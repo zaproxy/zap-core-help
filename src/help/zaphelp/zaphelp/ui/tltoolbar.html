@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<TITLE>
+Top Level Toolbar
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H1>Top Level Toolbar</H1>
+<p>
+This toolbar provides a set of buttons for commonly used functionality.
+
+<H2><img src="../images/16/171.png" align="bottom" width="16" height="16" />&nbsp; New Session</H2>
+This button is the same as the <a href="tlmenu/file.html">File menu</a> 'New Session' menu item.
+
+<H2><img src="../images/16/047.png" align="bottom" width="16" height="16" />&nbsp; Open Session</H2>
+This button is the same as the <a href="tlmenu/file.html">File menu</a> 'Open Session' menu item.
+
+<H2><img src="../images/16/096.png" align="bottom" width="16" height="16" />&nbsp; Save Session As</H2>
+This button is the same as the <a href="tlmenu/file.html">File menu</a> 'Save As...' menu item.
+
+<H2><img src="../images/16/151.png" align="bottom" width="16" height="16" />&nbsp; Set break</H2>
+This sets a 'global' <a href="../start/concepts/breakpoints.html">break point</a> - that will
+trap and display the next request or response in the <a href="tabs/break.html">Break tab</a>.<br/>
+You can then change any part of the request that you want to and send it to the target
+application by pressing either of the 'Step' or 'Continue' buttons.<br/>
+Alternatively you can press the 'Drop' button to dispose of the request.<br/>
+When the 'Set break' button has been pressed it will change into the "Unset break" button. 
+
+<H2><img src="../images/16/152.png" align="bottom" width="16" height="16" />&nbsp; Unset break</H2>
+This unsets the <a href="../start/concepts/breakpoints.html">Break Point</a> - set by the "Set Break" button.<br/>
+Requests  and responses will no longer be caught by ZAP unless you have set 
+<a href="../start/concepts/breakpoints.html">break points</a> on specific URLs.<br/>
+When this button has been pressed it will change into the "Set break" button. 
+
+<H2><img src="../images/16/143.png" align="bottom" width="16" height="16" />&nbsp; Step</H2>
+This allows the trapped request or response to continue to the application or your browser
+with any changes that you have made to it.<br/>
+The 'global' <a href="../start/concepts/breakpoints.html">break point</a> will remain set so that
+the next request or response will alos be caught.<br/>
+This button is only enabled when a request or response is trapped.
+
+<H2><img src="../images/16/131.png" align="bottom" width="16" height="16" />&nbsp; Continue</H2>
+The 'global' <a href="../start/concepts/breakpoints.html">break point</a> will be unset so that
+subsequent requests and responses will no longer be caught by ZAP unless you have set break points on specific URLs.<br/>
+This button is only enabled when a request or response is trapped.
+
+<H2><img src="../images/16/150.png" align="bottom" width="16" height="16" />&nbsp; Drop</H2>
+This drops the trapped request or response so that it is not passed on to the application
+or your browser<br/>
+This button is only enabled when a request or response is trapped.
+
+
+<H2>See also</H2>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="overview.html">The user interface overview</a><br/>
+
+</BODY>
+</HTML>

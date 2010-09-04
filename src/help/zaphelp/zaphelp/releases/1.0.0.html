@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<TITLE>
+Release 1.0.0
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H1>Release 1.0.0</H1>
+<p>
+The following changes were made in this release:
+</p>
+<H2>Significant changes:</H2>
+
+<H3>Help screens</H3>
+Help screens have been added for all of the fuctionality now provided by ZAP.<br/>
+Context sensitive help has also been implemented so that when you press the F1 key then the
+help screen associated with the tab you have selected will be displayed.
+
+<H3>Break Points</H3>
+The implementation of <a href="../start/concepts/breakpoints.html">Break Points</a> has been changed to be closer to that provided by 
+software Integrated Development Environments.<br/>
+The break point controls have been moved to the new <a href="../ui/tltoolbar.html">Top Level Toolbar</a>.<br/>
+Break points can now also be set by right clicking nodes in the 
+<a href="../ui/tabs/sites.html">Sites</a> and <a href="../ui/tabs/history.html">History tabs</a>.
+
+<H3>Report menu</H3>
+The <a href="../ui/tlmenu/report.html">Report Menu</a> has been significant changed and now includes the
+following menu items:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Generate Report...</td><td>Which now generates reports on demand</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Export Messages to File...</td><td>Moved from the <a href="../ui/tlmenu/file.html">File Menu</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Export Response to File...</td><td>Moved from the <a href="../ui/tlmenu/file.html">File Menu</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Export ALL URLs to File...</td><td>New functionality</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Compare with another session...</td><td>New functionality</td></tr>
+</table>
+
+<H3>Improved history searching</H3>
+The new <a href="../ui/tabs/search.html">Search tab</a> allows you to search for regular expressions 
+in all of the URLs, requests and responses. <br/>
+Next and previous buttons allow you view the found search terms in the 
+<a href="../ui/tabs/request.html">Request</a> and <a href="../ui/tabs/response.html">Response tabs</a>. <br/>
+
+<H3>History filter</H3>
+<a href="../ui/tabs/history.html">The History Filter Toolbar</a> has been added which allows you to restrict
+which requests are displayed.<br/>
+Requests can be filtered based on the HTTP methods, the HTTP result codes,
+and any <a href="../start/concepts/tags.html">tags</a>, <a href="../start/concepts/alerts.html">alerts</a>, or
+<a href="../start/concepts/notes.html">notes</a> that have been applied.    
+
+<H3>Notes</H3>
+You can now associate <a href="../start/concepts/notes.html">notes</a> with any request.    
+
+<H3>Multiple Tags</H3>
+You can now associate multiple <a href="../start/concepts/tags.html">tags</a> with any request.    
+
+<H3>More control over the alerts</H3>
+The <a href="../ui/dialogs/addalert.html">Add Alert dialog</a> allows you to manually add or change an
+alert. 
+
+<H3>New encoder/decoder</H3>
+A new <a href="../ui/dialogs/enc_dec.html">Encode/Decode/Hash dialog</a> has replaced the previous 
+Encoder/Decoder. 
+
+<H3>Passive scanning</H3>
+<a href="../start/concepts/pscan.html">Passive scanning</a> has been added.<br/>
+In this release ZAP will only use passive scanning for automatically adding <a href="../start/concepts/tags.html">tags</a>.<br/>
+In future releases it may also raise <a href="../start/concepts/alerts.html">alerts</a> for potential issues. 
+    
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<H2>Minor changes:</H2>
+
+<H3>The Top Level Toolbar</H3>
+<a href="../ui/tltoolbar.html">The Top Level Toolbar</a> has been added which
+provides a set up buttons for commonly used functionality. 
+
+<H3>Alert footer summaries</H3>
+Counts of the High, Medium, Low and Informational <a href="../start/concepts/alerts.html">alerts</a>
+are now displayed in the <a href="../ui/footer.html">footer</a>.
+
+<H3>New look and feel</H3>
+A new look and feel 'Nimbus' is used.
+
+<H3>Proxy password handling</H3>
+<a href="../ui/dialogs/options/connection.html">The Options Connection screen</a> has a new option to 
+'Prompt for proxy credentials on start up'.<br/>
+If this option is selected then your proxy password will not be stored on the hard disk.  
+
+<H3>Resend from the Sites tab</H3>
+The <a href="../ui/tabs/sites.html">Sites tab</a> has a new right click menu item that allows
+you to resend the request after making any changes to it that you want to.  
+
+<H3>User directory maintained between sessions</H3>
+The last directory used by the user is now stored in the config file so that it is
+maintained between sessions.
+
+<H2>See also</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Introduction</a></td><td>the introduction to ZAP<br/></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Releases</a></td><td>the full set of releases<br/></td></tr>
+</table>
+</BODY>
+</HTML>
