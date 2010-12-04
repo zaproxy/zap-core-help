@@ -14,9 +14,13 @@
         <mapID target="start.concepts.alerts" url="zaphelp/start/concepts/alerts.html" />
         <mapID target="start.concepts.ascan" url="zaphelp/start/concepts/ascan.html" />
         <mapID target="start.concepts.breakpoints" url="zaphelp/start/concepts/breakpoints.html" />
+        <mapID target="start.concepts.bruteforce" url="zaphelp/start/concepts/bruteforce.html" />
         <mapID target="start.concepts.filters" url="zaphelp/start/concepts/filters.html" />
+        <mapID target="start.concepts.intercept" url="zaphelp/start/concepts/intercept.html" />
         <mapID target="start.concepts.notes" url="zaphelp/start/concepts/notes.html" />
         <mapID target="start.concepts.pscan" url="zaphelp/start/concepts/pscan.html" />
+        <mapID target="start.concepts.plugins" url="zaphelp/start/concepts/plugins.html" />
+        <mapID target="start.concepts.portscan" url="zaphelp/start/concepts/portscan.html" />
         <mapID target="start.concepts.spider" url="zaphelp/start/concepts/spider.html" />
         <mapID target="start.concepts.tags" url="zaphelp/start/concepts/tags.html" />
         <mapID target="start.pentest" url="zaphelp/pentest/pentest.html" />
@@ -37,9 +41,12 @@
         <mapID target="ui.tabs.break" url="zaphelp/ui/tabs/break.html" />
         <mapID target="ui.tabs.history" url="zaphelp/ui/tabs/history.html" />
         <mapID target="ui.tabs.search" url="zaphelp/ui/tabs/search.html" />
-        <mapID target="ui.tabs.spider" url="zaphelp/ui/tabs/spider.html" />
-        <mapID target="ui.tabs.alerts" url="zaphelp/ui/tabs/alerts.html" />
         <mapID target="ui.tabs.breakpoints" url="zaphelp/ui/tabs/breakpoints.html" />
+        <mapID target="ui.tabs.alerts" url="zaphelp/ui/tabs/alerts.html" />
+        <mapID target="ui.tabs.ascan" url="zaphelp/ui/tabs/ascan.html" />
+        <mapID target="ui.tabs.spider" url="zaphelp/ui/tabs/spider.html" />
+        <mapID target="ui.tabs.bruteforce" url="zaphelp/ui/tabs/bruteforce.html" />
+        <mapID target="ui.tabs.portscan" url="zaphelp/ui/tabs/portscan.html" />
         <mapID target="ui.tabs.technology" url="zaphelp/ui/tabs/technology.html" />
         <mapID target="ui.tabs.output" url="zaphelp/ui/tabs/output.html" />
         <mapID target="ui.dialogs" url="zaphelp/ui/dialogs/dialogs.html"/>
@@ -56,7 +63,6 @@
         <mapID target="ui.dialogs.resend" url="zaphelp/ui/dialogs/resend.html"/>
         <mapID target="ui.dialogs.scanpolicy" url="zaphelp/ui/dialogs/scanpolicy.html"/>
         <mapID target="ui.dialogs.sessprop" url="zaphelp/ui/dialogs/sessprop.html"/>
-        <mapID target="ui.dialogs.spider" url="zaphelp/ui/dialogs/spider.html"/>
         <mapID target="ui.footer" url="zaphelp/ui/footer.html" />
         <mapID target="zap.paros" url="zaphelp/paros.html" />
         <mapID target="zap.releases" url="zaphelp/releases/releases.html"/>

@@ -19,9 +19,13 @@
          <tocitem text="Alerts" target="start.concepts.alerts"/>
          <tocitem text="Active Scanning" target="start.concepts.ascan"/>
          <tocitem text="Break Points" target="start.concepts.breakpoints"/>
+         <tocitem text="Brute Force" target="start.concepts.bruteforce"/>
          <tocitem text="Filters" target="start.concepts.filters"/>
+         <tocitem text="Intercepting Proxy" target="start.concepts.intercept"/>
          <tocitem text="Notes" target="start.concepts.notes"/>
          <tocitem text="Passive Scanning" target="start.concepts.pscan"/>
+         <tocitem text="Plugins" target="start.concepts.plugins"/>
+         <tocitem text="Port Scanning" target="start.concepts.portscan"/>
          <tocitem text="Spidering" target="start.concepts.spider"/>
          <tocitem text="Tags" target="start.concepts.tags"/>
       </tocitem>
@@ -49,9 +53,12 @@
          <tocitem text="Break" target="ui.tabs.break"/>
          <tocitem text="History" target="ui.tabs.history"/>
          <tocitem text="Search" target="ui.tabs.search"/>
-         <tocitem text="Spider" target="ui.tabs.spider"/>
-         <tocitem text="Alerts" target="ui.tabs.alerts"/>
          <tocitem text="Break Points" target="ui.tabs.breakpoints"/>
+         <tocitem text="Alerts" target="ui.tabs.alerts"/>
+         <tocitem text="Active Scan" target="ui.tabs.ascan"/>
+         <tocitem text="Spider" target="ui.tabs.spider"/>
+         <tocitem text="Brute Force" target="ui.tabs.bruteforce"/>
+         <tocitem text="Port Scan" target="ui.tabs.portscan"/>
          <!--tocitem text="Technology" target="ui.tabs.technology"/-->
          <tocitem text="Output" target="ui.tabs.output"/>
       </tocitem>
@@ -69,12 +76,12 @@
          <tocitem text="Resend" target="ui.dialogs.resend"/>
          <tocitem text="Scan Policy" target="ui.dialogs.scanpolicy"/>
          <tocitem text="Session Properties" target="ui.dialogs.sessprop"/>
-         <tocitem text="Spider" target="ui.dialogs.spider"/>
       </tocitem>
       <tocitem text="The Footer" target="ui.footer"/>
    </tocitem>
 
    <tocitem text="Releases" target="zap.releases">
+      <tocitem text="1.1.0" target="zap.releases.1.1.0"/>
       <tocitem text="1.0.0" target="zap.releases.1.0.0"/>
    </tocitem>
    <tocitem text="Paros Proxy" target="zap.paros"/>
