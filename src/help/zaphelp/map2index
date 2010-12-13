@@ -5,9 +5,13 @@
     <indexitem text="alerts" target="start.concepts.alerts" />
     <indexitem text="active scan" target="start.concepts.ascan" />
     <indexitem text="break points" target="start.concepts.breakpoints" /> 
+    <indexitem text="brute force" target="start.concepts.bruteforce"/>
     <indexitem text="filters" target="start.concepts.filters" />
+    <indexitem text="intercepting proxy" target="start.concepts.intercept"/>
     <indexitem text="notes" target="start.concepts.notes" />
     <indexitem text="passive scan" target="start.concepts.pscan" />
+    <indexitem text="plugins" target="start.concepts.plugins"/>
+    <indexitem text="port scanning" target="start.concepts.portscan"/>
     <indexitem text="spider" target="start.concepts.spider" />
     <indexitem text="tags" target="start.concepts.tags" />
     <indexitem text="basic penetration test" target="start.pentest" />
@@ -23,6 +27,10 @@
     <indexitem text="spider tab" target="ui.tabs.spider" />
     <indexitem text="alerts tab" target="ui.tabs.alerts" />
     <indexitem text="break points tab" target="ui.tabs.breakpoints" />
+    <indexitem text="active scan" target="ui.tabs.ascan"/>
+    <indexitem text="spider" target="ui.tabs.spider"/>
+    <indexitem text="brute force" target="ui.tabs.bruteforce"/>
+    <indexitem text="port scan" target="ui.tabs.portscan"/>
     <indexitem text="output tab" target="ui.tabs.output" />
     <indexitem text="dialogs" target="ui.dialogs" />
     <indexitem text="add alert dialog" target="ui.dialogs.addalert" />
@@ -38,10 +46,10 @@
     <indexitem text="resend dialog" target="ui.dialogs.resend" />
     <indexitem text="scan policy dialog" target="ui.dialogs.scanpolicy" />
     <indexitem text="session properties dialog" target="ui.dialogs.sessprop" />
-    <indexitem text="spider dialog" target="ui.dialogs.spider" />
     <indexitem text="footer" target="ui.footer" />
     <indexitem text="paros proxy" target="zap.paros" />
     <indexitem text="releases" target="zap.releases" />
     <indexitem text="release 1.0.0" target="zap.releases.1.0.0" />
+    <indexitem text="release 1.1.0" target="zap.releases.1.1.0" />
     <indexitem text="credits" target="zap.credits" />
 
