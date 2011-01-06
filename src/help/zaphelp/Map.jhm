@@ -17,6 +17,7 @@
         <mapID target="start.concepts.bruteforce" url="zaphelp/start/concepts/bruteforce.html" />
         <mapID target="start.concepts.filters" url="zaphelp/start/concepts/filters.html" />
         <mapID target="start.concepts.intercept" url="zaphelp/start/concepts/intercept.html" />
+        <mapID target="start.concepts.invokeapp" url="zaphelp/start/concepts/invokeapp.html" />
         <mapID target="start.concepts.notes" url="zaphelp/start/concepts/notes.html" />
         <mapID target="start.concepts.pscan" url="zaphelp/start/concepts/pscan.html" />
         <mapID target="start.concepts.plugins" url="zaphelp/start/concepts/plugins.html" />
@@ -66,8 +67,9 @@
         <mapID target="ui.footer" url="zaphelp/ui/footer.html" />
         <mapID target="zap.paros" url="zaphelp/paros.html" />
         <mapID target="zap.releases" url="zaphelp/releases/releases.html"/>
-        <mapID target="zap.releases.1.0.0" url="zaphelp/releases/1.0.0.html"/>
-        <mapID target="zap.releases.1.1.0" url="zaphelp/releases/1.1.0.html"/>
+        <mapID target="zap.releases.1.0.0" url="zaphelp/releases/1_0_0.html"/>
+        <mapID target="zap.releases.1.1.0" url="zaphelp/releases/1_1_0.html"/>
+        <mapID target="zap.releases.1.2.0" url="zaphelp/releases/1_2_0.html"/>
         <mapID target="zap.credits" url="zaphelp/credits.html" />
         <mapID target="zap.todo" url="zaphelp/todo.html" />
 </map>

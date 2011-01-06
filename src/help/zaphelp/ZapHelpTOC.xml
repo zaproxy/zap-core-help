@@ -22,6 +22,7 @@
          <tocitem text="Brute Force" target="start.concepts.bruteforce"/>
          <tocitem text="Filters" target="start.concepts.filters"/>
          <tocitem text="Intercepting Proxy" target="start.concepts.intercept"/>
+         <tocitem text="Invoke Applications" target="start.concepts.invokeapp"/>
          <tocitem text="Notes" target="start.concepts.notes"/>
          <tocitem text="Passive Scanning" target="start.concepts.pscan"/>
          <tocitem text="Plugins" target="start.concepts.plugins"/>
@@ -81,6 +82,7 @@
    </tocitem>
 
    <tocitem text="Releases" target="zap.releases">
+      <tocitem text="1.2.0" target="zap.releases.1.2.0"/>
       <tocitem text="1.1.0" target="zap.releases.1.1.0"/>
       <tocitem text="1.0.0" target="zap.releases.1.0.0"/>
    </tocitem>

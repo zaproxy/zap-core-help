@@ -35,6 +35,7 @@
     <indexitem text="history tab" target="ui.tabs.history" />
     <indexitem text="intercepting proxy" target="start.concepts.intercept"/>
     <indexitem text="introduction" target="zap.intro" />
+    <indexitem text="invoke applications" target="start.concepts.invokeapps"/>
     <indexitem text="manage tabs dialog" target="ui.dialogs.managetags" />
     <indexitem text="manual request dialog" target="ui.dialogs.manreq" />
     <indexitem text="notes" target="start.concepts.notes" />
@@ -48,6 +49,7 @@
     <indexitem text="proxy configuration" target="start.proxy" />
     <indexitem text="release 1.0.0" target="zap.releases.1.0.0" />
     <indexitem text="release 1.1.0" target="zap.releases.1.1.0" />
+    <indexitem text="release 1.2.0" target="zap.releases.1.2.0" />
     <indexitem text="releases" target="zap.releases" />
     <indexitem text="request tab" target="ui.tabs.request" />
     <indexitem text="resend dialog" target="ui.dialogs.resend" />
