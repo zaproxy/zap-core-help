@@ -2,11 +2,11 @@
 <HTML>
 <HEAD>
 <TITLE>
-Release 1.1.0
+Release 1.2.0
 </TITLE>
 </HEAD>
 <BODY BGCOLOR="#ffffff">
-<H1>Release 1.1.0</H1>
+<H1>Release 1.2.0</H1>
 <p>
 The following changes were made in this release:
 </p>
@@ -21,10 +21,21 @@ External applications can now be <a href="../start/concepts/invokeapp.html">invo
 <a href="../ui/tabs/history.html">History</a> tabs.
 
 <H3>Passive Scanner</H3>
-The <a href="../start/concepts/pscan.html">passive scanner</a> now looks for basic vulnerabilities, such as:
-TBA
+The <a href="../start/concepts/pscan.html">passive scanner</a> now looks for vulnerabilities, such as:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Autocomplete forms with password fields</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Cookies without the 'HttpOnly' flag</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>SSL Cookies without the 'secure' flag</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Weak authentication</td></tr>
+</table>
 
 <H2>Minor changes:</H2>
+
+<H3>XML Reports</H3>
+A new 'Generate XML Report...' menu item is now included in the top level <a href="../ui/tlmenu/report.html">Reports</a> 
+menu.<br>
+A Perl script is also provided (xml/parseReportXmlToMysql.pl) which can be used to populate a MySQL
+database with the contents of the XML report.
 
 <H3>Manual Request Editor and Resend dialogs</H3>
 Requests submitted by the <a href="../ui/dialogs/man_req.html">Manual Request Editor</a> and
@@ -39,10 +50,16 @@ The alert counts in the <a href="../ui/footer.html">footer</a> now show the numb
 the total number of instances. 
 
 <H3>Active scanner delay option</H3>
-Details TBA
+The delay in milliseconds between each <a href="../start/concepts/ascan.html">active scanner</a> request can now be set via the  
+<a href="../ui/dialogs/options/ascan.html">Options Active Scan screen</a>
 
 <H3>UI Changes</H3>
-Details TBA
+The 'toolbar' on the <a href="../ui/tabs/request.html">Request</a>, <a href="../ui/tabs/response.html">Response</a> and
+<a href="../ui/tabs/break.html">Break</a> tabs and the <a href="../ui/dialogs/man_req.html">Manual Request Editor</a> and
+<a href="../ui/dialogs/resend.html">Resend</a> dialogs is now at the top rather than the bottom.<br>
+<br>
+The scanner counts in the <a href="../ui/footer.html">footer</a> are now displayed on the right hand side.<br>
+<br>
 
 <H2>See also</H2>
 <table>
