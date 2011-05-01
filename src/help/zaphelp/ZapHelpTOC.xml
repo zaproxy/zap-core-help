@@ -73,7 +73,21 @@
          <tocitem text="History Filter" target="ui.dialogs.historyfilter"/>
          <tocitem text="Manual Request Editor" target="ui.dialogs.manreq"/>
          <tocitem text="Manage Tags" target="ui.dialogs.managetags"/>
-         <tocitem text="Options" target="ui.dialogs.options"/>
+         <tocitem text="Options" target="ui.dialogs.options">
+         	<tocitem text="Connection" target="ui.dialogs.options.connection"/>
+         	<tocitem text="Local Proxy" target="ui.dialogs.options.localproxy"/>
+         	<tocitem text="Authentication" target="ui.dialogs.options.authentication"/>
+         	<tocitem text="Certificate" target="ui.dialogs.options.certificate"/>
+         	<tocitem text="Display" target="ui.dialogs.options.view"/>
+         	<tocitem text="Check for Updates" target="ui.dialogs.options.checkforupdates"/>
+         	<tocitem text="Spider" target="ui.dialogs.options.spider"/>
+         	<tocitem text="Active Scan" target="ui.dialogs.options.ascan"/>
+         	<tocitem text="Passive Scan" target="ui.dialogs.options.pscan"/>
+         	<tocitem text="Brute Force" target="ui.dialogs.options.bruteforce"/>
+         	<tocitem text="Port Scan" target="ui.dialogs.options.portscan"/>
+         	<tocitem text="Applications" target="ui.dialogs.options.invokeapp"/>
+         	<tocitem text="Dynamic SSL Certificates" target="ui.dialogs.options.dynsslcert"/>
+         </tocitem>
          <tocitem text="Resend" target="ui.dialogs.resend"/>
          <tocitem text="Scan Policy" target="ui.dialogs.scanpolicy"/>
          <tocitem text="Session Properties" target="ui.dialogs.sessprop"/>

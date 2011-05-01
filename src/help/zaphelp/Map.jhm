@@ -72,4 +72,17 @@
         <mapID target="zap.releases.1.2.0" url="zaphelp/releases/1_2_0.html"/>
         <mapID target="zap.credits" url="zaphelp/credits.html" />
         <mapID target="zap.todo" url="zaphelp/todo.html" />
+   		<mapID target="ui.dialogs.options.connection" url="zaphelp/ui/dialogs/options/connection.html"/>
+     	<mapID target="ui.dialogs.options.localproxy" url="zaphelp/ui/dialogs/options/localproxy.html"/>
+     	<mapID target="ui.dialogs.options.authentication" url="zaphelp/ui/dialogs/options/authentication.html"/>
+     	<mapID target="ui.dialogs.options.certificate" url="zaphelp/ui/dialogs/options/certificate.html"/>
+     	<mapID target="ui.dialogs.options.view" url="zaphelp/ui/dialogs/options/view.html"/>
+     	<mapID target="ui.dialogs.options.checkforupdates" url="zaphelp/ui/dialogs/options/checkforupdates.html"/>
+     	<mapID target="ui.dialogs.options.spider" url="zaphelp/ui/dialogs/options/spider.html"/>
+     	<mapID target="ui.dialogs.options.ascan" url="zaphelp/ui/dialogs/options/ascan.html"/>
+     	<mapID target="ui.dialogs.options.pscan" url="zaphelp/ui/dialogs/options/pscan.html"/>
+     	<mapID target="ui.dialogs.options.bruteforce" url="zaphelp/ui/dialogs/options/bruteforce.html"/>
+     	<mapID target="ui.dialogs.options.portscan" url="zaphelp/ui/dialogs/options/portscan.html"/>
+     	<mapID target="ui.dialogs.options.invokeapp" url="zaphelp/ui/dialogs/options/invokeapp.html"/>
+     	<mapID target="ui.dialogs.options.dynsslcert" url="zaphelp/ui/dialogs/options/dynsslcert.html"/>
 </map>
