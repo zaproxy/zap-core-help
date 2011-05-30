@@ -13,18 +13,22 @@ The following changes were made in this release:
 <H2>Significant changes:</H2>
 
 <H3>Fuzzing</H3>
-Details TBA. Note - also document anti CSRF token support here!
+Strings in a response can now be fuzzed to try to find vulnerabilities.<br>
+Anti CRSF tokens can be detected and automatically regenerated when fuzzing.
 
 <H3>Dynamic SSL certificates</H3>
 	<p>
-		The support for SSL connections was improved and is now way easier.
-		User's now can create their own root certificate and distribute this
+		The support for SSL connections was improved and simplified.
+		User's can now create their own root certificate and distribute this
 		into their HTTP clients.
 		See <a href="../ui/dialogs/options/dynsslcert.html">Option: Dynamic SSL Certificates</a> for more details.  
 	</p>
 
-<H3>API</H3>
-Details TBA.
+<H3>Daemon mode and API</H3>
+ZAP can now be run in the background using the '-daemon' command line option.<br>
+An initial API has been implemented in XML, JSON and HTML.<br>
+If ZAP is running as a daemon then the API is automatically enabled, otherwise the API must be enabled via the Options API screen.<br>
+The API can be navigated by opening http://zap/ in your browser when proxying via ZAP. 
 
 <H3>Beanshell integration</H3>
 Details TBA.
@@ -51,20 +55,17 @@ Out of the box support for the following languages:
 <H2>Minor changes:</H2>
 
 <H3>Copy support</H3>
-Most of the panels now provide a 'right click' 'Copy' menu option, including the port scan and brute force panels. 
+Most of the panels now provide a 'right click' 'Copy' menu option, including the Port Scan and Brute Force panels. 
 
 <H3>Port scanner proxy support and timeout option</H3>
-Details TBA.
+The Port Scanner can now use the outgoing proxy (if configured) and the timeout in milliseconds can also now be set.
 
 <H3>ZAP headless mode</H3>
 Starting ZAP with the "-daemon" command line option will cause it to run in the background in 'headless' mode, 
 meaning that no UI is displayed.
 
 <H3>Request and response break buttons</H3>
-Details TBA.
-
-<H3>Alternative display options</H3>
-Details TBA.
+There are now 2 'Set Break' buttons to allow breaks to be set on all requests and all responses independently. 
 
 <H2>See also</H2>
 <table>
