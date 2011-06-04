@@ -23,6 +23,12 @@ The delay in milliseconds between each request.<br>
 Setting this to a non zero value will increase the time an active scan takes, but will put less of a strain
 on the target host.
 
+<H3>Handle anti CSRF tokens</H3>
+If this option is selected then the active scanner will attempt to automatically request 
+<a href="../../../start/concepts/anticsrf.html">anti CSRF</a> tokens when required.<br>
+Note that this is experimental functionality and will slow down the scanning process as only one thread will be used to ensure
+that anti CSRF token requests dont get out of step. 
+
 </p>
 
 <H2>See also</H2>
