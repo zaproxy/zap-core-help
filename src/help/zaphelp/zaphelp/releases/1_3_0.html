@@ -70,7 +70,14 @@ in each request or response.
 URLs can be explicitly excluded from the active scanner, spider and from the proxy.
 
 <H3>Copy support</H3>
-Most of the panels now provide a 'right click' 'Copy' menu option, including the Port Scan and Brute Force panels. 
+Most of the panels now provide a 'right click' 'Copy' menu option, including the Port Scan and Brute Force panels.
+
+<H3>Undo/Redo support</H3>
+All of the input fields now support Undo/Redo actions using the operating systems default Undo/Redo accelerators:
+<UL>
+<LI>Windows/Linux: Ctrl+Z / Ctrl+Y
+<LI>Mac OS X: Cmd+Z / Cmd+Shift+Z
+</UL>
 
 <H3>Port scanner proxy support and timeout option</H3>
 The Port Scanner can now use the outgoing proxy (if configured) and the timeout in milliseconds can also now be set.
@@ -96,9 +103,11 @@ to make it easier to test slow applications.
 Most of the libraries used by ZAP have been updated to the latest versions.
 
 <H3>A new icon :)</H3>
-C/o Axel and TBA.
+Thanks to Simon Egli and all others for submitting cool icon suggestions.
 
 <H2>Known issues:</H2>
+<H3>Mac OS X: Dynamic SSL and Google Chrome</H3>
+Currently Dynamic SSL is not working when using Google Chrome. This is because of an unresolved known issue with Google Chrome and Mac OS X Keychain. When importing OWASP ZAP's Root CA into the keychain and requesting a SSL website, an "Invalid certificate" error message is shown.
 
 <H2>See also</H2>
 <table>
