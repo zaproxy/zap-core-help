@@ -16,6 +16,7 @@
     <indexitem text="add note dialog" target="ui.dialogs.addnote" />
     <indexitem text="alerts tab" target="ui.tabs.alerts" />
     <indexitem text="alerts" target="start.concepts.alerts" />
+    <indexitem text="api" target="start.concepts.api" />
     <indexitem text="basic penetration test" target="start.pentest" />
     <indexitem text="break points tab" target="ui.tabs.breakpoints" />
     <indexitem text="break points" target="start.concepts.breakpoints" /> 
@@ -30,12 +31,15 @@
     <indexitem text="filters" target="start.concepts.filters" />
     <indexitem text="find dialog" target="ui.dialogs.find" />
     <indexitem text="footer" target="ui.footer" />
+    <indexitem text="fuzzer tab" target="ui.tabs.fuzz" />
+    <indexitem text="fuzzing" target="start.concepts.fuzz" />
+    <indexitem text="fuzz dialog" target="ui.dialogs.fuzz" />
     <indexitem text="getting started" target="start.start" />
     <indexitem text="history filter dialog" target="ui.dialogs.historyfilter" />
     <indexitem text="history tab" target="ui.tabs.history" />
     <indexitem text="intercepting proxy" target="start.concepts.intercept"/>
     <indexitem text="introduction" target="zap.intro" />
-    <indexitem text="invoke applications" target="start.concepts.invokeapps"/>
+    <indexitem text="invoke applications" target="start.concepts.invokeapp"/>
     <indexitem text="manage tabs dialog" target="ui.dialogs.managetags" />
     <indexitem text="manual request dialog" target="ui.dialogs.manreq" />
     <indexitem text="notes" target="start.concepts.notes" />
