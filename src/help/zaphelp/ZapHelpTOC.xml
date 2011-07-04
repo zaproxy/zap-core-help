@@ -92,6 +92,7 @@
          	<tocitem text="Display" target="ui.dialogs.options.view"/>
          	<tocitem text="Dynamic SSL Certificates" target="ui.dialogs.options.dynsslcert"/>
          	<tocitem text="Fuzzer" target="ui.dialogs.options.fuzz"/>
+         	<tocitem text="Language" target="ui.dialogs.options.language"/>
          	<tocitem text="Local Proxy" target="ui.dialogs.options.localproxy"/>
          	<tocitem text="Passive Scan" target="ui.dialogs.options.pscan"/>
          	<tocitem text="Port Scan" target="ui.dialogs.options.portscan"/>
