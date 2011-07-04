@@ -90,6 +90,7 @@
      	<mapID target="ui.dialogs.options.view" url="zaphelp/ui/dialogs/options/view.html"/>
      	<mapID target="ui.dialogs.options.dynsslcert" url="zaphelp/ui/dialogs/options/dynsslcert.html"/>
      	<mapID target="ui.dialogs.options.fuzz" url="zaphelp/ui/dialogs/options/fuzz.html"/>
+     	<mapID target="ui.dialogs.options.language" url="zaphelp/ui/dialogs/options/language.html"/>
      	<mapID target="ui.dialogs.options.localproxy" url="zaphelp/ui/dialogs/options/localproxy.html"/>
      	<mapID target="ui.dialogs.options.pscan" url="zaphelp/ui/dialogs/options/pscan.html"/>
      	<mapID target="ui.dialogs.options.portscan" url="zaphelp/ui/dialogs/options/portscan.html"/>
