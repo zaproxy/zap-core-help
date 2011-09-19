@@ -106,6 +106,7 @@
    </tocitem>
 
    <tocitem text="Releases" target="zap.releases">
+      <tocitem text="1.3.3" target="zap.releases.1.3.3"/>
       <tocitem text="1.3.2" target="zap.releases.1.3.2"/>
       <tocitem text="1.3.1" target="zap.releases.1.3.1"/>
       <tocitem text="1.3.0" target="zap.releases.1.3.0"/>
