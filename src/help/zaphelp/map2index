@@ -31,6 +31,7 @@
     <indexitem text="spider" target="ui.tabs.spider"/>
     <indexitem text="brute force" target="ui.tabs.bruteforce"/>
     <indexitem text="port scan" target="ui.tabs.portscan"/>
+    <indexitem text="params tab" target="ui.tabs.params" />
     <indexitem text="output tab" target="ui.tabs.output" />
     <indexitem text="dialogs" target="ui.dialogs" />
     <indexitem text="add alert dialog" target="ui.dialogs.addalert" />

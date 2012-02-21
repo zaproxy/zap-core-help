@@ -50,6 +50,7 @@
         <mapID target="ui.tabs.ascan" url="zaphelp/ui/tabs/ascan.html" />
         <mapID target="ui.tabs.spider" url="zaphelp/ui/tabs/spider.html" />
         <mapID target="ui.tabs.bruteforce" url="zaphelp/ui/tabs/bruteforce.html" />
+        <mapID target="ui.tabs.params" url="zaphelp/ui/tabs/params.html" />
         <mapID target="ui.tabs.portscan" url="zaphelp/ui/tabs/portscan.html" />
         <mapID target="ui.tabs.fuzz" url="zaphelp/ui/tabs/fuzz.html" />
         <mapID target="ui.tabs.output" url="zaphelp/ui/tabs/output.html" />
