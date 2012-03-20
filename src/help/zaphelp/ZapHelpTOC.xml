@@ -33,6 +33,7 @@
          <tocitem text="Spider" target="start.concepts.spider"/>
          <tocitem text="Tags" target="start.concepts.tags"/>
       </tocitem>
+      <tocitem text="Scanner Rules" target="start.check"/>
       <tocitem text="A Simple Penetration Test" target="start.pentest"/>
    </tocitem>
 

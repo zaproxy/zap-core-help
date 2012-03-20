@@ -65,6 +65,7 @@
     <indexitem text="request tab" target="ui.tabs.request" />
     <indexitem text="resend dialog" target="ui.dialogs.resend" />
     <indexitem text="response tab" target="ui.tabs.response" />
+    <indexitem text="scanner rules" target="start.check" />
     <indexitem text="scan policy dialog" target="ui.dialogs.scanpolicy" />
     <indexitem text="search tab" target="ui.tabs.search" />
     <indexitem text="session properties dialog" target="ui.dialogs.sessprop" />
