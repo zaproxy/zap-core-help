@@ -55,6 +55,8 @@ Full extensions can now be plugged into ZAP dynamically with full access to all 
 
 <H3>Issue 54: Clean shutdown</H3>
 
+<H3>Issue 102: Clean Save raw response and request, and save body of response and request</H3>
+
 <H3>Issue 126: Allow working directory and config file to be set via cmd line</H3>
 
 <H3>Issue 154: Include param id in reports</H3>
@@ -75,7 +77,11 @@ Full extensions can now be plugged into ZAP dynamically with full access to all 
 
 <H3>Issue 236: Option to toggle URLencoding</H3>
 
+<H3>Issue 242: Export node / req/resp via right click</H3>
+
 <H3>Issue 248: Delete alerts / retest feature request</H3>
+
+<H3>Issue 253: Allow extensions to define dependencies</H3>
 
 <H3>Issue 270: Icon changes</H3>
 
@@ -83,17 +89,27 @@ Full extensions can now be plugged into ZAP dynamically with full access to all 
 
 <H3>Issue 279: Core extensions</H3>
 
+<H3>Issue 282: Add author, description and URL to extensions</H3>
+
 <H2>Bug fixes:</H2>
- 
+
 <H3>Issue 42: Arbitrary Redirection</H3>
 
 <H3>Issue 94: PKCS#11 driver</H3>
+
+<H3>Issue 107: The last intercepted request/response remains in the Break window</H3>
 
 <H3>Issue 135: Broken URLs in Sites Panel</H3>
 
 <H3>Issue 148: New HTTP Panel broke the Undo/Redo Manager</H3>
 
+<H3>Issue 180: Tabular view for GET request</H3>
+
+<H3>Issue 187: Encoding issues</H3>
+
 <H3>Issue 198: The report is not generated when a "Parameter tampering" alert with "NULL" character exists</H3>
+
+<H3>Issue 210: Exception thrown when using the "Path Traversal" option in the active scan</H3>
 
 <H3>Issue 223: Exception in "Sites" tab when choosing a popup option, "Delete (from view)" or "Purge (from DB)", when no node tree is selected</H3>
 
@@ -104,6 +120,8 @@ Full extensions can now be plugged into ZAP dynamically with full access to all 
 <H3>Issue 226: proxy port number edit box should not allow millions of characters</H3>
 
 <H3>Issue 227: Tools, Options should go to the same tab as last time</H3>
+
+<H3>Issue 237: Bug: Problems with HTTP Panels</H3>
 
 <H3>Issue 238: Exception when using a custom fuzz file</H3>
 
@@ -117,11 +135,15 @@ Full extensions can now be plugged into ZAP dynamically with full access to all 
 
 <H3>Issue 256: Calling HttpMessage.setGetParams looses the port</H3>
 
+<H3>Issue 260: Exception when deleting ("Purge (from DB)") "History" tab entries</H3>
+
 <H3>Issue 261: Partial language match not working</H3>
 
 <H3>Issue 262: "Weak authentication" alerts not showing with spider</H3>
 
 <H3>Issue 263: "Cookie without secure flag" alerts not showing with spider</H3>
+
+<H3>Issue 264: Exception in "Manual Request Editor"/"Resend" dialogues</H3>
 
 <H3>Issue 268: Change ZAP Report XML</H3>
 
@@ -131,7 +153,17 @@ Full extensions can now be plugged into ZAP dynamically with full access to all 
 
 <H3>Issue 280: Escape URLs in sites tree</H3>
 
+<H3>Issue 283: RFE: Font anti-aliasing not enabled by default in request/response</H3>
+
+<H3>Issue 284: Request/response etc header panels too small</H3>
+
+<H3>Issue 286: Search string not highlighted for fuzz results</H3>
+
 <H3>Issue 287: Passive scanner doesnt pick up new anticsrf tokens</H3>
+
+<H3>Issue 289: fuzzdb files cause virus alerts</H3>
+
+<H3>Issue 291: Path Traversal has 'param' empty but put the param name in 'attack'</H3>
 
 <H2>See also</H2>
 <table>
