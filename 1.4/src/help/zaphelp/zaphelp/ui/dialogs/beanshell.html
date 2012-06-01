@@ -23,7 +23,6 @@ When the BeanShell starts a number of objects from ZAP are available for use, na
 <li>the <i>SiteTree</i> tree of current sites through the <b><i>sites</i></b> object</li>
 <li>an instance of <i>HttpSender</i> through the <b><i>sender</i></b> object</li>
 </ul>
-</p>
 <p>
 Notice that the BeanShell is loosely typed. Therefore, it is not necessary to declare variables before using them – this makes scripts a bit more concise than regular Java. But of course, if you did want to define the type you can.
 </p>
@@ -41,10 +40,10 @@ Tree () {
 	find (SiteNode node, String resource) {
 		if (node == null) return;
 		ref = node.getHistoryReference();
-		if ((ref != null) && (!node.isLeaf())) {
+		if ((ref != null) &amp;&amp; (!node.isLeaf())) {
 			checkExists(ref, resource);    
 		}
-		for (i=0;i<node.getChildCount();i++) {   
+		for (i=0;i&lt;node.getChildCount();i++) {   
 			try {
 				find (node.getChildAt(i), resource);
 			} catch (Exception e) {
