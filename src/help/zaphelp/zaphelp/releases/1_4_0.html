@@ -38,7 +38,7 @@ The following checks have been ported from Watcher (thanks to Chris Weber for ok
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.CrossDomain.ScriptReference.cs</td><td>checks for cross-domain javascript files inclusion.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.CacheControl.cs</td><td>checks HTTP cache-control header on SSL pages.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.ContentTypeMissing.cs</td><td>checks that the Content-Type HTTP header is not missing.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.FrameOptions.cs</td><td>checks that the X-FRAME-OPTIONS is not missing or insecurely set.</td>/tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.FrameOptions.cs</td><td>checks that the X-FRAME-OPTIONS is not missing or insecurely set.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.IeXssProtection.cs</td><td>checks that the X-XSS-Protection has not been set to disable IE's XSS protection.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.MimeSniff.cs</td><td>checks that the X-CONTENT-TYPE-OPTIONS has been set.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.DatabaseErrors.cs</td><td>checks for database error messages.</td></tr>
@@ -46,6 +46,7 @@ The following checks have been ported from Watcher (thanks to Chris Weber for ok
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.InUrl.cs</td><td>checks for information disclosure in URL parameters.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.ReferrerLeak.cs</td><td>checks HTTP Referer header for information disclosure.</td></tr>
 </table>
+
 
 <H3>Issue 253: Plugable extensions</H3>
 
@@ -55,7 +56,9 @@ Full extensions can now be plugged into ZAP dynamically with full access to all 
 
 <H3>Issue 54: Clean shutdown</H3>
 
-<H3>Issue 102: Clean Save raw response and request, and save body of response and request</H3>
+<H3>Issue 90: Add GUI support for unsecure SSL/TLS renegotiation</H3>
+
+<H3>Issue 102: Save raw response and request, and save body of response and request</H3>
 
 <H3>Issue 126: Allow working directory and config file to be set via cmd line</H3>
 
@@ -80,6 +83,8 @@ Full extensions can now be plugged into ZAP dynamically with full access to all 
 <H3>Issue 242: Export node / req/resp via right click</H3>
 
 <H3>Issue 248: Delete alerts / retest feature request</H3>
+
+<H3>Issue 251: Restructure alerts code</H3>
 
 <H3>Issue 253: Allow extensions to define dependencies</H3>
 
@@ -106,6 +111,8 @@ Full extensions can now be plugged into ZAP dynamically with full access to all 
 <H3>Issue 180: Tabular view for GET request</H3>
 
 <H3>Issue 187: Encoding issues</H3>
+
+<H3>Issue 197: Decoder cannot process base64 input without line breaks</H3>
 
 <H3>Issue 198: The report is not generated when a "Parameter tampering" alert with "NULL" character exists</H3>
 
