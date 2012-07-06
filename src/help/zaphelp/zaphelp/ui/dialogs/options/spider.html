@@ -1,23 +1,62 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
 <HTML>
 <HEAD>
-<TITLE>
-Options Spider screen
-</TITLE>
+<TITLE>Options Spider screen</TITLE>
 </HEAD>
 <BODY BGCOLOR="#ffffff">
-<H1>Options Spider screen</H1>
-<p>
-This screen allows you to configure the <a href="../../../start/concepts/spider.html">spider</a> options. 
-</p>
+	<H1>Options Spider screen</H1>
+	<p>
+		This screen allows you to configure the <a
+			href="../../../start/concepts/spider.html">spider</a> options:
+	</p>
 
-<H2>See also</H2>
-<table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
-</table>
+	<h3>Maximum depth to crawl</h3>
+	The parameter defines the maximum depth in the crawling process where a
+	page must be found in order for it to be processed. Resources found
+	deeper than this level are not fetched and parsed by the spider.
+
+	<h3>Number of threads used</h3>
+	The spider is multi-threaded and this is the number that defines the
+	maximum number of worker threads used in the crawling process.
+
+	<h3>Domain suffixes</h3>
+	The normal behaviour of the spider is to only follow links to resources
+	found on the same domain as the page where the scan started. However,
+	this option allows you to define additional domains that are considered
+	"in scope" during the crawling process.
+
+	<h3>Process forms</h3>
+	During the crawling process, the behaviour of the spider when it
+	encounters HTML forms is defined by this option. If disabled, the HTML
+	forms will not be processed at all. If enabled, the HTML forms with the
+	method defined as HTTP GET will be submitted with some generated
+	values. The behaviour when encountering forms with the method defined
+	as HTTP POST is configured by the next option.
+
+	<h3>POST forms</h3>
+	As briefly described in the previous paragraph (Process Forms), this
+	option configures the behaviour of the spider when
+	<i>Process Forms</i> is enabled and when encountering HTML forms that
+	have to be POSTed.
+
+	<h3>Use Cookies</h3>
+	This option defines whether the spider should send back the cookies
+	received in server responses with subsequent requests. If disabled, all
+	cookie related header fields will be ignored.
+
+	<H2>See also</H2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../overview.html">UI Overview</a></td>
+			<td>for an overview of the user interface</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="options.html">Options dialogs</a></td>
+			<td>for details of the other Options dialog screens</td>
+		</tr>
+	</table>
 
 </BODY>
 </HTML>
