@@ -55,6 +55,7 @@
         <mapID target="ui.tabs.portscan" url="zaphelp/ui/tabs/portscan.html" />
         <mapID target="ui.tabs.fuzz" url="zaphelp/ui/tabs/fuzz.html" />
         <mapID target="ui.tabs.output" url="zaphelp/ui/tabs/output.html" />
+        <mapID target="ui.tabs.websocket" url="zaphelp/ui/tabs/websocket.html" />
         <mapID target="ui.dialogs" url="zaphelp/ui/dialogs/dialogs.html"/>
         <mapID target="ui.dialogs.addalert" url="zaphelp/ui/dialogs/addalert.html"/>
         <mapID target="ui.dialogs.addbreak" url="zaphelp/ui/dialogs/addbreak.html"/>
@@ -103,4 +104,5 @@
      	<mapID target="ui.dialogs.options.pscan" url="zaphelp/ui/dialogs/options/pscan.html"/>
      	<mapID target="ui.dialogs.options.portscan" url="zaphelp/ui/dialogs/options/portscan.html"/>
      	<mapID target="ui.dialogs.options.spider" url="zaphelp/ui/dialogs/options/spider.html"/>
+     	<mapID target="ui.dialogs.options.websocket" url="zaphelp/ui/dialogs/options/websocket.html"/>
 </map>
