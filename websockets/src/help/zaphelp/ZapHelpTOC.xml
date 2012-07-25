@@ -68,6 +68,7 @@
          <tocitem text="Fuzzer" target="ui.tabs.fuzz"/>
          <!--tocitem text="Technology" target="ui.tabs.technology"/-->
          <tocitem text="Output" target="ui.tabs.output"/>
+         <tocitem text="WebSocket" target="ui.tabs.websocket"/>
       </tocitem>
       <tocitem text="The Dialogs" target="ui.dialogs">
          <tocitem text="Add Alert" target="ui.dialogs.addalert"/>
@@ -100,6 +101,7 @@
          	<tocitem text="Passive Scan" target="ui.dialogs.options.pscan"/>
          	<tocitem text="Port Scan" target="ui.dialogs.options.portscan"/>
          	<tocitem text="Spider" target="ui.dialogs.options.spider"/>
+            <tocitem text="WebSocket" target="ui.dialogs.options.websocket"/>
          </tocitem>
          <tocitem text="Resend" target="ui.dialogs.resend"/>
          <tocitem text="Scan Policy" target="ui.dialogs.scanpolicy"/>
