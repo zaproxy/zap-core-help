@@ -19,12 +19,17 @@
 	The spider is multi-threaded and this is the number that defines the
 	maximum number of worker threads used in the crawling process.
 
-	<h3>Domain suffixes</h3>
+	<h3>Domain Pattern</h3>
 	The normal behaviour of the spider is to only follow links to resources
 	found on the same domain as the page where the scan started. However,
 	this option allows you to define additional domains that are considered
 	"in scope" during the crawling process. Pages on these domains are
 	followed during the scan. Domain suffixes have to be separated by ';'.
+	The '*' can also be used to mark any character.
+	<br />For example, if the domain pattern is '*example.com', both
+	foo.example.com and example.com will match. If the domain pattern is
+	just example.com, only it will match. If the domain is *.example.com,
+	foo.example.com will match, but example.com will not match.
 
 	<h3>Process forms</h3>
 	During the crawling process, the behaviour of the spider when it
