@@ -27,6 +27,7 @@
     <indexitem text="history tab" target="ui.tabs.history" />
     <indexitem text="search tab" target="ui.tabs.search" />
     <indexitem text="spider tab" target="ui.tabs.spider" />
+    <indexitem text="websocket tab" target="ui.tabs.websocket" />
     <indexitem text="AJAX Spider tab" target="ui.tabs.spiderAjax" />
     <indexitem text="alerts tab" target="ui.tabs.alerts" />
     <indexitem text="break points tab" target="ui.tabs.breakpoints" />

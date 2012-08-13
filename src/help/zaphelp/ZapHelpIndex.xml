@@ -78,5 +78,6 @@
     <indexitem text="top level menu" target="ui.topmenu" />
     <indexitem text="top level toolbar" target="ui.toptoolbar" />
     <indexitem text="ui overview" target="ui.overview" />
+    <indexitem text="websocket tab" target="ui.tabs.websocket" />
 
 </index>
