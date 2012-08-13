@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<TITLE>Options AJAX Spider screen</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+	<H1>Options AJAX Spider screen</H1>
+	
+
+This screen allows you to configure the <a href="../../../start/concepts/ajaxSpider.html">AJAX Spider</a> options.
+The AJAX Spider is a plugin for a crawler called Crawljax. The plugin sets up a new local proxy in ZAP to talk to cralwjax. Therefore, you can configure both the proxy and crawler.
+	
+	<h2>AJAX Spider Proxy Configuration</h2>
+	You can configure the following parameters of the proxy.
+	<h3>Proxy Network Address</h3>
+	The IP address of the local proxy. By default set to localhost.
+	<h3>Proxy Port</h3>
+	The TCP port of the local proxy server. By default 8081.
+	
+	<h2>AJAX Spider Crawler Configuration</h2>
+	You can configure the following parameters of crawljax.
+	<h3>Number of Browser Windows</h3>
+	You can configure the number of windows to be used by AJAX Spider. The more windows, the faster the process will be. 
+	<h3>Number of Threads</h3>
+	You can configure the number of threads to we used by AJAX Spider. It is recommended to set a number of threads equal o higher than the one of Browser Windows
+	<h3>Crawl in depth</h3>
+	If you enable this option, more HTML tags will be analyzed to find new links. It usually improve the overall results but it also slows down the process.
+	<h3>Browser</h3>
+	<p>AJAX Spider relies on an external browser to crawl the targeted site. You can specify which one you want to use: Firefox, Chrome or HTMLUnit.</p> HTMLUnit is an embedded java based browser included in AJAX Spider.</p><p>If you use Firefox or Chrome, you must have it install in your system.</p><p>Chrome requires a specific package to run, called Chrome Driver.
+	<br> If you want to use Chrome, you should install it. For more information refer to http://code.google.com/p/chromedriver/downloads/list
+	
+	<H2>See also</H2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../overview.html">UI Overview</a></td>
+			<td>for an overview of the user interface</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="options.html">Options dialogs</a></td>
+			<td>for details of the other Options dialog screens</td>
+		</tr>
+		
+		<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../../start/concepts/ajaxSpider.html">AJAX Spider</a></td><td>for an overview of the AJAX Spider</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../../ui/tabs/ajaxSpider.html">AJAX Spider tab</a></td><td>for an overview of the AJAX Spider Tab</td></tr>
+	</table>
+
+</BODY>
+</HTML>

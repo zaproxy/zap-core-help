@@ -31,6 +31,7 @@
          <tocitem text="Plugins" target="start.concepts.plugins"/>
          <tocitem text="Port Scan" target="start.concepts.portscan"/>
          <tocitem text="Spider" target="start.concepts.spider"/>
+         <tocitem text="AJAX Spider" target="start.concepts.spiderAjax"/>
          <tocitem text="Tags" target="start.concepts.tags"/>
       </tocitem>
       <tocitem text="Scanner Rules" target="start.check"/>
@@ -62,6 +63,7 @@
          <tocitem text="Alerts" target="ui.tabs.alerts"/>
          <tocitem text="Active Scan" target="ui.tabs.ascan"/>
          <tocitem text="Spider" target="ui.tabs.spider"/>
+         <tocitem text="AJAX Spider" target="ui.tabs.spiderAjax"/>
          <tocitem text="Brute Force" target="ui.tabs.bruteforce"/>
          <tocitem text="Params" target="ui.tabs.params"/>
          <tocitem text="Port Scan" target="ui.tabs.portscan"/>
@@ -101,6 +103,7 @@
          	<tocitem text="Passive Scan" target="ui.dialogs.options.pscan"/>
          	<tocitem text="Port Scan" target="ui.dialogs.options.portscan"/>
          	<tocitem text="Spider" target="ui.dialogs.options.spider"/>
+         	<tocitem text="AJAX Spider" target="ui.dialogs.options.spiderAjax"/>
          </tocitem>
          <tocitem text="Resend" target="ui.dialogs.resend"/>
          <tocitem text="Scan Policy" target="ui.dialogs.scanpolicy"/>

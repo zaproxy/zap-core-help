@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<TITLE>
+AJAX Spider tab
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H1>AJAX Spider tab</H1>
+<p>
+The AJAX Spider tab shows you the set of unique URIs found by  
+<a href="../../start/concepts/ajaxSpider.html">AJAX Spider</a>.</p><br/>
+For each request you can see:
+
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>The request index - each request is numbered, starting at 1</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>The HTML method, e.g. GET or POST</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>The URL requested</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>The HTTP response code</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>A short summary of what the HTTP response code means</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>The length of time the whole request took</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>Any <a href="../../start/concepts/alerts.html">Alerts</a> on the request</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>Any <a href="../../start/concepts/notes.html">Notes</a> you have added to request</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>Any <a href="../../start/concepts/tags.html">Tags</a> on the request</td></tr>
+</table>
+
+Selecting a requests will display it in the <a href="request.html">Request tab</a> and 
+<a href="response.html">Response tab</a> above.<br/>
+
+<H2>Right click menu</H2>
+Right clicking on a node will bring up a menu which will allow you to:
+
+<H3>Attack</H3>
+The Attack menu has the following submenus:
+<H4>Active Scan Site</H4>
+This will initiate an 
+<a href="../../start/concepts/ascan.html">active scan</a> of the whole of the site containing the selected node.<br/>
+The <a href="ascan.html">Active Scan tab</a> will be display and will show the progress of the scan.<br/>
+
+<H4>Active Scan Node</H4>
+This will initiate an 
+<a href="../../start/concepts/ascan.html">active scan</a> of just the node selected.<br/>
+The <a href="ascan.html">Active Scan tab</a> will be display and will show the progress of the scan.<br/>
+
+<H4>Spider Site</H4>
+This will initiate a 
+<a href="../../start/concepts/spider.html">spider</a> of the whole of the site containing the selected node.<br/>
+The <a href="spider.html">Spider tab</a> will be display and will show the progress of the scan.<br/>
+
+<H4>Brute Force Site</H4>
+This will initiate a 
+<a href="../../start/concepts/bruteforce.html">brute force</a> of the whole of the site containing the selected node.<br/>
+The <a href="spider.html">Brute Force tab</a> will be display and will show the progress of the scan.<br/>
+
+<H4>Port Scan host</H4>
+This will initiate a 
+<a href="../../start/concepts/portscan.html">port scan</a> of the host for the selected node.<br/>
+The <a href="portscan.html">Port Scan tab</a> will be display and will show the progress of the scan.<br/>
+
+<H3>Exclude from</H3>
+This menu has the following submenus:
+
+<H4>Proxy</H4>
+This will exclude the selected nodes from the proxy. They will still be proxied via ZAP but will not be shown 
+in any of the tabs.<br/>
+This can be used to ignore URLs that you know are not relevant to the system you are currently testing.<br/>
+The nodes can be included again via the <a href="../dialogs/sessprop.html">Session Properties</a> dialog   
+
+<H4>Scanner</H4>
+This will prevent the selected nodes from being actively scanned.<br/>
+The nodes can be included again via the <a href="../dialogs/sessprop.html">Session Properties</a> dialog   
+
+<H4>Spider</H4>
+This will prevent the selected nodes from being spidered.<br/>
+The nodes can be included again via the <a href="../dialogs/sessprop.html">Session Properties</a> dialog   
+
+<H3>Run application</H3>
+This menu allows you to <a href="../../start/concepts/invokeapp.html">invoke applications</a> that you
+have configured via the <a href="../dialogs/options/invokeapp.html">Options Applications screen</a> which
+is also accessible via the 'Configure applications...' submenu.
+
+<H3>Manage Tags...</H3>
+This will bring up the
+<a href="../dialogs/managetags.html">Manage Tags dialog</a> which allows you to change 
+the <a href="../../start/concepts/tags.html">tags</a> associated with the
+request.
+
+<H3>Note...</H3>
+This will bring up the
+<a href="../dialogs/addnote.html">Add Note dialog</a> which allows you to record 
+<a href="../../start/concepts/notes.html">notes</a> related to the
+request.
+
+<H3>Delete</H3>
+This will remove the node and all of its children from ZAP.<br/>
+However they can be added back in, to prevent this use the 'Exclude from' menus. 
+
+<H3>Break...</H3>
+This will bring up the
+<a href="../dialogs/addbreak.html">Add Break Point dialog</a> which allows 
+you to set a break point on that URL.<br/>
+
+<H3>Scan this History</H3>
+This will perform an <a href="../../start/concepts/ascan.html">active scan</a>
+against the URL related to the selected request.
+
+<H3>Resend...</H3>
+This will bring up the
+<a href="../dialogs/resend.html">Resend dialog</a> which allows you to  
+resend the request after making any changes to it that you want to.
+
+<H3>New Alert...</H3>
+This will bring up the
+<a href="../dialogs/addalert.html">Add Alert dialog</a> which allows you to manually record a new  
+<a href="../../start/concepts/alerts.html">alert</a> against this request.
+
+<H3>Show in Sites tab</H3>
+This will show the selected message in the <a href="sites.html">Sites tab</a>.
+
+<H3>Open URL in Browser</H3>
+This will open the URL of the selected node in your default browser.
+
+<H2>See also</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../start/concepts/ajaxSpider.html">AJAX Spider</a></td><td>for an overview of the AJAX Spider</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/dialogs/options/ajaxSpider.html">Options AJAX Spider screen</a></td><td>for an overview of the AJAX Spider Options</td></tr>
+</table>
+
+</BODY>
+</HTML>

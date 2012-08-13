@@ -26,6 +26,7 @@
         <mapID target="start.concepts.plugins" url="zaphelp/start/concepts/plugins.html" />
         <mapID target="start.concepts.portscan" url="zaphelp/start/concepts/portscan.html" />
         <mapID target="start.concepts.spider" url="zaphelp/start/concepts/spider.html" />
+        <mapID target="start.concepts.spiderAjax" url="zaphelp/start/concepts/ajaxSpider.html" />
         <mapID target="start.concepts.tags" url="zaphelp/start/concepts/tags.html" />
         <mapID target="start.checks" url="zaphelp/start/checks.html" />
         <mapID target="start.pentest" url="zaphelp/pentest/pentest.html" />
@@ -50,6 +51,7 @@
         <mapID target="ui.tabs.alerts" url="zaphelp/ui/tabs/alerts.html" />
         <mapID target="ui.tabs.ascan" url="zaphelp/ui/tabs/ascan.html" />
         <mapID target="ui.tabs.spider" url="zaphelp/ui/tabs/spider.html" />
+        <mapID target="ui.tabs.spiderAjax" url="zaphelp/ui/tabs/ajaxSpider.html" />
         <mapID target="ui.tabs.bruteforce" url="zaphelp/ui/tabs/bruteforce.html" />
         <mapID target="ui.tabs.params" url="zaphelp/ui/tabs/params.html" />
         <mapID target="ui.tabs.portscan" url="zaphelp/ui/tabs/portscan.html" />
@@ -104,4 +106,5 @@
      	<mapID target="ui.dialogs.options.pscan" url="zaphelp/ui/dialogs/options/pscan.html"/>
      	<mapID target="ui.dialogs.options.portscan" url="zaphelp/ui/dialogs/options/portscan.html"/>
      	<mapID target="ui.dialogs.options.spider" url="zaphelp/ui/dialogs/options/spider.html"/>
+     	<mapID target="ui.dialogs.options.spiderAjax" url="zaphelp/ui/dialogs/options/ajaxSpider.html"/>
 </map>
