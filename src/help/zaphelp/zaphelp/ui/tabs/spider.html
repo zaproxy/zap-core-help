@@ -1,39 +1,59 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
-<HTML>
-<HEAD>
-<TITLE>
-Spider tab
-</TITLE>
-</HEAD>
-<BODY BGCOLOR="#ffffff">
-<H1>Spider tab</H1>
-<p>
-The Spider tab shows you the URIs found by the 
-<a href="../../start/concepts/spider.html">spider</a> that you have not yet visited.<br/>
-Sites can be selected via the toolbar or the <a href="sites.html">Sites tab</a>.<br>
-In this release the spider can only be run against one site at a time.<br>
-The toolbar provides a set of buttons which allow you to start, stop, pause and resume the scan.<br>
-A progress bar shows how far the scan of the selected site has progressed.<br>
+<html>
+<head>
+<title>Spider tab</title>
+</head>
+<body bgcolor="#ffffff">
+	<h1>Spider tab</h1>
+	<p>
+		The Spider tab shows you the set of unique URIs found by the <a
+			href="../../start/concepts/spider.html">Spider</a> during the scans.
+	</p>
 
-<H2>Right click menu</H2>
-Right clicking on a node will bring up a menu which will allow you to:
+	<p>
+		The current Site the information is referring to can be selected via
+		the toolbar or the <a href="sites.html">Sites tab</a>. The Spider can
+		be run on multiple Sites in parallel and the results for each scan are
+		shown by selecting the proper Site.
+	</p>
 
-<H3>Find...</H3>
-This will bring up the <a href="../dialogs/find.html">Find dialog</a>.
+	<p>The toolbar provides a set of buttons which allow you to start,
+		stop, pause and resume the scan. A progress bar shows how far the scan
+		of the selected site has progressed.</p>
 
-<H3>Encode/Decode/Hash...</H3>
-This will bring up the <a href="../dialogs/enc_dec.html">Encode/Decode/Hash dialog</a>.<br/>
-If you have highlighted any text then this will be automatically included in the dialog.
+	<br /> For each request you can see:
+	<ul>
+		<li>Processed - Whether the URI was processed by the Spider or
+			was skipped from fetching because of a rule (e.g. it was out of
+			scope)</li>
+		<li>Method - The HTTP method, e.g. GET or POST, through which the
+			resource should be accessed</li>
+		<li>URI - the resource found</li>
+		<li>Flags - any information about the URI (e.g. if it's a seed or
+			why was it not processed)</li>
+	</ul>
 
-<H3>Copy</H3>
-This will copy the selected string to the clipboard.
 
-<H2>See also</H2>
-<table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
-</table>
+	<h2>See also</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../overview.html">UI Overview</a></td>
+			<td>for an overview of the user interface</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../start/concepts/spider.html">Spider</a></td>
+			<td>for an overview of the Spider</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/options/spider.html">Spider
+					Options screen</a></td>
+			<td>for an overview of the Spider Options</td>
+		</tr>
+	</table>
 
-</BODY>
-</HTML>
+</body>
+</html>
 
