@@ -24,6 +24,7 @@
          <tocitem text="Brute Force" target="start.concepts.bruteforce"/>
          <tocitem text="Filters" target="start.concepts.filters"/>
          <tocitem text="Fuzzing" target="start.concepts.fuzz"/>
+         <tocitem text="Http Sessions" target="start.concepts.httpsessions"/>
          <tocitem text="Intercepting Proxy" target="start.concepts.intercept"/>
          <tocitem text="Invoke Applications" target="start.concepts.invokeapp"/>
          <tocitem text="Notes" target="start.concepts.notes"/>
@@ -71,6 +72,7 @@
          <!--tocitem text="Technology" target="ui.tabs.technology"/-->
          <tocitem text="Output" target="ui.tabs.output"/>
          <tocitem text="WebSocket" target="ui.tabs.websocket"/>
+         <tocitem text="Http Sessions" target="ui.tabs.httpsessions"/>
       </tocitem>
       <tocitem text="The Dialogs" target="ui.dialogs">
          <tocitem text="Add Alert" target="ui.dialogs.addalert"/>
@@ -93,8 +95,8 @@
          	<tocitem text="Brute Force" target="ui.dialogs.options.bruteforce"/>
          	<tocitem text="Certificate" target="ui.dialogs.options.certificate"/>
          	<tocitem text="Check for Updates" target="ui.dialogs.options.checkforupdates"/>
-		<tocitem text="Connection" target="ui.dialogs.options.connection"/>
-		<tocitem text="Database" target="ui.dialogs.options.database"/>
+			<tocitem text="Connection" target="ui.dialogs.options.connection"/>
+			<tocitem text="Database" target="ui.dialogs.options.database"/>
          	<tocitem text="Display" target="ui.dialogs.options.view"/>
          	<tocitem text="Dynamic SSL Certificates" target="ui.dialogs.options.dynsslcert"/>
          	<tocitem text="Fuzzer" target="ui.dialogs.options.fuzz"/>
@@ -104,7 +106,7 @@
          	<tocitem text="Passive Scan" target="ui.dialogs.options.pscan"/>
          	<tocitem text="Port Scan" target="ui.dialogs.options.portscan"/>
          	<tocitem text="Spider" target="ui.dialogs.options.spider"/>
-		<tocitem text="WebSocket" target="ui.dialogs.options.websocket"/>
+			<tocitem text="WebSocket" target="ui.dialogs.options.websocket"/>
          	<tocitem text="AJAX Spider" target="ui.dialogs.options.spiderAjax"/>
          </tocitem>
          <tocitem text="Resend" target="ui.dialogs.resend"/>

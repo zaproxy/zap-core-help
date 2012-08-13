@@ -37,6 +37,8 @@
     <indexitem text="getting started" target="start.start" />
     <indexitem text="history filter dialog" target="ui.dialogs.historyfilter" />
     <indexitem text="history tab" target="ui.tabs.history" />
+    <indexitem text="http sessions tab" target="ui.tabs.httpsessions" />
+    <indexitem text="http sessions" target="start.concepts.httpsessions" />
     <indexitem text="intercepting proxy" target="start.concepts.intercept"/>
     <indexitem text="introduction" target="zap.intro" />
     <indexitem text="invoke applications" target="start.concepts.invokeapp"/>

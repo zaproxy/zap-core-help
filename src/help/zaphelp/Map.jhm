@@ -19,6 +19,7 @@
         <mapID target="start.concepts.bruteforce" url="zaphelp/start/concepts/bruteforce.html" />
         <mapID target="start.concepts.filters" url="zaphelp/start/concepts/filters.html" />
         <mapID target="start.concepts.fuzz" url="zaphelp/start/concepts/fuzz.html" />
+        <mapID target="start.concepts.httpsessions" url="zaphelp/start/concepts/httpsessions.html" />
         <mapID target="start.concepts.intercept" url="zaphelp/start/concepts/intercept.html" />
         <mapID target="start.concepts.invokeapp" url="zaphelp/start/concepts/invokeapp.html" />
         <mapID target="start.concepts.notes" url="zaphelp/start/concepts/notes.html" />
@@ -58,6 +59,7 @@
         <mapID target="ui.tabs.fuzz" url="zaphelp/ui/tabs/fuzz.html" />
         <mapID target="ui.tabs.output" url="zaphelp/ui/tabs/output.html" />
         <mapID target="ui.tabs.websocket" url="zaphelp/ui/tabs/websocket.html" />
+        <mapID target="ui.tabs.httpsessions" url="zaphelp/ui/tabs/httpsessions.html" />
         <mapID target="ui.dialogs" url="zaphelp/ui/dialogs/dialogs.html"/>
         <mapID target="ui.dialogs.addalert" url="zaphelp/ui/dialogs/addalert.html"/>
         <mapID target="ui.dialogs.addbreak" url="zaphelp/ui/dialogs/addbreak.html"/>
