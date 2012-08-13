@@ -34,6 +34,7 @@
          <tocitem text="Spider" target="start.concepts.spider"/>
          <tocitem text="AJAX Spider" target="start.concepts.spiderAjax"/>
          <tocitem text="Tags" target="start.concepts.tags"/>
+         <tocitem text="WebSocket" target="start.concepts.websocket"/>
       </tocitem>
       <tocitem text="Scanner Rules" target="start.check"/>
       <tocitem text="A Simple Penetration Test" target="start.pentest"/>

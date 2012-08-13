@@ -15,6 +15,7 @@
     <indexitem text="spider" target="start.concepts.spider" />
     <indexitem text="AJAX Spider" target="start.concepts.spiderAjax" />
     <indexitem text="tags" target="start.concepts.tags" />
+    <indexitem text="websocket" target="start.concepts.websocket" />
     <indexitem text="scanner rules="start.checks" />
     <indexitem text="basic penetration test" target="start.pentest" />
     <indexitem text="ui overview" target="ui.overview" />
