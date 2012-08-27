@@ -4,8 +4,8 @@
          "http://java.sun.com/products/javahelp/map_1_0.dtd">
 
 <map version="1.0">
-	<mapID target="toplevelfolder" url="images/zap16x16.png" />
-	<mapID target="toplevelicon" url="images/zap32x32.png" />
+	<mapID target="toplevelfolder" url="zaphelp/images/zap16x16.png" />
+	<mapID target="toplevelicon" url="zaphelp/images/zap32x32.png" />
         <mapID target="zap.intro" url="zaphelp/intro.html" />
         <mapID target="start.start" url="zaphelp/start/start.html" />
         <mapID target="start.proxy" url="zaphelp/start/proxies.html" />
