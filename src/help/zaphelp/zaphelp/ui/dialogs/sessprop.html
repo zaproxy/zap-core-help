@@ -34,6 +34,18 @@ You can differentiate on the port for one given domain, by using e.g.: <I>exampl
 In the <I>Exclude from *</I> dialogs, you can enter regular expressions to define excluded URLs.
 While you can escape a single meta-character with a backslash, you can also use the <B>\Q...\E</B> escape sequence. All the characters between the <B>\Q</B> and the <B>\E</B> are interpreted as literal characters. E.g. \Q*\d+*\E matches the literal text *\d+*.
 This escape sequence is used in ZAP when you exclude URLs via some context menus.
+<BR>
+<B>Note:</B> If your URL contains a "\E", then you have to do the following steps when using the <B>\Q...\E</B> escape sequence:
+<UL>
+	<LI>Open the escape sequence</LI>
+	<LI>Close the escape sequence before the "character" \E</LI>
+	<LI>Escape the backslash</LI>
+	<LI>Open after the "\E" another escape sequence;</LI>
+	<LI>Close the escape sequence as normally would.</LI>
+</UL>
+<BR>
+Example: https://subdomain.example.com/path?a=<B>\E</B>&moredata=2 should appear as
+<I>\Qhttps://subdomain.example.com/path?a=\E</I><B>\\E</B><I>\Q&moredata=2\E</I>
   
 <H2>Accessed via</H2>
 <table>
