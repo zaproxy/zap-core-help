@@ -95,6 +95,7 @@
      	<mapID target="ui.dialogs.options.certificate" url="zaphelp/ui/dialogs/options/certificate.html"/>
      	<mapID target="ui.dialogs.options.checkforupdates" url="zaphelp/ui/dialogs/options/checkforupdates.html"/>
    		<mapID target="ui.dialogs.options.connection" url="zaphelp/ui/dialogs/options/connection.html"/>
+     	<mapID target="ui.dialogs.options.database" url="zaphelp/ui/dialogs/options/database.html"/>
      	<mapID target="ui.dialogs.options.view" url="zaphelp/ui/dialogs/options/view.html"/>
      	<mapID target="ui.dialogs.options.dynsslcert" url="zaphelp/ui/dialogs/options/dynsslcert.html"/>
      	<mapID target="ui.dialogs.options.fuzz" url="zaphelp/ui/dialogs/options/fuzz.html"/>
