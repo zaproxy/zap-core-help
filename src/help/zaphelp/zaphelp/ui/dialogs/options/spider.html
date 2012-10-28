@@ -7,7 +7,9 @@
 	<h1>Options Spider screen</h1>
 	<p>
 		This screen allows you to configure the <a
-			href="../../../start/concepts/spider.html">spider</a> options:
+			href="../../../start/concepts/spider.html">spider</a> options.</p> 
+	<p>It should be noted that modifying most of these options also affects
+	the running Spider.
 	</p>
 
 	<h3>Maximum depth to crawl</h3>
@@ -24,7 +26,8 @@
 
 	<h3>Number of threads used</h3>
 	The spider is multi-threaded and this is the number that defines the
-	maximum number of worker threads used in the crawling process.
+	maximum number of worker threads used in the crawling process. Changing this
+	parameter does not have any effect on any crawling is in progress. 
 
 	<h3>Domain Pattern</h3>
 	The normal behavior of the spider is to only follow links to resources
@@ -46,14 +49,14 @@
 	the way the URIs parameters are handled is set using this option. There are
 	three available options:
 	<ul>
-	<li><b>Ignore parameters completely</b> - if www.example.org/bar=456 is visited,
-	then www.example.org/foo=123 will not be visited</li>
+	<li><b>Ignore parameters completely</b> - if www.example.org/?bar=456 is visited,
+	then www.example.org/?foo=123 will not be visited</li>
 	<li><b>Consider only parameter's name</b> (ignore parameter's value) - if 
-	www.example.org/foo=123 is visited, then www.example.org/foo=456 will not be visited, 
-	but www.example.org/bar=789 or www.example.org/foo=456&bar=123 will be visited
-	<li><b>Consider both parameter's name and value</b> - if www.example.org/123 is visited,
-	any other uri that is different (including, for example, www.example.org/foo=456 or 
-	www.example.org/bar=abc) will be visited
+	www.example.org/?foo=123 is visited, then www.example.org/?foo=456 will not be visited, 
+	but www.example.org/?bar=789 or www.example.org/?foo=456&amp;bar=123 will be visited</li>
+	<li><b>Consider both parameter's name and value</b> - if www.example.org/?123 is visited,
+	any other uri that is different (including, for example, www.example.org/?foo=456 or 
+	www.example.org/?bar=abc) will be visited</li>
 	</ul>
 
 	<h3>Process forms</h3>

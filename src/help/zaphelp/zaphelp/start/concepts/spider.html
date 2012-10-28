@@ -13,7 +13,7 @@
 		the process continues recursively as long as new resources are found.
 	</p>
 
-	<p>There are 4 methods of starting the Spider, diferentiated by the
+	<p>There are 4 methods of starting the Spider, differentiated by the
 		seed list with which it starts:</p>
 	<ul>
 		<li>Spider Site - The seed list contains all the existing URIs
@@ -24,6 +24,8 @@
 			corresponding to the selected node (in the Site Tree).</li>
 		<li>Spider all in Scope - The seed list contains all the URIs the
 			user has selected as being 'In Scope'.</li>
+		<li>Spider all in Context... - The seed list contains all the URIs
+			user has selected as being in the selected context.</li>
 	</ul>
 	<i>More details can be found below, in the "Accessed via" section </i>
 
@@ -65,10 +67,18 @@
 	<h4>Non-Text response</h4>
 	Currently, the Spider does not process this type of resources.
 
-	<br />
+	<h2>Other aspects</h2>
+	<ul>
+	<li> When checking if an URL was already visited, the behaviour regarding how
+	parameters are handled can be configured on the Spider Options screen.
+	</li>
+	<li> When checking if an URL was already visited, there are a few common parameters
+	which are ignored: jsessionid, phpsessid, aspsessionid, utm_*
+	</li>
+	</ul>
 	<p>
 		The spider is configured using the <a
-			href="../../ui/dialogs/options/spider.html">Options Spider screen</a>.
+			href="../../ui/dialogs/options/spider.html">Spider Options screen</a>.
 	</p>
 
 	<h2>Accessed via</h2>
@@ -85,6 +95,7 @@
 			<td>'Attack -&gt; Spider URL' right click menu item</td>
 			<td>'Attack -&gt; Spider Subtree' right click menu item</td>
 			<td>'Attack -&gt; Spider all in Scope' right click menu item</td>
+			<td>'Attack -&gt; Spider all in Context...' right click menu item</td>
 		</tr>
 	</table>
 
