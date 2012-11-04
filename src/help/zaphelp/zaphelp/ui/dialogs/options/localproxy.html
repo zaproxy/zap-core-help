@@ -13,6 +13,12 @@ on which ZAP accepts incoming connections.<br/>
 It is this address and port that you must configure your browser to use as a proxy.
 </p>
 
+<H3>Modify/Remove "Accept-Encoding" request-header</H3>
+Allows the proxy to modify/remove the "Accept-Encoding" request-header field so 
+no encoding transformations are done to the response.<br/>
+This option should be always enabled unless when testing the encoding transformations.<br/>
+The messages encoded will not be correctly scanned (either by passive and active scanners).
+
 <H2>See also</H2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
