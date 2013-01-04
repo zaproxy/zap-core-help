@@ -13,6 +13,15 @@ The Options Connection screen allows you to configure the ZAP connection options
 <H3>Timeout in seconds</H3>
 This makes is easier to test slow applications.
 
+<H3>SSLTunneling for ports</H3>
+Browsers may use the HTTP CONNECT method to establish connections through a proxy.
+It occurs for HTTPS connections, but also for WebSocket connections.
+<br><br>
+This option allows to set ports where HTTPS should be used. Per default only requests to port 443 establish a secure connection.
+You may change this if your application uses secure services on non-standard ports. Otherwise the connection is not secured.
+<br><br>
+Use a comma to separate several ports like here "443,563,81".
+
 <H3>Use Proxy chain</H3>
 This section allows you to connect to another proxy for outgoing connections.<br/>
 This is often required in a corporate environment.
