@@ -95,6 +95,7 @@
      	<mapID target="ui.dialogs.options.ascan" url="zaphelp/ui/dialogs/options/ascan.html"/>
      	<mapID target="ui.dialogs.options.anticsrf" url="zaphelp/ui/dialogs/options/anticsrf.html"/>
      	<mapID target="ui.dialogs.options.api" url="zaphelp/ui/dialogs/options/api.html"/>
+     	<mapID target="ui.dialogs.options.ext" url="zaphelp/ui/dialogs/options/ext.html"/>
      	<mapID target="ui.dialogs.options.invokeapp" url="zaphelp/ui/dialogs/options/invokeapp.html"/>
      	<mapID target="ui.dialogs.options.authentication" url="zaphelp/ui/dialogs/options/authentication.html"/>
      	<mapID target="ui.dialogs.options.bruteforce" url="zaphelp/ui/dialogs/options/bruteforce.html"/>
