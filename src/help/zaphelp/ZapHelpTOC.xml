@@ -1,14 +1,13 @@
-<?xml version='1.0' encoding='ISO-8859-1'  ?>
-
-<!--
--->
-
+<?xml version='1.0' encoding='ISO-8859-1' ?>
 <!DOCTYPE toc
   PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 2.0//EN"
          "http://java.sun.com/products/javahelp/toc_2_0.dtd">
-
-<toc version="1.0">
- <tocitem text="ZAP User Guide" image="toplevelfolder" target="zap.intro">
+<!-- 
+	NOTE: Merging will NOT work for tocitems that got a target attribute!
+	As a result, the root element should not have any target attribute.
+-->
+<toc version="2.0">
+ <tocitem text="ZAP User Guide" image="toplevelfolder" mergetype="javax.help.UniteAppendMerge">
 
    <tocitem text="Introduction" target="zap.intro"/>
 
@@ -118,6 +117,16 @@
       <tocitem text="The Footer" target="ui.footer"/>
    </tocitem>
 
+   <!--
+   		Do not add a target attribute to "Add-ons" element,
+   		as this would break merging capability.
+   		Moreover, if you change the text "Add Ons" it must
+   		also be renamed in every extension that has got help files.
+    -->
+   <tocitem text="Add Ons">
+       <tocitem text="Introduction" target="addon.introduction" />
+   </tocitem>
+   
    <tocitem text="Releases" target="zap.releases">
       <tocitem text="1.4.1" target="zap.releases.1.4.1"/>
       <tocitem text="1.4.0" target="zap.releases.1.4.0"/>

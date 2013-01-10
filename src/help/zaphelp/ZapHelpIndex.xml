@@ -11,6 +11,7 @@
 
     <indexitem text="active scan" target="start.concepts.ascan" />
     <indexitem text="active scan tab" target="ui.tabs.ascan"/>
+    <indexitem text="add on" target="addon.introduction"/>
     <indexitem text="add alert dialog" target="ui.dialogs.addalert" />
     <indexitem text="add break point dialog" target="ui.dialogs.addbreak" />
     <indexitem text="add note dialog" target="ui.dialogs.addnote" />

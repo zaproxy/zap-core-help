@@ -78,6 +78,7 @@
         <mapID target="ui.dialogs.scanpolicy" url="zaphelp/ui/dialogs/scanpolicy.html"/>
         <mapID target="ui.dialogs.sessprop" url="zaphelp/ui/dialogs/sessprop.html"/>
         <mapID target="ui.footer" url="zaphelp/ui/footer.html" />
+        <mapID target="addon.introduction" url="zaphelp/addon/introduction.html" />
         <mapID target="zap.paros" url="zaphelp/paros.html" />
         <mapID target="zap.releases" url="zaphelp/releases/releases.html"/>
         <mapID target="zap.releases.1.0.0" url="zaphelp/releases/1_0_0.html"/>

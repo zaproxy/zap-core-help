@@ -15,15 +15,14 @@
   </maps>
 
   <!-- views -->
-  <view>
+  <view mergetype="javax.help.UniteAppendMerge">
     <name>TOC</name>
     <label>Contents</label>
-    <!--label>Table Of Contents</label-->
     <type>javax.help.TOCView</type>
     <data>ZapHelpTOC.xml</data>
   </view>
 
-  <view>
+  <view mergetype="javax.help.SortMerge">
     <name>Index</name>
     <label>Index</label>
     <type>javax.help.IndexView</type>
