@@ -63,10 +63,10 @@ This will initiate a
 <a href="../../start/concepts/spider.html">spider</a> of the whole of the site containing the selected node.<br/>
 The <a href="spider.html">Spider tab</a> will be display and will show the progress of the scan.<br/>
 
-<H4>Brute Force Site</H4>
+<H4>Forced Browse Site</H4>
 This will initiate a 
-<a href="../../start/concepts/bruteforce.html">brute force</a> of the whole of the site containing the selected node.<br/>
-The <a href="spider.html">Brute Force tab</a> will be display and will show the progress of the scan.<br/>
+<a href="../../start/concepts/bruteforce.html">forced browse</a> of the whole of the site containing the selected node.<br/>
+The <a href="spider.html">Forced Browse tab</a> will be display and will show the progress of the scan.<br/>
 
 <H4>Port Scan host</H4>
 This will initiate a 
@@ -120,6 +120,11 @@ you to set a break point on that URL.<br/>
 This will perform an <a href="../../start/concepts/ascan.html">active scan</a>
 against the URL related to the selected request.
 
+<H3>Alerts for this node</H3>
+If the URL selected has <a href="../../start/concepts/alerts.html">alerts</a> associated with it then 
+they will be listed under this menu.<br>
+Selecting one of the alerts will cause it to be displayed.
+
 <H3>Resend...</H3>
 This will bring up the
 <a href="../dialogs/resend.html">Resend dialog</a> which allows you to  
@@ -136,6 +141,10 @@ This will show the selected message in the <a href="sites.html">Sites tab</a>.
 <H3>Open URL in Browser</H3>
 This will open the URL of the selected node in your default browser.
 
+<H3>Generate anti CSRF test form</H3>
+This will open a URL which will give you a generated form for testing for CSRF issues.<br>
+It will only be enabled for POST requests, if the API is enabled and if Java supports the opening of URLs 
+in a browser on your platform.
 <H2>See also</H2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>

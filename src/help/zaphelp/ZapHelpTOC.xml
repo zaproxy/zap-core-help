@@ -20,8 +20,8 @@
          <tocitem text="Anti CSRF Tokens" target="start.concepts.anticsrf"/>
          <tocitem text="API" target="start.concepts.api"/>
          <tocitem text="Break Points" target="start.concepts.breakpoints"/>
-         <tocitem text="Brute Force" target="start.concepts.bruteforce"/>
          <tocitem text="Filters" target="start.concepts.filters"/>
+         <tocitem text="Forced browse" target="start.concepts.bruteforce"/>
          <tocitem text="Fuzzing" target="start.concepts.fuzz"/>
          <tocitem text="Http Sessions" target="start.concepts.httpsessions"/>
          <tocitem text="Intercepting Proxy" target="start.concepts.intercept"/>
@@ -33,7 +33,7 @@
          <tocitem text="Spider" target="start.concepts.spider"/>
          <tocitem text="AJAX Spider" target="start.concepts.spiderAjax"/>
          <tocitem text="Tags" target="start.concepts.tags"/>
-         <tocitem text="WebSocket" target="start.concepts.websocket"/>
+         <tocitem text="WebSockets" target="start.concepts.websocket"/>
       </tocitem>
       <tocitem text="Scanner Rules" target="start.check"/>
       <tocitem text="A Simple Penetration Test" target="start.pentest"/>
@@ -65,14 +65,13 @@
          <tocitem text="Active Scan" target="ui.tabs.ascan"/>
          <tocitem text="Spider" target="ui.tabs.spider"/>
          <tocitem text="AJAX Spider" target="ui.tabs.spiderAjax"/>
-         <tocitem text="Brute Force" target="ui.tabs.bruteforce"/>
-         <tocitem text="Params" target="ui.tabs.params"/>
+         <tocitem text="Force Browse" target="ui.tabs.bruteforce"/>
          <tocitem text="Port Scan" target="ui.tabs.portscan"/>
          <tocitem text="Fuzzer" target="ui.tabs.fuzz"/>
-         <!--tocitem text="Technology" target="ui.tabs.technology"/-->
-         <tocitem text="Output" target="ui.tabs.output"/>
-         <tocitem text="WebSocket" target="ui.tabs.websocket"/>
+         <tocitem text="Params" target="ui.tabs.params"/>
          <tocitem text="Http Sessions" target="ui.tabs.httpsessions"/>
+         <tocitem text="WebSockets" target="ui.tabs.websocket"/>
+         <tocitem text="Output" target="ui.tabs.output"/>
       </tocitem>
       <tocitem text="The Dialogs" target="ui.dialogs">
          <tocitem text="Add Alert" target="ui.dialogs.addalert"/>
@@ -92,7 +91,6 @@
          	<tocitem text="API" target="ui.dialogs.options.api"/>
          	<tocitem text="Applications" target="ui.dialogs.options.invokeapp"/>
          	<tocitem text="Authentication" target="ui.dialogs.options.authentication"/>
-         	<tocitem text="Brute Force" target="ui.dialogs.options.bruteforce"/>
          	<tocitem text="Certificate" target="ui.dialogs.options.certificate"/>
          	<tocitem text="Check for Updates" target="ui.dialogs.options.checkforupdates"/>
 			<tocitem text="Connection" target="ui.dialogs.options.connection"/>
@@ -100,6 +98,7 @@
          	<tocitem text="Display" target="ui.dialogs.options.view"/>
          	<tocitem text="Dynamic SSL Certificates" target="ui.dialogs.options.dynsslcert"/>
             <tocitem text="Extensions" target="ui.dialogs.options.ext"/>
+         	<tocitem text="Forced Browse" target="ui.dialogs.options.bruteforce"/>
          	<tocitem text="Fuzzer" target="ui.dialogs.options.fuzz"/>
          	<tocitem text="Http Sessions" target="ui.dialogs.options.httpsessions"/>
          	<tocitem text="Language" target="ui.dialogs.options.language"/>

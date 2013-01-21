@@ -22,8 +22,6 @@
     <indexitem text="break points tab" target="ui.tabs.breakpoints" />
     <indexitem text="break points" target="start.concepts.breakpoints" /> 
     <indexitem text="break tab" target="ui.tabs.break" />
-    <indexitem text="brute force" target="start.concepts.bruteforce"/>
-    <indexitem text="brute force tab" target="ui.tabs.bruteforce"/>
     <indexitem text="credits" target="zap.credits" />
     <indexitem text="dialogs" target="ui.dialogs" />
     <indexitem text="encode / decode / hash dialog" target="ui.dialogs.enc_dec" />
@@ -32,6 +30,8 @@
     <indexitem text="filters" target="start.concepts.filters" />
     <indexitem text="find dialog" target="ui.dialogs.find" />
     <indexitem text="footer" target="ui.footer" />
+    <indexitem text="forced browse" target="start.concepts.bruteforce"/>
+    <indexitem text="forced browse tab" target="ui.tabs.bruteforce"/>
     <indexitem text="fuzzer tab" target="ui.tabs.fuzz" />
     <indexitem text="fuzzing" target="start.concepts.fuzz" />
     <indexitem text="fuzz dialog" target="ui.dialogs.fuzz" />
