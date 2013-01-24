@@ -22,6 +22,7 @@
     <indexitem text="break points tab" target="ui.tabs.breakpoints" />
     <indexitem text="break points" target="start.concepts.breakpoints" /> 
     <indexitem text="break tab" target="ui.tabs.break" />
+    <indexitem text="command line" target="cmdline" />
     <indexitem text="credits" target="zap.credits" />
     <indexitem text="dialogs" target="ui.dialogs" />
     <indexitem text="encode / decode / hash dialog" target="ui.dialogs.enc_dec" />
@@ -45,6 +46,7 @@
     <indexitem text="invoke applications" target="start.concepts.invokeapp"/>
     <indexitem text="manage tabs dialog" target="ui.dialogs.managetags" />
     <indexitem text="manual request dialog" target="ui.dialogs.manreq" />
+    <indexitem text="modes" target="start.concepts.modes" />
     <indexitem text="notes" target="start.concepts.notes" />
     <indexitem text="options dialog" target="ui.dialogs.options" />
     <indexitem text="output tab" target="ui.tabs.output" />
@@ -72,6 +74,7 @@
     <indexitem text="scanner rules" target="start.check" />
     <indexitem text="scan policy dialog" target="ui.dialogs.scanpolicy" />
     <indexitem text="search tab" target="ui.tabs.search" />
+    <indexitem text="session contexts dialog" target="ui.dialogs.context" />
     <indexitem text="session properties dialog" target="ui.dialogs.sessprop" />
     <indexitem text="sites tab" target="ui.tabs.sites" />
     <indexitem text="spider tab" target="ui.tabs.spider" />

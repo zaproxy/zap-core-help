@@ -26,6 +26,7 @@
          <tocitem text="Http Sessions" target="start.concepts.httpsessions"/>
          <tocitem text="Intercepting Proxy" target="start.concepts.intercept"/>
          <tocitem text="Invoke Applications" target="start.concepts.invokeapp"/>
+         <tocitem text="Modes" target="start.concepts.modes"/>
          <tocitem text="Notes" target="start.concepts.notes"/>
          <tocitem text="Passive Scan" target="start.concepts.pscan"/>
          <tocitem text="Plugins" target="start.concepts.plugins"/>
@@ -111,10 +112,15 @@
          </tocitem>
          <tocitem text="Resend" target="ui.dialogs.resend"/>
          <tocitem text="Scan Policy" target="ui.dialogs.scanpolicy"/>
-         <tocitem text="Session Properties" target="ui.dialogs.sessprop"/>
+         <tocitem text="Session" target="ui.dialogs.sessprop">
+	         <tocitem text="Session Properties" target="ui.dialogs.sessprop"/>
+	         <tocitem text="Session Contexts" target="ui.dialogs.contexts"/>
+         </tocitem>
       </tocitem>
       <tocitem text="The Footer" target="ui.footer"/>
    </tocitem>
+
+   <tocitem text="Command Line" target="cmdline"/>
 
    <!--
    		Do not add a target attribute to "Add-ons" element,

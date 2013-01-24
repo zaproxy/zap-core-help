@@ -22,6 +22,7 @@
         <mapID target="start.concepts.httpsessions" url="zaphelp/start/concepts/httpsessions.html" />
         <mapID target="start.concepts.intercept" url="zaphelp/start/concepts/intercept.html" />
         <mapID target="start.concepts.invokeapp" url="zaphelp/start/concepts/invokeapp.html" />
+        <mapID target="start.concepts.modes" url="zaphelp/start/concepts/modes.html" />
         <mapID target="start.concepts.notes" url="zaphelp/start/concepts/notes.html" />
         <mapID target="start.concepts.pscan" url="zaphelp/start/concepts/pscan.html" />
         <mapID target="start.concepts.plugins" url="zaphelp/start/concepts/plugins.html" />
@@ -66,6 +67,7 @@
         <mapID target="ui.dialogs.addbreak" url="zaphelp/ui/dialogs/addbreak.html"/>
         <mapID target="ui.dialogs.addnote" url="zaphelp/ui/dialogs/addnote.html"/>
         <mapID target="ui.dialogs.beanshell" url="zaphelp/ui/dialogs/beanshell.html"/>
+        <mapID target="ui.dialogs.contexts" url="zaphelp/ui/dialogs/session/contexts.html"/>
         <mapID target="ui.dialogs.enc_dec" url="zaphelp/ui/dialogs/enc_dec.html"/>
         <mapID target="ui.dialogs.filter" url="zaphelp/ui/dialogs/filter.html"/>
         <mapID target="ui.dialogs.find" url="zaphelp/ui/dialogs/find.html"/>
@@ -76,9 +78,10 @@
         <mapID target="ui.dialogs.options" url="zaphelp/ui/dialogs/options/options.html"/>
         <mapID target="ui.dialogs.resend" url="zaphelp/ui/dialogs/resend.html"/>
         <mapID target="ui.dialogs.scanpolicy" url="zaphelp/ui/dialogs/scanpolicy.html"/>
-        <mapID target="ui.dialogs.sessprop" url="zaphelp/ui/dialogs/sessprop.html"/>
+        <mapID target="ui.dialogs.sessprop" url="zaphelp/ui/dialogs/session/sessprop.html"/>
         <mapID target="ui.footer" url="zaphelp/ui/footer.html" />
         <mapID target="addon.introduction" url="zaphelp/addon/introduction.html" />
+        <mapID target="cmdline" url="zaphelp/cmdline.html" />
         <mapID target="zap.paros" url="zaphelp/paros.html" />
         <mapID target="zap.releases" url="zaphelp/releases/releases.html"/>
         <mapID target="zap.releases.1.0.0" url="zaphelp/releases/1_0_0.html"/>
