@@ -16,6 +16,7 @@
       <!--tocitem text="Explore the application" target="start.explore"/-->
       <tocitem text="Features" target="start.concepts">
          <tocitem text="Active Scan" target="start.concepts.ascan"/>
+         <tocitem text="Add-ons" target="start.concepts.addons"/>
          <tocitem text="Alerts" target="start.concepts.alerts"/>
          <tocitem text="Anti CSRF Tokens" target="start.concepts.anticsrf"/>
          <tocitem text="API" target="start.concepts.api"/>
@@ -29,7 +30,6 @@
          <tocitem text="Modes" target="start.concepts.modes"/>
          <tocitem text="Notes" target="start.concepts.notes"/>
          <tocitem text="Passive Scan" target="start.concepts.pscan"/>
-         <tocitem text="Plugins" target="start.concepts.plugins"/>
          <tocitem text="Port Scan" target="start.concepts.portscan"/>
          <tocitem text="Spider" target="start.concepts.spider"/>
          <tocitem text="AJAX Spider" target="start.concepts.spiderAjax"/>
@@ -85,6 +85,7 @@
          <tocitem text="Fuzzer" target="ui.dialogs.fuzz"/>
          <tocitem text="History Filter" target="ui.dialogs.historyfilter"/>
          <tocitem text="Manual Request Editor" target="ui.dialogs.manreq"/>
+         <tocitem text="Manage Add-ons" target="ui.dialogs.manageaddons"/>
          <tocitem text="Manage Tags" target="ui.dialogs.managetags"/>
          <tocitem text="Options" target="ui.dialogs.options">
          	<tocitem text="Active Scan" target="ui.dialogs.options.ascan"/>

@@ -12,6 +12,7 @@
         <mapID target="start.explore" url="zaphelp/start/explore.html" />
         <mapID target="start.concepts" url="zaphelp/start/concepts/concepts.html" />
         <mapID target="start.concepts.ascan" url="zaphelp/start/concepts/ascan.html" />
+        <mapID target="start.concepts.addons" url="zaphelp/start/concepts/addons.html" />
         <mapID target="start.concepts.alerts" url="zaphelp/start/concepts/alerts.html" />
         <mapID target="start.concepts.anticsrf" url="zaphelp/start/concepts/anticsrf.html" />
         <mapID target="start.concepts.api" url="zaphelp/start/concepts/api.html" />
@@ -25,7 +26,6 @@
         <mapID target="start.concepts.modes" url="zaphelp/start/concepts/modes.html" />
         <mapID target="start.concepts.notes" url="zaphelp/start/concepts/notes.html" />
         <mapID target="start.concepts.pscan" url="zaphelp/start/concepts/pscan.html" />
-        <mapID target="start.concepts.plugins" url="zaphelp/start/concepts/plugins.html" />
         <mapID target="start.concepts.portscan" url="zaphelp/start/concepts/portscan.html" />
         <mapID target="start.concepts.spider" url="zaphelp/start/concepts/spider.html" />
         <mapID target="start.concepts.spiderAjax" url="zaphelp/start/concepts/ajaxSpider.html" />

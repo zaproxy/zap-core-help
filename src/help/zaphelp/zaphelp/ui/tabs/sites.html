@@ -68,6 +68,35 @@ This will initiate a
 <a href="../../start/concepts/portscan.html">port scan</a> of the host for the selected node.<br/>
 The <a href="portscan.html">Port Scan tab</a> will be display and will show the progress of the scan.<br/>
 
+<H3>Include in Context</H3>
+This menu allows you to include the selected nodes and all of their subordinates in the specified
+<a href="../../start/concepts/context.html">context</a>.<br/>
+You also have the option to create a new context.<br/>
+The <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
+allow you to make any additional changes.
+
+<H3>Exclude from Context</H3>
+This menu allows you to exclude the selected nodes and all of their subordinates from the specified
+<a href="../../start/concepts/context.html">context</a>.<br/>
+The <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
+allow you to make any additional changes.
+
+<H3>Flag as context</H3>
+This menu has the following submenus for each of the 
+<a href="../../start/concepts/context.html">contexts</a> you have defined:
+
+<H4>Login request</H4>
+This identifies the specified node as a login request.<br/>
+You may only have one node identified as such in any one context.<br/> 
+The <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
+allow you to make any additional changes.
+
+<H4>Logout request</H4>
+This identifies the specified node as a logout request.<br/>
+You may only have one node identified as such in any one context.<br/> 
+The <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
+allow you to make any additional changes.
+
 <H3>Exclude from</H3>
 This menu has the following submenus:
 
@@ -75,15 +104,15 @@ This menu has the following submenus:
 This will exclude the selected nodes from the proxy. They will still be proxied via ZAP but will not be shown 
 in any of the tabs.<br/>
 This can be used to ignore URLs that you know are not relevant to the system you are currently testing.<br/>
-The nodes can be included again via the <a href="../dialogs/sessprop.html">Session Properties</a> dialog   
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
 
 <H4>Scanner</H4>
 This will prevent the selected nodes from being actively scanned.<br/>
-The nodes can be included again via the <a href="../dialogs/sessprop.html">Session Properties</a> dialog   
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
 
 <H4>Spider</H4>
 This will prevent the selected nodes from being spidered.<br/>
-The nodes can be included again via the <a href="../dialogs/sessprop.html">Session Properties</a> dialog   
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
 
 <H3>Run application</H3>
 This menu allows you to <a href="../../start/concepts/invokeapp.html">invoke applications</a> that you

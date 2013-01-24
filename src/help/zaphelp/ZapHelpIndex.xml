@@ -11,7 +11,8 @@
 
     <indexitem text="active scan" target="start.concepts.ascan" />
     <indexitem text="active scan tab" target="ui.tabs.ascan"/>
-    <indexitem text="add on" target="addon.introduction"/>
+    <indexitem text="add-ons" target="start.concepts.addons"/>
+    <indexitem text="add-ons" target="addon.introduction"/>
     <indexitem text="add alert dialog" target="ui.dialogs.addalert" />
     <indexitem text="add break point dialog" target="ui.dialogs.addbreak" />
     <indexitem text="add note dialog" target="ui.dialogs.addnote" />
@@ -53,7 +54,6 @@
     <indexitem text="params tab" target="ui.tabs.params" />
     <indexitem text="paros proxy" target="zap.paros" />
     <indexitem text="passive scan" target="start.concepts.pscan" />
-    <indexitem text="plugins" target="start.concepts.plugins"/>
     <indexitem text="port scan" target="start.concepts.portscan"/>
     <indexitem text="port scan tab" target="ui.tabs.portscan"/>
     <indexitem text="proxy configuration" target="start.proxy" />
