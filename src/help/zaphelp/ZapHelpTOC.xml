@@ -34,7 +34,6 @@
          <tocitem text="Spider" target="start.concepts.spider"/>
          <tocitem text="AJAX Spider" target="start.concepts.spiderAjax"/>
          <tocitem text="Tags" target="start.concepts.tags"/>
-         <tocitem text="WebSockets" target="start.concepts.websocket"/>
       </tocitem>
       <tocitem text="Scanner Rules" target="start.check"/>
       <tocitem text="A Simple Penetration Test" target="start.pentest"/>
@@ -71,7 +70,6 @@
          <tocitem text="Fuzzer" target="ui.tabs.fuzz"/>
          <tocitem text="Params" target="ui.tabs.params"/>
          <tocitem text="Http Sessions" target="ui.tabs.httpsessions"/>
-         <tocitem text="WebSockets" target="ui.tabs.websocket"/>
          <tocitem text="Output" target="ui.tabs.output"/>
       </tocitem>
       <tocitem text="The Dialogs" target="ui.dialogs">
@@ -108,7 +106,6 @@
          	<tocitem text="Passive Scan" target="ui.dialogs.options.pscan"/>
          	<tocitem text="Port Scan" target="ui.dialogs.options.portscan"/>
          	<tocitem text="Spider" target="ui.dialogs.options.spider"/>
-			<tocitem text="WebSocket" target="ui.dialogs.options.websocket"/>
          	<tocitem text="AJAX Spider" target="ui.dialogs.options.spiderAjax"/>
          </tocitem>
          <tocitem text="Resend" target="ui.dialogs.resend"/>

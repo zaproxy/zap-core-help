@@ -15,7 +15,7 @@ This makes is easier to test slow applications.
 
 <H3>SSLTunneling for ports</H3>
 Browsers may use the HTTP CONNECT method to establish connections through a proxy.
-It occurs for HTTPS connections, but also for WebSocket connections.
+It occurs for HTTPS connections, but this method is allowed to be used for non-SSL connections too.
 <br><br>
 This option allows to set ports where HTTPS should be used. Per default only requests to port 443 establish a secure connection.
 You may change this if your application uses secure services on non-standard ports. Otherwise the connection is not secured.
