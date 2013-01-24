@@ -9,6 +9,7 @@
         <mapID target="zap.intro" url="zaphelp/intro.html" />
         <mapID target="start.start" url="zaphelp/start/start.html" />
         <mapID target="start.proxy" url="zaphelp/start/proxies.html" />
+        <mapID target="start.check" url="zaphelp/start/checks.html" />
         <mapID target="start.explore" url="zaphelp/start/explore.html" />
         <mapID target="start.concepts" url="zaphelp/start/concepts/concepts.html" />
         <mapID target="start.concepts.ascan" url="zaphelp/start/concepts/ascan.html" />

@@ -12,49 +12,13 @@ ZAP supports both <a href="concepts/ascan.html">active</a> and
 <a href="concepts/pscan.html">passive</a> scanning rules.
 </p>
 <p>
-Note that additional rules can be added via <a href="concepts/plugins.html">plugins</a>.
+All rules are contained in <a href="concepts/addons.html">add-ons</a> so that they can be updated quickly and easily.<br/>
+By default ZAP ships with just the 'Release' quality rules, but you can install 'Beta' and 'Alpha' quality rules via the
+<a href="../ui/dialogs/manageaddons.html">Manage Add-ons dialog</a>.
 </p>
 <p>
-<H2>Active Scanner Rules</H2>
-
-<table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Secure page browser cache</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Directory browsing</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>External redirect</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Potential File Path Manipulation</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Private IP disclosure</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Session ID in URL rewrite</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>CRLF injection</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>MS SQL Injection Enumeration</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Oracle SQL Injection Enumeration</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>SQL Injection</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>SQL Injection Fingerprinting</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Parameter tampering</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Server side include</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Cross Site Scripting</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Path Traversal</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>URL Redirector Abuse</td></tr>
-</table>
-
-<H2>Passive Scanner Rules</H2>
-
-<table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Incomplete or no cache-control and pragma HTTPHeader set</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Content-Type header missing</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Cookie no http-only flag</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Cookie without secure flag</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Cross-domain JavaScript source file inclusion</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Cross Site Request Forgery</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>IE8s XSS protection filter not disabled</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Information disclosure - database error messages</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Information disclosure - debug error messages</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Information disclosure - sensitive informations in URL</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Information disclosure - sensitive informations on HTTP Referrer header</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Password Autocomplete in browser</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Weak authentication</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>X-Content-Type-Options header missing</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>X-Frame-Options header not set</td></tr>
-</table>
+To see which rules you have installed open the <a href="../ui/dialogs/scanpolicy.html">Scan Policy dialog</a> 
+</p>
 
 <H2>See also</H2>
 <table>
