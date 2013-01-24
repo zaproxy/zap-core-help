@@ -75,6 +75,7 @@
         <mapID target="ui.dialogs.fuzz" url="zaphelp/ui/dialogs/fuzz.html"/>
         <mapID target="ui.dialogs.historyfilter" url="zaphelp/ui/dialogs/hist_filter.html"/>
         <mapID target="ui.dialogs.manreq" url="zaphelp/ui/dialogs/man_req.html"/>
+        <mapID target="ui.dialogs.manageaddons" url="zaphelp/ui/dialogs/manageaddons.html"/>
         <mapID target="ui.dialogs.managetags" url="zaphelp/ui/dialogs/managetags.html"/>
         <mapID target="ui.dialogs.options" url="zaphelp/ui/dialogs/options/options.html"/>
         <mapID target="ui.dialogs.resend" url="zaphelp/ui/dialogs/resend.html"/>
