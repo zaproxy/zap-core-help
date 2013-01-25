@@ -30,7 +30,6 @@
          <tocitem text="Modes" target="start.concepts.modes"/>
          <tocitem text="Notes" target="start.concepts.notes"/>
          <tocitem text="Passive Scan" target="start.concepts.pscan"/>
-         <tocitem text="Port Scan" target="start.concepts.portscan"/>
          <tocitem text="Spider" target="start.concepts.spider"/>
          <tocitem text="AJAX Spider" target="start.concepts.spiderAjax"/>
          <tocitem text="Tags" target="start.concepts.tags"/>
@@ -66,7 +65,6 @@
          <tocitem text="Spider" target="ui.tabs.spider"/>
          <tocitem text="AJAX Spider" target="ui.tabs.spiderAjax"/>
          <tocitem text="Force Browse" target="ui.tabs.bruteforce"/>
-         <tocitem text="Port Scan" target="ui.tabs.portscan"/>
          <tocitem text="Fuzzer" target="ui.tabs.fuzz"/>
          <tocitem text="Params" target="ui.tabs.params"/>
          <tocitem text="Http Sessions" target="ui.tabs.httpsessions"/>
@@ -104,7 +102,6 @@
          	<tocitem text="Language" target="ui.dialogs.options.language"/>
          	<tocitem text="Local Proxy" target="ui.dialogs.options.localproxy"/>
          	<tocitem text="Passive Scan" target="ui.dialogs.options.pscan"/>
-         	<tocitem text="Port Scan" target="ui.dialogs.options.portscan"/>
          	<tocitem text="Spider" target="ui.dialogs.options.spider"/>
          	<tocitem text="AJAX Spider" target="ui.dialogs.options.spiderAjax"/>
          </tocitem>

@@ -54,8 +54,6 @@
     <indexitem text="params tab" target="ui.tabs.params" />
     <indexitem text="paros proxy" target="zap.paros" />
     <indexitem text="passive scan" target="start.concepts.pscan" />
-    <indexitem text="port scan" target="start.concepts.portscan"/>
-    <indexitem text="port scan tab" target="ui.tabs.portscan"/>
     <indexitem text="proxy configuration" target="start.proxy" />
     <indexitem text="release 1.0.0" target="zap.releases.1.0.0" />
     <indexitem text="release 1.1.0" target="zap.releases.1.1.0" />
