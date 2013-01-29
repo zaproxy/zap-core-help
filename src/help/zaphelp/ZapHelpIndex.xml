@@ -72,7 +72,7 @@
     <indexitem text="scanner rules" target="start.check" />
     <indexitem text="scan policy dialog" target="ui.dialogs.scanpolicy" />
     <indexitem text="search tab" target="ui.tabs.search" />
-    <indexitem text="session contexts dialog" target="ui.dialogs.context" />
+    <indexitem text="session contexts dialog" target="ui.dialogs.contexts" />
     <indexitem text="session properties dialog" target="ui.dialogs.sessprop" />
     <indexitem text="sites tab" target="ui.tabs.sites" />
     <indexitem text="spider tab" target="ui.tabs.spider" />
