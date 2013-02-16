@@ -89,6 +89,7 @@
          	<tocitem text="API" target="ui.dialogs.options.api"/>
          	<tocitem text="Applications" target="ui.dialogs.options.invokeapp"/>
          	<tocitem text="Authentication" target="ui.dialogs.options.authentication"/>
+            <tocitem text="Breakpoints" target="ui.dialogs.options.breakpoints"/>
          	<tocitem text="Certificate" target="ui.dialogs.options.certificate"/>
          	<tocitem text="Check for Updates" target="ui.dialogs.options.checkforupdates"/>
 			<tocitem text="Connection" target="ui.dialogs.options.connection"/>

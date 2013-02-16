@@ -101,6 +101,7 @@
      	<mapID target="ui.dialogs.options.ext" url="zaphelp/ui/dialogs/options/ext.html"/>
      	<mapID target="ui.dialogs.options.invokeapp" url="zaphelp/ui/dialogs/options/invokeapp.html"/>
      	<mapID target="ui.dialogs.options.authentication" url="zaphelp/ui/dialogs/options/authentication.html"/>
+        <mapID target="ui.dialogs.options.breakpoints" url="zaphelp/ui/dialogs/options/breakpoints.html"/>
      	<mapID target="ui.dialogs.options.bruteforce" url="zaphelp/ui/dialogs/options/bruteforce.html"/>
      	<mapID target="ui.dialogs.options.certificate" url="zaphelp/ui/dialogs/options/certificate.html"/>
      	<mapID target="ui.dialogs.options.checkforupdates" url="zaphelp/ui/dialogs/options/checkforupdates.html"/>
