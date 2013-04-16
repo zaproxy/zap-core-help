@@ -18,13 +18,14 @@ Starting a new session without saving the current session will loose all of the 
 This opens a session that has been previously saved.<br/>
 Opening a session without saving the current session will loose all of the data in the current session.
 
-<H3>Save As...</H3>
-This saves the current session. <br/>
-Once a session has been saved you do not need to save it again - any changes
-will automatically be saved.<br/>
-If you want to keep a snapshot of the session then you can save the session
-under a different name - any changes you make after this will only be saved
-under the last name.
+<H3>Persist Session...</H3>
+This persists the current session. <br/>
+While the session is always stored in a database on disk, it will be lost when ZAP is stopped unless it has been persisted.<br/>
+You only need to persist it once - after that all changes will be saved.
+
+<H3>Snapshot Session</H3>
+This saves a snapshot of a session that has already been persisted.<br/>
+It will use the same filename with a date-time string appended to it.<br/>
 
 <H3>Properties...</H3>
 This displays the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog.<br/>
