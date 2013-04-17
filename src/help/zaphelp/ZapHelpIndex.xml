@@ -66,6 +66,7 @@
     <indexitem text="release 1.4.0" target="zap.releases.1.4.0" />
     <indexitem text="release 1.4.1" target="zap.releases.1.4.1" />
     <indexitem text="release 2.0.0" target="zap.releases.2.0.0" />
+    <indexitem text="release 2.1.0" target="zap.releases.2.1.0" />
     <indexitem text="releases" target="zap.releases" />
     <indexitem text="request tab" target="ui.tabs.request" />
     <indexitem text="resend dialog" target="ui.dialogs.resend" />
