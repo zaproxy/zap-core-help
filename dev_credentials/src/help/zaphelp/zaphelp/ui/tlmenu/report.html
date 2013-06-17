@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<TITLE>
+The Report menu
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H1>The Report menu</H1>
+This menu handles the reports.
+
+<H3>Generate HTML Report ...</H3>
+This generates a new HTML report containing the alerts raised.
+
+<H3>Generate XML Report ...</H3>
+This generates a new XML report containing the alerts raised.
+
+<H3>Export Messages to File...</H3>
+This allows you to save requests and responses to a text file. <br/>
+Select the messages to save in the History tab - use the shift key to select multiple messages.
+
+<H3>Export Response to File...</H3>
+This allows you to save a specific response to a file. <br/>
+Select the relevant message in the History tab - 
+note that binary responses (such as images) can be saved as well as test responses.
+
+<H3>Export All URLs to File...</H3>
+This allows you to save all of the URLs accessed to a text or HTML file. <br/>
+The URLs will be preceded by the HTTP method used. <br/>
+This can be used, amongst other things, to compare the URLs available to users with 
+different roles or permissions on the same system.
+
+<H3>Compare with another Session...</H3>
+This prompts you for a ZAP session that you have previously saved. <br/>
+It then prompts you for an output file into which is written all of the URLs accessed
+by the current session and the session you have selected to compare it with.<br/>
+The file will contain a table listing the URLs and the HTTP responses for the URLs in the
+2 sessions.<br/>
+JavaScript buttons allow you to display all of the URLs, just those accessed in the first session,
+the second session and those accessed by both sessions.<br/>
+This is particularly useful for comparing 2 sessions which access the same application using
+different users. You will be able to see which URLs are visible to the users and will be able to
+try to access all of the URLs when logged in as either of the users.
+
+<p>
+Note that <a href="../../start/concepts/addons.html">add-ons</a> can add additional menu items.
+</p>
+
+<H2>See also</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="tlmenu.html">The top level menu</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+</table>
+</BODY>
+</HTML>
