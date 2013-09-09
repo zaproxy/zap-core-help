@@ -94,6 +94,7 @@
         <mapID target="zap.releases.1.4.1" url="zaphelp/releases/1_4_1.html"/>
         <mapID target="zap.releases.2.0.0" url="zaphelp/releases/2_0_0.html"/>
         <mapID target="zap.releases.2.1.0" url="zaphelp/releases/2_1_0.html"/>
+        <mapID target="zap.releases.2.2.0" url="zaphelp/releases/2_2_0.html"/>
         <mapID target="zap.credits" url="zaphelp/credits.html" />
         <mapID target="zap.todo" url="zaphelp/todo.html" />
      	<mapID target="ui.dialogs.options.ascan" url="zaphelp/ui/dialogs/options/ascan.html"/>
