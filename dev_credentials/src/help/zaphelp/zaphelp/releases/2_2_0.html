@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<TITLE>
+  Release 2.2.0
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H1>Release 2.2.0</H1>
+<p>
+The following changes were made in this release:
+</p>
+
+<H2>Major changes:</H2>
+
+<H3>Issue 717 : Scripts: support multiple scripts and embedding within ZAP components</H3>
+<H3>Support for Mozilla Zest: https://developer.mozilla.org/en-US/docs/Zest</H3>
+<H3>Support for Mozilla Plug-n-Hack: https://developer.mozilla.org/en-US/docs/Plug-n-Hack</H3>
+
+<H2>Minor changes:</H2>
+
+<H3>Issue 711 : Support scanning of XML requests</H3>
+<H3>Issue 713 : Add CWE and WASC numbers to issues</H3>
+<H3>Issue 719 : Custom http break points with more options</H3>
+<H3>Issue 738 : Options to hide tabs / windows</H3>
+<H3>Issue 750 : Upgrade script console to support non textbased scripting languages</H3>
+<H3>Issue 752 : Create a new root CA when first run</H3>
+<H3>Issue 775 : Allow host to be set via the command line</H3>
+
+
+<H2>Bug Fixes:</H2>
+
+<H3>Issue 555 : Http panels default to hex view</H3>
+<H3>Issue 599 : The save session api does not allow to overwrite session already has same name</H3>
+<H3>Issue 630 : URLCanonicalizer.getCanonicalURL produces URIs "half" decoded</H3>
+<H3>Issue 631 : URLCanonicalizer.buildCleanedParametersURIRepresentation returns URIs in percent-encoded form and decoded</H3>
+<H3>Issue 652 : Shutdown after a big scan takes too long (deleting ascan records)</H3>
+<H3>Issue 655 : API encoding issues</H3>
+<H3>Issue 665 : NullPointerException while proxying with a URI with an empty path component</H3>
+<H3>Issue 666 : JSONException while calling an API action without the required parameter(s)</H3>
+<H3>Issue 669 : Certificate algorithm constraints in Java 1.7</H3>
+<H3>Issue 674 : Add HttpSessionAPI to ApiGeneratorUtils</H3>
+<H3>Issue 685 : Add dummy file to "fuzzers" directory</H3>
+<H3>Issue 686 : Log HttpException (as error) in the ProxyThread</H3>
+<H3>Issue 687 : Change HTTP response header parser to be less strict</H3>
+<H3>Issue 690 : Context Authentication URLs don't fail manual overwriting.</H3>
+<H3>Issue 691 : Handle old plugins</H3>
+<H3>Issue 692 : Report the version of java found by zap.sh</H3>
+<H3>Issue 693 : Command line should show all options</H3>
+<H3>Issue 694 : API UI fails on IE</H3>
+<H3>Issue 695 : Sites tree doesnt clear on new session created by API</H3>
+<H3>Issue 696 : Change "Ajax Spider" add-on options to use ZapNumberSpinner</H3>
+<H3>Issue 697 : API action "proxy.pac" might return wrong domain/port</H3>
+<H3>Issue 698 : Passive Scanner API view "recordsToScan" returns -1 after finish scanning the messages</H3>
+<H3>Issue 699 : Fix HTML errors in the help pages</H3>
+<H3>Issue 702 : Do not load newer add-on versions if they are not targeted for the running ZAP version</H3>
+<H3>Issue 703 : Add-on ZAP version constraints "not-before-version" and "not-from-version" are not respected for already "installed" add-ons</H3>
+<H3>Issue 706 : ZAP API doesn't parse correctly query parameters with "&" characters</H3>
+<H3>Issue 710 : URLCanonicalizer.getCanonicalURL fails to correctly parse query parameters with "&" and "=" characters</H3>
+<H3>Issue 712 : HttpSessions API action "setSessionTokenValue" should add the session token name to the site's session tokens</H3>
+<H3>Issue 720 : Cannot send non standard http methods</H3>
+<H3>Issue 721 : Non POST and PUT requests receive a 504 when server expects a request body</H3>
+<H3>Issue 724 : Do not clone the alert's message that will be shown in message panels</H3>
+<H3>Issue 725 : Clear alert's panel fields</H3>
+<H3>Issue 726 : Catch active scanner variants' exceptions</H3>
+<H3>Issue 727 : Name of automatically created HTTP sessions is always in English</H3>
+<H3>Issue 728 : Allow to create a session with a given name through the HttpSessions API</H3>
+<H3>Issue 729 : Update NTLM authentication code</H3>
+<H3>Issue 730 : MissingResourceException while selecting a disabled extension (from an add-on) in the "Extensions" options panel</H3>
+<H3>Issue 731 : MissingResourceException with ExtensionFuzz enabled and ExtensionBruteForce disabled</H3>
+<H3>Issue 736 : Change add-on class loading strategy to parent-last</H3>
+<H3>Issue 737 : Restore "Ajax spider" add-on dependencies</H3>
+<H3>Issue 756 : Allow Context Panels intercommunication</H3>
+<H3>Issue 763 : XML report empty when used in daemon mode</H3>
+<H3>Issue 764 : HTTP fuzz results dont support right click menus</H3>
+<H3>Issue 766 : Searching fuzz results doesnt include the header</H3>
+<H3>Issue 767 : HTTP Session API could be less strict</H3>
+<H3>Issue 772 : Restructuring of Saving/Loading Context Data</H3>
+<H3>Issue 774 : Build doesnt include scripts directory</H3>
+<H3>Issue 776 : Allow add-ons to warn user if they're closing ZAP with unsaved resources open</H3>
+<H3>Issue 777 : Unable to cancel changes when using Include in/Exclude from Context</H3>
+<H3>Issue 782 : NoSuchMethodError when excluding a WebSocket channel URL from context</H3>
+<H3>Issue 785 : Change zap.sh to cope with Java 1.8</H3>
+<H3>Issue 786 : Snapshot session menu item not working</H3>
+
+<H2>See also</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Introduction</a></td><td>the introduction to ZAP<br/></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Releases</a></td><td>the full set of releases<br/></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible<br/></td></tr>
+</table>
+</BODY>
+</HTML>
