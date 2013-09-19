@@ -17,10 +17,12 @@
       <tocitem text="Features" target="start.concepts">
          <tocitem text="Active Scan" target="start.concepts.ascan"/>
          <tocitem text="Add-ons" target="start.concepts.addons"/>
+         <tocitem text="Ajax Spider" target="start.concepts.ajaxSpider"/>
          <tocitem text="Alerts" target="start.concepts.alerts"/>
          <tocitem text="Anti CSRF Tokens" target="start.concepts.anticsrf"/>
          <tocitem text="API" target="start.concepts.api"/>
          <tocitem text="Break Points" target="start.concepts.breakpoints"/>
+         <tocitem text="Contexts" target="start.concepts.contexts"/>
          <tocitem text="Filters" target="start.concepts.filters"/>
          <tocitem text="Forced browse" target="start.concepts.bruteforce"/>
          <tocitem text="Fuzzing" target="start.concepts.fuzz"/>
@@ -30,8 +32,8 @@
          <tocitem text="Modes" target="start.concepts.modes"/>
          <tocitem text="Notes" target="start.concepts.notes"/>
          <tocitem text="Passive Scan" target="start.concepts.pscan"/>
+         <tocitem text="Scope" target="start.concepts.scope"/>
          <tocitem text="Spider" target="start.concepts.spider"/>
-         <tocitem text="AJAX Spider" target="start.concepts.spiderAjax"/>
          <tocitem text="Tags" target="start.concepts.tags"/>
       </tocitem>
       <tocitem text="Scanner Rules" target="start.check"/>

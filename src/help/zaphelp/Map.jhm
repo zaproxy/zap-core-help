@@ -14,11 +14,13 @@
         <mapID target="start.concepts" url="zaphelp/start/concepts/concepts.html" />
         <mapID target="start.concepts.ascan" url="zaphelp/start/concepts/ascan.html" />
         <mapID target="start.concepts.addons" url="zaphelp/start/concepts/addons.html" />
+		<mapID target="start.concepts.ajaxSpider" url="zaphelp/start/concepts/ajaxSpider.html" />
         <mapID target="start.concepts.alerts" url="zaphelp/start/concepts/alerts.html" />
         <mapID target="start.concepts.anticsrf" url="zaphelp/start/concepts/anticsrf.html" />
         <mapID target="start.concepts.api" url="zaphelp/start/concepts/api.html" />
         <mapID target="start.concepts.breakpoints" url="zaphelp/start/concepts/breakpoints.html" />
         <mapID target="start.concepts.bruteforce" url="zaphelp/start/concepts/bruteforce.html" />
+        <mapID target="start.concepts.contexts" url="zaphelp/start/concepts/contexts.html" />
         <mapID target="start.concepts.filters" url="zaphelp/start/concepts/filters.html" />
         <mapID target="start.concepts.fuzz" url="zaphelp/start/concepts/fuzz.html" />
         <mapID target="start.concepts.httpsessions" url="zaphelp/start/concepts/httpsessions.html" />
@@ -27,8 +29,8 @@
         <mapID target="start.concepts.modes" url="zaphelp/start/concepts/modes.html" />
         <mapID target="start.concepts.notes" url="zaphelp/start/concepts/notes.html" />
         <mapID target="start.concepts.pscan" url="zaphelp/start/concepts/pscan.html" />
+        <mapID target="start.concepts.scope" url="zaphelp/start/concepts/scope.html" />
         <mapID target="start.concepts.spider" url="zaphelp/start/concepts/spider.html" />
-        <mapID target="start.concepts.spiderAjax" url="zaphelp/start/concepts/ajaxSpider.html" />
         <mapID target="start.concepts.tags" url="zaphelp/start/concepts/tags.html" />
         <mapID target="start.checks" url="zaphelp/start/checks.html" />
         <mapID target="start.pentest" url="zaphelp/pentest/pentest.html" />
