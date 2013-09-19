@@ -19,6 +19,7 @@
     <indexitem text="alerts tab" target="ui.tabs.alerts" />
     <indexitem text="alerts" target="start.concepts.alerts" />
     <indexitem text="api" target="start.concepts.api" />
+    <indexitem text="authentication auth form-based manual login" target="start.concepts.auth" />
     <indexitem text="basic penetration test" target="start.pentest" />
     <indexitem text="break points tab" target="ui.tabs.breakpoints" />
     <indexitem text="break points" target="start.concepts.breakpoints" /> 

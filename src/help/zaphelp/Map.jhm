@@ -18,6 +18,7 @@
         <mapID target="start.concepts.alerts" url="zaphelp/start/concepts/alerts.html" />
         <mapID target="start.concepts.anticsrf" url="zaphelp/start/concepts/anticsrf.html" />
         <mapID target="start.concepts.api" url="zaphelp/start/concepts/api.html" />
+        <mapID target="start.concepts.auth" url="zaphelp/start/concepts/authentication.html" />
         <mapID target="start.concepts.breakpoints" url="zaphelp/start/concepts/breakpoints.html" />
         <mapID target="start.concepts.bruteforce" url="zaphelp/start/concepts/bruteforce.html" />
         <mapID target="start.concepts.contexts" url="zaphelp/start/concepts/contexts.html" />

@@ -33,24 +33,21 @@ If you exclude technologies that you know are not used then this may speed up
 <a href="../../../start/concepts/ascan.html">active scanning</a> as rules specific to the excluded
 technologies can be skipped.
 
-<H3>Authentication</H3>
+<H3><a name="auth">Authentication</a></H3>
 This allows you to manage the way in which Authentication is being done for the Context. 
 After selecting the Authentication Method type, the options that need to be configured 
 depend on the Authentication Method.
+
 <h4>Manual Authentication</h4>
-This method allows users to perform the authentication manually
-(e.g. authenticate in the browser while proxying through ZAP) and then select the corresponding 
-HttpSession.
-<p>No configuration is needed for this authentication method.</p>
+No configuration is needed for this authentication method. <small>Read  
+<a href="../../../start/concepts/authentication.html#manual">more</a>...</small>
 
 <h4>Form-Based Authentication</h4>
-This method is used for websites/web-apps where authentication is done by submitting a form or 
-performing a GET request to a 'login url' using a 'username/password' pair of authentication 
-credentials.
-<p>To configure this authentication method, you need to supply the 'login url', to which the 
+To configure this authentication method, you need to supply the 'login url', to which the 
 request is performed, and the request body (POST data) and identify the parameters used to supply
 the 'username' and 'password'. If no request body is supplied, the login request is performed as 
-a HTTP GET, otherwise an HTTP POST is done.</p>
+a HTTP GET, otherwise an HTTP POST is done. <small>Read  
+<a href="../../../start/concepts/authentication.html#formBased">more</a>...</small> 
 
 <h3>Session Management</h3>
 This allows you to manage the way in which Session Management is being done for the Context. 
@@ -92,7 +89,10 @@ Example: https://subdomain.example.com/path?a=<B>\E</B>&amp;moredata=2 should ap
 <a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../../start/concepts/authentication.html">Authentication</a></td><td>for an overview of Authentication </td></tr>
 </table>
+
 
 </BODY>
 </HTML>

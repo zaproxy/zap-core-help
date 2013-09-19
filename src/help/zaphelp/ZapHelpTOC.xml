@@ -21,6 +21,7 @@
          <tocitem text="Alerts" target="start.concepts.alerts"/>
          <tocitem text="Anti CSRF Tokens" target="start.concepts.anticsrf"/>
          <tocitem text="API" target="start.concepts.api"/>
+         <tocitem text="Authentication" target="start.concepts.auth"/>
          <tocitem text="Break Points" target="start.concepts.breakpoints"/>
          <tocitem text="Contexts" target="start.concepts.contexts"/>
          <tocitem text="Filters" target="start.concepts.filters"/>

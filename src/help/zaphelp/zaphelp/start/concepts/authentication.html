@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<title>Authentication</title>
+</head>
+<body bgcolor="#ffffff">
+	<h1>Authentication</h1>
+	<p>
+		ZAP handles multiple types of authentication (called <b>Authentication
+			Methods</b>) that can be used for websites / webapps. Each <a
+			href="contexts.html"><b>Context</b></a> has an Authentication Method
+		defined which dictates how authentication is handled.
+	</p>
+
+	<p>
+		In order to detect when response messages from web servers correspond
+		to authenticated requests, a set of indicators can be configured. The
+		<b>Logged in indicator</b>, when present in a response message (either
+		the header or the body), signifies that the response message
+		corresponds to an authenticated request (e.g. presence of a 'logout
+		link' or a 'Welcome back, User X' pattern). Similarly, the <b>Logged
+			out indicator</b> indicates an unauthenticated request (e.g. presence of
+		a 'login link'). Only the presence of one of the 2 indicators is
+		sufficient for proper functionality. In the case neither of the
+		indicators has been specified, all messages are considered, by
+		default, authenticated.
+	</p>
+
+	<p>Authentication methods can be used in multiple places around
+		ZAP. Some of the examples include:</p>
+	<ul>
+		<li>defining Users and automatic login</li>
+		<li>detection of authenticated/unauthenticated states</li>
+		<li>performing automatic re-authentication</li>
+	</ul>
+
+	<p>Multiple authentication methods have been implemented and the
+		system supports easy addition of new methods, according to user needs.
+		They main ones are described below.</p>
+
+	<h3>
+		<a name="manual">Manual Authentication</a>
+	</h3>
+	<p>This method allows users to perform the authentication manually
+		(e.g. authenticate in the browser while proxy-ing through ZAP) and
+		then select the corresponding HttpSession. As the actual
+		authentication is being performed by you, this method does not support
+		re-authentication in case the webapp logs an user out.</p>
+
+	<h3>
+		<a name="formBased">Form-Based Authentication</a>
+	</h3>
+	<p>
+		This method is used for websites / webapps where authentication is
+		done by submitting a form or performing a GET request to a 'login url'
+		using a 'username/password' pair of authentication credentials.
+		Re-authentication is possible. Configuration can be done using the <a
+			href="../../ui/dialogs/session/contexts.html#auth">Session
+			Contexts Dialog</a> or using the contextual PopupMenu: <i>Flag as...
+			Form-Based Authentication Login Request</i>.
+	</p>
+
+	<h2>Configured via</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/session/contexts.html#auth">Session
+					Contexts Dialog</a></td>
+			<td></td>
+		</tr>
+	</table>
+
+	<h2>See also</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/overview.html">UI Overview</a></td>
+			<td>for an overview of the user interface</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="concepts.html">Features</a></td>
+			<td>provided by ZAP</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/session/contexts.html">Session
+					Contexts Dialog</a></td>
+			<td>for an overview of the Session Properties</td>
+		</tr>
+
+	</table>
+
+	<p />
+</body>
+</html>
