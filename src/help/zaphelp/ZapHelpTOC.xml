@@ -37,6 +37,7 @@
          <tocitem text="Session Management" target="start.concepts.sessmanag"/>
          <tocitem text="Spider" target="start.concepts.spider"/>
          <tocitem text="Tags" target="start.concepts.tags"/>
+         <tocitem text="Users" target="start.concepts.users"/>
       </tocitem>
       <tocitem text="Scanner Rules" target="start.check"/>
       <tocitem text="A Simple Penetration Test" target="start.pentest"/>

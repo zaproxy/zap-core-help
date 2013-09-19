@@ -9,7 +9,9 @@
 		ZAP handles multiple types of authentication (called <b>Authentication
 			Methods</b>) that can be used for websites / webapps. Each <a
 			href="contexts.html"><b>Context</b></a> has an Authentication Method
-		defined which dictates how authentication is handled.
+		defined which dictates how authentication is handled. The
+		authentication is used to create Web Sessions that correspond to
+		authenticated webapp <a href="users.html">Users</a>.
 	</p>
 
 	<p>
@@ -25,6 +27,12 @@
 		indicators has been specified, all messages are considered, by
 		default, authenticated.
 	</p>
+
+	<p>In order to perform the authentication of an user on a website /
+		in a webapp, the Authentication Method defines how the authentication
+		is done (the process), while the necessary credentials (the exact
+		identifiers) are dependent on the user, so, in ZAP, they are
+		configured in the Users.</p>
 
 	<p>Authentication methods can be used in multiple places around
 		ZAP. Some of the examples include:</p>
@@ -87,6 +95,11 @@
 			<td><a href="../../ui/dialogs/session/contexts.html">Session
 					Contexts Dialog</a></td>
 			<td>for an overview of the Session Properties</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../../start/concepts/users.html">Users</a></td>
+			<td>for an overview of Users</td>
 		</tr>
 
 	</table>

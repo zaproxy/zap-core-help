@@ -34,6 +34,7 @@
         <mapID target="start.concepts.sessmanag" url="zaphelp/start/concepts/sessionManagement.html" />
         <mapID target="start.concepts.spider" url="zaphelp/start/concepts/spider.html" />
         <mapID target="start.concepts.tags" url="zaphelp/start/concepts/tags.html" />
+        <mapID target="start.concepts.users" url="zaphelp/start/concepts/users.html" />
         <mapID target="start.checks" url="zaphelp/start/checks.html" />
         <mapID target="start.pentest" url="zaphelp/pentest/pentest.html" />
         <!--mapID target="vulns.vuln" url="zaphelp/vulns/vulnerabilities.html" /-->
