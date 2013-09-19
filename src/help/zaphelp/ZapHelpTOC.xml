@@ -34,6 +34,7 @@
          <tocitem text="Notes" target="start.concepts.notes"/>
          <tocitem text="Passive Scan" target="start.concepts.pscan"/>
          <tocitem text="Scope" target="start.concepts.scope"/>
+         <tocitem text="Session Management" target="start.concepts.sessmanag"/>
          <tocitem text="Spider" target="start.concepts.spider"/>
          <tocitem text="Tags" target="start.concepts.tags"/>
       </tocitem>

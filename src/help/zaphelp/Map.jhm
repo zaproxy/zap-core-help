@@ -31,6 +31,7 @@
         <mapID target="start.concepts.notes" url="zaphelp/start/concepts/notes.html" />
         <mapID target="start.concepts.pscan" url="zaphelp/start/concepts/pscan.html" />
         <mapID target="start.concepts.scope" url="zaphelp/start/concepts/scope.html" />
+        <mapID target="start.concepts.sessmanag" url="zaphelp/start/concepts/sessionManagement.html" />
         <mapID target="start.concepts.spider" url="zaphelp/start/concepts/spider.html" />
         <mapID target="start.concepts.tags" url="zaphelp/start/concepts/tags.html" />
         <mapID target="start.checks" url="zaphelp/start/checks.html" />
