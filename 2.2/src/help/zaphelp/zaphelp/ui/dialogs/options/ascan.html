@@ -18,6 +18,10 @@ Increasing this may put extra strain on the computer ZAP is running on.
 The number of threads the scanner will use per host.<br>
 Increasing the number of threads will speed up the scan but may put extra strain on the computer ZAP is running on and the target host.
 
+<H3>Max results to list</H3>
+The number of results that will be shown in the Active Scan tab.<br>
+Displaying a large number of results can significantly increase the time a scan takes.
+
 <H3>Delay when scanning in milliseconds</H3>
 The delay in milliseconds between each request.<br>
 Setting this to a non zero value will increase the time an active scan takes, but will put less of a strain
@@ -40,6 +44,10 @@ If you select Low then fewer attacks will be used which will be quicker but may 
 If you select High then more attacks will be used which may find more issues but will take longer.<br>
 The Insane level should typically only be used for small parts of an application as it can result in a very large number of 
 attacks being used, which can take a considerable length of time.
+
+<H3>Parameters to scan</H3>
+The different type of application parameters ZAP will attack.<br>
+Scanning all of the types supported will take longer, but not scanning some types may cause some vulnerabilities to be missed.
 
 <H2>See also</H2>
 <table>
