@@ -34,7 +34,7 @@ If you exclude technologies that you know are not used then this may speed up
 technologies can be skipped.
 
 <H3><a name="auth">Authentication</a></H3>
-This allows you to manage the way in which Authentication is being done for the Context. Note that
+This allows you to manage the way in which <a href="../../../start/concepts/authentication.html">Authentication</a> is being done for the Context. Note that
 changing the authentication method after Users have been defined will cause them to be deleted, as
 the type of user credentials needs to match the authentication scheme. 
 After selecting the Authentication Method type, the options that need to be configured 
@@ -45,11 +45,18 @@ No configuration is needed for this authentication method. <small>Read
 <a href="../../../start/concepts/authentication.html#manual">more</a>...</small>
 
 <h4>Form-Based Authentication</h4>
-To configure this authentication method, you need to supply the 'login url', to which the 
-request is performed, and the request body (POST data) and identify the parameters used to supply
+To configure this authentication method, you need to supply the <b>login url</b>, to which the login
+request is performed, the <b>request body</b> (POST data), if needed, and identify the <b>parameters</b> used to supply
 the 'username' and 'password'. If no request body is supplied, the login request is performed as 
-a HTTP GET, otherwise an HTTP POST is done. <small>Read  
+a HTTP GET, otherwise an HTTP POST is used. The credentials themselves
+are configured in the <a href="#users">Users</a> tab. <small>Read  
 <a href="../../../start/concepts/authentication.html#formBased">more</a>...</small> 
+
+<h4>Http Authentication</h4>
+To configure this authentication method, you need to supply the <b>hostname</b> and the <b>port</b> of the server
+the authentication is done with and the <b>realm</b> the credentials apply to. The credentials themselves
+are configured in the <a href="#users">Users</a> tab. <small>Read  
+<a href="../../../start/concepts/authentication.html#httpAuth">more</a>...</small> 
 
 <h3><a name="sm">Session Management</a></h3>
 This allows you to manage the way in which Session Management is being done for the Context. 
