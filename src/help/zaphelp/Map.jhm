@@ -118,6 +118,7 @@
      	<mapID target="ui.dialogs.options.dynsslcert" url="zaphelp/ui/dialogs/options/dynsslcert.html"/>
      	<mapID target="ui.dialogs.options.fuzz" url="zaphelp/ui/dialogs/options/fuzz.html"/>
      	<mapID target="ui.dialogs.options.httpsessions" url="zaphelp/ui/dialogs/options/httpsessions.html"/>
+     	<mapID target="ui.dialogs.options.keyboard" url="zaphelp/ui/dialogs/options/keyboard.html"/>
      	<mapID target="ui.dialogs.options.language" url="zaphelp/ui/dialogs/options/language.html"/>
      	<mapID target="ui.dialogs.options.localproxy" url="zaphelp/ui/dialogs/options/localproxy.html"/>
      	<mapID target="ui.dialogs.options.pscan" url="zaphelp/ui/dialogs/options/pscan.html"/>
