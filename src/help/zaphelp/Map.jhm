@@ -24,6 +24,7 @@
         <mapID target="start.concepts.contexts" url="zaphelp/start/concepts/contexts.html" />
         <mapID target="start.concepts.filters" url="zaphelp/start/concepts/filters.html" />
         <mapID target="start.concepts.fuzz" url="zaphelp/start/concepts/fuzz.html" />
+        <mapID target="start.concepts.globalexcludeurl" url="zaphelp/start/concepts/globalexcludeurl.html" />
         <mapID target="start.concepts.httpsessions" url="zaphelp/start/concepts/httpsessions.html" />
         <mapID target="start.concepts.intercept" url="zaphelp/start/concepts/intercept.html" />
         <mapID target="start.concepts.invokeapp" url="zaphelp/start/concepts/invokeapp.html" />
@@ -117,6 +118,7 @@
      	<mapID target="ui.dialogs.options.view" url="zaphelp/ui/dialogs/options/view.html"/>
      	<mapID target="ui.dialogs.options.dynsslcert" url="zaphelp/ui/dialogs/options/dynsslcert.html"/>
      	<mapID target="ui.dialogs.options.fuzz" url="zaphelp/ui/dialogs/options/fuzz.html"/>
+     	<mapID target="ui.dialogs.options.globalexcludeurl" url="zaphelp/ui/dialogs/options/globalexcludeurl.html"/>
      	<mapID target="ui.dialogs.options.httpsessions" url="zaphelp/ui/dialogs/options/httpsessions.html"/>
      	<mapID target="ui.dialogs.options.keyboard" url="zaphelp/ui/dialogs/options/keyboard.html"/>
      	<mapID target="ui.dialogs.options.language" url="zaphelp/ui/dialogs/options/language.html"/>
