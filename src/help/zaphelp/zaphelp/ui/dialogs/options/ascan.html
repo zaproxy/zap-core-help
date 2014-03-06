@@ -33,6 +33,12 @@ If this option is selected then the active scanner will attempt to automatically
 Note that this is experimental functionality and will slow down the scanning process as only one thread will be used to ensure
 that anti CSRF token requests dont get out of step. 
 
+<H3>Delete records on shutdown</H3>
+If this option is selected then all of the requests and responses made by the active scanner will be 
+deleted from the database when you close the session.<br>
+This will reduce the database size but may increase the time it takes to close the session and means that the records
+will not be available when you open it again. 
+
 <H3>Alert Threshold</H3>
 This controls how likely ZAP is to report potential vulnerabilities.<br>
 If you select Low then more potential issues will be raised which may increase the number of false positives.<br>
@@ -45,16 +51,11 @@ If you select High then more attacks will be used which may find more issues but
 The Insane level should typically only be used for small parts of an application as it can result in a very large number of 
 attacks being used, which can take a considerable length of time.
 
-<H3>Parameters to scan</H3>
-The different type of application parameters ZAP will attack.<br>
-Scanning all of the types supported will take longer, but not scanning some types may cause some vulnerabilities to be missed.
-
 <H2>See also</H2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="ascan.html">Active Scan options</a></td><td></td></tr>
 </table>
 
 </BODY>
