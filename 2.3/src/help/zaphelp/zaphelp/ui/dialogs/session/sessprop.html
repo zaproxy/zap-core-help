@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<TITLE>
+Session Properties dialog
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H1>Session Properties dialog</H1>
+<p>
+This allows you to set the session properties and is made up of the following screens:
+
+<H3>General screen</H3>
+This allows you to set the session name and description.
+
+<H3>Exclude from proxy</H3>
+This allows you to manage the URLs which will be ignored by the proxy.
+
+<H3>Exclude from scanner</H3>
+This allows you to manage the URLs which will be ignored by the scanner.
+
+<H3>Exclude from spider</H3>
+This allows you to manage the URLs which will be ignored by the spider.
+
+<H3>Contexts</H3>
+A set of screens for managing <a href="../../../start/concepts/contexts.html">contexts</a>
+
+<H2>URL regexs</H2>
+In the <I>Exclude from *</I> dialogs, you can enter regular expressions to define excluded URLs.
+While you can escape a single meta-character with a backslash, you can also use the <B>\Q...\E</B> escape sequence. All the characters between the <B>\Q</B> and the <B>\E</B> are interpreted as literal characters. E.g. \Q*\d+*\E matches the literal text *\d+*.
+This escape sequence is used in ZAP when you exclude URLs via some context menus.
+<BR>
+<B>Note:</B> If your URL contains a "\E", then you have to do the following steps when using the <B>\Q...\E</B> escape sequence:
+<UL>
+	<LI>Open the escape sequence</LI>
+	<LI>Close the escape sequence before the "character" \E</LI>
+	<LI>Escape the backslash</LI>
+	<LI>Open after the "\E" another escape sequence;</LI>
+	<LI>Close the escape sequence as normally would.</LI>
+</UL>
+<BR>
+Example: https://subdomain.example.com/path?a=<B>\E</B>&amp;moredata=2 should appear as
+<I>\Qhttps://subdomain.example.com/path?a=\E</I><B>\\E</B><I>\Q&amp;moredata=2\E</I>
+  
+<H2>Accessed via</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../tlmenu/file.html">Top level File menu</a></td><td>'Properties...' menu item</td></tr>
+</table>
+
+<H2>See also</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+</table>
+
+</BODY>
+</HTML>
