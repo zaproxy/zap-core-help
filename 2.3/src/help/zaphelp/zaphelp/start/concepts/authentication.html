@@ -102,18 +102,19 @@
 	authentication.</p>
 	
 	<h3>
-		<a name="httpAuth">Http Authentication</a>
+		<a name="httpAuth">HTTP/NTLM Authentication</a>
 	</h3>
 	<p>
 		This method is used for websites / webapps where authentication is
-		enforced using the HTTP Authentication mechanisms employing HTTP message headers.
+		enforced using the HTTP or NTLM Authentication mechanisms employing HTTP message headers. 
+		Three authentication schemes are supported: Basic, Digest and NTLM.
 		Re-authentication is possible, as the authentication headers are sent with every authenticated
 		request. Configuration can be done using the <a
 			href="../../ui/dialogs/session/contexts.html#auth">Session
 			Contexts Dialog</a>.
 	</p>
 	<p>When using this authentication method, configuring an User for the context requires
-	setting up the <i>username/password</i> pair of credentials that are used for the HTTP authentication.</p>
+	setting up the <i>username/password</i> pair of credentials that are used for the HTTP/NTLM authentication.</p>
 	
 	<h2>Configuration example</h2>
 	<p>A configuration example showing how to fully configure a webapp that uses <i>form-based authentication</i> and
