@@ -33,12 +33,6 @@ If this option is selected then the active scanner will attempt to automatically
 Note that this is experimental functionality and will slow down the scanning process as only one thread will be used to ensure
 that anti CSRF token requests dont get out of step. 
 
-<H3>Delete records on shutdown</H3>
-If this option is selected then all of the requests and responses made by the active scanner will be 
-deleted from the database when you close the session.<br>
-This will reduce the database size but may increase the time it takes to close the session and means that the records
-will not be available when you open it again. 
-
 <H3>Alert Threshold</H3>
 This controls how likely ZAP is to report potential vulnerabilities.<br>
 If you select Low then more potential issues will be raised which may increase the number of false positives.<br>
