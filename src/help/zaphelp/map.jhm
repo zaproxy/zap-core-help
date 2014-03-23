@@ -122,6 +122,7 @@
      	<mapID target="ui.dialogs.options.language" url="contents/ui/dialogs/options/language.html"/>
      	<mapID target="ui.dialogs.options.localproxy" url="contents/ui/dialogs/options/localproxy.html"/>
      	<mapID target="ui.dialogs.options.pscan" url="contents/ui/dialogs/options/pscan.html"/>
+     	<mapID target="ui.dialogs.options.search" url="contents/ui/dialogs/options/search.html" />
      	<mapID target="ui.dialogs.options.spider" url="contents/ui/dialogs/options/spider.html"/>
      	<mapID target="ui.dialogs.options.spiderAjax" url="contents/ui/dialogs/options/ajaxSpider.html"/>
 </map>
