@@ -78,8 +78,6 @@
     <indexitem text="sites tab" target="ui.tabs.sites" />
     <indexitem text="spider tab" target="ui.tabs.spider" />
     <indexitem text="spider" target="start.concepts.spider" />
-    <indexitem text="AJAX Spider" target="start.concepts.spiderAjax" />
-    <indexitem text="AJAX Spider tab" target="ui.tabs.spiderAjax"/>
     <indexitem text="tags" target="start.concepts.tags" />
     <indexitem text="top level menu" target="ui.topmenu" />
     <indexitem text="top level toolbar" target="ui.toptoolbar" />

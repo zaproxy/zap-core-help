@@ -19,7 +19,6 @@
       <tocitem text="Features" target="start.concepts">
          <tocitem text="Active Scan" target="start.concepts.ascan"/>
          <tocitem text="Add-ons" target="start.concepts.addons"/>
-         <tocitem text="Ajax Spider" target="start.concepts.ajaxSpider"/>
          <tocitem text="Alerts" target="start.concepts.alerts"/>
          <tocitem text="Anti CSRF Tokens" target="start.concepts.anticsrf"/>
          <tocitem text="API" target="start.concepts.api"/>
@@ -69,7 +68,6 @@
          <tocitem text="Alerts" target="ui.tabs.alerts"/>
          <tocitem text="Active Scan" target="ui.tabs.ascan"/>
          <tocitem text="Spider" target="ui.tabs.spider"/>
-         <tocitem text="AJAX Spider" target="ui.tabs.spiderAjax"/>
          <tocitem text="Fuzzer" target="ui.tabs.fuzz"/>
          <tocitem text="Params" target="ui.tabs.params"/>
          <tocitem text="Http Sessions" target="ui.tabs.httpsessions"/>
@@ -110,7 +108,6 @@
          	<tocitem text="Local Proxy" target="ui.dialogs.options.localproxy"/>
          	<tocitem text="Passive Scan" target="ui.dialogs.options.pscan"/>
          	<tocitem text="Spider" target="ui.dialogs.options.spider"/>
-         	<tocitem text="AJAX Spider" target="ui.dialogs.options.spiderAjax"/>
          </tocitem>
          <tocitem text="Resend" target="ui.dialogs.resend"/>
          <tocitem text="Scan Policy" target="ui.dialogs.scanpolicy"/>
