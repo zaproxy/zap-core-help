@@ -26,7 +26,6 @@
         <mapID target="start.concepts.globalexcludeurl" url="contents/start/concepts/globalexcludeurl.html" />
         <mapID target="start.concepts.httpsessions" url="contents/start/concepts/httpsessions.html" />
         <mapID target="start.concepts.intercept" url="contents/start/concepts/intercept.html" />
-        <mapID target="start.concepts.invokeapp" url="contents/start/concepts/invokeapp.html" />
         <mapID target="start.concepts.modes" url="contents/start/concepts/modes.html" />
         <mapID target="start.concepts.notes" url="contents/start/concepts/notes.html" />
         <mapID target="start.concepts.pscan" url="contents/start/concepts/pscan.html" />
@@ -106,7 +105,6 @@
      	<mapID target="ui.dialogs.options.anticsrf" url="contents/ui/dialogs/options/anticsrf.html"/>
      	<mapID target="ui.dialogs.options.api" url="contents/ui/dialogs/options/api.html"/>
      	<mapID target="ui.dialogs.options.ext" url="contents/ui/dialogs/options/ext.html"/>
-     	<mapID target="ui.dialogs.options.invokeapp" url="contents/ui/dialogs/options/invokeapp.html"/>
      	<mapID target="ui.dialogs.options.authentication" url="contents/ui/dialogs/options/authentication.html"/>
         <mapID target="ui.dialogs.options.breakpoints" url="contents/ui/dialogs/options/breakpoints.html"/>
      	<mapID target="ui.dialogs.options.certificate" url="contents/ui/dialogs/options/certificate.html"/>

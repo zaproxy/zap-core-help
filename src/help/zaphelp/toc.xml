@@ -31,7 +31,6 @@
          <tocitem text="Globally Excluded URLs" target="start.concepts.globalexcludeurl"/>
          <tocitem text="Http Sessions" target="start.concepts.httpsessions"/>
          <tocitem text="Intercepting Proxy" target="start.concepts.intercept"/>
-         <tocitem text="Invoke Applications" target="start.concepts.invokeapp"/>
          <tocitem text="Modes" target="start.concepts.modes"/>
          <tocitem text="Notes" target="start.concepts.notes"/>
          <tocitem text="Passive Scan" target="start.concepts.pscan"/>
@@ -94,7 +93,6 @@
          	<tocitem text="Active Scan Input Vectors" target="ui.dialogs.options.ascaninput"/>
          	<tocitem text="Anti CSRF Tokens" target="ui.dialogs.options.anticsrf"/>
          	<tocitem text="API" target="ui.dialogs.options.api"/>
-         	<tocitem text="Applications" target="ui.dialogs.options.invokeapp"/>
          	<tocitem text="Authentication" target="ui.dialogs.options.authentication"/>
             <tocitem text="Breakpoints" target="ui.dialogs.options.breakpoints"/>
          	<tocitem text="Certificate" target="ui.dialogs.options.certificate"/>

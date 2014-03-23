@@ -43,7 +43,6 @@
     <indexitem text="http sessions" target="start.concepts.httpsessions" />
     <indexitem text="intercepting proxy" target="start.concepts.intercept"/>
     <indexitem text="introduction" target="zap.intro" />
-    <indexitem text="invoke applications" target="start.concepts.invokeapp"/>
     <indexitem text="manage tabs dialog" target="ui.dialogs.managetags" />
     <indexitem text="manual request dialog" target="ui.dialogs.manreq" />
     <indexitem text="modes" target="start.concepts.modes" />
