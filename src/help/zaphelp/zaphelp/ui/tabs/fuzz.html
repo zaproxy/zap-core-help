@@ -13,6 +13,16 @@ a string.<br>
 Selecting a row see the full requests and responses.
 You can also search for strings in the fuzz results using the <a href="search.html">Search tab</a>. 
 <br>
+	<H2>HTTP Fuzzer results</H2>
+	The results have to be manually assessed to know if any vulnerability was found.
+	<br> Meaning of values of the "State" column:
+	<ul>
+		<li>"Successful" - the message was successfully sent/received;</li>
+		<li>"Error" - an error occurred while creating or sending/receiving the message
+			(for example: malformed HTTP message, time out while reading the response);</li>
+		<li>"Reflected" - the injected fuzz string (value of "Fuzz" column) was found in
+			the response body.</li>
+	</ul>
 
 <H2>Right click menu</H2>
 Right clicking on a row will bring up a menu which will allow you to:
