@@ -1,13 +1,15 @@
-<?xml version='1.0' encoding='ISO-8859-1' ?>
+<?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE toc
   PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 2.0//EN"
          "http://java.sun.com/products/javahelp/toc_2_0.dtd">
 <!-- 
-	NOTE: Merging will NOT work for tocitems that got a target attribute!
-	As a result, the root element should not have any target attribute.
+	NOTE: Do not change the tocitem's tocid attribute without changing the TOC merger first. Otherwise the nodes will not be
+	correctly merged.
+
+	TOC merger is defined in org.zaproxy.zap.extension.help.ZapTocMerger.
 -->
 <toc version="2.0">
- <tocitem text="ZAP User Guide" image="toplevelfolder" mergetype="javax.help.UniteAppendMerge">
+ <tocitem text="ZAP User Guide" image="toplevelfolder" tocid="toplevelitem">
 
    <tocitem text="Introduction" target="zap.intro"/>
 
@@ -124,15 +126,7 @@
 
    <tocitem text="Command Line" target="cmdline"/>
 
-   <!--
-   		Do not add a target attribute to "Add-ons" element,
-   		as this would break merging capability.
-   		Moreover, if you change the text "Add Ons" it must
-   		also be renamed in every extension that has got help files.
-    -->
-   <tocitem text="Add Ons">
-       <tocitem text="Introduction" target="addon.introduction" />
-   </tocitem>
+   <tocitem text="Add Ons" target="addon.introduction" tocid="addons" />
    
    <tocitem text="Releases" target="zap.releases">
       <tocitem text="2.2.0" target="zap.releases.2.2.0"/>
