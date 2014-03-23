@@ -20,7 +20,6 @@
         <mapID target="start.concepts.api" url="zaphelp/start/concepts/api.html" />
         <mapID target="start.concepts.auth" url="zaphelp/start/concepts/authentication.html" />
         <mapID target="start.concepts.breakpoints" url="zaphelp/start/concepts/breakpoints.html" />
-        <mapID target="start.concepts.bruteforce" url="zaphelp/start/concepts/bruteforce.html" />
         <mapID target="start.concepts.contexts" url="zaphelp/start/concepts/contexts.html" />
         <mapID target="start.concepts.filters" url="zaphelp/start/concepts/filters.html" />
         <mapID target="start.concepts.fuzz" url="zaphelp/start/concepts/fuzz.html" />
@@ -60,7 +59,6 @@
         <mapID target="ui.tabs.ascan" url="zaphelp/ui/tabs/ascan.html" />
         <mapID target="ui.tabs.spider" url="zaphelp/ui/tabs/spider.html" />
         <mapID target="ui.tabs.spiderAjax" url="zaphelp/ui/tabs/ajaxSpider.html" />
-        <mapID target="ui.tabs.bruteforce" url="zaphelp/ui/tabs/bruteforce.html" />
         <mapID target="ui.tabs.params" url="zaphelp/ui/tabs/params.html" />
         <mapID target="ui.tabs.fuzz" url="zaphelp/ui/tabs/fuzz.html" />
         <mapID target="ui.tabs.output" url="zaphelp/ui/tabs/output.html" />
@@ -111,7 +109,6 @@
      	<mapID target="ui.dialogs.options.invokeapp" url="zaphelp/ui/dialogs/options/invokeapp.html"/>
      	<mapID target="ui.dialogs.options.authentication" url="zaphelp/ui/dialogs/options/authentication.html"/>
         <mapID target="ui.dialogs.options.breakpoints" url="zaphelp/ui/dialogs/options/breakpoints.html"/>
-     	<mapID target="ui.dialogs.options.bruteforce" url="zaphelp/ui/dialogs/options/bruteforce.html"/>
      	<mapID target="ui.dialogs.options.certificate" url="zaphelp/ui/dialogs/options/certificate.html"/>
      	<mapID target="ui.dialogs.options.checkforupdates" url="zaphelp/ui/dialogs/options/checkforupdates.html"/>
    		<mapID target="ui.dialogs.options.connection" url="zaphelp/ui/dialogs/options/connection.html"/>

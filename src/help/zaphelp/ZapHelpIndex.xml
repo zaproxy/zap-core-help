@@ -33,8 +33,6 @@
     <indexitem text="filters" target="start.concepts.filters" />
     <indexitem text="find dialog" target="ui.dialogs.find" />
     <indexitem text="footer" target="ui.footer" />
-    <indexitem text="forced browse" target="start.concepts.bruteforce"/>
-    <indexitem text="forced browse tab" target="ui.tabs.bruteforce"/>
     <indexitem text="fuzzer tab" target="ui.tabs.fuzz" />
     <indexitem text="fuzzing" target="start.concepts.fuzz" />
     <indexitem text="fuzz dialog" target="ui.dialogs.fuzz" />
