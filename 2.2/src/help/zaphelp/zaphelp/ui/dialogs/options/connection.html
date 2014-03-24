@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<TITLE>
+Options Connection screen
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H1>Options Connection screen</H1>
+<p>
+The Options Connection screen allows you to configure the ZAP connection options:
+
+<H3>Timeout in seconds</H3>
+This makes is easier to test slow applications.
+
+<H3>SSLTunneling for ports</H3>
+Browsers may use the HTTP CONNECT method to establish connections through a proxy.
+It occurs for HTTPS connections, but this method is allowed to be used for non-SSL connections too.
+<br><br>
+This option allows to set ports where HTTPS should be used. Per default only requests to port 443 establish a secure connection.
+You may change this if your application uses secure services on non-standard ports. Otherwise the connection is not secured.
+<br><br>
+Use a comma to separate several ports like here "443,563,81".
+
+<H3>Single Cookie Request Header</H3>
+Controls whether the ZAP's managed cookies (<a href="../../tlmenu/edit.html">Enable Session Tracking (Cookie)</a>) should be set
+on a single "Cookie" request header or multiple "Cookie" request headers, when sending an HTTP request to the server.
+
+<H3>Use Proxy chain</H3>
+This section allows you to connect to another proxy for outgoing connections.<br/>
+This is often required in a corporate environment.
+
+<H3>Proxy authentication</H3>
+This section allows you to configure the outgoing proxy authentication. 
+
+<H2>See also</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+</table>
+
+</BODY>
+</HTML>
