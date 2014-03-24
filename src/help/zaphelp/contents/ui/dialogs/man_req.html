@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<TITLE>
+Manual Request Editor dialog
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H1>Manual Request Editor dialog</H1>
+
+This dialog allows you to create a request from scratch which will be submitted to the specified target.
+
+<H2>Request tab</H2>
+
+The top panel is for the request header and the bottom panel is for any data also sent, for 
+example as part of a POST request.<br/>
+A pull down is provided which allows you to see the data in either:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>Raw View</td><td>: the data as supplied</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>Tabular View</td><td>: a table with one row per attribute and value</td></tr>
+</table>
+<br/>
+A second 'Method' pull down allows you to switch between the HTTP methods.<br>
+Note that when the method is changed to a POST then any URL parameters are moved into the body, and when the
+method is changed from a POST then any parameters in the body are moved to the URL.
+<br/>
+<br/>
+
+Two checkboxes are provided:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>Use current tracking session</td><td>: see the 'Enable session tracking (Cookie)' menu item in the <a href="../tlmenu/edit.html">Edit menu</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>Follow redirect</td><td>: automatically follows any redirects sent to the browser</td></tr>
+</table>
+
+<H2>Response tab</H2>
+
+The Response tab shows you the data sent to your browser in response to the request that you submitted.<br/>
+The top panel shows the Response header and the bottom panel shows the Response content<br/>
+
+<H2>Right click menu</H2>
+Right clicking will bring up a menu which will allow you to:
+
+<H3>Find...</H3>
+This will bring up the <a href="../dialogs/find.html">Find dialog</a>.
+
+<H3>Encode/Decode...</H3>
+This will bring up the <a href="../dialogs/enc_dec.html">Encode/Decode dialog</a>.<br/>
+If you have highlighted any text then this will be automatically included in the dialog.
+ 
+<H2>Accessed via</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../tlmenu/tools.html">Top level Tools menu</a></td><td>'Manual Request Editor ...' menu item</td></tr>
+</table>
+
+<H2>See also</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+</table>
+
+</BODY>
+</HTML>

@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<TITLE>
+  Release 2.0.0
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H1>Release 2.0.0</H1>
+<p>
+The following changes were made in this release:
+</p>
+
+<H2>Significant changes:</H2>
+
+
+<H3>An integrated add-ons marketplace</H3>
+
+ZAP can be extended by add-ons that have full access to all of the ZAP internals. Anyone can write add-ons and upload them to the ZAP Add-on Marketplace (OK, so its a Google code project called zap-extensions, but you get the idea).
+<br/>
+More importantly you can now browse, download and install those add-ons from within ZAP. Most add-ons can be dynamically installed (and uninstalled) so you wont even need a restart.
+<br/>
+You can choose to be notified of updates, and even be automatically updated. And as the scan rules are now implemented as add-ons you can get the latest rules as soon as they are published.
+
+<H3>A replacement for the 'standard' Spider</H3>
+
+The ‘old’ Spider was showing its age, so its been completely rewritten, and is much faster and more comprehensive than the old one. This is still a 'traditional' spider that analyses the HTML code for any links it can find.
+
+<H3>A new 'Ajax' spider</H3>
+
+In addition to the 'traditional' spider we've added an Ajax spider which is more effective with applications that make heavy use of JavaScript. This uses the Crawljax project which drives a browser (using Selenium) and so can discover any links an application generates, even ones generated client side.
+
+<H3>Web Socket support</H3>
+
+ZAP now supports WebSockets, so ZAP can now see all WebSocket messages sent to and from your browser. As with HTTP based messages, ZAP can also intercept WebSocket messages and allows you to change them on the fly.
+<br/>
+You can also fuzz WebSockets messages as well using all of the fuzzing payloads included in ZAP from projects like JBroFuzz and fuzzdb. And of course you can easily add your own fuzzing files.
+
+<H3>Quick Start tab</H3>
+
+The first main tab you will now see is a ‘Quick Start’ tab which allows you to just type in a URL and scan it with one click.
+<br/>
+This is an ideal starting point for people new to application security, but experts can easily remove it if they find it distracting.
+
+<H3>Session awareness</H3>
+
+ZAP is now session awareness, so that ZAP can recognise and keep track of multiple sessions. It allows you to create new sessions, switch between them, and applies to all of the other components, like the Spider and Active Scanner.
+
+<H3>User defined Contexts</H3>
+
+You can now define any number of ‘contexts’ - related sets of URLs which make up an application. You can then target all URLs in a context, for example using the Spider or Active Scanner. You can also add the contexts to the scope, and associate other information, such as authentication details.
+
+<H3>Session scope</H3>
+
+The session scope allows you to specify which contexts you are interested at any one time. You can restrict what you see in various tabs to just the URLs in scope, and prevent accidentally attacking URLs not in scope by using the Protected mode.
+
+<H3>Different modes</H3>
+
+ZAP now supports 3 modes:
+<ul>
+<li>Safe, in which no potentially dangerous operations permitted</li>
+<li>Protected, in which you can perform any actions on URLs in scope</li>
+<li>Standard, in which you can do anything to any URLs</li>
+</ul>
+<H3>Authentication handling</H3>
+
+You can now associate authentication details with any context, which allows ZAP to do things like detect if and when you are logged out and automatically log you back in again. This is especially useful when used via the API in security regression tests.
+
+<H3>More API support</H3>
+
+The REST API has been significantly extended, giving you much more access to the functionality ZAP provides.
+
+<H3>Fine grained scanning controls</H3>
+
+The active scan rules can now be tuned to adjust their strength (the number of attacks they perform) and the threshold at which they report potential issues.
+
+<H3>New and improved active and passive scanning rules</H3>
+
+
+We have uploaded the results from running ZAP 2.0.0 against wavsep (the most comprehensive open source evaluation project we are aware of) to the ZAP wiki: http://code.google.com/p/zaproxy/wiki/Testing TODO ;)
+
+
+
+<H2>Full list of changes:</H2>
+
+<H3>Issue 43: Scope option for filtering</H3>
+<H3>Issue 163: Active scanner failing against DVWA [ high false positives/true negatives rate]</H3>
+<H3>Issue 175: Better bruteforce wordlist</H3>
+<H3>Issue 240: SocketException whilst fuzzing not handled correctly.</H3>
+<H3>Issue 278: Root CA Certificate for Dynamic SSL invalid on some platforms due to ExtendeKeyUsage extension</H3>
+<H3>Issue 281: Alert class JSON dependency</H3>
+<H3>Issue 299: Feature request: Show count of found URIs during Spider</H3>
+<H3>Issue 305: Passive scanner rule for suspicious comments like TODO and FIXME</H3>
+<H3>Issue 326: Response time and total length in manual request</H3>
+<H3>Issue 330: robots.txt parsing</H3>
+<H3>Issue 332: Support for modes</H3>
+<H3>Issue 333: Spider - add option to crawl everthing in scope</H3>
+<H3>Issue 335: Web Sockets - add support for Modes and Scope</H3>
+<H3>Issue 342: Add an HttpSenderListener</H3>
+<H3>Issue 350: Authentication management</H3>
+<H3>Issue 354: Fuzzer attack strings not shown</H3>
+<H3>Issue 356: Generate CSRF test form</H3>
+<H3>Issue 358: Typo in "XFO Header Not Set" Solution</H3>
+<H3>Issue 360: brute force sub directories</H3>
+<H3>Issue 361: getHostPort on HttpRequestHeader for HTTPS CONNECT requests returns the wrong port</H3>
+<H3>Issue 370: API - save session better error handling</H3>
+<H3>Issue 374: API - save session synchronous or provide status</H3>
+<H3>Issue 376: Masking the passwords provided for Authentication</H3>
+<H3>Issue 385: Support contexts</H3>
+<H3>Issue 386: API Web UI - support parameters with views</H3>
+<H3>Issue 388: Allow user to specify which technologies apply to a context</H3>
+<H3>Issue 390: Spider - Add option to spider all in context</H3>
+<H3>Issue 391: ZAP Performance improvements</H3>
+<H3>Issue 393: More online links from menu</H3>
+<H3>Issue 397: Support weekly builds</H3>
+<H3>Issue 400: Generate new CA certificate will always produce certificate with same serial number</H3>
+<H3>Issue 401: Exception when the (new) Spider is started through the API</H3>
+<H3>Issue 402: GUI labels are not properly displayed on Linux (when language set to Polish)</H3>
+<H3>Issue 403: Set options via the API using reflection</H3>
+<H3>Issue 404: Labels not properly displayed when the Persian language is chosen</H3>
+<H3>Issue 406: Spider - Add option to control the effect of parameters on visited URLs</H3>
+<H3>Issue 410: charset wrapped in quotation marks</H3>
+<H3>Issue 411: Allow proxy port to be specified on the command line</H3>
+<H3>Issue 417: IndexOutOfBoundsException in ExtensionHttpSessions in daemon mode</H3>
+<H3>Issue 419: Restructure jar loading code</H3>
+<H3>Issue 420: API - support absolute session paths</H3>
+<H3>Issue 421: Cleanly shut down any active scan threads on shutdown</H3>
+<H3>Issue 422: Use exec in zap.sh so a new process is not forked</H3>
+<H3>Issue 423: Active scanner and spider can deadlock if ZAP is shutdown while they are running</H3>
+<H3>Issue 424: Exceptions in Web Sockets when session opened</H3>
+<H3>Issue 425: Add quick start tab</H3>
+<H3>Issue 428: ZAP Marketplace support</H3>
+<H3>Issue 429: Active Scan URL via API scans more than just the specified URL</H3>
+<H3>Issue 433: API: introduce mandatory parameters and optional descriptions</H3>
+<H3>Issue 435: Active scan alerts may be "lost" after saving the session</H3>
+<H3>Issue 436: Locking on session save or shutdown via the API</H3>
+<H3>Issue 438: API enhancements</H3>
+<H3>Issue 441: View incorrectly initialised in many places when in daemon mode</H3>
+<H3>Issue 443: "No Anti-CSRF tokens were found in a HTML submission form" listed as "None. Warning only."</H3>
+<H3>Issue 446: KeyStore of a registered PKCS#11 provider is not retrieved if a PKCS#11 provider is already registered</H3>
+<H3>Issue 447: Highlight attack when displaying alerts</H3>
+<H3>Issue 448: Rename Brute Force ext to Forced Browse and add URLs to the tree</H3>
+<H3>Issue 449: Missing help page for "Extensions" panel in the "Options" dialogue</H3>
+<H3>Issue 451: Manual check for updates doesn't work correctly in the newest weekly releases</H3>
+<H3>Issue 453: Dynamic loading and unloading of add-ons</H3>
+<H3>Issue 455: Split fuzzbd out into a new addon</H3>
+<H3>Issue 456: Spider session handling tweeks</H3>
+<H3>Issue 457: Search Tab arrow key support</H3>
+<H3>Issue 459: Active scanner locking</H3>
+<H3>Issue 460: Add a scan progress dialog</H3>
+<H3>Issue 461: Add help file for Quick Start addon</H3>
+<H3>Issue 462: Review: 	Patch/Review: SSLSocketFactory with TLS enabled and default Cipher options</H3>
+<H3>Issue 466: Move Port Scan extension to ZAP extensions project</H3>
+<H3>Issue 468: Upgrade SQL Injection rule to 'release'</H3>
+<H3>Issue 469: Allow anti csrf token to be added and removed via the API</H3>
+<H3>Issue 471: Move BeanSell extension to ZAP extensions project</H3>
+<H3>Issue 472: Spider accesses UI panel in daemon mode</H3>
+<H3>Issue 473: Allow add-ons to remove views/components added to the message panels</H3>
+<H3>Issue 474: Promote quick start to release status</H3>
+<H3>Issue 478: Allow to choose to send ZAP's managed cookies on a single Cookie request header and set it as the default</H3>
+
+
+
+<H2>See also</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Introduction</a></td><td>the introduction to ZAP<br/></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Releases</a></td><td>the full set of releases<br/></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible<br/></td></tr>
+</table>
+</BODY>
+</HTML>
