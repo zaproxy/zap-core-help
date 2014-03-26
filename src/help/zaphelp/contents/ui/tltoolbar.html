@@ -32,6 +32,9 @@ This button is the same as the <a href="tlmenu/file.html">File menu</a> 'Propert
 <H2><img src="../images/16/041.png" align="bottom" width="16" height="16" />&nbsp; Options...</H2>
 This button is the same as the <a href="tlmenu/tools.html">Tools menu</a> 'Options...' menu item.
 
+<H2><img src="../images/ui_tab_text.png" align="bottom" width="16" height="16" />&nbsp; Show tab names and icons</H2>
+This button toggles the displaying of the tab names.
+
 <H2><img src="../images/expand_sites.png" align="bottom" width="16" height="16" />&nbsp; Expand Sites Tab</H2>
 This changes the display so that the 'tree' window containing the Sites tab extends for the full length of the 
 left hand side.<br>
@@ -40,6 +43,22 @@ This will reduce the amount of space available to the 'information' window.
 <H2><img src="../images/expand_info.png" align="bottom" width="16" height="16" />&nbsp; Expand Information Tabs</H2>
 This changes the display so that the 'information' window extends for the full length of the bottom.<br> 
 This will reduce the amount of space available to the 'tree' window.
+
+<H2><img src="../images/expand_full.png" align="bottom" width="16" height="16" />&nbsp; Expand Full</H2>
+This changes the display so that the selected tab takes up the full screen.<br> 
+This is useful when using ZAP on small screens.
+
+<H2><img src="../images/layout_tabbed.png" align="bottom" width="16" height="16" />&nbsp; Request and Response tabs side by side</H2>
+This changes the display so that the request and response tabs are side by side.<br> 
+This increases the information that can be displayed but means you cannot see both the request and response at the same time.
+
+<H2><img src="../images/layout_vertical_split.png" align="bottom" width="16" height="16" />&nbsp; Request shown above Response</H2>
+This changes the display so that the request panel is shown above the response panel.<br> 
+This decreases the information that can be displayed but means you can see both the request and response at the same time.
+
+<H2><img src="../images/layout_horizontal_split.png" align="bottom" width="16" height="16" />&nbsp; Request and Response panels side by side</H2>
+This changes the display so that the request panel is shown to the left of the response panel.<br> 
+This decreases the information that can be displayed but means you can see both the request and response at the same time.
 
 <H2><img src="../images/16/105.png" align="bottom" width="16" height="16" />&nbsp;/&nbsp;
 <img src="../images/16/105r.png" align="bottom" width="16" height="16" />&nbsp;
@@ -77,7 +96,7 @@ or your browser.<br/>
 This button is only enabled when a request or response is trapped.
 
 <H2><img src="../images/16/break_add.png" align="bottom" width="16" height="16" />&nbsp; Add a custom HTTP break point</H2>
-This displays the <a href="dialogs/addbreak.html">'Add break point</a> dialog which allows you to specify the criteria for a 
+This displays the <a href="dialogs/addbreak.html">Add break point</a> dialog which allows you to specify the criteria for a 
 <a href="../start/concepts/breakpoints.html">break point</a>.
 
 <H2><img src="../images/fugue/block.png" align="bottom" width="16" height="16" />&nbsp; Manage Add-ons</H2>
@@ -85,13 +104,17 @@ This shows the <a href="dialogs/manageaddons.html">Manage Add-ons</a> dialog whi
 discover, install and update add-ons from the online marketplace.<br/>
 It also allows you to uninstall add-ons.
 
+<H2><img src="../images/fugue/forcedUserOff.png" align="bottom" width="16" height="16" />&nbsp;/&nbsp;
+<img src="../images/fugue/forcedUserOn.png" align="bottom" width="16" height="16" />&nbsp;
+Force User Mode On / Off</H2>
+This switchd forced user mode on and off.<br/>
+The button is only enabled when you have defined a forced user for at least one 
+<a href="../start/concepts/context.html">content</a>, which can be done via the 
+<a href="dialogs/session/contexts.html">Session Contexts</a> dialog.
 
-<H2><img src="../images/fugue/door-half-open.png" align="bottom" width="16" height="16" />&nbsp;/&nbsp;
-<img src="../images/fugue/door-open-green-loop-arrow.png" align="bottom" width="16" height="16" />&nbsp;
-Enable / disable automatic re-authentication</H2>
-This enables and disables automatic re-authentication.<br/>
-The button is only enabled when you have defined the Login URL (and associated POST data, if relevant),
-and either a Logged in or Logged out indicator for at least one session.
+<p>
+Note that <a href="../start/concepts/addons.html">add-ons</a> can add additional buttons.
+</p>
 
 <H2>See also</H2>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="overview.html">The user interface overview</a><br/>

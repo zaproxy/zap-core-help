@@ -64,6 +64,7 @@
         <mapID target="ui.dialogs.addalert" url="contents/ui/dialogs/addalert.html"/>
         <mapID target="ui.dialogs.addbreak" url="contents/ui/dialogs/addbreak.html"/>
         <mapID target="ui.dialogs.addnote" url="contents/ui/dialogs/addnote.html"/>
+        <mapID target="ui.dialogs.advascan" url="contents/ui/dialogs/advscan.html"/>
         <mapID target="ui.dialogs.beanshell" url="contents/ui/dialogs/beanshell.html"/>
         <mapID target="ui.dialogs.contexts" url="contents/ui/dialogs/session/contexts.html"/>
         <mapID target="ui.dialogs.enc_dec" url="contents/ui/dialogs/enc_dec.html"/>
