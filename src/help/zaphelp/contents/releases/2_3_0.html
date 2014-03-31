@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<TITLE>
+  Release 2.3.0
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H1>Release 2.3.0</H1>
+<p>
+The following changes were made in this release:
+</p>
+
+<H2>Significant changes:</H2>
+
+<H3>TBA - list them all here</H3>
+
+TBA, some details about each change ;)
+
+<H2>Full list of changes:</H2>
+
+<H3>122 : ProxyThread logging timeout readings with incorrect message (URL) </H3>
+<H3>207 : Enhancement: Hotkeys </H3>
+<H3>362 : Allow Alerts lists to be filtered by selection in Sites pane </H3>
+<H3>399 : zap.sh directory handling </H3>
+<H3>412 : Enable unsafe SSL/TLS renegotiation option not saved </H3>
+<H3>416 : Normalise how multiple related options are managed throughout ZAP and enhance the usability of some options  Usability </H3>
+<H3>485 : Make language packs into add-ons </H3>
+<H3>503 : Change the footer tabs to display the data with tables instead of lists  Usability </H3>
+<H3>572 : Change the generate_root_ca property to a function in the Python API </H3>
+<H3>575 : Return the list of alerts in the Python API instead of a dictionary with one entry </H3>
+<H3>585 : Proxy - "502 Bad Gateway" errors responded as "504 Gateway Timeout" </H3>
+<H3>589 : Move Reveal extension to ZAP extensions project </H3>
+<H3>590 : Forced Browse uses wrong scheme when "attacking" a site accessed over a secure connection (HTTPS) on a non-default port </H3>
+<H3>591 : Available sites/hosts (in the footer panels) disappear when mode changed to "Safe" </H3>
+<H3>595 : Spider fails to start (footer panel) with a site accessed over a secure connection (HTTPS) on a non-default port </H3>
+<H3>606 : Disable the "Start" scan button when the "--Select Site--" option is selected </H3>
+<H3>607 : Manual requested sites shown as scanned in the footer panels when selected in the "Sites" tab </H3>
+<H3>609 : Provide a common interface to query the state and access the data (HttpMessage and HistoryReference) displayed in the tabs </H3>
+<H3>613 : Move Save Raw HttpMessage extension to ZAP extensions project </H3>
+<H3>619 : Move Forced Browse extension to ZAP extensions project </H3>
+<H3>620 : Move Forced Browse files to ZAP extensions project </H3>
+<H3>783 : shutdown should be a method in the python zap.core api </H3>
+<H3>788 : Update Java for Mac release </H3>
+<H3>793 : Authentication / SessionManagement Methods dynamic loading in APIs not reliable </H3>
+<H3>799 : Add HttpAuthentication as an Authentication Method </H3>
+<H3>803 : Patch for /trunk/src/help/zaphelp/zaphelp/credits.html </H3>
+<H3>804 : Add Support for various types of Authentication for a Context </H3>
+<H3>805 : Add Support for various types of Session Management for a Context </H3>
+<H3>806 : Add Support for webapp Users </H3>
+<H3>807 : Error while loading ZAP when Quick Start Tab is closed </H3>
+<H3>816 : Add right-click Copy/Paste & Find options in the Encode/Decode/Hash dialog </H3>
+<H3>817 : Python API doesn't handle "other" operations correctly </H3>
+<H3>822 : Java API: ApiResponseSet.getAttributes() not working </H3>
+<H3>825 : Old version of Rhino included in lib directory </H3>
+<H3>827 : Default session tokens are not lower cased when added through options dialogue </H3>
+<H3>828 : NullPointerException while accessing HttpSessions API view "sessionTokens" when a site doesn't exist or doesn't have tokens </H3>
+<H3>829 : JSONException while calling an API view without the required parameter(s) </H3>
+<H3>830 : Java Client API doesn't encode query parameters when sending requests to ZAP API </H3>
+<H3>832 : Http Sessions tab should be cleared when a new session is created </H3>
+<H3>837 : Update, always, the HTTP request sent/forward by ZAP's proxy </H3>
+<H3>838 : Search API - Add search views that return HTTP messages </H3>
+<H3>839 : Search API - Add search views that return messages in HTTP Archive format </H3>
+<H3>840 : Core API - Allow to get the messages in HTTP Archive format </H3>
+<H3>841 : NullPointerException after sending a manual HTTP request with ExtensionHistory disabled </H3>
+<H3>842 : NullPointerException while active scanning with ExtensionAntiCSRF disabled </H3>
+<H3>843 : NullPointerException after sending/proxying a HTTP request with ExtensionAntiCSRF disabled </H3>
+<H3>844 : NullPointerException while invoking the "Scan policy" dialogue with ExtensionPassiveScan disabled </H3>
+<H3>845 : AbstractPanel added twice to TabbedPanel2 in ExtensionLoader#addTabPanel </H3>
+<H3>846 : NullPointerException while active scanning with ExtensionScript disabled </H3>
+<H3>849 : NullPointerException while authenticating with ExtensionHistory disabled </H3>
+<H3>852 : Search API - URL views return the same URL several times </H3>
+<H3>853 : Core API - Allow to get the number of alerts </H3>
+<H3>854 : Core API - Allow to get the number of messages </H3>
+<H3>855 : Core API - Allow to get a message by ID </H3>
+<H3>856 : Core API - Allow to get an alert by ID </H3>
+<H3>857 : Core API - "alerts" view might return unexpected alerts when pagination is used </H3>
+<H3>858 : Core API - "messages" view might return unexpected messages when pagination is used </H3>
+<H3>859 : PScan API - Allow to enable/disable the passive scan </H3>
+<H3>860 : PScan API - Allow to list/get the passive scanners </H3>
+<H3>861 : PScan API - Allow to enable/disable all the passive scanners </H3>
+<H3>862 : PScan API - Allow to enable/disable a given passive scanner </H3>
+<H3>863 : AScan API - Allow to list/get the active scanners </H3>
+<H3>864 : AScan API - Allow to enable/disable all the active scanners </H3>
+<H3>865 : AScan API - Allow to enable/disable a given active scanner </H3>
+<H3>866 : Alert keeps HttpMessage longer than needed when HistoryReference is set/available </H3>
+<H3>867 : HttpMessage#getFormParams should return an empty TreeSet if the request body is not "x-www-form-urlencoded" </H3>
+<H3>868 : Core API - "messages" view shouldn't return internal/temporary messages </H3>
+<H3>869 : Differentiate proxied requests from (ZAP) user requests </H3>
+<H3>870 : Change the MainToolbarPanel's expand buttons to use ButtonGroup and Action </H3>
+<H3>871 : Title not updated when session name is changed through the main tool bar button "Session Properties..." </H3>
+<H3>872 : Core API - Allow to send a manual request </H3>
+<H3>873 : Core API - Allow to send a manual request in HAR format </H3>
+<H3>874 : Change BreakPanelToolbarFactory to use Actions </H3>
+<H3>875 : Remove i18n directory </H3>
+<H3>876 : Deprecate FuzzerPanel#PANEL_NAME </H3>
+<H3>877 : ExtensionPopupMenuItem#isEnableForComponent called twice on some pop up menus each time is shown using the MainPopupMenu </H3>
+<H3>878 : ExtensionPopupMenuItem#getMenuIndex() as no effect in MainPopupMenu </H3>
+<H3>879 : Pop up menu "Spider Context..." is enabled even if ExtensionSpider is disabled </H3>
+<H3>880 : Remember last selected directory when adding custom fuzz files </H3>
+<H3>881 : Fail immediately if zapdb.script file is not found </H3>
+<H3>882 : Remove "Copy" pop up menu item shown in the "Forced Browse" tab </H3>
+<H3>884 : Plug-n-Hack phase 2 </H3>
+<H3>885 : API - Actions' response not shown when using HTML format </H3>
+<H3>886 : Main pop up menu invoked twice on some components </H3>
+<H3>887 : Scanners' pause button with inconsistent selection/enabled state </H3>
+<H3>888 : Search API - URL views might return unexpected URLs when pagination is used </H3>
+<H3>889 : JSONException while calling an API "other" without the required parameter(s) </H3>
+<H3>890 : Allow to clear "Output" tab </H3>
+<H3>891 : Target build "generate-javadocs" should apply SVN mime-type property to all generated files </H3>
+<H3>892 : Cache of response body length in HistoryReference might not be correct </H3>
+<H3>896 : PnH: Flag any fuzz attacks that hit the DOM XSS oracle </H3>
+<H3>897 : Add a JToggleButton that allows to set a tool tip text based on button's state </H3>
+<H3>898 : Replace all toggle buttons that set a tool tip text based on button's state with ZapToggleButton </H3>
+<H3>899 : Remove "manual" update of toggle buttons' icon based on button's state </H3>
+<H3>900 : IllegalArgumentException when invoking the main pop up menu with menus or super menus with high menu index </H3>
+<H3>901 : Pop up menu "succeed" separator is not added when using sub-menu in MainPopupMenu </H3>
+<H3>902 : Change all ExtensionAdaptor#hook(ExtensionHook) overriding methods to call the base implementation </H3>
+<H3>903 : Change options' thread sliders to use the same component </H3>
+<H3>904 : Add a button group that allows to deselect the selected button </H3>
+<H3>905 : Incorrect link in "Break tab" help pages </H3>
+<H3>910 : Forced User cannot be changed </H3>
+<H3>911 : AScan API - Change the "scanners" view to include the state of the active scanner </H3>
+<H3>912 : PScan API - Change the "scanners" view to include the state of the passive scanner </H3>
+<H3>913 : AScan API - Allow to list/get the active scanner policies </H3>
+<H3>914 : AScan API - Allow to set the active scanner policies enabled </H3>
+<H3>915 : Dynamically filter history based on selection in the sites window </H3>
+<H3>919 : Allow vulnerabilities.xml to be localized  IdealFirstBug </H3>
+<H3>920 : Add include/exclude url patterns to history filter </H3>
+<H3>921 : PnH2: open as monitored url </H3>
+<H3>923 : Allow individual rule thresholds and strengths to be set via GUI </H3>
+<H3>925 : HTML report issues </H3>
+<H3>929 : AScan API - Allow to set the attack strength and alert threshold of active scanner policies and active scanners </H3>
+<H3>930 : AScan API - Allow to list/get the active scanners by policy ID </H3>
+<H3>931 : Allow extensions to pick up command line args in GUI mode </H3>
+<H3>932 : Allow scripts to be specified on the command line </H3>
+<H3>933 : Automatically determine install dir </H3>
+<H3>934 : Handle files on the command line via extension </H3>
+<H3>935 : Improve the identification of Java version </H3>
+<H3>939 : ZAP should accept SSL connections on non-standard ports automatically </H3>
+<H3>947 : Spider fails on URLs with illegal characters </H3>
+<H3>950 : Cope with add-ons containing files copied directly into the plugins directory </H3>
+<H3>951 : TLS' versions 1.1 and 1.2 not enabled by default </H3>
+<H3>954 : Changes to certain fields in the GUI are not saved after clicking OK/Proceed </H3>
+<H3>957 : Reference for alert "X-Content-Type-Options header missing" </H3>
+<H3>963 : Add-on added to blocklist if it cant be deleted on update </H3>
+<H3>965 : Support 'single page' apps and 'non standard' parameter separators </H3>
+<H3>966 : Quickstart command line option </H3>
+<H3>967 : InvalidParameterException while updating the "Script Console" add-on </H3>
+<H3>968 : Allow to choose the enabled SSL/TLS protocols </H3>
+<H3>969 : Proxy - Do not include the response body when answering unsuccessful HEAD requests </H3>
+<H3>970 : Body of DELETE requests should be sent/forward </H3>
+<H3>974 : Scan URL path elements </H3>
+<H3>975 : Inverse Search Fuzz Results Buggy </H3>
+<H3>976 : Spider Context Attack causes spidering outside of context </H3>
+<H3>979 : Sites and Alerts trees can get corrupted </H3>
+<H3>981 : Internationalize help file </H3>
+<H3>982 : API key </H3>
+<H3>986 : New ScanProgress dialog implementation and plugin skipping functionality </H3>
+<H3>987 : Allow arbitrary config file values to be set via the command line </H3>
+<H3>988 : ZAP Help crashes before starting </H3>
+<H3>989 : Add a right click option "Add user" on an HTTP session </H3>
+<H3>991 : Add-on/Scan rule review request - Persistent XSS </H3>
+<H3>996 : Ensure all dialogs close when the escape key is pressed </H3>
+<H3>997 : Session.open complains about improper use of addPath </H3>
+<H3>998 : Silly regexp search kills ZAP </H3>
+<H3>999 : History loaded in wrong order </H3>
+<H3>1002 : Add support for Authentication via Scripts </H3>
+<H3>1003 : XXE Vulnerability Testing Plugin </H3>
+<H3>1004 : Source Code disclosure using Git meta-data </H3>
+<H3>1005 : Source Code disclosure using Subversion meta-data </H3>
+<H3>1006 : Spidering of web applications using using Git meta-data </H3>
+<H3>1007 : Spidering of web applications using using Subversion (SVN) meta-data </H3>
+<H3>1010 : Allow to sort fuzz results </H3>
+<H3>1012 : Encode / Decode dialog - support HTML and JavaScript encoding  IdealFirstBug </H3>
+<H3>1016 : HTML encoding display issue in credits.html </H3>
+<H3>1017 : Proxy set to 0.0.0.0 causes incorrect PAC file to be generated </H3>
+<H3>1018 : Give AbstractAppParamPlugin implementations access to the parameter type </H3>
+<H3>1019 : ZAP startup with bad JAVA_HOME shows confusing error message </H3>
+<H3>1020 : Duplicate "Body: Table" plug-able view on Request/Break tabs </H3>
+<H3>1021 : OutOutOfMemoryError while running the active scanner </H3>
+<H3>1022 : Proxy - Allow to override a proxied message </H3>
+<H3>1023 : Script Console - Run/Stop buttons with inconsistent state </H3>
+<H3>1024 : Large Response view is shown even if a response body is not present </H3>
+<H3>1025 : NullPointerException while pressing a key with "Script Console" text areas selected </H3>
+<H3>1030 : Load and save scan policies </H3>
+<H3>1031 : Adding Parameter Exclusion capabilities to the Active Scanner </H3>
+<H3>1032 : Add API support for Script Based Authentication </H3>
+<H3>1037 : JSON RPC parameters are not set correctly </H3>
+<H3>1039 : Improve External Redirect plugin Accuracy </H3>
+<H3>1041 : Active Scan plugins don't start if the site is local to 127.0.0.1 </H3>
+<H3>1043 : Custom active scan dialog </H3>
+<H3>1044 : Forced User Mode is not persisted across Session saves/loads </H3>
+<H3>1046 : The getHttpCookies() method in the HttpResponseHeader does not properly set the domain </H3>
+<H3>1047 : Backup Files not detected by Zap </H3>
+<H3>1049 : Fast multiple pattern search component </H3>
+<H3>1050 : Scripting based Input Vectors </H3>
+<H3>1051 : Zap can bound services to all network interfaces </H3>
+<H3>1052 : Callback API for active scan plugins </H3>
+<H3>1053 : String similarity and LCS algorithm component </H3>
+<H3>1055 : Load extensions before plugins </H3>
+<H3>1057 : Add a Extension.postInstall() method for post install actions </H3>
+<H3>1059 : Add Jython support for Script-Based Authentication </H3>
+<H3>1060 : Add JRuby support for Script-Based Authentication </H3>
+<H3>1061 : Select proper Script Type, Engine and Template when creating new script </H3>
+<H3>1063 : Option to decode add gzipped content (was handle compression for scripts) </H3>
+<H3>1065 : Rename ExtensionScripts to ExtensionScriptsConsole  Maintainability </H3>
+<H3>1066 : Add support for quickly setting Script Based Authentication from scripts UI </H3>
+<H3>1068 : Zap does not detect source code in responses </H3>
+<H3>1069 : Support .-: in Zest variable names </H3>
+<H3>1071 : Using Zest-Script "Replace in response-body" delivers wrong Content-Length header. </H3>
+<H3>1072 : SQLDataException: data exception: string data, right truncation </H3>
+<H3>1074 : Add option to only display output from the displayed script </H3>
+<H3>1075 : Change TableHistory to delete records in batches  Performance </H3>
+<H3>1076 : Change active scanner to not delete the temporary messages generated  Performance </H3>
+<H3>1077 : Change (HTTP) fuzzer to not delete the temporary messages generated  Performance </H3>
+<H3>1078 : Change ExtensionBreak to fallback to base message type breakpoint manager implementation </H3>
+<H3>1079 : Remove misplaced main pop up menu separators </H3>
+<H3>1080 : User Guide HTML pages incorrectly relying on the platform default encoding </H3>
+<H3>1081 : ExtensionPopupMenu should "notify" child ExtensionPopupMenu (and ExtensionPopupMenuItem) when the pop up is invoked </H3>
+<H3>1082 : Search URL matches highlighted in incorrect position </H3>
+<H3>1083 : Deprecate the method ExtensionPopupMenuItem#isSuperMenu() </H3>
+<H3>1084 : NullPointerException while selecting a node in the "Sites" tab </H3>
+<H3>1085 : Do not add/remove pop up menu items through the method View#getPopupMenu() </H3>
+<H3>1086 : Allow to dynamically add/remove passive scanners </H3>
+<H3>1087 : Change extensions to dynamically add passive scanners </H3>
+<H3>1088 : Deprecate the method ExtensionPopupMenu#prepareShow </H3>
+<H3>1089 : Change ExtensionPopupMenu to honour the extension pop up methods </H3>
+<H3>1090 : Do not add pop up menus if target extension is not enabled </H3>
+<H3>1091 : CoreAPI - Do not get the IDs of temporary history records </H3>
+<H3>1092 : SearchThread - Do not get the IDs of discarded messages </H3>
+<H3>1093 : Add an HTTP request body view that warns of large body </H3>
+<H3>1094 : Change ExtensionManualRequestEditor to only add view components if in GUI mode </H3>
+<H3>1095 : Replace main pop up sub menus with ExtensionPopupMenu when appropriate </H3>
+<H3>1096 : AddOnLoader calls incorrect notify method after uninstalling add-on files </H3>
+<H3>1097 : Move "Run applications" (invoke) extension to zap-extensions project </H3>
+<H3>1098 : Move AJAX Spider help pages to "Ajax Spider" add-on (and update them) </H3>
+<H3>1099 : Allow to annotate option methods as ignored for ZAP API </H3>
+<H3>1100 : Annotate option methods that shouldn't be exposed in the ZAP API </H3>
+<H3>1101 : Change passive scanners to expose its IDs </H3>
+<H3>1102 : Ajax Spider - Replace ajax spider proxy with core proxy </H3>
+<H3>1103 : Script Console - Allow to clear output even if "clear on run" is enabled </H3>
+<H3>1104 : Replace all toggle buttons that set a tool tip text based on button's state with ZapToggleButton (add-ons) </H3>
+<H3>1105 : Remove "manual" update of toggle buttons' icon based on button's state (add-ons) </H3>
+<H3>1106 : HistoryList's mapping of history ID to list indexes not updated when history entry is deleted </H3>
+<H3>1110 : Spider API - Unable to set how parameters are handled using API </H3>
+<H3>1111 : Check for Updates on startup gets (automatically) disabled when accessing the "Options" dialogue </H3>
+<H3>1112 : Change ZAP (core) to support new add-on dir structure </H3>
+<H3>1113 : Change add-on dir structure (help and resources) </H3>
+<H3>1120 : Uninstall add-on fails if rules use message bundle in uninstall </H3>
+<H3>1121 : Scan progress dialog can cause UI freezes </H3>
+<H3>1122 : Add-on additional info </H3>
+<H3>1125 : Can't re-import jython script as a proxy script </H3>
+<H3>1126 : Bugs in breakpoint filters </H3>
+<H3>1127 : Feature request: Allow scripts to generate breaks </H3>
+<H3>1131 : Support Zest Intercept actions in add-on </H3>
+<H3>1132 : HttpSender ignores the "Send single cookie request header" option </H3>
+
+<H2>See also</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Introduction</a></td><td>the introduction to ZAP<br/></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Releases</a></td><td>the full set of releases<br/></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible<br/></td></tr>
+</table>
+</BODY>
+</HTML>
