@@ -14,46 +14,52 @@ The following changes were made in this release:
 
 <H2>Significant changes:</H2>
 
-Work in progress ;)
+<H3>ZAP ‘lite’ version</H3>
+For this release we are providing a ‘lite’ version of ZAP in addition to the ‘full’ version.<br>
+This is exactly the same core code, it just includes fewer default add-ons.<br>
+You can download all of the ‘missing’ add-ons from the ZAP marketplace to ‘upgrade’ the lite version to a full one.<br>
+The ‘lite’ version is aimed at people new to security who need less initial functionality which will hopefully be easier to get started with. It will also be suitable for people looking for a smaller download or those wishing to customize exactly which add-ons they install.
 
-<H3>Authentication support</H3>
+<H3>Support for client-side (browser) events</H3>
+You can now view, intercept, manipulate, resend and fuzz client-side events. This includes postMessages, so you can now detect DOM based XSS vulnerabilities in postMessages. This is the first phase in a series of planned changes to support the testing of AJAX and HTML5 applications even more effectively.
 
-	inc scripts
+<H3>Enhanced authentication support</H3>
+ZAPs support for authentication has been completely revamped with support for user-defined scripts which allow you to handle completely custom authentication schemes. ZAP also now supports the concept of application users, which is used in the advanced active scan dialog.
 
 <H3>Support for non standard apps</H3>
+This release includes support for ‘single page’ applications and non standard key-value separators.
 
-<H3>Input Vector scripts</H3>
+<H3>New Input Vectors including user-defined scripts</H3>
+ZAP supports new options for defining the ‘input vectors’ ie the elements of a request that ZAP will attack. It also now supports scripts so that you can define custom scripts that define new input vectors.
 
-<H3>Scan policy - fine grained control</H3> 
+<H3>Scan policy - fine grained control</H3>
+The scan policy now have fine grained control, allowing you to tweak individual scanner rules. You can also define, load and save scan policies, allowing you to maintain a set of policies that work well in different circumstances.
 
-	(mention load and save policies)
+<H3>Advanced Active Scan dialog</H3>
+A new ‘Advanced Active Scan’ dialog allows you to specify exactly how you want the active scanner to function. It allows you to specify ‘custom vectors’ which explicitly define which strings you want to attack. It also support the option to scan as any of the users you have defined for the application you are testing.
 
-<H3>Advanced Scan dialog</H3>
+<H3>Extended command line options</H3>
+You can now run ZAP ‘inline’ ie without starting the ZAP UI or a daemon. In this mode you can run simple attacks or run scripts which can access all of the ZAP functionality. You can also now override any of the options defined in the configuration file.
 
-<H3>Plug-n-Hack - client side monitoring</H3>
+<H3>More API support</H3>
+The API has been extended to support even more of the ZAP functionality.
 
-<H3>Command line options </H3>
-
-	(set anything via cmdline, run scripts..)
-
-<H3>Extended API</H3>
-
-<H3>Internationalized help file</H3> 
-
-	(this in??)
+<H3>Internationalized help file</H3>
+The help file has been internationalized and is in the process of being translated into many other languages via https://crowdin.net/project/owasp-zap-help<br>
+If you use ZAP in one of the many languages we support then the help files will include all of the available translations for that language while defaulting back to English for phrases that have not yet been translated.
 
 <H3>Keyboard shortcuts</H3>
+All menu items can now be invoked via keyboard shortcuts. Defaults are defined for virtually all cases but are also user configurable.
 
 <H3>New UI options</H3>
+There is a new option to change the display so that the selected tab takes up the full screen. This is useful when using ZAP on small screens. There is also an option toggle the tab names on an off to further conserve space.
 
-<H3>More functionality moved to add-ons</H3> 
+<H3>More functionality moved to add-ons
+More of the core functionality has been moved into add-ons which allows us to deliver updates dynamically via the ZAP Marketplace rather than requiring new full releases.<br>
+This includes the language packs, so translations made to the ZAP UI via https://crowdin.net/project/owasp-zap can be downloaded within ZAP or even automatically installed.
 
-	(inc lang packs)
-
-<H3>Zest record button</H3>
-
-<H3>Trigger break points from proxy scripts</H3>
-
+<H3>New and improved active and passive scanning rules</H3>
+Many of the release quality active and passive scanning rules have been improved. There are new alpha and beta quality rules and many rules have been promoted from alpha to beta and from beta to release quality.
 
 <H2>Full list of changes:</H2>
 
