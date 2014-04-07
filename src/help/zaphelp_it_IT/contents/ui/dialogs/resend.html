@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Resend dialog
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Resend dialog</h1>
+<p>
+
+This dialog allows you to resend a request after making any changes to it that you want to. 
+
+<h2>Request tab</h2>
+
+The top panel is for the request header and the bottom panel is for any data also sent, for 
+example as part of a POST request.<br/>
+A pull down is provided which allows you to see the data in either:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>Raw View</td><td>: the data as supplied</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>Tabular View</td><td>: a table with one row per attribute and value</td></tr>
+</table>
+<br/>
+A second 'Method' pull down allows you to switch between the HTTP methods.<br>
+Note that when the method is changed to a POST then any URL parameters are moved into the body, and when the
+method is changed from a POST then any parameters in the body are moved to the URL.
+<br/>
+<br/>
+Two checkboxes are provided:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>Usa la sessione corrente di rilevamento</td><td>: see the 'Enable session tracking (Cookie)' menu item in the <a href="../tlmenu/edit.html">Edit menu</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>Segui redirect</td><td>: automatically follows any redirects sent to the browser</td></tr>
+</table>
+
+<h2>Response tab</h2>
+
+The Response tab shows you the data sent to your browser in response to the request that you submitted.<br/>
+The top panel shows the Response header and the bottom panel shows the Response content<br/>
+
+<h2>Right click menu</h2>
+Right clicking will bring up a menu which will allow you to:
+
+<h3>Trova...</h3>
+This will bring up the <a href="../dialogs/find.html">Find dialog</a>.
+
+<h3>Encode/Decode...</h3>
+This will bring up the <a href="../dialogs/enc_dec.html">Encode/Decode dialog</a>.<br/>
+If you have highlighted any text then this will be automatically included in the dialog.
+ 
+<h2>Accessed via</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../tabs/sites.html">Sites tab</a></td><td>'Resend...' right click menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../tabs/history.html">History tab</a></td><td>'Resend...' right click menu item</td></tr>
+</table>
+
+<h2>See also</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+</table>
+
+</body>
+</html>
