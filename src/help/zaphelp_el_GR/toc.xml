@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE toc
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 2.0//EN"
+         "http://java.sun.com/products/javahelp/toc_2_0.dtd">
+<!-- 
+	NOTE: Do not change the tocitem's tocid attribute without changing the TOC merger first. Otherwise the nodes will not be
+	correctly merged.
+
+	TOC merger is defined in org.zaproxy.zap.extension.help.ZapTocMerger.
+-->
+<toc version="2.0">
+ <tocitem text="ZAP User Guide" image="toplevelfolder" tocid="toplevelitem">
+
+   <tocitem text="Introduction" target="zap.intro"/>
+
+   <tocitem text="Getting Started" target="start.start">
+      <tocitem text="Configuring proxies" target="start.proxy"/>
+      <!--tocitem text="Explore the application" target="start.explore"/-->
+      <tocitem text="Features" target="start.concepts">
+         <tocitem text="Ενεργή Σάρωση" target="start.concepts.ascan"/>
+         <tocitem text="Add-ons" target="start.concepts.addons"/>
+         <tocitem text="Ειδοποιήσεις" target="start.concepts.alerts"/>
+         <tocitem text="Token κατά του Cerf" target="start.concepts.anticsrf"/>
+         <tocitem text="API" target="start.concepts.api"/>
+         <tocitem text="Πιστοποίηση" target="start.concepts.auth"/>
+         <tocitem text="Σημεία διακοπής" target="start.concepts.breakpoints"/>
+         <tocitem text="Πλαίσια" target="start.concepts.contexts"/>
+         <tocitem text="Φίλτρα" target="start.concepts.filters"/>
+         <tocitem text="Fuzzing" target="start.concepts.fuzz"/>
+         <tocitem text="Globally Excluded URLs" target="start.concepts.globalexcludeurl"/>
+         <tocitem text="Συνεδρίες http" target="start.concepts.httpsessions"/>
+         <tocitem text="Intercepting Proxy" target="start.concepts.intercept"/>
+         <tocitem text="Modes" target="start.concepts.modes"/>
+         <tocitem text="Notes" target="start.concepts.notes"/>
+         <tocitem text="Παθητική σάρωση" target="start.concepts.pscan"/>
+         <tocitem text="Scope" target="start.concepts.scope"/>
+         <tocitem text="Session Management" target="start.concepts.sessmanag"/>
+         <tocitem text="Αράχνη" target="start.concepts.spider"/>
+         <tocitem text="Tags" target="start.concepts.tags"/>
+         <tocitem text="Users" target="start.concepts.users"/>
+      </tocitem>
+      <tocitem text="Scanner Rules" target="start.check"/>
+      <tocitem text="A Simple Penetration Test" target="start.pentest"/>
+   </tocitem>
+
+   <!--tocitem text="Common Vulnerabilities" target="vulns.vuln">
+      <tocitem text="Cross Site Request Forgery" target="vulns.csrf"/>
+      <tocitem text="Insecure Direct Object References" target="vulns.idor"/>
+      <tocitem text="Information Leakage / Improper Error Handling" target="vulns.leak"/>
+      <tocitem text="Insecure Communications" target="vulns.nossl"/>
+      <tocitem text="SQL Injection" target="vulns.sqli"/>
+      <tocitem text="Failure to restrict URL access" target="vulns.urla"/>
+      <tocitem text="Cross Site Scripts" target="vulns.xss"/>
+   </tocitem-->
+
+   <tocitem text="The User Interface" target="ui.overview">
+      <tocitem text="Overview" target="ui.overview"/>
+      <tocitem text="The Top Level Menu" target="ui.topmenu"/>
+      <tocitem text="The Top Level Toolbar" target="ui.toptoolbar"/>
+      <tocitem text="The Tabs">
+         <tocitem text="Τοποθεσίες" target="ui.tabs.sites"/>
+         <tocitem text="Αίτημα" target="ui.tabs.request"/>
+         <tocitem text="Απόκριση" target="ui.tabs.response"/>
+         <tocitem text="Διακοπή" target="ui.tabs.break"/>
+         <tocitem text="Ιστορικό" target="ui.tabs.history"/>
+         <tocitem text="Αναζήτηση" target="ui.tabs.search"/>
+         <tocitem text="Σημεία διακοπής" target="ui.tabs.breakpoints"/>
+         <tocitem text="Ειδοποιήσεις" target="ui.tabs.alerts"/>
+         <tocitem text="Ενεργή Σάρωση" target="ui.tabs.ascan"/>
+         <tocitem text="Αράχνη" target="ui.tabs.spider"/>
+         <tocitem text="Fuzzer" target="ui.tabs.fuzz"/>
+         <tocitem text="Παράμετροι" target="ui.tabs.params"/>
+         <tocitem text="Συνεδρίες http" target="ui.tabs.httpsessions"/>
+         <tocitem text="Έξοδος" target="ui.tabs.output"/>
+      </tocitem>
+      <tocitem text="The Dialogs" target="ui.dialogs">
+         <tocitem text="Προσθήκη Ειδοποίησης" target="ui.dialogs.addalert"/>
+         <tocitem text="Add Break Point" target="ui.dialogs.addbreak"/>
+         <tocitem text="Προσθήκη σημείωσης" target="ui.dialogs.addnote"/>
+         <tocitem text="Advanced Active Scan" target="ui.dialogs.advscan"/>
+         <tocitem text="Κονσόλα BeanShell" target="ui.dialogs.beanshell"/>
+         <tocitem text="Κρυπτογράφηση/Αποκρυπτογράφηση/Hash" target="ui.dialogs.enc_dec"/>
+         <tocitem text="Φίλτρο" target="ui.dialogs.filter"/>
+         <tocitem text="Αναζήτηση" target="ui.dialogs.find"/>
+         <tocitem text="Fuzzer" target="ui.dialogs.fuzz"/>
+         <tocitem text="History Filter" target="ui.dialogs.historyfilter"/>
+         <tocitem text="Χειροκίνητος συντάκτης αιτημάτων" target="ui.dialogs.manreq"/>
+         <tocitem text="Manage Add-ons" target="ui.dialogs.manageaddons"/>
+         <tocitem text="Διαχείριση Ετικετών" target="ui.dialogs.managetags"/>
+         <tocitem text="Επιλογές" target="ui.dialogs.options">
+         	<tocitem text="Ενεργή Σάρωση" target="ui.dialogs.options.ascan"/>
+         	<tocitem text="Active Scan Input Vectors" target="ui.dialogs.options.ascaninput"/>
+         	<tocitem text="Token κατά του Cerf" target="ui.dialogs.options.anticsrf"/>
+         	<tocitem text="API" target="ui.dialogs.options.api"/>
+         	<tocitem text="Πιστοποίηση" target="ui.dialogs.options.authentication"/>
+            <tocitem text="Breakpoints" target="ui.dialogs.options.breakpoints"/>
+         	<tocitem text="Πιστοποιητικό" target="ui.dialogs.options.certificate"/>
+         	<tocitem text="Check for Updates" target="ui.dialogs.options.checkforupdates"/>
+			<tocitem text="Σύνδεση" target="ui.dialogs.options.connection"/>
+			<tocitem text="Βάση δεδομένων" target="ui.dialogs.options.database"/>
+         	<tocitem text="Εμφάνιση" target="ui.dialogs.options.view"/>
+         	<tocitem text="Δυναμικά Πιστοποιητικά SSL" target="ui.dialogs.options.dynsslcert"/>
+            <tocitem text="Επεκτάσεις" target="ui.dialogs.options.ext"/>
+         	<tocitem text="Fuzzer" target="ui.dialogs.options.fuzz"/>
+         	<tocitem text="Συνεδρίες http" target="ui.dialogs.options.httpsessions"/>
+            <tocitem text="Global Exclude URL" target="ui.dialogs.options.globalexcludeurl"/>
+         	<tocitem text="Keyboard" target="ui.dialogs.options.keyboard"/>
+         	<tocitem text="Γλώσσα" target="ui.dialogs.options.language"/>
+         	<tocitem text="Τοπικός Proxy" target="ui.dialogs.options.localproxy"/>
+         	<tocitem text="Παθητική σάρωση" target="ui.dialogs.options.pscan"/>
+         	<tocitem text="Αράχνη" target="ui.dialogs.options.spider"/>
+         </tocitem>
+         <tocitem text="Επαναποστολή" target="ui.dialogs.resend"/>
+         <tocitem text="Scan Policy" target="ui.dialogs.scanpolicy"/>
+         <tocitem text="Συνεδρία" target="ui.dialogs.sessprop">
+	         <tocitem text="Πληροφορίες Συνεδρίας" target="ui.dialogs.sessprop"/>
+	         <tocitem text="Session Contexts" target="ui.dialogs.contexts"/>
+         </tocitem>
+      </tocitem>
+      <tocitem text="The Footer" target="ui.footer"/>
+   </tocitem>
+
+   <tocitem text="Command Line" target="cmdline"/>
+
+   <tocitem text="Add Ons" target="addon.introduction" tocid="addons" />
+   
+   <tocitem text="Releases" target="zap.releases">
+      <tocitem text="2.2.0" target="zap.releases.2.2.0"/>
+      <tocitem text="2.1.0" target="zap.releases.2.1.0"/>
+      <tocitem text="2.0.0" target="zap.releases.2.0.0"/>
+      <tocitem text="1.4.1" target="zap.releases.1.4.1"/>
+      <tocitem text="1.4.0" target="zap.releases.1.4.0"/>
+      <tocitem text="1.3.4" target="zap.releases.1.3.4"/>
+      <tocitem text="1.3.3" target="zap.releases.1.3.3"/>
+      <tocitem text="1.3.2" target="zap.releases.1.3.2"/>
+      <tocitem text="1.3.1" target="zap.releases.1.3.1"/>
+      <tocitem text="1.3.0" target="zap.releases.1.3.0"/>
+      <tocitem text="1.2.0" target="zap.releases.1.2.0"/>
+      <tocitem text="1.1.0" target="zap.releases.1.1.0"/>
+      <tocitem text="1.0.0" target="zap.releases.1.0.0"/>
+   </tocitem>
+   <tocitem text="Paros Proxy" target="zap.paros"/>
+
+   <tocitem text="Credits" target="zap.credits"/>
+
+ </tocitem>
+</toc>
