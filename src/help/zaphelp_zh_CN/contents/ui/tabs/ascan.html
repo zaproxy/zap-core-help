@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Active Scan tab
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Active Scan tab</h1>
+
+The Active Scan tab allows you to perform an <a href="../../start/concepts/ascan.html">active scan</a>
+on any of the sites that have been accessed.<br> 
+<br>
+Sites can be selected via the toolbar or the <a href="sites.html">Sites tab</a>.<br>
+Any sites that have have been are are currently being scanned are marked in bold in the toolbar Sites pulldown control.<br>
+The toolbar provides a set of buttons which allow you to start, stop, pause and resume the scan selected.<br>
+A progress bar shows how far the scan of the selected site has progressed.<br>
+The 'Current scans' value shows how many scans are currently active - 
+hovering over this value will show a list of the sites being scanned in a popup. 
+
+<h2>Right click menu</h2>
+Right clicking on a node will bring up a menu which will allow you to:
+
+<h3>Exclude from</h3>
+This menu has the following submenus:
+
+<h4>Proxy</h4>
+This will exclude the selected nodes from the proxy. They will still be proxied via ZAP but will not be shown 
+in any of the tabs.<br/>
+This can be used to ignore URLs that you know are not relevant to the system you are currently testing.<br/>
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
+
+<h4>Scanner</h4>
+This will prevent the selected nodes from being actively scanned.<br/>
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
+
+<h4>Spider</h4>
+This will prevent the selected nodes from being spidered.<br/>
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
+
+<h3>再次发送...</h3>
+This will bring up the
+<a href="../dialogs/resend.html">Resend dialog</a> which allows you to  
+resend the request after making any changes to it that you want to.
+
+<h3>新建警告...</h3>
+This will bring up the
+<a href="../dialogs/addalert.html">Add Alert dialog</a> which allows you to manually record a new  
+<a href="../../start/concepts/alerts.html">alert</a> against this request.
+
+<h3>Show in Sites tab</h3>
+This will show the selected message in the <a href="sites.html">Sites tab</a>.
+
+<h3>Open URL in Browser</h3>
+This will open the URL of the selected node in your default browser.
+
+
+<h2>See also</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../dialogs/options/ascan.html">Options Active Scan screen</a></td><td>for details of the active scan configuration</td></tr>
+
+</table>
+
+</body>
+</html>
