@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Fuzz tab
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Fuzzer tab</h1>
+
+The Fuzzer tab shows you the requests and responses performed when you <a href="../../start/concepts/fuzz.html">fuzz</a>
+a string.<br>
+Selecting a row see the full requests and responses.
+You can also search for strings in the fuzz results using the <a href="search.html">Search tab</a>. 
+<br>
+	<h2>HTTP Fuzzer results</h2>
+	The results have to be manually assessed to know if any vulnerability was found.
+	<br> Meaning of values of the "State" column:
+	<ul>
+		<li>"Successful" - the message was successfully sent/received;</li>
+		<li>"Error" - an error occurred while creating or sending/receiving the message
+			(for example: malformed HTTP message, time out while reading the response);</li>
+		<li>"Reflected" - the injected fuzz string (value of "Fuzz" column) was found in
+			the response body.</li>
+	</ul>
+
+<h2>Menú de botón derecho</h2>
+Right clicking on a row will bring up a menu which will allow you to:
+
+<h3>Excluir de</h3>
+Este menú tiene los siguientes submenús:
+
+<h4>Proxy</h4>
+Esto excluirá los nodos seleccionados desde el proxy. Aunque seguirán siendo procesadas vía ZAP no aparecerán en ninguna de las pestañas.<br/>
+Esto puede usarse para ignorar las URLs que no son relevantes para el sistema que actualmente está probando.<br/>
+Los nodos pueden ser incluidos a través del cuadro de dialogo <a href="../dialogs/session/sessprop.html">propiedades de la Sesión</a> .   
+
+<h4>Escáner</h4>
+Esto evitará que los nodos seleccionados sean escaneados activamente.<br/>
+Los nodos pueden ser incluidos a través del cuadro de dialogo <a href="../dialogs/session/sessprop.html">propiedades de la Sesión</a> .   
+
+<h4>Spider(Araña)</h4>
+This will prevent the selected nodes from being spidered.<br/>
+Los nodos pueden ser incluidos a través del cuadro de dialogo <a href="../dialogs/session/sessprop.html">propiedades de la Sesión</a> .   
+
+<h3>Reenviar...</h3>
+Esto hará que aparezca el cuadro de dialogo 
+<a href="../dialogs/resend.html">Reenviar</a> que le permite enviar la solicitud después de hacer los cambios que desee.
+
+<h3>Nueva alerta...</h3>
+Esto hará que aparezca el cuadro de dialogo 
+<a href="../dialogs/addalert.html">Añadir Alerta,</a> el que le permitirá agregar una nueva  
+<a href="../../start/concepts/alerts.html">alerta</a> de forma automática en la petición.
+
+<h3>Ver en el navegador</h3>
+La dirección URL del nodo seleccionado se abrirá en el navegador por defecto.
+
+<h2>Vease también</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../overview.html">Visión general de la IU</a></td><td>Para una vista general sobre la interfaz de usuario</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../dialogs/options/fuzz.html">Options Fuzz screen</a></td><td>for details of the fuzz configuration</td></tr>
+
+</table>
+
+</body>
+</html>
