@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE toc
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 2.0//EN"
+         "http://java.sun.com/products/javahelp/toc_2_0.dtd">
+<!-- 
+	NOTE: Do not change the tocitem's tocid attribute without changing the TOC merger first. Otherwise the nodes will not be
+	correctly merged.
+
+	TOC merger is defined in org.zaproxy.zap.extension.help.ZapTocMerger.
+-->
+<toc version="2.0">
+ <tocitem text="ZAP User Guide" image="toplevelfolder" tocid="toplevelitem">
+
+   <tocitem text="Wprowadzenie" target="zap.intro"/>
+
+   <tocitem text="Rozpocznij" target="start.start">
+      <tocitem text="Configuring proxies" target="start.proxy"/>
+      <!--tocitem text="Explore the application" target="start.explore"/-->
+      <tocitem text="Features" target="start.concepts">
+         <tocitem text="Aktywne Skanowanie" target="start.concepts.ascan"/>
+         <tocitem text="Dodatki" target="start.concepts.addons"/>
+         <tocitem text="Zagrozenia" target="start.concepts.alerts"/>
+         <tocitem text="Anti CSRF Tokens" target="start.concepts.anticsrf"/>
+         <tocitem text="API" target="start.concepts.api"/>
+         <tocitem text="Uwierzytelnianie" target="start.concepts.auth"/>
+         <tocitem text="Punkty Zatrzymania" target="start.concepts.breakpoints"/>
+         <tocitem text="Contexts" target="start.concepts.contexts"/>
+         <tocitem text="Filtry" target="start.concepts.filters"/>
+         <tocitem text="Fuzzing" target="start.concepts.fuzz"/>
+         <tocitem text="Globally Excluded URLs" target="start.concepts.globalexcludeurl"/>
+         <tocitem text="Sesje HTTP" target="start.concepts.httpsessions"/>
+         <tocitem text="Intercepting Proxy" target="start.concepts.intercept"/>
+         <tocitem text="Modes" target="start.concepts.modes"/>
+         <tocitem text="Notes" target="start.concepts.notes"/>
+         <tocitem text="Skanowanie pasywne" target="start.concepts.pscan"/>
+         <tocitem text="Scope" target="start.concepts.scope"/>
+         <tocitem text="Session Management" target="start.concepts.sessmanag"/>
+         <tocitem text="Pająk" target="start.concepts.spider"/>
+         <tocitem text="Tags" target="start.concepts.tags"/>
+         <tocitem text="Users" target="start.concepts.users"/>
+      </tocitem>
+      <tocitem text="Scanner Rules" target="start.check"/>
+      <tocitem text="A Simple Penetration Test" target="start.pentest"/>
+   </tocitem>
+
+   <!--tocitem text="Common Vulnerabilities" target="vulns.vuln">
+      <tocitem text="Cross Site Request Forgery" target="vulns.csrf"/>
+      <tocitem text="Insecure Direct Object References" target="vulns.idor"/>
+      <tocitem text="Information Leakage / Improper Error Handling" target="vulns.leak"/>
+      <tocitem text="Insecure Communications" target="vulns.nossl"/>
+      <tocitem text="SQL Injection" target="vulns.sqli"/>
+      <tocitem text="Failure to restrict URL access" target="vulns.urla"/>
+      <tocitem text="Cross Site Scripts" target="vulns.xss"/>
+   </tocitem-->
+
+   <tocitem text="The User Interface" target="ui.overview">
+      <tocitem text="Overview" target="ui.overview"/>
+      <tocitem text="The Top Level Menu" target="ui.topmenu"/>
+      <tocitem text="The Top Level Toolbar" target="ui.toptoolbar"/>
+      <tocitem text="The Tabs">
+         <tocitem text="Strony" target="ui.tabs.sites"/>
+         <tocitem text="Żądanie" target="ui.tabs.request"/>
+         <tocitem text="Odpowiedź" target="ui.tabs.response"/>
+         <tocitem text="Zatrzymania" target="ui.tabs.break"/>
+         <tocitem text="Historia" target="ui.tabs.history"/>
+         <tocitem text="Szukaj" target="ui.tabs.search"/>
+         <tocitem text="Punkty Zatrzymania" target="ui.tabs.breakpoints"/>
+         <tocitem text="Zagrozenia" target="ui.tabs.alerts"/>
+         <tocitem text="Aktywne Skanowanie" target="ui.tabs.ascan"/>
+         <tocitem text="Pająk" target="ui.tabs.spider"/>
+         <tocitem text="Fuzzer" target="ui.tabs.fuzz"/>
+         <tocitem text="Parametry" target="ui.tabs.params"/>
+         <tocitem text="Sesje HTTP" target="ui.tabs.httpsessions"/>
+         <tocitem text="Wynik" target="ui.tabs.output"/>
+      </tocitem>
+      <tocitem text="The Dialogs" target="ui.dialogs">
+         <tocitem text="Dodaj Zagrożenie" target="ui.dialogs.addalert"/>
+         <tocitem text="Add Break Point" target="ui.dialogs.addbreak"/>
+         <tocitem text="Dodaj notatkę" target="ui.dialogs.addnote"/>
+         <tocitem text="Advanced Active Scan" target="ui.dialogs.advscan"/>
+         <tocitem text="BeanShell Console" target="ui.dialogs.beanshell"/>
+         <tocitem text="Kodowanie/Dekodowanie/Tworzenie skrótu" target="ui.dialogs.enc_dec"/>
+         <tocitem text="Filtr" target="ui.dialogs.filter"/>
+         <tocitem text="Znajdź" target="ui.dialogs.find"/>
+         <tocitem text="Fuzzer" target="ui.dialogs.fuzz"/>
+         <tocitem text="History Filter" target="ui.dialogs.historyfilter"/>
+         <tocitem text="Manual Request Editor" target="ui.dialogs.manreq"/>
+         <tocitem text="Zarządzaj dodatkami" target="ui.dialogs.manageaddons"/>
+         <tocitem text="Manage Tags" target="ui.dialogs.managetags"/>
+         <tocitem text="Opcje" target="ui.dialogs.options">
+         	<tocitem text="Aktywne Skanowanie" target="ui.dialogs.options.ascan"/>
+         	<tocitem text="Active Scan Input Vectors" target="ui.dialogs.options.ascaninput"/>
+         	<tocitem text="Anti CSRF Tokens" target="ui.dialogs.options.anticsrf"/>
+         	<tocitem text="API" target="ui.dialogs.options.api"/>
+         	<tocitem text="Uwierzytelnianie" target="ui.dialogs.options.authentication"/>
+            <tocitem text="Punkty przerwania" target="ui.dialogs.options.breakpoints"/>
+         	<tocitem text="Certyfikat" target="ui.dialogs.options.certificate"/>
+         	<tocitem text="Check for Updates" target="ui.dialogs.options.checkforupdates"/>
+			<tocitem text="Connection" target="ui.dialogs.options.connection"/>
+			<tocitem text="Baza danych" target="ui.dialogs.options.database"/>
+         	<tocitem text="Wyświetlanie" target="ui.dialogs.options.view"/>
+         	<tocitem text="Dynamiczne certyfikaty SSL" target="ui.dialogs.options.dynsslcert"/>
+            <tocitem text="Rozszerzenia" target="ui.dialogs.options.ext"/>
+         	<tocitem text="Fuzzer" target="ui.dialogs.options.fuzz"/>
+         	<tocitem text="Sesje HTTP" target="ui.dialogs.options.httpsessions"/>
+            <tocitem text="Global Exclude URL" target="ui.dialogs.options.globalexcludeurl"/>
+         	<tocitem text="Keyboard" target="ui.dialogs.options.keyboard"/>
+         	<tocitem text="Language" target="ui.dialogs.options.language"/>
+         	<tocitem text="Lokalne proxy" target="ui.dialogs.options.localproxy"/>
+         	<tocitem text="Skanowanie pasywne" target="ui.dialogs.options.pscan"/>
+         	<tocitem text="Pająk" target="ui.dialogs.options.spider"/>
+         </tocitem>
+         <tocitem text="Prześlij Ponownie" target="ui.dialogs.resend"/>
+         <tocitem text="Scan Policy" target="ui.dialogs.scanpolicy"/>
+         <tocitem text="Sesja" target="ui.dialogs.sessprop">
+	         <tocitem text="Właściwości sesji" target="ui.dialogs.sessprop"/>
+	         <tocitem text="Session Contexts" target="ui.dialogs.contexts"/>
+         </tocitem>
+      </tocitem>
+      <tocitem text="The Footer" target="ui.footer"/>
+   </tocitem>
+
+   <tocitem text="Command Line" target="cmdline"/>
+
+   <tocitem text="Add Ons" target="addon.introduction" tocid="addons" />
+   
+   <tocitem text="Releases" target="zap.releases">
+      <tocitem text="2.2.0" target="zap.releases.2.2.0"/>
+      <tocitem text="2.1.0" target="zap.releases.2.1.0"/>
+      <tocitem text="2.0.0" target="zap.releases.2.0.0"/>
+      <tocitem text="1.4.1" target="zap.releases.1.4.1"/>
+      <tocitem text="1.4.0" target="zap.releases.1.4.0"/>
+      <tocitem text="1.3.4" target="zap.releases.1.3.4"/>
+      <tocitem text="1.3.3" target="zap.releases.1.3.3"/>
+      <tocitem text="1.3.2" target="zap.releases.1.3.2"/>
+      <tocitem text="1.3.1" target="zap.releases.1.3.1"/>
+      <tocitem text="1.3.0" target="zap.releases.1.3.0"/>
+      <tocitem text="1.2.0" target="zap.releases.1.2.0"/>
+      <tocitem text="1.1.0" target="zap.releases.1.1.0"/>
+      <tocitem text="1.0.0" target="zap.releases.1.0.0"/>
+   </tocitem>
+   <tocitem text="Paros Proxy" target="zap.paros"/>
+
+   <tocitem text="Credits" target="zap.credits"/>
+
+ </tocitem>
+</toc>
