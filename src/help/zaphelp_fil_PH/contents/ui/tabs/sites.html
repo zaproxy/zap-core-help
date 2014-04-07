@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Sites tab
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Sites tab</h1>
+<p>
+The Sites tab shows all of the URLs visited in a tree structure. <br/>
+You can select any of the nodes in the tree to display the request and response for that URL 
+in the relevant tabs.<br/>
+</p>
+
+<h2>Right click menu</h2>
+Right clicking on a node will bring up a menu which will allow you to:
+
+<h3>Atake</h3>
+The Attack menu has the following submenus:
+<h4>Active Scan Site</h4>
+This will initiate an 
+<a href="../../start/concepts/ascan.html">active scan</a> of the whole of the site containing the selected node.<br/>
+The <a href="ascan.html">Active Scan tab</a> will be display and will show the progress of the scan.<br/>
+
+<h4>Active Scan Node</h4>
+This will initiate an 
+<a href="../../start/concepts/ascan.html">active scan</a> of just the node selected.<br/>
+The <a href="ascan.html">Active Scan tab</a> will be display and will show the progress of the scan.<br/>
+
+<h4>Spider Site</h4>
+This will initiate a 
+<a href="../../start/concepts/spider.html">spider</a> scan of the whole of the site containing the selected node.<br/>
+The <a href="spider.html">Spider tab</a> will be displayed and will show the progress of the scan.<br/>
+
+<h4>Spider Subtree</h4>
+This will initiate a <a href="../../start/concepts/spider.html">spider</a> scan with all the nodes in the subtree
+of the selected node contained in the Seed list. <br /> 
+The <a href="spider.html">Spider tab</a> will be displayed and will show the progress of the scan.<br/>
+
+<h4>Spider URL</h4>
+This will initiate a 
+<a href="../../start/concepts/spider.html">spider</a> scan starting (in the seed list) only with the selected node.<br/>
+The <a href="spider.html">Spider tab</a> will be displayed and will show the progress of the scan.<br/>
+
+<h4>Spider all in Scope</h4>
+This will initiate a <a href="../../start/concepts/spider.html">spider</a> scan starting (in the seed list) with all
+the nodes the user has selected as being "In Scope". <br />
+The <a href="spider.html">Spider tab</a> will be displayed and will show the progress of the scan.<br/>
+
+<h3>Include in Context</h3>
+This menu allows you to include the selected nodes and all of their subordinates in the specified
+<a href="../../start/concepts/context.html">context</a>.<br/>
+You also have the option to create a new context.<br/>
+The <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
+allow you to make any additional changes.
+
+<h3>Exclude from Context</h3>
+This menu allows you to exclude the selected nodes and all of their subordinates from the specified
+<a href="../../start/concepts/context.html">context</a>.<br/>
+The <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
+allow you to make any additional changes.
+
+<h3>Flag as context</h3>
+This menu has the following submenus for each of the 
+<a href="../../start/concepts/context.html">contexts</a> you have defined:
+
+<h4>Login request</h4>
+This identifies the specified node as a login request.<br/>
+You may only have one node identified as such in any one context.<br/> 
+The <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
+allow you to make any additional changes.
+
+<h4>Logout request</h4>
+This identifies the specified node as a logout request.<br/>
+You may only have one node identified as such in any one context.<br/> 
+The <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
+allow you to make any additional changes.
+
+<h3>Exclude from</h3>
+This menu has the following submenus:
+
+<h4>Proxy</h4>
+This will exclude the selected nodes from the proxy. They will still be proxied via ZAP but will not be shown 
+in any of the tabs.<br/>
+This can be used to ignore URLs that you know are not relevant to the system you are currently testing.<br/>
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
+
+<h4>Scanner</h4>
+This will prevent the selected nodes from being actively scanned.<br/>
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
+
+<h4>Spider</h4>
+This will prevent the selected nodes from being spidered.<br/>
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
+
+<h3>Delete</h3>
+This will remove the node and all of its children from ZAP.<br/>
+However they can be added back in, to prevent this use the 'Exclude from' menus. 
+
+<h3>Break...</h3>
+This will bring up a new window which will allow you to set a 
+<a href="../../start/concepts/breakpoints.html">break point</a> on that URL.<br/>
+The break point is defined via a regular expression. If you visit a URL which matches this 
+expression then ZAP will intercept it and allow you to change either the request and/or the
+response.
+
+<h3>Alerts for this node</h3>
+If the URL selected has <a href="../../start/concepts/alerts.html">alerts</a> associated with it then 
+they will be listed under this menu.<br>
+Selecting one of the alerts will cause it to be displayed.
+
+<h3>Resend...</h3>
+This will bring up the
+<a href="../dialogs/resend.html">Resend dialog</a> which allows you to  
+resend the request after making any changes to it that you want to.
+
+<h3>New Alert...</h3>
+This will bring up the
+<a href="../dialogs/addalert.html">Add Alert dialog</a> which allows you to manually record a new  
+<a href="../../start/concepts/alerts.html">alert</a> against this request.
+
+<h3>Show in History tab</h3>
+This will show the selected node in the <a href="history.html">History tab</a>.
+
+<h3>Open URL in Browser</h3>
+This will open the URL of the selected node in your default browser.
+
+<h3>Generate anti CSRF test form</h3>
+This will open a URL which will give you a generated form for testing for CSRF issues.<br>
+It will only be enabled for POST requests, if the API is enabled and if Java supports the opening of URLs 
+in a browser on your platform. 
+
+<h3>Refresh Sites tree</h3>
+Occasionally the Sites tree can be displayed incorrectly - this option will redraw it.
+
+<h2>See also</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+</table>
+
+</body>
+</html>
