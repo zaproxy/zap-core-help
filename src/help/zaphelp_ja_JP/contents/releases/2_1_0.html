@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  Release 2.1.0
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Release 2.1.0</h1>
+<p>
+本リリースでは以下のような変更が行われました。
+</p>
+
+<h2>小変更：</h2>
+
+<h3>Issue 355: Allow Positional Fuzzing</h3>
+<h3>Issue 475: Http Sessions custom cookie value</h3>
+<h3>Issue 484: Check java version in zap.sh</h3>
+<h3>Issue 496: Allow to see the request and response at the same time in the main window</h3>
+<h3>Issue 505: Http Session API Implementation</h3>
+<h3>Issue 515: Change add-ons to make use of automatic load of messages</h3>
+<h3>Issue 516: Change add-ons messages keys to have unique prefix</h3>
+<h3>Issue 518: Add OData support</h3>
+<h3>Issue 537: Option to Force Browse files/resources with user-defined extensions</h3>
+<h3>Issue 538: Allow non sequential lines to be selected in the history log</h3>
+<h3>Issue 542: browse api - prompt window to enable</h3>
+<h3>Issue 551: Add csrfmiddlewaretoken to list of default Anti csrf tokens</h3>
+<h3>Issue 552: Make ZapPortNumberSpinner a subclass of ZapNumberSpinner</h3>
+<h3>Issue 553: Add option to filter alerts by scope</h3>
+<h3>Issue 561: Copy URLs right click option</h3>
+<h3>Issue 566: Abstract class for creating generic popups</h3>
+<h3>Issue 568: Allow extensions to run from the command line</h3>
+<h3>Issue 569: Allow Spider Scan to start without prior visit</h3>
+<h3>Issue 587: Upgrade to JBroFuzz 2.5</h3>
+<h3>Issue 592: Do not show the main pop up menu if it doesn't have visible pop up menu items</h3>
+<h3>Issue 597: Shown "Author" field on available add-ons ("Marketplace" tab)</h3>
+<h3>Issue 602: Allow to (explicitly) choose the file type when exporting URLs to file</h3>
+<h3>Issue 621: Handle requests to the proxy URL (and generate a PAC file)</h3>
+<h3>Issue 638: Persist and snapshot sessions instead of saving them</h3>
+
+<h2>Bug Fixes:</h2>
+
+<h3>Issue 150: java.io.IOException at org.owasp.jbrofuzz.system.Logger.checkOrCreateDirs</h3>
+<h3>Issue 205: A previously saved option (Toolbar) is not set on start up when "Prompt for proxy credentials on start up" is checked.</h3>
+<h3>Issue 317: Move (or protect) the 'Bin' button</h3>
+<h3>Issue 452: API - shutdown asynchronously</h3>
+<h3>Issue 488: Fuzz categories available for the default category not updated after installing/uninstalling an add-on (with fuzz files)</h3>
+<h3>Issue 490: Re-authentication only works with the active scanner</h3>
+<h3>Issue 499: NullPointerException while uninstalling an add-on with a manual request editor</h3>
+<h3>Issue 500: NullPointerException while uninstalling an add-on manually installed</h3>
+<h3>Issue 501: ExtensionFactory keeps references to uninstalled add-ons (with extensions)</h3>
+<h3>Issue 502: Manually installed add-ons don't remain installed</h3>
+<h3>Issue 504: Table of installed add-ons may not update after manually installing an add-on</h3>
+<h3>Issue 507: Quick start tab doesnt have a scroll pane</h3>
+<h3>Issue 508: Some add-ons are not unloading all its components when uninstalled</h3>
+<h3>Issue 509: Remove add-on ResourceBundle when an add-on is uninstalled</h3>
+<h3>Issue 510: Remove add-on HelpSet when an add-on is uninstalled</h3>
+<h3>Issue 511: Allow add-ons to remove footer status labels</h3>
+<h3>Issue 512: Allow to remove the footer status label added by the ScanPanel</h3>
+<h3>Issue 513: Footer status labels not immediately shown when an add-on is installed</h3>
+<h3>Issue 514: Forced Browse footer status label still uses spanner icon</h3>
+<h3>Issue 517: Add-ons are added to "main" class loader when installed</h3>
+<h3>Issue 520: MissingResourceException when generating "Alerts" report</h3>
+<h3>Issue 524: Host authentication is used even when disabled</h3>
+<h3>Issue 525: "Report / Export all URLs to File ..." fails</h3>
+<h3>Issue 528: Scan progress dialog can show negative progress times</h3>
+<h3>Issue 533: Default ports 80 and 443 are appended to sites in site tree</h3>
+<h3>Issue 540: Maximised work tabs hidden when response tab position changed</h3>
+<h3>Issue 548: Diff messages are appended to the "Diff" dialogue</h3>
+<h3>Issue 549: Diff menu item enabled when "Sites" tree root node and a child node are selected</h3>
+<h3>Issue 550: Fuzzer - Buffer Overflow stops because of java.sql.SQLDataException: data exception: string data, right truncation</h3>
+<h3>Issue 558: Auto tagging broken</h3>
+<h3>Issue 564: Active scanner can hang if dependencies used</h3>
+<h3>Issue 565: Marketplace: Downloads won't use configured upstream Proxy</h3>
+<h3>Issue 567: Spelling mistake</h3>
+<h3>Issue 574: Spider fails when invoked via the API</h3>
+<h3>Issue 579: Some (build) targets are incorrectly relying on the platform default encoding</h3>
+<h3>Issue 582: NullPointerException while opening a session in daemon mode</h3>
+<h3>Issue 583: NullPointerException while managing a session in daemon mode with "WebSockets" add-on installed</h3>
+<h3>Issue 588: ExtensionHistory.historyIdToRef should be cleared when changing session</h3>
+<h3>Issue 593: Quick Start may start the active scan before waiting for the spider to finish</h3>
+<h3>Issue 614: SessionFixation labels wrong</h3>
+<h3>Issue 616: Spider handles incorrectly form actions containing fragments (#)</h3>
+<h3>Issue 617: NullPointerException when spidering a context</h3>
+<h3>Issue 622: Local proxy unable to correctly detect requests to itself</h3>
+<h3>Issue 626: Scroll bar of alert text areas is always at the bottom</h3>
+<h3>Issue 627: Allow add-ons to remove main tool bar buttons/separators</h3>
+<h3>Issue 628: Allow add-ons to remove the registered API</h3>
+<h3>Issue 632: Manual Request Editor dialogue (HTTP) configurations not saved correctly</h3>
+<h3>Issue 633: Auto tag scanners are shown in passive scanners table</h3>
+<h3>Issue 634: Empty passive scanner shown in the passive scanners table</h3>
+
+<h2>関連情報</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">導入</a></td><td>ZAPのご紹介<br/></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">リリース</a></td><td>the full set of releases<br/></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible<br/></td></tr>
+</table>
+</body>
+</html>

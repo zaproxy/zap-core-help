@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Http Sessions tab</title>
+</head>
+<body bgcolor="#ffffff">
+	<h1>Http Sessions tab</h1>
+	<p>
+		This tab shows you the set of identified HTTP sessions for each Site,
+		as detected by the <a href="../../start/concepts/httpsessions.html">HTTP
+			Sessions extension</a>.
+	</p>
+
+	<p>
+		The current Site the information is referring to can be selected via
+		the toolbar or the <a href="sites.html">Sites tab</a>.
+	</p>
+
+	<p>The toolbar provides a button ("New Session") which allows you
+		to start a new session, forcing all outgoing request messages to be
+		without the session tokens set, so the server considers it's a new
+		session. This allows the creation of a new session, without destroying
+		the old one.</p>
+
+	<p>Each of the entries in the Sessions table (each session)
+		initially has a generated name, but it can be changed by selecting the
+		'Name' cell and editing it.</p>
+
+	<p>Each of the entries in the Sessions table can be right clicked,
+		which activates the Popup Menu, with the following options:</p>
+	<ul>
+		<li>Remove Session - deletes the session</li>
+		<li>Set as active (available only on non-active sessions) - marks
+			this session as active. If any session was previously set as active,
+			it will be unset as active and, if it doesn't specify any token
+			values, it is deleted.</li>
+		<li>Unset as active (available only on the active session) -
+			marks this session as not being active anymore. If the session
+			doesn't specify any token values, it is deleted.</li>
+	</ul>
+
+	<i>Regarding the active session, more details can be read on the
+		general concepts help page of the <a
+		href="../../start/concepts/httpsessions.html">HTTP Sessions
+			extension</a>
+	</i>
+	<br />
+
+	<br /> For each session you can see:
+	<ul>
+		<li>Active - Whether this is the active session or not</li>
+		<li>Name - The session name</li>
+		<li>Session Tokens' Values - the list of values associated to
+			each of the session tokens. The entries are separated by the ';'
+			symbol.</li>
+		<li>Messages Matched - the number of HTTP messages that have been
+			matched by the extension with this session</li>
+	</ul>
+
+
+	<h2>関連情報</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../overview.html">UI Overview</a></td>
+			<td>ユーザー インターフェイスの概要について</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../start/concepts/httpsessions.html">Http
+					Sessions Extension</a></td>
+			<td>for an overview of the extension</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/options/httpsessions.html">Http
+					Sessions Options screen</a></td>
+			<td>for an overview of the extension's Options</td>
+		</tr>
+	</table>
+
+</body>
+</html>
+
