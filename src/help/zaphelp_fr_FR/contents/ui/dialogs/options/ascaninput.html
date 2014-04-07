@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Options Active Scan Input Vectors screen
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Options Active Scan Input Vectors screen</h1>
+<p>
+This screen allows you to configure the <a href="../../../start/concepts/ascan.html">active scan</a> input vectors.<br>
+These are the elements that the active scanner will attack.<br>
+Scanning all of the elements supported will take longer, but not scanning some elements may cause some vulnerabilities to be missed.
+
+<h3>Injectible Targets</h3>
+The request element that the active scanner will target:
+
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Chaîne de requête URL</td><td>Key value pairs in the request URL query, ie after the '?'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Données POST</td><td>Key value pairs in the request POST data</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Chemin de l'URL</td><td>Path elements in the request URL, ie the elements separated by '/'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>HTTP Headers</td><td>Request HTTP Headers</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Cookie data</td><td>Request cookies</td></tr>
+</table>
+
+<h3>Build-in Input Vector Handlers</h3>
+The data formats that the active scanner will target:
+
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Multipart Form Data</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Balise/attribut XML</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>JSON</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Google Web Toolkit</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>OData id/filter</td><td></td></tr>
+</table>
+
+
+<h3>Activez les vecteurs d'entrée du script</h3>
+If this option is selected then the active scanner will use any enabled script input vectors.<br>
+Script input vectors are scripts which you have written or imported into ZAP and allow you to target elements 
+which are not supported by default.
+
+<p>
+This screen also allows you to configure the parameters which will be ignored by the active scanner.
+
+<h2>Voir aussi</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">Aperçu de l'interface utilisateur</a></td><td>pour un aperçu de l'interface utilisateur</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="options.html">Boîtes de dialogue Options</a></td><td>pour des détails sur les autres boîtes de dialogue Options</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="ascaninput.html">Vecteurs d'entrée de balayage actif</a></td><td></td></tr>
+</table>
+
+</body>
+</html>

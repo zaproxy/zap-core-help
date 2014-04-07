@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Robot</title>
+</head>
+<body bgcolor="#ffffff">
+	<h1>Robot</h1>
+	<p>Le robot est un outil utilisé pour détecter automatiquement les nouvelles ressources (URL) sur un site particulier. Il commence par une liste d'URLs à visiter, appelées les germes. Cette liste dépend de la manière dont le robot est démarré. Le robot visite ensuite ces URLs, identifiant tous les liens hypertexte dans la page et les ajoutant à la liste des URLs à visiter. Le processus poursuit de manière récursive, aussi longtemps que sont découvertes de nouvelles ressources.
+	</p>
+
+	<p>Il y a 4 méthodes de démarrage du robot, différenciées par la liste de germes par laquelle le robot commence :</p>
+	<ul>
+		<li>Site du robot - la liste de germes contient toutes les URI existantes déjà découvertes pour le site sélectionné.</li>
+		<li>Sous-arbre du robot - la liste des germes contient toutes les URI existantes déjà découvertes et présentent dans le sous-arbre du nœud sélectionné.</li>
+		<li>URL du robot - la liste de germes contient seulement l'URI correspondant au nœud sélectionné (dans l'arborescence du site).</li>
+		<li>Robot tout dans le périmètre - la liste de germes contient toutes les URI que l'utilisateur a sélectionnées comme étant 'dans le périmètre'.</li>
+		<li>Robot tout dans le contexte... - la liste de germes contient toutes les URIs que l'utilisateur a choisies comme étant dans le contexte sélectionné.</li>
+	</ul>
+	<i>Plus de détails se trouvent ci-dessous, dans la section "Accès via" </i>
+
+
+	<p>Lors du traitement d'une URL, le robot envoie une requête pour charger la ressource, puis analyse la réponse afin d'identifier des liens hypertexte. Il se comporte actuellement de la manière suivante lors du traitement des différents types de réponses :</p>
+
+	<h4>HTML</h4>
+	Traite les balises spécifiques, identifiant les liens vers de nouvelles ressources:
+	<ul>
+		<li>Base - traitement naturel</li>
+		<li>A, Link, Area - attribut 'href'</li>
+		<li>Frame, IFrame, Script, Img - attribut 'src'</li>
+		<li>Meta - 'http-equiv' pour 'location' et 'refresh'</li>
+		<li>Form - manipulation appropriée des formulaires avec les méthodes GET et POST. Les valeurs des champs sont générées correctement, y compris pour les <a<br>
+			href="http://www.w3schools.com/html5/html5_form_input_types.asp">types d'entrée HTML 5.0</a>.
+		</li>
+		<li>Commentaires - les balises valides trouvées dans les commentaires sont aussi analysées, si spécifié dans l'écran <a href="../../ui/dialogs/options/spider.html">Options Robot</a>
+		</li>
+	</ul>
+
+	<h4>Fichier robots.txt</h4>
+	S'il est spécifié dans l'écran
+	<a href="../../ui/dialogs/options/spider.html">Options Robot</a>, il analyse également le fichier 'Robots.txt' et essaie d'identifier de nouvelles ressources en utilisant les règles spécifiées. Mentionnons encore que le robot ne suit pas les règles spécifiées dans le fichier « Robots.txt ».
+
+	<h4>Format OData Atom</h4>
+	Les contenus OData au format Atom sont actuellement pris en charge. Tous les liens inclus (relatifs ou absolus) sont traités.
+
+	<h4>Réponse texte non HTML</h4>
+	Les réponses texte sont analysées à la recherche de modèles d'URL
+
+	<h4>Réponse non textuelles</h4>
+	Actuellement, le robot ne traite pas ce type de ressources.
+
+	<h2>Autres aspects</h2>
+	<ul>
+	<li> Lors de la vérification si une URL a déjà été parcourue, la manière de traiter les paramètres peut être configurée dans l'écran 'Options Robot'.
+	</li>
+	<li> Lors de la vérification si une URL a déjà été parcourue, un certain nombre de paramètres communs sont ignorés:  jsessionid, phpsessid, aspsessionid, utm_*
+	</li>
+	<li> Le comportement du robot avec les cookies est défini par l'option présente dans l'écran <i>Modifier -&gt; Activer le suivi de session</i>. Si cette option est activée, le robot gérera correctement tous les cookies reçus du serveur et les renverra en conséquence.
+	Si l'option est désactivée, le robot n'enverra aucun cookie dans ses requêtes.
+	</li>
+	</ul>
+	<p>
+		Le robot est configuré à l'aide de l'écran <a<br>
+			href="../../ui/dialogs/options/spider.html">Options de Robot</a>.
+	</p>
+
+	<h2>Accès via</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/tabs/spider.html">Onglet robot</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/tabs/sites.html">Onglet sites</a></td>
+			<td>Menu contextuel clic droit 'Attaquer -&gt; scanner le site'</td>
+			<td>Menu contextuel clic droit 'Attaquer -&gt; scanner l'URL'</td>
+			<td>Menu contextuel clic droit 'Attaquer -&gt; scanner la sous-arborescence'</td>
+			<td>Élément de menu clic droit 'Attaquer -&gt; scanner tout le champ'</td>
+			<td>Menu contextuel clic droit 'Attaquer -&gt; scanner tout le champ'</td>
+		</tr>
+	</table>
+
+	<h2>Voir aussi</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/overview.html">Aperçu de l'interface utilisateur</a></td>
+			<td>pour un aperçu de l'interface utilisateur</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="concepts.html">Fonctionnalités</a></td>
+			<td>fournies par ZAP</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/options/spider.html">Écran d'options de robot</a></td>
+			<td>pour un aperçu des options du robot</td>
+		</tr>
+	</table>
+
+	<p />
+</body>
+</html>
