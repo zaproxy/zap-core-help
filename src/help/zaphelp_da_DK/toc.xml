@@ -77,7 +77,7 @@
          <tocitem text="Tilføj Alarm" target="ui.dialogs.addalert"/>
          <tocitem text="Add Break Point" target="ui.dialogs.addbreak"/>
          <tocitem text="Tilføj Note" target="ui.dialogs.addnote"/>
-         <tocitem text="Advanced Active Scan" target="ui.dialogs.advscan"/>
+         <tocitem text="Advanced Active Scan" target="ui.dialogs.advascan"/>
          <tocitem text="BeanShell Terminal" target="ui.dialogs.beanshell"/>
          <tocitem text="Encode/Decode/Hash" target="ui.dialogs.enc_dec"/>
          <tocitem text="Filter" target="ui.dialogs.filter"/>

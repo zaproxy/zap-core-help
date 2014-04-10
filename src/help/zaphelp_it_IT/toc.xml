@@ -77,7 +77,7 @@
          <tocitem text="Aggiungi Avviso" target="ui.dialogs.addalert"/>
          <tocitem text="Add Break Point" target="ui.dialogs.addbreak"/>
          <tocitem text="Aggiungi una nota" target="ui.dialogs.addnote"/>
-         <tocitem text="Advanced Active Scan" target="ui.dialogs.advscan"/>
+         <tocitem text="Advanced Active Scan" target="ui.dialogs.advascan"/>
          <tocitem text="BeanShell Console" target="ui.dialogs.beanshell"/>
          <tocitem text="Codifica/Decodifica/Hash" target="ui.dialogs.enc_dec"/>
          <tocitem text="Filtra" target="ui.dialogs.filter"/>
