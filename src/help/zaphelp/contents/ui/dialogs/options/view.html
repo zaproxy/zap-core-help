@@ -12,7 +12,7 @@ Options Display screen
 The Display screen allows you to configure:
 
 <H3>Images</H3>
-If ZAP processes images
+If ZAP processes images.
 
 <H3>Language</H3>
 The language ZAP uses for its display.<br>
@@ -23,12 +23,25 @@ Note that you will need to restart ZAP in order to see the new language.
 <H3>Display</H3>
 The layout of the 3 main windows.
 
+<H3>Output Tabs Timestamp Options</H3>
+Once you've enabled timestamps on output tabs you can configure the format you would like those timestamps to appear in. 
+Either select a pre-defined format from the drop-down list or enter one of your own choosing. The format is based on Java's
+SimpleDateFormat. After choosing or entering a timestamp format if you press enter the example on the right will be updated
+to reflect your choice. If ZAP is unable to use a format you've entered then the example is displayed based 
+on a DEFAULT format.</p>
+
+<table border="1" cellpadding="5">
+<tr> <td> Long & Default </td> <td> yyyy-MM-dd HH:mm:ss </td> </tr>
+<tr> <td> ISO8601 </td> <td> yyyy-MM-dd'T'HH:mm:ssZ </td> </tr>
+<tr> <td> Time Only </td> <td> HH:mm:ss </td> </tr>
+</table>
+
 <H2>See also</H2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens.</td></tr>
 </table>
 
 <H2>External Links</H2>
@@ -36,6 +49,8 @@ The layout of the 3 main windows.
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 https://code.google.com/p/zaproxy/downloads/list</td>
 <td> ZAP download page</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html</td><td>For details of Java's SimpleDateFormat.</td></tr>
 </table>
 
 </BODY>
