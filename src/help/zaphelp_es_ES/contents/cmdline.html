@@ -22,16 +22,33 @@ ZAP supports the following command line options:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-host</td><td>Overrides the host used for proxying specified in the configuration file</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-port</td><td>Overrides the port used for proxying specified in the configuration file</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-version</td><td>Reports the ZAP version</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-newsession</td><td>Creates a new session at the given location (it expects the full path to the session)</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-session</td><td>Opens the given session after starting ZAP (it expects the full path to the session).</td></tr>
 </table>
+<br>
+The options '-session' and '-newsession' are mutually exclusive. An error will be shown and ZAP exit (if not in GUI) when both options are set.
 <br/>
 Configuration keys should be specified using the dot notation based their location in the XML of the configuration file, eg:<br/>
 <pre>-config api.key=12345 -config connection.timeoutInSecs=60</pre>  
 Note that add-ons can add extra command line options.
 
-<h2>Vease también</h2>
+<p>
+Examples:
+	<ul>
+		<li>Start ZAP in 'daemon' mode with a new session created at a given path:
+			<pre>-daemon -newsession /path/to/new/session</pre>
+		</li>
+		<li>Create a report of the last scan of an existing session and exit ZAP once finished:
+			<pre>-last_scan_report /path/to/save/report.xml -session /path/to/existing/session -cmd</pre>
+		</li>
+	</ul>
+
+<h2>See also</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="intro.html">Introducción</a></td><td>Introducción a ZAP<br/></td></tr>
+<a href="intro.html">Introduction</a></td><td>the introduction to ZAP<br/></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="start/concepts/api.html">API</a></td><td>to control ZAP programmatically</td></tr>
 </table>
 
 </body>
