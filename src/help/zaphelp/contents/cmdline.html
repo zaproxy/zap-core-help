@@ -22,8 +22,8 @@ ZAP supports the following command line options:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-host</td><td>Overrides the host used for proxying specified in the configuration file</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-port</td><td>Overrides the port used for proxying specified in the configuration file</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-version</td><td>Reports the ZAP version</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-newsession</td><td>Creates a new session at the given location (it expects the name of the session (loaded from the user directory) or the full path)</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-session</td><td>Opens the given session after starting ZAP (it expects the name of the session (loaded from the user directory) or the full path).</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-newsession</td><td>Creates a new session at the given location (it expects the full path to the session)</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-session</td><td>Opens the given session after starting ZAP (it expects the full path to the session).</td></tr>
 </table>
 <br>
 The options '-session' and '-newsession' are mutually exclusive. An error will be shown and ZAP exit (if not in GUI) when both options are set.
@@ -39,7 +39,7 @@ Examples:
 			<pre>-daemon -newsession /path/to/new/session</pre>
 		</li>
 		<li>Create a report of the last scan of an existing session and exit ZAP once finished:
-			<pre>-last_scan_report /path/to/save/report.xml -session existing_session -cmd</pre>
+			<pre>-last_scan_report /path/to/save/report.xml -session /path/to/existing/session -cmd</pre>
 		</li>
 	</ul>
 
