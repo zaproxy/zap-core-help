@@ -97,6 +97,8 @@
         <mapID target="zap.releases.2.0.0" url="contents/releases/2_0_0.html"/>
         <mapID target="zap.releases.2.1.0" url="contents/releases/2_1_0.html"/>
         <mapID target="zap.releases.2.2.0" url="contents/releases/2_2_0.html"/>
+        <mapID target="zap.releases.2.2.1" url="contents/releases/2_2_1.html"/>
+        <mapID target="zap.releases.2.2.2" url="contents/releases/2_2_2.html"/>
         <mapID target="zap.credits" url="contents/credits.html" />
         <mapID target="zap.todo" url="contents/todo.html" />
      	<mapID target="ui.dialogs.options.ascan" url="contents/ui/dialogs/options/ascan.html"/>
