@@ -126,7 +126,7 @@
 		which sends messages or performs other actions as needed by your web-application. This script is then selected for use for a given Context
 		and it is called whenever an authentication is performed. Re-authentication is possible. 
 		Configuration can be done using the <a href="../../ui/dialogs/session/contexts.html#auth">Session
-			Contexts Dialog</a></i> and requires you to have the Scripts Console ZAP Addon installed from the Marketplace.
+			Contexts Dialog</a> and requires you to have the Scripts Console ZAP Addon installed from the Marketplace.
 	</p>
 	<p>When using this authentication method, configuring an User for the context requires
 	setting up the a set of parameters defined in the script. For more details, see the provided Authentication Script examples.</p>
@@ -136,8 +136,8 @@
 	<i>cookie-based session management</i> is 
 	seen below:
 	<ol>
-		<li>set up a context for the web application</p>
-		<li>set up the session management method to <i>Cookie-based Session Management</i>
+		<li>set up a context for the web application</li>
+		<li>set up the session management method to <i>Cookie-based Session Management</i></li>
 		<li>make sure your browser proxies everything through ZAP and log into your application using the browser</li>
 		<li>go to ZAP and identify the request that was done for the login (most usually it's a HTTP POST request 
 		containing the username and the password and possibly other elements)</li>
