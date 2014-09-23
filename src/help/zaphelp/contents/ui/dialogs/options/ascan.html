@@ -34,6 +34,14 @@ If this option is selected then the active scanner will attempt to automatically
 Note that this is experimental functionality and will slow down the scanning process as only one thread will be used to ensure
 that anti CSRF token requests dont get out of step. 
 
+<H3>In Attack mode prompt to rescan nodes when scope changed</H3>
+If this option is selected then when you select Attack <a href="../../../start/concepts/modes.html">mode</a> you will be prompted to choose whether to rescan nodes in scope.<br>
+If the option is not selected then the following option will control whether the nodes are rescanned.
+
+<H3>In Attack mode always rescan nodes when scope changed</H3>
+If this option is selected then when running in Attack <a href="../../../start/concepts/modes.html">mode</a> all nodes in scope will be rescanned if the scope changes.<br>
+This is not recommended for large sites as it could take a long time.
+
 <H3>Alert Threshold</H3>
 This controls how likely ZAP is to report potential vulnerabilities.<br>
 If you select Low then more potential issues will be raised which may increase the number of false positives.<br>
