@@ -5,7 +5,7 @@
 
 <map version="1.0">
 	<mapID target="toplevelfolder" url="contents/images/zap16x16.png" />
-	<mapID target="toplevelicon" url="contents/images/zap32x32.png" />
+	<mapID target="toplevelicon" url="contents/images/zap256x256.png" />
         <mapID target="zap.intro" url="contents/intro.html" />
         <mapID target="start.start" url="contents/start/start.html" />
         <mapID target="start.proxy" url="contents/start/proxies.html" />
