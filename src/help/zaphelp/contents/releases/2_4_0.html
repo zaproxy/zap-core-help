@@ -15,22 +15,44 @@ The following changes were made in this release:
 <H2>Significant changes:</H2>
 
 <H3>Attack mode</H3>
-TBA
+
+A new 'ATTACK' <a href="../concepts/modes.html">Mode</a> has been added - new nodes that are in <a href="../concepts/scope.html">Scope</a> are 
+<a href="../concepts/ascan.html">actively scanned</a> as soon as they are discovered.
 
 <H3>Advanced fuzzing</H3>
-TBA
+
+TBA - depends if these changes make it in ;)
 
 <H3>Scan dialogs with advanced options</H3>
-TBA
 
-<H3>Sequence scanning</H3>
-TBA
+New <a href="../ui/dialogs/advascan.html">Active Scan</a> and <a href="../ui/dialogs/spider.html">Spider</a> dialogs have replaced
+the increasing number of right click 'Attack' options.<br>
+These provide easy access to all of the most common options and optionally a wide range of advanced options. 
+
+<H3>Scan Policies</H3>
+
+A new <a href="../ui/dialogs/spanpolicymgr.html">Scan Policy Manager dialog</a> allows you to create as many 
+nd <a href="../concepts/scanpolicy.html">Scan Policies</a> as you need.<br>
+Scan policies define exactly which rules are run as part of an <a href="../concepts/ascan.html">Active Scan</a>.<br>
+They also define how these rules run influencing how many requests are made and how likely potential issues are to be flagged.<br>
 
 <H3>Unused tabs hidden</H3>
-TBA
+
+By default only the essential tabs are now shown when ZAP starts up.<br>
+The remaining tabs are revealed when they are used (e.g. for the spider and active scanner) or when you display them via the 
+special tab on the far right of each window with the green '+' icon. This special tab disappears if there are no hidden tabs.<br>
+Tabs can be closed via a small 'x' icon which is shown when the tab is selected.<br>
+Tabs can also be 'pinned' using a small 'pin' icon that is also shown when the tab is selected - pinned tabs will be shown
+when ZAP next starts up. 
+
+<H3>Enablers for Sequence scanning add-on</H3>
+
+A new optional 'alpha' quality add-on adds the ability to scan 'sequences' of web pages, in other words pages that must be visited
+in a strict order in order to work correctly. 
 
 <H3>Enablers for access control testing add-on</H3>
-TBA
+
+A new optional 'alpha' quality add-on adds the ability to automate many aspects of access control testing. 
 
 
 <H2>Full list of changes:</H2>

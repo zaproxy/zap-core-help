@@ -10,13 +10,13 @@
 <index version="2.0">
 
     <indexitem text="active scan" target="start.concepts.ascan" />
+    <indexitem text="active scan dialog" target="ui.dialogs.advascan" />
     <indexitem text="active scan tab" target="ui.tabs.ascan"/>
     <indexitem text="add-ons" target="start.concepts.addons"/>
     <indexitem text="add-ons" target="addon.introduction"/>
     <indexitem text="add alert dialog" target="ui.dialogs.addalert" />
     <indexitem text="add break point dialog" target="ui.dialogs.addbreak" />
     <indexitem text="add note dialog" target="ui.dialogs.addnote" />
-    <indexitem text="advanced active scan" target="ui.dialogs.advascan" />
     <indexitem text="alerts tab" target="ui.tabs.alerts" />
     <indexitem text="alerts" target="start.concepts.alerts" />
     <indexitem text="api" target="start.concepts.api" />
@@ -71,18 +71,22 @@
     <indexitem text="release 2.2.2" target="zap.releases.2.2.2" />
     <indexitem text="release 2.3.0" target="zap.releases.2.3.0" />
     <indexitem text="release 2.3.1" target="zap.releases.2.3.1" />
+    <indexitem text="release 2.4.0" target="zap.releases.2.4.0" />
     <indexitem text="releases" target="zap.releases" />
     <indexitem text="request tab" target="ui.tabs.request" />
     <indexitem text="resend dialog" target="ui.dialogs.resend" />
     <indexitem text="response tab" target="ui.tabs.response" />
     <indexitem text="scanner rules" target="start.check" />
+    <indexitem text="scan policy" target="start.concepts.scanpolicy" />
     <indexitem text="scan policy dialog" target="ui.dialogs.scanpolicy" />
+    <indexitem text="scan policy manager dialog" target="ui.dialogs.scanpolicymgr" />
     <indexitem text="search tab" target="ui.tabs.search" />
     <indexitem text="session contexts dialog" target="ui.dialogs.contexts" />
     <indexitem text="session properties dialog" target="ui.dialogs.sessprop" />
     <indexitem text="sites tab" target="ui.tabs.sites" />
-    <indexitem text="spider tab" target="ui.tabs.spider" />
     <indexitem text="spider" target="start.concepts.spider" />
+    <indexitem text="spider dialog" target="ui.dialogs.spider" />
+    <indexitem text="spider tab" target="ui.tabs.spider" />
     <indexitem text="tags" target="start.concepts.tags" />
     <indexitem text="top level menu" target="ui.topmenu" />
     <indexitem text="top level toolbar" target="ui.toptoolbar" />

@@ -28,6 +28,7 @@
         <mapID target="start.concepts.modes" url="contents/start/concepts/modes.html" />
         <mapID target="start.concepts.notes" url="contents/start/concepts/notes.html" />
         <mapID target="start.concepts.pscan" url="contents/start/concepts/pscan.html" />
+        <mapID target="start.concepts.scanpolicy" url="contents/start/concepts/scanpolicy.html" />
         <mapID target="start.concepts.scope" url="contents/start/concepts/scope.html" />
         <mapID target="start.concepts.sessmanag" url="contents/start/concepts/sessionManagement.html" />
         <mapID target="start.concepts.spider" url="contents/start/concepts/spider.html" />
@@ -78,7 +79,9 @@
         <mapID target="ui.dialogs.options" url="contents/ui/dialogs/options/options.html"/>
         <mapID target="ui.dialogs.resend" url="contents/ui/dialogs/resend.html"/>
         <mapID target="ui.dialogs.scanpolicy" url="contents/ui/dialogs/scanpolicy.html"/>
+        <mapID target="ui.dialogs.scanpolicymgr" url="contents/ui/dialogs/scanpolicymgr.html"/>
         <mapID target="ui.dialogs.sessprop" url="contents/ui/dialogs/session/sessprop.html"/>
+        <mapID target="ui.dialogs.spider" url="contents/ui/dialogs/spider.html"/>
         <mapID target="ui.footer" url="contents/ui/footer.html" />
         <mapID target="addon.introduction" url="contents/addon/introduction.html" />
         <mapID target="cmdline" url="contents/cmdline.html" />
@@ -101,6 +104,7 @@
         <mapID target="zap.releases.2.2.2" url="contents/releases/2_2_2.html"/>
         <mapID target="zap.releases.2.3.0" url="contents/releases/2_3_0.html"/>
         <mapID target="zap.releases.2.3.1" url="contents/releases/2_3_1.html"/>
+        <mapID target="zap.releases.2.4.0" url="contents/releases/2_4_0.html"/>
         <mapID target="zap.credits" url="contents/credits.html" />
         <mapID target="zap.todo" url="contents/todo.html" />
      	<mapID target="ui.dialogs.options.ascan" url="contents/ui/dialogs/options/ascan.html"/>
@@ -123,6 +127,7 @@
      	<mapID target="ui.dialogs.options.language" url="contents/ui/dialogs/options/language.html"/>
      	<mapID target="ui.dialogs.options.localproxy" url="contents/ui/dialogs/options/localproxy.html"/>
      	<mapID target="ui.dialogs.options.pscan" url="contents/ui/dialogs/options/pscan.html"/>
+     	<mapID target="ui.dialogs.options.pscanrules" url="contents/ui/dialogs/options/pscanrules.html"/>
      	<mapID target="ui.dialogs.options.search" url="contents/ui/dialogs/options/search.html" />
      	<mapID target="ui.dialogs.options.spider" url="contents/ui/dialogs/options/spider.html"/>
 </map>

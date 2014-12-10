@@ -3,14 +3,20 @@
 <HEAD>
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
 <TITLE>
-Active Scan
+Scan Policy
 </TITLE>
 </HEAD>
 <BODY BGCOLOR="#ffffff">
-<H1>Active Scan</H1>
+<H1>Scan Policy</H1>
 <p>
-Active scanning attempts to find potential vulnerabilities by using
-known attacks against the selected targets.
+A scan policy defines exactly which <a href="../checks.html">rules</a> are run as part of an <a href="ascan.html">active scan</a>.<br>
+It also defines how these rules run influencing how many requests are made and how likely potential issues are to be flagged.<br>
+You can define as many scan policies as you like and select the most appropriate one when you start the scan via
+the <a href="../../ui/dialogs/advascan.html">Active Scan Dialog</a>.<br>
+You can define the default scan policy to be used for active scans and for the <a href="modes.html">Attack mode</a> via the 
+<a href="../../ui/dialogs/options/ascan.html">Options Active Scan screen</a>.<br>
+ 
+
 </p>
 <p>
 Active scanning is an attack on those targets. <br/>
@@ -27,15 +33,20 @@ scanning to find all types of vulnerabilities.
 <p>
 Active scanning is configured using the 
 <a href="../../ui/dialogs/options/ascan.html">Options Active Scan screen</a>.<br>
-The rules that run are configured via <a href="scanpolicy.html">Scan Policies</a> - you can have as many of these as you like. 
+You can also define as many scan policies as you like - these define exactly which rules are run and how they work. 
 
 </p>
 
 <H2>Accessed via</H2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/ascan.html">Active Scan tab</a></td><td>'New Scan' button</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/sites.html">Sites tab</a></td><td>'Attack/Active Scan...' right click menu item</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/history.html">History tab</a></td><td>'Attack/Active Scan...' right click menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/tabs/ascan.html">Active Scan tab</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/tabs/sites.html">Sites tab</a></td><td>'Attack/Active Scan site' right click menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/tabs/sites.html">Sites tab</a></td><td>'Attack/Active Scan node' right click menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/tabs/history.html">History tab</a></td><td>'Scan this History' right click menu item</td></tr>
 </table>
 
 <H2>See also</H2>

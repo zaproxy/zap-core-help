@@ -42,17 +42,12 @@ If the option is not selected then the following option will control whether the
 If this option is selected then when running in Attack <a href="../../../start/concepts/modes.html">mode</a> all nodes in scope will be rescanned if the scope changes.<br>
 This is not recommended for large sites as it could take a long time.
 
-<H3>Alert Threshold</H3>
-This controls how likely ZAP is to report potential vulnerabilities.<br>
-If you select Low then more potential issues will be raised which may increase the number of false positives.<br>
-If you select High then fewer potential issues will be raised which may mean that some real issues are missed (false negatives).  
+<H3>Default active scan policy</H3>
+The <a href="../../../start/concepts/scanpolicy.html">Scan Policy</a> that is used by default when you start an active scan.
 
-<H3>Alert Strength</H3>
-This controls the number of attacks that ZAP will perform.<br>
-If you select Low then fewer attacks will be used which will be quicker but may miss some issues.<br>
-If you select High then more attacks will be used which may find more issues but will take longer.<br>
-The Insane level should typically only be used for small parts of an application as it can result in a very large number of 
-attacks being used, which can take a considerable length of time.
+<H3>Attack mode scan policy</H3>
+The <a href="../../../start/concepts/scanpolicy.html">Scan Policy</a> that is used for scanning in 
+Attack <a href="../../../start/concepts/modes.html">mode</a>.
 
 <H2>See also</H2>
 <table>
