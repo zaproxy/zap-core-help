@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<TITLE>
+  Release 2.4.0
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H1>Release 2.4.0</H1>
+<p>
+The following changes were made in this release:
+</p>
+
+<H2>Significant changes:</H2>
+
+<H3>Attack mode</H3>
+
+A new 'ATTACK' <a href="../concepts/modes.html">Mode</a> has been added - new nodes that are in <a href="../concepts/scope.html">Scope</a> are 
+<a href="../concepts/ascan.html">actively scanned</a> as soon as they are discovered.
+
+<H3>Advanced fuzzing</H3>
+
+TBA - depends if these changes make it in ;)
+
+<H3>Scan dialogs with advanced options</H3>
+
+New <a href="../ui/dialogs/advascan.html">Active Scan</a> and <a href="../ui/dialogs/spider.html">Spider</a> dialogs have replaced
+the increasing number of right click 'Attack' options.<br>
+These provide easy access to all of the most common options and optionally a wide range of advanced options. 
+
+<H3>Scan Policies</H3>
+
+A new <a href="../ui/dialogs/spanpolicymgr.html">Scan Policy Manager dialog</a> allows you to create as many 
+nd <a href="../concepts/scanpolicy.html">Scan Policies</a> as you need.<br>
+Scan policies define exactly which rules are run as part of an <a href="../concepts/ascan.html">Active Scan</a>.<br>
+They also define how these rules run influencing how many requests are made and how likely potential issues are to be flagged.<br>
+
+<H3>Unused tabs hidden</H3>
+
+By default only the essential tabs are now shown when ZAP starts up.<br>
+The remaining tabs are revealed when they are used (e.g. for the spider and active scanner) or when you display them via the 
+special tab on the far right of each window with the green '+' icon. This special tab disappears if there are no hidden tabs.<br>
+Tabs can be closed via a small 'x' icon which is shown when the tab is selected.<br>
+Tabs can also be 'pinned' using a small 'pin' icon that is also shown when the tab is selected - pinned tabs will be shown
+when ZAP next starts up. 
+
+<H3>Enablers for Sequence scanning add-on</H3>
+
+A new optional 'alpha' quality add-on adds the ability to scan 'sequences' of web pages, in other words pages that must be visited
+in a strict order in order to work correctly. 
+
+<H3>Enablers for access control testing add-on</H3>
+
+A new optional 'alpha' quality add-on adds the ability to automate many aspects of access control testing. 
+
+
+<H2>Full list of changes:</H2>
+<ul>
+<li>Issue 389 : Enable technology scope for scanners</li>
+<li>Issue 414 : API: Support scripts</li>
+<li>Issue 445 : SSLContextManager.isProviderAvailable() returns true as default</li>
+<li>Issue 557 : SQL injection false negatives</li>
+<li>Issue 642 : Output tab needs timestamps</li>
+<li>Issue 704 : ZAP Error: handshake alert: unrecognized_name</li>
+<li>Issue 883 : Support multiple scans in the API</li>
+<li>Issue 990 : Allow to delete alerts through the API</li>
+<li>Issue 1151 : Active Scan in Scope finishes before scanning all messages in scope if multiple domains available</li>
+<li>Issue 1154 : Tool tip text "Show tab names and tab icons"  IdealFirstBug</li>
+<li>Issue 1176 : Spider advanced scan dialog</li>
+<li>Issue 1180 : Proxy corrupts URL when there are multiple question marks</li>
+<li>Issue 1184 : Improve support for IBM JDK</li>
+<li>Issue 1207 : AScan API - Change the "scanners" view to include the dependencies</li>
+<li>Issue 1209 : Additional Reliability Values/Options & Rename Reliability to Confidence in UI</li>
+<li>Issue 1214 : Sorting in Scan Policy Dialogs  Usability</li>
+<li>Issue 1215 : Alert Tree Ordering/Sorting Issue  Usability</li>
+<li>Issue 1216 : Typo in scripts tab</li>
+<li>Issue 1217 : Table format does not display information when charset is present in Content-Type header</li>
+<li>Issue 1224 : Display Quality/Status in Scan Policy Dialogs  Usability</li>
+<li>Issue 1226 : Active scanner excluded parameter's regexes not validated</li>
+<li>Issue 1227 : Active scanner sends GET requests with content in request body</li>
+<li>Issue 1238 : NullPointerException if an active scanner raises an alert with null attack</li>
+<li>Issue 1239 : Allow extending the Spider from Extensions</li>
+<li>Issue 1241 : Active scanner might not report finished state when using host scanners</li>
+<li>Issue 1242 : Active scanner might use outdated policy settings</li>
+<li>Issue 1243 : NullPointerException if a script type does not have core bundled script templates</li>
+<li>Issue 1244 : Scripts Active Scanner should be category Misc not Injection  Usability</li>
+<li>Issue 1252 : Connection Exception during shutdown while running scans through the API</li>
+<li>Issue 1256 : Revisit missing X-Frame-Options scanner level</li>
+<li>Issue 1257 : Create a passive rule which detects big redirects</li>
+<li>Issue 1261 : NPE on "Plug-n-Hack Configuration" update from market place</li>
+<li>Issue 1262 : Address "Passive Rules - Risk - Reliability" [User controllable HTML element attribute (potential XSS), and Timestamp Disclosure - Unix]</li>
+<li>Issue 1263 : Generate Report Clobbers Existing Files Without Prompting</li>
+<li>Issue 1264 : Manual authentication - Cookie mismatch due to wrong handling of domain and path</li>
+<li>Issue 1265 : Context import and export</li>
+<li>Issue 1272 : ZAP API: Core.MessagesHAR() fails if a HTTP Request contains invalid Cookie header(s)</li>
+<li>Issue 1274 : ZAP Error [javax.net.ssl.SSLException]: Unsupported record version SSLv2Hello</li>
+<li>Issue 1275 : SpiderODataAtomParser must return true from "parseResource"</li>
+<li>Issue 1278 : Safe menu items not available in protected and safe modes</li>
+<li>Issue 1279 : Active scanner excluded parameters not working when "Where" is "Any"</li>
+<li>Issue 1280 : API shortcuts not removed when the ApiImplementor is removed</li>
+<li>Issue 1281 : QuickStart - Allow to generate the report when the view is initialised</li>
+<li>Issue 1282 : Extension#stop() is never called before destroy()</li>
+<li>Issue 1283 : SQLDataException: data exception: string data, right truncation while writing an alert to DB</li>
+<li>Issue 1286 : Fuzzer seems to be slow</li>
+<li>Issue 1290 : "Port Scan host" menu item enabled even if a port scan is already in progress</li>
+<li>Issue 1291 : 407 Proxy Authentication Required while active scanning</li>
+<li>Issue 1292 : NullPointerException while attempting to remove an unregistered ManualRequestEditorDialog</li>
+<li>Issue 1294 : Trivial_UI_Issue: Word - 'will be' appears twice under 'Session Properties' prompt.</li>
+<li>Issue 1295 : Enhancement Request - New Active Scan Rule to Check HTTP Access to HTTPS Content</li>
+<li>Issue 1300 : Add-ons show incorrect language when English is selected on non English locale</li>
+<li>Issue 1301 : AbstractPanel leak through TabbedPanel2</li>
+<li>Issue 1302 : Context menu item action might not get executed</li>
+<li>Issue 1303 : HttpPanel[SyntaxHighlight]TextArea leak through HighlighterManager</li>
+<li>Issue 1304 : ZapMenuItem leak through ExtensionKeyboard</li>
+<li>Issue 1305 : Outgoing proxy is disabled when updating from old versions</li>
+<li>Issue 1307 : Ant OS X build of zip gets spaces in file name confused</li>
+<li>Issue 1308 : ZAP icns resolution too low</li>
+<li>Issue 1309 : NullPointerExceptions during a failed uninstallation of an add-on</li>
+<li>Issue 1310 : Allow to set history types as temporary</li>
+<li>Issue 1311 : Differentiate temporary internal messages from temporary scanner messages</li>
+<li>Issue 1312 : Misleading error message when unable to bind the local proxy to specified address</li>
+<li>Issue 1322 : Remove deprecated Auth API</li>
+<li>Issue 1333 : ExtensionAntiCSRF ConcurrentModificationException</li>
+<li>Issue 1343 : XContentTypeOptionsScanner Internationalization  Usability</li>
+<li>Issue 1346 : Breaking gziped responses fails in the browser</li>
+<li>Issue 1348 : Java client api Ant tasks dont wait</li>
+<li>Issue 1356 : Fix CacheControlScanner Typos</li>
+<li>Issue 1359 : Reinstate splash screen</li>
+<li>Issue 1360 : New add-on - Tips and Tricks</li>
+<li>Issue 1367 : Can't detect "Xpath Injection" on a certain environment.</li>
+<li>Issue 1377 : "Source Code Disclosure - SVN" is missing regex escape</li>
+<li>Issue 1378 : Revamp active scan panel</li>
+<li>Issue 1381 : Cleanly close breakpoint Add/Edit dialog on Cancel
+<li>Issue 1390 : Force https on cfu call</li>
+<li>Issue 1391 : Active Scan send wrong payload of multipart/form-data type</li>
+<li>Issue 1399 : Enhance help to open 'external' links in the users default browser</li>
+<li>Issue 1404 : SpiderODataAtomParser must return true only if links are detected</li>
+<li>Issue 1406 : Move online menu items to an add-on</li>
+<li>Issue 1409 : Speed up ZAP startup</li>
+<li>Issue 1415 : Fixed file uploads > 128k</li>
+<li>Issue 1418 : Option for ZAP to stay on top when breakpoint hit</li>
+</ul>
+
+<H2>See also</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+</table>
+</BODY>
+</HTML>

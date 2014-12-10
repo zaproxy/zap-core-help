@@ -33,6 +33,7 @@
          <tocitem text="Modes" target="start.concepts.modes"/>
          <tocitem text="Notes" target="start.concepts.notes"/>
          <tocitem text="Passive Scan" target="start.concepts.pscan"/>
+         <tocitem text="Scan Policies" target="start.concepts.scanpolicy"/>
          <tocitem text="Scope" target="start.concepts.scope"/>
          <tocitem text="Session Management" target="start.concepts.sessmanag"/>
          <tocitem text="Spider" target="start.concepts.spider"/>
@@ -74,10 +75,10 @@
          <tocitem text="Output" target="ui.tabs.output"/>
       </tocitem>
       <tocitem text="The Dialogs" target="ui.dialogs">
+         <tocitem text="Active Scan" target="ui.dialogs.advascan"/>
          <tocitem text="Add Alert" target="ui.dialogs.addalert"/>
          <tocitem text="Add Break Point" target="ui.dialogs.addbreak"/>
          <tocitem text="Add Note" target="ui.dialogs.addnote"/>
-         <tocitem text="Advanced Active Scan" target="ui.dialogs.advascan"/>
          <tocitem text="BeanShell Console" target="ui.dialogs.beanshell"/>
          <tocitem text="Encode/Decode/Hash" target="ui.dialogs.enc_dec"/>
          <tocitem text="Filter" target="ui.dialogs.filter"/>
@@ -107,15 +108,19 @@
          	<tocitem text="Keyboard" target="ui.dialogs.options.keyboard"/>
          	<tocitem text="Language" target="ui.dialogs.options.language"/>
          	<tocitem text="Local Proxy" target="ui.dialogs.options.localproxy"/>
-         	<tocitem text="Passive Scan" target="ui.dialogs.options.pscan"/>
+         	<tocitem text="Passive Scan Rules" target="ui.dialogs.options.pscanrules"/>
+         	<tocitem text="Passive Scan Tags" target="ui.dialogs.options.pscan"/>
          	<tocitem text="Spider" target="ui.dialogs.options.spider"/>
          </tocitem>
          <tocitem text="Resend" target="ui.dialogs.resend"/>
-         <tocitem text="Scan Policy" target="ui.dialogs.scanpolicy"/>
+         <tocitem text="Scan Policy Manager" target="ui.dialogs.scanpolicymgr">
+	         <tocitem text="Scan Policy" target="ui.dialogs.scanpolicy"/>
+         </tocitem>
          <tocitem text="Session" target="ui.dialogs.sessprop">
 	         <tocitem text="Session Properties" target="ui.dialogs.sessprop"/>
 	         <tocitem text="Session Contexts" target="ui.dialogs.contexts"/>
          </tocitem>
+         <tocitem text="Spider" target="ui.dialogs.spider"/>
       </tocitem>
       <tocitem text="The Footer" target="ui.footer"/>
    </tocitem>
@@ -125,6 +130,7 @@
    <tocitem text="Add Ons" target="addon.introduction" tocid="addons" />
    
    <tocitem text="Releases" target="zap.releases">
+      <tocitem text="2.4.0" target="zap.releases.2.4.0"/>
       <tocitem text="2.3.1" target="zap.releases.2.3.1"/>
       <tocitem text="2.3.0" target="zap.releases.2.3.0"/>
       <tocitem text="2.2.2" target="zap.releases.2.2.2"/>

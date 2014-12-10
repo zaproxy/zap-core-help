@@ -3,16 +3,17 @@
 <HEAD>
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
 <TITLE>
-Advanced Active Scan dialog
+Active Scan dialog
 </TITLE>
 </HEAD>
 <BODY BGCOLOR="#ffffff">
-<H1>Advanced Active Scan dialog</H1>
+<H1>Active Scan dialog</H1>
 <p>
-This provides fine grain control over the active scanning process, allowing you to target exactly what you want.<br>
+This dialog launches the <a href="../../start/concepts/ascan.html">active scanner</a>.<br>
   
 <H3>Scope</H3>
 The first tab allows you to select or change the starting point.<br>
+If you have more that one <a href="../../start/concepts/scanpolicy.html">scan policies</a> then you will be able to select the one to use.<br>
 If the starting point is in one or more <a href="../../start/concepts/contexts.html">Contexts</a> then you will be able to choose one of them.<br>
 If that context has any <a href="../../start/concepts/users.html">Users</a> defined then you will be able to select one of them.<br>
 If you select one of the users then the active scan will be performed as that user, with ZAP (re)authenticating as that user whenever necessary.
@@ -20,7 +21,9 @@ If you select one of the users then the active scan will be performed as that us
 If you select 'recurse' then all of the nodes underneath the one selected will also be scanned.<br>
 Custom input vectors are only supported if this option is not selected.
 <br><br>
-If you select 'In scope' then only URLs in <a href="../../start/concepts/scope.html">Scope</a> will be attacked. 
+If you select 'Show advanced options' then the following tabs will be shown which provide fine grain control over the active scanning process.
+<br><br>
+Clicking on the 'Reset' button will reset all of the options to their default values. 
 
 <H3>Input Vectors</H3>
 The Input Vectors tab allows you override the default input vectors which are defined in the 
@@ -35,16 +38,22 @@ You can add as many custom input vectors as you want.<br>
 To remove custom input vectors highlight any of the selected characters and click the 'Remove' button.<br>
 Checking the 'Disable non custom input vectors' box disables all of the input vectors except those you manually define on this tab.
 
+<H3>Technology</H3>
+The Technology tab allows you to specify which types of technologies to scan.<br>
+Un-selecting technologies that you know are not present in the target application may speed up the scan as rules which target that technology can skip those tests.
+
 <H3>Policy</H3>
-The Policy tab allows you override the default scan policy defined in the 
-<a href="scanpolicy.html">Scan Policy dialog</a>.<br>
-Clicking on the 'Reset' button will reset the input vectors to the default options. 
+The Policy tab gives you to override any of the setting specified in the selected the default scan policy defined in the selected 
+<a href="../../start/concepts/scanpolicy.html">. 
+
+<br><br>
 
 <H2>Accessed via</H2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tlmenu/tools.html">Top level Tools menu</a></td><td>'Advanced Active Scan...' menu item</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/sites.html">Sites tab</a></td><td>'Attack / Active Scan Advanced ... right click menu item</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/history.html">History tab</a></td><td>'Attack / Active Scan Advanced...' right click menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/ascan.html">Active Scan tab</a></td><td>'New Scan' button</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tlmenu/tools.html">Top level Tools menu</a></td><td>'Active Scan...' menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/sites.html">Sites tab</a></td><td>'Attack / Active Scan... right click menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/history.html">History tab</a></td><td>'Attack / Active Scan...' right click menu item</td></tr>
 </table>
 
 <H2>See also</H2>
