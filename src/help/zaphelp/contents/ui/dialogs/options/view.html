@@ -14,14 +14,21 @@ The Display screen allows you to configure:
 <H3>Images</H3>
 If ZAP processes images.
 
-<H3>Language</H3>
-The language ZAP uses for its display.<br>
-A set of languages are built into ZAP, however more languages may be available after the last release.<br>
-Check the ZAP download page for the latest language pack available.<br> 
-Note that you will need to restart ZAP in order to see the new language.
-
 <H3>Display</H3>
 The layout of the 3 main windows.
+
+<H3>Show break buttons</H3>
+The location of the break buttons.
+
+<H3>Large request view min size</H3>
+The minimum size of a request body in bytes at which point a 'large request body' message will be shown instead of the actual body.<br>
+This is to prevent very large bodies from slowing down the UI.<br>
+Setting this value to -1 will result in request always being displayed no matter how large it is.
+
+<H3>Large response view min size</H3>
+The minimum size of a response body in bytes at which point a 'large response body' message will be shown instead of the actual body.<br>
+This is to prevent very large bodies from slowing down the UI.<br>
+Setting this value to -1 will result in response always being displayed no matter how large it is.
 
 <H3>Output Tabs Time Stamp Options</H3>
 Once you've enabled time stamps on the output tab you can configure the format you would like those time stamps to appear in. 
