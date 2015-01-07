@@ -128,6 +128,7 @@
      	<mapID target="ui.dialogs.options.localproxy" url="contents/ui/dialogs/options/localproxy.html"/>
      	<mapID target="ui.dialogs.options.pscan" url="contents/ui/dialogs/options/pscan.html"/>
      	<mapID target="ui.dialogs.options.pscanrules" url="contents/ui/dialogs/options/pscanrules.html"/>
+     	<mapID target="ui.dialogs.options.script" url="contents/ui/dialogs/options/script.html" />
      	<mapID target="ui.dialogs.options.search" url="contents/ui/dialogs/options/search.html" />
      	<mapID target="ui.dialogs.options.spider" url="contents/ui/dialogs/options/spider.html"/>
 </map>
