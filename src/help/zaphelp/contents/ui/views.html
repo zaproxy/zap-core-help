@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<TITLE>
+Views
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H1>Views</H1>
+<p>
+ZAP provides a set of plugable views which allows you to display the requests and responses in different ways.<br/>
+The following views are included by default:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Text</td><td>The data in text format</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Hex</td><td>A table showing the hex representation of all of the characters in the body. <br>
+	For editable screens this allows you to add control characters via their hex codes.<br>
+	You cannot add or delete characters in this view - to do that switch to one of the other views and then back to carry on in hex view.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Table</td><td>A table with one row per attribute and value.<br>
+	For editable screens all values will automatically be URL encoded when they are submitted. </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Table (adv)</td><td>A table with one row per attribute and value plus additional functions.<br>
+	For editable screens values will not be automatically be URL encoded when they are submitted, but this can be done 'manually' via 'URLEncode' function. </td></tr>
+</table>
+<p>
+Note that <a href="../start/concepts/addons.html">add-ons</a> can add additional views.
+</p>
+
+<H2>Used in</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="tabs/break.html">Break tab</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="tabs/request.html">Request tab</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="tabs/response.html">Response tab</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="dialogs/man_req.html">Manual Request dialog</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="dialogs/resend.html">Resend dialog</a></td><td></td></tr>
+</table>
+
+<H2>See also</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+</table>
+
+</BODY>
+</HTML>
