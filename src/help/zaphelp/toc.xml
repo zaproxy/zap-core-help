@@ -114,6 +114,7 @@
          	<tocitem text="Search" target="ui.dialogs.options.search"/>
          	<tocitem text="Spider" target="ui.dialogs.options.spider"/>
          </tocitem>
+         <tocitem text="Persist Session" target="ui.dialogs.persistsession"/>
          <tocitem text="Resend" target="ui.dialogs.resend"/>
          <tocitem text="Scan Policy Manager" target="ui.dialogs.scanpolicymgr">
 	         <tocitem text="Scan Policy" target="ui.dialogs.scanpolicy"/>
