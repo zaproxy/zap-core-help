@@ -16,8 +16,8 @@ The following changes were made in this release:
 
 <H3>Attack mode</H3>
 
-A new 'ATTACK' <a href="../concepts/modes.html">Mode</a> has been added - new nodes that are in <a href="../concepts/scope.html">Scope</a> are 
-<a href="../concepts/ascan.html">actively scanned</a> as soon as they are discovered.
+A new 'ATTACK' <a href="../start/concepts/modes.html">Mode</a> has been added - new nodes that are in <a href="../start/concepts/scope.html">Scope</a> are 
+<a href="../start/concepts/ascan.html">actively scanned</a> as soon as they are discovered.
 
 <H3>Advanced fuzzing</H3>
 
@@ -31,9 +31,9 @@ These provide easy access to all of the most common options and optionally a wid
 
 <H3>Scan Policies</H3>
 
-A new <a href="../ui/dialogs/spanpolicymgr.html">Scan Policy Manager dialog</a> allows you to create as many 
-nd <a href="../concepts/scanpolicy.html">Scan Policies</a> as you need.<br>
-Scan policies define exactly which rules are run as part of an <a href="../concepts/ascan.html">Active Scan</a>.<br>
+A new <a href="../ui/dialogs/scanpolicymgr.html">Scan Policy Manager dialog</a> allows you to create as many 
+<a href="../start/concepts/scanpolicy.html">Scan Policies</a> as you need.<br>
+Scan policies define exactly which rules are run as part of an <a href="../start/concepts/ascan.html">Active Scan</a>.<br>
 They also define how these rules run influencing how many requests are made and how likely potential issues are to be flagged.<br>
 
 <H3>Unused tabs hidden</H3>
@@ -72,7 +72,8 @@ A new optional 'alpha' quality add-on adds the ability to automate many aspects 
 <li>Issue 1180 : Proxy corrupts URL when there are multiple question marks</li>
 <li>Issue 1184 : Improve support for IBM JDK</li>
 <li>Issue 1207 : AScan API - Change the "scanners" view to include the dependencies</li>
-<li>Issue 1209 : Additional Reliability Values/Options & Rename Reliability to Confidence in UI</li>
+<li>Issue 1208 : Search classes/resources in add-ons declared as dependencies</li>
+<li>Issue 1209 : Additional Reliability Values/Options &amp; Rename Reliability to Confidence in UI</li>
 <li>Issue 1214 : Sorting in Scan Policy Dialogs  Usability</li>
 <li>Issue 1215 : Alert Tree Ordering/Sorting Issue  Usability</li>
 <li>Issue 1216 : Typo in scripts tab</li>
@@ -211,6 +212,10 @@ A new optional 'alpha' quality add-on adds the ability to automate many aspects 
 <li>Issue 1524 : New Persist Session dialog</li> 
 <li>Issue 1525 : Introduce a database interface layer to allow for alternative implementations</li> 
 <li>Issue 1528 : Support user defined font size</li>
+<li>Issue 1530 : Default attack strength and alert threshold, set in 'Scan Policy', not used by scanners</li>
+<li>Issue 1534 : Change "Ajax Spider" add-on to depend on "Selenium" add-on</li>
+<li>Issue 1535 : Update Crawljax library and dependencies ("Ajax Spider" add-on)</li>
+<li>Issue 1536 : Change "Zest" add-on to depend on "Selenium" add-on</li>
 
 </ul>
 
