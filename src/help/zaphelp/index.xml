@@ -34,9 +34,6 @@
     <indexitem text="filters" target="start.concepts.filters" />
     <indexitem text="find dialog" target="ui.dialogs.find" />
     <indexitem text="footer" target="ui.footer" />
-    <indexitem text="fuzzer tab" target="ui.tabs.fuzz" />
-    <indexitem text="fuzzing" target="start.concepts.fuzz" />
-    <indexitem text="fuzz dialog" target="ui.dialogs.fuzz" />
     <indexitem text="getting started" target="start.start" />
     <indexitem text="history filter dialog" target="ui.dialogs.historyfilter" />
     <indexitem text="history tab" target="ui.tabs.history" />

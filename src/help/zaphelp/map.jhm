@@ -21,7 +21,6 @@
         <mapID target="start.concepts.breakpoints" url="contents/start/concepts/breakpoints.html" />
         <mapID target="start.concepts.contexts" url="contents/start/concepts/contexts.html" />
         <mapID target="start.concepts.filters" url="contents/start/concepts/filters.html" />
-        <mapID target="start.concepts.fuzz" url="contents/start/concepts/fuzz.html" />
         <mapID target="start.concepts.globalexcludeurl" url="contents/start/concepts/globalexcludeurl.html" />
         <mapID target="start.concepts.httpsessions" url="contents/start/concepts/httpsessions.html" />
         <mapID target="start.concepts.intercept" url="contents/start/concepts/intercept.html" />
@@ -58,7 +57,6 @@
         <mapID target="ui.tabs.ascan" url="contents/ui/tabs/ascan.html" />
         <mapID target="ui.tabs.spider" url="contents/ui/tabs/spider.html" />
         <mapID target="ui.tabs.params" url="contents/ui/tabs/params.html" />
-        <mapID target="ui.tabs.fuzz" url="contents/ui/tabs/fuzz.html" />
         <mapID target="ui.tabs.output" url="contents/ui/tabs/output.html" />
         <mapID target="ui.tabs.httpsessions" url="contents/ui/tabs/httpsessions.html" />
         <mapID target="ui.dialogs" url="contents/ui/dialogs/dialogs.html"/>
@@ -71,7 +69,6 @@
         <mapID target="ui.dialogs.enc_dec" url="contents/ui/dialogs/enc_dec.html"/>
         <mapID target="ui.dialogs.filter" url="contents/ui/dialogs/filter.html"/>
         <mapID target="ui.dialogs.find" url="contents/ui/dialogs/find.html"/>
-        <mapID target="ui.dialogs.fuzz" url="contents/ui/dialogs/fuzz.html"/>
         <mapID target="ui.dialogs.historyfilter" url="contents/ui/dialogs/hist_filter.html"/>
         <mapID target="ui.dialogs.manreq" url="contents/ui/dialogs/man_req.html"/>
         <mapID target="ui.dialogs.manageaddons" url="contents/ui/dialogs/manageaddons.html"/>
@@ -114,7 +111,6 @@
      	<mapID target="ui.dialogs.options.anticsrf" url="contents/ui/dialogs/options/anticsrf.html"/>
      	<mapID target="ui.dialogs.options.api" url="contents/ui/dialogs/options/api.html"/>
      	<mapID target="ui.dialogs.options.ext" url="contents/ui/dialogs/options/ext.html"/>
-     	<mapID target="ui.dialogs.options.authentication" url="contents/ui/dialogs/options/authentication.html"/>
         <mapID target="ui.dialogs.options.breakpoints" url="contents/ui/dialogs/options/breakpoints.html"/>
      	<mapID target="ui.dialogs.options.certificate" url="contents/ui/dialogs/options/certificate.html"/>
      	<mapID target="ui.dialogs.options.checkforupdates" url="contents/ui/dialogs/options/checkforupdates.html"/>
@@ -122,7 +118,6 @@
      	<mapID target="ui.dialogs.options.database" url="contents/ui/dialogs/options/database.html"/>
      	<mapID target="ui.dialogs.options.view" url="contents/ui/dialogs/options/view.html"/>
      	<mapID target="ui.dialogs.options.dynsslcert" url="contents/ui/dialogs/options/dynsslcert.html"/>
-     	<mapID target="ui.dialogs.options.fuzz" url="contents/ui/dialogs/options/fuzz.html"/>
      	<mapID target="ui.dialogs.options.globalexcludeurl" url="contents/ui/dialogs/options/globalexcludeurl.html"/>
      	<mapID target="ui.dialogs.options.httpsessions" url="contents/ui/dialogs/options/httpsessions.html"/>
      	<mapID target="ui.dialogs.options.keyboard" url="contents/ui/dialogs/options/keyboard.html"/>
