@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Break tab
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Break tab</h1>
+<p>
+The Break tab allows you to change a request or response when it has been caught by ZAP via
+a <a href="../../start/concepts/breakpoints.html">break point</a>.<br/>
+It allows you to change elements that you would not normally be able to change via your
+browser, including:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>The header</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>Hidden fields</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>Disabled fields</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>Fields that use javascript to filter out illegal characters</td></tr>
+</table>
+This functionality is key to effectively pen testing your application.
+<p>
+The 2 panels will only contain anything if ZAP has caught a request or response.<br/>
+You can change anything in these 2 panels and then forward the request or response using
+the buttons on the <a href="../tltoolbar.html">Top Level Toolbar</a>.
+</p>
+<p>
+Pull downs allow you to select different <a href="../views.html">Views</a> for the request or response header and body.
+</p>
+<p>
+While the Break tab is not in use its icon is a grey cross: &nbsp;
+<img src="../../images/16/101grey.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
+When a <a href="../../start/concepts/breakpoints.html">break point</a> is hit the tab icon is changed 
+to a red cross: &nbsp;
+<img src="../../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
+
+</p>
+
+<h2>Right click menu</h2>
+Right clicking on a node will bring up a menu which will allow you to:
+
+<h3>Εύρεση...</h3>
+This will bring up the <a href="../dialogs/find.html">Find dialog</a>.
+
+<h3>Κρυπτογράφηση/Αποκρυπτογράφηση/Hash...</h3>
+This will bring up the <a href="../dialogs/enc_dec.html">Encode/Decode/Hash dialog</a>.<br/>
+If you have highlighted any text then this will be automatically included in the dialog.
+
+<h3>Αντιγραφή</h3>
+This will copy the selected string to the clipboard.
+
+<h2>See also</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="breakpoints.html">Break Points tab</a></td><td>for details of how to change or delete break points</td></tr>
+</table>
+
+</body>
+</html>

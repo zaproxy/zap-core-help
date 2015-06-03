@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Search tab
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Search tab</h1>
+
+<p>The Search tab allows you to search for regular expressions in all of the
+URLs, requests, responses, headers and fuzz results.</p>
+<p>Enter the regular expression you would like to search for in the search
+box and either press return or click on the search button: 
+<img src="../../images/16/049.png" align="bottom" width="16" height="16" /></p>
+<p>A pull down allows you to choose whether to search across the URLs,
+the requests, the responses or everything.</p>
+<p>All URLs, requests or responses which contain the search pattern will
+be displayed in the tab.<br/>
+You may find it useful to add .* to your search term -
+this will give you more context e.g. password.*</p>
+<p>You can use the 
+<img src="../../images/16/107.png" align="bottom" width="16" height="16" /> Next and
+<img src="../../images/16/108.png" align="bottom" width="16" height="16" /> Previous
+buttons to view found search terms in the <a href="request.html">Request</a>
+and <a href="response.html">Response tabs</a>. <br/>
+<p>You can also go directly to a specific instance by clicking on the relevant
+line in the results list.</p>
+
+<h2>Menú de botón derecho</h2>
+Al hacer click derecho sobre un nodo se abrirá un menú que le permitirá:
+
+<h3>Atacar</h3>
+El menú de ataque tiene los siguientes submenús:
+<h4>Escaneo de sitio Activo</h4>
+Esto iniciará un 
+<a href="../../start/concepts/ascan.html">escaneo activo</a> en todo el sitio contenido en el nodo seleccionado.<br/>
+Se mostrará la <a href="ascan.html">Pestaña de Escaneo Activo</a> indicando el progreso del escaneo.<br/>
+
+<h4>Nodo de escaneo Activo</h4>
+Esto iniciará un 
+<a href="../../start/concepts/ascan.html">escaneo activo</a> solo en el nodo seleccionado.<br/>
+Se mostrará la <a href="ascan.html">Pestaña de Escaneo Activo</a> indicando el progreso del escaneo.<br/>
+
+<h4>Sitio Spider</h4>
+Esto iniciará un 
+<a href="../../start/concepts/spider.html">spider</a> en todo el sitio contenido en el nodo seleccionado.<br/>
+Se mostrará la <a href="spider.html">Spider tab</a> indicando el progreso del escaneo.<br/>
+
+<h3>Include in Context</h3>
+This menu allows you to include the selected nodes and all of their subordinates in the specified
+<a href="../../start/concepts/contexts.html">context</a>.<br/>
+You also have the option to create a new context.<br/>
+Se mostrará la <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
+allow you to make any additional changes.
+
+<h3>Exclude from Context</h3>
+This menu allows you to exclude the selected nodes and all of their subordinates from the specified
+<a href="../../start/concepts/contexts.html">context</a>.<br/>
+Se mostrará la <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
+allow you to make any additional changes.
+
+<h3>Flag as context</h3>
+This menu has the following submenus for each of the 
+<a href="../../start/concepts/contexts.html">contexts</a> you have defined:
+
+<h4>Login request</h4>
+This identifies the specified node as a login request.<br/>
+You may only have one node identified as such in any one context.<br/> 
+Se mostrará la <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
+allow you to make any additional changes.
+
+<h4>Logout request</h4>
+This identifies the specified node as a logout request.<br/>
+You may only have one node identified as such in any one context.<br/> 
+Se mostrará la <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
+allow you to make any additional changes.
+
+<h3>Excluir de</h3>
+Este menú tiene los siguientes submenús:
+
+<h4>Proxy</h4>
+Esto excluirá los nodos seleccionados desde el proxy. Aunque seguirán siendo procesadas vía ZAP no aparecerán en ninguna de las pestañas.<br/>
+Esto puede usarse para ignorar las URLs que no son relevantes para el sistema que actualmente está probando.<br/>
+Los nodos pueden ser incluidos a través del cuadro de dialogo <a href="../dialogs/session/sessprop.html">Propiedades de la Sesión</a> .   
+
+<h4>Escáner</h4>
+Esto evitará que los nodos seleccionados sean escaneados activamente.<br/>
+Los nodos pueden ser incluidos a través del cuadro de dialogo <a href="../dialogs/session/sessprop.html">Propiedades de la Sesión</a> .   
+
+<h4>Spider(Araña)</h4>
+This will prevent the selected nodes from being spidered.<br/>
+Los nodos pueden ser incluidos a través del cuadro de dialogo <a href="../dialogs/session/sessprop.html">Propiedades de la Sesión</a> .   
+
+<h3>Reenviar...</h3>
+Esto hará que aparezca el cuadro de dialogo 
+<a href="../dialogs/resend.html">Reenviar</a> que le permite enviar la solicitud después de hacer los cambios que desee.
+
+<h3>Nueva alerta...</h3>
+Esto hará que aparezca el cuadro de dialogo 
+<a href="../dialogs/addalert.html">Añadir Alerta,</a> el que le permitirá agregar una nueva  
+<a href="../../start/concepts/alerts.html">alerta</a> de forma automática en la petición.
+
+<h3>Show in History tab</h3>
+This will show the selected node in the <a href="history.html">Pestaña Historia</a>.
+
+<h3>Mostrar en la pestaña Sitios</h3>
+Esto mostrará el mensaje seleccionado en la <a href="sites.html">Sitios tab</a>.
+
+<h3>Ver en el navegador</h3>
+La dirección URL del nodo seleccionado se abrirá en el navegador por defecto.
+
+<h2>Vease también</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../overview.html">UI Overview</a></td><td>Para una vista general sobre la interfaz de usuario</td></tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Aba de Busca
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Aba de Busca</h1>
+
+<p>Esta aba permite a busca de expressões regulares em todas as URLs, solicitações/requests, respostas, cabeçalhos e resultados de fuzzing.</p>
+<p>Digite na caixa de busca a expressão regular que você gostaria de pesquisar busca e tecle enter ou clique no botão Buscar:  <img src="../../images/16/049.png" align="bottom" width="16" height="16" /></p>
+<p>Um menu pull down permite que você escolha se deseja pesquisar em todas as URLs, requests, respostas ou tudo.</p>
+<p>Todos os URLs, solicitações ou respostas que contêm o padrão da busca serão exibidos na aba <br/> Você pode achar útil acrescentar. * na sua pesquisa - isto lhe dará mais contexto - por exemplo, password.*</p>
+<p>Você pode usar os botões <img src="../../images/16/107.png" align="bottom" width="16" height="16" /> próximo e <img src="../../images/16/108.png" align="bottom" width="16" height="16" /> anterior para ver os termos de pesquisa encontrados nas abas de <a href="request.html">Solicitações</a> e <a href="response.html">respostas</a>. <br/>
+<p>Você também pode ir diretamente a uma instância específica, clicando numa linha dentro da lista de resultados.</p>
+
+<h2>Menu do botão direito</h2>
+Clicar com o botão direito em um nó faz aparecer um menu que lhe permitirá:
+
+<h3>Ataque</h3>
+O menu de ataque tem os seguintes submenus:
+<h4>Varredura Ativa de Site</h4>
+Isto irá iniciar uma 
+<a href="../../start/concepts/ascan.html">Varredura Ativa</a> de todo o site do nó selecionado.<br/>
+A <a href="ascan.html">Aba de varredura ativa</a> vai aparecer e irá mostrar o progresso da varredura.<br/>
+
+<h4>Nó da Varredura ativa</h4>
+Isto irá iniciar uma 
+<a href="../../start/concepts/ascan.html">Varredura Ativa</a> apenas no nó selecionado.<br/>
+A <a href="ascan.html">Aba de Varredura ativa</a> vai aparecer e irá mostrar o progresso da varredura.<br/>
+
+<h4>Usar o Spider no site</h4>
+Isto irá iniciar uma varredura do 
+<a href="../../start/concepts/spider.html">Spider</a> de todo o site do nó selecionado.<br/>
+A <a href="spider.html">Aba Spider</a> vai aparecer e irá mostrar o progresso da varredura.<br/>
+
+<h3>Incluir no contexto</h3>
+Este menu permite que você inclua os nós selecionados e todos os seus subordinados no
+<a href="../../start/concepts/contexts.html">contexto especificado</a>.<br/>
+Você também tem a opção para criar um novo contexto.<br/>
+Os diálogos de <a href="../dialogs/session/contexts.html">Contextos da sessão</a> serão exibidos para que você possa fazer alterações adicionais.
+
+<h3>Excluir do contexto</h3>
+Este menu permite que você exclua os nós selecionados e todos os seus subordinados do
+<a href="../../start/concepts/contexts.html">contexto especificado</a>.<br/>
+O diálogo de <a href="../dialogs/session/contexts.html">Contextos da sessão</a> será exibido para que você possa fazer alterações adicionais.
+
+<h3>Marcar como contexto</h3>
+Este menu tem os seguintes submenus para cada um dos 
+<a href="../../start/concepts/contexts.html">contextos</a> que você definiu:
+
+<h4>Pedido de login</h4>
+Isto identifica o nó especificado como uma solicitação de logon.<br/>
+Você pode ter apenas um nó identificado desse jeito em cada contexto.<br/> 
+O diálogo <a href="../dialogs/session/contexts.html">Contextos da sessão</a> será exibido para que você possa fazer alterações adicionais.
+
+<h4>Pedido de logout</h4>
+Isto identifica o nó especificado como uma solicitação de logout.<br/>
+Você pode ter apenas um nó identificado como tal em cada contexto.<br/> 
+O diálogo <a href="../dialogs/session/contexts.html">Contextos da sessão</a> será exibido para que você possa fazer alterações adicionais.
+
+<h3>Excluir de</h3>
+Este menu possui os seguintes submenus:
+
+<h4>Proxy</h4>
+Isto irá excluir do proxy os nós selecionados. Eles ainda passarão pelo ZAP, mas não serão exibidos em qualquer uma das guias.<br/>
+Isto pode ser usado para ignorar URLs que você sabe que não são relevantes para o sistema que você está testando.<br/>
+Os nós podem ser incluídos novamente através do diálogo <a href="../dialogs/session/sessprop.html">Propriedades da Sessão</a>     
+
+<h4>Scanner</h4>
+Isto irá impedir que os nós selecionados entrem na varredura ativa.<br/>
+Os nós podem ser incluídos novamente através do diálogo <a href="../dialogs/session/sessprop.html">Propriedades da Sessão</a>     
+
+<h4>Spider</h4>
+Isto irá impedir que os nós selecionados sejam percorridos pelo spider.<br/>
+Os nós podem ser incluídos novamente através do diálogo <a href="../dialogs/session/sessprop.html">Propriedades da Sessão</a>     
+
+<h3>Reenviar...</h3>
+Isso irá abrir o
+<a href="../dialogs/resend.html">Diálogo de reenvio</a> que lhe permite reenviar o request depois de fazer quaisquer alterações que você deseje.
+
+<h3>Novo Alerta...</h3>
+Isso irá abrir o
+<a href="../dialogs/addalert.html">diálogo Acrescentar Alerta</a> que permite a você registrar manualmente um novo  
+<a href="../../start/concepts/alerts.html">alerta</a> para este request.
+
+<h3>Mostrar no guia histórico</h3>
+Isto irá mostrar o nó selecionado na <a href="history.html">Aba de histórico</a>.
+
+<h3>Mostrar na Aba de Sites</h3>
+Isto irá mostrar a mensagem selecionada na <a href="sites.html">Aba de Sites</a>.
+
+<h3>Ver no Navegador</h3>
+Isto irá abrir a URL do nó selecionado em seu navegador padrão.
+
+<h2>Leia também</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../overview.html">Visão geral da interface do usuário</a></td><td>para uma visão geral da interface do usuário</td></tr>
+</table>
+
+</body>
+</html>

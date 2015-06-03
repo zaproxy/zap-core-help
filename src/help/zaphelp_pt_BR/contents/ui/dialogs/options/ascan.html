@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Tela de Opções da Varredura Ativa
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Opções, tela de Varredura Ativa</h1>
+<p>
+Esta tela permite a você configurar as opções de <a href="../../../start/concepts/ascan.html">Varredura Ativa</a> .
+
+<h3>Número de hosts examinados simultaneamente</h3>
+É o número máximo de hosts que podem ser escaneados ao mesmo tempo. Aumentá-lo vai acrescentar carga ao computados onde o ZAP está rodando.
+
+<h3>Número de varreduras simultâneas em cada host</h3>
+Número de subdivisões de varreduras (threads) que o ZAP vai fazer em cada host.<br>
+Aumentar o número de subdivisões vai acelerar o escaneamento mas pode sobrecarregar tanto o computador onde o ZAP está rodando quando o host alvo.
+
+<h3>Número máximo de resultados na lista</h3>
+Número de resultados que será exibido na aba Varredura Ativa.<br>
+Exibir um grande número de resultados pode aumentar bastante o tempo que a varredura vai levar.
+
+<h3>Retardo de varredura em milissegundos</h3>
+O intervalo em milissegundos entre dois requests sucessivos.<br>
+Deixar esta variável com um valor diferente de zero vai elevar o tempo da varredura ativa mas aliviará a carga no host-alvo.
+
+<h3>Manipular tokens anti CSRF</h3>
+Se esta opção estiver selecionada, a varredura ativa tentará automaticamente solicitar tokens 
+<a href="../../../start/concepts/anticsrf.html">anti CSRF</a> quando sollicitado.<br>
+Observe que isto é uma funcionalidade experimental  e vai desacelerar o processo de varredura porque ele não será subdividido em threads para garantir que os tokens anti CSRF não se percam. 
+
+<h3>Solicitação para reescanear nós quando muda o escopo, no modo de Ataque</h3>
+Se esta opção estiver selecionada, quando você utilizar o <a href="../../../start/concepts/modes.html">modo</a> de ataque você será convidado a decidir se vai reescanear nós no nesse escopo.<br>
+Se a opção não estiver selecionada então essa decisão (se os nós serão reescaneados) fica para a próxima opção.
+
+<h3>No modo de Ataque, sempre reescaneie nós quando o escopo mudar</h3>
+Se esta opção estiver selecionada, então quando for selecionado o <a href="../../../start/concepts/modes.html">modo</a> de ataque todos os nós no escopo serão reescaneados se o escopo mudar.<br>
+Isso não é recomendável para  sites grandes porque pode tomar muito tempo.
+
+<h3>Política padrão de varredura ativa</h3>
+É a <a href="../../../start/concepts/scanpolicy.html">política de varredura</a> utilizada por padrão quando você inicia uma varredura ativa.
+
+<h3>Política de varredura do modo Ataque</h3>
+É a <a href="../../../start/concepts/scanpolicy.html">Política de Varredura</a> utilizada para escaneamento no modo de <a href="../../../start/concepts/modes.html">Ataque</a>.
+
+<h2>Leia também</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">Visão geral da interface do usuário</a></td><td>para uma visão geral da interface do usuário</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="options.html">Diálogos de opções</a></td><td>para detalhes de outras telas de diálogo de opções</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="ascan.html">Opções da Varredura Ativa</a></td><td></td></tr>
+</table>
+
+</body>
+</html>

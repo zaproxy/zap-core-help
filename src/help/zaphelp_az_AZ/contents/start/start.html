@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Getting Started
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Getting Started</h1>
+<p>
+The quickest way to get going with ZAP is to use the Quick Start add-on, which is installed by default.<br/>
+This allows you to enter a URL which ZAP will first <a href="concepts/spider.html">spider</a>
+and then <a href="concepts/ascan.html">active scan</a>.<br/>
+For a more in depth test you should explore your application using your browser or automated regression tests while proxying through ZAP.
+</p>
+
+<p>
+At its heart ZAP is an <a href="concepts/intercept.html">intercepting proxy</a>.<br/>
+You need to configure your browser to connect to the web application you wish to test through ZAP.<br/> 
+If required you can also configure ZAP to connect through another proxy - this is often 
+necessary in a corporate environment.<br/>
+</p>
+<p>
+If you know how to set up proxies in your web browser then go ahead and give it a go!<br>
+If you are unsure then have a look at the <a href="proxies.html">Configuring proxies</a>
+section.
+</p>
+<p>
+Once you have configured ZAP as your browser's proxy then try to connect to the web application
+you will be testing.<br/>
+If you can not connect to it then check your proxy settings again. You will need to check your 
+browser's proxy settings, and also ZAP's proxy settings. <br>
+Its also worth checking that the application that you are trying to test is running!
+</p>
+<p>
+When you have successfully connected to your application via your browser then have a look at ZAP
+again. You should now see one or more lines in the <a href="../ui/tabs/sites.html">Sites</a> and
+<a href="../ui/tabs/history.html">History</a> tabs.<br/>
+If so we're in business. If not then you'll need to check your proxy settings again.
+</p>
+<p>
+The next thing to do is to start a 
+<a href="../pentest/pentest.html">basic penetration test</a>.<br/>
+</p>
+
+<h2>See also</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="proxies.html">Configuring Proxies</a></td><td>for details of how to set up ZAP as a proxy in your web browser</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Giriş</a></td><td>the introduction to ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="concepts/concepts.html">Features</a></td><td>provided by ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="checks.html">Scanner Rules</a></td><td>supported by default</td></tr>
+</table>
+
+
+
+</body>
+</html>

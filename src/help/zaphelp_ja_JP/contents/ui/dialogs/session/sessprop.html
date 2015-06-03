@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+セッション プロパティ ダイアログ ボックス
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>セッション プロパティ ダイアログ ボックス</h1>
+<p>
+This allows you to set the session properties and is made up of the following screens:
+
+<h3>General screen</h3>
+This allows you to set the session name and description.
+
+<h3>プロキシから除外</h3>
+This allows you to manage the URLs which will be ignored by the proxy.
+
+<h3>スキャンから除外</h3>
+This allows you to manage the URLs which will be ignored by the scanner.
+
+<h3>スパイダーから除外</h3>
+This allows you to manage the URLs which will be ignored by the spider.
+
+<h3>コンテキスト</h3>
+A set of screens for managing <a href="../../../start/concepts/contexts.html">contexts</a>
+
+<h2>URL 正規表現</h2>
+In the <i>Exclude from *</i> dialogs, you can enter regular expressions to define excluded URLs.
+While you can escape a single meta-character with a backslash, you can also use the <b>\Q...\E</b> escape sequence. All the characters between the <b>\Q</b> and the <b>\E</b> are interpreted as literal characters. E.g. \Q*\d+*\E matches the literal text *\d+*.
+This escape sequence is used in ZAP when you exclude URLs via some context menus.
+<br>
+<b>Note:</b> If your URL contains a "\E", then you have to do the following steps when using the <b>\Q...\E</b> escape sequence:
+<ul>
+	<li>Open the escape sequence</li>
+	<li>Close the escape sequence before the "character" \E</li>
+	<li>Escape the backslash</li>
+	<li>Open after the "\E" another escape sequence;</li>
+	<li>Close the escape sequence as normally would.</li>
+</ul>
+<br>
+Example: subdomain.example.com/path?a=<b>\E</b>&amp;moredata=2 should appear as
+<i>\Qsubdomain.example.com/path?a=\E</i><b>\\E</b><i>\Q&amp;moredata=2\E</i>
+  
+<h2>ここから参照されています</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../tlmenu/file.html">トップレベルファイル メニュー</a></td><td>「プロパティ...」 メニュー項目</td></tr>
+</table>
+
+<h2>関連情報</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../overview.html">UIの概要</a></td><td>ユーザー インターフェイスの概要について</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../dialogs.html">ダイアログ</a></td><td>ダイアログボックスやポップアップの詳細 </td></tr>
+</table>
+
+</body>
+</html>

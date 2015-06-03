@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Spider</title>
+</head>
+<body bgcolor="#ffffff">
+	<h1>Spider</h1>
+	<p>O spider é uma ferramenta usada para detectar automaticamente novos recursos (URLs) em um determinado Site. Começa com uma lista de URLs para visitar, chamadas de sementes, que dependem de como o spider é iniciado. O spider então visita essas URLs, identifica todos os hiperlinks na página e os adiciona à lista de URLs para visitar e assim o processo continua recursivamente, à medida em que novos recursos/URLs são encontrados.
+	</p>
+
+	<p>Existem 4 métodos de iniciar o spider, diferenciados pela lista de sementes com as quais começa:</p>
+	<ul>
+		<li>Spider em Site - a lista de sementes contém todas as URIs já encontradas para o site selecionado.</li>
+		<li>Spider em Subárvore - a lista de sementes contém todos os URIs já encontrados e presente na subárvore do nó selecionado.</li>
+		<li>Spider de URL - a lista de sementes contém apenas a URI correspondente ao nó selecionado (na árvore do Site).</li>
+		<li>Spider de tudo no escopo - a lista de sementes contém todas as URIs que o usuário tiver selecionado como sendo 'No escopo'.</li>
+		<li>Spider em todo o contexto... - a lista de sementes contém todas as URIs que o usuário selecionou como sendo o contexto.</li>
+	</ul>
+	<i>Mais detalhes podem ser encontrados abaixo, na seção "Acessado via" </i>
+
+
+	<p>Durante o processamento de uma URL, o Spider faz uma solicitação para buscar o recurso e em seguida analisa a resposta, identificando os hiperlinks. Atualmente tem o seguinte comportamento para processar as respostas:</p>
+
+	<h4>HTML</h4>
+	Processa as tags específicas, identificando links em direção a novos recursos:
+	<ul>
+		<li>Base - manipulação adequada</li>
+		<li>A, Link, Area - atributo 'href'</li>
+		<li>Frame, IFrame, Script, Img - atributo 'src'</li>
+		<li>Meta - 'http-equiv' para 'location' e 'refresh'</li>
+		<li>Form - manipulação adequada de formulários com métodos GET e POST. Os valores dos campos são gerados de modo válido, incluindo <a
+			href="http://www.w3schools.com/html5/html5_form_input_types.asp">tipos de entrada HTML 5.0</a>.
+		</li>
+		<li>Comentários - Tags válidas encontradas em comentários também são analisadas, se isso for especificado na <a href="../../ui/dialogs/options/spider.html">tela de opções do Spider</a>
+		</li>
+	</ul>
+
+	<h4>Arquivo robots txt</h4>
+	Se definido na
+	<a href="../../ui/dialogs/options/spider.html">Tela de opções do Spider</a>, também analisa o arquivo 'Robots' e tenta identificar novos recursos usando as regras especificadas. Deve ser mencionado que o spider não segue as regras especificadas no arquivo 'Robots'.
+
+	<h4>Formato OData Atom</h4>
+	Conteúdo OData usando o formato Atom é suportado atualmente. Todos os links incluídos (relativos ou absolutos) são processados.
+
+	<h4>Resposta em texto não - HTML</h4>
+	É feito parsing de texto em busca de padrão de URL
+
+	<h4>Resposta não-texto</h4>
+	Atualmente, o spider não processa este tipo de recurso.
+
+	<h2>Outros aspectos</h2>
+	<ul>
+	<li> Ao verificar se uma URL já foi visitada, o comportamento para tratamento dos parâmetros pode ser configurado na tela de opções do spider.
+	</li>
+	<li> Quando verificar se uma URL já foi visitada, alguns parâmetros comuns são ignorados: jsessionid, phpsessid, aspsessionid, utm_ *
+	</li>
+	<li> O comportamento do spider em cookies é definido pela opção presente em <i>Editar -&gt; Habilitar rastreamento de sessão</i>. Se essa opção estiver habilitada, o spider manipulará corretamente os cookies recebidos do servidor e irá enviá-los adequadamete.
+	Se a opção estiver desabilitada, o spider não enviará quaisquer cookies em suas solicitações.
+	</li>
+	</ul>
+	<p>
+		O spider é configurado usando-se a <a
+			href="../../ui/dialogs/options/spider.html">tela de opções do spider</a>.
+	</p>
+
+	<h2>Leia também</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/overview.html">Visão geral da interface do usuário</a></td>
+			<td>uma visão geral da interface do usuário</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="concepts.html">Recursos</a></td>
+			<td>fornecidos pelo ZAP</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/options/spider.html">Tela de opções do Spider</a></td>
+			<td>para uma visão geral das opções do Spider</td>
+		</tr>
+	</table>
+
+</body>
+</html>

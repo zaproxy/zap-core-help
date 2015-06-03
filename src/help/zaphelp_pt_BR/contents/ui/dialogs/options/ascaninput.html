@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Tela de opções dos vetores de entrada da varredura ativa
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Tela de Entrada de opções para Vetores de Varredura Ativa</h1>
+<p>
+Esta tela permite que você configure a entrada de vetores para <a href="../../../start/concepts/ascan.html">varredura ativa</a> .<br>
+Estes são os elementos que a varredura ativa irá atacar.<br>
+Varrer todos os elementos disponíveis vai demorar mais, mas não varrer alguns deixará escapar algumas vulnerabilidades.
+
+<h3>Alvos injetáveis</h3>
+O elemento de requisição que a varredura ativa atingirá:
+
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>String de query da URL</td><td>Par de valores-chave na URL query, ou seja, depois do '?'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Dados do POST</td><td>Par de valores-chave nos dados da requisição POST</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Caminho da URL</td><td>Elementos de caminho (path) na URL de requisição, ou seja, os elementos separados por '/'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Headers de HTTP</td><td>Headers de HTTP da requisição</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Dados do cookie</td><td>Request de cookies</td></tr>
+</table>
+
+<h3>Janelas de entrada de vetor</h3>
+Os formatos de dados que a varredura ativa atingirá:
+
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Dados multipart de formulários</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>atributos/tag XML</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>JSON</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Google Web Toolkit</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>id/filtro OData</td><td></td></tr>
+</table>
+
+
+<h3>Habilitar entrada de vetores em scripts</h3>
+Se esta opção estiver selecionada, a varredura ativa utilizará quaisquer vetores em script habilitados.<br>
+Vetores de entrada em scripts são scripts que você pode escrever ou importar para o ZAP e permitem que você atinja elementos que não são suportados por default.
+
+<p>
+Esta tela também permite a você configurar os parâmetros a serem ignorados pela varredura ativa.
+
+<h2>Leia também</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">Visão geral da UI</a></td><td>para uma visão geral da interface do usuário</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="options.html">Diálogos das opções</a></td><td>para detalhes das outras telas de diálogos de opções</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="ascaninput.html">Vetores de entrada de varredura ativa</a></td><td></td></tr>
+</table>
+
+</body>
+</html>

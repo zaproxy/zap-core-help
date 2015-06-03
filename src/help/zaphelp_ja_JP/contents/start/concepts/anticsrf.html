@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+CSRF 処理対策
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Anti CSRF トークン</h1>
+<p>
+Anti CSRFトークンはクロスサイトリクエストフォージェリ(CSRF)攻撃を防ぐ為に使われている(疑似)ランダムのパラメータです。<br>しかしながら、これはペネトレーションテスターの仕事を困難なものにしてしまいます。特にトークンがフォームがリクエストされる度に毎回生成される場合です。<br>
+</p>
+<p>
+ZAPはanti CSRFトークンを単に属性名で検知します。属性名は<a href="../../ui/dialogs/options/anticsrf.html">オプション Anti CSRF画面</a>を使って設定されたものがanti CSRFトークンとみなされます。<br/>ZAPがこれらのトークンを検知するとトークン値とURLが生成したトークンを記録します。<br/>
+<a href="ascan.html">動的スキャナー</a>および<a href="fuzz.html">fuzzer</a>の両方とも、要求時に自動的にトークンを再生成するオプションを持っています。
+</p>
+
+<h2>関連情報</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/overview.html">UIの概要</a></td><td>ユーザー インターフェイスの概要について</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="concepts.html">特徴：</a></td><td>ZAPによって提供されます。</td></tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Tela das opções de Extensões</title>
+</head>
+<body bgcolor="#ffffff">
+	<h1>Tela das opções de Extensões</h1>
+	<p>Esta tela permite a você habilitar/desabilitar extensões disponíveis no ZAP.</p>
+	<h3>Habilitar/desabilitar Extensões</h3>
+	Extensões habilitadas serão carregadas pelo ZAP, ampliando assim as 
+funcionalidades que elas proporcionam. As extensões desabilitadas não serão carregadas.
+
+	<h3>Extensões do núcleo</h3>
+	Extensões do núcleo são aquelas que se forem desabilitadas impedirão o ZAP de ter um mínimo de funcionalidade. As extensões marcadas como de núcleo não podem ser desabilitadas.
+	<p>
+		<i>Nota: extensões do núcleo podem ser desabilitadas pelo arquivo de configuração, embora isso não seja recomendável.</i>
+	</p>
+
+	<h3>Dependências das extensões</h3>
+	Algumas extensões podem depender de outras para funcionar. Quando uma dessas extensões (dependências) estiver desabilitada, fará com que o ZAP automaticamente desabilite todas as extensões que dependem dela. Então pode acontecer que ao desabilitar uma extensão várias outras (que dependem dela) também ficarão desabilitadas. Extensões que foram automaticamente desabilitadas não poderão ser habilitadas até que as dependências estejam habilitadas.
+
+	<h3>Localização das extensões disponíveis no ZAP</h3>
+	Para tornar uma extensão disponível para o ZAP ela precisa estar num dos seguintes locais:
+	<ul>
+		<li>diretório "plugin", localizado na pasta do ZAP;</li>
+		<li>diretório "plugin", localizado na pasta do usuário do ZAP.</li>
+	</ul>
+
+	<p>
+		<i>Nota: você precisa reiniciar o ZAP para que as mudanças tenham efeito.</i>
+	</p>
+
+	<h2>Leia também</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../overview.html">Visão geral da interface do usuário</a></td>
+			<td>para uma visão geral da interface do usuário</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="options.html">Diálogos de opções</a></td>
+			<td>para detalhes das telas de diálogo de outras Opções</td>
+		</tr>
+	</table>
+
+</body>
+</html>

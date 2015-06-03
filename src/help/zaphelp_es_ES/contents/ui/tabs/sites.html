@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Sitios tab
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Sitios tab</h1>
+<p>
+The Sites tab shows all of the URLs visited in a tree structure. <br/>
+You can select any of the nodes in the tree to display the request and response for that URL 
+in the relevant tabs.<br/>
+</p>
+
+<h2>Menú de botón derecho</h2>
+Al hacer click derecho sobre un nodo se abrirá un menú que le permitirá:
+
+<h3>Atacar</h3>
+El menú de ataque tiene los siguientes submenús:
+
+<h4>Active Scan...</h4>
+This will launch the <a href="../dialogs/advascan.html">Escaneo Activo</a> dialog which allows you to initiate an 
+<a href="../../start/concepts/ascan.html">escaneo activo</a> with the starting point set to the request you selected.<br/>
+
+<h4>Spider...</h4>
+This will launch the <a href="../dialogs/spider.html">Spider(Araña)</a> dialog which allows you to initiate the 
+<a href="../../start/concepts/spider.html">spider</a> with the starting point set to the request you selected.<br/>
+
+<h3>Include in Context</h3>
+This menu allows you to include the selected nodes and all of their subordinates in the specified
+<a href="../../start/concepts/contexts.html">context</a>.<br/>
+You also have the option to create a new context.<br/>
+Se mostrará la <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
+allow you to make any additional changes.
+
+<h3>Exclude from Context</h3>
+This menu allows you to exclude the selected nodes and all of their subordinates from the specified
+<a href="../../start/concepts/contexts.html">context</a>.<br/>
+Se mostrará la <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
+allow you to make any additional changes.
+
+<h3>Flag as context</h3>
+This menu has the following submenus for each of the 
+<a href="../../start/concepts/contexts.html">contexts</a> you have defined:
+
+<h4>Login request</h4>
+This identifies the specified node as a login request.<br/>
+You may only have one node identified as such in any one context.<br/> 
+Se mostrará la <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
+allow you to make any additional changes.
+
+<h4>Logout request</h4>
+This identifies the specified node as a logout request.<br/>
+You may only have one node identified as such in any one context.<br/> 
+Se mostrará la <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
+allow you to make any additional changes.
+
+<h3>Excluir de</h3>
+Este menú tiene los siguientes submenús:
+
+<h4>Proxy</h4>
+Esto excluirá los nodos seleccionados desde el proxy. Aunque seguirán siendo procesadas vía ZAP no aparecerán en ninguna de las pestañas.<br/>
+Esto puede usarse para ignorar las URLs que no son relevantes para el sistema que actualmente está probando.<br/>
+Los nodos pueden ser incluidos a través del cuadro de dialogo <a href="../dialogs/session/sessprop.html">Propiedades de la Sesión</a> .   
+
+<h4>Escáner</h4>
+Esto evitará que los nodos seleccionados sean escaneados activamente.<br/>
+Los nodos pueden ser incluidos a través del cuadro de dialogo <a href="../dialogs/session/sessprop.html">Propiedades de la Sesión</a> .   
+
+<h4>Spider(Araña)</h4>
+This will prevent the selected nodes from being spidered.<br/>
+Los nodos pueden ser incluidos a través del cuadro de dialogo <a href="../dialogs/session/sessprop.html">Propiedades de la Sesión</a> .   
+
+<h3>Eliminar</h3>
+Esto eliminará el nodo de ZAP junto con todos sus hijos.<br/>
+Sin embargo estos pueden ser re agregados, para evitarlo use los menús 'Excluir de'. 
+
+<h3>Parada...</h3>
+This will bring up a new window which will allow you to set a 
+<a href="../../start/concepts/breakpoints.html">break point</a> on that URL.<br/>
+The break point is defined via a regular expression. If you visit a URL which matches this 
+expression then ZAP will intercept it and allow you to change either the request and/or the
+response.
+
+<h3>Alertas para este nodo</h3>
+Si la URL seleccionada tiene <a href="../../start/concepts/alerts.html">alertas</a> asociadas,
+serán mostradas bajo este menú.<br>
+Seleccionar una alerta hará que se muestre en pantalla.
+
+<h3>Reenviar...</h3>
+Esto hará que aparezca el cuadro de dialogo 
+<a href="../dialogs/resend.html">Reenviar</a> que le permite enviar la solicitud después de hacer los cambios que desee.
+
+<h3>Nueva alerta...</h3>
+Esto hará que aparezca el cuadro de dialogo 
+<a href="../dialogs/addalert.html">Añadir Alerta,</a> el que le permitirá agregar una nueva  
+<a href="../../start/concepts/alerts.html">alerta</a> de forma automática en la petición.
+
+<h3>Show in History tab</h3>
+This will show the selected node in the <a href="history.html">Pestaña Historia</a>.
+
+<h3>Ver en el navegador</h3>
+La dirección URL del nodo seleccionado se abrirá en el navegador por defecto.
+
+<h3>Generate anti CSRF test form</h3>
+Esto abrirá una URL que le presentará un formulario generado para detectar problemas CSRF.<br>
+Sólo se activará para solicitudes POST si la API está habilidata y Java soporta la apertura de URLs en un navegador en su plataforma. 
+
+<h3>Refresh Sites tree</h3>
+Occasionally the Sites tree can be displayed incorrectly - this option will redraw it.
+
+<h2>Vease también</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../overview.html">UI Overview</a></td><td>Para una vista general sobre la interfaz de usuario</td></tr>
+</table>
+
+</body>
+</html>

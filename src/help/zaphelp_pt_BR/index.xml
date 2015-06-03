@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'  ?>
+
+<!--
+-->
+
+<!DOCTYPE index
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Index Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/index_2_0.dtd">
+
+<index version="2.0">
+
+    <indexitem text="varredura ativa" target="start.concepts.ascan" />
+    <indexitem text="diálogo da varredura ativa" target="ui.dialogs.advascan" />
+    <indexitem text="aba da varredura ativa" target="ui.tabs.ascan"/>
+    <indexitem text="complementos" target="start.concepts.addons"/>
+    <indexitem text="complementos" target="addon.introduction"/>
+    <indexitem text="acrescentar diálogo de alerta" target="ui.dialogs.addalert" />
+    <indexitem text="acrescentar diálogo de ponto de ruptura" target="ui.dialogs.addbreak" />
+    <indexitem text="acrescentar diálogo de nota" target="ui.dialogs.addnote" />
+    <indexitem text="aba de alertas" target="ui.tabs.alerts" />
+    <indexitem text="alertas" target="start.concepts.alerts" />
+    <indexitem text="api" target="start.concepts.api" />
+    <indexitem text="autenticação auth, login manual baseado em formulário" target="start.concepts.auth" />
+    <indexitem text="teste de penetração básico" target="start.pentest" />
+    <indexitem text="aba de pontos de ruptura" target="ui.tabs.breakpoints" />
+    <indexitem text="pontos de ruptura" target="start.concepts.breakpoints" /> 
+    <indexitem text="aba de parada" target="ui.tabs.break" />
+    <indexitem text="linha de comando" target="cmdline" />
+    <indexitem text="créditos" target="zap.credits" />
+    <indexitem text="diálogos" target="ui.dialogs" />
+    <indexitem text="codificar / decodificar / diálogo de hash" target="ui.dialogs.enc_dec" />
+    <indexitem text="recursos" target="start.concepts" />
+    <indexitem text="diálogo de filtragem" target="ui.dialogs.filter" />
+    <indexitem text="filtros" target="start.concepts.filters" />
+    <indexitem text="localizar diálogo" target="ui.dialogs.find" />
+    <indexitem text="rodapé" target="ui.footer" />
+    <indexitem text="aba do fuzzer" target="ui.tabs.fuzz" />
+    <indexitem text="fuzzing" target="start.concepts.fuzz" />
+    <indexitem text="diálogo de fuzz" target="ui.dialogs.fuzz" />
+    <indexitem text="iniciando" target="start.start" />
+    <indexitem text="diálogo de filtro do histórico" target="ui.dialogs.historyfilter" />
+    <indexitem text="aba de histórico" target="ui.tabs.history" />
+    <indexitem text="aba de sessões http" target="ui.tabs.httpsessions" />
+    <indexitem text="sessões http" target="start.concepts.httpsessions" />
+    <indexitem text="proxy de interceptação" target="start.concepts.intercept"/>
+    <indexitem text="introdução" target="zap.intro" />
+    <indexitem text="diálogo de gerenciamento de abas" target="ui.dialogs.managetags" />
+    <indexitem text="diálogo de requisição manual" target="ui.dialogs.manreq" />
+    <indexitem text="modos" target="start.concepts.modes" />
+    <indexitem text="notas" target="start.concepts.notes" />
+    <indexitem text="diálogo de opções" target="ui.dialogs.options" />
+    <indexitem text="aba da saída" target="ui.tabs.output" />
+    <indexitem text="aba de parâmetros" target="ui.tabs.params" />
+    <indexitem text="proxy paros" target="zap.paros" />
+    <indexitem text="varredura passiva" target="start.concepts.pscan" />
+    <indexitem text="diálogo de persistência de sessão" target="ui.dialogs.persistsession" />
+    <indexitem text="configuração de proxy" target="start.proxy" />
+    <indexitem text="release 1.0.0" target="zap.releases.1.0.0" />
+    <indexitem text="release 1.1.0" target="zap.releases.1.1.0" />
+    <indexitem text="release 1.2.0" target="zap.releases.1.2.0" />
+    <indexitem text="release 1.3.0" target="zap.releases.1.3.0" />
+    <indexitem text="release 1.3.1" target="zap.releases.1.3.1" />
+    <indexitem text="release 1.3.2" target="zap.releases.1.3.2" />
+    <indexitem text="release 1.3.3" target="zap.releases.1.3.3" />
+    <indexitem text="release 1.3.4" target="zap.releases.1.3.4" />
+    <indexitem text="release 1.4.0" target="zap.releases.1.4.0" />
+    <indexitem text="release 1.4.1" target="zap.releases.1.4.1" />
+    <indexitem text="release 2.0.0" target="zap.releases.2.0.0" />
+    <indexitem text="release 2.1.0" target="zap.releases.2.1.0" />
+    <indexitem text="release 2.2.0" target="zap.releases.2.2.0" />
+    <indexitem text="release 2.2.1" target="zap.releases.2.2.1" />
+    <indexitem text="release 2.2.2" target="zap.releases.2.2.2" />
+    <indexitem text="release 2.3.0" target="zap.releases.2.3.0" />
+    <indexitem text="release 2.3.1" target="zap.releases.2.3.1" />
+    <indexitem text="release 2.4.0" target="zap.releases.2.4.0" />
+    <indexitem text="releases" target="zap.releases" />
+    <indexitem text="aba de requisição" target="ui.tabs.request" />
+    <indexitem text="diálogo de reenvio" target="ui.dialogs.resend" />
+    <indexitem text="aba de respostas" target="ui.tabs.response" />
+    <indexitem text="regras de varredura" target="start.check" />
+    <indexitem text="política de varredura" target="start.concepts.scanpolicy" />
+    <indexitem text="diálogo da política de varredura" target="ui.dialogs.scanpolicy" />
+    <indexitem text="diálogo do gerenciador da política de varredura" target="ui.dialogs.scanpolicymgr" />
+    <indexitem text="aba de busca" target="ui.tabs.search" />
+    <indexitem text="diálogo dos contextos de sessão" target="ui.dialogs.contexts" />
+    <indexitem text="diálogo das propriedades de sessão" target="ui.dialogs.sessprop" />
+    <indexitem text="aba de sites" target="ui.tabs.sites" />
+    <indexitem text="spider" target="start.concepts.spider" />
+    <indexitem text="diálogo do spider" target="ui.dialogs.spider" />
+    <indexitem text="tags" target="ui.tabs.spider" />
+    <indexitem text="tags" target="start.concepts.tags" />
+    <indexitem text="menu superior" target="ui.topmenu" />
+    <indexitem text="barra de ferramentas superior" target="ui.toptoolbar" />
+    <indexitem text="visão geral da UI" target="ui.overview" />
+    <indexitem text="vistas" target="ui.views" />
+
+</index>

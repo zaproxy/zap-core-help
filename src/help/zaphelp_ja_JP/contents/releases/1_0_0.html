@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+リリース 1.0.0
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>リリース 1.0.0</h1>
+<p>
+本リリースでは以下のような変更が行われました。
+</p>
+<h2>重要な変更</h2>
+
+<h3>ヘルプ画面</h3>
+ZAPが提供する全ての機能について、ヘルプ画面が追加されました。<br/>
+F1 キーを押すと選択しているタブに関連するヘルプ画面が表示されるよう、状況依存型ヘルプも実装されました。
+
+<h3>ブレーク</h3>
+The implementation of <a href="../start/concepts/breakpoints.html">ブレーク</a> has been changed to be closer to that provided by 
+software Integrated Development Environments.<br/>
+The break point controls have been moved to the new <a href="../ui/tltoolbar.html">トップレベルツールバー</a>.<br/>
+ブレークポイントは次のツリー上で右クリックすることで設定することもできます。 
+<a href="../ui/tabs/sites.html">サイト</a> 及び <a href="../ui/tabs/history.html">履歴タブ</a>.
+
+<h3>レポートメニュー</h3>
+　 <a href="../ui/tlmenu/report.html">レポートメニュー</a> は大幅に変更され、次のメニューアイテムを含むようになりました。
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>レポートを生成する.</td><td>今すぐレポートを生成する。</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>メッセージをファイルにエクスポート...</td><td><a href="../ui/tlmenu/file.html">[ファイル] メニュー</a> から移動しました。</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>レスポンスをファイルにエクスポート...</td><td><a href="../ui/tlmenu/file.html">[ファイル] メニュー</a> から移動しました。</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>全てのURLをファイルにエクスポート...</td><td>新機能</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>他セッションとの比較...</td><td>新機能</td></tr>
+</table>
+
+<h3>履歴検索の改善</h3>
+The new <a href="../ui/tabs/search.html">検索タブ</a> allows you to search for regular expressions 
+in all of the URLs, requests and responses. <br/>
+Next and previous buttons allow you view the found search terms in the 
+<a href="../ui/tabs/request.html">リクエスト</a> 及び <a href="../ui/tabs/response.html">Response tabs</a>. <br/>
+
+<h3>履歴フィルタ</h3>
+<a href="../ui/tabs/history.html">履歴フィルタ ツールバー</a> has been added which allows you to restrict
+which requests are displayed.<br/>
+Requests can be filtered based on the HTTP methods, the HTTP result codes,
+and any <a href="../start/concepts/tags.html">タグ</a>, <a href="../start/concepts/alerts.html">アラート</a>, or
+<a href="../start/concepts/notes.html">ノート</a> that have been applied.    
+
+<h3>ノート</h3>
+You can now associate <a href="../start/concepts/notes.html">ノート</a> with any request.    
+
+<h3>Multiple Tags</h3>
+You can now associate multiple <a href="../start/concepts/tags.html">タグ</a> with any request.    
+
+<h3>More control over the alerts</h3>
+　 <a href="../ui/dialogs/addalert.html">アラートダイアログを追加</a> allows you to manually add or change an
+alert. 
+
+<h3>新しいエンコーダー/デコーダー</h3>
+A new <a href="../ui/dialogs/enc_dec.html">Encode/Decode/Hash dialog</a> has replaced the previous 
+Encoder/Decoder. 
+
+<h3>静的スキャン</h3>
+<a href="../start/concepts/pscan.html">静的スキャン</a> が追加されました。<br/>
+In this release ZAP will only use passive scanning for automatically adding <a href="../start/concepts/tags.html">タグ</a>.<br/>
+In future releases it may also raise <a href="../start/concepts/alerts.html">アラート</a> for potential issues. 
+    
+<h2>小変更：</h2>
+
+<h3>トップレベルツールバー</h3>
+<a href="../ui/tltoolbar.html">トップレベルツールバー</a> has been added which
+provides a set up buttons for commonly used functionality. 
+
+<h3>アラートフッターの概要</h3>
+Counts of the High, Medium, Low and Informational <a href="../start/concepts/alerts.html">アラート</a>
+are now displayed in the <a href="../ui/footer.html">フッター</a>.
+
+<h3>新しい見た目と操作感</h3>
+新しい見た目と操作感の「Nimubus」が使用されています。
+
+<h3>プロキシ パスワードの扱い</h3>
+<a href="../ui/dialogs/options/connection.html">The Options Connection screen</a> 新たに 「起動時にプロキシの認証情報の入力を求める」オプションを備えます。<br/>
+本オプションが選択されている場合、プロキシのパスワードはハードディスク上に保存されません。  
+
+<h3>サイトタブからの再送信</h3>
+　 <a href="../ui/tabs/sites.html">サイトタブ</a> has a new right click menu item that allows
+you to resend the request after making any changes to it that you want to.  
+
+<h3>User directory maintained between sessions</h3>
+The last directory used by the user is now stored in the config file so that it is
+maintained between sessions.
+
+<h2>関連情報</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">導入</a></td><td>ZAPのご紹介</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">リリース</a></td><td>リリース一覧</td></tr>
+</table>
+</body>
+</html>

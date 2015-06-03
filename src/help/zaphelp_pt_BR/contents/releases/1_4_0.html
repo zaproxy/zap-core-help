@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  Release 1.4.0
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Release 1.4.0</h1>
+<p>
+Este release trouxe as seguintes mudanças:
+</p>
+
+<h2>Alterações significativas:</h2>
+
+<h3>Problema 133: Fazer realce de sintaxe no painel de resposta</h3>
+
+Os painéis HTML agora oferecem realce alternável da sintaxe.
+
+<h3>Problema 153: integração fuzzdb</h3>
+
+O difusor passa a incluir arquivos de difusão do fuzzdb (http://code.google.com/p/fuzzdb/).<br/>
+Note que alguns arquivos de fuzzdb foram ignorados porque os scanners de vírus indicam que eles contêm vírus.<br/>
+Você pode substituí-los (e atualizar o fuzzdb) baixando a versão mais recente do fuzzdb para a biblioteca 'fuzzers'.
+
+<h3>Problema 212: Análise de parâmetro</h3>
+
+Uma nova aba Params mostra um resumo de todos os parâmetros que um site usou.  
+
+<h3>Problema 228: varredura de XSS aperfeiçoada</h3>
+
+O scanner ativo de Cross Site Scripting foi reescrito do zero para encontrar mais problemas potenciais de XSS e apontar menos falsos positivos. 
+
+<h3>Problema 244: transferir as checagens passivas do Watcher</h3>
+
+As seguintes verificações foram transferidas do Watcher (graças a Chris Weber por resolver isso):
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.CrossDomain.ScriptReference.cs</td><td>checar a inclusão de arquivos javascript entre domínios.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.CacheControl.cs</td><td>verifica o cabeçalho de cache-control HTTP nas páginas SSL.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.ContentTypeMissing.cs</td><td>verifica-se se o cabeçalho HTTP Content-Type está presente.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.FrameOptions.cs</td><td>verifica-se que o X-FRAME-OPTIONS não está ausente ou setado de modo inseguro.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.IeXssProtection.cs</td><td>verifica se o X-XSS-Protection não foi ajustado para desativar a protecção de XSS do IE.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.MimeSniff.cs</td><td>checa se o X-CONTENT-TYPE-OPTIONS foi definido.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.DatabaseErrors.cs</td><td>verifica se há mensagens de erro de banco de dados.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.DebugErrors.cs</td><td>verifica se há mensagens de erro de depuração.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.InUrl.cs</td><td>verifica se há vazamento de informações nos parâmetros da URL.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.ReferrerLeak.cs</td><td>verifica se há vazamento de informações no cabeçalho HTTP Referer.</td></tr>
+</table>
+
+
+<h3>Problema 253: Extensões Plugáveis</h3>
+
+Extensões inteira podem agora ser plugadas no  ZAP dinamicamente, com acesso total a todos os recursos do ZAP.
+
+<h2>Pequenas mudanças:</h2>
+
+<h3>Problema 54: shutdown limpo</h3>
+
+<h3>Problema 90: adicionar interface gráfica para renegociação de TLS/SSL insegura</h3>
+
+<h3>Problema 102: Salvar a solicitação e resposta na íntegra, e salvar o corpo de resposta e de request</h3>
+
+<h3>Problema 126: Permitir que se escolha diretório de trabalho e arquivo de configuração pela linha de comando</h3>
+
+<h3>Problema 154: Incluir Param ID em relatórios</h3>
+
+<h3>Problema 164: Botão de configuração de barra de ferramentas</h3>
+
+<h3>Problema 168: Revelar campos ocultos nas páginas da web</h3>
+
+<h3>Problema 192: habilitar/desabilitar pontos de interrupção</h3>
+
+<h3>Problema 193: Detectar vulnerabilidades transversais de diretório</h3>
+
+<h3>Problema 194: Aperfeiçoamento: mostrar ID do request no painel de Busca</h3>
+
+<h3>Problema 200: Detectar vulnerabilidades CSRF</h3>
+
+<h3>Problema 230: Melhorar o zap.sh para lidar com links simbólicos</h3>
+
+<h3>Problema 236: Opção para alternar URLencoding</h3>
+
+<h3>Problema 242: Exportar nó e request/resposta através do botão direito</h3>
+
+<h3>Problema 248: Apagar alertas / retestar recurso de request</h3>
+
+<h3>Problema 251: Reestruturar código de alertas</h3>
+
+<h3>Problema 253: Permitir que extensões definam dependências</h3>
+
+<h3>Problema 270: mudança de Ícone</h3>
+
+<h3>Problema 277: Racionalizar menus de botão direito</h3>
+
+<h3>Problema 279: Extensões do núcleo</h3>
+
+<h3>Problema 282: Adicionar autor, descrição e URL para extensões</h3>
+
+<h2>Consertos de bugs:</h2>
+
+<h3>Problema 42: Redirecionamento arbitrário</h3>
+
+<h3>Problema 94: driver PKCS #11</h3>
+
+<h3>Problema 107: A última request/resposta interceptada permanece na janela de interrupções</h3>
+
+<h3>Problema 135: URLs quebradas no painel de Sites</h3>
+
+<h3>Problema 148: Novo painel HTTP derrubou o gerenciador de desfazer/refazer</h3>
+
+<h3>Problema 180: Exibição Tabular para solicitação GET</h3>
+
+<h3>Problema 187: problemas de codificação</h3>
+
+<h3>Problema 197: o Decodificador não consegue processar entrada base64 sem quebras de linha</h3>
+
+<h3>Problema 198: O relatório não é gerado quando existe um alerta de "Manipulação de parâmetro" com o caractere "NULL"</h3>
+
+<h3>Problema 210: Exceção ao usar a opção "Path Traversal" na varredura ativa</h3>
+
+<h3>Problema 223: Exceção na aba "Sites" ao escolher uma opção de pop-up, "Excluir (da visualização)" ou "Purgar (do DB)", quando nenhuma árvore foi selecionada</h3>
+
+<h3>problema 224: demora muito tempo para se recuperar quando é dado um número de porta do proxy fora do intervalo válido</h3>
+
+<h3>Problema 225: o ZAP fecha logo na inicialização, se um valor de opção contém caracteres estendidos como å, ä, ö</h3>
+
+<h3>Problema 226: caixa de edição para número porta do proxy não deve permitir milhões de caracteres</h3>
+
+<h3>Problema 227: Ferramentas, opções deve ir para a mesma guia como da última vez</h3>
+
+<h3>Problema 237: Bug: - problemas com painéis HTTP</h3>
+
+<h3>Problema 238: Exceção ao se usar um arquivo personalizado de fuzz</h3>
+
+<h3>Problema 241: valor Xmx para o zap.sh ter desempenho estável</h3>
+
+<h3>Problema 243: Quando o DynamicLoader carrega do jar local, não leva em conta o nome do pacote</h3>
+
+<h3>Problema 246: o cabeçalho Pragma precisa do o cabeçalho Cache-Control para requests HTTP/1.1</h3>
+
+<h3>Problema 255: Exceção na API quando ha' caráter ilegal no contexto XML</h3>
+
+<h3>Problema 256: perde-se a porta ao se chamar HttpMessage.setGetParams</h3>
+
+<h3>Problema 260: Exceção ao excluir entradas da aba "Histórico" ("Purge (de DB)")</h3>
+
+<h3>Problema 261: match parcial de Idioma parcial não está funcionando</h3>
+
+<h3>Problema 262: Alertas de "Autenticação fraca" não aparecem com o spider</h3>
+
+<h3>Problema 263: Alertas de "Cookie sem flag de seguro" não aparecem com o spider</h3>
+
+<h3>Problema 264: Exceção nos diálogos "Manual de solicitação Editor" / "Reenviar"</h3>
+
+<h3>Problema 268: Alterar relatório XML</h3>
+
+<h3>Problema 269: Parâmetro de profundidade do Spider</h3>
+
+<h3>Problema 274: Consertar as opções apagar / remover</h3>
+
+<h3>Problema 280: Fazer escape de URLs na árvore de sites</h3>
+
+<h3>Problema 283: RFE: suavização de fonte não está habilitada por padrão em request/resposta</h3>
+
+<h3>Problema 284: cabeçalho  dos painéis de request/resposta etc muito pequenos</h3>
+
+<h3>Problema 286: Seqüência de pesquisa não fica realçada em resultados de fuzz</h3>
+
+<h3>Problema 287: Scanner passivo não pega novos tokens anticsrf</h3>
+
+<h3>Problema 289: arquivos do fuzzdb provocam alertas de vírus</h3>
+
+<h3>Problema 291: Path Tranversal vem com 'param' vazio, mas no 'ataque' vem com o nome</h3>
+
+<h2>Leia também</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Introdução</a></td><td>Introdução ao ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Releases</a></td><td>o conjunto completo dos releases</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Créditos</a></td><td>pessoas e grupos que tornaram este release possível</td></tr>
+</table>
+</body>
+</html>

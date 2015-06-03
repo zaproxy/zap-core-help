@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Sessões HTTP</title>
+</head>
+<body bgcolor="#ffffff">
+	<h1>Sessões HTTP</h1>
+	<p>Esta ferramenta acompanha as sessões Http existentes em um determinado Site e permite que o usuário ZAP force todas as solicitações para que fiquem em uma só sessão. Basicamente ela permite que se possa alternar facilmente entre as sessões de usuário em um Site e criar uma nova sessão sem "destruir" as já existentes.</p>
+
+	<p>
+		É baseada no conceito de Tokens de sessão - parâmetros de mensagem HTTP (agora apenas Cookies), que permitem a um servidor HTTP conectar uma mensagem de request com quaisquer requests ou dados armazenados anteriormente.
+		No caso do Zaproxy, tokens de sessão foram classificados em 2 categorias: tokens de sessão default/padrão e tokens de sessão do site. Os tokens de sessão padrão são aquelas que o usuário pode definir na <a href="../../ui/dialogs/options/httpsessions.html">tela de opções</a> e que são automaticamente considerados tokens de sessão para qualquer site (por exemplo PHPSESSID, jsessionid, etc). Os tokens de sessão de sites são um conjunto de tokens para um determinado site e geralmente são criados usando-se os menus pop-up disponíveis na <a
+			href="../../ui/tabs/params.html">Aba Params</a>.
+	</p>
+
+	<p>
+		Esta ferramenta detecta automaticamente qualquer sessão HTTP que existe na comunicação, usando os tokens de sessão definida ou os tokens de sessão padrão automaticamente detectados. As sessões detectadas são mostradas na <a href="../../ui/tabs/httpsessions.html">Guia de sessões Http</a>.
+	</p>
+
+	<p>
+		O usuário pode, usando o botão disponível na <a
+			href="../../ui/tabs/httpsessions.html">Aba de sessões Http</a>, criar uma nova sessão sem destruir a existente, ou pode forçar uma das sessões como 'ativa'. Quando uma sessão está 'ativa', todas as solicitações de saída enviadas para o Site correspondente são modificadas, os tokens de sessão sendo configurados para corresponder à sessão ativa. Desta forma, o usuário pode facilmente forçar algumas mensagens para ser 'parte' de uma sessão e depois alternar e enviar mensagens em outra sessão.
+	</p>
+
+	<p>
+		A ferramenta de sessões Http é configurada usando a <a
+			href="../../ui/dialogs/options/httpsessions.html">tela de opções de sessões Http</a>.
+	</p>
+
+	<h2>Acessado via</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/tabs/httpsessions.html">Aba de sessões HTTP</a></td>
+			<td></td>
+		</tr>
+	</table>
+
+	<h2>Leia também</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/overview.html">Visão geral da interface do usuário</a></td>
+			<td>para uma visão geral da interface do usuário</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="concepts.html">Recursos</a></td>
+			<td>fornecidos pelo ZAP</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/options/httpsessions.html">Tela de opções de sessões http</a></td>
+			<td>para uma visão geral das opções da ferramenta</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/tabs/params.html">Aba de parâmetros</a></td>
+			<td>para uma visão geral da aba Params</td>
+		</tr>
+
+	</table>
+
+</body>
+</html>

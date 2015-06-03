@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Aba de Break
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Aba de Break</h1>
+<p>
+A aba de Break permite a você alterar uma request ou resposta quando elas são retidas pelo ZAP através de um <a href="../../start/concepts/breakpoints.html">ponto de interrupção</a>.<br/>
+Ela permite que você altere os elementos, coisa que você não seria capaz de mudar através do seu navegador, incluindo:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>O cabeçalho</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>Campos ocultos</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>Campos desativados</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>Campos que usam javascript para filtrar caracteres ilegais</td></tr>
+</table>
+Esta funcionalidade é uma chave para efetivamente fazer pentest do seu aplicativo.
+<p>
+Os 2 painéis conterão apenas aquilo que o ZAP pegar numa solicitação ou resposta. <br/> Você pode mudar alguma coisa nestes dois painéis e em seguida, encaminhar a solicitação ou resposta usando os botões sobre a <a href="../tltoolbar.html">Barra de ferramentas de nível superior</a>.
+</p>
+<p>
+Pull-downs permitem que você selecione diferentes <a href="../views.html">visualizações</a> para o cabeçalho e corpo de solicitação ou resposta.
+</p>
+<p>
+Quando a Aba de Break não estiver em uso seu ícone é uma cruz cinza: <img src="../../images/16/101grey.png" align="bottom" width="16" height="16" />. <br/> Quando um <a href="../../start/concepts/breakpoints.html">ponto de interrupção</a> é atingido, o ícone guia é alterado para uma cruz vermelha: <img src="../../images/16/101.png" align="bottom" width="16" height="16" /><br/>
+
+</p>
+
+<h2>Menu do botão direito</h2>
+Clicar com o botão direito em um nó faz aparecer um menu que lhe permitirá:
+
+<h3>Procurar...</h3>
+Isso irá abrir o <a href="../dialogs/find.html">diálogo Localizar</a>.
+
+<h3>Codificar/Decodificar/Hash...</h3>
+Isso irá abrir o <a href="../dialogs/enc_dec.html">diálogo de Codificar/Decodificar/Hash</a>.<br/>
+Se você tem algum texto realçado, ele será automaticamente incluído na caixa de diálogo.
+
+<h3>Copiar</h3>
+Isso irá copiar a seqüência de caracteres selecionada para a área de transferência.
+
+<h2>Leia também</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../overview.html">Visão geral da interface do usuário</a></td><td>para uma visão geral da interface do usuário</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="breakpoints.html">Aba dos pontos de interrupção</a></td><td>para obter detalhes sobre como alterar ou excluir pontos de interrupção</td></tr>
+</table>
+
+</body>
+</html>

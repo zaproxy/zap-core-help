@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Linha de comando
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Linha de comando</h1>
+
+O ZAP suporta as seguintes opções em linha de comando:
+
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-cmd</td><td>Roda o ZAP 'inline', ou seja, sem a interface do usuário nem daemon</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-config</td><td>Substitui o par 'variável=valor' no arquivo de configuração</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-daemon</td><td>O ZAP é iniciado no modo de 'daemon', ou seja, sem interface de usuário</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-dir</td><td>Usa o diretório especificado no lugar do padrão</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-installdir</td><td>Substitui o código que detecta onde ZAP foi instalado pelo diretório agora especificado em -installdir</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-h</td><td>Mostra todas as opções de linha de comando disponíveis, incluindo aquelas adicionadas pelos Complementos</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-help</td><td>O mesmo que -h </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-host</td><td>Substitui o host especificado no arquivo de configuração para ser usado como proxy</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-port</td><td>Substitui a porta do proxy especificado no arquivo de configuração</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-version</td><td>Informa a versão do ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-newsession</td><td>Cria uma nova sessão no local determinado (espera que seja informado o caminho completo para a sessão)</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-session</td><td>Abre a sessão solicitada depois que o ZAP é iniciado (informe o caminho completo para a sessão).</td></tr>
+</table>
+<br>
+As opções '-sessão ' e '-newsession' são mutuamente exclusivas - usa-se uma ou a outra. Se você tentar usar as duas surgirá um aviso de erro e o ZAP será encerrado (se não estiver em GUI - interface gráfica).
+<br/>
+Chaves de configuração devem ser especificadas usando-se a notação de ponto com base em sua localização no XML do arquivo de configuração. Por exemplo:<br/>
+<pre>-config api.key=12345 -config connection.timeoutInSecs=60</pre>  
+Observe que Complementos podem adicionar opções extras de linha de comando.
+
+<p>
+Exemplos:
+	<ul>
+		<li>Inicie o ZAP no modo 'daemon' com uma nova sessão criada em um determinado caminho assim:
+			<pre>-daemon - newsession /path/to/new/session</pre>
+		</li>
+		<li>Crie um relatório da última varredura de uma sessão existente e encerre o ZAP em seguida:
+			<pre>-last_scan_report /path/to/save/report.xml -session /path/to/existing/session -cmd</pre>
+		</li>
+	</ul>
+
+<h2>Leia também</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="intro.html">Introdução</a></td><td>a introdução ao ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="start/concepts/api.html">API</a></td><td>para controlar o ZAP programaticamente</td></tr>
+</table>
+
+</body>
+</html>

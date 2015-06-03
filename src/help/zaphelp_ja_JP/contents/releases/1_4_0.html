@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  リリース 1.4.0
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>リリース 1.4.0</h1>
+<p>
+本リリースでは以下のような変更が行われました。
+</p>
+
+<h2>重要な変更</h2>
+
+<h3>Issue 133: Add Syntax highlighting to Response Panel</h3>
+
+The HTML panels now support switchable syntax highlighting.
+
+<h3>Issue 153: fuzzdb integration</h3>
+
+The fuzzer includes fuzzdb (http://code.google.com/p/fuzzdb/) fuzzing files.<br/>
+Note that some fuzzdb files have been left out as they cause common anti virus scanners to flag them as containing viruses.<br/>
+You can replace them (and upgrade fuzzdb) by downloading the latest version of fuzzdb and expanding it in the 'fuzzers' library.
+
+<h3>Issue 212: Parameter analysis</h3>
+
+A new Params tab shows a summary of all of the parameters a site has used.  
+
+<h3>Issue 228: Enhanced XSS scanner</h3>
+
+The Cross Site Scripting active scanner has been rewritten from scratch to find more potential XSS issues and report fewer false positives. 
+
+<h3>Issue 244: Port the Watcher passive checks</h3>
+
+The following checks have been ported from Watcher (thanks to Chris Weber for oking this):
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.CrossDomain.ScriptReference.cs</td><td>checks for cross-domain javascript files inclusion.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.CacheControl.cs</td><td>checks HTTP cache-control header on SSL pages.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.ContentTypeMissing.cs</td><td>checks that the Content-Type HTTP header is not missing.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.FrameOptions.cs</td><td>checks that the X-FRAME-OPTIONS is not missing or insecurely set.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.IeXssProtection.cs</td><td>checks that the X-XSS-Protection has not been set to disable IE's XSS protection.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.MimeSniff.cs</td><td>checks that the X-CONTENT-TYPE-OPTIONS has been set.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.DatabaseErrors.cs</td><td>checks for database error messages.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.DebugErrors.cs</td><td>checks for debugging error messages.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.InUrl.cs</td><td>checks for information disclosure in URL parameters.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.ReferrerLeak.cs</td><td>checks HTTP Referer header for information disclosure.</td></tr>
+</table>
+
+
+<h3>Issue 253: Plugable extensions</h3>
+
+Full extensions can now be plugged into ZAP dynamically with full access to all of ZAPs features.
+
+<h2>小変更：</h2>
+
+<h3>Issue 54: Clean shutdown</h3>
+
+<h3>Issue 90: Add GUI support for unsecure SSL/TLS renegotiation</h3>
+
+<h3>Issue 102: Save raw response and request, and save body of response and request</h3>
+
+<h3>Issue 126: Allow working directory and config file to be set via cmd line</h3>
+
+<h3>Issue 154: Include param id in reports</h3>
+
+<h3>Issue 164: Toolbar config button</h3>
+
+<h3>Issue 168: Reveal hidden fields in web pages</h3>
+
+<h3>Issue 192: Enable/Disable breakpoints</h3>
+
+<h3>Issue 193: Detect directory traversal vulnerabilities</h3>
+
+<h3>Issue 194: Enhancement: Show request ID on Search pane</h3>
+
+<h3>Issue 200: Detect CSRF vulnerabilities</h3>
+
+<h3>Issue 230: Enhance zap.sh to cope with symbolic links</h3>
+
+<h3>Issue 236: Option to toggle URLencoding</h3>
+
+<h3>Issue 242: Export node / req/resp via right click</h3>
+
+<h3>Issue 248: Delete alerts / retest feature request</h3>
+
+<h3>Issue 251: Restructure alerts code</h3>
+
+<h3>Issue 253: Allow extensions to define dependencies</h3>
+
+<h3>Issue 270: Icon changes</h3>
+
+<h3>Issue 277: Rationalize right click menu items</h3>
+
+<h3>Issue 279: Core extensions</h3>
+
+<h3>Issue 282: Add author, description and URL to extensions</h3>
+
+<h2>バグ修正:</h2>
+
+<h3>Issue 42: Arbitrary Redirection</h3>
+
+<h3>Issue 94: PKCS#11 driver</h3>
+
+<h3>Issue 107: The last intercepted request/response remains in the Break window</h3>
+
+<h3>Issue 135: Broken URLs in Sites Panel</h3>
+
+<h3>Issue 148: New HTTP Panel broke the Undo/Redo Manager</h3>
+
+<h3>Issue 180: Tabular view for GET request</h3>
+
+<h3>Issue 187: Encoding issues</h3>
+
+<h3>Issue 197: Decoder cannot process base64 input without line breaks</h3>
+
+<h3>Issue 198: The report is not generated when a "Parameter tampering" alert with "NULL" character exists</h3>
+
+<h3>Issue 210: Exception thrown when using the "Path Traversal" option in the active scan</h3>
+
+<h3>Issue 223: Exception in "Sites" tab when choosing a popup option, "Delete (from view)" or "Purge (from DB)", when no node tree is selected</h3>
+
+<h3>Issue 224: takes too much time to recover from an proxy port number outside valid range</h3>
+
+<h3>Issue 225: ZAP exits on startup if an option value contains extended characters like å,ä,ö</h3>
+
+<h3>Issue 226: proxy port number edit box should not allow millions of characters</h3>
+
+<h3>Issue 227: Tools, Options should go to the same tab as last time</h3>
+
+<h3>Issue 237: Bug: Problems with HTTP Panels</h3>
+
+<h3>Issue 238: Exception when using a custom fuzz file</h3>
+
+<h3>Issue 241: zap.sh Xmx value for stable performance</h3>
+
+<h3>Issue 243: When the DynamicLoader loads from local jar, doesn't take into account the package name</h3>
+
+<h3>Issue 246: Pragma Header requires Cache-Control Header for HTTP/1.1 requests</h3>
+
+<h3>Issue 255: Exception in API when due to illegal character in XML context</h3>
+
+<h3>Issue 256: Calling HttpMessage.setGetParams looses the port</h3>
+
+<h3>Issue 260: Exception when deleting ("Purge (from DB)") "History" tab entries</h3>
+
+<h3>Issue 261: Partial language match not working</h3>
+
+<h3>Issue 262: "Weak authentication" alerts not showing with spider</h3>
+
+<h3>Issue 263: "Cookie without secure flag" alerts not showing with spider</h3>
+
+<h3>Issue 264: Exception in "Manual Request Editor"/"Resend" dialogues</h3>
+
+<h3>Issue 268: Change ZAP Report XML</h3>
+
+<h3>Issue 269: Spider depth parameter</h3>
+
+<h3>Issue 274: Tidy up delete / purge options</h3>
+
+<h3>Issue 280: Escape URLs in sites tree</h3>
+
+<h3>Issue 283: RFE: Font anti-aliasing not enabled by default in request/response</h3>
+
+<h3>Issue 284: Request/response etc header panels too small</h3>
+
+<h3>Issue 286: Search string not highlighted for fuzz results</h3>
+
+<h3>Issue 287: Passive scanner doesnt pick up new anticsrf tokens</h3>
+
+<h3>Issue 289: fuzzdb files cause virus alerts</h3>
+
+<h3>Issue 291: Path Traversal has 'param' empty but put the param name in 'attack'</h3>
+
+<h2>関連情報</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">はじめに</a></td><td>ZAPのご紹介</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">リリース</a></td><td>リリース一覧</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">クレジット</a></td><td>このリリースを可能にしたユーザーおよびグループ</td></tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+سیاست اسکن
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>سیاست اسکن</h1>
+<p>
+A scan policy defines exactly which <a href="../checks.html">rules</a> are run as part of an <a href="ascan.html">active scan</a>.<br>
+It also defines how these rules run influencing how many requests are made and how likely potential issues are to be flagged.<br>
+You can define as many scan policies as you like and select the most appropriate one when you start the scan via
+the <a href="../../ui/dialogs/advascan.html">Active Scan Dialog</a>.<br>
+You can define the default scan policy to be used for active scans and for the <a href="modes.html">Attack mode</a> via the 
+<a href="../../ui/dialogs/options/ascan.html">Options Active Scan screen</a>.<br>
+ 
+
+</p>
+<p>
+Active scanning is an attack on those targets. <br/>
+You should NOT use it on web applications that you do not own.
+</p>
+<p>
+It should be noted that active scanning can only find certain types of vulnerabilities.<br/>
+Logical vulnerabilities, such as broken access control, will not be found by
+any active or automated vulnerability scanning.<br/>
+Manual penetration testing should always be performed in addition to active
+scanning to find all types of vulnerabilities. 
+</p>
+
+<p>
+Active scanning is configured using the 
+<a href="../../ui/dialogs/options/ascan.html">Options Active Scan screen</a>.<br>
+You can also define as many scan policies as you like - these define exactly which rules are run and how they work. 
+
+</p>
+
+<h2>Accessed via</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/tabs/ascan.html">Active Scan tab</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/tabs/sites.html">Sites tab</a></td><td>'Attack/Active Scan site' right click menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/tabs/sites.html">Sites tab</a></td><td>'Attack/Active Scan node' right click menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/tabs/history.html">History tab</a></td><td>'Scan this History' right click menu item</td></tr>
+</table>
+
+<h2>See also</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="concepts.html">Features</a></td><td>provided by ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="pscan.html">Passive scanning</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/dialogs/scanpolicymgr.html">Scan Policy Manager Dialog</a></td><td>which allows you to manage the scan policies</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../checks.html">Scanner Rules</a></td><td>supported by default</td></tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Release 1.3.0
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Release 1.3.0</h1>
+<p>
+Este release trouxe as seguintes mudanças:
+</p>
+<h2>Alterações significativas:</h2>
+
+<h3>Fuzzing/Difusão</h3>
+Strings em uma resposta agora podem ser difusas para tentar encontrar vulnerabilidades.<br>
+Anti CRSF tokens podem ser detectados e regenerados automaticamente durante a difusão.<br/>
+Esta funcionalidade é baseada no código do projeto OWASP JBroFuzz.
+
+<h3>Certificados SSL Dinâmicos</h3>
+O suporte para conexões SSL foi melhorado e simplificado.<br>
+Usuários agora podem criar seu próprio certificado raiz e distribuí-los em seus clientes HTTP.<br>
+Leia <a href="../ui/dialogs/options/dynsslcert.html">Opção: Certificados SSL Dinâmicos</a> para obter mais detalhes.  
+
+<h3>Modos daemon e API</h3>
+Iniciando o ZAP com a opção de linha de comando "-daemon" fará com que ele seja executado em segundo plano no modo 'sem cabeça', significando que nenhuma interface de usuário é exibida.<br>
+Uma API inicial foi implementada em XML, JSON e HTML.<br>
+Se o ZAP estiver sendo executado como um daemon, então a API é ativada automaticamente; caso contrário, a API deve ser habilitada através da tela Opções de API.<br>
+A API pode ser navegada abrindo-se http://zap/ em seu navegador quando ele estiver usando o ZAP como proxy. 
+
+<h3>Integração Beanshell</h3>
+O <a href="http://www.beanshell.org/">BeanShell</a> é uma shell de Java que pode ser usada para executar scripts BeanShell.<br> 
+Esses scripts são uma forma simplificada de Java que usam muitos elementos de sintaxe Java, mas em um formato mais simples de script. <br>
+Todo o código Java é também válido como código BeanShell.<br>
+A integração do BeanShell no OWASP ZAP permite que você escreva scripts usando as funções ZAP e data sets.<br> 
+Isto pode ser um recurso muito poderoso para a análise de aplicações web.<br>
+
+
+<h3>Internacionalização completa</h3>
+Todas as strings de exibição (display) agora são totalmente internacionalizadas.
+
+<h3>Localização</h3>
+Suporte disponível para os seguintes idiomas:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Inglês</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Português do Brasil</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Chinês</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Francês</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Alemão</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Grego</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Indonésio</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Japonês</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Polonês</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Espanhol</td></tr>
+</table>
+
+
+<h2>Pequenas mudanças:</h2>
+
+<h3>Visualização hexa</h3>
+As abas <a href="../ui/tabs/request.html">Requisição e</a>, <a href="../ui/tabs/response.html">Resposta</a> agora oferecem uma opção de 'Hex View' que irá exibir os corpos de solicitação e resposta em formato hexadecimal. 
+
+<h3>Resultados de Busca</h3>
+A <a href="../ui/tabs/search.html">Aba de Busca </a> agora exibe todas as ocorrências de uma string localizada em vez de apenas a primeira instância em cada solicitação ou resposta. 
+
+<h3>Excluir URLs</h3>
+URLs podem ser explicitamente excluídas da varredura ativa, spider e do proxy.
+
+<h3>Suporte de cópia</h3>
+A maioria dos painéis agora proporciona uma opção de 'Copiar' no 'botão direito' , incluindo os painéis de Port Scan e Brute Force.
+
+<h3>Suporte de desfazer/refazer (undo/redo)</h3>
+Todos os campos de entrada agora suportam ações de desfazer/refazer usando os aceleradores padrão de Undo/Redo dos sistemas operacionais:
+<ul>
+<li>Windows/Linux: Ctrl+Z / Ctrl+Y
+<li>Mac OS X: Cmd+Z / Cmd+Shift+Z
+</ul>
+
+<h3>Suporte de proxy para varredura de porta e opção de timeout</h3>
+A varredura de Porta (o port scanner) agora pode usar o proxy de saída (se configurado) e o tempo limite/timeout em milissegundos também pode ser definido.
+
+<h3>Botões de pausa de solicitação e resposta</h3>
+Agora existem dois botões 'Criar Initerrupção' para permitir a configuração de interrupções em todas as solicitações e respostas independentemente. 
+
+<h3>Botões para expansão das abas de Sites e Informação</h3>
+Agora existem dois botões que permitem a você alternar entre ter as abas de Sites e de Informações expandidas.
+
+<h3>Ícone na aba de Interrupção muda de cor</h3>
+Enquanto a aba de interrupção não está em uso seu ícone é uma cruz cinza:
+<img src="../images/16/101grey.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
+Quando se chega a um <a href="../start/concepts/breakpoints.html">ponto de interrupção</a> o ícone da aba é alterado para uma cruz vermelha:
+<img src="../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
+
+<h3>Timeout ajustável</h3>
+A tela de <a href="../ui/dialogs/options/connection.html">Opções: conexão</a> permite que você defina o tempo limite em segundos para tornar mais fácil o teste de aplicativos lentos.
+
+<h3>Atualizações de biblioteca</h3>
+A maioria das bibliotecas usadas pelo ZAP foram atualizadas para as versões mais recentes.
+
+<h3>Um novo ícone :)</h3>
+Agradecimentos ao Simon Egli e a todos os outros por apresentarem sugestões legais de ícones.
+
+<h2>Problemas conhecidos:</h2>
+<h3>Mac OS X: SSL dinâmico e Google Chrome</h3>
+O SSL dinâmico atual não está funcionando quando se usa o Google Chrome. Isto é devido a um problema conhecido e não resolvido com o Google Chrome e o Mac OS X Keychain. Quando importa o certificado raiz da autoridade OWASP ZAP e solicita um site SSL, aparece uma mensagem de erro indicando "Certificado inválido".
+
+<h2>Leia também</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Introdução</a></td><td>Introdução ao ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Releases</a></td><td>o conjunto completo dos releases</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Créditos</a></td><td>pessoas e grupos que tornaram este release possível</td></tr>
+</table>
+</body>
+</html>
