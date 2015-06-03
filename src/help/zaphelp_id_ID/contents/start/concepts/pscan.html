@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Scan Pasif
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Scan Pasif</h1>
+<p>
+ZAP passively scans all of the responses from the web application being tested.<br/>
+Passive scanning does not change the responses in any way and is therefore safe to use.<br/>
+Scanned is performed in a background thread to ensure that it does not slow down the exploration
+of an application.
+</p>
+<p>
+In this release ZAP passive scanning is used for automatically adding <a href="tags.html">tags</a>
+and raising <a href="alerts.html">alerts</a> for potential issues. 
+</p>
+
+<p>
+A set of rules for automatic tagging are provided by default.<br>
+These can be changed, deleted or added to via the <a href="../../ui/dialogs/options/pscan.html">Options Passive Scan Tags screen</a>.<br/>
+</p>
+<p>
+The alerts raised by passive scanning can be configured using the 
+<a href="../../ui/dialogs/options/pscanrules.html">Options Passive Scan Rules screen</a>.<br/>
+</p>
+
+<h2>See also</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="concepts.html">Features</a></td><td>provided by ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="ascan.html">Active scanning</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../checks.html">Scanner Rules</a></td><td>supported by default</td></tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Configurando proxies
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Configurando proxies</h1>
+<p>
+Necesitará configurar el navegador para usar ZAP como proxy.
+ZAP usa por defecto una dirección 'localhost ' y el puerto '8080 ' pero se pueden cambiar a través de las <a href="../ui/dialogs/options/localproxy.html">Opciones de Proxy local</a>. 
+
+Las instrucciones para las últimas versiones de los navegadores más utilizados son: 
+</p>
+
+<h3>Chrome (en Windows)</h3>
+
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón ( arriba a la derecha ) 'Personalizar y controlar Google Chrome'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> el elemento de menú 'Opciones...'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'Cambiar la configuración del proxy'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'Configuración de LAN'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Siga</td><td> la sección 'Configuración LAN de Windows'</td></tr>
+</table>
+
+<h3>Firefox</h3>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> el menú 'Herramientas' </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> el elemento de menú 'Opciones...'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'Avanzado'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> la pestaña 'Red'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'Configuración...'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> la opción 'Configuración manual del proxy'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ingrese</td><td> en 'Proxy HTTP:' el campo 'Dirección' que configuró en  <a href="../ui/dialogs/options/localproxy.html">Opciones de Proxy local</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ingrese</td><td> en el campo 'Puerto' a la derecha de 'Proxy HTTP' el número de puerto configurado en  <a href="../ui/dialogs/options/localproxy.html">Opciones de Proxy local</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'OK'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'OK'</td></tr>
+</table>
+
+<h3>Firefox (en OS X)</h3>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> el menú 'Firefox' </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> el elemento de menú 'Preferencias...'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'Avanzado'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Siga</td><td> las instrucciones anteriores del botón 'Avanzado'</td></tr>
+</table>
+
+<h3>Internet Explorer 7 y 8</h3>
+
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> el menú 'Herramientas' </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> el elemento de menú 'Opciones de Internet'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> la pestaña 'Conexiones'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'Configuración de LAN'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Siga</td><td> la sección 'Configuración LAN de Windows'</td></tr>
+</table>
+
+<h3>Opera</h3>
+
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> 'Menu' en el extremo superior izquierdo</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> el elemento de menú 'Configuración'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> el elemento de menú 'Preferencias'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> la pestaña 'Avanzado'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> el ítem 'Red'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'Servidores Proxy'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> el checkbox 'HTTP'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ingrese</td><td> en el campo a la derecha de 'HTTP' la 'Dirección' que configuró en  <a href="../ui/dialogs/options/localproxy.html">Opciones de Proxy local</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ingrese</td><td> en el campo 'Puerto' el número de puerto configurado en  <a href="../ui/dialogs/options/localproxy.html">Opciones de Proxy local</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'OK' en Servidores Proxy</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'OK' en Preferencias</td></tr>
+</table>
+
+<h3>Safari (en OS X)</h3>
+
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> en el extremo superior derecho el botón 'Configuración de Safari'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> el elemento de menú 'Preferencias'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> la pestaña 'Avanzado'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'Cambiar configuraciones' a continuación de la etiqueta 'Proxies'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Siga</td><td> la sección 'Configuración del Proxy en Sistemas OS X'</td></tr>
+</table>
+
+<h3>Safari (en Windows)</h3>
+
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'Mostrar un menú de configuración general de Safari' en el extremo superior derecho</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> el elemento de menú 'Preferencias'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> la pestaña 'Avanzado'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'Cambiar configuraciones' a continuación de la etiqueta 'Proxies'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'Configuración de LAN'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Siga</td><td> la sección 'Configuración LAN de Windows'</td></tr>
+</table>
+
+<h3>Configuraciones del Proxy en Sistemas OS X</h3>
+
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> 'Web Proxy (HTTP)'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ingrese</td><td> la 'Dirección:' que especificó en 'Dirección' cuando lo configuró en  <a href="../ui/dialogs/options/localproxy.html">Opciones de Proxy local</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ingrese</td><td> en el campo 'Puerto' el número de puerto configurado en  <a href="../ui/dialogs/options/localproxy.html">Opciones de Proxy local</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'OK' en Configuración de Proxies</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'Aplicar' en Opciones de red</td></tr>
+</table>
+
+<h3>Configuración LAN de Windows</h3>
+
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> el checkbox 'Usar un servidor proxy para la LAN'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ingrese</td><td> la 'Dirección:' que especificó en 'Dirección' cuando lo configuró en  <a href="../ui/dialogs/options/localproxy.html">Opciones de Proxy local</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ingrese</td><td> en el campo 'Puerto' el número de puerto configurado en  <a href="../ui/dialogs/options/localproxy.html">Opciones de Proxy local</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'OK' en Configuración de Red de Área Local (LAN)</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'OK' en Opciones de Internet</td></tr>
+</table>
+
+<h2>Vea también</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="start.html">Primeros pasos</a></td><td>para detalles sobre cómo comenzar a utilizar ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Introducción</a></td><td>para una introducción a ZAP</td></tr>
+</table>
+
+</body>
+</html>

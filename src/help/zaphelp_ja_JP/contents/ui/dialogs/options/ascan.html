@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+オプション 動的スキャン画面
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>オプション 動的スキャン画面</h1>
+<p>
+この画面が設定できるのは <a href="../../../start/concepts/ascan.html">動的スキャン</a> オプションです。
+
+<h3>並列スキャンするホスト数</h3>
+The maximum number of hosts that will be scanned at the same time.
+Increasing this may put extra strain on the computer ZAP is running on.
+
+<h3>並列スキャンスレッド数</h3>
+The number of threads the scanner will use per host.<br>
+Increasing the number of threads will speed up the scan but may put extra strain on the computer ZAP is running on and the target host.
+
+<h3>Max results to list</h3>
+The number of results that will be shown in the Active Scan tab.<br>
+Displaying a large number of results can significantly increase the time a scan takes.
+
+<h3>スキャン中のミリ秒単位の遅延</h3>
+The delay in milliseconds between each request.<br>
+Setting this to a non zero value will increase the time an active scan takes, but will put less of a strain
+on the target host.
+
+<h3>anti CSRF トークン処理</h3>
+If this option is selected then the active scanner will attempt to automatically request 
+<a href="../../../start/concepts/anticsrf.html">anti CSRF</a> tokens when required.<br>
+Note that this is experimental functionality and will slow down the scanning process as only one thread will be used to ensure
+that anti CSRF token requests dont get out of step. 
+
+<h3>In Attack mode prompt to rescan nodes when scope changed</h3>
+If this option is selected then when you select Attack <a href="../../../start/concepts/modes.html">mode</a> you will be prompted to choose whether to rescan nodes in scope.<br>
+If the option is not selected then the following option will control whether the nodes are rescanned.
+
+<h3>In Attack mode always rescan nodes when scope changed</h3>
+If this option is selected then when running in Attack <a href="../../../start/concepts/modes.html">mode</a> all nodes in scope will be rescanned if the scope changes.<br>
+This is not recommended for large sites as it could take a long time.
+
+<h3>Default active scan policy</h3>
+　 <a href="../../../start/concepts/scanpolicy.html">スキャンポリシー</a> that is used by default when you start an active scan.
+
+<h3>Attack mode scan policy</h3>
+　 <a href="../../../start/concepts/scanpolicy.html">スキャンポリシー</a> that is used for scanning in 
+Attack <a href="../../../start/concepts/modes.html">mode</a>.
+
+<h2>関連情報</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">UIの概要</a></td><td>ユーザー インターフェイスの概要について</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="options.html">オプションダイアログ</a></td><td>その他のオプションダイアログの画面についての詳細</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="ascan.html">動的スキャンオプション</a></td><td></td></tr>
+</table>
+
+</body>
+</html>

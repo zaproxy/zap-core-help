@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Tela de opções de Display
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Tela de opções de Display</h1>
+<p>
+A tela de Display permite que você configure:
+
+<h3>Imagens</h3>
+Se o ZAP processa imagens.
+
+<h3>Display</h3>
+O layout das três janelas principais.
+
+<h3>Mostrar botões de interrupção</h3>
+A localização dos botões de interrupção.
+
+<h3>Tamanho mínimo para visualização de "Requisição muito Grande"</h3>
+O tamanho mínimo em bytes de um corpo de solicitação, sendo também o ponto a partir do qual será exibida a mensagem 'corpo da solicitação muito grande' em vez do próprio corpo.<br>
+Isso é para evitar que grandes corpos tornem lenta a interface do usuário.<br>
+Definir esse valor como -1 resultará na exibição do request, não importando o seu tamanho.
+
+<h3>Tamanho mínimo para visualização de "Resposta Muito Grande"</h3>
+O tamanho mínimo, em bytes, de um corpo de resposta, a partir do qual será exibida uma mensagem de 'Corpo de resposta muito grande' em vez do próprio corpo.<br>
+Isso é para evitar que grandes corpos tornem lenta a interface do usuário.<br>
+Definir esse valor como -1 resultará na exibição da reposta, não importando o seu tamanho.
+
+<h3>Opções de time stamp da Aba de saída</h3>
+Ao habilitar time stamps na aba de saída, você pode configurar o formato em que gostaria de utilizá-los. 
+Selecione um formato predefinido na lista drop down ou digite um de sua preferência. O formato é baseado em Java SimpleDateFormat. Depois de escolher ou digitar um formato de time stamp, se você pressionar enter o exemplo à direita será atualizado para refletir a sua escolha. Se o ZAP for incapaz de usar um formato que você digitou, o exemplo exibido será baseado no formato padrão.
+
+<h3>Tamanho da fonte</h3>
+O tamanho do texto padrão usado pelo ZAP. Se você definí-lo como -1 então o tamanho padrão do sistema será usado.<br>
+O campo 'Exemplo de fonte' irá mostrar-lhe em que tamanho o texto padrão será exibido.<br>
+Essa configuração só terá efeito quando o ZAP for reiniciado.
+
+<table border="1" cellpadding="5">
+<tr> <td> Longo e padrão </td> <td> yyyy-MM-dd HH:mm:ss </td> </tr>
+<tr> <td> ISO8601 </td> <td> yyyy-MM-dd'T'HH:mm:ssZ </td> </tr>
+<tr> <td> Apenas Hora </td> <td> HH:mm:ss </td> </tr>
+</table>
+
+<h2>Leia também</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../overview.html">Visão geral da interface do usuário</a></td><td>para uma visão geral da interface do usuário.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="options.html">Diálogos de opções</a></td><td>para detalhes das telas de diálogo de outras Opções.</td></tr>
+</table>
+
+<h2>Links externos</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+https://code.google.com/p/zaproxy/downloads/list</td>
+<td> página de download do ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html</td><td>Para obter detalhes de SimpleDateFormat do Java.</td></tr>
+</table>
+
+</body>
+</html>

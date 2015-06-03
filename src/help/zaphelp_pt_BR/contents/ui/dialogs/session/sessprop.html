@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Caixa de diálogo Propriedades de sessão
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Caixa de diálogo Propriedades de sessão</h1>
+<p>
+Aqui você define as propriedades da sessão por meio das seguintes telas:
+
+<h3>Tela geral</h3>
+Defina o nome da sessão e a descrição.
+
+<h3>Excluir do proxy</h3>
+Gerencie as URLs que serão ignoradas pelo proxy.
+
+<h3>Excluir da Varredura</h3>
+Gerencie as URLs que serão ignoradas na varredura.
+
+<h3>Excluir do spider</h3>
+Gerencie as URLs que serão ignoradas pelo spider.
+
+<h3>Contextos</h3>
+Um conjunto de telas para o gerenciamento de <a href="../../../start/concepts/contexts.html">contextos</a>
+
+<h2>Regex de URL</h2>
+Nos diálogos <i>Excluir de *</i> você pode digitar expressões regulares para definir URLs excluídas. Você pode escapar um único metacaractere com uma barra invertida, e também pode usar a sequência de escape <b>\Q...\E.</b> Todos os caracteres entre o <b>\Q</b> e o <b>\E</b> são interpretados como caracteres literais. Por exemplo, o \Q*\d+*\E coincide com o texto literal * \d+*. Esta sequência de escape é usada no ZAP quando você exclui URLs através de alguns menus de contexto.
+<br>
+<b>Nota:</b> Se sua URL contém um "\E", então você tem que dar os seguintes passos ao usar a <b>sequência \Q...\E</b> para escape:
+<ul>
+	<li>Abra a seqüência de escape</li>
+	<li>Feche a seqüência de escape antes do "caractere" \E</li>
+	<li>Escape a barra invertida</li>
+	<li>Abra depois do "\E" outra seqüência de escape;</li>
+	<li>Feche a seqüência de escape como normalmente faria.</li>
+</ul>
+<br>
+Exemplo: subdomain.example.com/path?a=<b>\E</b>&moredata=2 deve aparecer como
+<i>\Qsubdomain.example.com/path?a=\E</i><b>\\E</b><i>\Q&moredata=2\E</i>
+  
+<h2>Acessado via</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../tlmenu/file.html">Menu de arquivo de nível superior</a></td><td>Item de menu 'Propriedades...'</td></tr>
+</table>
+
+<h2>Leia também</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../overview.html">Visão geral da interface do usuário</a></td><td>para uma visão geral da interface do usuário</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../dialogs.html">Caixas de diálogo</a></td><td>para detalhes das caixas de diálogo ou pop-ups </td></tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+コマンドライン
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>コマンドライン</h1>
+
+ZAPは以下のコマンドラインオプションをサポートしています。
+
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-cmd</td><td>インラインでZAPを実行します。つまりUIやデーモンを起動しません</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-config</td><td>構成ファイル内の特定のkey=valueのペアを上書きします</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-daemon</td><td>deamonモードでZAPを開始します。つまりUIを使用しません</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-dir</td><td>デフォルトのディレクトリの代わりに指定したディレクトリを使用します</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-installdir</td><td>-h</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-h</td><td>アドオンによって追加されたものも含む、利用可能なコマンドラインオプションの全てを表示します</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-help</td><td>-hと同じです </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-host</td><td>構成ファイルで指定されたプロキシで使用されるホストを上書きします。</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-port</td><td>構成ファイルで指定されているプロキシに使用されるポートを上書きします</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-version</td><td>ZAPのバージョンを報告します</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-newsession</td><td>指定された場所 (セッションへの完全パス) で新しいセッションを作成します</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-session</td><td>ZAP を開始した後、指定されたセッションで開きます（セッションへの完全パス）。</td></tr>
+</table>
+<br>
+オプション '-session と '-newsession' はどちらかしか選べません。両方のオプションが設定されている場合 、エラーが表示されZAPは終了します（GUIでなければ)。
+<br/>
+ConfigurationキーはconfigurationファイルのXML中での場所をドット記法を使って指定してください。
+例:<br/>
+<pre>-config api.key=12345 -config connection.timeoutInSecs=60</pre>  
+アドオンによってコマンド ライン オプションを追加できることに気をつけてください。
+
+<p>
+例:
+	<ul>
+		<li>指定したパスに作成された新しいセッションで ZAP 'daemon' モードを開始します。
+			<pre>-daemon -newsession /path/to/new/session</pre>
+		</li>
+		<li>既存のセッションの最後のスキャンのレポートを作成し、そしてZAPを終了します。
+			<pre>-last_scan_report /path/to/save/report.xml -session /path/to/existing/session -cmd</pre>
+		</li>
+	</ul>
+
+<h2>関連情報</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="intro.html">導入</a></td><td>ZAPのご紹介</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="start/concepts/api.html">API</a></td><td>ZAPをプログラムによって制御するには</td></tr>
+</table>
+
+</body>
+</html>

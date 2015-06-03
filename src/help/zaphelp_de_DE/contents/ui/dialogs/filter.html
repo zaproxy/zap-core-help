@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Filter dialog
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Filter dialog</h1>
+<p>
+This allows you to set <a href="../../start/concepts/filters.html">filters</a> that are applied to requests and responses.
+</p>
+The following filters are supported by default.
+
+<h2>Change user agent to other browsers</h2> 
+
+<h2>Detect insecure or potentially malicious content in HTTP responses</h2>
+
+<h2>Detect and alert 'Set-cookie' attempt in HTTP response for modification</h2>
+
+<h2>Browser-Caching vermeiden (IfModifiedSince Header entfernen)</h2>
+
+<h2>Log cookies sent by browser</h2>
+
+<h2>Log unique GET queries into file</h2>
+
+<h2>Log unique POST queries into file</h2>
+
+<h2>Log request and response into file</h2>
+
+<h2>Replace HTTP request body using defined pattern</h2>
+
+<h2>Replace HTTP request header using defined pattern</h2>
+
+<h2>Replace HTTP response body using defined pattern</h2>
+
+<h2>Replace HTTP response header using defined pattern</h2>
+
+<h2>ZAP Session Request ID senden</h2>
+	<p>
+		This filter will add a special header tag to each request send to the server.
+		So you can track ZAP's requests, when investigating your own web application.
+		It's helpful to have a distinct id for multiple requests, when parsing
+		for example HTTP server's log files. 
+	</p>
+	<p>Request header is modified like this (example):</p>
+	
+	<pre>
+X-ZAP-RequestID: &lt;sessionName&gt;&#8211;&lt;number&gt;
+	</pre>
+	
+	<ul>
+		<li><code>sessionName</code> is URL encoded name of the session</li>
+		<li><code>number</code> is starting by one; increased on each request; is valid only per session</li>
+	</ul>
+
+<h2>Accessed via</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../tlmenu/tools.html">Top level Tools menu</a></td><td>'Filter...' menu item</td></tr>
+</table>
+
+<h2>See also</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+</table>
+
+
+</body>
+</html>

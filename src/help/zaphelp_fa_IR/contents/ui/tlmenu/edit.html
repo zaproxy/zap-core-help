@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+The Edit menu
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>The Edit menu</h1>
+This menu handles finding strings in specific tabs, searching for strings across all 
+requests and responses and managing session tracking.
+
+<h3>جستجو کردن...</h3>
+This opens the <a href="../dialogs/find.html">Find dialog</a> which allows you to find a string in the currently selected window.<br/>
+
+<h3>فعال کردن ردیابی جلسه (Cookie)</h3>
+This allows session details stored in cookies to be tracked.<br/>
+This option must be selected to enable the "Use current tracking session" checkbox
+in the <a href="../dialogs/resend.html">ارسال مجدد</a> and 
+<a href="../dialogs/man_req.html">Manual Request Editor dialogs</a>. <br/>
+Session tracking ensures that any requests are sent with the latest session
+details.<br/>
+For example you may record a session when logged in as one user and then logout
+and login as another user.<br/>
+If you resend a request from the first session without
+session tracking then it will use the cookies from the first session.<br/>
+If you resend the same request with session tracking then it will use the
+cookies from the second session.
+
+<h3>تنظیم مجدد حالت جلسه</h3>
+This clears the session tracking.<br/>
+
+<h3>جستجو...</h3>
+This selects the <a href="../tabs/search.html">Search tab</a> which allows you to search for regular expressions
+in all URLs, requests and responses..
+
+<h3>بعدی</h3>
+This selects the next occurrence of the last string searched for.<br/>
+The relevant message will be selected in the Search tab and the string will be displayed
+and highlighted in the <a href="../tabs/request.html">درخواست</a> or
+<a href="../tabs/response.html">پاسخ</a> tab as appropriate.
+
+<h3>قبلی</h3>
+This selects the previous occurrence of the last string searched for.<br/>
+The relevant message will be selected in the Search tab and the string will be displayed
+and highlighted in the <a href="../tabs/request.html">درخواست</a> or
+<a href="../tabs/response.html">پاسخ</a> tab as appropriate.
+
+<h3>رمزگذاری/رمزگشایی/درهم...</h3>
+This displays the <a href="../dialogs/enc_dec.html">Encode/Decode/Hash dialog</a>.
+
+<p>
+Note that <a href="../../start/concepts/addons.html">add-ons</a> can add additional menu items.
+</p>
+
+<h2>See also</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="tlmenu.html">The top level menu</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+リリース 1.1.0
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>リリース 1.1.0</h1>
+<p>
+本リリースでは以下のような変更が行われました。
+</p>
+<h2>重要な変更</h2>
+
+<h3>OWASPにブランド変更</h3>
+ZAPはOWASPのプロジェクトとして認められました。<br>
+今後、ZAPのホームページは http://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project となります。
+
+<h3>ブルート攻撃</h3>
+The ability to brute force files and directories based on code from the OWASP DirBuster project. <br>
+The new Brute Force tab shows the files and directories found.
+
+<h3>ポートスキャン</h3>
+The ability to port scan sites. <br>
+The new Port Scan tab shows the ports found.
+
+<h3>動的スキャンタブ</h3>
+The new <a href="../ui/tabs/ascan.html">動的スキャンタブ</a> shows the requests and responses as a result of actively scanning a site.
+
+<h3>スパイダータブ</h3>
+　 <a href="../ui/tabs/spider.html">スパイダータブ</a> now allows you to continue using ZAP while spidering a site.<br>
+You can also pause and resume the spider.    
+
+<h3>スマート カードのサポート</h3>
+Smart card support has been added c/o the Andiparos project.<br>
+The following smartcard devices have been tested on Windows:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Safeguard</td><td>Aladdin eToken</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td></td><td>Aladdin eToken Pro</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Omnikey</td><td>Omnikey 3121</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td></td><td>CardMan 6121</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Gemalto</td><td>Reflex 20 V2</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td></td><td>Swiss Stick</td></tr>
+</table>
+以下のスマートカードデバイスが動作すると報告されています。
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Omnikey</td><td>CardMan 4040</td></tr>
+</table>
+
+<h3>攻撃メニュー</h3>
+The new <a href="../ui/tabs/sites.html">サイトタブ</a> right click 'Attack' menu allows you to start various scans.
+
+<h3>更なる国際化対応</h3>
+All of the main tabs and menu items have now been internationalised.
+
+<h3>ローカライゼーション</h3>
+以下の言語に対するサポートが本バージョンに組み込まれます。
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>英語</td><td>既定の言語</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>ポルトガル語（ブラジル）</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>ドイツ語</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>ポーランド語</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>スペイン語</td><td></td></tr>
+</table>
+    
+<h3>言語選択</h3>
+起動時に、使用する言語を選択するよう指示がでます。<br>
+New languages are automatically detected by the presence of files with names of the form Messages_&lt;locale&gt;.properties in the ZAP directory. 
+
+<h2>小変更：</h2>
+
+<h3>Disabled 'default file' plugins</h3>
+The plugins which detect default files are effectively made redundant by the new 
+brute force scanner.<br>
+These have therefore been disabled.
+
+<h3>スキャナーの概要</h3>
+Counts of the number and types of the current scans are now displayed in the <a href="../ui/footer.html">フッター</a>.
+
+
+<h2>関連情報</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">導入</a></td><td>ZAPのご紹介</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">リリース</a></td><td>リリース一覧</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">クレジット</a></td><td>このリリースを可能にしたユーザーおよびグループ</td></tr>
+</table>
+</body>
+</html>

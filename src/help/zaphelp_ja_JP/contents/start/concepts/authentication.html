@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>認証</title>
+</head>
+<body bgcolor="#ffffff">
+	<h1>認証</h1>
+	<p>
+		ZAPはウェブサイト／ウェブアプリで使用することができる様々な種類の認証（<b>認証方法</b>と呼ばれる）を扱っています。 Each <b><a
+			href="contexts.html">Context</a></b> has an Authentication Method
+		defined which dictates how authentication is handled. 認証は認証された web アプリケーション の<a href="users.html">ユーザー</a> に対応する Web セッションを作成する為に使用されます。.
+	</p>
+
+	<p>
+		認証されたリクエストに対応する、Webサーバからの応答メッセージを検出するために、指標を設定できます。 応答メッセージ（ヘッダーまたは本文）が存在する場合、<b>ログインの指標</b>とは、認証済みのリクエストに対応する応答メッセージ（例えば 「ログアウトリンク」、「おかえりなさい、ユーザー X」 のパターンの存在）を示します。 同様に、<b>ログアウトの指標</b>とは、認証されていないリクエスト （例えば、「ログインリンク」の存在） を示します。 ２つの指標のうち１つだけあれば、正しく機能するのに十分です。 指標のどちらも指定されている場合、全てのメッセージを考慮し、既定で認証済みとなります。
+	</p>
+		
+	<p> To set one of the <b>Logged in/out Indicators</b>, either type the regex 
+		directly in the <i><a href="../../ui/dialogs/session/contexts.html#auth">Session
+		Properties</a> dialog -> Authentication panel -> Logged In/Out Indicator field</i>,
+		either find an authenticated message in the Sites Tree, select it, open the
+		Response View and select the text you wish to define as the indicator using the
+		mouse and select the <i>Flag as Context... Logged in/out indicator</i> right-click menu option.
+	</p>
+
+	<p>In order to perform the authentication of an user on a website /
+		in a webapp, the Authentication Method defines how the authentication
+		is done (the process), while the necessary credentials (the exact
+		identifiers) are dependent on the user, so, in ZAP, they are
+		configured in the Users.</p>
+	
+	<p>The generic <b>main steps</b> that are needed to configure authentication for a web application
+	are the following:
+	<ol>
+		<li>properly configure a ZAP <a href="contexts.html">Context</a> for the web application</li>
+		<li>set up the <a href="sessionManagement.html">session management method</a> for the context to
+		the one that is used in your app</li>
+		<li>set up the authentication method for the context:
+			<ol>
+				<li>set up at least one of the <i>Logged In Indicator</i> or the <i>Logged out indicator</i>,
+				as described above</li>
+				<li>configure the authentication method for your application, specifying all the requirements
+				(as seen below)</li>
+			</ol>
+		</li> 
+		<li>configure a set of <a href="users.html">users</a> for the context that directly correspond to the
+		authentication method for the context</li>
+	</ol>
+
+	<p>認証方法は、ZAPの複数の箇所で使用できます。その例のいくつかが次の通りです。</p>
+	<ul>
+		<li>ユーザと自動ログインの定義</li>
+		<li>認証／非認証状態の検知</li>
+		<li>自動的に再認証を実行</li>
+	</ul>
+
+	<p>複数の認証方法が実装されており、システムはユーザの必要に応じて新しい方法を簡単に追加のサポートをしています。主なものは次のとおりです。</p>
+
+	<h3>
+		<a name="manual">マニュアル認証</a>
+	</h3>
+	<p>This method allows users to perform the authentication manually
+		(e.g. authenticate in the browser while proxy-ing through ZAP) and
+		then select the corresponding HttpSession. As the actual
+		authentication is being performed by you, this method does not support
+		re-authentication in case the webapp logs an user out.
+	</p>
+	
+	<p>When using this authentication method, configuring an User for the context 
+	require choosing an authenticated HTTP session.</p>
+
+	<h3>
+		<a name="formBased">フォーム ベース認証</a>
+	</h3>
+	<p>
+		This method is used for websites / webapps where authentication is
+		done by submitting a form or performing a GET request to a 'login url'
+		using a 'username/password' pair of authentication credentials.
+		Re-authentication is possible. Configuration can be done using the <a
+			href="../../ui/dialogs/session/contexts.html#auth">Session
+			Contexts Dialog</a> or using the contextual PopupMenu: <i>Flag as...
+			Form-Based Authentication Login Request</i>.
+	</p>
+	<p>When using this authentication method, configuring an User for the context requires
+	setting up the <i>username/password</i> pair of credentials that are used for the form based
+	authentication.</p>
+	
+	<h3>
+		<a name="httpAuth">HTTP/NTLM 認証</a>
+	</h3>
+	<p>
+		This method is used for websites / webapps where authentication is
+		enforced using the HTTP or NTLM Authentication mechanisms employing HTTP message headers. 
+		Three authentication schemes are supported: Basic, Digest and NTLM.
+		Re-authentication is possible, as the authentication headers are sent with every authenticated
+		request. Configuration can be done using the <a
+			href="../../ui/dialogs/session/contexts.html#auth">Session
+			Contexts Dialog</a>.
+	</p>
+	<p>When using this authentication method, configuring an User for the context requires
+	setting up the <i>username/password</i> pair of credentials that are used for the HTTP/NTLM authentication.</p>
+	
+	<h3>
+		<a name="scriptBased">スクリプト ベースの認証</a>
+	</h3>
+	<p>
+		This method is useful for websites / webapps where the authentication is a more complex one and some custom
+		scripts that handle the authentication process are beneficial. To use this method, you must first define an Authentication script
+		which sends messages or performs other actions as needed by your web-application. This script is then selected for use for a given Context
+		and it is called whenever an authentication is performed. Re-authentication is possible. 
+		Configuration can be done using the <a href="../../ui/dialogs/session/contexts.html#auth">Session
+			Contexts Dialog</a> and requires you to have the Scripts Console ZAP Addon installed from the Marketplace.
+	</p>
+	<p>When using this authentication method, configuring an User for the context requires
+	setting up the a set of parameters defined in the script. For more details, see the provided Authentication Script examples.</p>
+	
+	<h2>設定の例</h2>
+	<p>A configuration example showing how to fully configure a webapp that uses <i>form-based authentication</i> 及び
+	<i>cookie-based session management</i> is 
+	seen below:
+	<ol>
+		<li>Webアプリケーションのコンテキストを設定します。</li>
+		<li>セッション管理方法を<i>Cookieベースセッション管理</i>へ設定します。</li>
+		<li>ブラウザのプロキシの全てがZAPを通しているか確認し、ブラウザで使用しているアプリケーションにログインします。</li>
+		<li>go to ZAP and identify the request that was done for the login (most usually it's a HTTP POST request 
+		containing the username and the password and possibly other elements)</li>
+		<li>right click on the request and Flag as Context... Form-based Auth Login Request</li>
+		<li>a window will be opened already containing the request URL and the parameters (if any). Use 
+		the dropdown options to select which of the parameters correspond to the username and to the password</li>
+    	<li>then you need to tell ZAP how to identify whether an authentication succeeded or not. You can do 
+    	this by setting logged in or logged indicators. These are regex patterns which, if found in a 
+    	response, tell ZAP whether it's authenticated or not (e.g. presence of a 
+    	http://example.com/logout link or the presence of a 'Welcome, User X'). Only one of them is
+    	necessary. To set one of them, either type the regex directly in the Session Properties -> 
+    	Authentication -> Logged In Indicator, either find an authenticated message in the Sites Tree,
+    	select it, open the Response View and select the text you wish to define as the indicator using
+    	the mouse and select the Flag as Context... Logged in indicator right-click menu option.</li>
+    	<li>define as many users as you need in the Session Properties -> Users section.</li>
+    	<li>after this step, various actions are available in ZAP. For example, you now have a new right click option: Attack -> Spider Context As User. Or, using the Forced User Mode, you can force all the interactions that go through ZAP for a given Context to be from the perspective of a User. The User Forced Mode is enabled via the previous-to-last button in the toolbar (the one with the user and the lock) and is configured via Session Properties -> Forced User Mode.</li>
+	</ol>
+	
+	Most of the steps above apply as well for other authentication methods. The only things that change when trying
+	to configure authentication using a different method are steps 3, 4, 5 and 6. Instead of these, select the authentication
+	method required from the drop-down list and configure it as needed. More details about configuring each type 
+	of authentication can be above and <a href="../../ui/dialogs/session/contexts.html">here</a>.
+
+	<h2>設定箇所</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/session/contexts.html#auth">セッション プロパティ ダイアログ ボックス</a></td>
+			<td></td>
+		</tr>
+	</table>
+
+	<h2>関連情報</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="http://youtu.be/cR4gw-cPZOA">Youtube のチュートリアル</a></td>
+			<td>認証、セッション管理、ユーザ管理などZAPの機能について[外部リンク:http://youtu.be/cR4gw-cPZOA]</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/overview.html">UIの概要</a></td>
+			<td>ユーザー インターフェイスの概要について</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="concepts.html">特徴：</a></td>
+			<td>ZAPによって提供されます。</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/session/contexts.html">セッションコンテキスト ダイアログ</a></td>
+			<td>セッションのプロパティの概要について</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="users.html">ユーザ</a></td>
+			<td>ユーザの概要</td>
+		</tr>
+
+	</table>
+
+</body>
+</html>

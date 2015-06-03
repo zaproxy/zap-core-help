@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Scan Policy dialog
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Scan Policy dialog</h1>
+<p>
+This allows you to enable and disable the rules that are run when performing an <a href="../../start/concepts/ascan.html">active scan</a>.<br>
+The first screen allows you to define the default levels as well as the levels for all of the rules in a specific category.<br>
+<br>
+The category screens allow you to define the levels for every individual rule.<br>
+<br>
+<br>
+Note that <a href="../../start/concepts/pscan.html">passive scan</a> rules are no longer managed via this dialog but are instead 
+managed via the <a href="../../ui/dialogs/options/pscanrules.html">Options Passive Scan Rules</a>.
+</p>
+
+<h3>Seuil</h3>
+This controls how likely ZAP is to report potential vulnerabilities.<br>
+If you select Low then more potential issues will be raised which may increase the number of false positives.<br>
+If you select High then fewer potential issues will be raised which may mean that some real issues are missed (false negatives).  
+
+<h3>Intensité</h3>
+This controls the number of attacks that ZAP will perform.<br>
+If you select Low then fewer attacks will be used which will be quicker but may miss some issues.<br>
+If you select High then more attacks will be used which may find more issues but will take longer.<br>
+The Insane level should typically only be used for small parts of an application as it can result in a very large number of 
+attacks being used, which can take a considerable length of time.
+
+<h2>Accès via</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="scanpolicymgr.html">Scan Policy Manager dialog</a></td><td></td></tr>
+</table>
+
+<h2>Voir aussi</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../overview.html">Aperçu de l'interface utilisateur</a></td><td>pour un aperçu de l'interface utilisateur</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+</table>
+
+</body>
+</html>

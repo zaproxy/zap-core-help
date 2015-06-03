@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Uso do anti CSRF
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Tokens anti CSRF</h1>
+<p>
+Anti CSRF tokens são parâmetros aleatórios de (pseudo) usados para proteger contra ataques de Cross Site Request falsificação (CSRF). <br>No entanto eles também fazem um trabalho de testadores de penetração mais difícil, especialmente se os tokens são regenerados sempre que um formulário é solicitado.<br>
+</p>
+<p>
+O ZAP detecta tokens anti CSRF pelos nomes de atributo - a lista de nomes de atributos considerados tokens anti CSRF é configurada usando-se a <a href="../../ui/dialogs/options/anticsrf.html">tela de opções Anti CSRF</a>. <br/> Quando o ZAP detecta esses tokens, grava o valor deles e qual URL gerou o token. <br/> A <a href="ascan.html">varredura ativa</a> e o <a href="fuzz.html">difusor</a> têm opções que fazem o ZAP automaticamente regenerar os tokens se necessário.
+</p>
+
+<h2>Leia também</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/overview.html">Visão geral da interface do usuário</a></td><td>uma visão geral da interface do usuário</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="concepts.html">Recursos</a></td><td>fornecidos pelo ZAP</td></tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+ファイルメニュー
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>ファイルメニュー</h1>
+このメニューは、現在のセッションを処理します。既定では、次のメニュー項目が表示されます。<br/>
+
+<h3>新規セッション</h3>
+新しいセッションを作成します。<br>
+If you have not saved your current session then a warning will be displayed.<br/>
+Starting a new session without saving the current session will loose all of the data in the current session.
+
+<h3>セッションを開く...</h3>
+以前に保存されたセッションを開きます。<br/>
+Opening a session without saving the current session will loose all of the data in the current session.
+
+<h3>永続化セッション...</h3>
+This persists the current session. <br/>
+While the session is always stored in a database on disk, it will be lost when ZAP is stopped unless it has been persisted.<br/>
+You only need to persist it once - after that all changes will be saved.
+
+<h3>スナップショットセッション</h3>
+This saves a snapshot of a session that has already been persisted.<br/>
+It will use the same filename with a date-time string appended to it.<br/>
+
+<h3>プロパティ...</h3>
+This displays the <a href="../dialogs/session/sessprop.html">セッション・プロパティ</a> dialog.<br/>
+This allows you to set the session name and description.
+
+<h3>アドオンファイルをロードする...</h3>
+Load a local <a href="../../start/concepts/addons.html">add-on</a> file.<br/>
+Add-ons are typically installed from via the <a href="../dialogs/manageaddons.html">アドオンの管理</a> dialog, but this
+option can be useful if you have downloaded an add-on manually or are testing one you have developed yourself.<br/>
+Add-ons remain installed until you manually uninstall them. 
+
+<h3>Exit and delete session...</h3>
+This will exit ZAP and delete the session, even if you have previously persisted it.<br/>
+The session will no longer be accessible when you restart ZAP, although any snapshots you took will still be available.<br/> 
+A warning dialog will be displayed to ensure you really meant to choose this option.
+
+<h3>Exit</h3>
+This will exit ZAP.<br/>
+If you have not saved the current session then you will be given the option to do so.
+
+<p>
+<a href="../../start/concepts/addons.html">アドオン</a> は他のメニュー項目を追加できます。
+</p>
+
+<h2>関連情報</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="tlmenu.html">トップ レベル メニュー</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../overview.html">UIの概要</a></td><td>ユーザー インターフェイスの概要について</td></tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Pestaña de Escaneo Activo
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Pestaña de Escaneo Activo</h1>
+
+The Active Scan tab allows you to perform an <a href="../../start/concepts/ascan.html">escaneo activo</a>.<br> 
+<br>
+The 'New Scan' button launches the <a href="../dialogs/advascan.html">Active Scan dialog</a> which allows you
+to specify exactly what should be scanned.
+<br><br>
+The toolbar provides a set of buttons which allow you to start, stop, pause and resume the scan selected.<br>
+A progress bar shows how far the scan of the selected site has progressed.<br>
+The 'Current scans' value shows how many scans are currently active - 
+hovering over this value will show a list of the sites being scanned in a popup. 
+
+<h2>Menú de botón derecho</h2>
+Al hacer click derecho sobre un nodo se abrirá un menú que le permitirá:
+
+<h3>Excluir de</h3>
+Este menú tiene los siguientes submenús:
+
+<h4>Proxy</h4>
+Esto excluirá los nodos seleccionados desde el proxy. Aunque seguirán siendo procesadas vía ZAP no aparecerán en ninguna de las pestañas.<br/>
+Esto puede usarse para ignorar las URLs que no son relevantes para el sistema que actualmente está probando.<br/>
+Los nodos pueden ser incluidos a través del cuadro de dialogo <a href="../dialogs/session/sessprop.html">Propiedades de la Sesión</a> .   
+
+<h4>Escáner</h4>
+Esto evitará que los nodos seleccionados sean escaneados activamente.<br/>
+Los nodos pueden ser incluidos a través del cuadro de dialogo <a href="../dialogs/session/sessprop.html">Propiedades de la Sesión</a> .   
+
+<h4>Spider(Araña)</h4>
+This will prevent the selected nodes from being spidered.<br/>
+Los nodos pueden ser incluidos a través del cuadro de dialogo <a href="../dialogs/session/sessprop.html">Propiedades de la Sesión</a> .   
+
+<h3>Reenviar...</h3>
+Esto hará que aparezca el cuadro de dialogo 
+<a href="../dialogs/resend.html">Reenviar</a> que le permite enviar la solicitud después de hacer los cambios que desee.
+
+<h3>Nueva alerta...</h3>
+Esto hará que aparezca el cuadro de dialogo 
+<a href="../dialogs/addalert.html">Añadir Alerta,</a> el que le permitirá agregar una nueva  
+<a href="../../start/concepts/alerts.html">alerta</a> de forma automática en la petición.
+
+<h3>Mostrar en la pestaña Sitios</h3>
+Esto mostrará el mensaje seleccionado en la <a href="sites.html">Sitios tab</a>.
+
+<h3>Ver en el navegador</h3>
+La dirección URL del nodo seleccionado se abrirá en el navegador por defecto.
+
+
+<h2>Vease también</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../overview.html">UI Overview</a></td><td>Para una vista general sobre la interfaz de usuario</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../dialogs/options/ascan.html">Options Active Scan screen</a></td><td>for details of the active scan configuration</td></tr>
+
+</table>
+
+</body>
+</html>

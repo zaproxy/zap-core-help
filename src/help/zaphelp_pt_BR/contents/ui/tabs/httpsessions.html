@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Aba de sessões http</title>
+</head>
+<body bgcolor="#ffffff">
+	<h1>Aba de sessões http</h1>
+	<p>
+		Esta aba mostra a você o conjunto de sessões HTTP identificadas para cada Site, conforme detectado pela <a href="../../start/concepts/httpsessions.html">extensão de sessões HTTP</a>.
+	</p>
+
+	<p>
+		O Site ao qual a as informações se referem pode ser selecionado pela barra de ferramentas ou pela <a href="sites.html">Aba de Sites</a>.
+	</p>
+
+	<p>A barra de ferramentas fornece um botão ("nova sessão"), que permite a você iniciar uma nova sessão, forçando todas as requests a ficarem sem o conjunto de tokens de sessão, de modo que o servidor considera que há uma nova sessão. Isto permite a criação de uma nova sessão sem destruir a anterior.</p>
+
+	<p>Cada uma das entradas na tabela de sessões inicialmente tem um nome, mas ele pode ser alterado selecionando-se a célula 'Nome' e editando-a.</p>
+
+	<p>Cada uma das entradas na tabela de sessões pode ser examinada com clique no botão direito, o que ativa um menu pop-up com as seguintes opções:</p>
+	<ul>
+		<li>Remover Sessão - deleta a sessão</li>
+		<li>Definir como ativa (disponível somente em sessões não-ativas) - marca esta sessão como ativa. Se qualquer sessão foi anteriormente definida como ativa, isso será revertido; se ela não tiver qualquer valor de token, será deletada.</li>
+		<li>Desmarcar como ativa (disponível apenas na sessão ativa) - marca esta sessão como não sendo mais ativa. Se a sessão não tiver quaisquer valores de token, ela será deletada.</li>
+	</ul>
+
+	<i>Em relação à sessão activa, mais detalhes podem ser lidos na página de ajuda de conceitos gerais da <a
+		href="../../start/concepts/httpsessions.html">Extensão de sessões HTTP</a>
+	</i>
+	<br />
+
+	<br /> Para cada sessão, você pode ver:
+	<ul>
+		<li>Ativa - se a sessão está ativa ou não</li>
+		<li>Name - o nome de sessão</li>
+		<li>Valores dos Tokens de sessão - a lista de valores associados a cada um dos tokens de sessão. As entradas são separadas pelo símbolo ';' (ponto-e-vírgula).</li>
+		<li>Mensagens Combinadas - o número de mensagens HTTP combinadas com esta sessão por causa de sua extensão</li>
+	</ul>
+
+
+	<h2>Leia também</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../overview.html">Visão geral da interface do usuário</a></td>
+			<td>para uma visão geral da interface do usuário</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../start/concepts/httpsessions.html">Extensão de sessões http</a></td>
+			<td>para uma visão geral da extensão</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/options/httpsessions.html">Tela de opções de sessões http</a></td>
+			<td>para uma visão geral das opções da extensão</td>
+		</tr>
+	</table>
+
+</body>
+</html>
+

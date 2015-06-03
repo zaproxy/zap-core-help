@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Options Display screen
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Options Display screen</h1>
+<p>
+The Display screen allows you to configure:
+
+<h3>Images</h3>
+If ZAP processes images.
+
+<h3>Display</h3>
+The layout of the 3 main windows.
+
+<h3>Show break buttons</h3>
+The location of the break buttons.
+
+<h3>Large request view min size</h3>
+The minimum size of a request body in bytes at which point a 'large request body' message will be shown instead of the actual body.<br>
+This is to prevent very large bodies from slowing down the UI.<br>
+Setting this value to -1 will result in request always being displayed no matter how large it is.
+
+<h3>Large response view min size</h3>
+The minimum size of a response body in bytes at which point a 'large response body' message will be shown instead of the actual body.<br>
+This is to prevent very large bodies from slowing down the UI.<br>
+Setting this value to -1 will result in response always being displayed no matter how large it is.
+
+<h3>Output Tabs Time Stamp Options</h3>
+Once you've enabled time stamps on the output tab you can configure the format you would like those time stamps to appear in. 
+Either select a pre-defined format from the drop-down list or enter one of your own choosing. The format is based on Java's
+SimpleDateFormat. After choosing or entering a time stamp format if you press enter the example on the right will be updated
+to reflect your choice. If ZAP is unable to use a format you've entered then the example is displayed based 
+on the Default format.
+
+<h3>Font Size</h3>
+The default text size used for the ZAP display. If you set this to -1 then the system default size will be used.<br>
+The 'Font Example' field will show you how large the default text will appear.<br>
+This setting will only take effect when ZAP is restarted.
+
+<table border="1" cellpadding="5">
+<tr> <td> Long &amp; Default </td> <td> yyyy-MM-dd HH:mm:ss </td> </tr>
+<tr> <td> ISO8601 </td> <td> yyyy-MM-dd'T'HH:mm:ssZ </td> </tr>
+<tr> <td> Time Only </td> <td> HH:mm:ss </td> </tr>
+</table>
+
+<h2>See also</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens.</td></tr>
+</table>
+
+<h2>External Links</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+https://code.google.com/p/zaproxy/downloads/list</td>
+<td> ZAP download page</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html</td><td>For details of Java's SimpleDateFormat.</td></tr>
+</table>
+
+</body>
+</html>

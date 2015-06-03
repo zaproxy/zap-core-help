@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Empezar
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Primeros pasos</h1>
+<p>
+La manera mas rápida de comenzar a utilizar ZAP es ejecutando el suplemento de inicio rápido, el cual está instalado por omisión.
+Éste permite ingresar una URL a la cual ZAP primero la recorre usando un  <a href="concepts/spider.html">spider</a> y luego realizará un  <a href="concepts/ascan.html">escaneo activo</a>.
+Para pruebas con más profundidad, debe explorar la aplicación utilizando su navegador o a través de pruebas de regresión automatizadas utilizando a ZAP como proxy.
+</p>
+
+<p>
+En esencia ZAP es un <a href="concepts/intercept.html">proxy de intercepción</a>.<br/> Necesita configurar su navegador para conectarse a la aplicación web deseada a través del proxy ZAP.<br/> Si es requerido también puede configurar ZAP para conectarse a través de otro proxy - esto es usualmente necesario en ambientes corporativos.<br/>
+</p>
+<p>
+Si sabe cómo configurar un servidor proxy en su navegador, ¡hágalo y comience!<br> Si no está seguro de cómo hacerlo, diríjase a la sección <a href="proxies.html">Configuración de proxies</a>.
+</p>
+<p>
+Una vez que haya configurado ZAP como el proxy de su navegador intente conectarse a la aplicación web que estará probando.<br/> Si tiene problemas de conexión, verifique nuevamente la configuración del servidor proxy. Necesitará verificar la configuración del servidor proxy en su navegador así como la configuración del proxy en ZAP.  <br>¡También es recomendable verificar que la aplicación que intenta probar esté corriendo!
+</p>
+<p>
+Cuando se haya conectado correctamente a la aplicación a través de su navegador, visualice ZAP nuevamente.  Debería ver una o más líneas en las pestañas  <a href="../ui/tabs/sites.html">Sitios</a> e  <a href="../ui/tabs/history.html">Historia</a>.<br/> Si es así, está listo para continuar.  Si no, deberá verificar nuevamente la configuración del proxy.
+</p>
+<p>
+El siguiente paso a realizar es comenzar con un <a href="../pentest/pentest.html">test de penetración básico</a>.<br/>
+</p>
+
+<h2>Vease también</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="proxies.html">Configurando proxies</a></td><td>para detalles de cómo configurar ZAP como proxy en su navegador</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Introducción</a></td><td>para una introducción a ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="concepts/concepts.html">Caracteristicas</a></td><td>que son proporcionadas por ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="checks.html">Reglas de escaneo</a></td><td>que son soportadas por omisión</td></tr>
+</table>
+
+
+
+</body>
+</html>

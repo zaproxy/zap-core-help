@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Filtro
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Filtro</h1>
+<p>
+Isso permite que você defina <a href="../../start/concepts/filters.html">filtros</a> que são aplicados para solicitações e respostas.
+</p>
+Os seguintes filtros são suportados por padrão.
+
+<h2>Modificar o user agent para outros navegadores</h2> 
+
+<h2>Detectar conteúdo inseguro ou potencialmente malicioso em respostas HTTP</h2>
+
+<h2>Detectar e alertar tentativas de 'Set-cookie' em respostas HTTP por modificação</h2>
+
+<h2>Burlar cache do navegador (Ignorar IfModifiedSince)</h2>
+
+<h2>Fazer log dos cookies enviados pelo navegador</h2>
+
+<h2>Fazer log de queries GET únicas em arquivo</h2>
+
+<h2>Fazer log de queries POST únicas em arquivo</h2>
+
+<h2>Fazer log de requests e respostas em arquivo</h2>
+
+<h2>Substituir o corpo das requisições HTTP utilizando um padrão definido</h2>
+
+<h2>Substituir o cabeçalho das requisições HTTP utilizando um padrão definido</h2>
+
+<h2>Substituir o corpo das respostas HTTP utilizando um padrão definido</h2>
+
+<h2>Substituir o cabeçalho das respostas HTTP utilizando um padrão definido</h2>
+
+<h2>Enviar ID de requisição de sessão</h2>
+	<p>
+		Este filtro irá adicionar uma tag especial de cabeçalho para cada solicitação enviada ao servidor.
+		Assim você pode rastrear as solicitações do ZAP, ao investigar sua própria aplicação web.
+		É útil ter uma identificação distinta para várias solicitações, ao analisar, por exemplo, arquivos de log do servidor HTTP. 
+	</p>
+	<p>O cabeçalho de solicitação é modificado como abaixo (exemplo):</p>
+	
+	<pre>
+X-ZAP-RequestID: <sessionname>–<number>
+	</pre>
+	
+	<ul>
+		<li><code>sessionName</code> é o nome da sessão codificado para URL</li>
+		<li><code>number</code> começa em um; é incrementado em cada request; é válido somente na sessão</li>
+	</ul>
+
+<h2>Acessado via</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../tlmenu/tools.html">Menu de ferramentas de nível superior</a></td><td>Item de menu 'Filtro...'</td></tr>
+</table>
+
+<h2>Leia também</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../overview.html">Visão geral da interface do usuário</a></td><td>para uma visão geral da interface do usuário</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="dialogs.html">Caixas de diálogo</a></td><td>para obter detalhes das caixas de diálogo ou pop-ups </td></tr>
+</table>
+
+
+</body>
+</html>

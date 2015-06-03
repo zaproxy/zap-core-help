@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Tela de opções do spider</title>
+</head>
+<body bgcolor="#ffffff">
+	<h1>Tela de opções do spider</h1>
+	<p>
+		Esta tela permite que você configure as opções do <a<br>
+			href="../../../start/concepts/spider.html">spider</a>.</p> 
+	<p>Note-se que modificar a maioria dessas opções também afeta a execução do spider.
+	</p>
+
+	<h3>Profundidade máxima de busca</h3>
+	O parâmetro define a profundidade máxima no processo de busca, no qual uma página deva ser encontrada para ser processada. Recursos encontrados mais abaixo deste nível não são buscados nem analisados pelo spider.
+	<p>
+		A profundidade é calculada a partir de 'sementes' (pontos de partida), então, se uma varredura do spider começa com apenas uma única URL (por exemplo, qualquer URL para o spider), a profundidade é calculada a partir deste nível. No entanto, se o exame começa com várias sementes (pontos de partida) um recurso é processado se a sua profundidade em relação a <i>qualquer</i> das sementes é menor do que aquele definido.
+	</p>
+
+	<h3>Número de segmentos (threads) usados</h3>
+	O spider é multi-threaded e este é o número que define o número máximo de threads de trabalho utilizados no processo de rastreamento. Alterar este parâmetro não tem efeito sobre qualquer rastreamento já em andamento. 
+
+	<h3>Padrão de domínio</h3>
+	O comportamento normal do spider é seguir apenas os links para recursos encontrados no mesmo domínio da página onde começou a navegação. No entanto, esta opção permite que você defina domínios adicionais considerados "dentro do escopo" durante o processo de varredura. Páginas desses domínios são processadas durante a verificação.
+		
+	<h3>Manipulação de parâmetros de consulta</h3>
+	Durante a navegação, o Spider tem um mecanismo interno que marcas páginas visitadas, para  não serem processadas novamente. Quando essa verificação é feita, a maneira que os parâmetros de URIs são manipulados é definida usando essa opção. Há três opções disponíveis:
+	<ul>
+	<li><b>Ignorar parâmetros completamente</b> - se www.example.org/? barra = 456 é visitado, em seguida www.example.org/? foo = 123 não será visitado</li>
+	<li><b>Considerar apenas o nome do parâmetro</b> (ignorar o valor do parâmetro) - se www.example.org/? foo = 123 é visitado, em seguida www.example.org/? foo = 456 não ser visitado, mas www.example.org/? barra = 789 ou www.example.org/? foo = 456 &amp; barra = 123 serão visitados</li>
+	<li><b>Considerar tanto o nome quanto o valor do parâmetro</b> - se www.example.org/? 123 é visitada, algum outra URI diferente (incluindo, por exemplo, www.example.org/? foo = 456 ou www.example.org/? barra = abc) serão visitados</li>
+	</ul>
+
+	<h3>Enviar o cabeçalho "Referer"</h3>
+	Quando os requests do spider devam ser enviados com o cabeçalho "Referer".
+
+	<h3>Processar formulários</h3>
+	 Essa opção define o comportamento do spider durante o processo de navegação, quando encontra formulários HTML. Se desabilitada, os formulários HTML não serão processados de modo algum. Se habilitado, os formulários HTML com o método definido como HTTP GET serão submetidos/enviados com alguns valores gerados. O comportamento ao encontrar formulários com o método definido como HTTP POST é configurado pela próxima opção.
+
+	<h3>Formulários POST</h3>
+	Como brevemente descrito no parágrafo anterior (processamento de formulários), esta opção configura o comportamento do spider quando
+	<i>Processar formulários</i> está habilitado, para quando encontrar formulários HTML que têm de ser POSTados.
+
+	<h3>Analisar os comentários do HTML</h3>
+	Esta opção define se o spider deve também processar os comentários HTML à procura de links. Apenas os recursos encontrados em tags HTML comentadas e válidas serão processados.
+
+	<h3>Analisar os arquivos 'robots.txt'</h3>
+	Esta opção define se o spider deve também percorrer os arquivos robots.txt encontrados em sites, à procura de links para navegar.
+	Esta opção não define se o spider deve seguir as regras impostas pelo arquivo robots.txt.
+
+	<h3>Lidar com parâmetros específicos de OData</h3>
+	Essa opção define se o spider deve tentar detectar parâmetros específicos de OData (ou seja, identificadores de recursos) para processá-los adequadamente de acordo com a regra definida pela opção "Manipulação de parâmetros de consulta".
+
+	<h2>Leia também</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../overview.html">Visão geral da interface do usuário</a></td>
+			<td>para uma visão geral da interface do usuário</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../../start/concepts/spider.html">Spider</a></td>
+			<td>para uma visão geral do spider</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../../ui/tabs/spider.html">Aba Spider</a></td>
+			<td>para uma visão geral do guia do spider</td>
+		</tr>
+	</table>
+
+</body>
+</html>

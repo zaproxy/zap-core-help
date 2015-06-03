@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Caixa de diálogo de varredura ativa
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Varredura ativa</h1>
+<p>
+Esta caixa de diálogo lança a <a href="../../start/concepts/ascan.html">varredura ativa</a>.<br>
+  
+<h3>Alcance</h3>
+A primeira aba permite a você selecionar ou alterar o ponto de partida.<br>
+Se você tiver mais que uma <a href="../../start/concepts/scanpolicy.html">política de varredura</a> então você conseguirá selecionar uma para usar.<br>
+Se o ponto de partida for em um ou mais <a href="../../start/concepts/contexts.html">Contextos</a> então você conseguirá escolher um deles.<br>
+Se esse contexto tiver algum <a href="../../start/concepts/users.html">Usuário</a> definido, então você conseguirá escolher um deles.<br>
+Se você selecionar um dos usuários então a varredura ativa será executada com aquele usuário, e o ZAP o (re) autenticará como o usuário sempre que necessário.
+<br><br>
+Se você selecionar 'recursar' então todos os nós abaixo do selecionado serão também escaneados.<br>
+Vetores de entrada personalizados são suportados apenas se esta opção não estiver selecionada.
+<br><br>
+Se você selecionar 'Mostrar opções avançadas' então as guias a seguir serão exibidas para proporcionar controle mais preciso sobre o processo de varredura ativa.
+<br><br>
+Clicar no botão 'Reset' retornará todas as opções a seus valores padrão. 
+
+<h3>Vetores de entrada</h3>
+A aba de vetores de entrada permite que você substitua os vetores de entrada padrão que estão definidos nas 
+<a href="../../ui/dialogs/options/ascaninput.html">Tela de Entrada de opções para Vetores de Varredura Ativa</a>.<br>
+Clicar no botão 'Reset' retornará todas as opções a seus valores padrão. 
+
+<h3>Vetores personalizados</h3>
+A aba Vetores Personalizados permite a você indicar locais específicos na solicitação para atacar.<br> 
+Vetores personalizados só estão disponíveis se a opção 'recursar' na primeira guia não estiver selecionada.<br>
+Para adicionar vetores de entrada personalizados destaque (highlight/ilumine) os caracteres que você deseja atacar na request e clique no botão 'Adicionar'.<br>
+Você pode adicionar quantos vetores de entrada personalizados quiser.<br>
+Para remover vetores de entrada personalizados realce (highlight/iluminar) os caracteres selecionados e clique no botão 'Remover'.<br>
+Marcando a caixa 'Desabilitar vetores de entrada não personalizados' desabilita todos os vetores de entrada, exceto aqueles que você definir manualmente nesta guia.
+
+<h3>Tecnologia</h3>
+A aba de Tecnologia permite que você especifique quais tipos de tecnologias irá procurar no alvo.<br>
+Desmarcando tecnologias que com certeza não estão presentes na aplicação-alvo pode acelerar a varredura, já que as regras destinadas àquela tecnologia podem ser ignoradas.
+
+<h3>Política</h3>
+A aba Política permite substituir qualquer das configurações especificadas na 
+<a href="../../start/concepts/scanpolicy.html">política de varredura selecionada</a>. 
+
+<br><br>
+
+<h2>Acessado via</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/ascan.html">Aba de varredura ativa</a></td><td>Botão 'Nova Varredura'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tlmenu/tools.html">Menu de ferramentas de nível superior</a></td><td>Item de menu 'Varredura Ativa...'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/sites.html">Aba de Sites</a></td><td>' Ataque / Varredura Ativa ... menu no botão direito do mouse</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/history.html">Aba de histórico</a></td><td>' Ataque / Varredura Ativa ... menu no botão direito do mouse</td></tr>
+</table>
+
+<h2>Leia também</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../overview.html">Visão geral da interface do usuário</a></td><td>para uma visão geral da interface do usuário</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="dialogs.html">Diálogos</a></td><td>para detalhes das caixas de diálogo ou pop-ups </td></tr>
+</table>
+
+</body>
+</html>

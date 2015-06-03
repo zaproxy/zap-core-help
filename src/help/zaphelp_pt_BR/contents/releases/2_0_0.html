@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  Release 2.0.0
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Release 2.0.0</h1>
+<p>
+Este release trouxe as seguintes mudanças:
+</p>
+
+<h2>Alterações significativas:</h2>
+
+
+<h3>Um Marketplace/loja de Complementos</h3>
+
+O ZAP pode ser ampliado por meio de Complementos/Add-ons que têm acesso total aos recursos internos do ZAP. Qualquer pessoa pode escrever Complementos e enviá-los para a loja de complementos ZAP (é um projeto do Google Code chamado Zap-extensions, mas já dá uma ideia).
+<br/>
+Melhor ainda, você pode agora navegar, baixar e instalar os complementos de dentro do ZAP. A maioria dos complementos pode ser instalada (e desinstalada) dinamicamente, e assim  você não precisa nem reiniciar o ZAP.
+<br/>
+Você pode optar por ser notificado das atualizações e até mesmo ser atualizado automaticamente. E como as regras de varredura agora são implementadas como complementos, você pode obter as mais recentes regras tão logo elas estejam publicadas.
+
+<h3>Um substituto para o Spider 'padrão'</h3>
+
+O 'velho' Spider estava mostrando a sua idade, então foi totalmente reescrito e ficou muito mais rápido e mais abrangente do que o antigo. Ainda é um spider 'tradicional', que analisa o código HTML para buscando todos os links que possa encontrar.
+
+<h3>Um novo spider 'Ajax'</h3>
+
+Além do spider 'tradicional', nós adicionamos um spider de Ajax, que é mais eficaz com aplicações que fazem uso intenso de JavaScript. Ele usa o projeto Crawljax, que aciona um navegador (usando Selenium) e assim pode descobrir quaisquer links que um aplicativo gera, mesmo aqueles gerados do lado do cliente.
+
+<h3>Suporte a Web socket</h3>
+
+ZAP agora suporta WebSockets, podendo exibir todas as mensagens de WebSocket enviadas de e para o seu navegador. Tal como acontece com as mensagens baseadas em HTTP, o ZAP também pode interceptar mensagens de WebSockets e permitir que você as altere em tempo real.
+<br/>
+Você também pode fazer fuzzing das mensagens de WebSockets usando os payloads de fuzzing incluídos no ZAP, oriiundos de projetos como JBroFuzz e fuzzdb. E claro que você pode facilmente adicionar seus próprios arquivos de fuzzing.
+
+<h3>Aba de Início rápido</h3>
+
+A primeira aba que você verá agora é uma de 'Início Rápido', que lhe permite a você simplesmente digitar uma URL e vasculhá-la (em scan) com um clique.
+<br/>
+É um ponto de partida ideal para pessoas novas em segurança de aplicativos, mas os especialistas podem facilmente removê-la se a considerarem incômoda.
+
+<h3>Organizado em sessões</h3>
+
+O ZAP agora está organizado em sessões, de modo que pode acompanhar múltiplas sessões. Isso permite que você crie novas sessões, alterne a operação entre elas, o que se aplica a todos os outros componentes, como o Spider e a Varredura Ativa.
+
+<h3>Contextos definidos pelo usuário</h3>
+
+Agora, você pode definir qualquer número de 'contextos' - conjuntos relacionados de URLs que compõem um aplicativo. Você pode então usar todas as URLs em um contexto como alvo, usando por exemplo a Varredura ativa ou o Spider. Você também pode adicionar os contextos ao escopo e associar outras informações, tais como detalhes de autenticação.
+
+<h3>Escopo de sessão</h3>
+
+O escopo de sessão permite que você especifique os contextos nos quais você está interessado. Você pode restringir o que você vê nas várias guias para que fiquem apenas as URLs do escopo e evitar acidentalmente atacar URLs fora do escopo, usando o Modo Protegido.
+
+<h3>Modos Diferentes</h3>
+
+O ZAP agora suporta 3 modos:
+<ul>
+<li>Seguro - nenhuma operação potencialmente perigosa é permitida</li>
+<li>Protegido - você pode executar qualquer ação sobre as URLs do escopo</li>
+<li>Padrão - no qual você pode fazer qualquer coisa em qualquer URL</li>
+</ul>
+<h3>Manipulação de autenticação</h3>
+
+Agora, você pode associar detalhes de autenticação com qualquer contexto, o que permite ao ZAP fazer coisas como detectar se e quando você está desconectado e automaticamente logar você de volta outra vez. Isso é especialmente útil quando usado via API em testes de regressão de segurança.
+
+<h3>Mais suporte à API</h3>
+
+A API REST foi significativamente ampliada, dando-lhe muito mais acesso à funcionalidade que o ZAP fornece.
+
+<h3>Controles finos de varredura</h3>
+
+As regras de varredura ativa agora podem ser afinadas para ajustar sua força (o número de ataques que executam) e o limite no qual relatam problemas em potencial.
+
+<h3>Regras de varredura ativa e passiva novas e melhoradas</h3>
+
+
+Fizemos upload dos resultados de rodar o ZAP 2.0.0 contra o wavsep (o mais completo projeto de avaliação de open source que conhecemos) para o ZAP wiki: http://code.google.com/p/zaproxy/wiki/Testing
+
+
+
+<h2>Lista completa de alterações:</h2>
+
+<h3>Problema 43: Opção de escopo para filtragem</h3>
+<h3>Problema 163: Varredura ativa falhar contra DVWA [alto índice de falsos positivos/verdadeiros negativos]</h3>
+<h3>Problema 175: bruteforce wordlist melhorada</h3>
+<h3>Questão 240: gerando SocketException em difusão não tratada corretamente.</h3>
+<h3>Problema 278: Certificado de CA raiz para SSL dinâmico inválido em algumas plataformas devido à extensão ExtendeKeyUsage</h3>
+<h3>Problema 281: dependência da Alert class JSON</h3>
+<h3>Problema 299: Recurso solicitado: mostrar a contagem de URIs encontradas pelo Spider</h3>
+<h3>Problema 305: regras de varredura passiva para comentários suspeitos como TODO (a ser feito) e FIXME (conserte-me)</h3>
+<h3>Problema 326: tempo de resposta e comprimento total em request manual</h3>
+<h3>Problema 330: parsing/análise do robots,txt</h3>
+<h3>Problema 332: Suporte para modos</h3>
+<h3>Problema 333: Spider - adicionar a opção de vasculhar tudo dentro do escopo</h3>
+<h3>Problema 335: Web Sockets - adicionar suporte para Modos e Escopo</h3>
+<h3>Problema 342: Adicionar um HttpSenderListener</h3>
+<h3>Problema 350: Gerenciamento de autenticação</h3>
+<h3>Problema 354: strings do Difusor/Fuzzer de ataque não aparecem</h3>
+<h3>Problema 356: Gerar formulário para CSRF de teste</h3>
+<h3>Problema 358: Erro de digitação na solução "cabeçalho XFO não definido"</h3>
+<h3>Problema 360: diretórios do brute force</h3>
+<h3>Problema 361: o getHostPort do HttpRequestHeader para requests de HTTPS CONNECT retorna a porta errada</h3>
+<h3>Problema 370: API - melhorar tratamento de erro ao salvar sessão</h3>
+<h3>Problema 374: API - salvar sessão síncrona ou fornecer o status</h3>
+<h3>Problema 376: Ocultar as senhas fornecidas para autenticação</h3>
+<h3>Problema 385: dar suporte a Contextos</h3>
+<h3>Problema 386: Interface web da API - dar suporte a parâmetros com visualizações</h3>
+<h3>Problema 388: Permitir que o usuário especifique quais tecnologias se aplicam a um contexto</h3>
+<h3>Problema 390: Spider - Adicionar opção para passar o spider em todo o contexto</h3>
+<h3>Problema 391: melhorias no desempenho do ZAP</h3>
+<h3>Problema 393: Mais links on-line para o menu</h3>
+<h3>Problema 397: Oferecer suporte a compilações semanais</h3>
+<h3>Problema 400: Gerar novo certificado CA produz o certificado sempre com o mesmo número de série</h3>
+<h3>Problema 401: Exceção quando o spider (o novo) é iniciado por meio da API</h3>
+<h3>Problema 402: os rótulos da interface gráfica [GUI] não são corretamente exibidos no Linux (quando o idioma definido é o polonês)</h3>
+<h3>Problema 403: Definir opções via API usando reflection</h3>
+<h3>Problema 404: Rótulos da GUI não são corretamente exibidos quando a língua é o persa</h3>
+<h3>Problema 406: Spider - adicionar a opção para controlar o efeito dos parâmetros sobre URLs visitadas</h3>
+<h3>Problema 410: charset entre aspas</h3>
+<h3>Problema 411: Permitir que a porta do proxy possa ser especificada pela linha de comando</h3>
+<h3>Problema 417: exceção IndexOutOfBoundsException no ExtensionHttpSessions quando em  modo daemon</h3>
+<h3>Problema 419: Reestruturar o código de carregamento jar</h3>
+<h3>Problema 420: API - suporte a caminhos absolutos de sessão</h3>
+<h3>Problema 421: Desligar corretamente qualquer scan ativo ou threads ao fazer shut down</h3>
+<h3>Problema 422: Usar exec no zap.sh para que um novo processo não seja iniciado</h3>
+<h3>Problema 423: Varredura ativa e spider podem travar se o ZAP for desligado enquanto eles estão em operação</h3>
+<h3>Problema 424: Exceções em Web Sockets na abertura da sessão</h3>
+<h3>Problema 425: Acrescentar uma aba de início rápido</h3>
+<h3>Problema 428: suporte ao ZAP Marketplace</h3>
+<h3>Problema 429: Varredura Ativa de URL pela API vasculha mais do que apenas a URL especificada</h3>
+<h3>Problema 433: API: introduzir parâmetros obrigatórios e descrições opcionais</h3>
+<h3>Problema 435: Alertas de varredura ativa podem ser "perdidas" depois do salvamento da sessão</h3>
+<h3>Problema 436: trava no salvamento de sessão ou no shut down via API</h3>
+<h3>Problema 438: Melhorias na API</h3>
+<h3>Problema 441: Visualização incorretamente inicializada em muitos lugares, quando em modo daemon</h3>
+<h3>Problema 443: aviso de "Nenhum token Anti-CSRF encontrado em formulário HTML de envio" exibido como "Nada. Só Aviso."</h3>
+<h3>Problema 446: Armazenamento de chaves de um provedor de PKCS #11 registrado não funciona se um provedor de PKCS #11 já estiver registrado</h3>
+<h3>Problema 447: Realçar o ataque quando exibir alertas</h3>
+<h3>Problema 448: Renomear Brute Force ext para Navegação Forçada (Forced Browse) e adicionar URLs à árvore</h3>
+<h3>Problema 449: Falta página de ajuda para o painel de "Extensões" no diálogo "Opções"</h3>
+<h3>Problema 451: checagem manual de atualizações não funciona corretamente nos releases semanais mais recentes</h3>
+<h3>Problema 453: carga e descarga dinâmica de complementos</h3>
+<h3>Problema 455: dividir o fuzzbd em um novo complemento</h3>
+<h3>Problema 456: Sessão do spider precisando de ajustes</h3>
+<h3>Problema 457: suporte de uso das teclas de setas para a Aba de pesquisa</h3>
+<h3>Problema 459: travamento da Varredura ativa</h3>
+<h3>Problema 460: Adicionar um diálogo do progresso da varredura</h3>
+<h3>Problema 461: Adicionar arquivo de ajuda para o complemento Quick Start / Início Rápido</h3>
+<h3>Problema 462: Revisar: SSLSocketFactory com TLS habilitado e opções padrão de cifragem</h3>
+<h3>Problema 466: Mover a extensão de varredura de porta para o projeto de extensões do ZAP</h3>
+<h3>Problema 468: Atualizar a regra de SQL Injection para ' liberar '</h3>
+<h3>Problema 469: Permitir que um token anti csrf token seja adicionado e removido via API</h3>
+<h3>Problema 471: Mudar a extensão BeanSell para o projeto de extensões do ZAP</h3>
+<h3>Problema 472: o spider acessa o painel de interface do usuário em modo daemon</h3>
+<h3>Problema 473: Permitir que complementos removam visualizações/componentes adicionados aos painéis de mensagens</h3>
+<h3>Problema 474: Promover inícialização rápida ao status de 'release'</h3>
+<h3>Problema 478: Permitir que se escolha enviar os cookies gerenciados pelo ZAP num único header de solicitação de cookie e designá-lo como padrão/default</h3>
+
+
+
+<h2>Leia também</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Introdução</a></td><td>Introdução ao ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Releases</a></td><td>o conjunto completo dos releases</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Créditos</a></td><td>pessoas e grupos que tornaram este release possível</td></tr>
+</table>
+</body>
+</html>

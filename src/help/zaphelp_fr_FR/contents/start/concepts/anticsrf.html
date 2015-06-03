@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Manipulation anti-CSRF
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Jetons anti-CSRF</h1>
+<p>
+Les jetons anti-CSRF sont des paramètres (pseudo) aléatoires utilisés pour protéger contre les attaques de Cross Site Request Forgery (CSRF).<br>Cependant ils rendent aussi le travail des testeurs de pénétration plus difficile, surtout si les jetons sont régénérés chaque fois qu'un formulaire est demandé.<br>
+</p>
+<p>
+ZAP détecte les jetons anti-CSRF purement par nom d'attributs - la liste des noms d'attribut considérés comme jetons anti-CSRF est configurée à l'aide de l' <a href="../../ui/dialogs/options/anticsrf.html">écran Options Anti-,CSRF</a>. <br/>  Quand ZAP détecte ces jetons, il enregistre la valeur du jeton et quelle URL a généré le jeton. <br/>  Le <a href="ascan.html">scanner actif</a> et le <a href="fuzz.html">Générateur de bruit</a> ont tous les deux des options qui poussent ZAP à régénérer automatiquement les jetons en cas de nécessité.
+</p>
+
+<h2>Voir aussi</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/overview.html">Aperçu de l'interface utilisateur</a></td><td>pour un aperçu de l'interface utilisateur</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="concepts.html">Fonctionnalités</a></td><td>fournies par ZAP</td></tr>
+</table>
+
+</body>
+</html>
