@@ -21,11 +21,12 @@ A new 'ATTACK' <a href="../start/concepts/modes.html">Mode</a> has been added - 
 
 <h3>Advanced fuzzing</h3>
 
-TBA - depends if these changes make it in ;)
+A completely new fuzzing dialog has been introduced that allows multiple injection points to be attacked at the same time.<br> 
+This supports new attack payloads including the option to use scripts for generating the payloads as well as pre and post attack manipulation and analysis.
 
 <h3>Scan dialogs with advanced options</h3>
 
-New <a href="../ui/dialogs/advascan.html">Активное Сканирование</a> and <a href="../ui/dialogs/spider.html">Паук</a> dialogs have replaced
+New <a href="../ui/dialogs/advascan.html">Активное Сканирование</a>, <a href="../ui/dialogs/spider.html">Паук</a> and AJAX Spider dialogs have replaced
 the increasing number of right click 'Attack' options.<br>
 These provide easy access to all of the most common options and optionally a wide range of advanced options. 
 
@@ -59,6 +60,9 @@ Please be aware that the Plugin ID for the External Redirect scanner has changed
 
 <h2>Full list of changes:</h2>
 <ul>
+<li>Issue 117 : Enhancement: Compare crawling sessions for authentication issues</li>
+<li>Issue 234 : Support for fuzzing multiple parts</li>
+<li>Issue 329 : Enhancement: Add sitemap.xml support</li>
 <li>Issue 389 : Enable technology scope for scanners</li>
 <li>Issue 414 : API: Support scripts</li>
 <li>Issue 445 : SSLContextManager.isProviderAvailable() returns true as default</li>
@@ -145,7 +149,9 @@ Please be aware that the Plugin ID for the External Redirect scanner has changed
 <li>Issue 1357 : Hide unused tabs</li>
 <li>Issue 1359 : Reinstate splash screen</li>
 <li>Issue 1360 : New add-on - Tips and Tricks</li>
+<li>Issue 1361 : No data appears on 'Spider' and 'Active Scan' panel while spidering or scanning by API</li>
 <li>Issue 1362 : Being allowed to add duplicated Anti-CSRF tokens only by API</li>
+<li>Issue 1363 : Missing API to get contextId</li>
 <li>Issue 1367 : Can't detect "Xpath Injection" on a certain environment.</li>
 <li>Issue 1377 : "Source Code Disclosure - SVN" is missing regex escape</li>
 <li>Issue 1378 : Revamp active scan panel</li>
@@ -175,6 +181,7 @@ Please be aware that the Plugin ID for the External Redirect scanner has changed
 <li>Issue 1420 : Change spider's URLCanonicalizer to skip URIs without authority</li>
 <li>Issue 1427 : Standardize on [Cancel] [OK] button order</li>
 <li>Issue 1433 : Spider Select target not selected automatically</li>
+<li>Issue 1446 : Downloaded addons failure not handled correctly.</li>
 <li>Issue 1447 : Update RSyntaxTextArea library</li>
 <li>Issue 1449 : Resend / Manual Request help out of date</li>
 <li>Issue 1458 : Change home/installation dir paths to be always absolute</li>
@@ -227,6 +234,7 @@ Please be aware that the Plugin ID for the External Redirect scanner has changed
 <li>Issue 1551 : ZAP does not detect Relative Path Confusion (aka "Relative Path Overwrite" / "Path Relative Stylesheet Import")</li>
 <li>Issue 1552 : ZAP does not detect Forward / Reverse Proxies</li>
 <li>Issue 1553 : ZAP does not detect Storability / Cacheability of a response</li>
+<li>Issue 1557 : Deadlock on making manual request</li>
 
 </ul>
 

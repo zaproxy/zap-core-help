@@ -9,10 +9,10 @@ Uso do anti CSRF
 <body bgcolor="#ffffff">
 <h1>Tokens anti CSRF</h1>
 <p>
-Anti CSRF tokens são parâmetros aleatórios de (pseudo) usados para proteger contra ataques de Cross Site Request falsificação (CSRF). <br>No entanto eles também fazem um trabalho de testadores de penetração mais difícil, especialmente se os tokens são regenerados sempre que um formulário é solicitado.<br>
+Tokens Anti CSRF são parâmetros (pseudo) aleatórios usados para proteção contra ataques de Cross Site Request Forgery (CSRF). <br>No entanto eles também tornam mais difícil o trabalho em testes de penetração, especialmente se os tokens são regenerados sempre que um formulário é solicitado.<br>
 </p>
 <p>
-O ZAP detecta tokens anti CSRF pelos nomes de atributo - a lista de nomes de atributos considerados tokens anti CSRF é configurada usando-se a <a href="../../ui/dialogs/options/anticsrf.html">tela de opções Anti CSRF</a>. <br/> Quando o ZAP detecta esses tokens, grava o valor deles e qual URL gerou o token. <br/> A <a href="ascan.html">varredura ativa</a> e o <a href="fuzz.html">difusor</a> têm opções que fazem o ZAP automaticamente regenerar os tokens se necessário.
+O ZAP detecta tokens anti CSRF pelos nomes de atributo - a lista de nomes de atributos considerados tokens anti CSRF é configurada usando-se a <a href="../../ui/dialogs/options/anticsrf.html">Tela de opções Anti CSRF</a>. <br/> Quando o ZAP detecta esses tokens, grava o valor deles e qual URL gerou o token. <br/> Recursos como <a href="ascan.html">varredura ativa</a>  têm opções que fazem o ZAP automaticamente regenerar os tokens se necessário.
 </p>
 
 <h2>Leia também</h2>

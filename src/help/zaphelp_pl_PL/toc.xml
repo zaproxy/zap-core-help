@@ -26,18 +26,17 @@
          <tocitem text="Punkty Zatrzymania" target="start.concepts.breakpoints"/>
          <tocitem text="Contexts" target="start.concepts.contexts"/>
          <tocitem text="Filtry" target="start.concepts.filters"/>
-         <tocitem text="Fuzzing" target="start.concepts.fuzz"/>
-         <tocitem text="Globally Excluded URLs" target="start.concepts.globalexcludeurl"/>
-         <tocitem text="Sesje HTTP" target="start.concepts.httpsessions"/>
-         <tocitem text="Intercepting Proxy" target="start.concepts.intercept"/>
+         <tocitem text="Fuzzing" target="start.concepts.globalexcludeurl"/>
+         <tocitem text="Http Sessions" target="start.concepts.httpsessions"/>
+         <tocitem text="Sesje HTTP" target="start.concepts.intercept"/>
          <tocitem text="Modes" target="start.concepts.modes"/>
          <tocitem text="Notes" target="start.concepts.notes"/>
-         <tocitem text="Skanowanie pasywne" target="start.concepts.pscan"/>
-         <tocitem text="Scan Policies" target="start.concepts.scanpolicy"/>
+         <tocitem text="Passive Scan" target="start.concepts.pscan"/>
+         <tocitem text="Skanowanie pasywne" target="start.concepts.scanpolicy"/>
          <tocitem text="Scope" target="start.concepts.scope"/>
          <tocitem text="Session Management" target="start.concepts.sessmanag"/>
-         <tocitem text="Pająk" target="start.concepts.spider"/>
-         <tocitem text="Tags" target="start.concepts.tags"/>
+         <tocitem text="Spider" target="start.concepts.spider"/>
+         <tocitem text="Pająk" target="start.concepts.tags"/>
          <tocitem text="Users" target="start.concepts.users"/>
       </tocitem>
       <tocitem text="Scanner Rules" target="start.check"/>
@@ -69,10 +68,9 @@
          <tocitem text="Zagrozenia" target="ui.tabs.alerts"/>
          <tocitem text="Aktywne Skanowanie" target="ui.tabs.ascan"/>
          <tocitem text="Pająk" target="ui.tabs.spider"/>
-         <tocitem text="Fuzzer" target="ui.tabs.fuzz"/>
-         <tocitem text="Parametry" target="ui.tabs.params"/>
-         <tocitem text="Sesje HTTP" target="ui.tabs.httpsessions"/>
-         <tocitem text="Wynik" target="ui.tabs.output"/>
+         <tocitem text="Params" target="ui.tabs.params"/>
+         <tocitem text="Parametry" target="ui.tabs.httpsessions"/>
+         <tocitem text="Sesje HTTP" target="ui.tabs.output"/>
       </tocitem>
       <tocitem text="The Dialogs" target="ui.dialogs">
          <tocitem text="Aktywne Skanowanie" target="ui.dialogs.advascan"/>
@@ -83,47 +81,44 @@
          <tocitem text="Kodowanie/Dekodowanie/Tworzenie skrótu" target="ui.dialogs.enc_dec"/>
          <tocitem text="Filtr" target="ui.dialogs.filter"/>
          <tocitem text="Znajdź" target="ui.dialogs.find"/>
-         <tocitem text="Fuzzer" target="ui.dialogs.fuzz"/>
          <tocitem text="History Filter" target="ui.dialogs.historyfilter"/>
          <tocitem text="Manual Request Editor" target="ui.dialogs.manreq"/>
-         <tocitem text="Zarządzaj dodatkami" target="ui.dialogs.manageaddons"/>
-         <tocitem text="Manage Tags" target="ui.dialogs.managetags"/>
-         <tocitem text="Opcje" target="ui.dialogs.options">
-         	<tocitem text="Aktywne Skanowanie" target="ui.dialogs.options.ascan"/>
+         <tocitem text="Manage Add-ons" target="ui.dialogs.manageaddons"/>
+         <tocitem text="Zarządzaj dodatkami" target="ui.dialogs.managetags"/>
+         <tocitem text="Options" target="ui.dialogs.options">
+         	<tocitem text="Active Scan" target="ui.dialogs.options.ascan"/>
          	<tocitem text="Active Scan Input Vectors" target="ui.dialogs.options.ascaninput"/>
          	<tocitem text="Anti CSRF Tokens" target="ui.dialogs.options.anticsrf"/>
          	<tocitem text="API" target="ui.dialogs.options.api"/>
-         	<tocitem text="Uwierzytelnianie" target="ui.dialogs.options.authentication"/>
-            <tocitem text="Punkty przerwania" target="ui.dialogs.options.breakpoints"/>
-         	<tocitem text="Certyfikat" target="ui.dialogs.options.certificate"/>
+            <tocitem text="Breakpoints" target="ui.dialogs.options.breakpoints"/>
+         	<tocitem text="Certificate" target="ui.dialogs.options.certificate"/>
          	<tocitem text="Check for Updates" target="ui.dialogs.options.checkforupdates"/>
 			<tocitem text="Connection" target="ui.dialogs.options.connection"/>
-			<tocitem text="Baza danych" target="ui.dialogs.options.database"/>
-         	<tocitem text="Wyświetlanie" target="ui.dialogs.options.view"/>
-         	<tocitem text="Dynamiczne certyfikaty SSL" target="ui.dialogs.options.dynsslcert"/>
-            <tocitem text="Rozszerzenia" target="ui.dialogs.options.ext"/>
-         	<tocitem text="Fuzzer" target="ui.dialogs.options.fuzz"/>
-         	<tocitem text="Sesje HTTP" target="ui.dialogs.options.httpsessions"/>
+			<tocitem text="Database" target="ui.dialogs.options.database"/>
+         	<tocitem text="Display" target="ui.dialogs.options.view"/>
+         	<tocitem text="Dynamic SSL Certificates" target="ui.dialogs.options.dynsslcert"/>
+            <tocitem text="Extensions" target="ui.dialogs.options.ext"/>
+         	<tocitem text="Http Sessions" target="ui.dialogs.options.httpsessions"/>
             <tocitem text="Global Exclude URL" target="ui.dialogs.options.globalexcludeurl"/>
          	<tocitem text="Keyboard" target="ui.dialogs.options.keyboard"/>
-         	<tocitem text="Języki" target="ui.dialogs.options.language"/>
-         	<tocitem text="Lokalne proxy" target="ui.dialogs.options.localproxy"/>
+         	<tocitem text="Language" target="ui.dialogs.options.language"/>
+         	<tocitem text="Local Proxy" target="ui.dialogs.options.localproxy"/>
          	<tocitem text="Passive Scan Rules" target="ui.dialogs.options.pscanrules"/>
          	<tocitem text="Passive Scan Tags" target="ui.dialogs.options.pscan"/>
-         	<tocitem text="Pająk" target="ui.dialogs.options.script"/>
+         	<tocitem text="Scripts" target="ui.dialogs.options.script"/>
          	<tocitem text="Search" target="ui.dialogs.options.search"/>
          	<tocitem text="Spider" target="ui.dialogs.options.spider"/>
          </tocitem>
-         <tocitem text="Prześlij Ponownie" target="ui.dialogs.persistsession"/>
-         <tocitem text="Resend" target="ui.dialogs.resend"/>
-         <tocitem text="Sesja" target="ui.dialogs.scanpolicymgr">
-	         <tocitem text="Właściwości sesji" target="ui.dialogs.scanpolicy"/>
+         <tocitem text="Opcje" target="ui.dialogs.persistsession"/>
+         <tocitem text="Prześlij Ponownie" target="ui.dialogs.resend"/>
+         <tocitem text="Scan Policy Manager" target="ui.dialogs.scanpolicymgr">
+	         <tocitem text="Scan Policy" target="ui.dialogs.scanpolicy"/>
          </tocitem>
-         <tocitem text="Pająk" target="ui.dialogs.sessprop">
-	         <tocitem text="Session Properties" target="ui.dialogs.sessprop"/>
+         <tocitem text="Sesja" target="ui.dialogs.sessprop">
+	         <tocitem text="Właściwości sesji" target="ui.dialogs.sessprop"/>
 	         <tocitem text="Session Contexts" target="ui.dialogs.contexts"/>
          </tocitem>
-         <tocitem text="Spider" target="ui.dialogs.spider"/>
+         <tocitem text="Pająk" target="ui.dialogs.spider"/>
       </tocitem>
       <tocitem text="The Footer" target="ui.footer"/>
    </tocitem>
@@ -133,6 +128,7 @@
    <tocitem text="Add Ons" target="addon.introduction" tocid="addons" />
    
    <tocitem text="Releases" target="zap.releases">
+      <tocitem text="2.4.0.1" target="zap.releases.2.4.0.1"/>
       <tocitem text="2.4.0" target="zap.releases.2.4.0"/>
       <tocitem text="2.3.1" target="zap.releases.2.3.1"/>
       <tocitem text="2.3.0" target="zap.releases.2.3.0"/>

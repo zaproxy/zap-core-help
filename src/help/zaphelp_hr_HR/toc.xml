@@ -26,7 +26,6 @@
          <tocitem text="Break Points" target="start.concepts.breakpoints"/>
          <tocitem text="Contexts" target="start.concepts.contexts"/>
          <tocitem text="Filters" target="start.concepts.filters"/>
-         <tocitem text="Fuzzing" target="start.concepts.fuzz"/>
          <tocitem text="Globally Excluded URLs" target="start.concepts.globalexcludeurl"/>
          <tocitem text="Http Sessions" target="start.concepts.httpsessions"/>
          <tocitem text="Intercepting Proxy" target="start.concepts.intercept"/>
@@ -69,7 +68,6 @@
          <tocitem text="Upozorenja" target="ui.tabs.alerts"/>
          <tocitem text="Active Scan" target="ui.tabs.ascan"/>
          <tocitem text="Spider" target="ui.tabs.spider"/>
-         <tocitem text="Fuzzer" target="ui.tabs.fuzz"/>
          <tocitem text="Params" target="ui.tabs.params"/>
          <tocitem text="Http Sessions" target="ui.tabs.httpsessions"/>
          <tocitem text="Output" target="ui.tabs.output"/>
@@ -83,7 +81,6 @@
          <tocitem text="Encode/Decode/Hash" target="ui.dialogs.enc_dec"/>
          <tocitem text="Filter" target="ui.dialogs.filter"/>
          <tocitem text="Find" target="ui.dialogs.find"/>
-         <tocitem text="Fuzzer" target="ui.dialogs.fuzz"/>
          <tocitem text="History Filter" target="ui.dialogs.historyfilter"/>
          <tocitem text="Manual Request Editor" target="ui.dialogs.manreq"/>
          <tocitem text="Manage Add-ons" target="ui.dialogs.manageaddons"/>
@@ -93,7 +90,6 @@
          	<tocitem text="Active Scan Input Vectors" target="ui.dialogs.options.ascaninput"/>
          	<tocitem text="Anti CSRF Tokens" target="ui.dialogs.options.anticsrf"/>
          	<tocitem text="API" target="ui.dialogs.options.api"/>
-         	<tocitem text="Authentication" target="ui.dialogs.options.authentication"/>
             <tocitem text="Breakpoints" target="ui.dialogs.options.breakpoints"/>
          	<tocitem text="Certificate" target="ui.dialogs.options.certificate"/>
          	<tocitem text="Check for Updates" target="ui.dialogs.options.checkforupdates"/>
@@ -102,7 +98,6 @@
          	<tocitem text="Display" target="ui.dialogs.options.view"/>
          	<tocitem text="Dynamic SSL Certificates" target="ui.dialogs.options.dynsslcert"/>
             <tocitem text="Extensions" target="ui.dialogs.options.ext"/>
-         	<tocitem text="Fuzzer" target="ui.dialogs.options.fuzz"/>
          	<tocitem text="Http Sessions" target="ui.dialogs.options.httpsessions"/>
             <tocitem text="Global Exclude URL" target="ui.dialogs.options.globalexcludeurl"/>
          	<tocitem text="Keyboard" target="ui.dialogs.options.keyboard"/>
@@ -133,6 +128,7 @@
    <tocitem text="Add Ons" target="addon.introduction" tocid="addons" />
    
    <tocitem text="Releases" target="zap.releases">
+      <tocitem text="2.4.0.1" target="zap.releases.2.4.0.1"/>
       <tocitem text="2.4.0" target="zap.releases.2.4.0"/>
       <tocitem text="2.3.1" target="zap.releases.2.3.1"/>
       <tocitem text="2.3.0" target="zap.releases.2.3.0"/>

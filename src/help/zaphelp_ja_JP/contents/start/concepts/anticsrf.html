@@ -12,8 +12,11 @@ CSRF 処理対策
 Anti CSRFトークンはクロスサイトリクエストフォージェリ(CSRF)攻撃を防ぐ為に使われている(疑似)ランダムのパラメータです。<br>しかしながら、これはペネトレーションテスターの仕事を困難なものにしてしまいます。特にトークンがフォームがリクエストされる度に毎回生成される場合です。<br>
 </p>
 <p>
-ZAPはanti CSRFトークンを単に属性名で検知します。属性名は<a href="../../ui/dialogs/options/anticsrf.html">オプション Anti CSRF画面</a>を使って設定されたものがanti CSRFトークンとみなされます。<br/>ZAPがこれらのトークンを検知するとトークン値とURLが生成したトークンを記録します。<br/>
-<a href="ascan.html">動的スキャナー</a>および<a href="fuzz.html">fuzzer</a>の両方とも、要求時に自動的にトークンを再生成するオプションを持っています。
+ZAP detects anti CSRF tokens purely by attribute names - the list of attribute names considered to be anti CSRF tokens
+is configured using the <a href="../../ui/dialogs/options/anticsrf.html">Options Anti CSRF screen</a>.<br/>
+When ZAP detects these tokens it records the token value and which URL generated the token.<br/>
+Other scanners, like <a href="ascan.html">active scanner</a>, have options which
+cause ZAP to automatically regenerate the tokens when required.
 </p>
 
 <h2>関連情報</h2>

@@ -26,19 +26,18 @@
          <tocitem text="Точки остановки" target="start.concepts.breakpoints"/>
          <tocitem text="Контексты" target="start.concepts.contexts"/>
          <tocitem text="Фильтры" target="start.concepts.filters"/>
-         <tocitem text="Fuzzing" target="start.concepts.fuzz"/>
          <tocitem text="Globally Excluded URLs" target="start.concepts.globalexcludeurl"/>
-         <tocitem text="HTTP-сессии" target="start.concepts.httpsessions"/>
-         <tocitem text="Intercepting Proxy" target="start.concepts.intercept"/>
+         <tocitem text="Http Sessions" target="start.concepts.httpsessions"/>
+         <tocitem text="HTTP-сессии" target="start.concepts.intercept"/>
          <tocitem text="Modes" target="start.concepts.modes"/>
          <tocitem text="Notes" target="start.concepts.notes"/>
-         <tocitem text="Пассивное сканирование" target="start.concepts.pscan"/>
-         <tocitem text="Scan Policies" target="start.concepts.scanpolicy"/>
+         <tocitem text="Passive Scan" target="start.concepts.pscan"/>
+         <tocitem text="Пассивное сканирование" target="start.concepts.scanpolicy"/>
          <tocitem text="Scope" target="start.concepts.scope"/>
          <tocitem text="Session Management" target="start.concepts.sessmanag"/>
-         <tocitem text="Паук" target="start.concepts.spider"/>
-         <tocitem text="Теги" target="start.concepts.tags"/>
-         <tocitem text="Users" target="start.concepts.users"/>
+         <tocitem text="Spider" target="start.concepts.spider"/>
+         <tocitem text="Паук" target="start.concepts.tags"/>
+         <tocitem text="Теги" target="start.concepts.users"/>
       </tocitem>
       <tocitem text="Scanner Rules" target="start.check"/>
       <tocitem text="A Simple Penetration Test" target="start.pentest"/>
@@ -69,10 +68,9 @@
          <tocitem text="Оповещения" target="ui.tabs.alerts"/>
          <tocitem text="Активное Сканирование" target="ui.tabs.ascan"/>
          <tocitem text="Паук" target="ui.tabs.spider"/>
-         <tocitem text="Фаззер" target="ui.tabs.fuzz"/>
-         <tocitem text="Параметры" target="ui.tabs.params"/>
-         <tocitem text="HTTP-сессии" target="ui.tabs.httpsessions"/>
-         <tocitem text="Вывод" target="ui.tabs.output"/>
+         <tocitem text="Фаззер" target="ui.tabs.params"/>
+         <tocitem text="Параметры" target="ui.tabs.httpsessions"/>
+         <tocitem text="HTTP-сессии" target="ui.tabs.output"/>
       </tocitem>
       <tocitem text="The Dialogs" target="ui.dialogs">
          <tocitem text="Активное Сканирование" target="ui.dialogs.advascan"/>
@@ -83,47 +81,44 @@
          <tocitem text="Кодировать/декодировать/хэшировать" target="ui.dialogs.enc_dec"/>
          <tocitem text="Фильтр" target="ui.dialogs.filter"/>
          <tocitem text="Найти" target="ui.dialogs.find"/>
-         <tocitem text="Фаззер" target="ui.dialogs.fuzz"/>
-         <tocitem text="History Filter" target="ui.dialogs.historyfilter"/>
-         <tocitem text="Редактор запросов" target="ui.dialogs.manreq"/>
-         <tocitem text="Управление дополнениями" target="ui.dialogs.manageaddons"/>
-         <tocitem text="Управление тегами" target="ui.dialogs.managetags"/>
-         <tocitem text="Параметры" target="ui.dialogs.options">
-         	<tocitem text="Активное Сканирование" target="ui.dialogs.options.ascan"/>
+         <tocitem text="Фаззер" target="ui.dialogs.historyfilter"/>
+         <tocitem text="Manual Request Editor" target="ui.dialogs.manreq"/>
+         <tocitem text="Редактор запросов" target="ui.dialogs.manageaddons"/>
+         <tocitem text="Управление дополнениями" target="ui.dialogs.managetags"/>
+         <tocitem text="Управление тегами" target="ui.dialogs.options">
+         	<tocitem text="Active Scan" target="ui.dialogs.options.ascan"/>
          	<tocitem text="Active Scan Input Vectors" target="ui.dialogs.options.ascaninput"/>
-         	<tocitem text="Анти-CSRF токены" target="ui.dialogs.options.anticsrf"/>
+         	<tocitem text="Anti CSRF Tokens" target="ui.dialogs.options.anticsrf"/>
          	<tocitem text="API" target="ui.dialogs.options.api"/>
-         	<tocitem text="Аутентификация" target="ui.dialogs.options.authentication"/>
-            <tocitem text="Прерывания" target="ui.dialogs.options.breakpoints"/>
-         	<tocitem text="Сертификат" target="ui.dialogs.options.certificate"/>
+            <tocitem text="Breakpoints" target="ui.dialogs.options.breakpoints"/>
+         	<tocitem text="Certificate" target="ui.dialogs.options.certificate"/>
          	<tocitem text="Check for Updates" target="ui.dialogs.options.checkforupdates"/>
-			<tocitem text="Соединение" target="ui.dialogs.options.connection"/>
-			<tocitem text="База данных" target="ui.dialogs.options.database"/>
-         	<tocitem text="Отображение" target="ui.dialogs.options.view"/>
-         	<tocitem text="Динамические SSL-сертификаты" target="ui.dialogs.options.dynsslcert"/>
-            <tocitem text="Расширения" target="ui.dialogs.options.ext"/>
-         	<tocitem text="Фаззер" target="ui.dialogs.options.fuzz"/>
-         	<tocitem text="HTTP-сессии" target="ui.dialogs.options.httpsessions"/>
+			<tocitem text="Connection" target="ui.dialogs.options.connection"/>
+			<tocitem text="Database" target="ui.dialogs.options.database"/>
+         	<tocitem text="Display" target="ui.dialogs.options.view"/>
+         	<tocitem text="Dynamic SSL Certificates" target="ui.dialogs.options.dynsslcert"/>
+            <tocitem text="Extensions" target="ui.dialogs.options.ext"/>
+         	<tocitem text="Http Sessions" target="ui.dialogs.options.httpsessions"/>
             <tocitem text="Global Exclude URL" target="ui.dialogs.options.globalexcludeurl"/>
          	<tocitem text="Keyboard" target="ui.dialogs.options.keyboard"/>
-         	<tocitem text="Язык" target="ui.dialogs.options.language"/>
-         	<tocitem text="Локальный прокси-сервер" target="ui.dialogs.options.localproxy"/>
+         	<tocitem text="Language" target="ui.dialogs.options.language"/>
+         	<tocitem text="Local Proxy" target="ui.dialogs.options.localproxy"/>
          	<tocitem text="Passive Scan Rules" target="ui.dialogs.options.pscanrules"/>
          	<tocitem text="Passive Scan Tags" target="ui.dialogs.options.pscan"/>
-         	<tocitem text="Паук" target="ui.dialogs.options.script"/>
+         	<tocitem text="Scripts" target="ui.dialogs.options.script"/>
          	<tocitem text="Search" target="ui.dialogs.options.search"/>
          	<tocitem text="Spider" target="ui.dialogs.options.spider"/>
          </tocitem>
-         <tocitem text="Переслать" target="ui.dialogs.persistsession"/>
-         <tocitem text="Resend" target="ui.dialogs.resend"/>
-         <tocitem text="Сессия" target="ui.dialogs.scanpolicymgr">
-	         <tocitem text="Свойства сессии" target="ui.dialogs.scanpolicy"/>
+         <tocitem text="Параметры" target="ui.dialogs.persistsession"/>
+         <tocitem text="Переслать" target="ui.dialogs.resend"/>
+         <tocitem text="Scan Policy Manager" target="ui.dialogs.scanpolicymgr">
+	         <tocitem text="Scan Policy" target="ui.dialogs.scanpolicy"/>
          </tocitem>
-         <tocitem text="Паук" target="ui.dialogs.sessprop">
-	         <tocitem text="Session Properties" target="ui.dialogs.sessprop"/>
+         <tocitem text="Сессия" target="ui.dialogs.sessprop">
+	         <tocitem text="Свойства сессии" target="ui.dialogs.sessprop"/>
 	         <tocitem text="Session Contexts" target="ui.dialogs.contexts"/>
          </tocitem>
-         <tocitem text="Spider" target="ui.dialogs.spider"/>
+         <tocitem text="Паук" target="ui.dialogs.spider"/>
       </tocitem>
       <tocitem text="The Footer" target="ui.footer"/>
    </tocitem>
@@ -133,6 +128,7 @@
    <tocitem text="Add Ons" target="addon.introduction" tocid="addons" />
    
    <tocitem text="Releases" target="zap.releases">
+      <tocitem text="2.4.0.1" target="zap.releases.2.4.0.1"/>
       <tocitem text="2.4.0" target="zap.releases.2.4.0"/>
       <tocitem text="2.3.1" target="zap.releases.2.3.1"/>
       <tocitem text="2.3.0" target="zap.releases.2.3.0"/>
