@@ -22,7 +22,30 @@ If enabled then the API will only be available via HTTPS. Otherwise it will be a
 <H3>API Key</H3>
 
 A key that must be specified on all API 'actions' and some 'other' operations.<br/>
+The API key is used to prevent malicious sites from accessing the ZAP API.<br/>
 It is strongly recommended that you set a key unless you are using ZAP in a completely isolated environment.<br/>
+
+<H3>Disable the API Key</H3>
+
+Selecting this option disables the API key.<br/>
+This is not recommended unless you are using ZAP in a completely isolated environment, as it allows malicious sites to access the ZAP API.
+
+<H3>Report error details via API</H3>
+
+If this option is selected then more error details are returned via the API.<br/>
+This is not recommended except for debugging purposes as these error messages can leak information to malicious sites.<br/>
+Note that the full error details are always written to the ZAP log file. 
+
+<H3>Autofill API key in the API UI</H3>
+
+If this option is selected then the API key is automatically included in the API UI.<br/>
+This is not recommended unless you are using ZAP in a completely isolated environment, as it allows malicious sites to access the ZAP API Key.<br/>
+
+<H3>Enable JSONP</H3>
+
+Selecting this option enables the JSONP format.<br/>
+This can be useful for some applications, but it is generally not recommended as it increases the ZAP attack surface area, ie the features that a malicious site can abuse.<br/>
+If JSONP is enabled then all API operations using JSONP (including views) will require the API key to prevent malicious sites from accessing sensitive information maintained by ZAP, such as session keys. 
 
 <H2>See also</H2>
 <table>
