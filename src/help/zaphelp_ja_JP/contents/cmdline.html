@@ -22,22 +22,23 @@ ZAPは以下のコマンドラインオプションをサポートしていま�
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-host</td><td>構成ファイルで指定されたプロキシで使用されるホストを上書きします。</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-port</td><td>構成ファイルで指定されているプロキシに使用されるポートを上書きします</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-version</td><td>ZAPのバージョンを報告します</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-newsession</td><td>指定された場所 (セッションへの完全パス) で新しいセッションを作成します</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-session</td><td>ZAP を開始した後、指定されたセッションで開きます（セッションへの完全パス）。</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-newsession</td><td>Creates a new session at the given location</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-session</td><td>Opens the given session after starting ZAP</td></tr>
 </table>
 <br>
 オプション '-session と '-newsession' はどちらかしか選べません。両方のオプションが設定されている場合 、エラーが表示されZAPは終了します（GUIでなければ)。
+<br>
+Relative paths to session file are resolved against the "session" directory located in ZAP's home directory (default or specified with -dir option).
 <br/>
-ConfigurationキーはconfigurationファイルのXML中での場所をドット記法を使って指定してください。
-例:<br/>
+Configuration keys should be specified using the dot notation based their location in the XML of the configuration file, eg:<br/>
 <pre>-config api.key=12345 -config connection.timeoutInSecs=60</pre>  
-アドオンによってコマンド ライン オプションを追加できることに気をつけてください。
+Note that add-ons can add extra command line options.
 
 <p>
 例:
 	<ul>
 		<li>指定したパスに作成された新しいセッションで ZAP 'daemon' モードを開始します。
-			<pre>-daemon -newsession /path/to/new/session</pre>
+			<pre>-daemon -newsession session</pre>
 		</li>
 		<li>既存のセッションの最後のスキャンのレポートを作成し、そしてZAPを終了します。
 			<pre>-last_scan_report /path/to/save/report.xml -session /path/to/existing/session -cmd</pre>

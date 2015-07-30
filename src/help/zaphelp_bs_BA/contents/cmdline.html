@@ -22,11 +22,13 @@ ZAP podržava sljedeće opcije iz komandne linije:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-host</td><td>Overrides the host used for proxying specified in the configuration file</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-port</td><td>Overrides the port used for proxying specified in the configuration file</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-version</td><td>Reports the ZAP version</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-newsession</td><td>Creates a new session at the given location (it expects the full path to the session)</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-session</td><td>Opens the given session after starting ZAP (it expects the full path to the session).</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-newsession</td><td>Creates a new session at the given location</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-session</td><td>Opens the given session after starting ZAP</td></tr>
 </table>
 <br>
 The options '-session' and '-newsession' are mutually exclusive. An error will be shown and ZAP exit (if not in GUI) when both options are set.
+<br>
+Relative paths to session file are resolved against the "session" directory located in ZAP's home directory (default or specified with -dir option).
 <br/>
 Configuration keys should be specified using the dot notation based their location in the XML of the configuration file, eg:<br/>
 <pre>-config api.key=12345 -config connection.timeoutInSecs=60</pre>  
@@ -36,7 +38,7 @@ Note that add-ons can add extra command line options.
 Examples:
 	<ul>
 		<li>Start ZAP in 'daemon' mode with a new session created at a given path:
-			<pre>-daemon -newsession /path/to/new/session</pre>
+			<pre>-daemon -newsession session</pre>
 		</li>
 		<li>Create a report of the last scan of an existing session and exit ZAP once finished:
 			<pre>-last_scan_report /path/to/save/report.xml -session /path/to/existing/session -cmd</pre>

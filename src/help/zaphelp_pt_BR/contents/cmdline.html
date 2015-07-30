@@ -22,21 +22,23 @@ O ZAP suporta as seguintes opções em linha de comando:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-host</td><td>Substitui o host especificado no arquivo de configuração para ser usado como proxy</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-port</td><td>Substitui a porta do proxy especificado no arquivo de configuração</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-version</td><td>Informa a versão do ZAP</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-newsession</td><td>Cria uma nova sessão no local determinado (espera que seja informado o caminho completo para a sessão)</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-session</td><td>Abre a sessão solicitada depois que o ZAP é iniciado (informe o caminho completo para a sessão).</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-newsession</td><td>Creates a new session at the given location</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-session</td><td>Opens the given session after starting ZAP</td></tr>
 </table>
 <br>
 As opções '-sessão ' e '-newsession' são mutuamente exclusivas - usa-se uma ou a outra. Se você tentar usar as duas surgirá um aviso de erro e o ZAP será encerrado (se não estiver em GUI - interface gráfica).
+<br>
+Relative paths to session file are resolved against the "session" directory located in ZAP's home directory (default or specified with -dir option).
 <br/>
-Chaves de configuração devem ser especificadas usando-se a notação de ponto com base em sua localização no XML do arquivo de configuração. Por exemplo:<br/>
+Configuration keys should be specified using the dot notation based their location in the XML of the configuration file, eg:<br/>
 <pre>-config api.key=12345 -config connection.timeoutInSecs=60</pre>  
-Observe que Complementos podem adicionar opções extras de linha de comando.
+Note that add-ons can add extra command line options.
 
 <p>
 Exemplos:
 	<ul>
 		<li>Inicie o ZAP no modo 'daemon' com uma nova sessão criada em um determinado caminho assim:
-			<pre>-daemon - newsession /path/to/new/session</pre>
+			<pre>-daemon -newsession session</pre>
 		</li>
 		<li>Crie um relatório da última varredura de uma sessão existente e encerre o ZAP em seguida:
 			<pre>-last_scan_report /path/to/save/report.xml -session /path/to/existing/session -cmd</pre>

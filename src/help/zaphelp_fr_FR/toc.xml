@@ -128,7 +128,7 @@
    <tocitem text="Accessoires" target="addon.introduction" tocid="addons" />
    
    <tocitem text="Releases" target="zap.releases">
-      <tocitem text="2.4.0.1" target="zap.releases.2.4.0.1"/>
+      <tocitem text="2.4.1" target="zap.releases.2.4.1"/>
       <tocitem text="2.4.0" target="zap.releases.2.4.0"/>
       <tocitem text="2.3.1" target="zap.releases.2.3.1"/>
       <tocitem text="2.3.0" target="zap.releases.2.3.0"/>
