@@ -12,6 +12,15 @@
 This release includes important security fixes - users are urged to upgrade asap.
 </p>
 <p>
+One of the changes means that an API key is created by default, which means that any applications using the ZAP API will fail unless they are updated to use that key.<br>
+The API Key can be found in the <a href="../ui/dialogs/options/api.html">API Options screen</a><br>
+You can also set it from the command line using an option like: 
+<pre>-config api.key=change-me-9203935709</pre><br>
+For more details see <a href="https://github.com/zaproxy/zaproxy/wiki/FAQapikey">https://github.com/zaproxy/zaproxy/wiki/FAQapikey</a><br>
+ 
+</p>
+
+<p>
 The following changes were made in this release:
 </p>
 
