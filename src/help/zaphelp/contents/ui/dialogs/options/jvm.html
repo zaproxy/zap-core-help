@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<TITLE>
+Options JVM screen
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H1>Options JVM screen</H1>
+<p>
+This screen allows you to configure the JVM options used when starting ZAP.
+</p>
+
+<H3>JVM Options</H3>
+A free format text field which will be added to the Java command line call
+when invoking ZAP via either zap.sh or zap.bat.
+</p>
+<p>
+The option was added so that the Java maximum memory allocation pool size can be set, 
+which is of the form: -Xmx<i>n</i> where <i>n</i> is the size in bytes.<br>
+Good values for this field could be:
+<ul>
+<li>-Xmx256m</li>
+<li>-Xmx512m</li>
+<li>-Xmx1024m</li>
+</ul>
+<p>
+Unlike the other ZAP options these are held in the file ".ZAP_JVM.properties" in the user's home directory.<br>
+If you make a mistake when setting these options then ZAP may fail to start.<br>
+If that happens then deleting this file should fix the problem.
+</p>
+<p>
+Note that these options are not used when starting ZAP via the Windows exe.
+</p>
+
+<H2>See also</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+</table>
+
+<H2>External links</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="http://docs.oracle.com/javase/7/docs/technotes/tools/windows/java.html#CBBIJCHG">Java 7 options</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="http://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html#BABDJJFI">Java 8 options</a></td></tr>
+</table>
+
+</BODY>
+</HTML>
