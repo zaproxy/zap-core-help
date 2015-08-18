@@ -26,7 +26,14 @@ Good values for this field could be:
 <li>-Xmx1024m</li>
 </ul>
 <p>
-Unlike the other ZAP options these are held in the file ".ZAP_JVM.properties" in the user's home directory.<br>
+Unlike the other ZAP options these are held in the file ".ZAP_JVM.properties" in the user's default ZAP directory,
+which depends on the OS being used:
+<ul>
+<li>Windows 7/8: C:\Users\<i>&lt;username&gt;</i>\OWASP ZAP</li>
+<li>Windows XP: C:\Documents and Settings\<i>&lt;username&gt;</i>\OWASP ZAP</li>
+<li>Linux: ~/.ZAP</li>
+<li>Mac OS: ~/Library/Application Support/ZAP</li>
+</ul>
 If you make a mistake when setting these options then ZAP may fail to start.<br>
 If that happens then deleting this file should fix the problem.
 </p>
