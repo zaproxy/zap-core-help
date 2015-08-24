@@ -109,6 +109,7 @@
         <mapID target="zap.todo" url="contents/todo.html" />
      	<mapID target="ui.dialogs.options.ascan" url="contents/ui/dialogs/options/ascan.html"/>
      	<mapID target="ui.dialogs.options.ascaninput" url="contents/ui/dialogs/options/ascaninput.html"/>
+     	<mapID target="ui.dialogs.options.alert" url="contents/ui/dialogs/options/alert.html"/>
      	<mapID target="ui.dialogs.options.anticsrf" url="contents/ui/dialogs/options/anticsrf.html"/>
      	<mapID target="ui.dialogs.options.api" url="contents/ui/dialogs/options/api.html"/>
      	<mapID target="ui.dialogs.options.ext" url="contents/ui/dialogs/options/ext.html"/>
