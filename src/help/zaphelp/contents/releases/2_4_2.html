@@ -15,6 +15,7 @@ The following changes were made in this release:
 
 <H2>Enhancements:</H2>
 <ul>
+<li>Issue 1306 : Java PermSize command line flag removed in Java 8</li>
 <li>Issue 1593 : Auto-scroll in Spider tab</li>
 <li>Issue 1600 : Dont report X-Frame-Options alert on 403 and 404 pages</li>
 <li>Issue 1654 : httpSessions/createEmptySession should initialize a site that was not previously visited</li>
@@ -34,15 +35,12 @@ The following changes were made in this release:
 
 <H2>Bug fixes:</H2>
 <ul>
-<li>Issue 1124 : VariantURLQuery throwing URIExceptions on active scan</li>
-<li>Issue 1306 : Java PermSize command line flag removed in Java 8</li>
-<li>Issue 1384 : HttpSessions API does not accept URIs with path component</li>
 <li>Issue 1760 : Unable to initialize home directory! xml/config.xml (No such file or directory)</li>
 <li>Issue 1763 : Automatic check for updates fails to report new versions</li>
 <li>Issue 1770 : Exceptions when calling (some) context API actions in daemon mode</li>
 <li>Issue 1771 : For OSX the zap.sh in the core download hard-codes the relative java location</li>
 <li>Issue 1772 : On OS X, Found Java version lies</li>
-<li>Issue 1777 : Cannot locate configuration source null.policy after opening Active Scan dialogue</li>
+<li>Issue 1777 : "Cannot locate configuration source null.policy" after opening "Active Scan" dialogue</li>
 <li>Issue 1781 : ZAP errors with "Unsupported option '-psn_x_xxxxxxx'" on OS X</li>
 <li>Issue 1784 : NullPointerException when active scanning through the API with a target without scheme</li>
 <li>Issue 1785 : Plugin enabled even if dependencies are not, "hangs" active scan</li>
