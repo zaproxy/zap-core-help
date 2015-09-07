@@ -88,6 +88,7 @@
          <tocitem text="Upravljaj Tagovima" target="ui.dialogs.options">
          	<tocitem text="Active Scan" target="ui.dialogs.options.ascan"/>
          	<tocitem text="Active Scan Input Vectors" target="ui.dialogs.options.ascaninput"/>
+         	<tocitem text="Alerts" target="ui.dialogs.options.alert"/>
          	<tocitem text="Anti CSRF Tokens" target="ui.dialogs.options.anticsrf"/>
          	<tocitem text="API" target="ui.dialogs.options.api"/>
             <tocitem text="Breakpoints" target="ui.dialogs.options.breakpoints"/>
@@ -100,6 +101,7 @@
             <tocitem text="Extensions" target="ui.dialogs.options.ext"/>
          	<tocitem text="Http Sessions" target="ui.dialogs.options.httpsessions"/>
             <tocitem text="Global Exclude URL" target="ui.dialogs.options.globalexcludeurl"/>
+         	<tocitem text="jvm" target="ui.dialogs.options.jvm"/>
          	<tocitem text="Keyboard" target="ui.dialogs.options.keyboard"/>
          	<tocitem text="Language" target="ui.dialogs.options.language"/>
          	<tocitem text="Local Proxy" target="ui.dialogs.options.localproxy"/>
@@ -128,24 +130,25 @@
    <tocitem text="Dodaci" target="addon.introduction" tocid="addons" />
    
    <tocitem text="Izdanja" target="zap.releases">
+      <tocitem text="2.4.2" target="zap.releases.2.4.2"/>
       <tocitem text="2.4.1" target="zap.releases.2.4.1"/>
       <tocitem text="2.4.0" target="zap.releases.2.4.0"/>
       <tocitem text="2.3.1" target="zap.releases.2.3.1"/>
       <tocitem text="2.3.0" target="zap.releases.2.3.0"/>
-      <tocitem text="2.2.2" target="zap.releases.2.2.2"/>
-      <tocitem text="2.2.0" target="zap.releases.2.2.1"/>
-      <tocitem text="2.1.0" target="zap.releases.2.2.0"/>
-      <tocitem text="2.0.0" target="zap.releases.2.1.0"/>
-      <tocitem text="1.4.1" target="zap.releases.2.0.0"/>
-      <tocitem text="1.4.0" target="zap.releases.1.4.1"/>
-      <tocitem text="1.3.4" target="zap.releases.1.4.0"/>
-      <tocitem text="1.3.3" target="zap.releases.1.3.4"/>
-      <tocitem text="1.3.2" target="zap.releases.1.3.3"/>
-      <tocitem text="1.3.1" target="zap.releases.1.3.2"/>
-      <tocitem text="1.3.0" target="zap.releases.1.3.1"/>
-      <tocitem text="1.2.0" target="zap.releases.1.3.0"/>
-      <tocitem text="1.1.0" target="zap.releases.1.2.0"/>
-      <tocitem text="1.0.0" target="zap.releases.1.1.0"/>
+      <tocitem text="2.2.0" target="zap.releases.2.2.2"/>
+      <tocitem text="2.1.0" target="zap.releases.2.2.1"/>
+      <tocitem text="2.0.0" target="zap.releases.2.2.0"/>
+      <tocitem text="1.4.1" target="zap.releases.2.1.0"/>
+      <tocitem text="1.4.0" target="zap.releases.2.0.0"/>
+      <tocitem text="1.3.4" target="zap.releases.1.4.1"/>
+      <tocitem text="1.3.3" target="zap.releases.1.4.0"/>
+      <tocitem text="1.3.2" target="zap.releases.1.3.4"/>
+      <tocitem text="1.3.1" target="zap.releases.1.3.3"/>
+      <tocitem text="1.3.0" target="zap.releases.1.3.2"/>
+      <tocitem text="1.2.0" target="zap.releases.1.3.1"/>
+      <tocitem text="1.1.0" target="zap.releases.1.3.0"/>
+      <tocitem text="1.0.0" target="zap.releases.1.2.0"/>
+      <tocitem text="1.1.0" target="zap.releases.1.1.0"/>
       <tocitem text="1.0.0" target="zap.releases.1.0.0"/>
    </tocitem>
    <tocitem text="Paros Proxy" target="zap.paros"/>

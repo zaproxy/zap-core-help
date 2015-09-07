@@ -71,25 +71,26 @@
     <indexitem text="release 2.2.1" target="zap.releases.2.3.1" />
     <indexitem text="release 2.2.2" target="zap.releases.2.4.0" />
     <indexitem text="release 2.3.0" target="zap.releases.2.4.1" />
-    <indexitem text="release 2.3.1" target="zap.releases" />
-    <indexitem text="release 2.4.0" target="ui.tabs.request" />
-    <indexitem text="releases" target="ui.dialogs.resend" />
-    <indexitem text="aba de requisição" target="ui.tabs.response" />
-    <indexitem text="diálogo de reenvio" target="start.check" />
-    <indexitem text="aba de respostas" target="start.concepts.scanpolicy" />
-    <indexitem text="regras de varredura" target="ui.dialogs.scanpolicy" />
-    <indexitem text="política de varredura" target="ui.dialogs.scanpolicymgr" />
-    <indexitem text="diálogo da política de varredura" target="ui.tabs.search" />
-    <indexitem text="diálogo do gerenciador da política de varredura" target="ui.dialogs.contexts" />
-    <indexitem text="aba de busca" target="ui.dialogs.sessprop" />
-    <indexitem text="diálogo dos contextos de sessão" target="ui.tabs.sites" />
-    <indexitem text="diálogo das propriedades de sessão" target="start.concepts.spider" />
-    <indexitem text="aba de sites" target="ui.dialogs.spider" />
-    <indexitem text="spider" target="ui.tabs.spider" />
-    <indexitem text="diálogo do spider" target="start.concepts.tags" />
+    <indexitem text="release 2.3.1" target="zap.releases.2.4.2" />
+    <indexitem text="release 2.4.0" target="zap.releases" />
+    <indexitem text="releases" target="ui.tabs.request" />
+    <indexitem text="aba de requisição" target="ui.dialogs.resend" />
+    <indexitem text="diálogo de reenvio" target="ui.tabs.response" />
+    <indexitem text="aba de respostas" target="start.check" />
+    <indexitem text="regras de varredura" target="start.concepts.scanpolicy" />
+    <indexitem text="política de varredura" target="ui.dialogs.scanpolicy" />
+    <indexitem text="diálogo da política de varredura" target="ui.dialogs.scanpolicymgr" />
+    <indexitem text="diálogo do gerenciador da política de varredura" target="ui.tabs.search" />
+    <indexitem text="aba de busca" target="ui.dialogs.contexts" />
+    <indexitem text="diálogo dos contextos de sessão" target="ui.dialogs.sessprop" />
+    <indexitem text="diálogo das propriedades de sessão" target="ui.tabs.sites" />
+    <indexitem text="aba de sites" target="start.concepts.spider" />
+    <indexitem text="spider" target="ui.dialogs.spider" />
+    <indexitem text="diálogo do spider" target="ui.tabs.spider" />
+    <indexitem text="tags" target="start.concepts.tags" />
     <indexitem text="tags" target="ui.topmenu" />
-    <indexitem text="tags" target="ui.toptoolbar" />
-    <indexitem text="menu superior" target="ui.overview" />
-    <indexitem text="barra de ferramentas superior" target="ui.views" />
+    <indexitem text="menu superior" target="ui.toptoolbar" />
+    <indexitem text="barra de ferramentas superior" target="ui.overview" />
+    <indexitem text="views" target="ui.views" />
 
 </index>

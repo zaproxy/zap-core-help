@@ -71,6 +71,7 @@
     <indexitem text="release 2.3.1" target="zap.releases.2.3.1" />
     <indexitem text="release 2.4.0" target="zap.releases.2.4.0" />
     <indexitem text="release 2.4.1" target="zap.releases.2.4.1" />
+    <indexitem text="release 2.4.2" target="zap.releases.2.4.2" />
     <indexitem text="releases" target="zap.releases" />
     <indexitem text="request tab" target="ui.tabs.request" />
     <indexitem text="resend dialog" target="ui.dialogs.resend" />
@@ -83,8 +84,8 @@
     <indexitem text="session contexts dialog" target="ui.dialogs.contexts" />
     <indexitem text="session properties dialog" target="ui.dialogs.sessprop" />
     <indexitem text="sites tab" target="ui.tabs.sites" />
-    <indexitem text="spider" target="start.concepts.spider" />
-    <indexitem text=""pająka"" target="ui.dialogs.spider" />
+    <indexitem text=""pająka"" target="start.concepts.spider" />
+    <indexitem text="spider dialog" target="ui.dialogs.spider" />
     <indexitem text="spider tab" target="ui.tabs.spider" />
     <indexitem text="tags" target="start.concepts.tags" />
     <indexitem text="top level menu" target="ui.topmenu" />

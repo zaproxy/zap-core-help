@@ -71,25 +71,26 @@
     <indexitem text="リリース 2.2.2" target="zap.releases.2.3.1" />
     <indexitem text="リリース 2.3.0" target="zap.releases.2.4.0" />
     <indexitem text="リリース 2.3.1" target="zap.releases.2.4.1" />
-    <indexitem text="リリース 2.4.0" target="zap.releases" />
-    <indexitem text="リリース" target="ui.tabs.request" />
-    <indexitem text="リクエストタブ" target="ui.dialogs.resend" />
-    <indexitem text="再送信ダイアログ" target="ui.tabs.response" />
-    <indexitem text="レスポンスタブ" target="start.check" />
-    <indexitem text="スキャナールール" target="start.concepts.scanpolicy" />
-    <indexitem text="スキャンポリシー" target="ui.dialogs.scanpolicy" />
-    <indexitem text="スキャン ポリシーダイアログ" target="ui.dialogs.scanpolicymgr" />
-    <indexitem text="search tab" target="ui.tabs.search" />
-    <indexitem text="検索タブ" target="ui.dialogs.contexts" />
-    <indexitem text="セッション コンテキスト ダイアログ" target="ui.dialogs.sessprop" />
-    <indexitem text="セッション プロパティ ダイアログ" target="ui.tabs.sites" />
-    <indexitem text="サイトタブ" target="start.concepts.spider" />
-    <indexitem text="スパイダー" target="ui.dialogs.spider" />
-    <indexitem text="スパイダーダイアログ" target="ui.tabs.spider" />
-    <indexitem text="スパイダータブ" target="start.concepts.tags" />
-    <indexitem text="タグ" target="ui.topmenu" />
-    <indexitem text="トップレベルメニュー" target="ui.toptoolbar" />
-    <indexitem text="トップレベルツールバー" target="ui.overview" />
-    <indexitem text="uiの概要" target="ui.views" />
+    <indexitem text="リリース 2.4.0" target="zap.releases.2.4.2" />
+    <indexitem text="リリース" target="zap.releases" />
+    <indexitem text="リクエストタブ" target="ui.tabs.request" />
+    <indexitem text="再送信ダイアログ" target="ui.dialogs.resend" />
+    <indexitem text="レスポンスタブ" target="ui.tabs.response" />
+    <indexitem text="スキャナールール" target="start.check" />
+    <indexitem text="スキャンポリシー" target="start.concepts.scanpolicy" />
+    <indexitem text="スキャン ポリシーダイアログ" target="ui.dialogs.scanpolicy" />
+    <indexitem text="scan policy manager dialog" target="ui.dialogs.scanpolicymgr" />
+    <indexitem text="検索タブ" target="ui.tabs.search" />
+    <indexitem text="セッション コンテキスト ダイアログ" target="ui.dialogs.contexts" />
+    <indexitem text="セッション プロパティ ダイアログ" target="ui.dialogs.sessprop" />
+    <indexitem text="サイトタブ" target="ui.tabs.sites" />
+    <indexitem text="スパイダー" target="start.concepts.spider" />
+    <indexitem text="スパイダーダイアログ" target="ui.dialogs.spider" />
+    <indexitem text="スパイダータブ" target="ui.tabs.spider" />
+    <indexitem text="タグ" target="start.concepts.tags" />
+    <indexitem text="トップレベルメニュー" target="ui.topmenu" />
+    <indexitem text="トップレベルツールバー" target="ui.toptoolbar" />
+    <indexitem text="uiの概要" target="ui.overview" />
+    <indexitem text="views" target="ui.views" />
 
 </index>
