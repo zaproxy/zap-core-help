@@ -7,24 +7,16 @@
 <body bgcolor="#ffffff">
 	<h1>Usuários</h1>
 	<p>
-		Os usuários são as representações de ZAP para os usuários dos sites/webapps. Eles permitem que determinadas ações sejam executada a partir do ponto de vista de um usuário da aplicação. Para cada <b><a href="contexts.html">contexto</a></b>, um conjunto de usuários pode ser definido, podendo ser usado em ações relacionadas ao contexto. Most commonly, during various scans the
-		request messages can be sent from the point of view of a User.
+		Os usuários são as representações de ZAP para os usuários dos sites/webapps. Eles permitem que determinadas ações sejam executada a partir do ponto de vista de um usuário da aplicação. Para cada <b><a href="contexts.html">contexto</a></b>, um conjunto de usuários pode ser definido, podendo ser usado em ações relacionadas ao contexto. Normalmente, durante várias varreduras as mensagens de solicitação podem ser enviadas como sendo do ponto de vista de um usuário.
 	</p>
 
 	<p>
 		O conceito de usuário é bem ligado aos conceitos de <a
 			href="authentication.html">autenticação</a> e <a
-			href="sessionManagement.html">Gerenciamento de sessão</a>. Quando um usuário é usado pela primeira vez em algum lugar no ZAP, uma autenticação é realizada (de acordo com o método de autenticação definido para o contexto) e uma sessão é criada e configurada para este usuário (de acordo com o gerenciamento de sessão definido para o contexto). After that, requests sent from
-		the point of view of a User are modified (if necessary) and sent in
-		such a way that the web server identifies them as being sent by an
-		authenticated webapp/website user. Se uma mensagem é enviada da perspectiva de um usuário e a resposta recebida parece não autenticada (conforme identificado pelos <a href="authentication.html">indicadores de autenticação </a><i>logado</i> e <i>deslogado</i>), uma nova autenticação é executada e a sessão é atualizada.
+			href="sessionManagement.html">Gerenciamento de sessão</a>. Quando um usuário é usado pela primeira vez em algum lugar no ZAP, uma autenticação é realizada (de acordo com o método de autenticação definido para o contexto) e uma sessão é criada e configurada para este usuário (de acordo com o gerenciamento de sessão definido para o contexto). Depois disso, as solicitações enviadas a partir do ponto de vista de um usuário são modificadas (se necessário) e enviadas de forma a que o servidor web os identifica como sendo de um usuário autenticado no webapp/Web site. Se uma mensagem é enviada da perspectiva de um usuário e a resposta recebida parece não autenticada (conforme identificado pelos <a href="authentication.html">indicadores de autenticação </a><i>logado</i> e <i>deslogado</i>), uma nova autenticação é executada e a sessão é atualizada.
 	</p>
 
-	<p>In order to perform the authentication of a user on a website /
-		in a webapp, the Authentication Method defines how the authentication
-		is done (the process), while the necessary credentials (the exact
-		identifiers) are dependent on the user, so, in ZAP, they are
-		configured in the Users.</p>
+	<p>Para fazer a autenticação de um usuário num Web site ou em uma webapp, o método de autenticação define como a autenticação é feita (o processo), enquanto as credenciais necessárias (os identificadores exatos) são dependentes do usuário, de modo que no ZAP eles são configurados em 'Usuários'.</p>
 
 	<h2>Configurados através de</h2>
 	<table>
