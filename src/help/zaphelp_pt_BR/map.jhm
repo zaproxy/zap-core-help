@@ -20,6 +20,7 @@
         <mapID target="start.concepts.auth" url="contents/start/concepts/authentication.html" />
         <mapID target="start.concepts.breakpoints" url="contents/start/concepts/breakpoints.html" />
         <mapID target="start.concepts.contexts" url="contents/start/concepts/contexts.html" />
+        <mapID target="start.concepts.ddc" url="contents/start/concepts/ddc.html" />
         <mapID target="start.concepts.filters" url="contents/start/concepts/filters.html" />
         <mapID target="start.concepts.globalexcludeurl" url="contents/start/concepts/globalexcludeurl.html" />
         <mapID target="start.concepts.httpsessions" url="contents/start/concepts/httpsessions.html" />
@@ -31,6 +32,8 @@
         <mapID target="start.concepts.scope" url="contents/start/concepts/scope.html" />
         <mapID target="start.concepts.sessmanag" url="contents/start/concepts/sessionManagement.html" />
         <mapID target="start.concepts.spider" url="contents/start/concepts/spider.html" />
+        <mapID target="start.concepts.structmods" url="contents/start/concepts/structmods.html" />
+        <mapID target="start.concepts.structparams" url="contents/start/concepts/structparams.html" />
         <mapID target="start.concepts.tags" url="contents/start/concepts/tags.html" />
         <mapID target="start.concepts.users" url="contents/start/concepts/users.html" />
         <mapID target="start.checks" url="contents/start/checks.html" />
@@ -66,6 +69,8 @@
         <mapID target="ui.dialogs.advascan" url="contents/ui/dialogs/advascan.html"/>
         <mapID target="ui.dialogs.beanshell" url="contents/ui/dialogs/beanshell.html"/>
         <mapID target="ui.dialogs.contexts" url="contents/ui/dialogs/session/contexts.html"/>
+        <mapID target="ui.dialogs.context-auth" url="contents/ui/dialogs/session/context-auth.html"/>
+        <mapID target="ui.dialogs.context-struct" url="contents/ui/dialogs/session/context-struct.html"/>
         <mapID target="ui.dialogs.enc_dec" url="contents/ui/dialogs/enc_dec.html"/>
         <mapID target="ui.dialogs.filter" url="contents/ui/dialogs/filter.html"/>
         <mapID target="ui.dialogs.find" url="contents/ui/dialogs/find.html"/>
@@ -106,6 +111,7 @@
         <mapID target="zap.releases.2.4.0" url="contents/releases/2_4_0.html"/>
         <mapID target="zap.releases.2.4.1" url="contents/releases/2_4_1.html"/>
         <mapID target="zap.releases.2.4.2" url="contents/releases/2_4_2.html"/>
+        <mapID target="zap.releases.2.4.3" url="contents/releases/2_4_3.html"/>
         <mapID target="zap.credits" url="contents/credits.html" />
         <mapID target="zap.todo" url="contents/todo.html" />
      	<mapID target="ui.dialogs.options.ascan" url="contents/ui/dialogs/options/ascan.html"/>

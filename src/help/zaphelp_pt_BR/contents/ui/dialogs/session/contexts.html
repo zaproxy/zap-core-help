@@ -3,11 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Diálogos de contextos de sessão
+Session Context screens
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Diálogos de contextos de sessão</h1>
+<h1>Session Context screens</h1>
 <p>
 Estas telas permitem que você gerencie <a href="../../../start/concepts/contexts.html">contextos</a>.
 </p>
@@ -26,46 +26,39 @@ URLs que não correspondem a nenhum do regexs não serão incluídas no contexto
 Isso permite que você gerencie as URLs que serão excluídas do contexto.<br/>
 Você só precisa especificar regexs para URLs que você não deseja incluir, mas que combinem com uma ou mais das regexes de 'incluir'.
 
-<h3>Tecnologia</h3>
-Isso permite que você especifique as tecnologias utilizadas no contexto, se conhecidas.<br/>
-Por padrão, todas as tecnologias são incluídas.<br/>
-Se você excluir tecnologias que você sabe que não são usadas, então isto pode acelerar a 
-<a href="../../../start/concepts/ascan.html">varredura ativa</a> já que as regras específicas para as tecnologias excluídas podem ser ignoradas.
+<h3><a name="struct">Structure</a></h3>
+See the <a href="context-struct.html">Session Context Structure screen</a>.
 
-<h3><a name="auth">Autenticação</a></h3>
-Isso permite a você gerenciar a maneira pela qual a <a href="../../../start/concepts/authentication.html">Autenticação</a> está sendo feita para o contexto. Note-se que mudar o método de autenticação depois que os usuários foram definidos fará com que eles sejam deletados, porque o tipo de credencial do usuário precisa coincidir com o esquema de autenticação. 
-Depois de selecionar o tipo de método de autenticação, as opções que precisam ser configuradas dependem do método de autenticação.
+<h3>Technology</h3>
+This allows you to specify the technologies used in the context, if known.<br/>
+By default all technologies are included.<br/>
+If you exclude technologies that you know are not used then this may speed up 
+<a href="../../../start/concepts/ascan.html">active scanning</a> as rules specific to the excluded
+technologies can be skipped.
 
-<h4>Autenticação manual</h4>
-Nenhuma configuração é necessária para este método de autenticação. <small>Leia <a href="../../../start/concepts/authentication.html#manual">mais</a>...</small>
+<h3><a name="auth">Authentication</a></h3>
+See the <a href="context-auth.html">Session Context Authentication screen</a>.
 
-<h4>Autenticação baseada em formulário</h4>
-Para configurar este método de autenticação, você precisa fornecer a <b>url de login</b>, para a qual a requisição de login é enviada, o <b>corpo da solicitação/requisição</b> (Dados do POST), se necessário e identificar os <b>parâmetros</b> usados para fornecer o 'username' e 'senha'. Não se for fornecido nenhum corpo de solicitação (request), a solicitação de logon é executada como um HTTP GET, caso contrário será usado um HTTP POST. As credenciais originais são configuradas na <a href="#users">Aba de usuários</a> . <small>Leia <a href="../../../start/concepts/authentication.html#formBased">mais</a>...</small> 
+<h3><a name="sm">Session Management</a></h3>
+This allows you to manage the way in which Session Management is being done for the Context. 
+After selecting the Session Management Method type, the options that need to be configured 
+depend on the Session Management Method.
 
-<h4>Autenticação HTTP/NTLM</h4>
-Para configurar este método de autenticação, você precisa fornecer o <b>hostname</b> e a <b>porta</b> do servidor onde a autenticação é feita e o <b>alcance</b> que essas credenciais têm. Elas são configuradas na <a href="#users">Aba de Usuários</a> . <small>Leia <a href="../../../start/concepts/authentication.html#httpAuth">mais</a>...</small> 
+<h4>Cookie-Based Session Management</h4>
+No configuration is needed for this session management method. <small>Read  
+<a href="../../../start/concepts/sessionManagement.html#cbsm">more</a>...</small>
 
-<h4>Autenticação baseada em script</h4>
-Para usar esse método de autenticação, você <b>primeiro</b> precisa escrever (e salvar) um <b>Script de autenticação</b> 
-usando a <b>Aba de</b> scripts (consulte os exemplos fornecidos e modelos para este tipo de script na aba Scripts).
-Em seguida, você precisa fornecer o nome do script na lista suspensa. Depois de selecionar o script, você precisa pressionar o <b>botão</b> Carregar, para carregar todos os requisitos do script. Quaisquer parâmetros que você especificou, tais como <i>obrigatório</i> ou <i>opcional</i> no script serão mostrados na interface a ser definida. Esses valores estarão disponíveis para serem usados no script, durante a autenticação, como visto nos exemplos fornecidos de Scripts de autenticação. Depois de fazer quaisquer alterações nos parâmetros exigidos pelo script de autenticação você terá de recarregá-lo. Caso contrário, os parâmetros mostrados na interface podem não ser aqueles usados na autenticação, e assim erros poderão ocorrer. As <i>credenciais</i> utilizadas para cada usuário durante o processo de autenticação também podem ser especificadas no Script de autenticação e ser configuradas na <a href="#users">Aba de</a> usuários.
-<small>Leia <a href="../../../start/concepts/authentication.html#scriptBased">mais</a>...</small> 
-
-<h3><a name="sm">Gerenciamento de sessão</a></h3>
-Isso permite a você gerenciar a maneira pela qual o gerenciamento de sessão está sendo feito para o contexto. 
-Depois de selecionar o tipo de método de gerenciamento de sessão, as opções que precisam ser configuradas dependem desse método de gerenciamento de sessão.
-
-<h4>Gerenciamento de sessão baseado em cookies</h4>
-Nenhuma configuração é necessária para este método de gerenciamento de sessão. <small>Leia <a href="../../../start/concepts/sessionManagement.html#cbsm">mais</a>...</small>
-
-<h3><a name="users">Usuários</a></h3>
-Isso permite a você configurar um conjunto de usuários que podem ser utilizados para várias outras ações em todo o aplicativo.
+<h3><a name="users">Users</a></h3>
+This allows you to configure a set of Users that may be used for various other actions
+throughout the application.
 <p>A seção de credenciais dos usuários depende do método de autenticação configurado para o contexto.</p>
 
 <h2>Regex de URL</h2>
-Nos painéis <i>Incluir em *</i>, <i>Excluir de *</i> e nos <i>indicadores de login/logout</i> do <i>painel de Autenticação</i> , você pode digitar expressões regulares para definir URLs excluídas. Você pode dar escape em determinados metacaracteres com uma barra invertida, e também pode usar <b>sequências \Q...\E</b> Todos os caracteres entre o <b>\Q</b> e o <b>\E</b> são interpretados como caracteres literais. Por exemplo, o \Q*\d+*\E coincide com o texto literal * \d+*. Esta sequência de escape é usada no ZAP quando você exclui URLs através de alguns menus de contexto.
+In the <i>Include in *</i>, <i>Exclude from *</i> panels and the <i>Logged in/out indicators</i> of the <i>Authentication</i> panel, you can enter regular expressions to define excluded URLs.
+While you can escape a single meta-character with a backslash, you can also use the <b>\Q...\E</b> escape sequence. All the characters between the <b>\Q</b> and the <b>\E</b> are interpreted as literal characters. E.g. \Q*\d+*\E matches the literal text *\d+*.
+This escape sequence is used in ZAP when you exclude URLs via some context menus.
 <br>
-<b>Nota:</b> Se sua URL contém um "\E", então você tem que dar os seguintes passos ao usar a <b>sequência de escape \Q...\E</b> :
+<b>Note:</b> If your URL contains a "\E", then you have to do the following steps when using the <b>\Q...\E</b> escape sequence:
 <ul>
 	<li>Abra a seqüência de escape</li>
 	<li>Feche a seqüência de escape antes do "caractere" \E</li>
@@ -74,8 +67,8 @@ Nos painéis <i>Incluir em *</i>, <i>Excluir de *</i> e nos <i>indicadores de lo
 	<li>Feche a seqüência de escape como normalmente faria.</li>
 </ul>
 <br>
-Exemplo: subdomain.example.com/path?a=<b>\E</b>&moredata=2 deve aparecer como
-<i>\Qsubdomain.example.com/path?a=\E</i><b>\\E</b><i>\Q&moredata=2\E</i>
+Example: subdomain.example.com/path?a=<b>\E</b>&amp;moredata=2 should appear as
+<i>\Qsubdomain.example.com/path?a=\E</i><b>\\E</b><i>\Q&amp;moredata=2\E</i>
   
 <h2>Acessado via</h2>
 <table>

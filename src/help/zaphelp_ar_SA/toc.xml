@@ -25,6 +25,7 @@
          <tocitem text="Authentication" target="start.concepts.auth"/>
          <tocitem text="نقاط الفصل" target="start.concepts.breakpoints"/>
          <tocitem text="السياقات" target="start.concepts.contexts"/>
+         <tocitem text="Data Driven Content" target="start.concepts.ddc"/>
          <tocitem text="Filters" target="start.concepts.filters"/>
          <tocitem text="Globally Excluded URLs" target="start.concepts.globalexcludeurl"/>
          <tocitem text="Http Sessions" target="start.concepts.httpsessions"/>
@@ -36,6 +37,8 @@
          <tocitem text="Scope" target="start.concepts.scope"/>
          <tocitem text="Session Management" target="start.concepts.sessmanag"/>
          <tocitem text="Spider" target="start.concepts.spider"/>
+         <tocitem text="Structural Modifiers" target="start.concepts.structmods"/>
+         <tocitem text="Structural Parameters" target="start.concepts.structparams"/>
          <tocitem text="Tags" target="start.concepts.tags"/>
          <tocitem text="Users" target="start.concepts.users"/>
       </tocitem>
@@ -119,6 +122,8 @@
          <tocitem text="Session" target="ui.dialogs.sessprop">
 	         <tocitem text="Session Properties" target="ui.dialogs.sessprop"/>
 	         <tocitem text="Session Contexts" target="ui.dialogs.contexts"/>
+	         <tocitem text="Session Context Authentication" target="ui.dialogs.context-auth"/>
+	         <tocitem text="Session Context Structure" target="ui.dialogs.context-struct"/>
          </tocitem>
          <tocitem text="Spider" target="ui.dialogs.spider"/>
       </tocitem>
@@ -130,6 +135,7 @@
    <tocitem text="Add Ons" target="addon.introduction" tocid="addons" />
    
    <tocitem text="Releases" target="zap.releases">
+      <tocitem text="2.4.3" target="zap.releases.2.4.3"/>
       <tocitem text="2.4.2" target="zap.releases.2.4.2"/>
       <tocitem text="2.4.1" target="zap.releases.2.4.1"/>
       <tocitem text="2.4.0" target="zap.releases.2.4.0"/>

@@ -3,11 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Sesijski Konteksti dijalozi
+Session Context screens
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Sesijski Konteksti dijalozi</h1>
+<h1>Session Context screens</h1>
 <p>
 These screens allows you manage <a href="../../../start/concepts/contexts.html">contexts</a>.
 </p>
@@ -27,52 +27,20 @@ This allows you to manage the URLs which will be excluded from the context.<br/>
 You only need to specify regexs for URLs that you do not want to include but which match one or more
 of the 'include' regexes.
 
-<h3>Tehnologija</h3>
+<h3><a name="struct">Structure</a></h3>
+See the <a href="context-struct.html">Session Context Structure screen</a>.
+
+<h3>Technology</h3>
 This allows you to specify the technologies used in the context, if known.<br/>
 By default all technologies are included.<br/>
 If you exclude technologies that you know are not used then this may speed up 
 <a href="../../../start/concepts/ascan.html">active scanning</a> as rules specific to the excluded
 technologies can be skipped.
 
-<h3><a name="auth">Autentikacija</a></h3>
-This allows you to manage the way in which <a href="../../../start/concepts/authentication.html">Autentikacija</a> is being done for the Context. Note that
-changing the authentication method after Users have been defined will cause them to be deleted, as
-the type of user credentials needs to match the authentication scheme. 
-After selecting the Authentication Method type, the options that need to be configured 
-depend on the Authentication Method.
+<h3><a name="auth">Authentication</a></h3>
+See the <a href="context-auth.html">Session Context Authentication screen</a>.
 
-<h4>Ručna Autentikacija</h4>
-No configuration is needed for this authentication method. <small>Read  
-<a href="../../../start/concepts/authentication.html#manual">more</a>...</small>
-
-<h4>Form-Based Authentication</h4>
-To configure this authentication method, you need to supply the <b>login url</b>, to which the login
-request is performed, the <b>request body</b> (POST data), if needed, and identify the <b>parameters</b> used to supply
-the 'username' and 'password'. If no request body is supplied, the login request is performed as 
-a HTTP GET, otherwise an HTTP POST is used. The credentials themselves
-are configured in the <a href="#users">Korisnici</a> tab. <small>Read  
-<a href="../../../start/concepts/authentication.html#formBased">more</a>...</small> 
-
-<h4>HTTP/NTLM Authentication</h4>
-To configure this authentication method, you need to supply the <b>hostname</b> and the <b>port</b> of the server
-the authentication is done with and the <b>realm</b> the credentials apply to. The credentials themselves
-are configured in the <a href="#users">Korisnici</a> tab. <small>Read  
-<a href="../../../start/concepts/authentication.html#httpAuth">more</a>...</small> 
-
-<h4>Script-Based Authentication</h4>
-To use this authentication method, you <b>first</b> need to write (and save) an <b>Authentication Script</b> 
-using the <b>Skripte</b> tab (see the provided examples and templates for this script type in the Scripts tab).
-Then you need to supply the name of the script in the dropdown list. After selecting the script, you need to press 
-the <b>Load</b> button, loading all the requirements of the script.
-Any parameters that you have specified as <i>required</i> or <i>optional</i> in the script will
-be shown in the interface to be defined. Their values are available to be used in the script, during the authentication, as seen
-in the provided examples for Authentication Scripts. Make sure that after doing any changes to the parameters 
-required by the Authentication script you re-load the script. Otherwise, the parameters shown in the interface might
-not be the ones used during the authentication and errors might occur. The <i>credentials</i> used for each User 
-during the authentication processed can be also specified in the Authentication Script and are configured in the <a href="#users">Korisnici</a> tab.
-<small>Read <a href="../../../start/concepts/authentication.html#scriptBased">more</a>...</small> 
-
-<h3><a name="sm">Upravljanje Sesijama</a></h3>
+<h3><a name="sm">Session Management</a></h3>
 This allows you to manage the way in which Session Management is being done for the Context. 
 After selecting the Session Management Method type, the options that need to be configured 
 depend on the Session Management Method.
@@ -81,14 +49,14 @@ depend on the Session Management Method.
 No configuration is needed for this session management method. <small>Read  
 <a href="../../../start/concepts/sessionManagement.html#cbsm">more</a>...</small>
 
-<h3><a name="users">Korisnici</a></h3>
+<h3><a name="users">Users</a></h3>
 This allows you to configure a set of Users that may be used for various other actions
 throughout the application.
 <p>The credentials section of the Users depends on the Authentication Method configured
 for the Context.</p>
 
 <h2>URL regexs</h2>
-In the <i>Include in *</i>, <i>Exclude from *</i> panels and the <i>Logged in/out indicators</i> of the <i>Autentikacija</i> panel, you can enter regular expressions to define excluded URLs.
+In the <i>Include in *</i>, <i>Exclude from *</i> panels and the <i>Logged in/out indicators</i> of the <i>Authentication</i> panel, you can enter regular expressions to define excluded URLs.
 While you can escape a single meta-character with a backslash, you can also use the <b>\Q...\E</b> escape sequence. All the characters between the <b>\Q</b> and the <b>\E</b> are interpreted as literal characters. E.g. \Q*\d+*\E matches the literal text *\d+*.
 This escape sequence is used in ZAP when you exclude URLs via some context menus.
 <br>

@@ -26,71 +26,78 @@
     <indexitem text="tačke prekida" target="start.concepts.breakpoints" /> 
     <indexitem text="prekid tab" target="ui.tabs.break" />
     <indexitem text="komandna linija" target="cmdline" />
-    <indexitem text="zasluge" target="zap.credits" />
-    <indexitem text="dijalozi" target="ui.dialogs" />
-    <indexitem text="enkodiraj / dekodiraj / hash dijalog" target="ui.dialogs.enc_dec" />
-    <indexitem text="karakteristike" target="start.concepts" />
-    <indexitem text="filter dijalog" target="ui.dialogs.filter" />
-    <indexitem text="filteri" target="start.concepts.filters" />
-    <indexitem text="traži dijalog" target="ui.dialogs.find" />
-    <indexitem text="footer" target="ui.footer" />
-    <indexitem text="fuzzer tab" target="start.start" />
-    <indexitem text="fuzzing" target="ui.dialogs.historyfilter" />
-    <indexitem text="fuzz dijalog" target="ui.tabs.history" />
-    <indexitem text="početak" target="ui.tabs.httpsessions" />
-    <indexitem text="historijat filter dijalog" target="start.concepts.httpsessions" />
-    <indexitem text="historijat tab" target="start.concepts.intercept"/>
-    <indexitem text="http sesije tab" target="zap.intro" />
-    <indexitem text="http sesije" target="ui.dialogs.managetags" />
-    <indexitem text="presrećući proxy" target="ui.dialogs.manreq" />
-    <indexitem text="uvod" target="start.concepts.modes" />
-    <indexitem text="upravljaj tabovima dijalog" target="start.concepts.notes" />
-    <indexitem text="ručni zahtjevi dijalog" target="ui.dialogs.options" />
-    <indexitem text="modovi" target="ui.tabs.output" />
-    <indexitem text="zabilješke" target="ui.tabs.params" />
-    <indexitem text="opcije dijalog" target="zap.paros" />
-    <indexitem text="izlaz tab" target="start.concepts.pscan" />
-    <indexitem text="params tab" target="ui.dialogs.persistsession" />
-    <indexitem text="paros proxy" target="start.proxy" />
-    <indexitem text="pasivni sken" target="zap.releases.1.0.0" />
-    <indexitem text="proxy konfiguracija" target="zap.releases.1.1.0" />
-    <indexitem text="izdanje 1.0.0" target="zap.releases.1.2.0" />
-    <indexitem text="izdanje 1.1.0" target="zap.releases.1.3.0" />
-    <indexitem text="izdanje 1.2.0" target="zap.releases.1.3.1" />
-    <indexitem text="izdanje 1.3.0" target="zap.releases.1.3.2" />
-    <indexitem text="izdanje 1.3.1" target="zap.releases.1.3.3" />
-    <indexitem text="izdanje 1.3.2" target="zap.releases.1.3.4" />
-    <indexitem text="izdanje 1.3.3" target="zap.releases.1.4.0" />
-    <indexitem text="izdanje 1.3.4" target="zap.releases.1.4.1" />
-    <indexitem text="izdanje 1.4.0" target="zap.releases.2.0.0" />
-    <indexitem text="izdanje 1.4.1" target="zap.releases.2.1.0" />
-    <indexitem text="izdanje 2.0.0" target="zap.releases.2.2.0" />
-    <indexitem text="izdanje 2.1.0" target="zap.releases.2.2.1" />
-    <indexitem text="izdanje 2.2.0" target="zap.releases.2.2.2" />
+    <indexitem text="zasluge" target="start.concepts.contexts" />
+    <indexitem text="dijalozi" target="zap.credits" />
+    <indexitem text="enkodiraj / dekodiraj / hash dijalog" target="start.concepts.ddc" />
+    <indexitem text="karakteristike" target="ui.dialogs" />
+    <indexitem text="filter dijalog" target="ui.dialogs.enc_dec" />
+    <indexitem text="filteri" target="start.concepts" />
+    <indexitem text="traži dijalog" target="ui.dialogs.filter" />
+    <indexitem text="footer" target="start.concepts.filters" />
+    <indexitem text="fuzzer tab" target="ui.dialogs.find" />
+    <indexitem text="fuzzing" target="ui.footer" />
+    <indexitem text="fuzz dijalog" target="start.start" />
+    <indexitem text="početak" target="ui.dialogs.historyfilter" />
+    <indexitem text="historijat filter dijalog" target="ui.tabs.history" />
+    <indexitem text="historijat tab" target="ui.tabs.httpsessions" />
+    <indexitem text="http sesije tab" target="start.concepts.httpsessions" />
+    <indexitem text="http sesije" target="start.concepts.intercept"/>
+    <indexitem text="presrećući proxy" target="zap.intro" />
+    <indexitem text="uvod" target="ui.dialogs.managetags" />
+    <indexitem text="upravljaj tabovima dijalog" target="ui.dialogs.manreq" />
+    <indexitem text="ručni zahtjevi dijalog" target="start.concepts.modes" />
+    <indexitem text="modovi" target="start.concepts.notes" />
+    <indexitem text="zabilješke" target="ui.dialogs.options" />
+    <indexitem text="opcije dijalog" target="ui.tabs.output" />
+    <indexitem text="izlaz tab" target="ui.tabs.params" />
+    <indexitem text="params tab" target="zap.paros" />
+    <indexitem text="paros proxy" target="start.concepts.pscan" />
+    <indexitem text="pasivni sken" target="ui.dialogs.persistsession" />
+    <indexitem text="proxy konfiguracija" target="start.proxy" />
+    <indexitem text="izdanje 1.0.0" target="zap.releases.1.0.0" />
+    <indexitem text="izdanje 1.1.0" target="zap.releases.1.1.0" />
+    <indexitem text="izdanje 1.2.0" target="zap.releases.1.2.0" />
+    <indexitem text="izdanje 1.3.0" target="zap.releases.1.3.0" />
+    <indexitem text="izdanje 1.3.1" target="zap.releases.1.3.1" />
+    <indexitem text="izdanje 1.3.2" target="zap.releases.1.3.2" />
+    <indexitem text="izdanje 1.3.3" target="zap.releases.1.3.3" />
+    <indexitem text="izdanje 1.3.4" target="zap.releases.1.3.4" />
+    <indexitem text="izdanje 1.4.0" target="zap.releases.1.4.0" />
+    <indexitem text="izdanje 1.4.1" target="zap.releases.1.4.1" />
+    <indexitem text="izdanje 2.0.0" target="zap.releases.2.0.0" />
+    <indexitem text="izdanje 2.1.0" target="zap.releases.2.1.0" />
+    <indexitem text="izdanje 2.2.0" target="zap.releases.2.2.0" />
+    <indexitem text="release 2.2.1" target="zap.releases.2.2.1" />
+    <indexitem text="release 2.2.2" target="zap.releases.2.2.2" />
     <indexitem text="release 2.3.0" target="zap.releases.2.3.0" />
     <indexitem text="release 2.3.1" target="zap.releases.2.3.1" />
     <indexitem text="release 2.4.0" target="zap.releases.2.4.0" />
-    <indexitem text="release 2.4.1" target="zap.releases.2.4.1" />
-    <indexitem text="release 2.4.2" target="zap.releases.2.4.2" />
-    <indexitem text="izdanja" target="zap.releases" />
-    <indexitem text="zahtjevi tab" target="ui.tabs.request" />
-    <indexitem text="ponovno slanje dijalog" target="ui.dialogs.resend" />
-    <indexitem text="odgovor tab" target="ui.tabs.response" />
-    <indexitem text="pravila skeniranja" target="start.check" />
-    <indexitem text="scan policy" target="start.concepts.scanpolicy" />
-    <indexitem text="sken politika dijalog" target="ui.dialogs.scanpolicy" />
-    <indexitem text="scan policy manager dialog" target="ui.dialogs.scanpolicymgr" />
-    <indexitem text="pretraga tab" target="ui.tabs.search" />
-    <indexitem text="sesijski konteksti dijalog" target="ui.dialogs.contexts" />
-    <indexitem text="svojstva sesije dijalog" target="ui.dialogs.sessprop" />
-    <indexitem text="sajtovi tab" target="ui.tabs.sites" />
-    <indexitem text="pauk" target="start.concepts.spider" />
-    <indexitem text="spider dialog" target="ui.dialogs.spider" />
-    <indexitem text="pauk tab" target="ui.tabs.spider" />
-    <indexitem text="tagovi" target="start.concepts.tags" />
-    <indexitem text="gornji nivo meni" target="ui.topmenu" />
-    <indexitem text="gornjeg nivoa alatna traka" target="ui.toptoolbar" />
-    <indexitem text="ui pregled" target="ui.overview" />
+    <indexitem text="izdanja" target="zap.releases.2.4.1" />
+    <indexitem text="zahtjevi tab" target="zap.releases.2.4.2" />
+    <indexitem text="ponovno slanje dijalog" target="zap.releases.2.4.3" />
+    <indexitem text="odgovor tab" target="zap.releases" />
+    <indexitem text="pravila skeniranja" target="ui.tabs.request" />
+    <indexitem text="resend dialog" target="ui.dialogs.resend" />
+    <indexitem text="sken politika dijalog" target="ui.tabs.response" />
+    <indexitem text="scanner rules" target="start.check" />
+    <indexitem text="pretraga tab" target="start.concepts.scanpolicy" />
+    <indexitem text="sesijski konteksti dijalog" target="ui.dialogs.scanpolicy" />
+    <indexitem text="svojstva sesije dijalog" target="ui.dialogs.scanpolicymgr" />
+    <indexitem text="sajtovi tab" target="ui.tabs.search" />
+    <indexitem text="pauk" target="ui.dialogs.contexts" />
+    <indexitem text="session context authentication screen" target="ui.dialogs.context-auth" />
+    <indexitem text="pauk tab" target="ui.dialogs.context-struct" />
+    <indexitem text="tagovi" target="ui.dialogs.sessprop" />
+    <indexitem text="gornji nivo meni" target="ui.tabs.sites" />
+    <indexitem text="gornjeg nivoa alatna traka" target="start.concepts.spider" />
+    <indexitem text="ui pregled" target="ui.dialogs.spider" />
+    <indexitem text="spider tab" target="ui.tabs.spider" />
+    <indexitem text="structural modifiers" target="start.concepts.structmods" />
+    <indexitem text="structural parameters" target="start.concepts.structparams" />
+    <indexitem text="tags" target="start.concepts.tags" />
+    <indexitem text="top level menu" target="ui.topmenu" />
+    <indexitem text="top level toolbar" target="ui.toptoolbar" />
+    <indexitem text="ui overview" target="ui.overview" />
     <indexitem text="views" target="ui.views" />
 
 </index>

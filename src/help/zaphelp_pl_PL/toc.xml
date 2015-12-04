@@ -25,18 +25,21 @@
          <tocitem text="Uwierzytelnianie" target="start.concepts.auth"/>
          <tocitem text="Punkty Zatrzymania" target="start.concepts.breakpoints"/>
          <tocitem text="Contexts" target="start.concepts.contexts"/>
-         <tocitem text="Filtry" target="start.concepts.filters"/>
-         <tocitem text="Fuzzing" target="start.concepts.globalexcludeurl"/>
-         <tocitem text="Http Sessions" target="start.concepts.httpsessions"/>
-         <tocitem text="Sesje HTTP" target="start.concepts.intercept"/>
+         <tocitem text="Filtry" target="start.concepts.ddc"/>
+         <tocitem text="Fuzzing" target="start.concepts.filters"/>
+         <tocitem text="Globally Excluded URLs" target="start.concepts.globalexcludeurl"/>
+         <tocitem text="Sesje HTTP" target="start.concepts.httpsessions"/>
+         <tocitem text="Intercepting Proxy" target="start.concepts.intercept"/>
          <tocitem text="Modes" target="start.concepts.modes"/>
          <tocitem text="Notes" target="start.concepts.notes"/>
-         <tocitem text="Passive Scan" target="start.concepts.pscan"/>
-         <tocitem text="Skanowanie pasywne" target="start.concepts.scanpolicy"/>
+         <tocitem text="Skanowanie pasywne" target="start.concepts.pscan"/>
+         <tocitem text="Scan Policies" target="start.concepts.scanpolicy"/>
          <tocitem text="Scope" target="start.concepts.scope"/>
          <tocitem text="Session Management" target="start.concepts.sessmanag"/>
-         <tocitem text="Spider" target="start.concepts.spider"/>
-         <tocitem text="Pająk" target="start.concepts.tags"/>
+         <tocitem text="Pająk" target="start.concepts.spider"/>
+         <tocitem text="Structural Modifiers" target="start.concepts.structmods"/>
+         <tocitem text="Structural Parameters" target="start.concepts.structparams"/>
+         <tocitem text="Tags" target="start.concepts.tags"/>
          <tocitem text="Users" target="start.concepts.users"/>
       </tocitem>
       <tocitem text="Scanner Rules" target="start.check"/>
@@ -119,6 +122,8 @@
          <tocitem text="Sesja" target="ui.dialogs.sessprop">
 	         <tocitem text="Właściwości sesji" target="ui.dialogs.sessprop"/>
 	         <tocitem text="Session Contexts" target="ui.dialogs.contexts"/>
+	         <tocitem text="Session Context Authentication" target="ui.dialogs.context-auth"/>
+	         <tocitem text="Session Context Structure" target="ui.dialogs.context-struct"/>
          </tocitem>
          <tocitem text="Pająk" target="ui.dialogs.spider"/>
       </tocitem>
@@ -130,6 +135,7 @@
    <tocitem text="Add Ons" target="addon.introduction" tocid="addons" />
    
    <tocitem text="Releases" target="zap.releases">
+      <tocitem text="2.4.3" target="zap.releases.2.4.3"/>
       <tocitem text="2.4.2" target="zap.releases.2.4.2"/>
       <tocitem text="2.4.1" target="zap.releases.2.4.1"/>
       <tocitem text="2.4.0" target="zap.releases.2.4.0"/>

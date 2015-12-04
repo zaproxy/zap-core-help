@@ -26,71 +26,78 @@
     <indexitem text="pontos de ruptura" target="start.concepts.breakpoints" /> 
     <indexitem text="aba de parada" target="ui.tabs.break" />
     <indexitem text="linha de comando" target="cmdline" />
-    <indexitem text="créditos" target="zap.credits" />
-    <indexitem text="diálogos" target="ui.dialogs" />
-    <indexitem text="codificar / decodificar / diálogo de hash" target="ui.dialogs.enc_dec" />
-    <indexitem text="recursos" target="start.concepts" />
-    <indexitem text="diálogo de filtragem" target="ui.dialogs.filter" />
-    <indexitem text="filtros" target="start.concepts.filters" />
-    <indexitem text="localizar diálogo" target="ui.dialogs.find" />
-    <indexitem text="rodapé" target="ui.footer" />
-    <indexitem text="aba do fuzzer" target="start.start" />
-    <indexitem text="fuzzing" target="ui.dialogs.historyfilter" />
-    <indexitem text="diálogo de fuzz" target="ui.tabs.history" />
-    <indexitem text="iniciando" target="ui.tabs.httpsessions" />
-    <indexitem text="diálogo de filtro do histórico" target="start.concepts.httpsessions" />
-    <indexitem text="aba de histórico" target="start.concepts.intercept"/>
-    <indexitem text="aba de sessões http" target="zap.intro" />
-    <indexitem text="sessões http" target="ui.dialogs.managetags" />
-    <indexitem text="proxy de interceptação" target="ui.dialogs.manreq" />
-    <indexitem text="introdução" target="start.concepts.modes" />
-    <indexitem text="diálogo de gerenciamento de abas" target="start.concepts.notes" />
-    <indexitem text="diálogo de requisição manual" target="ui.dialogs.options" />
-    <indexitem text="modos" target="ui.tabs.output" />
-    <indexitem text="notas" target="ui.tabs.params" />
-    <indexitem text="diálogo de opções" target="zap.paros" />
-    <indexitem text="aba da saída" target="start.concepts.pscan" />
-    <indexitem text="aba de parâmetros" target="ui.dialogs.persistsession" />
-    <indexitem text="proxy paros" target="start.proxy" />
-    <indexitem text="varredura passiva" target="zap.releases.1.0.0" />
-    <indexitem text="diálogo de persistência de sessão" target="zap.releases.1.1.0" />
-    <indexitem text="configuração de proxy" target="zap.releases.1.2.0" />
-    <indexitem text="release 1.0.0" target="zap.releases.1.3.0" />
-    <indexitem text="release 1.1.0" target="zap.releases.1.3.1" />
-    <indexitem text="release 1.2.0" target="zap.releases.1.3.2" />
-    <indexitem text="release 1.3.0" target="zap.releases.1.3.3" />
-    <indexitem text="release 1.3.1" target="zap.releases.1.3.4" />
-    <indexitem text="release 1.3.2" target="zap.releases.1.4.0" />
-    <indexitem text="release 1.3.3" target="zap.releases.1.4.1" />
-    <indexitem text="release 1.3.4" target="zap.releases.2.0.0" />
-    <indexitem text="release 1.4.0" target="zap.releases.2.1.0" />
-    <indexitem text="release 1.4.1" target="zap.releases.2.2.0" />
-    <indexitem text="release 2.0.0" target="zap.releases.2.2.1" />
-    <indexitem text="release 2.1.0" target="zap.releases.2.2.2" />
-    <indexitem text="release 2.2.0" target="zap.releases.2.3.0" />
-    <indexitem text="release 2.2.1" target="zap.releases.2.3.1" />
-    <indexitem text="release 2.2.2" target="zap.releases.2.4.0" />
-    <indexitem text="release 2.3.0" target="zap.releases.2.4.1" />
-    <indexitem text="release 2.3.1" target="zap.releases.2.4.2" />
-    <indexitem text="release 2.4.0" target="zap.releases" />
-    <indexitem text="releases" target="ui.tabs.request" />
-    <indexitem text="aba de requisição" target="ui.dialogs.resend" />
-    <indexitem text="diálogo de reenvio" target="ui.tabs.response" />
-    <indexitem text="aba de respostas" target="start.check" />
-    <indexitem text="regras de varredura" target="start.concepts.scanpolicy" />
-    <indexitem text="política de varredura" target="ui.dialogs.scanpolicy" />
-    <indexitem text="diálogo da política de varredura" target="ui.dialogs.scanpolicymgr" />
-    <indexitem text="diálogo do gerenciador da política de varredura" target="ui.tabs.search" />
-    <indexitem text="aba de busca" target="ui.dialogs.contexts" />
-    <indexitem text="diálogo dos contextos de sessão" target="ui.dialogs.sessprop" />
-    <indexitem text="diálogo das propriedades de sessão" target="ui.tabs.sites" />
-    <indexitem text="aba de sites" target="start.concepts.spider" />
-    <indexitem text="spider" target="ui.dialogs.spider" />
-    <indexitem text="diálogo do spider" target="ui.tabs.spider" />
+    <indexitem text="créditos" target="start.concepts.contexts" />
+    <indexitem text="diálogos" target="zap.credits" />
+    <indexitem text="codificar / decodificar / diálogo de hash" target="start.concepts.ddc" />
+    <indexitem text="recursos" target="ui.dialogs" />
+    <indexitem text="diálogo de filtragem" target="ui.dialogs.enc_dec" />
+    <indexitem text="filtros" target="start.concepts" />
+    <indexitem text="localizar diálogo" target="ui.dialogs.filter" />
+    <indexitem text="rodapé" target="start.concepts.filters" />
+    <indexitem text="aba do fuzzer" target="ui.dialogs.find" />
+    <indexitem text="fuzzing" target="ui.footer" />
+    <indexitem text="diálogo de fuzz" target="start.start" />
+    <indexitem text="iniciando" target="ui.dialogs.historyfilter" />
+    <indexitem text="diálogo de filtro do histórico" target="ui.tabs.history" />
+    <indexitem text="aba de histórico" target="ui.tabs.httpsessions" />
+    <indexitem text="aba de sessões http" target="start.concepts.httpsessions" />
+    <indexitem text="sessões http" target="start.concepts.intercept"/>
+    <indexitem text="proxy de interceptação" target="zap.intro" />
+    <indexitem text="introdução" target="ui.dialogs.managetags" />
+    <indexitem text="diálogo de gerenciamento de abas" target="ui.dialogs.manreq" />
+    <indexitem text="diálogo de requisição manual" target="start.concepts.modes" />
+    <indexitem text="modos" target="start.concepts.notes" />
+    <indexitem text="notas" target="ui.dialogs.options" />
+    <indexitem text="diálogo de opções" target="ui.tabs.output" />
+    <indexitem text="aba da saída" target="ui.tabs.params" />
+    <indexitem text="aba de parâmetros" target="zap.paros" />
+    <indexitem text="proxy paros" target="start.concepts.pscan" />
+    <indexitem text="varredura passiva" target="ui.dialogs.persistsession" />
+    <indexitem text="diálogo de persistência de sessão" target="start.proxy" />
+    <indexitem text="configuração de proxy" target="zap.releases.1.0.0" />
+    <indexitem text="release 1.0.0" target="zap.releases.1.1.0" />
+    <indexitem text="release 1.1.0" target="zap.releases.1.2.0" />
+    <indexitem text="release 1.2.0" target="zap.releases.1.3.0" />
+    <indexitem text="release 1.3.0" target="zap.releases.1.3.1" />
+    <indexitem text="release 1.3.1" target="zap.releases.1.3.2" />
+    <indexitem text="release 1.3.2" target="zap.releases.1.3.3" />
+    <indexitem text="release 1.3.3" target="zap.releases.1.3.4" />
+    <indexitem text="release 1.3.4" target="zap.releases.1.4.0" />
+    <indexitem text="release 1.4.0" target="zap.releases.1.4.1" />
+    <indexitem text="release 1.4.1" target="zap.releases.2.0.0" />
+    <indexitem text="release 2.0.0" target="zap.releases.2.1.0" />
+    <indexitem text="release 2.1.0" target="zap.releases.2.2.0" />
+    <indexitem text="release 2.2.0" target="zap.releases.2.2.1" />
+    <indexitem text="release 2.2.1" target="zap.releases.2.2.2" />
+    <indexitem text="release 2.2.2" target="zap.releases.2.3.0" />
+    <indexitem text="release 2.3.0" target="zap.releases.2.3.1" />
+    <indexitem text="release 2.3.1" target="zap.releases.2.4.0" />
+    <indexitem text="release 2.4.0" target="zap.releases.2.4.1" />
+    <indexitem text="releases" target="zap.releases.2.4.2" />
+    <indexitem text="aba de requisição" target="zap.releases.2.4.3" />
+    <indexitem text="diálogo de reenvio" target="zap.releases" />
+    <indexitem text="aba de respostas" target="ui.tabs.request" />
+    <indexitem text="regras de varredura" target="ui.dialogs.resend" />
+    <indexitem text="política de varredura" target="ui.tabs.response" />
+    <indexitem text="diálogo da política de varredura" target="start.check" />
+    <indexitem text="diálogo do gerenciador da política de varredura" target="start.concepts.scanpolicy" />
+    <indexitem text="aba de busca" target="ui.dialogs.scanpolicy" />
+    <indexitem text="diálogo dos contextos de sessão" target="ui.dialogs.scanpolicymgr" />
+    <indexitem text="diálogo das propriedades de sessão" target="ui.tabs.search" />
+    <indexitem text="aba de sites" target="ui.dialogs.contexts" />
+    <indexitem text="spider" target="ui.dialogs.context-auth" />
+    <indexitem text="diálogo do spider" target="ui.dialogs.context-struct" />
+    <indexitem text="tags" target="ui.dialogs.sessprop" />
+    <indexitem text="tags" target="ui.tabs.sites" />
+    <indexitem text="menu superior" target="start.concepts.spider" />
+    <indexitem text="barra de ferramentas superior" target="ui.dialogs.spider" />
+    <indexitem text="spider tab" target="ui.tabs.spider" />
+    <indexitem text="structural modifiers" target="start.concepts.structmods" />
+    <indexitem text="structural parameters" target="start.concepts.structparams" />
     <indexitem text="tags" target="start.concepts.tags" />
-    <indexitem text="tags" target="ui.topmenu" />
-    <indexitem text="menu superior" target="ui.toptoolbar" />
-    <indexitem text="barra de ferramentas superior" target="ui.overview" />
+    <indexitem text="top level menu" target="ui.topmenu" />
+    <indexitem text="top level toolbar" target="ui.toptoolbar" />
+    <indexitem text="ui overview" target="ui.overview" />
     <indexitem text="views" target="ui.views" />
 
 </index>

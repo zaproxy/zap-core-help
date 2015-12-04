@@ -10,8 +10,56 @@ Options Check for Updates screen
 <h1>Options Check for Updates screen</h1>
 <p>
 This screen allows you to configure whether ZAP checks to see if you are running
-the latest version when it starts.
+the latest version when it starts, and if so what it does.
 </p>
+
+<h3>Check for Updates on startup</h3>
+If selected then ZAP will automatically check for updates to the whole application and all of the add-ons when it starts.<br>
+It is strongly recommended that you check this box.<br>
+If for any reason you choose not to then you should manually check for updates frequently.<br>
+ZAP will only make one request, and the only information included will be the current version you are on.
+
+<h3>Automatically download new ZAP releases</h3>
+If selected then ZAP will automatically download new ZAP releases when they are available and prompt you to install them. 
+
+<h3>Automatically install updates to the add-ons you have installed</h3>
+If selected then ZAP will automatically download and install any updates to the add-ons you have installed.
+
+<h3>Automatically install updates to the scanner rules you have installed</h3>
+If selected then ZAP will automatically download and install any updates to the scanner rules you have installed.<br>
+These are a subset of the full set of add-ons installed.
+
+<h3>Report new release quality add-ons</h3>
+If selected then ZAP will inform you if and when any add-ons are promoted to 'release' quality.<br>
+These add-ons will have been thoroughly tested and reviewed, and you can be sure they are of the highest quality.
+
+<h3>Report new beta quality add-ons</h3>
+If selected then ZAP will inform you if and when any add-ons are promoted to 'beta' quality.<br>
+These add-ons will have been tested and reviewed, and are considered to be of a reasonable quality 
+and mostly fit for purpose.<br>
+However they may be incomplete or need further testing.<br>
+Some of the add-ons included with ZAP by default are still at the beta level.  
+
+<h3>Report new alpha quality add-ons</h3>
+If selected then ZAP will inform you if and when any new add-ons are added at 'alpha' quality.<br>
+These add-ons will have been reviewed but they are typically at an early stage of development.<br>
+They may be incomplete, contain significant issues or cause stability problems.
+
+<h3>Add-on directories</h3>
+ZAP will load all of the add-ons located in the release 'plugins' directory as well as any that have been downloaded
+and are in the local 'plugins' directory.<br>
+You can also add as many additional add-on directories as you need by adding them here.<br>
+This can be very useful when running multiple ZAP instances on one machine, for example in a CI environment.<br>
+You can then just download new or updated add-ons once and immediately share them between multiple instances.<br>
+Add-ons downloaded into shared directories will be only added to new ZAP instances, not to ones that are already running,
+with the exception of the instance that actually downloaded the add-on. 
+
+<h3>Download directory</h3>
+This is the directory ZAP will download new or updated add-ons to.<br>
+By default it will be the local directory, but you can also choose one of the shared directories as long as this ZAP
+instance can write to it.<br>
+ZAP will only move add-ons to a shared directory after they are completely downloaded, so that other ZAP instances
+do not try to load an incomplete add-on.
 
 <h2>Vease también</h2>
 <table>

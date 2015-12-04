@@ -25,19 +25,22 @@
          <tocitem text="Autentikacija" target="start.concepts.auth"/>
          <tocitem text="Tačke Prekida" target="start.concepts.breakpoints"/>
          <tocitem text="Konteksti" target="start.concepts.contexts"/>
-         <tocitem text="Filteri" target="start.concepts.filters"/>
-         <tocitem text="Fuzzing" target="start.concepts.globalexcludeurl"/>
-         <tocitem text="Globalno Isključivanje URL-ova" target="start.concepts.httpsessions"/>
-         <tocitem text="Http Sesije" target="start.concepts.intercept"/>
-         <tocitem text="Presrećući Proxy" target="start.concepts.modes"/>
-         <tocitem text="Modovi" target="start.concepts.notes"/>
-         <tocitem text="Zabilješke" target="start.concepts.pscan"/>
-         <tocitem text="Pasivni Sken" target="start.concepts.scanpolicy"/>
-         <tocitem text="Scope" target="start.concepts.scope"/>
-         <tocitem text="Opseg" target="start.concepts.sessmanag"/>
-         <tocitem text="Upravljanje Sesijama" target="start.concepts.spider"/>
-         <tocitem text="Pauk" target="start.concepts.tags"/>
-         <tocitem text="Tagovi" target="start.concepts.users"/>
+         <tocitem text="Filteri" target="start.concepts.ddc"/>
+         <tocitem text="Fuzzing" target="start.concepts.filters"/>
+         <tocitem text="Globalno Isključivanje URL-ova" target="start.concepts.globalexcludeurl"/>
+         <tocitem text="Http Sesije" target="start.concepts.httpsessions"/>
+         <tocitem text="Presrećući Proxy" target="start.concepts.intercept"/>
+         <tocitem text="Modovi" target="start.concepts.modes"/>
+         <tocitem text="Zabilješke" target="start.concepts.notes"/>
+         <tocitem text="Pasivni Sken" target="start.concepts.pscan"/>
+         <tocitem text="Scan Policies" target="start.concepts.scanpolicy"/>
+         <tocitem text="Opseg" target="start.concepts.scope"/>
+         <tocitem text="Upravljanje Sesijama" target="start.concepts.sessmanag"/>
+         <tocitem text="Pauk" target="start.concepts.spider"/>
+         <tocitem text="Tagovi" target="start.concepts.structmods"/>
+         <tocitem text="Structural Parameters" target="start.concepts.structparams"/>
+         <tocitem text="Tags" target="start.concepts.tags"/>
+         <tocitem text="Users" target="start.concepts.users"/>
       </tocitem>
       <tocitem text="Skener Pravila" target="start.check"/>
       <tocitem text="Jednostavni Penetracijski Test" target="start.pentest"/>
@@ -119,6 +122,8 @@
          <tocitem text="Sesija" target="ui.dialogs.sessprop">
 	         <tocitem text="Svojstva Sesije" target="ui.dialogs.sessprop"/>
 	         <tocitem text="Session Contexts" target="ui.dialogs.contexts"/>
+	         <tocitem text="Session Context Authentication" target="ui.dialogs.context-auth"/>
+	         <tocitem text="Session Context Structure" target="ui.dialogs.context-struct"/>
          </tocitem>
          <tocitem text="Pauk" target="ui.dialogs.spider"/>
       </tocitem>
@@ -130,24 +135,25 @@
    <tocitem text="Dodaci" target="addon.introduction" tocid="addons" />
    
    <tocitem text="Izdanja" target="zap.releases">
+      <tocitem text="2.4.3" target="zap.releases.2.4.3"/>
       <tocitem text="2.4.2" target="zap.releases.2.4.2"/>
       <tocitem text="2.4.1" target="zap.releases.2.4.1"/>
       <tocitem text="2.4.0" target="zap.releases.2.4.0"/>
       <tocitem text="2.3.1" target="zap.releases.2.3.1"/>
-      <tocitem text="2.3.0" target="zap.releases.2.3.0"/>
-      <tocitem text="2.2.0" target="zap.releases.2.2.2"/>
-      <tocitem text="2.1.0" target="zap.releases.2.2.1"/>
-      <tocitem text="2.0.0" target="zap.releases.2.2.0"/>
-      <tocitem text="1.4.1" target="zap.releases.2.1.0"/>
-      <tocitem text="1.4.0" target="zap.releases.2.0.0"/>
-      <tocitem text="1.3.4" target="zap.releases.1.4.1"/>
-      <tocitem text="1.3.3" target="zap.releases.1.4.0"/>
-      <tocitem text="1.3.2" target="zap.releases.1.3.4"/>
-      <tocitem text="1.3.1" target="zap.releases.1.3.3"/>
-      <tocitem text="1.3.0" target="zap.releases.1.3.2"/>
-      <tocitem text="1.2.0" target="zap.releases.1.3.1"/>
-      <tocitem text="1.1.0" target="zap.releases.1.3.0"/>
-      <tocitem text="1.0.0" target="zap.releases.1.2.0"/>
+      <tocitem text="2.2.0" target="zap.releases.2.3.0"/>
+      <tocitem text="2.1.0" target="zap.releases.2.2.2"/>
+      <tocitem text="2.0.0" target="zap.releases.2.2.1"/>
+      <tocitem text="1.4.1" target="zap.releases.2.2.0"/>
+      <tocitem text="1.4.0" target="zap.releases.2.1.0"/>
+      <tocitem text="1.3.4" target="zap.releases.2.0.0"/>
+      <tocitem text="1.3.3" target="zap.releases.1.4.1"/>
+      <tocitem text="1.3.2" target="zap.releases.1.4.0"/>
+      <tocitem text="1.3.1" target="zap.releases.1.3.4"/>
+      <tocitem text="1.3.0" target="zap.releases.1.3.3"/>
+      <tocitem text="1.2.0" target="zap.releases.1.3.2"/>
+      <tocitem text="1.1.0" target="zap.releases.1.3.1"/>
+      <tocitem text="1.0.0" target="zap.releases.1.3.0"/>
+      <tocitem text="1.2.0" target="zap.releases.1.2.0"/>
       <tocitem text="1.1.0" target="zap.releases.1.1.0"/>
       <tocitem text="1.0.0" target="zap.releases.1.0.0"/>
    </tocitem>

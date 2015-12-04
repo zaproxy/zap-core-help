@@ -25,19 +25,22 @@
          <tocitem text="Authentification" target="start.concepts.auth"/>
          <tocitem text="Points d'arrêt" target="start.concepts.breakpoints"/>
          <tocitem text="Contextes" target="start.concepts.contexts"/>
-         <tocitem text="Filtres" target="start.concepts.filters"/>
-         <tocitem text="Générateur de bruit" target="start.concepts.globalexcludeurl"/>
-         <tocitem text="Http Sessions" target="start.concepts.httpsessions"/>
-         <tocitem text="Sessions http" target="start.concepts.intercept"/>
-         <tocitem text="Proxy d'interception" target="start.concepts.modes"/>
-         <tocitem text="Modes" target="start.concepts.notes"/>
-         <tocitem text="Notes" target="start.concepts.pscan"/>
-         <tocitem text="Scan passif" target="start.concepts.scanpolicy"/>
-         <tocitem text="Scope" target="start.concepts.scope"/>
-         <tocitem text="Périmètre" target="start.concepts.sessmanag"/>
-         <tocitem text="Gestion de session" target="start.concepts.spider"/>
-         <tocitem text="Robot" target="start.concepts.tags"/>
-         <tocitem text="Tags" target="start.concepts.users"/>
+         <tocitem text="Filtres" target="start.concepts.ddc"/>
+         <tocitem text="Générateur de bruit" target="start.concepts.filters"/>
+         <tocitem text="Globally Excluded URLs" target="start.concepts.globalexcludeurl"/>
+         <tocitem text="Sessions http" target="start.concepts.httpsessions"/>
+         <tocitem text="Proxy d'interception" target="start.concepts.intercept"/>
+         <tocitem text="Modes" target="start.concepts.modes"/>
+         <tocitem text="Notes" target="start.concepts.notes"/>
+         <tocitem text="Scan passif" target="start.concepts.pscan"/>
+         <tocitem text="Scan Policies" target="start.concepts.scanpolicy"/>
+         <tocitem text="Périmètre" target="start.concepts.scope"/>
+         <tocitem text="Gestion de session" target="start.concepts.sessmanag"/>
+         <tocitem text="Robot" target="start.concepts.spider"/>
+         <tocitem text="Tags" target="start.concepts.structmods"/>
+         <tocitem text="Structural Parameters" target="start.concepts.structparams"/>
+         <tocitem text="Tags" target="start.concepts.tags"/>
+         <tocitem text="Users" target="start.concepts.users"/>
       </tocitem>
       <tocitem text="Scanner Rules" target="start.check"/>
       <tocitem text="A Simple Penetration Test" target="start.pentest"/>
@@ -119,6 +122,8 @@
          <tocitem text="Session" target="ui.dialogs.sessprop">
 	         <tocitem text="Propriétés de la session" target="ui.dialogs.sessprop"/>
 	         <tocitem text="Session Contexts" target="ui.dialogs.contexts"/>
+	         <tocitem text="Session Context Authentication" target="ui.dialogs.context-auth"/>
+	         <tocitem text="Session Context Structure" target="ui.dialogs.context-struct"/>
          </tocitem>
          <tocitem text="Robot" target="ui.dialogs.spider"/>
       </tocitem>
@@ -130,6 +135,7 @@
    <tocitem text="Accessoires" target="addon.introduction" tocid="addons" />
    
    <tocitem text="Releases" target="zap.releases">
+      <tocitem text="2.4.3" target="zap.releases.2.4.3"/>
       <tocitem text="2.4.2" target="zap.releases.2.4.2"/>
       <tocitem text="2.4.1" target="zap.releases.2.4.1"/>
       <tocitem text="2.4.0" target="zap.releases.2.4.0"/>

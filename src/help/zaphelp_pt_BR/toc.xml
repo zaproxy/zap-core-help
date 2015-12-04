@@ -25,19 +25,22 @@
          <tocitem text="Autenticação" target="start.concepts.auth"/>
          <tocitem text="Pontos de ruptura" target="start.concepts.breakpoints"/>
          <tocitem text="Contextos" target="start.concepts.contexts"/>
-         <tocitem text="Filtros" target="start.concepts.filters"/>
-         <tocitem text="Fuzzing" target="start.concepts.globalexcludeurl"/>
-         <tocitem text="URLs globalmente excluídas" target="start.concepts.httpsessions"/>
-         <tocitem text="Sessões HTTP" target="start.concepts.intercept"/>
-         <tocitem text="Proxy de interceptação" target="start.concepts.modes"/>
-         <tocitem text="Modos" target="start.concepts.notes"/>
-         <tocitem text="Notas" target="start.concepts.pscan"/>
-         <tocitem text="Varredura Passiva" target="start.concepts.scanpolicy"/>
-         <tocitem text="Políticas de varredura" target="start.concepts.scope"/>
-         <tocitem text="Alcance" target="start.concepts.sessmanag"/>
-         <tocitem text="Gerenciamento de sessão" target="start.concepts.spider"/>
-         <tocitem text="Spider" target="start.concepts.tags"/>
-         <tocitem text="Tags" target="start.concepts.users"/>
+         <tocitem text="Filtros" target="start.concepts.ddc"/>
+         <tocitem text="Fuzzing" target="start.concepts.filters"/>
+         <tocitem text="URLs globalmente excluídas" target="start.concepts.globalexcludeurl"/>
+         <tocitem text="Sessões HTTP" target="start.concepts.httpsessions"/>
+         <tocitem text="Proxy de interceptação" target="start.concepts.intercept"/>
+         <tocitem text="Modos" target="start.concepts.modes"/>
+         <tocitem text="Notas" target="start.concepts.notes"/>
+         <tocitem text="Varredura Passiva" target="start.concepts.pscan"/>
+         <tocitem text="Políticas de varredura" target="start.concepts.scanpolicy"/>
+         <tocitem text="Alcance" target="start.concepts.scope"/>
+         <tocitem text="Gerenciamento de sessão" target="start.concepts.sessmanag"/>
+         <tocitem text="Spider" target="start.concepts.spider"/>
+         <tocitem text="Tags" target="start.concepts.structmods"/>
+         <tocitem text="Structural Parameters" target="start.concepts.structparams"/>
+         <tocitem text="Tags" target="start.concepts.tags"/>
+         <tocitem text="Users" target="start.concepts.users"/>
       </tocitem>
       <tocitem text="Regras de varredura" target="start.check"/>
       <tocitem text="Um teste de penetração simples" target="start.pentest"/>
@@ -119,6 +122,8 @@
          <tocitem text="Gerenciador de políticas de varredura" target="ui.dialogs.sessprop">
 	         <tocitem text="Política de varredura" target="ui.dialogs.sessprop"/>
 	         <tocitem text="Session Contexts" target="ui.dialogs.contexts"/>
+	         <tocitem text="Session Context Authentication" target="ui.dialogs.context-auth"/>
+	         <tocitem text="Session Context Structure" target="ui.dialogs.context-struct"/>
          </tocitem>
          <tocitem text="Sessão" target="ui.dialogs.spider"/>
       </tocitem>
@@ -130,24 +135,25 @@
    <tocitem text="Complementos" target="addon.introduction" tocid="addons" />
    
    <tocitem text="Releases" target="zap.releases">
-      <tocitem text="2.4.0" target="zap.releases.2.4.2"/>
-      <tocitem text="2.3.1" target="zap.releases.2.4.1"/>
-      <tocitem text="2.3.0" target="zap.releases.2.4.0"/>
-      <tocitem text="2.2.2" target="zap.releases.2.3.1"/>
-      <tocitem text="2.2.1" target="zap.releases.2.3.0"/>
-      <tocitem text="2.2.0" target="zap.releases.2.2.2"/>
-      <tocitem text="2.1.0" target="zap.releases.2.2.1"/>
-      <tocitem text="2.0.0" target="zap.releases.2.2.0"/>
-      <tocitem text="1.4.1" target="zap.releases.2.1.0"/>
-      <tocitem text="1.4.0" target="zap.releases.2.0.0"/>
-      <tocitem text="1.3.4" target="zap.releases.1.4.1"/>
-      <tocitem text="1.3.3" target="zap.releases.1.4.0"/>
-      <tocitem text="1.3.2" target="zap.releases.1.3.4"/>
-      <tocitem text="1.3.1" target="zap.releases.1.3.3"/>
-      <tocitem text="1.3.0" target="zap.releases.1.3.2"/>
-      <tocitem text="1.2.0" target="zap.releases.1.3.1"/>
-      <tocitem text="1.1.0" target="zap.releases.1.3.0"/>
-      <tocitem text="1.0.0" target="zap.releases.1.2.0"/>
+      <tocitem text="2.4.0" target="zap.releases.2.4.3"/>
+      <tocitem text="2.3.1" target="zap.releases.2.4.2"/>
+      <tocitem text="2.3.0" target="zap.releases.2.4.1"/>
+      <tocitem text="2.2.2" target="zap.releases.2.4.0"/>
+      <tocitem text="2.2.1" target="zap.releases.2.3.1"/>
+      <tocitem text="2.2.0" target="zap.releases.2.3.0"/>
+      <tocitem text="2.1.0" target="zap.releases.2.2.2"/>
+      <tocitem text="2.0.0" target="zap.releases.2.2.1"/>
+      <tocitem text="1.4.1" target="zap.releases.2.2.0"/>
+      <tocitem text="1.4.0" target="zap.releases.2.1.0"/>
+      <tocitem text="1.3.4" target="zap.releases.2.0.0"/>
+      <tocitem text="1.3.3" target="zap.releases.1.4.1"/>
+      <tocitem text="1.3.2" target="zap.releases.1.4.0"/>
+      <tocitem text="1.3.1" target="zap.releases.1.3.4"/>
+      <tocitem text="1.3.0" target="zap.releases.1.3.3"/>
+      <tocitem text="1.2.0" target="zap.releases.1.3.2"/>
+      <tocitem text="1.1.0" target="zap.releases.1.3.1"/>
+      <tocitem text="1.0.0" target="zap.releases.1.3.0"/>
+      <tocitem text="1.2.0" target="zap.releases.1.2.0"/>
       <tocitem text="1.1.0" target="zap.releases.1.1.0"/>
       <tocitem text="1.0.0" target="zap.releases.1.0.0"/>
    </tocitem>

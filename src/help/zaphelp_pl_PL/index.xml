@@ -26,7 +26,9 @@
     <indexitem text="break points" target="start.concepts.breakpoints" /> 
     <indexitem text="break tab" target="ui.tabs.break" />
     <indexitem text="command line" target="cmdline" />
+    <indexitem text="contexts" target="start.concepts.contexts" />
     <indexitem text="credits" target="zap.credits" />
+    <indexitem text="data driven content" target="start.concepts.ddc" />
     <indexitem text="dialogs" target="ui.dialogs" />
     <indexitem text="encode / decode / hash dialog" target="ui.dialogs.enc_dec" />
     <indexitem text="features" target="start.concepts" />
@@ -72,6 +74,7 @@
     <indexitem text="release 2.4.0" target="zap.releases.2.4.0" />
     <indexitem text="release 2.4.1" target="zap.releases.2.4.1" />
     <indexitem text="release 2.4.2" target="zap.releases.2.4.2" />
+    <indexitem text="release 2.4.3" target="zap.releases.2.4.3" />
     <indexitem text="releases" target="zap.releases" />
     <indexitem text="request tab" target="ui.tabs.request" />
     <indexitem text="resend dialog" target="ui.dialogs.resend" />
@@ -81,12 +84,16 @@
     <indexitem text="scan policy dialog" target="ui.dialogs.scanpolicy" />
     <indexitem text="scan policy manager dialog" target="ui.dialogs.scanpolicymgr" />
     <indexitem text="search tab" target="ui.tabs.search" />
-    <indexitem text="session contexts dialog" target="ui.dialogs.contexts" />
+    <indexitem text=""pająka"" target="ui.dialogs.contexts" />
+    <indexitem text="session context authentication screen" target="ui.dialogs.context-auth" />
+    <indexitem text="session context structure screen" target="ui.dialogs.context-struct" />
     <indexitem text="session properties dialog" target="ui.dialogs.sessprop" />
     <indexitem text="sites tab" target="ui.tabs.sites" />
-    <indexitem text=""pająka"" target="start.concepts.spider" />
+    <indexitem text="spider" target="start.concepts.spider" />
     <indexitem text="spider dialog" target="ui.dialogs.spider" />
     <indexitem text="spider tab" target="ui.tabs.spider" />
+    <indexitem text="structural modifiers" target="start.concepts.structmods" />
+    <indexitem text="structural parameters" target="start.concepts.structparams" />
     <indexitem text="tags" target="start.concepts.tags" />
     <indexitem text="top level menu" target="ui.topmenu" />
     <indexitem text="top level toolbar" target="ui.toptoolbar" />

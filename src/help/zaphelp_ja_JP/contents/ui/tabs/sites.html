@@ -45,16 +45,15 @@ allow you to make any additional changes.
 This menu has the following submenus for each of the 
 <a href="../../start/concepts/contexts.html">contexts</a> you have defined:
 
-<h4>ログインリクエスト</h4>
-This identifies the specified node as a login request.<br/>
+<h4><i>Context name</i> Form-based Auth Login request</h4>
+This identifies the specified node as a login request for the specified context.<br/>
 You may only have one node identified as such in any one context.<br/> 
-　 <a href="../dialogs/session/contexts.html">セッションコンテキスト</a> dialog will be displayed to
+　 <a href="../dialogs/session/context-auth.html">Session Context Authentication</a> screen will be displayed to
 allow you to make any additional changes.
 
-<h4>ログアウトリクエスト</h4>
-This identifies the specified node as a logout request.<br/>
-You may only have one node identified as such in any one context.<br/> 
-　 <a href="../dialogs/session/contexts.html">セッションコンテキスト</a> dialog will be displayed to
+<h4><i>Context name</i> Data driven node</h4>
+This identifies the specified node as <a href="../../start/concepts/ddc.html">Data driven content</a> for the specified context.<br/>
+　 <a href="../dialogs/session/context-struct.html">Session Context Structure</a> screen will be displayed to
 allow you to make any additional changes.
 
 <h3>以下の処理から除外する:</h3>
@@ -72,7 +71,7 @@ The nodes can be included again via the <a href="../dialogs/session/sessprop.htm
 
 <h4>スパイダー</h4>
 This will prevent the selected nodes from being spidered.<br/>
-The nodes can be included again via the <a href="../dialogs/session/sessprop.html">セッション・プロパティ</a> dialog   
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
 
 <h3>削除</h3>
 This will remove the node and all of its children from ZAP.<br/>
@@ -80,28 +79,28 @@ However they can be added back in, to prevent this use the 'Exclude from' menus.
 
 <h3>ブレーク...</h3>
 This will bring up a new window which will allow you to set a 
-<a href="../../start/concepts/breakpoints.html">ブレークポイント</a> on that URL.<br/>
+<a href="../../start/concepts/breakpoints.html">break point</a> on that URL.<br/>
 The break point is defined via a regular expression. If you visit a URL which matches this 
 expression then ZAP will intercept it and allow you to change either the request and/or the
 response.
 
 <h3>Alerts for this node</h3>
-If the URL selected has <a href="../../start/concepts/alerts.html">アラート</a> associated with it then 
+If the URL selected has <a href="../../start/concepts/alerts.html">alerts</a> associated with it then 
 they will be listed under this menu.<br>
 Selecting one of the alerts will cause it to be displayed.
 
 <h3>再送信...</h3>
 This will bring up the
-<a href="../dialogs/resend.html">再送信ダイアログ</a> which allows you to  
+<a href="../dialogs/resend.html">Resend dialog</a> which allows you to  
 resend the request after making any changes to it that you want to.
 
 <h3>新しいアラート...</h3>
 This will bring up the
-<a href="../dialogs/addalert.html">アラートダイアログを追加</a> which allows you to manually record a new  
+<a href="../dialogs/addalert.html">Add Alert dialog</a> which allows you to manually record a new  
 <a href="../../start/concepts/alerts.html">alert</a> against this request.
 
 <h3>履歴タブに表示</h3>
-This will show the selected node in the <a href="history.html">履歴タブ</a>.
+This will show the selected node in the <a href="history.html">History tab</a>.
 
 <h3>ブラウザで表示</h3>
 既定のブラウザーで選択されたノードのURLを開きます。

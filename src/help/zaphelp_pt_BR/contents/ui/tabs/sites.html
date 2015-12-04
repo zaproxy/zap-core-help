@@ -41,15 +41,16 @@ O diálogo <a href="../dialogs/session/contexts.html">Contextos da sessão</a> s
 Este menu tem os seguintes submenus para cada um dos 
 <a href="../../start/concepts/contexts.html">contextos</a> que você definiu:
 
-<h4>Pedido de login</h4>
-Isto identifica o nó especificado como uma solicitação de logon.<br/>
+<h4><i>Context name</i> Form-based Auth Login request</h4>
+This identifies the specified node as a login request for the specified context.<br/>
 Você pode ter apenas um nó identificado como tal em cada contexto.<br/> 
-O diálogo <a href="../dialogs/session/contexts.html">Contextos da sessão</a> será exibido para que você possa fazer alterações adicionais.
+O diálogo <a href="../dialogs/session/context-auth.html">Session Context Authentication</a> screen will be displayed to
+allow you to make any additional changes.
 
-<h4>Pedido de logout</h4>
-Isto identifica o nó especificado como uma solicitação de logout.<br/>
-Você pode ter apenas um nó identificado como tal em cada contexto.<br/> 
-O diálogo <a href="../dialogs/session/contexts.html">Contextos da sessão</a> será exibido para que você possa fazer alterações adicionais.
+<h4><i>Context name</i> Data driven node</h4>
+This identifies the specified node as <a href="../../start/concepts/ddc.html">Data driven content</a> for the specified context.<br/>
+O diálogo <a href="../dialogs/session/context-struct.html">Session Context Structure</a> screen will be displayed to
+allow you to make any additional changes.
 
 <h3>Excluir de</h3>
 Este menu possui os seguintes submenus:
@@ -65,7 +66,7 @@ Os nós podem ser incluídos novamente através do diálogo <a href="../dialogs/
 
 <h4>Spider</h4>
 Isto irá impedir que os nós selecionados sejam percorridos pelo spider.<br/>
-Os nós podem ser incluídos novamente através do diálogo <a href="../dialogs/session/sessprop.html">Propriedades da Sessão</a>     
+Os nós podem ser incluídos novamente através do diálogo <a href="../dialogs/session/sessprop.html">Session Properties</a>     
 
 <h3>Deletar</h3>
 Isto irá remover o nó e todos os seus 'filhos' do ZAP.<br/>
@@ -73,24 +74,24 @@ No entanto, eles podem ser adicionados de volta, para impedir que isso aconteça
 
 <h3>Pausa...</h3>
 Isso irá abrir uma nova janela que irá permitir que você defina um 
-<a href="../../start/concepts/breakpoints.html">ponto de interrupção</a> naquela URL.<br/>
+<a href="../../start/concepts/breakpoints.html">break point</a> naquela URL.<br/>
 O ponto de interrupção é definido através de uma expressão regex. <br/> Se você visitar uma URL que corresponde a esta expressão, o ZAP vai interceptá-la e permitir que você altere a solicitação e/ou a resposta.
 
 <h3>Alertas para este alvo</h3>
-Se a URL selecionada tem <a href="../../start/concepts/alerts.html">alertas</a> associadas a ela, então eles serão listados aqui neste menu.<br>
+Se a URL selecionada tem <a href="../../start/concepts/alerts.html">alerts</a> associadas a ela, então eles serão listados aqui neste menu.<br>
 Selecionar um dos alertas fará com que ele seja exibido.
 
 <h3>Reenviar...</h3>
 Isso irá abrir o
-<a href="../dialogs/resend.html">Diálogo de reenvio</a> que lhe permite reenviar o request depois de fazer quaisquer alterações que você deseja.
+<a href="../dialogs/resend.html">Resend dialog</a> que lhe permite reenviar o request depois de fazer quaisquer alterações que você deseja.
 
 <h3>Novo Alerta...</h3>
 Isso irá abrir o
-<a href="../dialogs/addalert.html">diálogo Acrescentar Alerta</a> que permite a você registrar manualmente um novo  
-<a href="../../start/concepts/alerts.html">alerta</a> para um request.
+<a href="../dialogs/addalert.html">Add Alert dialog</a> que permite a você registrar manualmente um novo  
+<a href="../../start/concepts/alerts.html">alert</a> para um request.
 
 <h3>Mostrar no guia histórico</h3>
-Isto irá mostrar o nó selecionado na <a href="history.html">Aba de histórico</a>.
+Isto irá mostrar o nó selecionado na <a href="history.html">History tab</a>.
 
 <h3>Ver no Navegador</h3>
 Isto irá abrir a URL do nó selecionado em seu navegador padrão.

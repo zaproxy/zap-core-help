@@ -25,18 +25,21 @@
          <tocitem text="Authentisierung" target="start.concepts.auth"/>
          <tocitem text="Break Points" target="start.concepts.breakpoints"/>
          <tocitem text="Kontexte" target="start.concepts.contexts"/>
-         <tocitem text="Filter" target="start.concepts.filters"/>
+         <tocitem text="Filter" target="start.concepts.ddc"/>
+         <tocitem text="Filters" target="start.concepts.filters"/>
          <tocitem text="Globally Excluded URLs" target="start.concepts.globalexcludeurl"/>
-         <tocitem text="Http Sessions" target="start.concepts.httpsessions"/>
-         <tocitem text="HTTP-Sessions" target="start.concepts.intercept"/>
+         <tocitem text="HTTP-Sessions" target="start.concepts.httpsessions"/>
+         <tocitem text="Intercepting Proxy" target="start.concepts.intercept"/>
          <tocitem text="Modes" target="start.concepts.modes"/>
          <tocitem text="Notes" target="start.concepts.notes"/>
-         <tocitem text="Passive Scan" target="start.concepts.pscan"/>
-         <tocitem text="Passiv-Scan" target="start.concepts.scanpolicy"/>
+         <tocitem text="Passiv-Scan" target="start.concepts.pscan"/>
+         <tocitem text="Scan Policies" target="start.concepts.scanpolicy"/>
          <tocitem text="Scope" target="start.concepts.scope"/>
          <tocitem text="Session Management" target="start.concepts.sessmanag"/>
          <tocitem text="Spider" target="start.concepts.spider"/>
-         <tocitem text="Spider" target="start.concepts.tags"/>
+         <tocitem text="Structural Modifiers" target="start.concepts.structmods"/>
+         <tocitem text="Structural Parameters" target="start.concepts.structparams"/>
+         <tocitem text="Tags" target="start.concepts.tags"/>
          <tocitem text="Users" target="start.concepts.users"/>
       </tocitem>
       <tocitem text="Scanner Rules" target="start.check"/>
@@ -119,6 +122,8 @@
          <tocitem text="Session" target="ui.dialogs.sessprop">
 	         <tocitem text="Session Eigenschaften" target="ui.dialogs.sessprop"/>
 	         <tocitem text="Session Contexts" target="ui.dialogs.contexts"/>
+	         <tocitem text="Session Context Authentication" target="ui.dialogs.context-auth"/>
+	         <tocitem text="Session Context Structure" target="ui.dialogs.context-struct"/>
          </tocitem>
          <tocitem text="Spider" target="ui.dialogs.spider"/>
       </tocitem>
@@ -130,6 +135,7 @@
    <tocitem text="Add Ons" target="addon.introduction" tocid="addons" />
    
    <tocitem text="Releases" target="zap.releases">
+      <tocitem text="2.4.3" target="zap.releases.2.4.3"/>
       <tocitem text="2.4.2" target="zap.releases.2.4.2"/>
       <tocitem text="2.4.1" target="zap.releases.2.4.1"/>
       <tocitem text="2.4.0" target="zap.releases.2.4.0"/>
