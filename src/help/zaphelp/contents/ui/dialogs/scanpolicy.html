@@ -3,11 +3,11 @@
 <HEAD>
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
 <TITLE>
-Scan Policy dialog
+Scan Policy Dialog
 </TITLE>
 </HEAD>
 <BODY BGCOLOR="#ffffff">
-<H1>Scan Policy dialog</H1>
+<H1>Scan Policy Dialog</H1>
 <p>
 This allows you to enable and disable the rules that are run when performing an <a href="../../start/concepts/ascan.html">active scan</a>.<br>
 The first screen allows you to define the default levels as well as the levels for all of the rules in a specific category.<br>
@@ -21,8 +21,11 @@ managed via the <a href="../../ui/dialogs/options/pscanrules.html">Options Passi
 
 <H3>Threshold</H3>
 This controls how likely ZAP is to report potential vulnerabilities.<br>
-If you select Low then more potential issues will be raised which may increase the number of false positives.<br>
-If you select High then fewer potential issues will be raised which may mean that some real issues are missed (false negatives).  
+<ul>
+	<li>If you select Off then the scanner won't run.</li>
+	<li>If you select Low then more potential issues will be raised which may increase the number of false positives.</li>
+	<li>If you select High then fewer potential issues will be raised which may mean that some real issues are missed (false negatives).</li>
+</ul>  
 
 <H3>Strength</H3>
 This controls the number of attacks that ZAP will perform.<br>
