@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<TITLE>
+  Release 2.5.0
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H1>Release 2.5.0</H1>
+
+<p>
+The following changes were made in this release:
+</p>
+
+<H2>Enhancements:</H2>
+<ul>
+<li>Issue 69 : Ability to export request into various executable forms</li>
+<li>Issue 222 : Report : allow to include details of request</li>
+<li>Issue 266 : Add auto tagging for setting cookies, json, anything else?</li>
+<li>Issue 295 : Grouping</li>
+<li>Issue 304 : fuzzer enhancements (was output should have checks)</li>
+<li>Issue 322 : Official Apt or Yum repositories</li>
+<li>Issue 396 : Addition functionality - possibility to follow up request in Resend Dialog</li>
+<li>Issue 464 : Split the RFI tests out of PathTraversal</li>
+<li>Issue 605 : Force intercepts via header</li>
+<li>Issue 646 : Password outgoing proxy in plain text on screen</li>
+<li>Issue 937 : Move copy and past extensions into stdmenus</li>
+<li>Issue 1015 : Support Server Name Indication</li>
+<li>Issue 1229 : Update Extensions/Plugins to Take Advantage of New Confidence Scale</li>
+<li>Issue 1341 : Update alert XML schema to remove element-level name collision</li>
+<li>Issue 1496 : Nit: Unify Mac OS X "About Box" with Java "About Box"</li>
+<li>Issue 1590 : Mode to apply when running as a daemon</li>
+<li>Issue 1713 : Source Code Disclosure SVN Throws False Positive</li>
+<li>Issue 1958 : Allow to disable database (HSQLDB) log</li>
+<li>Issue 1959 : Allow to active scan headers of all requests</li>
+<li>Issue 1980 : Add ZAP CLI to Docker images</li>
+<li>Issue 2068 :  LoggedIn and LoggedOut indicators inside authentication scripts</li>
+<li>Issue 2070 : It should be possible for the authentication scripts to configure how the messages are sent</li>
+<li>Issue 2094 : Support a '-addoninstallall' command line option</li>
+<li>Issue 2121 : Disable Req/Resp tabs position options when in "Expand Full" layout</li>
+<li>Issue 2134 : Update HSQLDB library to version 2.3.3</li>
+<li>Issue 2162 : add-marketplace-sorting</li>
+<li>Issue 2171 : Add-ons managed via api, cli</li>
+<li>Issue 2183 : API: Include quality in the ascan/progress response</li>
+<li>Issue 2237 : Allow java max mem to be overridden on the cmdline</li>
+<li>Issue 2238 : spider: fallback to parse HTML comments as plain text if no URL found</li>
+<li>Issue 2273 : Support site level stats</li>
+<li>Issue 2274 : Allow to spider just a site's subtree</li>
+<li>Issue 2275 : spider: do not require a URL, through the API, if the context has seeds</li>
+<li>Issue 2277 : spider: preserve query parameters with same name when canonicalising URL</li>
+<li>Issue 2289 : Record site based response time stats</li>
+<li>Issue 2324 : Include scanners' quality in API scanners views</li>
+<li>Issue 2330 : Add authentication stats</li>
+<li>Issue 2335 : Add Outbound Proxy Password Peak</li>
+<li>Issue 2347 : Allow to remove context factories from View/Model</li>
+<li>Issue 2361 : Rename tool bar option Expand Full to Full Layout</li>
+<li>Issue 2362 : Allow to select all Spider results</li>
+<li>Issue 2367 : Change break buttons location without restarting ZAP</li>
+<li>Issue 2368 : Do not require a restart to show/hide the main tool bar</li>
+</ul>
+
+<H2>Bug fixes:</H2>
+<ul>
+<li>Issue 262 : "Weak authentication" alerts not showing with spider</li>
+<li>Issue 275 : ZAP with android emulator behind corporate proxy</li>
+<li>Issue 285 : Watcher passive check issues</li>
+<li>Issue 294 : "Delete" feature does not (always) work</li>
+<li>Issue 300 : Zed attack proxy root can not suitable use in ssl connection Cirtrix Receiver</li>
+<li>Issue 653 : Issues with auto-updater on Kali Linux and recommended fix</li>
+<li>Issue 1529 : TestExternalRedirect Missing Use Case plus Performance and FP Improvements</li>
+<li>Issue 1556 : ZAP requires Java 8 for some classes, but this is not currently available on Kali Linux</li>
+<li>Issue 1595 : owasp-zap does not launch on  Kali 1.1.0a VMWare VM due to architecture detection logic</li>
+<li>Issue 2090 : Context: Rename User, can't select in Forced User Panel</li>
+<li>Issue 2110 : SQL Injection gets skipped</li>
+<li>Issue 2112 : Wrong policy on active Scan</li>
+<li>Issue 2115 : Python API context.context("MyContext") is broken</li>
+<li>Issue 2119 : Context's description not imported</li>
+<li>Issue 2122 : Change SpiderAPI to ignore empty context names when handling scan action</li>
+<li>Issue 2125 : Log the exception when opening session file and internationalise message</li>
+<li>Issue 2126 : Fix NullPointerException on missing context's authentication script</li>
+<li>Issue 2142 : Fuzzer throwing exceptions</li>
+<li>Issue 2144 : Java.lang.NullPointerException in "AWT-EventQueue-0" </li>
+<li>Issue 2151 : AJAX Spider does not click all elements set in the options</li>
+<li>Issue 2193 : Initialise Technology tab with selected context in Active Scan dialogue</li>
+<li>Issue 2197 : Install new versions of the add-ons after downloading with -addonupdate</li>
+<li>Issue 2199 : Disallow Spider scans when ZAP is in Safe (or Protected) mode</li>
+<li>Issue 2203 : Fix findbugs warnings</li>
+<li>Issue 2208 : Prevent the active scanner from reporting progress higher than 100%</li>
+<li>Issue 2226 : ZAP should handle HttpSessionsSite's cookie errors more gracefully</li>
+<li>Issue 2246 : Error in sessions view with tokens</li>
+<li>Issue 2259 : Fix NullPointerException in VariantCookie implementation</li>
+<li>Issue 2281 : Filter params for a specific site</li>
+<li>Issue 2282 : Spider a whole context at once</li>
+<li>Issue 2292 : Enhance alertFingerPrint</li>
+<li>Issue 2297 : AWT blocker activation interrupted - java.lang.InterruptedException </li>
+<li>Issue 2307 : Add missing optional parameter "scanPolicyName" to ascan API actions</li>
+<li>Issue 2312 : Give focus to "Edit Keyboard Shortcut" dialogue</li>
+<li>Issue 2313 : Properly convert (old) excluded proxy domains</li>
+<li>Issue 2314 : Cannot add several payloads to fuzzer (NullPointerException)</li>
+<li>Issue 2323 : Fix (secure) ZAP API request loop</li>
+<li>Issue 2328 : Fix issue during uninstallation of named extension</li>
+<li>Issue 2329 : Filter seeds immediately before running the spider</li>
+<li>Issue 2331 : Custom Context Panels not show in existing contexts after installation of add-on</li>
+<li>Issue 2336 : BadLocationException thrown when using Fuzzer</li>
+<li>Issue 2363 : Keep break buttons in sync when changing mode</li>
+<li>Issue 2366 : Inconsistencies in break buttons shown</li>
+</ul>
+
+<H2>See also</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+</table>
+</BODY>
+</HTML>
