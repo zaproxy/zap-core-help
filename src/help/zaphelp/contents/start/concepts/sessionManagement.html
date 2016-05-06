@@ -13,7 +13,7 @@
 		Method defined which dictates how sessions are kept.
 	</p>
 
-	<p>So far, just a cookie based session management method has been
+	<p>So far, just cookie based and HTTP authentication session management methods have been
 		implemented, but the system supports easy addition of new methods,
 		according to user needs.</p>
 
@@ -24,6 +24,13 @@
 		In the case of this method the session is being tracked through
 		cookies. Currently, the session tokens that are used are imported from
 		the <a href="httpsessions.html">Http Sessions</a> Extension.
+	</p>
+
+	<h3>
+		<a name="hasm">HTTP Authentication Session Management</a>
+	</h3>
+	<p>
+		In the case of this method the session is managed with HTTP request header <code>Authorization</code>.
 	</p>
 
 	<h2>Configured via</h2>
