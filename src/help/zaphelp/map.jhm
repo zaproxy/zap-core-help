@@ -83,6 +83,7 @@
         <mapID target="ui.dialogs.resend" url="contents/ui/dialogs/resend.html"/>
         <mapID target="ui.dialogs.scanpolicy" url="contents/ui/dialogs/scanpolicy.html"/>
         <mapID target="ui.dialogs.scanpolicymgr" url="contents/ui/dialogs/scanpolicymgr.html"/>
+        <mapID target="ui.dialogs.scanprogress" url="contents/ui/dialogs/scanprogress.html"/>
         <mapID target="ui.dialogs.sessprop" url="contents/ui/dialogs/session/sessprop.html"/>
         <mapID target="ui.dialogs.spider" url="contents/ui/dialogs/spider.html"/>
         <mapID target="ui.footer" url="contents/ui/footer.html" />

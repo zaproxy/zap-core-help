@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<TITLE>
+Scan Progress Dialog
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H1>Scan Progress Dialog</H1>
+<p>
+This shows you the status of an <a href="../../start/concepts/ascan.html">active scan</a>.<br>
+
+<H3>Progress tab</H3>
+This shows which scan rules are running for each host being scanned, as well as other details such as the 
+elapsed time they have been running and the number of requests made per rule.<br>
+It also allows you to skip the rule which is currently being run by clicking on the 
+'Skip current running active scan' button <img src="../../images/10/137.png" align="bottom" width="10" height="10" /> 
+ in the Status column.
+
+<H3>Response Chart tab</H3>
+This shows the number of responses per second received by ZAP while active scanning a site.<br>
+The responses are charted per 'HTTP response status code group':
+<ul>
+<li>1xx Informational</li>
+<li>2xx Success</li>
+<li>3xx Redirection</li>
+<li>4xx Client Error</li>
+<li>5xx Server Error</li>
+</ul>
+You can zoom in by selecting an area of the chart using your mouse.<br>
+You can also right click the chart for more options.<br>
+Vertical bars indicate approximately when each scan rule starts (it is very difficult to be precise).<br>
+The chart will only be updated while open, if you close and then reopen the chart then the previous data will be lost.<br>
+By default the maximum time the chart will cover is 10 minutes, you can change that via the
+<a href="options/ascan.html">Options Active Scan screen</a>.
+
+<H2>Accessed via</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/ascan.html">Active Scan tab</a></td><td></td></tr>
+</table>
+
+<H2>See also</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+</table>
+
+<H2>External Links</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">https://en.wikipedia.org/wiki/List_of_HTTP_status_codes</a></td><td></td></tr>
+</table>
+
+</BODY>
+</HTML>

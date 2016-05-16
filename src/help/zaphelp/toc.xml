@@ -119,6 +119,7 @@
          <tocitem text="Scan Policy Manager" target="ui.dialogs.scanpolicymgr">
 	         <tocitem text="Scan Policy" target="ui.dialogs.scanpolicy"/>
          </tocitem>
+         <tocitem text="Scan Progress" target="ui.dialogs.scanprogress"/>
          <tocitem text="Session" target="ui.dialogs.sessprop">
 	         <tocitem text="Session Properties" target="ui.dialogs.sessprop"/>
 	         <tocitem text="Session Contexts" target="ui.dialogs.contexts"/>
