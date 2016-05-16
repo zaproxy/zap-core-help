@@ -37,6 +37,7 @@
          <tocitem text="Scope" target="start.concepts.scope"/>
          <tocitem text="Session Management" target="start.concepts.sessmanag"/>
          <tocitem text="Spider" target="start.concepts.spider"/>
+         <tocitem text="Statistics" target="start.concepts.stats"/>
          <tocitem text="Structural Modifiers" target="start.concepts.structmods"/>
          <tocitem text="Structural Parameters" target="start.concepts.structparams"/>
          <tocitem text="Tags" target="start.concepts.tags"/>
@@ -113,6 +114,7 @@
          	<tocitem text="Scripts" target="ui.dialogs.options.script"/>
          	<tocitem text="Search" target="ui.dialogs.options.search"/>
          	<tocitem text="Spider" target="ui.dialogs.options.spider"/>
+         	<tocitem text="Statistics" target="ui.dialogs.options.stats"/>
          </tocitem>
          <tocitem text="Persist Session" target="ui.dialogs.persistsession"/>
          <tocitem text="Resend" target="ui.dialogs.resend"/>
