@@ -32,6 +32,7 @@
         <mapID target="start.concepts.scope" url="contents/start/concepts/scope.html" />
         <mapID target="start.concepts.sessmanag" url="contents/start/concepts/sessionManagement.html" />
         <mapID target="start.concepts.spider" url="contents/start/concepts/spider.html" />
+        <mapID target="start.concepts.stats" url="contents/start/concepts/stats.html" />
         <mapID target="start.concepts.structmods" url="contents/start/concepts/structmods.html" />
         <mapID target="start.concepts.structparams" url="contents/start/concepts/structparams.html" />
         <mapID target="start.concepts.tags" url="contents/start/concepts/tags.html" />
@@ -140,4 +141,5 @@
      	<mapID target="ui.dialogs.options.script" url="contents/ui/dialogs/options/script.html" />
      	<mapID target="ui.dialogs.options.search" url="contents/ui/dialogs/options/search.html" />
      	<mapID target="ui.dialogs.options.spider" url="contents/ui/dialogs/options/spider.html"/>
+     	<mapID target="ui.dialogs.options.stats" url="contents/ui/dialogs/options/stats.html"/>
 </map>
