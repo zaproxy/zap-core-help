@@ -103,9 +103,9 @@
          	<tocitem text="Display" target="ui.dialogs.options.view"/>
          	<tocitem text="Dynamic SSL Certificates" target="ui.dialogs.options.dynsslcert"/>
             <tocitem text="Extensions" target="ui.dialogs.options.ext"/>
-         	<tocitem text="HTTP Sessions" target="ui.dialogs.options.httpsessions"/>
             <tocitem text="Global Exclude URL" target="ui.dialogs.options.globalexcludeurl"/>
-         	<tocitem text="jvm" target="ui.dialogs.options.jvm"/>
+         	<tocitem text="HTTP Sessions" target="ui.dialogs.options.httpsessions"/>
+         	<tocitem text="JVM" target="ui.dialogs.options.jvm"/>
          	<tocitem text="Keyboard" target="ui.dialogs.options.keyboard"/>
          	<tocitem text="Language" target="ui.dialogs.options.language"/>
          	<tocitem text="Local Proxy" target="ui.dialogs.options.localproxy"/>
