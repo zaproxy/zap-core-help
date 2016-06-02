@@ -13,6 +13,38 @@
 The following changes were made in this release:
 </p>
 
+<H2>ZAP API Changes:</H2>
+
+<H3>VIEW authorization / getAuthorizationDetectionMethod</H3>
+
+Now returns data wrapped in an object called authorizationDetectionMethod
+
+For example:
+<pre>{"authorizationDetectionMethod":{"statusCode":"-1"..."headerRegex":""}}</pre>
+instead of:
+<pre>{"statusCode":"-1"..."headerRegex":""}</pre>
+
+<H3>VIEW context / context + technologyList</H3>
+Both now return data wrapped in an object called "context"
+
+For example:
+<pre>{"context":{"id":"1", ..., "inScope":"true","loggedOutPattern":""}}</pre>
+instead of:
+<pre>{"id":"1", ..., "inScope":"true","loggedOutPattern":""}</pre>
+
+<H3>ACTION spider / scan + scanAsUser</H3>
+</ul>
+Both now support a new optional 'subtreeOnly' parameter which limits the spider to the specified subtree.
+The 'url' parameter is also now optional, as long as a valid 'context' parameter is supplied
+
+<H3>New 'stats' component</H3>
+The new 'stats' API component provides access to the <a href="../start/concepts/stats.html">stats</a>
+now maintained by ZAP.<br><br>
+
+Note that some existing components will also have new operations, see the 
+<a href="../start/concepts/api.html">API Web UI</a> for more details.
+ 
+
 <H2>Enhancements:</H2>
 <ul>
 <li>Issue 266 : Add auto tagging for setting cookies, json</li>
