@@ -12,14 +12,20 @@ API
 O ZAP fornece uma Application Programming Interface (API) que permite a você interagir programaticamente com o ZAP.
 </p>
 <p>
-A API está disponível em formatos JSON, HTML e XML. <br/> A documentação da API está disponível através da URL http://zap/ quando você em proxy via ZAP.<br/>
+The API is available in JSON, HTML and XML formats.<br/>
+A simple web UI which allows you to explore and use the API is available via the URL <a href="http://zap/">http://zap/</a> 
+when you are proxying via ZAP, or via the host and port ZAP is listening on, eg 
+<a href="http://localhost:8080/">http://localhost:8080/</a>.<br/>
 </p>
 <p>
-Note-se que há segurança incorporada à API, e por isso ela está desativada por default. <br/> Se ativada, em seguida, a API está disponível para todas as máquinas que são capazes de usar o ZAP como proxy. <br/> Por padrão o ZAP escuta somente em 'localhost' e assim a API só pode ser usada na máquina host.
+If enabled then the API is available to all machines that are able to use ZAP as a proxy.<br/>
+By default ZAP listens only on 'localhost' and so can only be used from the host machine.
 </p>
 
 <p>
-A API fornece acesso a recursos centrais do ZAP tais como <a href="ascan.html">varredura ativa</a> e <a href="spider.html">spider</a>. <br/> Versões futuras do ZAP vão aumentar a funcionalidade disponível através da APi.
+The API provides access to most of the core ZAP features such as the 
+ <a href="ascan.html">active scanner</a> and <a href="spider.html">spider</a>.<br/>
+Future versions of ZAP will increase the functionality available via the APi.
 </p>
 
 <p>

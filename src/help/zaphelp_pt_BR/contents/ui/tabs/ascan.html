@@ -15,41 +15,45 @@ O botão 'Nova Varredura' abre o diálogo de <a href="../dialogs/advascan.html">
 <br><br>
 A barra de ferramentas contém um conjunto de botões que permitem iniciar, parar, pausar e continuar a varredura selecionada.<br>
 Uma barra de progresso mostra o quanto progrediu a verificação do site selecionado.<br>
-O valor 'Varreduras em andamento' mostra quantas varreduras estão ativas - passar o cursor sobre esse valor irá mostrar num pop-uo uma lista dos sites que estão sendo examinados. 
+O valor 'Varreduras em andamento' mostra quantas varreduras estão ativas - passar o cursor sobre esse valor irá mostrar num pop-uo uma lista dos sites que estão sendo examinados.<br>
+The 'Show scan progress details' button <img src="../../images/fugue/system-monitor.png" align="bottom" width="16" height="16" /> launches the <a href="../dialogs/scanprogress.html">Scan Progress dialog</a>
+which allows you to see details about which rules are running, skip individual rules and see a chart of the responses.
 
 <h2>Menu do botão direito</h2>
-Clicar com o botão direito em um nó faz aparecer um menu que lhe permitirá:
+Right clicking on a node will bring up a menu which will allow you to:
 
 <h3>Excluir de</h3>
-Este menu possui os seguintes submenus:
+This menu has the following submenus:
 
 <h4>Proxy</h4>
-Isto irá excluir do proxy os nós selecionados. Eles ainda passarão pelo ZAP, mas não serão exibidos em qualquer uma das guias.<br/>
-Isto pode ser usado para ignorar URLs que você sabe que não são relevantes para o sistema que você está testando.<br/>
+This will exclude the selected nodes from the proxy. They will still be proxied via ZAP but will not be shown 
+in any of the tabs.<br/>
+This can be used to ignore URLs that you know are not relevant to the system you are currently testing.<br/>
 Os nós podem ser incluídos novamente através do diálogo <a href="../dialogs/session/sessprop.html">Propriedades da Sessão</a> .   
 
 <h4>Scanner</h4>
-Isto irá impedir que os nós selecionados entrem na varredura ativa.<br/>
+This will prevent the selected nodes from being actively scanned.<br/>
 Os nós podem ser incluídos novamente através do diálogo <a href="../dialogs/session/sessprop.html">Propriedades da Sessão</a> .   
 
 <h4>Spider</h4>
-Isto irá impedir que os nós selecionados sejam percorridos pelo spider.<br/>
-Os nós podem ser incluídos novamente através do diálogo <a href="../dialogs/session/sessprop.html">Propriedades da Sessão</a> .   
+This will prevent the selected nodes from being spidered.<br/>
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
 
 <h3>Reenviar...</h3>
-Isso irá abrir o
-<a href="../dialogs/resend.html">Diálogo de reenvio</a> que lhe permite reenviar o request depois de fazer quaisquer alterações que você deseja.
+This will bring up the
+<a href="../dialogs/resend.html">Resend dialog</a> which allows you to  
+resend the request after making any changes to it that you want to.
 
 <h3>Novo Alerta...</h3>
-Isso irá abrir o
-<a href="../dialogs/addalert.html">diálogo Acrescentar Alerta</a> que permite a você registrar manualmente um novo  
-<a href="../../start/concepts/alerts.html">alerta</a> para este request.
+This will bring up the
+<a href="../dialogs/addalert.html">Add Alert dialog</a> which allows you to manually record a new  
+<a href="../../start/concepts/alerts.html">alert</a> against this request.
 
 <h3>Mostrar na Aba de Sites</h3>
-Isto irá mostrar a mensagem selecionada na <a href="sites.html">Aba de Sites</a>.
+This will show the selected message in the <a href="sites.html">Sites tab</a>.
 
 <h3>Ver no Navegador</h3>
-Isto irá abrir a URL do nó selecionado em seu navegador padrão.
+This will open the URL of the selected node in your default browser.
 
 
 <h2>Leia também</h2>

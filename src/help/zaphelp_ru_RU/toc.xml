@@ -37,7 +37,8 @@
          <tocitem text="Scope" target="start.concepts.scope"/>
          <tocitem text="Session Management" target="start.concepts.sessmanag"/>
          <tocitem text="Паук" target="start.concepts.spider"/>
-         <tocitem text="Теги" target="start.concepts.structmods"/>
+         <tocitem text="Теги" target="start.concepts.stats"/>
+         <tocitem text="Structural Modifiers" target="start.concepts.structmods"/>
          <tocitem text="Structural Parameters" target="start.concepts.structparams"/>
          <tocitem text="Tags" target="start.concepts.tags"/>
          <tocitem text="Users" target="start.concepts.users"/>
@@ -102,9 +103,9 @@
          	<tocitem text="Display" target="ui.dialogs.options.view"/>
          	<tocitem text="Dynamic SSL Certificates" target="ui.dialogs.options.dynsslcert"/>
             <tocitem text="Extensions" target="ui.dialogs.options.ext"/>
-         	<tocitem text="Http Sessions" target="ui.dialogs.options.httpsessions"/>
             <tocitem text="Global Exclude URL" target="ui.dialogs.options.globalexcludeurl"/>
-         	<tocitem text="jvm" target="ui.dialogs.options.jvm"/>
+         	<tocitem text="HTTP Sessions" target="ui.dialogs.options.httpsessions"/>
+         	<tocitem text="JVM" target="ui.dialogs.options.jvm"/>
          	<tocitem text="Keyboard" target="ui.dialogs.options.keyboard"/>
          	<tocitem text="Language" target="ui.dialogs.options.language"/>
          	<tocitem text="Local Proxy" target="ui.dialogs.options.localproxy"/>
@@ -113,19 +114,21 @@
          	<tocitem text="Scripts" target="ui.dialogs.options.script"/>
          	<tocitem text="Search" target="ui.dialogs.options.search"/>
          	<tocitem text="Spider" target="ui.dialogs.options.spider"/>
+         	<tocitem text="Statistics" target="ui.dialogs.options.stats"/>
          </tocitem>
          <tocitem text="Параметры" target="ui.dialogs.persistsession"/>
          <tocitem text="Переслать" target="ui.dialogs.resend"/>
          <tocitem text="Scan Policy Manager" target="ui.dialogs.scanpolicymgr">
 	         <tocitem text="Scan Policy" target="ui.dialogs.scanpolicy"/>
          </tocitem>
-         <tocitem text="Сессия" target="ui.dialogs.sessprop">
-	         <tocitem text="Свойства сессии" target="ui.dialogs.sessprop"/>
+         <tocitem text="Сессия" target="ui.dialogs.scanprogress"/>
+         <tocitem text="Паук" target="ui.dialogs.sessprop">
+	         <tocitem text="Session Properties" target="ui.dialogs.sessprop"/>
 	         <tocitem text="Session Contexts" target="ui.dialogs.contexts"/>
 	         <tocitem text="Session Context Authentication" target="ui.dialogs.context-auth"/>
 	         <tocitem text="Session Context Structure" target="ui.dialogs.context-struct"/>
          </tocitem>
-         <tocitem text="Паук" target="ui.dialogs.spider"/>
+         <tocitem text="Spider" target="ui.dialogs.spider"/>
       </tocitem>
       <tocitem text="The Footer" target="ui.footer"/>
    </tocitem>
@@ -135,6 +138,7 @@
    <tocitem text="Add Ons" target="addon.introduction" tocid="addons" />
    
    <tocitem text="Releases" target="zap.releases">
+      <tocitem text="2.5.0" target="zap.releases.2.5.0"/>
       <tocitem text="2.4.3" target="zap.releases.2.4.3"/>
       <tocitem text="2.4.2" target="zap.releases.2.4.2"/>
       <tocitem text="2.4.1" target="zap.releases.2.4.1"/>

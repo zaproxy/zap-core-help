@@ -15,6 +15,10 @@
 Allows to compact the database when ZAP is closed, compacting the database 
 ensures a minimal space disk usage but it will also take longer to exit ZAP.
 
+<h3>Recovery Log</h3>
+Controls whether or not database's recovery log is enabled.<br>Improves the performance of the database when disabled but might lead to data loss if ZAP is exited abruptly.<br>
+Note: current session will be unaffected, changes take effect on new and opened sessions.
+
 <h3>Maximum Request Body Size</h3>
 The largest request body size in bytes that ZAP will allow.
 

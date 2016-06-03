@@ -75,23 +75,26 @@
     <indexitem text="リリース" target="zap.releases.2.4.1" />
     <indexitem text="リクエストタブ" target="zap.releases.2.4.2" />
     <indexitem text="再送信ダイアログ" target="zap.releases.2.4.3" />
-    <indexitem text="レスポンスタブ" target="zap.releases" />
-    <indexitem text="スキャナールール" target="ui.tabs.request" />
-    <indexitem text="スキャンポリシー" target="ui.dialogs.resend" />
-    <indexitem text="スキャン ポリシーダイアログ" target="ui.tabs.response" />
-    <indexitem text="scanner rules" target="start.check" />
-    <indexitem text="検索タブ" target="start.concepts.scanpolicy" />
-    <indexitem text="セッション コンテキスト ダイアログ" target="ui.dialogs.scanpolicy" />
-    <indexitem text="セッション プロパティ ダイアログ" target="ui.dialogs.scanpolicymgr" />
-    <indexitem text="サイトタブ" target="ui.tabs.search" />
-    <indexitem text="スパイダー" target="ui.dialogs.contexts" />
-    <indexitem text="スパイダーダイアログ" target="ui.dialogs.context-auth" />
-    <indexitem text="スパイダータブ" target="ui.dialogs.context-struct" />
-    <indexitem text="タグ" target="ui.dialogs.sessprop" />
-    <indexitem text="トップレベルメニュー" target="ui.tabs.sites" />
-    <indexitem text="トップレベルツールバー" target="start.concepts.spider" />
-    <indexitem text="uiの概要" target="ui.dialogs.spider" />
+    <indexitem text="レスポンスタブ" target="zap.releases.2.5.0" />
+    <indexitem text="スキャナールール" target="zap.releases" />
+    <indexitem text="スキャンポリシー" target="ui.tabs.request" />
+    <indexitem text="スキャン ポリシーダイアログ" target="ui.dialogs.resend" />
+    <indexitem text="response tab" target="ui.tabs.response" />
+    <indexitem text="検索タブ" target="start.check" />
+    <indexitem text="セッション コンテキスト ダイアログ" target="start.concepts.scanpolicy" />
+    <indexitem text="セッション プロパティ ダイアログ" target="ui.dialogs.scanpolicy" />
+    <indexitem text="サイトタブ" target="ui.dialogs.scanpolicymgr" />
+    <indexitem text="スパイダー" target="ui.dialogs.scanprogress" />
+    <indexitem text="スパイダーダイアログ" target="ui.tabs.search" />
+    <indexitem text="スパイダータブ" target="ui.dialogs.contexts" />
+    <indexitem text="タグ" target="ui.dialogs.context-auth" />
+    <indexitem text="トップレベルメニュー" target="ui.dialogs.context-struct" />
+    <indexitem text="トップレベルツールバー" target="ui.dialogs.sessprop" />
+    <indexitem text="uiの概要" target="ui.tabs.sites" />
+    <indexitem text="spider" target="start.concepts.spider" />
+    <indexitem text="spider dialog" target="ui.dialogs.spider" />
     <indexitem text="spider tab" target="ui.tabs.spider" />
+    <indexitem text="statistics" target="start.concepts.stats" />
     <indexitem text="structural modifiers" target="start.concepts.structmods" />
     <indexitem text="structural parameters" target="start.concepts.structparams" />
     <indexitem text="tags" target="start.concepts.tags" />

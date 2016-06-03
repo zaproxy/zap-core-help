@@ -7,38 +7,38 @@
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Release 2.4.3</h1>
+<h1>2.4.3 リリース</h1>
 
 <p>
-The following changes were made in this release:
+本リリースでは以下のような変更が行われました。
 </p>
 
-<h2>Enhancements:</h2>
+<h2>機能拡張:</h2>
 <ul>
-<li>Issue 1576 : Define URL path elements as 'non structural'</li>
-<li>Issue 1711 : Feature request: Option to specify number of token to be generated.</li>
-<li>Issue 1768 : Update to use a more recent user-agent</li>
+<li>Issue 1576 : URLの構造を指定できるようになりました。</li>
+<li>Issue 1711 : トークンの自動生成数を指定する機能が改善されました。</li>
+<li>Issue 1768 : デフォルトのユーザエージェントが更新されました。</li>
 <li>Issue 1894 : ZAP only scans "User-Agent", "Referer", and "Host" request headers</li>
-<li>Issue 1911 : Search AJAX spider requests</li>
+<li>Issue 1911 : AjaxSpiderのリクエストが検索タブに反映されるようになりました。</li>
 <li>Issue 1913 : Pass all params across to zap.sh - debian package</li>
 <li>Issue 1914 : Multiple add-on directories</li>
 <li>Issue 1920 : Report the host:port ZAP is listening on in daemon mode, or exit if it cant</li>
-<li>Issue 1927 : Enhancement: Break only for in-scope URLs.</li>
-<li>Issue 1944 : Chart responses per second in ascan progress</li>
-<li>Issue 1953 : Allow to spider a context through the ZAP API</li>
+<li>Issue 1927 : スコープ内のURLのみブレークする設定が追加されました。</li>
+<li>Issue 1944 : 動的スキャンの「スキャンの進捗画面(Scan Progress Detail)」に「レスポンスグラフ(Response Chart)」が追加されました。</li>
+<li>Issue 1953 : スパイダーのコンレキストが、ZAP APIを通して許可出来るようになりました。</li>
 <li>Issue 1962 : Install and update add-ons from the command line</li>
 <li>Issue 1975 : RC4-SHA SSL cipher suite not supported</li>
-<li>Issue 1980 : Add ZAP CLI to Docker images</li>
+<li>Issue 1980 : DockerイメージにZAP CLIが追加されました。</li>
 <li>Issue 1985 : Bring up the Modify dialog if the user doubles on a row in a AbstractMultipleOptionsBaseTablePanel</li>
-<li>Issue 2009 : Add Online links to the FAQ and Newsletter pages</li>
+<li>Issue 2009 : オンラインのリンクに、FAQとニュースレターが追加されました。</li>
 <li>Issue 2084 : Warn users if they are probably using out of date versions</li>
 <li>Issue 2086 : Report request counts per plugin</li>
-<li>Issue 2088 : Support an 'update all' button for installing all updated add-ons</li>
-<li>Issue 2094 : Support a '-addoninstallall' command line option</li>
-<li>Issue 2102 : Allow ajax spider options to be set via the API</li>
+<li>Issue 2088 : 拡張機能に「Update All」ボタンが追加されました。</li>
+<li>Issue 2094 : 上記に関連して、コマンドライン(-addoninstallall)で一括インストールが出来るようになりました。</li>
+<li>Issue 2102 : APIにAjax Spiderオプションが追加されました。</li>
 </ul>
 
-<h2>Bug fixes:</h2>
+<h2>バグ修正:</h2>
 <ul>
 <li>Issue 1070 : Breaking on custom URL with query parameters does not work.</li>
 <li>Issue 1555 : SAXParseException while generating the report</li>
@@ -64,11 +64,11 @@ The following changes were made in this release:
 
 
 
-<h2>See also</h2>
+<h2>関連情報</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">はじめに</a></td><td>ZAPの紹介</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">リリース</a></td><td>リリース一覧</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">謝辞</a></td><td>リリースに携わったユーザーやグループ</td></tr>
 </table>
 </body>
 </html>

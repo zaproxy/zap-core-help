@@ -21,36 +21,60 @@
 	<h3>Número de segmentos (threads) usados</h3>
 	O spider é multi-threaded e este é o número que define o número máximo de threads de trabalho utilizados no processo de rastreamento. Alterar este parâmetro não tem efeito sobre qualquer rastreamento já em andamento. 
 
-	<h3>Padrão de domínio</h3>
-	O comportamento normal do spider é seguir apenas os links para recursos encontrados no mesmo domínio da página onde começou a navegação. No entanto, esta opção permite que você defina domínios adicionais considerados "dentro do escopo" durante o processo de varredura. Páginas desses domínios são processadas durante a verificação.
+	<h3>Maximum duration</h3>
+	The maximum length of time that the spider should run for, measured in minutes.
+	Zero (the default) means that the spider will run until it has found all of the links that it is able to. 
+
+	<h3>Domain Pattern</h3>
+	The normal behavior of the spider is to only follow links to resources
+	found on the same domain as the page where the scan started. However,
+	this option allows you to define additional domains that are considered
+	"in scope" during the crawling process. Pages on these domains are
+	processed during the scan.
 		
-	<h3>Manipulação de parâmetros de consulta</h3>
-	Durante a navegação, o Spider tem um mecanismo interno que marcas páginas visitadas, para  não serem processadas novamente. Quando essa verificação é feita, a maneira que os parâmetros de URIs são manipulados é definida usando essa opção. Há três opções disponíveis:
+	<h3>Query parameters handling</h3>
+	When crawling, the Spider has an internal mechanism that marks which pages
+	were already visited, so they are not processed again. When this check is made,
+	the way the URIs parameters are handled is set using this option. There are
+	three available options:
 	<ul>
 	<li><b>Ignorar parâmetros completamente</b> - se www.example.org/? barra = 456 é visitado, em seguida www.example.org/? foo = 123 não será visitado</li>
 	<li><b>Considerar apenas o nome do parâmetro</b> (ignorar o valor do parâmetro) - se www.example.org/? foo = 123 é visitado, em seguida www.example.org/? foo = 456 não ser visitado, mas www.example.org/? barra = 789 ou www.example.org/? foo = 456 &amp; barra = 123 serão visitados</li>
 	<li><b>Considerar tanto o nome quanto o valor do parâmetro</b> - se www.example.org/? 123 é visitada, algum outra URI diferente (incluindo, por exemplo, www.example.org/? foo = 456 ou www.example.org/? barra = abc) serão visitados</li>
 	</ul>
 
-	<h3>Enviar o cabeçalho "Referer"</h3>
-	Quando os requests do spider devam ser enviados com o cabeçalho "Referer".
+	<h3>Send "Referer" header</h3>
+	If the spider requests should be sent with the "Referer" header.
 
-	<h3>Processar formulários</h3>
-	 Essa opção define o comportamento do spider durante o processo de navegação, quando encontra formulários HTML. Se desabilitada, os formulários HTML não serão processados de modo algum. Se habilitado, os formulários HTML com o método definido como HTTP GET serão submetidos/enviados com alguns valores gerados. O comportamento ao encontrar formulários com o método definido como HTTP POST é configurado pela próxima opção.
+	<h3>Process forms</h3>
+	During the crawling process, the behaviour of the spider when it
+	encounters HTML forms is defined by this option. If disabled, the HTML
+	forms will not be processed at all. If enabled, the HTML forms with the
+	method defined as HTTP GET will be submitted with some generated
+	values. The behaviour when encountering forms with the method defined
+	as HTTP POST is configured by the next option.
 
-	<h3>Formulários POST</h3>
-	Como brevemente descrito no parágrafo anterior (processamento de formulários), esta opção configura o comportamento do spider quando
-	<i>Processar formulários</i> está habilitado, para quando encontrar formulários HTML que têm de ser POSTados.
+	<h3>POST forms</h3>
+	As briefly described in the previous paragraph (Process Forms), this
+	option configures the behaviour of the spider when
+	<i>Processar formulários</i> is enabled and when encountering HTML forms that
+	have to be POSTed.
 
-	<h3>Analisar os comentários do HTML</h3>
-	Esta opção define se o spider deve também processar os comentários HTML à procura de links. Apenas os recursos encontrados em tags HTML comentadas e válidas serão processados.
+	<h3>Parse HTML Comments</h3>
+	This option defines whether the spider should also spider the HTML
+	comments searching for links to resources. Only the resources found in
+	commented valid HTML tags will be processed.
 
-	<h3>Analisar os arquivos 'robots.txt'</h3>
-	Esta opção define se o spider deve também percorrer os arquivos robots.txt encontrados em sites, à procura de links para navegar.
-	Esta opção não define se o spider deve seguir as regras impostas pelo arquivo robots.txt.
+	<h3>Parse 'robots.txt' files</h3>
+	This option defines whether the spider should also spider the
+	robots.txt files found on websites, searching for links to resources.
+	This option does not define whether the spider should follow the rules
+	imposed by the robots.txt file.
 
-	<h3>Lidar com parâmetros específicos de OData</h3>
-	Essa opção define se o spider deve tentar detectar parâmetros específicos de OData (ou seja, identificadores de recursos) para processá-los adequadamente de acordo com a regra definida pela opção "Manipulação de parâmetros de consulta".
+	<h3>Handle OData-specific parameters</h3>
+	This options defines whether the spider should try to detect OData-specific
+	parameters (i.e. resources identifiers) in order to properly process them 
+	according to the rule defined by the "Query parameters handling" option.
 
 	<h2>Leia também</h2>
 	<table>

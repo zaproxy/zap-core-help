@@ -11,13 +11,24 @@
 			href="contexts.html">contexto</a></b> tem um método de gerenciamento de sessão definido, que determina como as sessões são mantidas.
 	</p>
 
-	<p>Até agora, apenas um método de gerenciamento de sessão baseado em cookie foi implementado, mas o sistema oferece suporte para fácil acréscimo de novos métodos, de acordo com as necessidades do usuário.</p>
+	<p>So far, just cookie based and HTTP authentication session management methods have been
+		implemented, but the system supports easy addition of new methods,
+		according to user needs.</p>
 
 	<h3>
 		<a name="cbsm">Gerenciamento de sessão baseado em cookies</a>
 	</h3>
 	<p>
-		No caso deste método, a sessão está sendo monitorada através de cookies. Atualmente, os tokens de sessão usados são importados da extensão <a href="httpsessions.html">Sessões Http</a>.
+		In the case of this method the session is being tracked through
+		cookies. Currently, the session tokens that are used are imported from
+		the <a href="httpsessions.html">HTTP Sessions</a> Extension.
+	</p>
+
+	<h3>
+		<a name="hasm">HTTP Authentication Session Management</a>
+	</h3>
+	<p>
+		In the case of this method the session is managed with HTTP request header <code>Authorization</code>.
 	</p>
 
 	<h2>Configurados através de</h2>

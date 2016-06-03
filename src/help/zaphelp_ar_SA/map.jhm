@@ -32,6 +32,7 @@
         <mapID target="start.concepts.scope" url="contents/start/concepts/scope.html" />
         <mapID target="start.concepts.sessmanag" url="contents/start/concepts/sessionManagement.html" />
         <mapID target="start.concepts.spider" url="contents/start/concepts/spider.html" />
+        <mapID target="start.concepts.stats" url="contents/start/concepts/stats.html" />
         <mapID target="start.concepts.structmods" url="contents/start/concepts/structmods.html" />
         <mapID target="start.concepts.structparams" url="contents/start/concepts/structparams.html" />
         <mapID target="start.concepts.tags" url="contents/start/concepts/tags.html" />
@@ -83,6 +84,7 @@
         <mapID target="ui.dialogs.resend" url="contents/ui/dialogs/resend.html"/>
         <mapID target="ui.dialogs.scanpolicy" url="contents/ui/dialogs/scanpolicy.html"/>
         <mapID target="ui.dialogs.scanpolicymgr" url="contents/ui/dialogs/scanpolicymgr.html"/>
+        <mapID target="ui.dialogs.scanprogress" url="contents/ui/dialogs/scanprogress.html"/>
         <mapID target="ui.dialogs.sessprop" url="contents/ui/dialogs/session/sessprop.html"/>
         <mapID target="ui.dialogs.spider" url="contents/ui/dialogs/spider.html"/>
         <mapID target="ui.footer" url="contents/ui/footer.html" />
@@ -112,6 +114,7 @@
         <mapID target="zap.releases.2.4.1" url="contents/releases/2_4_1.html"/>
         <mapID target="zap.releases.2.4.2" url="contents/releases/2_4_2.html"/>
         <mapID target="zap.releases.2.4.3" url="contents/releases/2_4_3.html"/>
+        <mapID target="zap.releases.2.5.0" url="contents/releases/2_5_0.html"/>
         <mapID target="zap.credits" url="contents/credits.html" />
         <mapID target="zap.todo" url="contents/todo.html" />
      	<mapID target="ui.dialogs.options.ascan" url="contents/ui/dialogs/options/ascan.html"/>
@@ -138,4 +141,5 @@
      	<mapID target="ui.dialogs.options.script" url="contents/ui/dialogs/options/script.html" />
      	<mapID target="ui.dialogs.options.search" url="contents/ui/dialogs/options/search.html" />
      	<mapID target="ui.dialogs.options.spider" url="contents/ui/dialogs/options/spider.html"/>
+     	<mapID target="ui.dialogs.options.stats" url="contents/ui/dialogs/options/stats.html"/>
 </map>

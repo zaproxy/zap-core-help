@@ -12,13 +12,24 @@
 		Method defined which dictates how sessions are kept.
 	</p>
 
-	<p>これまでのところ、単にcookieベースのセッション管理方法が実装されていますが、ユーザーのニーズに応じて簡単に新しいメソッドの追加をシステムはサポートします。</p>
+	<p>So far, just cookie based and HTTP authentication session management methods have been
+		implemented, but the system supports easy addition of new methods,
+		according to user needs.</p>
 
 	<h3>
 		<a name="cbsm">クッキーベースセッション管理</a>
 	</h3>
 	<p>
-		このメソッドの場合、セッションクッキーを介して追跡されます。現在、セッショントークンは<a href="httpsessions.html">Httpセッション</a> 拡張からインポートされて使用されます。
+		In the case of this method the session is being tracked through
+		cookies. Currently, the session tokens that are used are imported from
+		the <a href="httpsessions.html">HTTP Sessions</a> Extension.
+	</p>
+
+	<h3>
+		<a name="hasm">HTTP Authentication Session Management</a>
+	</h3>
+	<p>
+		In the case of this method the session is managed with HTTP request header <code>Authorization</code>.
 	</p>
 
 	<h2>設定箇所</h2>

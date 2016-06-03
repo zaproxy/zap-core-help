@@ -75,6 +75,7 @@
     <indexitem text="release 2.4.1" target="zap.releases.2.4.1" />
     <indexitem text="release 2.4.2" target="zap.releases.2.4.2" />
     <indexitem text="release 2.4.3" target="zap.releases.2.4.3" />
+    <indexitem text="release 2.5.0" target="zap.releases.2.5.0" />
     <indexitem text="releases" target="zap.releases" />
     <indexitem text="request tab" target="ui.tabs.request" />
     <indexitem text="resend dialog" target="ui.dialogs.resend" />
@@ -83,6 +84,7 @@
     <indexitem text="scan policy" target="start.concepts.scanpolicy" />
     <indexitem text="scan policy dialog" target="ui.dialogs.scanpolicy" />
     <indexitem text="scan policy manager dialog" target="ui.dialogs.scanpolicymgr" />
+    <indexitem text="scan progress dialog" target="ui.dialogs.scanprogress" />
     <indexitem text="search tab" target="ui.tabs.search" />
     <indexitem text="session context screens" target="ui.dialogs.contexts" />
     <indexitem text="session context authentication screen" target="ui.dialogs.context-auth" />
@@ -92,6 +94,7 @@
     <indexitem text="spider" target="start.concepts.spider" />
     <indexitem text="spider dialog" target="ui.dialogs.spider" />
     <indexitem text="spider tab" target="ui.tabs.spider" />
+    <indexitem text="statistics" target="start.concepts.stats" />
     <indexitem text="structural modifiers" target="start.concepts.structmods" />
     <indexitem text="structural parameters" target="start.concepts.structparams" />
     <indexitem text="tags" target="start.concepts.tags" />

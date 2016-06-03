@@ -11,11 +11,11 @@ Active Scan dialog
 <p>
 This dialog launches the <a href="../../start/concepts/ascan.html">active scanner</a>.<br>
   
-<h3>Scope</h3>
+<h3>Hatókör</h3>
 The first tab allows you to select or change the starting point.<br>
 If you have more that one <a href="../../start/concepts/scanpolicy.html">scan policies</a> then you will be able to select the one to use.<br>
 If the starting point is in one or more <a href="../../start/concepts/contexts.html">Contexts</a> then you will be able to choose one of them.<br>
-If that context has any <a href="../../start/concepts/users.html">Users</a> defined then you will be able to select one of them.<br>
+If that context has any <a href="../../start/concepts/users.html">Felhasználók</a> defined then you will be able to select one of them.<br>
 If you select one of the users then the active scan will be performed as that user, with ZAP (re)authenticating as that user whenever necessary.
 <br><br>
 If you select 'recurse' then all of the nodes underneath the one selected will also be scanned.<br>
@@ -33,7 +33,7 @@ Clicking on the 'Reset' button will reset the input vectors to the default optio
 <h3>Custom Vectors</h3>
 The Custom Vectors tab allows you specify specific locations in the request to attack.<br> 
 Custom Vectors are only available if the 'recurse' option on the first tab is not selected.<br>
-To add custom input vectors highlight the characters you want to attack in the request and lick the 'Add' button.<br>
+To add custom input vectors highlight the characters you want to attack in the request and click the 'Add' button.<br>
 You can add as many custom input vectors as you want.<br>
 To remove custom input vectors highlight any of the selected characters and click the 'Remove' button.<br>
 Checking the 'Disable non custom input vectors' box disables all of the input vectors except those you manually define on this tab.
@@ -42,7 +42,7 @@ Checking the 'Disable non custom input vectors' box disables all of the input ve
 The Technology tab allows you to specify which types of technologies to scan.<br>
 Un-selecting technologies that you know are not present in the target application may speed up the scan as rules which target that technology can skip those tests.
 
-<h3>Policy</h3>
+<h3>Házirend</h3>
 The Policy tab allows you to override any of the settings specified in the selected 
 <a href="../../start/concepts/scanpolicy.html">scan policy</a>. 
 

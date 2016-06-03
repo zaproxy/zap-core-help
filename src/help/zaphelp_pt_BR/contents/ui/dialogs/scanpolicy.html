@@ -3,19 +3,22 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Política de Varredura
+Scan Policy Dialog
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Diálogos da Política de Varredura</h1>
+<h1>Scan Policy Dialog</h1>
 <p>
 Isso permite a você ativar e desativar as regras que são executadas quando fizer uma <a href="../../start/concepts/ascan.html">varredura ativa</a>.<br>A primeira tela permite que você defina os níveis default, bem como os níveis de todas as regras em uma categoria específica.<br><br>As telas de categoria permitem definir os níveis para cada regra individualmente. <br> <br><br>Note que regras de <a href="../../start/concepts/pscan.html">varredura passiva</a> não são mais gerenciadas através desta caixa de diálogo, mas em vez disso são gerenciadas por meio das <a href="../../ui/dialogs/options/pscanrules.html">Opções de regras de varredura passiva</a>.
 </p>
 
 <h3>Limiar</h3>
 Essa opção controla como o ZAP informará vulnerabilidades potenciais em relatório.<br>
-Se você selecionar 'baixo', mais problemas em potencial serão apontados, o que pode aumentar o número de falsos positivos.<br>
-Se você selecionar 'alto', menos problemas potenciais serão apontados, e pode significar que alguns serão perdidos (falsos negativos).  
+<ul>
+	<li>If you select Off then the scanner won't run.</li>
+	<li>If you select Low then more potential issues will be raised which may increase the number of false positives.</li>
+	<li>If you select High then fewer potential issues will be raised which may mean that some real issues are missed (false negatives).</li>
+</ul>  
 
 <h3>Força</h3>
 Essa opção controla o número de ataques que o ZAP executará.<br>

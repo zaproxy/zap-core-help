@@ -14,22 +14,32 @@ These are the elements that the active scanner will attack.<br>
 Scanning all of the elements supported will take longer, but not scanning some elements may cause some vulnerabilities to be missed.
 
 <h3>Injectable Targets</h3>
-The request element that the active scanner will target:
+The request elements that the active scanner will target:
 
-<table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>URL Query String</td><td>Key value pairs in the request URL query, ie after the '?'</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Dane POST</td><td>Key value pairs in the request POST data</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>URL Path</td><td>Path elements in the request URL, ie the elements separated by '/'</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>HTTP Headers</td><td>Request HTTP Headers</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Cookie data</td><td>Request cookies</td></tr>
-</table>
+<h4>URL Query String</h4>
+Key value pairs in the request URL query, ie after the <code>?</code>.
+
+<h4>POST Data</h4>
+Key value pairs in the request POST data.
+
+<h4>URL Path</h4>
+Path elements in the request URL, ie the elements separated by <code>/</code>.
+
+<h4>HTTP Headers</h4>
+Request HTTP Headers.
+
+<h5>All Requests</h5>
+Allows to scan the HTTP Headers of all requests. Not just requests that send parameters, through the query or request body.
+
+<h4>Cookie Data</h4>
+Request cookies.
 
 <h3>Build-in Input Vector Handlers</h3>
 The data formats that the active scanner will target:
 
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Multipart Form Data</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>tag/atrybut XML</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>XML tag/attribute</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>JSON</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Google Web Toolkit</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>OData id/filter</td><td></td></tr>

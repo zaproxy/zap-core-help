@@ -18,16 +18,16 @@ The following changes were made in this release:
 For this release we are providing a <i>‘lite’</i> version of ZAP in addition to the <i>‘full’</i> version. 
 This contains exactly the same core code, but it just includes fewer default add-ons.
 Of course, you can download all of the ‘missing’ add-ons from the ZAP marketplace to ‘upgrade’ the lite version to a full one.<br>
-The <i>‘lite’</i> version is aimed at people new to security who need less initial functionality which will hopefully be easier to get started with. It will also be suitable for people looking for a smaller download or those wishing to customize exactly which add-ons they install.
+A <i>‘lite’</i> version is aimed at people new to security who need less initial functionality which will hopefully be easier to get started with. It will also be suitable for people looking for a smaller download or those wishing to customize exactly which add-ons they install.
 
 <h3>Support for client-side (browser) events</h3>
 You can now view, intercept, manipulate, resend and fuzz <b>client-side events</b>. This includes postMessages, so you can now detect DOM based XSS vulnerabilities in postMessages. This is the first phase in a series of planned changes to support the testing of AJAX and HTML5 applications even more effectively.
 
 <h3>Enhanced authentication support</h3>
-ZAP's support for authentication has been completely revamped to easily handle complex types of <b>authentication methods and scenarios</b>. Support has also been added for user-defined scripts which allow you to handle custom authentication schemes. In addition, now ZAP understands and allows you to configure <b>web applications' Users</b> so various actions throughout ZAP can be performed from the point of view of defined users. To get started, check out the new <i>Authentication</i> and <i>Users</i> panels in the Session Properties for each of the defined Contexts.
+ZAP's support for authentication has been completely revamped to easily handle complex types of <b>authentication methods and scenarios</b>. Support has also been added for user-defined scripts which allow you to handle custom authentication schemes. In addition, now ZAP understands and allows you to configure <b>web applications' Users</b> so various actions throughout ZAP can be performed from the point of view of defined users. To get started, check out the new <i>Authentication</i> és <i>Felhasználók</i> panels in the Session Properties for each of the defined Contexts.
 
 <h3>Support for non standard apps</h3>
-This release includes support for <b>‘single page’ applications</b> and <b>non standard key-value separators</b>. You can now control these settings via the new <i>Structure</i> panel in the Session Properties.
+This release includes support for <b>‘single page’ applications</b> és <b>non standard key-value separators</b>. You can now control these settings via the new <i>Structure</i> panel in the Session Properties.
 
 <h3>New Input Vectors including user-defined scripts</h3>
 ZAP supports new options for defining the <b>input vectors</b> i.e. the elements of a request that ZAP will attack. The new options are available in the <i>Active Scan Input Vectors</i> panel of the Options. Support has also been added for defining custom scripts that define new input vectors.
@@ -37,7 +37,7 @@ The scan policy now has a <b>fine grained control</b>, allowing you to tweak ind
 In addition, by default ZAP will not now scan well-known service parameters (e.g. __VIEWSTATE) speeding up the overall scanning process. This is completely user configurable, allowing you to specify exactly which parameters ZAP should ignore.  
 
 <h3>Advanced Active Scan dialog</h3>
-A new <i>'Advanced Active Scan'</i> dialog allows you to specify exactly how you want the active scanner to function. It allows you to specify <b>‘custom vectors’</b> that explicitly define which strings you want to attack. It also supports the option to scan as any of the Users you have defined for the application under test. Start an <i>Advanced Active Scan</i> via the <i>Tools</i> menu or via the <i>Attack</i> section of the right click popup menu. 
+Egy új <i>'Advanced Active Scan'</i> dialog allows you to specify exactly how you want the active scanner to function. It allows you to specify <b>‘custom vectors’</b> that explicitly define which strings you want to attack. It also supports the option to scan as any of the Users you have defined for the application under test. Start an <i>Advanced Active Scan</i> via the <i>Eszközök</i> menu or via the <i>Támadás</i> section of the right click popup menu. 
 
 <h3>Extended command line options</h3>
 You can now run ZAP ‘inline’ i.e. <b>without starting the ZAP UI or a daemon</b>. In this mode you can run simple attacks or run scripts which can access all of the ZAP functionality. You can also now override any of the options defined in the configuration file via command line parameters.
@@ -50,9 +50,9 @@ The help file has been internationalized and is in the process of being translat
 Languages with a significant amount of translated help pages include:
 <ul>
 <li>Bosnian</li>
-<li>French</li>
+<li>Francia</li>
 <li>Japanese</li>
-<li>Spanish</li>
+<li>Spanyol</li>
 </ul>
 
 <h3>Keyboard shortcuts</h3>
@@ -337,7 +337,7 @@ Many of the release quality active and passive scanning rules have been improved
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<a href="../credits.html">Készítők</a></td><td>the people and groups who have made this release possible</td></tr>
 </table>
 </body>
 </html>

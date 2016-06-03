@@ -75,27 +75,30 @@
     <indexitem text="release 2.4.0" target="zap.releases.2.4.1" />
     <indexitem text="releases" target="zap.releases.2.4.2" />
     <indexitem text="aba de requisição" target="zap.releases.2.4.3" />
-    <indexitem text="diálogo de reenvio" target="zap.releases" />
-    <indexitem text="aba de respostas" target="ui.tabs.request" />
-    <indexitem text="regras de varredura" target="ui.dialogs.resend" />
-    <indexitem text="política de varredura" target="ui.tabs.response" />
-    <indexitem text="diálogo da política de varredura" target="start.check" />
-    <indexitem text="diálogo do gerenciador da política de varredura" target="start.concepts.scanpolicy" />
-    <indexitem text="aba de busca" target="ui.dialogs.scanpolicy" />
-    <indexitem text="diálogo dos contextos de sessão" target="ui.dialogs.scanpolicymgr" />
-    <indexitem text="diálogo das propriedades de sessão" target="ui.tabs.search" />
-    <indexitem text="aba de sites" target="ui.dialogs.contexts" />
-    <indexitem text="spider" target="ui.dialogs.context-auth" />
-    <indexitem text="diálogo do spider" target="ui.dialogs.context-struct" />
-    <indexitem text="tags" target="ui.dialogs.sessprop" />
-    <indexitem text="tags" target="ui.tabs.sites" />
-    <indexitem text="menu superior" target="start.concepts.spider" />
-    <indexitem text="barra de ferramentas superior" target="ui.dialogs.spider" />
-    <indexitem text="spider tab" target="ui.tabs.spider" />
-    <indexitem text="structural modifiers" target="start.concepts.structmods" />
-    <indexitem text="structural parameters" target="start.concepts.structparams" />
-    <indexitem text="tags" target="start.concepts.tags" />
-    <indexitem text="top level menu" target="ui.topmenu" />
+    <indexitem text="diálogo de reenvio" target="zap.releases.2.5.0" />
+    <indexitem text="aba de respostas" target="zap.releases" />
+    <indexitem text="regras de varredura" target="ui.tabs.request" />
+    <indexitem text="política de varredura" target="ui.dialogs.resend" />
+    <indexitem text="diálogo da política de varredura" target="ui.tabs.response" />
+    <indexitem text="diálogo do gerenciador da política de varredura" target="start.check" />
+    <indexitem text="aba de busca" target="start.concepts.scanpolicy" />
+    <indexitem text="diálogo dos contextos de sessão" target="ui.dialogs.scanpolicy" />
+    <indexitem text="diálogo das propriedades de sessão" target="ui.dialogs.scanpolicymgr" />
+    <indexitem text="aba de sites" target="ui.dialogs.scanprogress" />
+    <indexitem text="spider" target="ui.tabs.search" />
+    <indexitem text="diálogo do spider" target="ui.dialogs.contexts" />
+    <indexitem text="tags" target="ui.dialogs.context-auth" />
+    <indexitem text="tags" target="ui.dialogs.context-struct" />
+    <indexitem text="menu superior" target="ui.dialogs.sessprop" />
+    <indexitem text="barra de ferramentas superior" target="ui.tabs.sites" />
+    <indexitem text="aba do spider" target="start.concepts.spider" />
+    <indexitem text="modificadores estruturais" target="ui.dialogs.spider" />
+    <indexitem text="parâmetros estruturais" target="ui.tabs.spider" />
+    <indexitem text="tags" target="start.concepts.stats" />
+    <indexitem text="menu superior" target="start.concepts.structmods" />
+    <indexitem text="barra de ferramentas superior" target="start.concepts.structparams" />
+    <indexitem text="visão geral da UI" target="start.concepts.tags" />
+    <indexitem text="visualizar" target="ui.topmenu" />
     <indexitem text="top level toolbar" target="ui.toptoolbar" />
     <indexitem text="ui overview" target="ui.overview" />
     <indexitem text="views" target="ui.views" />

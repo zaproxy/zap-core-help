@@ -17,41 +17,45 @@ to specify exactly what should be scanned.
 The toolbar provides a set of buttons which allow you to start, stop, pause and resume the scan selected.<br>
 A progress bar shows how far the scan of the selected site has progressed.<br>
 The 'Current scans' value shows how many scans are currently active - 
-hovering over this value will show a list of the sites being scanned in a popup. 
+hovering over this value will show a list of the sites being scanned in a popup.<br>
+The 'Show scan progress details' button <img src="../../images/fugue/system-monitor.png" align="bottom" width="16" height="16" /> launches the <a href="../dialogs/scanprogress.html">Scan Progress dialog</a>
+which allows you to see details about which rules are running, skip individual rules and see a chart of the responses.
 
 <h2>Menú de botón derecho</h2>
-Al hacer click derecho sobre un nodo se abrirá un menú que le permitirá:
+Right clicking on a node will bring up a menu which will allow you to:
 
 <h3>Excluir de</h3>
-Este menú tiene los siguientes submenús:
+This menu has the following submenus:
 
 <h4>Proxy</h4>
-Esto excluirá los nodos seleccionados desde el proxy. Aunque seguirán siendo procesadas vía ZAP no aparecerán en ninguna de las pestañas.<br/>
-Esto puede usarse para ignorar las URLs que no son relevantes para el sistema que actualmente está probando.<br/>
+This will exclude the selected nodes from the proxy. They will still be proxied via ZAP but will not be shown 
+in any of the tabs.<br/>
+This can be used to ignore URLs that you know are not relevant to the system you are currently testing.<br/>
 Los nodos pueden ser incluidos a través del cuadro de dialogo <a href="../dialogs/session/sessprop.html">Propiedades de la Sesión</a> .   
 
 <h4>Escáner</h4>
-Esto evitará que los nodos seleccionados sean escaneados activamente.<br/>
+This will prevent the selected nodes from being actively scanned.<br/>
 Los nodos pueden ser incluidos a través del cuadro de dialogo <a href="../dialogs/session/sessprop.html">Propiedades de la Sesión</a> .   
 
 <h4>Spider(Araña)</h4>
 This will prevent the selected nodes from being spidered.<br/>
-Los nodos pueden ser incluidos a través del cuadro de dialogo <a href="../dialogs/session/sessprop.html">Propiedades de la Sesión</a> .   
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
 
 <h3>Reenviar...</h3>
-Esto hará que aparezca el cuadro de dialogo 
-<a href="../dialogs/resend.html">Reenviar</a> que le permite enviar la solicitud después de hacer los cambios que desee.
+This will bring up the
+<a href="../dialogs/resend.html">Resend dialog</a> which allows you to  
+resend the request after making any changes to it that you want to.
 
 <h3>Nueva alerta...</h3>
-Esto hará que aparezca el cuadro de dialogo 
-<a href="../dialogs/addalert.html">Añadir Alerta,</a> el que le permitirá agregar una nueva  
-<a href="../../start/concepts/alerts.html">alerta</a> de forma automática en la petición.
+This will bring up the
+<a href="../dialogs/addalert.html">Add Alert dialog</a> which allows you to manually record a new  
+<a href="../../start/concepts/alerts.html">alert</a> against this request.
 
 <h3>Mostrar en la pestaña Sitios</h3>
-Esto mostrará el mensaje seleccionado en la <a href="sites.html">Sitios tab</a>.
+This will show the selected message in the <a href="sites.html">Sites tab</a>.
 
 <h3>Ver en el navegador</h3>
-La dirección URL del nodo seleccionado se abrirá en el navegador por defecto.
+This will open the URL of the selected node in your default browser.
 
 
 <h2>Vease también</h2>

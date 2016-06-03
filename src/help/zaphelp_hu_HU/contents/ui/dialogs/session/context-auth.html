@@ -25,27 +25,27 @@ To configure this authentication method, you need to supply the <b>login url</b>
 request is performed, the <b>request body</b> (POST data), if needed, and identify the <b>parameters</b> used to supply
 the 'username' and 'password'. If no request body is supplied, the login request is performed as 
 a HTTP GET, otherwise an HTTP POST is used. The credentials themselves
-are configured in the <a href="contexts.html#users">Users</a> tab. <small>Read  
+are configured in the <a href="contexts.html#users">Felhasználók</a> fülre. <small>Read  
 <a href="../../../start/concepts/authentication.html#formBased">more</a>...</small> 
 
 <h4>HTTP/NTLM Authentication</h4>
 To configure this authentication method, you need to supply the <b>hostname</b> and the <b>port</b> of the server
 the authentication is done with and the <b>realm</b> the credentials apply to. The credentials themselves
-are configured in the <a href="contexts.html#users">Users</a> tab. <small>Read  
+are configured in the <a href="contexts.html#users">Felhasználók</a> fülre. <small>Read  
 <a href="../../../start/concepts/authentication.html#httpAuth">more</a>...</small> 
 
 <h4>Script-Based Authentication</h4>
-To use this authentication method, you <b>first</b> need to write (and save) an <b>Authentication Script</b> 
+To use this authentication method, you <b>első</b> need to write (and save) an <b>Authentication Script</b> 
 using the <b>Scripts</b> tab (see the provided examples and templates for this script type in the Scripts tab).
 Then you need to supply the name of the script in the dropdown list. After selecting the script, you need to press 
-the <b>Load</b> button, loading all the requirements of the script.
-Any parameters that you have specified as <i>required</i> or <i>optional</i> in the script will
+the <b>Betöltés</b> button, loading all the requirements of the script.
+Any parameters that you have specified as <i>required</i> vagy <i>optional</i> in the script will
 be shown in the interface to be defined. Their values are available to be used in the script, during the authentication, as seen
 in the provided examples for Authentication Scripts. Make sure that after doing any changes to the parameters 
 required by the Authentication script you re-load the script. Otherwise, the parameters shown in the interface might
-not be the ones used during the authentication and errors might occur. The <i>credentials</i> used for each User 
+not be the ones used during the authentication and errors might occur. A <i>credentials</i> used for each User 
 during the authentication processed can be also specified in the Authentication Script and are configured in the 
-<a href="contexts.html#users">Users</a> tab.
+<a href="contexts.html#users">Felhasználók</a> fülre.
 <small>Read <a href="../../../start/concepts/authentication.html#scriptBased">more</a>...</small> 
 
   

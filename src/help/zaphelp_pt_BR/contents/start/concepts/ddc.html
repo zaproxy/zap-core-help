@@ -3,64 +3,62 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Data Driven Content
+Conteúdo Orientado a dados
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Data Driven Content</h1>
+<h1>Conteúdo Orientado a dados</h1>
 <p>
-Data driven content is type of <a href="structmods.html">Structural Modifier</a>
-which identifies URL paths that represent data.<br>
+Conteúdo Orientado a Dados é um tipo de <a href="structmods.html">Modificador estrutural</a> que identifica caminhos de URL representando dados.<br>
 <p>
-In 'traditional' web applications the structure of the application is typically defined by the URL paths
-and the data is contained in the URL parameters and POST data.<br>
-URLs like:
+Em aplicativos 'tradicionais' web, a estrutura do aplicativo normalmente é definida pelos caminhos de URL e os dados estão contidos nos parâmetros de URL e dados de POST.<br>
+URLs como:
 <ul>
 <li>https://www.example.com/app/aaa?ddd=eee
 <li>https://www.example.com/app/aaa?ddd=fff
 <li>https://www.example.com/app/bbb?ddd=eee
 </ul>
-are represented in the <a href="../../ui/tabs/sites.html">Sites tab</a> as two 'nodes' in the tree:
+são representadas na <a href="../../ui/tabs/sites.html">aba de Sites</a> como dois 'nós' na árvore:
 <ul>
 <li>Sites
 	<ul>
 	<li>https://www.example.com
 		<ul>
-		<li>app
+		<li>Aplicativo
 			<ul>
-			<li>GET:aaa(ddd)
+			<li>Get:AAA(DDD)
 			<li>GET:bbb(ddd)
 			</ul>
 		</ul>
 	</ul>
 </ul>
-The Sites tree is very important as it reflects ZAP's understanding of the application structure.<br>
-If it is not a good representation of the structure then ZAP will not be able to attack the application effectively.<br>
+A árvore de Sites é muito importante, pois ela reflete o entendimento do ZAP sobre a estrutura do aplicativo.<br>
+Se não for uma boa representação da estrutura, o ZAP não será capaz de atacar o aplicativo eficazmente.<br>
 <br>
-Some applications include data in URL paths.<br>
-For example: 
+Algumas aplicações incluem dados em suas URLs.<br>
+Por exemplo: 
 <ul>
 <li>https://www.example.com/app/company1/aaa?ddd=eee
 <li>https://www.example.com/app/company2/aaa?ddd=fff
 <li>https://www.example.com/app/company3/aaa?ddd=ggg
 </ul>
-These 3 URLs represent the same page but with different data, but by default ZAP will represent them as three separate nodes:
+Essas três URLs representam a mesma página, mas com diferentes dados. Porém, por padrão ZAP o vai representá-los como três nós separados:
 <ul>
 <li>Sites
 	<ul>
 	<li>https://www.example.com
 		<ul>
-		<li>app
+		<li>Aplicativo
 			<ul>
-			<li>company1
+			<li>Companhia1
 				<ul>
 				<li>GET:aaa(ddd)
 				</ul>
-			<li>company2
+			<li>Companhia2
 				<ul>
 				<li>GET:aaa(ddd)
 				</ul>
-			<li>company3
+			<li>Companhia3
 				<ul>
 				<li>GET:aaa(ddd)
 				</ul>
@@ -68,23 +66,21 @@ These 3 URLs represent the same page but with different data, but by default ZAP
 		</ul>
 	</ul>
 </ul>
-This is a problem because ZAP will now attack all 3 pages when it only needs to attack one of them.<br>
-In this case attacking the same page 3 times is not a big problem, but if you have hundreds or thousands 
-of pages like this will significantly increase the time it takes to scan the application.<br>
+Isto é um problema, porque o ZAP agora vai atacar todas as três páginas, quando só precisaria atacar uma delas.<br>
+Neste caso, atacar a mesma página três vezes não é um grande problema, mas se você tem centenas ou milhares de páginas assim aumentará significativamente o tempo que leva para fazer a varredura do aplicativo.<br>
 <br>
-In ZAP terms the 'company' nodes are 'data driven content' - URL path elements that contain
-data instead of representing part of the application structure.<br>
-You can define data driven content by adding the application to a <a href="contexts.html">Context</a>
-and then configuring them via the <a href="../../ui/tabs/sites.html">Sites tab</a> 'Flag as Context -&gt; <i>Context Name</i> Data driven node' right click menu item<br>
-Once you have done this the pages will be correctly represented as 1 node:
+No ZAP, os termos "Companhia" nos nós são 'conteúdo orientado a dados' - elementos de URL que contêm dados ao invés de  representar parte da estrutura da aplicação.<br>
+Você pode definir conteúdo orientado a dados adicionando o aplicativo a um <a href="contexts.html">Contexto</a>
+e, em seguida, configurando-os através da <a href="../../ui/tabs/sites.html">aba de Sites</a> em ' Marcar como contexto -&gt; <i>Nome do contexto</i> Nó orientado a dados', item de menu de clique direito<br>
+Depois de ter feito isto, as páginas serão representadas corretamente como 1 nó:
 <ul>
 <li>Sites
 	<ul>
 	<li>https://www.example.com
 		<ul>
-		<li>app
+		<li>Aplicativo
 			<ul>
-			<li>&#x00AB;company&#x00BB;
+			<li>&#x00AB;companhia&#x00BB;
 				<ul>
 				<li>GET:aaa(ddd)
 				</ul>
@@ -92,21 +88,20 @@ Once you have done this the pages will be correctly represented as 1 node:
 		</ul>
 	</ul>
 </ul>
-The characters &#x00AB; and &#x00BB; are used to indicate that this is a 'special' node and the 
-node name (in this case 'company') can be set by you to indicate what that node represents.
+Os caracteres '«' e '»' são usados para indicar que este é um nó 'especial' e o nome do nó (no caso 'companhia') pode ser definido por você para indicar o que representa aquele nó.
 
-<h2>Accessed via</h2>
+<h2>Acessado via</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/sites.html">Sites tab</a></td><td>'Flag as Context -&gt; <i>Context Name</i> Data driven node' right click menu item</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/history.html">History tab</a></td><td>'Flag as Context -&gt; <i>Context Name</i> Data driven node' right click menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/sites.html">Aba de Sites</a></td><td>' Marcar como contexto -&gt; <i>Nome de contexto</i> Nó orientado a dados ' item de menu de clique direito</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/history.html">Aba de histórico</a></td><td>' Marcar como contexto -&gt; <i>Nome de contexto</i> Nó orientado a dados ' item de menu de clique direito</td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Veja também</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="concepts.html">Features</a></td><td>provided by ZAP</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="structparams.html">Structural Parameters</a></td><td>which identify parameters that represent application structure instead of user data</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/dialogs/session/context-struct.html">Session Context Structure screen</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">Visão geral da IU</a></td><td>para uma visão geral da interface do usuário</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="concepts.html">Destaques</a></td><td>fornecidos pelo ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="structparams.html">Parâmetros estruturais</a></td><td>que identificam parâmetros representando a estrutura da aplicação em vez de dados do usuário</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/dialogs/session/context-struct.html">Tela de estrutura de contexto de sessão</a></td></tr>
 </table>
 
 </body>

@@ -84,7 +84,7 @@ Dynamic SSL Certificates
 	But there's no way, that anyone can figure out your name from this hash code.
 </p>
 
-<h3>Import</h3>
+<h3>Importál</h3>
 <p>
 	When you're using multiple ZAP installation and you want to use the same
 	Root CA certificate, so you can import it. Simply use one installation of OWASP ZAP
@@ -133,7 +133,7 @@ yemZE/ua8wm34SKvDHf5uxcmofShW17PLICrsLJ7P35y/A== <br>
 And yes, that example will work - its the Superfish certificate!
 </p>
 
-<h3><a name="view">View</a></h3>
+<h3><a name="view">Nézet</a></h3>
 <p>
 	In the options dialog of ZAP you're seeing the raw bytes (hexa-decimal encoded)
 	of the certificate. The option "view" tries to use your system's default
@@ -160,7 +160,7 @@ And yes, that example will work - its the Superfish certificate!
 </p>
 <p>
 	Every dynamically generated certificate is valid for 1000 days.<br>
-	Every dynamically generated certificate is 1024 bit strong (RSA with SHA1).<br>
+	Every dynamically generated certificate is 2048 bit strong (RSA with SHA1).<br>
 	Every dynamically generated certificate has a random serial number. 
 	Every dynamically generated certificate consists of the following identifiers:
 </p>
@@ -237,7 +237,7 @@ And yes, that example will work - its the Superfish certificate!
 	<li>Finalize the wizard</li>
 	</ol>
 
-<h2 style="color: red; font-weight: bold; text-decoration: underline;">Risks</h2>
+<h2 style="color: red; font-weight: bold; text-decoration: underline;">Kockázatok</h2>
 <p>
 	<b>Attention, there are risks!</b><br>
 	When adding self generated Root CA certificates to your list of trusted 

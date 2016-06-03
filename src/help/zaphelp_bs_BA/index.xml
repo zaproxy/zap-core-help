@@ -75,23 +75,26 @@
     <indexitem text="izdanja" target="zap.releases.2.4.1" />
     <indexitem text="zahtjevi tab" target="zap.releases.2.4.2" />
     <indexitem text="ponovno slanje dijalog" target="zap.releases.2.4.3" />
-    <indexitem text="odgovor tab" target="zap.releases" />
-    <indexitem text="pravila skeniranja" target="ui.tabs.request" />
-    <indexitem text="resend dialog" target="ui.dialogs.resend" />
-    <indexitem text="sken politika dijalog" target="ui.tabs.response" />
-    <indexitem text="scanner rules" target="start.check" />
-    <indexitem text="pretraga tab" target="start.concepts.scanpolicy" />
-    <indexitem text="sesijski konteksti dijalog" target="ui.dialogs.scanpolicy" />
-    <indexitem text="svojstva sesije dijalog" target="ui.dialogs.scanpolicymgr" />
-    <indexitem text="sajtovi tab" target="ui.tabs.search" />
-    <indexitem text="pauk" target="ui.dialogs.contexts" />
-    <indexitem text="session context authentication screen" target="ui.dialogs.context-auth" />
-    <indexitem text="pauk tab" target="ui.dialogs.context-struct" />
-    <indexitem text="tagovi" target="ui.dialogs.sessprop" />
-    <indexitem text="gornji nivo meni" target="ui.tabs.sites" />
-    <indexitem text="gornjeg nivoa alatna traka" target="start.concepts.spider" />
-    <indexitem text="ui pregled" target="ui.dialogs.spider" />
+    <indexitem text="odgovor tab" target="zap.releases.2.5.0" />
+    <indexitem text="pravila skeniranja" target="zap.releases" />
+    <indexitem text="request tab" target="ui.tabs.request" />
+    <indexitem text="sken politika dijalog" target="ui.dialogs.resend" />
+    <indexitem text="response tab" target="ui.tabs.response" />
+    <indexitem text="pretraga tab" target="start.check" />
+    <indexitem text="sesijski konteksti dijalog" target="start.concepts.scanpolicy" />
+    <indexitem text="svojstva sesije dijalog" target="ui.dialogs.scanpolicy" />
+    <indexitem text="sajtovi tab" target="ui.dialogs.scanpolicymgr" />
+    <indexitem text="pauk" target="ui.dialogs.scanprogress" />
+    <indexitem text="search tab" target="ui.tabs.search" />
+    <indexitem text="pauk tab" target="ui.dialogs.contexts" />
+    <indexitem text="tagovi" target="ui.dialogs.context-auth" />
+    <indexitem text="gornji nivo meni" target="ui.dialogs.context-struct" />
+    <indexitem text="gornjeg nivoa alatna traka" target="ui.dialogs.sessprop" />
+    <indexitem text="ui pregled" target="ui.tabs.sites" />
+    <indexitem text="spider" target="start.concepts.spider" />
+    <indexitem text="spider dialog" target="ui.dialogs.spider" />
     <indexitem text="spider tab" target="ui.tabs.spider" />
+    <indexitem text="statistics" target="start.concepts.stats" />
     <indexitem text="structural modifiers" target="start.concepts.structmods" />
     <indexitem text="structural parameters" target="start.concepts.structparams" />
     <indexitem text="tags" target="start.concepts.tags" />

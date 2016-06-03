@@ -3,64 +3,45 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Session Context Authentication screen
+Tela de autenticação de contexto de sessão
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Session Context Authentication screen</h1>
+<h1>Tela de autenticação de contexto de sessão</h1>
 <p>
-This is one of the <a href="contexts.html">Session Context screens</a>
-which allows you to manage the way in which <a href="../../../start/concepts/authentication.html">Authentication</a> is being done for the Context. Note that
-changing the authentication method after Users have been defined will cause them to be deleted, as
-the type of user credentials needs to match the authentication scheme. 
-After selecting the Authentication Method type, the options that need to be configured 
-depend on the Authentication Method.
+Esta é uma das <a href="contexts.html">Telas de Contexto de Sessão</a>
+que permite a você gerenciar o modo pelo qual <a href="../../../start/concepts/authentication.html">a Autenticação</a> está sendo feita para o contexto. Note-se que mudar o método de autenticação depois que os usuários foram definidos fará com que eles sejam deletados, porque o tipo de credencial do usuário precisa coincidir com o esquema de autenticação. 
+Depois de selecionar o tipo de método de autenticação, as opções que precisam ser configuradas dependem do método de autenticação.
 
-<h4>Manual Authentication</h4>
-No configuration is needed for this authentication method. <small>Read  
-<a href="../../../start/concepts/authentication.html#manual">more</a>...</small>
+<h4>Autenticação manual</h4>
+Nenhuma configuração é necessária para este método de autenticação. <small>Leia <a href="">mais</a>...</small>
 
-<h4>Form-Based Authentication</h4>
-To configure this authentication method, you need to supply the <b>login url</b>, to which the login
-request is performed, the <b>request body</b> (POST data), if needed, and identify the <b>parameters</b> used to supply
-the 'username' and 'password'. If no request body is supplied, the login request is performed as 
-a HTTP GET, otherwise an HTTP POST is used. The credentials themselves
-are configured in the <a href="contexts.html#users">Users</a> tab. <small>Read  
-<a href="../../../start/concepts/authentication.html#formBased">more</a>...</small> 
+<h4>Autenticação baseada em formulário</h4>
+Para configurar este método de autenticação, você precisa fornecer a <b>url de login</b>, para a qual a requisição de login é enviada, o <b>corpo da solicitação/requisição</b> (Dados do POST), se necessário e identificar os <b>parâmetros</b> usados no fornecimento do 'username' e 'senha'. Não se for fornecido nenhum corpo de solicitação (request), a solicitação de logon é executada como um HTTP GET, caso contrário será usado um HTTP POST. As credenciais na verdade são configuradas na <a href="contexts.html#users">aba de </a> usuários. <small>Leia <a href="">mais</a>...</small> 
 
-<h4>HTTP/NTLM Authentication</h4>
-To configure this authentication method, you need to supply the <b>hostname</b> and the <b>port</b> of the server
-the authentication is done with and the <b>realm</b> the credentials apply to. The credentials themselves
-are configured in the <a href="contexts.html#users">Users</a> tab. <small>Read  
-<a href="../../../start/concepts/authentication.html#httpAuth">more</a>...</small> 
+<h4>Autenticação HTTP/NTLM</h4>
+Para configurar este método de autenticação, você precisa fornecer o <b>hostname</b> e a <b>porta</b> do servidor onde a autenticação é feita e o <b>alcance</b> que essas credenciais têm. Elas são configuradas na <a href="contexts.html#users">aba de</a> usuários. <small>Leia <a href="">mais</a>...</small> 
 
-<h4>Script-Based Authentication</h4>
-To use this authentication method, you <b>first</b> need to write (and save) an <b>Authentication Script</b> 
-using the <b>Scripts</b> tab (see the provided examples and templates for this script type in the Scripts tab).
-Then you need to supply the name of the script in the dropdown list. After selecting the script, you need to press 
-the <b>Load</b> button, loading all the requirements of the script.
-Any parameters that you have specified as <i>required</i> or <i>optional</i> in the script will
-be shown in the interface to be defined. Their values are available to be used in the script, during the authentication, as seen
-in the provided examples for Authentication Scripts. Make sure that after doing any changes to the parameters 
-required by the Authentication script you re-load the script. Otherwise, the parameters shown in the interface might
-not be the ones used during the authentication and errors might occur. The <i>credentials</i> used for each User 
-during the authentication processed can be also specified in the Authentication Script and are configured in the 
-<a href="contexts.html#users">Users</a> tab.
-<small>Read <a href="../../../start/concepts/authentication.html#scriptBased">more</a>...</small> 
+<h4>Autenticação baseada em script</h4>
+Para usar esse método de autenticação, você <b>primeiro</b> precisa escrever (e salvar) um <b>Script de autenticação</b> 
+usando a <b>Aba de</b> scripts (consulte os exemplos fornecidos e templates para este tipo de script na aba Scripts).
+Em seguida, você precisa fornecer o nome do script na lista drop down. Depois de selecionar o script, você precisa pressionar o <b>botão</b> Carregar, para carregar todos os requisitos do script. Quaisquer parâmetros que você especificou, tais como <i>Obrigatório</i> ou <i>opcional</i> no script serão mostrados na interface a ser definida. Os valores desses parâmetros estarão disponíveis para serem usados no script, durante a autenticação, como visto nos exemplos fornecidos de Scripts de autenticação. Depois de fazer quaisquer alterações nos parâmetros exigidos pelo script de autenticação você terá de recarregá-lo. Caso contrário, os parâmetros mostrados na interface podem não ser aqueles usados na autenticação, e assim erros poderão ocorrer. As <i>credenciais</i> utilizadas para cada usuário durante o processo de autenticação também podem ser especificadas no Script de autenticação e ser configuradas na 
+<a href="contexts.html#users">aba de</a> usuários.
+<small>Leia <a href="">mais</a>...</small> 
 
   
-<h2>Accessed via</h2>
+<h2>Acessado via</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../tlmenu/file.html">Top level File menu</a></td><td>'Properties...' menu item</td></tr>
+<a href="../../tlmenu/file.html">Menu de arquivo de nível superior</a></td><td>Item de menu 'Propriedades...'</td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Veja também</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="contexts.html">Session Context screens</a></td><td>for details of the other Context screens</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../../start/concepts/authentication.html">Authentication</a></td><td>for an overview of Authentication </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">Visão geral da IU</a></td><td>para uma visão geral da interface do usuário</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../dialogs.html">Diálogos</a></td><td>para detalhes das caixas de diálogo ou pop-ups </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="contexts.html">Telas de Contexto de Sessão</a></td><td>para obter detalhes das outras telas do contexto</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../../start/concepts/authentication.html">Autenticação</a></td><td>para uma visão geral da autenticação </td></tr>
 </table>
 
 

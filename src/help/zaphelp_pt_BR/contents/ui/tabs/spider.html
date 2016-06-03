@@ -15,33 +15,55 @@
 		O botão 'Nova Varredura' lança o <a href="../dialogs/spider.html">diálogo do Spider</a>, para permitir que você especifique exatamente o que deve ser escaneado.<br>O Spider pode ser executado em vários Sites ao mesmo tempo e os resultados de cada verificação são mostrados selecionando-se a varredura através do menu suspenso 'Progresso'.
 	</p>
 
-	<p>A barra de ferramentas fornece um conjunto de botões que permitem iniciar, parar, pausar e continuar a verificação. Uma barra de 'Progresso' mostra o quanto a varredura selecionada através do menu suspenso 'Progresso' já progrediu.</p>
-
-	<br /> Para cada solicitação, você pode ver:
+	<p>The toolbar shows information about a scan and allows to control it. It provides a
+		set of buttons which allows to:
+	
 	<ul>
-		<li>Processdo - se a URI foi processada pelo Spider ou foi ignorada dessa busca por causa de uma regra (por exemplo, estar fora do escopo)</li>
-		<li>Método - o método HTTP, por exemplo GET ou POST, através do qual o recurso deve ser acessado</li>
-		<li>URI - o recurso encontrado</li>
-		<li>Flags - qualquer informação sobre a URI (por exemplo, se é uma semente/seed ou porque não foi processada)</li>
+		<li><img align="bottom" alt="pause button" src="../../images/16/141.png">
+			Pause (and <img alt="resume button" src="../../images/16/131.png"> resume) the
+			selected spider scan;</li>
+		<li><img align="bottom" alt="stop button" src="../../images/16/142.png"> Stop
+			the selected spider scan;</li>
+		<li><img align="bottom" alt="clean scans button" src="../../images/fugue/broom.png">
+			Clean completed scans;</li>
+		<li><img align="bottom" alt="show messages button" src="../../images/16/178.png">
+			Show/Hide Messages - shows/hides a tab (called Messages) that displays all HTTP
+			messages sent by the selected spider scan;</li>
+		<li><img align="bottom" alt="spider options button" src="../../images/16/041.png">
+			Open the <a href="../../ui/dialogs/options/spider.html">Spider Options screen</a>.</li>
+	</ul>
+	The progress bar shows how far the selected spider scan has progressed. It is also shown
+	the number of active spider scans and the number of URIs found for the selected scan.
+	<p>For each URI found you can see:
+	<ul>
+		<li>Processed - Whether the URI was processed by the Spider or
+			was skipped from fetching because of a rule (e.g. it was out of
+			scope)</li>
+		<li>Method - The HTTP method, e.g. GET or POST, through which the
+			resource should be accessed</li>
+		<li>URI - the resource found</li>
+		<li>Flags - any information about the URI (e.g. if it's a seed or
+			why was it not processed)</li>
 	</ul>
 
 
-	<h2>Leia também</h2>
+	<h2>See also</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../overview.html">Visão geral da interface do usuário</a></td>
-			<td>para uma visão geral da interface do usuário</td>
+			<td><a href="../overview.html">UI Overview</a></td>
+			<td>for an overview of the user interface</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			<td><a href="../../start/concepts/spider.html">Spider</a></td>
-			<td>para uma visão geral do spider</td>
+			<td>for an overview of the Spider</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/options/spider.html">Tela de opções do Spider</a></td>
-			<td>para uma visão geral das opções do Spider</td>
+			<td><a href="../../ui/dialogs/options/spider.html">Spider
+					Options screen</a></td>
+			<td>for an overview of the Spider Options</td>
 		</tr>
 	</table>
 
