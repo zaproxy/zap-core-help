@@ -52,6 +52,7 @@
     <indexitem text="params tab" target="ui.tabs.params" />
     <indexitem text="paros proxy" target="zap.paros" />
     <indexitem text="passive scan" target="start.concepts.pscan" />
+    <indexitem text="passive scanner options" target="ui.dialogs.options.pscan.main" />
     <indexitem text="persist session dialog" target="ui.dialogs.persistsession" />
     <indexitem text="proxy configuration" target="start.proxy" />
     <indexitem text="release 1.0.0" target="zap.releases.1.0.0" />
