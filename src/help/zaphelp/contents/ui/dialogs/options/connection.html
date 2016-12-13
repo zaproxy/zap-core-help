@@ -18,6 +18,15 @@ This makes is easier to test slow applications.
 Controls whether the ZAP's managed cookies (<a href="../../tlmenu/edit.html">Enable Session Tracking (Cookie)</a>) should be set
 on a single "Cookie" request header or multiple "Cookie" request headers, when sending an HTTP request to the server.
 
+<H3>DNS</H3>
+<h4>TTL Successful Queries</h4>
+Defines for how long the successful DNS queries should be cached:<ul>
+<li>Negative number, cache forever;</li>
+<li>Zero, disables caching;</li>
+<li>Positive number, the number of seconds the queries will be cached.</li></ul>
+<strong>Note:</strong> Changes are applied after a restart.<p>
+The option can also be set using the <code>-config</code> command line argument with the key <code>connection.dnsTtlSuccessfulQueries</code>.
+
 <H3>Use Proxy chain</H3>
 This section allows you to connect to another proxy for outgoing connections.<br/>
 This is often required in a corporate environment.
@@ -31,6 +40,8 @@ This section allows you to configure the outgoing proxy authentication.
 <a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../../cmdline.html">Command Line</a></td><td>for details of the Command Line</td></tr>
 </table>
 
 </BODY>
