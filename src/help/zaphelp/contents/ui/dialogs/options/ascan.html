@@ -23,6 +23,12 @@ Increasing the number of threads will speed up the scan but may put extra strain
 The number of results that will be shown in the Active Scan tab.<br>
 Displaying a large number of results can significantly increase the time a scan takes.
 
+<H3>Maximum rule duration (min, 0 is unlimited)</H3>
+The maximum time any individual rule can run for in minutes. Zero means no limit. This can be used to prevent rules that are taking an excessive amount of time. 
+
+<H3>Maximum scan duration (min, 0 is unlimited)</H3>
+The maximum time that the whole scan can run for in minutes. Zero means no limit. This can be used to ensure that a scan is completed around a set time. 
+
 <H3>Delay when scanning in milliseconds</H3>
 The delay in milliseconds between each request.<br>
 Setting this to a non zero value will increase the time an active scan takes, but will put less of a strain
