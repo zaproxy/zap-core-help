@@ -34,6 +34,12 @@
 	The maximum length of time that the spider should run for, measured in minutes.
 	Zero (the default) means that the spider will run until it has found all of the links that it is able to. 
 
+	<h3>Maximum children to crawl</h3>
+	This parameter limits the number of children that will be crawled at every node in the tree.<br>
+	This is useful for data driven applications that have large numbers of 'pages' that are in fact exactly the same code but 
+	containing different data, for example from a database.<br>
+	By default this is set to zero which means there are no limits applied to the number of child nodes crawled.
+
 	<h3>Domain Pattern</h3>
 	The normal behavior of the spider is to only follow links to resources
 	found on the same domain as the page where the scan started. However,
