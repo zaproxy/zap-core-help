@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<TITLE>
+  Release 2.6.0
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H1>Release 2.6.0</H1>
+
+<p>
+The following changes were made in this release:
+</p>
+
+<H2>ZAP API Changed Endpoints:</H2>
+
+<H3>ACTION ascan / scan</H3>
+
+The url parameter is now optional and an optional contextId parameter has been added. You must supply one of these.
+
+<H3>ACTION ascan / scanAsUser</H3>
+
+The url and contextId parameters are now optional. You must supply one of these.
+
+<H3>ACTION ascan / addScanPolicy</H3>
+
+Added optional alertThreshold and attackStrength parameters.
+
+
+<H2>ZAP API New Endpoints:</H2>
+
+<H3>VIEW ascan / optionMaxRuleDurationInMins</H3>
+
+Returns the maximum time in minutes that a scan rule can run for, zero is unlimited.
+
+<H3>VIEW ascan / optionMaxScanDurationInMins</H3>
+
+Returns the maximum time in minutes that a full scan can run for, zero is unlimited.
+
+<H3>ACTION ascan / setOptionMaxRuleDurationInMins</H3>
+
+Sets the maximum time in minutes that a scan rule can run for, zero is unlimited.
+
+<H3>ACTION ascan / setOptionMaxScanDurationInMins</H3>
+
+Sets the maximum time in minutes that a full scan can run for, zero is unlimited.
+
+<H3>ACTION ascan / updateScanPolicy</H3>
+
+Updates the specified scan policy with the specified alertThreshold or attackStrength.
+
+<H3>VIEW break / isBreakAll</H3>
+
+Returns True if ZAP will break on both requests and responses.
+
+<H3>VIEW break / isBreakRequest</H3>
+
+Returns True if ZAP will break on requests.
+
+<H3>VIEW break / isBreakResponse</H3>
+
+Returns True if ZAP will break on responses.
+
+<H3>VIEW break / httpMessage</H3>
+
+Returns the HTTP message currently intercepted (if any).
+
+<H3>ACTION break / break</H3>
+
+Controls the global break functionality. The type may be one of: http-all, http-request or http-response. The state may be true (for turning break on for the specified type) or false (for turning break off). Scope is not currently used.
+
+<H3>ACTION break / setHttpMessage</H3>
+
+Overwrites the currently intercepted message with the data provided.
+
+<H3>ACTION break / continue</H3>
+
+Submits the currently intercepted message and unsets the global request/response break points.
+
+<H3>ACTION break / step</H3>
+
+Submits the currently intercepted message, the next request or response will automatically be intercepted.
+
+<H3>ACTION break / drop</H3>
+
+Drops the currently intercepted message.
+
+<H3>VIEW core / optionDnsTtlSuccessfulQueries</H3>
+
+Gets the TTL (in seconds) of successful DNS queries.
+
+<H3>ACTION core / sendRequest</H3>
+
+Sends the HTTP request, optionally following redirections. Returns the request sent and response received and followed redirections, if any. The Mode is enforced when sending the request (and following redirections), custom manual requests are not allowed in 'Safe' mode nor in 'Protected' mode if out of scope.
+
+<H3>ACTION core / setOptionDnsTtlSuccessfulQueries</H3>
+
+Sets the TTL (in seconds) of successful DNS queries (applies after ZAP restart).
+
+<H3>OTHER core / mdreport</H3>
+
+Generates a report in Markdown format.
+
+<H3>VIEW httpSessions / sites</H3>
+
+Gets all of the sites that have sessions.
+
+<H3>VIEW pscan / scanOnlyInScope</H3>
+
+Tells whether or not the passive scan should be performed only on messages that are in scope.
+
+<H3>ACTION pscan / setScanOnlyInScope</H3>
+
+Sets whether or not the passive scan should be performed only on messages that are in scope.
+
+<H3>VIEW spider / allUrls</H3>
+
+Returns a list of unique URLs from the history table based on HTTP messages added by the Spider.
+
+<H3>VIEW spider / optionMaxChildren</H3>
+
+Gets the maximum number of child nodes (per node) that can be crawled, 0 means no limit.
+
+<H3>ACTION spider / setOptionMaxChildren</H3>
+
+Sets the maximum number of child nodes (per node) that can be crawled, 0 means no limit.
+
+<H2>Enhancements:</H2>
+<ul>
+<li>Issue 368 : API - report URLS just found by spider</li>
+<li>Issue 689 : Improve Scope management</li>
+<li>Issue 958 : Java version identification when an environment variable for Java is exported</li>
+<li>Issue 1853 : Allow to active scan a Context through ZAP API</li>
+<li>Issue 1952 : Do not allow Contexts with same name</li>
+<li>Issue 2117 : set / update default threshold and strength for a scan policy</li>
+<li>Issue 2334 : Enable searching in ZAP Addons Pop-up</li>
+<li>Issue 2415 : Show the reason why an active scanner was skipped</li>
+<li>Issue 2559 : Do not clean up unsaved (file based) sessions</li>
+<li>Issue 2570 : Change proxy option to remove unsupported encoding</li>
+<li>Issue 2592 : Differentiate the source of alerts</li>
+<li>Issue 2611 : Change HTTP breakpoint dialogues to modal</li>
+<li>Issue 2633 : Enhance Client Cert File Chooser</li>
+<li>Issue 2647 : Support a/pscan rule configuration</li>
+<li>Issue 2655 : Provide skip reason for Script Active Scan Rules</li>
+<li>Issue 2682 : Sort (main) help add-on TOC entries</li>
+<li>Issue 2690 : Support ignoring specified forms when checking for CSRF vulnerabilities</li>
+<li>Issue 2701 : Enhancement Request: Factory Reset</li>
+<li>Issue 2723 : Support POST requests for API actions</li>
+<li>Issue 2728 : Allow to remove spider parsers and filters</li>
+<li>Issue 2750 : Add a reasonably strong CSP to the API</li>
+<li>Issue 2773 : Use UTF-8 to read/write ZAP scripts</li>
+<li>Issue 2782 : Support the -configfile cmdline parameter</li>
+<li>Issue 2825 : Additional Commentary for JS templates</li>
+<li>Issue 2853 : Override Alert details</li>
+<li>Issue 2855 : Support break functionality in the API</li>
+<li>Issue 2865 : Normalise Include/Exclude context panels</li>
+<li>Issue 2886 : Option to generate reports in Markdown format</li>
+<li>Issue 2891 : Show the cause why a script was not loaded</li>
+<li>Issue 2936 : Always set Java mem to 1/4 available (over 512Mb)</li>
+<li>Issue 2937 : Change ZAP API to read/use the request body</li>
+<li>Issue 2939 : Use non absolute URI base HTML element in spider</li>
+<li>Issue 2951 : Support active scan rule and scan max duration</li>
+<li>Issue 2954 : Allow to export a Context through the context menu</li>
+<li>Issue 2966 : Use L&amp;F specified through JVM args</li>
+<li>Issue 2970 : Allow to configure, by script type, the enabled state of new/loaded scripts</li>
+<li>Issue 2982 : Allow to disable default standard output logging</li>
+<li>Issue 2994 : show column 'Size Resp. Body' of history in bytes</li>
+<li>Issue 3004 : Allow to passive scan just HTTP messages in scope</li>
+<li>Issue 3038 : Return request's type through the ZAP API</li>
+<li>Issue 3042 : Allow to select multiple parameters in Params tab</li>
+<li>Issue 3050 : Return requests' timestamp/RTT through the ZAP API</li>
+<li>Issue 3061 : Allow to deprecate API endpoints</li>
+<li>Issue 3079 : Added cookie ignore list rule and inc sleep default to 20 to reduce FPs</li>
+<li>Issue 3081 : Change default time to 15 and make publicly accessible</li>
+<li>Issue 3098 : Log to file even if ZAP is run 'inline'</li>
+<li>Issue 3118 : include subjectAlternativeName extension in generated certificates</li>
+</ul>
+
+<H2>Bug fixes:</H2>
+<ul>
+<li>Issue 1107 : Additional Commentary needed for Script Templates/Examples</li>
+<li>Issue 1152 : Passive CSRF Sensor Reports Missing CSRF Tokens for all Forms, not just POST Requests Missing Anti-CSRF Tokens</li>
+<li>Issue 1212 : False positives in SQLi tests</li>
+<li>Issue 2176 : NPEs during zapbot WAVSEP scans</li>
+<li>Issue 2218 : Persisted Sessions don't save unconfigured Default Context</li>
+<li>Issue 2546 : ZAP access URLs which are out of scope</li>
+<li>Issue 2550 : GUI freezes while opening Scan Progress dialogue</li>
+<li>Issue 2561 : Use UTF-8 to write the HTML Report</li>
+<li>Issue 2578 : Minor Usability Issue: Must click on text in Options column to select row</li>
+<li>Issue 2585 : Remove temp Sequence requests on session clean up</li>
+<li>Issue 2586 : Use option All Requests from Active Scan dialogue</li>
+<li>Issue 2605 : Prevent GUI hang when adding messages to History</li>
+<li>Issue 2608 : Removing a DDN from a Context Does Not Appear to Trigger an Update to the Sites Tab</li>
+<li>Issue 2637 : Prevent API UI from being loaded in a frame</li>
+<li>Issue 2642 : Slow mouse wheel scrolling in site tree</li>
+<li>Issue 2657 : Correct persistence of disabled extensions</li>
+<li>Issue 2674 : Automated authentication requests shown in HTTP Sessions tab</li>
+<li>Issue 2681 : Fix exception while adding script through the API</li>
+<li>Issue 2696 : Enable Copy URLs pop up menu item for all messages</li>
+<li>Issue 2707 : Manual add-on installation needs more meaningful dialog messages</li>
+<li>Issue 2735 : Wiki: ModesAndScope doesn't cover ATTACK mode</li>
+<li>Issue 2736 : Bug: Can't generate reports from saved Session data</li>
+<li>Issue 2737 : Correct API error message on missing script params</li>
+<li>Issue 2745 : Spider Exception when sitemap.xml not found</li>
+<li>Issue 2748 : ZAP Spidering HTML Forms with multiple submit buttons</li>
+<li>Issue 2757 : Alerts with different request method are considered the same</li>
+<li>Issue 2774 : Wrong value shown in fuzz location for body text when selected through combined view</li>
+<li>Issue 2792 : Able to overlap fuzz (HTTP) locations</li>
+<li>Issue 2793 : Wrong highlight in combined view with last part of request header</li>
+<li>Issue 2810 : Active scanners' alerts persisted twice when with GUI</li>
+<li>Issue 2836 : ZAP hsqldb OutOfMemoryError when deleting records on cleanup</li>
+<li>Issue 2862 : XSS in url on page with no parameters not found</li>
+<li>Issue 2874 : Correct offset calculation in text header views</li>
+<li>Issue 2898 : Tweak spider parser to ignore/strip matched parenthesis around URLs</li>
+<li>Issue 2935 : Wrong charset used in response body if no charset set</li>
+<li>Issue 2977 : HTTP500 from JSON/httpSessions/view/sessions/?site=FOO</li>
+<li>Issue 3002 : Correctly render all nodes in checkbox tree</li>
+<li>Issue 3041 : Fix concurrency issues when publishing ZAP events</li>
+<li>Issue 3052 : Correct the loading of extensions' enabled state</li>
+<li>Issue 3054 : Clear old contexts, always, when loading a session</li>
+<li>Issue 3073 : Skip process automated msgs for HTTP Sessions tab</li>
+<li>Issue 3100 : Context's in scope change might not be applied</li>
+</ul>
+
+<H2>See also</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+</table>
+</BODY>
+</HTML>
