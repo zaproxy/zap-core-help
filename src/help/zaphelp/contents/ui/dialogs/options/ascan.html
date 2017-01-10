@@ -34,6 +34,10 @@ The delay in milliseconds between each request.<br>
 Setting this to a non zero value will increase the time an active scan takes, but will put less of a strain
 on the target host.
 
+<H3>Inject plugin ID in header for all active scan requests</H3>
+If this option is selected the active scanner will inject the request header <code>X-ZAP-Scan-ID</code> with the ID of
+the scanner that's sending the HTTP requests.
+
 <H3>Handle anti CSRF tokens</H3>
 If this option is selected then the active scanner will attempt to automatically request 
 <a href="../../../start/concepts/anticsrf.html">anti CSRF</a> tokens when required.<br>
