@@ -145,6 +145,7 @@ Sets the maximum number of child nodes (per node) that can be crawled, 0 means n
 <li>Issue 2655 : Provide skip reason for Script Active Scan Rules</li>
 <li>Issue 2682 : Sort (main) help add-on TOC entries</li>
 <li>Issue 2690 : Support ignoring specified forms when checking for CSRF vulnerabilities</li>
+<li>Issue 2699 : Enhancement Request: Improve SSL Negotiation Failure Error Handling</li>
 <li>Issue 2701 : Enhancement Request: Factory Reset</li>
 <li>Issue 2723 : Support POST requests for API actions</li>
 <li>Issue 2728 : Allow to remove spider parsers and filters</li>
@@ -167,14 +168,30 @@ Sets the maximum number of child nodes (per node) that can be crawled, 0 means n
 <li>Issue 2982 : Allow to disable default standard output logging</li>
 <li>Issue 2994 : show column 'Size Resp. Body' of history in bytes</li>
 <li>Issue 3004 : Allow to passive scan just HTTP messages in scope</li>
+<li>Issue 3028 : Value Generator (previously Form Handling)</li>
 <li>Issue 3038 : Return request's type through the ZAP API</li>
 <li>Issue 3042 : Allow to select multiple parameters in Params tab</li>
 <li>Issue 3050 : Return requests' timestamp/RTT through the ZAP API</li>
+<li>Issue 3058 : Allow to configure the domains always in spider scope (Spider API)</li>
 <li>Issue 3061 : Allow to deprecate API endpoints</li>
+<li>Issue 3069 : Context structural parameter only accepts alphanumeric charts</li>
 <li>Issue 3079 : Added cookie ignore list rule and inc sleep default to 20 to reduce FPs</li>
 <li>Issue 3081 : Change default time to 15 and make publicly accessible</li>
+<li>Issue 3090 : Be more lenient on add-on's file name format</li>
 <li>Issue 3098 : Log to file even if ZAP is run 'inline'</li>
 <li>Issue 3118 : include subjectAlternativeName extension in generated certificates</li>
+<li>Issue 3123 : Added security annotations for forms that dont need anti CSRF tokens</li>
+<li>Issue 3130 : Added autoupdate API calls</li>
+<li>Issue 3149 : Baseline: Support context file and in-progress issues</li>
+<li>Issue 3159 : Allow esc to Close Marketplace Dialog</li>
+<li>Issue 3163 : Autoselect Imported Certificate</li>
+<li>Issue 3176 : Allow to show more request data in History tab</li>
+<li>Issue 3195 : Add workaround to local proxy for Android emulator</li>
+<li>Issue 3226 : Option to supply API key or nonces via header</li>
+<li>Issue 3227 : Limit API access to whitelisted IP addresses</li>
+<li>Issue 3229 : Use Referrer-Policy in ZAP API</li>
+<li>Issue 3232 : Active Scan API - Allow to start the scans with non-leaf nodes</li>
+<li>Issue 3238 : Add driver entries for CSPid Virtual Smartcards</li>
 </ul>
 
 <H2>Bug fixes:</H2>
@@ -197,6 +214,7 @@ Sets the maximum number of child nodes (per node) that can be crawled, 0 means n
 <li>Issue 2657 : Correct persistence of disabled extensions</li>
 <li>Issue 2674 : Automated authentication requests shown in HTTP Sessions tab</li>
 <li>Issue 2681 : Fix exception while adding script through the API</li>
+<li>Issue 2694 : Ability to set Excluded Parameters from the API</li>
 <li>Issue 2696 : Enable Copy URLs pop up menu item for all messages</li>
 <li>Issue 2707 : Manual add-on installation needs more meaningful dialog messages</li>
 <li>Issue 2735 : Wiki: ModesAndScope doesn't cover ATTACK mode</li>
@@ -221,6 +239,14 @@ Sets the maximum number of child nodes (per node) that can be crawled, 0 means n
 <li>Issue 3054 : Clear old contexts, always, when loading a session</li>
 <li>Issue 3073 : Skip process automated msgs for HTTP Sessions tab</li>
 <li>Issue 3100 : Context's in scope change might not be applied</li>
+<li>Issue 3142 : Properly show excluded parameters through ZAP API</li>
+<li>Issue 3157 : Session Comparison Exception</li>
+<li>Issue 3175 : Cancel/save StandardFieldsDialog on escape key</li>
+<li>Issue 3192 : URLs included in context are disregarded by the spider</li>
+<li>Issue 3211 : Can't find .ZAP_JVM.properties with %HOMEPATH% when using zap.bat in windows</li>
+<li>Issue 3215 : History Filter dialog cant be scaled</li>
+<li>Issue 3221 : Some icons not scaled correctly</li>
+<li>Issue 3224 : HTML injection in "Alert" tab</li>
 </ul>
 
 <H2>See also</H2>
