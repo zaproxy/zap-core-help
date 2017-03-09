@@ -15,6 +15,11 @@ This screen allows you to configure the <a href="../../../start/concepts/api.htm
 
 If enabled then the API is available to all machines that are able to use ZAP as a proxy.<br/>
 
+<H3>UI Enabled</H3>
+
+If enabled then the API Web UI is available to all machines that are able to use ZAP as a proxy. 
+To access the API Web UI point your browser to the host and port that ZAP is listening on.<br/>
+
 <H3>Secure Only</H3>
 
 If enabled then the API will only be available via HTTPS. Otherwise it will be available via both HTTP and HTTPS.<br/>
@@ -25,10 +30,27 @@ A key that must be specified on all API 'actions' and some 'other' operations.<b
 The API key is used to prevent malicious sites from accessing the ZAP API.<br/>
 It is strongly recommended that you set a key unless you are using ZAP in a completely isolated environment.<br/>
 
+<H3>IP addresses permitted to use the API</H3>
+
+By default only the machine ZAP is running on is able to access the ZAP API.<br/>
+You can allow other machines access to the API by adding suitable regex patterns.<br/>
+You should only add IP addresses that you trust.
+
 <H3>Disable the API Key</H3>
 
 Selecting this option disables the API key.<br/>
 This is not recommended unless you are using ZAP in a completely isolated environment, as it allows malicious sites to access the ZAP API.
+
+<H3>Do not require an API key for safe operations</H3>
+
+If enabled then the API key is not required for Views or Other operations that are considered 'safe', in other words operations that do not make any changes to ZAP. 
+Such operations do however give access to ZAP data such as alert, messages, and file system paths.  
+They can also be used by web applications to detect the presence of ZAP.
+
+<H3>Report permission errors via API</H3>
+
+If enabled then ZAP will report permission errors via the API, which can be used by web applications to detect the presence of ZAP.
+This is not a serious problem in a safe environment but if you are using ZAP against potentially malicious sites then you should not enable it.
 
 <H3>Report error details via API</H3>
 
