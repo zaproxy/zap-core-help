@@ -30,11 +30,12 @@ A key that must be specified on all API 'actions' and some 'other' operations.<b
 The API key is used to prevent malicious sites from accessing the ZAP API.<br/>
 It is strongly recommended that you set a key unless you are using ZAP in a completely isolated environment.<br/>
 
-<H3>IP addresses permitted to use the API</H3>
+<H3>Addresses permitted to use the API</H3>
 
 By default only the machine ZAP is running on is able to access the ZAP API.<br/>
 You can allow other machines access to the API by adding suitable regex patterns.<br/>
-You should only add IP addresses that you trust.
+You should only add IP addresses that you trust.<br/>
+Note that the ZAP API also now checks the host header, so that must also be one of the permitted addresses.
 
 <H3>Disable the API Key</H3>
 
