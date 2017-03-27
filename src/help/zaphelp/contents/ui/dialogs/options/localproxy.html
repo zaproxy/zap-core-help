@@ -14,6 +14,17 @@ on which ZAP accepts incoming connections.<br/>
 It is this address and port that you must configure your browser to use as a proxy.
 </p>
 
+<H3>Behind NAT</H3>
+Indicates that the Local Proxy (ZAP) is behind NAT. When selected ZAP will attempt to
+determine the public IP address, to properly detect and handle requests with the public
+IP address (for example, to be served by the ZAP API).
+<p>
+<strong>Note:</strong> This option is only supported when ZAP is running in an AWS EC2 instance.
+ZAP should be started with this option enabled if access to the API, through the public IP address, is required:
+<blockquote>zap.sh -daemon -port 8080 -host 0.0.0.0 -config proxy.behindnat=true</blockquote>
+Also, the <a href="api.html">API</a> needs to be configured to accept external IP addresses (i.e. the IP
+address from where ZAP is being accessed).
+
 <H3>Remove Unsupported Encodings</H3>
 Allows the proxy to remove unsupported encodings from the "Accept-Encoding" request-header field, so 
 no (unsupported) encoding transformations are done to the response.<br/>
