@@ -1,6 +1,6 @@
 # [![](https://raw.githubusercontent.com/wiki/zaproxy/zaproxy/images/zap32x32.png)](https://www.owasp.org/index.php/ZAP) OWASP ZAP User Guide
 
-Welcome to the [OWASP ZAP](OWASP Zed Attack Proxy) (ZAP) User Guide.
+Welcome to the OWASP Zed Attack Proxy (ZAP) User Guide.
 
 This is available both as context sensitive help within ZAP and online here in the [wiki](https://github.com/zaproxy/zap-core-help/wiki).
 
