@@ -18,6 +18,11 @@ interact with ZAP through a wide variety of browsers.
 
 <H2>API Security Changes</H2>
 
+We have changed the API security in response to issues reported to us via our <a href="https://bugcrowd.com/owaspzap">bug bounty program</a>. 
+Details of the vulnerabilities are given below.<br>
+The security changes are by necessity not backwards compatible, although we have include options for disabling them if you use ZAP in a safe environment.
+<p>
+
 By default all API calls now require either the API key or a nonce. 
 These can be supplied via URL parameters, POST parameters or headers.
 The supported ZAP API clients (including Java and Python) have been updated to supply the API key via a header.
@@ -282,6 +287,58 @@ Gets the maximum number of child nodes (per node) that can be crawled, 0 means n
 
 Sets the maximum number of child nodes (per node) that can be crawled, 0 means no limit.
 
+<H2>Vulnerability Details</H2>
+
+The following vulnerabilities have been reported in previous versions of ZAP.
+Other less serious issues have been also been fixed as a matter of course.<br>
+Many thanks to all of the researchers who have ethically reported these issues to us via our <a href="https://bugcrowd.com/owaspzap">bug bounty program</a>. 
+If you need more details about any of these vulnerabilities then please contact us.
+
+<H3>RCE via Anti CSRF Test Form and API Key Disclosure</H3>
+
+If the user used the Anti CSRF Test Form against a specifically crafted HTML page then the API key was leaked to that site.
+The site could then access the ZAP API and perform any action, including uploading ZAP scripts. Scripts can only be uploaded from ‘local’ filesystems but if the user is running ZAP on Windows then the attacker can make a malicious script available via a public SMB share. This appears to ZAP to be a local file and the script is therefore uploaded and can be run via the API.
+<br>
+The requirement for the API key or nonce on all API operations are a direct result of this vulnerability, as are changing add-ons to use nonces to reduce the risk of leaking the API key.
+<br><br>
+<b>Credit: Artemy Bogdanov (@Abr1k0s)</b>
+<br>
+Artemy was awarded a $1000 bug bounty as a result of this submission. This is the first bug bounty we have paid out - congratulations Artemy!
+
+<H3>Windows Installer Vulnerable to DLL Hijacking</H3>
+
+The ZAP Windows Installer for all versions up to and including 2.5.0 are vulnerable to DLL Hijacking on Windows 7 (and earlier versions).
+This is a vulnerability in the in 3rd party installer InnoSetup.
+The 2.6.0 Installers (on all platforms) are now generated using Install4J.
+<br><br>
+If for some reason you do need to install previous versions of ZAP on Windows 7 or earlier then we recommend that you move the installer to a clean directory before running it.
+<br><br>
+Note that Burp Suite also use Install4J so future vulnerabilities in Install4j-generated installers may be eligible for the Burp Suite bug bounty program: <a href="https://hackerone.com/portswigger">https://hackerone.com/portswigger</a>
+<br><br>
+<b>Credit: James Kettle (Burp Suite)</b>
+
+<H3>Arbitrary Code Execution via Invoke Applications Parameter Injection</H3>
+ 
+HTML parameters could be specifically crafted to cause arbitrary code execution, if the user choose to invoke the targeted application with a request containing that parameter from within ZAP.
+<br>
+The Invoke Applications add-on has been updated to fix this issue - all ZAP users should install this new version before continuing to use the add-on.
+<br><br>
+<b>Credit: Artemy Bogdanov (@Abr1k0s)</b>
+
+<H3>XSS via Anti CSRF Test Form</H3>
+
+The Anti CSRF Test Form was vulnerable to XSS attacks if run against a specifically crafted HTML page.
+<br>
+The API now uses a strong Content Security Policy to prevent such issues
+<br><br>
+<b>Credit: g_sato - <a href="https://bugcrowd.com/g_sato">https://bugcrowd.com/g_sato</a></b>
+
+<H3>API Vulnerable to DNS Rebinding</H3>
+
+The API was vulnerable to DNS Rebinding attacks.
+It now checks the host header and rejects any requests from unexpected hosts.
+<br><br>
+<b>Credit: Artemy Bogdanov (@Abr1k0s)</b>
 
 <H2>See also</H2>
 <table>
