@@ -31,6 +31,10 @@ Defines for how long the successful DNS queries should be cached:<ul>
 <strong>Note:</strong> Changes are applied after a restart.<p>
 The option can also be set using the <code>-config</code> command line argument with the key <code>connection.dnsTtlSuccessfulQueries</code>.
 
+<H3>Security Protocols</H3>
+Allows to choose the SSL/TLS versions enabled for outgoing connections (for example, to servers). At least
+one version must be enabled, versions unsupported by the JRE will be unselected and disabled.
+
 <H3>Use Proxy chain</H3>
 This section allows you to connect to another proxy for outgoing connections.<br/>
 This is often required in a corporate environment.
