@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<TITLE>
+  Release 2.7.0
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<H1>Release 2.7.0</H1>
+
+<H2>Enhancements</H2>
+
+<H2>Bug fixes</H2>
+
+<H2>ZAP API Breaking Changes:</H2>
+
+<H3>VIEW context / contextList</H3>
+
+This change will break the consumers that were manually parsing/extracting the names from the string. The structure of the data
+returned was changed to properly separate each name:
+<blockquote><pre><code>
+{"contextList":["Context 1","Context 2"]}
+</code></pre></blockquote>
+and:
+<blockquote><pre><code>
+&lt;contextList type="list"&gt;
+    &lt;contextName&gt;Context 1&lt;/contextName&gt;
+    &lt;contextName&gt;Context 2&lt;/contextName&gt;
+&lt;/contextList&gt;
+</code></pre></blockquote>
+
+instead of:
+<blockquote><pre><code>
+{"contextList":"[Context 1, Context 2]"}
+</code></pre></blockquote>
+and:
+<blockquote><pre><code>
+&lt;contextList&gt;[Context 1, Context 2]&lt;/contextList&gt;
+</code></pre></blockquote>
+
+<H2>ZAP API Changed Endpoints:</H2>
+
+<H2>ZAP API New Endpoints:</H2>
+
+<H2>See also</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+</table>
+</BODY>
+</HTML>
