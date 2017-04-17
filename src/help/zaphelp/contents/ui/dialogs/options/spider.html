@@ -66,6 +66,20 @@
 	<h3>Send "Referer" header</h3>
 	If the spider requests should be sent with the "Referer" header.
 
+	<h3>Accept Cookies</h3>
+	If the spider scans should accept cookies while spidering. If enabled the Spider will
+	properly handle any cookies received from the server and will send them back accordingly.
+	If the option is disabled, the Spider will not send any cookies in its requests. For
+	example, this might control whether or not the Spider uses the same session throughout a
+	spidering scan.
+	<br>When accepting cookies the cookies are not shared between spider scans, each scan has
+	its own cookie jar.
+	<br>This option has low priority, the Spider will respect other (global) options related
+	to the HTTP state. This option is ignored if, for example, the option
+	<a href="../../tlmenu/edit.html">Enable Session Tracking (Cookie)</a> is enabled, when
+	spidering as a <a href="../../../start/concepts/users.html">User</a> or when a
+	<a href="../../../start/concepts/httpsessions.html">HTTP Session</a> is active.
+
 	<h3>Process forms</h3>
 	During the crawling process, the behaviour of the spider when it
 	encounters HTML forms is defined by this option. If disabled, the HTML
