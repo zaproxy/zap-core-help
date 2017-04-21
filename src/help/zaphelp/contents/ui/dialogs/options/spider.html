@@ -44,8 +44,9 @@
 	Defines the maximum size, in bytes, that a response might have to be parsed. This allows
 	the spider to skip big responses/files.
 
-	<h3>Domain Pattern</h3>
-	The normal behavior of the spider is to only follow links to resources
+	<h3>Domains Always in Scope</h3>
+	Allows to manage the domains, string literals or regular expressions, that are in the
+	spider's scope. The normal behavior of the spider is to only follow links to resources
 	found on the same domain as the page where the scan started. However,
 	this option allows you to define additional domains that are considered
 	"in scope" during the crawling process. Pages on these domains are
