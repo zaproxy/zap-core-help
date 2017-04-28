@@ -41,7 +41,22 @@ and:
 
 <H2>ZAP API Changed Endpoints:</H2>
 
+<H3>VIEW core / alerts</H3>
+Added optional riskId parameter to facilitate filtering the risk. Where riskId is in the range 0 for Informational 
+and 3 for High. 
+
+<H3>VIEW core / numberOfAlerts</H3>
+Added optional riskId parameter to facilitate filtering the risk. Where riskId is in the range 0 for Informational 
+and 3 for High. 
+
 <H2>ZAP API New Endpoints:</H2>
+
+<H3>VIEW core / alertsSummary</H3>
+A new summary view for Alerts which displays counts of Alerts per Risk level. Optionally, filtered by a baseurl value. 
+
+<blockquote><pre><code>
+{"High":0,"Low":132,"Medium":39,"Informational":153}
+</code></pre></blockquote>
 
 <H2>See also</H2>
 <table>
