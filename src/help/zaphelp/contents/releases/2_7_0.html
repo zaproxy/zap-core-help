@@ -39,6 +39,10 @@ and:
 &lt;contextList&gt;[Context 1, Context 2]&lt;/contextList&gt;
 </code></pre></blockquote>
 
+<H3>VIEW core / setOptionUseProxyChain</H3>
+Changed to return <code>FAIL</code> if the outgoing proxy was not enabled (because the required address/hostname was not
+previously set), before it would return always <code>OK</code>.
+
 <H2>ZAP API Changed Endpoints:</H2>
 
 <H3>VIEW core / alerts</H3>
