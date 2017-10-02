@@ -15,6 +15,11 @@
 
 <H2>ZAP API Breaking Changes:</H2>
 
+<H3>ACTION authentication / setAuthenticationMethod</H3>
+The authentication type "formBasedAuthentication" will now require the login URL always in encoded form. The change ensures the
+login URL is used/sent as it was specified. Previously it would accept partially encoded URLs but they would be re-encoded when
+used, potentially leading to a different URL being used/sent.
+
 <H3>VIEW context / contextList</H3>
 
 This change will break the consumers that were manually parsing/extracting the names from the string. The structure of the data
