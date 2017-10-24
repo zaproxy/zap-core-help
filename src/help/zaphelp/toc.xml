@@ -81,7 +81,6 @@
          <tocitem text="Add Alert" target="ui.dialogs.addalert"/>
          <tocitem text="Add Break Point" target="ui.dialogs.addbreak"/>
          <tocitem text="Add Note" target="ui.dialogs.addnote"/>
-         <tocitem text="BeanShell Console" target="ui.dialogs.beanshell"/>
          <tocitem text="Encode/Decode/Hash" target="ui.dialogs.enc_dec"/>
          <tocitem text="Filter" target="ui.dialogs.filter"/>
          <tocitem text="Find" target="ui.dialogs.find"/>

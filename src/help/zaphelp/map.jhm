@@ -68,7 +68,6 @@
         <mapID target="ui.dialogs.addbreak" url="contents/ui/dialogs/addbreak.html"/>
         <mapID target="ui.dialogs.addnote" url="contents/ui/dialogs/addnote.html"/>
         <mapID target="ui.dialogs.advascan" url="contents/ui/dialogs/advascan.html"/>
-        <mapID target="ui.dialogs.beanshell" url="contents/ui/dialogs/beanshell.html"/>
         <mapID target="ui.dialogs.contexts" url="contents/ui/dialogs/session/contexts.html"/>
         <mapID target="ui.dialogs.context-auth" url="contents/ui/dialogs/session/context-auth.html"/>
         <mapID target="ui.dialogs.context-struct" url="contents/ui/dialogs/session/context-struct.html"/>
