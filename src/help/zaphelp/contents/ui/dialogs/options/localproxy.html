@@ -3,16 +3,23 @@
 <HEAD>
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
 <TITLE>
-Options Local Proxy screen
+Options Local Proxies screen
 </TITLE>
 </HEAD>
 <BODY BGCOLOR="#ffffff">
-<H1>Options Local Proxy screen</H1>
+<H1>Options Local Proxies screen</H1>
 <p>
-The Options Connection screen allows you to configure the address and port 
+The Options Connection screen allows you to configure the addresses and ports 
 on which ZAP accepts incoming connections.<br/>
-It is this address and port that you must configure your browser to use as a proxy.
+
+<H2>Local Proxy</H2>
+By default ZAP will listen on one local address and port, and these are the address and port that you must configure your browser to use as a proxy.
 </p>
+<H3>Address</H3>
+The local address which ZAP will use. All of the available addresses are automatically identified.
+
+<H3>Port</H3>
+The port on which ZAP will listen.
 
 <H3>Behind NAT</H3>
 Indicates that the Local Proxy (ZAP) is behind NAT. When selected ZAP will attempt to
@@ -37,7 +44,15 @@ The messages encoded with unsupported encodings will not be correctly scanned (e
 <H3>Security Protocols</H3>
 Allows to choose the SSL/TLS versions enabled for incoming connections (for example, from browsers). At least
 one version must be enabled, versions unsupported by the JRE will be unselected and disabled.
-<br>The option SSLv2Hello must be selected in conjunction with at least one SSL/TLS version.
+<br>
+The option SSLv2Hello must be selected in conjunction with at least one SSL/TLS version.
+<br>
+The security options apply to both the main and all of the additional proxies.
+
+<H2>Additional Proxies</H2>
+You can add as many additional addresses and ports for ZAP to listen on as you like.<br>
+This can be useful when testing mobile applications - you can proxy the mobile application via a Wi-Fi interface at the same time
+as using the backend site directly using a browser proxying through ZAP emulating a mobile user agent.
 
 <H2>See also</H2>
 <table>

@@ -83,20 +83,19 @@ Gets the HTTP messages with the given IDs.
 Gets the HTTP messages with the given IDs, in HAR format.
 
 <H3>VIEW core / optionAlertOverridesFilePath</H3>
-
 Gets the path to the file with alert overrides. 
 
 <H3>VIEW core / optionMaximumAlertInstances</H3>
-
 Gets the maximum number of alert instances to include in a report. 
 
 <H3>VIEW core / optionMergeRelatedAlerts</H3>
-
 Gets whether or not related alerts will be merged in any reports generated. 
 
 <H3>VIEW core / zapHomePath</H3>
-
 Gets the path to ZAP's home directory.
+
+<H3>VIEW localProxies / additionalProxies</H3>
+Gets all of the additional proxies that have been configured.
 
 <H3>VIEW spider / optionAcceptCookies</H3>
 Gets whether or not a spider process should accept cookies while spidering.
@@ -105,23 +104,25 @@ Gets whether or not a spider process should accept cookies while spidering.
 Deletes the alert with the given ID.
 
 <H3>ACTION core / setOptionAlertOverridesFilePath</H3>
-
 Sets (or clears, if empty) the path to the file with alert overrides. 
 
 <H3>ACTION core / setOptionMaximumAlertInstances</H3>
-
 Sets the maximum number of alert instances to include in a report. A value of zero is treated as unlimited. 
 
 <H3>ACTION core / setOptionMergeRelatedAlerts</H3>
-
 Sets whether or not related alerts will be merged in any reports generated. 
 
 <H3>ACTION ascan / importScanPolicy</H3>
-
 Imports a Scan Policy using the given file system path.
 
 <H3>ACTION ascan / skipScanner</H3>
 Skips the scanner using the IDs of the scan and the scanner.
+
+<H3>VIEW localProxies / addAdditionalProxy</H3>
+Adds an new proxy using the details supplied. See the <a href="../ui/dialogs/options/localproxy.html">Options Local Proxies screen</a> for details of the parameters.
+
+<H3>VIEW localProxies / removeAdditionalProxy</H3>
+Removes the additional proxy with the specified address and port.
 
 <H3>ACTION spider / setOptionAcceptCookies</H3>
 Sets whether or not a spider process should accept cookies while spidering.
