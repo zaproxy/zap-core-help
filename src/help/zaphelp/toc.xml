@@ -108,7 +108,7 @@
          	<tocitem text="JVM" target="ui.dialogs.options.jvm"/>
          	<tocitem text="Keyboard" target="ui.dialogs.options.keyboard"/>
          	<tocitem text="Language" target="ui.dialogs.options.language"/>
-         	<tocitem text="Local Proxy" target="ui.dialogs.options.localproxy"/>
+         	<tocitem text="Local Proxies" target="ui.dialogs.options.localproxy"/>
          	<tocitem text="Passive Scan Rules" target="ui.dialogs.options.pscanrules"/>
          	<tocitem text="Passive Scan Tags" target="ui.dialogs.options.pscan"/>
          	<tocitem text="Passive Scanner" target="ui.dialogs.options.pscan.main"/>
