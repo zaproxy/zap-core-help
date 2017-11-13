@@ -29,7 +29,7 @@
          <tocitem text="Filters" target="start.concepts.filters"/>
          <tocitem text="Globally Excluded URLs" target="start.concepts.globalexcludeurl"/>
          <tocitem text="HTTP Sessions" target="start.concepts.httpsessions"/>
-         <tocitem text="Intercepting Proxy" target="start.concepts.intercept"/>
+         <tocitem text="Man-in-the-middle Proxy" target="start.concepts.intercept"/>
          <tocitem text="Modes" target="start.concepts.modes"/>
          <tocitem text="Notes" target="start.concepts.notes"/>
          <tocitem text="Passive Scan" target="start.concepts.pscan"/>
