@@ -43,7 +43,10 @@ A pull down field which allows you to specify how confident you are in the valid
 
 <H3>Parameter</H3>
 A pull down field which allows you to specify which parameter the issue is associated with.<br/>
-The field is prepopulated with any URL and FORM parameters found, but you can also enter your own parameter name. 
+The field is prepopulated with any URL and FORM parameters found, but you can also enter your own parameter name.<br />
+Array parameters (in URL query component and <code>x-www-form-urlencoded</code> request body) are identified with its index. For
+example, for a request containing <code>choices[]=ChoiceA&amp;choices[]=ChoiceB</code> the first parameter would be identified
+as <code>choices[0]</code> and the second as <code>choices[1]</code>.
 
 <H3>Description</H3>
 A general description of the type of issue found.<br/>
