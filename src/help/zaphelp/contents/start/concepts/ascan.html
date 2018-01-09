@@ -17,6 +17,11 @@ Active scanning is an attack on those targets. <br/>
 You should NOT use it on web applications that you do not own.
 </p>
 <p>
+In order to facilitate identifying ZAP traffic and Web Application Firewall exceptions, ZAP is accompanied 
+by a script "AddZapHeader.js" which can be used to add a specific header to all traffic that passes through 
+or originates from ZAP. eg: <tt>X-ZAP-Initiator: 3</tt>
+</p>
+<p>
 It should be noted that active scanning can only find certain types of vulnerabilities.<br/>
 Logical vulnerabilities, such as broken access control, will not be found by
 any active or automated vulnerability scanning.<br/>
