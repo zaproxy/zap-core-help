@@ -19,8 +19,18 @@ The user agent that ZAP should use when creating HTTP messages (for example, spi
 proxy).
 
 <H3>Single Cookie Request Header</H3>
-Controls whether the ZAP's managed cookies (<a href="../../tlmenu/edit.html">Enable Session Tracking (Cookie)</a>) should be set
+Controls whether the ZAP's managed cookies (Enable (Global) HTTP State) should be set
 on a single "Cookie" request header or multiple "Cookie" request headers, when sending an HTTP request to the server.
+
+<H3>Enable (Global) HTTP State</H3>
+This allows session details stored in cookies to be tracked.<br/>
+This option must be selected to enable the "Use current tracking session" checkbox in the 
+<a href="../../dialogs/resend.html">Resend</a> and <a href="../../dialogs/man_req.html">Manual Request Editor dialogs</a>.<br/>
+Session tracking ensures that any requests are sent with the latest session details.<br/>
+For example you may record a session when logged in as one user and then logout and login as another user.<br/>
+If you resend a request from the first session without session tracking then it will use the cookies from 
+the first session.<br/>
+If you resend the same request with session tracking then it will use the cookies from the second session.
 
 <H3>DNS</H3>
 <h4>TTL Successful Queries</h4>
