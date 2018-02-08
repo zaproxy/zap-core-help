@@ -3,7 +3,7 @@
 <helpset version="2.0" xml:lang="id-ID">
 
   <!-- title -->
-  <title>ZAP - User Guide</title>
+  <title>ZAP - Panduan Pengguna</title>
 
   <!-- maps -->
   <maps>
@@ -14,7 +14,7 @@
   <!-- views -->
   <view mergetype="org.zaproxy.zap.extension.help.ZapTocMerger">
     <name>TOC</name>
-    <label>Contents</label>
+    <label>Isi</label>
     <type>org.zaproxy.zap.extension.help.ZapTocView</type>
     <data>toc.xml</data>
   </view>
@@ -37,7 +37,7 @@
 
   <view>
     <name>Favorites</name>
-    <label>Favorites</label>
+    <label>Favorit</label>
     <type>javax.help.FavoritesView</type>
   </view>
 
@@ -45,7 +45,7 @@
      <name>main window</name>
      <size height="600" width="1000"/>
      <location x="200" y="200"/>
-     <title>ZAP - User Guide</title>
+     <title>ZAP - Panduan Pengguna</title>
      <image>toplevelicon</image>
      <toolbar>
 	<helpaction>javax.help.BackAction</helpaction>
@@ -62,6 +62,6 @@
      <name>main</name>
      <size height="400" width="400"/>
      <location x="200" y="200"/>
-     <title>ZAP - User Guide</title>
+     <title>ZAP - Panduan Pengguna</title>
   </presentation>
 </helpset>

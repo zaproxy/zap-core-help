@@ -3,173 +3,174 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-  Release 2.0.0
+  2.0.0版本
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Release 2.0.0</h1>
+<h1>2.0.0版本</h1>
 <p>
-The following changes were made in this release:
+此版本中进行了以下更改：
 </p>
 
-<h2>Significant changes:</h2>
+<h2>重大变化：</h2>
 
 
-<h3>An integrated add-ons marketplace</h3>
+<h3>一个集成的附加组件市场</h3>
 
-ZAP can be extended by add-ons that have full access to all of the ZAP internals. Anyone can write add-ons and upload them to the ZAP Add-on Marketplace (OK, so its a Google code project called zap-extensions, but you get the idea).
+ZAP可以通过完全访问所有ZAP内部组件的附加组件来扩展. 任何人都可以编写附加组件，并将其上传到ZAP附加组件市场（所以它是一个名为zap-extensions的谷歌代码项目，但你明白了）。
 <br/>
-More importantly you can now browse, download and install those add-ons from within ZAP. Most add-ons can be dynamically installed (and uninstalled) so you wont even need a restart.
+更重要的是，您现在可以从ZAP中浏览、下载和安装这些附加组件。大多数附加组件都可以动态安装（和卸载），因此您甚至不需要重新启动。
 <br/>
-You can choose to be notified of updates, and even be automatically updated. And as the scan rules are now implemented as add-ons you can get the latest rules as soon as they are published.
+您可以选择更新通知，甚至可以自动更新。现在，扫描规则作为附加组件实现，一旦发布，就可以得到最新的规则。 
 
-<h3>A replacement for the 'standard' Spider</h3>
+<h3>替代“标准”Spider</h3>
 
-The ‘old’ Spider was showing its age, so its been completely rewritten, and is much faster and more comprehensive than the old one. This is still a 'traditional' spider that analyses the HTML code for any links it can find.
+这只““老”蜘蛛显示了它的年龄，所以它被完全重写，比旧的更快，更全面。 这仍然是一个“传统”的Spider，它分析它能找到的HTML代码的任何链接。
 
-<h3>A new 'Ajax' spider</h3>
+<h3>一种新的“Ajax”Spider</h3>
 
-In addition to the 'traditional' spider we've added an Ajax spider which is more effective with applications that make heavy use of JavaScript. This uses the Crawljax project which drives a browser (using Selenium) and so can discover any links an application generates, even ones generated client side.
+除了“传统”蜘蛛外，我们还添加了一个Ajax蜘蛛，这对于大量使用JavaScript的应用程序更为有效。 这使用了驱动浏览器（使用Selenium）的CrawJAX项目，因此可以发现应用程序生成的任何链接，甚至生成的客户端。
 
-<h3>Web Socket support</h3>
+<h3>Web套接字支持 </h3>
 
-ZAP now supports WebSockets, so ZAP can now see all WebSocket messages sent to and from your browser. As with HTTP based messages, ZAP can also intercept WebSocket messages and allows you to change them on the fly.
+ZAP现在支持WebSockets，所以把现在可以通过您的浏览器看到所有的WebSocket消息发送和接受。  与基于HTTP的消息一样，ZAP也可以拦截WebSocket消息，并允许您即时更改它们。
 <br/>
-You can also fuzz WebSockets messages as well using all of the fuzzing payloads included in ZAP from projects like JBroFuzz and fuzzdb. And of course you can easily add your own fuzzing files.
+您还可以使用JBroFuzz和fuzzdb等项目中的ZAP中包含的所有模糊有效载荷来模糊WebSockets消息。 当然，您也可以轻松添加自己的模糊文件。
 
-<h3>Quick Start tab</h3>
+<h3>快速开始面板</h3>
 
-The first main tab you will now see is a ‘Quick Start’ tab which allows you to just type in a URL and scan it with one click.
+您现在将看到的第一个主要选项卡是“快速启动”选项卡，您可以只键入一个URL并单击进行扫描。
 <br/>
-This is an ideal starting point for people new to application security, but experts can easily remove it if they find it distracting.
+对于刚接触应用程序安全性的人来说，这是一个理想的起点，但是如果专家发现这会分散他们的注意力，就可以轻松地删除它。
 
-<h3>Session awareness</h3>
+<h3>会话意识</h3>
 
-ZAP is now session awareness, so that ZAP can recognise and keep track of multiple sessions. It allows you to create new sessions, switch between them, and applies to all of the other components, like the Spider and Active Scanner.
+ZAP是现在有会话意识的，所以ZAP能够识别和跟踪多个会话。 它允许您创建新的会话，在它们之间切换，并应用于所有其他组件，如蜘蛛和活动扫描器。 
 
-<h3>User defined Contexts</h3>
+<h3>用户定义的上下文</h3>
 
-You can now define any number of ‘contexts’ - related sets of URLs which make up an application. You can then target all URLs in a context, for example using the Spider or Active Scanner. You can also add the contexts to the scope, and associate other information, such as authentication details.
+现在您可以定义构成应用程序的任意数量的与上下文相关的URL集。 然后可以在上下文中针对所有URL，例如使用蜘蛛或主动扫描器。  然后可以在上下文中针对所有URL，例如使用Spider或主动扫描器。 
 
-<h3>Session scope</h3>
+<h3>会话作用域</h3>
 
-The session scope allows you to specify which contexts you are interested at any one time. You can restrict what you see in various tabs to just the URLs in scope, and prevent accidentally attacking URLs not in scope by using the Protected mode.
+会话作用域允许您在任何时候指定您感兴趣的上下文。 您可以将在各个选项卡中看到的内容限制在作用域中的URL上，并通过使用保护模式防止意外攻击范围以外的URL。 
 
-<h3>Different modes</h3>
+<h3>不同模式</h3>
 
-ZAP now supports 3 modes:
+ZAP现在支持三种模式：
 <ul>
-<li>Safe, in which no potentially dangerous operations permitted</li>
-<li>Protected, in which you can perform any actions on URLs in scope</li>
-<li>Standard, in which you can do anything to any URLs</li>
+<li>安全，其中不允许有潜在危险的操作</li>
+<li>受保护，可以对作用域中的URL执行任何操作。</li>
+<li>标准，你可以对任何URL做任何事情 </li>
 </ul>
-<h3>Authentication handling</h3>
+<h3>认证处理</h3>
 
-You can now associate authentication details with any context, which allows ZAP to do things like detect if and when you are logged out and automatically log you back in again. This is especially useful when used via the API in security regression tests.
+现在，您可以将身份验证详细信息与任何上下文相关联，这允许ZAP执行类似于检测到的情况，以及何时注销并自动重新登录。 当通过API在安全回归测试中使用时，这一点尤其有用。
 
-<h3>More API support</h3>
+<h3>更多API的支持</h3>
 
-The REST API has been significantly extended, giving you much more access to the functionality ZAP provides.
+REST API已经得到了很大的扩展，使您可以更多地访问ZAP提供的功能。
 
-<h3>Fine grained scanning controls</h3>
+<h3>更精细的扫描控制</h3>
 
-The active scan rules can now be tuned to adjust their strength (the number of attacks they perform) and the threshold at which they report potential issues.
+现在可以调整主动扫描规则以调整它们的强度(它们执行的攻击次数)以及它们报告潜在问题的阈值。 
 
-<h3>New and improved active and passive scanning rules</h3>
-
-
-We have uploaded the results from running ZAP 2.0.0 against wavsep (the most comprehensive open source evaluation project we are aware of) to the ZAP wiki: https://github.com/zaproxy/zaproxy/wiki/Testing TODO ;)
+<h3>新的和改进的主动和被动扫描规则 </h3>
 
 
+我们已经将运行ZAP 2.0.0对wavsep（我们知道的最全面的开源评估项目）的结果上传到了ZAP wiki：http:s//github.com/zaproxy/zaproxy/wiki/Testing TODO;）
 
-<h2>Full list of changes:</h2>
 
-<h3>Issue 43: Scope option for filtering</h3>
-<h3>Issue 163: Active scanner failing against DVWA [ high false positives/true negatives rate]</h3>
-<h3>Issue 175: Better bruteforce wordlist</h3>
-<h3>Issue 240: SocketException whilst fuzzing not handled correctly.</h3>
-<h3>Issue 278: Root CA Certificate for Dynamic SSL invalid on some platforms due to ExtendeKeyUsage extension</h3>
-<h3>Issue 281: Alert class JSON dependency</h3>
-<h3>Issue 299: Feature request: Show count of found URIs during Spider</h3>
-<h3>Issue 305: Passive scanner rule for suspicious comments like TODO and FIXME</h3>
-<h3>Issue 326: Response time and total length in manual request</h3>
-<h3>Issue 330: robots.txt parsing</h3>
-<h3>Issue 332: Support for modes</h3>
-<h3>Issue 333: Spider - add option to crawl everthing in scope</h3>
-<h3>Issue 335: Web Sockets - add support for Modes and Scope</h3>
-<h3>Issue 342: Add an HttpSenderListener</h3>
-<h3>Issue 350: Authentication management</h3>
-<h3>Issue 354: Fuzzer attack strings not shown</h3>
-<h3>Issue 356: Generate CSRF test form</h3>
-<h3>Issue 358: Typo in "XFO Header Not Set" Solution</h3>
-<h3>Issue 360: brute force sub directories</h3>
-<h3>Issue 361: getHostPort on HttpRequestHeader for HTTPS CONNECT requests returns the wrong port</h3>
-<h3>Issue 370: API - save session better error handling</h3>
-<h3>Issue 374: API - save session synchronous or provide status</h3>
-<h3>Issue 376: Masking the passwords provided for Authentication</h3>
-<h3>Issue 385: Support contexts</h3>
-<h3>Issue 386: API Web UI - support parameters with views</h3>
-<h3>Issue 388: Allow user to specify which technologies apply to a context</h3>
+
+<h2>完整的更改列表</h2>
+
+<h3>问题43：筛选的作用域选项</h3>
+<h3>问题163：主动式扫描仪无法对付DVWA [高假阳性/真阴性率]</h3>
+<h3>问题175：更好的蛮力单词表</h3>
+<h3>问题240：触发SocketException，但是模糊处理不正确。</h3>
+<h3>问题278：由于ExtendeKeyUsage的扩展，某些平台上的动态SSL的根CA证书无效</h3>
+<h3>问题281：警报类JSON依赖项</h3>
+<h3>问题299：功能请求：显示在Spider期间找到的URI的数量</h3>
+<h3>问题305：对TODO和FIXME等可疑评论的被动式扫描器规则</h3>
+<h3>问题326：手动请求中的响应时间和总长度</h3>
+<h3>问题330：robots.txt解析</h3>
+<h3>问题332：模式支持</h3>
+<h3>问题333：Spider - 添加选项来搜寻范围内的所有内容</h3>
+<h3>问题335：Web套接字 - 添加对模式和范围的支持</h3>
+<h3>问题342：添加一个HttpSenderListener</h3>
+<h3>问题350：身份验证管理</h3>
+<h3>问题354：模糊攻击字符串未显示</h3>
+<h3>问题356：生成CSRF测试表单</h3>
+<h3>问题358：在“XFO标题未设置”解决方案中输入错字</h3>
+<h3>问题360：蛮力子目录</h3>
+<h3>问题361：HttpRequestHeader上的getHostPort用于HTTPS CONNECT请求返回错误的端口</h3>
+<h3>问题370：API - 保存会话更好的错误处理</h3>
+<h3>问题374：API - 保存会话同步或提供状态</h3>
+<h3>问题376：掩盖为验证提供的密码</h3>
+<h3>问题385：上下文支持</h3>
+<h3>问题386：API 网页 用户界面 - 支持带有视图的参数</h3>
+<h3>问题388：允许用户指定哪些技术适用于上下文</h3>
 <h3>Issue 390: Spider - Add option to spider all in context</h3>
-<h3>Issue 391: ZAP Performance improvements</h3>
-<h3>Issue 393: More online links from menu</h3>
-<h3>Issue 397: Support weekly builds</h3>
-<h3>Issue 400: Generate new CA certificate will always produce certificate with same serial number</h3>
-<h3>Issue 401: Exception when the (new) Spider is started through the API</h3>
-<h3>Issue 402: GUI labels are not properly displayed on Linux (when language set to Polish)</h3>
-<h3>Issue 403: Set options via the API using reflection</h3>
-<h3>Issue 404: Labels not properly displayed when the Persian language is chosen</h3>
-<h3>Issue 406: Spider - Add option to control the effect of parameters on visited URLs</h3>
-<h3>Issue 410: charset wrapped in quotation marks</h3>
-<h3>Issue 411: Allow proxy port to be specified on the command line</h3>
-<h3>Issue 417: IndexOutOfBoundsException in ExtensionHttpSessions in daemon mode</h3>
-<h3>Issue 419: Restructure jar loading code</h3>
-<h3>Issue 420: API - support absolute session paths</h3>
-<h3>Issue 421: Cleanly shut down any active scan threads on shutdown</h3>
-<h3>Issue 422: Use exec in zap.sh so a new process is not forked</h3>
-<h3>Issue 423: Active scanner and spider can deadlock if ZAP is shutdown while they are running</h3>
-<h3>Issue 424: Exceptions in Web Sockets when session opened</h3>
-<h3>Issue 425: Add quick start tab</h3>
-<h3>Issue 428: ZAP Marketplace support</h3>
-<h3>Issue 429: Active Scan URL via API scans more than just the specified URL</h3>
-<h3>Issue 433: API: introduce mandatory parameters and optional descriptions</h3>
-<h3>Issue 435: Active scan alerts may be "lost" after saving the session</h3>
-<h3>Issue 436: Locking on session save or shutdown via the API</h3>
-<h3>Issue 438: API enhancements</h3>
-<h3>Issue 441: View incorrectly initialised in many places when in daemon mode</h3>
-<h3>Issue 443: "No Anti-CSRF tokens were found in a HTML submission form" listed as "None. Warning only."</h3>
-<h3>Issue 446: KeyStore of a registered PKCS#11 provider is not retrieved if a PKCS#11 provider is already registered</h3>
-<h3>Issue 447: Highlight attack when displaying alerts</h3>
-<h3>Issue 448: Rename Brute Force ext to Forced Browse and add URLs to the tree</h3>
-<h3>Issue 449: Missing help page for "Extensions" panel in the "Options" dialogue</h3>
-<h3>Issue 451: Manual check for updates doesn't work correctly in the newest weekly releases</h3>
-<h3>Issue 453: Dynamic loading and unloading of add-ons</h3>
-<h3>Issue 455: Split fuzzbd out into a new addon</h3>
-<h3>Issue 456: Spider session handling tweeks</h3>
-<h3>Issue 457: Search Tab arrow key support</h3>
-<h3>Issue 459: Active scanner locking</h3>
-<h3>Issue 460: Add a scan progress dialog</h3>
-<h3>Issue 461: Add help file for Quick Start addon</h3>
-<h3>Issue 462: Review: 	Patch/Review: SSLSocketFactory with TLS enabled and default Cipher options</h3>
-<h3>Issue 466: Move Port Scan extension to ZAP extensions project</h3>
-<h3>Issue 468: Upgrade SQL Injection rule to 'release'</h3>
-<h3>Issue 469: Allow anti csrf token to be added and removed via the API</h3>
-<h3>Issue 471: Move BeanSell extension to ZAP extensions project</h3>
-<h3>Issue 472: Spider accesses UI panel in daemon mode</h3>
-<h3>Issue 473: Allow add-ons to remove views/components added to the message panels</h3>
-<h3>Issue 474: Promote quick start to release status</h3>
-<h3>Issue 478: Allow to choose to send ZAP's managed cookies on a single Cookie request header and set it as the default</h3>
+<h3>问题391：ZAP性能改进</h3>
+<h3>问题393：更多来自菜单的在线链接</h3>
+<h3>问题397：支持每周构建</h3>
+<h3>问题400：生成新CA证书时将始终生成具有相同序列号的证书</h3>
+<h3>问题401：当（新的）Spider通过API启动时出现异常 </h3>
+<h3>问题402：在Linux上不能正确显示GUI标签（当语言设置为波兰语时）</h3>
+<h3>问题403：使用反射通过API设置选项 </h3>
+<h3>问题404：当选择波斯语时标签没有正确显示 </h3>
+<h3>问题406：蜘蛛 - 添加选项来控制访问的URL上的参数的影响</h3>
+<h3>问题410：包裹在引号中的字符集</h3>
+<h3>问题411：允许在命令行中指定代理端口</h3>
+<h3>问题417：在守护程序模式下的ExtensionHttpSessions中的IndexOutOfBoundsException</h3>
+<h3>问题419：重构jar加载代码</h3>
+<h3>问题420：API - 支持绝对会话路径</h3>
+<h3>问题421：关机时干净地关闭任何主动扫描线程</h3>
+<h3>问题422：在zap.sh中使用exec，因此新的进程不是分叉的</h3>
+<h3>问题423：如果ZAP在运行时关闭，则主动扫描程序和蜘蛛可能会死锁</h3>
+<h3>问题424：会话打开时Web套接字中的异常</h3>
+<h3>问题425：添加快速启动选项卡</h3>
+<h3>问题428：ZAP市场支持</h3>
+<h3>问题429：通过API扫描的的主动扫描URL不仅仅是指定的URL</h3>
+<h3>问题433：API：引入强制性参数和可选描述</h3>
+<h3>问题435：保存会话后，主动扫描警报可能会“丢失”</h3>
+<h3>问题436：通过API锁定会话保存或关闭</h3>
+<h3>问题438：API增强</h3>
+<h3>问题441：在守护进程模式下，许多地方的视图被错误地初始化</h3>
+<h3>问题443：“无反CSRF令牌被发现在一个HTML表单提交”被列为“无。仅警告。”</h3>
+<h3>问题446：如果PKCS＃11提供程序已经注册，则不会检索注册的PKCS＃11提供程序的KeyStore</h3>
+<h3>问题447：显示警报时突出显示攻击信息</h3>
+<h3>问题448：将Brute Force ext重命名为Forced Browse并将URL添加到树中</h3>
+<h3>问题449：在“选项”对话框中缺少“扩展”面板的帮助页面</h3>
+<h3>问题451：手动检查更新在最新的每周发行版中无法正常工作</h3>
+<h3>问题453：附加组件的动态加载和卸载</h3>
+<h3>问题455：将fuzzbd分成一个新的插件</h3>
+<h3>问题456：Spider会话处理tweeks</h3>
+<h3>问题457：搜索选项卡箭头键支持</h3>
+<h3>问题459：主动扫描器锁定</h3>
+<h3>问题460：添加扫描进度对话框</h3>
+<h3>问题461：添加快速启动插件的帮助文件</h3>
+<h3>问题462：审阅：修补程序/审阅：启用TLS和默认密码选项的SSLSocketFactory</h3>
+<h3>问题466：将端口扫描扩展移到ZAP扩展项目</h3>
+<h3>问题468：在新版本中升级SQL注入规则</h3>
+<h3>问题469：允许通过API添加和删除反csrf令牌</h3>
+<h3>问题471：将BeanSell扩展移动到ZAP扩展项目</h3>
+<h3>问题472：Spider在守护程序模式下访问UI面板</h3>
+<h3>问题473：允许附加组件删除添加到消息面板的视图/组件</h3>
+<h3>问题474：促进快速启动释放状态</h3>
+<h3>问题478：允许选择在单个Cookie请求标头上发送ZAP托管的Cookie，并将其设置为默认值</h3>
 
 
 
-<h2>See also</h2>
+<h2>请参阅</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<a href="../intro.html">简介</a></td><td>ZAP简介
+</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<a href="releases.html">版本发布</a></td><td>所有版本</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<a href="../credits.html">版权</a></td><td>所有参与这次版本更新的人和组织</td></tr>
 </table>
 </body>
 </html>

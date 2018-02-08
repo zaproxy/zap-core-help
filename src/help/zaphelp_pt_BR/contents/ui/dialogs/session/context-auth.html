@@ -14,20 +14,20 @@ que permite a você gerenciar o modo pelo qual <a href="../../../start/concepts/
 Depois de selecionar o tipo de método de autenticação, as opções que precisam ser configuradas dependem do método de autenticação.
 
 <h4>Autenticação manual</h4>
-Nenhuma configuração é necessária para este método de autenticação. <small>Leia <a href="">mais</a>...</small>
+Nenhuma configuração é necessária para este método de autenticação. <small>Leia <a href="../../../start/concepts/authentication.html#httpAuth">mais</a>...</small>
 
 <h4>Autenticação baseada em formulário</h4>
-Para configurar este método de autenticação, você precisa fornecer a <b>url de login</b>, para a qual a requisição de login é enviada, o <b>corpo da solicitação/requisição</b> (Dados do POST), se necessário e identificar os <b>parâmetros</b> usados no fornecimento do 'username' e 'senha'. Não se for fornecido nenhum corpo de solicitação (request), a solicitação de logon é executada como um HTTP GET, caso contrário será usado um HTTP POST. As credenciais na verdade são configuradas na <a href="contexts.html#users">aba de </a> usuários. <small>Leia <a href="">mais</a>...</small> 
+Para configurar este método de autenticação, você precisa fornecer a <b>url de login</b>, para a qual a requisição de login é enviada, o <b>corpo da solicitação/requisição</b> (Dados do POST), se necessário e identificar os <b>parâmetros</b> usados no fornecimento do 'username' e 'senha'. Não se for fornecido nenhum corpo de solicitação (request), a solicitação de logon é executada como um HTTP GET, caso contrário será usado um HTTP POST. As credenciais na verdade são configuradas na <a href="contexts.html#users">aba de </a> usuários. <small>Leia <a href="../../../start/concepts/authentication.html#scriptBased">mais</a>...</small> 
 
 <h4>Autenticação HTTP/NTLM</h4>
-Para configurar este método de autenticação, você precisa fornecer o <b>hostname</b> e a <b>porta</b> do servidor onde a autenticação é feita e o <b>alcance</b> que essas credenciais têm. Elas são configuradas na <a href="contexts.html#users">aba de</a> usuários. <small>Leia <a href="">mais</a>...</small> 
+Para configurar este método de autenticação, você precisa fornecer o <b>hostname</b> e a <b>porta</b> do servidor onde a autenticação é feita e o <b>alcance</b> que essas credenciais têm. Elas são configuradas na <a href="contexts.html#users">aba de</a> usuários. <small>Leia <a href="../../../start/concepts/authentication.html#manual">mais</a>...</small> 
 
 <h4>Autenticação baseada em script</h4>
 Para usar esse método de autenticação, você <b>primeiro</b> precisa escrever (e salvar) um <b>Script de autenticação</b> 
 usando a <b>Aba de</b> scripts (consulte os exemplos fornecidos e templates para este tipo de script na aba Scripts).
 Em seguida, você precisa fornecer o nome do script na lista drop down. Depois de selecionar o script, você precisa pressionar o <b>botão</b> Carregar, para carregar todos os requisitos do script. Quaisquer parâmetros que você especificou, tais como <i>Obrigatório</i> ou <i>opcional</i> no script serão mostrados na interface a ser definida. Os valores desses parâmetros estarão disponíveis para serem usados no script, durante a autenticação, como visto nos exemplos fornecidos de Scripts de autenticação. Depois de fazer quaisquer alterações nos parâmetros exigidos pelo script de autenticação você terá de recarregá-lo. Caso contrário, os parâmetros mostrados na interface podem não ser aqueles usados na autenticação, e assim erros poderão ocorrer. As <i>credenciais</i> utilizadas para cada usuário durante o processo de autenticação também podem ser especificadas no Script de autenticação e ser configuradas na 
 <a href="contexts.html#users">aba de</a> usuários.
-<small>Leia <a href="">mais</a>...</small> 
+<small>Leia <a href="../../../start/concepts/authentication.html#formBased">mais</a>...</small> 
 
   
 <h2>Acessado via</h2>

@@ -14,35 +14,36 @@ Estes são os elementos que a varredura ativa irá atacar.<br>
 Varrer todos os elementos disponíveis vai demorar mais, mas não varrer alguns deixará escapar algumas vulnerabilidades.
 
 <h3>Alvos injetáveis</h3>
-The request elements that the active scanner will target:
+Os elementos de request que o scanner ativo terá como alvo:
 
-<h4>URL Query String</h4>
-Key value pairs in the request URL query, ie after the <code>?</code>.
-
-<h4>POST Data</h4>
+<h4>URL Query String & Data Driven Nodes</h4>
+Par de valores-chave na URL query, ou seja, depois do '?' <code>?</code>.<br>
+If there are no query parameters then an arbitrary one will be tested.  
+If <a href="../../../start/concepts/ddc.html">Data Driven Nodes</a> are defined within a Context they will be tested.
+<h4>Dados do POST</h4>
 Key value pairs in the request POST data.
 
-<h4>URL Path</h4>
+<h4>Caminho da URL</h4>
 Path elements in the request URL, ie the elements separated by <code>/</code>.
 
-<h4>HTTP Headers</h4>
+<h4>Cabeçalhos HTTP</h4>
 Request HTTP Headers.
 
-<h5>All Requests</h5>
+<h5>Todas as solicitações</h5>
 Allows to scan the HTTP Headers of all requests. Not just requests that send parameters, through the query or request body.
 
-<h4>Cookie Data</h4>
+<h4>Dados do cookie</h4>
 Request cookies.
 
 <h3>Janelas de entrada de vetor</h3>
 The data formats that the active scanner will target:
 
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Multipart Form Data</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>XML tag/attribute</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Dados multipart de formulários</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>atributos/tag XML</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>JSON</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Google Web Toolkit</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>OData id/filter</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>id/filtro OData</td><td></td></tr>
 </table>
 
 

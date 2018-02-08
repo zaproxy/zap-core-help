@@ -6,46 +6,40 @@
 </head>
 <body bgcolor="#ffffff">
 	<h1>Spider(Araña)</h1>
-	<p>The spider is a tool that is used to automatically discover new
-		resources (URLs) on a particular Site. Comienza con una lista de URLs a visitar, llamadas semillas, las cuales dependen de como se inicia spider. Spider visita estas URLs, identifica todos los hipervinculos en la página y los agrega a la lista de URLs a visitar y el proceso continua recursivamente mientras se encuentran nuevos recursos.
+	<p>Spider es una herramienta que es usada para descubrir automáticamente nuevos recursos (URLs) en un sitio en particular. Comienza con una lista de URLs a visitar, llamadas semillas, las cuales dependen de como se inicia spider. Spider visita estas URLs, identifica todos los hipervinculos en la página y los agrega a la lista de URLs a visitar y el proceso continua recursivamente mientras se encuentran nuevos recursos.
 	</p>
 
-	<p>Hay 4 métodos de ejecutar spider, deferenciados por la lista de semillas con la cual comienza:</p>
-	<ul>
-		<li>Web spider - La lista de semillas contiene todas las URIs existentes del sitio.</li>
-		<li>Spider Subarbol - La lista de semillas contiene todas las URIs ya encontradas y presentes en las ramas del nodo seleccionado.</li>
-		<li>URL Spider - La lista de semillas contiene solo la URI correspondiente a el nodo seleccionado (en el árbol del sitio).</li>
-		<li>Spider en el alcance - La lista de semillas contiene todas las URIs que el usuario ha seleccionado y están 'en el alcance'.</li>
-		<li>Spider en el contexto...- La lista de semillas contiene todas las URIs que el usuario ha seleccionado y se encuentran dentro del contexto.</li>
-	</ul>
-	<i>Más detalles pueden ser encontrados abajo, en la sección "Acceso vía" </i>
-
+	<p>The Spider puede configurarse y comenzar a usar el <a href="../../ui/dialogs/spider.html"> diálogo Spider </>.</p>
 
 	<p>Mientras se procesa una URL, Spider realiza peticiones para extraer el recurso y luego parsear la respuesta, identificando hipervinculos. De acuerdo al tipo de respuesta presenta distintos comportamientos:</p>
 
 	<h4>HTML</h4>
 	Procesa los siguientes tags, para identificar links a nuevos recursos:
 	<ul>
-		<li>Base - Manejo cabal</li>
-		<li>A, Link, area - Atributo 'href'</li>
-		<li>Frame, IFrame, Script, Img - Atributo 'src'</li>
-		<li>Meta - 'http-equiv' para 'location' y 'refresh'</li>
-		<li>Form - Manejo cabal de formularios con métodos GET y POST. Los valores de los campos son correctamente generados, incluyendo tipos de entrada <a<br>
-			href="http://www.w3schools.com/html5/html5_form_input_types.asp">HTML 5.0</a>.
+		<li>Base - Proper handling</li>
+		<li>A, Link, Area - 'href' attribute</li>
+		<li>Frame, IFrame, Script, Img - 'src' attribute</li>
+		<li>Meta - 'http-equiv' for 'location' and 'refresh'</li>
+		<li>Form - proper handling of Forms with both GET and POST
+			method. The fields values are generated validly, including <a
+			href="http://www.w3schools.com/html5/html5_form_input_types.asp">HTML
+				5.0 input types</a>.
 		</li>
-		<li>Comments - Tags encontrados en comentarios son analizados, si se especifica en la <a href="../../ui/dialogs/options/spider.html">pantalla de opciones del Spider</a>
+		<li>Comments - Valid tags found in comments are also analyzed, if
+			specified in the <a href="../../ui/dialogs/options/spider.html">Options
+				Spider screen</a>
 		</li>
 	</ul>
 
 	<h4>Archivos Robots.txt</h4>
-	Si se configura en 
+	If set in the
 	<a href="../../ui/dialogs/options/spider.html">la pantalla de opciones del Spider</a>, también analiza el archivo 'Robots.txt' y trata de identificar nuevos recursos usando las siguientes reglas. hay que destacar que el Spider no sigue las reglas especificadas en el archivo 'Robots.txt'.
 
 	<h4>Formato OData Atom</h4>
 	El contenido de OData usando el formato Atom tiene soporte. Todos los links incluidos (relativos o absolutos) son procesados.
 
 	<h4>Respuesta Non-HTML (No HTML)</h4>
-	Respuestas de texto son parseadas escaneando patrones URL
+	Son analizadas las respuestas del texto buscando el patrón de URL
 
 	<h4>Respuestas Non-Text (No texto)</h4>
 	Actualmente, Spider no procesa este tipo de recursos.
@@ -56,8 +50,7 @@
 	</li>
 	<li> Al comprobar si una URL fue visitada, hay algunos parámetros en común los cuales son ignorados: jsessionid, phpsessid, aspsessionid, utm_*
 	</li>
-	<li> El comportamiento del Spider con respecto a las cookies se define por la opción presente en <i>Edit - &gt; Enable Session Tracking</i>. Si esta opción está activa, el Spider manejará correctamente cualquier cookie recibida desde el servidor y la enviará de vuelta correctamente.
-	Si la opción está descativada, el Spider no enviará solicitudes cookies en sus peticiones.
+	<li> El comportamiento del spider con respecto a las cookies depende de cómo se inicia el spider y qué opciones están habilitadas. Para obtener más detalles, consulte la pantalla Opciones del spider.
 	</li>
 	</ul>
 	<p>

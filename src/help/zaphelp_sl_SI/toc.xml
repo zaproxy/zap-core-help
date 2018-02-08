@@ -29,7 +29,7 @@
          <tocitem text="Filters" target="start.concepts.filters"/>
          <tocitem text="Globally Excluded URLs" target="start.concepts.globalexcludeurl"/>
          <tocitem text="HTTP Sessions" target="start.concepts.httpsessions"/>
-         <tocitem text="Intercepting Proxy" target="start.concepts.intercept"/>
+         <tocitem text="Man-in-the-middle Proxy" target="start.concepts.intercept"/>
          <tocitem text="Modes" target="start.concepts.modes"/>
          <tocitem text="Notes" target="start.concepts.notes"/>
          <tocitem text="Passive Scan" target="start.concepts.pscan"/>
@@ -81,21 +81,21 @@
          <tocitem text="Dodaj opozorilo" target="ui.dialogs.addalert"/>
          <tocitem text="Add Break Point" target="ui.dialogs.addbreak"/>
          <tocitem text="Add Note" target="ui.dialogs.addnote"/>
-         <tocitem text="BeanShell Console" target="ui.dialogs.beanshell"/>
          <tocitem text="Encode/Decode/Hash" target="ui.dialogs.enc_dec"/>
          <tocitem text="Filter" target="ui.dialogs.filter"/>
-         <tocitem text="Find" target="ui.dialogs.find"/>
+         <tocitem text="Filter" target="ui.dialogs.find"/>
          <tocitem text="History Filter" target="ui.dialogs.historyfilter"/>
          <tocitem text="Manual Request Editor" target="ui.dialogs.manreq"/>
          <tocitem text="Manage Add-ons" target="ui.dialogs.manageaddons"/>
-         <tocitem text="Upravljanje dodatkov" target="ui.dialogs.managetags"/>
-         <tocitem text="Options" target="ui.dialogs.options">
+         <tocitem text="Manage Tags" target="ui.dialogs.managetags"/>
+         <tocitem text="Upravljanje dodatkov" target="ui.dialogs.options">
          	<tocitem text="Active Scan" target="ui.dialogs.options.ascan"/>
          	<tocitem text="Active Scan Input Vectors" target="ui.dialogs.options.ascaninput"/>
          	<tocitem text="Alerts" target="ui.dialogs.options.alert"/>
          	<tocitem text="Anti CSRF Tokens" target="ui.dialogs.options.anticsrf"/>
          	<tocitem text="API" target="ui.dialogs.options.api"/>
             <tocitem text="Breakpoints" target="ui.dialogs.options.breakpoints"/>
+            <tocitem text="Callback Address" target="ui.dialogs.options.callback"/>
          	<tocitem text="Certificate" target="ui.dialogs.options.certificate"/>
          	<tocitem text="Check for Updates" target="ui.dialogs.options.checkforupdates"/>
 			<tocitem text="Connection" target="ui.dialogs.options.connection"/>
@@ -108,16 +108,18 @@
          	<tocitem text="JVM" target="ui.dialogs.options.jvm"/>
          	<tocitem text="Keyboard" target="ui.dialogs.options.keyboard"/>
          	<tocitem text="Language" target="ui.dialogs.options.language"/>
-         	<tocitem text="Local Proxy" target="ui.dialogs.options.localproxy"/>
+         	<tocitem text="Local Proxies" target="ui.dialogs.options.localproxy"/>
          	<tocitem text="Passive Scan Rules" target="ui.dialogs.options.pscanrules"/>
          	<tocitem text="Passive Scan Tags" target="ui.dialogs.options.pscan"/>
+         	<tocitem text="Passive Scanner" target="ui.dialogs.options.pscan.main"/>
+         	<tocitem text="Rule Configuration" target="ui.dialogs.options.ruleconfig"/>
          	<tocitem text="Scripts" target="ui.dialogs.options.script"/>
          	<tocitem text="Search" target="ui.dialogs.options.search"/>
          	<tocitem text="Spider" target="ui.dialogs.options.spider"/>
          	<tocitem text="Statistics" target="ui.dialogs.options.stats"/>
          </tocitem>
-         <tocitem text="Možnosti" target="ui.dialogs.persistsession"/>
-         <tocitem text="Resend" target="ui.dialogs.resend"/>
+         <tocitem text="Persist Session" target="ui.dialogs.persistsession"/>
+         <tocitem text="Možnosti" target="ui.dialogs.resend"/>
          <tocitem text="Scan Policy Manager" target="ui.dialogs.scanpolicymgr">
 	         <tocitem text="Scan Policy" target="ui.dialogs.scanpolicy"/>
          </tocitem>
@@ -138,6 +140,8 @@
    <tocitem text="Add Ons" target="addon.introduction" tocid="addons" />
    
    <tocitem text="Releases" target="zap.releases">
+      <tocitem text="2.7.0" target="zap.releases.2.7.0"/>
+      <tocitem text="2.6.0" target="zap.releases.2.6.0"/>
       <tocitem text="2.5.0" target="zap.releases.2.5.0"/>
       <tocitem text="2.4.3" target="zap.releases.2.4.3"/>
       <tocitem text="2.4.2" target="zap.releases.2.4.2"/>

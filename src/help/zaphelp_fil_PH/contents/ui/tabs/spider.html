@@ -2,72 +2,69 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Spider tab</title>
+<title>Ispayder na tab</title>
 </head>
 <body bgcolor="#ffffff">
-	<h1>Spider tab</h1>
+	<h1>Ispayder na tab</h1>
 	<p>
-		The Spider tab shows you the set of unique URIs found by the <a
-			href="../../start/concepts/spider.html">Spider</a> during the scans.
+		Ang Ispayder na tab ay magpapakita sa iyo ng mga natalagang natatanging mga URI na mahahanap sa <a
+			href="../../start/concepts/spider.html">Ispayder</a> tuwing pagscan.
 	</p>
 
 	<p>
-		The 'New Scan' button launches the <a href="../dialogs/spider.html">Spider dialog</a> which allows you
-to specify exactly what should be scanned.<br>
-	
-		The Spider can be run on multiple Sites in parallel and the results for each scan are
-		shown by selecting the scan via the 'Progress' pull-down.
+		Ang 'Bagong Pagscan' na button ay maglulunsad ng <a href="../dialogs/spider.html">Ispayder na dialogo</a> na magpapahintulot sa iyo na tukuyin ng eksakto kung ano ang dapat i-scan.<br>
+
+		Ang Ispayder ay maaring mapagana sa iba't ibang mga Site ng magkasabay at ang mga resulta sa bawat pagscan ay
+		makikita sa pamamagitan ng pagpili ng na-scan gamit ang 'Progreso' na pull-down.
 	</p>
 
-	<p>The toolbar shows information about a scan and allows to control it. It provides a
-		set of buttons which allows to:
+	<p>Ang toolbar ay magpapakita ng impormasyon patungkol sa pagscan at magpapahintulot na makontrol ito. Ito ay magbibigay ng grupo ng mga button na magbibigay daan upang:
 	
 	<ul>
-		<li><img align="bottom" alt="pause button" src="../../images/16/141.png">
-			Pause (and <img alt="resume button" src="../../images/16/131.png"> resume) the
-			selected spider scan;</li>
-		<li><img align="bottom" alt="stop button" src="../../images/16/142.png"> Stop
-			the selected spider scan;</li>
-		<li><img align="bottom" alt="clean scans button" src="../../images/fugue/broom.png">
-			Clean completed scans;</li>
-		<li><img align="bottom" alt="show messages button" src="../../images/16/178.png">
-			Show/Hide Messages - shows/hides a tab (called Messages) that displays all HTTP
-			messages sent by the selected spider scan;</li>
-		<li><img align="bottom" alt="spider options button" src="../../images/16/041.png">
-			Open the <a href="../../ui/dialogs/options/spider.html">Spider Options screen</a>.</li>
+		<li><img align="bottom" alt="button pang-pause" src="../../images/16/141.png">
+			I-pause (at <img alt="button pangresume" src="../../images/16/131.png"> muling pasimulan) ang
+			napiling ispayder na na-scan;</li>
+		<li><img align="bottom" alt="button pangtigil" src="../../images/16/142.png"> Itigil
+			and napiling ispayder na pagscan;</li>
+		<li><img align="bottom" alt="linisin ang button ng mga nascan" src="../../images/fugue/broom.png">
+			Linisin ang nakompletong mga pagscan;</li>
+		<li><img align="bottom" alt="ipakita ang button ng mga mensahe" src="../../images/16/178.png">
+			Ipakita/Itago ang mga Mensahe - nagpapakita/nagtatago ng tab (tinatawag na mga Mensahe) na magpapakita ng lahat ng HTTP na mga mensahe na ipinadala ng napiling ispayder na pagscan;</li>
+		<li><img align="bottom" alt="button ng mga pagpipilian ng ispayder" src="../../images/16/041.png">
+			Buksan ang <a href="../../ui/dialogs/options/spider.html">screen ng mga Pagpipilian ng Ispayder</a>.</li>
 	</ul>
-	The progress bar shows how far the selected spider scan has progressed. It is also shown
-	the number of active spider scans and the number of URIs found for the selected scan.
-	<p>For each URI found you can see:
+	Ang bar ng progreso ay magpapakita kung gaano kalayo ang napiling ispayder na pagscan ay nagkaprogreso. Ito ay magpapakita rin
+	ng bilang ng aktibong ispayder na mga pagscan at ang bilang ng mga URI na matatagpuan para sa napiling pagscan.
+	<p>Para sa bawat URI na mahahanap maari mo'ng makita:
 	<ul>
-		<li>Processed - Whether the URI was processed by the Spider or
-			was skipped from fetching because of a rule (e.g. it was out of
-			scope)</li>
-		<li>Method - The HTTP method, e.g. GET or POST, through which the
-			resource should be accessed</li>
-		<li>URI - the resource found</li>
-		<li>Flags - any information about the URI (e.g. if it's a seed or
-			why was it not processed)</li>
+		<li>Naproseso - Kahit ang URI na naproseso ng Ispayder o nalaktawan galing sa pagkuha dahil sa isang tuntunin (e.g. iyon ay labas ng iscope)</li>
+		<li>Paraan - Ang paraan ng HTTP, e.g. GET o POST, na kung saan ang
+			resource ay dapat mapasok</li>
+		<li>URI - ang resource na nahanap</li>
+		<li>Mga Flag - kahit anong impormasyon patungkol sa URI (e.g. kung ito ay isang seed o kung bakit ito ay hindi naproseso)</li>
 	</ul>
 
+	<p>Para sa bawat ispayder na mensahe, makikita sa ibaba ng tab ng Mensahe, maari mong makita ang mga detalye ng request na napadala at tugon
+		na natanggap, higit sa rito ito ay ipinapatanda sa loob ng hilera <code>Naproseso</code>, kahit hindi man naproseso ang mensahe
+		(iyan ay, ang tugon ay matagumpay na natanggap at na-parse).
 
-	<h2>See also</h2>
+	<h2>Tingnan din</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../overview.html">UI Overview</a></td>
-			<td>for an overview of the user interface</td>
+			<td><a href="../overview.html">Pangkalahatang-ideya ng UI</a></td>
+			<td>para sa isang pangkalahatang ideya sa interface ng gumagamit</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../start/concepts/spider.html">Spider</a></td>
-			<td>for an overview of the Spider</td>
+			<td><a href="../../start/concepts/spider.html">Ispayder</a></td>
+			<td>para sa kabuuan ng Ispayder</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/options/spider.html">Spider
-					Options screen</a></td>
-			<td>for an overview of the Spider Options</td>
+			<td><a href="../../ui/dialogs/options/spider.html">Ispayder
+					screen ng mga Pagpipilian</a></td>
+			<td>para sa isang kabuuan ng mga Pagpipilian ng Ispayder</td>
 		</tr>
 	</table>
 

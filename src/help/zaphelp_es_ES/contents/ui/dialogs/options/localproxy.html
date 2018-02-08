@@ -3,29 +3,59 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Options Local Proxy screen
+Opciones Locales Proxies de pantalla
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Options Local Proxy screen</h1>
+<h1>Pantalla de opciones de Proxies locales</h1>
 <p>
-The Options Connection screen allows you to configure the address and port 
-on which ZAP accepts incoming connections.<br/>
-It is this address and port that you must configure your browser to use as a proxy.
+La pantalla de opciones de conexión le permite configurar las direcciones y puertos que ZAP acepta conexiones entrantes. <br/>  <h2>Proxy local</h2> Por defecto ZAP escuchará en un puerto y dirección local, y estas son la dirección y el puerto que debe configurar su navegador para usar como proxy.
 </p>
+<h3>Dirección</h3>
+La dirección local que ZAP va a utilizar. Todas las direcciones disponibles se identifican automáticamente.
 
-<h3>Modify/Remove "Accept-Encoding" request-header</h3>
-Allows the proxy to modify/remove the "Accept-Encoding" request-header field so 
-no encoding transformations are done to the response.<br/>
-This option should be always enabled unless when testing the encoding transformations.<br/>
-The messages encoded will not be correctly scanned (either by passive and active scanners).
+<h3>Puerto</h3>
+El puerto en el que ZAP va a escuchar.
 
-<h2>Vease también</h2>
+<h3>Detrás de NAT</h3>
+Indica que el Proxy Local (ZAP) está detrás de NAT. Cuando se selecciona ZAP intentará
+determinar la dirección IP pública, para detectar y controlar las solicitudes con el público
+Dirección IP (por ejemplo, para ser atendidos por el ZAP de la API).
+<p>
+<strong>Nota:</strong> Esta opción sólo se admite cuando ZAP se ejecutan en AWS instancia de EC2.
+ZAP obtendrá la dirección IP pública de
+<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html#working-with-ip-addresses">AWS EC2
+de la instancia de metadatos</a>.<br>
+ZAP se debe de empezar con esta opción habilitada, si el acceso a la API, a través de la dirección IP pública, es necesario:
+<blockquote>zap.sh -daemon -puerto 8080 -host 0.0.0.0 configuración de proxy.behindnat=true</blockquote>
+Also, the <a href="api.html">API</a> necesita ser configurado para aceptar direcciones IP externas (es decir, la IP
+dirección desde donde ZAP es la que se accede).
+
+<h3>Quitar Incompatible Codificaciones</h3>
+Permite que el proxy para quitar incompatible codificaciones de la "Accept-Encoding" solicitud de encabezado de campo, por lo que 
+no (no admitida) en la codificación de las transformaciones se realizan para la respuesta.<br/>
+Esta opción debe estar activada siempre, salvo cuando las pruebas de la codificación de las transformaciones.<br/>
+Los mensajes codificados incompatible con las codificaciones de no ser correctamente analizado (ya sea por activa y pasiva de los escáneres).
+
+<h3>Protocolos De Seguridad</h3>
+Permite escoger el SSL/TLS versiones habilitado para conexiones entrantes (por ejemplo, de los navegadores). Al menos
+una versión debe estar habilitado, las versiones no soportadas por el JRE, será seleccionado y movilidad.
+<br>
+La opción SSLv2Hello deben ser seleccionados junto con al menos uno de SSL/TLS versión.
+<br>
+Las opciones de seguridad se aplican a la principal y todos los apoderados adicionales.
+
+<h2>Los Servidores Proxy Adicionales</h2>
+Puede añadir tantas direcciones y puertos para ZAP para escuchar como te gusta.<br>
+Esto puede ser útil cuando las pruebas de aplicaciones móviles - puede proxy de la aplicación móvil a través de una conexión Wi-Fi gratuita interfaz al mismo tiempo
+como usar el backend del sitio directamente a través de un navegador proxy a través de ZAP emulando un agente de usuario móvil.
+
+<h2>Véase también</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Overview</a></td><td>Para una vista general sobre la interfaz de usuario</td></tr>
+<a href="../../overview.html">Resumen de la IU</a></td><td>para una visión general de la interfaz de usuario</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+<a href="options.html">Cuadros de diálogo de opciones</a></td><td>para más detalles de las otras Opciones de diálogo de las pantallas</td></tr>
 </table>
 
 </body>

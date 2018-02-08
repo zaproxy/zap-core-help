@@ -2,110 +2,133 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Options Spider screen</title>
+<title>Mga opsyon sa screen ng Spider</title>
 </head>
 <body bgcolor="#ffffff">
-	<h1>Options Spider screen</h1>
+	<h1>Mga opsyon sa iskrin ng Spider</h1>
 	<p>
-		This screen allows you to configure the <a
-			href="../../../start/concepts/spider.html">spider</a> options.</p> 
-	<p>It should be noted that modifying most of these options also affects
-	the running Spider.
+		Ang iskrin na ito ay pinahihintulutan ka na isaayos ang <a
+			href="../../../start/concepts/spider.html">spider</a> na mga opsyon.</p> 
+	<p>Dapat itoy makilala na ang sakdalang pagsasaayos ng bahagya nitong mga opsyon ay ma-aapektohan ang gumaganang Spider.
 	</p>
 
-	<h3>Maximum depth to crawl</h3>
-	The parameter defines the maximum depth in the crawling process where a
-	page must be found in order for it to be processed. Resources found
-	deeper than this level are not fetched and parsed by the spider.
+	<h3>Ang pinaka mataas na kalaliman sa pag gapang</h3>
+	Ang paramiter ay tumutukoy sa pinakamataas na kalaliman ng pag-gapang na kung saan ang
+	pahina ay makikita sa kautusan para dito upang mai-proseso na. Nakita na ang mga Pinagmulan
+	ang mas malalim pa sa level na ito ay kinuha at nai-parse na sa pamamagitan ng spider.
 	<p>
-		The depth is calculated starting from the seeds, so, if a Spider scan
-		starts with only a single URL (eg. Spider URL), the depth is
-		calculated from this one. However, if the scan starts with multiple
-		seeds (eg. Spider site), a resource is processed if it's depth
-		relative to <i>any</i> of the seeds is less than the defined one.
+		Ang lalim ay kinalkula na ito ay nag-simula mula sa mga binhi, kaya, kapag ang spider scan ay
+		magsisimula ng nagiisa lamang na URL (eg. Spider URL), ang kalaliman ay
+		nakalkula na mula sa isang ito. Gayon pa man, kapag ang scan ay nagsimula ng may maraming
+		mga binhi (eg. Ang site ng spider), ang pinagkukunan ay naka proseso kung ang kalaliman nito ay
+		nababagay sa <i>anuman</i> sa mga binhi ay mas mababa kesa sa isa pang nilarawan.
 	</p>
 
-	<h3>Number of threads used</h3>
-	The spider is multi-threaded and this is the number that defines the
-	maximum number of worker threads used in the crawling process. Changing this
-	parameter does not have any effect on any crawling is in progress. 
+	<h3>Bilang ng mga thread na nagamit</h3>
+	Ang spider ay maraming mga thread at ito ang bilang na nilalarawan ang
+	napakaraming bilang ng gumaganang thread na ginagamit sa pag gapang na proseso. Baguhin itong
+	paramiter na walang anumang epekto sa kahit anong pag-gapang na nasa pag unlad. 
 
-	<h3>Maximum duration</h3>
-	The maximum length of time that the spider should run for, measured in minutes.
-	Zero (the default) means that the spider will run until it has found all of the links that it is able to. 
+	<h3>Pinakamataas na durasyon</h3>
+	Ang pinaka-mahaba na oras na ang spider ay gumana para sa, sinukat na mga minuto.
+	sero (ang default) na nanganga-hulugang ang spider ay gumana hanggang sa makita ang lahat ng mga link na pwede sa. 
 
-	<h3>Domain Pattern</h3>
-	The normal behavior of the spider is to only follow links to resources
-	found on the same domain as the page where the scan started. However,
-	this option allows you to define additional domains that are considered
-	"in scope" during the crawling process. Pages on these domains are
-	processed during the scan.
+	<h3>Pinakamataas na anak para gumapang</h3>
+	Ang paramiter na ito ay nililimitahan ang bilang ng mga bata na gumagapang sa bawat node na nasa puno.<br>
+	Ito ay kapaki pakinabang para sa mga aplikasyong pinapatakbo ng datos na mayroong malaking mga bilang ng 'mga pahina' ito ay katotohanan eksakto ang kaparehas na code ngunit naglalaman ng ibat ibang datos. halimbawa mula sa database.<br>
+	Sa pamamagitan ng default ito ay maitatakda sa sero na nanganga-hulugang wala itong limitasyon na ginamit sa bilang ng mga buhol ng mga batang gumagapang.
+
+	<h3>Pinaka-mataas na sukat ng parse</h3>
+	Ipaliwanag ang pinakamataas na sukat, sa bytes, na ang tugon ay kailangan i-parsed. Pinapayagan nito
+	ang spider upang laktawan ang malaking mga pagtugon/mga files.
+
+	<h3>Ang Domain ay laging nasa Abot ng isip</h3>
+	Payagan na pamahalaan ang string na literals ng domain o karaniwan na mga ekspresyon, na nasa
+	abot ng kaisipan ng spider. Ang normal na ugali ng spider ay magfollow lamang ng mga link sa mga mapagkukunan
+	na nakita sa kaparehas na saklaw tulad ng pahina kung saan ang scan ay magsisimula. Gayon man,
+	ang opsyon na ito ay pinapayagan ka na ipaliwanag ang mga karagdagang mga domain na itinuturing
+	"sa abot ng isip" habang nasa proseso ng pag-gapang. Mga pahina dito sa mga domain ay
+	naka-proseso habang nagii-scan.
 		
-	<h3>Query parameters handling</h3>
-	When crawling, the Spider has an internal mechanism that marks which pages
-	were already visited, so they are not processed again. When this check is made,
-	the way the URIs parameters are handled is set using this option. There are
-	three available options:
+	<h3>Mga Pag-usisa sa pag-kontrol ng mga paramiter</h3>
+	Kapag gumagapang na, ang Spider ay mayroong nasa loob na mekanismo na markahan kung alin ang mga pahina
+	na tapos ng bisitahin, kaya hindi na ulit sila mag po-proseso. Nang itong pagsusuri ay nagawa,
+	ang pamamaraan ng mga paramiter ng mga URI ay hinawakan ito ay itinakda gamit ang opsyon na ito. Mayroon ditong
+	tatlong magagamit na mga opsyon:
 	<ul>
-	<li><b>Ignore parameters completely</b> - if www.example.org/?bar=456 is visited,
-	then www.example.org/?foo=123 will not be visited</li>
-	<li><b>Consider only parameter's name</b> (ignore parameter's value) - if 
-	www.example.org/?foo=123 is visited, then www.example.org/?foo=456 will not be visited, 
-	but www.example.org/?bar=789 or www.example.org/?foo=456&amp;bar=123 will be visited</li>
-	<li><b>Consider both parameter's name and value</b> - if www.example.org/?123 is visited,
-	any other uri that is different (including, for example, www.example.org/?foo=456 or 
-	www.example.org/?bar=abc) will be visited</li>
+	<li><b>Lubos na wag pansinin ang mga paramiter</b> - kapag ang www.example.org/?bar=456 ay binisita,
+	tapos ang www.example.org/?foo=123 ay hindi binisita</li>
+	<li><b>Ang kinikilala lamang ay ang pangalan ng paramiter</b> (huwag pansinin ang halaga ng perimiter) - kapag ang
+	www.example.org/?foo=123 ay binisita, tapos ang www.example.org/?foo=456 ay hindi binisita, 
+	ngunit ang www.example.org/?bar=789 o kaya www.example.org/?foo=456&amp;bar=123 ay binisita</li>
+	<li><b>Kinikilala ang dalawa ang pangalan at halaga ng parameter</b> - kapag ang www.example.org/?123 ay binisita,
+	ang anumang ibang uri ito ay magkaiba (kasama ang, para sa halimbawa, www.example.org/?foo=456 or 
+	www.example.org/?bar=abc) ay binisita</li>
 	</ul>
 
-	<h3>Send "Referer" header</h3>
-	If the spider requests should be sent with the "Referer" header.
+	<h3>Magpadala ng "Tumutukoy sa" pinuno</h3>
+	Kapag ang mga paki usap ay naipadala na ng may "Tumutukoy" sa pinuno.
 
-	<h3>Process forms</h3>
-	During the crawling process, the behaviour of the spider when it
-	encounters HTML forms is defined by this option. If disabled, the HTML
-	forms will not be processed at all. If enabled, the HTML forms with the
-	method defined as HTTP GET will be submitted with some generated
-	values. The behaviour when encountering forms with the method defined
-	as HTTP POST is configured by the next option.
+	<h3>Tanggapin ang mga Cookie</h3>
+	Kapag ang mga scan ng spider ay tinanggap ang mga cookie habang nag spidering. Kung maaari ang spider ay
+	maayos na hahawakan ang mga natanggap na cookie mula sa server at ipapadala nila pabalik ng naaayon.
+	Kung ang opinyon ay hindi pwede, ang Spider ay hindi magpapadala ng kahit anong mga cookie sa kahit anong mga paghiling. Para
+	sa halimbawa, itoy kino-kontrol kung oo o hindi ang Spider ay gumagamit ng parehas na sesyon habang labas ang
+	pag-spidering scan.
+	<br>Kapag tumanggap ng mga cookie ang mga cookie ay hindi ibinahagi sa pagitan ng mga pag-scan sa spider, ang bawat pag-scan ay mayroong
+	sariling banga ng cookie.
+	<br>Ang opsyong ito ay maymababang prioridad, ang Spider ay irerespeto ng iba (pandaigdigan) mga opsyong kaugnay
+	sa HTTP state. Ang opsyong ito ay hindi pinansin kung, para sa halimbawa, ang opsyon
+	<a href="../../tlmenu/edit.html">Paganahin ang Sesyon sa Pagsubaybay (Cookie)</a> ay paganahin, kapag
+	nag-spidering katulad ng <a href="../../../start/concepts/users.html">Gumagamit</a> o kapag ang
+	<a href="../../../start/concepts/httpsessions.html">HTTP Sesyon</a> ay aktibo.
 
-	<h3>POST forms</h3>
-	As briefly described in the previous paragraph (Process Forms), this
-	option configures the behaviour of the spider when
-	<i>Process Forms</i> is enabled and when encountering HTML forms that
-	have to be POSTed.
+	<h3>Mga form sa pag proseso</h3>
+	Habang nag po-proseso ang pag gapang, ang ugali ng spider kapag itoy
+	makakatagpo ng HTML na mga form ay nililinawsa pamamagitan ng opsyon na ito. Kapag hindi pwede, ang mga anyo ng HTML
+	ay hindi magpo-proseso sa lahat. Kung gumagana, ang mga form ng HTML na may
+	paraan na isinasaad sa HTTP GET ay isinusumite na mayroong ilang lumilikha ng
+	mga halaga. Ang ugali kapag nag-engkwentro ang mga form na may paraang nagpapalinaw
+	tulad ng HTTP POST ay na-kumpigur sa mga susunod na opsyon.
 
-	<h3>Parse HTML Comments</h3>
-	This option defines whether the spider should also spider the HTML
-	comments searching for links to resources. Only the resources found in
-	commented valid HTML tags will be processed.
+	<h3>Mga form sa POST</h3>
+	Tulad ng agarang pag lalarawan ng mga nakaraang talata (Mga form ng Pag-proseso), itong
+	opsyon ay nagkukumpigur ng ugali ng spider kapag
+	<i>Mga form sa Pag=proseso</i> ay gumagana at kapag nagkatagpo ang mga form ng HTML na
+	mayroon para makapag POSTed.
 
-	<h3>Parse 'robots.txt' files</h3>
-	This option defines whether the spider should also spider the
-	robots.txt files found on websites, searching for links to resources.
-	This option does not define whether the spider should follow the rules
-	imposed by the robots.txt file.
+	<h3>Mga komento sa Parse HTML</h3>
+	Ang opsyon ay nagpapaliwanag kung ang spider ay spider ang HTML
+	pagsusuri sa mga komento para sa mga link hanggang sa pinag-kukunan. Ang mapagkukunan lamang ang nakatagpo dito
+	sa mga balidong komento HTML ang pag-tag ay nakaproseso.
 
-	<h3>Handle OData-specific parameters</h3>
-	This options defines whether the spider should try to detect OData-specific
-	parameters (i.e. resources identifiers) in order to properly process them 
-	according to the rule defined by the "Query parameters handling" option.
+	<h3>Parse 'robots.txt' mga file</h3>
+	Ang opsyon na ito ay nagpapaliwanag kung ang spider ay spider ang
+	robots.txt mga file na makikita sa mga website, magsiyasat tungkol sa mga link sa mga pinagkukunan.
+	Ang opsyong ito ay hindi ipinapaliwanag kung ang spider ay sumusnod sa mga kautusan
+	inilagay ng robots.txt file.
 
-	<h2>See also</h2>
+	<h3>Hawakan ang OData-natatangi mga paramiter</h3>
+	Ang opsyong ito ay nagpapaliwanag kung ang spider ay susubukan na alamin ang natatanging mga paramiter ng OData
+	 (i.e. pinagkukunan tagapagpaliwanag) sa utos na maayos na i-proseso nila
+	ayon sa mga rule na kanilang ipinaliwanag sa pamamagitan ng "Humahawak sa mga paramiter ng pag-usisa" opsyon.
+
+	<h2>Tingnan din</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			<td><a href="../../overview.html">UI Overview</a></td>
-			<td>for an overview of the user interface</td>
+			<td>para sa overview ng interface ng gumagamit</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			<td><a href="../../../start/concepts/spider.html">Spider</a></td>
-			<td>for an overview of the Spider</td>
+			<td>para sa pag-overview ng Spider</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			<td><a href="../../../ui/tabs/spider.html">Spider Tab</a></td>
-			<td>for an overview of the Spider tab</td>
+			<td>para sa overview ng Spider tab</td>
 		</tr>
 	</table>
 

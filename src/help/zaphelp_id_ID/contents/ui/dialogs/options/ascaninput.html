@@ -3,62 +3,62 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Options Active Scan Input Vectors screen
+Pilihan layar masukan Vektor aktif
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Options Active Scan Input Vectors screen</h1>
+<h1>Pilihan layar masukan Vektor aktif</h1>
 <p>
-This screen allows you to configure the <a href="../../../start/concepts/ascan.html">active scan</a> input vectors.<br>
-These are the elements that the active scanner will attack.<br>
-Scanning all of the elements supported will take longer, but not scanning some elements may cause some vulnerabilities to be missed.
+Layar ini memungkinkan anda untuk mengkonfigurasi <a href="../../../start/concepts/ascan.html">aktif scan</a> masukan vektor.<br>
+Ini adalah elemen pemindai aktif yang akan menyerang.<br>
+Memindai semua elemen yang didukung akan menghabiskan waktu yang lebih lama, namun tidak dapat memindai beberapa elemen bisa menyebabkan beberapa kelemahan yang dilewatkan.
 
-<h3>Injectable Targets</h3>
-The request elements that the active scanner will target:
+<h3>Sasaran yang disuntikkan</h3>
+Elemen permintaan yang ditargetkan untuk pemindai akan aktif:
 
-<h4>URL Query String</h4>
-Key value pairs in the request URL query, ie after the <code>?</code>.
+<h4>String Permintaan URL & Data Didorong Node</h4>
+Pasangan nilai kunci dalam kueri URL permintaan, yaitu setelah <code>?</code>.<br>
+Jika tidak ada parameter kueri maka yang sewaktu-waktu akan diuji.
+Jika <a href="../../../start/concepts/ddc.html">Data Didorong Node</a> didefinisikan dalam konteks mereka akan diuji.
+<h4>Data POST</h4>
+Pasangan nilai kunci dalam permintaan data POST.
 
-<h4>POST Data</h4>
-Key value pairs in the request POST data.
+<h4>Jalur url</h4>
+Elemen jalur dalam URL permintaan, yaitu elemen yang dipisahkan oleh <code>/</code>.
 
-<h4>URL Path</h4>
-Path elements in the request URL, ie the elements separated by <code>/</code>.
+<h4>Header HTTP</h4>
+Permintaan HTTP Header.
 
-<h4>HTTP Headers</h4>
-Request HTTP Headers.
+<h5>Semua permintaan</h5>
+Memungkinkan untuk memindai Header HTTP dari semua permintaan. Tidak hanya permintaan yang mengirimkan parameter, melalui query atau permintaan body.
 
-<h5>All Requests</h5>
-Allows to scan the HTTP Headers of all requests. Not just requests that send parameters, through the query or request body.
+<h4>Data cookie</h4>
+Permintaan cookie.
 
-<h4>Cookie Data</h4>
-Request cookies.
-
-<h3>Build-in Input Vector Handlers</h3>
-The data formats that the active scanner will target:
+<h3>Membangun masukan menangani Vektor</h3>
+Format data yang dipindai aktif akan menargetkan:
 
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Multipart Form Data</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>XML tag/attribute</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Data Formulir Multipart</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tag/atribut XML</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>JSON</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Google Web Toolkit</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>OData id/filter</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>OData id/menyaring</td><td></td></tr>
 </table>
 
 
-<h3>Enable Script Input Vectors</h3>
-If this option is selected then the active scanner will use any enabled script input vectors.<br>
-Script input vectors are scripts which you have written or imported into ZAP and allow you to target elements 
-which are not supported by default.
+<h3>Mengaktifkan Skrip masukan vektor</h3>
+Jika pilihan ini dipilih maka pemindai aktif akan menggunakan vektor masukan skrip yang diaktifkan.<br>
+Vektor masukan skrip adalah skrip yang telah anda tulis atau impor ke ZAP dan memungkinkan anda untuk menargetkan elemen yang tidak didukung secara default.
 
 <p>
-This screen also allows you to configure the parameters which will be ignored by the active scanner.
+Layar ini juga memungkinkan anda untuk mengkonfigurasi parameter yang akan diabaikan oleh pemindai yang aktif.
 
-<h2>See also</h2>
+<h2>Lihat juga</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="ascaninput.html">Active Scan Input Vectors</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">Ikhtisar UI</a></td><td>untuk meninjau antar muka pengguna</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="options.html">Dialog pilihan</a></td><td>untuk rincian layar opsi dialog lainnya</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="ascaninput.html">Pemindaian aktif masukan Vektor</a></td><td></td></tr>
 </table>
 
 </body>

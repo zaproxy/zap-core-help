@@ -9,39 +9,64 @@ Command Line
 <body bgcolor="#ffffff">
 <h1>Command Line</h1>
 
+To run ZAP via the command line, you will need to locate the ZAP startup script.<br/>
+<strong>Windows:</strong><br/>
+<pre>C:\Program Files (x86)\OWASP\Zed Attack Proxy\zap.bat</pre>
+<strong>Mac:</strong><br/>
+<pre>/Applications/OWASP\ ZAP.app/Contents/Java/zap.sh</pre>
+<strong>Linux:</strong><br/>
+<code>zap.sh</code> will be below the directory where ZAP was installed.
+<br/><br/>
+Alternatively, you can run the JAR file directly:<br/>
+<pre>java -jar zap.jar</pre>
+All options below can be passed to any of these.
+
+<h2>Options</h2>
+
 ZAP supports the following command line options:
 
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-cmd</td><td>Runs ZAP 'inline', ie without starting the UI or a daemon</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-config</td><td>Overrides the specified key=value pair in the configuration file</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-daemon</td><td>Starts ZAP in 'daemon' mode, ie without a UI</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-dir</td><td>Uses the specified directory instead of the default one</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-installdir</td><td>Overrides the code that detects where ZAP has been installed with the specified directory</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-h</td><td>Shows all of the command line options available, including those added by add-ons</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-help</td><td>The same as -h </td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-host</td><td>Overrides the host used for proxying specified in the configuration file</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-port</td><td>Overrides the port used for proxying specified in the configuration file</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-version</td><td>Reports the ZAP version</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-newsession</td><td>Creates a new session at the given location</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-session</td><td>Opens the given session after starting ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-cmd</td><td>Run inline (exits when command line options complete)</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-daemon</td><td>Starts ZAP in daemon mode, ie without a UI</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-config &lt;kvpair&gt;</td><td>Overrides the specified key=value pair in the configuration file. <code>-config</code> command line options are applied in the order they are specified.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-configfile &lt;path&gt;</td><td>Overrides the key=value pairs with those in the specified properties file</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-dir &lt;dir&gt;</td><td>Uses the specified directory instead of the default one</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-installdir &lt;dir&gt;</td><td>Overrides the code that detects where ZAP has been installed with the specified directory</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-h</td><td>Shows all of the command line options available, including those added by add-ons</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-help</td><td>The same as -h</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-newsession &lt;path&gt;</td><td>Creates a new session at the given location</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-session &lt;path&gt;</td><td>Opens the given session after starting ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-host &lt;host&gt;</td><td>Overrides the host used for proxying specified in the configuration file</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-port &lt;port&gt;</td><td>Overrides the port used for proxying specified in the configuration file</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-lowmem</td><td>Use the database instead of memory as much as possible - this is still experimental</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-experimentaldb</td><td>Use the experimental generic database code, which is not surprisingly also still experimental</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstall &lt;addon&gt;</td><td>Install the specified add-on from the ZAP Marketplace</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstallall</td><td>Install all available add-ons from the ZAP Marketplace</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonuninstall &lt;addon&gt;</td><td>Uninstall the specified add-on</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonupdate</td><td>Update all changed add-ons from the ZAP Marketplace</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonlist</td><td>List all of the installed add-ons</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-script &lt;script&gt;</td><td>Run the specified script (file system path) if command line/daemon, or just load it if GUI</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-last_scan_report &lt;path&gt;</td><td>Generate the 'Last Scan Report' into the specified path</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-suppinfo</td><td>Outputs details relevant for support and troubleshooting (to the console/standard out). Such as: ZAP version, java version, installed add-ons and version, locale info, operating system, etc.</td></tr>
 </table>
 <br>
-The options '-session' and '-newsession' are mutually exclusive. An error will be shown and ZAP exit (if not in GUI) when both options are set.
+The options <code>-session</code> and <code>-newsession</code> are mutually exclusive. An error will be shown and ZAP exit (if not in GUI) when both options are set.
 <br>
-Relative paths to session file are resolved against the "session" directory located in ZAP's home directory (default or specified with -dir option).
+Relative paths to session file are resolved against the "session" directory located in ZAP's home directory (default or specified with <code>-dir</code> option).
 <br/>
 Configuration keys should be specified using the dot notation based their location in the XML of the configuration file, eg:<br/>
-<pre>-config api.key=12345 -config connection.timeoutInSecs=60</pre>  
+<pre>&lt;zap-script&gt; -config api.key=12345 -config connection.timeoutInSecs=60</pre>
 Note that add-ons can add extra command line options.
 
 <p>
 Examples:
 	<ul>
 		<li>Start ZAP in 'daemon' mode with a new session created at a given path:
-			<pre>-daemon -newsession session</pre>
+			<pre>&lt;zap-script&gt; -daemon -newsession session</pre>
 		</li>
 		<li>Create a report of the last scan of an existing session and exit ZAP once finished:
-			<pre>-last_scan_report /path/to/save/report.xml -session /path/to/existing/session -cmd</pre>
+			<pre>&lt;zap-script&gt; -last_scan_report /full/path/to/save/report.xml -session /full/path/to/existing/session -cmd</pre>
 		</li>
 	</ul>
 

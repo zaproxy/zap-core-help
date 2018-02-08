@@ -10,54 +10,55 @@
 		resources (URLs) on a particular Site. Il commence par une liste d'URLs à visiter, appelées les germes. Cette liste dépend de la manière dont le robot est démarré. Le robot visite ensuite ces URLs, identifiant tous les liens hypertexte dans la page et les ajoutant à la liste des URLs à visiter. Le processus poursuit de manière récursive, aussi longtemps que sont découvertes de nouvelles ressources.
 	</p>
 
-	<p>Il y a 4 méthodes de démarrage du robot, différenciées par la liste de germes par laquelle le robot commence :</p>
-	<ul>
-		<li>Site du robot - la liste de germes contient toutes les URI existantes déjà découvertes pour le site sélectionné.</li>
-		<li>Sous-arbre du robot - la liste des germes contient toutes les URI existantes déjà découvertes et présentent dans le sous-arbre du nœud sélectionné.</li>
-		<li>URL du robot - la liste de germes contient seulement l'URI correspondant au nœud sélectionné (dans l'arborescence du site).</li>
-		<li>Robot tout dans le périmètre - la liste de germes contient toutes les URI que l'utilisateur a sélectionnées comme étant 'dans le périmètre'.</li>
-		<li>Robot tout dans le contexte... - la liste de germes contient toutes les URIs que l'utilisateur a choisies comme étant dans le contexte sélectionné.</li>
-	</ul>
-	<i>Plus de détails se trouvent ci-dessous, dans la section "Accès via" </i>
-
+	<p>The Spider can configured and started using the <a href="../../ui/dialogs/spider.html">Spider dialogue</a>.</p>
 
 	<p>Lors du traitement d'une URL, le robot envoie une requête pour charger la ressource, puis analyse la réponse afin d'identifier des liens hypertexte. Il se comporte actuellement de la manière suivante lors du traitement des différents types de réponses :</p>
 
 	<h4>HTML</h4>
-	Traite les balises spécifiques, identifiant les liens vers de nouvelles ressources:
+	Processes the specific tags, identifying links to new resources:
 	<ul>
-		<li>Base - traitement naturel</li>
-		<li>A, Link, Area - attribut 'href'</li>
-		<li>Frame, IFrame, Script, Img - attribut 'src'</li>
-		<li>Meta - 'http-equiv' pour 'location' et 'refresh'</li>
-		<li>Form - manipulation appropriée des formulaires avec les méthodes GET et POST. Les valeurs des champs sont générées correctement, y compris pour les <a<br>
-			href="http://www.w3schools.com/html5/html5_form_input_types.asp">types d'entrée HTML 5.0</a>.
+		<li>Base - Proper handling</li>
+		<li>A, Link, Area - 'href' attribute</li>
+		<li>Frame, IFrame, Script, Img - 'src' attribute</li>
+		<li>Meta - 'http-equiv' for 'location' and 'refresh'</li>
+		<li>Form - proper handling of Forms with both GET and POST
+			method. The fields values are generated validly, including <a
+			href="http://www.w3schools.com/html5/html5_form_input_types.asp">HTML
+				5.0 input types</a>.
 		</li>
-		<li>Commentaires - les balises valides trouvées dans les commentaires sont aussi analysées, si spécifié dans l'écran <a href="../../ui/dialogs/options/spider.html">Options Robot</a>
+		<li>Comments - Valid tags found in comments are also analyzed, if
+			specified in the <a href="../../ui/dialogs/options/spider.html">Options
+				Spider screen</a>
 		</li>
 	</ul>
 
 	<h4>Fichier robots.txt</h4>
-	S'il est spécifié dans l'écran
-	<a href="../../ui/dialogs/options/spider.html">Options Robot</a>, il analyse également le fichier 'Robots.txt' et essaie d'identifier de nouvelles ressources en utilisant les règles spécifiées. Mentionnons encore que le robot ne suit pas les règles spécifiées dans le fichier « Robots.txt ».
+	If set in the
+	<a href="../../ui/dialogs/options/spider.html">Options Robot</a>, it also analyzes the 'Robots.txt' file and tries to identify
+	new resources using the specified rules. It has to be mentioned that
+	the Spider does not follow the rules specified in the 'Robots.txt'
+	file.
 
 	<h4>Format OData Atom</h4>
-	Les contenus OData au format Atom sont actuellement pris en charge. Tous les liens inclus (relatifs ou absolus) sont traités.
+	OData content using the Atom format is currently supported. All included links 
+	(relative or absolute) are processed.
 
 	<h4>Réponse texte non HTML</h4>
-	Les réponses texte sont analysées à la recherche de modèles d'URL
+	Text responses are parsed scanning for the URL pattern
 
 	<h4>Réponse non textuelles</h4>
-	Actuellement, le robot ne traite pas ce type de ressources.
+	Currently, the Spider does not process this type of resources.
 
 	<h2>Autres aspects</h2>
 	<ul>
-	<li> Lors de la vérification si une URL a déjà été parcourue, la manière de traiter les paramètres peut être configurée dans l'écran 'Options Robot'.
+	<li> When checking if an URL was already visited, the behaviour regarding how
+	parameters are handled can be configured on the Spider Options screen.
 	</li>
-	<li> Lors de la vérification si une URL a déjà été parcourue, un certain nombre de paramètres communs sont ignorés:  jsessionid, phpsessid, aspsessionid, utm_*
+	<li> When checking if an URL was already visited, there are a few common parameters
+	which are ignored: jsessionid, phpsessid, aspsessionid, utm_*
 	</li>
-	<li> Le comportement du robot avec les cookies est défini par l'option présente dans l'écran <i>Modifier -&gt; Activer le suivi de session</i>. Si cette option est activée, le robot gérera correctement tous les cookies reçus du serveur et les renverra en conséquence.
-	Si l'option est désactivée, le robot n'enverra aucun cookie dans ses requêtes.
+	<li> The Spider's behaviour regarding cookies depends on how the spider is started and which options are enabled. For more
+	details refer to the Spider Options screen.
 	</li>
 	</ul>
 	<p>

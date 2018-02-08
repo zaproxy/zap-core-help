@@ -3,45 +3,70 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Command Line
+Baris Perintah
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Command Line</h1>
+<h1>Baris Perintah</h1>
 
-ZAP supports the following command line options:
+Untuk menjalankan ZAP via garis perintah, anda akan perlu untuk mencari skrip memulai ke ZAP.<br/>
+<strong>Windows:</strong><br/>
+<pre>C:\File Program (x86)\OWASP\Zed Attack Proxy\zap.bat</pre>
+<strong>Mac:</strong><br/>
+<pre>/Applications/OWASP\ ZAP.app/Contents/Java/zap.sh</pre>
+<strong>Linux:</strong><br/>
+<code>zap.sh</code> akan ada di bawah direktori dimana ZAP telah terinstal.
+<br/><br/>
+Alternatif lainnya, anda bisa menjalankan file JAR secara langsung:<br/>
+<pre>java -jar zap.jar</pre>
+Semua pilihan berikut ini bisa dilalui untuk apa saja dari ini.
+
+<h2>Pilihan</h2>
+
+ZAP mendukung pilihan garis perintah berikut ini:
 
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-cmd</td><td>Runs ZAP 'inline', ie without starting the UI or a daemon</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-config</td><td>Overrides the specified key=value pair in the configuration file</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-daemon</td><td>Starts ZAP in 'daemon' mode, ie without a UI</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-dir</td><td>Uses the specified directory instead of the default one</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-installdir</td><td>Overrides the code that detects where ZAP has been installed with the specified directory</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-h</td><td>Shows all of the command line options available, including those added by add-ons</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-help</td><td>The same as -h </td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-host</td><td>Overrides the host used for proxying specified in the configuration file</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-port</td><td>Overrides the port used for proxying specified in the configuration file</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-version</td><td>Reports the ZAP version</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-newsession</td><td>Creates a new session at the given location</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-session</td><td>Opens the given session after starting ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-versi</td><td>Laporan pada versi ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-cmd</td><td>Menjalankan pada garis (meninggalkan ketika pilihan baris perintah tuntas)</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-daemon</td><td>Memulai ZAP pada mode daemon, yaitu tanpa sebuah UI</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-config &lt;kvpair&gt;</td><td>Mengesampingkan yang ditentukan kunci = nilai pasangan pada file konfigurasi. <code>-config</code> pilihan garis perintah ditetapkan dalam pesanan sesuai yang mereka tentukan.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-configfile &lt;path&gt;</td><td>Mengesampingkan kunci=nilai pasangan dengan itu pada file properti yang ditentukan</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-dir &lt;dir&gt;</td><td>Mempergunakan direktori yang terperinci sebagai gantinya dari satu default</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-memasang dir &lt;dir&gt;</td><td>Membatalkan kode yang mendeteksi dimana ZAP yang telah terinstal dengan daftar yang telah ditentukan</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-h</td><td>Menampilkan semua dari pilihan baris perintah yang tersedia, termasuk pada yang ditambahkan oleh add-on</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-bantuan</td><td>Sama seperti -h</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-sesi baru &lt;path&gt;</td><td>Membuat sebuah sesi terbaru pada lokasi yang ditentukan</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-sesi &lt;path&gt;</td><td>Membuka sesi yang ditentukan setelah memulai ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-tuan rumah &lt;host&gt;</td><td>Mengesampingkan host yang dipergunakan untuk proxy yang ditetapkan pada file konfigurasi</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-pelabuhan &lt;port&gt;</td><td>Mengesampingkan port yang dipergunakan untuk proxy yang ditetapkan pada file konfigurasi</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-mem rendah</td><td>Menggunakan database sebagai gantinya dari sebuah memori sebanyak mungkin - ini masih menjadi bahan percobaan</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-experimentaldb</td><td>Menggunakan bahan percobaan kode database umum, yang tidak mengherankan juga tetap menjadi bahan percobaan</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-tambahkan pada install &lt;addon&gt;</td><td>Menginstal add-on yang ditentukan dari ZAP Pasartertentu</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstallall</td><td>Menginstal semua add-on yang terdapat dari ZAP Pasartertentu</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonuninstall &lt;addon&gt;</td><td>Copot pemasangan add-on yang ditentukan</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonupdate</td><td>Perbarui semua perubahan add-on dari Marketplace ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonlist</td><td>Daftarkan semua add-on yang terpasang</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-script &lt;script&gt;</td><td>Menjalankan script tertentu (sistem file path) jika baris perintah/daemon, atau hanya beban jika GUI</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-last_scan_report &lt;path&gt;</td><td>Menghasilkan 'Laporan Pindaian Terakhir' kedalam path yang ditentukan</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-suppinfo</td><td>Rincian keluaran yang relevan untuk mendukung dan pemecahan masalah (untuk konsol/standar). Seperti: versi ZAP, versi java, diinstal add-ons dan versi info lokal, sistem operasi, dll.</td></tr>
 </table>
 <br>
-The options '-session' and '-newsession' are mutually exclusive. An error will be shown and ZAP exit (if not in GUI) when both options are set.
+Pilihan <code>-session</code> dan <code>-newsession</code> saling eksklusif. Kesalahan akan ditampilkan dan ZAP keluar (jika tidak pada GUI) ketika kedua opsi ditetapkan.
 <br>
-Relative paths to session file are resolved against the "session" directory located in ZAP's home directory (default or specified with -dir option).
+Jalur relatif ke berkas sesi yang diselesaikan terhadap direktori "sesi" yang terletak di direktori home ZAP (default atau ditentukan dengan <code>-dir</code> option).
 <br/>
-Configuration keys should be specified using the dot notation based their location in the XML of the configuration file, eg:<br/>
-<pre>-config api.key=12345 -config connection.timeoutInSecs=60</pre>  
-Note that add-ons can add extra command line options.
+Kunci konfigurasi seharusnya ditentukan menggunakan titik notasi yang berdasarkan lokasi mereka pada file dari konfigurasi XML, misalnya:<br/>
+<pre>&lt;zap-script&gt; -config api.key=12345 -config connection.timeoutInSecs=60</pre>
+Sebagai catatan bahwa add-on bisa menambah pilihan garis perintah tambahan.
 
 <p>
-Examples:
+Contoh:
 	<ul>
-		<li>Start ZAP in 'daemon' mode with a new session created at a given path:
-			<pre>-daemon -newsession session</pre>
+		<li>Memulai ZAP pada mode 'daemon' dengan sebuah sesi terbaru yang telah dibuat pada sebuah jalur yang ditentukan:
+			<pre>&lt;zap-script&gt; -daemon -newsession session</pre>
 		</li>
-		<li>Create a report of the last scan of an existing session and exit ZAP once finished:
-			<pre>-last_scan_report /path/to/save/report.xml -session /path/to/existing/session -cmd</pre>
+		<li>Membuat sebuah laporan dari peninjauan terakhir dari sebuah sesi yang ada dan keluar dari ZAP setelah selesai:
+			<pre>&lt;zap-script&gt; -last_scan_report /full/path/to/save/report.xml -session /full/path/to/existing/session -cmd</pre>
 		</li>
 	</ul>
 
@@ -50,7 +75,7 @@ Examples:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="start/concepts/api.html">API</a></td><td>to control ZAP programmatically</td></tr>
+<a href="start/concepts/api.html">API</a></td><td>untuk mengendalikan ZAP secara matematis</td></tr>
 </table>
 
 </body>

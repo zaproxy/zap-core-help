@@ -3,65 +3,65 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Active Scan dialog
+Aktibong Scan diyalogo
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Active Scan dialog</h1>
+<h1>Aktibong Pagscan ng tab</h1>
 <p>
-This dialog launches the <a href="../../start/concepts/ascan.html">active scanner</a>.<br>
+Inilunsad ang mga diyalogong ito ang <a href="../../start/concepts/ascan.html">aktibong scanner</a>.<br>
   
-<h3>Scope</h3>
-The first tab allows you to select or change the starting point.<br>
-If you have more that one <a href="../../start/concepts/scanpolicy.html">scan policies</a> then you will be able to select the one to use.<br>
-If the starting point is in one or more <a href="../../start/concepts/contexts.html">Contexts</a> then you will be able to choose one of them.<br>
-If that context has any <a href="../../start/concepts/users.html">Users</a> defined then you will be able to select one of them.<br>
-If you select one of the users then the active scan will be performed as that user, with ZAP (re)authenticating as that user whenever necessary.
+<h3>Saklaw</h3>
+Ang unang tab na ito ay nagbibigay-daan sa iyo upang pumili o baguhin ang panimula.<br>
+Kung mayroon kang higit na isa <a href="../../start/concepts/scanpolicy.html">mga patakaran ng scan</a> pagkatapos ay mo magagawang upang piliin ang gamitin.<br>
+Kung ang panimulang punto sa isa o higit pa <a href="../../start/concepts/contexts.html">Konteksto</a> pagkatapos ay mo magagawang upang piliin ang isa sa kanila.<br>
+Kung may anumang ng konteksto <a href="../../start/concepts/users.html">Mga gumagamit</a> nilinaw na noon ay mo magagawang upang piliin ang isa sa kanila.<br>
+Kung pumili ka ng isa sa mga gumagamit noon ang aktibong scan ay ginanap bilang ang user na ito, may ZAP (re) pamamagitan ng mga mahimalang bilang na gumagamit kung kinakailangan.
 <br><br>
-If you select 'recurse' then all of the nodes underneath the one selected will also be scanned.<br>
-Custom input vectors are only supported if this option is not selected.
+Kung pumili ka ng 'recurse' saka lahat ng mga nodes ilalim ang isa na pinili ay din ay nagsuri.<br>
+Pasadyang input vectors ay suportado lamang kapag hindi pipiliin ang opsyon na ito.
 <br><br>
-If you select 'Show advanced options' then the following tabs will be shown which provide fine grain control over the active scanning process.
+Kung piliin mo ang 'Ipakita ang mga advanced na mga pagpipilian' pagkatapos ay ang mga sumusunod na tab ay ipapakita na kung saan ay nagbibigay ng pinong butil na kontrol sa mga aktibong proseso ng pag-scan.
 <br><br>
-Clicking on the 'Reset' button will reset all of the options to their default values. 
+Pag-click sa pindutan ng 'I-reset' ay magreset ng lahat ng mga pagpipilian sa kanilang mga pinahahalagahan sa default. 
 
-<h3>Input Vectors</h3>
-The Input Vectors tab allows you override the default input vectors which are defined in the 
-<a href="../../ui/dialogs/options/ascaninput.html">Options Active Scan Input Vectors screen</a>.<br>
-Clicking on the 'Reset' button will reset the input vectors to the default options. 
+<h3>Mga Input Vector</h3>
+Nagbibigay-daan ang Input Vectors tab mo pawalang-bisa ang default input vectors na ang ibig sabihin sa ang 
+<a href="../../ui/dialogs/options/ascaninput.html">Screen ng aktibong I-scan sa mga Input Vectors ng opsyon</a>.<br>
+Pag-click sa pindutan ng 'I-reset' ay i-reset ang input na vectors sa mga opsiyon sa default. 
 
-<h3>Custom Vectors</h3>
-The Custom Vectors tab allows you specify specific locations in the request to attack.<br> 
-Custom Vectors are only available if the 'recurse' option on the first tab is not selected.<br>
-To add custom input vectors highlight the characters you want to attack in the request and click the 'Add' button.<br>
-You can add as many custom input vectors as you want.<br>
-To remove custom input vectors highlight any of the selected characters and click the 'Remove' button.<br>
-Checking the 'Disable non custom input vectors' box disables all of the input vectors except those you manually define on this tab.
+<h3>Pasadyang mga Vector</h3>
+Ang Custom Vectors tab ay nagbibigay-daan sa mong tukuyin ang tiyak na lokasyon sa kahilingan na atake.<br> 
+Custom Vectors ay lamang makukuha kung hindi napili ang opsyon na 'recurse' sa unang tab.<br>
+Magdagdag ng input ng custom vectors i-highlight ang mga character na gusto mong atake sa kahilingan at i-click ang pindutan ng 'Add'.<br>
+Maaari kang magdagdag ng maraming pasadyang input vectors hangga 't gusto mo.<br>
+Upang alisin ang mga input ng pasadyang i-highlight ang alinman sa mga napiling karakter ang vectors at i-click ang pindutan ng 'Tanggalin'.<br>
+Check ang box na 'Huwag paganahin ang di-pasadyang input vectors' ay nagpabaldado sa lahat ng mga input na vectors maliban sa mga nang manu-mano mong tukuyin sa tab na ito.
 
-<h3>Technology</h3>
-The Technology tab allows you to specify which types of technologies to scan.<br>
-Un-selecting technologies that you know are not present in the target application may speed up the scan as rules which target that technology can skip those tests.
+<h3>Teknolohiya</h3>
+Ang teknolohiya na tab ay nagpapahintulot sa iyo na tukuyin kung aling mga uri ng teknolohiya na i-scan.<br>
+Hindi piliin ng teknolohiya sa alam mo ay hindi naroroon sa target na mga application na maaaring pabilisin ang ang scan gaya ng patakaran na target ang mga teknolohiya na maaaring laktawan ang mga pagsusulit.
 
-<h3>Policy</h3>
-The Policy tab allows you to override any of the settings specified in the selected 
-<a href="../../start/concepts/scanpolicy.html">scan policy</a>. 
+<h3>Patakaran</h3>
+Ang patakaran ng tab ay nagpapahintulot sa iyo na pawalang-bisa ang alinman sa mga setting na tinukoy sa mga piling 
+<a href="../../start/concepts/scanpolicy.html">mag-scan ng mga patakaran</a>. 
 
 <br><br>
 
-<h2>Accessed via</h2>
+<h2>Ma-access sa pamamagitan ng</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/ascan.html">Active Scan tab</a></td><td>'New Scan' button</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tlmenu/tools.html">Top level Tools menu</a></td><td>'Active Scan...' menu item</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/sites.html">Sites tab</a></td><td>'Attack / Active Scan... right click menu item</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/history.html">History tab</a></td><td>'Attack / Active Scan...' right click menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/ascan.html">Aktibong Scan tab</a></td><td>'Bagong magsuri' na pindutan</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tlmenu/tools.html">Itaas ang antas ng menu ng Tools</a></td><td>'Aktibo Scan...' menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/sites.html">Ang Sites tab</a></td><td>' Atake / aktibong magsuri... right-click na aytem sa menu</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/history.html">Pangkasaysayan na tab</a></td><td>' Atake / aktibong magsuri...' right-click na aytem sa menu</td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Tignan din</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../overview.html">Kabuuan ng UI</a></td><td>para sa kabuoang gumagamit ng interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+<a href="dialogs.html">Diyalogo ng</a></td><td>para sa mga detalye ng diyalogo o mga popup </td></tr>
 </table>
 
 </body>

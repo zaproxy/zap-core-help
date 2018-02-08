@@ -2,57 +2,40 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Options Extensions screen</title>
+<title>Pilihan Ekstensi layar</title>
 </head>
 <body bgcolor="#ffffff">
-	<h1>Options Extensions screen</h1>
-	<p>This screen allows you to enable/disable extensions that are
-		available to ZAP.</p>
-	<h3>Enable/Disable Extensions</h3>
-	Enabled extensions will be loaded by ZAP, thus adding the
-	functionalities provided by those extensions. Disabled extensions will
-	not be loaded.
+	<h1>Pilihan Ekstensi layar</h1>
+	<p>Layar ini memungkinkan anda untuk mengaktifkan/menonaktifkan ekstensi yang tersedia untuk ZAP, baik inti atau ditambahkan oleh <a href="../../../start/concepts/addons.html">add-ons</a>.</p>
+	<h3>Mengaktifkan/Menonaktifkan Ekstensi</h3>
+	Ekstensi yang diaktifkan akan dimuat oleh ZAP, sehingga menambah fungsionalitas yang disediakan oleh ekstensi tersebut. Ekstensi yang dinonaktifkan tidak akan dimuat.
 
-	<h3>Core Extensions</h3>
-	Core extensions are extensions that if disabled will impair ZAP's
-	minimal functionality. Extensions marked as core cannot be disabled.
+	<h3>Inti Ekstensi</h3>
+	Inti ekstensi adalah ekstensi bahwa jika dinonaktifkan akan mengganggu ZAP
+	fungsi minimal. Ekstensi ditandai sebagai inti tidak dapat dinonaktifkan.
 	<p>
-		<i>Note: Core extensions can be disabled through the configuration
-			file, although it's not recommend.</i>
+		<i>Catatan: Ekstensi inti dapat dinonaktifkan melalui file konfigurasi, meskipun tidak disarankan.</i>
 	</p>
 
-	<h3>Extensions' Dependencies</h3>
-	Extensions may depend on other extensions to work. When one of those
-	extensions (dependencies) is disabled it will make ZAP automatically
-	disable all the extensions that depend on them. So it may happen that
-	when disabling one extension other extensions (that depend on it) will
-	also be disabled. Automatically disabled extensions will not be allowed
-	to be enabled until all the dependencies are enabled.
-
-	<h3>Location of extensions available to ZAP</h3>
-	To make an extension available to ZAP it must be in one the following
-	locations:
-	<ul>
-		<li>"plugin" directory located in the ZAP's folder;</li>
-		<li>"plugin" directory located in the ZAP user's folder.</li>
-	</ul>
+	<h3>Ekstensi' Dependensi</h3>
+	Ekstensi mungkin bergantung pada ekstensi lain untuk bekerja. Bila salah satunya ekstensi (dependensi) dinonaktifkan maka akan membuat ZAP otomatis nonaktifkan semua ekstensi yang bergantung padanya. Jadi mungkin itu terjadi ketika menonaktifkan satu ekstensi ekstensi lain (yang bergantung padanya) akan juga dinonaktifkan. Ekstensi yang dinonaktifkan secara otomatis tidak akan diizinkan
+untuk diaktifkan sampai semua dependensi diaktifkan.
 
 	<p>
-		<i>Note: You will need to restart ZAP for the changes to take
-			effect.</i>
+		<i>Catatan: Anda perlu memulai ulang ZAP agar perubahan diterapkan.</i>
 	</p>
 
-	<h2>See also</h2>
+	<h2>Lihat juga</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../overview.html">UI Overview</a></td>
-			<td>for an overview of the user interface</td>
+			<td><a href="../../overview.html">Ikhtisar UI</a></td>
+			<td>untuk Ikhtisar antarmuka pengguna</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="options.html">Options dialogs</a></td>
-			<td>for details of the other Options dialog screens</td>
+			<td><a href="options.html">Pilihan dialog</a></td>
+			<td>untuk rincian layar dialog Opsi lainnya</td>
 		</tr>
 	</table>
 

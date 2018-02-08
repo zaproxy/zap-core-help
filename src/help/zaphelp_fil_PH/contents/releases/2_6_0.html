@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  Inilabas 2.6.0
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Inilabas 2.6.0</h1>
+
+Ang inilabas na ito ay naglalaman ng isang malaking bilang ng mga pagbabago, partikular na ang ZAP API.<br>
+Kami ay nagdagdag ng isang makabuluhang bilang ng mga bagong endpoints ng API, nagtatrabaho patungo sa aming layunin ng paggawa ng ZAP ganap na pagpigil sa pamamagitan ng API.
+Binago rin namin ang ilan sa mga umiiral na endpoints at sa lahat ng mga kaso ang mga pagbabagong ito ay pabalik na magkatugma.
+<p>
+Ang buong pag pakawala ay kabilang din ang bagong JxBrowser add-on pati na rin ang platform specific webdricvers para ito ay magawa ng mas madali.
+
+<h2>Mga pagbabago sa seguridad ng API</h2> Binago namin ang seguridad ng API bilang tugon sa mga isyu na iniulat sa atin sa pamamagitan ng <a href="https://bugcrowd.com/owaspzap">bug bounty program</a>. 
+Nakatakda sa ibaba ang mga detalye ng mga kahinaan. <br>Ang mga pagbabago ng seguridad ay sa pangangailangan na hindi paurong na tugma, bagama't isinama namin ang mga opsiyon para sa hindi pagpapagana sa kanila kung gagamit ka ng ZAP sa isang ligtas na paligid.
+<p>
+
+Sa pamamagitan ng pag-default sa lahat ng tawag ng API ngayon ay kailangan na nang API key o ng nonce. 
+Ito ay maaaring magbigay sa pamamagitan ng URL parameter, POST parameter o mga header.
+Ang supportadong kliyente ng ZAP API (kabilang ang Java at Python) ay naging bago sa nagbibigay ng API key sa pamamagitan ng header.
+Ang nonces ay nabuo sa pamamagitan ng ZAP at nilalayon na upang gamitin sa pamamagitan ng ZAP add-ons na kailangan sa pag-akses ng ZAP API. 
+Para sa buong detalye tingnan ang <a href="../ui/dialogs/options/api.html">Tabing ng API ng mga pagpipilian</a>.
+<p>
+May mga bagong hanay na pagpipilian sa API na may kaugnay sa seguridad:
+<ul>
+<li>UI Enabled - Kung pinagana pagkatapos ang API Web UI ay magagamit sa lahat ng mga makina na magamit ang ZAP bilang proxy. Ito ay pinagana sa pamamagitan ng pag-default.</li>
+<li>Ang mga IP address ay pinahihintulutan upang gamitin ang API - Sa pamamagitan lamang ng pag-default ng makina na tumatakbo sa ZAP ay magagawang mapasok ang ZAP API. Maaari mong ipahintulot ang ibang makina na pumasok sa API sa pamamagitan ng pagdagdag ng mga angkop na disenyo ng regex. Kailang mo lang magdagdag ng mga IP address na iyong pinagkakatiwalaan.</li>
+<li>Hindi nangangailangan ng isang API key para sa mga ligtas na operasyon - Kung pinagana pagkatapos ang API key ay hindi kinakailangan para sa pagtingin o iba pang operasyon na isinasaalang-alang ang 'kaligtasan', sa madaling salita ang mga operasyon na hindi gumawa ng anumang pagbabago sa ZAP. Gayun paman ang mga naturang operasyon ay nagbibigay nang-access sa ZAP data tulad ng mga alerto, mga mensahe at mga landas ng sistema ng file.  Maaari din itong gamitin sa pamamagitan ng mga web application upang makita ang presensya ng ZAP.</li>
+<li>Iulat ang mga error permiso sa pamamagitan ng API - kung panagana pagkatapos ang ZAP ay mag-uulat ng mga error sa permiso sa pamamagitan ng API, na maaaring gamitin ng mga web application para tuklasin ang kinaroroonan ng ZAP. Ito ay hindi isang seryosong problema sa isang ligtas ng kapaligiran pero kung ikaw ay gumagamit ng ZAP labang sa posibleng malisiyosong mga site kung ganoon hindi mo dapat paganahin ito.</li>
+</ul>
+
+Lahat ng mga ZAP opsyon ay maaaring tukuyin sa pamamagitan ng command line pagka sinimulan mo na ang ZAP - tignan ang <a href="http://github.com/zaproxy/zaproxy/wiki/FAQapikey">API Key FAQ</a> para sa buong mga detalye.<br>
+Nagdagdag din kami ng marami pang mga security header sa API kasama ang isang matibay ng Content Security Policy.
+
+<h2>Mga pagpapahusay</h2>
+<ul>
+<li>Isyu 368 : API - iulat ang mga URL na sadyang natagpuan ng ispayder</li>
+<li>Isyu 689 : Pagbutihin ang pamamahala sa Scope</li>
+<li>Isyu 958 : Ang pagkakakilanlan ng bersyon ng Java kapag ang isang nagbabagong kapaligiran ay nailuwas ang Java</li>
+<li>Isyu 1853 : Pinapayagan ang aktibong pag-iskan sa isang konteksto sa pamamagitan ng ZAP API</li>
+<li>Isyu 1952 : Hindi pinahihitulutan ang mga kontekstong may parehong pangalan</li>
+<li>Isyu 2117 : i-takda / i-update ang default threshold at patibayin ang pamamalakad sa isang iskan</li>
+<li>Isyu 2334 : Paganahin ang paghahanap sa mga ZAP Addon Pop-up</li>
+<li>Isyu 2415 : Ipakita ang rason kung bakit ang isang aktibong iskanner ay nalaktawan</li>
+<li>Isyu 2559 : Huwag linisin ang mga hindi naka-save na (payl base) sesyon</li>
+<li>Isyu 2570 : Baguhin ang opsyon proxy para alisin ang hindi suportadong encoding</li>
+<li>Isyu 2592 : Ibahin ang mapagkukunan ng mga alerto</li>
+<li>Isyu 2611 : Baguhin ang mga HTTP breakpoint dialogue sa modal</li>
+<li>Isyu 2633 : Pahusayin ang Tagapili ng Client Cert payl</li>
+<li>Isyu 2647 : Suportahan ang pagsasaayos sa pamamahala ng isang/pscan</li>
+<li>Isyu 2655 : Maglaan ng laktaw dahilan para sa mga panuntunan ng Aktibong Iskan</li>
+<li>Isyu 2682 : Klase ng (pangunahin) tulong sa mga add-on TOC entry</li>
+<li>Isyu 2690 : Suporta sa hindi napapansin na mga form na tinutukoy kapag sinusuri ang mga kahinaan ng CSRF</li>
+<li>Isyu 2699 : Pagpapahusay sa kahilingan: Mapabuti ang pangangasiwa ng SSL sa pag-aayos ng error sa negosasyon</li>
+<li>Isyu 2701 : kahilingan para sa Pagpapahusay: Factory Reset</li>
+<li>Isyu 2723 : Suporta sa mga kahilingan ng POST para sa mga API aksyon</li>
+<li>Isyu 2728 : Pinahihintulutan na alisin ang mga ispayder parse at mga piltro</li>
+<li>Isyu 2742 : Pahintulot para i-override/i-customize ang halaga ng mga "networkaddress.cache.ttl" sa Java</li>
+<li>Isyu 2750 : Idagdag ang isang makatwiran at malakas na CSP sa API</li>
+<li>Isyu 2773 : Gamitin ang UTF-8 para mabasa/maisulat ang mga iskrip ng ZAP</li>
+<li>Isyu 2782 : Suportahan ang -configfile cmdline parameter</li>
+<li>Isyu 2825 : Karagdagang komentaryo para sa mga Js template</li>
+<li>Isyu 2853 : I-override ang mga detalye ng alerto</li>
+<li>Isyu 2855 : Suportahan ang pag-andar ng break sa API</li>
+<li>Isyu 2865 : Normalisahin ang Isinama/ibinukod na mga panel ng konteksto</li>
+<li>Isyu 2886 : Pagpipilian upang makabuo ng mga ulat sa markdown na ayos</li>
+<li>Isyu 2891 : Ipakita ang dahilang kung bakit ang isang iskrip ay hindi na i-load</li>
+<li>Isyu 2936 : Laging ilagay sa 1/4 ang magagamit na mem ng Java (mahigit 512Mb)</li>
+<li>Isyu 2937 : Baguhin ang ZAP API para basahin/gamitin ang katawan ng kahilingan</li>
+<li>Isyu 2939 : Gamit ang hindi tiyak na URI base HTML element sa ispayder</li>
+<li>Isyu 2951 : Suportahan ang aktibong iskan rule at iskan max duration</li>
+<li>Isyu 2954 : Pinahintulutan na i-export ang isang Konteksto sa pamamagitan ng menu ng Konteksto</li>
+<li>Isyu 2966 : Gamitin ang L&amp;F na tinukoy sa pamamagitan ng JVM args</li>
+<li>Isyu 2970 : Pinahihintulutan na i-configure, ayon sa klase ng iskrip, ang pinaganang estado ng bagong/puno ng mga iskrip</li>
+<li>Isyu 2982 : Pahintulutan na huwag paganahin ang default istandard output logging</li>
+<li>Isyu 2994 : ipakita ang kolum ng 'sukat ng katawan ng Resp.' na may kasaysayan sa mga byte</li>
+<li>Isyu 3004 : Pahintulutan ang pasibong pag-iskan sa mga mensahe na saklaw ng HTTP lamang</li>
+<li>Isyu 3028 : Halaga ng dyeneretor (dating paraan ng pag-aasikaso)</li>
+<li>Isyu 3038 : Uri ng mga kahilingan na bumalik sa pamamagitan ng ZAP API</li>
+<li>Isyu 3042 : Pahintulutan na pumili ng maramihang parameter sa tab ng mga param</li>
+<li>Isyu 3050 : Mga kahilingan bumalik sa timestamp/RTT sa pamamagitan ng ZAP API</li>
+<li>Isyu 3058 : Pahintulutan na laging i-configure ang mga domain sa ispayder scope (Ispayder API)</li>
+<li>Isyu 3061 : Pahintulutan na itakwil ang mga endpoint ng API</li>
+<li>Isyu 3069 : Mga alphanumeric tsart na konteksto ang tanging tinatanggap na estruktura sa parameter</li>
+<li>Isyu 3079 : Magdagdag ng cookie ng hindi pinapansin ang listahan ng patakaran at i-default ang pagtigil ng inc ng sagad sa 20 upang mabawasan ang Fbs</li>
+<li>Isyu 3081 : Baguhin ang default time sa 15 at gawin na madaling ma-access ng publiko</li>
+<li>Isyu 3090 : Maging mas mahigpit sa ayos ng pangalan ng mga add-on payl</li>
+<li>Isyu 3098 : Mag-log sa payl kahit na tumatakbo ang ZAP ng 'nasa linya'</li>
+<li>Isyu 3118 : Isama ang ekstensiyon ng subjectAlternativeName sa mga nabuong sertipiko</li>
+<li>Isyu 3123 : Magdagdag ng mga komentaryo sa seguridad para sa mga form na hindi kailangan ang mga anti CSRF token</li>
+<li>Isyu 3130 : Idagdag ang autoupdate sa mga tawag ng API</li>
+<li>Isyu 3149 : Baseline: suporta para sa payl ng konteksto at sa mga isyu sa pag-unlad</li>
+<li>Isyu 3159 : Nagpapahintulot sa esc na Maisara ang Marketplace Dialog</li>
+<li>Isyu 3163 : Autoselect ng Na-import na Sertipiko</li>
+<li>Isyu 3176 : Pahintulutan na ipakita ang higit pang mga kahilingan ng data sa History tab</li>
+<li>Isyu 3195 : Magdagdag ng workaround sa lokal na proxy para sa Android emulator</li>
+<li>Isyu 3226 : Opsyon para tustusan ang API key o nonces sa pamamagitan ng header</li>
+<li>Isyu 3227 : Limitahan ang API access sa mga whitelisted IP address</li>
+<li>Isyu 3229 : Gumamit ng Patakaran ng Referrer sa ZAP API</li>
+<li>Isyu 3232 : Ang Aktibong iskan API - ay Pinapayagan na simulan ang pag-iskan kahit walang mga leaf node</li>
+<li>Isyu 3238 : Magdagdag ng mga drayber entry para sa CSPid Virtual Smartcards</li>
+<li>Isyu 3261 : Client Cert PKCS#11- Pangangasiwa sa UI/Exception</li>
+<li>Isyu 3285 : I-edit ang pagpapaganda sa mga alerto</li>
+<li>Isyu 3290 : Ipakita ang mga kahilingan sa mga error ng I/O sa Ispayder tab</li>
+<li>Isyu 3296 : Gumawa ng direktaryo ng mga skrip kapag sinisimulan ang home dir</li>
+<li>Isyu 3297 : Mag-simula ng lokal na proxy pagkatapos ng pagpoproseso sa mga argumento sa command line kapag nasa daemon mode</li>
+</ul>
+
+<h2>Pag-aayos sa mga Bug</h2>
+<ul>
+<li>Isyu 1107 : Kailangan ng karagdagang komentaryo para sa mga template/mga halimbawa ng iskrip</li>
+<li>Isyu 1152 : Mga ulat ng nawawalang mga Token ng CSRF para sa lahat ng mga form ng Passive CSRF Sensor hindi lang mga POST Request ang nawawala pati mga Anti-CSRF Token</li>
+<li>Isyu 1212 : Mga positibong mali sa mga pagsusuri sa SQLi</li>
+<li>Isyu 2176 : NPEs sa panahon ng mga zapbot WAVSEP iskan</li>
+<li>Isyu 2218 : Nagpapatuloy ang mga Sesyon na huwag i-save ang hindi na-configure Default na konteksto</li>
+<li>Isyu 2546 : Mga access URL ng ZAP na wala sa scope</li>
+<li>Isyu 2550 : mga GUI freeze habang binubuksan ang iskan progress dialogue</li>
+<li>Isyu 2561 : Gamitin ang UTF-8 sa pagsulat sa ulat ng HTML</li>
+<li>Isyu 2578 : Maliit na isyu sa pagkakagamit: Kinakailangang mag-click sa mga Opsyon ng teksto</li>
+<li>Isyu 2585 : alisin ang mga hinihiling ng temp Sequence sa sesyon ng paglilinis</li>
+<li>Isyu 2586 : Gamitin ang opsyon sa lahat ng mga kahilingan mula sa aktibong Iskan dialogue</li>
+<li>Isyu 2605 : Pigilin ang GUI hang kapag nag daragdag ng mga mensahe sa History</li>
+<li>Isyu 2608 : Pag aalis ng DDN mula sa isang konteksto na hindi lumilitaw upang i-trigger ang isang Update sa mga Site Tab</li>
+<li>Isyu 2637 : Pigilin ang API UI mula sa pagiging loaded sa isang frame</li>
+<li>Isyu 2642 : Mabagal ang pag-scroll sa wheel ng mouse sa puno ng site</li>
+<li>Isyu 2657 : tamang pagtitiyaga ng mga hindi pinaganang ekstensyon</li>
+<li>Isyu 2674 : Mga Automatikong kahilingan sa pagpapahusay na ipinakita sa mga Sesyon tab ng HTTP</li>
+<li>Isyu 2681 : Ayusin ang pagbubukod habang nag dadagdag ng iskrip sa pamamagitan ng API</li>
+<li>Isyu 2694 : Ang kakayahan na itakda ang pagbubukod ng mga parameter mula sa API</li>
+<li>Isyu 2696 : Paganahin ang pag kopya sa mga URL pop up item menu para sa lahat ng mga mensahe</li>
+<li>Isyu 2707 : ang Mano manong pag-install ng add-on ay nangangailangan ng mas maraming makabuluhang mga mensahe</li>
+<li>Isyu 2735 : Wiki: ModesAndScope ay hindi matatakpan ang PAG-ATAKE ng mode</li>
+<li>Isyu 2736 : Ang Bug: ay hindi maaaring makabuo ng mga ulat mula sa mga naka-save na data ng sesyon</li>
+<li>Isyu 2737 : I-tama ang error na mensahe sa nawawalang mga iskrip param sa API</li>
+<li>Isyu 2745 : Ispayder eksepsyon kapag ang sitemap.xml ay hindi matagpuan</li>
+<li>Isyu 2748 : ZAP Spidering ang mga HTML form na may maramihang ibinibigay na mga buton</li>
+<li>Isyu 2757 : Mga Alerto na may iba't ibang paraan ng paghiling ay itinuturing na pareho</li>
+<li>Isyu 2774 : Maling halaga na ipinapakita sa fuzz location para sa katawan ng tekstong napili sa pamamagitan ng pinagsama samang view</li>
+<li>Isyu 2792 : Maaring mag-overlap ang fuzz (HTTP) location</li>
+<li>Isyu 2793 : Maling highlight sa pinagsama samang view sa huling bahagi ng request header</li>
+<li>Isyu 2810 : Ang mga alerto para sa Aktibong iskaner ay nagpapatuloy ng dalawang beses kapag may GUI</li>
+<li>Isyu 2836 : ZAP hsqldb OutofMemoryError kapag binura ang mga rekord sa paglilinis</li>
+<li>Isyu 2862 : XSS sa url sa pahina na walang mga parameter na hindi natagpuan</li>
+<li>Isyu 2874 : Tamang kalkulasyon para sa offset sa mga text header view</li>
+<li>Isyu 2898 : I-tweak ang spider parser upang hindi mapansin/strip ang tugmang panaklong sa mga URL</li>
+<li>Isyu 2935 : Hindi tamang paggamit ng charset sa katawan ng pagtugon kung walang hanay ng set</li>
+<li>Isyu 2977 : HTTP500 mula sa JSON/httpSessions/view/sessions/?site=FOO</li>
+<li>Isyu 3002 : Tamang pagbibigay ng lahat ng mga node sa checkbox tree</li>
+<li>Isyu 3041 : Ayusin ang isyu ng concurrency sa panahon ng paglilimbag ng mga ZAP event</li>
+<li>Isyu 3052 : I-tama ang pag-load ng mga pinagagana ng estado sa ekstensyon</li>
+<li>Isyu 3054 : Burahin ang mga lumang konteksto, kapag nagload ng sesyon</li>
+<li>Isyu 3073 : Lagpasan ang awtomatikong pagproseso ng msgs para sa mga HTTP Session tab</li>
+<li>Isyu 3100 : Ang pagbabago ng konteksto ng scope ay maaaring hindi ma-apply</li>
+<li>Isyu 3142 : Maayos na pagpapalabas ng mga hindi kabilang na parameter sa pamamagitan ng ZAP API</li>
+<li>Isyu 3157 : Paghihiwalay sa paghahambing ng sesyon</li>
+<li>Isyu 3157 : Pagkansela/pagsave ng StandardFieldDialog sa escape key</li>
+<li>Isyu 3192 : Ang mga URL na kasama sa konteksto ay binalewala ng ispayder</li>
+<li>Isyu 3211 : Hindi mahanap ang .ZAP_JVM.properties sa %HOMEPATH% kapag ginagamit ang mga zap.bat sa window</li>
+<li>Isyu 3215 : Ang diyalogo sa pagsala ng kasaysayan ay hindi maaring paliitin</li>
+<li>Isyu 3221 : Ang ilang mga icon ay hindi mapaliit ng tama</li>
+<li>Isyu 3224 : iniksyon ng HTML sa tab na "Alerto"</li>
+<li>Isyu 3275 : Global Exclude URL (beta) - pagkatapos na isara at muling buksan ay hindi nito makuha ang idinagdag na regex para sa pagbubukod ng mga URL</li>
+<li>Isyu 3278 : I-reset ang mga ibinukod na URL proxy sa bagong sesyon</li>
+<li>Isyu 3309 : Pagbutihin ang pag-isa isa sa node sa pre-scan phase</li>
+<li>Isyu 3320 : Tamang paglikha ng mga Git/SVN ispayder seed</li>
+<li>Isyu 3330 : Ilapat ang mga argumento ng config sa tinutukoy na utos</li>
+</ul>
+
+<h2>Pagbabago sa mga Endpoint ng ZAP API:</h2>
+
+<h3>Aksyon ng ascan / scan</h3>
+
+Ang url parameter ay opsyonal na ngayon at ang isang opsyonal na contexttld parameter ay idagdag na. Kinakailangan mong suportahan ang isa sa mga yon.
+
+<h3>Aksyong ng ascan / scanAsUser</h3>
+
+Ang url at contextld parameter ay opsyonal na ngayon. Kailangan mong suportahan ang isa sa mga yon.
+
+<h3>Aksyon ng ascan / addScanPolicy</h3>
+
+Idinagdag na mga opsyon ng alertThreshold at attackStrength parameter.
+
+
+<h2>Bagong mga Endpoint ng ZAP API:</h2>
+
+<h3>Ipakita ang ascan / optionMaxRuleDurationInMins</h3>
+
+Ibalik ang pinakamataas na oras sa minuto kung saan ang isang karaniwang scan ay maaaring mapagana sapagkat, ang zero ay walang limitasyon.
+
+<h3>Ipakita ang ascan / optionMaxScanDurationMins</h3>
+
+Ibalik ang pinakamataas ng oras sa minuto kung saan ang buong scan ay maaaring mapagana sapagkat, ang zero ay walang limitasyon.
+
+<h3>AKSYON ascan / setOptionMaxRuleDurationInMins</h3>
+
+I-set ang pinakamataas na oras ng minuto na itatagal ng paggana ng scan rule, ang zero ay walang limitasyon.
+
+<h3>AKSYON ascan / setOptionMaxScanDurationInMins</h3>
+
+I-set ang pinakamataas na oras ng minuto na itatagal ng paggana ng scan rule, ang zero ay walang limitasyon.
+
+<h3>AKSYON ascan / updateScanPolicy</h3>
+
+I-update ang tinukoy na polisiya ng scan na may tinukoy na alertThreshold o attackStrenght.
+
+<h3>Ipakita ang bago / isBreakALL</h3>
+
+Ibalik sa TAMA kung babaguhin ng ZAP ang parehong mga kahilingan at mga tugon.
+
+<h3>Ipakita ang bago / isBreakRequest</h3>
+
+Ibalik sa TAMA kung ang mga kahilingan ay babaguhin ng ZAP.
+
+<h3>Ipakita ang bago / isBreakResponse</h3>
+
+Ibalik sa TAMA kung ang mga tugon ay babaguhin ng ZAP.
+
+<h3>Ipakita ang binago / httpMessage</h3>
+
+Ibinabalik ang mensahe ng HTTP na kasalukuyang nagambala (kung mayroon man).
+
+<h3>AKSYON break / break</h3>
+
+Kinokontrol ang pag-andar ng mga global break. Ang uri ay maaaring isa sa: http-all, http-request o http-response. Ang estado ay maaaring totoo (para sa pagpihit ng break sa on para sa tinutukoy ng uri) o huwad (para sa pagpihit ng break sa off). Sa kasalukuyan ang Scope ay hindi ginagamit.
+
+<h3>AKSYON break / setHttpMessage</h3>
+
+Pinapalitan ang kasalukuyang mensahe na naharang kasama ang ibinigay na datos.
+
+<h3>AKSYON break / continue</h3>
+
+Isumite ang kasalukuyang naharang na mga mensahe at i-unset ang global request/response sa mga break point.
+
+<h3>AKSYON break / step</h3>
+
+Isumite ang kasalukuyang naharang na mensahe, ang susunod na kahilingan o tugon ay automatikong haharangin.
+
+<h3>AKSYON break / drop</h3>
+
+Inilalagay ang kasalukuyang mensahe na naharang.
+
+<h3>TIGNAN ang core / optionDnsTtlSuccessfulQueries</h3>
+
+Makakakuha ng TTL (sa ilang mga segundo) ng matagumpay ng mga query ng DNS.
+
+<h3>AKSYON core / sendRequest</h3>
+
+Nagpadala ang HTTP ng Kahilingan, opsyonal na pagsunod sa mga redirection. Ibalik ang kahilingan naipadala at tugon na natangap at sumunod sa mga redirection, kung meron man. Ang Mode ay ipinatutupad kapag nagpapadala ng kahilingan ( at kasunod ang redirection), ang mga pasadyang manu-manong kahilingan ay hindi pinapayagan sa 'ligtas' na mode kahit sa 'protektadong' mode kung labas sa scope.
+
+<h3>AKSYON core / setOptionDnsTtlSuccessfulQueries</h3>
+
+I-set ang TTl (sa mga segundo) ng matagumpay na mga tanong ng DNS (gamitin gamitin pagkatapos na ang ZAP ay mai restart).
+
+<h3>Iba pang core / mdreport</h3>
+
+Bumubuo ng isang ulat sa Markdown format.
+
+<h3>TIGNAN ang mga httpSession / mga site</h3>
+
+Kunin ang lahat ng mga site na mayroong mga session.
+
+<h3>TIGNAN ang pscan / scanOnlyInScope</h3>
+
+Sabihin kung ang passive scan ay dapat bang gumanap o hindi sa mga mensaheng na nasa scope.
+
+<h3>AKSYON pscan / setScanOnlyInScope</h3>
+
+I-set kung ang passive scan ay dapat bang gumanap lang sa mga mensaheng na nasa scope o hindi.
+
+<h3>TIGNAN ang ispayder / allurls</h3>
+
+Ibalik ang isang listahan ng mga natatanging URL mula sa talahanayan ng kasaysayan batay sa mga mensaheng idinagdag ng ispayder sa HTTP.
+
+<h3>TIGNAN ang Ispayder / optionMaxChildren</h3>
+
+Kunin ang pinakamataas na bilang ng mga child node (bawat node) na maaaring i-crawled, 0 ibig sabihin walang limitasyon.
+
+<h3>AKSYON ispayder / setOptionMaxChildren</h3>
+
+I-set ang pinakamataas na bilang ng mga child node (bawat node) na maaaring i-crawled, 0 ibig sabihin ay walang limitasyon.
+
+<h2>Mga Detalye ng kahinaan</h2>
+
+Ang mga sumusunod na kahinaan ay naiulat na sa nakaraan mga bersyon ng ZAP. Ang iba pang hindi gaanong seryosong isyu ay na ayos na bilang isang bagay ng course.<br>
+Maraming salamat sa lahat ng mga mananaliksik na mayroong etkal na ulat ng mga isyung ito sa amin sapamamagitan ng ating <a href="https://bugcrowd.com/owaspzap">bug bounty program</a>. kung kailangan mo ng karagdagang mga detalye tungkol sa kahit aling kahinaan mangyari na makipag-ugnayan po kayo sa amin.
+
+<h3>RCE sa pamamagitan ng Anti CSRF Test Form at API Key Disclosure</h3>
+
+Kung ang gumagamit ay gumamit ng Anti CSRF Test Form laban sa isang partikular na ginawang HTML page at pagkatapos ang API key ay nahayag sa site na iyon.
+Pagkatapos na ma-access ang site ang ZAP API ay magsasagawa ng anumang aksyon, kabilang ang pag-upload ng mga ZAP script. Ang mga Iskrip ay maaaring lamang i-upload sa mga 'lokal' na filesystem subalit kung ang gumagamit ay nagpapaandar ng ZAP sa Windows kung gayon ang attacker ay maaaring makagawa ng isang malisyosong iskrip na magagamit sa pamamagitan ng isang pampublikong SMB share. Ito ay lilitaw sa ZAP bilang isang lokal na payl at ang iskrip ay na-upload at maaaring mapagana sa pamamagitan ng API.
+<br>
+Ang kinakailangan para sa API key o nonce sa lahat ng mga operasyon ng API ay isang direktang resulta ng kahinaan na ito, gaya ng pagbabago ng mga add-on sa paggamit ng nonce upang mabawasan ang panganib ng pagtagas ng API key.
+<br><br>
+<b>Kredito: Artemy Bogdanov (@Abr1k0s)</b>
+<br>
+Si Artemy ay ginawaran ng isang award ng $1000 bug bounty bilang resulta ng kanyang pagsusumite. ito ang unang bug bounty na aming binayaran - congratulation Artemy!
+
+<h3>Windows Installer Vulnerable sa DLL Hijacking</h3>
+
+Ang ZAP Windows Installer para sa lahat ng mga bersyon hanggang sa kabilang ang 2.5.0 ay mahina sa DLL Hijacking sa Windows 7 (at mga unang bersyon).
+Ito ay isang kahinaan sa 3rd party installer InnoSetup.
+Ang 2.6.0 na mga installer (sa lahat ng platforms) ay nabuo na ngayon gamit ang Install4J.
+<br><br>
+Kung sa ilang kadahilanan na kailangan mong i-install ang lumang bersyon ng ZAP sa Windows 7 o mas maaga kung ganon ay nirerekuminda namin sa iyo na ilipat mo ang installer sa isang malinis na direktaryo bago paandarin ito.
+<br><br>
+Tandaan na ang Burp Suite ay gumagamit din ng Install4J sa hinaharap na kahinaan sa Install4J-generated na mga installer maaaring karapat dapat para sa Burp Suite bug bounty program: <a href="https://hackerone.com/portswigger">https://hackerone.com/portswigger</a>
+<br><br>
+<b>Kredito: James Kettle (Burp Suite)</b>
+
+<h3>Kodigo ng di-makatwirang pagpapatupad sa pamamagitan ng mga invoke Application Parameter Injection</h3>
+ 
+Ang mga parameter ng HTML ay maaaring maging partikular na ginawa upang maging sanhi ng di-makatwirang pagpapatupad ng code, kung pipiliin ng gumagamit na tumawag sa naka-target na application na may isang kahilingan na naglalaman ng parameter mula sa ZAP.
+<br>
+Ang mga Invoke Application Add-on ay na-update na para maayos ang isyu - lahat ng mga gumagamit ng ZAP ay kailangan install itong bagong bersyon bago magpatuloy sa paggamit ng add-on.
+<br><br>
+<b>Kredito: Artemy Bogdanov (@Abr1k0s)</b>
+
+<h3>XSS sa pamamagitan ng CSRF Test Form</h3>
+
+Ang Anti CSRF Test Form ay walang tibay sa mga atake ng XSS kung tumatakbo laban sa tinutukoy na ginawang HTML page.
+<br>
+Gumagamit ngayon ang API ng isang malakas na patakaran ukol sa seguridad ng naglalaman para maiwasan ang gayong mga isyu
+<br><br>
+<b>Kredito: g_sato - <a href="https://bugcrowd.com/g_sato">https://bugcrowd.com/g_sato</a></b>
+
+<h3>API na mahina sa DNS Rebinding</h3>
+
+Ang API ay mahina sa mga atake ng DNS Rebinding. sinusuri nito ngayon ang host header at tinatanggihan ang anumang kahilingan mula sa mga hindi inaasahang host.
+<br><br>
+<b>Kredito: Artemy Bogdanov (@Abr1k0s)</b>
+
+<h2>Tignan din</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Pambungad</a></td><td>ang pambungad sa ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Mga Inilabas</a></td><td>ang buong set ng mga inilabas</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Mga Kredito</a></td><td>ang mga tao at grupo na ginawang posible ang pag lanas na ito</td></tr>
+</table>
+</body>
+</html>

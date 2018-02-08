@@ -3,86 +3,86 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-  Release 2.4.1
+  Rilis 1.3.0
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Release 2.4.1</h1>
+<h1>Rilis 2.4.1</h1>
 <p>
-This release includes important security fixes - users are urged to upgrade asap.
+Rilis ini mencakup perbaikan keamanan yang penting - pengguna didesak untuk mengupgrade secepat mungkin.
 </p>
 <p>
-One of the changes means that an API key is created by default, which means that any applications using the ZAP API will fail unless they are updated to use that key.<br>
-The API Key can be found in the <a href="../ui/dialogs/options/api.html">API Options screen</a><br>
-You can also set it from the command line using an option like: 
+Salah satu perubahannya adalah kunci API dibuat secara default, artinya setiap aplikasi yang menggunakan API ZAP akan gagal kecuali jika diperbarui menggunakan kunci tersebut.<br>
+Kunci API dapat ditemukan di <a href="../ui/dialogs/options/api.html">Tampilan pengaturan API</a><br>
+Anda juga dapat mengaturnya melalui perintah menggunakan opsi seperti: 
 <pre>-config api.key=change-me-9203935709</pre><br>
-For more details see <a href="https://github.com/zaproxy/zaproxy/wiki/FAQapikey">https://github.com/zaproxy/zaproxy/wiki/FAQapikey</a><br>
+Detail lebih lanjut lihat <a href="https://github.com/zaproxy/zaproxy/wiki/FAQapikey">https://github.com/zaproxy/zaproxy/wiki/FAQapikey</a><br>
  
 </p>
 
 <p>
-The following changes were made in this release:
+Berikut perubahan yang dibuat dalam rilis ini:
 </p>
 
-<h2>Enhancements:</h2>
+<h2>Peningkatan:</h2>
 <ul>
-<li>Issue 321 : Support multiple databases</li>
-<li>Issue 1459 : Add an HTTP sender listener script</li>
-<li>Issue 1500 : Update Bouncy Castle libs</li>
-<li>Issue 1566 : Improve active scan's reported progress</li>
-<li>Issue 1573 : Add option to inject plugin ID in header for all ascan requests</li>
-<li>Issue 1607 : Unable to save the test session via API</li>
-<li>Issue 1621 : AScan API - Allow to scan as a user</li>
-<li>Issue 1625 : Support multiple structural params and ones on top level nodes</li> 
-<li>Issue 1653 : Support context menu key for trees</li>
-<li>Issue 1655 : Copy Session Token from Http Sessions tab to clipboard</li>
-<li>Issue 1662 : Add default Rails anti-CSRF token parameter</li>
-<li>Issue 1664 : Clients tab autoscroll</li>
-<li>Issue 1684 : Unable to set technology via API</li>
-<li>Issue 1688 : Updating owasp/zap2docker image with Python Client API</li>
-<li>Issue 1690 : Bump key pair size to 2048 for all certs in the (proxy's) chain of trust</li>
-<li>Issue 1695 : Change SSL cert signature algorithm to "SHA-256 with RSA Encryption"</li>
-<li>Issue 1699 : Allow ApiImplementor's to add custom headers</li>
-<li>Issue 1715 : Unable to pass arguments when launching ZAP from the command line on Mac OS X</li>
-<li>Issue 1728 : Update JRE to 1.7u79 (CPU) for MacOS</li>
+<li>Masalah 321 : Mendukung banyak database</li>
+<li>Masalah 1459 : Penambahan HTTP sender listener script</li>
+<li>Masalah 1500 : Pembaruan Bouncy Castle libs</li>
+<li>Masalah 1566 : Peningkatan laporan kemajuan pemindaian aktif</li>
+<li>Masalah 1573 : Penambahan opsi untuk menambahkan ID plugin di header untuk semua permintaan ascan</li>
+<li>Masalah 1607 : Tidak dapat menyimpan sesi tes melalui API</li>
+<li>Masalah 1621 : AScan API - Mengizinkan memindaian sebagai pengguna</li>
+<li>Masalah 1625 : Mendukung beberapa params struktural dan yang ada di node tingkat atas</li> 
+<li>Issue 1653 : Mendukung menu konteks untuk pepohonan</li>
+<li>Edisi 1655 : Copy Session Token dari tab Http Sessions ke clipboard</li>
+<li>Edisi 1662 : Tambahkan parameter token anti-CSRF default Rails</li>
+<li>Isu 1664 : Tab klien gulir otomatis</li>
+<li>Edisi 1684 : Tidak dapat mengatur teknologi melalui API</li>
+<li>Edisi 1688 : Memperbarui gambar owasp/zap2docker dengan API Klien Python</li>
+<li>Edisi 1690 : Bump kunci pasangan ukuran untuk 2048 untuk semua certs dalam (proxy's) rantai kepercayaan</li>
+<li>Edisi 1695 : Mengubah algoritma tanda tangan SSL cert menjadi "SHA-256 dengan Enkripsi RSA"</li>
+<li>Isu 1699 : Mengizinkan Implementor Api untuk menambahkan header kustom</li>
+<li>Edisi 1715 : Tidak dapat melewati argumen saat meluncurkan ZAP dari baris perintah di Mac OS X</li>
+<li>Isu 1728 : Memperbarui JRE ke 1.7u79 (CPU) untuk MacOS</li>
 
 </ul>
 
-<h2>Bug fixes:</h2>
+<h2>Perbaikan bug:</h2>
 <ul>
-<li>Issue 444 : Guaranteed NPE on AliasCertificate.getName() if getCN()==null</li>
-<li>Issue 1442 : Up/Down arrow keys in results stop working if "reflected"</li>
-<li>Issue 1473 : Spider does not handle URLs extracted from meta tags correctly</li>
-<li>Issue 1497 : The spider is extracting and reporting links from comments - event when instructed not to do so</li>
-<li>Issue 1598 : startup script lacks support for FreeBSD</li>
-<li>Issue 1615 : Search "All" option not working</li>
-<li>Issue 1617 : ZAP 2.4.0 throws HeadlessExceptions when running in daemon mode on headless machine</li>
-<li>Issue 1618 : Target Technology Not Honored</li>
-<li>Issue 1619 : Search regex might not be validated</li>
-<li>Issue 1624 : Error while loading ZAP 2.4.0</li>
-<li>Issue 1626 : Structural parameters not saved when context exported and not available via the API</li>
-<li>Issue 1636 : Users (for auth) & Forced User not loaded from session</li>
-<li>Issue 1647 : Wrong reference in Zest Result</li>
-<li>Issue 1674 : Ajax spider not considering get parameters</li>
-<li>Issue 1677 : Fuzzers can't be expanded on OS X</li>
-<li>Issue 1694 : "Error: setting file is missing. Program will exit." even if file exists</li>
-<li>Issue 1698 : Escape API exceptions</li>
-<li>Issue 1700 : Forced Browse Lists Missing from Drop-Down in 2.4.0</li>
-<li>Issue 1706 : Add API security options</li>
-<li>Issue 1708 : Context's technology tree can get out of sync</li>
-<li>Issue 1709 : Applications are not (immediately) shown after start</li>
-<li>Issue 1714 : PNH should not reflect API key unless user supplies it</li>
-<li>Issue 1716 : Restrict use of CORS header in pnh</li>
-<li>Issue 1720 : Add more security options for JSONP API</li>
-<li>Issue 1724 : Ensure API component names are escaped in the HTML output</li>
-<li>Issue 1735 : Context's technologies not used in active scan unless overridden</li>
+<li>Isu 444 : Terjamin NPE pada AliasCertificate.getName() jika getCN()==batal</li>
+<li>Masalah 1442 : tombol panah Atas/Bawah dalam hasil berhenti bekerja jika "mencerminkan"</li>
+<li>Masalah 1473 : Spider tidak menangani URL yang diambil dari tag meta dengan benar</li>
+<li>Edisi 1497 : Laba-laba mengeluarkan dan melaporkan tautan dari komentar - kejadian saat diinstruksikan untuk tidak melakukannya</li>
+<li>Masalah 1598 : skrip startup tidak mendukung FreeBSD</li>
+<li>Edisi 1615 : Cari opsi "Semua" yang tidak berfungsi</li>
+<li>Masalah 1617 : ZAP 2.4.0 melempar Tanpa kepalaPengecualian ketika berjalan di setan cara atas tanpa mesin</li>
+<li>Isu 1618 : Teknologi Target Tidak Dihormati</li>
+<li>Edisi 1619 : Pencarian regex mungkin tidak divalidasi</li>
+<li>Masalah 1624 : Kesalahan ketika pemuatan ZAP 2.4.0</li>
+<li>Edisi 1626 : Parameter struktural tidak disimpan saat konteks diekspor dan tidak tersedia melalui API</li>
+<li>Masalah 1636 : Pengguna (untuk pengguna auth) & Pengguna Paksa tidak dimuat dari sesi</li>
+<li>Edisi 1647 : Referensi salah dalam Zest Result</li>
+<li>Edisi 1674 : Laba-laba Ajax tidak mempertimbangkan untuk mendapatkan parameter</li>
+<li>Masalah 1677 : Fuzzers tidak dapat diperluas pada OS X</li>
+<li>Masalah 1694 : "Kesalahan: berkas yang hilang. Rancangan akan keluar." bahkan jika berkas yang ada</li>
+<li>Masalah 1698 : Melarikan diri API pengecualian</li>
+<li>Masalah 1700 : Dipaksa Mencari Hilang dari Daftar Penurunan-Turun di 2.4.0</li>
+<li>Masalah 1706 : Tambahkan API opsi keamanan</li>
+<li>Masalah 1708 : Konteks ini teknologi pohon bisa keluar dari sinkronisasi</li>
+<li>Edisi 1709 : Aplikasi tidak (segera) ditampilkan setelah mulai</li>
+<li>Edisi 1714 : PNH seharusnya tidak mencerminkan kunci API kecuali jika pengguna menyediakannya</li>
+<li>Masalah 1716 : Membatasi penggunaan CORS depan di pnh</li>
+<li>Masalah 1720 : Tambahkan lebih banyak opsi keamanan untuk JSONP API</li>
+<li>Masalah 1724 : Memastikan API komponen nama-nama yang lolos dalam output HTML</li>
+<li>Masalah 1735 : Konteks ini teknologi tidak digunakan secara aktif memindai kecuali diganti</li>
 </ul>
 
-<h2>See also</h2>
+<h2>Lihat juga</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Lihat juga</a></td><td>pengantar ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Rilis</a></td><td>set lengkap rilis</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Kredit</a></td><td>orang-orang dan kelompok-kelompok yang telah membuat rilis ini mungkin</td></tr>
 </table>
 </body>
 </html>

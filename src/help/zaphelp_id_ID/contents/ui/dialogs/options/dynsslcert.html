@@ -7,70 +7,57 @@ Sertifikat SSL Dinamis
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Option Dynamic SSL Certificates</h1>
+<h1>Pilihan Dinamis Sertifikat SSL</h1>
 	<p>
-	OWASP ZAP allows you to transparently decrypt SSL connections.
-	For doing so, ZAP has to encrypt each request before sending
-	to the server and decrypt each response, which comes back.
-	But, this is already done by the browser.
-	That's why, the only way to decrypt or intercept the transmission,
-	is to do a 'man in the middle' approach.
+	OWASP ZAP memungkinkan anda secara transparan untuk mendekripsi koneksi SSL.
+	Untuk bisa melakukannya, ZAP harus mengenkripsi setiap permintaan sebelum mengirim ke server dan mendekripsi setiap tanggapan yang kembali hadir.
+	Namun, ini sudah dilakukan oleh peramban.
+	Itulah kenapa hanya satu cara untuk mendekripsi atau mencegat transmisi yaitu dengan melakukan pendekatan 'man in the middle'.
 	</p>
 
 
-<h2>Overview</h2>
+<h2>Ikhtisar</h2>
 <p>
-	<img alt="man in the middle" src="../../../images/maninthemiddle.png">
+	<img alt="pria di tengah" src="../../../images/maninthemiddle.png">
 </p>
 <p>
-	In short words, every data send to and received from the server
-	is encrypted/decrypted by using the original server's certificate
-	inside ZAP. This way, ZAP knows the plain text.
-	To establish a SSL protected session from you (your browser),
-	ZAP is using it's own certificate. This is the one you can create.
-	Every certificate created by ZAP will be signed for the same
-	server name. In the example above, ZAP will create a certificate
-	for the server's name "www.example.com". This way, your browser
-	will do regular SSL encryption.
+	Singkat kata, setiap data yang dikirim dan diterima dari server yang dienkripsi/didekripsi dengan menggunakan sertifikat server asli di dalam ZAP. Cara ini, ZAP mengatahui teks polosnya.
+	Untuk membuat sesi yang perlindungan SSL dari anda (peramban anda), ZAP akan menggunakan sertifikat itu sendiri. Inilah yang bisa anda buat.
+	Setiap sertifikat yang dibuat oleh ZAP akan ditandatangani untuk nama server yang sama. Dalam contoh di atas, ZAP akan membuat sertifikat untuk nama server "www.example.com". Dengan cara ini, browser 
+ Anda akan melakukan enkripsi SSL biasa.
 </p>
 
 
-<h2>ZAP Root CA certificate</h2>
+<h2>ZAP sertifikat CA akar</h2>
 <p>
-	Imagine your're visiting multiple SSL protected sites. Every time your
-	browser connects such a site, a new SSL certificate is created.
-	But, these certificates are not trusted by anyone (because self created by ZAP).
-	In other words, your browser will not accept such certificates in the first place.
-	You may familiar with such situations, when your browser complains certificate
-	error but you manually can create an exception rule for that server.  
+	Bayangkan anda sedang mengunjungi beberapa SSL situs yang dilindungi. Setiap kali browser anda menghubugkan situs seperti itu, sertifikat SSL baru dibuat.
+	Tetapi, sertifikat ini tidak dipercaya oleh siapapun (karena dibuat sendiri oleh ZAP).
+	Dengan kata lain, browser anda tidak akan menerima sertifikat semacam itu terlebih dahulu.
+	Anda mungkin terbiasa dengan situasi semacam itu, ketika browser anda mengeluh kesalahan sertifikat namun secara manual anda dapat membuat aturan pengecualian untuk server tersebut.  
 </p>
 <p>
-	Every certificate created by ZAP is in the direct chain of trust
-	from the "ZAP Root CA" certificate. 
-	(For more details about chain of trust, use your favorite search engine ;-) )
-	This means, you (your browser) only have to trust the ZAP Root CA once,
-	and any further certificates are automatically trusted. In other words,
-	once you've added the ZAP Root CA certificate to your list of trusted
-	Root CAs, your browser doesn't recognize the man in the middle. 
+	Setiap sertifikat yang diciptakan oleh ZAP di rantai kepercayaan
+dari "ZAP Root CA" sertifikat. 
+	(Untuk rincian lebih lanjut tentang rantai kepercayaan, gunakan mesin pencari favorit Anda ;-) ) Artinya, Anda (browser Anda) hanya harus mempercayai ZAP Root CA sekali, dan sertifikat lebih lanjut secara otomatis dipercaya. Dengan kata lain,
+setelah Anda menambahkan sertifikat CA Root ZAP ke daftar terpercaya Anda
+Root CAs, browser Anda tidak mengenal pria di tengah. 
 </p>
 
 <h3>Susun</h3>
 <p>
-	If you're running ZAP the first time, you should generate a Root CA certificate first.
-	Once you've generated one, you have to install it within your browser 
-	or HTTP client application. See section <a href="#install">installation</a> 
-	for more details.
+	Jika anda menjalankan ZAP untuk pertama kalinya, anda harus membuat sertifikat Root CA terlebih dahulu.
+	Setelah anda menghasilkannya, anda harus memasangnya dalam peramban atau aplikasi klien HTTP anda. Lihat bagian <a href="#install">installation</a> untuk rincian selengkapnya.
 </p>
 <p>
-	Every generated Root CA certificate is valid for one year. After that period you have
-	to create a new one.<br>
-	Every generated Root CA certificate is 2048 bit strong (RSA with SHA1).<br>
-	Every generated Root CA certificate starts with serial number "1". 
-	Every generated Root CA certificate consists of the following identifiers:
+	Setiap sertifikat Root CA yang dihasilkan berlaku untuk satu tahun. Setelah periode itu Anda miliki
+untuk membuat satu yang baru.<br>
+Setiap sertifikat Root CA yang dihasilkan adalah 2048 bit strong (RSA dengan SHA1).<br>
+Setiap sertifikat Root CA yang dihasilkan dimulai dengan nomor seri "1". 
+	Setiap sertifikat Root CA yang dihasilkan terdiri dari pengenal berikut:
 </p>
 <p style="padding-left: 20pt;">
 	<code>
-	CN = OWASP Zed Attack Proxy Root CA<br>
+	CN = OWASP Zed Menyerang Proxy Root CA<br>
 	L = 87b77fe834b0a301<br>
 	O = OWASP Root CA<br>
 	OU = OWASP ZAP Root CA<br>
@@ -78,25 +65,21 @@ Sertifikat SSL Dinamis
 	</code>
 </p>
 <p>
-	As you can see, there's a Location identifier (L) which is only a hexadecimal number.
-	This number is constructed out of two 32bit hash codes: user's name and user's home directory.
-	This way you can identify your own certificate when using multiple installations.
-	But there's no way, that anyone can figure out your name from this hash code.
+	Seperti yang anda lihat, ada sebuah identifier Lokasi (L) yang hanya sebuah angka heksadesimal.
+	Nomor ini dibuat dari dua kode hash 32bit: nama pengguna dan direktori pengguna.
+	Dengan cara ini anda dapat mengindentifikasi sertifikat anda ketika menggunakan beberapa instalasi.
+	Tetapi tidak mungkin, siapa saja bisa mengatahui nama anda dari code hash ini.
 </p>
 
 <h3>Impor</h3>
 <p>
-	When you're using multiple ZAP installation and you want to use the same
-	Root CA certificate, so you can import it. Simply use one installation of OWASP ZAP
-	to generate one Root CA certificate.<br>
-	Copy the file 'OWASP ZAP/config.xml' from your users home directory to 
-	the PC, where you want to use the same certificate and press 'import' to import it.
+	Bila anda menggunakan beberapa instalasi ZAP dan anda ingin menggunakan sertifikat Root CA yang sama, anda dapat mengimpornya. Cukup gunakan sebuah instalasi dari OWASP ZAP untuk menghasilkan sebuah sertifikat Root CA. <br>Salin berkas 'OWASP ZAP/config.xml' dari direktori beranda pengguna anda ke PC, di mana anda ingin menggunakan sertifikat yang sama dan tekan 'impor' untuk mengimpornya.
 </p>
 <p>
-	You can also import certificates stored in pem files as long as they include both
-	the certificate and the unencrypted private key in the following format:<br>
+	Anda juga dapat mengimpor sertifikat yang tersimpan dalam file pem sepanjang asalkan keduanya disertakan 
+sertifikat dan kunci pribadi yang tidak dienkripsi dalam format berikut:<br>
 	<code><br>
------BEGIN CERTIFICATE-----<br>
+-----AWAL SERTIFIKAT-----<br>
 MIIC9TCCAl6gAwIBAgIJANL8E4epRNznMA0GCSqGSIb3DQEBBQUAMFsxGDAWBgNV<br>
 BAoTD1N1cGVyZmlzaCwgSW5jLjELMAkGA1UEBxMCU0YxCzAJBgNVBAgTAkNBMQsw<br>
 CQYDVQQGEwJVUzEYMBYGA1UEAxMPU3VwZXJmaXNoLCBJbmMuMB4XDTE0MDUxMjE2<br>
@@ -113,8 +96,8 @@ UzEYMBYGA1UEAxMPU3VwZXJmaXNoLCBJbmMuggkA0vwTh6lE3OcwDQYJKoZIhvcN<br>
 AQEFBQADgYEApHyg7ApKx3DEcWjzOyLi3JyN0JL+c35yK1VEmxu0Qusfr76645Oj<br>
 1IsYwpTws6a9ZTRMzST4GQvFFQra81eLqYbPbMPuhC+FCxkUF5i0DNSWi+kczJXJ<br>
 TtCqSwGl9t9JEoFqvtW+znZ9TqyLiOMw7TGEUI+88VAqW0qmXnwPcfo=<br>
------END CERTIFICATE-----<br>
------BEGIN PRIVATE KEY-----<br>
+-----SERTIFIKAT AKHIR-----<br>
+-----MULAI KUNCI PRIBADI-----<br>
 MIICXgIBAAKBgQDo80oYdl8ZP7HPWOl/QwcJlYA1xQ/+cTEngZkSJiCl349q/EJV<br>
 Oe4JOInZ4DbErAGCW9U55vmPB4jf/u72oRTOqXRF2P3wF1cqguF6LhKTWqyK1xVj<br>
 0bebVYAPWLwcSe0gYt22TKU66xw9oP96cabTEHgzrkvCHP2SSqHD50GkLQIDAQAB<br>
@@ -128,41 +111,36 @@ vlwz69jdFpQqrFRBjVlf4/FDx3IfjpxHj0RgiEUUxcnoXmh/8qwh1fdzCrbjAkB4<br>
 afg/chTLQUrKw5ecvW2p9+Blu20Fsv1kcDHLb/0LjU4XNrhbuz+8TlmqstOMCrPZ<br>
 j48o5+RLKvqrpxNlMeS5AkEA6qIdW/yp5N8b1j2OxYZ9u5O//BvspwRITGM60Cps<br>
 yemZE/ua8wm34SKvDHf5uxcmofShW17PLICrsLJ7P35y/A== <br>
------END PRIVATE KEY-----<br>
+-----AKHIR KUNCI PRIBADI-----<br>
   	</code><br>
-And yes, that example will work - its the Superfish certificate!
+Dan ya, contoh itu akan berhasil - itu sertifikat Superfish!
 </p>
 
 <h3><a name="view">Tampilan</a></h3>
 <p>
-	In the options dialog of ZAP you're seeing the raw bytes (hexa-decimal encoded)
-	of the certificate. The option "view" tries to use your system's default
-	viewing tool for ".CER" files. On Windows, this is typically the same,
-	when exporting the certificate and double clicking on it.
+	Dalam dialog opsi dari ZAP kamu melihat mentah byte (heksadesimal dikodekan)
+sertifikat. Opsi "view" mencoba untuk digunakan sistem default
+melihat alat ".CER" file. Pada Windows, ini biasanya sama, saat mengekspor sertifikat dan mengklik dua kali di atasnya.
 </p>
 
-<h3>Save/Export</h3>
+<h3>Simpan/Ekspor</h3>
 <p>
-	In the options dialog of ZAP you're seeing the raw bytes (hexa-decimal encoded)
-	of the certificate. Many programs are using this simple format for import/export
-	functions. When clicking 'export', these bytes are saved to disk.
-	This is equal to selecting all and doing CTRL+C (copy to clipboard) and
-	save it into a new .CER file (which is simple text as you see in the dialog).
+	Dalam dialog opsi dari ZAP kamu melihat mentah byte (heksadesimal dikodekan)
+sertifikat. Banyak program menggunakan format sederhana untuk fungsi impor/ekspor. Ketika klik 'export', ini byte disimpan ke disk.
+	Ini sama seperti memilih semua dan melakukan CTRL+C (salin ke clipboard) dan simpan ke berkas .CER yang baru (yang merupakan teks sederhana seperti yang anda lihat di dialog).
 </p>
 
-<h2><a name="dynamic_certificates">Dynamic certificates</a></h2>
+<h2><a name="dynamic_certificates">Sertifikat dinamis</a></h2>
 <p>
-	Each ZAP instance is using it's own root certificate. Of course, you can
-	import root certificates, to use them on multiple machines.
-	When running, there will be sub-certificated created, each time a HTTPS 
-	resource is requested.
-	That means, the Root CA certificate is used as an issuer.
+	Setiap instance ZAP menggunakan sertifikat root miliknya sendiri. Tentu saja, anda dapat mengimpor sertifikat root, untuk menggunakannya pada beberapa mesin.
+	Ketikan dijalankan, disana akan ada sub-sertifikat yang dibuat, setiap kali sumber HTTPS diminta.
+	Itu berarti, sertifikat Root CA digunakan sebagai penerbit.
 </p>
 <p>
-	Every dynamically generated certificate is valid for 1000 days.<br>
-	Every dynamically generated certificate is 2048 bit strong (RSA with SHA1).<br>
-	Every dynamically generated certificate has a random serial number. 
-	Every dynamically generated certificate consists of the following identifiers:
+	Setiap yang didapatkan secara dinamis sertifikat ini berlaku selama 1000 hari.<br>
+Setiap yang didapatkan secara dinamis sertifikat 2048 bit yang kuat (RSA dengan SHA1).<br>
+Setiap yang didapatkan secara dinamis sertifikat acak nomor seri. 
+	Setiap sertifikat yang dihasilkan secara dinamis terdiri dari pengenal berikut:
 </p>
 <p style="padding-left: 20pt;">
 	<code>
@@ -170,88 +148,77 @@ And yes, that example will work - its the Superfish certificate!
 	E = owasp-zed-attack-proxy@lists.owasp.org<br>
 	C = XX<br>
 	O = OWASP<br>
-	OU = Zed Attack Proxy Project<br>
+	OU = Zed Menyerang Proyek Proxy<br>
 	</code>
 </p>
 <p>
-	<i>
-		Side note:
-		Each time you start ZAP, internally a random serial number offset is generated.
-		Every dynamically generated certificate will use this offset plus an
-		increasing counter. For example, first dynamically certificate has 
-		serial number 2314, the second one 2315, the third one 2316 and so on.
-		The reason for this is simple: browsers are also caching certificates.
-		When you restart ZAP but don't restart your browser, it could happen,
-		the the browser sees the same certificate but with different serial number.
-		In the end, the browser would complain about and reject the certificate.
-		By using the random offset (internally 48bit random number), the chances
-		are 1 to 281.474.976.710.656 that when restarting ZAP, the serial number
-		offset is a different one.<br>
-		So in the rare case, you are discovering that you browser complains about
-		a broken serial number within the certificate, just restart your browser ;-)
-	</i>.
+	<i> Catatan pinggir: Setiap kali anda memulai ZAP, secara internal nomor seri acak offset akan dihasilkan.
+		Setiap sertifikat yang dihasilkan secara dinamis akan menggunakan offset ini ditambah dengan counter yang meningkat. Contohnya, sertifikat dinamis pertama memiliki nomor seri 2314, yang kedua 2315, yang ketiga 2316 dan seterusnya.
+		Alasan untuk ini adalah sederhana: browser juga caching sertifikat.
+		Ketika anda merestart ZAP tapi jangan restart browser anda, itu bisa terjadi, browser melihat sertifikat yang sama namun dengan nomor seri yang berbeda.
+		Pada akhirnya, browser akan mengeluhkan dan menolak sertifikat tersebut.
+		Dengan menggunakan offset acak (internal 48bit nomor acak), kemungkinannya adalah 1 sampai 281.474.976.710.656 bahwa saat me-restart ZAP, nomor seri offset adalah yang berbeda.<br>
+Jadi, dalam kasus yang jarang terjadi, Anda menemukan bahwa peramban Anda mengeluhkan nomor seri yang rusak di dalam sertifikat, cukup mulai ulang peramban Anda ;-)
+</i>.
 </p>
 
-<h2><a name="install">Install ZAP Root CA certificate</a></h2>
+<h2><a name="install">Pasang sertifikat ZAP Root CA</a></h2>
 <p>
-	Any HTTPS client you want to use, has to know the OWASP Root CA certificate
-	as 'trusted root certificate'. Typically you have to install manually the
-	ZAP certificate into your browser's list of trusted root certificates.
+	Setiap klien HTTPS yang ingin Anda gunakan, harus mengetahui sertifikat OWASP Root CA
+sebagai 'sertifikat root terpercaya'. Biasanya anda harus menginstal secara manual
+	ZAP sertifikat kepada browser anda daftar dari sertifikat akar terpercaya.
 </p>
-<h3>Windows / Internet Explorer</h3>
+<h3>Windows / Penjelajah Internet</h3>
 <p>
-	The easiest way is to click on <a href="#view">view</a> and choose
-	'Install certificate'. Alternatively, you can save/export your generated
-	certificate (copy it to you target computer) and double click the .CER file. 
-	When doing so, the regular Windows wizard for certificate installation
-	assistance is poping up.
-	In the this wizard manually choose the certificate store. Do NOT let
-	Windows choose automatically the certificate store.
-	Choose 'trusted root certificates' as store and finalize the wizard.
+	Cara paling mudah adalah untuk klik pada <a href="#view">lihat</a> dan pilih
+	'Instal sertifikat'. Alternatifnya, anda bisa menyimpan/mengekspor sertifikat yang anda buat (salin itu ke komputer target anda) dan klik dua kali berkas .CER. 
+	Saat melakukannya, Windows biasa wizard untuk instalasi sertifikat
+	bantuan poping up.
+	Pada wizard ini pilihlah toko sertifikat secara manual. Jangan biarkan
+Windows memilih secara otomatis toko sertifikat.
+	Pilih 'trusted root certificate' sebagai toko dan selesaikan wizard.
 </p>
 <p>
-	After successfully installation, you can check the certificate.
+	Setelah berhasil instalasi, anda bisa memeriksa sertifikatnya.
 </p>
 	<ol>
-	<li>Go to Internet options</li>
-	<li>Tab Content</li>
-	<li>Click certificates</li>
-	<li>Click tab trusted root certificates</li>
-	<li>The OWASP ZAP Root CA should be there</li>
+	<li>Pergi ke pilihan internet</li>
+	<li>Konten tab</li>
+	<li>Klik sertifikat</li>
+	<li>Klik tab sertifikat akar terpercaya</li>
+	<li>OWASP ZAP Root CA seharusnya ada di sana</li>
 	</ol>
 
 <h3>Mozilla Firefox</h3>
 <p>
-	Firefox is using it's own certificate store. Thats why you have to
-	import it twice, when you're using both browser on windows.
-	Installation and late on validation is done in the same preferences dialog:
+	Firefox menggunakan toko sertifikat itu sendiri. Itulah mengapa Anda harus melakukannya
+impor dua kali, bila Anda menggunakan kedua browser pada windows.
+	Instalasi dan keterlambatan dalam pengesahan dilakukan pada pilihan dialog yang sama:
 </p>
 	<ol>
-	<li>Go to Preferences</li>
-	<li>Tab Advanced</li>
-	<li>Tab Cryptography/Certificates</li>
-	<li>Click View certificates</li>
-	<li>Click tab Trusted root certificates</li>
-	<li>Click Import and choose the saved <tt>owasp_zap_root_ca.cer</tt> file</li>
-	<li>In the wizard choose to trust this certificate to identify web sites (check on the boxes)</li>
-	<li>Finalize the wizard</li>
+	<li>Buka Preferensi</li>
+	<li>Tab Lanjutan</li>
+	<li>Tab Kriptografi/Sertifikat</li>
+	<li>Klik Lihat Sertifikat</li>
+	<li>Klik tab Otoritas</li>
+	<li>Klik Import dan pilih diselamatkan <tt>owasp_zap_root_ca.cer</tt> file</li>
+	<li>Di wizard memilih untuk mempercayai sertifikat ini untuk mengidentifikasi situs web (cek pada kotak-kotak)</li>
+	<li>Menyelesaikan wizard</li>
 	</ol>
 
-<h2 style="color: red; font-weight: bold; text-decoration: underline;">Risks</h2>
+<h2 style="color: red; font-weight: bold; text-decoration: underline;">Risiko</h2>
 <p>
-	<b>Attention, there are risks!</b><br>
-	When adding self generated Root CA certificates to your list of trusted 
-	root certificates, everyone with the root certificate can smuggle data
-	into your system (browser).
-	In other words when you're not testing in a safe environment, but on
-	productive machines, be aware that you're opening an additional attack
-	vector to your system.  
+	<b>Perhatian, ada risiko!</b><br>
+	Ketika menambahkan mandiri yang didapatkan Root CA sertifikat untuk kamu daftar terpercaya 
+	sertifikat akar, semua orang dengan sertifikat root yang bisa menyelundupkan data
+	ke dalam sistem kamu (browser).
+	Dengan kata lain ketika anda tidak melakukan pengujian di lingkungan yang aman, namun pada mesin yang produktif, perhatikan bahwa anda akan membuka vektor serangan tambahan ke sistem anda.  
 </p>
 
-<h2>See also</h2>
+<h2>Lihat juga</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="certificate.html">Certificates</a></td><td>for SSL client certificates</td></tr>
+<a href="certificate.html">Sertifikat</a></td><td>untuk sertifikat klien SSL</td></tr>
 </table>
 
 </body>

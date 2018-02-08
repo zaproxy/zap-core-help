@@ -7,28 +7,51 @@ Options API screen
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Options API screen</h1>
+<h1>API选项屏幕</h1>
 <p>
-This screen allows you to configure the <a href="../../../start/concepts/api.html">API</a> options:
+此屏幕允许您配置 <a href="../../../start/concepts/api.html">API</a> 选项：
 
-<h3>活动</h3>
+<h3>启用</h3>
 
-If enabled then the API is available to all machines that are able to use ZAP as a proxy.<br/>
+如果启用，则API可用于所有能够使用ZAP作为代理的计算机。<br/>
 
-<h3>Secure Only</h3>
+<h3>启用的UI</h3>
 
-If enabled then the API will only be available via HTTPS. Otherwise it will be available via both HTTP and HTTPS.<br/>
+如果启用，则API Web UI可用于所有能够使用ZAP作为代理的计算机。
+要访问API Web UI，请将浏览器指向ZAP正在监听的主机和端口。<br/>
 
-<h3>API Key</h3>
+<h3>只允许安全模式</h3>
 
-A key that must be specified on all API 'actions' and some 'other' operations.<br/>
-The API key is used to prevent malicious sites from accessing the ZAP API.<br/>
-It is strongly recommended that you set a key unless you are using ZAP in a completely isolated environment.<br/>
+如果启用，那么API将只能通过HTTPS使用。 否则，它将通过HTTP和HTTPS提供。<br/>
 
-<h3>Disable the API Key</h3>
+<h3>API密钥</h3>
 
-Selecting this option disables the API key.<br/>
-This is not recommended unless you are using ZAP in a completely isolated environment, as it allows malicious sites to access the ZAP API.
+必须在所有API操作和一些其它操作中指定密钥。<br/>
+API密钥用于防止恶意网站访问ZAP API。<br/>
+强烈建议您设置密钥，除非您在完全隔离的环境中使用ZAP。<br/>
+
+<h3>允许使用API的地址</h3>
+
+默认情况下，只有运行ZAP的计算机才能访问ZAP API。<br/>
+您可以通过添加合适的正则表达式模式来允许其它计算机访问API。<br/>
+您应该只添加您信任的IP地址。<br/>
+请注意，ZAP API现在也检查主机头，因此它也必须是允许的地址之一。
+
+<h3>禁用API密钥</h3>
+
+选择此选项将禁用API密钥。<br/>
+除非您在完全隔离的环境中使用ZAP，否则不建议使用ZAP，因为它允许恶意站点访问ZAP API。
+
+<h3>不需要用于安全操作的API密钥</h3>
+
+如果启用，那么视图或其它被视为“安全”的操作不需要API密钥，换言之，不对ZAP进行任何更改的操作。 
+但是这样的操作可以访问ZAP数据，如警报，消息和文件系统路径。  
+Web应用程序也可以使用它们来检测ZAP的存在。
+
+<h3>Report permission errors via API</h3>
+
+If enabled then ZAP will report permission errors via the API, which can be used by web applications to detect the presence of ZAP.
+This is not a serious problem in a safe environment but if you are using ZAP against potentially malicious sites then you should not enable it.
 
 <h3>Report error details via API</h3>
 

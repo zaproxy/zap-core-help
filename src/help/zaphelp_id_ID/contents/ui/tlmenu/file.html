@@ -8,55 +8,60 @@ The File menu
 </head>
 <body bgcolor="#ffffff">
 <h1>The File menu</h1>
-This menu handles the current session. By default the following menu items will be present:<br/>
+Menu ini menangani sesi saat ini. Secara default menu berikut barang-barang yang akan hadir:<br/>
 
 <h3>Sesi Baru</h3>
-This creates a new session.<br>
-If you have not saved your current session then a warning will be displayed.<br/>
-Starting a new session without saving the current session will loose all of the data in the current session.
+Ini menciptakan sesi baru.<br>
+Jika kamu belum menyimpan sesi kamu saat ini maka peringatan akan ditampilkan.<br/>
+Memulai sesi baru tanpa menyimpan sesi saat ini akan kehilangan semua data dalam sesi saat ini.
 
 <h3>Membuka Sesi...</h3>
-This opens a session that has been previously saved.<br/>
-Opening a session without saving the current session will loose all of the data in the current session.
+Ini akan membuka sesi yang telah disimpan sebelumnya.<br/>
+Pembukaan sesi tanpa menyimpan sesi saat ini akan kehilangan semua data dalam sesi saat ini.
 
 <h3>Persist Session...</h3>
-This persists the current session. <br/>
-While the session is always stored in a database on disk, it will be lost when ZAP is stopped unless it has been persisted.<br/>
-You only need to persist it once - after that all changes will be saved.
+Ini terus berlanjut sesi saat ini. <br/>
+Sementara sesi selalu disimpan dalam database pada disk, maka akan hilang saat ZAP dihentikan kecuali jika telah bertahan.<br/>
+Kamu hanya butuh untuk bertahan sekali - setelah itu semua perubahan akan disimpan.
 
-<h3>Snapshot Session</h3>
-This saves a snapshot of a session that has already been persisted.<br/>
-It will use the same filename with a date-time string appended to it.<br/>
+<h3>Snapshot Session As...</h3>
+Ini menyimpan cuplikan dari sesi yang telah berlangsung lama.<br/>
+Ini akan menyarankan nama berkas yang sama seperti yang bertahan sesi dengan tanggal-waktu string yang ditambahkan ke dalamnya, dan memungkinkan pengguna untuk mengatur apapun nama yang mereka pilih.<br/>
 
-<h3>Properti...</h3>
-This displays the <a href="../dialogs/session/sessprop.html">Properti Sesi</a> dialog.<br/>
-This allows you to set the session name and description.
+<h3>Session Properties...</h3>
+Ini menampilkan <a href="../dialogs/session/sessprop.html">Properti Sesi</a> dialog.<br/>
+Ini memungkinkan Anda untuk mengatur sesi nama dan deskripsi.
 
-<h3>Load Add-on file...</h3>
-Load a local <a href="../../start/concepts/addons.html">add-on</a> file.<br/>
-Add-ons are typically installed from via the <a href="../dialogs/manageaddons.html">Manage Add-ons</a> dialog, but this
-option can be useful if you have downloaded an add-on manually or are testing one you have developed yourself.<br/>
-Add-ons remain installed until you manually uninstall them. 
+<h3>Impor Konteks...</h3>
+Mengizinkan untuk mengimpor sebuah <a href="../../start/concepts/contexts.html">Konteks</a>.
 
-<h3>Exit and delete session...</h3>
-This will exit ZAP and delete the session, even if you have previously persisted it.<br/>
-The session will no longer be accessible when you restart ZAP, although any snapshots you took will still be available.<br/> 
-A warning dialog will be displayed to ensure you really meant to choose this option.
+<h3>Ekspor Konteks...</h3>
+Mengizinkan untuk mengekspor Konteks.
 
-<h3>Exit</h3>
-This will exit ZAP.<br/>
-If you have not saved the current session then you will be given the option to do so.
+<h3>Muat berkas Add-on...</h3>
+Beban lokal <a href="../../start/concepts/addons.html">add-on</a> berkas.<br/>
+Add-ons yang biasanya dipasang melalui <a href="../dialogs/manageaddons.html">Mengelola Add-ons</a> dialog, tapi pilihan ini dapat berguna jika anda telah mengunduh add-on secara manual atau pengujian salah satu yang telah anda kembangkan sendiri.<br/>
+Add-ons tetap dipasang sampai anda secara manual menghapus mereka. 
+
+<h3>Keluar dan Menghapus Sesi...</h3>
+Ini akan keluar dari ZAP dan menghapus sesi, bahkan jika kamu sebelumnya pernah melakukannya.<br/>
+Sesi ini akan tidak dapat diakses lagi ketika anda me-restart ZAP, meskipun setiap foto yang anda ambil akan tetap tersedia.<br/> 
+Dialog peringatan akan ditampilkan untuk memastikan anda benar-benar dimaksudkan untuk memilih opsi ini.
+
+<h3>Keluar</h3>
+Ini akan keluar ZAP.<br/>
+Jika anda belum menyimpan sesi saat ini kemudian anda akan diberikan pilihan untuk melakukannya.
 
 <p>
-Note that <a href="../../start/concepts/addons.html">add-ons</a> can add additional menu items.
+Catatan bahwa <a href="../../start/concepts/addons.html">add-ons</a> dapat menambahkan item menu tambahan.
 </p>
 
-<h2>See also</h2>
+<h2>Lihat juga</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="tlmenu.html">The top level menu</a></td><td></td></tr>
+<a href="tlmenu.html">Tingkat atas menu</a></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../overview.html">Ikhtisar UI</a></td><td>untuk gambaran dari antarmuka pengguna</td></tr>
 </table>
 </body>
 </html>

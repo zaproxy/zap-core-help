@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'  ?>
+
+<!--
+-->
+
+<!DOCTYPE index
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Index Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/index_2_0.dtd">
+
+<index version="2.0">
+
+    <indexitem text="aktif tarama" target="start.concepts.ascan" />
+    <indexitem text="aktif tarama iletişim kutusu" target="ui.dialogs.advascan" />
+    <indexitem text="aktif tarama sekmesi" target="ui.tabs.ascan"/>
+    <indexitem text="eklentiler" target="start.concepts.addons"/>
+    <indexitem text="eklentiler" target="addon.introduction"/>
+    <indexitem text="uyarı iletişim kutusu ekle" target="ui.dialogs.addalert" />
+    <indexitem text="kesme noktası iletişim kutusu ekle" target="ui.dialogs.addbreak" />
+    <indexitem text="not iletişim kutusu ekle" target="ui.dialogs.addnote" />
+    <indexitem text="uyarılar sekmesi" target="ui.tabs.alerts" />
+    <indexitem text="uyarılar" target="start.concepts.alerts" />
+    <indexitem text="api" target="start.concepts.api" />
+    <indexitem text="kimlik doğrulama yetkili tabanlı el ile giriş" target="start.concepts.auth" />
+    <indexitem text="temel penetrasyon testi" target="start.pentest" />
+    <indexitem text="mola noktaları sekmesi" target="ui.tabs.breakpoints" />
+    <indexitem text="mola noktaları" target="start.concepts.breakpoints" /> 
+    <indexitem text="mola sekmesi" target="ui.tabs.break" />
+    <indexitem text="komut satırı" target="cmdline" />
+    <indexitem text="bağlamlar" target="start.concepts.contexts" />
+    <indexitem text="katkıda bulunanlar" target="zap.credits" />
+    <indexitem text="veri güdümlü içerik" target="start.concepts.ddc" />
+    <indexitem text="diyaloglar" target="ui.dialogs" />
+    <indexitem text="Kodlama / Kod Çözme / Hash penceresi" target="ui.dialogs.enc_dec" />
+    <indexitem text="özellikler" target="start.concepts" />
+    <indexitem text="diyalog filtrele" target="ui.dialogs.filter" />
+    <indexitem text="filtreler" target="start.concepts.filters" />
+    <indexitem text="diyalog bul" target="ui.dialogs.find" />
+    <indexitem text="alt bilgi" target="ui.footer" />
+    <indexitem text="başlarken" target="start.start" />
+    <indexitem text="geçmiş filtresi diyaloğu" target="ui.dialogs.historyfilter" />
+    <indexitem text="geçmiş sekmesi" target="ui.tabs.history" />
+    <indexitem text="http oturumları sekmesi" target="ui.tabs.httpsessions" />
+    <indexitem text="http oturumları" target="start.concepts.httpsessions" />
+    <indexitem text="man-in-the-middle proxy" target="start.concepts.intercept"/>
+    <indexitem text="giriş" target="zap.intro" />
+    <indexitem text="sekmeleri yönet iletişim kutusu" target="ui.dialogs.managetags" />
+    <indexitem text="manüel istek iletişim kutusu" target="ui.dialogs.manreq" />
+    <indexitem text="modlar" target="start.concepts.modes" />
+    <indexitem text="notlar" target="start.concepts.notes" />
+    <indexitem text="seçenekler iletişim kutusu" target="ui.dialogs.options" />
+    <indexitem text="çıktı sekmesi" target="ui.tabs.output" />
+    <indexitem text="parametreler sekmesi" target="ui.tabs.params" />
+    <indexitem text="paros proxy" target="zap.paros" />
+    <indexitem text="pasif tarama" target="start.concepts.pscan" />
+    <indexitem text="pasif tarayıcı seçenekleri" target="ui.dialogs.options.pscan.main" />
+    <indexitem text="oturuma devam etme iletişim kutusu" target="ui.dialogs.persistsession" />
+    <indexitem text="proxy yapılandırması" target="start.proxy" />
+    <indexitem text="sürüm 1.0.0" target="zap.releases.1.0.0" />
+    <indexitem text="sürüm 1.1.0" target="zap.releases.1.1.0" />
+    <indexitem text="sürüm 1.2.0" target="zap.releases.1.2.0" />
+    <indexitem text="sürüm 1.3.0" target="zap.releases.1.3.0" />
+    <indexitem text="sürüm 1.3.1" target="zap.releases.1.3.1" />
+    <indexitem text="sürüm 1.3.2" target="zap.releases.1.3.2" />
+    <indexitem text="sürüm 1.3.3" target="zap.releases.1.3.3" />
+    <indexitem text="sürüm 1.3.4" target="zap.releases.1.3.4" />
+    <indexitem text="sürüm 1.4.0" target="zap.releases.1.4.0" />
+    <indexitem text="sürüm 1.4.1" target="zap.releases.1.4.1" />
+    <indexitem text="sürüm 2.0.0" target="zap.releases.2.0.0" />
+    <indexitem text="sürüm 2.1.0" target="zap.releases.2.1.0" />
+    <indexitem text="sürüm 2.2.0" target="zap.releases.2.2.0" />
+    <indexitem text="sürüm 2.2.1" target="zap.releases.2.2.1" />
+    <indexitem text="sürüm 2.2.2" target="zap.releases.2.2.2" />
+    <indexitem text="sürüm 2.3.0" target="zap.releases.2.3.0" />
+    <indexitem text="sürüm 2.3.1" target="zap.releases.2.3.1" />
+    <indexitem text="sürüm 2.4.0" target="zap.releases.2.4.0" />
+    <indexitem text="sürüm 2.4.1" target="zap.releases.2.4.1" />
+    <indexitem text="sürüm 2.4.2" target="zap.releases.2.4.2" />
+    <indexitem text="sürüm 2.4.3" target="zap.releases.2.4.3" />
+    <indexitem text="sürüm 2.5.0" target="zap.releases.2.5.0" />
+    <indexitem text="sürüm 2.6.0" target="zap.releases.2.6.0" />
+    <indexitem text="sürüm 2.7.0" target="zap.releases.2.7.0" />
+    <indexitem text="sürümler" target="zap.releases" />
+    <indexitem text="istek sekmesi" target="ui.tabs.request" />
+    <indexitem text="diyaloğu tekrar gönder" target="ui.dialogs.resend" />
+    <indexitem text="yanıt sekmesi" target="ui.tabs.response" />
+    <indexitem text="tarayıcı kuralları" target="start.check" />
+    <indexitem text="tarama ilkesi" target="start.concepts.scanpolicy" />
+    <indexitem text="tarama ilkesi iletişim kutusu" target="ui.dialogs.scanpolicy" />
+    <indexitem text="tarama politikası yönetim diyaloğu" target="ui.dialogs.scanpolicymgr" />
+    <indexitem text="tarama ilerlemesi diyaloğu" target="ui.dialogs.scanprogress" />
+    <indexitem text="arama sekmesi" target="ui.tabs.search" />
+    <indexitem text="oturum bağlam ekranları" target="ui.dialogs.contexts" />
+    <indexitem text="oturum bağlam doğrulama ekranı" target="ui.dialogs.context-auth" />
+    <indexitem text="oturum bağlam yapı ekranı" target="ui.dialogs.context-struct" />
+    <indexitem text="oturum özellikleri diyaloğu" target="ui.dialogs.sessprop" />
+    <indexitem text="siteler sekmesi" target="ui.tabs.sites" />
+    <indexitem text="örümcek" target="start.concepts.spider" />
+    <indexitem text="örümcek diyaloğu" target="ui.dialogs.spider" />
+    <indexitem text="örümcek sekmesi" target="ui.tabs.spider" />
+    <indexitem text="istatistikler" target="start.concepts.stats" />
+    <indexitem text="yapısal düzenleyiciler" target="start.concepts.structmods" />
+    <indexitem text="yapısal parametreler" target="start.concepts.structparams" />
+    <indexitem text="etiketler" target="start.concepts.tags" />
+    <indexitem text="üst düzey menü" target="ui.topmenu" />
+    <indexitem text="üst seviye araç çubuğu" target="ui.toptoolbar" />
+    <indexitem text="kullanıcı arayüzü genel bakış" target="ui.overview" />
+    <indexitem text="görünümler" target="ui.views" />
+
+</index>

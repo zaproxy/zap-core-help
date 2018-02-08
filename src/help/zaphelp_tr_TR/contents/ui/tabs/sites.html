@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Site sekmesi
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Siteler sekmesi</h1>
+<p>
+Siteler sekmesi, ağaç yapısındaki tüm ziyaret edilen URL leri gösterir. <br/>
+URL'deki istek ve yanıtı görmek için ağaçtaki nodelardan herhangi birini seçebilirsiniz.<br/>
+</p>
+
+<h2>Sağ tık menüsü</h2>
+Node'a sağ tıkladığınızda bir menü oluşacaktır ve bu menüden şunları yapabilirsiniz:
+
+<h3>Saldırı</h3>
+Saldırı menüsü şu alt menülerden oluşur:
+
+<h4>Aktif tarama...</h4>
+Bu, <a href="../dialogs/advascan.html">Active Scan</a> dialogunu çalıştıracaktır, buda active scan'i başlatmanızı sağlacaktır 
+<a href="../../start/concepts/ascan.html">başlangıç noktasıda</a> sizin belirlediğiniz olacaktır.<br/>
+
+<h4>Örümcek...</h4>
+Bu, <a href="../dialogs/spider.html">Örümcek</a> dialogunu başlatacaktır, buda belirlediğiniz bir noktaya göre örümceği başlatacaktır 
+<a href="../../start/concepts/spider.html">örümcek</a> seçtiğiniz talebi başlangıç noktası alarak.<br/>
+
+<h3>İçeriğe dahil et</h3>
+Bu menü, seçtiğiniz node'ları ve bunların astlarını içeriğe eklemenizi
+<a href="../../start/concepts/contexts.html">sağlar</a>.<br/>
+Ayrıca, yeni bir içerik oluşturma seçeneğiniz vardır.<br/>
+The <a href="../dialogs/session/contexts.html">Session Contexts</a> dialogu gösterilecektir
+buradan daha fazla değişiklik yapabilirsiniz.
+
+<h3>İçeriği Dışarıda Tut</h3>
+Bu menü, seçilen nodeların ve onların astlarının, seçilmiş tüm içerikten dışarıda kalmasını sağlar
+<a href="../../start/concepts/contexts.html">içerik</a>.<br/>
+The <a href="../dialogs/session/contexts.html">Session Contexts</a> dialogu gösterilecektir
+buradan daha fazla değişiklik yapabilirsiniz.
+
+<h3>İçerik olarak işaretle</h3>
+Bu menü, bir sonraki gösterilen içeriklerden hepsi için 
+<a href="../../start/concepts/contexts.html">bir alt kategoriye</a> sahiptir:
+
+<h4><i>Context name</i> Form tabanlı kimlik doğrulama otuurm açma isteği</h4>
+Bu belirtilen node, belirtilen içerik için bir oturum açma isteği olarak tanımlar.<br/>
+Böyle bir bağlamda belirlenmiş yanlızca bir node'a sahip olabilirsiniz.<br/> 
+Session Context Authentication <a href="../dialogs/session/context-auth.html">Ekranı, değişiklik yapmanız için</a> gösterilecektir.
+
+<h4><i>Context name</i> Veri odaklı node</h4>
+Bu, seçilen node'u <a href="../../start/concepts/ddc.html">Veri yönelik içerik</a> olarak tanımlar.<br/>
+Session Context Structe <a href="../dialogs/session/context-struct.html">Ekranı, daha fazla değişiklik yapabilmeniz için</a> gösterilecektir.
+
+<h3>Dışında tut</h3>
+Bu menü, aşağıdaki alt menülere sahiptir:
+
+<h4>Proxy</h4>
+Bu, seçilen node'ları proxyden ayıracaktır. Bunlar hala ZAP sayesinde sağlanacaktır ama başka bir sekmede görünmeyecektir.<br/>
+Bu, test ettiğiniz sistemle alakalı olmadığını bildiğiniz URL'leri yoksaymak için kullanılabilir.<br/>
+Bu node'lar Session Properties dialog kullanılarak <a href="../dialogs/session/sessprop.html">Içeriğe eklenebilir</a> pencere   
+
+<h4>Tarayıcı</h4>
+Bu seçili node'ların etkin olarak taranmasını engeller.<br/>
+Node'lar , Sessıon Properties dialog kullanılarak  <a href="../dialogs/session/sessprop.html">Tekrar eklenebilir</a> diyalog   
+
+<h4>Örümcek</h4>
+Bu, seçili node'ların örümceklenmesini engeller.<br/>
+Node'lar Session Property dialog kullanılarak <a href="../dialogs/session/sessprop.html">Tekrar dahil edilebilir</a> diyalog   
+
+<h3>Kaldır</h3>
+Bu node'u ve onun tüm çocuklarını ZAP üzerinden kaldırır.<br/>
+Bununla birlikte, bunlar tekrardan eklenebilir, bunu engellemek için 'Dışında bırak' menülerini kullanın. 
+
+<h3>Kırılma...</h3>
+Bu yeni bir pencere açarak 
+<a href="../../start/concepts/breakpoints.html">kırılma noktasını Url olarak ayarlamanızı sağlar</a> o URL ile.<br/>
+Kesme noktası, düzenli bir ifade yoluyla tanımlanır. Eğer bununla eşleşen bir URL ' yi ziyaret ederseniz
+ifade o zaman ZAP onu durdurur ve talebinizi ve/veya yanıtınızın ikisini de değiştirmenize izin verir.
+
+<h3>Bu node için uyarılar</h3>
+Eğer seçili URL, onunla ilgili olan bir alarma sahipse <a href="../../start/concepts/alerts.html">bu</a> menu altında listelenir.<br>
+Bu alarmlardan birini seçme, bunların gösterilmesine sebep olacaktır.
+
+<h3>Tekrar gönder...</h3>
+Bu şunu açar
+<a href="../dialogs/resend.html">Diyaloğu tekrar gönder</a> yapmak istediğiniz değişiklikleri yaptıktan sonra talebi tekrar göndermenizi sağlar.
+
+<h3>Yeni Uyarı...</h3>
+Bu şunu öne çıkaracak
+<a href="../dialogs/addalert.html">Uyarı diyaloğu ekle</a> manuel olarak yeni bir... kaydetmenizi sağlar  
+<a href="../../start/concepts/alerts.html">uyarı</a> bu talebe karşı.
+
+<h3>Geçmiş sekmesinde göster</h3>
+Bu seçilmiş düğümü şurada gösterecektir <a href="history.html">Geçmiş sekmesi</a>.
+
+<h3>Tarayıcıda URL aç</h3>
+Bu varsayılan tarayıcınızda seçilen node'un URL'sini açacak.
+
+<h3>Anti CSRF test formu oluştur</h3>
+Bu CSRF sorunları testi için size verilecek oluşturulan bir formun bir URL'sini açacak.<br>
+Eğer API etkin ise ve eğer Java platformunuz üzerindeki browser'da URL'lerin açılmasını destekliyorsa bu 
+sadece POST istekleri için etkinleştirilecektir. 
+
+<h3>Site ağacını yenile</h3>
+Ara sıra Site ağacı hatalı görüntülenebilir - bu seçenek onu yeniden düzenleyecek.
+
+<h2>Ayrıca bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../overview.html">Kullanıcı Arabirimine Genel bakış</a></td><td>kullanıcı arabirimine genel bakış için</td></tr>
+</table>
+
+</body>
+</html>

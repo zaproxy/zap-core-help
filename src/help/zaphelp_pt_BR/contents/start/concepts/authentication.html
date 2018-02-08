@@ -12,7 +12,12 @@
 	</p>
 
 	<p>
-		Para detectar quando as mensagens de resposta dos servidores web correspondem às requests, um conjunto de indicadores pode ser configurado. O indicadpr <b>Logado</b>, quando presente em uma mensagem de resposta (no cabeçalho ou no corpo) significa que a mensagem de resposta corresponde a uma solicitação autenticada (por exemplo, a presença de um link' logout' ou de um 'Bem-vindo, usuário X'). Da mesma forma, o indicador <b>Desconectado</b> indica um request não autenticado (por exemplo, com a presença de um link de' login'). Apenas a presença de um dos 2 indicadores é suficiente para a funcionalidade adequada. No caso de que nenhum dos indicadores foi especificado, todas as mensagens são consideradas, por padrão, autenticadas.
+		Para detectar quando as mensagens de resposta dos servidores web correspondem às requests, um conjunto de indicadores pode ser configurado. O indicadpr <b>Logado</b>, quando presente em uma mensagem de resposta (no cabeçalho ou no corpo) significa que a mensagem de resposta corresponde a uma solicitação autenticada (por exemplo, a presença de um link' logout' ou de um 'Bem-vindo, usuário X'). Da mesma forma, o indicador <b>Desconectado</b> indica um request não autenticado (por exemplo, com a presença de um link de' login'). If ZAP detects the logged out indicator it will re-authenticate,
+		otherwise it's assumed that's already authenticated and will continue as usual.  
+		Only one (1) of the two (2) indicators is necessary for 
+		proper functionality. In the case neither of the
+		indicators has been specified, all messages are considered, by
+		default, authenticated.
 	</p>
 		
 	<p> Para definir um dos indicadores <b>Logado/Deslogado</b>, digite o regex diretamente na <i>caixa de diálogo <a href="../../ui/dialogs/session/contexts.html#auth">Propriedades da sessão</a>-> painel de autenticação-> campo Logged in/out</i>, ou encontre uma mensagem autenticada na árvore de Sites, selecione-a, abra a visualização de resposta e selecione o texto que você deseja definir como o indicador usando o mouse e selecione <i>Flag como contexto... Indicador Logado/Deslogado</i> pelo botão direito do mouse.
@@ -45,9 +50,7 @@
 	<h3>
 		<a name="manual">Autenticação manual</a>
 	</h3>
-	<p>This method allows users to perform the authentication manually
-		(e.g. authenticate in the browser while proxy-ing through ZAP) and
-		then select the corresponding HTTP session. Como a autenticação real está sendo realizada por você, esse método não suporta re-autenticação caso a webapp desconecte um usuário.
+	<p>Esse método permite que os usuários executem a autenticação manualmente (por exemplo, autenticar no navegador ao mesmo tempo fazendo proxy através do ZAP) e selecionem a sessão HTTP correspondente. Como a autenticação real está sendo realizada por você, esse método não suporta re-autenticação caso a webapp desconecte um usuário.
 	</p>
 	
 	<p>Ao usar esse método de autenticação, configurar um usuário para o contexto exige escolha de uma sessão autenticada do HTTP.</p>
@@ -95,7 +98,7 @@
 		<li>uma janela se abrirá já contendo a URL da solicitação e os parâmetros (se houver). Use as opções de menu suspenso para selecionar quais dos parâmetros correspondem ao nome de usuário e a senha</li>
     	<li>em seguida, você precisa dizer ZAP como identificar se uma autenticação foi bem-sucedida ou não. Você pode fazer isso definindo indicadores de logado ou deslogado. Isso são padrões regex que, se encontrados em uma resposta, dizem ao ZAP se ele está autenticado ou não (por exemplo, a presença de um link de http://example.com/logout ou a presença de um 'bem-vindo, usuário X'). Apenas um deles é necessário. Para definir um deles, ou digite o regex diretamente em propriedades da sessão-> autenticação-> indicador de login, ou encontre uma mensagem autenticada na árvore de Sites, selecione-a, abra a visualização de resposta e selecione o texto que você deseja definir como o indicador usando o mouse e selecione Flag como Contexto... no menu direito do mouse, Indicador de Logado.</li>
     	<li>Defina quantos usuários quiser em Propriedades da sessão-> Seção de usuários.</li>
-    	<li>Após esta etapa, várias ações estão disponíveis no ZAP. Por exemplo, você agora tem uma nova opção de clique direito: Ataque-> Contexto de Spider como usuário. Ou, usando o Modo de Usuário Forçado, você pode forçar todas as interacções que passem pelo ZAP para um determinado contexto ser visto na perspectiva de um usuário. O Modo Usuário Forçado é habilitado através do botão 'anterior-último' na barra de ferramentas (aquela com o usuário e trava) e é configurado através de propriedades de sessão-> modo de usuário forçado.</li>
+    	<li>Após esta etapa, várias ações estão disponíveis no ZAP. Por exemplo, você pode agora selecionar o usuário no <a href="../../ui/dialogs/spider.html">diálogo do spider</a>. Ou, usando o Modo de Usuário Forçado, você pode forçar todas as interacções que passem pelo ZAP para um determinado contexto ser visto na perspectiva de um usuário. O Modo Usuário Forçado é habilitado através do botão 'anterior-último' na barra de ferramentas (aquela com o usuário e trava) e é configurado através de propriedades de sessão-> modo de usuário forçado.</li>
 	</ol>
 	
 	A maioria das etapas acima aplicam-se também para outros métodos de autenticação. As únicas coisas que mudam ao tentar configurar a autenticação usando um método diferente são etapas 3, 4, 5 e 6. No lugar delas, selecione o método de autenticação obrigatório da lista drop-down e configure conforme necessário. Mais detalhes sobre a configuração de cada tipo de autenticação podem ser vistos acima e <a href="../../ui/dialogs/session/contexts.html">aqui</a>.
@@ -113,8 +116,8 @@
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="http://youtu.be/cR4gw-cPZOA">YouTube-tutorial</a></td>
-			<td>dos recursos autenticação, gerenciamento de sessão e gerenciamento de usuários do ZAP [link externo de http://youtu.be/cR4gw-cPZOA].</td>
+			<td><a href="https://youtu.be/cR4gw-cPZOA">YouTube-tutorial</a></td>
+			<td>dos recursos de autenticação, gerenciamento de sessão e gerenciamento de usuários do ZAP [link externo de http://youtu.be/cR4gw-cPZOA].</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>

@@ -3,180 +3,179 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-  Release 2.5.0
+  Rilis 1.3.0
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Release 2.5.0</h1>
+<h1>Rilis 2.5.0</h1>
 
 <p>
-The following changes were made in this release:
+Berikut perubahan yang dibuat dalam rilis ini:
 </p>
 
-<h2>ZAP API Changes:</h2>
+<h2>ZAP perubahan API:</h2>
 
-<h3>VIEW authorization / getAuthorizationDetectionMethod</h3>
+<h3>Lihat otorisasi / getAuthorizationDetectionMethod</h3>
 
-Now returns data wrapped in an object called authorizationDetectionMethod
+Sekarang kembali data yang dilibatkan dalam sebuah objek disebut otorisasi Metode Deteksi
 
-For example:
-<pre>{"authorizationDetectionMethod":{"statusCode":"-1"..."headerRegex":""}}</pre>
-instead of:
-<pre>{"statusCode":"-1"..."headerRegex":""}</pre>
+Misalnya:
+<pre>{"authorizationDetectionMethod": {"statusCode": "-1"..."headerRegex": ""}}</pre>
+melainkan:
+<pre>{"statusCode": "-1"..."headerRegex": ""}</pre>
 
-<h3>VIEW context / context + technologyList</h3>
-Both now return data wrapped in an object called "context"
+<h3>Lihat konteks / konteks + technologyList</h3>
+Kedua sekarang kembali data dibungkus dalam sebuah objek yang disebut "konteks" misalnya:
+<pre>{"konteks": {"id": "1",..., "inScope": "benar", "loggedOutPattern": ""}}</pre>
+melainkan:
+<pre>{"konteks": {"id": "1",..., "inScope": "benar", "loggedOutPattern": ""}}</pre>
 
-For example:
-<pre>{"context":{"id":"1", ..., "inScope":"true","loggedOutPattern":""}}</pre>
-instead of:
-<pre>{"id":"1", ..., "inScope":"true","loggedOutPattern":""}</pre>
-
-<h3>ACTION spider / scan + scanAsUser</h3>
+<h3>Laba-laba aksi / scan + scanAsUser</h3>
 </ul>
-Both now support a new optional 'subtreeOnly' parameter which limits the spider to the specified subtree.
-The 'url' parameter is also now optional, as long as a valid 'context' parameter is supplied
+Sekarang dukungan opsional baru 'subtreeOnly' parameter yang membatasi laba-laba yang telah ditentukan sub.
+'url' parameter ini juga sekarang opsional, asalkan valid 'konteks' parameter yang disediakan
 
-<h3>New 'stats' component</h3>
-The new 'stats' API component provides access to the <a href="../start/concepts/stats.html">stats</a>
-now maintained by ZAP.<br><br>
+<h3>Komponen baru 'Statistik'</h3>
+Komponen 'Statistik' API baru menyediakan akses ke <a href="../start/concepts/stats.html">statistik</a>
+sekarang dikelola oleh ZAP.<br><br>
 
-Note that some existing components will also have new operations, see the 
-<a href="../start/concepts/api.html">API Web UI</a> for more details.
+Perhatikan bahwa beberapa komponen yang ada juga akan memiliki operasi baru, lihat 
+<a href="../start/concepts/api.html">API Web UI</a> untuk lebih jelasnya.
  
 
-<h2>Enhancements:</h2>
+<h2>Tambahan:</h2>
 <ul>
-<li>Issue 266 : Add auto tagging for setting cookies, json</li>
-<li>Issue 646 : Password outgoing proxy in plain text on screen</li>
-<li>Issue 1171 : Sites tree to raise 'new site / new node' events</li>
-<li>Issue 1229 : Update Extensions/Plugins to Take Advantage of New Confidence Scale</li>
-<li>Issue 1341 : Update alert XML schema to remove element-level name collision</li>
-<li>Issue 1590 : Mode to apply when running as a daemon</li>
-<li>Issue 1713 : Source Code Disclosure SVN Throws False Positive</li>
-<li>Issue 1864 : Copy scan progress as text to clipboard</li>
-<li>Issue 1958 : Allow to disable database (HSQLDB) log</li>
-<li>Issue 1959 : Allow to active scan headers of all requests</li>
-<li>Issue 1980 : Add ZAP CLI to Docker images</li>
-<li>Issue 2068 :  LoggedIn and LoggedOut indicators inside authentication scripts</li>
-<li>Issue 2070 : It should be possible for the authentication scripts to configure how the messages are sent</li>
-<li>Issue 2121 : Disable Req/Resp tabs position options when in "Expand Full" layout</li>
-<li>Issue 2127 : Warn if the report generation failed</li>
-<li>Issue 2162 : add-marketplace-sorting</li>
-<li>Issue 2171 : Add-ons managed via api, cli</li>
-<li>Issue 2174 : ExpressionLanguageInjectionPlugin - Needs logging fix </li>
-<li>Issue 2177 : SourceCodeDisclosureSVN - Can't write to temp DB</li>
-<li>Issue 2183 : API: Include quality in the ascan/progress response</li>
-<li>Issue 2237 : Allow java max mem to be overridden on the cmdline</li>
-<li>Issue 2238 : spider: fallback to parse HTML comments as plain text if no URL found</li>
-<li>Issue 2272 : SQLInjectionHypersonic (Beta) - Exceptions</li>
-<li>Issue 2273 : Support site level stats</li>
-<li>Issue 2274 : Allow to spider just a site's subtree</li>
-<li>Issue 2275 : spider: do not require a URL, through the API, if the context has seeds</li>
-<li>Issue 2277 : spider: preserve query parameters with same name when canonicalising URL</li>
-<li>Issue 2289 : Record site based response time stats</li>
-<li>Issue 2324 : Include scanners' quality in API scanners views</li>
-<li>Issue 2330 : Add authentication stats</li>
-<li>Issue 2335 : Add Outbound Proxy Password Peak</li>
-<li>Issue 2342 : Ability to manage Sites in ZAP via API</li>
-<li>Issue 2347 : Allow to remove context factories from View/Model</li>
-<li>Issue 2361 : Rename tool bar option Expand Full to Full Layout</li>
-<li>Issue 2362 : Allow to select all Spider results</li>
-<li>Issue 2367 : Change break buttons location without restarting ZAP</li>
-<li>Issue 2368 : Do not require a restart to show/hide the main tool bar</li>
-<li>Issue 2381 : Do not allow to save/write to read-only files</li>
-<li>Issue 2400 : Show a more informative message on read timeouts through the proxy</li>
-<li>Issue 2410 : Show HTTP messages in the Spider tab</li>
-<li>Issue 2413 : Disable "Show in History Tab" if message not valid</li>
-<li>Issue 2418 : Spider: support maximum duration in mins option</li>
-<li>Issue 2420 : Allow active scanners to notify that a message was sent</li>
-<li>Issue 2422 : Support Statsd and moved stats to new ext</li>
-<li>Issue 2465 : Allow to wait for ZAP to start with ClientApi</li>
-<li>Issue 2466 : Allow to access a URL through the ZAP API</li>
-<li>Issue 2479 : Show User Guide even if a search view has errors</li>
-<li>Issue 2481 : Set correct application name in Linux</li>
-<li>Issue 2482 : Normalise Session dialogue tables "Exclude from"</li>
-<li>Issue 2484 : Circular Redirects</li>
-<li>Issue 2486 : Clear ScriptVars on session change</li>
-<li>Issue 2494 : ZAP Proxy is not showing the HTTP CONNECT Request in history tab.</li>
-<li>Issue 2504 : Explicitly add manual HTTP requests to Sites tree</li>
-<li>Issue 2506 : Do not discard the session for file based database</li>
-<li>Issue 2512 : Update HSQLDB library to version 2.3.4</li>
-<li>Issue 2519 : Enable menu/button when help add-on is installed</li>
+<li>Masalah 266 : Tambahkan auto tagging untuk pengaturan cookie, json</li>
+<li>Masalah 646 : Password keluar proxy di teks pada layar</li>
+<li>Masalah 1171 : Situs pohon untuk menaikkan 'baru situs / node baru' peristiwa</li>
+<li>Masalah 1229 : Memperbarui Ekstensi/Plugin untuk Mengambil Keuntungan dari Kepercayaan Baru Skala</li>
+<li>Masalah 1341 : Memperbarui alert skema XML untuk menghapus elemen-tingkat tabrakan nama</li>
+<li>Masalah 1590 : Mode untuk menerapkan ketika berjalan sebagai daemon</li>
+<li>Masalah 1713 : Kode Sumber Pengungkapan SVN Melempar Positif Palsu</li>
+<li>Masalah 1864 : Salinan scan kemajuan sebagai teks ke clipboard</li>
+<li>Masalah 1958 : Memungkinkan untuk menonaktifkan database (HSQLDB) log</li>
+<li>Masalah 1959 : Memungkinkan untuk aktif memindai header dari semua permintaan</li>
+<li>Masalah 1980 : Tambahkan ZAP CLI untuk Docker gambar</li>
+<li>Masalah 2068 : LoggedIn dan LoggedOut indikator dalam script otentikasi</li>
+<li>Masalah 2070 : Itu harus mungkin untuk script otentikasi untuk mengkonfigurasi bagaimana pesan dikirim</li>
+<li>Masalah 2121 : Menonaktifkan Req/Resp tab pilihan posisi ketika di "Memperluas" tata letak</li>
+<li>Masalah 2127 : Memperingatkan jika laporan generasi gagal</li>
+<li>Edisi 2162 : Sorting tambahan marketplace</li>
+<li>Edisi 2171: Pengaya dikelola melalui api, cli</li>
+<li>Masalah 2174 : ExpressionLanguageInjectionPlugin - Kebutuhan penebangan memperbaiki </li>
+<li>Masalah 2177 : SourceCodeDisclosureSVN - tidak Dapat menulis ke temp DB</li>
+<li>Masalah 2183 : API: Termasuk kualitas dalam ascan/kemajuan respon</li>
+<li>Masalah 2237 : Memungkinkan java max mem untuk diganti pada cmdline</li>
+<li>Masalah 2238 : laba-laba: fallback untuk mengurai komentar HTML sebagai teks biasa jika tidak ada URL ditemukan</li>
+<li>Masalah 2272 : SQLInjectionHypersonic (Beta) - Pengecualian</li>
+<li>Masalah 2273 : situs Dukungan tingkat statistik</li>
+<li>Edisi 2274: Memungkinkan untuk laba-laba hanya situs subpepohon</li>
+<li>Edisi 2275: laba-laba: tidak memerlukan sebuah URL, melalui API, jika konteks memiliki benih</li>
+<li>Edisi 2277: laba-laba: melestarikan parameter kueri dengan sama nama ketika canonicalising URL</li>
+<li>Edisi 2289: Catatan situs berdasarkan statistik waktu respon</li>
+<li>Edisi 2324: Scanner kualitas meliputi API scanner views</li>
+<li>Edisi 2330: Tambahkan otentikasi Statistik</li>
+<li>Edisi 2335: Tambahkan puncak Password Proxy Outbound</li>
+<li>Edisi 2342: Kemampuan untuk mengelola situs dalam ZAP melalui API</li>
+<li>Edisi 2347: Memungkinkan untuk menghapus konteks pabrik dari pemandangan, Model</li>
+<li>Masalah 2361 : Mengubah tool bar opsi Memperluas Penuh untuk tata Letak Penuh</li>
+<li>Edisi 2362 : Izinkan untuk melanjutkan semua hasil Laba laba</li>
+<li>Masalah 2367 : Mengubah tombol istirahat lokasi tanpa restart ZAP</li>
+<li>Edisi 2368: Tidak memerlukan restart untuk menampilkan/menyembunyikan bilah alat utama</li>
+<li>Edisi 2381 : Mulai tidak mengizinkan untuk menyimpan/hanya file bacaan untuk ditulis</li>
+<li>Masalah 2400 : Menunjukkan lebih informatif pesan di baca timeout melalui proxy</li>
+<li>Edisi 2410: HTTP Tampilkan pesan di tab laba-laba</li>
+<li>Edisi 2413 : Tidak mengizinkan "Tampil Tab di Riwayat" jika pesan tidak benar</li>
+<li>Issue 2418 : Spider: mendukung durasi maksimal dalam pilihan menit</li>
+<li>Edisi 2420: Memungkinkan aktif scanner untuk memberitahukan bahwa pesan terkirim</li>
+<li>Masalah 2422 : Dukungan Statsd dan pindah statistik baru ext</li>
+<li>Masalah 2465 : Memungkinkan untuk menunggu ZAP untuk memulai dengan ClientApi</li>
+<li>Masalah 2466 : Memungkinkan untuk mengakses sebuah URL melalui ZAP API</li>
+<li>Masalah 2479 : Lihat Panduan Pengguna bahkan jika pencarian pandangan memiliki kesalahan</li>
+<li>Masalah 2481 : Kumpulan benar nama aplikasi di Linux</li>
+<li>Masalah 2482: Menormalkan tabel dialog sesi "Kecualikan dari"</li>
+<li>Masalah 2484 : Melingkar Pengalihan</li>
+<li>Masalah 2486 : Jelas ScriptVars pada sesi mengubah</li>
+<li>Masalah 2494 : ZAP Proxy tidak menunjukkan HTTP MENGHUBUNGKAN Permintaan dalam tab sejarah.</li>
+<li>Masalah 2504 : secara Eksplisit menambahkan manual permintaan HTTP ke Situs pohon</li>
+<li>Masalah 2506 : Jangan membuang sesi untuk berkas berbasis database</li>
+<li>Masalah 2512 : Memperbarui HSQLDB perpustakaan ke versi 2.3.4</li>
+<li>Masalah 2519 : Mengaktifkan menu/tombol ketika bantuan tambahan terpasang</li>
 </ul>
 
-<h2>Bug fixes:</h2>
+<h2>Perbaikan bug:</h2>
 <ul>
-<li>Issue 1529 : TestExternalRedirect Missing Use Case plus Performance and FP Improvements</li>
-<li>Issue 1597 : Java 8 - Mac OS/X package</li>
-<li>Issue 1786 : Activescan Scripts Silent Failure</li>
-<li>Issue 1801 : URL StandardParameterParser not working correctly with QueryString</li>
-<li>Issue 1848 : VariantURLQuery throwing exceptions on active scan</li>
-<li>Issue 1874 : Two Cookie line in the header when adding a cookie with an httpsender script and doing an active scan</li>
-<li>Issue 1875 : Scanner temp history not cleaned on close</li>
-<li>Issue 2090 : Context: Rename User, can't select in Forced User Panel</li>
-<li>Issue 2110 : SQL Injection gets skipped</li>
-<li>Issue 2112 : Wrong policy on active Scan</li>
-<li>Issue 2115 : Python API context.context("MyContext") is broken</li>
-<li>Issue 2119 : Context's description not imported</li>
-<li>Issue 2122 : Change SpiderAPI to ignore empty context names when handling scan action</li>
-<li>Issue 2125 : Log the exception when opening session file and internationalise message</li>
-<li>Issue 2126 : Fix NullPointerException on missing context's authentication script</li>
-<li>Issue 2132 : Zap Report Counting Bug</li>
-<li>Issue 2142 : Fuzzer throwing exceptions</li>
-<li>Issue 2144 : Java.lang.NullPointerException in "AWT-EventQueue-0" </li>
-<li>Issue 2151 : AJAX Spider does not click all elements set in the options</li>
-<li>Issue 2153 : 2.4.3 failed parse the POST Data containts bracket([]) </li>
-<li>Issue 2193 : Initialise Technology tab with selected context in Active Scan dialogue</li>
-<li>Issue 2197 : Install new versions of the add-ons after downloading with -addonupdate</li>
-<li>Issue 2199 : Disallow Spider scans when ZAP is in Safe (or Protected) mode</li>
-<li>Issue 2203 : Fix findbugs warnings</li>
-<li>Issue 2208 : Prevent the active scanner from reporting progress higher than 100%</li>
-<li>Issue 2226 : ZAP should handle HttpSessionsSite's cookie errors more gracefully</li>
-<li>Issue 2246 : Error in sessions view with tokens</li>
-<li>Issue 2259 : Fix NullPointerException in VariantCookie implementation</li>
-<li>Issue 2281 : Filter params for a specific site</li>
-<li>Issue 2282 : Spider a whole context at once</li>
-<li>Issue 2292 : Enhance alertFingerPrint</li>
-<li>Issue 2297 : AWT blocker activation interrupted - java.lang.InterruptedException </li>
-<li>Issue 2307 : Add missing optional parameter "scanPolicyName" to ascan API actions</li>
-<li>Issue 2312 : Give focus to "Edit Keyboard Shortcut" dialogue</li>
-<li>Issue 2313 : Properly convert (old) excluded proxy domains</li>
-<li>Issue 2314 : Cannot add several payloads to fuzzer (NullPointerException)</li>
+<li>Masalah 1529 : TestExternalRedirect Hilang Use Case plus Kinerja dan Perbaikan FP</li>
+<li>Masalah 1597 : Jawa 8 - Mac OS/X paket</li>
+<li>Masalah 1639 : XSS Negatif Palsu pada naskah suntikan ke dalam Rujukan depan HTTP</li>
+<li>Masalah 1786 : Script Activescan Diam Kegagalan</li>
+<li>Masalah 1801 : URL StandardParameterParser tidak bekerja dengan benar dengan QueryString</li>
+<li>Masalah 1848 : VariantURLQuery melemparkan pengecualian pada active scan</li>
+<li>Masalah 1874 : Dua baris Cookie dalam header ketika menambahkan cookie dengan httpsender script dan melakukan pemindaian aktif</li>
+<li>Masalah 1875 : Scanner temp sejarah tidak dibersihkan dekat</li>
+<li>Masalah 2090 : Konteks: Mengubah nama Pengguna, tidak dapat memilih di Paksa Pengguna Panel</li>
+<li>Masalah 2110 : SQL SUntikan akan dilewati</li>
+<li>Masalah 2112 : kebijakan yang Salah pada aktif Pengamatan</li>
+<li>Masalah 2115 : Python API konteks.konteks("MyContext") rusak</li>
+<li>Masalah 2119 : Konteks deskripsi tidak diimpor</li>
+<li>Masalah 2122 : Perubahan Laba-labaAPI untuk mengabaikan kosong konteks nama ketika menangani pengamatan aksi</li>
+<li>Masalah 2125 : Mencatat pengecualian ketika sesi pembukaan berkas dan menginternasionalisasikan pesan</li>
+<li>Masalah 2126 : Memperbaiki NullPointerException pada hilang konteks otentikasi script</li>
+<li>Masalah 2132 : Zap Laporan Menghitung Masalah</li>
+<li>Masalah 2142 : telah mengirimkan hasil pengeditan melempar pengecualian</li>
+<li>Masalah 2144 : Jawa.lang.NullPointerException "AWT-EventQueue-0" </li>
+<li>Masalah 2151 : AJAX laba-Laba tidak klik semua unsur-unsur yang ditetapkan dalam pilihan</li>
+<li>Masalah 2153 : 2.4.3 gagal mem-POSTING Data muatan mengurung([]) </li>
+<li>Masalah 2193 : Menginisialisasi Teknologi biaya dengan memilih konteks secara Aktif Memindai percakapan</li>
+<li>Masalah 2197 : Menginstal versi baru dari add-ons setelah men-download-addonupdate</li>
+<li>Masalah 2199 : Larang laba-Laba pengamatan ketika ZAP adalah dalam Aman (atau Dilindungi) cara</li>
+<li>Masalah 2203 : Memperbaiki findbugs peringatan</li>
+<li>Masalah 2208 : Mencegah aktif scanner dari pelaporan kemajuan yang lebih tinggi dari 100%</li>
+<li>Masalah 2226 : ZAP harus menangani HttpSessionsSite cookie kesalahan lebih anggun</li>
+<li>Masalah 2246 : Kesalahan di sesi tampilan dengan token</li>
+<li>Masalah 2259 : Memperbaiki NullPointerException di VariantCookie pelaksanaan</li>
+<li>Masalah 2281 : menyaring params untuk situs tertentu</li>
+<li>Masalah 2282 : spider keseluruhan konteks sekaligus</li>
+<li>Masalah 2292 : Meningkatkan alertFingerPrint</li>
+<li>Masalah 2297 : AWT blocker aktivasi terganggu - jawa.lang.InterruptedException </li>
+<li>Masalah 2307 : Tambahkan hilang parameter opsional "scanPolicyName" untuk ascan API tindakan</li>
+<li>Isu 2312 : Memberikan fokus kepada dialog "Ubah Pintasan Tombol Papan"</li>
+<li>Isu 2313 : Mengkonversi secara benar tidak termasuk domain proxy (lama)</li>
+<li>Isu 2314 : Tidak bisa menambah beberapa payload untuk fuzzer (EksepsiPetunjukBatal)</li>
 <li>Issue 2323 : Fix (secure) ZAP API request loop</li>
-<li>Issue 2328 : Fix issue during uninstallation of named extension</li>
-<li>Issue 2329 : Filter seeds immediately before running the spider</li>
-<li>Issue 2331 : Custom Context Panels not show in existing contexts after installation of add-on</li>
-<li>Issue 2336 : BadLocationException thrown when using Fuzzer</li>
-<li>Issue 2357 : Inconsistencies while changing between panel layouts</li>
-<li>Issue 2363 : Keep break buttons in sync when changing mode</li>
-<li>Issue 2366 : Inconsistencies in break buttons shown</li>
-<li>Issue 2373 : Show Tab not working correctly in Full Layout for non-information tabs</li>
-<li>Issue 2374 : Unable to change response tab position without main tool bar</li>
-<li>Issue 2390 : HeadlessException should be handled more gracefully & README needs Headless details</li>
-<li>Issue 2394 : Change API authorization view to wrap its object</li>
-<li>Issue 2399 : Timeout requests not shown in ZAP</li>
-<li>Issue 2421 : Active scanner request count mismatch</li>
-<li>Issue 2428 : Memory leak on session creation/loading</li>
-<li>Issue 2429 : InterruptedExceptions while stopping the spider with user authentication</li>
-<li>Issue 2435 : Clean up spider task resources, when not consumed</li>
-<li>Issue 2436 : Unable to dynamically uninstall WebSockets add-on</li>
-<li>Issue 2440 : Exception while opening the Active Scan dialogue</li>
-<li>Issue 2451 : Only a single Data Driven Node can be saved in a context</li>
-<li>Issue 2463 : Websocket not proxied when outgoing proxy is set</li>
-<li>Issue 2469 : Always return 100% when spider stopped</li>
-<li>Issue 2472 : Use file name case when loading policies from file</li>
-<li>Issue 2474 : Add multiple context URL in/exclusions at once</li>
-<li>Issue 2475 : Correct help page for Passive Scan Rules options</li>
-<li>Issue 2487 : Wrong charset used in HTTP body</li>
-<li>Issue 2516 : Add auth and spider task types to temporary types</li>
+<li>Isu 2328 : Perbaiki masalah selama penginstalan ulang dari nama ekstensi</li>
+<li>Isu 2329 : Menyaring benih secara langsung sebelum menjalankan laba-laba</li>
+<li>Isu 2331 : Panel Konteks Khusus tidak muncul dalam konteks yang ada setelah pemasangan dari add-on</li>
+<li>Masalah 2336 : BadLocationException dilemparkan ketika menggunakan telah mengirimkan hasil pengeditan</li>
+<li>Masalah 2357 : Inkonsistensi saat mengganti antara panel layouts</li>
+<li>Masalah 2363 : Terus tombol istirahat di sync ketika mengubah mode</li>
+<li>Masalah 2366 : Inkonsistensi dalam istirahat tombol ditampilkan</li>
+<li>Masalah 2373 : Lihat Tab tidak bekerja dengan benar di tata Letak Penuh untuk non-informasi tab</li>
+<li>Masalah 2374 : tidak Dapat mengubah respon posisi tab tanpa alat utama bar</li>
+<li>Masalah 2390 : HeadlessException harus ditangani lebih anggun & README kebutuhan Tanpa kepala detail</li>
+<li>Masalah 2394 : Perubahan API otorisasi melihat untuk membungkus objek</li>
+<li>Masalah 2399 : Batas waktu permintaan tidak ditampilkan di ZAP</li>
+<li>Masalah 2421 : Aktif scanner jumlah permintaan ketidakcocokan</li>
+<li>Masalah 2428 : kebocoran Memori pada sesi pembuatan/memuat</li>
+<li>Masalah 2429 : InterruptedExceptions sementara menghentikan laba-laba dengan otentikasi pengguna</li>
+<li>Masalah 2435 : bersih-Bersih laba-laba tugas sumber daya, ketika tidak dikonsumsi</li>
+<li>Masalah 2436 : Mampu untuk secara dinamis mencabut WebSockets add-on</li>
+<li>Masalah 2440 : Pengecualian saat membuka Active Scan dialog</li>
+<li>Masalah 2451 : Hanya satu yang Didorong Data Node dapat disimpan dalam konteks</li>
+<li>Masalah 2463 : Websocket tidak proksi ketika keluar proxy set</li>
+<li>Masalah 2469 : Selalu kembali 100% jika laba-laba berhenti</li>
+<li>Masalah 2472 : Gunakan nama file kasus ketika memuat kebijakan dari file</li>
+<li>Masalah 2474 : Tambahkan beberapa konteks URL di/pengecualian sekaligus</li>
+<li>Masalah 2475 : Benar membantu halaman untuk Pasif Scan Aturan pilihan</li>
+<li>Masalah 2487 : Salah charset digunakan di HTTP tubuh</li>
+<li>Masalah 2516 : Tambahkan auth dan laba-laba jenis tugas untuk sementara jenis</li>
 </ul>
 
-<h2>See also</h2>
+<h2>Lihat juga</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Lihat juga</a></td><td>pengantar ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Rilis</a></td><td>set lengkap rilis</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Kredit</a></td><td>orang-orang dan kelompok-kelompok yang telah membuat rilis ini mungkin</td></tr>
 </table>
 </body>
 </html>

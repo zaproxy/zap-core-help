@@ -9,22 +9,24 @@
 <body bgcolor="#ffffff">
 <h1>Пассивное сканирование</h1>
 <p>
-ZAP passively scans all of the responses from the web application being tested.<br/>
-Passive scanning does not change the responses in any way and is therefore safe to use.<br/>
-Scanned is performed in a background thread to ensure that it does not slow down the exploration
+ZAP by default passively scans all HTTP messages (requests and responses) sent to the web application being tested.<br/>
+Passive scanning does not change the requests nor the responses in any way and is therefore safe to use.<br/>
+Scanning is performed in a background thread to ensure that it does not slow down the exploration
 of an application.
 </p>
 <p>
-In this release ZAP passive scanning is used for automatically adding <a href="tags.html">tags</a>
-and raising <a href="alerts.html">alerts</a> for potential issues. 
+The (main) behaviour of the passive scanner can be configured using the 
+<a href="../../ui/dialogs/options/pscanner.html">Options Passive Scanner Screen</a>.
+</p>
+<p>
+Passive scanning can also be used for automatically adding <a href="tags.html">tags</a>
+and raising <a href="alerts.html">alerts</a> for potential issues.<br>
+A set of rules for automatic tagging are provided by default. These can be changed, deleted or
+added to via the <a href="../../ui/dialogs/options/pscan.html">Options Passive Scan Tags screen</a>.
 </p>
 
 <p>
-A set of rules for automatic tagging are provided by default.<br>
-These can be changed, deleted or added to via the <a href="../../ui/dialogs/options/pscan.html">Options Passive Scan Tags screen</a>.<br/>
-</p>
-<p>
-The alerts raised by passive scanning can be configured using the 
+The alerts raised by passive scanners can be configured using the 
 <a href="../../ui/dialogs/options/pscanrules.html">Options Passive Scan Rules screen</a>.<br/>
 </p>
 

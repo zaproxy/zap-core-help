@@ -9,7 +9,9 @@
 <body bgcolor="#ffffff">
 <h1>プロキシの設定</h1>
 <p>
-ZAPをプロキシとして使用するには、ブラウザの設定をする必要があります。<br>  <a href="../ui/dialogs/options/localproxy.html">Options Local Proxy 画面</a> において設定変更を行わない限り、ZAPはデフォルトで 'localhost' アドレスおよび '8080' ポートを使用します。 
+You will need to configure your browser to use ZAP as a proxy.<br>
+By default ZAP uses an Address of 'localhost' and a Port of '8080', but these can be changed via the 
+<a href="../ui/dialogs/options/localproxy.html">Options Local Proxies screen</a>. 
 
 最も一般に利用されているブラウザの最新版に関する説明は次の通りです。 
 </p>
@@ -24,7 +26,7 @@ ZAPをプロキシとして使用するには、ブラウザの設定をする�
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Follow the</td><td> 'Windows LAN Settings' section below</td></tr>
 </table>
 
-<h3>Firefox</h3>
+<h3>Firefox (on Windows)</h3>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select the</td><td> 'Tools' menu </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select the</td><td> 'Options..' menu item</td></tr>
@@ -33,14 +35,21 @@ ZAPをプロキシとして使用するには、ブラウザの設定をする�
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> 'Settings...' button</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select the</td><td> 'Manual proxy configuration' radio button</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Enter in the</td><td> 'HTTP Proxy:' field the 'Address' you configured in the 
-<a href="../ui/dialogs/options/localproxy.html">Options Local Proxy screen</a></td></tr>
+<a href="../ui/dialogs/options/localproxy.html">Options Local Proxies screen</a></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Enter in the</td><td> 'Port' field to the right of the 'HTTP Proxy' field the 'Port' you configured in the 
-<a href="../ui/dialogs/options/localproxy.html">Options Local Proxy screen</a></td></tr>
+<a href="../ui/dialogs/options/localproxy.html">Options Local Proxies screen</a></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> Connection Setting 'OK' button</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> Options 'OK' button</td></tr>
 </table>
 
-<h3>Firefox (OS X版)</h3>
+<h3>Firefox (on Linux)</h3>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select the</td><td>'Edit' menu</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select the</td><td>'Preferences' menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Follow the</td><td>instructions above from the 'Advanced' button</td></tr>
+</table>
+
+<h3>Firefox (on OS X)</h3>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select the</td><td> 'Firefox' menu </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select the</td><td> 'Preferences...' menu item</td></tr>
@@ -48,7 +57,7 @@ ZAPをプロキシとして使用するには、ブラウザの設定をする�
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Follow the</td><td> instructions above from the 'Advanced' button</td></tr>
 </table>
 
-<h3>Internet Explorer 7 および 8</h3>
+<h3>Internet Explorer 7 and 8</h3>
 
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select the</td><td> 'Tools' menu </td></tr>
@@ -69,14 +78,14 @@ ZAPをプロキシとして使用するには、ブラウザの設定をする�
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> 'Proxy Servers' button</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select the</td><td> 'HTTP' checkbox</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Enter in the</td><td> field to the right of 'HTTP' the 'Address' you configured in the 
-<a href="../ui/dialogs/options/localproxy.html">Options Local Proxy screen</a></td></tr>
+<a href="../ui/dialogs/options/localproxy.html">Options Local Proxies screen</a></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Enter in the</td><td> HTTP 'Port' field the 'Port' you configured in the 
-<a href="../ui/dialogs/options/localproxy.html">Options Local Proxy screen</a></td></tr>
+<a href="../ui/dialogs/options/localproxy.html">Options Local Proxies screen</a></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> Proxy servers 'OK' button</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> Preferences 'OK' button</td></tr>
 </table>
 
-<h3>Safari (OS X)</h3>
+<h3>Safari (on OS X)</h3>
 
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> 'Safari settings' button in the top right hand corner</td></tr>
@@ -86,7 +95,7 @@ ZAPをプロキシとして使用するには、ブラウザの設定をする�
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Follow the</td><td> 'OS X System Proxy settings' section below</td></tr>
 </table>
 
-<h3>Safari (Windows 版)</h3>
+<h3>Safari (on Windows)</h3>
 
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> 'Display a menu of general Safari settings' button in the top right hand corner</td></tr>
@@ -97,26 +106,26 @@ ZAPをプロキシとして使用するには、ブラウザの設定をする�
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Follow the</td><td> 'Windows LAN Settings' section below</td></tr>
 </table>
 
-<h3>OS X のシステムのプロキシ設定</h3>
+<h3>OS X System Proxy settings</h3>
 
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select the</td><td> 'Web Proxy (HTTP)</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Enter in the</td><td> 'Address:' field the 'Address' you configured in the 
-<a href="../ui/dialogs/options/localproxy.html">Options Local Proxy screen</a></td></tr>
+<a href="../ui/dialogs/options/localproxy.html">Options Local Proxies screen</a></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Enter in the</td><td> 'Port' field the 'Port' you configured in the 
-<a href="../ui/dialogs/options/localproxy.html">Options Local Proxy screen</a></td></tr>
+<a href="../ui/dialogs/options/localproxy.html">Options Local Proxies screen</a></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> Proxies Setting 'OK' button</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> Network Options 'Apply' button</td></tr>
 </table>
 
-<h3>Windows LAN の設定</h3>
+<h3>Windows LAN Settings</h3>
 
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select the</td><td> 「LAN にプロキシサーバーを使用する」チェックボックス</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select the</td><td> 'Use a proxy server for your LAN' checkbox</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Enter in the</td><td> 'Address:' field the 'Address' you configured in the 
-<a href="../ui/dialogs/options/localproxy.html">Options Local Proxy screen</a></td></tr>
+<a href="../ui/dialogs/options/localproxy.html">Options Local Proxies screen</a></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Enter in the</td><td> 'Port' field the 'Port' you configured in the 
-<a href="../ui/dialogs/options/localproxy.html">Options Local Proxy screen</a></td></tr>
+<a href="../ui/dialogs/options/localproxy.html">Options Local Proxies screen</a></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> Local Area Network (LAN) Setting 'OK' button</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> Internet Options 'OK' button</td></tr>
 </table>
@@ -124,9 +133,10 @@ ZAPをプロキシとして使用するには、ブラウザの設定をする�
 <h2>関連情報</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="start.html">はじめに</a></td><td>ZAPの使用開始方法の詳細について</td></tr>
+<a href="start.html">Getting Started</a></td><td>for details of how to
+start using ZAP</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../intro.html">導入</a></td><td>ZAPのご紹介</td></tr>
+<a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
 </table>
 
 </body>

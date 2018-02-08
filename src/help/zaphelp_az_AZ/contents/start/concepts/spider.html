@@ -9,27 +9,12 @@
 	<p>The spider is a tool that is used to automatically discover new
 		resources (URLs) on a particular Site. It begins with a list of URLs
 		to visit, called the seeds, which depends on how the Spider is
-		started. The Spider then visits these URLs, it identifies all the
-		hyperlinks in the page and adds them to the list of URLs to visit and
-		the process continues recursively as long as new resources are found.
+		started. Spider sonra bu URL 'leri ziyarət, bütün təriflər
+            səhifədəki körpülər və bunları ziyarət etmək üçün URL 'lərin siyahısına əlavələr və
+             yeni qaynaqlar tapıldığında əməliyyat yinelemeli olaraq davam edər
 	</p>
 
-	<p>There are 4 methods of starting the Spider, differentiated by the
-		seed list with which it starts:</p>
-	<ul>
-		<li>Spider Site - The seed list contains all the existing URIs
-			already found for the selected site.</li>
-		<li>Spider Subtree - The seed list contains all the existing URIs
-			already found and present in the subtree of the selected node.</li>
-		<li>Spider URL - The seed list contains only the URI
-			corresponding to the selected node (in the Site Tree).</li>
-		<li>Spider all in Scope - The seed list contains all the URIs the
-			user has selected as being 'In Scope'.</li>
-		<li>Spider all in Context... - The seed list contains all the URIs
-			user has selected as being in the selected context.</li>
-	</ul>
-	<i>More details can be found below, in the "Accessed via" section </i>
-
+	<p>The Spider can configured and started using the <a href="../../ui/dialogs/spider.html">Spider dialogue</a>.</p>
 
 	<p>During the processing of an URL, the Spider makes a request to
 		fetch the resource and then parses the response, identifying
@@ -80,10 +65,8 @@
 	<li> When checking if an URL was already visited, there are a few common parameters
 	which are ignored: jsessionid, phpsessid, aspsessionid, utm_*
 	</li>
-	<li> The Spider's behaviour regarding cookies is defined by the option present in the
-	<i>Edit -&gt; Enable Session Tracking</i> option. If that option is enabled, the Spider
-	will properly handle any cookies received from the server and will send them back accordingly.
-	If the option is disabled, the Spider will not send any cookies in its requests.
+	<li> The Spider's behaviour regarding cookies depends on how the spider is started and which options are enabled. For more
+	details refer to the Spider Options screen.
 	</li>
 	</ul>
 	<p>

@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  Sürüm 2.4.0
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Sürüm 2.4.0</h1>
+<p>
+Bu sürümde aşagğıdaki değişiklikler yapılmıştır:
+</p>
+
+<h2>Önemli değişiklikler:</h2>
+
+<h3>Attack mod</h3>
+
+Yeni 'SALDIRI' <a href="../start/concepts/modes.html">Mod</a> eklendi - içinde bulunan yeni düğümler <a href="../start/concepts/scope.html">Kapsam</a> lar 
+<a href="../start/concepts/ascan.html">aktif olarak tarandı</a> ayrıldıkları gibi hemen.
+
+<h3>Gelişmiş fuzzing</h3>
+
+Aynı anda birden fazla püskürtme noktasına saldırılmasına izin veren tamamen yeni bir iletişim şoku başlatıldı.<br> 
+Bu, yükleri üretmek için komut dosyalarının yanı sıra ön ve direk saldırı manipülasyonu ve analizini kullanma seçeneği de dahil olmak üzere yeni saldırı yüklerini destekler.
+
+<h3>Gelişmiş seçeneklerle tarama pencereleri</h3>
+
+Yeni <a href="../ui/dialogs/advascan.html">Aktif Tarama</a>, <a href="../ui/dialogs/spider.html">Örümcek</a> ve AJAX Örümcek diyalogları 
+artan sağ tıklamanın sayısı 'Saldırı' seçeneklerine değiştirildi.<br>
+Bunlar, en yaygın seçeneklerin tümüne kolay erişim sağlar ve isteğe bağlı olarak geniş kapsamlı ileri düzey seçenekler sunar. 
+
+<h3>Tarama İlkeleri</h3>
+
+Yeni <a href="../ui/dialogs/scanpolicymgr.html">Tarama İlkesi Yönetici penceresi</a> birden fazla oluşturmaya izin verir 
+<a href="../start/concepts/scanpolicy.html">Tarama İlkeleri</a> gerek duyduğunuz kadar.<br>
+Tarama politikaları tam olarak hangi kuralların bir parçası olarak çalıştığını tanımlar <a href="../start/concepts/ascan.html">Aktif Tarama</a>.<br>
+Ayrıca bu kuralların kaç tane istek yapılmasını etkilediğini ve olası sorunların bayrak üzerinde olma olasılığını da tanımlarlar.<br>
+
+<h3>Kullanılmayan sekmeler gizlendi</h3>
+
+ZAP başlatıldığında varsayılan olarak sadece başlıca sekmeler gösterilir.<br>
+Kalan sekmeler kullanıldıklarında (örümcek ve etkin tarayıcı gibi) veya görüntülendiklerinde her bir pencerenin en sağındaki özel sekmeyi yeşil '+' simgesiyle işaretleyin. Eğer gizli sekmeler yoksa bu özel sekme kaybolur.<br>
+Sekmeler sekme seçildiğinde gösterilen küçük bir 'x' simgesi ile kapatılabilir.<br>
+Sekmeler aynı zamanda sekme seçildiğinde de gösterilen küçük bir 'iğne' simgesi kullanılarak sabitlenebilir - sonraki ZAP başlatıldığında sabitlenmiş sekmeler gösterilir. 
+
+<h3>Sıra tarama eklentisi için etkinleştiriciler</h3>
+
+Yeni bir isteğe bağlı 'alfa' kalite eklentisi, web sayfalarının 'dizileri' tarama yeteneğini, diğer bir deyişle ziyaret edilmesi gereken sayfaları doğru çalışması için uygun bir şekilde sıralar. 
+
+<h3>Erişim noktası test eklentisi sağlayıcı</h3>
+
+Yeni isteğe bağlı 'alfa' kalite eklentisi erişim kontrolü testinin birçok yönünü otomatikleştirme yeteneği ekler. 
+
+<h3>API kullanıcıları için not</h3>
+Harici Yönlendirme tarayıcı Eklenti Kimliğinin 30000'den 20019'a kadar değiştiğini unutmayın.
+
+<h2>Değişikliklerin tam listesi:</h2>
+<ul>
+<li>Sorun 117: Arttırma: Kimlik doğrulama sorunları için gezinme oturumlarını karşılaştırma</li>
+<li>Sorun 234: Çoklu parçaları bulandırma desteği</li>
+<li>Sorun 329: Arttırma: sitemap.xml desteğini ekleyin</li>
+<li>Sorun 389 : Tarayıcılar için teknoloji kapsamını etkinleştir</li>
+<li>Sorun 414: Yazılım Programlama arayüzü: Kod desteği</li>
+<li>Sorun 445 : SSLContextManager.isProviderAvailable() varsayılan olarak true döndürür</li>
+<li>Sorun 557: SQL yerleştirme yanlış negatifler</li>
+<li>Sorun 642 : Çıktı sekmesi için zaman bilgisi gerekli</li>
+<li>Sorun 653 : Kali Linux üzerinde güncellemeleri daha iyi yapar</li>
+<li>Sorun 704 : ZAP Hatası : el titreme uyarısı : tanımlanamayan_isim</li>
+<li>Sorun 722 : ZAP Kullanıcı Arayüzü toplu aktif taramanın üstesinden gelemez</li>
+<li>Sorun 883 : API'da çoklu taramayı destekle</li>
+<li>Sorun 949 : Örümcek (site) JSON belgelerindeki hiperlinkleri takip etmez</li>
+<li>Sorun 959 : eklenti güncelleyici giden proxy değişikliklerini göz ardı edebilir</li>
+<li>Sorun 984 : Yöntemin belirtilmesine izin vermek için ascan API'sını geliştirin</li>
+<li>Sorun 990: API aracılığıyla bildirimleri silmeye izin verin</li>
+<li>Sorun 1151 : Kapsamlı Aktif Tarama çoklu alan kullanılabilir ise tüm iletiler kapsamdaki taramadan önce biter</li>
+<li>Sorun 1154 : Araç ipucu metni "Sekme adlarını ve sekme simgelerini göster" IdealFirstBug</li>
+<li>Sorun 1175: İçindekiler Ağacını destekle</li>
+<li>Sorun 1176 : Örümcek gelişmiş tarama diyaloğu</li>
+<li>Sorun 1180 : Birden fazla soru işareti olduğunda proxy URL'yi bozuyor</li>
+<li>Sorun 1184 : IBM JDK desteğini geliştirin</li>
+<li>Sorun 1207 : AScan API'sı - "tarayıcılar" görünümünü bağlılıkları içerecek şekilde değiştirin</li>
+<li>Sorun 1208 : Arama sınıfları/eklentilerdeki bağlılıklar olarak bildirilen kaynaklar</li>
+<li>Sorun 1209 : Ek Güvenilirlik Değerleri/Seçenekler &amp; Güvenilirliği UI'da Güvenliğe Yeniden Adlandır</li>
+<li>Sorun 1214 : Tarama Politikası İletişim Kutularında Kullanılabilirlik Sıralaması</li>
+<li>Sorun 1215 : Ağaç Sıralama/Ayrıştırma Sorunu Uyarısı Kullanılabilirlik</li>
+<li>Sorun 1216: Kod sekmesindeki yazım hatası</li>
+<li>Sorun 1217 : İçerik türü üst bilgisinde karakter seti kullanılabilir olduğunda tablo biçimi bilgi görüntülemez</li>
+<li>Sorun 1224 : Tarama Politikası İletişim Kutularındaki Kullanılabilirlik Durumunda Görüntülenen Kalite/Durum</li>
+<li>Sayı 1226: Etkin tarayıcı hariç tutulan parametrenin regexes'i doğrulanmadı</li>
+<li>Sorun 1227 : Aktif tarayıcı istek gövdesi içeriğiyle GET istekleri gönderir</li>
+<li>Sorun 1238 : NullPointerException aktif bir tarayıcı geçersiz saldırı ile uyarı verirse</li>
+<li>Sorun 1239 : Uzantılardan Örümcek uzatılmasına izin ver</li>
+<li>Sorun 1241 : Aktif tarayıcı ana makine tarayıcılarını kullanırken biten durumu bildirmeyebilir</li>
+<li>Sorun 1242: Aktif tarayıcı güncelliğini yitirmiş ilke ayarlarını kullanabilir</li>
+<li>Sorun 1243 : Bir script türü, temel paket script şablonlarına sahip değilse NullPointerException durumu</li>
+<li>Sorun 1244 : Komut Dizileri Aktif Tarayıcısı Misc not Enjeksiyon Kullanılabilirliği kategorisinde olmalıdır</li>
+<li>Sorun 1252 : API üzerinden taramaları çalıştırırken kapanış sırasında Bağlantı İstisnası</li>
+<li>Sorun 1256 : Eksik X-Çerçeve-Seçenekleri tarayıcı düzeyini tekrar gözden geçirin</li>
+<li>Sorun 1257 : Büyük yönlendirmeleri tespit eden pasif bir kural oluşturun</li>
+<li>Sorun 1261 : Pazar alanından "Tak-Çalıştır Yapılandırması" hakkında NPE güncellemesi</li>
+<li>Sorun 1262 : Adres "Pasif Kurallar - Risk - Güvenilirlik" [Kullanıcı tarafından denetlenebilir HTML öğesi özelliği (potansiyel XSS), ve Zaman Damgası Bilgilendirme - Unix]</li>
+<li>Sorun 1263 : Talep Edilmeden Varolan Dosyalarla Cobbbers Oluşturun</li>
+<li>Sorun 1264 : El ile kimlik doğrulama - Alan ve yolun hatalı işlenmesi nedeniyle çerez uyuşmazlığı</li>
+<li>Sorun 1265 : İçeriği içe ve dışa aktarma</li>
+<li>Sorun 1272 : ZAP API: Core.MessagesHAR(), HTTP sorgusu geçersiz Cookie header(s) içeriyorsa hata veriyor</li>
+<li>Sorun 1274 : ZAP Hatası [javax.net.ssl.SSLException]: Desteklenmeyen kayıt sürümü SSLv2Hello</li>
+<li>Sorun 1275 : SpiderODataAtomParser, "parseResource" 'den true döndürmelidir</li>
+<li>Sorun 1278: Güvenli menü öğeleri korumalı ve güvenli modların kullanılması</li>
+<li>Sorun 1279 : Parametreler dışındaki aktif tarayıcı "Where" "Any" olduğu zaman çalışmıyor</li>
+<li>Sorun 1280 : ApiImplementor kaldırıldığında API kısayolları kaldırılmaz</li>
+<li>Sorun 1281: Hızlı Başlatma - Görünüm başlatıldığında raporu oluşturmaya izin verin</li>
+<li>Sorun 1282: Extension#stop() asla destroy() 'dan önce tanımlanmaz</li>
+<li>Sorun 1283 : SQLDataException: Veri özel durumu: string veri, veritabanına uyarı yazarken doğru kesme</li>
+<li>Sorun 1286: Fuzzer yavaş gibi görünüyor</li>
+<li>Sorun 1290 : Bir bağlantı tarama işlemi zaten devam ediyor olsa bile "Bağlantı Tarama sunucusu" menü öğesi etkinleştirildi</li>
+<li>Sorun 1291 : 407 Aktif tarama yapılırken Proxy Kimlik Doğrulaması Gerekli</li>
+<li>Sorun 1292: Tescilsiz bir ManualRequestEditorDialog kaldırmaya çalışırken NullPointerException durumu</li>
+<li>Sorun 1294 : Önemsiz_UI_Sorunu : Kelime - 'Session Properties' komut istemi altında iki kez görünür 'olacak'.</li>
+<li>Sorun 1295: Geliştirme isteği - HTTPS içeriğine HTTP erişimi kontrol etmek için yeni aktif tarama kuralı</li>
+<li>Sorun 1300: Eklentiler İngilizce olmayan yerel ayarlarda İngilizce seçildiğinde yanlış dili göstermesi</li>
+<li>Sorun 1301: AbstractPanel TabbedPanel2 sızdırıyor</li>
+<li>Sorun 1302 : İçerik menü öğesi işlemi yürütülmeyebilir</li>
+<li>Sorun 1303: HttpPanel[SyntaxHighlight]TextArea HighlighterManager sızdırıyor</li>
+<li>Sorun 1304: ZapMenuItem ExtensionKeyboard sızdırıyor</li>
+<li>Sorun 1305: Eski sürümlerden güncelleme yaparken çıkış proxysi devre dışı</li>
+<li>Sorun 1307 : Ant OS X'in zip dosyası adı boşluklu dosya adını karıştırıyor</li>
+<li>Sorun 1308: ZAP simgelerinin çözünürlükleri çok düşük</li>
+<li>Sorun 1309: Bir eklentinin başarısız kaldırılması sırasında NullPointerExceptions durumu</li>
+<li>Sorun 1310: Geçmiş türleri geçici olarak ayarlamaya izin ver</li>
+<li>Sorun 1311 : Geçici dahili mesajları geçici tarayıcı iletilerinden ayırabilir</li>
+<li>Sorun 1312 : Yerel proxy'yi belirtilen adrese bağlayamadığında hata iletisi yanıltıcı oldu</li>
+<li>Sorun 1319 : İçeriğin yetkilendirme algılamasını yapılandırmak için API desteği ekleyin</li>
+<li>Sorun 1322 : Kullanımdan dışı olan Auth API'sını kaldırın</li>
+<li>Sorun 1324 : Oluşturulan apilere eklenti apisi çağrılarını dahil et</li>
+<li>Sorun 1325: İçerikleri silmek için seçenek</li>
+<li>Sorun 1326 : Ajax Örümcek Uzantısını Beta'dan Yayın durumuna Taşıyın</li>
+<li>Sorun 1333: ExtensionAntiCSRF ConcurrentModificationException</li>
+<li>Sorun 1334 : ZAP BilinmeyenSunucuUzantısı'na yol açan tekrarlanan bağlantılarda API isteklerini işlemez: www.zap.com</li>
+<li>Sorun 1335: Proxy 'den siteleri hariç tuttuktan sonra "Uyarılar" sekmesi içinde bir düğümü seçerken NullPointerException durumu</li>
+<li>Sorun 1339 : Basit bir event bus tanıtmak</li>
+<li>Sorun 1343: XContentTypeOptionsScanner uluslararası duruma getirme kullanılabilirliği</li>
+<li>Sorun 1345 : Saldırı modunu Destekleyin</li>
+<li>Sorun 1346 : Tarayıcıda sıkıştırılmış gziped yanıtları başarısız</li>
+<li>Sorun 1348 : Java istemcisi api Karınca görevleri beklemez</li>
+<li>Sorun 1353 : Daha kolay kesme seçeneği</li>
+<li>Sorun 1355 : API aracılığıyla HTML raporu oluşturma</li>
+<li>Sorun 1356: CacheControlScanner yazım hataları düzeltmek</li>
+<li>Sorun 1357: Kullanılmayan sekmeleri gizleme</li>
+<li>Sorun 1359: Sıçratma ekranını geri getirme</li>
+<li>Sorun 1360 : Yeni eklenti - İpuçları ve Hileler</li>
+<li>Sorun 1361 : Spidering veya API ile tarama yaparken 'Örümcek' ve 'Aktif Tarama' panelinde hiçbir veri görünmüyor</li>
+<li>Sorun 1362 : Tekrarlanan Anti-CSRF belirteçlerinin yalnızca API tarafından eklenmesine izin veriliyor</li>
+<li>Sorun 1363 : contextId almak için API eksik</li>
+<li>Sorun 1367: Belirli bir ortamda "Xpath Injection" algılayamaz.</li>
+<li>Sorun 1377 : "Kaynak Kodu Açıklaması - SVN" regex kaçışı eksik</li>
+<li>Sorun 1378 : Aktif tarama panelini yenileyin</li>
+<li>Sorun 1379 : Eklenti yüklemesi sırasında tüm uzantıların dinleyicileri bağlı değil</li>
+<li>Sorun 1381 : Kesme noktasını temiz bir şekilde İptal üzerinde Ekle/Düzenle iletişim kutusundan kapatın</li>
+<li>Sorun 1383: Bir anti CSRF belirtecinin atanan bir değeri olmazsa NullPointerException durumu</li>
+<li>Sorun 1384: HttpSessions API bileşen yolu ile URL 'leri kabul etmez</li>
+<li>Sorun 1385 : ZAP varsayılan kurulum dizininden çalıştırılmazsa XML raporu API aracılığıyla oluşturulmaz</li>
+<li>Sorun 1386: PScan API - uyarı eşiklerini görüntülemeye ve değiştirmeye izin verme</li>
+<li>Sorun 1387 : Bağlantı noktası/adres komut satırında belirtilmişse proxy'nin bağlantı noktası/adresi değiştirilemez</li>
+<li>Sorun 1388 : "zaplang" paketi içe aktarıldığında çevrilmiş dosyaların tümü güncellenmiyor</li>
+<li>Sorun 1389: Başlangıç süresince core help jar bulunamazsa NullPointerException durumu</li>
+<li>Sorun 1390: cfu çağrısında https zorlaması</li>
+<li>Sorun 1391: Etkin tarama çok parçalı / form-veri türü ' nün yanlış yükünü gönderiyor</li>
+<li>Sorun1394: Çevrilmiş kaynakları güncellerken vulnerabilities.xml dosyalarını içe aktar</li>
+<li>Sorun 1395 : Güvenlik açıklarının verisi kullanılmasa bile bellekte tutulur</li>
+<li>Sorun 1397 : Yardım dosyalarını eklentilere taşı</li>
+<li>Sorun 1399 : Kullanıcıların varsayılan tarayıcısında 'harici' bağlantılar açmak için yardım geliştirin</li>
+<li>Sorun 1404: SpiderODataAtomParser bağlantılar tespit edilirse sadece true döndürmelidir</li>
+<li>Sorun 1406 : Çevrimiçi menü öğelerini bir eklentiye taşıyın</li>
+<li>Sorun 1409 : ZAP başlangıç hızını artırma</li>
+<li>Sorun 1415: Dosya yüklemeleri düzeldi > 128k</li>
+<li>Sorun 1412 : Tarama ilkelerini yönetin</li>
+<li>Sorun 1416 : Örümceğin çocuk sayısıyla sınırlandırılmasına izin verin</li>
+<li>Sorun 1418 : Kesme noktası vurulduğunda ZAP için üstte kalma seçeneği</li>
+<li>Sorun 1419 : Uyarının kanıtını HTML raporuna dahil edin</li>
+<li>Sorun 1420 : Örümceğin URLCanonicalizer'i yetkisiz URI'ları atlayacak şekilde değiştirin</li>
+<li>Sorun 1427 : [İptal] [TAMAM] butonuna göre standartlaştırın</li>
+<li>Sorun 1433 : Örümcek Seçimi hedefi otomatik olarak seçilmedi</li>
+<li>Sorun 1439 : Site sekmesindeki içeriği/kapsamı olan siteleri göstermek/gizlemek için kullanılan düğme</li>
+<li>Sorun 1445 : Oturum Özellikleri İçerik Kimliği'ni gösteriyor İçerik Adı'nı göstermiyor</li>
+<li>Sorun 1446: İndirilen eklentilerin başarısızlığı doğru şekilde ele alınmadı.</li>
+<li>Sorun 1447 : RSyntaxTextArea kütüphanesi güncelleme</li>
+<li>Sorun 1449: Tekrar gönderme / Manuel İstek yardımı güncel değil</li>
+<li>Sorun 1458: Her zaman kesin olan home/installation direktöry yollarını değiştirmek</li>
+<li>Sorun 1460 : Bir eklentinin yüklenmesi sırasında komut dosyası türü eklendiğinde komut dosyası türleri "Komut Dosyası" ağacında gösterilmiyor</li>
+<li>Sorun 1461 : Çekirdek API - HTTP Arşiv formatında bir kimlik mesajı alınmasına izin verin</li>
+<li>Sorun 1462: Kod tiplerini kaldırmaya izin ver</li>
+<li>Sorun 1463 : Komut dosyalarının eklenti sınıflarına erişmesine izin ver</li>
+<li>Sorun 1464 : Örümcek isteklerinde "Başvuran" başlığını göndermeye izin verin</li>
+<li>Sorun 1465 : ZAP varsayılan kurulum dizininden çalıştırılmazsa çevrilen dosyalar doğru dizine kopyalanmaz</li>
+<li>Sorun 1466 : 'geniş ekran' boyutu için yapılandırma seçeneği</li>
+<li>Sorun 1467: AuthenticationApiExample çalışmıyor</li>
+<li>Sorun 1468 : Bir eklenti yüklemesi sırasında yeni komut dosyası türleri eklendiğinde komut dosyası şablonları kullanılamaz</li>
+<li>Sorun 1469 : İsteğe dayalı olarak form tabanlı kimlik doğrulama belirtilmişse kullanıcıyı otomatik olarak ekleyin</li>
+<li>Sorun 1472 : Uzantıların UI bileşenleri için bir isim belirtmesine izin verin</li>
+<li>Sorun 1475 : Uyarılar raporda aynı tarayıcıdan farklı bir adla gösterilmeyebilir</li>
+<li>Sorun 1476: Sitelerin ağacında bağlamları görüntülemek</li>
+<li>Sorun 1483: Pasif tarayıcılarla bir eklenti kaldırdıktan sonra MissingResourceException durumu</li>
+<li>Sorun 1484: Etkin tarayıcılar ile bir eklentinin kaldırılması sırasında NullPointerException durumu</li>
+<li>Sorun 1485 : Kaldırma işlemi başarısız olursa eklentiyi yeniden seçmeye izin vermeyin</li>
+<li>Sorun 1486 : Eklenti bileşenleri sızıntısı</li>
+<li>Sorun 1489: Pencere adında sürüm numarası</li>
+<li>Sorun 1490: HarLib kütüphanesini güncelleştirme</li>
+<li>Konu 1491: AbstractParam sürümlü ekle</li>
+<li>Sorun 1492: commons-csv kütüphanesi güncelleştirme</li>
+<li>Sorun 1493: Kimlik doğrulama sınıflarında kullanımdan kalkanları kaldırma</li>
+<li>Sorun 1494: Betik dizinleri desteği</li>
+<li>Sorun 1502 : Script motoru sarıcılarını kaldırmaya izin ver</li>
+<li>Sorun 1503 : Bir kod türünden oluşturulduğu zaman bütün motorlar gösterilemez</li>
+<li>Sorun 1504: Bir komut dosyası yüklü olmadığı / bulunmadığı zamanki istisnai durum</li>
+<li>Sorun 1505: Kaldırma sırasında "Zorla Gözatma" bileşenlerinin tamamı açılmıyor</li>
+<li>Sorun 1507: Kaldırma sırasında "Script Console" bileşenlerinin tamamı açılmıyor</li>
+<li>Sorun 1508: Daemon modundaki görünümde eklenen uyarılar</li>
+<li>Sorun 1510: New Extension.postInit() yöntemi ilk defada yüklü tüm uzantıları çağırıyor</li>
+<li>Konu 1511: API 'ye yalnızca güvenli bağlantılara izin vermek için seçenek ekle</li>
+<li>Sorun 1514: Daemon modunda kök CA sertifikası oluşturulmuş değil</li>
+<li>Sorun 1515: Kaldırma sırasında "Zest" bileşenlerinin tamamı açılmıyor</li>
+<li>Sorun 1520 : https sitelerine sitelerin ağacında kilit simgesi eklemek</li>
+<li>Sorun 1521 : StackOverflowError gibi atılabilen hatalar pasif tarayıcı tarafından yakalanmıyor</li>
+<li>Sorun 1524: Yeni Persist Session iletişim kutusu</li> 
+<li>Sorun 1525 : Bir veritabanı arayüz katmanına alternetif uygulamalara izin vermek için tanıtım yapmak</li> 
+<li>Sorun 1528: Kullanıcı tarafından belirlenmiş font büyüklüğünü destekleme</li>
+<li>Sorun 1530 : 'Scan Policy' de belirlenen varsayılan saldırı gücü ve eşik alarmları tarayıcılar tarafından kullanılır değil</li>
+<li>Sorun 1534 : "Selenium" eklentisindeki bağlılığı "Ajax Spider" eklentisine değiştirmek</li>
+<li>Sorun 1535: Güncelleştirme Crawljax Kütüphane ve bağımlılıkları ("Ajax Spider" eklentisi)</li>
+<li>Sorun 1536 : "Selenium" eklentisindeki bağlılığı "Zest" eklentisine değiştirmek</li>
+<li>Sorun 1537 : ZAP, CA sertifikalarının içe aktarılmasına izin vermelidir</li>
+<li>Sorun 1540 : Proxy scriptlerine sahte yanıt göndermesine izin ver</li>
+<li>Sorun 1541 : Etkin tarama komut dosyalarını her parametre yerine sadece bir URL'yi taramak için etkinleştirin</li>
+<li>Sorun 1544 : Her zaman komut dosyası değişkenlerini destekleyin</li>
+<li>Sorun 1551 : ZAP Relative Path Confusion (diğer adıyla "Relative Path Overwrite" / "Path Relative Stylesheet Import") 'u algılamaz</li>
+<li>Sorun 1552: ZAP İleri / Geri Proxyleri tespit etmiyor</li>
+<li>Sorun 1553: ZAP bir yanıtın depolanabilirliğini / Önbelleğe alınabilirliğini algılamaz</li>
+<li>Sorun 1557: Manuel istek yaparken kilitlenme</li>
+
+</ul>
+
+<h2>Ayrıca bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Giriş</a></td><td>ZAP'ye giriş</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Sürümler</a></td><td>tüm sürümler</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Katkıda bulunanlar</a></td><td>bu sürümü mümkün kılan insanlar ve gruplar</td></tr>
+</table>
+</body>
+</html>

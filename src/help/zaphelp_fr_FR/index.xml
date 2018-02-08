@@ -41,7 +41,7 @@
     <indexitem text="history tab" target="ui.tabs.history" />
     <indexitem text="http sessions tab" target="ui.tabs.httpsessions" />
     <indexitem text="http sessions" target="start.concepts.httpsessions" />
-    <indexitem text="intercepting proxy" target="start.concepts.intercept"/>
+    <indexitem text="man-in-the-middle proxy" target="start.concepts.intercept"/>
     <indexitem text="introduction" target="zap.intro" />
     <indexitem text="manage tabs dialog" target="ui.dialogs.managetags" />
     <indexitem text="manual request dialog" target="ui.dialogs.manreq" />
@@ -52,6 +52,7 @@
     <indexitem text="params tab" target="ui.tabs.params" />
     <indexitem text="paros proxy" target="zap.paros" />
     <indexitem text="passive scan" target="start.concepts.pscan" />
+    <indexitem text="passive scanner options" target="ui.dialogs.options.pscan.main" />
     <indexitem text="persist session dialog" target="ui.dialogs.persistsession" />
     <indexitem text="proxy configuration" target="start.proxy" />
     <indexitem text="release 1.0.0" target="zap.releases.1.0.0" />
@@ -76,6 +77,8 @@
     <indexitem text="release 2.4.2" target="zap.releases.2.4.2" />
     <indexitem text="release 2.4.3" target="zap.releases.2.4.3" />
     <indexitem text="release 2.5.0" target="zap.releases.2.5.0" />
+    <indexitem text="release 2.6.0" target="zap.releases.2.6.0" />
+    <indexitem text="release 2.7.0" target="zap.releases.2.7.0" />
     <indexitem text="releases" target="zap.releases" />
     <indexitem text="request tab" target="ui.tabs.request" />
     <indexitem text="resend dialog" target="ui.dialogs.resend" />

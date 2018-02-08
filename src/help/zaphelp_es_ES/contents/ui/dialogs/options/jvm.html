@@ -3,54 +3,50 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Options JVM screen
+Pantalla de opciones JMV
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Options JVM screen</h1>
+<h1>Pantalla de opciones JVM</h1>
 <p>
-This screen allows you to configure the JVM options used when starting ZAP.
+Esta pantalla te permite configurar las opciones JMV usadas al empezar en ZAP.
 </p>
 
-<h3>JVM Options</h3>
-A free format text field which will be added to the Java command line call
-when invoking ZAP via either zap.sh or zap.bat.
+<h3>Opciones de JMV</h3>
+Un formato libre de texto que será añadido a la línea de comando de llamada de Java cuando se invoque ZAP, bien sea por vía zap.sh o zap.bat.
 </p>
 <p>
-The option was added so that the Java maximum memory allocation pool size can be set, 
-which is of the form: -Xmx<i>n</i> where <i>n</i> is the size in bytes.<br>
-Good values for this field could be:
+La opción fue añadida para que el tamaño máximo del grupo de asignación de la memoria pueda ser establecido, el cuál es de la forma: -Xmx<i>n</i> dónde <i>n</i> representa el tamaño en bytes.<br>
+Buenos valores en este campo podrían ser:
 <ul>
 <li>-Xmx256m</li>
 <li>-Xmx512m</li>
 <li>-Xmx1024m</li>
 </ul>
 <p>
-Unlike the other ZAP options these are held in the file ".ZAP_JVM.properties" in the user's default ZAP directory,
-which depends on the OS being used:
+A diferencia de otras opciones de ZAP, estas ocurren en el archivo ".ZAP_JVM.properties" en el directorio ZAP predeterminado del usuario, el cual depende del Sistema Operativo que se utiliza:
 <ul>
 <li>Windows 7/8: C:\Users\<i>&lt;username&gt;</i>\OWASP ZAP</li>
 <li>Windows XP: C:\Documents and Settings\<i>&lt;username&gt;</i>\OWASP ZAP</li>
 <li>Linux: ~/.ZAP</li>
-<li>Mac OS: ~/Library/Application Support/ZAP</li>
+<li>Sistema Operativo Mac: ~/Library/Application Support/ZAP</li>
 </ul>
-If you make a mistake when setting these options then ZAP may fail to start.<br>
-If that happens then deleting this file should fix the problem.
+Si usted cometiese un error mientras se configuran estas opciones, entonces, ZAP podría fallas al iniciar.<br>
+Si eso ocurre, borrando este archivo se debe solucionar el problema.
 </p>
 <p>
-Note that these options are not used when starting ZAP via the Windows exe.
+Notese que estas opciones so son empleadas al iniciar ZAP desde Windows exe.
 </p>
 
-<h2>See also</h2>
+<h2>Vease también</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">Resumen de la interfaz de usuario</a></td><td>para una vista general de la interfaz de usuario</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="options.html">Opciones de dialogo</a></td><td>para más detalles de otras pantallas de opciones de diálogos</td></tr>
 </table>
 
-<h2>External links</h2>
+<h2>Enlaces externos</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="http://docs.oracle.com/javase/7/docs/technotes/tools/windows/java.html#CBBIJCHG">Java 7 options</a></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="http://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html#BABDJJFI">Java 8 options</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html#BABDJJFI">Opciones de Java 8</a></td></tr>
 </table>
 
 </body>

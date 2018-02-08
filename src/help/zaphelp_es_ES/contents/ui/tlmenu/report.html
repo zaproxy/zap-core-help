@@ -3,54 +3,60 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-The Report menu
+El Menú Informe
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>The Report menu</h1>
-This menu handles the reports.
+<h1>Menú de Reportes</h1>
+Este menú handles los informes.
 
-<h3>Generate HTML Report ...</h3>
-This generates a new HTML report containing the alerts raised.
+<h3>Generar Reporte HTML</h3>
+Esto genera un informe HTML que contiene las alertas levantadas.
 
-<h3>Generate XML Report ...</h3>
-This generates a new XML report containing the alerts raised.
+<h3>Generar Reporte XML</h3>
+Esto genera un nuevo informe XML que contiene las alertas levantadas.
 
-<h3>Exportar mensajes a fichero...</h3>
-This allows you to save requests and responses to a text file. <br/>
-Select the messages to save in the History tab - use the shift key to select multiple messages.
+<h3>Generar Reporte Markdown</h3>
+Esto genera un nuevo informe Markdown que contiene las alertas levantadas.
 
-<h3>Exportar respuesta a fichero...</h3>
-This allows you to save a specific response to a file. <br/>
-Select the relevant message in the History tab - 
-note that binary responses (such as images) can be saved as well as test responses.
+<h3>Exportar mensajes a un archivo</h3>
+Esto le permite guardar las solicitudes y respuestas en un archivo de texto. <br/>
+Seleccione los mensajes de guardar en la ficha History. Utilice la tecla Mayús para seleccionar varios mensajes.
 
-<h3>Exportar Todas las URLs a un fichero...</h3>
-This allows you to save all of the URLs accessed to a text or HTML file. <br/>
-The URLs will be preceded by the HTTP method used. <br/>
-This can be used, amongst other things, to compare the URLs available to users with 
-different roles or permissions on the same system.
+<h3>Exportar respuesta al archivo</h3>
+Esto le permite guardar una respuesta específica en un archivo. <br/>
+Seleccionar el mensaje relevante en la pestaña de History- tenga en cuenta que las respuestas binarias (como imágenes) pueden guardarse como prueba respuestas.
 
-<h3>Comparar con otra Sesión...</h3>
-This prompts you for a ZAP session that you have previously saved. <br/>
-It then prompts you for an output file into which is written all of the URLs accessed
-by the current session and the session you have selected to compare it with.<br/>
-The file will contain a table listing the URLs and the HTTP responses for the URLs in the
-2 sessions.<br/>
-JavaScript buttons allow you to display all of the URLs, just those accessed in the first session,
-the second session and those accessed by both sessions.<br/>
-This is particularly useful for comparing 2 sessions which access the same application using
-different users. You will be able to see which URLs are visible to the users and will be able to
-try to access all of the URLs when logged in as either of the users.
+<h3>Exportar todas las direcciones URL a un archivo</h3>
+Esto le permite guardar todas las URLs de acceso a un texto o archivo HTML. <br/>
+Esto puede usarse, entre otras cosas, comparar las URLs disponibles para usuarios con diferentes roles o permisos en el mismo sistema.
+
+<h3>Exportar las direcciones URL Seleccionadas a un archivo</h3>
+Según la selección (incluida la selección múltiple) en el Sites tree se exportan todas las URL y las URL secundarias de los nodos seleccionados.
+
+<h3>Exportar URL para el contexto</h3>
+Se exportan todas las URLs en el Sites tree dentro del contexto seleccionado. Esta funcionalidad también está disponible desde el menú contextual cuando se utiliza en un nodo de contexto en el panel del Sites tree.
+
+<h3>Comparar con otra sesión</h3>
+Esto le solicita una sesión de ZAP que haya guardado previamente <br/>
+A continuación, le solicita un archivo de salida en el que se escriben todas las URLs a las que se accedió
+por la sesión actual y la sesión que ha seleccionado para compararla.<br/>
+El archivo contendrá una tabla que enumera las URLs y las respuestas HTTP para las URLs en las
+2 sesiones<br/>
+Los botones de JavaScript le permiten mostrar todas las URLs, solo las que se accedieron en la primera sesión,
+la segunda sesión y las accedidas por ambas sesiones.<br/>
+Esto es particularmente útil para comparar 2 sesiones que acceden a la misma aplicación usando
+diferentes usuarios. Podrá ver qué URLs son visibles para los usuarios y podrá
+intentar acceder a todas las URLs cuando inicie sesión como cualquiera de los usuarios.
 
 <p>
-Note that <a href="../../start/concepts/addons.html">add-ons</a> can add additional menu items.
+Tenga en cuenta que <a href="../../start/concepts/addons.html"> add-ons </> puede agregar elementos de menú adicionales.
 </p>
 
 <h2>Vease también</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="tlmenu.html">The top level menu</a></td><td></td></tr>
+<a href="tlmenu.html">El menú de nivel superior</a></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../overview.html">UI Overview</a></td><td>Para una vista general sobre la interfaz de usuario</td></tr>
 </table>

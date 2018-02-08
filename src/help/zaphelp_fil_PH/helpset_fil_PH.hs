@@ -3,7 +3,7 @@
 <helpset version="2.0" xml:lang="fil-PH">
 
   <!-- title -->
-  <title>ZAP - User Guide</title>
+  <title>ZAP - Gabay sa paggamit</title>
 
   <!-- maps -->
   <maps>
@@ -14,21 +14,21 @@
   <!-- views -->
   <view mergetype="org.zaproxy.zap.extension.help.ZapTocMerger">
     <name>TOC</name>
-    <label>Contents</label>
+    <label>Mga nilalaman</label>
     <type>org.zaproxy.zap.extension.help.ZapTocView</type>
     <data>toc.xml</data>
   </view>
 
   <view mergetype="javax.help.SortMerge">
     <name>Index</name>
-    <label>Index</label>
+    <label>Ang index</label>
     <type>javax.help.IndexView</type>
     <data>index.xml</data>
   </view>
 
   <view>
     <name>Search</name>
-    <label>Search</label>
+    <label>Ang maghanap</label>
     <type>org.zaproxy.zap.extension.help.ZapSearchView</type>
     <data engine="com.sun.java.help.search.DefaultSearchEngine">
       JavaHelpSearch
@@ -37,7 +37,7 @@
 
   <view>
     <name>Favorites</name>
-    <label>Favorites</label>
+    <label>Mga paborito</label>
     <type>javax.help.FavoritesView</type>
   </view>
 
@@ -45,7 +45,7 @@
      <name>main window</name>
      <size height="600" width="1000"/>
      <location x="200" y="200"/>
-     <title>ZAP - User Guide</title>
+     <title>ZAP - Gabay sa paggamit</title>
      <image>toplevelicon</image>
      <toolbar>
 	<helpaction>javax.help.BackAction</helpaction>
@@ -62,6 +62,6 @@
      <name>main</name>
      <size height="400" width="400"/>
      <location x="200" y="200"/>
-     <title>ZAP - User Guide</title>
+     <title>ZAP - Gabay sa paggamit</title>
   </presentation>
 </helpset>

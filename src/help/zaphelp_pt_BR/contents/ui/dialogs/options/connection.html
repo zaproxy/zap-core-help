@@ -14,22 +14,43 @@ A tela das opções de conexão permite a você configurar as opções de conex�
 <h3>Timeout em segundos</h3>
 Isso facilita o teste em aplicações lentas.
 
-<h3>Header de requisição de um cookie</h3>
-Define se os cookies gerenciados pelo ZAP<a href="../../tlmenu/edit.html">(Habilitiar o Rastreamento da Sessão  - Cookie</a>) devem ser definidos num único header de requisição de cookie ou em múltiplos headers de requisição, toda vez que for enviada uma requisição HTTP ao servidor.
+<h3>Default User Agent</h3>
+The user agent that ZAP should use when creating HTTP messages (for example, spider messages or CONNECT requests to outgoing
+proxy).
 
-<h3>Usar cadeia de proxies</h3>
-Esta aseção permite a você conectar a outro proxy para as conexões de saída.<br/>
-Isto é geralmente solicitado em ambientes corporativos.
+<h3>Single Cookie Request Header</h3>
+Controls whether the ZAP's managed cookies (<a href="../../tlmenu/edit.html">(Habilitiar o Rastreamento da Sessão  - Cookie</a>) should be set
+on a single "Cookie" request header or multiple "Cookie" request headers, when sending an HTTP request to the server.
 
-<h3>Autenticação via Proxy</h3>
-Esta seção permite a você configurar a autenticação do proxy de saída. 
+<h3>DNS</h3>
+<h4>TTL das queries bem-sucedidas</h4>
+Defines for how long the successful DNS queries should be cached:<ul>
+<li>Número Negativo, cache para sempre;</li>
+<li>Zero, desativa o cache;</li>
+<li>Número positivo, o número de segundos que as consultas serão armazenadas.</li></ul>
+<strong>Nota:</strong> Changes are applied after a restart.<p>
+A opção também pode ser definida usando o <code>-config</code> como argumento de linha de comando com a chave <code>connection.dnsTtlSuccessfulQueries</code>.
 
-<h2>Leia também</h2>
+<h3>Security Protocols</h3>
+Allows to choose the SSL/TLS versions enabled for outgoing connections (for example, to servers). At least
+one version must be enabled, versions unsupported by the JRE will be unselected and disabled.
+<br>The option SSLv2Hello must be selected in conjunction with at least one SSL/TLS version.
+
+<h3>Use Proxy chain</h3>
+This section allows you to connect to another proxy for outgoing connections.<br/>
+This is often required in a corporate environment.
+
+<h3>Proxy authentication</h3>
+This section allows you to configure the outgoing proxy authentication. 
+
+<h2>Veja também</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">Visão geral da UI</a></td><td>para uma visão geral da interface do usuário</td></tr>
+<a href="../../overview.html">Visão geral da IU</a></td><td>para uma visão geral da interface do usuário</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Diálogos ode opções</a></td><td>para detalhes de outras telas de diálogos de Opções</td></tr>
+<a href="options.html">Diálogo de opções</a></td><td>para detalhes de outras telas de diálogos de Opções</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../../cmdline.html">Linha de comando</a></td><td>para obter detalhes da linha de comando</td></tr>
 </table>
 
 </body>

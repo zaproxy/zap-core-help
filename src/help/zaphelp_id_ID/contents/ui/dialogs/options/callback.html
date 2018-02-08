@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Pilihan Callback Mengatasi layar
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Pilihan Callback Address screen</h1>
+<p>
+Callback Mengatasi layar memungkinkan anda untuk mengkonfigurasi alamat yang digunakan untuk mendeteksi kerentanan yang memungkinkan seorang penyerang untuk memanggil remote Url.<br>
+Di versi sebelumnya ZAP API digunakan untuk tujuan ini, tetapi dari 2.6.0 seterusnya terpisah endpoint digunakan agar sistem target
+tidak perlu lagi akses ke API.
+</p>
+
+<h3>Local Address (e.g. 0.0.0.0)</h3>
+
+Alamat lokal ZAP yang akan mendengarkan untuk koneksi yang baru masuk. 
+Nilai default dari '0.0.0.0' yang berarti ZAP akan mendengarkan pada semua alamat lokal yang tersedia.
+
+<h3>Alamat jauh</h3>
+
+Alamat yang akan ditentukan pada serangan yang relevan. 
+Alamat ini harus dapat diakses dari sistem target. 
+Anda dapat menggunakan tes URL untuk memastikan kasus seperti ini terjadi.
+
+<h3>Acak pelabuhan</h3>
+
+Secara default ZAP akan menggunakan sebuah port yang berbeda setiap kali dijalankan. 
+Jika anda harus menggunakan port yang sama (contohnya untuk mengizinkan akses lewat firewall) kemudian hapus centang pada opsi ini.
+
+<h3>Menentukan pelabuhan</h3>
+
+Jika opsi Port Random tidak dicentang, lalu port inilah yang akan didengarkan ZAP. 
+Ini mesti berbeda dengan port lain yang digunakan ZAP, contohnya port yang digunakan sebagai koneksi proxy.
+
+<h3>Tes URL</h3>
+
+Ini adalah URL uji yang dapat Anda coba akses dari sistem jarak jauh. 
+Semua akses ke URL Uji akan dicatat dalam file log ZAP pada tingkat INFO. 
+Jika anda menggunakan UI ZAP maka akses tersebut juga akan ditampilkan di <a href="../../tabs/output.html">Output tab</a>.
+
+<h2>Lihat juga</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../overview.html">UI Gambaran</a></td><td>untuk sebuah ikhtisar dari interface pengguna</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="options.html">Dialog pilihan</a></td><td>untuk rincian layar dialog Opsi lainnya</td></tr>
+</table>
+
+</body>
+</html>

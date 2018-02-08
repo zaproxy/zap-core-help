@@ -34,8 +34,19 @@
 	The maximum length of time that the spider should run for, measured in minutes.
 	Zero (the default) means that the spider will run until it has found all of the links that it is able to. 
 
-	<h3>Domain Pattern</h3>
-	The normal behavior of the spider is to only follow links to resources
+	<h3>Maximum children to crawl</h3>
+	This parameter limits the number of children that will be crawled at every node in the tree.<br>
+	This is useful for data driven applications that have large numbers of 'pages' that are in fact exactly the same code but 
+	containing different data, for example from a database.<br>
+	By default this is set to zero which means there are no limits applied to the number of child nodes crawled.
+
+	<h3>Maximum parse size</h3>
+	Defines the maximum size, in bytes, that a response might have to be parsed. This allows
+	the spider to skip big responses/files.
+
+	<h3>Domains Always in Scope</h3>
+	Allows to manage the domains, string literals or regular expressions, that are in the
+	spider's scope. The normal behavior of the spider is to only follow links to resources
 	found on the same domain as the page where the scan started. However,
 	this option allows you to define additional domains that are considered
 	"in scope" during the crawling process. Pages on these domains are
@@ -59,6 +70,20 @@
 
 	<h3>Send "Referer" header</h3>
 	If the spider requests should be sent with the "Referer" header.
+
+	<h3>Accept Cookies</h3>
+	If the spider scans should accept cookies while spidering. If enabled the Spider will
+	properly handle any cookies received from the server and will send them back accordingly.
+	If the option is disabled, the Spider will not send any cookies in its requests. For
+	example, this might control whether or not the Spider uses the same session throughout a
+	spidering scan.
+	<br>When accepting cookies the cookies are not shared between spider scans, each scan has
+	its own cookie jar.
+	<br>This option has low priority, the Spider will respect other (global) options related
+	to the HTTP state. This option is ignored if, for example, the option
+	<a href="../../tlmenu/edit.html">Enable Session Tracking (Cookie)</a> is enabled, when
+	spidering as a <a href="../../../start/concepts/users.html">User</a> or when a
+	<a href="../../../start/concepts/httpsessions.html">HTTP Session</a> is active.
 
 	<h3>Process forms</h3>
 	During the crawling process, the behaviour of the spider when it

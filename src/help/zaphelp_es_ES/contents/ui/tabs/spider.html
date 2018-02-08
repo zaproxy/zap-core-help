@@ -7,67 +7,68 @@
 <body bgcolor="#ffffff">
 	<h1>Spider tab</h1>
 	<p>
-		The Spider tab shows you the set of unique URIs found by the <a
-			href="../../start/concepts/spider.html">Spider</a> during the scans.
+		La Araña ficha muestra el conjunto de la única Uri encontrado por la <a
+			href="../../start/concepts/spider.html">Araña</a> durante el análisis.
 	</p>
 
 	<p>
-		The 'New Scan' button launches the <a href="../dialogs/spider.html">Spider dialog</a> which allows you
-to specify exactly what should be scanned.<br>
-	
-		The Spider can be run on multiple Sites in parallel and the results for each scan are
-		shown by selecting the scan via the 'Progress' pull-down.
+		El Nuevo 'Scan' botón, se abre la <a href="../dialogs/spider.html">Araña de diálogo</a>, que permite
+para especificar exactamente lo que deben ser analizados.<br>
+
+La Araña se puede ejecutar en varios Sitios en paralelo y los resultados de cada análisis son
+se muestra mediante la selección de la exploración a través de la 'Progreso' pull-down.
 	</p>
 
-	<p>The toolbar shows information about a scan and allows to control it. It provides a
-		set of buttons which allows to:
+	<p>La barra de herramientas muestra información acerca de un análisis y permite el control del mismo. Proporciona un
+conjunto de botones que permiten:
 	
 	<ul>
-		<li><img align="bottom" alt="pause button" src="../../images/16/141.png">
-			Pause (and <img alt="resume button" src="../../images/16/131.png"> resume) the
-			selected spider scan;</li>
-		<li><img align="bottom" alt="stop button" src="../../images/16/142.png"> Stop
-			the selected spider scan;</li>
-		<li><img align="bottom" alt="clean scans button" src="../../images/fugue/broom.png">
-			Clean completed scans;</li>
-		<li><img align="bottom" alt="show messages button" src="../../images/16/178.png">
-			Show/Hide Messages - shows/hides a tab (called Messages) that displays all HTTP
-			messages sent by the selected spider scan;</li>
-		<li><img align="bottom" alt="spider options button" src="../../images/16/041.png">
+		<li><img align="bottom" alt="botón de pausa" src="../../images/16/141.png">
+			Pausa (y <img alt="botón de reanudar" src="../../images/16/131.png"> reanudar) la
+seleccionado araña de exploración;</li>
+		<li><img align="bottom" alt="botón de parar" src="../../images/16/142.png"> Parada
+el seleccionado de la araña de exploración;</li>
+		<li><img align="bottom" alt="borrar botón de escaneo" src="../../images/fugue/broom.png">
+			Borrar escaneos completados;</li>
+		<li><img align="bottom" alt="mostrar mensajes de botón" src="../../images/16/178.png">
+			Mostrar/Ocultar Mensajes - muestra/oculta una ficha (llamados Mensajes) que muestra todos los HTTP
+los mensajes enviados por el seleccionado de la araña de exploración;</li>
+		<li><img align="bottom" alt="araña botón de opciones" src="../../images/16/041.png">
 			Open the <a href="../../ui/dialogs/options/spider.html">Spider Options screen</a>.</li>
 	</ul>
-	The progress bar shows how far the selected spider scan has progressed. It is also shown
-	the number of active spider scans and the number of URIs found for the selected scan.
-	<p>For each URI found you can see:
+	La barra de progreso muestra el seleccionado de araña de escaneo ha progresado. También se muestra
+el número de activos de la araña exploraciones y el número de URIs encontrado para el escaneo seleccionada.
+	<p>Para cada URI encontrado se puede ver:
 	<ul>
-		<li>Processed - Whether the URI was processed by the Spider or
-			was skipped from fetching because of a rule (e.g. it was out of
-			scope)</li>
-		<li>Method - The HTTP method, e.g. GET or POST, through which the
-			resource should be accessed</li>
-		<li>URI - the resource found</li>
-		<li>Flags - any information about the URI (e.g. if it's a seed or
-			why was it not processed)</li>
+		<li>Procesado - Si la URI a la que fue procesado por la Araña o
+se ha omitido de recuperación debido a una regla (por ejemplo, estaba fuera de
+ámbito de aplicación)</li>
+		<li>Método - El método HTTP, ejemplo. OBTENER o POSTEAR, a través del cual el debe accederse al recurso</li>
+		<li>URI - el recurso encontrado</li>
+		<li>Banderas - cualquier información acerca de la URI (por ejemplo, si es una semilla o
+por qué no fue procesado)</li>
 	</ul>
 
+	<p>Para cada araña mensaje, que se muestra en la ficha Mensajes, usted puede ver los detalles de la solicitud y de respuesta
+recibió, además, es el indicado, en la columna <code>Procesado</code>, ya sea o no que el mensaje fue procesado
+(es decir, la respuesta fue recibida con éxito y se analiza).
 
-	<h2>See also</h2>
+	<h2>Véase también</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../overview.html">UI Overview</a></td>
-			<td>for an overview of the user interface</td>
+			<td><a href="../overview.html">Resumen de UI</a></td>
+			<td>para una visión general de la interfaz de usuario</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			<td><a href="../../start/concepts/spider.html">Spider</a></td>
-			<td>for an overview of the Spider</td>
+			<td>para una visión general de la Araña</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/options/spider.html">Spider
-					Options screen</a></td>
-			<td>for an overview of the Spider Options</td>
+			<td><a href="../../ui/dialogs/options/spider.html">Pantalla de opciones de spider</a></td>
+			<td>para una vista general de las opciones de spider</td>
 		</tr>
 	</table>
 

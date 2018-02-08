@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Anti CSRF Kullanımı
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Anti CSRF Token'ları</h1>
+<p>
+Anti CSRF belirteçleri, Siteler Arası Talep Sahteciliği (CSRF) saldırılarına karşı koruma sağlamak için kullanılan (sahte) rastgele parametrelerdir. <br>
+Bununla birlikte, özellikle bir form talep edildiğinde simgeler yeniden oluşturulursa, penetrasyon testi görevlilerini daha zora sokuyorlar.<br>
+</p>
+<p>
+ZAP, anti CSRF belirteçlerini tamamen nitelik adlarıyla saptar - anti CSRF belirteçleri olarak düşünülen özellik adlarının listesi
+<a href="../../ui/dialogs/options/anticsrf.html">Seçenekler Anti CSRF ekranı</a> kullanılarak yapılandırılmıştır.<br/>
+ZAP bu tokenları algıladığında, token değerini ve hangi bağlantının tokenını oluşturduğunu kaydeder.<br/>
+<a href="ascan.html">aktif tarayıcı</a> gibi diğer tarayıcılarda, ZAP'ın gerekli olduğunda belirteçleri otomatik olarak yeniden oluşturmasına neden olan seçenekler bulunur.
+</p>
+
+<h2>Ayrıca bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/overview.html">UI Genel Bakış</a></td><td>kullanıcı ara yüzünün bir genel görünümü için</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="concepts.html">Özellikler</a></td><td>ZAP tarafından sağlanır</td></tr>
+</table>
+
+</body>
+</html>

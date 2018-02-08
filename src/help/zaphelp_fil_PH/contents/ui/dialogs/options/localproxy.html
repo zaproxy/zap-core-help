@@ -3,29 +3,51 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Options Local Proxy screen
+Screen ng lokal na proxy ng opsyon
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Options Local Proxy screen</h1>
+<h1>Screen ng lokal na proxy ng opsyon</h1>
 <p>
-The Options Connection screen allows you to configure the address and port 
-on which ZAP accepts incoming connections.<br/>
-It is this address and port that you must configure your browser to use as a proxy.
+Screen ng koneksyon sa mga pagpipilian ay nagpapahintulot sa iyo na magkumpigura ng mga address at port kung saan ang ZAP ay tumatanggap ng papasok na mga koneksiyon. <br/> <h2>Lokal na Proxy</h2> Sa pamamagitan ng default ZAP ay nakikinig sa isang lokal na tirahan at port, at ang mga ito ay mga address at port na dapat mong i-configure ang iyong browser upang gamitin bilang proxy.
 </p>
+<h3>Address</h3>
+Ang lokal na address na gagamitin ang ZAP. Lahat ng mga magagamit na mga mensahe ay awtomatikong natukoy.
 
-<h3>Modify/Remove "Accept-Encoding" request-header</h3>
-Allows the proxy to modify/remove the "Accept-Encoding" request-header field so 
-no encoding transformations are done to the response.<br/>
-This option should be always enabled unless when testing the encoding transformations.<br/>
-The messages encoded will not be correctly scanned (either by passive and active scanners).
+<h3>Porto</h3>
+Ang port na kung saan ang ZAP ay makinig.
 
-<h2>See also</h2>
+<h3>Likod NAT</h3>
+Ay nagpapahiwatig na ang mga lokal na mga Proxy (ZAP) ay likod ng metro. Kapag ang napiling ZAP ay pagtatangka upang matukoy ang pampublikong IP address, na maayos na tiktikan at hawakan ang mga hiling sa pampublikong IP address (halimbawa, na naglingkod sa mga ZAP API).
+<p>
+<strong>Tandaan:</strong> Ang opsyon na ito ay suportado lamang kapag ZAP ay tumatakbo sa isang AWS EC2 pagkakataon. ZAP ay magkakamit ng public IP address mula sa
+<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html#working-with-ip-addresses">AWS EC2 pagkakataon Metadatos</a>.<br>
+ZAP dapat nagsimula sa opsyon na ito pinagana kung access sa API, sa pamamagitan ng public IP address, ay kinakailangan:
+<blockquote>zap.sh-daemon-port 8080 - host 0.0.0.0 - kumpig proxy.behindnat=true</blockquote>
+Gayundin, ang <a href="api.html">API</a> pangangailangan upang maisaayos na tanggapin ng mga panlabas ng mga IP address (i.e. ang IP address mula sa kung saan ang ZAP ay pagiging na-access).
+
+<h3>Alisin ang mga di-suportadong pagsasakodigo</h3>
+Nagbibigay-daan ang proxy upang alisin ang mga di-suportadong pag-encode Batac "Tanggapin-Encoding" ulunan ng kahilingan, kaya walang (unsupported) encoding pagbabago ay ginawa upang ang tugon.<br/>
+Ang opsyon na dapat maging palaging pinagana maliban kung nang pagsusuri ang encoding na pagbabago.<br/>
+Ang mga mensahe na na-encode nang may di-suportadong pagsasakodigo ay hindi maging tama Nakilatis (alinman ng pasibo at aktibo scanner).
+
+<h3>Security protocol</h3>
+Ay nagbibigay-daan upang piliin ang mga bersyon ng SSL/TLS na pinagana para sa mga papasok na mga koneksiyon (halimbawa, mula sa browser). Kailangang magpagana ng hindi bababa sa isang version, hindi suportadong sa pamamagitan ng JRE mga bersyon ay napili at may kapansanan.
+<br>
+Dapat piliin ang mga opsyon na SSLv2Hello kaugnay ng hindi bababa sa isang bersyon ng SSL/TLS.
+<br>
+Ang mga opsyon sa seguridad ay tumutukoy sa parehong ang pangunahing at ang lahat ng mga karagdagang proxy.
+
+<h2>Karagdagang proxy</h2>
+Maaari kang magdagdag ng maraming karagdagang mga address at port para sa ZAP makinig sa 't gusto mo.<br>
+Ito ay maaaring maging kapaki-pakinabang kapag ang pagsusuri ng mga mobile application - maaari mong proxy ang mobile application gamit ang isang Wi-Fi interface sa parehong oras bilang gamit sa backend site na direktang gamit ang isang browser nagsisilbing proxy para sa pamamagitan ng ZAP pagtulad ng mga mobile na gumagamit ng isang agent.
+
+<h2>Tingnan din sa</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../overview.html">UI buod</a></td><td>para sa buod ng user interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+<a href="options.html">Mga diyalogo ng mga opsiyon</a></td><td>para sa mga detalye ng mga iba pang Options Ang mga diyalogo screen</td></tr>
 </table>
 
 </body>

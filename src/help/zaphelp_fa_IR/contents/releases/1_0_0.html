@@ -3,103 +3,91 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Release 1.0.0
+نسخه 1.0.0
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Release 1.0.0</h1>
+<h1>نسخه 1.0.0</h1>
 <p>
-The following changes were made in this release:
+تغییرات زیر در این نسخه ایجاد شده اند:
 </p>
-<h2>Significant changes:</h2>
+<h2>تغییرات مهم:</h2>
 
-<h3>Help screens</h3>
-Help screens have been added for all of the functionality now provided by ZAP.<br/>
-Context sensitive help has also been implemented so that when you press the F1 key then the
-help screen associated with the tab you have selected will be displayed.
+<h3>صفحات راهنما</h3>
+صفحات راهنما برای تمام قابلیت های فراهم شدهی کنونی توسط ZAP افزوده شده اند.<br/>
+راهنمای حساس به متن نیز پیاده سازی شده است چنانکه وقتی کلید F1 را فشار دهید سپس صفحه ی راهنمای مربوط به برگه ای که انتخاب کرده اید نمایش داده خواهد شد.
 
 <h3>نقطه انفصال</h3>
-The implementation of <a href="../start/concepts/breakpoints.html">نقطه انفصال</a> has been changed to be closer to that provided by 
-software Integrated Development Environments.<br/>
-The break point controls have been moved to the new <a href="../ui/tltoolbar.html">نوار ابزار بالایی</a>.<br/>
-Break points can now also be set by right clicking nodes in the 
-<a href="../ui/tabs/sites.html">سایت</a> and <a href="../ui/tabs/history.html">History tabs</a>.
+The implementation of <a href="../start/concepts/breakpoints.html">نقطه انفصال</a> تغییر یافته است تا به آنچه که توسط محیط توسعه ی ادغام شده ی نرم افزار فراهم شده است، نزدیکتر باشد.<br/>
+کنترل های نقاط انفصال جابجا شده اند به <a href="../ui/tltoolbar.html">نوار ابزار بالایی</a>.<br/>
+نقاط انفصال حالا همچنین میتوانند تنظیم شوند با راست کلیک کردن گره های موجود در 
+<a href="../ui/tabs/sites.html">سایت</a> و <a href="../ui/tabs/history.html">برگه های سوابق</a>.
 
-<h3>Report menu</h3>
-The <a href="../ui/tlmenu/report.html">Report Menu</a> has been significant changed and now includes the
-following menu items:
+<h3>منوی گزارش</h3>
+این <a href="../ui/tlmenu/report.html">منوی گزارش</a> بطور قابل ملاحظه ای تغییر یافته و حالا شامل آیتم های منوی زیر می باشد:
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Generate Report...</td><td>Which now generates reports on demand</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>صدور پیام ها به فایل...</td><td>Moved from the <a href="../ui/tlmenu/file.html">File Menu</a></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>صدور پاسخ به فایل...</td><td>Moved from the <a href="../ui/tlmenu/file.html">File Menu</a></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Export ALL URLs to File...</td><td>New functionality</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Compare with another session...</td><td>New functionality</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>تولید گزارش...</td><td>که حالا گزارش ها را بنا به درخواست تولید می کند</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>صدور پیام ها به فایل...</td><td>از <a href="../ui/tlmenu/file.html"> منوی فایل </a> تغییر مکان داده شده</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>صدور پاسخ به فایل...</td><td>از <a href="../ui/tlmenu/file.html"> منوی فایل </a> تغییر مکان داده شده</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>صدور همه ی URL ها به فایل...</td><td>قابلیت جدید</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>مقایسه با جلسه ای دیگر...</td><td>قابلیت جدید</td></tr>
 </table>
 
-<h3>Improved history searching</h3>
-The new <a href="../ui/tabs/search.html">Search tab</a> allows you to search for regular expressions 
-in all of the URLs, requests and responses. <br/>
-Next and previous buttons allow you view the found search terms in the 
-<a href="../ui/tabs/request.html">درخواست</a> and <a href="../ui/tabs/response.html">Response tabs</a>. <br/>
+<h3>جستجوی سوابق پیشرفت یافته</h3>
+این جدید <a href="../ui/tabs/search.html">برگه ی جستجو</a> به شما اجازه می دهد که برای عبارات متداول در تمام URL ها جستجو کنید، درخواست ها و پاسخ ها. <br/>
+دکمه های بعدی و قبلی به شما اجاز می دهند که عبارات جستجوی یافته شده را مشاهده کنید در 
+<a href="../ui/tabs/request.html">درخواست</a> و <a href="../ui/tabs/response.html">برگه های پاسخ</a>. <br/>
 
-<h3>History filter</h3>
-<a href="../ui/tabs/history.html">The History Filter Toolbar</a> has been added which allows you to restrict
-which requests are displayed.<br/>
-Requests can be filtered based on the HTTP methods, the HTTP result codes,
-and any <a href="../start/concepts/tags.html">tags</a>, <a href="../start/concepts/alerts.html">alerts</a>, or
-<a href="../start/concepts/notes.html">notes</a> that have been applied.    
+<h3>فیلتر سوابق</h3>
+<a href="../ui/tabs/history.html">نوار ابزار فیلتر سوابق</a> افزوده شده است که به شما این امکان را می دهد تا اینکه کدام درخواست ها نمایش داده شوند را محدود کنید.<br/>
+درخواست ها می توانند فیلتر شوند بر اساس متد های HTTP، نتایج کد های HTTP، و هر <a href="../start/concepts/tags.html">برچسب ها</a>, <a href="../start/concepts/alerts.html">هشدار ها</a>، یا
+<a href="../start/concepts/notes.html">یادداشت هایی</a> که اعمال شده باشند.    
 
-<h3>Notes</h3>
-You can now associate <a href="../start/concepts/notes.html">notes</a> with any request.    
+<h3>یادداشت ها</h3>
+شما اکنون میتوانید پیوند دهید <a href="../start/concepts/notes.html">یادداشت ها را</a> با هر نوع درخواستی.    
 
-<h3>Multiple Tags</h3>
-You can now associate multiple <a href="../start/concepts/tags.html">tags</a> with any request.    
+<h3>چنیدن برچسب</h3>
+شما اکنون می توانید پیوند دهید چندین <a href="../start/concepts/tags.html">برچسب</a> را با هر درخواستی.    
 
-<h3>More control over the alerts</h3>
-The <a href="../ui/dialogs/addalert.html">Add Alert dialog</a> allows you to manually add or change an
-alert. 
+<h3>کنترل بیشتر بر روی هشدار ها</h3>
+این <a href="../ui/dialogs/addalert.html">دیالوگ افزودن هشدار</a> به شما اجازه می دهد به صورت دستی یک هشدار را بیافزایید یا تغییر دهید. 
 
-<h3>New encoder/decoder</h3>
-A new <a href="../ui/dialogs/enc_dec.html">Encode/Decode/Hash dialog</a> has replaced the previous 
-Encoder/Decoder. 
+<h3>رمزگذار/رمزگشا ی جدید</h3>
+یک جدید <a href="../ui/dialogs/enc_dec.html">دیالوگ رمزگذار/رمزگشا/هش</a> با رمزگذار/رمزگشا ی قبلی جایگزین شده است. 
 
-<h3>Passive scanning</h3>
-<a href="../start/concepts/pscan.html">Passive scanning</a> has been added.<br/>
-In this release ZAP will only use passive scanning for automatically adding <a href="../start/concepts/tags.html">tags</a>.<br/>
-In future releases it may also raise <a href="../start/concepts/alerts.html">alerts</a> for potential issues. 
+<h3>پویش منفعل</h3>
+<a href="../start/concepts/pscan.html">پویش منفعل</a> افزوده شده است.<br/>
+در این نسخه ZAP فقط از پویش منفعل استفاده می کند برای افزودن خودکار <a href="../start/concepts/tags.html">برچسب ها</a>.<br/>
+در نسخه های آینده همچنین ممکن است بالا ببرد <a href="../start/concepts/alerts.html">هشدار ها</a> را برای مسائل بالقوه. 
     
-<h2>Minor changes:</h2>
+<h2>تغییرات جزئی:</h2>
 
-<h3>The Top Level Toolbar</h3>
-<a href="../ui/tltoolbar.html">The Top Level Toolbar</a> has been added which
-provides a set up buttons for commonly used functionality. 
+<h3>نوار ابزار بالایی</h3>
+<a href="../ui/tltoolbar.html">نوار ابزار بالایی</a> افزوده شده است که یک سری دکمه را برای قابلیت های رایج مورد استفاده فراهم می نماید. 
 
-<h3>Alert footer summaries</h3>
-Counts of the High, Medium, Low and Informational <a href="../start/concepts/alerts.html">alerts</a>
-are now displayed in the <a href="../ui/footer.html">footer</a>.
+<h3>خلاصه های پاورقی هشدار</h3>
+تعداد بالا، متوسط، پایین و اطلاعاتی <a href="../start/concepts/alerts.html">هشدار ها</a>
+اکنون قابل مشاهده است در <a href="../ui/footer.html">پاورقی</a>.
 
-<h3>New look and feel</h3>
-A new look and feel 'Nimbus' is used.
+<h3>حس و شمایل جدید</h3>
+یک 'هاله' ی حس و شمایل جدید استفاده شده است.
 
-<h3>Proxy password handling</h3>
-<a href="../ui/dialogs/options/connection.html">The Options Connection screen</a> has a new option to 
-'Prompt for proxy credentials on start up'.<br/>
-If this option is selected then your proxy password will not be stored on the hard disk.  
+<h3>مدیریت رمز عبور پروکسی</h3>
+<a href="../ui/dialogs/options/connection.html">صفحه ارتباط تنظیمات</a> یک گزینه جدید برای 'درخواست اعتبار پروکسی در هنگام راه اندازی' دارد.<br/>
+اگر این گزینه انتخاب شده باشد در اینصورت رمزعبور پروکسی شما بر روی هارد دیسک ذخیره نخواهد شد.  
 
-<h3>Resend from the Sites tab</h3>
-The <a href="../ui/tabs/sites.html">Sites tab</a> has a new right click menu item that allows
-you to resend the request after making any changes to it that you want to.  
+<h3>ارسال دوباره از برگه ی سایت ها</h3>
+این <a href="../ui/tabs/sites.html">برگه ی سایت ها</a> یک آیتم منوی جدید در راست کلیک دارد که اجازه میدهد درخواست را پس از ایجاد هر گونه تغییری که می خواهد به آن اضافه کنید دوباره ارسال کنید.  
 
-<h3>User directory maintained between sessions</h3>
-The last directory used by the user is now stored in the config file so that it is
-maintained between sessions.
+<h3>دایرکتوری کاربر در بین جلسات حفظ می شود</h3>
+اخرین دایرکتوری که توسط کاربر استفاده شده اکنون در فایل config ذخیره می شود چنانکه میان جلسات حفظ می شود.
 
-<h2>See also</h2>
+<h2>همچنین مشاهده نمایید</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<a href="../intro.html">معرفی</a></td><td>معرفی و آشنایی با ZAP</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<a href="releases.html">نسخه ها</a></td><td>مجموعه کامل نسخه های منتشر شده</td></tr>
 </table>
 </body>
 </html>

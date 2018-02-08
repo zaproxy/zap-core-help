@@ -5,28 +5,15 @@
 <title>Authentication</title>
 </head>
 <body bgcolor="#ffffff">
-	<h1>Authentication</h1>
+	<h1>身份验证</h1>
 	<p>
-		ZAP handles multiple types of authentication (called <b>Authentication
-			Methods</b>) that can be used for websites / webapps. Each <b><a
-			href="contexts.html">Context</a></b> has an Authentication Method
-		defined which dictates how authentication is handled. The
-		authentication is used to create Web Sessions that correspond to
-		authenticated webapp <a href="users.html">Users</a>.
+		ZAP处理可用于网站和网站应用程序的多种类型的身份验证（称为<b>身份验证方法</b>）。 每个<b><a
+			href="contexts.html">上下文</a></b>具有定义如何处理身份验证的身份验证方法。 身份验证用于创建与经过身份验证的网站应用程序<a href="users.html">用户</a>相对应的Web会话.
 	</p>
 
 	<p>
-		In order to detect when response messages from web servers correspond
-		to authenticated requests, a set of indicators can be configured. The
-		<b>Logged in indicator</b>, when present in a response message (either
-		the header or the body), signifies that the response message
-		corresponds to an authenticated request (e.g. presence of a 'logout
-		link' or a 'Welcome back, User X' pattern). Similarly, the <b>Logged
-			out indicator</b> indicates an unauthenticated request (e.g. presence of
-		a 'login link'). Only the presence of one of the 2 indicators is
-		sufficient for proper functionality. In the case neither of the
-		indicators has been specified, all messages are considered, by
-		default, authenticated.
+		为了检测来自Web服务器的响应消息何时与经过身份验证的请求相对应，可以配置一组指示符。 当<b>登录指示符</b>出现在响应消息（标头或主体）中时，它表示响应消息对应一个认证的请求（例如存在“注销链接”或“欢迎返回，用户X”模式）。 同样，<b>注销指示符</b>表示未经身份验证的请求（例如，存在“登录链接”）。 如果ZAP检测到注销指示符，它将重新验证，否则它将假设已经通过身份验证，并将继续如常。  
+		这两个指标中只有一个指标是适当功能所必需的。 在指定的这两个指标都没有的情况下，默认情况下所有消息都被认为是经过身份验证的。 
 	</p>
 		
 	<p> To set one of the <b>Logged in/out Indicators</b>, either type the regex 
@@ -34,118 +21,88 @@
 		Properties</a> dialog -> Authentication panel -> Logged In/Out Indicator field</i>,
 		either find an authenticated message in the Sites Tree, select it, open the
 		Response View and select the text you wish to define as the indicator using the
-		mouse and select the <i>Flag as Context... Logged in/out indicator</i> right-click menu option.
+		mouse and select the <i>Flag as Context... 登录/注销指示符</i>右键菜单选项。
 	</p>
 
-	<p>In order to perform the authentication of a user on a website /
-		in a webapp, the Authentication Method defines how the authentication
-		is done (the process), while the necessary credentials (the exact
-		identifiers) are dependent on the user, so, in ZAP, they are
-		configured in the Users.</p>
+	<p>为了在网站或Web应用程序中执行用户身份验证，身份验证方法定义了如何完成身份验证（整个过程），而必要的凭据（确切标识符）则依赖于用户，因此在ZAP中，这些标识符都在用户项中配置。</p>
 	
-	<p>The generic <b>main steps</b> that are needed to configure authentication for a web application
-	are the following:
+	<p>一般的 <b>主要步骤</b> （为Web应用程序配置身份验证所需的内容如下所示：）
 	<ol>
-		<li>properly configure a ZAP <a href="contexts.html">Context</a> for the web application</li>
-		<li>set up the <a href="sessionManagement.html">session management method</a> for the context to
-		the one that is used in your app</li>
-		<li>set up the authentication method for the context:
+		<li>正确配置web应用程序的ZAP<a href="contexts.html">上下文</a></li>
+		<li>为应用程序中使用的上下文设置<a href="sessionManagement.html">会话管理方法</a></li>
+		<li>为上下文设置身份验证方法：
 			<ol>
-				<li>set up at least one of the <i>Logged In Indicator</i> or the <i>Logged out indicator</i>,
-				as described above</li>
-				<li>configure the authentication method for your application, specifying all the requirements
-				(as seen below)</li>
+				<li>如上所述，至少设置一个<i>已登录指示符</i>或<i>已注销指示符</i></li>
+				<li>为您的应用程序配置身份验证方法, 指定所有的要求 (如下所示)</li>
 			</ol>
 		</li> 
-		<li>configure a set of <a href="users.html">users</a> for the context that directly correspond to the
-		authentication method for the context</li>
+		<li>为与上下文的认证方法直接对应的上下文配置一组<a href="users.html">用户</a></li>
 	</ol>
 
-	<p>Authentication methods can be used in multiple places around
-		ZAP. Some of the examples include:</p>
+	<p>身份验证方法可以在ZAP的多个地方使用。 一些示例包括：</p>
 	<ul>
-		<li>defining Users and automatic login</li>
-		<li>detection of authenticated/unauthenticated states</li>
-		<li>performing automatic re-authentication</li>
+		<li>定义用户和自动登录</li>
+		<li>检测经过身份验证/未经身份验证的状态</li>
+		<li>执行自动验证</li>
 	</ul>
 
-	<p>Multiple authentication methods have been implemented and the
-		system supports easy addition of new methods, according to user needs.
-		They main ones are described below.</p>
+	<p>系统实现了多种身份认证方法，并支持根据用户的需要轻松添加新方法。他们的主要介绍如下所述。</p>
 
 	<h3>
-		<a name="manual">Manual Authentication</a>
+		<a name="manual">手动身份验证</a>
 	</h3>
-	<p>This method allows users to perform the authentication manually
-		(e.g. authenticate in the browser while proxy-ing through ZAP) and
-		then select the corresponding HTTP session. As the actual
-		authentication is being performed by you, this method does not support
-		re-authentication in case the webapp logs a user out.
+	<p>该方法允许用户手动执行认证（例如，通过ZAP进行代理时在浏览器中进行认证）
+然后选择相应的HTTP会话。 当实际的身份验证由您执行时，如果网页应用程序将用户注销，此方法不支持重新身份验证。
 	</p>
 	
-	<p>When using this authentication method, configuring a User for the context 
-	require choosing an authenticated HTTP session.</p>
+	<p>使用此身份验证方法时，为上下文配置用户需要选择经过身份验证的HTTP会话。</p>
 
 	<h3>
-		<a name="formBased">Form-Based Authentication</a>
+		<a name="formBased">基于表单的身份验证</a>
 	</h3>
 	<p>
-		This method is used for websites / webapps where authentication is
-		done by submitting a form or performing a GET request to a 'login url'
-		using a 'username/password' pair of authentication credentials.
-		Re-authentication is possible. Configuration can be done using the <a
+		此方法用于网站/Web应用程序，通过提交表单或使用“用户名/密码”对身份验证凭据向“登录url”执行GET请求来完成身份验证。
+		重新验证是可能的。 Configuration can be done using the <a
 			href="../../ui/dialogs/session/contexts.html#auth">Session
 			Contexts Dialog</a> or using the contextual PopupMenu: <i>Flag as...
-			Form-Based Authentication Login Request</i>.
+			基于表单的身份验证登录请求</i>.
 	</p>
-	<p>When using this authentication method, configuring a User for the context requires
-	setting up the <i>username/password</i> pair of credentials that are used for the form based
-	authentication.</p>
+	<p>使用这种身份验证方法时，需要为上下文配置用户设置用于基于表单的身份验证的<i>用户名/密码</i>对凭证。</p>
 	
 	<h3>
-		<a name="httpAuth">HTTP/NTLM Authentication</a>
+		<a name="httpAuth">HTTP/NTLM身份验证</a>
 	</h3>
 	<p>
-		This method is used for websites / webapps where authentication is
-		enforced using the HTTP or NTLM Authentication mechanisms employing HTTP message headers. 
-		Three authentication schemes are supported: Basic, Digest and NTLM.
-		Re-authentication is possible, as the authentication headers are sent with every authenticated
-		request. Configuration can be done using the <a
-			href="../../ui/dialogs/session/contexts.html#auth">Session
-			Contexts Dialog</a>.
+		此方法用于使用HTTP或NTLM身份验证机制（使用HTTP消息标头）执行身份验证的网站和网页应用程序。 
+		支持三种认证方案：Basic，Digest和NTLM。
+		重新验证是可能的，因为验证头文件是每个验证请求发送的。 可以使用<a
+			href="../../ui/dialogs/session/contexts.html#auth">会话上下文对话框</a>完成配置.
 	</p>
-	<p>When using this authentication method, configuring a User for the context requires
-	setting up the <i>username/password</i> pair of credentials that are used for the HTTP/NTLM authentication.</p>
+	<p>使用此身份验证方法时，要为上下文配置用户，需要设置用于HTTP/NTLM身份验证的<i>用户名/密码</i>对凭证。</p>
 	
 	<h3>
-		<a name="scriptBased">Script-Based Authentication</a>
+		<a name="scriptBased">基于脚本的身份验证</a>
 	</h3>
 	<p>
-		This method is useful for websites / webapps where the authentication is a more complex one and some custom
-		scripts that handle the authentication process are beneficial. To use this method, you must first define an Authentication script
-		which sends messages or performs other actions as needed by your web-application. This script is then selected for use for a given Context
-		and it is called whenever an authentication is performed. Re-authentication is possible. 
-		Configuration can be done using the <a href="../../ui/dialogs/session/contexts.html#auth">Session
-			Contexts Dialog</a> and requires you to have the Scripts Console ZAP Addon installed from the Marketplace.
+		这种方法对于那些身份验证比较复杂的网站/网页应用程序很有用，而且一些处理身份验证过程的自定义脚本是有益的。 要使用此方法，您必须首先定义一个身份验证脚本，该脚本根据您的网页应用程序的需求发送消息或执行其他操作。 然后选择此脚本用于给定的上下文，并在执行身份验证时调用该脚本。 重新验证是可能的。 
+		可以使用<a href="../../ui/dialogs/session/contexts.html#auth">会话上下文对话框</a>完成配置，并要求您从市场安装脚本控制台ZAP加载项。
 	</p>
-	<p>When using this authentication method, configuring a User for the context requires
-	setting up the a set of parameters defined in the script. For more details, see the provided Authentication Script examples.</p>
+	<p>使用此身份验证方法时，为上下文配置用户需要设置脚本中定义的一组参数。 有关更多详细信息，请参阅提供的验证脚本示例。</p>
 	
-	<h2>Configuration example</h2>
-	<p>A configuration example showing how to fully configure a webapp that uses <i>form-based authentication</i> and
-	<i>cookie-based session management</i> is 
-	seen below:
+	<h2>配置示例</h2>
+	<p>显示如何完全配置使用的webapp的配置示例 <i>（基于表单的身份验证</i> 和
+	<i>基于Cookie的会话管理）</i> 如下所示：
 	<ol>
-		<li>set up a context for the web application</li>
-		<li>set up the session management method to <i>Cookie-based Session Management</i></li>
-		<li>make sure your browser proxies everything through ZAP and log into your application using the browser</li>
+		<li>为Web应用程序设置上下文</li>
+		<li>将会话管理方法设置为<i>基于Cookie的会话管理</i></li>
+		<li>确保您的浏览器通过ZAP代理所有内容，并使用浏览器登录到您的应用程序</li>
 		<li>go to ZAP and identify the request that was done for the login (most usually it's a HTTP POST request 
 		containing the username and the password and possibly other elements)</li>
 		<li>right click on the request and Flag as Context... Form-based Auth Login Request</li>
 		<li>a window will be opened already containing the request URL and the parameters (if any). Use 
 		the dropdown options to select which of the parameters correspond to the username and to the password</li>
     	<li>then you need to tell ZAP how to identify whether an authentication succeeded or not. You can do 
-    	this by setting logged in or logged indicators. These are regex patterns which, if found in a 
+    	this by setting logged in or logged out indicators. These are regex patterns which, if found in a 
     	response, tell ZAP whether it's authenticated or not (e.g. presence of a 
     	http://example.com/logout link or the presence of a 'Welcome, User X'). Only one of them is
     	necessary. To set one of them, either type the regex directly in the Session Properties -> 
@@ -153,7 +110,7 @@
     	select it, open the Response View and select the text you wish to define as the indicator using
     	the mouse and select the Flag as Context... Logged in indicator right-click menu option.</li>
     	<li>define as many users as you need in the Session Properties -> Users section.</li>
-    	<li>after this step, various actions are available in ZAP. For example, you now have a new right click option: Attack -> Spider Context As User. Or, using the Forced User Mode, you can force all the interactions that go through ZAP for a given Context to be from the perspective of a User. The User Forced Mode is enabled via the previous-to-last button in the toolbar (the one with the user and the lock) and is configured via Session Properties -> Forced User Mode.</li>
+    	<li>after this step, various actions are available in ZAP. For example, you can now select the user in <a href="../../ui/dialogs/spider.html">Spider dialogue</a>. Or, using the Forced User Mode, you can force all the interactions that go through ZAP for a given Context to be from the perspective of a User. The User Forced Mode is enabled via the previous-to-last button in the toolbar (the one with the user and the lock) and is configured via Session Properties -> Forced User Mode.</li>
 	</ol>
 	
 	Most of the steps above apply as well for other authentication methods. The only things that change when trying
@@ -161,42 +118,41 @@
 	method required from the drop-down list and configure it as needed. More details about configuring each type 
 	of authentication can be above and <a href="../../ui/dialogs/session/contexts.html">here</a>.
 
-	<h2>Configured via</h2>
+	<h2>配置通过</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/session/contexts.html#auth">Session Properties dialog</a></td>
+			<td><a href="../../ui/dialogs/session/contexts.html#auth">会话属性对话框</a></td>
 			<td></td>
 		</tr>
 	</table>
 
-	<h2>See also</h2>
+	<h2>请参阅</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="http://youtu.be/cR4gw-cPZOA">Youtube tutorial</a></td>
-			<td>of the Authentication, Session Management and Users Management features of ZAP [external link to http://youtu.be/cR4gw-cPZOA].</td>
+			<td><a href="https://youtu.be/cR4gw-cPZOA">Youtube教程</a></td>
+			<td>ZAP的身份验证，会话管理和用户管理功能[外部链接到https://youtu.be/cR4gw-cPZOA]。</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/overview.html">UI Overview</a></td>
-			<td>for an overview of the user interface</td>
+			<td><a href="../../ui/overview.html">UI综览</a></td>
+			<td>关于用户界面的概述</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="concepts.html">Features</a></td>
-			<td>provided by ZAP</td>
+			<td><a href="concepts.html">功能</a></td>
+			<td>由ZAP提供</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/session/contexts.html">Session
-					Contexts Dialog</a></td>
-			<td>for an overview of the Session Properties</td>
+			<td><a href="../../ui/dialogs/session/contexts.html">会话上下文对话框</a></td>
+			<td>关于会话属性的概述</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="users.html">Users</a></td>
-			<td>for an overview of Users</td>
+			<td><a href="users.html">用户</a></td>
+			<td>关于用户类别的概述</td>
 		</tr>
 
 	</table>

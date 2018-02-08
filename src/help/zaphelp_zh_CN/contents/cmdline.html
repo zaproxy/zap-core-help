@@ -7,41 +7,66 @@ Command Line
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Command Line</h1>
+<h1>命令行</h1>
 
-ZAP supports the following command line options:
+要通过命令行运行ZAP，您需要找到ZAP启动脚本。<br/>
+<strong>Windows版本：</strong><br/>
+<pre>C:\Program Files (x86)\OWASP\Zed Attack Proxy\zap.bat</pre>
+<strong>Mac版本：</strong><br/>
+<pre>/Applications/OWASP\ ZAP.app/Contents/Java/zap.sh</pre>
+<strong>Linux版本:</strong><br/>
+<code>zap.sh</code> 在安装ZAP的目录下面。
+<br/><br/>
+或者，您可以直接运行JAR文件：<br/>
+<pre>java -jar zap.jar</pre>
+下面的所有选项都可以传递给其中的任何一个。
+
+<h2>选项</h2>
+
+ZAP支持以下命令行选项：
 
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-cmd</td><td>Runs ZAP 'inline', ie without starting the UI or a daemon</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-config</td><td>Overrides the specified key=value pair in the configuration file</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-daemon</td><td>Starts ZAP in 'daemon' mode, ie without a UI</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-dir</td><td>Uses the specified directory instead of the default one</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-installdir</td><td>Overrides the code that detects where ZAP has been installed with the specified directory</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-h</td><td>Shows all of the command line options available, including those added by add-ons</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-help</td><td>The same as -h </td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-host</td><td>Overrides the host used for proxying specified in the configuration file</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-port</td><td>Overrides the port used for proxying specified in the configuration file</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-version</td><td>Reports the ZAP version</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-newsession</td><td>Creates a new session at the given location</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-session</td><td>Opens the given session after starting ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-version</td><td>报告ZAP的版本</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-cmd</td><td>内联运行（命令行选项完成时退出）</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-daemon</td><td>在守护进程模式下启动ZAP，即没有UI</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-config &lt;kvpair&gt;</td><td>覆盖配置文件中指定的key = value对。 <code> -config </>命令行选项按照它们指定的顺序。</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-configfile &lt;path&gt;</td><td>用指定的属性文件中的值覆盖key = value对</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-dir &lt;dir&gt;</td><td>使用指定的目录而不是默认目录</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-installdir &lt;dir&gt;</td><td>重写用于检测已使用指定目录安装 ZAP 的代码</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-h</td><td>显示所有可用的命令行选项，包括由加载项添加的命令行选项</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-help</td><td>和-h一样</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-newsession &lt;path&gt;</td><td>在给定的位置创建一个新的会话</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-session &lt;path&gt;</td><td>启动ZAP后打开给定的会话</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-host &lt;host&gt;</td><td>覆盖用于配置文件中指定的代理的主机</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-port &lt;port&gt;</td><td>覆盖配置文件中指定的用于代理的端口</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-lowmem</td><td>尽可能使用数据库而不是内存 - 这条命令仍然是实验性的</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-experimentaldb</td><td>使用实验性的通用数据库代码，这条命令也仍然是实验性的</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstall &lt;addon&gt;</td><td>从ZAP市场安装指定的加载项</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstallall</td><td>从ZAP市场安装所有可用的加载项</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonuninstall &lt;addon&gt;</td><td>卸载指定的加载项</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonupdate</td><td>从ZAP市场更新所有已更改的加载项</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonlist</td><td>列出所有已安装的加载项</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-script &lt;script&gt;</td><td>运行指定的脚本（文件系统路径）如果命令行/守护进程，或只是加载它如果GUI</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-last_scan_report &lt;path&gt;</td><td>生成“上次扫描报告”到指定的路径</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-suppinfo</td><td>输出支持和故障排除相关的详细信息（到控制台/标准输出）。 如：ZAP版本，java版本，已安装的附件和版本，区域设置信息，操作系统等</td></tr>
 </table>
 <br>
-The options '-session' and '-newsession' are mutually exclusive. An error will be shown and ZAP exit (if not in GUI) when both options are set.
+选项 <code>-session</code> 和 <code>-newsession</code> 是相互排斥的。 如果两个选项都设置，将会显示一个错误，ZAP将会退出（如果不在GUI中）。
 <br>
-Relative paths to session file are resolved against the "session" directory located in ZAP's home directory (default or specified with -dir option).
+会话文件的相对路径将根据位于ZAP主目录中的“会话”目录解析（默认或指定 <code>-dir</code> 选项）。
 <br/>
-Configuration keys should be specified using the dot notation based their location in the XML of the configuration file, eg:<br/>
-<pre>-config api.key=12345 -config connection.timeoutInSecs=60</pre>  
-Note that add-ons can add extra command line options.
+应该使用点符号来指定配置密钥，这些符号是基于它们在配置文件的XML中的位置，例如：<br/>
+<pre>&lt;zap-script&gt; -config api.key=12345 -config connection.timeoutInSecs=60</pre>
+请注意，加载项可以添加额外的命令行选项。
 
 <p>
-Examples:
+例如：
 	<ul>
-		<li>Start ZAP in 'daemon' mode with a new session created at a given path:
-			<pre>-daemon -newsession session</pre>
+		<li>在“守护进程”模式下使用在给定路径创建的新会话启动ZAP：
+			<pre>&lt;zap-script&gt; -daemon -newsession session</pre>
 		</li>
 		<li>Create a report of the last scan of an existing session and exit ZAP once finished:
-			<pre>-last_scan_report /path/to/save/report.xml -session /path/to/existing/session -cmd</pre>
+			<pre>&lt;zap-script&gt; -last_scan_report /full/path/to/save/report.xml -session /full/path/to/existing/session -cmd</pre>
 		</li>
 	</ul>
 

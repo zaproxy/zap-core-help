@@ -7,41 +7,40 @@ Views
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Views</h1>
+<h1>Vistas</h1>
 <p>
-ZAP provides a set of plugable views which allows you to display the requests and responses in different ways.<br/>
-The following views are included by default:
+ZAP proporciona un conjunto de vistas que se conectan que permite mostrar las solicitudes y respuestas de diferente manera.<br/>
+Las siguientes vistas se incluyen por defecto:
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Text</td><td>The data in text format</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Hex</td><td>A table showing the hex representation of all of the characters in the header and body. <br>
-	For editable screens this allows you to add control characters via their hex codes.<br>
-	You cannot add or delete characters in this view - to do that switch to one of the other views and then back to carry on in hex view.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Image</td><td>The image - only available for bodys containing images</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Table</td><td>A table with one row per attribute and value.<br>
-	For editable screens all values will automatically be URL encoded when they are submitted. </td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Table (adv)</td><td>A table with one row per attribute and value plus additional functions.<br>
-	For editable screens values will not be automatically be URL encoded when they are submitted, but this can be done 'manually' via 'URLEncode' function. </td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Large Request</td><td>A placeholder view used to prevent the UI trying to load a very large request body.<br>
-	You will need to switch to a different view to display the actual contents.<br>
-	The threshold for the view can be changed via the <a href="dialogs/options/view.html">Display Options screen</a></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Large Response</td><td>A placeholder view used to prevent the UI trying to load a very large response body.<br>
-	You will need to switch to a different view to display the actual contents.<br>
-	The threshold for the view can be changed via the <a href="dialogs/options/view.html">Display Options screen</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Texto</td><td>La información en formato de texto</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Hex</td><td>Una tabla que muestra la representación hex de todos los caracteres en el encabezado y el cuerpo. <br>Esto permite para pantallas editables añadir caracteres de control mediante sus códigos hex.<br>
+No se puede añadir o eliminar caracteres en esta vista. Para hacerlo, cambie a otra vista y luego vuelva a la vista hex para continuar.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Imagen</td><td>La imagen, solo disponible para cuerpos que contienen imágenes</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tabla</td><td>Una tabla con una fila por atributo y valor.<br>
+Para pantallas editables todos los valores se codificarán en URL automáticamente cuando se envíen. </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tabla (adv)</td><td>Una tabla con una fila por atributo y valor más las funciones adicionales.<br>
+Para pantallas editables los valores no se codificarán automáticamente en URL cuando se envíen, pero esto se puede hacer "manualmente" a través de la función "URLEncode". </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Solicitud Grande</td><td>Una vista de marcador de posición se utiliza para evitar que la IU intente cargar un cuerpo de solicitud muy grande.<br>
+Se necesita cambiar a una vista diferente para mostrar los contenidos actuales.<br>
+El umbral para la vista puede cambiarse a través de la <a href="dialogs/options/view.html">pantalla Mostrar Opciones</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Respuesta Grande</td><td>Una vista de marcador de posición se utiliza para evitar que la IU intente cargar un cuerpo de respuesta muy grande.<br>
+Se necesita cambiar a una vista diferente para mostrar los contenidos actuales.<br>
+El umbral para la vista puede cambiarse a través de la <a href="dialogs/options/view.html">pantalla Mostrar Opciones</a></td></tr>
 </table>
 <p>
-Note that <a href="../start/concepts/addons.html">add-ons</a> can add additional views.
+Tome en cuenta que <a href="../start/concepts/addons.html">add-ons</a> puede agregar vistas adicionales.
 </p>
 
-<h2>Used in</h2>
+<h2>Utilizado en</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="tabs/break.html">Break tab</a></td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="tabs/request.html">Request tab</a></td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="tabs/response.html">Response tab</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="tabs/break.html">Pestaña de interrupción</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="tabs/request.html">Pestaña de solicitud</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="tabs/response.html">Pestaña Respuesta</a></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="dialogs/man_req.html">Manual Request dialog</a></td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="dialogs/resend.html">Resend dialog</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="dialogs/resend.html">Cuadro de diálogo Reenviar</a></td><td></td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Véase también</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
 </table>

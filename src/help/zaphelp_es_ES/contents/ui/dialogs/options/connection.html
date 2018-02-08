@@ -3,34 +3,51 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Options Connection screen
+Pantalla de Opciones de Conexión
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Options Connection screen</h1>
+<h1>Pantalla de Opciones de Conexión</h1>
 <p>
-The Options Connection screen allows you to configure the ZAP connection options:
+La pantalla de Opciones de Conexión te permite configurar las opciones de conexión de ZAP:
 
-<h3>Timeout in seconds</h3>
-This makes is easier to test slow applications.
+<h3>Tiempo de espera (segundos)</h3>
+Esto hace que es más fácil de probar aplicaciones lentas.
 
-<h3>Single Cookie Request Header</h3>
-Controls whether the ZAP's managed cookies (<a href="../../tlmenu/edit.html">Habilitar seguimiento de la sesión (Cookie)</a>) should be set
-on a single "Cookie" request header or multiple "Cookie" request headers, when sending an HTTP request to the server.
+<h3>Agente de usuario predeterminado:</h3>
+El agente de usuario que ZAP debe utilizar al crear mensajes de HTTP (por ejemplo, mensajes de araña o Conecte las peticiones al proxy saliente).
 
-<h3>Use Proxy chain</h3>
-This section allows you to connect to another proxy for outgoing connections.<br/>
-This is often required in a corporate environment.
+<h3>Encabezado de solicitud única Cookie</h3>
+Controla si el ZAP de administrado (cookies<a href="../../tlmenu/edit.html">Habilitar seguimiento de la sesión (Cookie)</a>) se debe colocar en un encabezado de solicitud "Cookie" único o varios encabezados de la petición de "Cookie", al enviar una petición HTTP al servidor.
+
+<h3>DNS</h3>
+<h4>Consultas exitosas TTL</h4>
+Define por cuánto tiempo deben en caché las consultas DNS exitosas:<ul>
+<li>Negativo número, caché para siempre;</li>
+<li>Cero, desactiva la caché;</li>
+<li>Número positivo, el número de segundos que se almacenará en caché las consultas.</li></ul>
+<strong>Nota:</strong> Cambios se aplican después de un reinicio.<p>
+También se puede definir la opción mediante el <code>-config</code> argumento de línea de comandos con la key <code>connection.dnsTtlSuccessfulQueries</code>.
+
+<h3>Protocolos de seguridad</h3>
+Permite para elegir las versiones SSL/TLS para las conexiones salientes (por ejemplo, a los servidores). Debe habilitar al menos una versión, versiones no el JRE no seleccionadas y desactivadas.
+<br>Debe seleccionar la opción SSLv2Hello en conjunto con al menos una versión SSL/TLS.
+
+<h3>Utilice la cadena de Proxy</h3>
+Esta sección le permite conectarse a otro proxy para las conexiones salientes.<br/>
+Esto a menudo es necesaria en un entorno corporativo.
 
 <h3>Autenticación Proxy</h3>
-This section allows you to configure the outgoing proxy authentication. 
+Esta sección le permite configurar la autenticación de proxy saliente. 
 
-<h2>Vease también</h2>
+<h2>Véase también</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Overview</a></td><td>Para una vista general sobre la interfaz de usuario</td></tr>
+<a href="../../overview.html">UI Overview</a></td><td>para tener una visión general de la interfaz de usuario</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+<a href="options.html">Options dialogs</a></td><td>para más detalles de las otras Opciones de diálogo de las pantallas</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../../cmdline.html">Command Line</a></td><td>para obtener más información de la línea de comandos</td></tr>
 </table>
 
 </body>

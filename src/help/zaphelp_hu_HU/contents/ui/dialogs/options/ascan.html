@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Options Active Scan screen
+Az opciók Aktív Szkennelési képernyő
 </title>
 </head>
 <body bgcolor="#ffffff">
@@ -11,47 +11,58 @@ Options Active Scan screen
 <p>
 This screen allows you to configure the <a href="../../../start/concepts/ascan.html">active scan</a> options:
 
-<h3>Number of hosts scanned concurrently</h3>
-The maximum number of hosts that will be scanned at the same time.
-Increasing this may put extra strain on the computer ZAP is running on.
+<h3>Száma házigazdák beolvasott egyidejűleg</h3>
+A maximális számát a házigazdák, hogy a készülék egyidejűleg.
+Növekvő ezt fel extra megterhelést jelent a számítógép ZAP fut.
 
 <h3>Concurrent scanning threads per host</h3>
 The number of threads the scanner will use per host.<br>
-Increasing the number of threads will speed up the scan but may put extra strain on the computer ZAP is running on and the target host.
+Egyre nagyobb a szálak száma felgyorsítja a vizsgálat, de fel extra megterhelést jelent a számítógép ZAP fut a cél fogadó.
 
 <h3>Max results to list</h3>
-The number of results that will be shown in the Active Scan tab.<br>
-Displaying a large number of results can significantly increase the time a scan takes.
+Az eredmények száma jelenik meg, az Aktív Beolvasás lapot.<br>
+Megjelenítése egy nagy eredmények száma jelentősen növeli az idő, a vizsgálat tart.
 
-<h3>Delay when scanning in milliseconds</h3>
-The delay in milliseconds between each request.<br>
+<h3>Maximális szabály időtartama (perc, 0 korlátlan)</h3>
+A maximális idő minden egyes szabály fut a perc. A nulla azt jelenti, hogy nincs határ. Ez lehet használni, hogy megakadályozzák szabályokat figyelembe túlzott mennyiségű idő. 
+
+<h3>Maximum scan duration (min, 0 is unlimited)</h3>
+A maximális idő, hogy az egész vizsgálat fut a perc. A nulla azt jelenti, hogy nincs határ. Ezt fel lehet használni annak érdekében, hogy a vizsgálat befejezése körül egy meghatározott ideig. 
+
+<h3>Késedelem beolvasásakor ezredmásodpercben</h3>
+A késedelem ezredmásodpercben között minden kérésre.<br>
 Setting this to a non zero value will increase the time an active scan takes, but will put less of a strain
 on the target host.
 
-<h3>Handle anti CSRF tokens</h3>
-If this option is selected then the active scanner will attempt to automatically request 
-<a href="../../../start/concepts/anticsrf.html">anti CSRF</a> tokens when required.<br>
-Note that this is experimental functionality and will slow down the scanning process as only one thread will be used to ensure
-that anti CSRF token requests dont get out of step. 
+<h3>Adja be a plugin ID fejléc minden aktív szkennelési kéri,</h3>
+Ha ezt az opciót választja, akkor az aktív szkenner adja be a kérelmet fejléc <code>X-ZAP-Scan-ID</code> with the ID of
+the scanner that's sending the HTTP requests.
 
-<h3>In Attack mode prompt to rescan nodes when scope changed</h3>
-If this option is selected then when you select Attack <a href="../../../start/concepts/modes.html">mód</a> you will be prompted to choose whether to rescan nodes in scope.<br>
-If the option is not selected then the following option will control whether the nodes are rescanned.
+<h3>Handle anti CSRF tokens</h3>
+Ha ezt az opciót választja, akkor az aktív szkenner megpróbálja automatikusan kérés 
+<a href="../../../start/concepts/anticsrf.html">anti CSRF</a> tokens when required.<br>
+Vegye figyelembe, hogy ez kísérleti funkció, valamint lassítja a szkennelési folyamat, mivel csak egy szál fogja alkalmazni annak biztosítása érdekében
+az anti CSRF token kérést nem kap ki a lépés. 
+
+<h3>A Támadás mód kéri, hogy olvassa újra a csomópontok, amikor hatálya megváltozott</h3>
+Ha ez az opció van kiválasztva, akkor válassza a Támadás <a href="../../../start/concepts/modes.html">mód</a> kérni fogja, hogy válassza ki, hogy rescan csomópontok hatálya alá.<br>
+Ha az opció nincs bejelölve, akkor a következő lehetőség lesz irányítani akár a csomópontok rescanned.
 
 <h3>In Attack mode always rescan nodes when scope changed</h3>
-If this option is selected then when running in Attack <a href="../../../start/concepts/modes.html">mód</a> all nodes in scope will be rescanned if the scope changes.<br>
-This is not recommended for large sites as it could take a long time.
+If this option is selected then when running in Attack <a href="../../../start/concepts/modes.html">mód</a> minden csomópont hatálya lesz rescanned, ha a hatálya változások.<br>
+Ez nem javasolt a nagy építkezések, mivel ez sokáig eltarthat.
 
-<h3>Default active scan policy</h3>
-A <a href="../../../start/concepts/scanpolicy.html">Scan Policy</a> that is used by default when you start an active scan.
+<h3>Alapértelmezett aktív szkennelési politika</h3>
+The <a href="../../../start/concepts/scanpolicy.html">Scan Policy</a> alapértelmezés szerint használt, amikor a start aktív szkennelési.
 
 <h3>Attack mode scan policy</h3>
-A <a href="../../../start/concepts/scanpolicy.html">Scan Policy</a> that is used for scanning in 
+The <a href="../../../start/concepts/scanpolicy.html">Scan Policy</a> that is used for scanning in 
 Attack <a href="../../../start/concepts/modes.html">mód</a>.
 
 <h3>Max progress chart in mins</h3>
-The maximum time in minutes for which response codes will be charted in the
-<a href="../scanprogress.html">Scan Progress dialog</a>, with zero meaning no limit.
+A maximális idő, a perc, amelyre válaszkódok lesz feltérképezték a
+<a href="../scanprogress.html">Scan Progress dialog</a>.<br>
+Tiltsa le a grafikon a lehetőséget meg kell határozni, hogy nulla perc.
 
 <h2>See also</h2>
 <table>

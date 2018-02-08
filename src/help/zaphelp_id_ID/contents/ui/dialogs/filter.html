@@ -7,66 +7,70 @@ Filter dialog
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Filter dialog</h1>
+<h1>Dialog penyaring</h1>
 <p>
-This allows you to set <a href="../../start/concepts/filters.html">filters</a> that are applied to requests and responses.
+<strong>CATATAN: Penyaring pada dasarnya telah digantikan oleh add-on replacer dan skrip yang lebih kuat dan fleksibel.<br>
+Filter akan dihapus dalam versi kedepannya oleh ZAP.</strong>
 </p>
-The following filters are supported by default.
+<p>
+Ini mengizinkan anda untuk mengatur <a href="../../start/concepts/filters.html">penyaring</a> yang telah diterapkan untuk permintaan dan respon respon.
+</p>
+Saringan berikut didukung secara default.
 
-<h2>Change user agent to other browsers</h2> 
+<h2>Mengubah agen pengguna ke peramban lain</h2> 
 
-<h2>Detect insecure or potentially malicious content in HTTP responses</h2>
+<h2>Mendeteksi konten yang tak aman atau berpotensi membahayakan dalam reaksi HTTP</h2>
 
-<h2>Detect and alert 'Set-cookie' attempt in HTTP response for modification</h2>
+<h2>Mendeteksi dan memberi peringatan 'set-cookie' pada tanggapan HTTP untuk dimodifikasi</h2>
 
-<h2>Hindari browser cache (strip off IfModifiedSince)</h2>
+<h2>Hindari browser cache (strip off if modified since)</h2>
 
-<h2>Log cookies sent by browser</h2>
+<h2>Log cookie dikirim oleh browser</h2>
 
-<h2>Log unique GET queries into file</h2>
+<h2>Log unik mendapatkan pertanyaan ke berkas</h2>
 
-<h2>Log unique POST queries into file</h2>
+<h2>Log unik POST pertanyaan ke berkas</h2>
 
-<h2>Log request and response into file</h2>
+<h2>Log permintaan dan respon ke berkas</h2>
 
-<h2>Replace HTTP request body using defined pattern</h2>
+<h2>Mengganti HTTP permintaan tubuh menggunakan pola didefinisikan</h2>
 
-<h2>Replace HTTP request header using defined pattern</h2>
+<h2>Mengganti HTTP header permintaan yang menggunakan pola didefinisikan</h2>
 
-<h2>Replace HTTP response body using defined pattern</h2>
+<h2>Mengganti HTTP respon tubuh menggunakan pola didefinisikan</h2>
 
-<h2>Replace HTTP response header using defined pattern</h2>
+<h2>Mengganti HTTP respon header menggunakan pola didefinisikan</h2>
 
 <h2>Kirim ZAP session request ID</h2>
 	<p>
-		This filter will add a special header tag to each request send to the server.
-		So you can track ZAP's requests, when investigating your own web application.
-		It's helpful to have a distinct id for multiple requests, when parsing
-		for example HTTP server's log files. 
+		Penyaring ini akan menambahkan tag header khusus ke setiap permintaan yang dikirim ke server.
+		Jadi, anda dapat melacak permintaan ZAP saat menyelidiki aplikasi web anda sendiri.
+		Ini berguna untuk memiliki id yang berbeda terhadap beberapa permintaan, saat melakukan penguraian
+misalnya file log server HTTP. 
 	</p>
-	<p>Request header is modified like this (example):</p>
+	<p>Permintaan header telah dimodifikasi seperti ini (contoh):</p>
 	
 	<pre>
-X-ZAP-RequestID: &lt;sessionName&gt;&#8211;&lt;number&gt;
+X-ZAP-permintaan ID: &lt;sessionName&gt;&#8211; &lt;number&gt;
 	</pre>
 	
 	<ul>
-		<li><code>sessionName</code> is URL encoded name of the session</li>
-		<li><code>number</code> is starting by one; increased on each request; is valid only per session</li>
+		<li><code>sessionName</code> yaitu URL dikodekan dengan nama sesi</li>
+		<li><code>nomor</code> diawali dengan satu; meningkat pada setiap permintaan; berlaku hanya setiap sesi</li>
 	</ul>
 
-<h2>Accessed via</h2>
+<h2>Diakses melalui</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../tlmenu/tools.html">Top level Tools menu</a></td><td>'Filter...' menu item</td></tr>
+<a href="../tlmenu/tools.html">Tingkat atas Alat menu</a></td><td>'Filter...' item menu</td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Lihat juga</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../overview.html">Ikhtisar UI</a></td><td>untuk ikhtisar antarmuka pengguna</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+<a href="dialogs.html">Dialog</a></td><td>untuk rincian dari dialog popup </td></tr>
 </table>
 
 

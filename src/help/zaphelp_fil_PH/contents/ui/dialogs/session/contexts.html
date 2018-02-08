@@ -3,96 +3,90 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Session Context screens
+Sesyon konteksto screen
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Session Context screens</h1>
+<h1>Ang mga sesyon konteksto iskren</h1>
 <p>
-These screens allows you manage <a href="../../../start/concepts/contexts.html">contexts</a>.
+Ang mga iskren ang nagpapahintulot sa iyo na pamahalaan ang <a href="../../../start/concepts/contexts.html">contexts</a>.
 </p>
 <p>
-There is a set of screens for each context you define.
+Dito nakahanay ang mga iskren ng bawat konteksto iyong tutukoyin.
 </p>
 
-<h3>Top screen</h3>
-This allows you to set the context name and description.
+<h3>Ang Top iskren</h3>
+Ito ay nag papahintulot sa iyo na lagyan ng pangalan ang konteksto at mailarawan.
 
-<h3>Include in context</h3>
-This allows you to manage the URLs which will be included in the context.<br/>
-URLs which dont match any of the regexs will not be included in the context.
+<h3>Kasama sa konteksto</h3>
+Ito ay nagpapahintulot sayo na pamahalaan ang URL na kung saan kasama ang konteksto.<br/>
+Ang mga URL na hindi tumugma sa anu mang mga regex ay hindi kasama sa konteksto.
 
-<h3>Exclude from context</h3>
-This allows you to manage the URLs which will be excluded from the context.<br/>
-You only need to specify regexs for URLs that you do not want to include but which match one or more
-of the 'include' regexes.
+<h3>Ihiwalay mula sa konteksto</h3>
+Ito ay nagpapahintulot sayo na pamahalaan ang mga URL na kung saan hindi kasama mula sa konteksto.<br/>
+Ang kaylangan mo lamang upang matukoy ang mga regex o mga URL na ayaw mong isama pero tumugma ito sa isa o higit pang mga 'kasama' sa regexe.
 
-<h3><a name="struct">Structure</a></h3>
-See the <a href="context-struct.html">Session Context Structure screen</a>.
+<h3><a name="struct">Istraktural</a></h3>
+Tignan ang <a href="context-struct.html">Sesyon konteksto istractural iskren</a>.
 
-<h3>Technology</h3>
-This allows you to specify the technologies used in the context, if known.<br/>
-By default all technologies are included.<br/>
-If you exclude technologies that you know are not used then this may speed up 
-<a href="../../../start/concepts/ascan.html">active scanning</a> as rules specific to the excluded
-technologies can be skipped.
+<h3>Teknolohiya</h3>
+Ito ay nag papahintulot sa iyo na tukoyin ang mga teknolohiyang ginamit sa konteksto, Kung alam.<br/>
+Ayon sa default ang lahat ng mga teknolohiya ay kasama.<br/>
+Kung ihihiwalay ang mga teknolohiya na Alam mong Hindi ginagamit ma aaring bumilis ang up 
+<a href="../../../start/concepts/ascan.html">aktibong pag-skan</a> sa mga patakaran tiyakin na maihihiwalay ang mga teknolohiya dahil puwedi itong malaktawan.
 
-<h3><a name="auth">Authentication</a></h3>
-See the <a href="context-auth.html">Session Context Authentication screen</a>.
+<h3><a name="auth">Pag papatunay</a></h3>
+Tignan ang <a href="context-auth.html">Screen sa pag papatunay ng konteksto sesyon</a>.
 
-<h3><a name="sm">Session Management</a></h3>
-This allows you to manage the way in which Session Management is being done for the Context. 
-After selecting the Session Management Method type, the options that need to be configured 
-depend on the Session Management Method.
+<h3><a name="sm">Pamamahala ng sesyon</a></h3>
+Ito ay nag papahintulot sa iyo na pamahalaan ang paraan sa pamamahala ng sesyon ito ay ginawa para sa konteksto. 
+Matapos mapili ang uri ng paraan sa pamamahala ng sesyon, ang pag pipiliaan ay kaylangan maisaayos 
+base sa paraan ng pamamahala sesyon.
 
-<h4>Cookie-Based Session Management</h4>
-No configuration is needed for this session management method. <small>Read  
+<h4>Ang cookie-based sa pamamahala ng sesyon</h4>
+Walang kaylangan isaayos sa paraan ng pamamahalang sesyon. <small>Basahin
 <a href="../../../start/concepts/sessionManagement.html#cbsm">more</a>...</small>
 
-<h4>HTTP Authentication Session Management</h4>
-No configuration is needed for this session management method. <small>Read
+<h4>HTTP ang nagpapatunay sa pamamahala ng sesyon</h4>
+Walang kaylangan isaayos sa paraan ng pamamahalang sesyon. <small>Basahin
 <a href="../../../start/concepts/sessionManagement.html#hasm">more</a>...</small>
 
 
-<h3><a name="users">Users</a></h3>
-This allows you to configure a set of Users that may be used for various other actions
-throughout the application.
-<p>The credentials section of the Users depends on the Authentication Method configured
-for the Context.</p>
+<h3><a name="users">Ang mga gumagamit</a></h3>
+Ito ay nagpapahintulot sayo na maisaayon ang set ng mga gumagamit para ito ay magamit pa sa iba't ibang gawain sa buong applikasyon.
+<p>Ang mga kredensiyal seksiyon ng mga gumagamit ay nakadipende sa Otentikasiyon method sa pag aayos ng konteksto.</p>
 
-<h2>URL regexs</h2>
-In the <i>Include in *</i>, <i>Exclude from *</i> panels and the <i>Logged in/out indicators</i> of the <i>Authentication</i> panel, you can enter regular expressions to define excluded URLs.
-While you can escape a single meta-character with a backslash, you can also use the <b>\Q...\E</b> escape sequence. All the characters between the <b>\Q</b> and the <b>\E</b> are interpreted as literal characters. E.g. \Q*\d+*\E matches the literal text *\d+*.
-This escape sequence is used in ZAP when you exclude URLs via some context menus.
+<h2>Ang mga regex ng URL</h2>
+Sa mga <i>Naisama sa *</i>, <i>Mga nahiwalay mula *</i> sa mga panel at ang <i>Lagged in/out ay nagpapahiwatig</i> at ang <i>Otentikasyon</i> panel, maaari mong ma pasok regular ang mga exprassiyon para matukoy ang hihiwalay ng mga URL. Habang ikaw ay umaalis sa nagiisang meta-karakter kasama ang backslash, maaari murin magamit ang <b>\Q...\E</b> umalis sa pagkakasunod sunod. Ang lahat ng mga karakter ay sagitna ng <b>\Q</b> at ng <b>\E</b> ang interpreted ay literal na karacter ng. E.g. \Q*\d+*\E magtutugma ang literal na teksto sa *\d+*. Ang pag alis ng pagkakasunod sunod ay magagamit sa ZAP Kung hindi ikaw kasama say mga URL sa pamamagitan ng parehong konteksto mga menu.
 <br>
-<b>Note:</b> If your URL contains a "\E", then you have to do the following steps when using the <b>\Q...\E</b> escape sequence:
+<b>Tandaan:</b> Kung ang iyong URL ay naglalaman ng "\E", at kaylangan mong sunden ang mga gagawin kung gagamit ka ng <b>\Q...\E</b> nasira ang pagkakasunod-sunod:
 <ul>
-	<li>Open the escape sequence</li>
-	<li>Close the escape sequence before the "character" \E</li>
-	<li>Escape the backslash</li>
-	<li>Open after the "\E" another escape sequence;</li>
-	<li>Close the escape sequence as normally would.</li>
+	<li>Buksan ang nasirang pagkakasunod-sunod</li>
+	<li>Isarado ang nasirang pagkakasunod-sunod bago ang "karakter" \E</li>
+	<li>Alisin ang backslash</li>
+	<li>Buksan pagkatapos ng "\E" ang iba pang naalis sa pagkakasunod-sunod;</li>
+	<li>Isarado ang nasirang pagkakasunod-sunod tulad ng karaniwan.</li>
 </ul>
 <br>
-Example: subdomain.example.com/path?a=<b>\E</b>&amp;moredata=2 should appear as
+Halibawa: subdomain.example.com/path?a=<b>\E</b>&amp;moredata=2 ay dapat ng lumitaw bilang
 <i>\Qsubdomain.example.com/path?a=\E</i><b>\\E</b><i>\Q&amp;moredata=2\E</i>
   
-<h2>Accessed via</h2>
+<h2>Sapamamagitan ng akses</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../tlmenu/file.html">Top level File menu</a></td><td>'Properties...' menu item</td></tr>
+<a href="../../tlmenu/file.html">Itaas ang antas ng file menu</a></td><td>'Mga propertie...' menu item</td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Tignan din</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../overview.html">Ang UI Overview</a></td><td>para sa kabuoan gumagamit ng interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+<a href="../dialogs.html">Mga dialog</a></td><td>para sa detalye ng mga dialog o mga popup </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../../start/concepts/authentication.html">Authentication</a></td><td>for an overview of Authentication </td></tr>
+<a href="../../../start/concepts/authentication.html">Pag papatunay</a></td><td>para sa kabuoan pag papatunay </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../../start/concepts/sessionManagement.html">Session Management</a></td><td>for an overview of Session Management </td></tr>
+<a href="../../../start/concepts/sessionManagement.html">Namamahal ng sesyon</a></td><td>para sa kabuoan ng sesyon management </td></tr>
 </table>
 
 

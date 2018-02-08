@@ -7,79 +7,79 @@
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Release 1.4.0</h1>
+<h1>Versiunea 1.4.0</h1>
 <p>
-The following changes were made in this release:
+Următoarele modificări au fost aduse acestei versiuni:
 </p>
 
-<h2>Significant changes:</h2>
+<h2>Schimbări majore:</h2>
 
-<h3>Issue 133: Add Syntax highlighting to Response Panel</h3>
+<h3>Problema 133: Adăugarea evidențierii de sintaxă la panoul de Răspuns</h3>
 
-The HTML panels now support switchable syntax highlighting.
+Panourile HTML acum permit evidențieri de sintaxă schimbabile.
 
-<h3>Issue 153: fuzzdb integration</h3>
+<h3>Problema 153: integrarea de fuzzdb</h3>
 
-The fuzzer includes fuzzdb (https://github.com/fuzzdb-project/fuzzdb) fuzzing files.<br/>
-Note that some fuzzdb files have been left out as they cause common anti virus scanners to flag them as containing viruses.<br/>
-You can replace them (and upgrade fuzzdb) by downloading the latest version of fuzzdb and expanding it in the 'fuzzers' library.
+Tester-ul fuzz include fuzzdb (https://github.com/fuzzdb-project/fuzzdb) în fuzz-are fișierelor.<br/>
+Reține că unele fișiere fuzzdb au fost omise deoarece scanere anti virus comune le marchează ca incluzând viruși.<br/>
+Acum poți înlocui aceste fișiere ( și upgrada fuzzdb) prin descărcarea ultimei versiuni de fuzzdb și prin extinderea acesteia în librăria 'fuzzers'.
 
-<h3>Issue 212: Parameter analysis</h3>
+<h3>Problema 212: Analiza de parametrii</h3>
 
-A new Params tab shows a summary of all of the parameters a site has used.  
+Un nou tab pentru Parametrii afișeaze un sumar al tuturor parametrilor folosiți de un site.  
 
-<h3>Issue 228: Enhanced XSS scanner</h3>
+<h3>Problema 228: Imbunătățirea scanerului XSS</h3>
 
-The Cross Site Scripting active scanner has been rewritten from scratch to find more potential XSS issues and report fewer false positives. 
+Scanerul activ de Scriptare Între Site-uri a fost rescris de la început pentru a găsi mai multe probleme potențiale XSS și pentru a raporta mai puține falsuri pozitive. 
 
-<h3>Issue 244: Port the Watcher passive checks</h3>
+<h3>Problema 244: Portarea controalelor pasive a Obeservatorului</h3>
 
-The following checks have been ported from Watcher (thanks to Chris Weber for oking this):
+Următoarele verificări au fost portate din Observator (mulțumiri lui Chris Weber pentru aprobare):
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.CrossDomain.ScriptReference.cs</td><td>checks for cross-domain javascript files inclusion.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.CacheControl.cs</td><td>checks HTTP cache-control header on SSL pages.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.ContentTypeMissing.cs</td><td>checks that the Content-Type HTTP header is not missing.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.FrameOptions.cs</td><td>checks that the X-FRAME-OPTIONS is not missing or insecurely set.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.IeXssProtection.cs</td><td>checks that the X-XSS-Protection has not been set to disable IE's XSS protection.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.MimeSniff.cs</td><td>checks that the X-CONTENT-TYPE-OPTIONS has been set.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.DatabaseErrors.cs</td><td>checks for database error messages.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.DebugErrors.cs</td><td>checks for debugging error messages.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.InUrl.cs</td><td>checks for information disclosure in URL parameters.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.ReferrerLeak.cs</td><td>checks HTTP Referer header for information disclosure.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.CrossDomain.ScriptReference.cs</td><td>verifică incluziunea fișierelor javascript între domenii.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.CacheControl.cs</td><td>verifică antetul cache-control HTTP pe pagini SSL.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.ContentTypeMissing.cs</td><td>verifică dacă antetul HTTP Content-Type lipsește.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.FrameOptions.cs</td><td>verifică dacă opțiunile X-FRAME lipsesc sau dacă au fost incorect setate.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.IeXssProtection.cs</td><td>verifică dacă protecția X-XSS nu a fost setată să dezactiveze protecția XSS a Internet Explorer.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.MimeSniff.cs</td><td>verifică daca opțiunile X-CONTENT-TYPE au fost setate.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.DatabaseErrors.cs</td><td>verifică existența mesajelor de eroare din baza de date.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.DebugErrors.cs</td><td>verifică existentă mesajelor de eroare survenite din debugging.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.InUrl.cs</td><td>verifică dacă există informație dezvăluită în parametrii URL.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.ReferrerLeak.cs</td><td>verifică antetul HTTP Referer pentru informație dezvăluită.</td></tr>
 </table>
 
 
-<h3>Issue 253: Plugable extensions</h3>
+<h3>Problema 253: Extensii conectabile</h3>
 
-Full extensions can now be plugged into ZAP dynamically with full access to all of ZAPs features.
+Extensii complete pot fi acum conectate dinamic în ZAP cu acces complet la toate caracteristicile ZAP.
 
-<h2>Minor changes:</h2>
+<h2>Schimbări minore:</h2>
 
-<h3>Issue 54: Clean shutdown</h3>
+<h3>Problema 51: Închidere curată</h3>
 
-<h3>Issue 90: Add GUI support for unsecure SSL/TLS renegotiation</h3>
+<h3>Problema 90: Adăugarea suportului GUI pentru renegocieri SSL/TLS nesecurizate</h3>
 
-<h3>Issue 102: Save raw response and request, and save body of response and request</h3>
+<h3>Problema 102: Salvarea de răspunsuri și cereri brute și salvarea corpului raspunsului și cererii</h3>
 
-<h3>Issue 126: Allow working directory and config file to be set via cmd line</h3>
+<h3>Problema 126: Permite setarea directorului de lucru și a fișierului de configurare din linia de comandă</h3>
 
-<h3>Issue 154: Include param id in reports</h3>
+<h3>Problema 154: Includerea indentității parametrilor în rapoarte</h3>
 
-<h3>Issue 164: Toolbar config button</h3>
+<h3>Problema 164: Butonul toolbar-ului de configurare</h3>
 
-<h3>Issue 168: Reveal hidden fields in web pages</h3>
+<h3>Problema 168: Dezvăluirea câmpurilor ascunse în pagini web</h3>
 
-<h3>Issue 192: Enable/Disable breakpoints</h3>
+<h3>Problema 192: Activarea/dezactivarea punctelor de rupere</h3>
 
-<h3>Issue 193: Detect directory traversal vulnerabilities</h3>
+<h3>Problema 193: Detectarea vulnerabilităților de traversare a directorului</h3>
 
-<h3>Issue 194: Enhancement: Show request ID on Search pane</h3>
+<h3>Problema 194: Îmbunătățire: Afișarea ID-ului de cerere în panoul de Căutare</h3>
 
-<h3>Issue 200: Detect CSRF vulnerabilities</h3>
+<h3>Problema 200: Detectarea vulnerabilităților CSRF</h3>
 
-<h3>Issue 230: Enhance zap.sh to cope with symbolic links</h3>
+<h3>Problema 230: Îmbunătățirea zap.sh pentru a face fața link-urilor simbolice</h3>
 
-<h3>Issue 236: Option to toggle URLencoding</h3>
+<h3>Problema 236: Opțiune pentru a comuta encodarea URL</h3>
 
 <h3>Issue 242: Export node / req/resp via right click</h3>
 

@@ -15,37 +15,31 @@
 		O botão 'Nova Varredura' lança o <a href="../dialogs/spider.html">diálogo do Spider</a>, para permitir que você especifique exatamente o que deve ser escaneado.<br>O Spider pode ser executado em vários Sites ao mesmo tempo e os resultados de cada verificação são mostrados selecionando-se a varredura através do menu suspenso 'Progresso'.
 	</p>
 
-	<p>The toolbar shows information about a scan and allows to control it. It provides a
-		set of buttons which allows to:
+	<p>A barra de ferramentas mostra informações sobre uma varredura e permite controlá-la. Ela fornece um conjunto de botões que permite:
 	
 	<ul>
-		<li><img align="bottom" alt="pause button" src="../../images/16/141.png">
-			Pause (and <img alt="resume button" src="../../images/16/131.png"> resume) the
-			selected spider scan;</li>
-		<li><img align="bottom" alt="stop button" src="../../images/16/142.png"> Stop
-			the selected spider scan;</li>
-		<li><img align="bottom" alt="clean scans button" src="../../images/fugue/broom.png">
-			Clean completed scans;</li>
-		<li><img align="bottom" alt="show messages button" src="../../images/16/178.png">
-			Show/Hide Messages - shows/hides a tab (called Messages) that displays all HTTP
-			messages sent by the selected spider scan;</li>
-		<li><img align="bottom" alt="spider options button" src="../../images/16/041.png">
-			Open the <a href="../../ui/dialogs/options/spider.html">Spider Options screen</a>.</li>
+		<li><img align="bottom" alt="botão de pausa" src="../../images/16/141.png">
+			Pausar (e reiniciar) a varredura de spider selecionada <img alt="botão de reinício" src="../../images/16/131.png">;</li>
+		<li><img align="bottom" alt="botão de parada/Stop" src="../../images/16/142.png"> Interromper a varredura de spider selecionada;</li>
+		<li><img align="bottom" alt="botão 'limpar varreduras'" src="../../images/fugue/broom.png">
+			Limpar varreduras concluídas;</li>
+		<li><img align="bottom" alt=" botão 'mostrar mensagens'" src="../../images/16/178.png">
+			Mostrar/ocultar mensagens - Mostra/oculta uma aba (Mensagens chamadas) que exibe todas as mensagens HTTP enviadas pela varredura de spider selecionada;</li>
+		<li><img align="bottom" alt="botão 'opções de spider'" src="../../images/16/041.png">
+			Abrir a <a href="../../ui/dialogs/options/spider.html">Tela de Opções de Spider</a>.</li>
 	</ul>
-	The progress bar shows how far the selected spider scan has progressed. It is also shown
-	the number of active spider scans and the number of URIs found for the selected scan.
-	<p>For each URI found you can see:
+	A barra de progresso mostra o quanto progrediu a varredura de spider selecionada. Também é mostrado o número de varreduras de spider ativas e o número de URIs encontrado para a varredura selecionada.
+	<p>Para cada URI encontrada você pode ver:
 	<ul>
-		<li>Processed - Whether the URI was processed by the Spider or
-			was skipped from fetching because of a rule (e.g. it was out of
-			scope)</li>
-		<li>Method - The HTTP method, e.g. GET or POST, through which the
-			resource should be accessed</li>
-		<li>URI - the resource found</li>
-		<li>Flags - any information about the URI (e.g. if it's a seed or
-			why was it not processed)</li>
+		<li>Processdo - se a URI foi processada pelo Spider ou foi ignorada dessa busca por causa de uma regra (por exemplo, estar fora do escopo)</li>
+		<li>Método - o método HTTP, por exemplo GET ou POST, através do qual o recurso deve ser acessado</li>
+		<li>URI - o recurso encontrado</li>
+		<li>Flags - qualquer informação sobre a URI (por exemplo, se é uma semente/seed ou porque não foi processada)</li>
 	</ul>
 
+	<p>For each spider message, shown under the Messages tab, you can see details of the request sent and response
+		received, moreover it's indicated, in the column <code>Processed</code>, whether or not the message was processed
+		(that is, the response was successfully received and parsed).
 
 	<h2>See also</h2>
 	<table>

@@ -9,178 +9,178 @@
 <body bgcolor="#ffffff">
 <h1>Release 1.4.0</h1>
 <p>
-The following changes were made in this release:
+Ang mga sumusunod na pagbabago ay ginawa para sa release na ito:
 </p>
 
-<h2>Significant changes:</h2>
+<h2>Mga mahahalagang pagbabago:</h2>
 
-<h3>Issue 133: Add Syntax highlighting to Response Panel</h3>
+<h3>Isyu 133: Nagdagdag ng Syntax highlighting sa Panel ng Tugon</h3>
 
-The HTML panels now support switchable syntax highlighting.
+Ang HTML panels ay sumusuporta na ngayon ng malilipat na syntax highlighting.
 
-<h3>Issue 153: fuzzdb integration</h3>
+<h3>Isyu 153: pagsasama ng fuzzdb</h3>
 
-The fuzzer includes fuzzdb (https://github.com/fuzzdb-project/fuzzdb) fuzzing files.<br/>
-Note that some fuzzdb files have been left out as they cause common anti virus scanners to flag them as containing viruses.<br/>
-You can replace them (and upgrade fuzzdb) by downloading the latest version of fuzzdb and expanding it in the 'fuzzers' library.
+Ang fuzzer ay nagsasama ng fuzzdb (https://github.com/fuzzdb-project/fuzzdb) fuzzing files.<br/>
+Tandaan na ang ilang fuzzdb files ay nag-iiwan dahil sila ang sanhi sa karaniwang anti virus scanners na i-flag ang mga ito bilang naglalaman ng mga virus.<br/>
+Maari mong palitan ang mga ito (at i-upgrade ang fuzzdb) sa pamamagitan ng pag-download ng pinakabago bersyon ng fuzzdb at paglawak nito sa 'fuzzers' library.
 
-<h3>Issue 212: Parameter analysis</h3>
+<h3>Isyu 212: Pagsusuri ng parameter</h3>
 
-A new Params tab shows a summary of all of the parameters a site has used.  
+Isang bagong Params tab ay nagpapakita ng buod sa lahat ng mga parameter na ginamit ng site.  
 
-<h3>Issue 228: Enhanced XSS scanner</h3>
+<h3>Isyu 228: Pinahusay na XSS scanner</h3>
 
-The Cross Site Scripting active scanner has been rewritten from scratch to find more potential XSS issues and report fewer false positives. 
+Ang aktibong scanner ng Cross Site Scripting ay isinulat muli mula sa simula upang mahanap ang higit pang potesyal na mga isyu ng XSS at mag-ulat ng mas kaunting maling positibo. 
 
-<h3>Issue 244: Port the Watcher passive checks</h3>
+<h3>Isyu 244: I-port ang Watcher passive checks</h3>
 
-The following checks have been ported from Watcher (thanks to Chris Weber for oking this):
+Ang mg sumusunod na mga check ay nai-port mula sa Watcher (salamat kay Chris Weber para sa oking ito):
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.CrossDomain.ScriptReference.cs</td><td>checks for cross-domain javascript files inclusion.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.CacheControl.cs</td><td>checks HTTP cache-control header on SSL pages.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.ContentTypeMissing.cs</td><td>checks that the Content-Type HTTP header is not missing.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.FrameOptions.cs</td><td>checks that the X-FRAME-OPTIONS is not missing or insecurely set.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.IeXssProtection.cs</td><td>checks that the X-XSS-Protection has not been set to disable IE's XSS protection.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.MimeSniff.cs</td><td>checks that the X-CONTENT-TYPE-OPTIONS has been set.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.DatabaseErrors.cs</td><td>checks for database error messages.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.DebugErrors.cs</td><td>checks for debugging error messages.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.InUrl.cs</td><td>checks for information disclosure in URL parameters.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.ReferrerLeak.cs</td><td>checks HTTP Referer header for information disclosure.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.CrossDomain.ScriptReference.cs</td><td>nagsusuri para sa nakalakip na cross-domain javascript file.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.CacheControl.cs</td><td>nagsusuri ng HTTP cache-control header sa mga pahina ng SSL.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.ContentTypeMissing.cs</td><td>nagsusuri na ang Content-Type-HTTP header ay hindi nawawala.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.FrameOptions.cs</td><td>nagsusuri na ang X-FRAME-OPTIONS ay hindi nawawala o walang katiyakang nai-set.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.IeXssProtection.cs</td><td>nagsusuri na ang X-XSS-Protection ay nai-set para hindi paganahin ang proteksyon ng IE-s XSS.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.MimeSniff.cs</td><td>nagsusuri na ang X-CONTENT-TYPE-OPTIONS ay nai-set.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.DatabaseErrors.cs</td><td>nagsusuri para sa mga mensahe ng kamalian ng database.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.DebugErrors.cs</td><td>nagsusuri para sa mensahe ng kamalian ng debugging.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.InUrl.cs</td><td>nagsusuri para sa pagsisiwalat ng ipormasyon sa mga URL parameter.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.ReferrerLeak.cs</td><td>nagsusuri ng HTTP Referer header para sa pagsisiwalat ng impormasyon.</td></tr>
 </table>
 
 
-<h3>Issue 253: Plugable extensions</h3>
+<h3>Isyu 253: Plugable extensions</h3>
 
-Full extensions can now be plugged into ZAP dynamically with full access to all of ZAPs features.
+Maaring ng i-plug nang dinamiko ang buong extension sa ZAP sa buong access sa lahat ng mga tampok ng ZAP.
 
-<h2>Minor changes:</h2>
+<h2>Maliit na mga pagbabago:</h2>
 
-<h3>Issue 54: Clean shutdown</h3>
+<h3>Isyu 54: Malinis na pag-shutdown</h3>
 
-<h3>Issue 90: Add GUI support for unsecure SSL/TLS renegotiation</h3>
+<h3>Isyu 90: Nagdagdag ng suporta saa GUI para sa hindi ligtas na muling pagsasaayos ng SSL/TLS</h3>
 
-<h3>Issue 102: Save raw response and request, and save body of response and request</h3>
+<h3>Isyu 102: I-save ang raw na tugon at request, at i-save ang body ng tugon at request</h3>
 
-<h3>Issue 126: Allow working directory and config file to be set via cmd line</h3>
+<h3>Isyu 126: Pahintulutan ang gumaganang directory at config file para ma-set sa cmd line</h3>
 
-<h3>Issue 154: Include param id in reports</h3>
+<h3>Isyu 154: isama ang param id sa mga ulat</h3>
 
-<h3>Issue 164: Toolbar config button</h3>
+<h3>Isyu 164: Toolbar config button</h3>
 
-<h3>Issue 168: Reveal hidden fields in web pages</h3>
+<h3>Isyu 168: Isaliwalat ang mga nakatagong field sa mga web page</h3>
 
-<h3>Issue 192: Enable/Disable breakpoints</h3>
+<h3>Isyu 192: Paganahin/Di paganahin ang mga breakpoint</h3>
 
-<h3>Issue 193: Detect directory traversal vulnerabilities</h3>
+<h3>Isyu 193: Tuklasin ang mga kahinaan ng directory traversal</h3>
 
-<h3>Issue 194: Enhancement: Show request ID on Search pane</h3>
+<h3>Isyu 194: Pagpapahusay: Ipakita ang request ID sa Hanapang pane</h3>
 
-<h3>Issue 200: Detect CSRF vulnerabilities</h3>
+<h3>Isyu 200: Tuklasin ang mga kahinaan ng CSRF</h3>
 
-<h3>Issue 230: Enhance zap.sh to cope with symbolic links</h3>
+<h3>Isyu 230: Hinusayan ang zap.sh para makaya ang mga symbolic link</h3>
 
-<h3>Issue 236: Option to toggle URLencoding</h3>
+<h3>Isyu 236: Opsyon na i-toggle ang URL encoding</h3>
 
-<h3>Issue 242: Export node / req/resp via right click</h3>
+<h3>Isyu 242: I-export ang node / req/resp sa pamamagitan ng pag-right click</h3>
 
-<h3>Issue 248: Delete alerts / retest feature request</h3>
+<h3>Isyu 248: Tanggalin ang mga alerto / subukang muli ang mga request ng tampok</h3>
 
-<h3>Issue 251: Restructure alerts code</h3>
+<h3>Isyu 251: Pagsasaayos ng mga code ng alerto</h3>
 
-<h3>Issue 253: Allow extensions to define dependencies</h3>
+<h3>Isyu 253: Pahintulutan ang mga extension na itakda ang mga dependency</h3>
 
-<h3>Issue 270: Icon changes</h3>
+<h3>Isyu 270: Mga pagbabago sa icon</h3>
 
-<h3>Issue 277: Rationalize right click menu items</h3>
+<h3>Isyu 227: Mangatwirang pag-right click ng mga menu item</h3>
 
-<h3>Issue 279: Core extensions</h3>
+<h3>Isyu 279: Core extensions</h3>
 
-<h3>Issue 282: Add author, description and URL to extensions</h3>
+<h3>Isyu 282: Nagdagdag ng may-akda, paglalarawan at URL sa mga extension</h3>
 
-<h2>Bug fixes:</h2>
+<h2>Mga bugfix:</h2>
 
-<h3>Issue 42: Arbitrary Redirection</h3>
+<h3>Isyu 42: Nagkataong pag-redirect</h3>
 
-<h3>Issue 94: PKCS#11 driver</h3>
+<h3>Isyu 94: PKCS#11 driver</h3>
 
-<h3>Issue 107: The last intercepted request/response remains in the Break window</h3>
+<h3>Isyu 107: Ang huling nakaharang na request/tugo ay nanatili sa Break window</h3>
 
-<h3>Issue 135: Broken URLs in Sites Panel</h3>
+<h3>Isyu 135: Sirang URL sa Sites Panel</h3>
 
-<h3>Issue 148: New HTTP Panel broke the Undo/Redo Manager</h3>
+<h3>Isyu 148: Bagong HTTP Panel ay sinira ang tagapamahala ng Undo/Redo</h3>
 
-<h3>Issue 180: Tabular view for GET request</h3>
+<h3>Isyu 180: Tabular view para sa GET request</h3>
 
-<h3>Issue 187: Encoding issues</h3>
+<h3>Isyu 187: Mga isyu sa encoding</h3>
 
-<h3>Issue 197: Decoder cannot process base64 input without line breaks</h3>
+<h3>Isyu: Hindi maproseso ng decode ang base64 input ng walang line breaks</h3>
 
-<h3>Issue 198: The report is not generated when a "Parameter tampering" alert with "NULL" character exists</h3>
+<h3>Isyu 198: Ang ulatay hindi nabubuo kapag ang alerto ng "pakikialam ng Paramter" ay may umiiral na "NULL" character</h3>
 
-<h3>Issue 210: Exception thrown when using the "Path Traversal" option in the active scan</h3>
+<h3>Isyu 210: Exception na itinapon kapang gumagamit ng "Path Traversal" na opsyon sa aktibong scan</h3>
 
-<h3>Issue 223: Exception in "Sites" tab when choosing a popup option, "Delete (from view)" or "Purge (from DB)", when no node tree is selected</h3>
+<h3>Isyu 223: Exception sa "Sites" tab kapag pumipili ng opsyon ng popup, "Tanggalin (mula sa view)" o "Linisin (mula sa DB)", kapag walang piniling node tree</h3>
 
-<h3>Issue 224: takes too much time to recover from an proxy port number outside valid range</h3>
+<h3>Isyu 224: masyadong matagal na pagbawi mula sa proxy ng numero ng port a labas ng balidong pagitan</h3>
 
-<h3>Issue 225: ZAP exits on startup if an option value contains extended characters like å,ä,ö</h3>
+<h3>Isyu 225: Ang ZAP ay nagsasara sa simula kapag ang halaga ng opsyon ay naglalaman ng pinalawak na mga character tulad ng å,ä,ö</h3>
 
-<h3>Issue 226: proxy port number edit box should not allow millions of characters</h3>
+<h3>Isyu 226: numero ng port ng proxy ng edit box ay dapat hindi payagan ang milyong mga character</h3>
 
-<h3>Issue 227: Tools, Options should go to the same tab as last time</h3>
+<h3>Isyu 227: Tools, Opsyon ay dapat mapunta sa parehong tab kagaya noong nakaraan</h3>
 
-<h3>Issue 237: Bug: Problems with HTTP Panels</h3>
+<h3>Isyu 237: Bug: Mga problema sa HTTP panels</h3>
 
-<h3>Issue 238: Exception when using a custom fuzz file</h3>
+<h3>Isyu 238: Exception kapag ginagamit ang pinasadyang fuzz file</h3>
 
-<h3>Issue 241: zap.sh Xmx value for stable performance</h3>
+<h3>Isyu 241: zap.sh Xmx na halaga para sa matatag na pagganap</h3>
 
-<h3>Issue 243: When the DynamicLoader loads from local jar, doesn't take into account the package name</h3>
+<h3>Isyu 243: Kapang ang DynamicLoader ay naglo-load mula sa lokal na jar, hindi isinasaalang-alang ang pangalan ng package</h3>
 
-<h3>Issue 246: Pragma Header requires Cache-Control Header for HTTP/1.1 requests</h3>
+<h3>Isyu 246: Pragma Header ay nangangailangan ng Cache-Control Header para sa HTTP/1.1 requests</h3>
 
-<h3>Issue 255: Exception in API when due to illegal character in XML context</h3>
+<h3>Isyu 255: Exception sa API kapag dahil sa ilegal na character sa konteksto ng XML</h3>
 
-<h3>Issue 256: Calling HttpMessage.setGetParams looses the port</h3>
+<h3>Isyu 256: Pagtatawang ng HttpMessage.setGetParams ay nagwawala ng port</h3>
 
-<h3>Issue 260: Exception when deleting ("Purge (from DB)") "History" tab entries</h3>
+<h3>Isyu 260: Exception kapag tinatanggal ang mga ("Paglinis (mula sa DB)") "History" tab entry</h3>
 
-<h3>Issue 261: Partial language match not working</h3>
+<h3>Isyu 261: Katumbas ng Bahagyang lenggwahe ay hindi gumagana</h3>
 
-<h3>Issue 262: "Weak authentication" alerts not showing with spider</h3>
+<h3>Isyu 262: "Mahinang pagpapatunay" na mga alerto ay hindi nakikita sa spider</h3>
 
-<h3>Issue 263: "Cookie without secure flag" alerts not showing with spider</h3>
+<h3>Isyu 263: "Cookie ng walang ligtas na flag" na mga alerto ay hindi nakikita sa spider</h3>
 
-<h3>Issue 264: Exception in "Manual Request Editor"/"Resend" dialogues</h3>
+<h3>Isyu 264: Exception sa "Manu-manong Request Editor"/"Ipadalang muli" na mga dyalogo</h3>
 
-<h3>Issue 268: Change ZAP Report XML</h3>
+<h3>Isyu 268: Palitan ang ZAP Report XML</h3>
 
-<h3>Issue 269: Spider depth parameter</h3>
+<h3>Isyu 269: Spider depth parameter</h3>
 
-<h3>Issue 274: Tidy up delete / purge options</h3>
+<h3>Isyu 274: Lininis ang pagtanggal / paglinis na mga opsyon</h3>
 
-<h3>Issue 280: Escape URLs in sites tree</h3>
+<h3>Isyu 280: Escape URLs sa sites tree</h3>
 
-<h3>Issue 283: RFE: Font anti-aliasing not enabled by default in request/response</h3>
+<h3>Isyu 283: RFE: Font anit-aliasing hindi gumana ng default sa request/tugon</h3>
 
-<h3>Issue 284: Request/response etc header panels too small</h3>
+<h3>Isyu 284: Request/tugon atbp header panel ay masyadong maliit</h3>
 
-<h3>Issue 286: Search string not highlighted for fuzz results</h3>
+<h3>Isyu 286: Hinahanap na string ay hindi naka-highlight para sa resulta ng fuzz</h3>
 
-<h3>Issue 287: Passive scanner doesnt pick up new anticsrf tokens</h3>
+<h3>Isyu 287: Passive scanner ay hindi pumupulot ng bagong anticsrf tokens</h3>
 
-<h3>Issue 289: fuzzdb files cause virus alerts</h3>
+<h3>Isyu 289: fuzzdb files ay nagsasanhi ng mga alerto ng virus</h3>
 
-<h3>Issue 291: Path Traversal has 'param' empty but put the param name in 'attack'</h3>
+<h3>Isyu 291: Path Traversal ay mayroong 'param' na blangko ngunit ilagay ang pangalan ng param sa 'attack'</h3>
 
-<h2>See also</h2>
+<h2>Tingnan din sa</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<a href="../intro.html">Panimula</a></td><td>ang panimula</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<a href="releases.html">Mga release</a></td><td>ang buong set ng mga release</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<a href="../credits.html">Credits</a></td><td>mga tao at grupo na ginawang posible ang release na ito</td></tr>
 </table>
 </body>
 </html>

@@ -9,60 +9,59 @@ Añadir Alerta,
 <body bgcolor="#ffffff">
 <h1>Añadir Alerta,</h1>
 <p>
-This dialog allows you to manually add or change an <a href="../../start/concepts/alerts.html">Alert</a> associated
-with a specific request.<br/>
+Este diálogo te permite agregar o cambiar manualmente una <a href="../../start/concepts/alerts.html">Alerta</a> asociada a una solicitud específica.<br/>
 </p>
 
-<h2>Fields</h2>
-The dialog has the following fields:
+<h2>Campos</h2>
+El diálogo tiene los siguientes campos:
 
 <h3>Tipo</h3>
-The type of the alert is a pull down field which allows you to select one of a prepopulated set of issue types.<br/>
-You can also enter your own text or change the text of one of the items you selected.<br/>
-If you select on of the existing types then the Description, Solution and Other Info fields
-will be populated with text associated with the item you chose. 
+El tipo de alerta es un campo desplegable que te permite seleccionar un tipo de problema de un conjunto precompletado.<br/>
+También puedes introducir tu propio texto o cambiar el texto de alguno de los artículos que has seleccionado.<br/>
+Si seleccionas uno de los tipos existentes los campos de la Descripción, Solución y Otra Información se rellenarán con el texto asociado al elemento que seleccionaste. 
 
 <h3>Riesgo</h3>
-A pull down field which allows you to specify how serious you think the risk is:
+Un campo desplegable que te permite especificar qué tan grave consideras que es el riesgo:
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Informational</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Informativo</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Bajo</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Medio</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Alto</td><td></td></tr>
 </table>
 
-<h3>Confidence</h3>
-A pull down field which allows you to specify how confident you are in the validity of the finding:
+<h3>Confianza</h3>
+Un campo desplegable que te permite especificar qué tanto confías en la validez del hallazgo:
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>False Positive</td><td>for potential issues that you later find are not exploitable</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Bajo</td><td>for unconfirmed issues</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Medio</td><td>for issues you are somewhat confident of</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Falso Positivo</td><td>para problemas potenciales que luego resultan no ser explotables</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Bajo</td><td>para problemas no confirmados</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Medio</td><td>para problemas que son un poco confiables</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Alto</td><td>for findings you are highly confident in</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Confirmed</td><td>for confirmed issues</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Confirmado</td><td>para problemas confirmados</td></tr>
 </table>
 
-<h3>Parameter</h3>
-A pull down field which allows you to specify which parameter the issue is associated with.<br/>
-The field is prepopulated with any URL and FORM parameters found, but you can also enter your own parameter name. 
+<h3>Parámetro</h3>
+Un campo desplegable que te permite especificar a qué parámetro se asocia el problema.<br/>
+Este campo es prepopulado con los parámetros URL y FORM encontrados, pero también puedes ingresar tu propio nombre para el parámetro.<br />
+Los parámetros del arreglo (en el componente de consulta de URL y <code>el cuerpo de solicitud x-www-form-urlencoded</code> ) se identifican con su índice. Por ejemplo, para una solicitud que contenga <code>choices[]=ChoiceA&amp;choices[]=ChoiceB</code> el primer parámetro sería identificado como <code>choices[0]</code> y el segundo como <code>choices[1]</code>.
 
 <h3>Descripción</h3>
-A general description of the type of issue found.<br/>
-This is populated when you select one of the predefined types, but you can also change it as required.<br/>
-Note that any changes you make will be lost if you select another type.
+Una descripción general del tipo de problema encontrado.<br/>
+Se rellena cuando se selecciona uno de los tipos predefinidos, pero también se puede cambiar según sea necesario.<br/>
+Ten en cuenta que cualquier cambio que hagas se perderá si seleccionas otro tipo.
  
-<h3>Other Info</h3>
-Information specific to the particular issue you have found.<br/>
-This is not prepopulated.
+<h3>Otra Información</h3>
+La información específica a un problema particular que se haya encontrado.<br/>
+Este campo no se rellena previamente.
 
 <h3>Recomendación</h3>
-Recommendations about how to fix the issue.<br/>
-This is populated when you select one of the predefined types, but you can also change it as required.<br/>
-Note that any changes you make will be lost if you select another type.
+Las recomendaciones sobre cómo arreglar el problema.<br/>
+Se rellena cuando se selecciona uno de los tipos predefinidos, pero también se puede cambiar según sea necesario.<br/>
+Tenga en cuenta que cualquier cambio que se haga se perderá si se selecciona otro tipo.
  
-<h3>Reference</h3>
-One or more URLs pointing to more information on the internet about the selected type of alert.<br/>
-This is populated when you select one of the predefined types, but you can also change it as required.<br/>
-Note that any changes you make will be lost if you select another type.
+<h3>Referencia</h3>
+Uno o mas URLs que apunten a mayor informacion en internet sobre el tipo de alerta seleccionado.<br/>
+Se rellena cuando se selecciona uno de los tipos predefinidos, pero también se puede cambiar según sea necesario.<br/>
+Ten en cuenta que cualquier cambio que hagas se perderá si seleccionas otro tipo.
  
 <h2>Acceso vía</h2>
 <table>

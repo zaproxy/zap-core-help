@@ -2,110 +2,92 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Options Spider screen</title>
+<title>Pilihan layar Spider</title>
 </head>
 <body bgcolor="#ffffff">
-	<h1>Options Spider screen</h1>
+	<h1>Pilihan layar Spider</h1>
 	<p>
-		This screen allows you to configure the <a
-			href="../../../start/concepts/spider.html">spider</a> options.</p> 
-	<p>It should be noted that modifying most of these options also affects
-	the running Spider.
+		Layar ini mengizinkan anda untuk mengubah pilihan <a
+			href="../../../start/concepts/spider.html">sipder</a>.</p> 
+	<p>Perlu dicatat bahwa mengubah sebagian besar opsi ini akan mempengaruhi Spider yang sedang berjalan.
 	</p>
 
-	<h3>Maximum depth to crawl</h3>
-	The parameter defines the maximum depth in the crawling process where a
-	page must be found in order for it to be processed. Resources found
-	deeper than this level are not fetched and parsed by the spider.
+	<h3>Kedalaman maksimum untuk dicrawl</h3>
+	Parameter menentukan kedalaman maksimum dalam proses crawling dimana laman harus ditemukan agar bisa diproses. Sumber daya yang ditemukan melebihi level ini tidak diambil dan di urai oleh spider.
 	<p>
-		The depth is calculated starting from the seeds, so, if a Spider scan
-		starts with only a single URL (eg. Spider URL), the depth is
-		calculated from this one. However, if the scan starts with multiple
-		seeds (eg. Spider site), a resource is processed if it's depth
-		relative to <i>any</i> of the seeds is less than the defined one.
+		Kedalaman dihitung mulai dari sumber, demikian jika pemindaian spider dimulai dengan hanya satu URL (misalnya. URL Spider), kedalaman nya dihitung mulai dari yang satu ini. Namun, jika pemindaian dimulai dengan beberapa sumber (misalnya. Spider site), sumber daya nya diproses jika kedalaman nya relatif terhadap <i>setiap</i> sumber kurang dari yang ditentukan.
 	</p>
 
-	<h3>Number of threads used</h3>
-	The spider is multi-threaded and this is the number that defines the
-	maximum number of worker threads used in the crawling process. Changing this
-	parameter does not have any effect on any crawling is in progress. 
+	<h3>Jumlah lembar yang digunakan</h3>
+	Spider adalah multi-threaded dan ini adalah angka yang menentukan maksimum jumlah urutan pekerja yang digunakan dalam proses crawling. Mengubah parameter ini tidak berpengaruh pada setiap crawling yang sedang berlangsung. 
 
-	<h3>Maximum duration</h3>
-	The maximum length of time that the spider should run for, measured in minutes.
-	Zero (the default) means that the spider will run until it has found all of the links that it is able to. 
+	<h3>Durasi maksimum</h3>
+	Panjang maksimum waktu yang harus dijalankan oleh spider, diukur dalam hitungan menit.
+Nol (default) berarti Spider akan berjalan sampai menemukan semua tautan yang bisa digunakan. 
 
-	<h3>Domain Pattern</h3>
-	The normal behavior of the spider is to only follow links to resources
-	found on the same domain as the page where the scan started. However,
-	this option allows you to define additional domains that are considered
-	"in scope" during the crawling process. Pages on these domains are
-	processed during the scan.
+	<h3>Anak - anak yang maksimum dijelajahi</h3>
+	Parameter ini membatasi jumlah anak yang akan dijelajahi disetiap simpul keturunan.<br>
+	Hal ini berguna untuk aplikasi berbasis data yang memiliki sejumlah besar 'laman' yang dalam fakta sebenarnya adalah kode yang sama tapi berisi data yang berbeda, misalnya dari database.<br>
+	Secara default ini disetel ke nol yang berarti tidak ada batasan yang digunakan pada jumlah nodus anak yang dijelajahi.
+
+	<h3>Ukuran penguraian maksimum</h3>
+	Menetapkan ukuran maksimum, dalam satuan bytes, sehingga respon mungkin harus di uraikan. Hal ini memperbolehkan spider untuk melewati tanggapan/file besar.
+
+	<h3>Selalu dalam Lingkup Domain</h3>
+	Memungkinkan untuk mengelola domain, rangkaian literal atau kalimat biasa, yang berada dalam lingkup Spider. Aturan normal Spider adalah hanya mengikuti tautan dari sumber daya yang ditemukan didomain yang sama seperti halaman dimana ia memulai pemindaian. Namun, pilihan ini mengizinkan anda untuk menentukan domain tambahan yang dianggap "dalam lingkup" selama proses penjelajahan. Halaman pada domain ini diproses selama pemindaian.
 		
-	<h3>Query parameters handling</h3>
-	When crawling, the Spider has an internal mechanism that marks which pages
-	were already visited, so they are not processed again. When this check is made,
-	the way the URIs parameters are handled is set using this option. There are
-	three available options:
+	<h3>Penanganan parameter Query</h3>
+	Pada saat menjelajahi, Spider memiliki mekanisme internal yang dapat menandai halaman yang telah ia dikunjungi, sehingga mereka tidak lagi diproses. Saat pemeriksaan dilakukan, cara menangani parameter URL diatur dengan opsi ini. Ada tiga opsi yang tersedia:
 	<ul>
-	<li><b>Ignore parameters completely</b> - if www.example.org/?bar=456 is visited,
-	then www.example.org/?foo=123 will not be visited</li>
-	<li><b>Consider only parameter's name</b> (ignore parameter's value) - if 
-	www.example.org/?foo=123 is visited, then www.example.org/?foo=456 will not be visited, 
-	but www.example.org/?bar=789 or www.example.org/?foo=456&amp;bar=123 will be visited</li>
-	<li><b>Consider both parameter's name and value</b> - if www.example.org/?123 is visited,
-	any other uri that is different (including, for example, www.example.org/?foo=456 or 
-	www.example.org/?bar=abc) will be visited</li>
+	<li><b>abaikan semua parameter</b> - jika www.example.org/?bar=456 dikunjungi, maka www.example.org/?foo=123 tidak bisa dikunjungi</li>
+	<li><b>hanya meninjau nama parameter</b> (abaikan nilai parameter) - jika mengunjungi www.example.org/?foo=123, maka www.example.org/foo=456 tidak boleh dikunjungi, tetapi www.example.org/?bar=789 atau www.example.org/?foo=456&amp;bar=789 boleh dikunjungi</li>
+	<li><b>pertimbangkan dengan baik nama parameter dan nilai</b> - jika mengunjungi www.example.org/? 123, setiap uri lain yang berbeda (termasuk, misalnya, www.example.org/?foo=456 atau www.example.org/?bar=abc) akan dapat dikunjungi</li>
 	</ul>
 
-	<h3>Send "Referer" header</h3>
-	If the spider requests should be sent with the "Referer" header.
+	<h3>Kirim header "Referer"</h3>
+	Jika permintaan spider harus di kirim dengan header "Referer".
 
-	<h3>Process forms</h3>
-	During the crawling process, the behaviour of the spider when it
-	encounters HTML forms is defined by this option. If disabled, the HTML
-	forms will not be processed at all. If enabled, the HTML forms with the
-	method defined as HTTP GET will be submitted with some generated
-	values. The behaviour when encountering forms with the method defined
-	as HTTP POST is configured by the next option.
+	<h3>Terima Cookie</h3>
+	Jika pemindai spider harus menerima cookie saat spidering. Jika diaktifkan Spider akan menangani berbagai cookie yang diterima dari server dan akan mengirim kembali yang demikian.
+	Jika opsi dinonaktifkan, Spider tidak akan mengirim cookie kedalam permintaan nya. Sebagai contoh, ini bisa mengontrol apakah spider menggunakan sesi yang sama disepanjang pemindaian spidering atau tidak.
+	<br>Pada saat menerima cookie, cookie tidak dibagi diantara pemindai spider, setiap pemindai memiliki cookie jar sendiri.
+	<br>Pilihan ini memiliki prioritas yang rendah, Spider akan mematuhi opsi (global) lainnya yang berkaitan dengan status HTTP. Opsi ini akan diabaikan jika, misalkan pilihannya
+	<a href="../../tlmenu/edit.html">Aktifkan Sesi Pelacakan (Cookie)</a> diaktifkan, ketika spidering sebagai <a href="../../../start/concepts/users.html">Pengguna</a> atau saat
+	<a href="../../../start/concepts/httpsessions.html">Sesi HTTP</a> aktif.
 
-	<h3>POST forms</h3>
-	As briefly described in the previous paragraph (Process Forms), this
-	option configures the behaviour of the spider when
-	<i>Process Forms</i> is enabled and when encountering HTML forms that
-	have to be POSTed.
+	<h3>Bentuk-bentuk proses</h3>
+	Selama proses penjelajahan, tindakan spider saat menemukan bentuk-bentuk HTML ditentukan oleh opsi ini. Jika di nonaktifkan, bentuk HTML tidak akan diproses semuanya. Jika diaktifkan, bentuk dari HTML dengan metode yang diartikan sebagai HTTP GET akan diserahkan dengan beberapa nilai yang dihasilkan. Tindakan ketika menghadapi bentuk dengan metode yang diartikan sebagai HTTP POST dikonfigurasi oleh opsi berikutnya.
 
-	<h3>Parse HTML Comments</h3>
-	This option defines whether the spider should also spider the HTML
-	comments searching for links to resources. Only the resources found in
-	commented valid HTML tags will be processed.
+	<h3>Bentuk-bentuk POST</h3>
+	Seperti yang telah dijelaskan dalam paragraf sebelumnya (Bentuk-bentuk prose), opsi ini mengkonfigurasikan tindakan spider saat
+	<i>Process Form</i> diaktifkan dan saat menghadapi bentuk HTML yang dipotong.
 
-	<h3>Parse 'robots.txt' files</h3>
-	This option defines whether the spider should also spider the
-	robots.txt files found on websites, searching for links to resources.
-	This option does not define whether the spider should follow the rules
-	imposed by the robots.txt file.
+	<h3>Uraian Komentar HTML</h3>
+	Opsi ini mengartikan bahwa apakah spider juga harus spider comments yang melakukan pencarian ke sumber. Hanya sumber yang ditemukan berkomentar dengan tag HTML yang sesuai yang akan diproses.
 
-	<h3>Handle OData-specific parameters</h3>
-	This options defines whether the spider should try to detect OData-specific
-	parameters (i.e. resources identifiers) in order to properly process them 
-	according to the rule defined by the "Query parameters handling" option.
+	<h3>Uraian file 'robots.txt'</h3>
+	Opsi ini mengartikan bahwa apakah spider juga harus menemukan file robots.txt yang ada di website, yang mencari tautan kesumber daya.
+	Opsi ini tidak menentukan apakah spider harus mengikuti aturan-aturan diberlakukan oleh file robots.txt.
 
-	<h2>See also</h2>
+	<h3>Menangani parameter OData-spesific</h3>
+	Opsi ini menentukan apakah spider harus mencoba untuk mendeteksi parameter OData-specific (yaitu resources identifiers) untuk memproses nya dengan benar sesuai dengan jalur yang ditetapkan oleh aturan "Query parameters handling".
+
+	<h2>Lihat juga</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../overview.html">UI Overview</a></td>
-			<td>for an overview of the user interface</td>
+			<td><a href="../../overview.html">Tinjauan UI</a></td>
+			<td>untuk tinjauan antar muka pengguna</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			<td><a href="../../../start/concepts/spider.html">Spider</a></td>
-			<td>for an overview of the Spider</td>
+			<td>untuk tinjauan spider</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../../ui/tabs/spider.html">Spider Tab</a></td>
-			<td>for an overview of the Spider tab</td>
+			<td><a href="../../../ui/tabs/spider.html">Label Spider</a></td>
+			<td>untuk ikhtisar tab Spider</td>
 		</tr>
 	</table>
 

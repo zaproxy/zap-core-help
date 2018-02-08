@@ -14,61 +14,45 @@ A tela de Display permite que você configure:
 <h3>Imagens</h3>
 Se o ZAP processa imagens.
 
-<h3>Show (local) CONNECT requests</h3>
-If the HTTP CONNECT requests received by the <a href="localproxy.html">Local Proxy</a> should be persisted in the current
-<a href="../../tlmenu/file.html">session</a> and shown in the <a href="../../tabs/history.html">History tab</a>. The default is
-to not show those requests, they happen frequently (in preparation for TLS/SSL, WebSocket... connections) and, unless inspecting
-the behaviour of the client application, are not (usually) of much interest.
+<h3>Visualizar solicitações de conexão (locais)</h3>
+Se as solicitações HTTP CONNECT recebidas pelo <a href="localproxy.html">Local Proxies</a> devem persistir na atual
+<a href="../../tlmenu/file.html">sessão</a> e exibidas na <a href="../../tabs/history.html">aba de Histórico</a>. O padrão é não mostrar esses pedidos. Eles acontecem com frequência (em preparação para conexões TLS/SSL, WebSockets... ) e, a menos que se inspecione o comportamento do aplicativo cliente, não são (normalmente) de muito interesse.
 
-<h3>Display</h3>
-The layout of the 3 main panels.<br>
-The following options are available:
+<h3>Tela</h3>
+O layout das três janelas principais.<br>
+As seguintes opções estão disponíveis:
 <ul>
-    <li>Maximise left (Sites) tab - The 'tree' panel containing the Sites tab extends
-        for the full length of the left hand side. This will reduce the amount of
-        space available to the 'information' panel.</li>
-    <li>Maximise bottom (History etc) tabs - The 'information' panel extends for the
-        full length of the bottom. This will reduce the amount of space available to
-        the 'tree' panel.</li>
-    <li>Full Layout - The selected tab takes up the full screen. This is
-        useful when using ZAP on small screens.</li>
+    <li>Maximizar a aba esquerda (Sites) - O painel 'árvore' contendo a aba de Sites estende-se por toda a extensão do lado esquerdo. Isto irá reduzir a quantidade de espaço disponível para o painel 'informações'.</li>
+    <li>Maximizar as guias inferiores (história etc) - o painel 'informações' estende-se por todo o comprimento da parte inferior. Isto irá reduzir a quantidade de espaço disponível para o painel 'árvore'.</li>
+    <li>Layout completo - a aba selecionada ocupa a tela inteira. Isso é útil quando usando o ZAP em telas pequenas.</li>
 </ul>
 
-<h3>Response Panel Position</h3>
-Allows to configure the position of the Response tab with respect to Request tab.<br>
-The following options are available:
+<h3>Posição do painel de resposta</h3>
+Permite configurar a posição da aba de Resposta em relação à de solicitação/request.<br>
+As seguintes opções estão disponíveis:
 <ul>
-    <li>Tabs Side by Side - The Request and Response tabs are side by side. This
-        increases the information that can be displayed but means you cannot see both the
-        request and response at the same time.</li>
-    <li>Panels Side by Side - The Request panel is shown to the left of the Response
-        panel. This decreases the information that can be displayed but means you can see both
-        the request and response at the same time.</li>
-    <li>Request Shown Above Response - The Request panel is shown above the Response
-        panel. This decreases the information that can be displayed but means you can see both
-        the request and response at the same time.</li>
+    <li>Abas lado-a-lado - As abas de Request e Response ficam lado-a-lado. Isto aumenta o volume de informação que pode ser exibida, mas significa que você não pode ver o Request e a Resposta ao mesmo tempo.</li>
+    <li>Painéis lado-a-lado - o painel de Request é mostrado à esquerda do painel de Resposta. Isso diminui as informações que podem ser exibidas, mas significa que você pode ver a solicitação e a resposta ao mesmo tempo.</li>
+    <li>Request mostrado acima da resposta - o painel de Request é mostrado acima do painel de Resposta. Isso diminui as informações que podem ser exibidas, mas significa que você pode ver a solicitação e a resposta ao mesmo tempo.</li>
 </ul>
-The Response Panel Position option does not apply when the Display option is set to Full Layout.
+A opção de posições para o painel de Resposta não se aplica quando a opção de exibição é definida como Layout Completo.
 
-<h3>Show break buttons</h3>
-The location of the break buttons.
+<h3>Mostrar botões de interrupção</h3>
+A localização dos botões de interrupção.
 
-<h3>Large request view min size</h3>
-The minimum size of a request body in bytes at which point a 'large request body' message will be shown instead of the actual body.<br>
-This is to prevent very large bodies from slowing down the UI.<br>
-Setting this value to -1 will result in request always being displayed no matter how large it is.
+<h3>Visualização de Request grande e tamanho mínimo</h3>
+O tamanho mínimo em bytes de um corpo/body de Request, a partir do qual será exibida a mensagem 'corpo da Request muito grande' em vez do próprio corpo.<br>
+Isso é para evitar que grandes corpos tornem lenta a interface do usuário.<br>
+Definir esse valor como -1 resultará na exibição do request, não importando o seu tamanho.
 
-<h3>Large response view min size</h3>
-The minimum size of a response body in bytes at which point a 'large response body' message will be shown instead of the actual body.<br>
-This is to prevent very large bodies from slowing down the UI.<br>
-Setting this value to -1 will result in response always being displayed no matter how large it is.
+<h3>Visualização de Response grande e tamanho mínimo</h3>
+O tamanho mínimo, em bytes, de um corpo de resposta, a partir do qual será exibida uma mensagem de 'Corpo de resposta muito grande' em vez do próprio corpo.<br>
+Isso é para evitar que grandes corpos tornem lenta a interface do usuário.<br>
+Definir esse valor como -1 resultará na exibição da reposta, não importando o seu tamanho.
 
-<h3>Output Tabs Time Stamp Options</h3>
-Once you've enabled time stamps on the output tab you can configure the format you would like those time stamps to appear in. 
-Either select a pre-defined format from the drop-down list or enter one of your own choosing. The format is based on Java's
-SimpleDateFormat. After choosing or entering a time stamp format if you press enter the example on the right will be updated
-to reflect your choice. If ZAP is unable to use a format you've entered then the example is displayed based 
-on the Default format.
+<h3>Opções de time stamp da Aba de saída</h3>
+Ao habilitar time stamps na aba de saída, você pode configurar o formato em que gostaria de utilizá-los. 
+Selecione um formato predefinido na lista drop down ou digite um de sua preferência. O formato é baseado em Java SimpleDateFormat. Depois de escolher ou digitar um formato de time stamp, se você pressionar enter o exemplo à direita será atualizado para refletir a sua escolha. Se o ZAP for incapaz de usar um formato que você digitou, o exemplo exibido será baseado no formato padrão.
 
 <table border="1" cellpadding="5">
 <tr> <td> Longo e padrão </td> <td> yyyy-MM-dd HH:mm:ss </td> </tr>
@@ -76,10 +60,10 @@ on the Default format.
 <tr> <td> Apenas Hora </td> <td> HH:mm:ss </td> </tr>
 </table>
 
-<h3>Font Size</h3>
-The default text size used for the ZAP display. If you set this to -1 then the system default size will be used.<br>
-The 'Font Example' field will show you how large the default text will appear.<br>
-This setting will only take effect when ZAP is restarted.
+<h3>Tamanho da fonte</h3>
+O tamanho do texto padrão usado pelo ZAP. Se você definí-lo como -1 então o tamanho padrão do sistema será usado.<br>
+O campo 'Exemplo de fonte' irá mostrar-lhe em que tamanho o texto padrão será exibido.<br>
+Essa configuração só terá efeito quando o ZAP for reiniciado.
 
 <h2>Leia também</h2>
 <table>
@@ -92,7 +76,7 @@ This setting will only take effect when ZAP is restarted.
 <h2>Links externos</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html</td><td>Para obter detalhes de SimpleDateFormat do Java.</td></tr>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html">Details of Java's SimpleDateFormat</a></td></tr>
 </table>
 
 </body>

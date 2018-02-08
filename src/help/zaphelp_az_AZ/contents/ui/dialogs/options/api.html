@@ -15,36 +15,66 @@ This screen allows you to configure the <a href="../../../start/concepts/api.htm
 
 If enabled then the API is available to all machines that are able to use ZAP as a proxy.<br/>
 
+<h3>UI Enabled</h3>
+
+Etkinleştirilirse, API Web UI 'si zap' i proxy olaraq istifadə edə bütün maşınlar üçün istifadə edilə bilər. 
+API Web UI nöqtəsinə çatmaq üçün brauzerinizin ana kompüterə və Zap dinlədiyi əlaqə nöqtəsinə.<br/>
+
 <h3>Secure Only</h3>
 
-If enabled then the API will only be available via HTTPS. Otherwise it will be available via both HTTP and HTTPS.<br/>
+Etkinleştirilirse, API yalnız https üzərindən istifadə edilə bilər. Əks təqdirdə http və https üzərindən istifadə edilə bilər.<br/>
 
 <h3>API Key</h3>
 
 A key that must be specified on all API 'actions' and some 'other' operations.<br/>
 The API key is used to prevent malicious sites from accessing the ZAP API.<br/>
-It is strongly recommended that you set a key unless you are using ZAP in a completely isolated environment.<br/>
+Tamamilə səpilmiş bir mühitdə zap istifadə edirsinizsə, bir düyməyə təyin etmək qətiliklə təklif edilər.
+<br/>
+
+<h3>Addresses permitted to use the API</h3>
+
+By default only the machine ZAP is running on is able to access the ZAP API.<br/>
+You can allow other machines access to the API by adding suitable regex patterns.<br/>
+You should only add IP addresses that you trust.<br/>
+Bundan başqa, Zap API, indi icazə verilən ünvanlar olmalıdır bir Mövzu qovşağı, belə ki, qeyd yoxlayır
+
 
 <h3>Disable the API Key</h3>
 
 Selecting this option disables the API key.<br/>
-This is not recommended unless you are using ZAP in a completely isolated environment, as it allows malicious sites to access the ZAP API.
+Zap API 'sına daxil olmaq üçün pis məqsədli saytların icazə verdiyindən, tamamilə izolyasiya bir mühitdə zap istifadə etmədikdə bu tövsiyə olunmur
+
+<h3>Do not require an API key for safe operations</h3>
+
+Əgər daxil edilir, sonra API açarı və ya təqdim edildiyi "təhlükəsiz" hesab tələb olunmur digər əməliyyatlar üçün, başqa sözlə edir ki, heç bir dəyişiklik zap əməliyyatlar. 
+Bu cür əməliyyatlar ancaq xəbərdarlıq, mesajlar və fayl sistemi yolları kimi zap məlumatlarına giriş verir
+  
+They can also be used by web applications to detect the presence of ZAP.
+
+<h3>Report permission errors via API</h3>
+
+Əgər bu xüsusiyyət, Zap aşkar varlığını, üçün istifadə edilə bilər ki, web apps API, qoy vasitəsi ilə səhv məlumat verir.
+Bu etibarlı bir mühitdə ciddi bir problem deyil, amma əgər potensial pis niyyətli saytlara qarşı zap istifadə edirsinizsə o zaman bunu etkinleştirmeniz lazımdır.
+
 
 <h3>Report error details via API</h3>
 
 If this option is selected then more error details are returned via the API.<br/>
-This is not recommended except for debugging purposes as these error messages can leak information to malicious sites.<br/>
+Bu səhv mesajları, pis məqsədli saytlara məlumat görür kimi ayıklama məqsədləri xaricində təklif edilməz.
+<br/>
 Note that the full error details are always written to the ZAP log file. 
 
 <h3>Autofill API key in the API UI</h3>
 
 If this option is selected then the API key is automatically included in the API UI.<br/>
-This is not recommended unless you are using ZAP in a completely isolated environment, as it allows malicious sites to access the ZAP API Key.<br/>
+Zap istifadə etməyiniz tövsiyə edilmir, çünki zərərli saytlar zap DOOR düyməsinə daxil olmağa imkan verir.
+<br/>
 
 <h3>Enable JSONP</h3>
 
 Selecting this option enables the JSONP format.<br/>
-This can be useful for some applications, but it is generally not recommended as it increases the ZAP attack surface area, ie the features that a malicious site can abuse.<br/>
+Bu bəzi tətbiqlər üçün faydalı ola bilər, ancaq ZAP hücum səthi sahəsi artdıqca, pis niyyətli bir site sui ola bilər xüsusiyyətləri yəni ümumiyyətlə təklif edilməz.
+<br/>
 If JSONP is enabled then all API operations using JSONP (including views) will require the API key to prevent malicious sites from accessing sensitive information maintained by ZAP, such as session keys. 
 
 <h2>See also</h2>

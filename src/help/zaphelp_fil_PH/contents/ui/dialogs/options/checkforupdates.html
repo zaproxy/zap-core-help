@@ -3,70 +3,68 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Options Check for Updates screen
+Mga opsyon para sa pagsusuri sa update ng iskrin
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Options Check for Updates screen</h1>
+<h1>Suriin ang mga Opsyon para sa mga Update ng iskrin</h1>
 <p>
-This screen allows you to configure whether ZAP checks to see if you are running
-the latest version when it starts, and if so what it does.
+Ang iskrin na ito ay magbibigay daan sa iyo upang maisaayos kung ang ZAP ay nagsisiyasat upang makita kung ikaw ba ay gumagana
+ang pinakabagong bersyon kapag ito ay nagsisimula, at kung gayon din ang ginagawa nito.
 </p>
 
-<h3>Check for Updates on startup</h3>
-If selected then ZAP will automatically check for updates to the whole application and all of the add-ons when it starts.<br>
-It is strongly recommended that you check this box.<br>
-If for any reason you choose not to then you should manually check for updates frequently.<br>
-ZAP will only make one request, and the only information included will be the current version you are on.
+<h3>Suriin para sa mga Update sa pagsisimula</h3>
+Kapag napili na pagkatapos ang ZAP ay kusang mag a-update sa buong aplikasyon at lahat ng mga add-on kapag magsisimula.<br>
+Ito at talagang inirerekomenda na suriin mo ang kahong ito.<br>
+Kung itoy para sa kahit anong rason na iyong pinili hindi pagkatapos may mano-mano mong susuriin para sa madalas na pag update.<br>
+Ang ZAP ay gagawa lamang ng mga kahilingan, at ang impormasyon na kinabibilangan ay magiging kasalukuyang bersyon na ikaw ay naroon.
 
-<h3>Automatically download new ZAP releases</h3>
-If selected then ZAP will automatically download new ZAP releases when they are available and prompt you to install them. 
+<h3>Ang kusang pag-download ng bagong ZAP na pagpapakawala</h3>
+Kapag pinili pagkatapos ang ZAP ay kusang mag da-download ng bagong ZAP na pagapakawala kapag sila ay magagamit at maagap ka na i-install sila. 
 
-<h3>Automatically install updates to the add-ons you have installed</h3>
-If selected then ZAP will automatically download and install any updates to the add-ons you have installed.
+<h3>Awtomatikong pag i-install mga i-update sa mga add-on na iyong na-install</h3>
+Kapag pinili pagkatapos ang ZAP ay awtomatikong magda-download at install ng ano mang mga update sa mga add-on na iyong in-install.
 
-<h3>Automatically install updates to the scanner rules you have installed</h3>
-If selected then ZAP will automatically download and install any updates to the scanner rules you have installed.<br>
-These are a subset of the full set of add-ons installed.
+<h3>Awtomatikong pag install ng mga update sa mga patakaran ng scanner na iyong in-install</h3>
+Kapag pinili pagkatapos ang ZAP ay awtomatikong maida-download at install anumang mga update sa patakaran ng scanner na iyong in-install.<br>
+Ito ay ang malaking bilang ng mga buong set ng mga add-on na na install.
 
-<h3>Report new release quality add-ons</h3>
-If selected then ZAP will inform you if and when any add-ons are promoted to 'release' quality.<br>
-These add-ons will have been thoroughly tested and reviewed, and you can be sure they are of the highest quality.
+<h3>Iulat ang bagong pinakawalang kalidad ng mga add-on</h3>
+Kapag pinili pagkatapos ang ZAP ay mag-bibigay alam sayo kung at kapag ang kung anong mga add-on ay na-promote upang 'pakawalan' ang kalidad.<br>
+Ang mga add-on ay ay lubos ng subok at nasuri ng maigi, at ikaw ay makakasiguradong ito ay mataas na kalidad.
 
-<h3>Report new beta quality add-ons</h3>
-If selected then ZAP will inform you if and when any add-ons are promoted to 'beta' quality.<br>
-These add-ons will have been tested and reviewed, and are considered to be of a reasonable quality 
-and mostly fit for purpose.<br>
-However they may be incomplete or need further testing.<br>
-Some of the add-ons included with ZAP by default are still at the beta level.  
+<h3>Mag-ulat ng bagong beta na kalidad ng mga add-on</h3>
+Kapag napilini pagkatapos ang ZAP ay mag-bibigay alam sa iyo kung at kung ang anumang add-on ay na-promote sa kalidad ng 'beta'.<br>
+Ang mga add-on na ito ay talagang subok na nasuri ng maigi, at ito ay ibinibilang sa makatwirang kalidad
+at higit pa sa lahat akma ito sa layinin.<br>
+Gayun pa man itoy pwedeng kulang o Kaya ay kaylangan ng karagdagang pag-subok.<br>
+Ang ilan sa mga add-on ay nabibilang kasama ang ZAP sa pamamagitan ng default ay nasa antas ng beta padin.  
 
-<h3>Report new alpha quality add-ons</h3>
-If selected then ZAP will inform you if and when any new add-ons are added at 'alpha' quality.<br>
-These add-ons will have been reviewed but they are typically at an early stage of development.<br>
-They may be incomplete, contain significant issues or cause stability problems.
+<h3>Iulat ang bagong alpha na kalidad ng mga add-on</h3>
+Kapag napili na pagkatapos ang ZAP ay mag-bibigay alam sa iyo kung sakali at kapag ang kahit anong bagong mga add-on ay naidagdag sa kalidad ng 'alpha'.<br>
+Ang mga add-on na ito ay talagang nasuri na ngunit ito ay karaniwan na lamang sa maagang yugto ng pagunlad.<br>
+Ito ay magiging kulang, naglalaman ng mahalagang mga isyu o maging dahilan ng madalas ma mga problema.
 
-<h3>Add-on directories</h3>
-ZAP will load all of the add-ons located in the release 'plugins' directory as well as any that have been downloaded
-and are in the local 'plugins' directory.<br>
-You can also add as many additional add-on directories as you need by adding them here.<br>
-This can be very useful when running multiple ZAP instances on one machine, for example in a CI environment.<br>
-You can then just download new or updated add-ons once and immediately share them between multiple instances.<br>
-Add-ons downloaded into shared directories will be only added to new ZAP instances, not to ones that are already running,
-with the exception of the instance that actually downloaded the add-on. 
+<h3>Ang mga direktoryo ng mga add-on</h3>
+Ang ZAP ay magkakarga ng lahat ng mga add-on mula sa <a href="../../../start/concepts/addons.html">default <code>plugin</code>
+mga direktoryo</a>.<br>
+Pwede mo ding dagdagan ang maraming adisyonal na mga direktoryo ng add-on tulad ng iyong pangangailangan sa pamamagitan ng pagdaragdag sa mga ito dito.<br>
+Ito ay magiging napaka kagamit-gamit kapag gumagana ang maraming ZAP na mga instansiya sa isang makina, para sa halimbawa sa kapaliran ng CI.<br>
+Magagawa mo pagkatapos ay idownload mo lamang ang bago o na-update na mga add-on isang beses at Agad na ipamahagi ito sa pagitan ng maraming pagkakataon.<br>
+Ang pagda-download ng mga add-on papunta sa pagbabahagi ng direktoryo ay i-daragdag lamang sa bagong ZAP na pagkakataon, hindi ang isang gumagana na, mayroong eksesiyon ng pagkakataong aktwal na dina-download ang add-on. 
 
-<h3>Download directory</h3>
-This is the directory ZAP will download new or updated add-ons to.<br>
-By default it will be the local directory, but you can also choose one of the shared directories as long as this ZAP
-instance can write to it.<br>
-ZAP will only move add-ons to a shared directory after they are completely downloaded, so that other ZAP instances
-do not try to load an incomplete add-on.
+<h3>Mag-download ng mga direktoryo</h3>
+Ito ay ang direktoryo ng ZAP na magda-download ng bago o na-update na mga add-on kung sakali.<br>
+Sa pamamagitan ng default ito ay magiging lokal na direktoryo, ngunit maaari ka din mamili ng isa sa mga ibinahaging mga direktoryo kasing haba tulad nitong pagkakataon ng ZAP na maaring mai-tala ito.<br>
+Ang ZAP ay gagalaw lamang ng mga add-on sa ibinahaging direktoryo pagkatapos nitong makompleto sa pag-download, kaya't ang ibang mga ZAP na pagkakataon
+Huwag subukan na kargahan ang hindi kompleto na add-on.
 
-<h2>See also</h2>
+<h2>Tingnan din</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../overview.html">UI Overview</a></td><td>para sa isang overview ng mga interface ng gumagamit</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+<a href="options.html">Mga opsyon ng mga dyalogo</a></td><td>para sa mga detalye ng ibang mga Opsyon sa dyalogo na mga iskrin</td></tr>
 </table>
 
 </body>

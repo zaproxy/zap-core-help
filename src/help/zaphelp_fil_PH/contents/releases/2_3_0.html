@@ -9,171 +9,171 @@
 <body bgcolor="#ffffff">
 <h1>Release 2.3.0</h1>
 <p>
-The following changes were made in this release:
+And mga sumusunod na pagbabago ay ginawa sa release na ito:
 </p>
 
-<h2>Significant changes:</h2>
+<h2>Mga Mahahalagang pagbabago:</h2>
 
-<h3>ZAP ‘lite’ version</h3>
-For this release we are providing a <i>‘lite’</i> version of ZAP in addition to the <i>‘full’</i> version. 
-This contains exactly the same core code, but it just includes fewer default add-ons.
-Of course, you can download all of the ‘missing’ add-ons from the ZAP marketplace to ‘upgrade’ the lite version to a full one.<br>
-The <i>‘lite’</i> version is aimed at people new to security who need less initial functionality which will hopefully be easier to get started with. It will also be suitable for people looking for a smaller download or those wishing to customize exactly which add-ons they install.
+<h3>'lite' na bersyon ng ZAP</h3>
+Para sa release na ito kami ay nagbibigay ng <i>'lite'</i> na bersyon ng ZAP bilang karagdagan sa <i>'buo'</i> na bersyon. 
+Ito ay eksaktong naglalaman ng parehong core code, pero ito lamang ay nagbibilang ng mas kaunting mga default na add-on.
+Siyempre, maaring mong i-download lahat ng mga 'nawawala' na mga add-on mula sa ZAP marketplace para -ma-upgrade' ang 'lite' na bersyon sa 'full'.<br>
+Ang <i>'lite'</i> na bersyon ay para sa mga taong bago sa seguridad na nangangailangan ng mababang inisyal na functionality na sana ay mas madaling masimulan. Ito rin ay magiging angkop para sa mga tao na naghahanap ng mas maliit na download o sa mga nais na eksaktong i-customize ang anumang add-ons na na-install.
 
-<h3>Support for client-side (browser) events</h3>
-You can now view, intercept, manipulate, resend and fuzz <b>client-side events</b>. This includes postMessages, so you can now detect DOM based XSS vulnerabilities in postMessages. This is the first phase in a series of planned changes to support the testing of AJAX and HTML5 applications even more effectively.
+<h3>Suporta para sa panig-kliyente (browser) na mga pangyayari</h3>
+Maari mo nang tingnan, maharang, manipulahin, ipadalang muli at magpalabo ng <b>mga pangyayari sa panig-kliyente</b>. Ito ay kinabibilangan ng postMessages, kaya maari mo ng tuklasin ang DOM batay sa XSS na mga kahinaan sa postMessages. Ito ang unang yugto ng isang serye ng planadong mga pagbabago upang suportahan ang pagsusuri ng mga AJAX at HTML5 application nang mas epektibo.
 
-<h3>Enhanced authentication support</h3>
-ZAP's support for authentication has been completely revamped to easily handle complex types of <b>authentication methods and scenarios</b>. Support has also been added for user-defined scripts which allow you to handle custom authentication schemes. In addition, now ZAP understands and allows you to configure <b>web applications' Users</b> so various actions throughout ZAP can be performed from the point of view of defined users. To get started, check out the new <i>Authentication</i> and <i>Users</i> panels in the Session Properties for each of the defined Contexts.
+<h3>Pinahusay na suporta ng pagpapatunay</h3>
+Ang suporta ng ZAP sa pagpapatunay ay lubos na na naayos para madaling mapangasiwaan ang mga kumplikadong uri ng <b>paraan at mga sitwasyon ng pagpapatunay</b>. Naidagdag din ang suporta para sa mga itinakdang script na magpapahintulot sa iyo na pangasiwaan ang mga pamamaraan ng pasadyang pagpapatunay. Bukod pa rito, ang ZAP ay nag-uunawa na ngayon at nagpapahintulot sa iyo ng magkumpigura ng <b>mga gumagamit ng mga aplikasyon ng web</b> upang maisagawa ang iba't-ibang mga aksyon sa buong ZAP mula sa pananaw ng mga itinakdang manggagamit. Para makapagsimula, tingnan ang bagong <i>Pagpapatunay</i> at <i>Mga Gumagamit</i> na mga panel sa Katangian ng Sesyon para sa bawat isa sa mga itinukoy na konteksto.
 
-<h3>Support for non standard apps</h3>
-This release includes support for <b>‘single page’ applications</b> and <b>non standard key-value separators</b>. You can now control these settings via the new <i>Structure</i> panel in the Session Properties.
+<h3>Suporta para sa mga di-karaniwang app</h3>
+Ang release na ito ay kinabibilangan ng suporta para sa <b>mga aplikasyon ng 'iisang pahina'</b> at <b>di-karaniwang key-value na panghiwalay</b>. Maari mo nang kontrolin ang mga setting na ito gamit ang bagong <i>Istraktura</i> na panel sa Katangian ng Sesyon.
 
-<h3>New Input Vectors including user-defined scripts</h3>
-ZAP supports new options for defining the <b>input vectors</b> i.e. the elements of a request that ZAP will attack. The new options are available in the <i>Active Scan Input Vectors</i> panel of the Options. Support has also been added for defining custom scripts that define new input vectors.
+<h3>Bagong Input Vectors kabilang ang mga itinakdang script</h3>
+Ang ZAP ay sumusuporta ng mga bagong opsyon para sa pagtukoy ng <b>input vectors</b> halimbawa ang mga elemento ng isang kahilingan na aatakihin ng ZAP. Ang mga bagong opsyon ay magagamit sa <i>Aktibong Scan Input Vectors</i> panel ng mga opsyon. Ang suporta ay idinagdag para sa pagtukoy ng mga pasadyang script na nagtutukoy ng bagong input vectors.
 
-<h3>Scan policy - fine grained control</h3>
-The scan policy now has a <b>fine grained control</b>, allowing you to tweak individual scanner rules. You can also define, load and save scan policies, allowing you to maintain a set of policies that work well in different circumstances.<br>
-In addition, by default ZAP will not now scan well-known service parameters (e.g. __VIEWSTATE) speeding up the overall scanning process. This is completely user configurable, allowing you to specify exactly which parameters ZAP should ignore.  
+<h3>Patakaran ng pag-scan - pinong grained kontrol</h3>
+Ang patakaran ng pag-scan ngayon ay may isang <b>pinong grained kontrol</b>, nagpapahintulot sa iyo upang baguhin ang indibidwal na mga patakaran ng scanner. Maari mo ring tukuyin, i-load at i-save ang mga patakaran ng pag-scan, nagpapahintulot sa iyo na mapanatili ang isang hanay ng mga patakaran na maiging gumagawa sa iba't-ibang sitwasyon.<br>
+Bukod pa rito, sa pamamagitan ng default, ang ZAP ay hindi na ngayon mag-scan ng mga kilalang parameter ng serbisyo (e.g. __VIEWSTATE) nagpapabilis ng kabuuang proseso ng pag-scan. Ito ay ganap na maaring ikumpigura ng mga gumagamit, na nagpapahintulot sa iyo sa eksaktong tukuyin ang mga parameter na dapat balewalain ng ZAP.  
 
-<h3>Advanced Active Scan dialog</h3>
-A new <i>'Advanced Active Scan'</i> dialog allows you to specify exactly how you want the active scanner to function. It allows you to specify <b>‘custom vectors’</b> that explicitly define which strings you want to attack. It also supports the option to scan as any of the Users you have defined for the application under test. Start an <i>Advanced Active Scan</i> via the <i>Tools</i> menu or via the <i>Atake</i> section of the right click popup menu. 
+<h3>Diyalogo ng Advanced na Aktibong Pag-scan</h3>
+Ang bagong <i>'Advanced na Aktibong Pag-scan'</i> na diyalogo ay nagpapahintulot sa iyo na eksaktong tukuyin kung paano mo gustong gumana ang aktibong scanner. Ito ay nagpapahintulot sa iyo na tukuyin ang <b>‘custom vectors’</b> na pinagtitiwalaan na tukuyin ang anumang mga string na gusto mo atakihin. Ito rin ay sumusuporta ng opsyon na mag-scan ng anumang natukoy na mga gumagamit para sa aplikasyon sa ilalim ng pagsusuri. Simulan ang isang <i>Advanced na Aktibong Pag-scan</i> sa pamamagitan ng <i>Mga Kagamitan</i> na menu o sa pamamagitan ng <i>Atake</i> seksyon ng right click popup menu. 
 
-<h3>Extended command line options</h3>
-You can now run ZAP ‘inline’ i.e. <b>without starting the ZAP UI or a daemon</b>. In this mode you can run simple attacks or run scripts which can access all of the ZAP functionality. You can also now override any of the options defined in the configuration file via command line parameters.
+<h3>Mga opsyon ng pinalawak na command line</h3>
+Maari mo nang patakbuhin ang ZAP nang 'inline' halimbawa <b>nang hindi sinisimulan ang ZAP UI o ang daemon</b>. Sa paraang ito, maaring kang magpatakbo ng mga simpleng atake o magpatakbo ng mga script na maaring mag-access sa lahat ng ZAP functionality. Maari mo na ring i-override ang anumang opsyon na tinukoy sa file ng kumpigurasyon sa pamamagitan ng command line parameters.
 
-<h3>More API support</h3>
-The API has been extended to support even more of the ZAP functionality.
+<h3>Mas marami pang suporta ng API</h3>
+Ang API ay pinalawak upang suportahan ang mas higit pang ZAP functionality.
 
-<h3>Internationalized help file</h3>
-The help file has been internationalized and is in the process of being translated into many other languages via <a href="https://crowdin.net/project/owasp-zap-help">https://crowdin.net/project/owasp-zap-help</a>. If you use ZAP in one of the many languages we support, then the help files will include all of the available translations for that language while defaulting back to English for phrases that have not yet been translated.<br>
-Languages with a significant amount of translated help pages include:
+<h3>File ng pina-internasyonal na tulong</h3>
+Ang file ng tulong ay pina-internasyonal at nasa proseso ng pagiging isinalin sa maraming mga wika sa pamamagitan ng <a href="https://crowdin.net/project/owasp-zap-help">https://crowdin.net/project/owasp-zap-help</a>. Kung gumagamit ka ng ZAP sa isa sa maraming wika na sinuportahan namin, ang mga file ng tulong ay kinabibilangan ng lahat ng magagamit na pagsasalin para sa wikang iyon habang binabalik ang default sa Ingles para sa mga parirala na hindi pa naisalin.<br>
+Ang mga wika na may makabuluhang halaga ng isinalin na mga pahina ng tulong ay kinabibilangan ng:
 <ul>
 <li>Bosnian</li>
-<li>French</li>
-<li>Japanese</li>
-<li>Spanish</li>
+<li>Pranses</li>
+<li>Wikang Hapon</li>
+<li>Espanyol</li>
 </ul>
 
-<h3>Keyboard shortcuts</h3>
-All menu items can now be invoked via keyboard shortcuts. Defaults are defined for virtually all cases, but you can configure your own preferences in the <i>Keyboard</i> panel of the Options.
+<h3>Mga shortcut ng keyboard</h3>
+Lahat ng item sa menu ay maaring nang matawag sa pamamagitan ng keyboard shortcut. Tinukoy ang mga default para sa halot lahat ng mga kaso, ngunit maaring mo itong ma-configure sa iyong sariling kagustuhan sa mga <i>Keyboard</i> panel ng mga opsyon.
 
-<h3>New UI options</h3>
-There is a new option to change the display so that the selected tab takes up the <b>full screen</b>. This is useful when using ZAP on small screens.
-There is also an option to <b>toggle the visibility of the tab names</b> on an off to further conserve space.
+<h3>Bagong mga opsyon ng UI</h3>
+May isang bagong opsyon para baguhin ang display upang ang napiling tab tumatagal ng hanggang sa <b>buong screen</b>. Ito ay kapaki-pakinabang kapag ginagamit ang ZAP sa maliit na screens. Mayroon ring opsyon para <b>mag-toggle ng pagkakakita ng mga pangalan ng tab</b> sa isang off para lalong makatipid ng espasyo.
 
-<p>Most of the UI lists have also been converted to tables, which allow you to change column widths and define exactly which columns are displayed, and how the tables are sorted.</p>
+<p>Karamihan sa mga listahan ng UI ay pinapalitn ng tables, kung saan nagpapahintulot sa iyong palitan ang lapad ng kulumna at eksaktong tukuyn ang anumang ipanapakitang kulumna, at paano nagkasunod-sunod ang mga table.</p>
 
-<h3>More functionality moved to add-ons</h3>
-More of the core functionality has been moved into add-ons which allows us to deliver updates dynamically via the ZAP Marketplace rather than requiring new full releases.<br>
-This includes the language packs, so translations made to the ZAP UI via https://crowdin.net/project/owasp-zap can be downloaded within ZAP or even automatically installed.
+<h3>Karagdagang functionality na inilipat sa add-ons</h3>
+Higit pa sa mga pangunahing functionality ay nailipat sa add-ons na nagpapahintulot sa atin na makapaghatid ng mga update sa pamamagitan ng ZAP Marketplace sa halip na mangangailangan ng mga bagong buong release.<br>
+Ito ay kinabibilangan ng mga pangkat ng wika, kaya ang pagsasalin na ginawa sa ZAP UI sa pamamagitan ng https://crowdin.net/project/owasp-zap ay maaring i-download sa loob ng ZAP o kahit na awtomatikong i-install.
 
-<h3>New and improved active and passive scanning rules</h3>
-Many of the release quality active and passive scanning rules have been improved. There are new alpha and beta quality rules and many rules have been promoted from alpha to beta and from beta to release quality.
+<h3>Bago at mas pinabuting aktibo at pasibong patakaran ng pagsusuri</h3>
+Marami sa mga kalidad ng release na aktibo at pasibong patakaran ng pagsusuri ay napabuti. Mayroong bagong alpha at beta na mga patakaran ng kalidad at maraming patakaran ang naitaguyod mula sa alpha hanggang beta at mula beta hanggang sa kalidad ng release.
 
-<h3>Other miscellaneous changes and additions</h3>
+<h3>Iba pang mga samut-saring pagbabago at pagdaragdag</h3>
 <ul>
-<li>A new option to stop individual scan rules without stopping the whole scan</li>
-<li>A new toolbar button that allows you to quickly and easily record Zest scripts.</li>
-<li>A new group for sharing ZAP scripts (<a href="http://groups.google.com/group/zaproxy-scripts">http://groups.google.com/group/zaproxy-scripts</a>) has been created.</li>
-<li>The ability to spider applications based on source control metadata (SVN and Git) exposed via a web server</li>
-<li>The ability to force breaks from within Proxy scripts</li>
+<li>Isang bagong opsyon para ihinto ang mga patakaran ng pang-indibidwal na pag-scan nang hindi hinihinto ang buong pag-scan</li>
+<li>Isang bagong toolbar button na nagpapahintulot sa iyo na mapabilis at mapadali ang pagtala ng mga Zest script.</li>
+<li>Isang bagong grupo para mabahagi ang mga ZAP script (<a href="https://groups.google.com/group/zaproxy-scripts">https://groups.google.com/group/zaproxy-scripts</a>) ay nalikha.</li>
+<li>Ang kakayahan na magamit ng spider ay batay sa pinagmulan ng kontrol metadata (SVN at Git) na nakalantad sa pamamagitan ng isang web server</li>
+<li>Ang kakayahan upang pilitin ang mga break mula sa loob ng Proxy script</li>
 </ul>
 
-<h2>Full list of changes:</h2>
+<h2>Buong listahan ng mga pagbabago:</h2>
 <ul>
-<li>Issue 122 : ProxyThread logging timeout readings with incorrect message (URL) </li>
-<li>Issue 207 : Enhancement: Hotkeys </li>
-<li>Issue 362 : Allow Alerts lists to be filtered by selection in Sites pane </li>
-<li>Issue 399 : zap.sh directory handling </li>
-<li>Issue 412 : Enable unsafe SSL/TLS renegotiation option not saved </li>
-<li>Issue 416 : Normalise how multiple related options are managed throughout ZAP and enhance the usability of some options  Usability </li>
-<li>Issue 485 : Make language packs into add-ons </li>
-<li>Issue 503 : Change the footer tabs to display the data with tables instead of lists  Usability </li>
-<li>Issue 572 : Change the generate_root_ca property to a function in the Python API </li>
-<li>Issue 575 : Return the list of alerts in the Python API instead of a dictionary with one entry </li>
-<li>Issue 585 : Proxy - "502 Bad Gateway" errors responded as "504 Gateway Timeout" </li>
-<li>Issue 589 : Move Reveal extension to ZAP extensions project </li>
-<li>Issue 590 : Forced Browse uses wrong scheme when "attacking" a site accessed over a secure connection (HTTPS) on a non-default port </li>
-<li>Issue 591 : Available sites/hosts (in the footer panels) disappear when mode changed to "Safe" </li>
-<li>Issue 595 : Spider fails to start (footer panel) with a site accessed over a secure connection (HTTPS) on a non-default port </li>
-<li>Issue 606 : Disable the "Start" scan button when the "--Select Site--" option is selected </li>
-<li>Issue 607 : Manual requested sites shown as scanned in the footer panels when selected in the "Sites" tab </li>
-<li>Issue 609 : Provide a common interface to query the state and access the data (HttpMessage and HistoryReference) displayed in the tabs </li>
-<li>Issue 613 : Move Save Raw HttpMessage extension to ZAP extensions project </li>
-<li>Issue 619 : Move Forced Browse extension to ZAP extensions project </li>
-<li>Issue 620 : Move Forced Browse files to ZAP extensions project </li>
-<li>Issue 783 : shutdown should be a method in the python zap.core api </li>
-<li>Issue 788 : Update Java for Mac release </li>
-<li>Issue 793 : Authentication / SessionManagement Methods dynamic loading in APIs not reliable </li>
-<li>Issue 799 : Add HttpAuthentication as an Authentication Method </li>
-<li>Issue 803 : Patch for /trunk/src/help/zaphelp/zaphelp/credits.html </li>
-<li>Issue 804 : Add Support for various types of Authentication for a Context </li>
-<li>Issue 805 : Add Support for various types of Session Management for a Context </li>
-<li>Issue 806 : Add Support for webapp Users </li>
-<li>Issue 807 : Error while loading ZAP when Quick Start Tab is closed </li>
-<li>Issue 816 : Add right-click Copy/Paste &amp; Find options in the Encode/Decode/Hash dialog </li>
-<li>Issue 817 : Python API doesn't handle "other" operations correctly </li>
-<li>Issue 822 : Java API: ApiResponseSet.getAttributes() not working </li>
-<li>Issue 825 : Old version of Rhino included in lib directory </li>
-<li>Issue 827 : Default session tokens are not lower cased when added through options dialogue </li>
-<li>Issue 828 : NullPointerException while accessing HttpSessions API view "sessionTokens" when a site doesn't exist or doesn't have tokens </li>
-<li>Issue 829 : JSONException while calling an API view without the required parameter(s) </li>
-<li>Issue 830 : Java Client API doesn't encode query parameters when sending requests to ZAP API </li>
-<li>Issue 832 : Http Sessions tab should be cleared when a new session is created </li>
-<li>Issue 837 : Update, always, the HTTP request sent/forward by ZAP's proxy </li>
-<li>Issue 838 : Search API - Add search views that return HTTP messages </li>
-<li>Issue 839 : Search API - Add search views that return messages in HTTP Archive format </li>
-<li>Issue 840 : Core API - Allow to get the messages in HTTP Archive format </li>
-<li>Issue 841 : NullPointerException after sending a manual HTTP request with ExtensionHistory disabled </li>
-<li>Issue 842 : NullPointerException while active scanning with ExtensionAntiCSRF disabled </li>
-<li>Issue 843 : NullPointerException after sending/proxying a HTTP request with ExtensionAntiCSRF disabled </li>
-<li>Issue 844 : NullPointerException while invoking the "Scan policy" dialogue with ExtensionPassiveScan disabled </li>
-<li>Issue 845 : AbstractPanel added twice to TabbedPanel2 in ExtensionLoader#addTabPanel </li>
-<li>Issue 846 : NullPointerException while active scanning with ExtensionScript disabled </li>
-<li>Issue 849 : NullPointerException while authenticating with ExtensionHistory disabled </li>
-<li>Issue 852 : Search API - URL views return the same URL several times </li>
-<li>Issue 853 : Core API - Allow to get the number of alerts </li>
-<li>Issue 854 : Core API - Allow to get the number of messages </li>
-<li>Issue 855 : Core API - Allow to get a message by ID </li>
-<li>Issue 856 : Core API - Allow to get an alert by ID </li>
-<li>Issue 857 : Core API - "alerts" view might return unexpected alerts when pagination is used </li>
-<li>Issue 858 : Core API - "messages" view might return unexpected messages when pagination is used </li>
-<li>Issue 859 : PScan API - Allow to enable/disable the passive scan </li>
-<li>Issue 860 : PScan API - Allow to list/get the passive scanners </li>
-<li>Issue 861 : PScan API - Allow to enable/disable all the passive scanners </li>
-<li>Issue 862 : PScan API - Allow to enable/disable a given passive scanner </li>
-<li>Issue 863 : AScan API - Allow to list/get the active scanners </li>
-<li>Issue 864 : AScan API - Allow to enable/disable all the active scanners </li>
-<li>Issue 865 : AScan API - Allow to enable/disable a given active scanner </li>
-<li>Issue 866 : Alert keeps HttpMessage longer than needed when HistoryReference is set/available </li>
-<li>Issue 867 : HttpMessage#getFormParams should return an empty TreeSet if the request body is not "x-www-form-urlencoded" </li>
-<li>Issue 868 : Core API - "messages" view shouldn't return internal/temporary messages </li>
-<li>Issue 869 : Differentiate proxied requests from (ZAP) user requests </li>
-<li>Issue 870 : Change the MainToolbarPanel's expand buttons to use ButtonGroup and Action </li>
-<li>Issue 871 : Title not updated when session name is changed through the main tool bar button "Session Properties..." </li>
-<li>Issue 872 : Core API - Allow to send a manual request </li>
-<li>Issue 873 : Core API - Allow to send a manual request in HAR format </li>
-<li>Issue 874 : Change BreakPanelToolbarFactory to use Actions </li>
-<li>Issue 875 : Remove i18n directory </li>
-<li>Issue 876 : Deprecate FuzzerPanel#PANEL_NAME </li>
-<li>Issue 877 : ExtensionPopupMenuItem#isEnableForComponent called twice on some pop up menus each time is shown using the MainPopupMenu </li>
-<li>Issue 878 : ExtensionPopupMenuItem#getMenuIndex() as no effect in MainPopupMenu </li>
-<li>Issue 879 : Pop up menu "Spider Context..." is enabled even if ExtensionSpider is disabled </li>
-<li>Issue 880 : Remember last selected directory when adding custom fuzz files </li>
-<li>Issue 881 : Fail immediately if zapdb.script file is not found </li>
-<li>Issue 882 : Remove "Copy" pop up menu item shown in the "Forced Browse" tab </li>
-<li>Issue 884 : Plug-n-Hack phase 2 </li>
-<li>Issue 885 : API - Actions' response not shown when using HTML format </li>
-<li>Issue 886 : Main pop up menu invoked twice on some components </li>
-<li>Issue 887 : Scanners' pause button with inconsistent selection/enabled state </li>
-<li>Issue 888 : Search API - URL views might return unexpected URLs when pagination is used </li>
-<li>Issue 889 : JSONException while calling an API "other" without the required parameter(s) </li>
-<li>Issue 890 : Allow to clear "Output" tab </li>
-<li>Issue 891 : Target build "generate-javadocs" should apply SVN mime-type property to all generated files </li>
-<li>Issue 892 : Cache of response body length in HistoryReference might not be correct </li>
-<li>Issue 896 : PnH: Flag any fuzz attacks that hit the DOM XSS oracle </li>
-<li>Issue 897 : Add a JToggleButton that allows to set a tool tip text based on button's state </li>
+<li>Isyu 122: Ang ProxyThread nagtatala ng mga readings ng timeout na may maling mensahe (URL) </li>
+<li>Isyu 207: Paghuhusay: Hotkeys </li>
+<li>Isyu 362: Payagan ang mga listahan ng mga alerto na salain sa pamamagitan ng pagpapipilian sa Sites pane </li>
+<li>Isyu 399: pagpangangasiwa ng directory ng zap.sh </li>
+<li>Isyu 412: Pagpapagana ng hindi ligtas na muling pagsasaayos ng opsyon ng SSL/TLS ay hindi na-save </li>
+<li>Isyu 416: Normalisahin kung paano pamahalaan ang maraming kaugnay na mga opsyon sa pamamagitan ng ZAP at pagpapahusay ng paggamit ng ilang mga opsyon sa Paggamit </li>
+<li>Isyu 485: Ginawang add-ons ang mga pangkat ng wika </li>
+<li>Isyu 503: Binago ang footer tabs para matingnan ang data na may tables sa halip ng mga listahan ng Paggamit </li>
+<li>Isyu 572: Binago ang generate_root_ca property sa isang function sa Python API </li>
+<li>Isyu 575: Binalik ang listahan ng mga alerto sa Python API sa halip ng diksyunaryo na may isang tala </li>
+<li>Isyu 585: Proxy - Mga kamalian na "502 Maling Gateway" ay tumugon ilang "504 Gateway Timeout" </li>
+<li>Isyu 589: Ilipat ang Ihayag na extension sa proyekto ng ZAP extensions </li>
+<li>Isyu 590: Sapilitang Browse ay gumagamit ng maling pamamaraan kapag "umaatake" ng isang site na ma-access sa isang ligtas na koneksiyon (HTTPS) sa isang non-default port </li>
+<li>Isyu 591: Nawawal ang mga magagamit na sites/hosts (sa footer panels) kapag ang paraan ay binago sa "Ligtas" </li>
+<li>Isyu 595: Bigong makapagsimula (footer panel) ang spider kapag may isang site na nag-access sa isang ligtas na koneksiyon (HTTPS) sa isang non-default port </li>
+<li>Isyu 606: Huwag paganahin ang pang-scan na button na "Simulan" kapag ang "--Pumili ng Site--" na opsyon ay pinili </li>
+<li>Isyu 607: Manu-manong hiniling na mga sites na ipinapakita bilang na-scan sa footer panels kapag ang napili sa "Sites" tab </li>
+<li>Isyu 609: Pagbigay ng isang karaniwang interface upang i-query at i-access ang data (HttpMessage and HistoryReference) na naka-display sa mga tab </li>
+<li>Isyu 613: Ilipat ang Save Raw HttpMessage extension sa proyekto ng ZAP extensions </li>
+<li>Isyu 619: Ilipat ang Sapilitang Pag-Browse na extension sa proyekto ng ZAP extensions </li>
+<li>Isyu 620: Ilipat ang Sapilitang Pag-browse na mga file sa proyekto ng ZAP extensions </li>
+<li>Isyu 783: ang shutdown ay dapat isang paraan sa python zap.core api </li>
+<li>Isyu 788: I-update ang Java para sa release ng Mac </li>
+<li>Isyu 793: Ang dinamikang pag-load ng Pagpapatunay / Pamamaraan ng SessionManagement sa APIs ay hindi maaasahan </li>
+<li>Isyu 799: Magdagdag HttpAuthentication bilang isang paraan ng Pagpapatunay </li>
+<li>Isyu 803: Patch para sa /trunk/src/help/zaphelp/zaphelp/credits.html </li>
+<li>Isyu 804: Magdagdag ng suporta para sa iba't-ibang uri ng pagpapatunay para sa isang konteksto </li>
+<li>Isyu 805: Magdagdag ng suporta para sa iba't-ibang uri ng pamamahala ng sesyon para sa isang konteksto </li>
+<li>Isyu 806: Magdagdag ng suporta para sa mga gumagamit ng webapp </li>
+<li>Isyu 807: Kamalian habang nag-lo-load ng ZAP kapag ang Quick Start Tab ay nakasara </li>
+<li>Isyu 816: Magdagdag ng right-click Kopya/I-paster &amp; Humanap ng mga opsyon sa Encode/Decode/Hash na diyalogo </li>
+<li>Isyu 817: Hindi napangasiwaan ng Python API ang "ibang" operasyon nang tama </li>
+<li>Isyu 822: Hindi gumagana ang Java API: ApiResponseSet.getAttributes() </li>
+<li>Isyu 825: Lumang bersyon ng Rhino ay sinama sa lib directory </li>
+<li>Isyu 827: Default na mga token ng sesyon ay hindi maliit na titik kapag idinagdag sa pamamagitan ng diyalogo ng mga opsyon </li>
+<li>Isyu 828: NullPointerException habang nag-a-access ng HttpSessions API view "sessionTokens" kapag ang site ay hindi umiiral o walang mga token </li>
+<li>Isyu 829: JSONException kapag tumatawang ng API view nang walang kailangang parameter(s) </li>
+<li>Isyu 830: Ang Java Client API ay hindi nag-encode ng mga parameter ng query kapag nagpapadala ng mga kahilingan sa ZAP API </li>
+<li>Isyu 832: Tab ng mga sesyon ng Http ay dapat alisin kapag nalikha ang isang bagong sesyon </li>
+<li>Isyu 837: I-update, lagi, ang mga kahilingan ng HTTP na ipinadala ng proxy ng ZAP </li>
+<li>Isyu 838: API ng Paghahanap - Magdagdag ng mga view ng paghahanap na nagbabalik ng mga mensahe ng HTTP </li>
+<li>Isyu 839: API ng Paghahanap - Magdagdag ng mga view ng paghahanap na nagbabalik ng mg mensahe sa format ng HTTP Archive </li>
+<li>Isyu 840: Core API - Nagpapahintulot na kunin ang mga mensahe sa format ng HTTP Archive </li>
+<li>Isyu 841: NullPointerException pagkatapos ng pagpapadala ng manu-manong kahilingan ng HTTP na hindi pinagana ang ExtensionHistory </li>
+<li>Isyu 842: NullPointerException habang nag-scan nang aktibo na hindi pinagana ang ExtensionAntiCSRF </li>
+<li>Isyu 843: NullPointerException pagkatapos ng pagpapadala/pagpo-proxy ng isang kahilingan ng HTTP na hindi pinagana ang ExtensionAntiCSRF </li>
+<li>Isyu 844: NullPointerException habang tinatawang ang "Patakaran ng Pag-scan"na dylogo na hindi pinagana ang ExtensionPassiveScan </li>
+<li>Isyu 845: Naidagdag ang AbstractPanel nang dalawang beses sa TabbedPannel2 sa ExtensionLoader#addTabPanel </li>
+<li>Isyu 846: NullPointerException habang nag-scan nang aktibo na hindi pinagana ang ExtensionScript </li>
+<li>Isyu 849: NullPointerException habang nagpapatunay na hindi pinagana ang ExtensionHistory </li>
+<li>Isyu 852: API ng Paghahanap - Ang mga view ng URL ay nagbabalik ng parehong URL nang ilang ulit </li>
+<li>Isyu 853: Core API - Nagpapahintulot na kunin ang bilang nga mga alerto </li>
+<li>Isyu 854: Core API - Nagpapahintulot na kunin ang bilang ng mga mensahe </li>
+<li>Isu 855: Core API - Nagpapahintulot na kunin ang mensahe ayon sa ID </li>
+<li>Isyu 856: Core API - Nagpapahintulot na kunin ang alerto ayon sa ID </li>
+<li>Isyu 857: Core API - ang view ng "mga alerto" ay maaaring magbalik ng hindi inaasahang mga alerto kapag gumamit ng pagbilang ng pahina </li>
+<li>Isyu 858: Core API - "mga mensahe" na view ay maaari magbalik ng hindi inaasahang mga mensahe kapag gumamit ng pagbilang ng pahina </li>
+<li>Isyu 859: PScan API - Nagpapahintulot na paganahin/hindi paganahin ang pasibong pag-scan </li>
+<li>Isyu 860: PScan API - Nagpapahintulot na ilista/kunin ang mga pasibong scanner </li>
+<li>Isyu 861: PScan API - Nagpapahintulot na paganahin/hindi paganahin ang lahat ng mga pasibong scanner </li>
+<li>Isyu 862: PScan API - Nagpapahintulot na paganahin/hindi paganahin ang ibinigay na pasibong scanner </li>
+<li>Isyu 863: AScan API - Nagpapahintulot na ilista/kunin ang mga aktibong scanner </li>
+<li>Isyu 864: AScan API - Nagpapahintulot na paganahin/hindi paganahin ang lahat ng mga aktibong scanner </li>
+<li>Isyu 865: AScan API - Nagpapahintulot na paganahin/hindi paganahin ang ibinigay na aktibong scanner </li>
+<li>Isyu 866: Alerto ay nagpapanatili sa HttpMessage nang mas matagal kaysa sa kinakailangan kapag ang HistoryReference ay itinakda/magagamit </li>
+<li>Isyu 867: HttpMessage#getFormParams ay dapat magbalik ng isang walang laman na TreeSet kapag ang laman ng kahilingan ay hindi "x-www-form-urlencoded" </li>
+<li>Isyu 868: Core API - view ng "mga mensahe" ay hindi dapat magbalik ng panloob/pansamantalang mga mensahe </li>
+<li>Isyu 869: Ikaiba ang mga naka-proxy na mga kahilingan mula sa mga kahilingan ng (ZAP) gumagamit </li>
+<li>Isyu 870: Baguhin ang palawakin na pindutan ng MainToolbarPanel upang gumamit ng ButtonGroup at Aksyon </li>
+<li>Isyu 871: Hindi nabago ang titulo kapag ang pangalan ng sesyon ay nabago sa pamamagitan ng pindutan sa pangunahing tool bar na "Mga Katangian ng Sesyon..." </li>
+<li>Isyu 872: Core API - Nagpapahintulot na ipadala ang isang manu-manong kahilingan </li>
+<li>Isyu 873: Core API - Nagpapahintulot na ipadala ang manu-manong kahilingan sa HAR format </li>
+<li>Isyu 874: Baguhin ang BreakPanelToolbarFactory na gumamit ng mga Aksyon </li>
+<li>Isyu 875: Alisin ang i18n directory </li>
+<li>Isyu 876: Itakwil ang FuzzerPanel#PANEL_NAME </li>
+<li>Isyu 877: Natawag nang dalawang beses ang ExtensionPopupMenuItem#isEnableForComponent sa ilang mga menu ng pop up sa bawat
+panahon na ito ay ipanapakita gamit ang MainPopupMenu </li>
+<li>Isyu 878: ExtensionPopupMenuItem#getMenuIndex() bilang walang epekto sa MainPopupMenu </li>
+<li>Isyu 879: Pop up menu na "Konteksto ng Spider..." ay pinagana kahit na ang ExtensionSpider ay hindi pinagana </li>
+<li>Isyu 880: Tandaan ang huling napiling directory kapag nagdadagdag ng mga pasadyang fuzz file </li>
+<li>Isyu 881: Biguin kaagad kapag ang zapdb.script file ay hindi natagpuan </li>
+<li>Isyu 882: Alisin ang "Kopya" na aytem ng pop up menu na ipanapakita sa tab na "Sapilitang Pag-browse" </li>
+<li>Isyu 884: 2 na yugto ng Plug-n-Hack </li>
+<li>Isyu 885: API - tugon ng mga aksyon ay hindi ipinapakita kapag gumagamit ng HTML format </li>
+<li>Isyu 886: Tinawag nang dalawang beses ang pangunahing pop up menu sa ilang mga bahagi </li>
+<li>Isyu 887: Pindutan na pause ng scanner ay may hindi alinsunod na pagpipilian/pinaganang estado </li>
+<li>Isyu 888: API ng Paghahanap - mga view ng URL ay maaaring magbalik ng hindi inaasahan na mga URL kapag gumamot ng pagbilang ng pahina </li>
+<li>Isyu 889: JSONException habang tinatawag ang isang API na "iba" na wala ang mga kinakailangang parameter(s) </li>
+<li>Isyu 890: Nagpapahintulot na alisin ang tab na "Output" </li>
+<li>Isyu 891: Target build na "generate-javadocs" ay dapat maglapat ng katangian ng SVN mime-type sa lahat ng mga nabuong file </li>
+<li>Isyu 892: Cache ng haba ng laman ng tugon sa HistoryReference ay maaaring hindi wasto </li>
+<li>Isyu 896: PnH: I-flag ang anumang fuzz na mga atake na tumama sa DOM XSS oracle </li>
+<li>Isyu 897: Magdagdag ng isang JToggleButton na nagpapahintulot upang itakda ang teksto ng tool tip batay sa estado ng pindutan </li>
 <li>Issue 898 : Replace all toggle buttons that set a tool tip text based on button's state with ZapToggleButton </li>
 <li>Issue 899 : Remove "manual" update of toggle buttons' icon based on button's state </li>
 <li>Issue 900 : IllegalArgumentException when invoking the main pop up menu with menus or super menus with high menu index </li>
@@ -315,6 +315,7 @@ Many of the release quality active and passive scanning rules have been improved
 <li>Issue 1112 : Change ZAP (core) to support new add-on dir structure </li>
 <li>Issue 1113 : Change add-on dir structure (help and resources) </li>
 <li>Issue 1118 : Alerts Tab can get out of sync</li>
+<li>Issue 1119 : Spider doesn't detect multiple forms on the same URL</li>
 <li>Issue 1120 : Uninstall add-on fails if rules use message bundle in uninstall </li>
 <li>Issue 1121 : Scan progress dialog can cause UI freezes </li>
 <li>Issue 1122 : Add-on additional info </li>

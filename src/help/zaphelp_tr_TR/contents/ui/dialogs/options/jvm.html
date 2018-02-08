@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+JVM seçenekleri Ekranı
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>JVM Seçenekleri Ekranı</h1>
+<p>
+Bu ekran, ZAP başlatılırken kullanılan JVM seçeneklerini yapılandırmanıza izin verir.
+</p>
+
+<h3>JVM Seçenekleri</h3>
+Zap.sh veya zap.bat üzerinden ZAP çağrıldığında Java komut satırı çağrısına eklenecek serbest metin alanı.
+</p>
+<p>
+Seçenek eklendi, böylece maksimum Java belleği ayırma havuzu boyutu ayarlanabilir, 
+şu biçimdeki: - Xmx<i>n</i> nerede <i>n</i> bitler olarak uzunluk belirttiği.<br>
+Bu alan için güzel iyi değerler şöyle olabilirdi:
+<ul>
+<li>-Xmx256m</li>
+<li>-Xmx512m</li>
+<li>Xmx1024m</li>
+</ul>
+<p>
+Diğer ZAP seçeneklerinden farklı olarak bunlar, kullanılan OS'ye bağlı olan kullanıcının varsayılan ZAP dizinindeki ".ZAP_JVM.properties" dosyasında tutulur:
+<ul>
+<li>Windows 7/8: C:\Users\<i>&lt;username&gt;</i>\OWASP ZAP</li>
+<li>Windows XP: C:\Documents and Settings\<i>&lt;username&gt;</i>\OWASP ZAP</li>
+<li>Linux: ~/.ZAP</li>
+<li>Mac OS: ~/Library/Application Support/ZAP</li>
+</ul>
+Eğer bu ayarları kurarken bir hata yaparsanız, ZAP başlamayı başaramayabilir.<br>
+Eğer bu olursa, dosyayı silmek sıkıntıyı çözecektir.
+</p>
+<p>
+ZAP'i Windows exe aracılığıyla başlatırken bu seçeneklerin kullanılmadığını unutmayın.
+</p>
+
+<h2>Ayrıca bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">UI Genel Bakışı</a></td><td>kullanıcı arayüzüne genel bir bakış için</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="options.html">Diyaloglar Seçenekleri</a></td><td>diğer diyalog seçenekleri ekranlarının detayları için</td></tr>
+</table>
+
+<h2>Harici bağlantılar</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html#BABDJJFI">Java 8 seçenekleri</a></td></tr>
+</table>
+
+</body>
+</html>

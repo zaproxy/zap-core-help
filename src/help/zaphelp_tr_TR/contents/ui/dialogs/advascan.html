@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Aktif Tarama iletişim kutusu
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Aktif Tarama iletişim kutusu</h1>
+<p>
+Bu iletişim kutusu aşağıdakileri başlatır <a href="../../start/concepts/ascan.html">aktif tarayıcı</a>.<br>
+  
+<h3>Kapsam</h3>
+İlk sekme, başlangıç noktasını seçmenize veya değiştirmenize izin verir.<br>
+Eğer daha fazlasına sahipseniz <a href="../../start/concepts/scanpolicy.html">tarama ilkeleri</a> o zaman kullanılacak olanı seçebileceksiniz.<br>
+Eğer başlangıç noktası bir veya birden fazla ise <a href="../../start/concepts/contexts.html">İçerikler</a> o zaman içlerinden birini seçebilirsiniz.<br>
+Eğer bağlam hiçbirini içermiyorsa <a href="../../start/concepts/users.html">Kullanıcılar</a> tanımladığınızda bunlardan birini seçebilirsiniz.<br>
+Kullanıcılardan birini seçerseniz, o zaman aktif tarama o kullanıcı olarak gerçekleştirilir ve ZAP (tekrar) bu kullanıcı olarak gerektiğinde kimlik doğrulaması yapar.
+<br><br>
+'Tekrarlamalı'yı seçerseniz, seçilen grubun altındaki tüm düğümler de taranır.<br>
+Özel giriş vektörleri yalnızca bu seçenek seçili değilse desteklenir.
+<br><br>
+'Gelişmiş seçenekleri göster'i seçerseniz, etkin tarama işlemi üzerinde ince tanecik kontrolü sağlayan aşağıdaki sekmeler gösterilir.
+<br><br>
+'Sıfırla' düğmesine tıklamak, tüm seçenekleri varsayılana sıfırlar. 
+
+<h3>Giriş Vektörleri</h3>
+Giriş Vektörleri sekmesi, varsayılan giriş vektörlerini geçersiz kılmanıza izin verir 
+<a href="../../ui/dialogs/options/ascaninput.html">Seçenekler Aktif Tarama Giriş Vektörleri ekranı</a>.<br>
+'Sıfırla' düğmesini tıklamak, giriş vektörlerini varsayılan seçeneklere sıfırlar. 
+
+<h3>Özel Vektörler</h3>
+Özel Vektörler sekmesi saldırı talebine karşı belirli bölgeleri belirtmenize olanak tanır.<br> 
+Özel Vektörler yalnızca ilk sekmedeki 'recurse' seçeneği seçilmezse kullanılabilir.<br>
+Özel giriş vektörleri eklemek için, isteğinize saldırmak istediğiniz karakterleri vurgulayın ve 'Ekle' düğmesini tıklayın.<br>
+İstediğiniz kadar çok sayıda özel giriş vektörü ekleyebilirsiniz.<br>
+Özel giriş vektörlerini kaldırmak için seçili karakterlerden herhangi birini vurgulayın ve 'Kaldır' düğmesini tıklayın.<br>
+'Özel giriş vektörlerini devre dışı bırak' kutusunu işaretleyerek, bu sekmede manuel olarak tanımladığınız giriş vektörleri hariç tüm giriş vektörleri devre dışı bırakırsınız.
+
+<h3>Teknoloji</h3>
+Teknoloji sekmesi hangi teknolojilerin taranacağını belirlemenizi sağlar.<br>
+Hedef uygulamada bulunmayan tanıdığınız teknolojileri seçmemek, taramayı, o teknolojinin bu testleri atlayabileceğini hedefleyen kurallar olarak hızlandırabilir.
+
+<h3>İlke</h3>
+İlke sekmesi seçilen ayarlarda belirtilen ayarların tümünü geçersiz kılmanızı sağlar 
+<a href="../../start/concepts/scanpolicy.html">tarama ilkesi</a>. 
+
+<br><br>
+
+<h2>Şununla erişildi</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/ascan.html">Aktif Tarama sekmesi</a></td><td>'Yeni Tarama' butonu</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tlmenu/tools.html">Yukarı seviye Araçlar menüsü</a></td><td>'Aktif Tarama...' menu öğesi</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/sites.html">Siteler sekmesi</a></td><td>'Atak / Aktif Tarama... sağ tıklama menü öğesi</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/history.html">Geçmiş sekmesi</a></td><td>'Atak / Aktif Tarama...' sağ tıklama menü öğesi</td></tr>
+</table>
+
+<h2>Ayrıca bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../overview.html">Kullanıcı Arayüzüne Genel Bakış</a></td><td>kullanıcı arayüzüne genel bakış için</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="dialogs.html">İletişim kutuları</a></td><td>iletişim kutularının ve açılır pencerelerin detayları için </td></tr>
+</table>
+
+</body>
+</html>

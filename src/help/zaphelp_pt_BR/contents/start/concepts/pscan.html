@@ -9,15 +9,15 @@ Varredura Passiva
 <body bgcolor="#ffffff">
 <h1>Varredura Passiva</h1>
 <p>
-O ZAP faz varredura passiva de todas as respostas do aplicativos da web que está sendo testado. <br/> A Varredura passiva não altera as respostas de forma alguma e, portanto, é segura para uso. <br/> A varredura é executada em um thread de segundo plano, para garantir que ele não retarde a exploração de um aplicativo.
+O ZAP verifica passivamente, por padrão, todas as mensagens HTTP (pedidos e respostas), enviadas para o aplicativo da web que está sendo testado. <br/> Varredura passiva não altera os pedidos, nem as respostas de forma alguma e, portanto, é seguro para uso. <br/> A varredura é executada em um thread de segundo plano para garantir que isso não diminua a exploração de um aplicativo.
 </p>
 <p>
-Nesta versão a varredura passiva é usada para automaticamente adicionar <a href="tags.html">tags</a> e criar <a href="alerts.html">alertas</a> para potenciais problemas. 
+O comportamento (principal) do scanner passivo pode ser configurado usando a <a href="../../ui/dialogs/options/pscanner.html">Tela de opções de Scanner passivo</a>.
+</p>
+<p>
+Varredura passiva também pode ser usada para automaticamente adicionar <a href="tags.html">tags</a> e criar <a href="alerts.html">alertas</a> para potenciais problemas. <br>Um conjunto de regras para a marcação automática é fornecida por padrão. Elas podem ser alteradas, excluídas ou adicionadas através da <a href="../../ui/dialogs/options/pscan.html">tela de opções de Tags de varredura passiva</a>.
 </p>
 
-<p>
-Um conjunto de regras para a marcação automática é fornecido por padrão. <br>Elas podem ser alteradas, excluídas ou adicionadas ao através da <a href="../../ui/dialogs/options/pscan.html">tela de opções de Tags de varredura passiva</a>.<br/>
-</p>
 <p>
 Os alertas gerados por varredura passiva podem ser configurados usando-se a <a href="../../ui/dialogs/options/pscanrules.html">tela de opções de regras de varredura passiva</a>.<br/>
 </p>

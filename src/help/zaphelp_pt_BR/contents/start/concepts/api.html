@@ -9,27 +9,18 @@ API
 <body bgcolor="#ffffff">
 <h1>API</h1>
 <p>
-O ZAP fornece uma Application Programming Interface (API) que permite a você interagir programaticamente com o ZAP.
+O ZAP fornece uma API (Application Programming Interface) que permite a você interagir programaticamente com ele.
 </p>
 <p>
-The API is available in JSON, HTML and XML formats.<br/>
-A simple web UI which allows you to explore and use the API is available via the URL <a href="http://zap/">http://zap/</a> 
-when you are proxying via ZAP, or via the host and port ZAP is listening on, eg 
-<a href="http://localhost:8080/">http://localhost:8080/</a>.<br/>
+A API está disponível em formatos JSON, HTML e XML. <br/> Uma interface web simples permite que você explore e use a API. Ela está disponível através da URL <a href="http://zap/">http://zap/</a> quando você estiver fazendo proxy através do ZAP, ou através do host e porta ZAP que estiver escutando o ZAP. Por exemplo, <a href="http://localhost:8080/">http://localhost:8080/ /</a>.<br/>
 </p>
 <p>
-If enabled then the API is available to all machines that are able to use ZAP as a proxy.<br/>
-By default ZAP listens only on 'localhost' and so can only be used from the host machine.
+By default only the machine ZAP is running on is able to access the API. You can allow other machines, that are able to use ZAP
+as a proxy, access to the API. The API is configured using the <a href="../../ui/dialogs/options/api.html">Options API screen</a>.
 </p>
 
 <p>
-The API provides access to most of the core ZAP features such as the 
- <a href="ascan.html">active scanner</a> and <a href="spider.html">spider</a>.<br/>
-Future versions of ZAP will increase the functionality available via the APi.
-</p>
-
-<p>
-A API é configurada usando a <a href="../../ui/dialogs/options/api.html">tela de opções de API</a>.
+A API fornece acesso a recursos centrais do ZAP tais como <a href="ascan.html">varredura ativa</a> e <a href="spider.html">spider</a>. <br/> Versões futuras do ZAP vão aumentar a funcionalidade disponível através da APi.
 </p>
 
 

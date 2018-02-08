@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Örümcek Seçenekleri Ekranı</title>
+</head>
+<body bgcolor="#ffffff">
+	<h1>Örümcek Seçenekleri Ekranı</h1>
+	<p>
+		Bu ekran size <a
+			href="../../../start/concepts/spider.html">örümcek</a> seçeneklerini yapılandırma imkanı verir.</p> 
+	<p>Bu seçenekleri değiştirme ve özelleştirmenin çalışan Örümceği de etkileyeceği unutulmamalıdır.
+	</p>
+
+	<h3>Taranacak maksimum derinlik</h3>
+	Parametre, bir sayfanın işlenebilmesi için bulunması gereken tarama işlemindeki maksimum derinliği tanımlar. Bu seviyeden daha derinlerde bulunan kaynaklar örümcek tarafından alınmaz ve ayrıştırılmaz.
+	<p>
+		Derinlik, kaynaklardan başlayarak hesaplanır; örümceğin taraması yalnızca tek bir URL ile başlarsa (örneğin. Örümcek URL'si) derinlik bundan itibaren hesaplanır. Ancak tarama birden fazla kaynakla başlarsa (örneğin. Örümcek Sitesi), kaynak, kaynakların <i>herhangi birine</i> göre derinliği tanımlananlardan daha düşükse işlenir.
+	</p>
+
+	<h3>Kullanılan iplik sayısı</h3>
+	Örümcek çok ipliklidir ve bu sayı tarama sürecinde çalışan maksimum iplik sayısını tanımlayan sayıdır. Bu parametrenin değişmesinin o an devam etmekte olan taramalara hiçbir etkisi yoktur. 
+
+	<h3>Maksimum Süre</h3>
+	Örümceğin çalışması gereken maksimum süre, dakika cinsinden ölçülmüş olarak. 
+Sıfır (varsayılan) örümceğin bulabileceği bütün bağlantıları bulana dek çalışacağı anlamına gelir. 
+
+	<h3>Tarama için en fazla çocuk</h3>
+	Bu parametre, ağacın her düğümünde taranacak çocuk sayısını sınırlar.<br>
+	Bu, aslında tam olarak aynı kodu; ancak örneğin bir veri tabanından farklı verileri içeren ve çok sayıda 'sayfası' olan, veri odaklı uygulamalar için yararlıdır.<br>
+	Varsayılan olarak bu sıfır olarak ayarlanmıştır; bu, taranan alt düğümlerin sayısına uygulanan herhangi bir sınırlama olmadığı anlamına gelir.
+
+	<h3>Maksimum ayrıştırma boyutu</h3>
+	Bir yanıtın ayrıştırılması gereken maksimum boyutu (bayt cinsinden) tanımlar. Bu örümceğin büyük yanıtları/dosyaları atlamasına izin verir.
+
+	<h3>Daima Kapsanan Alanlar</h3>
+	Örümceğin, kapsamındaki alan adlarını, dize ifadelerini veya normal ifadeleri yönetmesine izin verir. Örümceğin normal davranışı, yalnızca taramanın başladığı sayfa ile aynı alanda bulunan kaynakları izlemektir. Ancak, bu seçenek size, tarama işlemi süresince "kapsamda" olarak kabul edilecek birkaç ilave alan tanımlama izni verir. Bu alanlardaki sayfalar tarama sırasında işlenir.
+		
+	<h3>Sorgu parametrelerinin işlenmesi</h3>
+	Tarama esnasında, Örümcek kendi içindeki bir mekanizma zaten ziyaret edilmiş olan sayfaları işaretler, böylece o sayfalar tekrar işleme tabi tutulmaz. Bu kontrol yapıldığında URI parametrelerinin işlenme şekli bu seçenek kullanılarak ayarlanır. Kullanılabilecek 3 seçenek vardır:
+	<ul>
+	<li><b>Parametreleri tamamıyla yoksay</b> - eğer www.example.org/?bar=456 ziyaret edildiyse, o zaman www.example.org/?foo=123 ziyaret edilmeyecek</li>
+	<li><b>Parametrenin sadece ismini göz önüne al</b> (parametrenin değerini yok say) eğer www.example.org/?foo=123 ziyaret edildiyse, o zaman www.example.org/?foo=456 ziyaret edilmeyecek, ancak www.example.org/?bar=789 ya da www.example.org/?foo=456&amp;bar=123 ziyaret edilecek</li>
+	<li><b>Parametrenin değerini de ismini de göz önüne al</b> - eğer www.example.org/?123 ziyaret edildiyse, farklı olan diğer her türlü url (örneğin,www.example.org/?foo=456 or 
+	www.example.org/?bar=abc) ziyaret edilecek</li>
+	</ul>
+
+	<h3>"Yönlendirici" başlığı gönder</h3>
+	Örümcek istekleri "Yönlendirici" başlığı ile gönderilmelidir.
+
+	<h3>Çerezleri Kabul Et</h3>
+	Örümcek taramaları, örümcekleme işlemi sırasında çerezleri kabul etmelidir. Etkinleştirildiğinde Örümcek, sunucudan alınan çerezleri düzgün bir şekilde işleyecek ve bunları buna göre geri gönderecektir.
+	Seçenek devre dışı bırakılırsa, Örümcek istekleri içerisinde çerez göndermez. Örneğin Örümcek, örümcekleme taraması boyunca ayni oturumu kullanıp kullanmayacağını kontrol edebilir.
+	<br>Çerezleri kabul ederken çerezler örümcek taramaları arasında paylaşılmaz, her taramanın kendi çerez kavanozu vardır.
+	<br>Bu seçeneğin önceliği düşüktür, Örümcek HTTP durumuyla ilgili diğer (genel) seçeneklere saygı gösterir. Bu seçenek görmezden gelinir, eğer, örneğin seçenek
+	<a href="../../tlmenu/edit.html">Oturum takibini Etkinleştir (Çerez)</a> etkinse, örümcekleme yapan bir <a href="../../../start/concepts/users.html">Kullanıcı</a> ya da
+	<a href="../../../start/concepts/httpsessions.html">HTTP oturumu</a> etkin durumda ise.
+
+	<h3>Süreç formları</h3>
+	Tarama işlemi sırasında, örümcek HTML formlarıyla karşılaştığında sergileyeceği tavrı bu seçenek tanımlar. Devre dışı bırakılırsa, HTML formları hiç işlenmeyecektir. Eğer etkinleştirilirse, HTTP GET olarak tanımlanan yöntemle HTML formları bazı oluşturulan değerlerle birlikte gönderilir. HTTP POST olarak tanımlanan yöntemle formlarla karşılaşırken davranış, bir sonraki seçenek tarafından yapılandırılır.
+
+	<h3>POST formları</h3>
+	Bir önceki paragrafta kısaca anlatıldığı gibi (Process Forms), bu seçenek örümceğin davranışını aşağıdaki gibi yapılandırır
+	<i>Süreç Formları</i> etkinleştirildiğinde ve POST uygulanması gereken HTML formlarıyla karşılaşıldığında.
+
+	<h3>HTML Yorumlarının Ayrıştırılması</h3>
+	Bu seçenek, örümcekin kaynaklara olan bağlantıları arayan HTML açıklamalarını da örümcek mi olup olmadığını tanımlar. Yalnızca yorumlanan geçerli HTML etiketlerinde bulunan kaynaklar işlenecektir.
+
+	<h3>'robots.txt' dosyasını çözümle</h3>
+	Bu seçenek, örümceğin web sitelerinde bulunan robots.txt dosyalarının örümcek olup olmadığını, kaynakları yönlendiren kaynakların araştırılıp araştırılmamasını belirler.
+	Bu seçenek, örümceğin robots.txt dosyası tarafından verilen kurallara uyup uymamasını tanımlamaz.
+
+	<h3>OData'ya özgü parametreleri işle</h3>
+	Bu seçenekler, Örümcek'in, "Sorgu parametreleri işleme" seçeneği tarafından tanımlanan kurala uygun olarak onları işlemek için OData'ya özgü parametreleri (yani, kaynak tanımlayıcıları) algılamaya çalışıp çalışmamasını belirtir.
+
+	<h2>Ayrıca bakınız</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../overview.html">UI genel bakış</a></td>
+			<td>kullanıcı arayüzüne genel bir bakış için</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../../start/concepts/spider.html">Örümcek</a></td>
+			<td>örümceğe genel bir bakış için</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../../ui/tabs/spider.html">Örümcek Sekmesi</a></td>
+			<td>örümcek sekmesine genel bir bakış için</td>
+		</tr>
+	</table>
+
+</body>
+</html>

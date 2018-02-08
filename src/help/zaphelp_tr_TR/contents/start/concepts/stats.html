@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+İstatistikler
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>İstatistikler</h1>
+<p>
+ZAP, büyük uygulamalarla etkileşimde bulunulduğunda, gerçekte neler olduğunu anlamanıza yardımcı olabilecek istatistikleri korur.
+</p>
+<p>
+İstatistikler <a href="api.html">API</a> aracılığıyla kullanılmaya uygun ve ayrıca aşağıdaki durumlarda bir Statsd sunucusuna da gönderilebilir:
+<a href="../../ui/dialogs/options/stats.html">Seçenek İstatistikleri ekranı</a>nda yapılanmış.
+</p>
+
+<h3>Site tabanlı istatistikler</h3>
+İstatistikler, site bazında tutulmuştur:
+<ul>
+<li>response codes, eg:
+	<ul>
+	<li>stats.code.200</li>
+	<li>stats.code.302</li>
+	</ul></li>
+<li>ms cinsinden yanıt süreleri (bir logaritmik ölçek kullanarak), örneğin:
+	<ul>
+	<li>stats.responseTime.1</li>
+	<li>stats.responseTime.2</li>
+	<li>stats.responseTime.4</li>
+	<li>stats.responseTime.8</li>
+	<li>stats.responseTime.16</li>
+	</ul></li>
+<li>içerik türleri, örnek:
+	<ul>
+	<li>stats.contentType.text/css</li>
+	<li>stats.contentType.text/html;charset=utf-8</li>
+	</ul></li>
+<li><a href="tags.html">etiketler</a>Örneğin:
+	<ul>
+	<li>stats.tag.Password</li>
+	<li>stats.tag.Hidden</li>
+	</ul></li>
+<li>anticsrf üretilen belirteçler:
+	<ul>
+	<li>stats.acsrf.anticsrf</li>
+	</ul></li>
+<li>kimlik doğrulama bilgi:
+	<ul>
+	<li>stats.auth.success (başarılı doğrulama sayısı)</li>
+	<li>stats.auth.failure (başarısız doğrulama sayısı)</li>
+	<li>stats.auth.state.loggedin (çevrimiçi olmuş görünen yanıtların sayısı)
+	<li>stats.auth.state.loggedout (çevrimdışı olmuş görünen yanıtların sayısı)
+	<li>stats.auth.state.noindicator (göstergelerin ayarlandığı oturum açıp kapatmanın olmadığı yanıtların sayısı)
+	<li>(oturum açmış veya göstergeleri içermeyen yanıtların sayısı)
+	</ul></li>
+</ul>
+</p>
+
+<h2>Ayrıca bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">UI Genel Bakış</a></td><td>kullanıcı ara yüzüne genel bakış için</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="concepts.html">Özellikler</a></td><td>ZAP tarafından sağlanmaktadır</td></tr>
+</table>
+
+</body>
+</html>

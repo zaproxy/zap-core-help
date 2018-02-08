@@ -9,115 +9,110 @@ Release 1.3.0
 <body bgcolor="#ffffff">
 <h1>Release 1.3.0</h1>
 <p>
-The following changes were made in this release:
+Ang mga sumusunod na pagbabago ay ginawa para sa release na ito:
 </p>
-<h2>Significant changes:</h2>
+<h2>Mga Mahahalagang pagbabago:</h2>
 
 <h3>Fuzzing</h3>
-Strings in a response can now be fuzzed to try to find vulnerabilities.<br>
-Anti CRSF tokens can be detected and automatically regenerated when fuzzing.<br/>
-This functionality is based on code from the OWASP JBroFuzz project.
+Ang mga string sa isang response ay maari na i-fuzz para subukang hanapin ang mga kahinaan.<br>
+Ang mga Anti CRSF token ay maaring napansin at awtomatikong nagawa sa fuzzing.<br/>
+Ang functionality na ito ay batay sa code mula sa OWASP JBroFuzz na proyekto.
 
 <h3>Dynamic SSL certificates</h3>
-The support for SSL connections was improved and simplified.<br>
-User's can now create their own root certificate and distribute this into their HTTP clients.<br>
-See <a href="../ui/dialogs/options/dynsslcert.html">Option: Dynamic SSL Certificates</a> for more details.  
+Ang suporta para sa SSL na mga koneksyon ay pinabuti at pinadali.<br>
+Ang mga gumagamit ay maaring lumikha ng sarili nilang root certificate at ipamahagi ito sa kanilang mga HTTP client.<br>
+Tingnan sa <a href="../ui/dialogs/options/dynsslcert.html">Option: Dynamic SSL Certificates</a> para sa karagdagang mga detalye.  
 
-<h3>Daemon mode and API</h3>
-Starting ZAP with the "-daemon" command line option will cause it to run in the background in 'headless' mode, 
-meaning that no UI is displayed.<br>
-An initial API has been implemented in XML, JSON and HTML.<br>
-If ZAP is running as a daemon then the API is automatically enabled, otherwise the API must be enabled via the Options API screen.<br>
-The API can be navigated by opening http://zap/ in your browser when proxying via ZAP. 
+<h3>Daemon mode at API</h3>
+Ang pagsisimula ng ZAP na may "-daemon" command line na opsyon ay maging sanhi ng pagtakbo sa background na naka-'headless' mode, ibig sabihin na walang UI na nakikita.<br>
+Ang paunang API ay naipatupad sa XML, JSON at HTML.<br>
+Kung ang ZAP ay tumatakbo bilang isang daemon, ang API ay awtimatikong gumana, kung hindi man ay ang API ay dapat gumana sa pamamagitan ng Options API screen.<br>
+Ang API ay maaring tingnan sa pamamagitan ng pagbukas ng http://zap/ sa iyong browser kung nagsisilbing proxy sa ZAP. 
 
-<h3>Beanshell integration</h3>
-The <a href="http://www.beanshell.org/">BeanShell</a> is an interactive Java shell that can be used to execute BeanShell scripts.<br> 
-These scripts are a simplified form of Java that use many elements from Java syntax, but in a simpler scripting format. <br>
-All Java code is also valid BeanShell code.<br>
-BeanShell integration in OWASP ZAP enables you to write scripts using the ZAP functions and data set.<br> 
-This can be a very powerful feature for analyzing web applications.<br>
+<h3>Integrasyon ng Beanshell</h3>
+Ang <a href="http://www.beanshell.org/">BeanShell</a> ay isang interactive na Java shell na maaring gamitin para patakbuhin ang mga Beanshell script.<br> 
+Ang mga script na ito ay pinasimpleng porma ng Java na gumamit ng maraming elemento mula sa syntax ng Java, ngunit sa mas panisimpleng scripting format. <br>
+Lahat ng Java code ay balido ding Beanshell code.<br>
+Ang integrasyon ng Beanshell sa OWASP ZAP ay nagbibigay-daan sa io na magsulat ng mga script gamit ang mga ZAP function at data set.<br> 
+Ito ay maaring maging isang napakalakas na tampok para sa pagsusuri ng mga web application.<br>
 
 
-<h3>Full internationalisation</h3>
-All display string are now fully internationalised.
+<h3>Buong internationalisation</h3>
+Lahat ng nakikitang string ay lubos na ngayong na-internationalise.
 
-<h3>Localisation</h3>
-Out of the box support for the following languages:
+<h3>Lokalisasyon</h3>
+Suportang out of the box para sa mga sumusunod na wika:
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>English</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ingles</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Brazilian Portuguese</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Chinese</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>French</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>German</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Greek</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Wikang Tsino</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pranses</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Aleman</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Griyego</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Indonesian</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Japanese</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Wikang Hapon</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Polish</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Spanish</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Espanyol</td></tr>
 </table>
 
 
-<h2>Minor changes:</h2>
+<h2>Maliit na mga pagbabago:</h2>
 
 <h3>Hex view</h3>
-The <a href="../ui/tabs/request.html">Request</a>, <a href="../ui/tabs/response.html">Response</a> tabs now provide
-a 'Hex View' option which will display the request and response bodies in hex format. 
+Ang <a href="../ui/tabs/request.html">Request</a>, <a href="../ui/tabs/response.html">Response</a> tabs ay nagbibigay ng opsyong 'Hex View' na magpapakita ng request at response bodies sa hex format. 
 
-<h3>Search results</h3>
-The <a href="../ui/tabs/search.html">Search tab </a> now displays all instances of a string found rather than just the first instance
-in each request or response. 
+<h3>Resulta ng paghahanap</h3>
+Ang <a href="../ui/tabs/search.html">Tab ng paghahanap </a> ay nagpapakita ng lahat ng mga instance sa isang string natagpuan sa halip na ang unang instance lamang sa bawat request o response. 
 
-<h3>Exclude URLs</h3>
-URLs can be explicitly excluded from the active scanner, spider and from the proxy.
+<h3>Ibukod ang mga URL</h3>
+Ang mga URL ay maaring ibukod mula sa aktibong scanner, spider at mula sa proxy.
 
-<h3>Copy support</h3>
-Most of the panels now provide a 'right click' 'Copy' menu option, including the Port Scan and Brute Force panels.
+<h3>Suporta sa Pagkopya</h3>
+Karamihan sa mga panel ay nagbibigay ng 'right click' 'Kopya' na opsyon sa menu, kabilang ang Port Scan at Brute Force na mga panel.
 
-<h3>Undo/Redo support</h3>
-All of the input fields now support Undo/Redo actions using the operating systems default Undo/Redo accelerators:
+<h3>Suporta sa Undo/Redo</h3>
+Lahat ng mga input field ay sumusuporta ng Undo/Redo na mga aksyon gamit ang mga default Undo/Redo accelerator ng mga operating system:
 <ul>
 <li>Windows/Linux: Ctrl+Z / Ctrl+Y
 <li>Mac OS X: Cmd+Z / Cmd+Shift+Z
 </ul>
 
-<h3>Port scanner proxy support and timeout option</h3>
-The Port Scanner can now use the outgoing proxy (if configured) and the timeout in milliseconds can also now be set.
+<h3>Suporta ng port scanner proxy at timeout na opsyon</h3>
+Ang Port Scanner ay maaring gamitan sa palabas na proxy (kung nakaayos) at ang timeout na naka-milliseconds ay maari ring i-set.
 
-<h3>Request and response break buttons</h3>
-There are now 2 'Set Break' buttons to allow breaks to be set on all requests and all responses independently. 
+<h3>Mga button ng request at response break</h3>
+Mayroon na ngayong 2 'Set Break' na mga button upang payagan ang mga break na ma-set sa lahat ng mga request at response. 
 
-<h3>Expand Sites and Information tab buttons</h3>
-There are now 2 buttons which allow you to switch between having the Sites and Information tabs expanded.
+<h3>Palawakin nga mga Site at Impormasyon na tab buttons</h3>
+Mayroon na ngayong 2 buttons na nagbibigay-daan sa iyong palitan sa pagitan ng pagkakaroon ng Sites at Impormasyon na mga tabs na pinalawakan.
 
-<h3>Break tab icon changes colour when break point hit</h3>
-While the Break tab is not in use its icon is a grey cross: &nbsp;
+<h3>Break tab icon ay nagbabago ng kulay kapag na-hit ang break point</h3>
+Habang ang Break tab ay hindi ginamit, ang icon nito ay kulay-abong krus: &nbsp;
 <img src="../images/16/101grey.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
-When a <a href="../start/concepts/breakpoints.html">break point</a> is hit the tab icon is changed 
-to a red cross: &nbsp;
+Kapag ang <a href="../start/concepts/breakpoints.html">break point</a> ay na-hit, ang tab icon ay nagbabago sa isang pulang krus: &nbsp;
 <img src="../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
 
-<h3>Adjustable timeout</h3>
-The <a href="../ui/dialogs/options/connection.html">Option: Connection</a> screen allows you to set the timeout in seconds
-to make it easier to test slow applications.
+<h3>Adjustable na timeout</h3>
+Ang <a href="../ui/dialogs/options/connection.html">Option: Connection</a> screen ay nagbibigay-daan sa iyong ma-set ang timeout sa segundo para gawing mas madali ang pagsubok ng mabagal na mga application.
 
-<h3>Library updates</h3>
-Most of the libraries used by ZAP have been updated to the latest versions.
+<h3>Mga Library update</h3>
+Karamihan sa mga library na ginamit ng ZAP ay na-update sa pinakabagong bersyon.
 
-<h3>A new icon :)</h3>
-Thanks to Simon Egli and all others for submitting cool icon suggestions.
+<h3>Isang bagong icon :)</h3>
+Salamat kay Simon Egli at sa lahat ng iba pa sa pagsumite ng mga magandang icon na suhestiyon.
 
-<h2>Known issues:</h2>
-<h3>Mac OS X: Dynamic SSL and Google Chrome</h3>
-Currently Dynamic SSL is not working when using Google Chrome. This is because of an unresolved known issue with Google Chrome and Mac OS X Keychain. When importing OWASP ZAP's Root CA into the keychain and requesting a SSL website, an "Invalid certificate" error message is shown.
+<h2>Mga kilalang Isyu:</h2>
+<h3>Mac OS X: Dynamic SSL at Google Chrome</h3>
+Ang kasalukuyang Dynamic SSL ay hindi gumagana kapag ang gamit ay Google Chrome. Ito ay dahil sa isang hindi nalutas na kilalang isyu sa Google Chrome at Mac OS X Keychain. Kapag nag-aangkat ng OWASP ZAP's Root CA sa keychain at nagri-request ng isang SSL website, ang "Maling certificate" na kamaliang mensahe ay nakikita.
 
-<h2>See also</h2>
+<h2>Tingnan din sa</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<a href="../intro.html">Panimula</a></td><td>ang panimula ng ZAP</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<a href="releases.html">Mga Release</a></td><td>ang buong set ng mga release</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<a href="../credits.html">Credits</a></td><td>mga tao at grupo na ginawang posible ang release na ito</td></tr>
 </table>
 </body>
 </html>

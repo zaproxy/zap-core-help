@@ -21,78 +21,78 @@ Clicar com o botão direito em um nó faz aparecer um menu que lhe permitirá:
 
 <h3>Ataque</h3>
 O menu de ataque tem os seguintes submenus:
-<h4>Varredura Ativa de Site</h4>
-Isto irá iniciar uma 
-<a href="../../start/concepts/ascan.html">Varredura Ativa</a> de todo o site do nó selecionado.<br/>
-A <a href="ascan.html">Aba de varredura ativa</a> vai aparecer e irá mostrar o progresso da varredura.<br/>
 
-<h4>Nó da Varredura ativa</h4>
-Isto irá iniciar uma 
-<a href="../../start/concepts/ascan.html">Varredura Ativa</a> apenas no nó selecionado.<br/>
-A <a href="ascan.html">Aba de Varredura ativa</a> vai aparecer e irá mostrar o progresso da varredura.<br/>
+<h4>Active Scan...</h4>
+This will launch the <a href="../dialogs/advascan.html">Active Scan dialog</a> which allows you to initiate an 
+<a href="../../start/concepts/ascan.html">active scan</a> with the starting point set to the request you selected.<br/>
 
-<h4>Usar o Spider no site</h4>
-Isto irá iniciar uma varredura do 
-<a href="../../start/concepts/spider.html">Spider</a> de todo o site do nó selecionado.<br/>
-A <a href="spider.html">Aba Spider</a> vai aparecer e irá mostrar o progresso da varredura.<br/>
+<h4>Spider...</h4>
+This will launch the <a href="../dialogs/spider.html">Spider dialog</a> which allows you to initiate the 
+<a href="../../start/concepts/spider.html">spider</a> with the starting point set to the request you selected.<br/>
 
 <h3>Incluir no contexto</h3>
-Este menu permite que você inclua os nós selecionados e todos os seus subordinados no
-<a href="../../start/concepts/contexts.html">contexto especificado</a>.<br/>
-Você também tem a opção para criar um novo contexto.<br/>
-Os diálogos de <a href="../dialogs/session/contexts.html">Contextos da sessão</a> serão exibidos para que você possa fazer alterações adicionais.
+This menu allows you to include the selected nodes and all of their subordinates in the specified
+<a href="../../start/concepts/contexts.html">context</a>.<br/>
+You also have the option to create a new context.<br/>
+The <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
+allow you to make any additional changes.
 
 <h3>Excluir do contexto</h3>
-Este menu permite que você exclua os nós selecionados e todos os seus subordinados do
+This menu allows you to exclude the selected nodes and all of their subordinates from the specified
 <a href="../../start/concepts/contexts.html">contexto especificado</a>.<br/>
-O diálogo de <a href="../dialogs/session/contexts.html">Contextos da sessão</a> será exibido para que você possa fazer alterações adicionais.
+The <a href="../dialogs/session/contexts.html">Contextos da sessão</a> dialog will be displayed to
+allow you to make any additional changes.
 
 <h3>Marcar como contexto</h3>
-Este menu tem os seguintes submenus para cada um dos 
-<a href="../../start/concepts/contexts.html">contextos</a> que você definiu:
+This menu has the following submenus for each of the 
+<a href="../../start/concepts/contexts.html">contexts</a> you have defined:
 
-<h4>Solicitação de Login de Autenticação baseado em formulário do <i>Nome do contexto</i></h4>
-Isto identifica o nó especificado como uma solicitação de logon para o contexto especificado.<br/>
-Você pode ter apenas um nó identificado desse jeito em cada contexto.<br/> 
-A tela do diálogo de <a href="../dialogs/session/context-auth.html">Autenticação de contexto de sessão</a> será exibida para que você possa fazer alterações adicionais.
+<h4><i>Context name</i> Form-based Auth Login request</h4>
+This identifies the specified node as a login request for the specified context.<br/>
+You may only have one node identified as such in any one context.<br/> 
+The <a href="../dialogs/session/context-auth.html">Session Context Authentication</a> screen will be displayed to
+allow you to make any additional changes.
 
-<h4>Nó baseado em<i>Nome de contexto</i></h4>
-Isto identifica o nó especificado como <a href="../../start/concepts/ddc.html">Orientado a dados</a> para o contexto especificado.<br/>
-A tela do diálogo de <a href="../dialogs/session/context-struct.html">Estrutura de contexto de sessão</a> será exibida para que você possa fazer alterações adicionais.
+<h4><i>Context name</i> Data driven node</h4>
+This identifies the specified node as <a href="../../start/concepts/ddc.html">Data driven content</a> for the specified context.<br/>
+The <a href="../dialogs/session/context-struct.html">Session Context Structure</a> screen will be displayed to
+allow you to make any additional changes.
 
 <h3>Excluir de</h3>
-Este menu possui os seguintes submenus:
+This menu has the following submenus:
 
 <h4>Proxy</h4>
-Isto irá excluir do proxy os nós selecionados. Eles ainda passarão pelo ZAP, mas não serão exibidos em qualquer uma das guias.<br/>
-Isto pode ser usado para ignorar URLs que você sabe que não são relevantes para o sistema que você está testando.<br/>
-Os nós podem ser incluídos novamente através do diálogo <a href="../dialogs/session/sessprop.html">Propriedades da Sessão</a>     
+This will exclude the selected nodes from the proxy. They will still be proxied via ZAP but will not be shown 
+in any of the tabs.<br/>
+This can be used to ignore URLs that you know are not relevant to the system you are currently testing.<br/>
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
 
 <h4>Scanner</h4>
-Isto irá impedir que os nós selecionados entrem na varredura ativa.<br/>
-Os nós podem ser incluídos novamente através do diálogo <a href="../dialogs/session/sessprop.html">Propriedades da Sessão</a>     
+This will prevent the selected nodes from being actively scanned.<br/>
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
 
 <h4>Spider</h4>
-Isto irá impedir que os nós selecionados sejam percorridos pelo spider.<br/>
-Os nós podem ser incluídos novamente através do diálogo <a href="../dialogs/session/sessprop.html">Propriedades da Sessão</a>     
+This will prevent the selected nodes from being spidered.<br/>
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Propriedades da Sessão</a> dialog   
 
 <h3>Reenviar...</h3>
-Isso irá abrir o
-<a href="../dialogs/resend.html">Diálogo de reenvio</a> que lhe permite reenviar o request depois de fazer quaisquer alterações que você deseje.
+This will bring up the
+<a href="../dialogs/resend.html">Resend dialog</a> which allows you to  
+resend the request after making any changes to it that you want to.
 
 <h3>Novo Alerta...</h3>
-Isso irá abrir o
-<a href="../dialogs/addalert.html">Diálogo Acrescentar Alerta</a> que permite a você registrar manualmente um novo  
-<a href="../../start/concepts/alerts.html">alerta</a> para este request.
+This will bring up the
+<a href="../dialogs/addalert.html">Add Alert dialog</a> which allows you to manually record a new  
+<a href="../../start/concepts/alerts.html">alert</a> against this request.
 
 <h3>Mostrar no guia histórico</h3>
-Isto irá mostrar o nó selecionado na <a href="history.html">Aba de histórico</a>.
+This will show the selected node in the <a href="history.html">History tab</a>.
 
 <h3>Mostrar na Aba de Sites</h3>
-Isto irá mostrar a mensagem selecionada na <a href="sites.html">aba de Sites</a>.
+This will show the selected message in the <a href="sites.html">Sites tab</a>.
 
 <h3>Ver no Navegador</h3>
-Isto irá abrir a URL do nó selecionado em seu navegador padrão.
+This will open the URL of the selected node in your default browser.
 
 <h2>Leia também</h2>
 <table>

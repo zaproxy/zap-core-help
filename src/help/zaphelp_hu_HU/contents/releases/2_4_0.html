@@ -16,49 +16,49 @@ The following changes were made in this release:
 
 <h3>Attack mode</h3>
 
-A new 'ATTACK' <a href="../start/concepts/modes.html">Mód</a> has been added - new nodes that are in <a href="../start/concepts/scope.html">Hatókör</a> van 
-<a href="../start/concepts/ascan.html">actively scanned</a> as soon as they are discovered.
+A new 'ATTACK' <a href="../start/concepts/modes.html">Mód</a> került - új csomópontok, amelyek <a href="../start/concepts/scope.html">Hatókör</a> van 
+<a href="../start/concepts/ascan.html">actively scanned</a> amint ők fedezték fel.
 
 <h3>Advanced fuzzing</h3>
 
-A completely new fuzzing dialog has been introduced that allows multiple injection points to be attacked at the same time.<br> 
-This supports new attack payloads including the option to use scripts for generating the payloads as well as pre and post attack manipulation and analysis.
+Egy teljesen új fuzzing párbeszédablak vezettek be, amely lehetővé teszi, hogy több injekció pontokat, hogy megtámadta egy időben.<br> 
+Ezt támogatja az új támadás csomagot tartalmazzák, beleértve a lehetőséget, hogy használja a forgatókönyveket a termelő a terhekben, valamint előtti, illetve utáni támadás manipuláció, elemzés.
 
-<h3>Scan dialogs with advanced options</h3>
+<h3>Beolvasás párbeszédpanelen a speciális beállítások</h3>
 
-Új <a href="../ui/dialogs/advascan.html">Active Scan</a>, <a href="../ui/dialogs/spider.html">Pók</a> and AJAX Spider dialogs have replaced
-the increasing number of right click 'Attack' options.<br>
-These provide easy access to all of the most common options and optionally a wide range of advanced options. 
+Új <a href="../ui/dialogs/advascan.html">Active Scan</a>, <a href="../ui/dialogs/spider.html">Pók</a> és AJAX Pók párbeszédablakok helyébe
+a növekvő számú kattintson jobb gombbal, 'Támadás' lehetőségek.<br>
+Ezek az egyszerű hozzáférést biztosít a leggyakoribb az opciók lehetőséget, majd opcionálisan széles körű speciális beállítások. 
 
 <h3>Scan Policies</h3>
 
-Egy új <a href="../ui/dialogs/scanpolicymgr.html">Scan Policy Manager dialog</a> allows you to create as many 
+Egy új <a href="../ui/dialogs/scanpolicymgr.html">Vizsgálat Policy-Kezelő párbeszédpanel</a> allows you to create as many 
 <a href="../start/concepts/scanpolicy.html">Scan Policies</a> as you need.<br>
-Scan policies define exactly which rules are run as part of an <a href="../start/concepts/ascan.html">Active Scan</a>.<br>
-They also define how these rules run influencing how many requests are made and how likely potential issues are to be flagged.<br>
+Scan házirendje határozza meg pontosan, hogy mely szabályokat fut részeként egy <a href="../start/concepts/ascan.html">Aktív Szkennelési</a>.<br>
+Azt is meghatározzák, hogy ezek a szabályok távon befolyásoló hány kérelem érkezik meg, hogyan lehetséges problémák vannak jelölve.<br>
 
 <h3>Unused tabs hidden</h3>
 
-By default only the essential tabs are now shown when ZAP starts up.<br>
-The remaining tabs are revealed when they are used (e.g. for the spider and active scanner) or when you display them via the 
-special tab on the far right of each window with the green '+' icon. This special tab disappears if there are no hidden tabs.<br>
-Tabs can be closed via a small 'x' icon which is shown when the tab is selected.<br>
-Tabs can also be 'pinned' using a small 'pin' icon that is also shown when the tab is selected - pinned tabs will be shown
-when ZAP next starts up. 
+Alapértelmezés szerint csak az alapvető fül most jelenik meg, ha ZAP elindul.<br>
+A fennmaradó lapok derül fény, amikor használják (pl. a pók, aktív szkenner), vagy ha a kijelző őket keresztül a 
+speciális fülre a jobb szélen, minden ablak a zöld '+' ikonra. Ez a speciális lap eltűnik, ha nincsenek rejtett lapok.<br>
+A füleket lehet zárt keresztül egy kis " x " ikon, amely akkor jelenik meg, ha a fül van kiválasztva.<br>
+Lapok is lehet 'enek' egy kis 'pin-ikon, amely akkor is megjelenik, amikor a fül van kiválasztva tűzött fülek jelennek meg
+amikor ZAP következő indításakor. 
 
-<h3>Enablers for Sequence scanning add-on</h3>
+<h3>Helyiségek a Sorrend szkennelés add-on</h3>
 
-A new optional 'alpha' quality add-on adds the ability to scan 'sequences' of web pages, in other words pages that must be visited
-in a strict order in order to work correctly. 
+Egy új választható "alpha" minőségi add-on hozzáteszi a képessége, hogy olvasni szekvenciák' a web oldalak, más szóval oldalak kell látogatható
+a szigorú érdekében, hogy megfelelően működnek-e. 
 
-<h3>Enablers for access control testing add-on</h3>
+<h3>Helyiségek a hozzáférést ellenőrző vizsgálat add-on</h3>
 
-A new optional 'alpha' quality add-on adds the ability to automate many aspects of access control testing. 
+Egy új választható "alpha" minőségi kiegészítő növeli a képességet, hogy automatizálják sok szempontból a hozzáférést ellenőrző vizsgálat. 
 
-<h3>Note for API Users</h3>
-Please be aware that the Plugin ID for the External Redirect scanner has changed from 30000 to 20019.
+<h3>Megjegyzés API Felhasználók</h3>
+Kérjük, vegye figyelembe, hogy a Plugin ID Külső Átirányítás szkenner megváltozott 30000 20019.
 
-<h2>Full list of changes:</h2>
+<h2>A teljes lista a változásokról:</h2>
 <ul>
 <li>Issue 117 : Enhancement: Compare crawling sessions for authentication issues</li>
 <li>Issue 234 : Support for fuzzing multiple parts</li>
@@ -74,6 +74,7 @@ Please be aware that the Plugin ID for the External Redirect scanner has changed
 <li>Issue 883 : Support multiple scans in the API</li>
 <li>Issue 949 : Spider (site) does not follow hyperlinks in JSON documents</li>
 <li>Issue 959 : add-on updater might ignore outbound proxy changes</li>
+<li>Issue 984 : Enhance ascan API to allow method to be specified</li>
 <li>Issue 990 : Allow to delete alerts through the API</li>
 <li>Issue 1151 : Active Scan in Scope finishes before scanning all messages in scope if multiple domains available</li>
 <li>Issue 1154 : Tool tip text "Show tab names and tab icons"  IdealFirstBug</li>
@@ -183,6 +184,8 @@ Please be aware that the Plugin ID for the External Redirect scanner has changed
 <li>Issue 1420 : Change spider's URLCanonicalizer to skip URIs without authority</li>
 <li>Issue 1427 : Standardize on [Cancel] [OK] button order</li>
 <li>Issue 1433 : Spider Select target not selected automatically</li>
+<li>Issue 1439 : button to show/hide only context/scoped sites in site tab</li>
+<li>Issue 1445 : Session Properties shows Context ID not Context Name</li>
 <li>Issue 1446 : Downloaded addons failure not handled correctly.</li>
 <li>Issue 1447 : Update RSyntaxTextArea library</li>
 <li>Issue 1449 : Resend / Manual Request help out of date</li>
@@ -245,7 +248,7 @@ Please be aware that the Plugin ID for the External Redirect scanner has changed
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<a href="releases.html">Releases</a></td><td>a teljes készlet kiadások</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../credits.html">Készítők</a></td><td>the people and groups who have made this release possible</td></tr>
 </table>

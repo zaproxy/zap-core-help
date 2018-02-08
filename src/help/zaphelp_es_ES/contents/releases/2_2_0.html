@@ -9,90 +9,90 @@
 <body bgcolor="#ffffff">
 <h1>Release 2.2.0</h1>
 <p>
-The following changes were made in this release:
+Se hicieron los siguientes cambios en esta versión:
 </p>
 
-<h2>Major changes:</h2>
+<h2>Cambios menores:</h2>
 
-<h3>Issue 717 : Scripts: support multiple scripts and embedding within ZAP components</h3>
-<h3>Support for Mozilla Zest: https://developer.mozilla.org/en-US/docs/Zest</h3>
-<h3>Support for Mozilla Plug-n-Hack: https://developer.mozilla.org/en-US/docs/Plug-n-Hack</h3>
-<h3>Support for scanning headers as well as JSON and XML formats</h3>
+<h3>Problema 717: Scripts: admite varios scripts e incrustaciones en los componentes de ZAP</h3>
+<h3>Soporte para Mozilla Zest: https://developer.mozilla.org/en-US/docs/Zest</h3>
+<h3>Soporte para Mozilla Zest: https://developer.mozilla.org/en-US/docs/Zest</h3>
+<h3>Soporte para escanear encabezados, así como formatos JSON y XML</h3>
 
-<h2>Minor changes:</h2>
+<h2>Cambios menores:</h2>
 
-<h3>Issue 711 : Support scanning of XML requests</h3>
-<h3>Issue 713 : Add CWE and WASC numbers to issues</h3>
-<h3>Issue 719 : Custom http break points with more options</h3>
-<h3>Issue 738 : Options to hide tabs / windows</h3>
-<h3>Issue 750 : Upgrade script console to support non textbased scripting languages</h3>
-<h3>Issue 752 : Create a new root CA when first run</h3>
-<h3>Issue 775 : Allow host to be set via the command line</h3>
+<h3>Problema 711: Soporte de escaneo de solicitudes XML</h3>
+<h3>Problema 713: Agregue números CWE y WASC a problemas</h3>
+<h3>Problema 719: puntos de interrupción de http personalizados con más opciones</h3>
+<h3>Problema 738: Opciones para ocultar pestañas / ventanas</h3>
+<h3>Problema 750: consola de script de actualización para admitir lenguajes de scripting no basados ​​en texto</h3>
+<h3>Problema 752: cree una nueva CA raíz cuando ejecute por primera vez</h3>
+<h3>Problema 775: permitir que el host se configure a través de la línea de comando</h3>
 
 
-<h2>Bug Fixes:</h2>
+<h2>Corrección de error:</h2>
 
-<h3>Issue 555 : Http panels default to hex view</h3>
-<h3>Issue 599 : The save session api does not allow to overwrite session already has same name</h3>
-<h3>Issue 630 : URLCanonicalizer.getCanonicalURL produces URIs "half" decoded</h3>
-<h3>Issue 631 : URLCanonicalizer.buildCleanedParametersURIRepresentation returns URIs in percent-encoded form and decoded</h3>
-<h3>Issue 652 : Shutdown after a big scan takes too long (deleting ascan records)</h3>
-<h3>Issue 655 : API encoding issues</h3>
+<h3>Problema 555: paneles Http predeterminados a vista hexadecimal</h3>
+<h3>Problema 599: la api de guardar sesión no permite sobrescribir la sesión que ya tiene el mismo nombre</h3>
+<h3>Problema 630: URLCanonicalizer.getCanonicalURL produce decodificadores "mitad" de URI decodificados</h3>
+<h3>Problema 631: URLCanonicalizer.buildCleanedParametersURIRepresentation devuelve URI en forma de porcentaje codificado y decodificado</h3>
+<h3>Problema 652: el apagado después de un análisis grande lleva demasiado tiempo (borrar registros de ascan)</h3>
+<h3>Problema 655: problemas de codificación de API</h3>
 <h3>Issue 665 : NullPointerException while proxying with a URI with an empty path component</h3>
-<h3>Issue 666 : JSONException while calling an API action without the required parameter(s)</h3>
-<h3>Issue 669 : Certificate algorithm constraints in Java 1.7</h3>
-<h3>Issue 674 : Add HttpSessionAPI to ApiGeneratorUtils</h3>
-<h3>Issue 685 : Add dummy file to "fuzzers" directory</h3>
-<h3>Issue 686 : Log HttpException (as error) in the ProxyThread</h3>
-<h3>Issue 687 : Change HTTP response header parser to be less strict</h3>
-<h3>Issue 690 : Context Authentication URLs don't fail manual overwriting.</h3>
-<h3>Issue 691 : Handle old plugins</h3>
-<h3>Issue 692 : Report the version of java found by zap.sh</h3>
-<h3>Issue 693 : Command line should show all options</h3>
-<h3>Issue 694 : API UI fails on IE</h3>
-<h3>Issue 695 : Sites tree doesnt clear on new session created by API</h3>
-<h3>Issue 696 : Change "Ajax Spider" add-on options to use ZapNumberSpinner</h3>
+<h3>Problema 666: JSONException al llamar a una acción API sin los parámetros necesarios</h3>
+<h3>Problema 669: restricciones de algoritmo de certificado en Java 1.7</h3>
+<h3>Problema 674: agregue HttpSessionAPI a ApiGeneratorUtils</h3>
+<h3>Problema 685: Agregue el archivo ficticio al directorio "fuzzers"</h3>
+<h3>Problema 686: Log HttpException (como error) en ProxyThread</h3>
+<h3>Problema 687: Cambiar el analizador de encabezado de respuesta HTTP para que sea menos estricto</h3>
+<h3>Problema 690: las URL de autenticación de contexto no fallan la sobrescritura manual.</h3>
+<h3>Problema 691: gestionar complementos antiguos</h3>
+<h3>Problema 692: informa la versión de java encontrada por zap.sh</h3>
+<h3>Problema 693: la línea de comando debería mostrar todas las opciones</h3>
+<h3>Problema 694: API UI falla en IE</h3>
+<h3>Problema 695: El árbol de sitios no borra la nueva sesión creada por la API</h3>
+<h3>Problema 696: cambie las opciones de complemento "Ajax Spider" para usar ZapNumberSpinner</h3>
 <h3>Issue 697 : API action "proxy.pac" might return wrong domain/port</h3>
-<h3>Issue 698 : Passive Scanner API view "recordsToScan" returns -1 after finish scanning the messages</h3>
-<h3>Issue 699 : Fix HTML errors in the help pages</h3>
-<h3>Issue 702 : Do not load newer add-on versions if they are not targeted for the running ZAP version</h3>
-<h3>Issue 703 : Add-on ZAP version constraints "not-before-version" and "not-from-version" are not respected for already "installed" add-ons</h3>
-<h3>Issue 706 : ZAP API doesn't parse correctly query parameters with "&amp;" characters</h3>
-<h3>Issue 710 : URLCanonicalizer.getCanonicalURL fails to correctly parse query parameters with "&amp;" and "=" characters</h3>
-<h3>Issue 712 : HttpSessions API action "setSessionTokenValue" should add the session token name to the site's session tokens</h3>
-<h3>Issue 720 : Cannot send non standard http methods</h3>
-<h3>Issue 721 : Non POST and PUT requests receive a 504 when server expects a request body</h3>
-<h3>Issue 724 : Do not clone the alert's message that will be shown in message panels</h3>
-<h3>Issue 725 : Clear alert's panel fields</h3>
-<h3>Issue 726 : Catch active scanner variants' exceptions</h3>
-<h3>Issue 727 : Name of automatically created HTTP sessions is always in English</h3>
-<h3>Issue 728 : Allow to create a session with a given name through the HttpSessions API</h3>
-<h3>Issue 729 : Update NTLM authentication code</h3>
-<h3>Issue 730 : MissingResourceException while selecting a disabled extension (from an add-on) in the "Extensions" options panel</h3>
-<h3>Issue 731 : MissingResourceException with ExtensionFuzz enabled and ExtensionBruteForce disabled</h3>
-<h3>Issue 736 : Change add-on class loading strategy to parent-last</h3>
-<h3>Issue 737 : Restore "Ajax spider" add-on dependencies</h3>
-<h3>Issue 756 : Allow Context Panels intercommunication</h3>
-<h3>Issue 763 : XML report empty when used in daemon mode</h3>
-<h3>Issue 764 : HTTP fuzz results dont support right click menus</h3>
-<h3>Issue 766 : Searching fuzz results doesnt include the header</h3>
-<h3>Issue 767 : HTTP Session API could be less strict</h3>
-<h3>Issue 772 : Restructuring of Saving/Loading Context Data</h3>
-<h3>Issue 774 : Build doesnt include scripts directory</h3>
-<h3>Issue 776 : Allow add-ons to warn user if they're closing ZAP with unsaved resources open</h3>
-<h3>Issue 777 : Unable to cancel changes when using Include in/Exclude from Context</h3>
-<h3>Issue 782 : NoSuchMethodError when excluding a WebSocket channel URL from context</h3>
-<h3>Issue 785 : Change zap.sh to cope with Java 1.8</h3>
-<h3>Issue 786 : Snapshot session menu item not working</h3>
+<h3>Problema 698: La vista de la API del analizador pasivo "recordsToScan" devuelve -1 después de terminar de escanear los mensajes</h3>
+<h3>Problema 699: corregir errores HTML en las páginas de ayuda</h3>
+<h3>Problema 702: No cargue versiones de complemento más nuevas si no están destinadas a la versión ZAP en ejecución.</h3>
+<h3>Problema 703: Add-on ZAP restricciones "not-before-version" y "not-from-version" no son respetados por complementos ya "instalados"</h3>
+<h3>Número 706: ZAP API no analizar correctamente los parámetros de la consulta con "&amp;" caracteres</h3>
+<h3>Problema 710: URLCanonicalizer.getCanonicalURL no puede analizar correctamente los parámetros de consulta con "& amp;" y "=" caracteres</h3>
+<h3>Problema 712: La acción de la API de HttpSessions "setSessionTokenValue" debe agregar el nombre del token de sesión a los tokens de sesión del sitio</h3>
+<h3>Problema 720: No se pueden enviar métodos http no estándar</h3>
+<h3>Edición 721: Solicitudes POST no y poner reciban un 504 al servidor espera un cuerpo de la solicitud</h3>
+<h3>Número 724: No clonar mensaje de alerta que aparecerá en los paneles de mensaje</h3>
+<h3>Número 725: Limpiar los campos de panel de alarma</h3>
+<h3>Número 726: Captura excepciones de variantes scanner activo</h3>
+<h3>: 727 nombre de sesiones HTTP creadas automáticamente se trata siempre en inglés</h3>
+<h3>Edición 728: Permite crear una sesión con un nombre dado a través de la API de HttpSessions</h3>
+<h3>Edición 729: Actualizar código de autenticación de NTLM</h3>
+<h3>Edición 730: MissingResourceException al seleccionar una extensión de movilidad (de un Add-on) en el panel de opciones de "Extensiones"</h3>
+<h3>Edición 731: MissingResourceException con ExtensionFuzz activado y desactivado ExtensionBruteForce</h3>
+<h3>Edición 736: Cambiar clase de complemento carga estrategia para padres-último</h3>
+<h3>Edición 737: Restaurar las dependencias de Add-on de "Ajax spider"</h3>
+<h3>Número 756: Permite intercomunicación contexto paneles</h3>
+<h3>: 763 XML informe vacía cuando se usa en modo demonio</h3>
+<h3>Edición 764: HTTP fuzz resultados no admiten menús de clic derecho</h3>
+<h3>Edición 766: Busca resultados de pelusa no incluye el encabezado</h3>
+<h3>Problema de 767: Sesión HTTP API podría ser menos estricto</h3>
+<h3>Número 772: Reestructuración de los datos de contexto de ahorro/carga</h3>
+<h3>Número 774: Construcción no incluye el directorio de secuencias de comandos</h3>
+<h3>Número 776: Permitir complementos a usuario si estás cerrando ZAP con abierto sin guardar recursos</h3>
+<h3>Problema de 777: No se puede cancelar los cambios cuando usando Include en excluir del contexto</h3>
+<h3>Número 782: NoSuchMethodError al excluir a un enlace de canal de WebSocket de contexto</h3>
+<h3>Número 785: Cambiar zap.sh para hacer frente a Java 1.8</h3>
+<h3>Número 786: Instantánea menú de sesión no funciona</h3>
 
 <h2>Vease también</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../intro.html">Introducción</a></td><td>Introducción a ZAP</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="releases.html">Lanzamientos</a></td><td>the full set of releases</td></tr>
+<a href="releases.html">Lanzamientos</a></td><td>el conjunto completo de los comunicados de</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<a href="../credits.html">Créditos</a></td><td>las personas y grupos que han hecho posible esta versión</td></tr>
 </table>
 </body>
 </html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  Release 2.7.0
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Serbest 2.7.0</h1>
+
+bu bir səhv fix və inkişaf versiyası, ən azı java 8 versiyası tələb olunur.
+
+<br><br>
+bəzi vacib hadisələr:
+<ul>
+<li>brauzer başlamaq u mənim olaraq daxil bu proxy əvvəldən yapılandırılan ZAP gələn tarayıcalar başlamaq üçün icazə verir.
+zip və zap kök sertifikatı səbəbiylə sertifikat xəbərdarlıqlarını bilməz.
+</li>
+<li>Zap'ın birden çok Adres/port üzerinde dinleme yapmasına izin ver</li>
+<li>Server Adı Belirtimini dəstəklə
+</li>
+<li>Yenilənən NTLM infrastrukturunun tətbiqi - domenin təsdiqləndiyi halları düzəltdirir və digər serverlər (server) NTLM tətbiqləri ilə birlikdə işləyə bilir. Digər (server) NTLM tətbiqləri</li>
+<li>Bir çox yeni API endpoints - ətraflı məlumat üçün aşağıya baxın</li>
+</ul>
+Bu versiya ilə bağlı bir problem varsa, yeni bir 'kömək / dəstək məlumatı' menyusu
+Bu, siz qaldırdığınız hər hansı bir problemlə əlaqəli zap quruluşu haqqında vacib məlumatları təqdim etməlidir.
+
+
+<h2>aksesuarların</h2>
+<ul>
+<li>Problem 1015: server adı göstəricisini dəstəkləyin
+</li>
+<li>Problem 1313: Spider-ayrıştırılmış cavabla ölçü sərhədini konfiqurasiya üçün icazə
+</li>
+<li>Problem 1604: API vasitəsilə alma prinsipi faylı
+</li>
+<li>Problem 1620: Risk səviyyəsinə görə qruplaşdırılan xəbərdarlıq sayını almaq üçün son nöqtəni əlavə edin</li>
+<li>Problem 1681: Sonuncu sorğuları ilk olaraq yerinə yetirmək üçün "aktiv tarama" düyməsini dəyişin</li>
+<li>Problem 2411: dinamik SSL kök CA sertifikatı müddəti dolmuşsa xəbərdar et
+
+</li>
+<li>Problem 2615: yüksək riskli maddələr göstərmək üçün zap hesabatlarını filtreleme</li>
+<li>Problem 3040: Parametr nişanı məzmununu xaricə köçürmə
+</li>
+<li>Problem 3101: Semantik azad istifadə edərək, uzantıya icazə verin</li>
+<li>Problem 3156:-u mənim zibil toplayıcı olaraq G1 istifadə</li>
+<li>Problem 3253: məzmuna görə ixrac URL'leri</li>
+<li>Problem 3365: inkişaf: əlavə ümumi kənarlaşdırmaq u mənim naxışları</li>
+<li>Problem 3367: Zap API vasitəsilə zap ev yolu ortaya çıxdı
+</li>
+<li>Problem 3374: Daha çox istifadəçi üçün müvafiq sütun genişliklərini qurmaq</li>
+<li>Problem 3381: i18n nüvə davamı adları</li>
+<li>Problem 3387: ESC-nin Soyut Forma Dialoqunu bağlamasına icazə verin</li>
+<li>Problem 3392: Spider tərəfindən göndərilən bütün ismarıcları göstər</li>
+<li>Problem 3395: bir iclas ilə anonim olaraq Spider variantı yüklə
+</li>
+<li>Problem 3398: ümumi skript faylı değişkenlerinin dəyərini artırmaq sərhədi
+
+</li>
+<li>Problem 3404: OWASP CSRF Guard üçün yeni-u mənim CSRF mö'cüzə yüklə</li>
+<li>Problem 3408: variantları sıfırlama əsnasında səhv emal inkişaf
+</li>
+<li>Problem 3443: Zap API vasitəsilə xəbərdarlıq variantları aşkar
+</li>
+<li>Problem 3446: Təkmilləşdirmə: Kontekst menyusundan site xəritəsi ixrac etmək imkanı əlavə etmək</li>
+<li>Problem 3457: "URL" əsas görünüşünü əsas URL-lərə görə filtrelemesine icazə verin
+</li>
+<li>Problem 3460: İnkişaf: istifadəçi interfeysi daxilində log kataloq tapmaqda yardım göstərilməsi</li>
+<li>Problem 3461: inkişaf: brauzer üçün zap kimi bir proxy istifadə etmirsinizsə, API taraması işləmir</li>
+<li>Problem 3476: passiv qaydaları msj növünü seçmək üçün icazə ver
+</li>
+<li>Problem 3481 : UI üzərindən cədvəlləri Xaricə Aktar
+</li>
+<li>Problem  3498: Kiçik inkişaf: Tarixdə axtarış nəticələrində eyni xəttləri dəstəkləmək</li>
+<li>Problem 3500: Birdən çox tabletin idarə edilməsinə icazə verin</li>
+<li>Problem 3508: mümkündürsə, yeni ECMAScript infrastrukturu istifadə edin.
+</li>
+<li>Problem 3514: şəxsiyyətə görə birdən çox mesaj almaq üçün icazə ver
+</li>
+<li>Problem 3521: inkişaf istəyi: passiv darama qaydaları variantları panelinə Filtr yüklə
+</li>
+<li>Problem 3527: güncelleştirme təməl skript faylı Python 3 'ü dəstəkləmək üçün
+</li>
+<li>Problem 3529: Etiketləri pasif qaydalara əlavə etməyə icazə verin</li>
+<li>Problem 3533: əlavə cədvəl vermə düymələri
+</li>
+<li>Problem 3539: inkişaf: yığılmış mesajlar aktiv taramadan əvvəl taranacaq</li>
+<li>Problem 3552: Zap API vasitəsilə mesaj etiketlərinin göstərilməsi</li>
+<li>Issue 3559 : ZAP API option to output report in JSON format</li>
+<li>Issue 3574 : Show the add-on name in Extensions panel</li>
+<li>Issue 3587 : Allow to use system's locale for formatting</li>
+<li>Issue 3594 : ZAP API Ability to specify domains/addresses that API will be served from</li>
+<li>Issue 3595 : Print args and error msg when failed to parse args</li>
+<li>Issue 3599 : Always attack Data Driven Nodes </li>
+<li>Issue 3619 : Show plugin as OFF, in policy panels, if disabled</li>
+<li>Issue 3626 : Allow to delete messages with keyboard shortcut</li>
+<li>Issue 3676 : Enhancement: Delete single Alert using the api</li>
+<li>Issue 3681 : Use number spinner for connection timeout</li>
+<li>Issue 3686 : Allow to select alert's CWE/WASC IDs and Source</li>
+<li>Issue 3688 : Show scanner's ID/name in Alert tab</li>
+<li>Issue 3691 : Modernized and refined HTML reports</li>
+<li>Issue 3700 : Ensure panel with validation errors is visible</li>
+<li>Issue 3714 : Spider - report # of new endpoints discovered</li>
+<li>Issue 3727 : Sites Tree Alpha Sort should ignore HTTP Method</li>
+<li>Issue 3733 : Ascan API - Return alert count for each scanner</li>
+<li>Issue 3739 : Allow to skip pending scanners</li>
+<li>Issue 3765 : Show alert count in Scan Progress dialogue</li>
+<li>Issue 3769 : Add Check for Updates toolbar button</li>
+<li>Issue 3770 : Clear dockerfiles</li>
+<li>Issue 3782 : Add msg and alert count to active scans API view</li>
+<li>Issue 3787 : Added passive scan timeout</li>
+<li>Issue 3793 : Allow to filter Keyboard options panel</li>
+<li>Issue 3808 : added bare docker image file</li>
+<li>Issue 3810 : Add JSON output support to zap-full-scan.py</li>
+<li>Issue 3818 : Change right-click "Resend..." to "Send to Manual Request Editor"</li>
+<li>Issue 3836 : Allow IPv6 loopback address to access the API by default</li>
+<li>Issue 3837 : Add anoncsrf as anticsrf token name</li>
+<li>Issue 3851 : Spider New Scan UI Consistency</li>
+<li>Issue 3871 : Default to checking for updates on start</li>
+<li>Issue 3878 : Support persistent connections in the API</li>
+<li>Issue 3910 : Allow to skip scanners through the API</li>
+<li>Issue 3918 : improved docker file</li>
+<li>Issue 3922 : Refactor target access in docker scripts</li>
+<li>Issue 3931 : Minor Enhancement to Very large response body message</li>
+<li>Issue 3977 : Include spider messages when comparing sessions</li>
+<li>Issue 3983 : Allow ZAP to listen on multiple addresses/ports</li>
+<li>Issue 3992 : Allow to enable code folding in body text views</li>
+<li>Issue 3993 : Added checkbox secure to callback option dialog. </li>
+<li>Issue 4001 : Allow to delete a Context with keyboard shortcut</li>
+<li>Issue 4049 : Allow to delete alerts with keyboard shortcut</li>
+<li>Issue 4053 : AlertViewPanel line wrapping</li>
+<li>Issue 4055 : New splash screen</li>
+<li>Issue 4061 : Update NTLM engine implementation</li>
+<li>Issue 4063 : Validate that -cmd and -daemon are not both set</li>
+<li>Issue 4066 : Improve error message in script API</li>
+</ul>
+
+<h2>Bug fixes:</h2>
+<ul>
+<li>Issue 765 : Ctrl-F key doesnt work on Resend / Manual Request Editor dialogs</li>
+<li>Issue 1222 : False positive: XSS scanning</li>
+<li>Issue 1984 : Alerts API should always return 'evidence' (and all other keys)</li>
+<li>Issue 2375 : Unable to change Mode without main tool bar</li>
+<li>Issue 2496 : ZAP only report the first alert in array</li>
+<li>Issue 2744 : Unable to enable/disable Forced User mode without main tool bar</li>
+<li>Issue 2756 : Class loading deadlock when loading httpsender script from API call and spidering</li>
+<li>Issue 2989 : Redirect history not recorded when resend request</li>
+<li>Issue 3154 : Execution Order for Plugins Displayed in Scan Progress Details, Progress Tab</li>
+<li>Issue 3207 : History tab cleared when session persisted</li>
+<li>Issue 3284 : Accept underscores in hostnames</li>
+<li>Issue 3289 : Proxy excluded URLs still processed by ZAP</li>
+<li>Issue 3350 : wrong comparison of HTTP Messages in queryEquals() method of HttpMessage class</li>
+<li>Issue 3351 : the url disappear when i click it</li>
+<li>Issue 3353 : ZAP API View:contextList method returns a string instead of JSON list</li>
+<li>Issue 3359 : Missing Help details Options Connection screen</li>
+<li>Issue 3363 : Spider Messages View Includes Underused Tags Column</li>
+<li>Issue 3377 : ZAP can no longer load non UTF8 scripts</li>
+<li>Issue 3382 : Fix "internal error" in ScriptAPI</li>
+<li>Issue 3394 : Enable Session Tracking (Cookie) option not persisted</li>
+<li>Issue 3397 : Do not uninstall a file if it no longer exists</li>
+<li>Issue 3411 : Clear cached certs when setting Root CA cert</li>
+<li>Issue 3440 : Log Exception when the provided config file could not be parsed</li>
+<li>Issue 3456 : Bug: Paused Scans Wiped Out when Persisting a Session</li>
+<li>Issue 3459 : Enhancement: Prescan Output is Confusing. Please Clarify.</li>
+<li>Issue 3490 : Poor font rendering on linux</li>
+<li>Issue 3531 : Docker scripts might get stuck on "Records to passive scan" seemingly indefinitely</li>
+<li>Issue 3555 : Changing Session Name, doesn't Update the Window Name</li>
+<li>Issue 3571 : Require extension's dependencies during extension loading</li>
+<li>Issue 3590 : Set installation status to marketplace add-ons</li>
+<li>Issue 3591 : Correctly check for add-on updates on dep calc</li>
+<li>Issue 3620 : Return correct error on missing auth parameters</li>
+<li>Issue 3621 : Sync HistoryReference cache in ExtensionHistory</li>
+<li>Issue 3632 : Do not close session when changing its properties</li>
+<li>Issue 3633 : "Generate Anti-CSRF Test Form" not working</li>
+<li>Issue 3648 : Correct state of adv option in Spider dialogue</li>
+<li>Issue 3667 : Markdown report heading format issue</li>
+<li>Issue 3673 : API: sendHarRequest results in error if redirects are true</li>
+<li>Issue 3675 : Sites tree option Show only URLs in Scope not working</li>
+<li>Issue 3692 : zap-api-scan.py correct path handling</li>
+<li>Issue 3696 : Correct API response for outgoing proxy changes</li>
+<li>Issue 3703 : org.parosproxy.paros.db.DatabaseException: java.sql.SQLException: Can not issue executeUpdate() or executeLargeUpdate() for SELECTs</li>
+<li>Issue 3711 : Session snapshots might "break" running scans</li>
+<li>Issue 3723 : Properly reset Database options panel</li>
+<li>Issue 3748 : Automatically skip dependent scanners</li>
+<li>Issue 3759 : Update version check in zap.sh script for Java 9</li>
+<li>Issue 3771 : Add-on files not updated when running newer ZAP/core version</li>
+<li>Issue 3779 : Can't open the Resend window because of missing font</li>
+<li>Issue 3799 : Declare ExtensionDynSSL as supporting low mem</li>
+<li>Issue 3825 : Show error if failed to active the certificate</li>
+<li>Issue 3827 : mysql NULL value in where in CLAUSE</li>
+<li>Issue 3832 : Errors in Input Vector Templates</li>
+<li>Issue 3849 : Pscanrule Content Type Missing not working with Spider messages</li>
+<li>Issue 3854 : Error whilst using Api - ERROR ExtensionUserManagement - Unable to persist Users</li>
+<li>Issue 3889 : Initialise the source of the Alert always</li>
+<li>Issue 3895 : JSON Input Vector fails if string has quoted chars</li>
+<li>Issue 3907 : Normalise form-based login URL validation/usage</li>
+<li>Issue 3912 : VariantDirectWebRemotingQuery might hang in infinite loop</li>
+<li>Issue 3914 : Use ZapVersions.xml file in Docker images</li>
+<li>Issue 3927 : zap-full-scan on docker tries to reach out to external network</li>
+<li>Issue 3955 : Database too small to handle large login request bodies</li>
+<li>Issue 3965 : Empty Cookie header causes errors</li>
+<li>Issue 3969 : Logged in/out indicators not persisted when cleared</li>
+<li>Issue 4004 : zap.bat should use %USERPROFILE% instead of %HOMEDRIVE%%HOMEPATH%</li>
+<li>Issue 4013 : Sending to the Callback Endpoint while proxying through ZAP logs an error</li>
+<li>Issue 4014 : Issue when attempting to ignore all rules for a URL</li>
+<li>Issue 4028 : Warn when check for updates fails</li>
+<li>Issue 4056 : Use realm as domain for NTLM authentication</li>
+<li>Issue 4065 : Deleting a parent URL in History tab should not delete all child URLs</li>
+</ul>
+
+<h2>ZAP API Breaking Changes:</h2>
+
+<h3>ACTION authentication / setAuthenticationMethod</h3>
+Identifikasiyası növü "formBasedAuthentication" artıq hər zaman kodlaşdırılmış formada giriş URL 'si tələb edəcək
+ Dəyişiklik, 
+açma URL 'si göstərilən olaraq istifadə / göndərilir.
+ Daha əvvəl qismən kodlanmış URL'leri qəbul edir, lakin yenidən kodlanır
+potensial olaraq istifadə olunan / göndərilən fərqli bir URL'ye gətirib çıxarır.
+
+<h3>VIEW context / contextList</h3>
+
+Bu dəyişiklik, əl ilə təhlil / adları dizə ayıklanan istehlakçıları qıracaq. Məlumatların quruluşu 
+çevirilən hər adı düzgün ayırmaq üçün dəyişdirildi:
+
+<blockquote><pre><code>
+{"contextList":["Context 1","Context 2"]}
+</code></pre></blockquote>
+and:
+<blockquote><pre><code>
+&lt;contextList type="list"&gt;
+    &lt;contextName&gt;Context 1&lt;/contextName&gt;
+    &lt;contextName&gt;Context 2&lt;/contextName&gt;
+&lt;/contextList&gt;
+</code></pre></blockquote>
+
+instead of:
+<blockquote><pre><code>
+{"contextList":"[Context 1, Context 2]"}
+</code></pre></blockquote>
+and:
+<blockquote><pre><code>
+&lt;contextList&gt;[Context 1, Context 2]&lt;/contextList&gt;
+</code></pre></blockquote>
+
+<h3>VIEW core / setOptionUseProxyChain</h3>
+Changed to return <code>FAIL</code> if the outgoing proxy was not enabled (because the required address/hostname was not
+previously set), before it would return always <code>OK</code>.
+
+<h2>ZAP API Changed Endpoints:</h2>
+
+<h3>VIEW core / alerts</h3>
+Risk filtrelemek asanlaşdırmaq üçün isteğe bağlı riskId parametr əlavə edildi. RiskId harada məlumat üçün 0 aralığında 
+və 3 yüksək.
+ 
+
+<h3>VIEW core / numberOfAlerts</h3>
+Added optional riskId parameter to facilitate filtering the risk. Where riskId is in the range 0 for Informational 
+and 3 for High. 
+
+<h3>VIEW core / urls</h3>
+Added optional <code>baseurl</code> parameter, to filter the URLs that are returned.
+
+<h3>VIEW ascan / scans</h3>
+Changed to also return the total number of alerts raised and messages sent during each scan.
+
+<h3>VIEW ascan / scanProgress</h3>
+Changed to also return the number of alerts raised by each scanner.
+
+<h2>ZAP API New Endpoints:</h2>
+
+<h3>VIEW core / alertsSummary</h3>
+A new summary view for Alerts which displays counts of Alerts per Risk level. Optionally, filtered by a baseurl value. 
+
+<blockquote><pre><code>
+{"High":0,"Low":132,"Medium":39,"Informational":153}
+</code></pre></blockquote>
+
+<h3>VIEW core / messagesById</h3>
+Gets the HTTP messages with the given IDs.
+
+<h3>VIEW core / messagesHarById</h3>
+Gets the HTTP messages with the given IDs, in HAR format.
+
+<h3>VIEW core / optionAlertOverridesFilePath</h3>
+Gets the path to the file with alert overrides. 
+
+<h3>VIEW core / optionMaximumAlertInstances</h3>
+Gets the maximum number of alert instances to include in a report. 
+
+<h3>VIEW core / optionMergeRelatedAlerts</h3>
+Gets whether or not related alerts will be merged in any reports generated. 
+
+<h3>VIEW core / zapHomePath</h3>
+Gets the path to ZAP's home directory.
+
+<h3>VIEW localProxies / additionalProxies</h3>
+Gets all of the additional proxies that have been configured.
+
+<h3>VIEW spider / optionAcceptCookies</h3>
+Gets whether or not a spider process should accept cookies while spidering.
+
+<h3>ACTION core / deleteAlert</h3>
+Deletes the alert with the given ID.
+
+<h3>ACTION core / setOptionAlertOverridesFilePath</h3>
+Sets (or clears, if empty) the path to the file with alert overrides. 
+
+<h3>ACTION core / setOptionMaximumAlertInstances</h3>
+Sets the maximum number of alert instances to include in a report. A value of zero is treated as unlimited. 
+
+<h3>ACTION core / setOptionMergeRelatedAlerts</h3>
+Sets whether or not related alerts will be merged in any reports generated. 
+
+<h3>ACTION ascan / importScanPolicy</h3>
+Imports a Scan Policy using the given file system path.
+
+<h3>ACTION ascan / skipScanner</h3>
+Skips the scanner using the IDs of the scan and the scanner.
+
+<h3>VIEW localProxies / addAdditionalProxy</h3>
+Adds an new proxy using the details supplied. See the <a href="../ui/dialogs/options/localproxy.html">Options Local Proxies screen</a> for details of the parameters.
+
+<h3>VIEW localProxies / removeAdditionalProxy</h3>
+Removes the additional proxy with the specified address and port.
+
+<h3>ACTION spider / setOptionAcceptCookies</h3>
+Sets whether or not a spider process should accept cookies while spidering.
+
+<h2>Vulnerability Details</h2>
+
+Aşağıdakı təhlükəsizlik açığı, Zap 'in əvvəlki versiya bildirilmişdir.
+<br>
+Etik olaraq bizə problemləri bildirən bütün araşdırmaçılar sayəsində bir çox sayəsində bizim <a href="https://bugcrowd.com/owaspzap">bug bounty program</a>.<br> 
+If you need more details about this vulnerability then please contact us.
+
+<h3>Windows Uninstaller Vulnerable to DLL Hijacking</h3>
+
+2.6.0 üçün zap Windows Uninstaller Windows üzərində hijacking dll üçün savunmasızdır. 
+Bu, indi sabit olan üçüncü partiya installer Install4j bir təhlükəsizlik açığı oldu<br>
+Note that this can only occur if a malicious DLL is already on the path.
+<br><br>
+<b>Credit: Sajeeb Lohani (sml555) of Bulletproof ZDS</b>
+
+
+<h2>See also</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+</table>
+</body>
+</html>

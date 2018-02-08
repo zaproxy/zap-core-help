@@ -3,52 +3,46 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Spider dialog
+Dialog laba laba
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Spider dialog</h1>
+<h1>Dialog laba laba</h1>
 <p>
-This dialog launches the <a href="../../start/concepts/spider.html">spider</a>.<br>
+Dialog ini meluncurkan <a href="../../start/concepts/spider.html">laba laba</a>.<br>
   
-<h2>Scope</h2>
-The first tab allows you to select or change the starting point.<br>
-If the starting point is in one or more <a href="../../start/concepts/contexts.html">Contexts</a> then you will be able to choose one of them.<br>
-If that context has any <a href="../../start/concepts/users.html">Users</a> defined then you will be able to select one of them.<br>
-If you select one of the users then the spider will be performed as that user, with ZAP (re)authenticating as that user whenever necessary.
+<h2>Cakupan</h2>
+Tab pertama memungkinkan anda untuk memilih atau mengubah titik awal.<br>
+Jika titik awal adalah satu atau lebih <a href="../../start/concepts/contexts.html">Konteks</a> maka Anda akan dapat memilih salah satunya.<br>
+Jika konteks itu ada <a href="../../start/concepts/users.html">Pengguna</a> yang ditetapkan maka Anda akan dapat memilih salah satunya.<br>
+Jika anda memilih salah satu dari pengguna maka spider akan dilakukan sebagai pengguna, dengan ZAP (re)otentikasi sebagai user tersebut bila diperlukan.
 <br><br>
-If you select 'recurse' then all of the nodes underneath the one selected will also be used to seed the spider.
+Jika anda memilih 'recurse' maka semua node di bawahnya yang dipilih juga akan digunakan untuk benih laba-laba.
 <br><br>
-If you select 'Spider Subtree Only' the spider will only access resources that are under the starting point (URI).
-When evaluating if a resource is found within the specified subtree, the spider considers only the scheme, host, port, and path components of the URI.
+Jika anda memilih 'Spider Subtree Only' laba-laba hanya akan mengakses sumberdaya yang berada dibawah titik awal (URL).
+Ketika mengevaluasi jika sumber daya ini ditemukan dalam waktu yang telah ditentukan sub, laba-laba hanya mempertimbangkan skema, host, port, dan path komponen dari URI.
 <br><br>
-If you select 'Show advanced options' then the following tab will be shown which provide fine grain control over the spider process.
+Jika anda memilih 'Show advanced options' lalu tab berikut akan ditampilkan yang memberikan butiran halus kontrol atas spider proses.
 <br><br>
-Clicking on the 'Reset' button will reset all of the options to their default values. 
+Mengklik tombol 'reset' akan mengatur ulang semua opsi ke nilai defaultnya. 
 
-<h2>Advanced</h2>
+<h2>Maju</h2>
 
-Most of the parameters on this tab correspond to the same parameters on the <a href="options/spider.html">Options Spider screen</a>.<br>
+Parameter pada tab ini sesuai dengan parameter yang sama di <a href="options/spider.html">Pilihan layar spider</a>.
 
-<h3>Maximum children to crawl</h3>
-This parameter limits the number of children that will be crawled at every node in the tree.<br>
-This is useful for data driven applications that have large numbers of 'pages' that are in fact exactly the same code but 
-containing different data, for example from a database.<br>
-By default this is set to zero which means there are no limits applied to the number of child nodes crawled.
-
-<h2>Accessed via</h2>
+<h2>Diakses via</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/spider.html">Spider tab</a></td><td>'New Scan' button</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/sites.html">Sites tab</a></td><td>'Attack / Spider...' right click menu item</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/history.html">History tab</a></td><td>'Attack / Spider...' right click menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/spider.html">Url laba-laba</a></td><td>Tombol pemindaian baru</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/sites.html">Tab situs</a></td><td>'serangan / laba-laba klik kanan item menu...'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/history.html">Riwayat tab</a></td><td>'serangan / laba-laba klik kanan item menu...'</td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Lihat juga</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../overview.html">Ikhtisar UI</a></td><td>untuk meninjau antar muka pengguna</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+<a href="dialogs.html">Dialog</a></td><td>untuk rincian detail dialog atau popups </td></tr>
 </table>
 
 </body>

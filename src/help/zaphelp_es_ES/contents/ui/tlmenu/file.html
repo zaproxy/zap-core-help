@@ -3,58 +3,63 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-The File menu
+El menú de archivo
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>The File menu</h1>
-This menu handles the current session. By default the following menu items will be present:<br/>
+<h1>El menú Archivo</h1>
+Este menú se encarga de la sesión actual. Por defecto los siguientes elementos del menú estarán presentes:<br/>
 
 <h3>Nueva sesión</h3>
-This creates a new session.<br>
-If you have not saved your current session then a warning will be displayed.<br/>
-Starting a new session without saving the current session will loose all of the data in the current session.
+Esto crea una nueva sesión.<br>
+Si no has guardado la sesión actual se mostrará una advertencia.<br/>
+Iniciar una nueva sesión sin guardar la actual se perderá toda la información de la sesión actual.
 
 <h3>Abrir sesión</h3>
-This opens a session that has been previously saved.<br/>
-Opening a session without saving the current session will loose all of the data in the current session.
+Esto abre una sesión que ha sido previamente guardada.<br/>
+Abrir nueva sesión sin guardar la actual se perderá toda la información de la sesión actual.
 
-<h3>Persist Session...</h3>
-This persists the current session. <br/>
-While the session is always stored in a database on disk, it will be lost when ZAP is stopped unless it has been persisted.<br/>
-You only need to persist it once - after that all changes will be saved.
+<h3>Mantener sesión...</h3>
+Esto mantiene la sesión actual. <br/>
+Mientras que la sesión siembre se almacena en una base de datos en el disco, se perderá cuando ZAP se detenga a menos que haya sido mantenida.<br/>
+Solo se necesita mantener una vez, luego se guardarán todos los cambios.
 
-<h3>Snapshot Session</h3>
-This saves a snapshot of a session that has already been persisted.<br/>
-It will use the same filename with a date-time string appended to it.<br/>
+<h3>Fotos instantánea de sesión como...</h3>
+Esto guarda una instantánea de una sesión que ya se ha mantenido.<br/>
+Sugiere que el mismo nombre del archivo sea el mismo de la sesión mantenida con una cadena de fecha anexado a él, y permite al usuario establecer cualquier nombre que el elija.<br/>
 
-<h3>Propiedades...</h3>
-This displays the <a href="../dialogs/session/sessprop.html">Propiedades de la Sesión</a> dialog.<br/>
-This allows you to set the session name and description.
+<h3>Propiedades de la sesión...</h3>
+Esto muestra el cuadro de diálogo <a href="../dialogs/session/sessprop.html">Propiedades de la Sesión</a> .<br/>
+Esto permite escoger el nombre de la sesión y la descripción.
 
-<h3>Load Add-on file...</h3>
-Load a local <a href="../../start/concepts/addons.html">add-on</a> file.<br/>
-Add-ons are typically installed from via the <a href="../dialogs/manageaddons.html">Manage Add-ons</a> dialog, but this
-option can be useful if you have downloaded an add-on manually or are testing one you have developed yourself.<br/>
-Add-ons remain installed until you manually uninstall them. 
+<h3>Importar contexto...</h3>
+Permite importar un <a href="../../start/concepts/contexts.html">Contexto</a>.
 
-<h3>Exit and delete session...</h3>
-This will exit ZAP and delete the session, even if you have previously persisted it.<br/>
-The session will no longer be accessible when you restart ZAP, although any snapshots you took will still be available.<br/> 
-A warning dialog will be displayed to ensure you really meant to choose this option.
+<h3>Exportar contexto...</h3>
+Permite exportar un Contexto.
 
-<h3>Exit</h3>
-This will exit ZAP.<br/>
-If you have not saved the current session then you will be given the option to do so.
+<h3>Cargar archivo de complemento...</h3>
+Carga un archivo local de <a href="../../start/concepts/addons.html">complemento</a> .<br/>
+Los complementos generalmente se instalan a través del cuadro de diálogo <a href="../dialogs/manageaddons.html">Administrar Complementos</a> , pero esta opción solo es útil si se ha descargado manualmente un complemento o si se está poniendo a prueba uno que haya desarrollado uno mismo.<br/>
+Los complementos se mantienen instalados hasta que se desinstalen manualmente. 
+
+<h3>Salir y Eliminar Sesión...</h3>
+Esto sale de ZAP y elimina la sesión, incluso si ha sido previamente mantenida.<br/>
+La sesión ya no será accesible cuando se reinicie ZAP, aunque cualquier foto instantánea tomada todavía estará disponible.<br/> 
+Un cuadro de diálogo de advertencia se mostrará para asegurar si realmente se quiere elegir esta opción.
+
+<h3>Salir</h3>
+Esto saldrá de ZAP.<br/>
+Si no has guardado la sesión actual entonces se le dará la opción de hacerlo.
 
 <p>
-Note that <a href="../../start/concepts/addons.html">add-ons</a> can add additional menu items.
+Tenga en cuenta que <a href="../../start/concepts/addons.html"> add-ons </a> puede agregar elementos de menú adicionales.
 </p>
 
 <h2>Vease también</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="tlmenu.html">The top level menu</a></td><td></td></tr>
+<a href="tlmenu.html">Menú de nivel superior</a></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../overview.html">UI Overview</a></td><td>Para una vista general sobre la interfaz de usuario</td></tr>
 </table>

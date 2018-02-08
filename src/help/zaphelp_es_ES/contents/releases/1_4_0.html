@@ -3,41 +3,41 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-  Release 1.4.0
+  Versión 1.4.0
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Release 1.4.0</h1>
+<h1>Versión 1.4.0</h1>
 <p>
-The following changes were made in this release:
+Se hicieron los siguientes cambios en esta versión:
 </p>
 
-<h2>Significant changes:</h2>
+<h2>Cambios significativos:</h2>
 
-<h3>Issue 133: Add Syntax highlighting to Response Panel</h3>
+<h3>Tema 133: Añade resaltado de sintaxis para Panel de respuesta</h3>
 
-The HTML panels now support switchable syntax highlighting.
+Los paneles HTML ahora soportan resaltado de sintaxis conmutable.
 
-<h3>Issue 153: fuzzdb integration</h3>
+<h3>Número 153: integración de fuzzdb</h3>
 
-The fuzzer includes fuzzdb (https://github.com/fuzzdb-project/fuzzdb) fuzzing files.<br/>
-Note that some fuzzdb files have been left out as they cause common anti virus scanners to flag them as containing viruses.<br/>
-You can replace them (and upgrade fuzzdb) by downloading the latest version of fuzzdb and expanding it in the 'fuzzers' library.
+El fuzzer incluye fuzzdb (https://github.com/fuzzdb-project/fuzzdb) archivos de fuzzing.<br/>
+Tenga en cuenta que algunos archivos de fuzzdb han quedado ya que común anti antivirus a bandera que contienen virus.<br/>
+Usted puede sustituir (y fuzzdb) por descargar la versión más reciente de fuzzdb y expansión en la biblioteca 'fuzzers'.
 
-<h3>Issue 212: Parameter analysis</h3>
+<h3>Número 212: Análisis del parámetro</h3>
 
-A new Params tab shows a summary of all of the parameters a site has used.  
+Una nueva pestaña de parámetros muestra un resumen de todos los parámetros que se ha utilizado un sitio.  
 
-<h3>Issue 228: Enhanced XSS scanner</h3>
+<h3>Número 228: Escáner XSS mayor</h3>
 
-The Cross Site Scripting active scanner has been rewritten from scratch to find more potential XSS issues and report fewer false positives. 
+El escáner de Cross Site Scripting activo ha sido reescrito desde cero para encontrar más posibles problemas de XSS e informe menos falsos positivos. 
 
-<h3>Issue 244: Port the Watcher passive checks</h3>
+<h3>Número 244: Puerto el vigilante pasivo comprueba</h3>
 
-The following checks have been ported from Watcher (thanks to Chris Weber for oking this):
+Las siguientes comprobaciones han sido portadas de vigilante (gracias a Chris Weber por oking esto):
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.CrossDomain.ScriptReference.cs</td><td>checks for cross-domain javascript files inclusion.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.CacheControl.cs</td><td>checks HTTP cache-control header on SSL pages.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.CrossDomain.ScriptReference.cs</td><td>verifica la inclusión de archivos javascript entre dominios.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.CacheControl.cs</td><td>verifica el encabezado de control de caché HTTP en páginas SSL.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.ContentTypeMissing.cs</td><td>checks that the Content-Type HTTP header is not missing.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.FrameOptions.cs</td><td>checks that the X-FRAME-OPTIONS is not missing or insecurely set.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.IeXssProtection.cs</td><td>checks that the X-XSS-Protection has not been set to disable IE's XSS protection.</td></tr>
@@ -49,138 +49,138 @@ The following checks have been ported from Watcher (thanks to Chris Weber for ok
 </table>
 
 
-<h3>Issue 253: Plugable extensions</h3>
+<h3>Número 253: Extensiones de tarjetas</h3>
 
-Full extensions can now be plugged into ZAP dynamically with full access to all of ZAPs features.
+Toda su extensión puede ahora conectarse a ZAP dinámicamente con acceso completo a todas las características del ZAPs.
 
-<h2>Minor changes:</h2>
+<h2>Cambios menores:</h2>
 
-<h3>Issue 54: Clean shutdown</h3>
+<h3>Tema 54: Cierre correcto</h3>
 
-<h3>Issue 90: Add GUI support for unsecure SSL/TLS renegotiation</h3>
+<h3>Problema 90: Agregar soporte GUI para la renegociación de SSL/TLS insegura</h3>
 
-<h3>Issue 102: Save raw response and request, and save body of response and request</h3>
+<h3>Problema 102: Guardar la solicitud y la respuesta cruda y guardar el cuerpo de la respuesta y solicitud</h3>
 
-<h3>Issue 126: Allow working directory and config file to be set via cmd line</h3>
+<h3>Número 126: Permiten trabajar archivo directorio y configuración a través de línea de cmd</h3>
 
-<h3>Issue 154: Include param id in reports</h3>
+<h3>Número 154: Incluir param id en informes</h3>
 
-<h3>Issue 164: Toolbar config button</h3>
+<h3>Edición 164: Botón de configuración de barra de herramientas</h3>
 
-<h3>Issue 168: Reveal hidden fields in web pages</h3>
+<h3>Edición 168: Revelan campos ocultos en páginas web</h3>
 
-<h3>Issue 192: Enable/Disable breakpoints</h3>
+<h3>Número 192: Puntos de interrupción activar/desactivar</h3>
 
-<h3>Issue 193: Detect directory traversal vulnerabilities</h3>
+<h3>Edición 193: Detectar vulnerabilidad de directory traversal</h3>
 
-<h3>Issue 194: Enhancement: Show request ID on Search pane</h3>
+<h3>Edición 194: Mejora: Mostrar ID de petición en el panel de búsqueda</h3>
 
-<h3>Issue 200: Detect CSRF vulnerabilities</h3>
+<h3>Número 200: Detectar las vulnerabilidades CSRF</h3>
 
-<h3>Issue 230: Enhance zap.sh to cope with symbolic links</h3>
+<h3>Número 230: Mejorar zap.sh para hacer frente con enlaces simbólicos</h3>
 
-<h3>Issue 236: Option to toggle URLencoding</h3>
+<h3>Número 236: Opción para activar URLencoding</h3>
 
-<h3>Issue 242: Export node / req/resp via right click</h3>
+<h3>Número 242: Nodo de exportación / req/resp via click derecho</h3>
 
-<h3>Issue 248: Delete alerts / retest feature request</h3>
+<h3>Número 248: Eliminar alertas / vuelva a probar la petición de característica</h3>
 
-<h3>Issue 251: Restructure alerts code</h3>
+<h3>Número 251: Reestructurar el código de alertas</h3>
 
-<h3>Issue 253: Allow extensions to define dependencies</h3>
+<h3>Número 253: Permitir extensiones definir dependencias</h3>
 
-<h3>Issue 270: Icon changes</h3>
+<h3>Edición 270: Icono cambia</h3>
 
-<h3>Issue 277: Rationalize right click menu items</h3>
+<h3>Número 277: Racionalizar los elementos de menú de clic derecho</h3>
 
-<h3>Issue 279: Core extensions</h3>
+<h3>Número 253: Extensiones de tarjetas</h3>
 
-<h3>Issue 282: Add author, description and URL to extensions</h3>
+<h3>Edición 282: Añadir autor, Descripción y URL para extensiones</h3>
 
-<h2>Bug fixes:</h2>
+<h2>Corrección de error:</h2>
 
-<h3>Issue 42: Arbitrary Redirection</h3>
+<h3>Tema 42: Redirección arbitraria</h3>
 
-<h3>Issue 94: PKCS#11 driver</h3>
+<h3>Problema 94: PKCS #11 controlador</h3>
 
-<h3>Issue 107: The last intercepted request/response remains in the Break window</h3>
+<h3>Tema 107: La última petición/respuesta interceptada permanece en la ventana con rotura de</h3>
 
-<h3>Issue 135: Broken URLs in Sites Panel</h3>
+<h3>Tema 135: Roto las URL en el Panel sitios</h3>
 
-<h3>Issue 148: New HTTP Panel broke the Undo/Redo Manager</h3>
+<h3>Problema 148: El nuevo panel HTTP rompió el administrador de deshacer / rehacer</h3>
 
-<h3>Issue 180: Tabular view for GET request</h3>
+<h3>Problema 180: vista tabular para la solicitud GET</h3>
 
-<h3>Issue 187: Encoding issues</h3>
+<h3>Problema 187: Problemas de codificación</h3>
 
-<h3>Issue 197: Decoder cannot process base64 input without line breaks</h3>
+<h3>Edición 197: Decodificador no puede procesar entrada base64 sin saltos de línea</h3>
 
-<h3>Issue 198: The report is not generated when a "Parameter tampering" alert with "NULL" character exists</h3>
+<h3>Problema 198: el informe no se genera cuando existe una alerta de "alteración de parámetros" con carácter "NULO"</h3>
 
-<h3>Issue 210: Exception thrown when using the "Path Traversal" option in the active scan</h3>
+<h3>Número 210: Al usar la opción "Path Traversal" en la exploración activa de la excepción</h3>
 
-<h3>Issue 223: Exception in "Sites" tab when choosing a popup option, "Delete (from view)" or "Purge (from DB)", when no node tree is selected</h3>
+<h3>Número 223: Excepción en pestaña de "Sites" la hora de elegir una opción emergente, "Delete (from view)" o "Purge (from DB)", cuando no se ha seleccionado ningún árbol de nodo</h3>
 
-<h3>Issue 224: takes too much time to recover from an proxy port number outside valid range</h3>
+<h3>Número 224: toma demasiado tiempo para recuperarse de un número de puerto de proxy fuera de intervalo válido</h3>
 
-<h3>Issue 225: ZAP exits on startup if an option value contains extended characters like å,ä,ö</h3>
+<h3>Número 225: ZAP salidas al inicio si un valor de opción contiene caracteres extendidos como å, ä, ö</h3>
 
-<h3>Issue 226: proxy port number edit box should not allow millions of characters</h3>
+<h3>Edición 226: cuadro de edición número puerto proxy no debe permitir millones de caracteres</h3>
 
-<h3>Issue 227: Tools, Options should go to the same tab as last time</h3>
+<h3>Número 227: Herramientas, opciones de deben ir a la pestaña mismo como la última vez</h3>
 
-<h3>Issue 237: Bug: Problems with HTTP Panels</h3>
+<h3>Número 237: Error: problemas con los paneles de HTTP</h3>
 
-<h3>Issue 238: Exception when using a custom fuzz file</h3>
+<h3>Número 238: Excepción cuando se utiliza un archivo personalizado de pelusa</h3>
 
-<h3>Issue 241: zap.sh Xmx value for stable performance</h3>
+<h3>Número 241: zap.sh valor de Xmx para funcionamiento estable</h3>
 
-<h3>Issue 243: When the DynamicLoader loads from local jar, doesn't take into account the package name</h3>
+<h3>Número 243: El DynamicLoader las cargas del tarro de local, no tienen en cuenta el nombre del paquete</h3>
 
-<h3>Issue 246: Pragma Header requires Cache-Control Header for HTTP/1.1 requests</h3>
+<h3>Número 246: Cabecera Pragma requiere encabezado Cache-Control para las solicitudes de HTTP/1.1</h3>
 
-<h3>Issue 255: Exception in API when due to illegal character in XML context</h3>
+<h3>Número 255: Excepción de API cuando debido al carácter ilegal en contexto XML</h3>
 
-<h3>Issue 256: Calling HttpMessage.setGetParams looses the port</h3>
+<h3>Número 256: Llamar HttpMessage.setGetParams pierde el puerto</h3>
 
-<h3>Issue 260: Exception when deleting ("Purge (from DB)") "History" tab entries</h3>
+<h3>Número 260: Excepción al eliminar las entradas de pestaña ("Purge (from DB) "History"</h3>
 
-<h3>Issue 261: Partial language match not working</h3>
+<h3>Número 261: Lengua parcial partido no funciona</h3>
 
-<h3>Issue 262: "Weak authentication" alerts not showing with spider</h3>
+<h3>Número 262: Alertas de "Autenticación débil" no aparece con araña</h3>
 
-<h3>Issue 263: "Cookie without secure flag" alerts not showing with spider</h3>
+<h3>Número 262: Alertas de "Cookie without secure flag" no aparece con araña</h3>
 
-<h3>Issue 264: Exception in "Manual Request Editor"/"Resend" dialogues</h3>
+<h3>Número 264: Excepción en el "Manual Request Editor"/"Resend" diálogos</h3>
 
-<h3>Issue 268: Change ZAP Report XML</h3>
+<h3>Número 268: Cambiar ZAP Informe XML</h3>
 
-<h3>Issue 269: Spider depth parameter</h3>
+<h3>Edición 269: Parámetro de profundidad araña</h3>
 
-<h3>Issue 274: Tidy up delete / purge options</h3>
+<h3>Tema 274: Orden delete / opciones de purga</h3>
 
-<h3>Issue 280: Escape URLs in sites tree</h3>
+<h3>Número 280: Escape URL en árbol de sitios</h3>
 
-<h3>Issue 283: RFE: Font anti-aliasing not enabled by default in request/response</h3>
+<h3>Número 283: RFE: suavizado de fuente no activado por defecto en la solicitud y respuesta</h3>
 
-<h3>Issue 284: Request/response etc header panels too small</h3>
+<h3>Edición 284: Paneles de cabecera etcetera de solicitud/respuesta demasiado pequeños</h3>
 
-<h3>Issue 286: Search string not highlighted for fuzz results</h3>
+<h3>Número 286: Cadena de búsqueda no destacada resultados de pelusa</h3>
 
-<h3>Issue 287: Passive scanner doesnt pick up new anticsrf tokens</h3>
+<h3>Número 287: Escáner pasivo no recoge nuevas fichas de anticsrf</h3>
 
-<h3>Issue 289: fuzzdb files cause virus alerts</h3>
+<h3>Número 289: archivos de fuzzdb causan alertas de virus</h3>
 
-<h3>Issue 291: Path Traversal has 'param' empty but put the param name in 'attack'</h3>
+<h3>Número 291: Path Traversal tiene 'param' vacía pero puso el nombre de param 'attack'</h3>
 
 <h2>Vease también</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../intro.html">Introducción</a></td><td>Introducción a ZAP</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="releases.html">Lanzamientos</a></td><td>the full set of releases</td></tr>
+<a href="releases.html">Lanzamientos</a></td><td>el conjunto completo de los comunicados de</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<a href="../credits.html">Créditos</a></td><td>las personas y grupos que han hecho posible esta versión</td></tr>
 </table>
 </body>
 </html>

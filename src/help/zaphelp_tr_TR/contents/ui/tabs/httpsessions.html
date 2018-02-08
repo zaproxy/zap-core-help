@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>HTTP Oturumları sekmesi</title>
+</head>
+<body bgcolor="#ffffff">
+	<h1>HTTP Oturumları sekmesi</h1>
+	<p>
+		Bu sekme size,<a href="../../start/concepts/httpsessions.html">HTTP Sessions eklentisi</a>tarafından tespit edilen, her Site için tanımlanmış HTTP oturumlarını gösterir.
+	</p>
+
+	<p>
+		Geçerli Site bilgilerinin değindiği araç çubuğundan veya
+		<a href="sites.html">Siteler sekmesi</a> yolu ile seçilebilir.
+	</p>
+
+	<p>Bu araç çubuğu size ("Yeni Oturum") butonunu sağlar ki bu
+            dışarı giden tüm istek iletilerini oturum belirteci olmadan gitmeye zorlar
+            bu yüzden sunucu bunu yeni bir oturum olarak algılar böylece sizin yeni 
+            bir oturum açmanıza izin verir.
+               Bu eskisini yok etmeden yeni bir oturum yaratılmasına 
+               izin verir.</p>
+
+	<p>Oturumlar masasındaki girilerin her biri (her oturum)
+              başlangıçta üretilen bir isme sahiptir fakat bu, 'İsim' birimi seçilerek
+              değiştirilebilir ve düzenlenebilir.</p>
+
+	<p>Oturumlar masasındaki girilerin her biri sağ tıklanabilir,
+              böylece şu seçeneklerle birlikte açılır menü aktifleşir:</p>
+	<ul>
+		<li>Oturumu Kaldır - oturumu siler</li>
+		<li>Etkin olarak ayarla (sadece etkin olmayan oturumlar üzerinde kullanılabilir) - bu oturumu
+			aktif olarak işaretler. Eğer herhangi bir oturum önceden aktif olarak ayarlanmışsa
+                     bu aktif olarak ayalanmayacak ve eğer bu herhangi bir belirteç
+                     değeri belirlemezse silinir.</li>
+		<li>Aktif olarak ayarlamama (ancak aktif bir oturum üzerinde mümkün) -
+                      bu oturumu bundan sonra aktif olmayan olarak işaretler. Eğer 
+                      oturum herhangi bir belirteç değeri belirlemezse silinir.</li>
+	</ul>
+
+	<i>Etkin oturumla ilgili olarak, <a
+		href="../../start/concepts/httpsessions.html">HTTP Oturum Genişletmesi</a>, genel kavramlar yardım sayfasında daha fazla ayrıntı okunabilir
+	</i>
+	<br />
+
+	<br /> Görebileceğiniz her talep için:
+	<ul>
+		<li>Aktif - Bu aktif bir oturum olsun ya da olmasın</li>
+		<li>İsim - Oturum ismi</li>
+		<li>Session Tokens 'Values - her bir oturum belirteci ile ilişkili değerlerin listesi. Girişler ';' sembolüyle ayrılır.</li>
+		<li>Eşleşmiş Mesajlar - bu oturumdaki uzantıya göre eşleşen
+			HTTP mesajlarının sayısı</li>
+	</ul>
+
+
+	<h2>Ayrıca bakınız</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../overview.html">Kullanıcı Arayüzüne Genel Bakış</a></td>
+			<td>kullanıcı arayüzüne genel bakış için</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../start/concepts/httpsessions.html">HTTP
+					Oturumları Uzantısı</a></td>
+			<td>uzantılara genel bir bakış için</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/options/httpsessions.html">HTTP
+					Oturumları Seçenekler ekranı</a></td>
+			<td>uzantıların Seçeneklerine genel bir bakış için</td>
+		</tr>
+	</table>
+
+</body>
+</html>
+

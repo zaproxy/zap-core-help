@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Geçmiş sekmesi
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Geçmiş sekmesi</h1>
+<p>
+Geçmiş sekmesi, tüm istekleri yapıldığı sırayla gösterir.<br/>
+Görebileceğiniz her talep için:
+
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>Talep indeksi - 1'den başlayarak her talep numaralandırılır</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>HTML metodu, örneğin GET ya da POST</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>İstenen URL</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>HTTP yanıt kodu</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>HTTP yanıt kodunun ne anlama geldiğinin kısa bir özeti</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>Tüm isteğin aldığı süre</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>Talep üzerindeki <a href="../../start/concepts/alerts.html">Uyarılar</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>Talepe eklediğiniz <a href="../../start/concepts/notes.html">Notlar</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td>Talep üzerindeki <a href="../../start/concepts/tags.html">Etiketler</a></td></tr>
+</table>
+
+Seçilen bir istek şurada gösterilecek <a href="request.html">İstek sekmesi</a> ve 
+<a href="response.html">Yanıt sekmesi</a> yukarıda.<br/>
+ 
+<h2>Filtre araç çubuğu</h2>
+Filtre araç çubuğu sizin gösterilen istekleri sınırlamanızı sağlar.<br/>
+Üstüne tıklayın 
+<img src="../../images/16/054.png" align="bottom" width="16" height="16" /> 
+Filtre butonu şunu gösterir 
+<a href="../dialogs/hist_filter.html">Geçmiş Filtresi diyaloğu</a>.<br/>
+Butonun sağına şuan uygulanan bir filtre özeti gösterilir.
+
+<h2>Sağ tık menüsü</h2>
+Bir node üzerinde sağ tıklamak şunları yapabileceğiniz bir menü getirir:
+
+<h3>Saldırı</h3>
+Saldırı menüsünün sahip olduğu alt-menüler:
+
+<h4>Aktif Tarama...</h4>
+Bunun başlatacağı şey <a href="../dialogs/advascan.html">Aktif tarama</a> bir şey başlatmanızı sağlayan bir diyaloğu 
+<a href="../../start/concepts/ascan.html">aktif tarama</a> seçtiğiniz talebi başlangıç noktası alarak.<br/>
+
+<h4>Örümcek...</h4>
+Bu, şunu başlatacak <a href="../dialogs/spider.html">Örümcek</a> başlatmanızı sağlayan iletişim kutusu 
+<a href="../../start/concepts/spider.html">örümcek</a> seçtiğiniz talebi başlangıç noktası olarak ayarlayın.<br/>
+
+<h3>İçeriğe dahil et</h3>
+Bu menü sizin seçilen ağları ve onun belirlenmiş astlarının hepsini dahil etmenize izin verir
+<a href="../../start/concepts/contexts.html">içerik</a>.<br/>
+Siz ayrıca yeni bir ortam yaratma seçeneğine de sahipsiniz.<br/>
+The <a href="../dialogs/session/contexts.html">Oturum Bağlamları</a> ek değişiklik yapmanıza izin vermek için iletişim kutusu görüntülenecektir.
+
+<h3>Bağlamdan Dışla</h3>
+Bu menü, seçilen düğümleri ve belirtilen tüm astları çıkarmak için izin verir
+<a href="../../start/concepts/contexts.html">içerik</a>.<br/>
+The <a href="../dialogs/session/contexts.html">Oturum Bağlamları</a> iletişim kutusu görüntülenecek ek değişiklikler yapmanıza izin verir.
+
+<h3>İçerik olarak işaretle</h3>
+Bu menü aşağıdaki alt menüleri sağlar 
+<a href="../../start/concepts/contexts.html">içerikler</a> tanımladığınız:
+
+<h4><i>Bağlam adı</i> Form-bazlı Kimlik Girişi talebi</h4>
+Bu belirtilen nokta belirtilen içerik için bir oturum açma isteği olarak tanımlar.<br/>
+Herhangi bir ortamda olduğu gibi siz yalnızca bir tane ağ tanımlamasına sahip olabilirsiniz.<br/> 
+The <a href="../dialogs/session/context-auth.html">Oturum İçerikleri Kimlik Doğrulaması</a> ek değişiklikler yapabilmeniz için ekran görüntülenecektir.
+
+<h4><i>Context name</i> Veri odaklı düğüm</h4>
+Bu, belirtilen node'yi aşağıdaki gibi tanımlar <a href="../../start/concepts/ddc.html">Veri güdümlü içerik</a> belirtilen içerik için.<br/>
+The <a href="../dialogs/session/context-struct.html">Oturum İçerik Yapısı</a> ek değişiklikler yapabilmeniz için ekran görüntülenecektir.
+
+<h3>Hariç tut</h3>
+Bu menüde aşağıdaki alt menüler bulunur:
+
+<h4>Proxy</h4>
+Bu durum, seçilen düğümleri proxy dışında bırakacaktır. ZAP üzerinde hala proxylenmiş olarak kalacaklar ancak herhangi bir sekmede gösterilmeyecekler.<br/>
+Bu, şu anda test ettiğiniz sistem ile ilgili olmadığı bilinen URL'leri yok saymak için kullanılabilir.<br/>
+Nodeler tekrar şunun aracılığıyla dahil edilebilir <a href="../dialogs/session/sessprop.html">Oturum özellikleri</a> diyalog   
+
+<h4>Tarayıcı</h4>
+Seçili düğümlerin etkin olarak taranmasını engeller.<br/>
+Nodeler tekrar şunun aracılığıyla dahil edilebilir <a href="../dialogs/session/sessprop.html">Oturum özellikleri</a> diyalog   
+
+<h4>Örümcek</h4>
+Bu, seçilen düğümlerin örümcek olmasını önleyecektir.<br/>
+Düğümler şunun aracılığıyla tekrar dahil edilebilir <a href="../dialogs/session/sessprop.html">Oturum Özellikleri</a> diyalog   
+
+<h3>Etiketleri Yönet...</h3>
+Bu şunu öne çıkaracak
+<a href="../dialogs/managetags.html">Etiketler Diyaloğunu Yönet</a> değiştirmenize olanak sağlar <a href="../../start/concepts/tags.html">etiketler</a> istek ile eşleştirilmiş.
+
+<h3>Not...</h3>
+Bu, şunu ansızın durduracak
+<a href="../dialogs/addnote.html">Not diyaloğu ekle</a> kaydetmeniz için size imkan veren 
+<a href="../../start/concepts/notes.html">notlar</a> istek ile
+bağlantılı.
+
+<h3>Sil</h3>
+Bu ağı ve onun bütün alttakilerini ZAP'tan kaldıracak.<br/>
+Fakat bunlar yeniden eklenebilir, bunu engellemek için 'Hariç tut' menülerini kullanın. 
+
+<h3>Kırılma...</h3>
+Bu şunu öne çıkarır
+<a href="../dialogs/addbreak.html">Kırılma Noktası Ekle penceresi</a> o URL'e bir durma noktası ayarlamanıza izin verir.<br/>
+
+<h3>Bu düğüm için uyarılar</h3>
+Eğer seçili URL,  <a href="../../start/concepts/alerts.html">uyarılar</a> bununla bağlantılı ise
+bu menü altında listelenecektir.<br>
+Uyarılardan birisini seçmek onun oynatılmasına sebep olacaktır.
+
+<h3>Tekrar gönder...</h3>
+Bu şunu öne çıkaracak
+<a href="../dialogs/resend.html">Yeniden gönderilen diyalog</a> istediğiniz herhangi bir değişiklik yaptıktan sonra isteği tekrar göndermenizi sağlar.
+
+<h3>Yeni uyarı...</h3>
+Bu şunu öne çıkaracak
+<a href="../dialogs/addalert.html">Uyarı penceresi ekle</a> elinizle yeni bir kayıt almanıza izin veren  
+<a href="../../start/concepts/alerts.html">uyarı</a> bu talebe karşı.
+
+<h3>Siteler sekmesinde göster</h3>
+Bu, seçili mesajı şurada gösterecek <a href="sites.html">Siteler sekmesi</a>.
+
+<h3>URL'yi Tarayıcıda Aç</h3>
+Bu, varsayılan tarayıcınızda seçili düğümün URL'sini açar.
+
+<h3>Anti CSRF test formu oluştur</h3>
+Bu, CSRF sorunlarını test etmek için oluşturulan bir form veren URL açacaktır.<br>
+Eğer API etkin ise ve eğer Java platformunuz üzerindeki tarayıcıda URLlerin açılmasını destekliyorsa bu 
+sadece POST istekleri için etkinleştirilebilir.
+<h2>Ayrıca bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../overview.html">Kullanıcı Arayüzüne Genel Bakış</a></td><td>kullanıcı ara yüzüne genel bir bakış için</td></tr>
+</table>
+
+</body>
+</html>

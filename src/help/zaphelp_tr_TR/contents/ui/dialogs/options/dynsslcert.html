@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Dinamik SSL Sertifikaları
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Seçenek Dinamik SSL Sertifikaları</h1>
+	<p>
+	OWASP ZAP, SSL bağlantılarını şeffaf bir şekilde çözmenizi sağlar.
+	Bunu yapmak için, ZAP, sunucuya göndermeden önce her isteği şifrelemek ve geri gelen her yanıtın şifresini çözmek zorundadır.
+	Fakat bu zaman tarayıcı tarafından yapıldı.
+	Bu nedenle iletimin şifresini çözmek ya da müdahale etmenin tek yolu, 'adam ortada' yaklaşımı yapmaktır.
+	</p>
+
+
+<h2>Genel Bakış</h2>
+<p>
+	<img alt="ortadaki adam" src="../../../images/maninthemiddle.png">
+</p>
+<p>
+	Kısa kelimeyle, sunucuya gönderilen ve alınan tüm veriler, ZAP içindeki orijinal sunucunun sertifikasını kullanarak şifrelenir / şifrelerin çözülür. Bu yolla, ZAP düz metni bilir.
+	Siz (sizin tarayıcınız) SSL korumalı bir oturum kurmak için,
+ZAP kendi sertifikasını kullanıyor. Sizin yaratabileceğiniz bu.
+	ZAP tarafından oluşturulan her sertifika aynı sunucu adı için imzalanacaktır. Üstteki örnekte, ZAP sunucu adı "www.example.com" için bir sertifika oluşturacaktır. Buyolla, tarayıcınız düzenli SSL şifrelemesi yapacak.
+</p>
+
+
+<h2>ZAP Root CA sertifikası</h2>
+<p>
+	Bir çok SSL korumalı siteyi ziyaret ettiğinizi hayal edin. Tarayıcınız böyle bir siteye ne zaman bağlanırsa, yeni bir SSL sertifikası oluşturulur.
+	Fakt, bu sertifikalar kimseye güvenmiyor ( çünkü ZAP tarafından kendi yaratıldı).
+	Başka bir deyişle, tarayıcınız bu gibi sertifikaları ilk etapta kabul etmez.
+	Tarayıcınız sertifika hatasından şikayet ettiğinde bu gibi durumlara tanıdık olabilirsiniz fakat elle o sunucu için bir istisna kuralı oluşturabilirsiniz.  
+</p>
+<p>
+	ZAP tarafından oluşturulan her sertifika "ZAP Kök CA" sertifikasından doğrudan güven zincirindedir. 
+	(Güven zinciri hakkında daha fazla detay için favori arama motorunuzu kullanın ;-) )
+	Bu sadece sizin (tarayıcınızın) bir kere ZAP Kökü CA 'ya güvenmesi ve başka sertifikalara da
+	otomatik olarak güvenilmesi anlamını taşır. Başka bir deyişle,
+	ZAP Kökü CA sertifikasını güvenilir Kök CA 'lar listenize ekledikten sonra,
+	tarayıcınız anonim vekil sunucuyu tanımaz. 
+</p>
+
+<h3>Oluşturmak</h3>
+<p>
+	Eğer ZAP'ı ilk kez çalıştırıyorsanız, öncelikle bir Root CA sertifikası oluşturmalısınız.
+	Bir tane oluşturduktan sonra onu kendi tarayıcınıza ya da HTTP istemci uygulamasına yüklemelisiniz. Daha fazla ayrıntı için bkz. bölüm<a href="#install"> yükleme</a>.
+</p>
+<p>
+	Üretilen her Root CA sertifikası bir yıl için geçerlidir. Bu dönemden sonra
+yeni bir tane oluşturmak için.<br>
+Üretilen her Root CA sertifikası 2048 bit gücündedir(RSA ile SHA1).<br>
+Üretilen her Root CA sertifikası "1" seri numarası ile başlar. 
+	Üretilen her Root CA sertifikası aşağıdaki tanımlayıcılardan meydana gelir:
+</p>
+<p style="padding-left: 20pt;">
+	<code>
+	CN = OWASP Zed Attack Vekil Sunucu Kökü CA<br>
+	L = 87b77fe834b0a301<br>
+	O = OWASP Kök CA<br>
+	OU = OWASP ZAP Kök CA<br>
+	C = XX<br>
+	</code>
+</p>
+<p>
+	Görüldüğü gibi, sadece on altılık bir sayıyla olan konum tanımlayıcısı (L) var.
+	Bu sayı iki 32 bit karma koddan inşa edilmiştir: kullanıcının adı ve kullanıcının giriş dizini.
+	Bu yolla kendi sertifikanızı, bir çok kurulum kullanırken belirleyebilirsiniz.
+	Fakat hiçbir şekilde, hiç kimse bu koddan adınızı anlayamaz.
+</p>
+
+<h3>İçe aktar</h3>
+<p>
+	Çoklu ZAP kurulumu kullandığınız zaman ve aynı Root CA sertifikasını 
+        kullanmak istediğinizde, bunu alabilirsiniz. Tek bir Kök CA sertifikası oluşturmak için
+	sadece bir OWASP ZAP kurulumu kullanın.<br>
+	'OWASP ZAP / config.xml' dosyasını kullanıcılarınız ana dizininden 
+	benzer sertifikayı kullanmak istediğiniz PC 'ye kopyalayın ve içe aktarmak için 'içe aktar' a basın.
+</p>
+<p>
+	Hem sertifikayı hem de şifrelenmemiş gizli anahtarı aşağıdaki biçimde içerdikleri sürece
+pem dosyalarında saklanan sertifikaları içe aktarabilirsiniz:<br><code><br>
+-----SERTİFİKAYA BAŞLAYIN-----<br>
+MIIC9TCCAl6gAwIBAgIJANL8E4epRNznMA0GCSqGSIb3DQEBBQUAMFsxGDAWBgNV<br>
+BAoTD1N1cGVyZmlzaCwgSW5jLjELMAkGA1UEBxMCU0YxCzAJBgNVBAgTAkNBMQsw<br>
+CQYDVQQGEwJVUzEYMBYGA1UEAxMPU3VwZXJmaXNoLCBJbmMuMB4XDTE0MDUxMjE2<br>
+MjUyNloXDTM0MDUwNzE2MjUyNlowWzEYMBYGA1UEChMPU3VwZXJmaXNoLCBJbmMu<br>
+MQswCQYDVQQHEwJTRjELMAkGA1UECBMCQ0ExCzAJBgNVBAYTAlVTMRgwFgYDVQQD<br>
+Ew9TdXBlcmZpc2gsIEluYy4wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAOjz<br>
+Shh2Xxk/sc9Y6X9DBwmVgDXFD/5xMSeBmRImIKXfj2r8QlU57gk4idngNsSsAYJb<br>
+1Tnm+Y8HiN/+7vahFM6pdEXY/fAXVyqC4XouEpNarIrXFWPRt5tVgA9YvBxJ7SBi<br>
+3bZMpTrrHD2g/3pxptMQeDOuS8Ic/ZJKocPnQaQtAgMBAAGjgcAwgb0wDAYDVR0T<br>
+BAUwAwEB/zAdBgNVHQ4EFgQU+5izU38URC7o7tUJml4OVoaoNYgwgY0GA1UdIwSB<br>
+hTCBgoAU+5izU38URC7o7tUJml4OVoaoNYihX6RdMFsxGDAWBgNVBAoTD1N1cGVy<br>
+ZmlzaCwgSW5jLjELMAkGA1UEBxMCU0YxCzAJBgNVBAgTAkNBMQswCQYDVQQGEwJV<br>
+UzEYMBYGA1UEAxMPU3VwZXJmaXNoLCBJbmMuggkA0vwTh6lE3OcwDQYJKoZIhvcN<br>
+AQEFBQADgYEApHyg7ApKx3DEcWjzOyLi3JyN0JL+c35yK1VEmxu0Qusfr76645Oj<br>
+1IsYwpTws6a9ZTRMzST4GQvFFQra81eLqYbPbMPuhC+FCxkUF5i0DNSWi+kczJXJ<br>
+TtCqSwGl9t9JEoFqvtW+znZ9TqyLiOMw7TGEUI+88VAqW0qmXnwPcfo=<br>
+-----SERTİFİKA SONU-----<br>
+-----ÖZEL ANAHTARIN BAŞLATILMASI-----<br>
+MIICXgIBAAKBgQDo80oYdl8ZP7HPWOl/QwcJlYA1xQ/+cTEngZkSJiCl349q/EJV<br>
+Oe4JOInZ4DbErAGCW9U55vmPB4jf/u72oRTOqXRF2P3wF1cqguF6LhKTWqyK1xVj<br>
+0bebVYAPWLwcSe0gYt22TKU66xw9oP96cabTEHgzrkvCHP2SSqHD50GkLQIDAQAB<br>
+AoGBAKepW14J7F5e0ppa8wvOcUU7neCVafKHA4rcoxBF8t+P7UhiMVfn7uQiFk2D<br>
+K8gXyKpLcEdRb7K7CI+3i8RkoXTRDEZU5XPMJnZsE5LWgNQ+pi3HwMEdR0vD2Iyv<br>
+vIH3tq6mNKgDu+vozm8DWsEP96jrhVbo1U1rzyEtX46afo79AkEA/VXanGaqj4ua<br>
+EsqfY6n/7+MTm4iPOM7qfoyI4EppJXZklc/FbcV2lAjY2Jl9U6X7WnqCPn+/zg44<br>
+6lKWTnhAawJBAOtmi6nw8WjY6uyXZosE/0r4SkSSo20EJbBCJcgdofKT+VCGB4hp<br>
+h6XwGdls0ca+qa5ZE1a196dpwwVre0hm88cCQQDrUm3QbHmw/39uRzOJs6dfYPKc<br>
+vlwz69jdFpQqrFRBjVlf4/FDx3IfjpxHj0RgiEUUxcnoXmh/8qwh1fdzCrbjAkB4<br>
+afg/chTLQUrKw5ecvW2p9+Blu20Fsv1kcDHLb/0LjU4XNrhbuz+8TlmqstOMCrPZ<br>
+j48o5+RLKvqrpxNlMeS5AkEA6qIdW/yp5N8b1j2OxYZ9u5O//BvspwRITGM60Cps<br>
+yemZE/ua8wm34SKvDHf5uxcmofShW17PLICrsLJ7P35y/A== <br>
+-----ÖZEL ANAHTARIN SONU-----<br>
+  	</code><br>
+ve evet, bu örnek çalışacak- Karşınızda Superfish sertifikası!
+</p>
+
+<h3><a name="view">Görünüm</a></h3>
+<p>
+	ZAP'ın seçenekler penceresinde sertifikanın ham bytelarını(on altılı olarak kodlanmış)
+         görüyorsunuz "Görüntü" seçeneği ".CER" dosyaları için olan sisteminizin varsayılan
+	görüntüleme aracını kullanmaya çalışır. Windows'da, bu genel olarak aynıdır,
+        sertifikayı dışarı alırken ve üstüne çift tıklarken.
+</p>
+
+<h3>Kaydet/Dışa aktar</h3>
+<p>
+	ZAP'ın seçenekler bölümünde, sertifikanın ham haldeki baytlarını (on altıya onlu şifrelenmiş şekilde) görüyorsunuz. Pek çok program, içe / dışa aktarma işlevleri için, bu basit biçimi kullanmaktadır. Dışa aktarmaya tıklayınca bu byte lar disk e kaydedilir.
+	Hepsini seçme, CTRL+C (Panoya Kopyalama) yapma ve yeni bir .CER dosyasına kaydetmeye eşittir (ki diyalogda gördüğünüz gibi basit bir metin).
+</p>
+
+<h2><a name="dynamic_certificates">Dinamik sertifikalar</a></h2>
+<p>
+	Her ZAP örneği kendi kök sertifikasını kullanır. Tabii ki, onları çoklu
+	makinelerde kullanmak için kök sertifikalarını içe aktarabilirsin.
+	Çalışırken, bir HTTPS kaynağı istendiği her seferde alt sertifikalar oluşturulacaktır.
+	Bu, Root CA sertifikasının kullanıldığı anlamına gelir.
+</p>
+<p>
+	Dinamik olarak üretilen her sertifika 1000 gün için geçerlidir.<br>
+Dinamik olarak üretilen her sertifika 2048 bit gücündedir( RSA ile SHA1).<br>
+Dinamik olarak üretilen her sertifika rastgele bir seri numarasına sahiptir. 
+	Dinamik olarak üretilen her sertifika aşağıdaki tanımlayıcılardan meydana gelir:
+</p>
+<p style="padding-left: 20pt;">
+	<code>
+	CN = www.örnek.com<br>
+       E = owasp-zed-attack-proxy@lists.owasp.org<br>
+       C = XX<br>
+       O = OWASP<br>
+       OU = Zed Attack Proxy Projesi<br>
+	</code>
+</p>
+<p>
+	Yan not: 
+ZAP' ı her başlattığınızda, dahili olarak rastgele seri numarası ofseti oluşturulur.
+		Her dinamik olarak oluşturulan sertifika, bu ofseti ayrıca artan bir sayaç kullanacaktır. Örneğin, ilk başta dinamik olan sertifikaya sahip seri numarası 2314, ikincisi 2315, üçüncüsü 2316 ve bunun gibi.
+		Bunun nedeni basit: tarayıcılar da sertifikaları önbelleğe alıyor.
+		ZAP'ı yeniden başlattığınızda ama tarayıcınızı yeniden başlatmadığınızda, tarayıcı aynı sertifikayı ama farklı seri numarası ile görür olabilir.
+		Sonuç olarak, tarayıcı sertifikayı şikayet eder ve reddeder.
+		Rasgele ofset (dahili 48bit rastgele sayı) kullanarak, 1 ila 281.474.976.710.656 arasında bir olasılık vardır ZAP yeniden başlatıldığında, seri numara ofseti farklı olur.<br> Nadir durumlarda, tarayıcının, sertifika içindeki bozuk bir seri numarasıyla ilgili olarak şikayetçi olduğunu keşfediyorsunuz; sadece tarayıcınızı yeniden başlatın ;-) </i>.
+</p>
+
+<h2><a name="install">ZAP Kök CA sertifikası kurulumu</a></h2>
+<p>
+	Kullanmak istediğiniz herhangi bir HTTPS istemcisi, OWASP Kök CA sertifikasını 'güvenilir kök sertifika' olarak tanımalıdır. Genellikle tarayıcınızın güvenilen kök sertifikalar listesine ZAP sertifikasını el ile yüklemelisiniz.
+</p>
+<h3>Windows / Internet Explorer</h3>
+<p>
+	En kolay yol <a href="#view">görünümü</a> tıklamak ve 'sertifika yükle' yi seçmektir. Alternatif olarak, oluşturulan sertifikanızı kaydedebilir/dışa aktarabilirsiniz (hedef bilgisayara kopyalayın) ve .CER dosyasına çift tıklayın. 
+	Bunu yaparken, sertifika yükleme yardımı için normal Windows sihirbazı açılır.
+	Bu sihirbazda manuel olarak sertifika deposu seçin. Windows'un otomatik olarak sertifika deposunu seçmesine izin vermeyin.
+	Mağazadan "güvenilir root sertifikaları" nı seçin ve sihirbazı sonlandırın.
+</p>
+<p>
+	Başarılı kurulumdan sonra, sertifikayı kontrol edebilirsin.
+</p>
+	<ol>
+	<li>İnternet seçeneklerine gidin</li>
+	<li>İçerik sekmesi</li>
+	<li>Sertifikalara tıklayın</li>
+	<li>Kök sertifika sekmesine tıkla</li>
+	<li>The OWASP ZAP Root CA orada olmalı</li>
+	</ol>
+
+<h3>Mozilla Firefox</h3>
+<p>
+	Firefox kendi sertifika deposunu kullanıyor. Bu yüzden, windowsta her iki tarayıcıyı da kullanırken iki kez içe aktarmalısınız.
+	Kurulum ve geç onaylama, aynı tercihler iletişim kutusunda yapılır:
+</p>
+	<ol>
+	<li>Tercihlere git</li>
+	<li>Gelişmiş sekme</li>
+	<li>Kriptografi/ sertifika sekmesi</li>
+	<li>Sertifikaları görüntüleye tıklayın</li>
+	<li>Kaynakça sekmesine tıklayın</li>
+	<li>İçe aktarmaya tıkla ve kaydedilmiş <tt>owasp_zap_root_ca.cer</tt> dosyasını seç</li>
+	<li>Sihirbazda web sitesini tanımlamak için bu sertifikaya güvenin seçeneğini kullan (kutulara tıklayın)</li>
+	<li>Sihirbazı sonlandır</li>
+	</ol>
+
+<h2 style="color: red; font-weight: bold; text-decoration: underline;">Riskler</h2>
+<p>
+	<b>Dikkat, mevcut riskler vardır!</b><br>
+Kullanıcı tarafından üretilmis Root CA sertifikasını güvenilenler
+listesine alarak, root sertifikasına sahip bütün kullanıcıların sisteme(tarayıcıya) 
+veri sokmasına olanak sağlar.
+	Başka bir deyişle verimli makinalarla güvenli bir çevrede test etmiyorsanız, 
+sisteminize yapılacak fazladan
+ saldırılara karşı dikkatli olun.  
+</p>
+
+<h2>Ayrıca Bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="certificate.html">Sertifikalar</a></td><td>SSL istemci sertifikası için</td></tr>
+</table>
+
+</body>
+</html>

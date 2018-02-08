@@ -9,42 +9,42 @@
 	TOC merger is defined in org.zaproxy.zap.extension.help.ZapTocMerger.
 -->
 <toc version="2.0">
- <tocitem text="ZAP User Guide" image="toplevelfolder" tocid="toplevelitem">
+ <tocitem text="Gabay sa Gumagamit ng ZAP" image="toplevelfolder" tocid="toplevelitem">
 
-   <tocitem text="Introduction" target="zap.intro"/>
+   <tocitem text="Introduksyon" target="zap.intro"/>
 
-   <tocitem text="Getting Started" target="start.start">
-      <tocitem text="Configuring proxies" target="start.proxy"/>
+   <tocitem text="Gabay sa Pagsisimula" target="start.start">
+      <tocitem text="Pagkukumipigura ng mga proxy" target="start.proxy"/>
       <!--tocitem text="Explore the application" target="start.explore"/-->
-      <tocitem text="Features" target="start.concepts">
-         <tocitem text="Active Scan" target="start.concepts.ascan"/>
-         <tocitem text="Add-ons" target="start.concepts.addons"/>
-         <tocitem text="Alerts" target="start.concepts.alerts"/>
-         <tocitem text="Anti CSRF Tokens" target="start.concepts.anticsrf"/>
+      <tocitem text="Mga tampok" target="start.concepts">
+         <tocitem text="Aktibong Pagsusuri" target="start.concepts.ascan"/>
+         <tocitem text="Mga add-on" target="start.concepts.addons"/>
+         <tocitem text="Mga alerto" target="start.concepts.alerts"/>
+         <tocitem text="Anty CSRF na mga Token" target="start.concepts.anticsrf"/>
          <tocitem text="API" target="start.concepts.api"/>
-         <tocitem text="Authentication" target="start.concepts.auth"/>
-         <tocitem text="Break Points" target="start.concepts.breakpoints"/>
-         <tocitem text="Contexts" target="start.concepts.contexts"/>
-         <tocitem text="Data Driven Content" target="start.concepts.ddc"/>
-         <tocitem text="Filters" target="start.concepts.filters"/>
-         <tocitem text="Globally Excluded URLs" target="start.concepts.globalexcludeurl"/>
-         <tocitem text="HTTP Sessions" target="start.concepts.httpsessions"/>
-         <tocitem text="Intercepting Proxy" target="start.concepts.intercept"/>
-         <tocitem text="Modes" target="start.concepts.modes"/>
-         <tocitem text="Notes" target="start.concepts.notes"/>
-         <tocitem text="Passive Scan" target="start.concepts.pscan"/>
-         <tocitem text="Scan Policies" target="start.concepts.scanpolicy"/>
-         <tocitem text="Scope" target="start.concepts.scope"/>
-         <tocitem text="Session Management" target="start.concepts.sessmanag"/>
-         <tocitem text="Spider" target="start.concepts.spider"/>
-         <tocitem text="Statistics" target="start.concepts.stats"/>
-         <tocitem text="Structural Modifiers" target="start.concepts.structmods"/>
-         <tocitem text="Structural Parameters" target="start.concepts.structparams"/>
-         <tocitem text="Tags" target="start.concepts.tags"/>
-         <tocitem text="Users" target="start.concepts.users"/>
+         <tocitem text="Awtentikasyon" target="start.concepts.auth"/>
+         <tocitem text="Mga Break Point" target="start.concepts.breakpoints"/>
+         <tocitem text="Mga konteksto" target="start.concepts.contexts"/>
+         <tocitem text="Data Driven na Kontent" target="start.concepts.ddc"/>
+         <tocitem text="Mga Pagsala" target="start.concepts.filters"/>
+         <tocitem text="URL na di Kasali sa Pangkalahatan" target="start.concepts.globalexcludeurl"/>
+         <tocitem text="Mga sesyon ng HTTP" target="start.concepts.httpsessions"/>
+         <tocitem text="Man-in-the-middle na Proxy" target="start.concepts.intercept"/>
+         <tocitem text="Mga Mode" target="start.concepts.modes"/>
+         <tocitem text="Mga tala" target="start.concepts.notes"/>
+         <tocitem text="Passive na Scan" target="start.concepts.pscan"/>
+         <tocitem text="Mga patakaran ng Pagsusuri" target="start.concepts.scanpolicy"/>
+         <tocitem text="Saklaw" target="start.concepts.scope"/>
+         <tocitem text="Pamamahala ng Sesyon" target="start.concepts.sessmanag"/>
+         <tocitem text="Ispayder" target="start.concepts.spider"/>
+         <tocitem text="Mga Istatistika" target="start.concepts.stats"/>
+         <tocitem text="Istraktural na mga Modifier" target="start.concepts.structmods"/>
+         <tocitem text="Istraktural ng mga Parametro" target="start.concepts.structparams"/>
+         <tocitem text="Mga tag" target="start.concepts.tags"/>
+         <tocitem text="Mga user" target="start.concepts.users"/>
       </tocitem>
-      <tocitem text="Scanner Rules" target="start.check"/>
-      <tocitem text="A Simple Penetration Test" target="start.pentest"/>
+      <tocitem text="Mga patakaran ng pang-scan" target="start.check"/>
+      <tocitem text="Isang simpleng pagsubok sa pagbaon" target="start.pentest"/>
    </tocitem>
 
    <!--tocitem text="Common Vulnerabilities" target="vulns.vuln">
@@ -57,87 +57,91 @@
       <tocitem text="Cross Site Scripts" target="vulns.xss"/>
    </tocitem-->
 
-   <tocitem text="The User Interface" target="ui.overview">
-      <tocitem text="Overview" target="ui.overview"/>
-      <tocitem text="The Top Level Menu" target="ui.topmenu"/>
+   <tocitem text="Ang User Interface" target="ui.overview">
+      <tocitem text="Buod" target="ui.overview"/>
+      <tocitem text="Ang Pinakang taas na antas na Menu" target="ui.topmenu"/>
       <tocitem text="The Top Level Toolbar" target="ui.toptoolbar"/>
-      <tocitem text="The Tabs">
-         <tocitem text="Sites" target="ui.tabs.sites"/>
-         <tocitem text="Request" target="ui.tabs.request"/>
-         <tocitem text="Response" target="ui.tabs.response"/>
+      <tocitem text="Ang mga Tab">
+         <tocitem text="Mga site" target="ui.tabs.sites"/>
+         <tocitem text="Kahilingan" target="ui.tabs.request"/>
+         <tocitem text="Respunde" target="ui.tabs.response"/>
          <tocitem text="Break" target="ui.tabs.break"/>
-         <tocitem text="History" target="ui.tabs.history"/>
-         <tocitem text="Search" target="ui.tabs.search"/>
-         <tocitem text="Break Points" target="ui.tabs.breakpoints"/>
-         <tocitem text="Alerts" target="ui.tabs.alerts"/>
-         <tocitem text="Active Scan" target="ui.tabs.ascan"/>
-         <tocitem text="Spider" target="ui.tabs.spider"/>
-         <tocitem text="Params" target="ui.tabs.params"/>
-         <tocitem text="HTTP Sessions" target="ui.tabs.httpsessions"/>
+         <tocitem text="Kasaysayan" target="ui.tabs.history"/>
+         <tocitem text="Maghanap" target="ui.tabs.search"/>
+         <tocitem text="Mga Break Point" target="ui.tabs.breakpoints"/>
+         <tocitem text="Mga alerto" target="ui.tabs.alerts"/>
+         <tocitem text="Aktibong Pag-scan" target="ui.tabs.ascan"/>
+         <tocitem text="Ispayder" target="ui.tabs.spider"/>
+         <tocitem text="Mga param" target="ui.tabs.params"/>
+         <tocitem text="Mga Sesyon ng HTTP" target="ui.tabs.httpsessions"/>
          <tocitem text="Output" target="ui.tabs.output"/>
       </tocitem>
-      <tocitem text="The Dialogs" target="ui.dialogs">
-         <tocitem text="Active Scan" target="ui.dialogs.advascan"/>
-         <tocitem text="Add Alert" target="ui.dialogs.addalert"/>
-         <tocitem text="Add Break Point" target="ui.dialogs.addbreak"/>
-         <tocitem text="Add Note" target="ui.dialogs.addnote"/>
-         <tocitem text="BeanShell Console" target="ui.dialogs.beanshell"/>
+      <tocitem text="Mga diyalogo" target="ui.dialogs">
+         <tocitem text="Aktibong Pag-scan" target="ui.dialogs.advascan"/>
+         <tocitem text="Magdagdag ng alerto" target="ui.dialogs.addalert"/>
+         <tocitem text="Magdagdag ng Break Point" target="ui.dialogs.addbreak"/>
+         <tocitem text="Magdagdag ng Tala" target="ui.dialogs.addnote"/>
          <tocitem text="Encode/Decode/Hash" target="ui.dialogs.enc_dec"/>
-         <tocitem text="Filter" target="ui.dialogs.filter"/>
-         <tocitem text="Find" target="ui.dialogs.find"/>
-         <tocitem text="History Filter" target="ui.dialogs.historyfilter"/>
-         <tocitem text="Manual Request Editor" target="ui.dialogs.manreq"/>
-         <tocitem text="Manage Add-ons" target="ui.dialogs.manageaddons"/>
-         <tocitem text="Manage Tags" target="ui.dialogs.managetags"/>
-         <tocitem text="Options" target="ui.dialogs.options">
-         	<tocitem text="Active Scan" target="ui.dialogs.options.ascan"/>
-         	<tocitem text="Active Scan Input Vectors" target="ui.dialogs.options.ascaninput"/>
-         	<tocitem text="Alerts" target="ui.dialogs.options.alert"/>
-         	<tocitem text="Anti CSRF Tokens" target="ui.dialogs.options.anticsrf"/>
+         <tocitem text="Pagsala" target="ui.dialogs.filter"/>
+         <tocitem text="Hanapin" target="ui.dialogs.find"/>
+         <tocitem text="Pagsala ng Kasaysayan" target="ui.dialogs.historyfilter"/>
+         <tocitem text="Manu-manong Editor ng Kahilingan" target="ui.dialogs.manreq"/>
+         <tocitem text="Pamahalaan ang mga Add-on" target="ui.dialogs.manageaddons"/>
+         <tocitem text="Pamahalaan ang mga Tag" target="ui.dialogs.managetags"/>
+         <tocitem text="Mga Opsyon" target="ui.dialogs.options">
+         	<tocitem text="Aktibong Pag-scan" target="ui.dialogs.options.ascan"/>
+         	<tocitem text="Aktibong scan input na mga vector" target="ui.dialogs.options.ascaninput"/>
+         	<tocitem text="Mga alerto" target="ui.dialogs.options.alert"/>
+         	<tocitem text="Ang Anti CSRF na mga token" target="ui.dialogs.options.anticsrf"/>
          	<tocitem text="API" target="ui.dialogs.options.api"/>
-            <tocitem text="Breakpoints" target="ui.dialogs.options.breakpoints"/>
-         	<tocitem text="Certificate" target="ui.dialogs.options.certificate"/>
-         	<tocitem text="Check for Updates" target="ui.dialogs.options.checkforupdates"/>
-			<tocitem text="Connection" target="ui.dialogs.options.connection"/>
+            <tocitem text="Mga Breakpoint" target="ui.dialogs.options.breakpoints"/>
+            <tocitem text="Address ng Callback" target="ui.dialogs.options.callback"/>
+         	<tocitem text="Sertipiko" target="ui.dialogs.options.certificate"/>
+         	<tocitem text="I-check para sa mga Update" target="ui.dialogs.options.checkforupdates"/>
+			<tocitem text="Koneksyon" target="ui.dialogs.options.connection"/>
 			<tocitem text="Database" target="ui.dialogs.options.database"/>
-         	<tocitem text="Display" target="ui.dialogs.options.view"/>
-         	<tocitem text="Dynamic SSL Certificates" target="ui.dialogs.options.dynsslcert"/>
-            <tocitem text="Extensions" target="ui.dialogs.options.ext"/>
-            <tocitem text="Global Exclude URL" target="ui.dialogs.options.globalexcludeurl"/>
-         	<tocitem text="HTTP Sessions" target="ui.dialogs.options.httpsessions"/>
+         	<tocitem text="Displey" target="ui.dialogs.options.view"/>
+         	<tocitem text="Mga Sertipiko ng Dinamikong SSL" target="ui.dialogs.options.dynsslcert"/>
+            <tocitem text="Mga Ekstensyon" target="ui.dialogs.options.ext"/>
+            <tocitem text="Global Exclude na URL" target="ui.dialogs.options.globalexcludeurl"/>
+         	<tocitem text="Mga sesyon ng HTTP" target="ui.dialogs.options.httpsessions"/>
          	<tocitem text="JVM" target="ui.dialogs.options.jvm"/>
          	<tocitem text="Keyboard" target="ui.dialogs.options.keyboard"/>
-         	<tocitem text="Language" target="ui.dialogs.options.language"/>
-         	<tocitem text="Local Proxy" target="ui.dialogs.options.localproxy"/>
-         	<tocitem text="Passive Scan Rules" target="ui.dialogs.options.pscanrules"/>
-         	<tocitem text="Passive Scan Tags" target="ui.dialogs.options.pscan"/>
-         	<tocitem text="Scripts" target="ui.dialogs.options.script"/>
-         	<tocitem text="Search" target="ui.dialogs.options.search"/>
+         	<tocitem text="Lengwahe" target="ui.dialogs.options.language"/>
+         	<tocitem text="Mga Lokal na Proxy" target="ui.dialogs.options.localproxy"/>
+         	<tocitem text="Mga passive scan na patakaran" target="ui.dialogs.options.pscanrules"/>
+         	<tocitem text="Mga passive scan na tag" target="ui.dialogs.options.pscan"/>
+         	<tocitem text="Passive scanner" target="ui.dialogs.options.pscan.main"/>
+         	<tocitem text="Pagsasaayos ng patakaran" target="ui.dialogs.options.ruleconfig"/>
+         	<tocitem text="Mga script" target="ui.dialogs.options.script"/>
+         	<tocitem text="Paghahanap" target="ui.dialogs.options.search"/>
          	<tocitem text="Spider" target="ui.dialogs.options.spider"/>
-         	<tocitem text="Statistics" target="ui.dialogs.options.stats"/>
+         	<tocitem text="Mga istatistika" target="ui.dialogs.options.stats"/>
          </tocitem>
-         <tocitem text="Persist Session" target="ui.dialogs.persistsession"/>
-         <tocitem text="Resend" target="ui.dialogs.resend"/>
-         <tocitem text="Scan Policy Manager" target="ui.dialogs.scanpolicymgr">
-	         <tocitem text="Scan Policy" target="ui.dialogs.scanpolicy"/>
+         <tocitem text="Patuloy ang Sesyon" target="ui.dialogs.persistsession"/>
+         <tocitem text="Pinadala muli" target="ui.dialogs.resend"/>
+         <tocitem text="Ang tagapamahala ng patakaran ng scan" target="ui.dialogs.scanpolicymgr">
+	         <tocitem text="Patakaran ng scan" target="ui.dialogs.scanpolicy"/>
          </tocitem>
-         <tocitem text="Scan Progress" target="ui.dialogs.scanprogress"/>
-         <tocitem text="Session" target="ui.dialogs.sessprop">
-	         <tocitem text="Session Properties" target="ui.dialogs.sessprop"/>
-	         <tocitem text="Session Contexts" target="ui.dialogs.contexts"/>
-	         <tocitem text="Session Context Authentication" target="ui.dialogs.context-auth"/>
-	         <tocitem text="Session Context Structure" target="ui.dialogs.context-struct"/>
+         <tocitem text="Proseso ng scan" target="ui.dialogs.scanprogress"/>
+         <tocitem text="Sesyon" target="ui.dialogs.sessprop">
+	         <tocitem text="Mga katangian ng sesyon" target="ui.dialogs.sessprop"/>
+	         <tocitem text="Mga konteksto ng sesyon" target="ui.dialogs.contexts"/>
+	         <tocitem text="Ang pagpapatunay ng konteksto ng sesyon" target="ui.dialogs.context-auth"/>
+	         <tocitem text="Istraktura ng Koteksto ng Sesyon" target="ui.dialogs.context-struct"/>
          </tocitem>
-         <tocitem text="Spider" target="ui.dialogs.spider"/>
+         <tocitem text="Ispayder" target="ui.dialogs.spider"/>
       </tocitem>
-      <tocitem text="The Footer" target="ui.footer"/>
+      <tocitem text="Ang Footer" target="ui.footer"/>
    </tocitem>
 
    <tocitem text="Command Line" target="cmdline"/>
 
-   <tocitem text="Add Ons" target="addon.introduction" tocid="addons" />
+   <tocitem text="Mga Add On" target="addon.introduction" tocid="addons" />
    
-   <tocitem text="Releases" target="zap.releases">
+   <tocitem text="Mga Inilabas" target="zap.releases">
+      <tocitem text="2.7.0" target="zap.releases.2.7.0"/>
+      <tocitem text="2.6.0" target="zap.releases.2.6.0"/>
       <tocitem text="2.5.0" target="zap.releases.2.5.0"/>
       <tocitem text="2.4.3" target="zap.releases.2.4.3"/>
       <tocitem text="2.4.2" target="zap.releases.2.4.2"/>
@@ -161,9 +165,9 @@
       <tocitem text="1.1.0" target="zap.releases.1.1.0"/>
       <tocitem text="1.0.0" target="zap.releases.1.0.0"/>
    </tocitem>
-   <tocitem text="Paros Proxy" target="zap.paros"/>
+   <tocitem text="Proxy ng Paros" target="zap.paros"/>
 
-   <tocitem text="Credits" target="zap.credits"/>
+   <tocitem text="Mga Kredito" target="zap.credits"/>
 
  </tocitem>
 </toc>

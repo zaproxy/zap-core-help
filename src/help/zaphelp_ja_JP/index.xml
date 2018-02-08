@@ -20,39 +20,40 @@
     <indexitem text="アラートタブ" target="ui.tabs.alerts" />
     <indexitem text="アラート" target="start.concepts.alerts" />
     <indexitem text="api" target="start.concepts.api" />
-    <indexitem text="authentication auth form-based manual login" target="start.concepts.auth" />
+    <indexitem text="認証フォーム式手動ログイン認証" target="start.concepts.auth" />
     <indexitem text="基本的なペネトレーションテスト" target="start.pentest" />
     <indexitem text="ブレークポイントタブ" target="ui.tabs.breakpoints" />
     <indexitem text="ブレークポイント" target="start.concepts.breakpoints" /> 
     <indexitem text="ブレークタブ" target="ui.tabs.break" />
     <indexitem text="コマンドライン" target="cmdline" />
-    <indexitem text="クレジット" target="start.concepts.contexts" />
-    <indexitem text="ダイアログ" target="zap.credits" />
-    <indexitem text="エンコード / デコード/ ハッシュ ダイアログ" target="start.concepts.ddc" />
-    <indexitem text="特徴" target="ui.dialogs" />
-    <indexitem text="フィルターダイアログ" target="ui.dialogs.enc_dec" />
-    <indexitem text="フィルター" target="start.concepts" />
-    <indexitem text="検索ダイアログ" target="ui.dialogs.filter" />
-    <indexitem text="フッター" target="start.concepts.filters" />
-    <indexitem text="fuzzerタブ" target="ui.dialogs.find" />
-    <indexitem text="ファジング" target="ui.footer" />
-    <indexitem text="fuzzerダイアログ" target="start.start" />
-    <indexitem text="はじめに" target="ui.dialogs.historyfilter" />
-    <indexitem text="履歴フィルターダイアログ" target="ui.tabs.history" />
-    <indexitem text="履歴タブ" target="ui.tabs.httpsessions" />
-    <indexitem text="httpセッションタブ" target="start.concepts.httpsessions" />
-    <indexitem text="httpセッション" target="start.concepts.intercept"/>
-    <indexitem text="透過プロキシ" target="zap.intro" />
-    <indexitem text="はじめに" target="ui.dialogs.managetags" />
-    <indexitem text="タブダイアログの管理" target="ui.dialogs.manreq" />
-    <indexitem text="マニュアルリクエストダイアログ" target="start.concepts.modes" />
-    <indexitem text="モード" target="start.concepts.notes" />
-    <indexitem text="ノート" target="ui.dialogs.options" />
-    <indexitem text="オプションダイアログ" target="ui.tabs.output" />
-    <indexitem text="params tab" target="ui.tabs.params" />
-    <indexitem text="パラメータータブ" target="zap.paros" />
-    <indexitem text="paros proxy" target="start.concepts.pscan" />
-    <indexitem text="静的スキャン" target="ui.dialogs.persistsession" />
+    <indexitem text="コンテキスト" target="start.concepts.contexts" />
+    <indexitem text="クレジット" target="zap.credits" />
+    <indexitem text="データ駆動型コンテキスト" target="start.concepts.ddc" />
+    <indexitem text="ダイアログ" target="ui.dialogs" />
+    <indexitem text="エンコード / デコード/ ハッシュ ダイアログ" target="ui.dialogs.enc_dec" />
+    <indexitem text="機能" target="start.concepts" />
+    <indexitem text="フィルターダイアログ" target="ui.dialogs.filter" />
+    <indexitem text="フィルター" target="start.concepts.filters" />
+    <indexitem text="検索ダイアログ" target="ui.dialogs.find" />
+    <indexitem text="フッター" target="ui.footer" />
+    <indexitem text="はじめに" target="start.start" />
+    <indexitem text="履歴検索ダイアログ" target="ui.dialogs.historyfilter" />
+    <indexitem text="履歴タブ" target="ui.tabs.history" />
+    <indexitem text="httpセッションタブ" target="ui.tabs.httpsessions" />
+    <indexitem text="httpセッション" target="start.concepts.httpsessions" />
+    <indexitem text="透過型プロキシ" target="start.concepts.intercept"/>
+    <indexitem text="導入" target="zap.intro" />
+    <indexitem text="タブダイアログの管理" target="ui.dialogs.managetags" />
+    <indexitem text="マニュアルリクエストダイアログ" target="ui.dialogs.manreq" />
+    <indexitem text="モード" target="start.concepts.modes" />
+    <indexitem text="ノート" target="start.concepts.notes" />
+    <indexitem text="オプションダイアログ" target="ui.dialogs.options" />
+    <indexitem text="出力タブ" target="ui.tabs.output" />
+    <indexitem text="パラメータータブ" target="ui.tabs.params" />
+    <indexitem text="Parosプロキシ" target="zap.paros" />
+    <indexitem text="静的スキャン" target="start.concepts.pscan" />
+    <indexitem text="静的スキャンオプション" target="ui.dialogs.options.pscan.main" />
+    <indexitem text="セッションダイアログの保持" target="ui.dialogs.persistsession" />
     <indexitem text="プロキシ設定" target="start.proxy" />
     <indexitem text="リリース 1.0.0" target="zap.releases.1.0.0" />
     <indexitem text="リリース 1.1.0" target="zap.releases.1.1.0" />
@@ -72,35 +73,37 @@
     <indexitem text="リリース 2.3.0" target="zap.releases.2.3.0" />
     <indexitem text="リリース 2.3.1" target="zap.releases.2.3.1" />
     <indexitem text="リリース 2.4.0" target="zap.releases.2.4.0" />
-    <indexitem text="リリース" target="zap.releases.2.4.1" />
-    <indexitem text="リクエストタブ" target="zap.releases.2.4.2" />
-    <indexitem text="再送信ダイアログ" target="zap.releases.2.4.3" />
-    <indexitem text="レスポンスタブ" target="zap.releases.2.5.0" />
-    <indexitem text="スキャナールール" target="zap.releases" />
-    <indexitem text="スキャンポリシー" target="ui.tabs.request" />
-    <indexitem text="スキャン ポリシーダイアログ" target="ui.dialogs.resend" />
-    <indexitem text="response tab" target="ui.tabs.response" />
-    <indexitem text="検索タブ" target="start.check" />
-    <indexitem text="セッション コンテキスト ダイアログ" target="start.concepts.scanpolicy" />
-    <indexitem text="セッション プロパティ ダイアログ" target="ui.dialogs.scanpolicy" />
-    <indexitem text="サイトタブ" target="ui.dialogs.scanpolicymgr" />
-    <indexitem text="スパイダー" target="ui.dialogs.scanprogress" />
-    <indexitem text="スパイダーダイアログ" target="ui.tabs.search" />
-    <indexitem text="スパイダータブ" target="ui.dialogs.contexts" />
-    <indexitem text="タグ" target="ui.dialogs.context-auth" />
-    <indexitem text="トップレベルメニュー" target="ui.dialogs.context-struct" />
-    <indexitem text="トップレベルツールバー" target="ui.dialogs.sessprop" />
-    <indexitem text="uiの概要" target="ui.tabs.sites" />
-    <indexitem text="spider" target="start.concepts.spider" />
-    <indexitem text="spider dialog" target="ui.dialogs.spider" />
-    <indexitem text="spider tab" target="ui.tabs.spider" />
-    <indexitem text="statistics" target="start.concepts.stats" />
-    <indexitem text="structural modifiers" target="start.concepts.structmods" />
-    <indexitem text="structural parameters" target="start.concepts.structparams" />
-    <indexitem text="tags" target="start.concepts.tags" />
-    <indexitem text="top level menu" target="ui.topmenu" />
-    <indexitem text="top level toolbar" target="ui.toptoolbar" />
-    <indexitem text="ui overview" target="ui.overview" />
+    <indexitem text="リリース 2.4.1" target="zap.releases.2.4.1" />
+    <indexitem text="リリース 2.4.2" target="zap.releases.2.4.2" />
+    <indexitem text="リリース 2.4.3" target="zap.releases.2.4.3" />
+    <indexitem text="リリース 2.5.0" target="zap.releases.2.5.0" />
+    <indexitem text="リリース 2.6.0" target="zap.releases.2.6.0" />
+    <indexitem text="リリース" target="zap.releases.2.7.0" />
+    <indexitem text="リクエストタブ" target="zap.releases" />
+    <indexitem text="再送信ダイアログ" target="ui.tabs.request" />
+    <indexitem text="レスポンスタブ" target="ui.dialogs.resend" />
+    <indexitem text="スキャナールール" target="ui.tabs.response" />
+    <indexitem text="スキャンポリシー" target="start.check" />
+    <indexitem text="スキャンポリシーダイアログ" target="start.concepts.scanpolicy" />
+    <indexitem text="スキャンポリシー管理ダイアログ" target="ui.dialogs.scanpolicy" />
+    <indexitem text="スキャン進捗ダイアログ" target="ui.dialogs.scanpolicymgr" />
+    <indexitem text="検索タブ" target="ui.dialogs.scanprogress" />
+    <indexitem text="セッションコンテキスト画面" target="ui.tabs.search" />
+    <indexitem text="セッションコンテキスト認証画面" target="ui.dialogs.contexts" />
+    <indexitem text="セッションコンテキスト構成画面" target="ui.dialogs.context-auth" />
+    <indexitem text="セッションプロパティダイアログ" target="ui.dialogs.context-struct" />
+    <indexitem text="サイトタブ" target="ui.dialogs.sessprop" />
+    <indexitem text="スパイダー" target="ui.tabs.sites" />
+    <indexitem text="スパイダーダイアログ" target="start.concepts.spider" />
+    <indexitem text="スパイダータブ" target="ui.dialogs.spider" />
+    <indexitem text="統計情報" target="ui.tabs.spider" />
+    <indexitem text="構造体修飾子" target="start.concepts.stats" />
+    <indexitem text="構造体パラメーター" target="start.concepts.structmods" />
+    <indexitem text="タグ" target="start.concepts.structparams" />
+    <indexitem text="トップレベルメニュー" target="start.concepts.tags" />
+    <indexitem text="トップレベルツールバー" target="ui.topmenu" />
+    <indexitem text="uiの概要" target="ui.toptoolbar" />
+    <indexitem text="表示" target="ui.overview" />
     <indexitem text="views" target="ui.views" />
 
 </index>

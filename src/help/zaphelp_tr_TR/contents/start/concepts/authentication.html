@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Kimlik Doğrulama</title>
+</head>
+<body bgcolor="#ffffff">
+	<h1>Kimlik Doğrulama</h1>
+	<p>
+		ZAP, web siteleri / web uygulamaları için kullanılabilen birden çok kimlik doğrulama türü (<b> Kimlik Doğrulama Yöntemleri </> olarak adlandırılır) ile ilgilenir. Her <b><a
+			href="contexts.html"> Bağlam </>, kimlik doğrulamanın nasıl işleneceğini belirleyen bir Kimlik Doğrulama Yöntemi içerir. Kimlik doğrulama, kimliği doğrulanmış web uygulamasına karşılık gelen Web Oturumu oluşturmak için kullanılır <a href="users.html"> Kullanıcılar </>.
+	</p>
+
+	<p>
+		Web sunucularından gelen yanıt mesajlarının ne zaman karşılık verildiğini, kimliği doğrulanmış talepler için bir dizi gösterge yapılandırılabilir. Bir yanıt mesajında (üstbilgi veya gövde) mevcut olduğunda <b> Girişlenen göstergesi </>, yanıt mesajının kimliği doğrulanmış bir talebe karşılık geldiğini gösterir (ör. Bir 'çıkış bağlantısı' veya 'Çıkış bağlantısı varlığı' geri, Kullanıcı X 'deseni). Benzer şekilde, <b>Oturum
+			kapatıldı göstergesi</b> doğrulanmamış bir isteği gösterir (örneğin bir
+		'oturum açma linkinin' varlığı). ZAP, oturum kapatma göstergesini algılarsa, yeniden kimlik doğrulaması yapar,
+aksi takdirde zaten kimliğin doğrulandığını ve her zamanki gibi devam edeceğini varsayar.  
+		Doğru işlevsellik için iki (2) göstergeden yalnızca biri (1) gereklidir. Göstergelerden hiçbiri belirtilmediğinde, tüm mesajlar varsayılan olarak kimliği doğrulanmış sayılır.
+	</p>
+		
+	<p> <b>Giriş/Çıkış Göstergeleri</b> 'den birini ayarlamak için, 
+regex'i doğrudan<i><a href="../../ui/dialogs/session/contexts.html#auth">Oturum 
+Özellikleri</a>iletişim kutusu -> Kimlik doğrulama paneli -> Oturum Açılmış/Çıkışı Göstergesi alan </i> 'ın da yazın,
+Siteler Ağacında kimliği doğrulanmış bir mesaj bulun, onu seçin, 
+Yanıt Görünümü'nü açın ve fareyi kullanarak gösterge olarak tanımlamak istediğiniz metni seçin ve 
+<i>Bağlam olarak İşaretle... seçeneğini seçin... Oturum açıldı/kapatıldı göstergeci</i> sağ tık menü seçeneği.
+	</p>
+
+	<p>Bir web sitesindeki / webapp'teki bir kullanıcının kimlik doğrulamasını gerçekleştirmek için Kimlik Doğrulama Yöntemi, gerekli kimlik bilgileri (tam tanımlayıcılar) kullanıcıya bağımlı iken kimlik doğrulama işleminin nasıl yapılacağını ise (işlem) tanımlar; dolayısıyla ZAP'ta, kullanıcılar içinde yapılandırılır.</p>
+	
+	<p>Jenerik <b>ana adımlar</b> bir web uygulaması için kimlik doğrulamayı yapılandırmak için gerekli olan şudur:
+	<ol>
+		<li>web uygulaması için bir ZAP <a href="contexts.html">İçeriğini</a> uygun şekilde yapılandır</li>
+		<li>uygulamanızda kullanılan birine bağlam için <a href="sessionManagement.html">oturum yönetim
+		metodunu</a> kur</li>
+		<li>durumlar için kimlik doğrulama yöntemini ayarlaryın:
+			<ol>
+				<li>yukarıda açıklandığı gibi, <i>Oturum Açma Göstergeci</i> veya
+ <i>Oturum Kapatma Göstergeci</i>nin en az birini kur</li>
+				<li>tüm gereksinimleri belirterek (aşağıda görüldüğü gibi) uygulamanız için kimlik doğrulama yöntemini yapılandırın</li>
+			</ol>
+		</li> 
+		<li>bağlam için, bağlamın kimlik doğrulama yöntemine doğrudan karşılık gelen bir dizi <a href="users.html"> kullanıcı yapılandırın </></li>
+	</ol>
+
+	<p>Kimlik doğrulama yöntemleri, ZAP'ın etrafında birden fazla yerde kullanılabilir. Örneklerden bazıları şunlardır:</p>
+	<ul>
+		<li>kullanıcıları tanımlama ve otomatik giriş</li>
+		<li>kimliği doğrulanmış / kimliği doğrulanmayan durumların tespiti</li>
+		<li>otomatik yeniden kimlik doğrulama işlemini uygulama</li>
+	</ul>
+
+	<p>Çoklu kimlik doğrulama yöntemleri uygulanmış ve sistem, kullanıcı ihtiyaçlarına göre yeni yöntemlerin kolay eklenmesini desteklemektedir. Bunların ana hatları aşağıda açıklanmaktadır.</p>
+
+	<h3>
+		<a name="manual">Manuel Kimlik Doğrulama</a>
+	</h3>
+	<p>Bu yöntem, kullanıcıların kimlik doğrulamasını manuel olarak gerçekleştirmesine (örneğin, ZAP üzerinden proxy yaparken tarayıcıda kimlik doğrulama yapmaya) ve ardından karşılık gelen HTTP oturumunu seçmesine olanak tanır. Gerçek kimlik doğrulama sizin tarafınızdan gerçekleştirildiğinden, webapp bir kullanıcıyı dışarıda bırakması durumunda bu yöntem yeniden kimlik doğrulamayı desteklemez.
+	</p>
+	
+	<p>Bu kimlik doğrulama yöntemini kullanırken, bir Kullanıcı'nın içeriği için yapılandırılması, kimliği doğrulanmış bir HTTP oturumu seçilmesini gerektirir.</p>
+
+	<h3>
+		<a name="formBased">Form-Merkezli Kimlik Doğrulama</a>
+	</h3>
+	<p>
+		Bu yöntem, kimlik doğrulama işleminin kimlik bilgileri 'kullanıcı adı / şifre' çifti kullanılarak bir 'giriş URL'si' için bir form gönderilmesi veya bir GET isteği gerçekleştirilmesi yoluyla gerçekleştirildiği web siteleri / web uygulamaları için kullanılır.
+		Yeniden kimlik doğrulama mümkündür. Yapılandırma <a
+			href="../../ui/dialogs/session/contexts.html#auth">Oturum Bağlam Diyaloğu</a> veya
+			bağlamsa Açılır Menü kullanılarak yapılabilir:<i>Gibi bayrakla...
+			Form-Merkezli Kimlik Doğrulama Oturum Açma İsteği</i>.
+	</p>
+	<p>Bu kimlik doğrulama metodunu kullanırken, bağla için bir kullanıcı yapılandırılması form merkezli
+kimlik doğrulama iççin kullanılan <i>kullanıcı adı/şifre</i> çifti kimlik bilgilerinin kurulumunu gerektirir.</p>
+	
+	<h3>
+		<a name="httpAuth">HTTP/NTLM Doğrulama</a>
+	</h3>
+	<p>
+		Bu yöntem, kimlik doğrulamanın HTTP ileti üstbilgilerini kullanan HTTP veya NTLM Kimlik Doğrulama mekanizmalarını kullanarak uygulandığı web siteleri / web uygulamaları için kullanılır. 
+		Desteklenen üç kimlik doğrulama şeması vardır: Temel, Özet ve NTLM.
+		Kimlik doğrulama başlıkları, kimliği doğrulanmış her istekte gönderildiğinden, yeniden kimlik doğrulama mümkündür. Doğrulama <a
+			href="../../ui/dialogs/session/contexts.html#auth">Oturum Bağlam Diyaloğu</a>
+kullanılarak yapılabilir.
+	</p>
+	<p>Bu kimlik doğrulama yöntemini kullanırken, bir Kullanıcı'nın içerik için yapılandırılması, HTTP / NTLM kimlik doğrulaması için kullanılan kimlik bilgilerinin <i> kullanıcı adı / parola </> çifti ayarlamasını gerektirir.</p>
+	
+	<h3>
+		<a name="scriptBased">Script-Merkezli Kimlik Doğrulama</a>
+	</h3>
+	<p>
+		Bu yöntem, kimlik doğrulamasının daha karmaşık olduğu ve kimlik doğrulama işlemini gerçekleştiren bazı özel komut dosyalarının yararlı olduğu web siteleri / web uygulamaları için yararlıdır. Bu yöntemi kullanabilmek için önce web uygulaması tarafından mesaj gönderen veya gereken diğer eylemleri yapan bir Kimlik Doğrulama komut dosyası tanımlamanız gerekir. Bu metin daha sonra belirli bir Bağlam için kullanılmak üzere seçilir ve bir kimlik doğrulama gerçekleştirildiğinde çağrılır. Yeniden kimlik doğrulama mümkündür. 
+		Yapılandırma, <a href="../../ui/dialogs/session/contexts.html#auth"> Oturum Bağlamları İletişim Kutusu </> 'nu kullanarak yapılabilir ve Scripts Console ZAP Eklentisinin Marketplace'den kurulmasını gerektirir.
+	</p>
+	<p>Bu kimlik doğrulama yöntemini kullanırken, bir Kullanıcıyı durum için yapılandırmak, komut dosyasında tanımlanan bir parametre setini ayarlamayı gerektirir. Daha fazla ayrıntı için, verilen Kimlik Doğrulama Komut Dosyası örneklerine bakın.</p>
+	
+	<h2>Yapılandırma örneği</h2>
+	<p>Kullanılan bir web uygulamasının nasıl tamamen yapılandırılacağını gösteren bir yapılandırma örneği <i>form tabanlı kimlik doğrulama</i> ve
+	<i>çerez-merkezli oturum yönetimi</i> 	
+	aşağıda görülüyor:
+	<ol>
+		<li>web uygulaması için bir durum ayarla</li>
+		<li><i>Cookie-based Session Management</i> ile oturum yönetme yöntemini kurmak</li>
+		<li>tarayıcınızın her şeyi ZAP aracılığıyla yetkilendirdiğinden emin olun ve tarayıcıyı kullanarak uygulamanıza giriş yapın</li>
+		<li>ZAP'a gidin ve oturum açma işlemi için yapılan talebi saptayın (genellikle kullanıcı adı ve şifreyi içeren bir HTTP POST isteği ve muhtemelen başka öğelerdir)</li>
+		<li>isteği sağ tıklatın ve Bağlam Olarak İşaretle... Form Tabanlı Kimlik Doğrulama İsteği</li>
+		<li>zaten istek URL'sini ve parametreleri (varsa) içeren bir pencere açılacaktır. Parametrelerden hangisinin kullanıcı adına ve şifresine karşılık geldiğini seçmek için açılır menü seçeneklerini kullanın</li>
+    	<li>ondan sonra bir kimlik doğrulamanın başarılı olup olmadığını belirlemek için Zap'a bildirmeniz gerekir. Yapabilirsin 
+    	bu oturum açma veya oturum kapatma göstergelerini ayarlayarak. Bunlar, bir yanıtta bulunursa,bunlar doğrulanmış olup olmadığını ZAP'a söyleyen regex kalıplarıdır (ör. Bir http://example.com/logout bağlantısı varlığı veya bir "Hoş Geldiniz, Kullanıcı X" varlığı). Sadece bir tanesi
+    	gerekli. Bunlardan birini ayarlamak için regex'i doğrudan Oturum Özellikleri -> 
+         Kimlik Doğrulama -> Oturum Açma Göstergesi, Siteler Ağacı'nda kimliği doğrulanmış bir mesaj bulun,
+         onu seçin, Yanıt Görünümü'nü açın ve kullanarak gösterge olarak tanımlamak istediğiniz metni seçin
+         fareyi tıklayın ve Bağlam Olarak İşaretle 'yi seçin... Oturum açma göstergesi sağ-tık meni seçeneğinde.</li>
+    	<li>oturum Özellikleri -> Kullanıcılar bölümünde istediğiniz kadar çok kullanıcı tanımlayın.</li>
+    	<li>bu adımdan sonra ZAP'ta çeşitli eylemler yapılabilir. Örneğin, şimdi <a href="../../ui/dialogs/spider.html">örümcek diyaloğunda</a> kullanıcıyı seçebilirsiniz. Ya da, Zorunlu Kullanıcı Modu'nu kullanarak belirli bir Bağlam için ZAP yoluyla geçen tüm etkileşimleri bir Kullanıcı'nın perspektifinden zorlayabilirsiniz. Kullanıcı Zorla Modu, araç çubuğundaki (kullanıcı ve kilitle birlikte) önceki düğme aracılığıyla etkinleştirilir ve Oturum Özellikleri -> Zorunlu Kullanıcı Modu aracılığıyla yapılandırılır.</li>
+	</ol>
+	
+	Yukarıdaki adımların çoğu diğer kimlik doğrulama yöntemleri için de geçerlidir. Farklı bir yöntemi kullanarak kimlik doğrulamasını yapılandırmaya çalışırken değişen tek şey 3., 4., 5. ve 6. adımlardır. Bunun yerine, açılır listeden gerekli kimlik doğrulama yöntemini seçin ve gerektiği gibi yapılandırın. Her kimlik doğrulama türünü yapılandırmayla ilgili daha fazla bilgi, yukarıda ve <a href="../../ui/dialogs/session/contexts.html">burada</a>.
+
+	<h2>Via Yapılandırması</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/session/contexts.html#auth">Oturum Özellikleri diyaloğu</a></td>
+			<td></td>
+		</tr>
+	</table>
+
+	<h2>Ayrıca bakınız</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="https://youtu.be/cR4gw-cPZOA">Youtube öğretici</a></td>
+			<td>ZAP'ın Kimlik Doğrulama, Oturum Yönetimi ve Kullanıcı Yönetimi özellikleri [harici https://youtu.be/cR4gw-cPZOA bağlantısı].</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/overview.html">UI Genel Bakış</a></td>
+			<td>kullanıcı ara yüzü için bir genel görünüm</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="concepts.html">Özellikler</a></td>
+			<td>ZAP tarafından sağlanır</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/session/contexts.html">Oturum
+					Bağlam Diyaloğu</a></td>
+			<td>Oturum Özellikleri'ne genel bakış için</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="users.html">Kullanıcılar</a></td>
+			<td>Kullanıcıların bir genel görünümü</td>
+		</tr>
+
+	</table>
+
+</body>
+</html>

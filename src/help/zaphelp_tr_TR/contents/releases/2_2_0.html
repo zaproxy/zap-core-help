@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  Sürüm 2.2.0
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Sürüm 2.2.0</h1>
+<p>
+Bu sürümde aşağıdaki değişiklikler yapıldı:
+</p>
+
+<h2>Büyük değişiklikler:</h2>
+
+<h3>Sayı 717: Komut dosyaları: birden fazla komutu destekleme ve ZAP bileşenleri içine gömme</h3>
+<h3>Mozilla Zest için destek: https://developer.mozilla.org/en-US/docs/Zest</h3>
+<h3>Mozilla Plug-n-Hack için destek: https://developer.mozilla.org/en-US/docs/Plug-n-Hack</h3>
+<h3>Başıkları taramanın yanı sıra JSON ve XML için destek</h3>
+
+<h2>Küçük değişiklikler:</h2>
+
+<h3>Sorun 711 : XML tarama taleplerine destek</h3>
+<h3>Sorun 713 : Sorunlara CWE ve WASC numaraları ekle</h3>
+<h3>Sorun 719 : Daha fazla seçenek içeren özel http kesme noktaları</h3>
+<h3>Sorun 738: Sekmeleri / Pencereleri gizlemek için seçenekler</h3>
+<h3>Sorun 750 : Metin tabanlı olmayan komut dosyası dillerini desteklemek için komut konsolunu iyileştirin</h3>
+<h3>Sorun 752 : İlk çalıştırıldığında yeni bir CA kökü oluşturun</h3>
+<h3>Sorun 775 : Ana makinenin komut satırından ayarlanmasına izin ver</h3>
+
+
+<h2>Hata Düzeltmeleri:</h2>
+
+<h3>Sorun 555: Http panelleri varsayılan olarak onaltılı görünümündedir</h3>
+<h3>Sayı 599: Kaydetme oturumu api'si, aynı isme sahip farklı bir oturumun üzerine yazmasına izin vermiyor</h3>
+<h3>Sayı 630: URLCanonicalizer.getCanonicalURL, URL'leri 'yarı' deşifre edilmiş şekilde üretir</h3>
+<h3>Konu 631: URLCanonicalizer.buildCleanedParametersURIRepresentation URL'leri yüzde-kodlanmış formda ve deşifreli getirir</h3>
+<h3>Sorun 652: Büyük tarama çok uzun sürdüğünde kapatma (Ascan kayıtlarını silerek)</h3>
+<h3>Sorun 655: API kodlama sorunları</h3>
+<h3>Sayı 665: Boş yol bileşeni olan bir URI ile proxy işlemi uygularken oluşan Boş İşaretleyici Harici Durumu</h3>
+<h3>Sayı 666: JSONException, gerekli parametre(ler) olmadan bir API eylemi ararken</h3>
+<h3>Sayı 669: Java 1.7'de bulunan sertifika algoritması kısıtlamaları</h3>
+<h3>Sayı 674: ApiGeneratorUtils'e HttpSessionAPI ekleyin</h3>
+<h3>Konu 685: "Fuzzers" dizinine taklit dosya ekle</h3>
+<h3>Konu 686: ProxyThread'de HttpException (hata olarak) logla</h3>
+<h3>Sayı 687: HTTP yanıt üstbilgi ayrıştırıcısını daha az katı olacak şekilde düzenleme</h3>
+<h3>Sayı 690: İçerik Doğrulama URL'leri üzerine manuel olarak yazma konusunda başarısız olmaz.</h3>
+<h3>Sorun 691: Eski eklentileri tanıma</h3>
+<h3>Sorun 692: zap.sh tarafından bulunan java versiyonlarını raporla</h3>
+<h3>Sayı 693: Komut satırı tüm seçenekleri göstermelidir</h3>
+<h3>Sorun 694 : Internet Explorer'daki API arayüzü hataları</h3>
+<h3>Sayı 695: Siteler ağacı, API tarafından yaratılan yeni oturumu temizlemiyor</h3>
+<h3>Sayı 696: Zap Numara Değiştiricisini kullanmak için "Ajax Örümcek" eklenti seçeneklerini değiştirin</h3>
+<h3>Sayı 697: Bir API eylemi olan "proxy.pac" yanlış etki alanı / bağlantı noktası meydana getirebilir</h3>
+<h3>Sayı 698: Pasif Tarayıcı API görünümü "recordsToScan" iletilerini taramayı tamamladıktan sonra tekrar -1'e döner</h3>
+<h3>Sorun 699 : Yardım sayfalarındaki HTML hatalarını düzelt</h3>
+<h3>Sayı 702: Çalışan ZAP sürümü için hedeflenmemişlerse yeni eklenti sürümleri yüklemeyin</h3>
+<h3>Sayı 703: "önceden yüklenmemiş" ve "sürümden olmayan" eklentili ZAP sürüm kısıtlamaları, zaten "yüklü" eklentiler için saygı göstermez</h3>
+<h3>Sayı 706: ZAP API, doğru sorgu parametrelerini "&amp;" karakterleri ile doğru şekilde ayrıştırmıyor</h3>
+<h3>Sayı 710: URLCanonicalizer.getCanonicalURL, sorgu parametrelerini "&amp;" ve "=" karakterleri ile ayrıştırma konusunda sorun yaşıyor</h3>
+<h3>Sayı 712: HttpSessions API eylemi olan "setSessionTokenValue", sitenin oturum simgelerine oturum belirten bir isim eklemelidir</h3>
+<h3>Sorun 720: standart olmayan http metodlarını gönderememe</h3>
+<h3>Sayı 721: Sunucu, bir istek gövdesi beklediğinde, POST olmayan ve PUT istekleri bir 504 uyarısı alıyorlar</h3>
+<h3>Sorun 724 : Mesaj panelinde gösterilecek olan uyarı mesajını klonlama</h3>
+<h3>Sorun 725 : Uyarı panel bölgesini temizle</h3>
+<h3>Sayı 726: Aktif tarayıcı değişkenlerinin özel durumlarını yakalama</h3>
+<h3>Sorun 727: Otomatik olarak oluşturulan HTTP oturumlarının adı her zaman İngilizce'dir</h3>
+<h3>Sorun 728: HttpSessions API'si aracılığıyla belirli bir adla bir oturum oluşturmaya izin ver</h3>
+<h3>Sorun 729 : NTLM kimlik doğrulama kodunu güncelle</h3>
+<h3>Sayı 730: (eklenti üzerindeki) "Eklentiler" seçenekleri panelinde devre dışı bırakılan bir uzantı seçildiği sırada ortaya çıkan MissingResourceException</h3>
+<h3>Konu 731: MissingResourceException ve ExtensionFuzz etkin ve ExtensionBruteForce devre dışı</h3>
+<h3>Sayı 736: Eklenti sınıfı yükleme stratejisini son aileye doğru değiştir</h3>
+<h3>Sayı 737: "Ajax örümcek" eklenti bağlılıklarını tekrar yükleyin</h3>
+<h3>Sayı 756: İçerik Panoların aralarında iletişim kurmasına izin verir</h3>
+<h3>Sayı 763: Hayalet modunda kullanılırken XML raporu boştur</h3>
+<h3>Konu 764: HTTP fuzz sonuçları sağ tık menüleri desteklemez</h3>
+<h3>Konu 766: Fuzz sonuçları aramaya başlık dahil değil</h3>
+<h3>Sayı 767: HTTP oturumu API'si daha az sıkı olabilirdi</h3>
+<h3>Sayı 772: İçerik bilgisini yüklerken / kaydederken yeniden yapılandırma</h3>
+<h3>Sorun 774 : Sürüm betik dizinini kapsamıyor</h3>
+<h3>Sorun 776 : Eklentilere ZAP'ı kaydedilmemiş kaynaklar varken kapatılmak istenirse uyarı ekle</h3>
+<h3>Sayı 777: Bağlama dahil et veya bağlamdan dışarıya çıkar işlemlerini yaparken kullanılan değişiklikler iptal edilemiyor</h3>
+<h3>Sayı 782: Bir WebSocket kanal URL'si içerikten ayrı tutulduğunda verilen NoSuchMethod hatası</h3>
+<h3>Sorun 785 : Java 1.8 ile uyumlu olabilmesi için zap.sh'yi değiştir</h3>
+<h3>Sayı 786: Anlık görüntü oturumu menü parçası çalışmıyor</h3>
+
+<h2>Ayrıca bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Giriş</a></td><td>zAP'a giriş</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Sürümler</a></td><td>bütün sürümler</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Jenerik</a></td><td>bu serbest bırakmayı mümkün kılan insanlar ve gruplar</td></tr>
+</table>
+</body>
+</html>

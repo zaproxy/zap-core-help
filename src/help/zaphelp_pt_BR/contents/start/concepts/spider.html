@@ -6,20 +6,10 @@
 </head>
 <body bgcolor="#ffffff">
 	<h1>Spider</h1>
-	<p>The spider is a tool that is used to automatically discover new
-		resources (URLs) on a particular Site. Começa com uma lista de URLs para visitar, chamadas de sementes, que dependem de como o spider é iniciado. O spider então visita essas URLs, identifica todos os hiperlinks na página e os adiciona à lista de URLs para visitar e assim o processo continua recursivamente, à medida em que novos recursos/URLs são encontrados.
+	<p>O spider é uma ferramenta usada para detectar automaticamente novos recursos (URLs) em um determinado Site. Começa com uma lista de URLs para visitar, chamadas de sementes, que dependem de como o spider é iniciado. O spider então visita essas URLs, identifica todos os hiperlinks na página e os adiciona à lista de URLs para visitar e assim o processo continua recursivamente, à medida em que novos recursos/URLs são encontrados.
 	</p>
 
-	<p>Existem 4 métodos de iniciar o spider, diferenciados pela lista de sementes com as quais começa:</p>
-	<ul>
-		<li>Spider em Site - a lista de sementes contém todas as URIs já encontradas para o site selecionado.</li>
-		<li>Spider em Subárvore - a lista de sementes contém todos os URIs já encontrados e presente na subárvore do nó selecionado.</li>
-		<li>Spider de URL - a lista de sementes contém apenas a URI correspondente ao nó selecionado (na árvore do Site).</li>
-		<li>Spider de tudo no escopo - a lista de sementes contém todas as URIs que o usuário tiver selecionado como sendo 'No escopo'.</li>
-		<li>Spider em todo o contexto... - a lista de sementes contém todas as URIs que o usuário selecionou como sendo o contexto.</li>
-	</ul>
-	<i>Mais detalhes podem ser encontrados abaixo, na seção "Acessado via" </i>
-
+	<p>O spider pode ser configurado e iniciado usando-se o <a href="../../ui/dialogs/spider.html">diálogo de spider</a>.</p>
 
 	<p>Durante o processamento de uma URL, o Spider faz uma solicitação para buscar o recurso e em seguida analisa a resposta, identificando os hiperlinks. Atualmente tem o seguinte comportamento para processar as respostas:</p>
 
@@ -54,10 +44,10 @@
 	<ul>
 	<li> Ao verificar se uma URL já foi visitada, o comportamento para tratamento dos parâmetros pode ser configurado na tela de opções do spider.
 	</li>
-	<li> Quando verificar se uma URL já foi visitada, alguns parâmetros comuns são ignorados: jsessionid, phpsessid, aspsessionid, utm_ *
+	<li> Quando verificar se uma URL já foi visitada, alguns parâmetros comuns são ignorados: jsessionid, phpsessid, aspsessionid, utm_*
 	</li>
-	<li> O comportamento do spider em cookies é definido pela opção presente em <i>Editar -&gt; Habilitar rastreamento de sessão</i>. Se essa opção estiver habilitada, o spider manipulará corretamente os cookies recebidos do servidor e irá enviá-los adequadamete.
-	Se a opção estiver desabilitada, o spider não enviará quaisquer cookies em suas solicitações.
+	<li> The Spider's behaviour regarding cookies depends on how the spider is started and which options are enabled. For more
+	details refer to the Spider Options screen.
 	</li>
 	</ul>
 	<p>

@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Oturum Özellikleri diyaloğu
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Oturum Özellikleri diyaloğu</h1>
+<p>
+Bu aşağıdaki ekranlardan oluşmuştur ve oturum özellikleri ayarlamanıza izin verir:
+
+<h3>Genel</h3>
+Bu oturum adını ve açıklamasını düzenlemenize olanak verir.
+
+<h3>Proxy'den Hariç Tut</h3>
+Bu yerel proxyler tarafından reddedilecek URL'leri yönetmenize olanak sağlar.
+
+<h3>Tarayıcıdan çıkar</h3>
+Bu tarayıcı tarafından reddedilecek URL'leri yönetmenize olanak sağlar.
+
+<h3>Ağdan çıkar</h3>
+Bu ağlar (standart ve AJAX) tarafından reddedilecek URL'leri yönetmenize olanak sağlar.
+
+<h3>İçerikler</h3>
+Yönetim için bir ekran kümesi <a href="../../../start/concepts/contexts.html">içerikler</a>
+
+<h2>URL regexleri</h2>
+İçinde <i>* dan hariç</i> diyalogta, hariç tutulan URL'leri tanımlamak için normal ifadeler girebilirsiniz. Bir tek bir ters eğik çizgiyle meta karakter kaçabilir, Ayrıca şunu kullanabilirsiniz <b>\Q...\E</b> çıkış sırası. bunların arasındaki bütün karakterler <b>\Q</b> ve <b>\E</b> doğru karakterler olarak çevrilir.Örneğin Q*\d+*\E doğru karakterde *\d+* ile eşleşir.
+Bu çıkış sırası ZAP tarafından bazı içerik menüleri ile URL'leri çıkardığınızda kullanılır.
+<br>
+<b>Not:</b> Eğer URL'niz bir "\E" içeriyorsa, bunu kullanırken aşağıdaki adımları yapmak zorundasınız <b>\Q...\E</b> çıkış sırası:
+<ul>
+	<li>Çıkış sırası aç</li>
+	<li>''karakter'' \E den önce çıkış sırasını kapatın.</li>
+	<li>Ters eğik çizgi çıkışı</li>
+	<li>"\E"den sonra başka bir çıkış sırası aç;</li>
+	<li>Normal olarak yapılacağı gibi çıkış sırasını kapat.</li>
+</ul>
+<br>
+Örnek: subdomain.example.com/path?a=<b>\E</b>&amp; moredata = 2 olarak görünmelidir
+<i>\Qsubdomain.example.com/path?a=\E</i><b>\\E</b><i>\Q &amp; moredata = 2\E</i>
+  
+<h2>Üzerinden erişildi</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../tlmenu/file.html">Üst Seviye Dosya menüsü</a></td><td>'Özellikler...' menü öğesi</td></tr>
+</table>
+
+<h2>Ayrıca bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../overview.html">UI Genel Bakış</a></td><td>kullanıcı arayüzüne genel bir bakış için</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../dialogs.html">Diyaloglar</a></td><td>diyalogların ve açılır pencerelerin detayları için </td></tr>
+</table>
+
+</body>
+</html>

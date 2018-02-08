@@ -9,9 +9,12 @@ Filtros
 <body bgcolor="#ffffff">
 <h1>Filtros</h1>
 <p>
-Esto permite establecer <a href="../../start/concepts/filters.html">filtros</a> que son aplicados a solicitudes y respuestas.
+<strong>NOTA: Los filtros han sido reemplazados por el complemento Replacer y los scripts que son más potentes y flexibles. <br> Los filtros se eliminarán en una versión futura de ZAP.</strong>
 </p>
-Los siguientes filtros están soportados por defecto.
+<p>
+Esto permite establecer <a href="../../start/concepts/filters.html">filters</a> que son aplicados a solicitudes y respuestas.
+</p>
+Los siguientes filtros son compatibles por defecto.
 
 <h2>Cambiar el agente de usuario a otros navegadores</h2> 
 
@@ -39,11 +42,12 @@ Los siguientes filtros están soportados por defecto.
 
 <h2>Enviar el ID de las solicitudes en la sesión de ZAP</h2>
 	<p>
-		Este filtro añadirá una etiqueta especial en el encabezado para enviar cada solicitud al servidor.
-		Por lo tanto, se puede seguir las solicitudes de ZAP, cuando investigas tu propia aplicación web.
-		Es útil tener un id distinto para múltiples solicitudes, cuando se analiza por ejemplo, archivos de registros del servidor HTTP. 
+		This filter will add a special header tag to each request send to the server.
+		So you can track ZAP's requests, when investigating your own web application.
+		It's helpful to have a distinct id for multiple requests, when parsing
+		for example HTTP server's log files. 
 	</p>
-	<p>El encabezado de la solicitud es modificado como este (ejemplo):</p>
+	<p>Request header is modified like this (example):</p>
 	
 	<pre>
 X-ZAP-RequestID: &lt;sessionName&gt;&#8211;&lt;number&gt;

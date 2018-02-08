@@ -22,21 +22,21 @@ The HTML panels now support switchable syntax highlighting.
 
 The fuzzer includes fuzzdb (https://github.com/fuzzdb-project/fuzzdb) fuzzing files.<br/>
 Note that some fuzzdb files have been left out as they cause common anti virus scanners to flag them as containing viruses.<br/>
-You can replace them (and upgrade fuzzdb) by downloading the latest version of fuzzdb and expanding it in the 'fuzzers' library.
+Cserélje ki őket (frissítés fuzzdb) letölti a legújabb fuzzdb, bővül a 'fuzzers' könyvtár.
 
 <h3>Issue 212: Parameter analysis</h3>
 
-A new Params tab shows a summary of all of the parameters a site has used.  
+Egy új Params fülön összefoglalását a paraméterek egy webhely használja.  
 
 <h3>Issue 228: Enhanced XSS scanner</h3>
 
-The Cross Site Scripting active scanner has been rewritten from scratch to find more potential XSS issues and report fewer false positives. 
+A Cross-Site Scripting aktív szkenner átírták a semmiből, hogy megtalálja több potenciális XSS kérdések jelentés kevesebb hamis pozitív. 
 
 <h3>Issue 244: Port the Watcher passive checks</h3>
 
-The following checks have been ported from Watcher (thanks to Chris Weber for oking this):
+Az alábbi ellenőrzéseket már nekiláttak a Figyelő (köszönöm, hogy Chris Weber a oking):
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.CrossDomain.ScriptReference.cs</td><td>checks for cross-domain javascript files inclusion.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.CrossDomain.ScriptReference.cs</td><td>ellenőrzi a cross-domain javascript fájlok felvétele.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.CacheControl.cs</td><td>checks HTTP cache-control header on SSL pages.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.ContentTypeMissing.cs</td><td>checks that the Content-Type HTTP header is not missing.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.FrameOptions.cs</td><td>checks that the X-FRAME-OPTIONS is not missing or insecurely set.</td></tr>

@@ -7,80 +7,46 @@
 <body bgcolor="#ffffff">
 	<h1>Avtorizasiya</h1>
 	<p>
-		ZAP handles multiple types of authentication (called <b>Authentication
-			Methods</b>) that can be used for websites / webapps. Each <b><a
-			href="contexts.html">Context</a></b> has an Authentication Method
-		defined which dictates how authentication is handled. The
-		authentication is used to create Web Sessions that correspond to
-		authenticated webapp <a href="users.html">Users</a>.
+		Zap yapar, bir neçə növ identifikasiyası (qondarma <b>üsulları identifikasiyası</b>) istifadə edilə bilər ki, web sites üçün / web applications. Hər bir element <b><a
+			href="contexts.html">kontekstində</a></b> müəyyən bir üsul identifikasiyası olan diktə edir emal identifikasiyası. İdentifikasiyası üçün istifadə olunur yaratmaq, web ki, sessiyanın uyğun həqiqiliyini web apps <a href="users.html">İstifadəçilər</a>.
 	</p>
 
 	<p>
-		In order to detect when response messages from web servers correspond
-		to authenticated requests, a set of indicators can be configured. The
-		<b>Logged in indicator</b>, when present in a response message (either
-		the header or the body), signifies that the response message
-		corresponds to an authenticated request (e.g. presence of a 'logout
-		link' or a 'Welcome back, User X' pattern). Similarly, the <b>Logged
-			out indicator</b> indicates an unauthenticated request (e.g. presence of
-		a 'login link'). Only the presence of one of the 2 indicators is
-		sufficient for proper functionality. In the case neither of the
-		indicators has been specified, all messages are considered, by
-		default, authenticated.
+		Müəyyən etmək üçün zaman cavab veb-server uyğun аутентифицированных sorğu, bir sıra göstəricilərin müəyyən edilə bilər. <b>daxil vəziyyət</b>, əgər o, mövcud mesajını (mövzu və ya bədənində), o deməkdir ki, mesaj uyğun аутентифицированный sorğu (məsələn, olması "çıxış". arayış " və ya "xoş gəlmisiniz, İstifadəçi x' şablon). Bircür, <b>çıxış işığı</b> göstərir sorğu olmadan identifikasiyası (məsələn, mövcudluğu 'giriş'). Əgər zap ki, aşkar çıxış göstərici olacaq təkrar yoxlamadan keçmək həqiqiliyini, əks halda ehtimal olunur ki, artıq müəyyən edilmişdir və davam edəcək, adətən  
+		Yalnız bir (1) iki (2) göstəricilər üçün lazım olan düzgün funksionallığı. Bu halda, əgər heç biri göstəricilərinin müəyyən edilmişdir, bütün mesajları hesab olunur, default, ötən yoxlanılması.
 	</p>
 		
-	<p> To set one of the <b>Logged in/out Indicators</b>, either type the regex 
-		directly in the <i><a href="../../ui/dialogs/session/contexts.html#auth">Session
-		Properties</a> dialog -> Authentication panel -> Logged In/Out Indicator field</i>,
-		either find an authenticated message in the Sites Tree, select it, open the
-		Response View and select the text you wish to define as the indicator using the
-		mouse and select the <i>Flag as Context... Logged in/out indicator</i> right-click menu option.
+	<p> Yüklemek üçün biri <b>giriş/çıxış göstəriciləri</b>, ya da yazın bir ifadə birbaşa <i><a href="../../ui/dialogs/session/contexts.html#auth">xassələri</a> dialoqu -> identifikasiyası panel -> ınput/output Göstərici sahələri</i>, ya da tapmaq проверенного mesajlar saytlarında, ağac üzərinə gedin və onu açmaq cavab görmək və seçmək istədiyiniz mətn kimi müəyyən göstərici istifadə edərək, bir siçan seçin və <i>bayrağımız kontekstində... Giriş/çıxış işığı</i> sağ menu item.
 	</p>
 
-	<p>In order to perform the authentication of a user on a website /
-		in a webapp, the Authentication Method defines how the authentication
-		is done (the process), while the necessary credentials (the exact
-		identifiers) are dependent on the user, so, in ZAP, they are
-		configured in the Users.</p>
+	<p>In order to perform the authentication of a user on a website / in a webapp, the Authentication Method defines how the authentication is done (the process), while the necessary credentials (the exact identifiers) are dependent on the user, so, in ZAP, they are configured in the Users.</p>
 	
-	<p>The generic <b>main steps</b> that are needed to configure authentication for a web application
-	are the following:
+	<p>The generic <b>main steps</b> lazımdır ki qurmaq identifikasiyası üçün veb-proqramlar aşağıdakılardır:
 	<ol>
-		<li>properly configure a ZAP <a href="contexts.html">Context</a> for the web application</li>
-		<li>set up the <a href="sessionManagement.html">session management method</a> for the context to
-		the one that is used in your app</li>
-		<li>set up the authentication method for the context:
+		<li>düzgün qurmaq zap <a href="contexts.html">kontekstində</a> web app</li>
+		<li>müəyyən <a href="sessionManagement.html">idarəsi сеансом metodu</a> kontekstində üçün o, istifadə olunur ki, sizin app</li>
+		<li>quraşdırma metodu identifikasiyası üçün kontekstində:
 			<ol>
-				<li>set up at least one of the <i>Logged In Indicator</i> or the <i>Logged out indicator</i>,
-				as described above</li>
-				<li>configure the authentication method for your application, specifying all the requirements
-				(as seen below)</li>
+				<li>konfiqurasiya, heç olmasa, biri <i>daxil vəziyyət</i> və ya <i>çıxış işığı</i>, yuxarıda izah edildiyi kimi</li>
+				<li>quraşdırma metodu identifikasiyası üçün proqram göstərilməklə bütün tələbləri (aşağıda göstərildiyi kimi)</li>
 			</ol>
 		</li> 
-		<li>configure a set of <a href="users.html">users</a> for the context that directly correspond to the
-		authentication method for the context</li>
+		<li>konfiqurasiya dəsti <a href="users.html">İstifadəçilər</a> kontekstində üçün, ki, birbaşa uyğun üsul identifikasiyası üçün rabitə</li>
 	</ol>
 
-	<p>Authentication methods can be used in multiple places around
-		ZAP. Some of the examples include:</p>
+	<p>Texnika identifikasiyası üçün istifadə edilə bilər bir çox yerlərdə ətrafında zap. Bəzi nümunələr daxildir:</p>
 	<ul>
 		<li>defining Users and automatic login</li>
 		<li>detection of authenticated/unauthenticated states</li>
 		<li>performing automatic re-authentication</li>
 	</ul>
 
-	<p>Multiple authentication methods have been implemented and the
-		system supports easy addition of new methods, according to user needs.
-		They main ones are described below.</p>
+	<p>Bir neçə üsulları identifikasiyası icra edilmişdir və sistem imkan verir asanlıqla əlavə yeni metodlardan asılı olaraq, ehtiyaclarını istifadəçi. Onlar əsas onlardan aşağıda təsvir olunur.</p>
 
 	<h3>
 		<a name="manual">Göstərişlə Avtorizasiya</a>
 	</h3>
-	<p>This method allows users to perform the authentication manually
-		(e.g. authenticate in the browser while proxy-ing through ZAP) and
-		then select the corresponding HTTP session. As the actual
-		authentication is being performed by you, this method does not support
-		re-authentication in case the webapp logs a user out.
+	<p>Bu üsul imkan verir yerinə identifikasiyası əl ilə (məsələn, identifikasiyası brauzerinizin kimi bir proxy ki vasitəsilə zap) seçin müvafiq http seans Kimi faktiki identifikasiyası həyata keçirilir sizin bu üsul bilmir re-identifikasiyası halda app açan istifadəçi.
 	</p>
 	
 	<p>When using this authentication method, configuring a User for the context 
@@ -145,7 +111,7 @@
 		<li>a window will be opened already containing the request URL and the parameters (if any). Use 
 		the dropdown options to select which of the parameters correspond to the username and to the password</li>
     	<li>then you need to tell ZAP how to identify whether an authentication succeeded or not. You can do 
-    	this by setting logged in or logged indicators. These are regex patterns which, if found in a 
+    	this by setting logged in or logged out indicators. These are regex patterns which, if found in a 
     	response, tell ZAP whether it's authenticated or not (e.g. presence of a 
     	http://example.com/logout link or the presence of a 'Welcome, User X'). Only one of them is
     	necessary. To set one of them, either type the regex directly in the Session Properties -> 
@@ -153,7 +119,7 @@
     	select it, open the Response View and select the text you wish to define as the indicator using
     	the mouse and select the Flag as Context... Logged in indicator right-click menu option.</li>
     	<li>define as many users as you need in the Session Properties -> Users section.</li>
-    	<li>after this step, various actions are available in ZAP. For example, you now have a new right click option: Attack -> Spider Context As User. Or, using the Forced User Mode, you can force all the interactions that go through ZAP for a given Context to be from the perspective of a User. The User Forced Mode is enabled via the previous-to-last button in the toolbar (the one with the user and the lock) and is configured via Session Properties -> Forced User Mode.</li>
+    	<li>after this step, various actions are available in ZAP. For example, you can now select the user in <a href="../../ui/dialogs/spider.html">Spider dialogue</a>. Or, using the Forced User Mode, you can force all the interactions that go through ZAP for a given Context to be from the perspective of a User. The User Forced Mode is enabled via the previous-to-last button in the toolbar (the one with the user and the lock) and is configured via Session Properties -> Forced User Mode.</li>
 	</ol>
 	
 	Most of the steps above apply as well for other authentication methods. The only things that change when trying
@@ -174,8 +140,8 @@
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="http://youtu.be/cR4gw-cPZOA">Youtube tutorial</a></td>
-			<td>of the Authentication, Session Management and Users Management features of ZAP [external link to http://youtu.be/cR4gw-cPZOA].</td>
+			<td><a href="https://youtu.be/cR4gw-cPZOA">Youtube tutorial</a></td>
+			<td>of the Authentication, Session Management and Users Management features of ZAP [external link to https://youtu.be/cR4gw-cPZOA].</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>

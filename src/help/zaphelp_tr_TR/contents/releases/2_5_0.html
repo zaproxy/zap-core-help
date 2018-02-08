@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  Sürüm 2.5.0
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Sürüm 2.5.0</h1>
+
+<p>
+Bu sürümde aşağıdaki değişiklikler yapıldı:
+</p>
+
+<h2>ZAP Uygulama Programlama Arayüzü değişiklikleri:</h2>
+
+<h3>GetAuthorizationDetectionMethod / VIEW yetkilendirme</h3>
+
+AuthorizationDetectionMethod adlı gizli dosyaları bir nesneye sarılmış verileri döndür:
+<pre>{"authorizationDetectionMethod":{"statusCode":"-1"..."headerRegex":""}}</pre>
+yerine:
+<pre>{"statusCode":"-1"..."headerRegex":""}</pre>
+
+<h3>VIEW context / context + technologyList</h3>
+Gizli dosyaları şimdi dönüş verileri "içerik" adı verilen bir nesneye sarılmış olarak dönüştür:
+<pre>{"bağlantı":{"id":"1", ..., "inScope":"gerçek","loggedOutPattern":""}}</pre>
+yerine:
+<pre>{"bağlantı":{"id":"1", ..., "inScope":"gerçek","loggedOutPattern":""}}</pre>
+
+<h3>ACTION spider / scan + scanAsUser</h3>
+</ul>
+İkisi de bağlantıyı belirtilen alt ağa sınırlayan yeni bir isteğe bağlı 'alt başlık' parametresini destekler.
+Geçerli bir 'içerik' parametresi sağlandığı sürece 'url' parametresi artık isteğe bağlıdır
+
+<h3>Yeni 'istatistik' öğesi</h3>
+API bileşeni içinde yeni 'istatistikler' <a href="../start/concepts/stats.html">istatistikler</a>
+ZAP tarafından korunuyor.<br><br>
+
+Mevcut bileşenlere de yeni işlemler yapılacağını unutmayın 
+<a href="../start/concepts/api.html">API Web Kullanıcı Arayüzü</a> daha fazla ayrıntı için.
+ 
+
+<h2>Geliştirmeler:</h2>
+<ul>
+<li>Konu 266 : Çerezleri ayıklamak için otomatik etiketleme ekleyin, json</li>
+<li>Konu 646 : Giden proxy şifresi ekranda düz metin halinde görünür</li>
+<li>Konu 1171 : Site verilerini kaldırmak için 'Yeni site / yeni düğüm' gir</li>
+<li>Konu 1229 : Yeni Güven Ölçeğinden Yararlanacak Eklentileri Güncelleyin</li>
+<li>Konu 1341 : Element bölümünde isim çakışmasını yok etmek için XML uyarısı şemasını güncelle</li>
+<li>Konu 1590 : Daemon çalışırken uygulanacak mod</li>
+<li>Sorun 1713: Kaynak kodu açıklaması SVN yanlış yada doğrudur</li>
+<li>Sorun 1864: Tarama sürecini panoya yazı olarak kopyala</li>
+<li>Konu 1958 : (HSQLDB) Veritabanı günlüğünü devre dışı bırakmaya izin ver</li>
+<li>Konu 1959 : Etkin olan tüm isteklerin etkin tarama başlıklarına izin ver</li>
+<li>Sorun 1980 : ZAP CLI yi Docker görüntülere ekleme</li>
+<li>Konu 2068 : Kimlik doğrulama dosyalarında oturum açıp ve çıkış yapılmış gösterge</li>
+<li>Konu 2070 : Kimlik doğrulama dosyaları, iletilerin gönderilme şeklini yapılandırması mümkün olmalıdır</li>
+<li>Konu 2121 : "Expand Full" konumundayken Req / Resp sekmelerinin konum seçeneklerini devre dışı bırak</li>
+<li>Sorun 2127: Eğer rapor dosyası oluşturma başarısız olursa uyar</li>
+<li>Sorun 2162 : ekle-pazaryeri-sınıflandırma</li>
+<li>Sorun 2171 : Api, cli ile yönetilen eklentiler</li>
+<li>Konu 2174 : ExpressionLanguageInjectionPlugin - Günlüğe kayıt edilmeli </li>
+<li>2177. sayı: SourceCodeDisclosureSVN - DB temp yazmıyor</li>
+<li>Konu 2183 : API: kaliteyi azaltıp/çoğaltma ayarla</li>
+<li>Konu 2237 : Cmdline'da java max belgesini geçersiz kılmasına izin ver</li>
+<li>Konu 2238 : Bağlantı: URL bulunamazsa, HTML yorumlarını düz metin olarak ayrıştırmak için geri dönüştür</li>
+<li>Sorun 2272: SQLInjectionHypersonic (Beta) - istisnai durumlarda</li>
+<li>Sorun 2273 : Destek Sitesi Düzey İstatistikleri</li>
+<li>Konu 2274 : Sadece bir sitenin alt bağlantısına izin verin</li>
+<li>Konu 2275 : bağlantı: bağlantıda konum varsa API aracılığıyla bir URL gerekmez</li>
+<li>Konu 2277 : Bağlantı: soru parametrelerinin içeriğini korurken URL'yi canonicalising ile sorgulayın</li>
+<li>Konu 2289 : Sayfanınyanıt süresi bilgilerini kaydedin</li>
+<li>Konu 2324 : API Tarayıcılarının kalitesini görünümlerine dahil edin</li>
+<li>Sorun 2330: Kimlik doğrulama istatistikleri eklendi</li>
+<li>Sorun 2335 : Giden Proxy ye En Yüksek Şifre Ekleme</li>
+<li>Konu 2342 : API'leri kullanarak ZAP'taki Sayfaları yönetme</li>
+<li>Konu 2347 : Bağlantı faktörlerini Görüntü/Model'den kaldırmaya izin ver</li>
+<li>Konu 2361 : Araç çubuğunu yeniden adlandırma seçeneğinde görünümünü Tam Düzeye Çıkar</li>
+<li>Konu 2362 : Tüm bağlantı sonuçlarını izlemesine izin verin</li>
+<li>Konu 2367 : ZAP'ı yeniden başlatmadan kesme düğmelerinin konumunu değiştir</li>
+<li>Konu 2368 : Genel araç çubuğunu göstermek yada gizlemek için yeniden başlatma gerekmez</li>
+<li>Konu 2381 : Açık okunur dosyalara kaydedilmesine / yazılmasına izin verme</li>
+<li>Konu 2400 : Proxy den kaynaklanan okuma zaman aşımları hakkında daha bilgilendirici bir ileti göster</li>
+<li>Sorun 2410: HTTP mesajlarını Örümcek sekmesinden göster</li>
+<li>Konu 2413 : Mesaj geçerli değilse "Geçmişi Göster sekmesindeki" göstergeyi devre dışı bırak</li>
+<li>Konu 2418 : Bağlantı: dakika cinsinden maksimum süreyi destekleme seçeneği</li>
+<li>Konu 2420 : Etkin tarayıcıların bir mesaj gönderildiğinde bildirmesine izin ver</li>
+<li>Konu 2422 : Statsd'yi destekleyin ve istatistikleri yeni ext'e taşıyın</li>
+<li>Konu 2465 : ZAP'in ClientApi ile başlaması için beklemeye izin ver</li>
+<li>Konu 2466 : API üzerinden bir URL'ye ZAP erişime izin ver</li>
+<li>Konu 2479 : Hatalar olsa bile arama bölümünde Kullanıcı Kılavuzunu gösterin</li>
+<li>Sorun 2481: Linux'te doğru uygulama ismi ayarlandı</li>
+<li>Konu 2482 : "Hariç tut" oturumuyla diyalog tablolarını normalleştir</li>
+<li>Sorun 2484 : Dairesel Yönlendirmeler</li>
+<li>Konu 2486 : Oturum değişikliği hakkında Clear ScriptVars</li>
+<li>Konu 2494 : ZAP Proxy, HTTP CONNECT İsteği Geçmiş sekmesinde gösterilmiyor.</li>
+<li>Konu 2504 : Sitelerin listesine manuel olarak HTTP isteklerini açıkça ekleyin</li>
+<li>Konu 2506 : Dosya tabanlı veritabanı oluşturmak için oturumu boşa çıkarmayın</li>
+<li>Konu 2512 : HSQLDB bilgi dosyasını 2.3.4 sürümüne güncelleyin</li>
+<li>Konu 2519 : Yardım eklentisi yüklendiğinde menü / düğmesini etkinleştirin</li>
+</ul>
+
+<h2>Hata düzeltmeleri:</h2>
+<ul>
+<li>Konu 1529 : Kullanma Durumu Eksik, artı Performans FP Geliştirmeleri ile TestExternalRedirect</li>
+<li>Sorun 1597: Java 8 - Mac OS/X paketi</li>
+<li>Konu 1639 : HTTP üstbilgisine komut dosyası ekleme istemi XSS olumsuz sonuçlandı</li>
+<li>Sorun 1786 : Activescan Komut Dizileri Sessiz Hatası</li>
+<li>Konu 1801 : URL StandardParameterParser QueryString dosyası düzgün çalışmıyor</li>
+<li>Konu 1848 : VariantURLQuery etkin taramada istisnalar buluyor</li>
+<li>Konu 1874: Bir http gönderici komut dosyası ile çerez eklerken ve etkin bir tarama yaparken başlık ikinci çerez satırında</li>
+<li>Konu 1875 : Tarayıcı kapandığında temp geçmişi temizlenmedi</li>
+<li>Konu 2090 : Bağlantı: Kullanıcıyı Yeniden Adlandır, Zorunlu Kullanıcı Panelinde seçilemiyor</li>
+<li>Sorun 2110 : SQL Enjeksiyon atlandı</li>
+<li>Sorun 2112 : Aktif Taramada yanlış ilke</li>
+<li>Sorun 2115: Python API bağlantı.bağlantı("MyContext") bozuldu</li>
+<li>Konu 2119 : Bağlantı bilgisi aktarılmadı</li>
+<li>Konu 2122 : Tarama işlemini çalıştırırken boş bağlantı adlarını atlamak için SpiderAPI'yi değiştirin</li>
+<li>Konu 2125 : Oturum dosyasını açarken özel oturum ve ileti ayrılığını uluslararası bir mesaja dönüştürün</li>
+<li>Konu 2126 : Hatalı bağlantıyı, kimlik doğrulama komut dosyasında ki NullPointerException'ı düzelt</li>
+<li>Sorun 2132 : Zap Raporu Sayma Hatası</li>
+<li>Sorun 2142 : Fuzzer istisnaları atıyor</li>
+<li>Sorunu 2144: "AWT-EventQueue-0" Java.lang.NullPointerException </li>
+<li>Konu 2151 : AJAX Bağlantısında, seçeneklerde ayarlanan tüm öğeleri tıklatmaz</li>
+<li>Konu 2153 : 2.4.3 ayrıştırma başarısız oldu POST Verisi ayracı var </li>
+<li>Konu 2193 : Başlangıç Teknolojisi diyaloğunda seçilen içeriğe sahip Aktif Tarama sekmesi</li>
+<li>Konu 2197 : Dosyaları addunupdate ile indirdikten sonra eklentilerin yeni sürümlerini yükleyin</li>
+<li>Konu 2199 : ZAP Güvenli (veya Korumalı) modda iken bağlantı taramalarına izin verme</li>
+<li>Konu 2203 : Bug bulma uyarılarını düzelt</li>
+<li>Konu 2208 : Etkin tarayıcı durumu % 100'ün üzerinde olduğunda bildir</li>
+<li>Konu 2226 : ZAP, HttpSessionsSite'ın çerez hatalarını detaylı bir şekilde incele</li>
+<li>Konu 2246 : Belirteçlerdeki hata oturum görünümünde</li>
+<li>Konu 2259 : VariantCookie uygulamasında NullPointerException'u düzelt</li>
+<li>Sorun 2281 : Belirli bir site için parametreleri filtrele</li>
+<li>Sorun 2282 : Örümcek bütün bir bağlamı tek seferde</li>
+<li>Sorun 2292 : alertFingerPrint'i geliştirin</li>
+<li>Konu 2297 : AWT engelleyicisi etkinleştirici kesintiye uğradı - java.lang.InterruptedException </li>
+<li>Konu 2307 : API işlemlerini taramak için "scanPolicyName" eksik olan parametresini ekleyin</li>
+<li>Konu 2312 : "Klavye Kısayolunu Düzenle" kurmaya odaklanın</li>
+<li>Konu 2313 : Geçersiz (eski) dış proxy alanlarını doğru bir şekilde dönüştürme</li>
+<li>Konu 2314 : Fuzzer'a farklı emirler eklenemiyor (NullPointerException)</li>
+<li>Sorun 2323 : ZAP API istek döngüsünü düzelt (güvenilir)</li>
+<li>Konu 2328 : İsimlendirilmiş uzantı kaldırılırken sorunu çöz</li>
+<li>Konu 2329 : Bağlantıyı çalıştırmadan hemen önce ilk girişleri filtreleyin</li>
+<li>Konu: 2331 : Özel Bağlam Panelleri eklentisi yüklendikten sonra mevcut bağlantılarda ayrı olarak gösterilmelidir</li>
+<li>Konu 2336 : BadLocationException Fuzzer kullanılırken atılsın</li>
+<li>Konu 2357 : Panel devreleri arasında geçiş yaparken uyumsuzluklar var</li>
+<li>Konu 2363 : Mod değiştirmede bağlantıyı koparan düğmeleri senkronize et</li>
+<li>Konu 2366 : Kırılma düğmelerinde gösterilen tutarsızlıklar</li>
+<li>Konu 2373 : Bilgi sekmeleri için sekmelerin tam düzgün çalışmadığını göster</li>
+<li>Konu 2374 : Cevap sekmesinin konumu ana araç çubuğu olmadan değiştirilemiyor</li>
+<li>Konu 2390 : README Headles içeriğine ihtiyaç duyuyor ve HeadlessException daha dikkatli bir şekilde ele alınmalı</li>
+<li>Konu 2394 : API Nesnesini kaydırmak için yetkilendirme görünümünü değiştirin</li>
+<li>Sorun 2399: Zaman aşımı isteklerinin ZAP'ta gözükmemesi</li>
+<li>Konu 2421 : Aktif tarayıcıda istek sayısının uyuşmazlığı</li>
+<li>Konu 2428 : Oturum oluşturma / yükleme sırasında bellekte açık var</li>
+<li>Konu 2429 : Kullanıcı kimlik doğrulaması örüntüsü ile durdur InterruptedExceptions</li>
+<li>Konu 2435 : Kullanılmadığı zaman bağlantılı görev kaynaklarını temizle</li>
+<li>Konu 2436 : WebSocket eklentisi tam olarak kaldırılamadı</li>
+<li>Konu 2440 : Etkin Tarama da iletişim kutusunu özel aç</li>
+<li>Konu 2451 : Bu bağlam içine yalnızca tek bir Veri Sürücü Bağlantısı kaydedilebilir</li>
+<li>Konu 2463 : WebSockette dışa giden proxy ayarlandığında geçerli değil</li>
+<li>Konu 2469 : Bağlantı durduğunda daima% 100 geri dönün</li>
+<li>Konu 2472 : Dosyadan kuralları yüklenirken dosya adı örneğini kullanın</li>
+<li>Konu 2474 : Birden çok bağlamsal URL ekleyin/çıkarın</li>
+<li>Konu 2475 : Pasif Tarama Kurallarının seçeneklerini bulmak için doğru yardım sayfası</li>
+<li>Sorun 2487 : HTTP gövdesinde kullanılan hatalı karakter seti</li>
+<li>Konu 2516 : Sürekli kullanılmayan auth ve bağlantı görev türleri eklemek</li>
+</ul>
+
+<h2>Ayrıca bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Giriş</a></td><td>ZAP'a giriş</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Sürümler</a></td><td>sürümlerin tamamı</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Katkıda bulunanlar</a></td><td>bu sürümü kullanan insanlar ve gruplar</td></tr>
+</table>
+</body>
+</html>

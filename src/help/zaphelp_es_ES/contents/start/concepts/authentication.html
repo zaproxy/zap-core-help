@@ -7,165 +7,103 @@
 <body bgcolor="#ffffff">
 	<h1>Autenticación</h1>
 	<p>
-		ZAP handles multiple types of authentication (called <b>Authentication
-			Methods</b>) that can be used for websites / webapps. Each <b><a
-			href="contexts.html">Context</a></b> has an Authentication Method
-		defined which dictates how authentication is handled. The
-		authentication is used to create Web Sessions that correspond to
-		authenticated webapp <a href="users.html">Users</a>.
+		ZAP maneja varios tipos de autenticación (llamados <b>Métodos de autenticación</b>) que puede ser utilizado para sitios web / webapps. Cada <b><a
+			href="contexts.html">contexto</a></b> posee un Método de Autenticación definido el cual dicta cómo se maneja la autenticación. La autenticación se utiliza para crear sesiones Web que corresponden a la aplicación web autenticado <a href="users.html">usuarios</a>.
 	</p>
 
 	<p>
-		In order to detect when response messages from web servers correspond
-		to authenticated requests, a set of indicators can be configured. The
-		<b>Logged in indicator</b>, when present in a response message (either
-		the header or the body), signifies that the response message
-		corresponds to an authenticated request (e.g. presence of a 'logout
-		link' or a 'Welcome back, User X' pattern). Similarly, the <b>Logged
-			out indicator</b> indicates an unauthenticated request (e.g. presence of
-		a 'login link'). Only the presence of one of the 2 indicators is
-		sufficient for proper functionality. In the case neither of the
-		indicators has been specified, all messages are considered, by
-		default, authenticated.
+		Con el fin de detectar mensajes de respuesta de servidores web corresponden a autenticar las solicitudes, se puede configurar un conjunto de indicadores. <b>Conectado en el indicador</b>, cuando se presenta en un mensaje de respuesta (el encabezado o el cuerpo), significa que el mensaje de respuesta corresponde a una solicitud autenticada (por ejemplo, la presencia de un enlace de' cerrar sesión' o de 'Bienvenido de nuevo, usuario X'). Del mismo modo, <b>conectado a indicador</b> indica una solicitud sin autenticar (p. ej. presencia de un 'enlace de inicio de sesión'). Si ZAP detecta la sesión un indicador de que se vuelva a autenticar, de lo contrario se supone que ya está autenticado y continuará como de costumbre.  
+		Sólo uno (1) de los indicadores de dos 2 es necesario para un funcionamiento correcto. En el caso que ninguno de los indicadores se ha especificado, se consideran todos los mensajes, por defecto, autenticado.
 	</p>
 		
-	<p> To set one of the <b>Logged in/out Indicators</b>, either type the regex 
-		directly in the <i><a href="../../ui/dialogs/session/contexts.html#auth">Session
-		Properties</a> dialog -> Authentication panel -> Logged In/Out Indicator field</i>,
-		either find an authenticated message in the Sites Tree, select it, open the
-		Response View and select the text you wish to define as the indicator using the
-		mouse and select the <i>Flag as Context... Logged in/out indicator</i> right-click menu option.
+	<p> Para establecer una <b>sesión iniciada indicadores de entrada/salida</b>, ya sea tipo regex directamente en el <i>cuadro de diálogo de <a href="../../ui/dialogs/session/contexts.html#auth">Propiedades de sesión</a>-> panel de autenticación-> conectado in/out indicador del campo</i>, ya sea encontrar un mensaje autenticado en el árbol de sitios, seleccionarlo, abierta la   Ver respuesta y seleccione el texto que desea definir como el indicador de uso del ratón y seleccionar la <i>bandera como contexto... Sesión de entrada/salida indicador de</i> opción de menú de botón derecho.
 	</p>
 
-	<p>In order to perform the authentication of a user on a website /
-		in a webapp, the Authentication Method defines how the authentication
-		is done (the process), while the necessary credentials (the exact
-		identifiers) are dependent on the user, so, in ZAP, they are
-		configured in the Users.</p>
+	<p>Para realizar la autenticación de un usuario de un sitio web o en una aplicación Web, el método de autenticación define cómo realiza la autentificación (el proceso), mientras que las credenciales necesarias (los identificadores exactas) dependen del usuario, así, en ZAP, que son el config medido en los usuarios.</p>
 	
-	<p>The generic <b>main steps</b> that are needed to configure authentication for a web application
-	are the following:
+	<p>El modelo genérico <b>pasos principales</b> se necesitan para configurar la autenticación para una aplicación web son los siguientes:
 	<ol>
-		<li>properly configure a ZAP <a href="contexts.html">Context</a> for the web application</li>
-		<li>set up the <a href="sessionManagement.html">session management method</a> for the context to
-		the one that is used in your app</li>
-		<li>set up the authentication method for the context:
+		<li>configurar correctamente un ZAP <a href="contexts.html">contexto</a> de la aplicación web</li>
+		<li>configurar el <a href="sessionManagement.html">método de administración de sesión</a> para el contexto al que se utiliza en su aplicación</li>
+		<li>configurar el método de autenticación para el contexto:
 			<ol>
-				<li>set up at least one of the <i>Logged In Indicator</i> or the <i>Logged out indicator</i>,
-				as described above</li>
-				<li>configure the authentication method for your application, specifying all the requirements
-				(as seen below)</li>
+				<li>configurar al menos uno de la <i>Sesión en indicador</i> o la <i>sesión iniciada por indicador</i>, como se describió anteriormente</li>
+				<li>configurar el método de autenticación de la aplicación, especificar todos los requisitos (como se ve abajo)</li>
 			</ol>
 		</li> 
-		<li>configure a set of <a href="users.html">users</a> for the context that directly correspond to the
-		authentication method for the context</li>
+		<li>configurar un conjunto de <a href="users.html">usuarios</a> para el contexto que se corresponden directamente con el método de autenticación para el contexto</li>
 	</ol>
 
-	<p>Authentication methods can be used in multiple places around
-		ZAP. Some of the examples include:</p>
+	<p>Métodos de autenticación pueden utilizarse en varios lugares alrededor de ZAP. Algunos ejemplos incluyen:</p>
 	<ul>
-		<li>defining Users and automatic login</li>
-		<li>detection of authenticated/unauthenticated states</li>
-		<li>performing automatic re-authentication</li>
+		<li>definición de usuarios y login automático</li>
+		<li>detección de Estados autenticado/no autenticado</li>
+		<li>realizar autenticación automática</li>
 	</ul>
 
-	<p>Multiple authentication methods have been implemented and the
-		system supports easy addition of new methods, according to user needs.
-		They main ones are described below.</p>
+	<p>Se han implementado varios métodos de autenticación y fácil adición de nuevos métodos, es compatible con el sistema según las necesidades del usuario.   Lo principal que se describen a continuación.</p>
 
 	<h3>
-		<a name="manual">Manual Authentication</a>
+		<a name="manual">Autenticación manual</a>
 	</h3>
-	<p>This method allows users to perform the authentication manually
-		(e.g. authenticate in the browser while proxy-ing through ZAP) and
-		then select the corresponding HTTP session. As the actual
-		authentication is being performed by you, this method does not support
-		re-authentication in case the webapp logs a user out.
+	<p>Este método permite que los usuarios realicen la autenticación manualmente (por ejemplo, autenticación en el navegador mientras proxy-ing a través de ZAP) y seleccione la correspondiente sesión HTTP. Como la autenticación actual se está realizando por usted, este método no permite autenticación en caso de que la aplicación cierra la sesión un usuario.
 	</p>
 	
-	<p>When using this authentication method, configuring a User for the context 
-	require choosing an authenticated HTTP session.</p>
+	<p>Cuando se utiliza este método de autenticación, configurar un usuario para el contexto requieren elegir una sesión HTTP autenticada.</p>
 
 	<h3>
-		<a name="formBased">Form-Based Authentication</a>
+		<a name="formBased">Autenticación basada en formularios</a>
 	</h3>
 	<p>
-		This method is used for websites / webapps where authentication is
-		done by submitting a form or performing a GET request to a 'login url'
-		using a 'username/password' pair of authentication credentials.
-		Re-authentication is possible. Configuration can be done using the <a
-			href="../../ui/dialogs/session/contexts.html#auth">Session
-			Contexts Dialog</a> or using the contextual PopupMenu: <i>Flag as...
-			Form-Based Authentication Login Request</i>.
+		Este método se utiliza para sitios web / webapps donde se realiza la autenticación por enviar un formulario o realizar una obtener la petición a un 'url de inicio de sesión' con un par de 'contraseña' de credenciales de autenticación.
+		Autenticación es posible. Configuración se puede hacer usando el <a
+			href="../../ui/dialogs/session/contexts.html#auth">Diálogo de contextos de sesión</a> o utilizando PopupMenu contextual: <i>bandera como...
+			Solicitud de autenticación por formulario de inicio de sesión</i>.
 	</p>
-	<p>When using this authentication method, configuring a User for the context requires
-	setting up the <i>username/password</i> pair of credentials that are used for the form based
-	authentication.</p>
+	<p>Cuando utilizando este método de autenticación, configurar un usuario para el contexto requiere establecer el par de <i>contraseña</i> de las credenciales que se utilizan para el formulario de autenticación basada en.</p>
 	
 	<h3>
-		<a name="httpAuth">HTTP/NTLM Authentication</a>
+		<a name="httpAuth">Autenticación HTTP/NTLM</a>
 	</h3>
 	<p>
-		This method is used for websites / webapps where authentication is
-		enforced using the HTTP or NTLM Authentication mechanisms employing HTTP message headers. 
-		Three authentication schemes are supported: Basic, Digest and NTLM.
-		Re-authentication is possible, as the authentication headers are sent with every authenticated
-		request. Configuration can be done using the <a
-			href="../../ui/dialogs/session/contexts.html#auth">Session
-			Contexts Dialog</a>.
+		Este método se utiliza para sitios web webapps donde se aplique la autenticación utilizando los mecanismos HTTP o la autenticación NTLM con encabezados de los mensajes HTTP. 
+		Se admiten tres esquemas de autenticación: Basic, Digest y NTLM.
+		Autenticación es posible, como los encabezados de autenticación se enviaron con cada solicitud autenticada. Configuración se puede hacer usando el <a
+			href="../../ui/dialogs/session/contexts.html#auth">Diálogo de contextos de sesión</a>.
 	</p>
-	<p>When using this authentication method, configuring a User for the context requires
-	setting up the <i>username/password</i> pair of credentials that are used for the HTTP/NTLM authentication.</p>
+	<p>Cuando se utiliza este método de autenticación, configurar un usuario para el contexto requiere configurar el par <i>usuario/contraseña</i> de credenciales que se utilizan para la autenticación de HTTP/NTLM.</p>
 	
 	<h3>
-		<a name="scriptBased">Script-Based Authentication</a>
+		<a name="scriptBased">Autenticación basada en script</a>
 	</h3>
 	<p>
-		This method is useful for websites / webapps where the authentication is a more complex one and some custom
-		scripts that handle the authentication process are beneficial. To use this method, you must first define an Authentication script
-		which sends messages or performs other actions as needed by your web-application. This script is then selected for use for a given Context
-		and it is called whenever an authentication is performed. Re-authentication is possible. 
-		Configuration can be done using the <a href="../../ui/dialogs/session/contexts.html#auth">Session
-			Contexts Dialog</a> and requires you to have the Scripts Console ZAP Addon installed from the Marketplace.
+		Este método es útil para sitios web / webapps donde la autenticación es un más complejo uno y algunos scripts personalizados que manejan el proceso de autenticación son beneficiosos. Para utilizar este método, primero es necesario definir una secuencia de comandos de autenticación que envía mensajes o realiza otras acciones como necesarias para la aplicación web. Este script es seleccionado para el uso de un determinado contexto y se llama cuando se realiza una autenticación. Autenticación es posible. 
+		Configuración se puede hacer usando la <a href="../../ui/dialogs/session/contexts.html#auth">Sesión contextos de diálogo</a> y requiere tener el Addon Scripts consola ZAP instalado desde el Marketplace.
 	</p>
-	<p>When using this authentication method, configuring a User for the context requires
-	setting up the a set of parameters defined in the script. For more details, see the provided Authentication Script examples.</p>
+	<p>Al usar este método de autenticación, configurar un Usuario para el contexto requiere configurar un conjunto de parámetros definidos en el script. Para más detalles, ve los ejemplos que aparecen en el Script de Autenticación.</p>
 	
-	<h2>Configuration example</h2>
-	<p>A configuration example showing how to fully configure a webapp that uses <i>form-based authentication</i> y en la 
-	<i>cookie-based session management</i> is 
-	seen below:
+	<h2>Ejemplo de configuración</h2>
+	<p>Un ejemplo de configuración que muestra cómo configurar completamente una aplicación web que utiliza <i>autenticación basada en formularios</i> y en la 
+	<i>Administración de sesiones basadas en cookies</i> se ve a continuación:
 	<ol>
-		<li>set up a context for the web application</li>
-		<li>set up the session management method to <i>Cookie-based Session Management</i></li>
-		<li>make sure your browser proxies everything through ZAP and log into your application using the browser</li>
-		<li>go to ZAP and identify the request that was done for the login (most usually it's a HTTP POST request 
-		containing the username and the password and possibly other elements)</li>
-		<li>right click on the request and Flag as Context... Form-based Auth Login Request</li>
-		<li>a window will be opened already containing the request URL and the parameters (if any). Use 
-		the dropdown options to select which of the parameters correspond to the username and to the password</li>
-    	<li>then you need to tell ZAP how to identify whether an authentication succeeded or not. You can do 
-    	this by setting logged in or logged indicators. These are regex patterns which, if found in a 
-    	response, tell ZAP whether it's authenticated or not (e.g. presence of a 
-    	http://example.com/logout link or the presence of a 'Welcome, User X'). Only one of them is
-    	necessary. To set one of them, either type the regex directly in the Session Properties -> 
-    	Authentication -> Logged In Indicator, either find an authenticated message in the Sites Tree,
-    	select it, open the Response View and select the text you wish to define as the indicator using
-    	the mouse and select the Flag as Context... Logged in indicator right-click menu option.</li>
-    	<li>define as many users as you need in the Session Properties -> Users section.</li>
-    	<li>after this step, various actions are available in ZAP. For example, you now have a new right click option: Attack -> Spider Context As User. Or, using the Forced User Mode, you can force all the interactions that go through ZAP for a given Context to be from the perspective of a User. The User Forced Mode is enabled via the previous-to-last button in the toolbar (the one with the user and the lock) and is configured via Session Properties -> Forced User Mode.</li>
+		<li>establecer un contexto para la aplicación web</li>
+		<li>configurar el método de administración de sesión gestión de <i>sesión basada en cookies</i></li>
+		<li>Asegúrese de que sus proxies de navegador todo por ZAP e inicie sesión en su aplicación utilizando el navegador</li>
+		<li>ir a ZAP e identificar la solicitud que se hizo para el inicio de sesión (de más generalmente es un HTTP POST solicitar que contiene el nombre de usuario y la contraseña y posiblemente otros elementos)</li>
+		<li>click derecho sobre la solicitud y la bandera como contexto... Petición de Login de autenticación basada en formularios</li>
+		<li>se abrirá una ventana que ya contiene la URL de solicitud y los parámetros (si los hay). Utilice las opciones del menú desplegable para seleccionar cuál de los parámetros corresponden con el nombre de usuario y la contraseña</li>
+    	<li>entonces usted necesita decirle a ZAP cómo identificar si una autenticación tuvo éxito o no. Para ello fijando logueado o registrado hacia fuera de los indicadores. Estos son patrones de expresión regular que, si se encuentra en una respuesta, Dile ZAP si está autenticado o no (por ejemplo, la presencia de un enlace de http://example.com/logout o la presencia de un 'Bienvenido, usuario X'). Sólo uno de ellos es necesario. Para definir uno de ellos, ya sea tipo la regex directamente en las propiedades de sesión-> autenticación-> registrado en indicador, ya sea encontrar un mensaje autenticado en el árbol de sitios, seleccione, abra la vista de la respuesta y seleccione el texto que desea definir como indicador  utilizando el ratón y seleccionar la bandera como contexto... Iniciar sesión en la opción de menú de clic derecho de indicador.</li>
+    	<li>definir tantos usuarios como necesite en las propiedades de sesión-> sección usuarios.</li>
+    	<li>después de este paso, varias acciones están disponibles en ZAP. Por ejemplo, ahora puede seleccionar el usuario en el <a href="../../ui/dialogs/spider.html">diálogo de spider</a>. O, usando el modo de usuario obligado, puede forzar todas las interacciones que atraviesan ZAP para un contexto dado que desde la perspectiva de un usuario. El modo de forzado de usuario se activa mediante la tecla anterior a la última en la barra de herramientas (el uno con el usuario y el bloqueo) y se configura a través de propiedades de la sesión-> obligado modo de usuario.</li>
 	</ol>
 	
-	Most of the steps above apply as well for other authentication methods. The only things that change when trying
-	to configure authentication using a different method are steps 3, 4, 5 and 6. Instead of these, select the authentication
-	method required from the drop-down list and configure it as needed. More details about configuring each type 
-	of authentication can be above and <a href="../../ui/dialogs/session/contexts.html">here</a>.
+	La mayoría de los pasos anteriores se aplica también para otros métodos de autenticación. Lo único que cambia cuando se trata de configurar la autenticación utilizando un método diferente es los pasos 3, 4, 5 y 6. En vez de éstos, seleccione el método de autenticación de la lista desplegable y configurar según sea necesario. Más detalles sobre la configuración de cada tipo de autenticación pueden estar por encima y <a href="../../ui/dialogs/session/contexts.html">aquí</a>.
 
-	<h2>Configured via</h2>
+	<h2>Configura a través</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/session/contexts.html#auth">Session Properties dialog</a></td>
+			<td><a href="../../ui/dialogs/session/contexts.html#auth">Diálogo de propiedades de sesión</a></td>
 			<td></td>
 		</tr>
 	</table>
@@ -174,13 +112,13 @@
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="http://youtu.be/cR4gw-cPZOA">Youtube tutorial</a></td>
-			<td>of the Authentication, Session Management and Users Management features of ZAP [external link to http://youtu.be/cR4gw-cPZOA].</td>
+			<td><a href="https://youtu.be/cR4gw-cPZOA">YouTube tutorial</a></td>
+			<td>de las características de autenticación, manejo de sesiones y de gestión de usuarios de ZAP [enlace externo a https://youtu.be/cR4gw-cPZOA].</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/overview.html">UI Overview</a></td>
-			<td>Para una vista general sobre la interfaz de usuario</td>
+			<td><a href="../../ui/overview.html">Resumen de la interfaz de usuario</a></td>
+			<td>para tener una visión general de la interfaz de usuario</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
@@ -189,14 +127,13 @@
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/session/contexts.html">Session
-					Contexts Dialog</a></td>
-			<td>for an overview of the Session Properties</td>
+			<td><a href="../../ui/dialogs/session/contexts.html">Diálogo de contextos de sesión</a></td>
+			<td>para una descripción general de las Propiedades de sesión</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="users.html">Users</a></td>
-			<td>for an overview of Users</td>
+			<td><a href="users.html">Usuarios</a></td>
+			<td>para una descripción general de los usuarios</td>
 		</tr>
 
 	</table>

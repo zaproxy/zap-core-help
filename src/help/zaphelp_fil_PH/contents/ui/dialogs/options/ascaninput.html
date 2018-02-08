@@ -3,62 +3,62 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Options Active Scan Input Vectors screen
+Ang mga opsyon ng aktibong iskan input sa mga vector screen
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Options Active Scan Input Vectors screen</h1>
+<h1>Opsyon ng aktibong iskan input ng mga vector screen</h1>
 <p>
-This screen allows you to configure the <a href="../../../start/concepts/ascan.html">active scan</a> input vectors.<br>
-These are the elements that the active scanner will attack.<br>
-Scanning all of the elements supported will take longer, but not scanning some elements may cause some vulnerabilities to be missed.
+Ang screen na ito ay pinapayagan ka na i-configure ang <a href="../../../start/concepts/ascan.html">aktibong iskan</a> ng input ng mga vector.<br>
+Ito ang mga elemento na ang aktibong iskaner ay umaatake.<br>
+Ang pag-iskan ng lahat ng nagsusuportang mga elemento ay may katagalan, pero ang hindi pagiskan ng ibang elemento ay magiging dahilan ng mga kahinaan ay maaaring pumalya.
 
-<h3>Injectable Targets</h3>
-The request elements that the active scanner will target:
+<h3>Naiinyek na mga target</h3>
+Ang mga kahilingan ng mga elemento na ang aktibong iskaner ay ang target:
 
-<h4>URL Query String</h4>
-Key value pairs in the request URL query, ie after the <code>?</code>.
+<h4>Ang URL ng Query String & Data Driven ng mga Node</h4>
+Ang halaga ng mga paris na key sa aplikasyon na URL ng query, ang ie pagkatapos <code>?</code>.<br>
+Kung walang query ng mga parameter kung magkagayon ang isa sa arbitaryo ay maaaring nasubukan na. kung <a href="../../../start/concepts/ddc.html">Ang data ng mga driven node</a> ay liwanagin sa loob ng isang context ito ay maaaring nasubukan na.
+<h4>POST ng data</h4>
+Ang halaga ng mga pares na key sa aplikasyon ng post data.
 
-<h4>POST Data</h4>
-Key value pairs in the request POST data.
+<h4>Daanan ng URL</h4>
+Ang daanan ng mga elemento sa aplikasyon ng URL, ang ie ng mga elemento ay nakahiwalay sa pamamagitan ng <code>/</code>.
 
-<h4>URL Path</h4>
-Path elements in the request URL, ie the elements separated by <code>/</code>.
+<h4>Mga header ng HTTP</h4>
+Aplikasyon ng mga Header ng HTTP.
 
-<h4>HTTP Headers</h4>
-Request HTTP Headers.
+<h5>Lahat ng Aplikasyon</h5>
+Pahintulutan para maiskan ang mga Header ng HTTP para sa lahat ng aplikasyon. Hindi lang mga aplikasyon na ipinadala sa mga parameter. kundi sa pamamagitan ng query o katawan ng aplikasyon.
 
-<h5>All Requests</h5>
-Allows to scan the HTTP Headers of all requests. Not just requests that send parameters, through the query or request body.
+<h4>Cookie ng Data</h4>
+Aplikasyon ng mga cookie.
 
-<h4>Cookie Data</h4>
-Request cookies.
-
-<h3>Build-in Input Vector Handlers</h3>
-The data formats that the active scanner will target:
+<h3>Build-in Input mga Handler ng Vector</h3>
+Ang mga format ng data na target ng aktibong iskaner:
 
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Multipart Form Data</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>XML tag/attribute</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ang multipart na paraan ng data</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ang XML tag/attribute</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>JSON</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Google Web Toolkit</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>OData id/filter</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ang Google Web Toolkit</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ang OData id/filter</td><td></td></tr>
 </table>
 
 
-<h3>Enable Script Input Vectors</h3>
-If this option is selected then the active scanner will use any enabled script input vectors.<br>
-Script input vectors are scripts which you have written or imported into ZAP and allow you to target elements 
-which are not supported by default.
+<h3>Paganahin ang iskrip input ng mga vector</h3>
+Kung ang opsyon na ito ay napili na kung magkagayon ang aktibong iskaner ay maaaring gamitin ang kahit anong iskrip input ng mga vector.<br>
+Ang iskrip input ng mga vector ay mga iskrip na kung saan mayroon o importante sa ZAP at pinapahintulutan kang i-target ang mga elemento 
+na kung saan ay hindi suportado ng default.
 
 <p>
-This screen also allows you to configure the parameters which will be ignored by the active scanner.
+Ganoon din ang screen ay pinapahintulutan ka para i-configure ang mga parameter na kung saan ay maaaring baliwalain ng aktibong iskaner.
 
-<h2>See also</h2>
+<h2>Tignan din</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="ascaninput.html">Active Scan Input Vectors</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">Pangkalahatang-ideya ng UI</a></td><td>para sa isang pangkalahatang-ideya ng mga gumagamit ng interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="options.html">Mga opsyon ng dayalogo</a></td><td>para sa mga detalye ng ibang mga opsyon na dayalogo ng mga screen</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="ascaninput.html">Aktibong iskan input ng mg vector</a></td><td></td></tr>
 </table>
 
 </body>

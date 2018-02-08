@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Örümcek</title>
+</head>
+<body bgcolor="#ffffff">
+	<h1>Örümcek</h1>
+	<p>Örümcek yeni keşfetmek için kullanılan bir araçtır yeni
+Belirli bir Sitedeki kaynakları (URL'ler). URL'lerin bir listesiyle başlar
+ziyaret etmek, Örümcek Örümcek'in nasıl olduğuna bağlı olan tohumları çağırmak
+başladı. Örümcek daha sonra bu URL'leri ziyaret eder,
+sayfadaki köprüleri kaldırıp ziyaret edecekleri URL'lerin listesine ekler ve
+süreç, yeni kaynaklar bulunduğu sürece tekrar tekrar devam eder.
+	</p>
+
+	<p>Spider, <a href="../../ui/dialogs/spider.html"> örümcek diyalogunu </> kullanarak konfigüre edebilir ve başlatabilir.</p>
+
+	<p>Bir URL'nin işlenmesi sırasında örümcek,
+kaynağı getirin ve ardından yanıtı ayrıştırarak
+köprüler. İşlem şu anda şu davranışa sahiptir:
+yanıt türleri:</p>
+
+	<h4>HTML</h4>
+	Belirli etiketleri işler, yeni kaynaklara olan bağlantıları belirler:
+	<ul>
+		<li>Taban - Doğru kullanım</li>
+		<li>A, Bağlantı, Alan - 'href' özniteliği</li>
+		<li>Çerçeve, IFrame, Komut Dosyası, Img - 'src' özniteliği</li>
+		<li>Meta - 'konum' ve 'yenileme' için 'http-equiv'</li>
+		<li>Form - GET ve POST ile Formların doğru kullanımı
+yöntem. Alan değerleri geçerli olarak üretilir; bunlara <a
+			href="http://www.w3schools.com/html5/html5_form_input_types.asp"> HTML
+5.0 giriş türleri </>.
+		</li>
+		<li>Yorumlar - Yorumlarda bulunan geçerli etiketler de analiz edilir, eğer
+<a href="../../ui/dialogs/options/spider.html"> Seçenekleri'nde belirtilen
+Örümcek ekranı </>
+		</li>
+	</ul>
+
+	<h4>Robots.txt dosyası</h4>
+	Ayarlanmışsa
+	<a href="../../ui/dialogs/options/spider.html">Seçenekler Örümcek</a>ayrıca 'Robots.txt' dosyasını analiz eder ve
+belirtilen kaynakları kullanarak yeni kaynaklar. Sözü edilmelidir ki
+Örümcek, 'Robots.txt' bölümünde belirtilen kurallara uymaz;
+dosya.
+
+	<h4>OData Atom biçimi</h4>
+	OData içeriği Atom biçimini kullanarak şu anda desteklenmektedir. Dahil olan tüm bağlantılar
+(göreceli veya mutlak) işlenir.
+
+	<h4>HTML Olmayan Metin Yanısı</h4>
+	Metin yanıtları, URL kalıbı için tarama ayrıştırılır
+
+	<h4>Html Olmayan Metin Yanısı</h4>
+	Şu anda Spider bu tür kaynakları işleyemiyor.
+
+	<h2>Diğer görüşler</h2>
+	<ul>
+	<li> Bir URL'nin daha önce ziyaret edilip edilmediğini kontrol ederken,
+Örümcek Seçenekleri ekranında yapılandırılabilen parametreler işlenir.
+	</li>
+	<li> Bir URL'nin daha önce ziyaret edilip edilmediğini kontrol ederken, birkaç ortak parametre var
+yok sayılır: jsessionid, phpsessid, aspsessionid, utm_ *
+	</li>
+	<li> Örümceklerin çerezlerle ilgili davranışı, örümkenin nasıl başlatıldığına ve hangi seçeneklerin etkinleştirildiğine bağlıdır. Daha fazlası için
+ayrıntılar Örümcek Seçenekleri ekranına bakın.
+	</li>
+	</ul>
+	<p>
+		Http Oturumları aracı, <a
+			href="../../ui/dialogs/options/httpsessions. html"> Http Oturumu kullanılarak yapılandırılmıştır
+Seçenekler ekranı </>.
+	</p>
+
+	<h2>Ayrıca bakınız</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/overview.html">UI Genel Bakış</a></td>
+			<td>kullanıcı ara yüzüne genel bakış için</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="concepts.html">Özellikler</a></td>
+			<td>zAP tarafından sağlanmaktadır</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/options/spider.html">Örümcek
+Seçenekler ekranı</a></td>
+			<td>aracın Seçeneklerine genel bakış için</td>
+		</tr>
+	</table>
+
+</body>
+</html>

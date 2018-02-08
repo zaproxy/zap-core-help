@@ -3,34 +3,51 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Options Connection screen
+Mga Opsyon ng Screen ng Koneksyon
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Options Connection screen</h1>
+<h1>Mga Opsyon ng Screen ng Koneksyon</h1>
 <p>
-The Options Connection screen allows you to configure the ZAP connection options:
+Ang mga Opsyon ng Screen ng Koneksyon ay nagpapahintulot sa iyo na magkumpigura ng mga opsyon sa koneysyon ng ZAP:
 
-<h3>Timeout in seconds</h3>
-This makes is easier to test slow applications.
+<h3>Timeout sa segundo</h3>
+Ginagawa nitong mas madaling suriin ang mga mabagal na application.
 
-<h3>Single Cookie Request Header</h3>
-Controls whether the ZAP's managed cookies (<a href="../../tlmenu/edit.html">Enable Session Tracking (Cookie)</a>) should be set
-on a single "Cookie" request header or multiple "Cookie" request headers, when sending an HTTP request to the server.
+<h3>Default na User Agent</h3>
+Ang user agent na dapat gamitin ng ZAP sa paglilikha ng mga mensahe ng HTTP (halimbawa, mga mensahe ng spider o mga kahilingan ng CONNECT na papalabas na proxy).
 
-<h3>Use Proxy chain</h3>
-This section allows you to connect to another proxy for outgoing connections.<br/>
-This is often required in a corporate environment.
+<h3>Header ng Kahilingan ng Solong Cookie</h3>
+Kumukontrol kung ang ang mga pinamamahalang cookies ng ZAP (<a href="../../tlmenu/edit.html">Paganahin ang Pagsusubaybay ng Sesyon (Cookie)</a>) ay dapat itakda sa isang solong "Cookie" header ng kahilingan o maramihang "Cookie" header ng kahilingan, kapag nagpapadala ng isang HTTP na kahilingan sa server.
 
-<h3>Proxy authentication</h3>
-This section allows you to configure the outgoing proxy authentication. 
+<h3>DNS</h3>
+<h4>Mga Matagumpay na Query ng TTL</h4>
+Tumutukoy sa kung gaano katagal dapat naka-cache ang matagumpay na mga query ng DNS:<ul>
+<li>Negatibong bilang, i-cache magpakailanman;</li>
+<li>Zero, hindi pinapagana ang caching;</li>
+<li>Positibong bilang, ang bilang ng segundo na maka-cache ang mga query.</li></ul>
+<strong>Paalala:</strong> Ang mga pagbabago ay inilapat pagkatapos ng restart.<p>
+Ang opsyon ay maaari ring itakda gamit ang <code>-config</code> na argumento ng command line na may key <code>connection.dnsTtlSuccessfulQueries</code>.
 
-<h2>See also</h2>
+<h3>Mga Protocol sa Seguridad</h3>
+Nagpapahintulot na makapili ng mga bersyon ng SSL/TLS na pinagana para sa papalabas na mga koneysyon (halimbawa, sa mga server). Kahit na isang bersyon ay dapat na pinagana, mga bersyon na hindi suportado ng JRE ay hindi mapipili and hindi paganahin.
+<br>Ang opsyon na SSLv2Hello ay dapat piliin kaugnay sa kahit isang bersyon ng SSL/TSL.
+
+<h3>Gumamit ng Proxy chain</h3>
+Ang bahaging ito ay nagpapahintulot sa iyo na kumonekta ng isa pang proxy para sa mga papalabas na koneksyon.<br/>
+Ito ay madalas na kinakailangan sa isang corporate environment.
+
+<h3>Pagpapatunay ng Proxy</h3>
+Ang bahaging ito ay nagpapahintulot sa iyo na magkumpigura ng papalabas na pagpapatunay ng proxy. 
+
+<h2>Tingnan din sa</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../overview.html">Kabuuan ng UI</a></td><td>para sa kabuuan ng interface ng gumagamit</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+<a href="options.html">Mga diyalogo ng mga opsyon</a></td><td>para sa mga detalye ng ibang mga Opsyon ng screen ng diyalogo</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../../cmdline.html">Command Line</a></td><td>para sa mga detalye ng Command Line</td></tr>
 </table>
 
 </body>

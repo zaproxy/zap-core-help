@@ -3,65 +3,65 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Active Scan dialog
+Dialog Pemindaian Aktif
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Active Scan dialog</h1>
+<h1>Dialog Pemindaian Aktif</h1>
 <p>
-This dialog launches the <a href="../../start/concepts/ascan.html">active scanner</a>.<br>
+Dialog ini meluncurkan <a href="../../start/concepts/ascan.html">pemindai aktif</a>.<br>
   
-<h3>Scope</h3>
-The first tab allows you to select or change the starting point.<br>
-If you have more that one <a href="../../start/concepts/scanpolicy.html">scan policies</a> then you will be able to select the one to use.<br>
-If the starting point is in one or more <a href="../../start/concepts/contexts.html">Contexts</a> then you will be able to choose one of them.<br>
-If that context has any <a href="../../start/concepts/users.html">Users</a> defined then you will be able to select one of them.<br>
-If you select one of the users then the active scan will be performed as that user, with ZAP (re)authenticating as that user whenever necessary.
+<h3>Cakupan</h3>
+Tab pertama memungkinkan Anda untuk memilih atau mengubah titik awal.<br>
+Jika Anda punya lebih dari satu <a href="../../start/concepts/scanpolicy.html">kebijakan pemindaian</a> maka Anda akan dapat memilih mana yang akan digunakan.<br>
+Jika titik awal adalah satu atau lebih <a href="../../start/concepts/contexts.html">Konteks</a> maka Anda akan dapat memilih salah satunya.<br>
+Jika konteks tersebut memiliki <a href="../../start/concepts/users.html">Pengguna</a> yang ditetapkan maka Anda akan dapat memilih salah satunya.<br>
+Jika Anda memilih salah satu pengguna maka pindai aktif akan dijalankan sebagai pengguna tersebut, dengan ZAP (re)otentikasi sebagai pengguna tersebut kapanpun diperlukan.
 <br><br>
-If you select 'recurse' then all of the nodes underneath the one selected will also be scanned.<br>
-Custom input vectors are only supported if this option is not selected.
+Jika Anda memilih 'rekursi' maka semua node di bawah yang sudah dipilih akan dipindai juga.<br>
+Vektor masukan tersuai hanya didukung jika opsi ini tidak dipilih.
 <br><br>
-If you select 'Show advanced options' then the following tabs will be shown which provide fine grain control over the active scanning process.
+Jika Anda memilih 'Tampilkan pilihan lanjutan' maka tab berikutnya akan ditampilkan yang mana akan memberikan kontrol yang sangat tepat terhadap proses pemindaian aktif.
 <br><br>
-Clicking on the 'Reset' button will reset all of the options to their default values. 
+Mengeklik tombol 'Reset' akan mengatur ulang semua opsi ke nilai bawaannya. 
 
-<h3>Input Vectors</h3>
-The Input Vectors tab allows you override the default input vectors which are defined in the 
-<a href="../../ui/dialogs/options/ascaninput.html">Options Active Scan Input Vectors screen</a>.<br>
-Clicking on the 'Reset' button will reset the input vectors to the default options. 
+<h3>Vektor Masukan</h3>
+Tab Vektor Masukan memungkinkan Anda untuk membatalkan vektor masukan bawaan yang ditetapkan dalam 
+<a href="../../ui/dialogs/options/ascaninput.html">Layar Pilihan Pindai Aktif Vektor Masukan</a>.<br>
+Mengeklik tombol 'Reset' akan mengatur ulang vektor masukan ke opsi bawaannya. 
 
-<h3>Custom Vectors</h3>
-The Custom Vectors tab allows you specify specific locations in the request to attack.<br> 
-Custom Vectors are only available if the 'recurse' option on the first tab is not selected.<br>
-To add custom input vectors highlight the characters you want to attack in the request and click the 'Add' button.<br>
-You can add as many custom input vectors as you want.<br>
-To remove custom input vectors highlight any of the selected characters and click the 'Remove' button.<br>
-Checking the 'Disable non custom input vectors' box disables all of the input vectors except those you manually define on this tab.
+<h3>Vektor Suai</h3>
+Tab Vektor Suai memungkinkan Anda menentukan lokasi tertentu dalam permintaan untuk menyerang.<br> 
+Vektor Suai hanya tersedia jika opsi 'rekursi' pada tab pertama tidak dipilih.<br>
+Untuk menambahkan vektor masukan sorot karakter yang ingin Anda serang dalam permintaan dan klik tombol 'Tambah'.<br>
+Anda dapat menambahkan vektor masukan suai sebanyak yang Anda inginkan.<br>
+Untuk menghapus vektor masukan suai sorot karakter mana saja yang dipilih dan klik tombol 'Hapus'.<br>
+Memeriksa kotak 'Menonaktifkan vektor input non suai' akan menonaktifkan semua vektor masukan kecuali yang Anda tentukan secara manual pada tab ini.
 
-<h3>Technology</h3>
-The Technology tab allows you to specify which types of technologies to scan.<br>
-Un-selecting technologies that you know are not present in the target application may speed up the scan as rules which target that technology can skip those tests.
+<h3>Teknologi</h3>
+Tab Teknologi memungkinkan Anda untuk menentukan jenis teknologi untuk dipindai.<br>
+Membatalkan pilihan teknologi yang Anda tahu tidak ada dalam aplikasi tujuan dapat mempercepat pemindaian karena aturan-aturan yang menargetkan teknologi tersebut dapat melewatkan tes-tes itu.
 
-<h3>Policy</h3>
-The Policy tab allows you to override any of the settings specified in the selected 
-<a href="../../start/concepts/scanpolicy.html">scan policy</a>. 
+<h3>Kebijakan</h3>
+Tab Kebijakan memungkinkan Anda untuk membatalkan pengaturan apapun yang ditetapkan dalam 
+<a href="../../start/concepts/scanpolicy.html">kebijakan pemindaian</a>. 
 
 <br><br>
 
-<h2>Accessed via</h2>
+<h2>Diakses melalui</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/ascan.html">Active Scan tab</a></td><td>'New Scan' button</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tlmenu/tools.html">Top level Tools menu</a></td><td>'Active Scan...' menu item</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/sites.html">Sites tab</a></td><td>'Attack / Active Scan... right click menu item</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/history.html">History tab</a></td><td>'Attack / Active Scan...' right click menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/ascan.html">Tab Pindai Aktif</a></td><td>Tombol 'Pemindaian Baru'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tlmenu/tools.html">Menu Perkakas tingkat Atas</a></td><td>'Pindai aktif...' menu</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/sites.html">Tab situs</a></td><td>'Serangan/Pindai Aktif... menu klik kanan</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/history.html">Tab Riwayat</a></td><td>'Serangan/Pindai Aktif...' menu klik kanan</td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Lihat juga</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../overview.html">Ikhtisar UI</a></td><td>untuk ikhtisar dari antar muka pengguna</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+<a href="dialogs.html">Dialog</a></td><td>untuk rincian dialog atau sembulan </td></tr>
 </table>
 
 </body>

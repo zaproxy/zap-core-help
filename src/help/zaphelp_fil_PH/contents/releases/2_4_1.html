@@ -3,86 +3,86 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-  Release 2.4.1
+  Pagpapakawala 2.4.1
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Release 2.4.1</h1>
+<h1>Pagpapakwala 2.4.1</h1>
 <p>
-This release includes important security fixes - users are urged to upgrade asap.
+Ang Pagpapakwalang ito ay may mga importanteng seguridad na inayos - ang mga gumagamit ay mahigpit na inirekomenda upang ma-upgrade agad.
 </p>
 <p>
-One of the changes means that an API key is created by default, which means that any applications using the ZAP API will fail unless they are updated to use that key.<br>
-The API Key can be found in the <a href="../ui/dialogs/options/api.html">API Options screen</a><br>
-You can also set it from the command line using an option like: 
-<pre>-config api.key=change-me-9203935709</pre><br>
-For more details see <a href="https://github.com/zaproxy/zaproxy/wiki/FAQapikey">https://github.com/zaproxy/zaproxy/wiki/FAQapikey</a><br>
+Isa sa mga pagbabago na nangangahulugan na ang susi sa API ay nalikha sa pamamagitan ng default, ang kahulugan nito ay ang kahit anong aplikasyon na gumagamit ng ZAP API ay nagkamali maliban na lang kung sila ay mag-update sa pagamit ng ganyang susi.<br>
+Ang Susi sa API ay pwedeng mahanap sa <a href="../ui/dialogs/options/api.html">Mga Opsyon na skrin sa API</a><br>
+Pwede mo din itakda ito mula sa ipinaguutos na linya sa pamamagitan ng opsyon katulad: 
+<pre>-config api. susi=baguhin-ako-9203935709</pre><br>
+Para sa maraming detalye tingnan ang <a href="https://github.com/zaproxy/zaproxy/wiki/FAQapikey">https://github.com/zaproxy/zaproxy/wiki/FAQapikey</a><br>
  
 </p>
 
 <p>
-The following changes were made in this release:
+Ang mga sumunsunod na pagbabago ay gawa sa pagpapakawala na ito:
 </p>
 
-<h2>Enhancements:</h2>
+<h2>Mga pagpapaganda:</h2>
 <ul>
-<li>Issue 321 : Support multiple databases</li>
-<li>Issue 1459 : Add an HTTP sender listener script</li>
-<li>Issue 1500 : Update Bouncy Castle libs</li>
-<li>Issue 1566 : Improve active scan's reported progress</li>
-<li>Issue 1573 : Add option to inject plugin ID in header for all ascan requests</li>
-<li>Issue 1607 : Unable to save the test session via API</li>
-<li>Issue 1621 : AScan API - Allow to scan as a user</li>
-<li>Issue 1625 : Support multiple structural params and ones on top level nodes</li> 
-<li>Issue 1653 : Support context menu key for trees</li>
-<li>Issue 1655 : Copy Session Token from Http Sessions tab to clipboard</li>
-<li>Issue 1662 : Add default Rails anti-CSRF token parameter</li>
-<li>Issue 1664 : Clients tab autoscroll</li>
-<li>Issue 1684 : Unable to set technology via API</li>
-<li>Issue 1688 : Updating owasp/zap2docker image with Python Client API</li>
-<li>Issue 1690 : Bump key pair size to 2048 for all certs in the (proxy's) chain of trust</li>
-<li>Issue 1695 : Change SSL cert signature algorithm to "SHA-256 with RSA Encryption"</li>
-<li>Issue 1699 : Allow ApiImplementor's to add custom headers</li>
-<li>Issue 1715 : Unable to pass arguments when launching ZAP from the command line on Mac OS X</li>
-<li>Issue 1728 : Update JRE to 1.7u79 (CPU) for MacOS</li>
+<li>Usapin 321 : Suportahan ang maraming mga database</li>
+<li>Usapin 1459 : Magdagdag ng HTTP nagpapadala nakikinig ng iskrip</li>
+<li>Usapin 1500 : Mag-update ng Bouncy Castle libs</li>
+<li>Usapin 1566 : Pagbutihin ang aktibong ulat sa pag unlad ng scan</li>
+<li>Usapin 1573 : Magdagdag ng opsyon para ma-inject ang plugin ID sa namumuno para sa lahat ng mga kahilingan ng ascan</li>
+<li>Usapin 1607 : Hindi maaari na i-save ang pagsusulit ng sesyon sa pamamagitan ng API</li>
+<li>Usapin 1621 : AScan API - Pinayagan na mag-scan bilang gumagamit</li>
+<li>Usapin 1625 : Suportahan ang maraming estruktural na params at isa sa pinakamataas na antas na nodes</li> 
+<li>Usapin 1653 : Ang Pag-suporta sa konteksto sa menu susi para sa mga puno</li>
+<li>Issue 1655 : Sesyon ng Pag-kopya ng Token mula sa Http Sessions tab hangang clipboard</li>
+<li>Usapin 1662 : Magdagdag ng default Rails kontra sa CSRF parametro ng token</li>
+<li>Usapin 1664 : Ang tab ng mga kliyente ay kusang nag-iskrol</li>
+<li>Usapin 1684 : Hindi maari na itakda ang teknolohiya sa pamamagitan ng API</li>
+<li>Usapin 1688 : I-update ang owasp/zap2docker na imahe ng Python Client API</li>
+<li>Usapin 1690 : Ang Bump na pares ng susi susukatin sa 2048 para sa lahat ng certs na nasa kadena ng pagtitiwala ng (proxy)</li>
+<li>Usapin 1695 : Baguhin ang SSL lagda ng cert algorithm sa "SHA-256 na may RSA Encryption"</li>
+<li>Usapin 1699 : Payagan angbApiImplementor's na magdagdag ng custom headers</li>
+<li>Usapin 1715 : Hindi maari na pumasa sa mga argumento kapag magla-launch sa ZAP mula sa ipinag-utos na linya sa Mac OS X</li>
+<li>Usapin 1728 : I-update ang JRE sa 1.7u79 (CPU) para sa MacOS</li>
 
 </ul>
 
-<h2>Bug fixes:</h2>
+<h2>Mga pagsasaayos ng Bug:</h2>
 <ul>
-<li>Issue 444 : Guaranteed NPE on AliasCertificate.getName() if getCN()==null</li>
-<li>Issue 1442 : Up/Down arrow keys in results stop working if "reflected"</li>
-<li>Issue 1473 : Spider does not handle URLs extracted from meta tags correctly</li>
-<li>Issue 1497 : The spider is extracting and reporting links from comments - event when instructed not to do so</li>
-<li>Issue 1598 : startup script lacks support for FreeBSD</li>
-<li>Issue 1615 : Search "All" option not working</li>
-<li>Issue 1617 : ZAP 2.4.0 throws HeadlessExceptions when running in daemon mode on headless machine</li>
-<li>Issue 1618 : Target Technology Not Honored</li>
-<li>Issue 1619 : Search regex might not be validated</li>
-<li>Issue 1624 : Error while loading ZAP 2.4.0</li>
-<li>Issue 1626 : Structural parameters not saved when context exported and not available via the API</li>
-<li>Issue 1636 : Users (for auth) & Forced User not loaded from session</li>
-<li>Issue 1647 : Wrong reference in Zest Result</li>
-<li>Issue 1674 : Ajax spider not considering get parameters</li>
-<li>Issue 1677 : Fuzzers can't be expanded on OS X</li>
-<li>Issue 1694 : "Error: setting file is missing. Program will exit." even if file exists</li>
-<li>Issue 1698 : Escape API exceptions</li>
-<li>Issue 1700 : Forced Browse Lists Missing from Drop-Down in 2.4.0</li>
-<li>Issue 1706 : Add API security options</li>
-<li>Issue 1708 : Context's technology tree can get out of sync</li>
-<li>Issue 1709 : Applications are not (immediately) shown after start</li>
-<li>Issue 1714 : PNH should not reflect API key unless user supplies it</li>
-<li>Issue 1716 : Restrict use of CORS header in pnh</li>
-<li>Issue 1720 : Add more security options for JSONP API</li>
-<li>Issue 1724 : Ensure API component names are escaped in the HTML output</li>
-<li>Issue 1735 : Context's technologies not used in active scan unless overridden</li>
+<li>Usapin 444 : Garantisadong NPE na nasa AliasCertificate.getName() if getCN()==null</li>
+<li>Usapin 1442 : I-taas/baba ang palaso na pindutan ang resulta titigil ito kapag "nag-rerepleksyon"</li>
+<li>Usapin 1473 : Ang Spider ay hindi hahawak ng mga URL na nahango mula sa meta tags nang tama</li>
+<li>Usapin 1497 : Ang spider ay kumukuha at nag-uulat mga link mula sa mga komento - pangyayare nang tinuruan hindi upang gawin ito</li>
+<li>Usapin 1598 : magsimula sa iskrip kulang ng pag-suporta para sa LibrengBSD</li>
+<li>Usapin 1615 : Suriin "Lahat" ng opsyon na hindi gumagana</li>
+<li>Usapin 1617 : ZAP 2.4.0 itapon ang Walang namumuno na mga Eksepsyon kapag gumagana sa daemon na kalakaran sa walang namumuno na makina</li>
+<li>Usapin 1618 : Ang Target na Teknolohiya ay Hindi Pinarangalan</li>
+<li>Usapin 1619 : Sa Pagsusuri ng regex maaring hindi na napatutunayan</li>
+<li>Usapin 1624 : Nag-eror habang nagkakarga ZAP 2.4.0</li>
+<li>Usapin 1626 : Mga Istruktural na mga parameter na hindi naka save kapag ang contexto ay lumalabas at hindi magagamit sa pamamagitan ng API</li>
+<li>Usapin 1636 : Gumagamit (para sa auth) & pinipilit ang gumagamit na hindi magkarga mula sa sesyon</li>
+<li>Usapin 1647 : Maling sanggunian sa resulta ng Zest</li>
+<li>Usapin 1674 : Ang Ajax spider ay hindi isinaalang-alang na kumuha ng mga parameter</li>
+<li>Usapin 1677 : Ang mga fuzzer ay hindi maaaring palawakin sa OS X</li>
+<li>Usapin 1694 : Ang "Error: setting file ay nawawala. Ang Program naman ay lumalabas." Maging ang file ay nagiging iisa</li>
+<li>Usapin 1698 : Takasan ang mga sesyon sa API</li>
+<li>Usapin 1700 : Pilitin ang Lists na nawawala sa Browse mula sa Drop-Down sa 2.4.0</li>
+<li>Usapin 1706 : Magdagdag ng seguridad na opsyon ng API</li>
+<li>Usapin 1708 : Mga contexto ng puno ng teknolohiya maaaring makalabas sa sync</li>
+<li>Usapin 1709 : Ang mga Aplikasyon ay hindi (agarang) nakikita matapos magsimula</li>
+<li>Usapin 1714 : Ang PNH ay hindi nagre-repleksyon ang API na susi maliban na lamang kung ang gumagamit ay gagamitin ito</li>
+<li>Usapin 1716 : Pinagbabawal ang pag-gamitng CORS na namumuno sa pnh</li>
+<li>Usapin 1720 : Magdagdag ng madaming mga seguridad na opsyon para sa JSONP API</li>
+<li>Usapin 1724 : Siguraduhin ang komponent na mga pangalan sa API ay makakaalis sa HTML output</li>
+<li>Usapin 1735 : Ang mga konteksto ng mga teknolohiya na hindi magagamit sa aktibong pag-scan maliban na lamang kung lumabis ang ridden</li>
 </ul>
 
-<h2>See also</h2>
+<h2>Tingnan din</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Pagpapakilala</a></td><td>ang pagpapakilala sa ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Mga pagpapakawala</a></td><td>ang buong kabuoan ng mga pagpapakawala</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Mga kredito</a></td><td>ang mga tao at mga grupo na ginawang posible ang pagpakawala</td></tr>
 </table>
 </body>
 </html>

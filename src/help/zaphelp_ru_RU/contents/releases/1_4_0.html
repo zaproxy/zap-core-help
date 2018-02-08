@@ -9,32 +9,32 @@
 <body bgcolor="#ffffff">
 <h1>Release 1.4.0</h1>
 <p>
-The following changes were made in this release:
+В этом выпуске были внесены следующие изменения:
 </p>
 
 <h2>Significant changes:</h2>
 
-<h3>Issue 133: Add Syntax highlighting to Response Panel</h3>
+<h3>Вопрос 133: Добавить подсветку синтаксиса в панели ответа</h3>
 
-The HTML panels now support switchable syntax highlighting.
+Панели HTML теперь поддерживают переключаемую подсветку синтаксиса.
 
 <h3>Issue 153: fuzzdb integration</h3>
 
-The fuzzer includes fuzzdb (https://github.com/fuzzdb-project/fuzzdb) fuzzing files.<br/>
-Note that some fuzzdb files have been left out as they cause common anti virus scanners to flag them as containing viruses.<br/>
-You can replace them (and upgrade fuzzdb) by downloading the latest version of fuzzdb and expanding it in the 'fuzzers' library.
+В fuzzer включает fuzzdb (https://github.com/fuzzdb-project/fuzzdb) фаззинг файлов.<br/>
+Обратите внимание, что некоторые fuzzdb файлы были оставлены, поскольку они вызывают общие антивирусные сканеры, чтобы помечать их как содержащие вирусы.<br/>
+Вы можете заменить их (и обновить fuzzdb), загрузив последнюю версию fuzzdb и расширяя его в библиотеке fuzzers.
 
 <h3>Issue 212: Parameter analysis</h3>
 
-A new Params tab shows a summary of all of the parameters a site has used.  
+На новой вкладке Params отображается сводка всех параметров, используемых сайтом.  
 
-<h3>Issue 228: Enhanced XSS scanner</h3>
+<h3>Проблема 228: Расширенный сканер XSS</h3>
 
-The Cross Site Scripting active scanner has been rewritten from scratch to find more potential XSS issues and report fewer false positives. 
+Активный сканер Межсайтовых сценариев был переписан с нуля, чтобы найти больше потенциальных проблем XSS и сообщить меньше ложных срабатываний. 
 
-<h3>Issue 244: Port the Watcher passive checks</h3>
+<h3>Проблема 244: порт пассивные проверки наблюдателя</h3>
 
-The following checks have been ported from Watcher (thanks to Chris Weber for oking this):
+Следующие проверки были портированы от Watcher (благодаря Крису Веберу за это):
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.CrossDomain.ScriptReference.cs</td><td>checks for cross-domain javascript files inclusion.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.CacheControl.cs</td><td>checks HTTP cache-control header on SSL pages.</td></tr>

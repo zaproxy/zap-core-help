@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Options Rule Configuration screen
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Options Rule Configuration screen</h1>
+<p>
+This screen allows you to configure the behaviour of specific active and passive scan rules.
+<p>
+
+Select any of the listed rows to see details of the specific configuration and to change the associated value.
+Both individual and all rules can be reset.  
+<p>
+The built-in rules include:<br><br>
+<table>
+<tr><th>Name</th><th>Default</th><th>Description</th></tr>
+<tr><td>rules.common.sleep</td><td>15</td><td>The length of time in seconds used for timing attacks.</td></tr>
+<tr><td>rules.cookie.ignorelist</td><td></td><td>A comma separated list of cookie names.
+Cookies included in this list will be ignored when scanning for cookie related issues.</td></tr>
+<tr><td>rules.csrf.ignorelist</td><td></td><td>A comma separated list of identifiers.
+Any FORMs with a name or ID that matches one of these identifiers will be ignored when scanning for missing Anti-CSRF tokens.
+Only use this feature to ignore FORMs that you know are safe, for example search forms.</td></tr>
+</table>
+
+
+<h2>See also</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+</table>
+
+</body>
+</html>

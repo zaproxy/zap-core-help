@@ -3,58 +3,56 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Session Properties dialog
+会话属性对话框
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Session Properties dialog</h1>
+<h1>会话属性对话框</h1>
 <p>
 This allows you to set the session properties and is made up of the following screens:
 
-<h3>General screen</h3>
-This allows you to set the session name and description.
+<h3>综合</h3>
+这允许您设置会话名称和描述。
 
-<h3>Exclude from proxy</h3>
-This allows you to manage the URLs which will be ignored by the proxy.
+<h3>从代理中排除</h3>
+这允许您管理将被本地代理忽略的URL。
 
-<h3>Exclude from scanner</h3>
-This allows you to manage the URLs which will be ignored by the scanner.
+<h3>从扫描仪中排除</h3>
+这将允许您管理将被扫描仪忽略的URL。
 
-<h3>Exclude from spider</h3>
-This allows you to manage the URLs which will be ignored by the spider.
+<h3>从Spider中排除</h3>
+这允许您管理将被spider忽略的URL(标准和AJAX)。
 
-<h3>Contexts</h3>
+<h3>上下文</h3>
 A set of screens for managing <a href="../../../start/concepts/contexts.html">contexts</a>
 
-<h2>URL regexs</h2>
-In the <i>Exclude from *</i> dialogs, you can enter regular expressions to define excluded URLs.
-While you can escape a single meta-character with a backslash, you can also use the <b>\Q...\E</b> escape sequence. All the characters between the <b>\Q</b> and the <b>\E</b> are interpreted as literal characters. E.g. \Q*\d+*\E matches the literal text *\d+*.
-This escape sequence is used in ZAP when you exclude URLs via some context menus.
+<h2>URL正则表达式</h2>
+在 <i>从*中排除</i> 对话框，您可以输入正则表达式来定义排除的URL。虽然您可以用反斜线转义单个元字符，您也可以使用 <b>\Q...\E</b> 转义序列。中的所有字符 <b>\Q</b> 和 <b>\E</b> 被解释为原义字符。例如:\Q*\d+*\E匹配文本*\d+*。当您通过一些上下文菜单排除URL时，此转义序列用于ZAP。
 <br>
-<b>Note:</b> If your URL contains a "\E", then you have to do the following steps when using the <b>\Q...\E</b> escape sequence:
+<b>备注:</b> 如果您的URL包含一个"\E"，那么当使用时您必须按照以下步骤做 <b>\Q...\E</b> 转义序列:
 <ul>
-	<li>Open the escape sequence</li>
-	<li>Close the escape sequence before the "character" \E</li>
-	<li>Escape the backslash</li>
-	<li>Open after the "\E" another escape sequence;</li>
-	<li>Close the escape sequence as normally would.</li>
+	<li>打开转义序列</li>
+	<li>在"字符"\E之前关闭转义序列</li>
+	<li>转义反斜线</li>
+	<li>在"\E"之后打开另一个转义序列；</li>
+	<li>按正常方式关闭转义序列。</li>
 </ul>
 <br>
 Example: subdomain.example.com/path?a=<b>\E</b>&amp;moredata=2 should appear as
 <i>\Qsubdomain.example.com/path?a=\E</i><b>\\E</b><i>\Q&amp;moredata=2\E</i>
   
-<h2>Accessed via</h2>
+<h2>通过访问</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../tlmenu/file.html">Top level File menu</a></td><td>'Properties...' menu item</td></tr>
+<a href="../../tlmenu/file.html">顶层文件菜单</a></td><td>"属性..."菜单项</td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>另请参阅</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../overview.html">UI综述</a></td><td>关于用户界面的概述</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+<a href="../dialogs.html">对话框</a></td><td>有关对话框或弹出窗口的详情 </td></tr>
 </table>
 
 </body>

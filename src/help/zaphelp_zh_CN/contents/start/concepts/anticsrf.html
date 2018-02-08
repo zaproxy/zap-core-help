@@ -3,29 +3,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Anti CSRF Handling
+反CSRF处理
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Anti CSRF Tokens</h1>
+<h1>反CSRF令牌</h1>
 <p>
-Anti CSRF tokens are (pseudo) random parameters used to protect against Cross Site Request Forgery (CSRF) attacks.<br>
-However they also make a penetration testers job harder, especially if the tokens are regenerated every time a form is requested.<br>
+反 CSRF 令牌是 (伪) 随机参数, 用于防止跨站点请求伪造 (CSRF) 攻击。<br> 但是, 它们也使渗透测试人员的工作更加困难, 尤其是在每次请求表单时重新生成令牌。<br>
 </p>
 <p>
-ZAP detects anti CSRF tokens purely by attribute names - the list of attribute names considered to be anti CSRF tokens
-is configured using the <a href="../../ui/dialogs/options/anticsrf.html">Options Anti CSRF screen</a>.<br/>
-When ZAP detects these tokens it records the token value and which URL generated the token.<br/>
-Other scanners, like <a href="ascan.html">active scanner</a>, have options which
-cause ZAP to automatically regenerate the tokens when required.
+ZAP纯粹通过属性名称来检测反CSRF令牌 - 被认为是反CSRF令牌的属性名称列表是使用 <a href="../../ui/dialogs/options/anticsrf.html">选项反CSRF屏幕</a>配置的。<br/>当ZAP检测到这些令牌时，它将记录令牌值和生成令牌的URL。<br/> 其他扫描仪，如 <a href="ascan.html">主动扫描仪</a>，具有可以使ZAP在需要时自动重新生成令牌的选项。
 </p>
 
-<h2>See also</h2>
+<h2>请参阅</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../ui/overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../ui/overview.html">UI综览</a></td><td>关于用户界面的概述</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="concepts.html">Features</a></td><td>provided by ZAP</td></tr>
+<a href="concepts.html">特性</a></td><td>由ZAP提供</td></tr>
 </table>
 
 </body>

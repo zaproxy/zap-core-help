@@ -3,38 +3,38 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Release 1.1.0
+Versiunea 1.1.0
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Release 1.1.0</h1>
+<h1>Versiunea 1.1.0</h1>
 <p>
-The following changes were made in this release:
+Următoarele schimbări au fost aduse acestei versiuni:
 </p>
-<h2>Significant changes:</h2>
+<h2>Schimbări majore:</h2>
 
-<h3>OWASP rebranding</h3>
-ZAP has been accepted as an OWASP project.<br>
-Its homepage is now: http://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project
+<h3>Rebranding-ul OWASP</h3>
+ZAP a fost acceptat ca fiind un proiect OWASP.<br>
+Pagina sa de start este acum https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project
 
-<h3>Brute Force</h3>
-The ability to brute force files and directories based on code from the OWASP DirBuster project. <br>
-The new Brute Force tab shows the files and directories found.
+<h3>Forțare brută</h3>
+Reprezintă capacitatea de a forța fișierele și directoarele bazate pe cod din proiectele OWASP DirBuster. <br>
+Noul tab de Forțare Brută arată fișierele și directoarele găsite.
 
-<h3>Port Scan</h3>
-The ability to port scan sites. <br>
-The new Port Scan tab shows the ports found.
+<h3>Portarea scanării</h3>
+Reprezintă capacitatea de a porta site-uri scanate. <br>
+Noul tab de Portare a Scanării prezintă portările găsite.
 
-<h3>Active Scan tab</h3>
-The new <a href="../ui/tabs/ascan.html">Active Scan tab</a> shows the requests and responses as a result of actively scanning a site.
+<h3>Tab-ul de scanare activă</h3>
+Noul <a href="../ui/tabs/ascan.html">tab de Scanare Activă</a> arată cereri și răspunsuri ce rezultă din scanarea activă a unui site.
 
-<h3>Spider tab</h3>
-The <a href="../ui/tabs/spider.html">Spider tab</a> now allows you to continue using ZAP while spidering a site.<br>
-You can also pause and resume the spider.    
+<h3>Tab-ul Spider</h3>
+Tab-ul <a href="../ui/tabs/spider.html">Spider</a> acum permite utilizarea continuă a ZAP în timpul indexării unui site.<br>
+De asemenea poți întrerupe și relua indexarea.    
 
-<h3>Smartcard support</h3>
-Smart card support has been added c/o the Andiparos project.<br>
-The following smartcard devices have been tested on Windows:
+<h3>Suport Smartcard</h3>
+Suportul Smart card a fost adăugat proiectului Andiparos.<br>
+Următoarele dispozitive Smart card au fost testate pe Windows:
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Safeguard</td><td>Aladdin eToken</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td></td><td>Aladdin eToken Pro</td></tr>
@@ -43,50 +43,49 @@ The following smartcard devices have been tested on Windows:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Gemalto</td><td>Reflex 20 V2</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td></td><td>Swiss Stick</td></tr>
 </table>
-The following smartcard devices are reported to work:
+Următoarele dispozitive Smart card au fost raportate funcționale:
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Omnikey</td><td>CardMan 4040</td></tr>
 </table>
 
-<h3>Attack menu</h3>
-The new <a href="../ui/tabs/sites.html">Sites tab</a> right click 'Attack' menu allows you to start various scans.
+<h3>Meniu de atac</h3>
+Noul <a href="../ui/tabs/sites.html">meniu din tab-ul Site-ului</a> ce se deschide prin click dreapta 'Attack' permite începerea mai multor scanări.
 
-<h3>More internationalisation</h3>
-All of the main tabs and menu items have now been internationalised.
+<h3>Mai multă internaționalizare</h3>
+Toate tab-urile și meniurile principale au fost internaționalizate.
 
-<h3>Localisation</h3>
-Support for the following languages are built into this version:
+<h3>Localizare</h3>
+Suport pentru următoarele limbi a fost integrat în această versiune:
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>English</td><td>The default language</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Brazilian Portuguese</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>German</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Polish</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Spanish</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Engleză</td><td>Limba implicită</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Portugheză Braziliană</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Germană</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Poloneză</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Spaniolă</td><td></td></tr>
 </table>
     
-<h3>Language selection</h3>
-On start up you will be prompted to choose the language to use.<br>
-New languages are automatically detected by the presence of files with names of the form Messages_&lt;locale&gt;.properties in the ZAP directory. 
+<h3>Selectarea limbii</h3>
+La pornire ți se va solicita să alegi limba ce va fi folosită.<br>
+Noi limbi vor fi detectate automat prin prezenta fișierelor cu nume ce au forma Messages_&lt;locale&gt;.properties în directoarele ZAP. 
 
-<h2>Minor changes:</h2>
+<h2>Schimbări minore:</h2>
 
-<h3>Disabled 'default file' plugins</h3>
-The plugins which detect default files are effectively made redundant by the new 
-brute force scanner.<br>
-These have therefore been disabled.
+<h3>Dezactivează plugin-ul 'fișier implicit'</h3>
+Plugin-urile ce detectează fișiere implicite au devenit redundante odată cu scanerul de forțare brută.<br>
+Acestea au fost dezactivate în consecință.
 
-<h3>Scanner summaries</h3>
-Counts of the number and types of the current scans are now displayed in the <a href="../ui/footer.html">footer</a>.
+<h3>Rezumatele scanării</h3>
+O numărătoare a tipului și numărului de scanări active curente este acum afișată în <a href="../ui/footer.html">subsolul paginii</a>.
 
 
-<h2>See also</h2>
+<h2>Consultă și</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<a href="../intro.html">Introducerea</a></td><td>introducere în ZAP</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<a href="releases.html">Lansări</a></td><td>setul complet de versiuni lansate</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<a href="../credits.html">Contribuții</a></td><td>oamenii și grupurile care au făcut posibilă această lansare</td></tr>
 </table>
 </body>
 </html>

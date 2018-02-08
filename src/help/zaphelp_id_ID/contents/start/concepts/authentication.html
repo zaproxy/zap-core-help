@@ -7,196 +7,181 @@
 <body bgcolor="#ffffff">
 	<h1>Otentikasi</h1>
 	<p>
-		ZAP handles multiple types of authentication (called <b>Authentication
-			Methods</b>) that can be used for websites / webapps. Each <b><a
-			href="contexts.html">Context</a></b> has an Authentication Method
-		defined which dictates how authentication is handled. The
-		authentication is used to create Web Sessions that correspond to
-		authenticated webapp <a href="users.html">Users</a>.
+		ZAP menangani beberapa jenis otentikasi (disebut <b> Authentication
+Metode </>) yang bisa digunakan untuk website / webapps. Setiap <b><a
+			href="contexts.html"> Konteks </> memiliki Metode Otentikasi
+didefinisikan yang menentukan bagaimana otentikasi ditangani. Itu
+otentikasi digunakan untuk membuat Sesi Web yang sesuai
+webapp yang diautentikasi <a href="users.html"> Pengguna </>.
 	</p>
 
 	<p>
-		In order to detect when response messages from web servers correspond
-		to authenticated requests, a set of indicators can be configured. The
-		<b>Logged in indicator</b>, when present in a response message (either
-		the header or the body), signifies that the response message
-		corresponds to an authenticated request (e.g. presence of a 'logout
-		link' or a 'Welcome back, User X' pattern). Similarly, the <b>Logged
-			out indicator</b> indicates an unauthenticated request (e.g. presence of
-		a 'login link'). Only the presence of one of the 2 indicators is
-		sufficient for proper functionality. In the case neither of the
-		indicators has been specified, all messages are considered, by
-		default, authenticated.
+		Dalam rangka untuk mendeteksi ketika pesan tanggapan dari server web sesuai permintaan untuk dikonfirmasi, satu perangkat indikator yang dapat dikonfigurasi. Itu
+<b> Logged in indicator </>, bila ada dalam pesan tanggapan (baik
+header atau badan), menandakan bahwa pesan respon
+sesuai dengan permintaan yang diautentikasi (mis., ada 'logout'
+link 'atau' Welcome back, User X 'pattern). Demikian pula, <b> Logged
+indikator keluar </> menunjukkan permintaan yang tidak diautentikasi (mis., keberadaan
+sebuah 'link login'). Jika ZAP mendeteksi indikator keluar ini akan mengautentikasi ulang, selain itu diasumsikan bahwa sudah dikonfirmasi dan akan terus seperti biasa.  
+		Hanya satu (1) dari dua (2) indikator yang diperlukan
+fungsionalitas yang tepat. Dalam kasus tidak satu pun dari
+Indikator telah ditentukan, semua pesan dipertimbangkan, oleh
+default, dikonfirmasi.
 	</p>
 		
-	<p> To set one of the <b>Logged in/out Indicators</b>, either type the regex 
-		directly in the <i><a href="../../ui/dialogs/session/contexts.html#auth">Session
-		Properties</a> dialog -> Authentication panel -> Logged In/Out Indicator field</i>,
-		either find an authenticated message in the Sites Tree, select it, open the
-		Response View and select the text you wish to define as the indicator using the
-		mouse and select the <i>Flag as Context... Logged in/out indicator</i> right-click menu option.
+	<p> Untuk menetapkan salah satu Indikator Masuk / Keluar yang Ditandai </>, ketik regex
+langsung di Sidang <i> <a href="../../ui/dialogs/session/contexts.html#auth">
+Properties </> - - Panel otentikasi -> Field Indikator Masuk / Keluar Indikator </>,
+cari pesan yang diautentikasi di Pohon Situs, pilih, buka
+Response View dan pilih teks yang ingin Anda definisikan sebagai indikator dengan menggunakan
+mouse dan pilih <i> Flag as Context ... Masuk / keluar indikator </> klik kanan opsi menu.
 	</p>
 
-	<p>In order to perform the authentication of a user on a website /
-		in a webapp, the Authentication Method defines how the authentication
-		is done (the process), while the necessary credentials (the exact
-		identifiers) are dependent on the user, so, in ZAP, they are
-		configured in the Users.</p>
+	<p>Untuk melakukan otentikasi pengguna pada website /
+dalam webapp, Authentication Method mendefinisikan bagaimana otentikasi
+dilakukan (proses), sedangkan kredensial yang diperlukan (tepatnya
+pengenal) bergantung pada pengguna, jadi, di ZAP, mereka
+dikonfigurasi di Pengguna.</p>
 	
-	<p>The generic <b>main steps</b> that are needed to configure authentication for a web application
-	are the following:
+	<p>Generik <b>langkah utama</b> yang diperlukan untuk mengkonfigurasi otentikasi untuk aplikasi web
+adalah sebagai berikut:
 	<ol>
-		<li>properly configure a ZAP <a href="contexts.html">Context</a> for the web application</li>
-		<li>set up the <a href="sessionManagement.html">session management method</a> for the context to
-		the one that is used in your app</li>
-		<li>set up the authentication method for the context:
+		<li>konfigurasikan dengan benar ZAP <a href="contexts.html"> Konteks </> untuk aplikasi web</li>
+		<li>atur metode pengelolaan sesi <a href="sessionManagement.html"> </> untuk konteksnya
+yang digunakan di aplikasi Anda</li>
+		<li>atur metode otentikasi untuk konteksnya:
 			<ol>
-				<li>set up at least one of the <i>Logged In Indicator</i> or the <i>Logged out indicator</i>,
-				as described above</li>
-				<li>configure the authentication method for your application, specifying all the requirements
-				(as seen below)</li>
+				<li>atur setidaknya satu dari <i> Logged In Indicator </> atau indikator <i> Logged out </>,
+seperti dijelaskan di atas</li>
+				<li>mengkonfigurasi metode otentikasi untuk aplikasi anda, menentukan semua persyaratan
+(seperti yang terlihat di bawah ini)</li>
 			</ol>
 		</li> 
-		<li>configure a set of <a href="users.html">users</a> for the context that directly correspond to the
-		authentication method for the context</li>
+		<li>konfigurasikan satu set <a href="users.html"> pengguna </> untuk konteks yang berhubungan langsung dengan
+metode otentikasi untuk konteksnya</li>
 	</ol>
 
-	<p>Authentication methods can be used in multiple places around
-		ZAP. Some of the examples include:</p>
+	<p>Metode otentikasi dapat digunakan di banyak tempat sekitar
+PERTENGKARAN. Beberapa contohnya meliputi:</p>
 	<ul>
-		<li>defining Users and automatic login</li>
-		<li>detection of authenticated/unauthenticated states</li>
-		<li>performing automatic re-authentication</li>
+		<li>mendefinisikan User dan login otomatis</li>
+		<li>deteksi status terautentikasi / tidak terauthentikasi</li>
+		<li>melakukan autentikasi otomatis
+ 
+Konteks | Permintaan Konteks</li>
 	</ul>
 
-	<p>Multiple authentication methods have been implemented and the
-		system supports easy addition of new methods, according to user needs.
-		They main ones are described below.</p>
+	<p>Beberapa metode otentikasi telah diterapkan dan
+Sistem ini mendukung penambahan metode baru dengan mudah, sesuai kebutuhan pengguna.
+Mereka yang utama dijelaskan di bawah ini.</p>
 
 	<h3>
-		<a name="manual">Manual Authentication</a>
+		<a name="manual">Otentikasi Manual</a>
 	</h3>
-	<p>This method allows users to perform the authentication manually
-		(e.g. authenticate in the browser while proxy-ing through ZAP) and
-		then select the corresponding HTTP session. As the actual
-		authentication is being performed by you, this method does not support
-		re-authentication in case the webapp logs a user out.
+	<p>Metode ini memungkinkan pengguna melakukan autentikasi secara manual
+(misalnya mengotentikasi di browser saat melakukan proxy melalui ZAP) dan
+lalu pilih sesi HTTP yang sesuai. Seperti yang sebenarnya otentikasi dilakukan oleh anda, metode ini tidak mendukung otentikasi ulang dalam kasus aplikasi web log pengguna.
 	</p>
 	
-	<p>When using this authentication method, configuring a User for the context 
-	require choosing an authenticated HTTP session.</p>
+	<p>Ketika menggunakan metode ini, konfigurasi Pengguna untuk konteks memerlukan memilih sesi HTTP dikonfirmasi.</p>
 
 	<h3>
-		<a name="formBased">Form-Based Authentication</a>
+		<a name="formBased">Otentikasi Berbasis Bentuk</a>
 	</h3>
 	<p>
-		This method is used for websites / webapps where authentication is
-		done by submitting a form or performing a GET request to a 'login url'
-		using a 'username/password' pair of authentication credentials.
-		Re-authentication is possible. Configuration can be done using the <a
-			href="../../ui/dialogs/session/contexts.html#auth">Session
-			Contexts Dialog</a> or using the contextual PopupMenu: <i>Flag as...
-			Form-Based Authentication Login Request</i>.
+		Metode ini digunakan untuk website / webapps dimana authentication berada
+dilakukan dengan mengirimkan formulir atau melakukan permintaan GET ke 'url login'
+menggunakan 'username / password' sepasang kredensial otentikasi.
+		Re-otentikasi adalah mungkin. Konfigurasi bisa dilakukan dengan menggunakan Sesi <a
+			href="../../ui/dialogs/session/contexts.html#auth">
+Konteks Dialog </> atau menggunakan PopupMenu kontekstual: <i> Tandai sebagai ...
+			Permintaan Masuk Otentikasi Berbasis Formulir </>.
 	</p>
-	<p>When using this authentication method, configuring a User for the context requires
-	setting up the <i>username/password</i> pair of credentials that are used for the form based
-	authentication.</p>
+	<p>Ketika menggunakan metode otentikasi ini, konfigurasi pengguna untuk konteks membutuhkan menyiapkan <i>nama pengguna/kata sandi</i> sepasang kredensial yang digunakan untuk bentuk berdasarkan otentikasi.</p>
 	
 	<h3>
-		<a name="httpAuth">HTTP/NTLM Authentication</a>
+		<a name="httpAuth">Otentikasi HTTP / NTLM</a>
 	</h3>
 	<p>
-		This method is used for websites / webapps where authentication is
-		enforced using the HTTP or NTLM Authentication mechanisms employing HTTP message headers. 
-		Three authentication schemes are supported: Basic, Digest and NTLM.
-		Re-authentication is possible, as the authentication headers are sent with every authenticated
-		request. Configuration can be done using the <a
-			href="../../ui/dialogs/session/contexts.html#auth">Session
-			Contexts Dialog</a>.
+		Metode ini digunakan untuk situs web / aplikasi web di mana otentikasi ditegakkan dengan menggunakan HTTP atau NTLM mekanisme Otentikasi menggunakan HTTP pesan header. 
+		Tiga skema otentikasi didukung: Basic, Digest dan NTLM.
+		Otentikasi ulang adalah mungkin, seperti otentikasi header yang dikirim dengan setiap dikonfirmasi permintaan. Konfigurasi bisa dilakukan dengan menggunakan Sesi <a
+			href="../../ui/dialogs/session/contexts.html#auth">
+Konteks Dialog </>.
 	</p>
-	<p>When using this authentication method, configuring a User for the context requires
-	setting up the <i>username/password</i> pair of credentials that are used for the HTTP/NTLM authentication.</p>
+	<p>Saat menggunakan metode otentikasi ini, konfigurasikan Pengguna untuk konteksnya memerlukan
+menyiapkan <i> username / password </> sepasang kredensial yang digunakan untuk otentikasi HTTP / NTLM.</p>
 	
 	<h3>
-		<a name="scriptBased">Script-Based Authentication</a>
+		<a name="scriptBased">Otentikasi Berbasis Script</a>
 	</h3>
 	<p>
-		This method is useful for websites / webapps where the authentication is a more complex one and some custom
-		scripts that handle the authentication process are beneficial. To use this method, you must first define an Authentication script
-		which sends messages or performs other actions as needed by your web-application. This script is then selected for use for a given Context
-		and it is called whenever an authentication is performed. Re-authentication is possible. 
-		Configuration can be done using the <a href="../../ui/dialogs/session/contexts.html#auth">Session
-			Contexts Dialog</a> and requires you to have the Scripts Console ZAP Addon installed from the Marketplace.
+		Metode ini berguna untuk situs web / aplikasi web di mana otentikasi yang lebih kompleks dan beberapa custom script yang menangani proses otentikasi yang bermanfaat. Untuk menggunakan metode ini, anda harus terlebih dahulu menentukan Otentikasi script yang mengirimkan pesan atau melakukan tindakan lain yang diperlukan oleh aplikasi web. Script ini kemudian dipilih untuk digunakan dalam konteks tertentu dan disebut setiap kali otentikasi dilakukan. Re-otentikasi adalah mungkin. 
+		Konfigurasi dapat dilakukan dengan menggunakan <a href="../../ui/dialogs/session/contexts.html#auth">Sesi Konteks Dialog</a> dan mengharuskan anda untuk memiliki Script Konsol ZAP tambahan diinstal dari Pasar.
 	</p>
-	<p>When using this authentication method, configuring a User for the context requires
-	setting up the a set of parameters defined in the script. For more details, see the provided Authentication Script examples.</p>
+	<p>Ketika menggunakan metode ini, konfigurasi Pengguna untuk konteks membutuhkan menyiapkan satu set parameter yang ditetapkan dalam naskah. Untuk lebih jelasnya, lihat contoh Authentication Script yang tersedia.</p>
 	
-	<h2>Configuration example</h2>
-	<p>A configuration example showing how to fully configure a webapp that uses <i>form-based authentication</i> and
-	<i>cookie-based session management</i> is 
-	seen below:
+	<h2>Contoh konfigurasi</h2>
+	<p>Contoh konfigurasi yang menunjukkan bagaimana untuk sepenuhnya mengkonfigurasi aplikasi web yang digunakan <i>otentikasi berbasis form</i> dan
+	<i>manajemen sesi berbasis cookie</i> Terlihat di bawah ini:
 	<ol>
-		<li>set up a context for the web application</li>
-		<li>set up the session management method to <i>Cookie-based Session Management</i></li>
-		<li>make sure your browser proxies everything through ZAP and log into your application using the browser</li>
-		<li>go to ZAP and identify the request that was done for the login (most usually it's a HTTP POST request 
-		containing the username and the password and possibly other elements)</li>
-		<li>right click on the request and Flag as Context... Form-based Auth Login Request</li>
-		<li>a window will be opened already containing the request URL and the parameters (if any). Use 
-		the dropdown options to select which of the parameters correspond to the username and to the password</li>
-    	<li>then you need to tell ZAP how to identify whether an authentication succeeded or not. You can do 
-    	this by setting logged in or logged indicators. These are regex patterns which, if found in a 
-    	response, tell ZAP whether it's authenticated or not (e.g. presence of a 
-    	http://example.com/logout link or the presence of a 'Welcome, User X'). Only one of them is
-    	necessary. To set one of them, either type the regex directly in the Session Properties -> 
-    	Authentication -> Logged In Indicator, either find an authenticated message in the Sites Tree,
-    	select it, open the Response View and select the text you wish to define as the indicator using
-    	the mouse and select the Flag as Context... Logged in indicator right-click menu option.</li>
-    	<li>define as many users as you need in the Session Properties -> Users section.</li>
-    	<li>after this step, various actions are available in ZAP. For example, you now have a new right click option: Attack -> Spider Context As User. Or, using the Forced User Mode, you can force all the interactions that go through ZAP for a given Context to be from the perspective of a User. The User Forced Mode is enabled via the previous-to-last button in the toolbar (the one with the user and the lock) and is configured via Session Properties -> Forced User Mode.</li>
+		<li>siapkan konteks untuk aplikasi web</li>
+		<li>atur metode pengelolaan sesi menjadi <i> Pengelolaan Sesi Berbasis Cookie </></li>
+		<li>pastikan proxy browser Anda semuanya melalui ZAP dan login ke aplikasi Anda menggunakan browser</li>
+		<li>pergi ke ZAP dan mengidentifikasi permintaan yang dilakukan untuk masuk (biasanya permintaan HTTP POST yang berisi nama pengguna dan kata sandi dan mungkin unsur-unsur lain)</li>
+		<li>klik kanan pada permintaan dan Flag as Context... Form-based Auth Login Request</li>
+		<li>sebuah jendela akan terbuka yang sudah berisi permintaan URL dan parameter (jika ada). Gunakan pilihan dropdown untuk memilih mana yang sesuai dengan parameter nama pengguna dan kata sandi</li>
+    	<li>kemudian anda perlu untuk memberitahu ZAP cara untuk mengidentifikasi apakah otentikasi berhasil atau tidak. Yang dapat anda lakukan ini dengan pengaturan masuk atau keluar indikator. Ini adalah pola regex yang, jika ditemukan pada a
+    tanggapan, beritahu ZAP apakah itu disahkan atau tidak (mis., kehadiran a
+    http://example.com/logout link atau adanya 'Welcome, User X'). Hanya satu di antaranya
+    perlu. Untuk menetapkan salah satunya, ketik regex secara langsung di Session Properties ->
+    Authentication -> Logged In Indicator, temukan pesan yang diautentikasi di Pohon Situs,
+    pilih, buka Response View dan pilih teks yang ingin Anda tentukan sebagai indikator yang digunakan
+    mouse dan pilih Flag as Context... Masuk dalam opsi menu klik kanan klik.</li>
+    	<li>tentukan sebanyak mungkin pengguna yang Anda butuhkan di bagian Session Properties -> Users.</li>
+    	<li>setelah langkah ini, berbagai tindakan tersedia di ZAP. Misalnya, Anda sekarang dapat memilih pengguna di <a href="../../ui/dialogs/spider.html"> Spider dialogue </>. Atau, dengan menggunakan Mode Pengguna Paksa, Anda dapat memaksa semua interaksi yang melewati ZAP untuk konteks tertentu agar berasal dari perspektif Pengguna. Mode Paksa Pengguna diaktifkan melalui tombol sebelumnya-ke-terakhir di bilah alat (yang berisi pengguna dan kunci) dan dikonfigurasi melalui Session Properties -> Forced User Mode.</li>
 	</ol>
 	
-	Most of the steps above apply as well for other authentication methods. The only things that change when trying
-	to configure authentication using a different method are steps 3, 4, 5 and 6. Instead of these, select the authentication
-	method required from the drop-down list and configure it as needed. More details about configuring each type 
-	of authentication can be above and <a href="../../ui/dialogs/session/contexts.html">here</a>.
+	Sebagian besar langkah di atas juga berlaku untuk metode otentikasi lainnya. Satu-satunya hal yang berubah ketika mencoba
+untuk mengkonfigurasi otentikasi menggunakan metode yang berbeda yaitu langkah 3, 4, 5 dan 6. Alih-alih, pilih otentikasi metode yang diperlukan dari daftar drop-down dan mengkonfigurasi sesuai kebutuhan. Detail lebih lanjut tentang mengonfigurasi setiap jenis
+otentikasi bisa di atas dan <a href="../../ui/dialogs/session/contexts.html">sini</a>.
 
-	<h2>Configured via</h2>
+	<h2>Dikonfigurasi via</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/session/contexts.html#auth">Session Properties dialog</a></td>
+			<td><a href="../../ui/dialogs/session/contexts.html#auth">Dialog Session Properties</a></td>
 			<td></td>
 		</tr>
 	</table>
 
-	<h2>See also</h2>
+	<h2>Lihat juga</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="http://youtu.be/cR4gw-cPZOA">Youtube tutorial</a></td>
-			<td>of the Authentication, Session Management and Users Management features of ZAP [external link to http://youtu.be/cR4gw-cPZOA].</td>
+			<td><a href="https://youtu.be/cR4gw-cPZOA">Tutorial Youtube</a></td>
+			<td>dari Authentication, Session Management dan User Management features dari ZAP [tautan eksternal ke https://youtu.be/cR4gw-cPZOA].</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/overview.html">UI Overview</a></td>
-			<td>for an overview of the user interface</td>
+			<td><a href="../../ui/overview.html">Ikhtisar UI</a></td>
+			<td>untuk ikhtisar antarmuka pengguna</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="concepts.html">Features</a></td>
-			<td>provided by ZAP</td>
+			<td><a href="concepts.html">Fitur</a></td>
+			<td>disediakan oleh ZAP</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/session/contexts.html">Session
-					Contexts Dialog</a></td>
-			<td>for an overview of the Session Properties</td>
+			<td><a href="../../ui/dialogs/session/contexts.html">Sidang
+Konteks Dialog</a></td>
+			<td>untuk tinjauan umum tentang Session Properties</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="users.html">Users</a></td>
-			<td>for an overview of Users</td>
+			<td><a href="users.html">Pengguna</a></td>
+			<td>untuk ikhtisar Pengguna</td>
 		</tr>
 
 	</table>

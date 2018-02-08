@@ -3,58 +3,58 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Session Properties dialog
+Sesi dialog Properti
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Session Properties dialog</h1>
+<h1>Sesi dialog Properti</h1>
 <p>
-This allows you to set the session properties and is made up of the following screens:
+Ini memungkinkan kamu mengatur properti sesi dan terdiri dari layar berikut:
 
-<h3>General screen</h3>
-This allows you to set the session name and description.
+<h3>Umum</h3>
+Ini memungkinkan kamu untuk mengatur nama sesi dan deskripsi.
 
-<h3>Keluarkan dari proxy</h3>
-This allows you to manage the URLs which will be ignored by the proxy.
+<h3>Mengecualikan dari Proxy</h3>
+Ini memungkinkan kamu mengelola URL yang akan diabaikan oleh proxy lokal.
 
-<h3>Keluarkan dari scanner</h3>
-This allows you to manage the URLs which will be ignored by the scanner.
+<h3>Mengecualikan dari Scanner</h3>
+Ini memungkinkan kamu mengelola URL yang akan diabaikan oleh pemindai.
 
-<h3>Keluarkan dari spider</h3>
-This allows you to manage the URLs which will be ignored by the spider.
+<h3>Mengecualikan dari laba-Laba</h3>
+Hal ini memungkinkan anda untuk mengelola URL yang akan diabaikan oleh laba-laba (standar dan AJAX).
 
-<h3>Contexts</h3>
-A set of screens for managing <a href="../../../start/concepts/contexts.html">contexts</a>
+<h3>Konteks</h3>
+Satu set layar untuk mengelola <a href="../../../start/concepts/contexts.html">konteks</a>
 
 <h2>URL regexs</h2>
-In the <i>Exclude from *</i> dialogs, you can enter regular expressions to define excluded URLs.
-While you can escape a single meta-character with a backslash, you can also use the <b>\Q...\E</b> escape sequence. All the characters between the <b>\Q</b> and the <b>\E</b> are interpreted as literal characters. E.g. \Q*\d+*\E matches the literal text *\d+*.
-This escape sequence is used in ZAP when you exclude URLs via some context menus.
+In the <i>Tidak termasuk *</i> dialog, anda dapat memasukkan ekspresi reguler untuk mendefinisikan Url dikecualikan.
+Sementara anda dapat membuka satu meta-karakter dengan garis miring, anda juga dapat menggunakan <b>\Q...\E</b> escape sequence. Semua karakter antara <b>\Q</b> dan <b>\E</b> ditafsirkan sebagai karakter yang persis. Contoh: \Q*\d+*\E persis dengan teks *\d+*.
+Urutan keluar ini digunakan di dalam ZAP saat mengecualikan URL melalui beberapa konteks menu.
 <br>
-<b>Note:</b> If your URL contains a "\E", then you have to do the following steps when using the <b>\Q...\E</b> escape sequence:
+<b>Catatan:</b> Jika URL anda berisi "\E", maka anda harus melakukan langkah-langkah berikut saat menggunakan <b>\Q...\E</b> urutan keluar:
 <ul>
-	<li>Open the escape sequence</li>
-	<li>Close the escape sequence before the "character" \E</li>
-	<li>Escape the backslash</li>
-	<li>Open after the "\E" another escape sequence;</li>
-	<li>Close the escape sequence as normally would.</li>
+	<li>Buka escape sequence</li>
+	<li>Tutup urutan keluar sebelum "karakter" \E</li>
+	<li>Melarikan diri backslash</li>
+	<li>Buka setelah urutan keluar lainnya "\E";</li>
+	<li>Menutup escape sequence seperti biasanya.</li>
 </ul>
 <br>
-Example: subdomain.example.com/path?a=<b>\E</b>&amp;moredata=2 should appear as
+Contoh: subdomain.example.com/path?a=<b>\E</b>&amp;moredata=2 seharusnya muncul sebagai
 <i>\Qsubdomain.example.com/path?a=\E</i><b>\\E</b><i>\Q&amp;moredata=2\E</i>
   
-<h2>Accessed via</h2>
+<h2>Diakses melalui</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../tlmenu/file.html">Top level File menu</a></td><td>'Properties...' menu item</td></tr>
+<a href="../../tlmenu/file.html">Tingkat atas menu File</a></td><td>'Properties...' menu item</td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Lihat juga</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../overview.html">Ikhtisar UI</a></td><td>untuk gambaran dari antarmuka pengguna</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+<a href="../dialogs.html">Dialog</a></td><td>untuk rincian dari dialog popup </td></tr>
 </table>
 
 </body>

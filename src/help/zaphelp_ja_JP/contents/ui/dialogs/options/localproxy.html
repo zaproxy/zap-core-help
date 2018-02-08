@@ -3,29 +3,63 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Options Local Proxy screen
+Options Local Proxies screen
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Options Local Proxy screen</h1>
+<h1>Options Local Proxies screen</h1>
 <p>
-The Options Connection screen allows you to configure the address and port 
+The Options Connection screen allows you to configure the addresses and ports 
 on which ZAP accepts incoming connections.<br/>
-It is this address and port that you must configure your browser to use as a proxy.
+
+<h2>Local Proxy</h2>
+By default ZAP will listen on one local address and port, and these are the address and port that you must configure your browser to use as a proxy.
 </p>
+<h3>Address</h3>
+The local address which ZAP will use. All of the available addresses are automatically identified.
 
-<h3>Modify/Remove "Accept-Encoding" request-header</h3>
-Allows the proxy to modify/remove the "Accept-Encoding" request-header field so 
-no encoding transformations are done to the response.<br/>
+<h3>Port</h3>
+The port on which ZAP will listen.
+
+<h3>Behind NAT</h3>
+Indicates that the Local Proxy (ZAP) is behind NAT. When selected ZAP will attempt to
+determine the public IP address, to properly detect and handle requests with the public
+IP address (for example, to be served by the ZAP API).
+<p>
+<strong>Note:</strong> This option is only supported when ZAP is running in an AWS EC2 instance.
+ZAP will obtain the public IP address from
+<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html#working-with-ip-addresses">AWS EC2
+instance's metadata</a>.<br>
+ZAP should be started with this option enabled if access to the API, through the public IP address, is required:
+<blockquote>zap.sh -daemon -port 8080 -host 0.0.0.0 -config proxy.behindnat=true</blockquote>
+Also, the <a href="api.html">API</a> needs to be configured to accept external IP addresses (i.e. the IP
+address from where ZAP is being accessed).
+
+<h3>Remove Unsupported Encodings</h3>
+Allows the proxy to remove unsupported encodings from the "Accept-Encoding" request-header field, so 
+no (unsupported) encoding transformations are done to the response.<br/>
 This option should be always enabled unless when testing the encoding transformations.<br/>
-The messages encoded will not be correctly scanned (either by passive and active scanners).
+The messages encoded with unsupported encodings will not be correctly scanned (either by passive and active scanners).
 
-<h2>関連情報</h2>
+<h3>Security Protocols</h3>
+Allows to choose the SSL/TLS versions enabled for incoming connections (for example, from browsers). At least
+one version must be enabled, versions unsupported by the JRE will be unselected and disabled.
+<br>
+The option SSLv2Hello must be selected in conjunction with at least one SSL/TLS version.
+<br>
+The security options apply to both the main and all of the additional proxies.
+
+<h2>Additional Proxies</h2>
+You can add as many additional addresses and ports for ZAP to listen on as you like.<br>
+This can be useful when testing mobile applications - you can proxy the mobile application via a Wi-Fi interface at the same time
+as using the backend site directly using a browser proxying through ZAP emulating a mobile user agent.
+
+<h2>See also</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UIの概要</a></td><td>ユーザー インターフェイスの概要について</td></tr>
+<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">オプションダイアログ</a></td><td>その他のオプションダイアログの画面についての詳細</td></tr>
+<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
 </table>
 
 </body>

@@ -17,9 +17,9 @@ The following changes were made in this release:
 
 <h3>VIEW authorization / getAuthorizationDetectionMethod</h3>
 
-Now returns data wrapped in an object called authorizationDetectionMethod
+Most visszatér adatok csomagolva egy objektum neve engedélyKimutatásiMódszer
 
-For example:
+Például:
 <pre>{"authorizationDetectionMethod":{"statusCode":"-1"..."headerRegex":""}}</pre>
 instead of:
 <pre>{"statusCode":"-1"..."headerRegex":""}</pre>
@@ -34,14 +34,14 @@ instead of:
 
 <h3>ACTION spider / scan + scanAsUser</h3>
 </ul>
-Both now support a new optional 'subtreeOnly' parameter which limits the spider to the specified subtree.
-The 'url' parameter is also now optional, as long as a valid 'context' parameter is supplied
+Mindkét már támogatja egy új, opcionális 'subtreeOnly' paraméter, amely korlátozza a pók, hogy a megadott részfa.
+Az 'url' paraméter is választható, ameddig egy érvényes 'helyi' paraméter tartozék
 
 <h3>New 'stats' component</h3>
-The new 'stats' API component provides access to the <a href="../start/concepts/stats.html">stats</a>
-now maintained by ZAP.<br><br>
+Az új 'statisztika' API alkatrész hozzáférést biztosít a <a href="../start/concepts/stats.html">stats</a>
+most által fenntartott ZAP.<br><br>
 
-Note that some existing components will also have new operations, see the 
+Vegye figyelembe, hogy néhány meglévő komponensek is új műveletek, lásd a 
 <a href="../start/concepts/api.html">API Web UI</a> for more details.
  
 
@@ -109,6 +109,7 @@ Note that some existing components will also have new operations, see the
 <ul>
 <li>Issue 1529 : TestExternalRedirect Missing Use Case plus Performance and FP Improvements</li>
 <li>Issue 1597 : Java 8 - Mac OS/X package</li>
+<li>Issue 1639 : XSS False Negative on script injections into the Referer HTTP header</li>
 <li>Issue 1786 : Activescan Scripts Silent Failure</li>
 <li>Issue 1801 : URL StandardParameterParser not working correctly with QueryString</li>
 <li>Issue 1848 : VariantURLQuery throwing exceptions on active scan</li>
@@ -131,29 +132,29 @@ Note that some existing components will also have new operations, see the
 <li>Issue 2197 : Install new versions of the add-ons after downloading with -addonupdate</li>
 <li>Issue 2199 : Disallow Spider scans when ZAP is in Safe (or Protected) mode</li>
 <li>Issue 2203 : Fix findbugs warnings</li>
-<li>Issue 2208 : Prevent the active scanner from reporting progress higher than 100%</li>
-<li>Issue 2226 : ZAP should handle HttpSessionsSite's cookie errors more gracefully</li>
-<li>Issue 2246 : Error in sessions view with tokens</li>
-<li>Issue 2259 : Fix NullPointerException in VariantCookie implementation</li>
-<li>Issue 2281 : Filter params for a specific site</li>
-<li>Issue 2282 : Spider a whole context at once</li>
-<li>Issue 2292 : Enhance alertFingerPrint</li>
+<li>Kérdés, 2208 : Megakadályozza az aktív szkenner a beszámolási fejlődés magasabb, mint 100%</li>
+<li>Kérdés 2226 : ZAP kell kezelni HttpSessionsSite cookie hibák több, elegánsan</li>
+<li>Kérdés 2246 : Hiba a munkameneteit tartalmazó nézet a tokenek</li>
+<li>Kérdés 2259 : Fix NullPointerException a VariantCookie végrehajtása</li>
+<li>Kérdés 2281 : Szűrő params egy adott oldalon</li>
+<li>Kérdés 2282 : Pók egy egész összefüggésben egyszerre</li>
+<li>Kérdés 2292 : Fokozza figyelmeztetőUjjátNyomtatás</li>
 <li>Issue 2297 : AWT blocker activation interrupted - java.lang.InterruptedException </li>
-<li>Issue 2307 : Add missing optional parameter "scanPolicyName" to ascan API actions</li>
-<li>Issue 2312 : Give focus to "Edit Keyboard Shortcut" dialogue</li>
-<li>Issue 2313 : Properly convert (old) excluded proxy domains</li>
-<li>Issue 2314 : Cannot add several payloads to fuzzer (NullPointerException)</li>
-<li>Issue 2323 : Fix (secure) ZAP API request loop</li>
-<li>Issue 2328 : Fix issue during uninstallation of named extension</li>
-<li>Issue 2329 : Filter seeds immediately before running the spider</li>
-<li>Issue 2331 : Custom Context Panels not show in existing contexts after installation of add-on</li>
-<li>Issue 2336 : BadLocationException thrown when using Fuzzer</li>
-<li>Issue 2357 : Inconsistencies while changing between panel layouts</li>
-<li>Issue 2363 : Keep break buttons in sync when changing mode</li>
-<li>Issue 2366 : Inconsistencies in break buttons shown</li>
-<li>Issue 2373 : Show Tab not working correctly in Full Layout for non-information tabs</li>
-<li>Issue 2374 : Unable to change response tab position without main tool bar</li>
-<li>Issue 2390 : HeadlessException should be handled more gracefully & README needs Headless details</li>
+<li>Kérdés 2307 : Add hiányzik az opcionális paraméter "scanPolitikaNeve" ascan API akciók</li>
+<li>Kérdés 2312 : Adj figyelmet, hogy a "Szerkesztés Billentyűparancs" párbeszéd</li>
+<li>Kérdés 2313 : Megfelelően átalakítani (régi) kizárt proxy domainek</li>
+<li>Kérdés, 2314 : Nem vehet fel több rakományának, hogy fuzzer (NullPointerKivétel)</li>
+<li>Kérdés 2323 : Fix (biztonságos) ZAP API kérelem hurok</li>
+<li>Kérdés, 2328 : Fix kérdés során eltávolítása nevű kiterjesztés</li>
+<li>Kérdés 2329 : Szűrő magok azonnal futtatása előtt a pók</li>
+<li>Kérdés 2331 : Egyéni Összefüggésben Panelek nem mutatják a jelenlegi kontextusban telepítés után az add-on</li>
+<li>Kérdés 2336 : BadLocationException dobott használata Fuzzer</li>
+<li>Kérdés 2357 : Ellentmondások, míg a változó közötti panel elrendezés</li>
+<li>Kérdés 2363 : Ne törd gombok szinkronban, amikor a változó mód</li>
+<li>Kérdés 2366 : Ellentmondások a szünet gomb látható</li>
+<li>Kérdés 2373 : Show Lap nem működik megfelelően a Teljes Elrendezés a nem-információs lapok</li>
+<li>Kérdés 2374 : Nem változik válasz lap helyzetben, anélkül, hogy a fő eszköztáron</li>
+<li>Kérdés 2390 : HeadlessException kell kezelni több kecsesen & README kell Fejetlen részletek</li>
 <li>Issue 2394 : Change API authorization view to wrap its object</li>
 <li>Issue 2399 : Timeout requests not shown in ZAP</li>
 <li>Issue 2421 : Active scanner request count mismatch</li>
@@ -176,7 +177,7 @@ Note that some existing components will also have new operations, see the
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>az emberek vagy csoportok, akik ezt kiadás lehetséges</td></tr>
 </table>
 </body>
 </html>

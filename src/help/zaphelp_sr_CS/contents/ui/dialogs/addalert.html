@@ -19,7 +19,7 @@ The dialog has the following fields:
 <h3>Type</h3>
 The type of the alert is a pull down field which allows you to select one of a prepopulated set of issue types.<br/>
 You can also enter your own text or change the text of one of the items you selected.<br/>
-If you select on of the existing types then the Description, Solution and Other Info fields
+If you select one of the existing types then the Description, Solution and Other Info fields
 will be populated with text associated with the item you chose. 
 
 <h3>Rizik</h3>
@@ -43,7 +43,10 @@ A pull down field which allows you to specify how confident you are in the valid
 
 <h3>Parameter</h3>
 A pull down field which allows you to specify which parameter the issue is associated with.<br/>
-The field is prepopulated with any URL and FORM parameters found, but you can also enter your own parameter name. 
+The field is prepopulated with any URL and FORM parameters found, but you can also enter your own parameter name.<br />
+Array parameters (in URL query component and <code>x-www-form-urlencoded</code> request body) are identified with its index. For
+example, for a request containing <code>choices[]=ChoiceA&amp;choices[]=ChoiceB</code> the first parameter would be identified
+as <code>choices[0]</code> and the second as <code>choices[1]</code>.
 
 <h3>Opis</h3>
 A general description of the type of issue found.<br/>

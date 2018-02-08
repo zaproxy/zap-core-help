@@ -3,38 +3,38 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Release 1.1.0
+1.1.0版本
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Release 1.1.0</h1>
+<h1>1.1.0版本</h1>
 <p>
-The following changes were made in this release:
+本版本进行了以下更改：
 </p>
-<h2>Significant changes:</h2>
+<h2>重大变化：</h2>
 
-<h3>OWASP rebranding</h3>
-ZAP has been accepted as an OWASP project.<br>
-Its homepage is now: http://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project
+<h3>OWASP品牌重塑</h3>
+ZAP已被接受为OWASP项目。<br>
+现在的主页是： https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project
 
 <h3>暴力破解</h3>
-The ability to brute force files and directories based on code from the OWASP DirBuster project. <br>
-The new Brute Force tab shows the files and directories found.
+基于OWASP DirBuster项目的代码帮助暴力破解文件和目录的能力。 <br>
+新的暴力破解选项卡显示找到的文件和目录。
 
 <h3>端口扫描</h3>
-The ability to port scan sites. <br>
-The new Port Scan tab shows the ports found.
+端口扫描网站的能力。 <br>
+新的端口扫描选项卡显示找到的端口。
 
-<h3>Active Scan tab</h3>
-The new <a href="../ui/tabs/ascan.html">Active Scan tab</a> shows the requests and responses as a result of actively scanning a site.
+<h3>主动扫描选项卡</h3>
+新的 <a href="../ui/tabs/ascan.html">主动扫描选项卡</a> 显示主动扫描网站的请求和响应。
 
-<h3>Spider tab</h3>
-The <a href="../ui/tabs/spider.html">Spider tab</a> now allows you to continue using ZAP while spidering a site.<br>
-You can also pause and resume the spider.    
+<h3>Spider选项卡</h3>
+Spider <a href="../ui/tabs/spider.html">选项卡</a> 现在允许您继续使用ZAP（当您Spidering一个网站的时候）。<br>
+您也可以暂停和恢复Spider。    
 
-<h3>Smartcard support</h3>
-Smart card support has been added c/o the Andiparos project.<br>
-The following smartcard devices have been tested on Windows:
+<h3>智能卡支持</h3>
+Andiparos项目增加了智能卡支持。<br>
+以下智能卡设备已在Windows上进行了测试：
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Safeguard</td><td>Aladdin eToken</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td></td><td>Aladdin eToken Pro</td></tr>
@@ -43,50 +43,49 @@ The following smartcard devices have been tested on Windows:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Gemalto</td><td>Reflex 20 V2</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td></td><td>Swiss Stick</td></tr>
 </table>
-The following smartcard devices are reported to work:
+以下智能卡设备被报告可以工作：
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Omnikey</td><td>CardMan 4040</td></tr>
 </table>
 
-<h3>Attack menu</h3>
-The new <a href="../ui/tabs/sites.html">Sites tab</a> right click 'Attack' menu allows you to start various scans.
+<h3>攻击菜单</h3>
+新的 <a href="../ui/tabs/sites.html">站点选项卡</a> 右键点击‘攻击’菜单使您可以开始进行病毒扫描。
 
-<h3>More internationalisation</h3>
-All of the main tabs and menu items have now been internationalised.
+<h3>更国际化</h3>
+所有的主要标签和菜单项目现已国际化。
 
-<h3>Localisation</h3>
-Support for the following languages are built into this version:
+<h3>本地化</h3>
+此版本支持以下语言：
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>English</td><td>The default language</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Brazilian Portuguese</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>German</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Polish</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Spanish</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>英文</td><td>默认语言</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>巴西 葡萄牙语</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>德语</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>波兰语</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>西班牙语</td><td></td></tr>
 </table>
     
-<h3>Language selection</h3>
-On start up you will be prompted to choose the language to use.<br>
-New languages are automatically detected by the presence of files with names of the form Messages_&lt;locale&gt;.properties in the ZAP directory. 
+<h3>语言选项</h3>
+启动时，系统将提示您选择要使用的语言。<br>
+在ZAP目录中存在名称为Messages_ &lt;locale&gt; .properties的文件时会自动检测到新语言。 
 
-<h2>Minor changes:</h2>
+<h2>小更改：</h2>
 
-<h3>Disabled 'default file' plugins</h3>
-The plugins which detect default files are effectively made redundant by the new 
-brute force scanner.<br>
-These have therefore been disabled.
+<h3>取消“默认文件”插件</h3>
+检测默认文件的插件被新的强力扫描器有效地冗余了。<br>
+因此被禁用了。
 
-<h3>Scanner summaries</h3>
-Counts of the number and types of the current scans are now displayed in the <a href="../ui/footer.html">footer</a>.
+<h3>扫描器总结</h3>
+当前扫描的数量和类型的计数现在显示在 <a href="../ui/footer.html">页脚</a>.
 
 
-<h2>See also</h2>
+<h2>请参阅</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<a href="../intro.html">简介</a></td><td>ZAP简介</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<a href="releases.html">版本发布</a></td><td>所有版本</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<a href="../credits.html">版权</a></td><td>所有参与这次版本更新的人和组织</td></tr>
 </table>
 </body>
 </html>

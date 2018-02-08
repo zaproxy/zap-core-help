@@ -9,18 +9,25 @@
 <body bgcolor="#ffffff">
 <h1>静的スキャン</h1>
 <p>
-ZAPはテストするWEBアプリケーションからの全てのレスポンスを受動的（静的）にスキャンします。<br/>静的スキャンはとにかくレスポンスを変更する事は無く、それゆえ使用するのに安全です。<br/>スキャンはアプリケーションの探索を遅くする事が無いようにするため、バックグラウンドスレッドで実行されます。
+ZAP by default passively scans all HTTP messages (requests and responses) sent to the web application being tested.<br/>
+Passive scanning does not change the requests nor the responses in any way and is therefore safe to use.<br/>
+Scanning is performed in a background thread to ensure that it does not slow down the exploration
+of an application.
 </p>
 <p>
-このリリースで、ZAPの静的スキャンは自動的に<a href="tags.html">タグ</a>を追加、潜在的な問題の<a href="alerts.html">アラート</a>をあげるために使用されます。 
+The (main) behaviour of the passive scanner can be configured using the 
+<a href="../../ui/dialogs/options/pscanner.html">Options Passive Scanner Screen</a>.
+</p>
+<p>
+Passive scanning can also be used for automatically adding <a href="tags.html">tags</a>
+and raising <a href="alerts.html">alerts</a> for potential issues.<br>
+A set of rules for automatic tagging are provided by default. These can be changed, deleted or
+added to via the <a href="../../ui/dialogs/options/pscan.html">Options Passive Scan Tags screen</a>.
 </p>
 
 <p>
-A set of rules for automatic tagging are provided by default.<br>
-These can be changed, deleted or added to via the <a href="../../ui/dialogs/options/pscan.html">Options Passive Scan Tags screen</a>.<br/>
-</p>
-<p>
-静的スキャンによって発生するアラートは<a href="../../ui/dialogs/options/pscanrules.html">静的スキャンルールオプション画面</a> を使用して設定します。.<br/>
+The alerts raised by passive scanners can be configured using the 
+<a href="../../ui/dialogs/options/pscanrules.html">Options Passive Scan Rules screen</a>.<br/>
 </p>
 
 <h2>関連情報</h2>

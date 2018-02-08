@@ -3,58 +3,56 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Session Properties dialog
+Ang mga katangian ng sesyon sa dayalogo
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Session Properties dialog</h1>
+<h1>Ang mga katangian ng sesyon sa dayalugo</h1>
 <p>
-This allows you to set the session properties and is made up of the following screens:
+Ito ang nagpapahintulot sayo na maset ang katangian ng sesyon na binubuo ng mga sumusunod na iskren:
 
-<h3>General screen</h3>
-This allows you to set the session name and description.
+<h3>Pangkalahatan</h3>
+Ito ay nagpapahintulot sa iyo na lagyan ng pangalan ang sesyon at ilarawan.
 
-<h3>Exclude from proxy</h3>
-This allows you to manage the URLs which will be ignored by the proxy.
+<h3>Ibukod mula sa proxy</h3>
+Ito ay nagpapahintulot sayo na pamahalaan ang mga URL na hindi pinansin ng lokal na mga proxie.
 
-<h3>Exclude from scanner</h3>
-This allows you to manage the URLs which will be ignored by the scanner.
+<h3>Ibukod mula sa scanner</h3>
+Ito ay nag papahintulot sa iyo na pamahalaan ang mga URL na hindi pinansin ng scanner.
 
-<h3>Exclude from spider</h3>
-This allows you to manage the URLs which will be ignored by the spider.
+<h3>Ibukod mula sa spider</h3>
+Ito ay nagpapahintulot sa iyo na pamahalaan ang mga URL na hindi pinansin ng spider (standard and AJAX).
 
-<h3>Contexts</h3>
-A set of screens for managing <a href="../../../start/concepts/contexts.html">contexts</a>
+<h3>Konteksto</h3>
+Isang set ng mga screen para sa namamahala <a href="../../../start/concepts/contexts.html">konteksto</a>
 
-<h2>URL regexs</h2>
-In the <i>Exclude from *</i> dialogs, you can enter regular expressions to define excluded URLs.
-While you can escape a single meta-character with a backslash, you can also use the <b>\Q...\E</b> escape sequence. All the characters between the <b>\Q</b> and the <b>\E</b> are interpreted as literal characters. E.g. \Q*\d+*\E matches the literal text *\d+*.
-This escape sequence is used in ZAP when you exclude URLs via some context menus.
+<h2>Mga regex ng URL</h2>
+Sa mga <i>Hiniwalay mula *</i> ang mga dialog na naipasok mo ng regular sa expresyon upang matukoy ang mga URL habang ikaw ay umaalis sa nagiisang meta-karakter kasama ang backslash, maari murin gamitin ang <b>\Q...\E</b> alisin ang pagkakasunod-sunod. ang lahat ng mga karakter sa pagitan ng <b>\Q</b> at ng <b>\E</b> ang interpreted ay literal na karakter ng. E.g. \Q*\d+*\E katugma ng literal natekstong *\d+* ang pag kakaalis ng pag kakasunod-sunod ay magagamit sa ZAP kung hindi ka kasama sa mga URL sapamamagitan ng mga menu.
 <br>
-<b>Note:</b> If your URL contains a "\E", then you have to do the following steps when using the <b>\Q...\E</b> escape sequence:
+<b>Tandaan:</b> Kung ang iyong URL ay naglalaman ng "\E", at kaylangan mong sundin ang mga step. kung gagamit ka ng <b>\Q...\E</b> alisin ang pagkakasunod-sunod:
 <ul>
-	<li>Open the escape sequence</li>
-	<li>Close the escape sequence before the "character" \E</li>
-	<li>Escape the backslash</li>
-	<li>Open after the "\E" another escape sequence;</li>
-	<li>Close the escape sequence as normally would.</li>
+	<li>Buksan ang nasirang pagkakasunod-sunod</li>
+	<li>Isarado ang nasirang pagkakasunod-sunod bago ang karakter na"\E</li>
+	<li>Alisin ang backslash</li>
+	<li>Buksan pagkatapos ng "\E" ang iba pang nasirang pagkakasunod-sunod;</li>
+	<li>Isarado ang nasirang pagkakasunod-sunod tulad ng karaniwan.</li>
 </ul>
 <br>
-Example: subdomain.example.com/path?a=<b>\E</b>&amp;moredata=2 should appear as
+Halibawa: subdomain.example.com/path?a=<b>\E</b>&amp;moredata=2 ay dapat lumitaw bilang
 <i>\Qsubdomain.example.com/path?a=\E</i><b>\\E</b><i>\Q&amp;moredata=2\E</i>
   
-<h2>Accessed via</h2>
+<h2>Sa pamamagitan ng akses</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../tlmenu/file.html">Top level File menu</a></td><td>'Properties...' menu item</td></tr>
+<a href="../../tlmenu/file.html">Itaas ang antas ng payl ng menu</a></td><td>ang mga propertie...' menu item</td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Tignan din</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../overview.html">Kabuoan ng UI</a></td><td>para sa kabuoang gumagamit ng interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+<a href="../dialogs.html">Mga dayalogo</a></td><td>para sa mga detalye ng mga dayalogo o mga popup </td></tr>
 </table>
 
 </body>

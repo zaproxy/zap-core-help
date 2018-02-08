@@ -2,164 +2,146 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Authentication</title>
+<title>المصادقة</title>
 </head>
 <body bgcolor="#ffffff">
-	<h1>Authentication</h1>
+	<h1>مصادقة</h1>
 	<p>
-		ZAP handles multiple types of authentication (called <b>Authentication
-			Methods</b>) that can be used for websites / webapps. Each <b><a
-			href="contexts.html">Context</a></b> has an Authentication Method
-		defined which dictates how authentication is handled. The
-		authentication is used to create Web Sessions that correspond to
-		authenticated webapp <a href="users.html">Users</a>.
+		انطلق يتعامل مع أنواع متعددة من المصادقة (تسمى <b>أساليب المصادقة</b>) التي يمكن استخدامها لمواقع الويب/webapps. وقد كل <b><a
+			href="contexts.html">سياق</a></b> "أسلوب المصادقة" المحدد الذي يملي علينا كيف تتم مصادقة. يستخدم لإنشاء "دورات ويب" التي تتوافق مع webapp مصادقة <a href="users.html">المستخدمين</a> المصادقة.
 	</p>
 
 	<p>
-		In order to detect when response messages from web servers correspond
-		to authenticated requests, a set of indicators can be configured. The
-		<b>Logged in indicator</b>, when present in a response message (either
-		the header or the body), signifies that the response message
-		corresponds to an authenticated request (e.g. presence of a 'logout
-		link' or a 'Welcome back, User X' pattern). Similarly, the <b>Logged
-			out indicator</b> indicates an unauthenticated request (e.g. presence of
-		a 'login link'). Only the presence of one of the 2 indicators is
-		sufficient for proper functionality. In the case neither of the
-		indicators has been specified, all messages are considered, by
-		default, authenticated.
+		من أجل كشف عندما تتوافق مع رسائل الاستجابة من ملقمات ويب مصادقة الطلبات، يمكن تكوين مجموعة من المؤشرات. <b>تسجيل الدخول في المؤشر</b>، عندما تكون موجودة في رسالة استجابة (الرأس أو الجسم)، يدل على أن يتوافق مع رسالة استجابة إلى طلب مصادقة (مثل وجود ارتباط تسجيل خروج أو نمط 'نرحب بعودة، X المستخدم'). وبالمثل، <b>تم تسجيل الدخول إلى مؤشر</b> يشير إلى طلب غير مصادقة (مثلاً وجود ارتباط تسجيل الدخول). إذا انطلق بالكشف عن الذي قام بتسجيل خارج المؤشر فإنه سيتم إعادة المصادقة، وإلا فمن المفترض أن الفعل تمت المصادقة عليه وسوف تستمر كالمعتاد.  
+		واحدة فقط (1) من المؤشرات 2 سنتين ضروري للحصول على وظائف مناسبة. في حالة لم يتم تحديد أي من المؤشرات، تعتبر كافة الرسائل بشكل افتراضي، مصادقة.
 	</p>
 		
-	<p> To set one of the <b>Logged in/out Indicators</b>, either type the regex 
-		directly in the <i><a href="../../ui/dialogs/session/contexts.html#auth">Session
-		Properties</a> dialog -> Authentication panel -> Logged In/Out Indicator field</i>,
-		either find an authenticated message in the Sites Tree, select it, open the
-		Response View and select the text you wish to define as the indicator using the
-		mouse and select the <i>Flag as Context... Logged in/out indicator</i> right-click menu option.
+	<p> لمجموعة واحدة من <b>تسجيل مؤشرات في الخارج</b>، أما نوع regex مباشرة في <i>مربع الحوار <a href="../../ui/dialogs/session/contexts.html#auth">خصائص الدورة</a>-> الفريق مصادقة-> "تسجيل مؤشر/خارج" الحقل</i>، أما البحث عن رسالة تمت مصادقتها في "شجرة المواقع"، قم بتحديده، مفتوحة   عرض الاستجابة، وحدد النص الذي ترغب في تحديد مؤشر الماوس باستخدام وحدد علامة 1 كسياق... تسجيل/بها مؤشر</i> انقر بالزر الأيمن خيار القائمة.
 	</p>
 
-	<p>In order to perform the authentication of a user on a website /
-		in a webapp, the Authentication Method defines how the authentication
-		is done (the process), while the necessary credentials (the exact
-		identifiers) are dependent on the user, so, in ZAP, they are
-		configured in the Users.</p>
+	<p>من أجل أداء مصادقة المستخدم على الموقع /
+في webapp, أسلوب المصادقة يعرف كيف المصادقة
+هو (عملية) ، في حين المؤهلات اللازمة (الدقيق
+معرفات) تعتمد على المستخدم ، لذلك ، انطلق ، فهي
+تكوين المستخدمين.</p>
 	
-	<p>The generic <b>main steps</b> that are needed to configure authentication for a web application
-	are the following:
+	<p>عام <b>الخطوات الرئيسية</b> التي هي بحاجة إلى تكوين المصادقة على تطبيق ويب
+هي التالية:
 	<ol>
-		<li>properly configure a ZAP <a href="contexts.html">Context</a> for the web application</li>
-		<li>set up the <a href="sessionManagement.html">session management method</a> for the context to
-		the one that is used in your app</li>
-		<li>set up the authentication method for the context:
+		<li>تكوين بشكل صحيح ZAP <a href="contexts.html">السياق</a> تطبيق ويب</li>
+		<li>إعداد <a href="sessionManagement.html">الدورة أسلوب الإدارة</a> السياق
+التي يتم استخدامها في التطبيق الخاص بك</li>
+		<li>تعيين أسلوب المصادقة السياق:
 			<ol>
-				<li>set up at least one of the <i>Logged In Indicator</i> or the <i>Logged out indicator</i>,
-				as described above</li>
-				<li>configure the authentication method for your application, specifying all the requirements
-				(as seen below)</li>
+				<li>تعيين واحد على الأقل من <i>تسجيل في مؤشر</i> أو <i>تسجيل الخروج المؤشر</i>,
+كما هو موضح أعلاه</li>
+				<li>تكوين أسلوب المصادقة التطبيق الخاص بك و تحديد كل الاحتياجات
+(كما هو موضح أدناه)</li>
 			</ol>
 		</li> 
-		<li>configure a set of <a href="users.html">users</a> for the context that directly correspond to the
-		authentication method for the context</li>
+		<li>تكوين مجموعة من <a href="users.html">المستخدمين</a> السياق أن تتوافق مباشرة إلى
+أسلوب المصادقة سياق</li>
 	</ol>
 
-	<p>Authentication methods can be used in multiple places around
-		ZAP. Some of the examples include:</p>
+	<p>أساليب المصادقة يمكن استخدامها في أماكن متعددة حول
+انطلق. بعض الأمثلة على ذلك:</p>
 	<ul>
-		<li>defining Users and automatic login</li>
-		<li>detection of authenticated/unauthenticated states</li>
-		<li>performing automatic re-authentication</li>
+		<li>تحديد المستخدمين تسجيل الدخول التلقائي</li>
+		<li>الكشف عن مصادقة/غير مصادق الدول</li>
+		<li>أداء التلقائي إعادة المصادقة</li>
 	</ul>
 
-	<p>Multiple authentication methods have been implemented and the
-		system supports easy addition of new methods, according to user needs.
-		They main ones are described below.</p>
+	<p>أساليب مصادقة متعددة تم تنفيذها ، 
+النظام يدعم من السهل إضافة أساليب جديدة وفقا لاحتياجات المستخدم.
+أنها الرئيسي منها هو موضح أدناه.</p>
 
 	<h3>
-		<a name="manual">Manual Authentication</a>
+		<a name="manual">MSG Authentication</a>
 	</h3>
-	<p>This method allows users to perform the authentication manually
-		(e.g. authenticate in the browser while proxy-ing through ZAP) and
-		then select the corresponding HTTP session. As the actual
-		authentication is being performed by you, this method does not support
-		re-authentication in case the webapp logs a user out.
+	<p>هذا الأسلوب يتيح للمستخدمين إجراء المصادقة يدويا
+(مثل المصادقة في المتصفح حين الوكيل-ing خلال انطلق) 
+ثم حدد المقابلة HTTP الدورة. كما الفعلية
+المصادقة يتم لك هذا الأسلوب لا يدعم
+إعادة المصادقة في حالة webapp سجلات المستخدم.
 	</p>
 	
-	<p>When using this authentication method, configuring a User for the context 
-	require choosing an authenticated HTTP session.</p>
+	<p>عند استخدام هذا الأسلوب مصادقة تكوين المستخدم سياق 
+تتطلب اختيار مصادقة HTTP الدورة.</p>
 
 	<h3>
-		<a name="formBased">Form-Based Authentication</a>
+		<a name="formBased">شكل المصادقة المستندة إلى</a>
 	</h3>
 	<p>
-		This method is used for websites / webapps where authentication is
-		done by submitting a form or performing a GET request to a 'login url'
-		using a 'username/password' pair of authentication credentials.
-		Re-authentication is possible. Configuration can be done using the <a
-			href="../../ui/dialogs/session/contexts.html#auth">Session
-			Contexts Dialog</a> or using the contextual PopupMenu: <i>Flag as...
-			Form-Based Authentication Login Request</i>.
+		يتم استخدام هذا الأسلوب المواقع / webapps حيث التوثيق
+القيام بذلك عن طريق تقديم نموذج أو إجراء على الطلب إلى 'تسجيل الدخول url'
+باستخدام اسم المستخدم/كلمة المرور' زوج من مصادقة بيانات الاعتماد.
+
+السياق | طلب السياق
+		إعادة المصادقة ممكن. يمكن أن يتم تكوين باستخدام <a
+			href="../../ui/dialogs/session/contexts.html#auth">الدورة
+سياقات الحوار</a> أو استخدام السياقية PopupMenu: <i>العلم...
+			شكل المصادقة المستندة إلى طلب تسجيل الدخول</i>.
 	</p>
-	<p>When using this authentication method, configuring a User for the context requires
-	setting up the <i>username/password</i> pair of credentials that are used for the form based
-	authentication.</p>
+	<p>عند استخدام هذا الأسلوب مصادقة تكوين المستخدم يقتضي السياق
+إعداد <i>اسم المستخدم/كلمة المرور</i> زوج من بيانات الاعتماد التي تستخدم في شكل بناء
+المصادقة.</p>
 	
 	<h3>
-		<a name="httpAuth">HTTP/NTLM Authentication</a>
+		<a name="httpAuth">HTTP/مصادقة NTLM</a>
 	</h3>
 	<p>
-		This method is used for websites / webapps where authentication is
-		enforced using the HTTP or NTLM Authentication mechanisms employing HTTP message headers. 
-		Three authentication schemes are supported: Basic, Digest and NTLM.
-		Re-authentication is possible, as the authentication headers are sent with every authenticated
-		request. Configuration can be done using the <a
-			href="../../ui/dialogs/session/contexts.html#auth">Session
-			Contexts Dialog</a>.
+		يتم استخدام هذا الأسلوب المواقع / webapps حيث التوثيق
+القسري باستخدام HTTP أو مصادقة NTLM آليات توظيف HTTP رؤوس الرسائل. 
+		ثلاثة أنظمة المصادقة معتمدة: الأساسية ، هضم و NTLM.
+		إعادة المصادقة ممكن ، كما المصادقة رؤوس يتم إرسالها مع كل موثق
+طلب. يمكن أن يتم تكوين باستخدام <a
+			href="../../ui/dialogs/session/contexts.html#auth">الدورة
+سياقات الحوار</a> أو استخدام السياقية PopupMenu: <i>العلم....
 	</p>
-	<p>When using this authentication method, configuring a User for the context requires
-	setting up the <i>username/password</i> pair of credentials that are used for the HTTP/NTLM authentication.</p>
+	<p>عند استخدام هذا الأسلوب مصادقة تكوين المستخدم يقتضي السياق
+إعداد <i>اسم المستخدم/كلمة المرور</i> زوج من بيانات الاعتماد التي تستخدم في شكل بناء
+المصادقة.</p>
 	
 	<h3>
-		<a name="scriptBased">Script-Based Authentication</a>
+		<a name="scriptBased">شكل المصادقة المستندة إلى</a>
 	</h3>
 	<p>
-		This method is useful for websites / webapps where the authentication is a more complex one and some custom
-		scripts that handle the authentication process are beneficial. To use this method, you must first define an Authentication script
-		which sends messages or performs other actions as needed by your web-application. This script is then selected for use for a given Context
-		and it is called whenever an authentication is performed. Re-authentication is possible. 
-		Configuration can be done using the <a href="../../ui/dialogs/session/contexts.html#auth">Session
-			Contexts Dialog</a> and requires you to have the Scripts Console ZAP Addon installed from the Marketplace.
+		هذه الطريقة مفيدة للمواقع / webapps حيث التوثيق فهو أكثر تعقيدا و بعض مخصص
+البرامج النصية التي تتعامل مع عملية التوثيق هي مفيدة. استخدام هذه الطريقة يجب أولا تحديد مصادقة النصي
+الذي يرسل الرسائل أو تنفيذ إجراءات أخرى حسب الحاجة الخاصة بك على شبكة الإنترنت تطبيق. هذا البرنامج النصي ثم المختارة للاستخدام سياق معين
+ويطلق عليها كلما مصادقة بها. إعادة المصادقة ممكن. 
+		يمكن أن يتم تكوين باستخدام <a href="../../ui/dialogs/session/contexts.html#auth">الدورة
+سياقات الحوار</a> يتطلب أن يكون لديك البرامج النصية وحدة انطلق الملحق المثبتة من السوق.
 	</p>
-	<p>When using this authentication method, configuring a User for the context requires
-	setting up the a set of parameters defined in the script. For more details, see the provided Authentication Script examples.</p>
+	<p>عند استخدام هذا الأسلوب مصادقة تكوين المستخدم يقتضي السياق
+إعداد مجموعة من المعايير المحددة في البرنامج النصي. للحصول على مزيد من التفاصيل ، انظر المقدمة المصادقة النصي الأمثلة.</p>
 	
-	<h2>Configuration example</h2>
-	<p>A configuration example showing how to fully configure a webapp that uses <i>form-based authentication</i> and
-	<i>cookie-based session management</i> is 
-	seen below:
+	<h2>تم فشل الإعدادات</h2>
+	<p>تكوين المثال يوضح كيف بالكامل تكوين webapp يستخدم <i>شكل المصادقة المستندة إلى</i> و
+	<i>ملف تعريف الارتباط القائم على إدارة الدورة</i> هو 
+يرى أدناه:
 	<ol>
-		<li>set up a context for the web application</li>
-		<li>set up the session management method to <i>Cookie-based Session Management</i></li>
-		<li>make sure your browser proxies everything through ZAP and log into your application using the browser</li>
-		<li>go to ZAP and identify the request that was done for the login (most usually it's a HTTP POST request 
-		containing the username and the password and possibly other elements)</li>
-		<li>right click on the request and Flag as Context... Form-based Auth Login Request</li>
-		<li>a window will be opened already containing the request URL and the parameters (if any). Use 
-		the dropdown options to select which of the parameters correspond to the username and to the password</li>
+		<li>إعداد إطار تطبيق ويب</li>
+		<li>اقامة الدورة أسلوب الإدارة <i>ملف تعريف الارتباط القائم على إدارة الدورة</i></li>
+		<li>تأكد من المتصفح الخاص بك وكلاء كل شيء من خلال انطلق وتسجيل الدخول إلى التطبيق الخاص بك باستخدام المتصفح</li>
+		<li>انتقل إلى انطلق وتحديد الطلب الذي تم القيام به من أجل الدخول (عادة ما تكون الأكثر إنه طلب POST HTTP 
+التي تحتوي على اسم المستخدم و كلمة المرور وربما عناصر أخرى)</li>
+		<li>انقر بزر الماوس الأيمن على طلب العلم السياق... يستند إلى نموذج مصادقة طلب تسجيل الدخول</li>
+		<li>نافذة سيتم فتح بالفعل تحتوي على URL طلب والمعلمات (إن وجدت). استخدام 
+القائمة المنسدلة خيارات لتحديد أي من المعلمات تتوافق مع اسم المستخدم و كلمة المرور</li>
     	<li>then you need to tell ZAP how to identify whether an authentication succeeded or not. You can do 
-    	this by setting logged in or logged indicators. These are regex patterns which, if found in a 
+    	this by setting logged in or logged out indicators. These are regex patterns which, if found in a 
     	response, tell ZAP whether it's authenticated or not (e.g. presence of a 
     	http://example.com/logout link or the presence of a 'Welcome, User X'). Only one of them is
-    	necessary. To set one of them, either type the regex directly in the Session Properties -> 
-    	Authentication -> Logged In Indicator, either find an authenticated message in the Sites Tree,
-    	select it, open the Response View and select the text you wish to define as the indicator using
-    	the mouse and select the Flag as Context... Logged in indicator right-click menu option.</li>
+    	necessary. لمجموعة واحدة من <b>تسجيل مؤشرات في الخارج</b>، أما نوع regex مباشرة في <i>مربع الحوار <a href="../../ui/dialogs/session/contexts.html#auth">خصائص الدورة</a>-> الفريق مصادقة-> "تسجيل مؤشر/خارج" الحقل</i>، أما البحث عن رسالة تمت مصادقتها في "شجرة المواقع"، قم بتحديده، مفتوحة   عرض الاستجابة، وحدد النص الذي ترغب في تحديد مؤشر الماوس باستخدام وحدد علامة 1 كسياق... تسجيل/بها مؤشر</i> انقر بالزر الأيمن خيار القائمة.</li>
     	<li>define as many users as you need in the Session Properties -> Users section.</li>
-    	<li>after this step, various actions are available in ZAP. For example, you now have a new right click option: Attack -> Spider Context As User. Or, using the Forced User Mode, you can force all the interactions that go through ZAP for a given Context to be from the perspective of a User. The User Forced Mode is enabled via the previous-to-last button in the toolbar (the one with the user and the lock) and is configured via Session Properties -> Forced User Mode.</li>
+    	<li>after this step, various actions are available in ZAP. For example, you can now select the user in <a href="../../ui/dialogs/spider.html">Spider dialogue</a>. Or, using the Forced User Mode, you can force all the interactions that go through ZAP for a given Context to be from the perspective of a User. The User Forced Mode is enabled via the previous-to-last button in the toolbar (the one with the user and the lock) and is configured via Session Properties -> Forced User Mode.</li>
 	</ol>
 	
 	Most of the steps above apply as well for other authentication methods. The only things that change when trying
 	to configure authentication using a different method are steps 3, 4, 5 and 6. Instead of these, select the authentication
 	method required from the drop-down list and configure it as needed. More details about configuring each type 
-	of authentication can be above and <a href="../../ui/dialogs/session/contexts.html">here</a>.
+	of authentication can be above and <a href="../../ui/dialogs/session/contexts.html">هنا</a>.
 
 	<h2>Configured via</h2>
 	<table>
@@ -170,22 +152,22 @@
 		</tr>
 	</table>
 
-	<h2>See also</h2>
+	<h2>أنظر أيضاً</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="http://youtu.be/cR4gw-cPZOA">Youtube tutorial</a></td>
-			<td>of the Authentication, Session Management and Users Management features of ZAP [external link to http://youtu.be/cR4gw-cPZOA].</td>
+			<td><a href="https://youtu.be/cR4gw-cPZOA">Youtube tutorial</a></td>
+			<td>of the Authentication, Session Management and Users Management features of ZAP [external link to https://youtu.be/cR4gw-cPZOA].</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/overview.html">UI Overview</a></td>
-			<td>for an overview of the user interface</td>
+			<td><a href="../../ui/overview.html">نظرة عامة</a></td>
+			<td>للحصول على نظرة عامة حول واجهة المستخدم</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="concepts.html">Features</a></td>
-			<td>provided by ZAP</td>
+			<td><a href="concepts.html">الميزات</a></td>
+			<td>التي تقدمها انطلق</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
@@ -195,7 +177,7 @@
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="users.html">Users</a></td>
+			<td><a href="users.html">المستخدمون</a></td>
 			<td>for an overview of Users</td>
 		</tr>
 

@@ -9,42 +9,42 @@
 	TOC merger is defined in org.zaproxy.zap.extension.help.ZapTocMerger.
 -->
 <toc version="2.0">
- <tocitem text="ZAP User Guide" image="toplevelfolder" tocid="toplevelitem">
+ <tocitem text="ZAP 用户指南" image="toplevelfolder" tocid="toplevelitem">
 
-   <tocitem text="Introduction" target="zap.intro"/>
+   <tocitem text="简介" target="zap.intro"/>
 
-   <tocitem text="Getting Started" target="start.start">
-      <tocitem text="Configuring proxies" target="start.proxy"/>
+   <tocitem text="快速开始" target="start.start">
+      <tocitem text="配置代理" target="start.proxy"/>
       <!--tocitem text="Explore the application" target="start.explore"/-->
-      <tocitem text="Features" target="start.concepts">
+      <tocitem text="特性" target="start.concepts">
          <tocitem text="主动扫描" target="start.concepts.ascan"/>
-         <tocitem text="Add-ons" target="start.concepts.addons"/>
+         <tocitem text="附加组件" target="start.concepts.addons"/>
          <tocitem text="警报" target="start.concepts.alerts"/>
-         <tocitem text="Anti CSRF Tokens" target="start.concepts.anticsrf"/>
+         <tocitem text="反CSRF令牌" target="start.concepts.anticsrf"/>
          <tocitem text="API" target="start.concepts.api"/>
-         <tocitem text="Authentication" target="start.concepts.auth"/>
+         <tocitem text="授权" target="start.concepts.auth"/>
          <tocitem text="断点" target="start.concepts.breakpoints"/>
-         <tocitem text="Contexts" target="start.concepts.contexts"/>
-         <tocitem text="Data Driven Content" target="start.concepts.ddc"/>
-         <tocitem text="Filters" target="start.concepts.filters"/>
-         <tocitem text="Globally Excluded URLs" target="start.concepts.globalexcludeurl"/>
-         <tocitem text="HTTP Sessions" target="start.concepts.httpsessions"/>
-         <tocitem text="Intercepting Proxy" target="start.concepts.intercept"/>
-         <tocitem text="Modes" target="start.concepts.modes"/>
-         <tocitem text="Notes" target="start.concepts.notes"/>
+         <tocitem text="内容" target="start.concepts.contexts"/>
+         <tocitem text="数据驱动内容" target="start.concepts.ddc"/>
+         <tocitem text="过滤器" target="start.concepts.filters"/>
+         <tocitem text="全局排除的url" target="start.concepts.globalexcludeurl"/>
+         <tocitem text="HTTP 会话" target="start.concepts.httpsessions"/>
+         <tocitem text="中间人代理" target="start.concepts.intercept"/>
+         <tocitem text="模式" target="start.concepts.modes"/>
+         <tocitem text="备注" target="start.concepts.notes"/>
          <tocitem text="被动扫描" target="start.concepts.pscan"/>
-         <tocitem text="Scan Policies" target="start.concepts.scanpolicy"/>
-         <tocitem text="Scope" target="start.concepts.scope"/>
-         <tocitem text="Session Management" target="start.concepts.sessmanag"/>
+         <tocitem text="扫描策略" target="start.concepts.scanpolicy"/>
+         <tocitem text="范围" target="start.concepts.scope"/>
+         <tocitem text="会话管理" target="start.concepts.sessmanag"/>
          <tocitem text="Spider" target="start.concepts.spider"/>
-         <tocitem text="Statistics" target="start.concepts.stats"/>
-         <tocitem text="Structural Modifiers" target="start.concepts.structmods"/>
-         <tocitem text="Structural Parameters" target="start.concepts.structparams"/>
-         <tocitem text="Tags" target="start.concepts.tags"/>
-         <tocitem text="Users" target="start.concepts.users"/>
+         <tocitem text="统计" target="start.concepts.stats"/>
+         <tocitem text="结构修饰符" target="start.concepts.structmods"/>
+         <tocitem text="结构参数" target="start.concepts.structparams"/>
+         <tocitem text="标签" target="start.concepts.tags"/>
+         <tocitem text="用户" target="start.concepts.users"/>
       </tocitem>
-      <tocitem text="Scanner Rules" target="start.check"/>
-      <tocitem text="A Simple Penetration Test" target="start.pentest"/>
+      <tocitem text="扫描规则" target="start.check"/>
+      <tocitem text="简单的渗透测试" target="start.pentest"/>
    </tocitem>
 
    <!--tocitem text="Common Vulnerabilities" target="vulns.vuln">
@@ -57,11 +57,11 @@
       <tocitem text="Cross Site Scripts" target="vulns.xss"/>
    </tocitem-->
 
-   <tocitem text="The User Interface" target="ui.overview">
-      <tocitem text="Overview" target="ui.overview"/>
-      <tocitem text="The Top Level Menu" target="ui.topmenu"/>
-      <tocitem text="The Top Level Toolbar" target="ui.toptoolbar"/>
-      <tocitem text="The Tabs">
+   <tocitem text="用户界面" target="ui.overview">
+      <tocitem text="综述" target="ui.overview"/>
+      <tocitem text="顶级菜单" target="ui.topmenu"/>
+      <tocitem text="顶级工具栏" target="ui.toptoolbar"/>
+      <tocitem text="标签">
          <tocitem text="站点" target="ui.tabs.sites"/>
          <tocitem text="请求" target="ui.tabs.request"/>
          <tocitem text="响应" target="ui.tabs.response"/>
@@ -76,53 +76,55 @@
          <tocitem text="参数" target="ui.tabs.httpsessions"/>
          <tocitem text="Output" target="ui.tabs.output"/>
       </tocitem>
-      <tocitem text="The Dialogs" target="ui.dialogs">
+      <tocitem text="的对话" target="ui.dialogs">
          <tocitem text="主动扫描" target="ui.dialogs.advascan"/>
          <tocitem text="添加警报" target="ui.dialogs.addalert"/>
-         <tocitem text="Add Break Point" target="ui.dialogs.addbreak"/>
-         <tocitem text="Add Note" target="ui.dialogs.addnote"/>
-         <tocitem text="BeanShell Console" target="ui.dialogs.beanshell"/>
+         <tocitem text="添加断点" target="ui.dialogs.addbreak"/>
+         <tocitem text="添加备注" target="ui.dialogs.addnote"/>
          <tocitem text="编码/解码/哈希" target="ui.dialogs.enc_dec"/>
-         <tocitem text="过滤" target="ui.dialogs.filter"/>
-         <tocitem text="Find" target="ui.dialogs.find"/>
-         <tocitem text="History Filter" target="ui.dialogs.historyfilter"/>
-         <tocitem text="Manual Request Editor" target="ui.dialogs.manreq"/>
-         <tocitem text="手动请求编辑器" target="ui.dialogs.manageaddons"/>
-         <tocitem text="Manage Tags" target="ui.dialogs.managetags"/>
-         <tocitem text="Options" target="ui.dialogs.options">
-         	<tocitem text="Active Scan" target="ui.dialogs.options.ascan"/>
-         	<tocitem text="Active Scan Input Vectors" target="ui.dialogs.options.ascaninput"/>
-         	<tocitem text="Alerts" target="ui.dialogs.options.alert"/>
-         	<tocitem text="Anti CSRF Tokens" target="ui.dialogs.options.anticsrf"/>
+         <tocitem text="编码/解码/哈希" target="ui.dialogs.filter"/>
+         <tocitem text="过滤" target="ui.dialogs.find"/>
+         <tocitem text="历史过滤器" target="ui.dialogs.historyfilter"/>
+         <tocitem text="手动请求编辑器" target="ui.dialogs.manreq"/>
+         <tocitem text="管理加载项" target="ui.dialogs.manageaddons"/>
+         <tocitem text="手动请求编辑器" target="ui.dialogs.managetags"/>
+         <tocitem text="选项" target="ui.dialogs.options">
+         	<tocitem text="主动扫描" target="ui.dialogs.options.ascan"/>
+         	<tocitem text="主动扫描输入向量" target="ui.dialogs.options.ascaninput"/>
+         	<tocitem text="警报" target="ui.dialogs.options.alert"/>
+         	<tocitem text="反CSRF令牌" target="ui.dialogs.options.anticsrf"/>
          	<tocitem text="API" target="ui.dialogs.options.api"/>
-            <tocitem text="Breakpoints" target="ui.dialogs.options.breakpoints"/>
-         	<tocitem text="Certificate" target="ui.dialogs.options.certificate"/>
-         	<tocitem text="Check for Updates" target="ui.dialogs.options.checkforupdates"/>
-			<tocitem text="Connection" target="ui.dialogs.options.connection"/>
-			<tocitem text="Database" target="ui.dialogs.options.database"/>
-         	<tocitem text="Display" target="ui.dialogs.options.view"/>
-         	<tocitem text="Dynamic SSL Certificates" target="ui.dialogs.options.dynsslcert"/>
-            <tocitem text="Extensions" target="ui.dialogs.options.ext"/>
-            <tocitem text="Global Exclude URL" target="ui.dialogs.options.globalexcludeurl"/>
-         	<tocitem text="HTTP Sessions" target="ui.dialogs.options.httpsessions"/>
+            <tocitem text="断点" target="ui.dialogs.options.breakpoints"/>
+            <tocitem text="回调地址" target="ui.dialogs.options.callback"/>
+         	<tocitem text="证书" target="ui.dialogs.options.certificate"/>
+         	<tocitem text="检查更新" target="ui.dialogs.options.checkforupdates"/>
+			<tocitem text="连接" target="ui.dialogs.options.connection"/>
+			<tocitem text="数据库" target="ui.dialogs.options.database"/>
+         	<tocitem text="显示" target="ui.dialogs.options.view"/>
+         	<tocitem text="动态SSL证书" target="ui.dialogs.options.dynsslcert"/>
+            <tocitem text="扩展" target="ui.dialogs.options.ext"/>
+            <tocitem text="全局排除的URL" target="ui.dialogs.options.globalexcludeurl"/>
+         	<tocitem text="HTTP会话" target="ui.dialogs.options.httpsessions"/>
          	<tocitem text="JVM" target="ui.dialogs.options.jvm"/>
-         	<tocitem text="Keyboard" target="ui.dialogs.options.keyboard"/>
-         	<tocitem text="Language" target="ui.dialogs.options.language"/>
-         	<tocitem text="Local Proxy" target="ui.dialogs.options.localproxy"/>
-         	<tocitem text="Passive Scan Rules" target="ui.dialogs.options.pscanrules"/>
+         	<tocitem text="键盘" target="ui.dialogs.options.keyboard"/>
+         	<tocitem text="语言" target="ui.dialogs.options.language"/>
+         	<tocitem text="本地代理" target="ui.dialogs.options.localproxy"/>
+         	<tocitem text="被动扫描规则" target="ui.dialogs.options.pscanrules"/>
          	<tocitem text="Passive Scan Tags" target="ui.dialogs.options.pscan"/>
+         	<tocitem text="Passive Scanner" target="ui.dialogs.options.pscan.main"/>
+         	<tocitem text="Rule Configuration" target="ui.dialogs.options.ruleconfig"/>
          	<tocitem text="Scripts" target="ui.dialogs.options.script"/>
          	<tocitem text="Search" target="ui.dialogs.options.search"/>
          	<tocitem text="Spider" target="ui.dialogs.options.spider"/>
          	<tocitem text="Statistics" target="ui.dialogs.options.stats"/>
          </tocitem>
          <tocitem text="Persist Session" target="ui.dialogs.persistsession"/>
-         <tocitem text="重发送" target="ui.dialogs.resend"/>
-         <tocitem text="Scan Policy Manager" target="ui.dialogs.scanpolicymgr">
+         <tocitem text="Resend" target="ui.dialogs.resend"/>
+         <tocitem text="重发送" target="ui.dialogs.scanpolicymgr">
 	         <tocitem text="Scan Policy" target="ui.dialogs.scanpolicy"/>
          </tocitem>
-         <tocitem text="会话" target="ui.dialogs.scanprogress"/>
-         <tocitem text="Session" target="ui.dialogs.sessprop">
+         <tocitem text="Scan Progress" target="ui.dialogs.scanprogress"/>
+         <tocitem text="会话" target="ui.dialogs.sessprop">
 	         <tocitem text="Session Properties" target="ui.dialogs.sessprop"/>
 	         <tocitem text="Session Contexts" target="ui.dialogs.contexts"/>
 	         <tocitem text="Session Context Authentication" target="ui.dialogs.context-auth"/>
@@ -138,6 +140,8 @@
    <tocitem text="Add Ons" target="addon.introduction" tocid="addons" />
    
    <tocitem text="Releases" target="zap.releases">
+      <tocitem text="2.7.0" target="zap.releases.2.7.0"/>
+      <tocitem text="2.6.0" target="zap.releases.2.6.0"/>
       <tocitem text="2.5.0" target="zap.releases.2.5.0"/>
       <tocitem text="2.4.3" target="zap.releases.2.4.3"/>
       <tocitem text="2.4.2" target="zap.releases.2.4.2"/>

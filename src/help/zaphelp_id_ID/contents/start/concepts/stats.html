@@ -3,36 +3,35 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Statistics
+Statistik
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Statistics</h1>
+<h1>Statistik</h1>
 <p>
-ZAP maintains statistics which can help you understand what is really happening when interacting with large applications.
+Zap membantu anda untuk berinteraksi dengan aplikasi besar agar anda memahami apa yang sebenarnya sedang terjadi.
 </p>
 <p>
-The statistics are available via the <a href="api.html">API</a> and can be also sent to a Statsd server when 
-configured via the <a href="../../ui/dialogs/options/stats.html">Options Statistics screen</a>.
+Pilihan statistik bisa juga dikonfigurasi melalui <a href="../../ui/dialogs/options/stats.html"> layar atau <\1>dan dapat juga di kirimkan melalui server ketika statistik tersedia melalui <a href="api.html">API<\0>.
 </p>
 
-<h3>Site based statistics</h3>
-Statistics maintained on a per site basis include:
+<h3>Statistik merupakan sebuah situs yang berbasis</h3>
+Statistik di jaga khusus persitus:
 <ul>
-<li>response codes, eg:
+<li>kode respon, misalnya:
 	<ul>
-	<li>stats.code.200</li>
-	<li>stats.code.302</li>
+	<li>200 kode statistik</li>
+	<li>302 kode statistik</li>
 	</ul></li>
-<li>response times in ms (using a logarithmic scale), eg:
+<li>waktu balasan dalam ms (menggunakan skala logaritmik), misal nya:
 	<ul>
-	<li>stats.responseTime.1</li>
-	<li>stats.responseTime.2</li>
-	<li>stats.responseTime.4</li>
-	<li>stats.responseTime.8</li>
-	<li>stats.responseTime.16</li>
+	<li>1 waktu balasan statistik</li>
+	<li>waktu ke 2 balasan statistik</li>
+	<li>waktu ke 4 balasan statistik</li>
+	<li>waktu ke 8 balasan statistik</li>
+	<li>waktu ke 16 balasan statistik</li>
 	</ul></li>
-<li>content types, eg:
+<li>jenis muatan, misalnya:
 	<ul>
 	<li>stats.contentType.text/css</li>
 	<li>stats.contentType.text/html;charset=utf-8</li>
@@ -42,26 +41,26 @@ Statistics maintained on a per site basis include:
 	<li>stats.tag.Password</li>
 	<li>stats.tag.Hidden</li>
 	</ul></li>
-<li>anticsrf tokens generated:
+<li>anticsrf token yang dihasilkan:
 	<ul>
 	<li>stats.acsrf.anticsrf</li>
 	</ul></li>
 <li>authentication info:
 	<ul>
-	<li>stats.auth.success (number of authentication successes)</li>
-	<li>stats.auth.failure (number of authentication failures)</li>
-	<li>stats.auth.state.loggedin (number of responses that appear to be logged in)
+	<li>statistik.auth.sukses (jumlah otentikasi keberhasilan)</li>
+	<li>statistik.auth.kegagalan (jumlah kegagalan otentikasi)</li>
+	<li>statistik.auth.negara.loggedin (jumlah tanggapan yang muncul untuk login)
 	<li>stats.auth.state.loggedout (number of responses that appear to be logged out)
-	<li>stats.auth.state.noindicator (number of responses where no logged in or out indicators have been set)
-	<li>stats.auth.state.unknown (number of responses which don't contain either logged in or out indicators)
+	<li>statistik.auth.negara.noindicator (jumlah tanggapan yang mana tidak masuk atau keluar indikator yang telah ditetapkan)
+	<li>statistik.auth.negara.tidak diketahui (jumlah tanggapan yang tidak mengandung baik masuk atau keluar indikator)
 	</ul></li>
 </ul>
 </p>
 
 <h2>See also</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="concepts.html">Features</a></td><td>provided by ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">UI Gambaran</a></td><td>untuk gambaran dari antarmuka pengguna</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="concepts.html">Fitur</a></td><td>ditawarkan oleh ZAP</td></tr>
 </table>
 
 </body>

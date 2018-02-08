@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Seçenekler Aktif Tarama Giriş Vektörleri ekranı
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Seçenekler Aktif Tarama Giriş Vektörleri ekranı</h1>
+<p>
+Bu ekran yapılandırmanıza olanak sağlar <a href="../../../start/concepts/ascan.html">aktif tarama</a> giriş vektörleri.<br>
+Bunlar aktif tarayıcının saldırıya uğrayacağı unsurlardır.<br>
+Desteklenen tüm öğelerde tarama daha uzun sürer, fakat bazı öğelerin taranmaması durumunda bazı güvenlik açıkları ortaya çıkabilir.
+
+<h3>Yerleştirilebilen Hedefler</h3>
+Aktif tarayıcının hedeflediği istek öğeleri:
+
+<h4>URL Sorgu Dizesi ve Veri Tabanlı Düğümler</h4>
+İstek URL sorgusundaki anahtar değer çiftleri, yani <code>?</code>.<br>
+Sorgu parametresi yoksa, rastgele bir tanesi test edilir <a href="../../../start/concepts/ddc.html">Veri Sürücüsü Düğümleri</a> test edilecekleri bir Ortam içerisinde tanımlanır.
+<h4>POST Verisi</h4>
+İstek POST verilerinde anahtar değer çiftleri.
+
+<h4>URL Yolu</h4>
+Stek URL'sindeki yol öğeleri, yani tarafından ayrılmış öğeler <code>/</code>.
+
+<h4>HTTP Başlıkları</h4>
+HTTP Başlıklarını iste.
+
+<h5>Tüm İstekler</h5>
+Tüm isteklerin HTTP Üstbilgilerini taramaya izin verir. Sorgu veya talep gövdesi aracılığıyla parametre gönderme isteklerini değil.
+
+<h4>Çerez verisi</h4>
+Çerezleri iste.
+
+<h3>Yerleşik Girdi Vektörü Yöneticileri</h3>
+Etkin tarayıcının hedeflediği veri biçimleri:
+
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Çok Katmanlı Form Verisi</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>XML Etiketi/Öz niteliği</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>JSON</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Google Web Araç Takımı</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>OData kimlik/filtre</td><td></td></tr>
+</table>
+
+
+<h3>Komut Dosyası Girişi Vektörlerini Etkinleştir</h3>
+Bu seçenek seçilirse aktif tarayıcı etkin komut dosyası giriş vektörlerini kullanır.<br>
+Komut dosyası girdi vektörleri, ZAP'a yazdığınız veya içe aktardığınız ve sizin de öğeleri hedeflemenize izin veren komut dosyalarıdır.
+varsayılan olarak desteklenmemektedir.
+
+<p>
+Bu ekran aynı zamanda aktif tarayıcı tarafından gözardı edilen parametreleri yapılandırmanıza izin verir.
+
+<h2>Ayrıca Bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">UI Genel Bakış</a></td><td>kullanıcı arayüzüne genel bakış için</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="options.html">Seçenek diyalogları</a></td><td>diğer Seçenekler iletişim kutusu ekranlarının ayrıntıları için</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="ascaninput.html">Aktif tarama girdi vektörleri</a></td><td></td></tr>
+</table>
+
+</body>
+</html>

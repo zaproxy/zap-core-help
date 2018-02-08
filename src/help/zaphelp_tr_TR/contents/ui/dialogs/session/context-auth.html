@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Oturum İçerik Doğrulama ekranı
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Oturum İçerik Doğrulama ekranı</h1>
+<p>
+Bu şunlardan biridir <a href="contexts.html">Oturum Bağlam Ekranları</a>
+içinde yolu takip etmenizi sağlayan <a href="../../../start/concepts/authentication.html">Doğrulama</a> içerik için yapılıyor. Kullanıcılar belirlendikten sonra doğrulama metotlarını değiştirmek metotların silinmesine neden olacağını unutmayın, çünkü kullanıcı bilgileri türlerinin doğrulama şemasıyla eşleşmesi gerekmektedir. 
+Doğrulama metodunu seçtikten sonra Doğrulama metoduna göre ayarlar düzenlenmelidir.
+
+<h4>Manuel kimlik doğrulama</h4>
+Bu doğrulama metodu için düzenleme gerekmemektedir. <small><a href="../../../start/concepts/authentication.html#manual">daha çok</a> oku...</small>
+
+<h4>Form-Tabanlı Doğrulama</h4>
+Bu doğrulama metodunu yapılandırmak için şunu sağlamanız gereklidir <b>giriş url'si</b>, oturum açma isteği yapıldığı için, <b>istek gövdesi</b> (POST verisi), gerekli ise, ve tanımlayın <b>parametreler</b> öncesinde 'kullanıcı adı' ve 'şifre' sağlardı. Eğer istek gövdesi sağlanmadıysa giriş isteği bir HTTP GET olarak yapılır, aksi taktirde bir HTTP POST kullanılır. Kimlik bilgileri kendi kendilerine şunun içinde yapılandırılırlar <a href="contexts.html#users">Kullanıcılar</a> sekme. <small><a href="../../../start/concepts/authentication.html#formBased">daha çok</a> Oku...</small> 
+
+<h4>HTTP/NTLM Doğrulama</h4>
+Bu doğrulama metodunu yapılandırmak için şunu sağlamanız gereklidir <b>sunucu adı</b> ve <b>port</b> sunucu kimlik doğrulaması yapılır ve <b>erişim Alanı</b> kimlik bilgileri uygulanır. Kimlik bilgileri kendilerini şunu içinde yapılandırır <a href="contexts.html#users">Kullanıcılar</a> sekme. <small><a href="../../../start/concepts/authentication.html#httpAuth">Daha çok</a> Oku...</small> 
+
+<h4>Komut Dosyası Tabanlı Doğrulama</h4>
+Bu doğrulamayı kullanmanız için <b>ilk</b> bir adet yazmanız (kaydetmeniz) gerekiyor <b>Doğrulama komut dosyası</b> 
+kullanarak <b>Komutlar</b> sekme(Komutlar sekmesinde bu komut tipi için sağlanan örnekleri ve şablonlara bakınız).
+Sonra açılan listedeki komutun adını sağlamanız gerekir. Komutu seçtikten sonra şu tuşa basmanız gerekir <b>Yükle</b> buton, komut dosyasının tüm gereksinimleri yükleyerek, şu şekilde belirttiğiniz tüm parametreleri <i>gerekli</i> veya <i>opsiyonel</i> komut dosyası içinde arayüzde tanımlı olarak gösterilecek. Doğrulama Komutları için sağlanan örneklerde de görüldüğü üzere, doğrulama sırasında, değerleri komut dosyasının içinde kullanmak mümkündür. Doğrulama komut dosyası için gereken parametrelerde herhangi bir değişiklik yaptıktan sonra komut dosyasını yeniden yüklediğinizden emin olun. Aksi halde arayüzde görülen parametreler kimlik doğrulama sırasında kullanılanlardan olmayabilir ve hata meydana gelebilir. , <i>kimlik bilgileri</i> doğrulama işlemi sırasında her bir Kullanıcı için kullanılan dosya, aynı zamanda Doğrulama Komut Dosyasında özelleştirilebilir ve şurada yapılandırılabilir 
+<a href="contexts.html#users">Kullanıcılar</a> sekme.
+<small><a href="../../../start/concepts/authentication.html#scriptBased">Daha çok</a> Oku...</small> 
+
+  
+<h2>Üzerinden erişildi</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../tlmenu/file.html">Üst Seviye Dosya menüsü</a></td><td>'Özellikler...' menü öğesi</td></tr>
+</table>
+
+<h2>Ayrıca bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">UI Genel Bakış</a></td><td>kullanıcı arayüzüne genel bakış için</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../dialogs.html">Diyaloglar</a></td><td>diyalogların ve açılır pencerelerin detayları için </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="contexts.html">Oturum İçerik Ekranları</a></td><td>diğer İçerik Ekranlarının detayları için</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../../start/concepts/authentication.html">Doğrulama</a></td><td>doğrulamaya genel bakış için </td></tr>
+</table>
+
+
+</body>
+</html>

@@ -3,56 +3,78 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Options API screen
+Pilihan layar apl
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Options API screen</h1>
+<h1>Pilihan layar API</h1>
 <p>
-This screen allows you to configure the <a href="../../../start/concepts/api.html">API</a> options:
+Layar ini memungkinkan anda untuk mengkonfigurasi <a href="../../../start/concepts/api.html">API</a> pilihan:
 
 <h3>Aktifkan</h3>
 
-If enabled then the API is available to all machines that are able to use ZAP as a proxy.<br/>
+Jika itu diaktifkan maka API tersedia untuk semua mesin yang dapat menggunakan ZAP sebagai proxy.<br/>
 
-<h3>Secure Only</h3>
+<h3>UI diaktifkan</h3>
 
-If enabled then the API will only be available via HTTPS. Otherwise it will be available via both HTTP and HTTPS.<br/>
+Jika diaktifkan maka UI Web API tersedia untuk semua mesin yang mampu menggunakan ZAP sebagai proxy. Untuk mengakses UI Web API arahkan browser anda ke host dan port yang sedang didengarkan ZAP.<br/>
 
-<h3>API Key</h3>
+<h3>Hanya aman</h3>
 
-A key that must be specified on all API 'actions' and some 'other' operations.<br/>
-The API key is used to prevent malicious sites from accessing the ZAP API.<br/>
-It is strongly recommended that you set a key unless you are using ZAP in a completely isolated environment.<br/>
+Jika diaktifkan maka API hanya tersedia melalui HTTPS. Jika tidak maka akan tersedia melalui keduanya HTTP dan HTTPS.<br/>
 
-<h3>Disable the API Key</h3>
+<h3>Kunci API</h3>
 
-Selecting this option disables the API key.<br/>
-This is not recommended unless you are using ZAP in a completely isolated environment, as it allows malicious sites to access the ZAP API.
+Kunci yang harus ditentukan pada semua 'tindakan' API dan juga beberapa operasi 'lainnya'.<br/>
+Kunci API digunakan untuk mencegah situs berbahaya yang mengakses API ZAP.<br/>
+Sangat disarankan agar anda menetapkan kunci kecuali jika anda menggunakan ZAP di lingkungan yang benar-benar terisolasi.<br/>
 
-<h3>Report error details via API</h3>
+<h3>Alamat diizinkan menggunakan API</h3>
 
-If this option is selected then more error details are returned via the API.<br/>
-This is not recommended except for debugging purposes as these error messages can leak information to malicious sites.<br/>
-Note that the full error details are always written to the ZAP log file. 
+Secara default hanya mesin ZAP yang sedang berjalan yang mampu mengakses API ZAP.<br/>
+Anda dapat mengizinkan mesin lain untuk mengakses API dengan menambahkan pola regex yang sesuai.<br/>
+Anda hanya perlu menambahkan alamat ip yang anda percaya.<br/>
+Perhatikan bahwa API ZAP juga sekarang memeriksa header host, jadi itu juga harus menjadi salah satu alamat yang diizinkan.
 
-<h3>Autofill API key in the API UI</h3>
+<h3>Nonaktifkan Kunci API</h3>
 
-If this option is selected then the API key is automatically included in the API UI.<br/>
-This is not recommended unless you are using ZAP in a completely isolated environment, as it allows malicious sites to access the ZAP API Key.<br/>
+Memilih opsi ini menonaktifkan tombol API.<br/>
+Ini tidak direkomendasikan kecuali jika anda menggunakan ZAP di lingkungan yang benar-benar terisolasi, karena dapat memungkinkan situs berbahaya mengakses API ZAP.
 
-<h3>Enable JSONP</h3>
+<h3>Jangan memerlukan kunci API untuk pengoperasian yang aman</h3>
 
-Selecting this option enables the JSONP format.<br/>
-This can be useful for some applications, but it is generally not recommended as it increases the ZAP attack surface area, ie the features that a malicious site can abuse.<br/>
-If JSONP is enabled then all API operations using JSONP (including views) will require the API key to prevent malicious sites from accessing sensitive information maintained by ZAP, such as session keys. 
+Jika diaktifkan maka kunci API itu tidak diperlukan untuk tampilan atau operasi lain yang dianggap 'aman', dengan kata lain operasi yang tidak membuat perubahan pada ZAP. 
+Namun operasi seperti itu memberi akses ke data ZAP seperti jalur peringatan, pesan, dan berkas jalur sistem.  
+Mereka juga dapat digunakan pada aplikasi web untuk mendeteksi keberadaan ZAP.
 
-<h2>See also</h2>
+<h3>Laporkan kesalahan izin melalui API</h3>
+
+Jika diaktifkan maka ZAP akan melaporkan kesalahan izin melalui API, yang dapat digunakan oleh aplikasi web untuk mendeteksi keberadaan ZAP.
+Ini bukanlah masalah serius di lingkungan yang aman namun jika anda menggunakan ZAP ini terhadap situs yang berpotensi kejahatan maka anda tidak boleh mengaktifkannya.
+
+<h3>Laporkan detail kesalahan melalui API</h3>
+
+Jika pilihan ini dipilih maka akan lebih banyak rincian kesalahan yang dikembalikan melalui API.<br/>
+Ini tidak dapat direkomendasikan kecuali untuk tujuan debugging karena pesan kesalahan ini bisa membocorkan informasi ke situs yang berbahaya.<br/>
+Perhatikan bahwa rincian kesalahan penuh ini selalu ditulis pada berkas ZAP log. 
+
+<h3>Kunci API Isi Otomatis di UI API</h3>
+
+Jika pilihan ini dipilih maka kunci API itu secara otomatis disertakan dalam UI API.<br/>
+Ini tidak direkomendasikan kecuali jika anda menggunakan ZAP di lingkungan yang benar-benar terisolasi, karena memungkinkan situs yang berbahaya untuk mengakses Kunci API ZAP.<br/>
+
+<h3>Aktifkan JSONP</h3>
+
+Memilih pilihan ini memungkinkan format JSONP.<br/>
+Ini dapat berguna untuk beberapa aplikasi, tapi secara umum tidak disarankan karena akan meningkatkan daerah permukaan serangan ZAP, yaitu fitur yang dapat disalahgunakan oleh situs yang jahat.<br/>
+Jika JSONP itu diaktifkan maka semua operasi API yang menggunakan JSONP (termasuk tampilan) akan membutuhkan kunci API untuk mencegah situs berbahaya yang mengakses informasi sensitif yang dikelola oleh ZAP, seperti kunci sesi. 
+
+<h2>Lihat juga</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../overview.html">Ikhtisar UI</a></td><td>untuk ikhtisar antarmuka pengguna</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+<a href="options.html">Dialog pilihan</a></td><td>untuk rincian layar dialog pilih opsi lainnya</td></tr>
 </table>
 
 </body>

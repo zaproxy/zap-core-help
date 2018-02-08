@@ -2,93 +2,84 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Options Spider screen</title>
+<title>Opciones de Spider de la pantalla</title>
 </head>
 <body bgcolor="#ffffff">
-	<h1>Options Spider screen</h1>
+	<h1>Pantalla de opciones de Spider</h1>
 	<p>
-		This screen allows you to configure the <a
-			href="../../../start/concepts/spider.html">spider</a> options.</p> 
-	<p>It should be noted that modifying most of these options also affects
-	the running Spider.
+		Esta pantalla le permite configurar ls opciones de  <a
+			href="../../../start/concepts/spider.html">Spider</a> .</p> 
+	<p>Cabe señalar que la modificación de la mayoría de estas opciones también afecta a
+el funcionamiento de Spider.
 	</p>
 
-	<h3>Maximum depth to crawl</h3>
-	The parameter defines the maximum depth in the crawling process where a
-	page must be found in order for it to be processed. Resources found
-	deeper than this level are not fetched and parsed by the spider.
+	<h3>Máxima profundidad para rastrear</h3>
+	El parámetro define la profundidad máxima en el proceso de rastreo donde un
+la página debe estar en orden para que sea procesada. Los recursos que se encuentran
+más profundo que este nivel no se recopila y analiza la Spider.
 	<p>
-		The depth is calculated starting from the seeds, so, if a Spider scan
-		starts with only a single URL (eg. Spider URL), the depth is
-		calculated from this one. However, if the scan starts with multiple
-		seeds (eg. Spider site), a resource is processed if it's depth
-		relative to <i>any</i> of the seeds is less than the defined one.
+		la profundidad es calculada partiendo de las seeds, así, si una exploración de spider empieza con una única URL (ejemplo: Spider URL), la profundidad es
+calculado a partir de este. Sin embargo, si el análisis se inicia con múltiples
+las seeds (por ejemplo. Spider site), un recurso es procesada si la profundidad de
+en relación a <i>cualquier</i> de las seeds es menor que el definido uno.
 	</p>
 
-	<h3>Number of threads used</h3>
-	The spider is multi-threaded and this is the number that defines the
-	maximum number of worker threads used in the crawling process. Changing this
-	parameter does not have any effect on any crawling is in progress. 
+	<h3>Número de threads usados</h3>
+	La spider es multi-threaded y este es el número que define la
+número máximo de subprocesos de trabajo utilizado en el proceso de rastreo. El cambio de este
+el parámetro no tiene ningún efecto en cualquier rastreo en progreso. 
 
-	<h3>Maximum duration</h3>
-	The maximum length of time that the spider should run for, measured in minutes.
-	Zero (the default) means that the spider will run until it has found all of the links that it is able to. 
+	<h3>Máxima duración</h3>
+	La longitud máxima de tiempo que la spider se deben ejecutar para, medido en minutos.
+Cero (por defecto) significa que la spider se va a ejecutar hasta que se ha encontrado a todos los enlaces de que es capaz. 
 
-	<h3>Domain Pattern</h3>
-	The normal behavior of the spider is to only follow links to resources
-	found on the same domain as the page where the scan started. However,
-	this option allows you to define additional domains that are considered
-	"in scope" during the crawling process. Pages on these domains are
-	processed during the scan.
+	<h3>Máximo de children a rastrear</h3>
+	Este parámetro limita el número de children que puede ser rastreado en cada nodo en el árbol.<br>
+	Esto es útil para aplicaciones conducidas por datos, que tienen un gran número de páginas, las cuales son de hecho el mismo código, pero contienen datos diferentes, por ejemplo, una base de datos.<br>
+	Por defecto se establece a cero, lo que significa que no hay límites al número de nodos secundarios rastreado.
+
+	<h3>Máximo tamaño de análisis</h3>
+	Define el máximo tamaño, en bytes, de una respuesta que puede tener que ser analizada. Esto permite a la spider saltar respuestas o archivos grandes.
+
+	<h3>Dominios siempre en el alcance</h3>
+	Permite administrar los dominios, cadena de literales o expresiones regulares, que están en el alcance de la spider. El comportamiento normal de la spider es el único en seguir los enlaces de recursos encontrados en el mismo dominio que la página donde comenzó la exploración. Sin embargo, esta opción permite definir adicionalmente dominios que son considerados en la mira durante el proces de crawling ". Las páginas en éste dominio son procesadas durante la exploración.
 		
-	<h3>Query parameters handling</h3>
-	When crawling, the Spider has an internal mechanism that marks which pages
-	were already visited, so they are not processed again. When this check is made,
-	the way the URIs parameters are handled is set using this option. There are
-	three available options:
+	<h3>Manejo de parámetros de computadora</h3>
+	Cuando se arrastraba, la spider tiene un sistema mecánico interno que marca las páginas que nosotros visitamos. para que no sean procesadas nuevamente. Cuando el check está marcado, el sentido en que las ULR son manejadas según ésta opción. exísten 3 tipos de opciones disponilbles:
 	<ul>
-	<li><b>Ignore parameters completely</b> - if www.example.org/?bar=456 is visited,
-	then www.example.org/?foo=123 will not be visited</li>
-	<li><b>Consider only parameter's name</b> (ignore parameter's value) - if 
-	www.example.org/?foo=123 is visited, then www.example.org/?foo=456 will not be visited, 
-	but www.example.org/?bar=789 or www.example.org/?foo=456&amp;bar=123 will be visited</li>
-	<li><b>Consider both parameter's name and value</b> - if www.example.org/?123 is visited,
-	any other uri that is different (including, for example, www.example.org/?foo=456 or 
-	www.example.org/?bar=abc) will be visited</li>
+	<li><b> Ignore los parámetros por completo</b> si www.example.org/?bar=?456, entonces, el ejemplo www.example.org/?foo=123 no será visitado</li>
+	<li><b>Considere sólo el nombre del parámetro</b>(ignore valor del parámetro) - si www.example.org/?foo=123 es visitada, entonces www.example.org/?foo=456 no será visitado, pero www.example.org/?bar=789 o www.example.org/?foo=456&amp;bar=123 serán visitados</li>
+	<li><b>Considere ambos parámetros nombre y valor</b> si www.example.org/?123 es visitado, cualquier otra Url que sea diferente ( incluyendo, por ejmplo, www.example.org/?foo=456 o
+	www.example.org/?bar=abc) serán visitados</li>
 	</ul>
 
-	<h3>Send "Referer" header</h3>
-	If the spider requests should be sent with the "Referer" header.
+	<h3>Enviar encabezado "Referencia"</h3>
+	Si las solicitudes de spider deben ser enviadas con el encabezado "Referencia".
 
-	<h3>Process forms</h3>
-	During the crawling process, the behaviour of the spider when it
-	encounters HTML forms is defined by this option. If disabled, the HTML
-	forms will not be processed at all. If enabled, the HTML forms with the
-	method defined as HTTP GET will be submitted with some generated
-	values. The behaviour when encountering forms with the method defined
-	as HTTP POST is configured by the next option.
+	<h3>Cookies aceptadas</h3>
+	Si los escaneos de spider deben aceptar cookies mientras son llevados a cabo. Si se encuentra activa ésta opción la spider manejará correctamente cualquier cookie recibida desde el servidor y las enviará de vuelta en consecuencia.
+	Si la opción se encuentra deshabilitada, la spider no enviará ninguna cookie en sus solicitudes. Por ejemplo, esto podría controlar si la spider usa o nó la misma sesión a través de un escaneo de spider.
+	<br>Al aceptar las cookies, ellas no son compartidas entre escaneos de spider, cada escaneo tiene su propia jarra para estas.
+	<br>Esta opción tiene una baja prioridad, la araña respetará las otras opciones (globales) relacionadas al estado de HTTP. Esta opción es ignorada si, por ejemplo, la opción
+	<a href="../../tlmenu/edit.html">Habilitar rastreo de sesión (Cookie)</a> se ecncuentra habilitada, mientras de hace el escaneo de spider como un <a href="../../../start/concepts/users.html">Usuario</a> o cuando una
+	<a href="../../../start/concepts/httpsessions.html">Sesión HTTP</a> este activa.
 
-	<h3>POST forms</h3>
-	As briefly described in the previous paragraph (Process Forms), this
-	option configures the behaviour of the spider when
-	<i>Process Forms</i> is enabled and when encountering HTML forms that
-	have to be POSTed.
+	<h3>Formas de Procesos</h3>
+	Durante el proceso de arrastre, el comportamiento de la spider cuando se encuentra con formas HTML queda definido por esta opción. Si se encuentra desactivado, los formularios HTML no serán procesados en lo absoluto. De encontrarse habilitado, las formas HTML con los métodos definidos como HTTP GET serán presentados con algunos valores generados. El comportamiento al encontrarse formas con el método definido como HTTP POST es configurado mediante la siguiente opción.
 
-	<h3>Parse HTML Comments</h3>
-	This option defines whether the spider should also spider the HTML
-	comments searching for links to resources. Only the resources found in
-	commented valid HTML tags will be processed.
+	<h3>Formas POST</h3>
+	Descrito brevemente en el párrafo anterior (Formas de Procesos), ésta opción configura el comportamiento de la spider cuando
+	<i>Formas de Procesos</i> se encuentra habilitado y cuando de encuentre con formas HTML que debden ser publicadas.
 
-	<h3>Parse 'robots.txt' files</h3>
-	This option defines whether the spider should also spider the
-	robots.txt files found on websites, searching for links to resources.
-	This option does not define whether the spider should follow the rules
-	imposed by the robots.txt file.
+	<h3>Analizar gramaticalmente comentarios HTML</h3>
+	Esta opción define si la spider debe también realizar escaneos de araña en los comentarios HTML, buscando enlaces de recursos. Sólo los recursos encontrados en etiquetas de comentarios HTML válidas serán procesados.
 
-	<h3>Handle OData-specific parameters</h3>
-	This options defines whether the spider should try to detect OData-specific
-	parameters (i.e. resources identifiers) in order to properly process them 
-	according to the rule defined by the "Query parameters handling" option.
+	<h3>Analizar gramaticalmente archivos 'robots.txt'</h3>
+	Esta opción define si la spider debe también realizar escaneos de spider en los archivos robots.txt encontrados en páginas web, buscando enlaces de recursos.
+	Esta opción no define si la spider debe seguir las reglas impuestas por los archivos tipo robots.txt.
+
+	<h3>Manejo de los parámetros específicos de OData</h3>
+	Esta opción define si la araña debería intentar detectar parámetros específicos de OData (es decir, identificadores de recursos) para procesarlas correctamente de acuerdo a la regla definida por la opción de "manejo de parámetros de consulta".
 
 	<h2>Vease también</h2>
 	<table>
@@ -100,12 +91,12 @@
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			<td><a href="../../../start/concepts/spider.html">Spider(Araña)</a></td>
-			<td>for an overview of the Spider</td>
+			<td>para una vista general sobre la araña</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../../ui/tabs/spider.html">Spider Tab</a></td>
-			<td>for an overview of the Spider tab</td>
+			<td><a href="../../../ui/tabs/spider.html">Etiqueta de araña</a></td>
+			<td>para una vista general sobre la etiqueta de araña</td>
 		</tr>
 	</table>
 

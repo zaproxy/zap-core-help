@@ -2,81 +2,76 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>HTTP Sessions tab</title>
+<title>Tab ng mga Sesyon ng HTTP</title>
 </head>
 <body bgcolor="#ffffff">
-	<h1>HTTP Sessions tab</h1>
+	<h1>Ang mga Sesyon ng HTTP na tab</h1>
 	<p>
-		This tab shows you the set of identified HTTP sessions for each Site,
-		as detected by the <a href="../../start/concepts/httpsessions.html">HTTP
-			Sessions extension</a>.
+		Ang tab na ito ay nagpapakita sa iyo ng mga set ng mga natukoy na mga sesyon ng HTTP para sa bawat Site,
+		sa pagkatukoy ng <a href="../../start/concepts/httpsessions.html">Extensyon
+			sa mga Sesyon ng HTTP</a>.
 	</p>
 
 	<p>
-		The current Site the information is referring to can be selected via
-		the toolbar or the <a href="sites.html">Sites tab</a>.
+		Ang kasalukuyang Site na tinutukoy ng impormasyon ay maaring matuklas sa pamamagitan ng
+		toolbar o ang <a href="sites.html">Mga Site na tab</a>.
 	</p>
 
-	<p>The toolbar provides a button ("New Session") which allows you
-		to start a new session, forcing all outgoing request messages to be
-		without the session tokens set, so the server considers it's a new
-		session. This allows the creation of a new session, without destroying
-		the old one.</p>
+	<p>Ang toolbar ay maglalaan ng button ("Bagong Sesyon") na magpapahintulot sa iyo
+		na magsimula ng bagong sesyon, pumupuwersa sa lahat ng palabas na request na mga mensahe na hindi masali ang mga tokens ng na-set na sesyon, kaya gugunitain ng server na ito ay isang bagong sesyon. Ito ay magpapahintulot ng paggawa ng isang bagong sesyon, na hindi mawawasak
+		ang huling nagawa.</p>
 
-	<p>Each of the entries in the Sessions table (each session)
-		initially has a generated name, but it can be changed by selecting the
-		'Name' cell and editing it.</p>
+	<p>Bawat entry ng Sesyon na table (bawat sesyon)
+		sa pauna ay mayroong malikhang pangalan, pero ito ay maaring mabago sa pamamagitan ng pagpili ng 'Pangalan' na cell at pag-edit nito.</p>
 
-	<p>Each of the entries in the Sessions table can be right clicked,
-		which activates the Popup Menu, with the following options:</p>
+	<p>Bawat entry ng Sesyon na table ay maaring makaliwang pindot,
+		na magpapagana ng Popup na Menu, na may sumusunod na mga pagpipilian:</p>
 	<ul>
-		<li>Remove Session - deletes the session</li>
-		<li>Set as active (available only on non-active sessions) - marks
-			this session as active. If any session was previously set as active,
-			it will be unset as active and, if it doesn't specify any token
-			values, it is deleted.</li>
-		<li>Unset as active (available only on the active session) -
-			marks this session as not being active anymore. If the session
-			doesn't specify any token values, it is deleted.</li>
+		<li>Alisin ang Sesyon - magbubura ng sesyon</li>
+		<li>Itakda bilang aktibo (puwedeng gamitin lamang sa hindi-aktibong mga sesyon) - nagmamarka ng sesyong ito bilang aktibo. Kung kahit anong sesyon ang bagong natakda bilang aktibo,
+			ito ay mawawalan ng pagtakda ng pagka-aktibo at, kung ito ay hindi nagtutukoy ng kahit anong mga balyu ng token, ito ay mabubura.</li>
+		<li>Ang pagpapawala ng pagkatakda bilang aktibo (magagamit lamang sa aktibong sesyon) - 
+			nagmamarka ng sesyong ito bilang hindi na ngayon aktibo. Kung ang sesyon
+			ay hindi nagtutukoy ng kahit anong mga balyu ng token, ito ay mabubura.</li>
 	</ul>
 
-	<i>Regarding the active session, more details can be read on the
-		general concepts help page of the <a
-		href="../../start/concepts/httpsessions.html">HTTP Sessions
-			extension</a>
+	<i>Tungkol sa aktibong sesyon, marami pang mga detalye ang maaring mabasa sa
+		pangkalahatang mga konsepto na pahina ng <a
+		href="../../start/concepts/httpsessions.html">Extension ng mga Sesyon ng 
+			HTTP</a>
 	</i>
 	<br />
 
-	<br /> For each session you can see:
+	<br /> Para sa bawat sesyon iyong maaring makita:
 	<ul>
-		<li>Active - Whether this is the active session or not</li>
-		<li>Name - The session name</li>
-		<li>Session Tokens' Values - the list of values associated to
-			each of the session tokens. The entries are separated by the ';'
-			symbol.</li>
-		<li>Messages Matched - the number of HTTP messages that have been
-			matched by the extension with this session</li>
+		<li>Aktibo - Kahit ito ay aktibong sesyon o hindi</li>
+		<li>Pangalan - Ang pangalan ng sesyon</li>
+		<li>Mga Balyu ng mga Token ng Sesyon - ang lista ng mga balyus na kaugnay sa
+			bawat mga token ng sesyon. Ang mga entry ay pinaghihiwalay sa ';'
+			na simbolo.</li>
+		<li>Tugmang mga Mensahe - ang bilang ng mga mensahe ng HTTP na
+			natugma sa pamamagitan ng extensyon sa sesyong ito</li>
 	</ul>
 
 
-	<h2>See also</h2>
+	<h2>Tingnan rin</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../overview.html">UI Overview</a></td>
-			<td>for an overview of the user interface</td>
+			<td><a href="../overview.html">Pangkalahatang ideya ng UI</a></td>
+			<td>para sa pangkalahatang ideya sa interface ng gumagamit</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			<td><a href="../../start/concepts/httpsessions.html">HTTP
-					Sessions Extension</a></td>
-			<td>for an overview of the extension</td>
+					Extensyon ng mga Sesyon</a></td>
+			<td>para sa kabuuan ng extensyon</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			<td><a href="../../ui/dialogs/options/httpsessions.html">HTTP
-					Sessions Options screen</a></td>
-			<td>for an overview of the extension's Options</td>
+					sceen ng mga Pagpipilian ng mga Sesyon</a></td>
+			<td>para sa kabuuan ng mga Pagpipilian ng extensyon</td>
 		</tr>
 	</table>
 

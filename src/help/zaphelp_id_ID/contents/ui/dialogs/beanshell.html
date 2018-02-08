@@ -3,40 +3,40 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-BeanShell Console dialog
+Dialog Konsol BeanShell
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>BeanShell Console dialog</h1>
-<h3>Introduction / What is the BeanShell</h3>
+<h1>Dialog Konsol BeanShell</h1>
+<h3>Pengantar/ Apa itu BeanShell</h3>
 <p>
-The <a href="http://www.beanshell.org/">BeanShell</a> is an interactive Java shell that can be used to execute BeanShell scripts. These scripts are a simplified form of Java that use many elements from Java syntax, but in a simpler scripting format. All Java code is also valid BeanShell code.
-BeanShell integration in OWASP ZAP enables you to write scripts using the ZAP functions and data set. This can be a very powerful feature for analyzing web applications.
+<a href="http://www.beanshell.org/">BeanShell</a> adalah shell Java interaktif yang dapat digunakan untuk mengeksekusi skrip BeanShell. Skrip ini adalah bentuk sederhana dari Java yang menggunakan berbagai elemen dari sintaks Java, tapi dalam format skrip yang lebih sederhana. Semua kode Java adalah kode BeanShell yang valid.
+Integrasi BeanShell dalam OWASP ZAP memungkinkan Anda untuk menulis skrip menggunakan fungsi-fungsi ZAP dan kumpulan data. Ini akan menjadi fitur yang sangat mumpuni untuk menganalisa aplikasi web.
 </p>
 <h3>Konsol BeanShell</h3>
 <p>
-The console is started from the Tools menu, and contains a split screen where the top half is the interactive BeanShell console and the bottom half is a simple text editor. For complex scripts, you're encouraged to use a Java editor.  Scripts can be loaded, saved and evaluated from the editor.
+Konsol dimulai dari menu Perkakas, dan berisi layar belah di mana setengah di atas adalah konsol BeanShell interaktif dan setengah di bawah adalah penyunting teks sederhana. Untuk skrip yang rumit, Anda disarankan untuk menggunakan penyunting Java.  Skrip dapat dimuat, disimpan, dan dievaluasi dari penyunting.
 </p>
 <p>
-When the BeanShell starts a number of objects from ZAP are available for use, namely:
+Ketika BeanShell mulai maka tersedia sejumlah obyek dari ZAP untuk digunakan, yaitu:
 <ul>
-<li>the <i>Model</i> singleton, through the object named <b><i>model</i></b></li>
-<li>the <i>SiteTree</i> tree of current sites through the <b><i>sites</i></b> object</li>
-<li>an instance of <i>HttpSender</i> through the <b><i>sender</i></b> object</li>
+<li>singleton <i>Model</i>, melalui obyek bernama <b><i>model</i></b></li>
+<li>pohon <i>SiteTree</i> dari situs saat ini melalui obyek <b><i>sites</i></b></li>
+<li>contoh <i>HttpSender</i> melalui obyek <b><i>sender</i></b></li>
 </ul>
 <p>
-Notice that the BeanShell is loosely typed. Therefore, it is not necessary to declare variables before using them – this makes scripts a bit more concise than regular Java. But of course, if you did want to define the type you can.
+Perhatikan bahwa BeanShell adalah jenis loosely typed. Oleh karena itu, tidak perlu untuk menyatakan variabel sebelum menggunakannya - hal ini membuat skrip sedikit lebih ringkas dari Java biasa. Tapi tentu saja, Anda diperbolehkan jika Anda tidak ingin menentukan jenisnya.
 </p>
-<h3>Using the Site Map</h3>
+<h3>Menggunakan Peta Situs</h3>
 <p>
-Let's start with something useful and typical: Iterate through all the site nodes and check for the existence of a file. A script has already been created that accomplishes this, choose <i>Load</i> and select the <i>example.tree.bsh</i> file.
+Mari kita mulai dengan sesuatu yang berguna dan khas: Iterate melalui semua node situs dan periksa keberadaan berkas. Skrip yang sudah dibuat yang menyelesaikan skrip ini, pilih <i>Load</i> dan pilih berkas <i>example.tree.bsh</i>.
 </p>
 <pre>
 import org.apache.commons.httpclient.URI;
 import org.parosproxy.paros.network.HttpMessage;
 import org.parosproxy.paros.model.*;
 
-Tree () {
+Pohon () {
 	
 	find (SiteNode node, String resource) {
 		if (node == null) return;
@@ -54,7 +54,8 @@ Tree () {
 	}
 	
 	checkExists(ref, resource) {
-		u = ref.getHttpMessage().getRequestHeader().getURI().toString() + "/" + resource;
+		u = ref.getHttpMessage().getRequestHeader().getURI().toString() + "/" + 
+sumber;
 		msg = ref.getHttpMessage();
 		msg.getRequestHeader().setURI(new URI(u));
 		sender.sendAndReceive(msg, true);
@@ -63,62 +64,62 @@ Tree () {
 		}
 	}
 
-	return this;
+	kembalikan ini;
 }
 </pre>
 <p>
-Before clicking Evaluate, first browse to a site through ZAP to populate the tree:
+Sebelum mengeklik Evaluasi, terlebih dahulu ramban ke situs melalui ZAP untuk mengisi pohon:
 </p>
 <p>
-Now click on evaluate to execute the script that's in the editor. If there are no errors, then you can now start using the object defined in the script by issuing these commands:
+Sekarang klik pada evaluasi untuk mengeksekusi skrip yang ada di penyunting. Jika tidak ada kesalahan, maka sekarang Anda dapat mulai mengunakan obyek yang ditentukan dalam skrip dengan cara menjalankan perintah-perintah ini:
 </p>
 <pre>
 t = Tree();
 </pre>
 <p>
-This constructs a new Tree object and assigns a reference to <i>t</i>.
+Ini akan membuat obyek Pohon baru dan menetapkan referensi ke <i>t</i>.
 </p>
 <pre>
 t.find(sites.getRoot(), "index.html");
 </pre>
 <p>
-Call the <i>find</i> method on t, which takes a <i>SiteNode</i> as the first argument and a resource to find as the second. In this case, the method will iterate through all the nodes in the tree, because we started at the root, and will find index.html files.
+Panggil metode <i>find</i> pada t, yang akan mengambil <i>SiteNode</i> sebagai argumen pertama dan sumber sebagai kedua. Dalam hal ini, metode tersebut akan iterate melalui semua node dalam pohon, karena kita mulai dari akar, dan akan menemukan berkas index.html.
 </p>
 <p>
-Instead of iterating through all the nodes, we could also choose to start a specific node by using the <i>findChild</i> method.
+Alih-alih iterasi melalui semua node, kita juga bisa memilih untuk memulai suatu node khusus dengan menggunakan metode <i>findChild</i>.
 </p>
 <p>
-This should give you some idea of the power of the BeanShell in ZAP. But to fully exploit it, you'll need to familiarize yourself with the internal API and the BeanShell's features. The BeanShell has been setup so as to allow full access to all internal objects and methods – even private ones.
+Hal ini akan memberikan Anda gambaran mengenai kemampuan BeanShell dalam ZAP. Tapi untuk memanfaatkan sepenuhnya, Anda perlu mengenal API internal dan fitur-fitur BeanShell. BeanShell telah dibuat sedemikian rupa untuk memungkinkan akses penuh terhadap semua obyek dan metode internal - bahkan yang pribadi sekalipun.
 </p>
-<h3>Simple HTTP Request</h3>
+<h3>Permintaan HTTP Sederhana</h3>
 <p>
-In the next example, we create and send an HTTP request directly in the interactive console:
+Pada contoh berikut, kita membuat dan mengirim permintaan HTTP langsung di konsol interaktif:
 </p>
 <pre>
 TBD
 </pre>
 <p>
-To fully utilize the power of the BeanShell, you should familiarize yourself with ZAP's internals. The <i>sender</i> object is the same instance as is used by the <a href="man_req.html">Manual Request Editor</a> and will therefore automatically use proxy settings set in the ZAP configuration.
+Untuk menggunakan sepenuhnya kemampuan BeanShell, Anda perlu mengenal fitur-fitur ZAP. Obyek <i>sender</i> adalah contoh yang sama seperti yang digunakan oleh <a href="man_req.html">Manual Request Editor</a> dan karenanya akan otomatis menggunakan pengaturan proksi yang ditetapkan dalam konfigurasi ZAP.
 </p>
 <pre>
 TBD
 </pre>
 <h3>Tips</h3>
 <p>
-Use the <i>unset(String)</i> command to unset any declared variables, methods or objects. This is useful if you want to replace a method declaration in the current namespace. Note that the command takes a String argument, not an Object, so to unset the <i>t</i> object we used above, it should be: <i>unset("t");</i> and not <i>unset(t);</i>
+Gunakan perintah <i>unset(String)</i> untuk menghapus variabel, metode, atau obyek yang dinyatakan. Hal ini berguna jika Anda ingin mengganti metode pernyataan dalam namespace saat ini. Perhatikan bahwa perintah menggunakan argumen String, bukan Obyek, jadi untuk menghapus obyek <i>t</i> yang kita pakai di atas, harusnya: <i>unset("t");</i> dan bukan <i>unset(t);</i>
 </p>
-<h2>Accessed via</h2>
+<h2>Diakses melalui</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../tlmenu/tools.html">Top level Tools menu</a></td><td>'BeanShell Console' menu item</td></tr>
+<a href="../tlmenu/tools.html">Menu Perkakas tingkat atas</a></td><td>Menu 'Konsol BeanShell'</td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Lihat juga</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../overview.html">Ikhtisar UI</a></td><td>untuk ikhtisar antarmuka pengguna</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+<a href="dialogs.html">Dialog</a></td><td>untuk rincian dialog dan sembulan </td></tr>
 </table>
 
 </body>

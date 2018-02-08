@@ -3,26 +3,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Data Driven Content
+Nilalaman ng Hinihimok na Data
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Data Driven Content</h1>
+<h1>Nilalaman ng Hinihimok na Data</h1>
 <p>
-Data driven content is type of <a href="structmods.html">Structural Modifier</a>
-which identifies URL paths that represent data.<br>
+Nilalaman ng hinihimok na data ay uri ng <a href="structmods.html">Estruktural na Taga-bago</a> na nagtutukoy sa mga path ng URL na kumakatawan sa data.<br>
 <p>
-In 'traditional' web applications the structure of the application is typically defined by the URL paths
-and the data is contained in the URL parameters and POST data.<br>
-URLs like:
+Sa 'tradisyunal' na mga web application ang istraktura ng mga aplikasyon ay isang karaniwang itinukoy ng mga URL path at ang data ay nakapaloob sa mga URL parameter at POST data.<br>
+Gaya ng URL na:
 <ul>
 <li>https://www.example.com/app/aaa?ddd=eee
 <li>https://www.example.com/app/aaa?ddd=fff
 <li>https://www.example.com/app/bbb?ddd=eee
 </ul>
-are represented in the <a href="../../ui/tabs/sites.html">Sites tab</a> as two 'nodes' in the tree:
+ay kumakatawan sa <a href="../../ui/tabs/sites.html">Tab ng mga Site</a> bilang dalawang 'noda' sa puno:
 <ul>
-<li>Sites
+<li>Mga Site
 	<ul>
 	<li>https://www.example.com
 		<ul>
@@ -34,19 +32,19 @@ are represented in the <a href="../../ui/tabs/sites.html">Sites tab</a> as two '
 		</ul>
 	</ul>
 </ul>
-The Sites tree is very important as it reflects ZAP's understanding of the application structure.<br>
-If it is not a good representation of the structure then ZAP will not be able to attack the application effectively.<br>
+Ang mga puno ng site ay napakahalaga dahil ito ay sumasalamin sa pag-unawa ng ZAP sa istraktura ng aplikasyon.<br>
+Kung ito ay hind maganadang representasyon ng istraktura, ang ZAP ay hindi magagawang epektibong umatake sa aplikasyon.<br>
 <br>
-Some applications include data in URL paths.<br>
-For example: 
+Ilang mga aplikasyon ay kinabibilangan ng mga URL path.<br>
+Halimbawa: 
 <ul>
 <li>https://www.example.com/app/company1/aaa?ddd=eee
 <li>https://www.example.com/app/company2/aaa?ddd=fff
 <li>https://www.example.com/app/company3/aaa?ddd=ggg
 </ul>
-These 3 URLs represent the same page but with different data, but by default ZAP will represent them as three separate nodes:
+Ang tatlong URL na ito ay kumakatawan ng parehong pahina ngunit may iba't-ibang data, ngunit bilang default, ang ZAP ay kumakatawan sa mga ito bilang tatlong magkahiwalay na noda:
 <ul>
-<li>Sites
+<li>Mga Site
 	<ul>
 	<li>https://www.example.com
 		<ul>
@@ -68,23 +66,21 @@ These 3 URLs represent the same page but with different data, but by default ZAP
 		</ul>
 	</ul>
 </ul>
-This is a problem because ZAP will now attack all 3 pages when it only needs to attack one of them.<br>
-In this case attacking the same page 3 times is not a big problem, but if you have hundreds or thousands 
-of pages like this will significantly increase the time it takes to scan the application.<br>
+Ito ay isang problema dahil ang ZAP ay aatake na ngayon sa lahat ng tatlong mga pahina kapag ito lamang ay kinakailangan umatake ng isa sa kanila.<br>
+Sa kasong ito, ang pag-aatake sa parehong pahina nang 3 beses ay hindi isang malaking problema, ngunit kung mayroon kang daan-daan o libo-libong pahina tulad nito ay makabuluhang madagdagan ang oras na abutin para ma-scan ang aplikasyon.<br>
 <br>
-In ZAP terms the 'company' nodes are 'data driven content' - URL path elements that contain
-data instead of representing part of the application structure.<br>
-You can define data driven content by adding the application to a <a href="contexts.html">Context</a>
-and then configuring them via the <a href="../../ui/tabs/sites.html">Sites tab</a> 'Flag as Context -&gt; <i>Context Name</i> Data driven node' right click menu item<br>
-Once you have done this the pages will be correctly represented as 1 node:
+Sa mga tuntunin ng ZAP, ang 'kompanya' na noda ay 'nilalaman ng hinihimok na data' - mga elemento ng URL path na naglalaman ng data sa halip na kumakatawan sa bahagi ng istraktura ng aplikasyon.<br>
+Maaari mong tukuyin ang mga nilalaman ng hinihimok na data sa pamamagitan ng pagdaragdag ng aplikasyon sa <a href="contexts.html">Konteksto</a>
+at saka pagsasaayos ng mga ito sa <a href="../../ui/tabs/sites.html">Tab ng mga Site</a> 'I-flag bilang Konteksto &gt; <i>Pangalan ng Konteksto</i> Noda ng hinihimok na data' right-click na aytem sa menu<br>
+Kapag nagawa mo na ito, ang mga pahina ay tamang kinakatawan bilang 1 na noda:
 <ul>
-<li>Sites
+<li>Mga Site
 	<ul>
 	<li>https://www.example.com
 		<ul>
 		<li>app
 			<ul>
-			<li>&#x00AB;company&#x00BB;
+			<li>&#x00AB;kompanya&#x00BB;
 				<ul>
 				<li>GET:aaa(ddd)
 				</ul>
@@ -92,21 +88,20 @@ Once you have done this the pages will be correctly represented as 1 node:
 		</ul>
 	</ul>
 </ul>
-The characters &#x00AB; and &#x00BB; are used to indicate that this is a 'special' node and the 
-node name (in this case 'company') can be set by you to indicate what that node represents.
+Ang mga character na &#x00AB; at &#x00BB; ay ginagamit upang ipahiwatig na ito ay isang 'espesyal' na noda at ang pangalan ng noda (sa kasong ito ay 'kompanya') ay maaaring mong itakda upang ipahiwatig kung ano ang kinakatawan ng noda.
 
-<h2>Accessed via</h2>
+<h2>Na-access sa pamamagitan ng</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/sites.html">Sites tab</a></td><td>'Flag as Context -&gt; <i>Context Name</i> Data driven node' right click menu item</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/history.html">History tab</a></td><td>'Flag as Context -&gt; <i>Context Name</i> Data driven node' right click menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/sites.html">Tab ng mga Site</a></td><td>'I-flag bilang Konteksto &gt; <i>Pangalan ng Konteksto</i>Noda ng hinihimok na data' right click na aytem sa menu</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/history.html">Tab ng Kasaysayan</a></td><td>'I-flag bilang Konteksto &gt; <i>Pangalan ng Konteksto</i>Noda ng hinihimok na data' right click na aytem sa menu</td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Tingnan din</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="concepts.html">Features</a></td><td>provided by ZAP</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="structparams.html">Structural Parameters</a></td><td>which identify parameters that represent application structure instead of user data</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/dialogs/session/context-struct.html">Session Context Structure screen</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">Pangkalahatang-ideya ng UI</a></td><td>para sa pangkalahataang-ideya ng interface ng gumagamit</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="concepts.html">Mga Tampok</a></td><td>na ibinigay ng ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="structparams.html">Istraktural ng mga Parameter</a></td><td>na nagtutukoy ng mga parameter na kumakatawan sa istraktura ng aplikasyon sa halip na data ng gumagamit</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/dialogs/session/context-struct.html">Screen ng Istraktura ng Konteksto ng Sesyon</a></td></tr>
 </table>
 
 </body>

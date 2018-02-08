@@ -3,64 +3,51 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Session Context Authentication screen
+会话上下文身份验证屏幕
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Session Context Authentication screen</h1>
+<h1>会话上下文身份验证屏幕</h1>
 <p>
-This is one of the <a href="contexts.html">Session Context screens</a>
-which allows you to manage the way in which <a href="../../../start/concepts/authentication.html">Authentication</a> is being done for the Context. Note that
-changing the authentication method after Users have been defined will cause them to be deleted, as
-the type of user credentials needs to match the authentication scheme. 
-After selecting the Authentication Method type, the options that need to be configured 
-depend on the Authentication Method.
+这是其中一个 <a href="contexts.html">会话上下文屏幕</a>
+它将允许您以此方式来管理 <a href="../../../start/concepts/authentication.html">身份验证</a> 正在为上下文进行操作。 请注意，在用户定义之后更改身份验证方法，这将导致被删除，因为用户凭据类型需要与身份验证方案匹配。 
+选择身份验证方法类型之后，需要配置的选项取决于身份验证方法。
 
-<h4>Manual Authentication</h4>
-No configuration is needed for this authentication method. <small>Read  
-<a href="../../../start/concepts/authentication.html#manual">more</a>...</small>
+<h4>手动身份验证</h4>
+此身份验证方法不需要配置。 <small>读取  
+<a href="../../../start/concepts/authentication.html#manual">更多</a>...</small>
 
-<h4>Form-Based Authentication</h4>
-To configure this authentication method, you need to supply the <b>login url</b>, to which the login
-request is performed, the <b>request body</b> (POST data), if needed, and identify the <b>parameters</b> used to supply
-the 'username' and 'password'. If no request body is supplied, the login request is performed as 
-a HTTP GET, otherwise an HTTP POST is used. The credentials themselves
-are configured in the <a href="contexts.html#users">Users</a> tab. <small>Read  
-<a href="../../../start/concepts/authentication.html#formBased">more</a>...</small> 
+<h4>基于表单的身份验证</h4>
+为了配置此身份验证方法，您需要提供 <b>登录url</b>, to which the login
+request is performed, the <b>请求主体</b> (POST数据)，如果需要，并识别 <b>参数</b> 用于提供的"用户名"和"密码"。 如果未提供请求正文，则将以HTTP GET的方式执行登录请求，否则将使用HTTP POST。 The credentials themselves
+are configured in the <a href="contexts.html#users">用户</a> 标签。 <small>读取  
+<a href="../../../start/concepts/authentication.html#formBased">更多</a>...</small> 
 
-<h4>HTTP/NTLM Authentication</h4>
-To configure this authentication method, you need to supply the <b>hostname</b> and the <b>port</b> of the server
-the authentication is done with and the <b>realm</b> the credentials apply to. The credentials themselves
-are configured in the <a href="contexts.html#users">Users</a> tab. <small>Read  
-<a href="../../../start/concepts/authentication.html#httpAuth">more</a>...</small> 
+<h4>HTTP/NTLM身份验证</h4>
+为了配置此身份验证方法，您应该提供 <b>主机名称</b> and the <b>端口</b> 服务器的身份验证已完成和 <b>realm</b> 凭据适用于。凭据本身配置在 <a href="contexts.html#users">用户</a> 标签。 <small>读取  
+<a href="../../../start/concepts/authentication.html#httpAuth">更多</a>...</small> 
 
-<h4>Script-Based Authentication</h4>
-To use this authentication method, you <b>first</b> need to write (and save) an <b>Authentication Script</b> 
-using the <b>Scripts</b> tab (see the provided examples and templates for this script type in the Scripts tab).
-Then you need to supply the name of the script in the dropdown list. After selecting the script, you need to press 
-the <b>Load</b> button, loading all the requirements of the script.
-Any parameters that you have specified as <i>required</i> or <i>optional</i> in the script will
-be shown in the interface to be defined. Their values are available to be used in the script, during the authentication, as seen
-in the provided examples for Authentication Scripts. Make sure that after doing any changes to the parameters 
-required by the Authentication script you re-load the script. Otherwise, the parameters shown in the interface might
-not be the ones used during the authentication and errors might occur. The <i>credentials</i> used for each User 
+<h4>基于脚本的身份验证</h4>
+为了使用此身份验证方法，您 <b>第一</b> 需要写(并保存) 一个 <b>认证脚本</b> 
+使用 <b>脚本</b> 选项卡(请参阅脚本选项卡中的此脚本类型提供的示例和模版)。
+然后您需要在下拉列表中提供脚本名称。 选择脚本后，您需要按 <b>加载</b> 按钮，加载脚本的所有要求。任何您已指定的参数为 <i>必需</i> 或 <i>可选</i> 将在脚本中显示要定义的接口。 在身份验证过程中，可以在脚本中使用它们的值，如为身份验证脚本提供的示例所示。 在对认证脚本所需的参数进行任何更改之后，请确保重新加载该脚本。 否则，接口中显示的参数可能不是在身份验证期间使用的，并且可能会发生错误。 The <i>凭证</i> used for each User 
 during the authentication processed can be also specified in the Authentication Script and are configured in the 
-<a href="contexts.html#users">Users</a> tab.
-<small>Read <a href="../../../start/concepts/authentication.html#scriptBased">more</a>...</small> 
+<a href="contexts.html#users">用户</a> 标签。
+<small>读取<a href="../../../start/concepts/authentication.html#scriptBased">更多</a>...</small> 
 
   
-<h2>Accessed via</h2>
+<h2>通过访问</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../tlmenu/file.html">Top level File menu</a></td><td>'Properties...' menu item</td></tr>
+<a href="../../tlmenu/file.html">顶层文件菜单</a></td><td>"属性..."菜单项</td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>另请参阅</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="contexts.html">Session Context screens</a></td><td>for details of the other Context screens</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../../start/concepts/authentication.html">Authentication</a></td><td>for an overview of Authentication </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">UI综述</a></td><td>关于用户界面的概述</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../dialogs.html">对话框</a></td><td>有关对话框或弹出窗口的详情 </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="contexts.html">会话上下文屏幕</a></td><td>有关其他上下文屏幕的详情</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../../start/concepts/authentication.html">身份验证</a></td><td>有关身份验证的概述 </td></tr>
 </table>
 
 

@@ -3,36 +3,36 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Modes
+Modos
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Modes</h1>
+<h1>Modos</h1>
 <p>
-ZAP has a 'mode' which can be:
+ZAP tiene un 'modo' que puede ser:
 <ul>
-<li>Safe - no potentially dangerous operations permitted</li>
-<li>Protected - you can only perform (potentially) dangerous actions on URLs in the <a href="scope.html">Scope</a></li>
-<li>Standard - as in previous releases, you can do anything</li>
-<li>ATTACK - new nodes that are in <a href="scope.html">Scope</a> are <a href="ascan.html">actively scanned</a> as soon as they are discovered</li>
+<li>Caja de seguridad - no operaciones potencialmente peligrosas permitidas</li>
+<li>Protegido - sólo puede realizar acciones peligrosas (potencialmente) las URL en el <a href="scope.html">ámbito</a></li>
+<li>Estándar - al igual que en versiones anteriores, se puede hacer nada</li>
+<li>ATTACK - nuevos nodos que se encuentran en el <a href="scope.html">ámbito de aplicación</a> son <a href="ascan.html">activamente explorado</a> tan pronto como son descubiertos</li>
 </ul>
-It is recommended that you use the Protected mode to ensure that you only attack sites that you mean to.<br/><br/>
+Se recomienda que utilice el modo protegido para asegurar que sólo atacar sitios que usted quiere.<br/><br/>
 
-The mode can be changed via the <a href="../../ui/tltoolbar.html">toolbar</a>
-(or the ZAP API) and is persisted between sessions.<br/><br/>
+Puede cambiar el modo de la <a href="../../ui/tltoolbar.html">barra de herramientas</a>
+(o la API de ZAP) y persiste entre sesiones.<br/><br/>
 
-Examples of the things that will not be possible in either Safe mode or in Protected mode when not acting on URLs in the Scope:
+Ejemplos de lo que no será posible en cualquier modo seguro o en modo protegido cuando no actúa en las URLs en el ámbito de aplicación:
 
 <ul>
-<li>Spidering</li>
-<li>Active Scanning</li>
+<li>Indizado de web</li>
+<li>Escaneo activo</li>
 <li>Fuzzing</li>
-<li>Force Browsing</li>
-<li>Breaking (intercepting)</li>
-<li>Resending requests</li>
+<li>Forzar navegación</li>
+<li>Romper (interceptar)</li>
+<li>Reenviar solicitudes</li>
 </ul>
 
-You can define the <a href="scanpolicy.html">Scan Policy</a> to be used for the Attack mode the <a href="../../ui/dialogs/options/ascan.html">Options Active Scan screen</a>.<br>
+Se puede definir la <a href="scanpolicy.html">Política de escaneo</a> para el modo de ataque la <a href="../../ui/dialogs/options/ascan.html">Pantalla de opciones de escaneo activo</a>.<br>
 
 <h2>Vease también</h2>
 <table>

@@ -3,60 +3,65 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-The File menu
+Ang Menu ng File
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>The File menu</h1>
-This menu handles the current session. By default the following menu items will be present:<br/>
+<h1>Ang Menu ng File</h1>
+And menu na ito ang nagdadala ng kasalukuyang sesyon. Sa pamamagitan ng default ang mga sumusunod na talaan ng mga aytem ay lalabas:<br/>
 
-<h3>New Session</h3>
-This creates a new session.<br>
-If you have not saved your current session then a warning will be displayed.<br/>
-Starting a new session without saving the current session will loose all of the data in the current session.
+<h3>Bagong Sesyon</h3>
+Ito ang lumilikha ng bagong sesyon.<br>
+Kapag hindi mo na i-save ang iyong kasalukuyang sesyon kung gayon ay may lalabas na babala.<br/>
+Ang pagsisimula ng bagong sesyon nang hindi nagsi-save ng kasalukyang sesyon ay maaring makawala ng lahat ng impormasyon na nasa kasalukuyang sesyon.
 
-<h3>Open Session...</h3>
-This opens a session that has been previously saved.<br/>
-Opening a session without saving the current session will loose all of the data in the current session.
+<h3>Magbukas ng Sesyon...</h3>
+Ito ang nagbubukas ng sesyon na minsang nang na-save.<br/>
+Ang pagbubukas ng sesyon nang hindi nagsi-save ng kasalukyang sesyon ay maaring makawala ng lahat ng impormasyon na nasa kasalukuyang sesyon.
 
-<h3>Persist Session...</h3>
-This persists the current session. <br/>
-While the session is always stored in a database on disk, it will be lost when ZAP is stopped unless it has been persisted.<br/>
-You only need to persist it once - after that all changes will be saved.
+<h3>Ipagpatuloy Pa Rin ang Sesyon...</h3>
+Ito ang nagpapatuloy sa kasalukuyang sesyon. <br/>
+Habang ang sesyon ay laging nakaimbak sa isang database ng disk, ito ay mawawala kapag ang ZAP ay itinigil kung hindi man ay ipinagpatuloy.<br/>
+Isang beses mo lang ito maaaring ipagpatuloy - pagkatapos niyan ay lahat ng pagbabago ay na-save na.
 
-<h3>Snapshot Session</h3>
-This saves a snapshot of a session that has already been persisted.<br/>
-It will use the same filename with a date-time string appended to it.<br/>
+<h3>Litrato ng Sesyon Bilang...</h3>
+Ito ang nagsi-save ng litrato ng isang sesyon na siyang minsan nang naipagpatuloy.<br/>
+Ito ay nagmumungkahi ng parehong pangalan ng file katulad ng ipinagpatuloy na sesyon na mayroong petsa-oras na string na karugtong, at nagpapahintulot sa taga-gamit na itakda sa anumang pangalan na kanilang napili.<br/>
 
-<h3>Properties...</h3>
-This displays the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog.<br/>
-This allows you to set the session name and description.
+<h3>Mga Katangian ng Sesyon...</h3>
+Ito ay nagpapakita ng <a href="../dialogs/session/sessprop.html">mga Katangian ng Sesyon</a> dyalogo.<br/>
+Ito ang nagpapahintulot sa iyo na magtakda ng pangalan ng sesyon at deskripsyon.
 
-<h3>Load Add-on file...</h3>
-Load a local <a href="../../start/concepts/addons.html">add-on</a> file.<br/>
-Add-ons are typically installed from via the <a href="../dialogs/manageaddons.html">Manage Add-ons</a> dialog, but this
-option can be useful if you have downloaded an add-on manually or are testing one you have developed yourself.<br/>
-Add-ons remain installed until you manually uninstall them. 
+<h3>Maglagay ng Konteksto...</h3>
+Nagpapahintulot na maglagay ng <a href="../../start/concepts/contexts.html">Konteksto</a>.
 
-<h3>Exit and delete session...</h3>
-This will exit ZAP and delete the session, even if you have previously persisted it.<br/>
-The session will no longer be accessible when you restart ZAP, although any snapshots you took will still be available.<br/> 
-A warning dialog will be displayed to ensure you really meant to choose this option.
+<h3>Mag-export ng Konteksto...</h3>
+Nagpapahintulot upang makapag-export ng konteksto.
 
-<h3>Exit</h3>
-This will exit ZAP.<br/>
-If you have not saved the current session then you will be given the option to do so.
+<h3>Magkarga ng Add-on file...</h3>
+Magkarga ng lokal <a href="../../start/concepts/addons.html">na add-on</a> file.<br/>
+Ang mga add-on ay karaniwanng naka-install mula sa pamamagitan ng <a href="../dialogs/manageaddons.html">Pamamahala ng Add-ons</a> dyalogo, ngunit ang option na ito ay kapaki-pakinabang lamang kung meron kang nai-download na manu-manong add-on o di kaya ay subukan ang sarili mong gawa.<br/>
+Ang mga add-on ay nananatiling naka-install hanggang manu-mano mo silang tinatanggal sa pagka-install. 
+
+<h3>Lumabas at Burahin ang Sesyon...</h3>
+Ito ang naglalabas ng ZAP at nagbubura ng sesyon, kahit na minsan mo na itong naipagpatuloy.<br/>
+Ang sesyon ay hindi na magiging accessible kapag iyong ni-restart ang ZAP, ngunit ganun paman ay ang mga litratong iyong nakuha ay hindi mawawala.<br/> 
+Isang dyalogong babala ang lalabas upang masiguro na iyo talagang pinili ang opsyon na ito.
+
+<h3>Lumabas</h3>
+Ito ang nagpapalabas ng ZAP.<br/>
+Kung hindi mo nai-save ang kasalukuyang sesyon kung gayon ay bibigyan ka ng opsyon upang gawin talaga ito.
 
 <p>
-Note that <a href="../../start/concepts/addons.html">add-ons</a> can add additional menu items.
+Dapat tandaang <a href="../../start/concepts/addons.html">ang mga pandagdag</a> ay maaring magdagdag ng karagdagang menu ng mga aytem.
 </p>
 
-<h2>See also</h2>
+<h2>Tingnan din</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="tlmenu.html">The top level menu</a></td><td></td></tr>
+<a href="tlmenu.html">Ang pinakatuktok na antas ng menu</a></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../overview.html">Buod ng UI</a></td><td>para sa pangkalahatang-ideya ng hangganan ng gumagamit</td></tr>
 </table>
 </body>
 </html>

@@ -2,57 +2,38 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Options Extensions screen</title>
+<title>Mga Opsyon ng Screen ng mga Extension</title>
 </head>
 <body bgcolor="#ffffff">
-	<h1>Options Extensions screen</h1>
-	<p>This screen allows you to enable/disable extensions that are
-		available to ZAP.</p>
-	<h3>Enable/Disable Extensions</h3>
-	Enabled extensions will be loaded by ZAP, thus adding the
-	functionalities provided by those extensions. Disabled extensions will
-	not be loaded.
+	<h1>Mga Opsyon ng Screen ng mga Extension</h1>
+	<p>Ang screen na ito ay nagpapahintulot sa iyo na paganahin/hindi paganahin ang mga extension na magagamit sa ZAP, sa core man o idinagdag ng <a href="../../../start/concepts/addons.html">add-ons</a>.</p>
+	<h3>Paganahin/Hindi Paganahin ang mga Extension</h3>
+	Ang mga gumaganang extension ay nai-load ng ZAP, kaya naman nagdaragdag ng mga andar na ibinigay sa pamamagitan ng mga extension na iyon. Ang mga hindi pinagana na extension ay hindi mai-load.
 
-	<h3>Core Extensions</h3>
-	Core extensions are extensions that if disabled will impair ZAP's
-	minimal functionality. Extensions marked as core cannot be disabled.
+	<h3>Mga Core Extension</h3>
+	Ang mga core extension ay mga extension na kapag hindi pinagana ay makapaghina sa napakaliit na pag-andar ng ZAP. Ang mga extension na minarkahan bilang core ay hindi maaaring hindi paganahin.
 	<p>
-		<i>Note: Core extensions can be disabled through the configuration
-			file, although it's not recommend.</i>
+		<i>Paalala: Ang mga core extension ay maaaring hindi paganahin sa pamamagitan ng file ng kumpigurasyon, kahit na ito ay hindi inirerekomenda.</i>
 	</p>
 
 	<h3>Extensions' Dependencies</h3>
-	Extensions may depend on other extensions to work. When one of those
-	extensions (dependencies) is disabled it will make ZAP automatically
-	disable all the extensions that depend on them. So it may happen that
-	when disabling one extension other extensions (that depend on it) will
-	also be disabled. Automatically disabled extensions will not be allowed
-	to be enabled until all the dependencies are enabled.
-
-	<h3>Location of extensions available to ZAP</h3>
-	To make an extension available to ZAP it must be in one the following
-	locations:
-	<ul>
-		<li>"plugin" directory located in the ZAP's folder;</li>
-		<li>"plugin" directory located in the ZAP user's folder.</li>
-	</ul>
+	Ang mga extension ay maaaring nakasalalay sa iba pang mga extension para gumana. Kapag ang isa sa mga extension na iyon (dependencies) is hindi pinagana, gagawin nito awtomatikong hindi paganahin ng ZAP ang lahat ng mga extension na nakasalalay sa mga ito. Kaaya maaaring mangyari na kapag hindi pinapagana ang isang extension, ang ibang extension (na nakasalalay nito) ay hindi din paganahin. Awtomatikong hindi pinagana na mga extension ay hindi papahintulutan na paganahin hangga't ang lahat nga dependencies ay pinagana na.
 
 	<p>
-		<i>Note: You will need to restart ZAP for the changes to take
-			effect.</i>
+		<i>Paalala: Kailangan mong i-restart ang ZAP para magkabisa ang mga pagbabago.</i>
 	</p>
 
-	<h2>See also</h2>
+	<h2>Tingnan din sa</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../overview.html">UI Overview</a></td>
-			<td>for an overview of the user interface</td>
+			<td><a href="../../overview.html">Kabuuan ng UI</a></td>
+			<td>para sa kabuuan ng interface ng gumagamit</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="options.html">Options dialogs</a></td>
-			<td>for details of the other Options dialog screens</td>
+			<td><a href="options.html">Mga Diyalogo ng mga Opsyon</a></td>
+			<td>para sa mga detalye ng ibang mga Opsyon ng screen ng diyalogo</td>
 		</tr>
 	</table>
 

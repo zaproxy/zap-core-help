@@ -3,54 +3,80 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Command Line
+Linya ng Utos
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Command Line</h1>
+<h1>Linya ng Utos</h1>
 
-ZAP supports the following command line options:
+Para patakbuhin ang ZAP sa pamamagitan ng linya ng utos, kailangan mong mahanap ang panimulang script ng ZAP.<br/>
+<strong>Mga Bintana:</strong><br/>
+<pre>C:\Program Files (x86)\OWASP\Zed Attack Proxy\zap.bat</pre>
+<strong>Mac:</strong><br/>
+<pre>/Applications/OWASP\Zap.app/Contents/Java/zap.sh</pre>
+<strong>Linux:</strong><br/>
+<code>zap.sh</code> ay mapupunta sa ibaba ng directory kung saan ang ZAP ay naka-install.
+<br/><br/>
+Bilang panghalili, pwede mong patakbuhin ang JAR file nang direkta:<br/>
+<pre>java -jar zap.jar</pre>
+Lahat ng mga opsyon sa ibaba ay maaring mapasa sa kahit alinman sa mga ito.
+
+<h2>Mga Opsyon</h2>
+
+Ang ZAP ay sumusuporta sa mga sumusunod na mga opsyon ng linya ng utos:
 
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-cmd</td><td>Runs ZAP 'inline', ie without starting the UI or a daemon</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-config</td><td>Overrides the specified key=value pair in the configuration file</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-daemon</td><td>Starts ZAP in 'daemon' mode, ie without a UI</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-dir</td><td>Uses the specified directory instead of the default one</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-installdir</td><td>Overrides the code that detects where ZAP has been installed with the specified directory</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-h</td><td>Shows all of the command line options available, including those added by add-ons</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-help</td><td>The same as -h </td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-host</td><td>Overrides the host used for proxying specified in the configuration file</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-port</td><td>Overrides the port used for proxying specified in the configuration file</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-version</td><td>Reports the ZAP version</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-newsession</td><td>Creates a new session at the given location</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-session</td><td>Opens the given session after starting ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-bersyon</td><td>Nag-uulat sa bersyon ng ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-cmd</td><td>Patakbuhin ang inline (lumalabas kapag ang mga opsyon ng linya ng utos ay kumpleto)</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-daemon</td><td>Sinisimulan ang ZAP na naka-daemon mode, ie walang UI</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-config &lt;kvpair&gt;</td><td>Pinapawalang-bisa ang espesipikong susi=pares ng halaga sa kumpigurasyon na file.<code>-kumpig</code>ang mga opsyon ng linya ng utos ay aplikado sa order na naka-espisipiko sa kanila.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-configfile&lt;path&gt;</td><td>Pinapawalang-bisa ang susi=pares ng halaga kasama ang espesipikong katangian ng file</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-dir &lt;dir&gt;</td><td>Ginagamit ang espesipikong directory sa halip na ang default nito</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-installdir &lt;dir&gt;</td><td>Pinapawalang-bisa ang code na tumutuklas kung saan ang ZAP ay naka-install kasama ang espesipikong directory</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-h</td><td>Nagpapakita sa lahat ng opsyon ng linya ng utos na magagamit, kasama na rin yung idinagdag ng add-ons</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-help</td><td>Katulad ng -h</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-newsession &lt;path&gt;</td><td>Lumilikha ng isang bagong sesyon sa binigay na lokasyon</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-session &lt;path&gt;</td><td>Nagbubukas ng binigay na sesyon pagkatapos masimulan ang ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-host &lt;host&gt;</td><td>Pinapawalang-bisa ang host na ginagamit sa proxying na naka-espesipiko sa kumpigurasyon na file</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-port &lt;port&gt;</td><td>Pinapawalang-bisa ang port na ginagamit sa proxying na naka-espesipiko sa kumpigurasyon na file</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-lowmem</td><td>Gamitin ang database sa halip na ang memorya kung maari, ito ay eskperimental pa rin</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-experimentaldb</td><td>Gamitin ang eksperimental na code ng generik na database, kung saan hindi rin nakakagulat na ito ay eksperimental pa rin</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstall &lt;addon&gt;</td><td>I-install ang espesipikong add-on mula sa Marketplace ng ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstallall</td><td>I-install lahat ang pwedeng magamit na mga add-on mula sa Marketplace ng ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonuninstall &lt;addon&gt;</td><td>I-uninstall ang espesipikong add-on</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonupdate</td><td>I-update lahat ng nabagong add-on mula sa Marketplace ng ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonlist</td><td>Ilista ang lahat ng mga naka-install na mga add-on</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-script &lt;script&gt;</td><td>Patakbuhin ang espesipikong script (daanan ng sistema ng file) kung ang linya ng utos/daemon, o i-load lang kung ito ay GUI</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-last_scan_report &lt;path&gt;</td><td>Likhain ang 'Huling Report ng Pagsusuri' papunta sa espisipikong landas</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-suppinfo</td><td>Nagpapalabas ng nauugnay na mga detalye bilang suporta at pag-troubleshoot (papunta sa console/labas na pamantayan). Tulad ng: bersyon ng ZAP, bersyon ng java, naka-install na mga add-on at bersyon, lokal na impormasyon, gumaganang sistema, at iba pa.</td></tr>
 </table>
 <br>
-The options '-session' and '-newsession' are mutually exclusive. An error will be shown and ZAP exit (if not in GUI) when both options are set.
+Ang mga opsyon <code>-session</code> at <code>-newsession</code> ay kapwa eksklusibo. Ang isang error ay ipapalabas at lalabas ang ZAP (kung wala sa GUI) kung naka-set ang parehong mga opsyon.
 <br>
-Relative paths to session file are resolved against the "session" directory located in ZAP's home directory (default or specified with -dir option).
+Mga relatibong landas papunta sa file ng sesyon ay nalutas laban sa "sesyon" directory na matatagpuan sa home directory ng ZAP
+(default or naka-espesipiko sa <code>-dir</code> opsyon).
 <br/>
-Configuration keys should be specified using the dot notation based their location in the XML of the configuration file, eg:<br/>
-<pre>-config api.key=12345 -config connection.timeoutInSecs=60</pre>  
-Note that add-ons can add extra command line options.
+Mga susi ng kumpigurasyon ay dapat naka-espesipiko gamit ang notasyon na dot na naka-base ang kanilang lokasyon sa XML ng kumpigurasyon, eg:<br/>
+<pre>&lt;zap-script&gt; -config api.key=12345 -config connection.timeoutInSecs=60</pre>
+Tandaan na ang mga add-on ay maaring magdagdag ng extrang mga opsyon sa linya ng utos.
 
 <p>
-Examples:
+Mga Halimbawa:
 	<ul>
-		<li>Start ZAP in 'daemon' mode with a new session created at a given path:
-			<pre>-daemon -newsession session</pre>
+		<li>Simulan ang ZAP sa mode na 'deamon' kasama ang bagong sesyon na ginawa sa naibigay na landas:
+			<pre>&lt;zap-script&gt; -daemon -newsession session</pre>
 		</li>
-		<li>Create a report of the last scan of an existing session and exit ZAP once finished:
-			<pre>-last_scan_report /path/to/save/report.xml -session /path/to/existing/session -cmd</pre>
+		<li>Gumawa ng isang ulat tungkol sa huling iskan ng isang nabuo nang sesyon at lumabas ng ZAP pag natapos na:
+			<pre>&lt;zap-script&gt; -last_scan_report /full/path/to/save/report.xml -session /full/path/to/existing/session -cmd</pre>
 		</li>
 	</ul>
 
-<h2>See also</h2>
+<h2>Tingnan rin</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<a href="intro.html">Panimula</a></td><td>ang panimula ng ZAP</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="start/concepts/api.html">API</a></td><td>to control ZAP programmatically</td></tr>
+<a href="start/concepts/api.html">API</a></td><td>para kontrolin ang ZAP nang naka-program</td></tr>
 </table>
 
 </body>

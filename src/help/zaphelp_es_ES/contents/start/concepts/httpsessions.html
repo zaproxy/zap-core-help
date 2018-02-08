@@ -2,61 +2,38 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>HTTP Sessions</title>
+<title>Sesiones HTTP</title>
 </head>
 <body bgcolor="#ffffff">
-	<h1>HTTP Sessions</h1>
-	<p>This tool keeps track of the existing HTTP Sessions on a
-		particular Site and allows the Zaproxy user to force all requests to
-		be on a particular session. Basically, it allows the user to easily
-		switch between user sessions on a Site and to create a new Session
-		without "destroying" the existing ones.</p>
+	<h1>Sesiones HTTP</h1>
+	<p>Esta herramienta realiza un seguimiento de las sesiones HTTP existente en un sitio particular y le permite Zaproxy todas las solicitudes que en una sesión especial de la fuerza. Básicamente, permite al usuario cambiar fácilmente entre sesiones de usuario en un sitio y crear una nueva sesión sin "destruir" a los ya existentes.</p>
 
 	<p>
-		It is based on the concept of Session Tokens, which are HTTP message
-		parameters (for now only Cookies) which allow an HTTP server to
-		connect a request message with any previous requests or data stored.
-		In the case of Zaproxy, conceptually, session tokens have been
-		classified into 2 categories: default session tokens and site session
-		tokens. The default session tokens are the ones that the user can set
-		in the <a href="../../ui/dialogs/options/httpsessions.html">Options
-			screen</a> and are tokens that are, by default, automatically considered
-		session tokens for any site (eg. phpsessid, jsessionid, etc). The site
-		session tokens are a set of tokens for a particular site and are
-		usually set up using the popup menus available in the <a
-			href="../../ui/tabs/params.html">Params Tab</a>.
+		Se basa en el concepto de Tokens de sesión, que son los parámetros de mensaje HTTP (por ahora sólo Cookies) que permiten a un servidor HTTP conectar un mensaje de solicitud con sus peticiones anteriores o los datos almacenados.
+		En el caso de Zaproxy, conceptualmente, tokens de sesión han sido clasificados en 2 categorías: default sesión fichas y tokens de sesión del sitio. Los tokens de sesión por defecto son los que el usuario puede configurar en la <a href="../../ui/dialogs/options/httpsessions.html">pantalla de opciones</a> y son fichas que, por defecto, automáticamente se consideran tokens de sesión para cualquier sitio (por ejemplo. phpsessid, jsessionid, etc). Los tokens de sesión del sitio son un conjunto de fichas para un sitio particular y generalmente se establecen utilizando los menús emergentes disponibles en la <a
+			href="../../ui/tabs/params.html">Ficha Parámetros</a>.
 	</p>
 
 	<p>
-		This tool automatically detects, using the defined session tokens or
-		the automatically detected default session tokens, any HTTP session
-		which exists in the communication. The detected sessions are shown in
-		the <a href="../../ui/tabs/httpsessions.html">HTTP Sessions Tab</a>.
+		Esta herramienta detecta automáticamente, con los tokens de sesión definido o los tokens de sesión por defecto automáticamente detectado, alguna sesión HTTP que existe en la comunicación. Las sesiones detectadas se muestran en la <a href="../../ui/tabs/httpsessions.html">pestaña de sesiones HTTP</a>.
 	</p>
 
 	<p>
-		The user can, using the button available on the <a
-			href="../../ui/tabs/httpsessions.html">HTTP Sessions Tab</a>, create
-		a new session without destroying the existing one, or can force one of
-		the sessions as 'active'. When a session is 'active', all the outbound
-		requests sent to the corresponding Site are modified, the session
-		tokens being set up to match the active session. In this way, the user
-		can easily force some messages to be 'part of' a particular session
-		and then switch and send messages on another session.
+		El usuario puede, utilizando el botón disponible en la <a
+			href="../../ui/tabs/httpsessions.html">pestaña de sesiones HTTP</a>, crear una nueva sesión sin destruir la existente, o puede forzar una de las sesiones como 'activos'. Cuando una sesión está 'activa', todas las solicitudes salientes enviadas al sitio correspondiente se modifican, los tokens de sesión está establecidos para que coincida con la sesión activa. De esta manera, el usuario puede forzar fácilmente algunos mensajes que 'parte de' una determinada sesión y después cambian y enviar mensajes en otra sesión.
 	</p>
 
 	<p>
-		The HTTP Sessions tool is configured using the <a
-			href="../../ui/dialogs/options/httpsessions.html">HTTP Sessions
-			Options screen</a>.
+		El Spider es configurado usando la <a<br>
+			href="../../ui/dialogs/options/spider.html">Pantalla de opciones de Spider</a>.
 	</p>
 
 	<h2>Acceso vía</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/tabs/httpsessions.html">HTTP Sessions
-					tab</a></td>
+			<td><a href="../../ui/tabs/httpsessions.html">Sesiones HTTP
+					pestaña</a></td>
 			<td></td>
 		</tr>
 	</table>
@@ -76,13 +53,13 @@
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			<td><a href="../../ui/dialogs/options/httpsessions.html">HTTP
-					Sessions Options screen</a></td>
-			<td>for an overview of the tool's Options</td>
+					Pantalla de opciones de sesión</a></td>
+			<td>para una vista general de las opciones de la herramienta</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/tabs/params.html">Params Tab</a></td>
-			<td>for an overview of Params Tab</td>
+			<td><a href="../../ui/tabs/params.html">Pestaña de Parámetros</a></td>
+			<td>para un resumen de la Pestaña de Parámetros</td>
 		</tr>
 
 	</table>

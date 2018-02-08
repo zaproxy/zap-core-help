@@ -9,32 +9,32 @@ Release 1.1.0
 <body bgcolor="#ffffff">
 <h1>Release 1.1.0</h1>
 <p>
-The following changes were made in this release:
+Ang mga sumusunod na pagbabago ay ginawa para sa release na ito:
 </p>
-<h2>Significant changes:</h2>
+<h2>Mga Mahahalagang pagbabago:</h2>
 
-<h3>OWASP rebranding</h3>
-ZAP has been accepted as an OWASP project.<br>
-Its homepage is now: http://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project
+<h3>Rebranding ng OWASP</h3>
+Ang ZAP ay tinanggap biliang isang OWASP na proyekto.<br>
+Ang homepage nito ngayon ay: https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project
 
 <h3>Brute Force</h3>
-The ability to brute force files and directories based on code from the OWASP DirBuster project. <br>
-The new Brute Force tab shows the files and directories found.
+Ang kakayahanang mag-brute force ng mga file at mga directory batay sa code mula sa OWASP DirBuster na proyekto. <br>
+Ang bagong Brute Force tab ay nagpapakita ng mga file at mga directory na natagpuan.
 
-<h3>Port Scan</h3>
-The ability to port scan sites. <br>
-The new Port Scan tab shows the ports found.
+<h3>Scan ng Port</h3>
+Ang kakayahang mag-scan ng port sa mga site. <br>
+Ang bagong Scan ng Port na tab ay nagpapakita ng mga port na natagpuan.
 
-<h3>Active Scan tab</h3>
-The new <a href="../ui/tabs/ascan.html">Active Scan tab</a> shows the requests and responses as a result of actively scanning a site.
+<h3>Aktibong Scan tab</h3>
+Ang bagong <a href="../ui/tabs/ascan.html">Aktiboong Scan tab</a> ay nagpapakita ng mga request at mga response bilang resulta ng mga aktibong pag-scan ng site.
 
 <h3>Spider tab</h3>
-The <a href="../ui/tabs/spider.html">Spider tab</a> now allows you to continue using ZAP while spidering a site.<br>
-You can also pause and resume the spider.    
+Ang <a href="../ui/tabs/spider.html">Spider tab</a> ngayon ay nagpapahintulot sa iyong ipagpatuloy ang paggamit ng ZAP habang nag-spider ng isang site.<br>
+Maaring mo ring itigil at ituloy ang spider.    
 
-<h3>Smartcard support</h3>
-Smart card support has been added c/o the Andiparos project.<br>
-The following smartcard devices have been tested on Windows:
+<h3>Suporta ng Smartcard</h3>
+Ang suporta ng Smart Card ay naidagdag ng proyekto ng Andiparos.<br>
+Ang sumusunod na aparato ng smartcard ay nasubok na sa Windows:
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Safeguard</td><td>Aladdin eToken</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td></td><td>Aladdin eToken Pro</td></tr>
@@ -43,50 +43,49 @@ The following smartcard devices have been tested on Windows:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Gemalto</td><td>Reflex 20 V2</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td></td><td>Swiss Stick</td></tr>
 </table>
-The following smartcard devices are reported to work:
+Ang sumusunod na mga aparato ng smartcard ay inulat na gumana:
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Omnikey</td><td>CardMan 4040</td></tr>
 </table>
 
 <h3>Attack menu</h3>
-The new <a href="../ui/tabs/sites.html">Sites tab</a> right click 'Attack' menu allows you to start various scans.
+Ang bagong <a href="../ui/tabs/sites.html">Sites tab</a> i-right click ang 'Attack' menu ay nagpapahintulot sa iyo na simulan ang iba't-ibang mga scan.
 
-<h3>More internationalisation</h3>
-All of the main tabs and menu items have now been internationalised.
+<h3>Higit pang internationalisation</h3>
+Lahat ng mga pangunahing mga tab at mga item ng menu ay na-internationalise na.
 
-<h3>Localisation</h3>
-Support for the following languages are built into this version:
+<h3>Lokalisasyon</h3>
+Ang suporta para sa sumusunod nga mga wika ay naisagawa sa bersyong ito:
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>English</td><td>The default language</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ingles</td><td>Ang default na wika</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Brazilian Portuguese</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>German</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Aleman</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Polish</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Spanish</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Espanyol</td><td></td></tr>
 </table>
     
-<h3>Language selection</h3>
-On start up you will be prompted to choose the language to use.<br>
-New languages are automatically detected by the presence of files with names of the form Messages_&lt;locale&gt;.properties in the ZAP directory. 
+<h3>Pagpipilian ng Wika</h3>
+Sa simula ay papipiliin ka ng wikang gagamitin.<br>
+Ang mga bagong wika ay awtomatikong natuklas ng presensiya ng mga file na may mga pangalan ng form na Messages_&lt;locale&gt;.properties sa ZAP directory. 
 
-<h2>Minor changes:</h2>
+<h2>Maliit na mga pagbabago:</h2>
 
-<h3>Disabled 'default file' plugins</h3>
-The plugins which detect default files are effectively made redundant by the new 
-brute force scanner.<br>
-These have therefore been disabled.
+<h3>Hindi pinagana na mga 'default file' plugin</h3>
+Ang mga plugin na nagtutuklas ng default na mga file ay epektibong ginawang paulit-ulit ng bagong scanner ng brute force.<br>
+Ang mga ito ay hindi pinagana.
 
-<h3>Scanner summaries</h3>
-Counts of the number and types of the current scans are now displayed in the <a href="../ui/footer.html">footer</a>.
+<h3>Mga buod ng scanner</h3>
+Ang mga bilang ng mga numero at mga uri ng kasalukuyang scan ay ipinapakita na ngayon sa <a href="../ui/footer.html">footer</a>.
 
 
-<h2>See also</h2>
+<h2>Tingnan din sa</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<a href="../intro.html">Panimula</a></td><td>ang panimula ng ZAP</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<a href="releases.html">Mga Release</a></td><td>ang buong set ng mga release</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<a href="../credits.html">Credits</a></td><td>mga tao at grupo na ginawang posible ang release na ito</td></tr>
 </table>
 </body>
 </html>

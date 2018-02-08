@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Kullanıcı Arayüzüne Genel Bakış
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Kullanıcı Arayüzüne Genel Bakış</h1>
+Kullanıcı arayüzü şundan oluştu:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="tlmenu/tlmenu.html">Üst Düzey Menü</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="tltoolbar.html">Üst Düzey Araç Çubuğu</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Birden çok sekme içeren üç pencere, aşağıda detaylandırılmıştır</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="footer.html">Alt başlık</a></td><td></td></tr>
+</table>
+
+Üç pencerenin her biri bir veya daha fazla sekme grubuna sahiptir.<br> 
+ZAP başlatıldığında varsayılan olarak sadece gerekli sekmeler gösterilir.<br>
+(örümcek ve etkin tarayıcı gibi) veya ne zaman kalan sekmeler kullanıldıkları zaman veya onları görüntülediğinizde her bir pencerenin en sağındaki özel sekmeyi yeşil '+' simgesiyle işaretleyin. Gizli sekmeler yoksa bu özel sekme kaybolur.<br>
+Sekmeler, sekme seçildiğinde gösterilen küçük bir 'x' simgesi ile kapatılabilir.<br>
+Sekmeler ayrıca, sekme seçildiğinde de gösterilen küçük bir 'iğne' simgesi aracılığıyla 'sabitlenebilir' - ZAP'ın bir sonraki başlatılışında bu sabitlenmiş sekmeler gösterilecektir. 
+
+<h3>'Ağaç' penceresi</h3>
+Bu, sol tarafta görüntülenir ve ziyaret edilen URL'lerin etrafında gezinmenizi sağlar.
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="tabs/sites.html">Siteler sekmesi</a></td><td>Bu, bir ağaç yapısı üzerinde ziyaret edilen tüm URL'leri gösterir</td></tr>
+</table>
+
+<h3>'Çalışma alanı' penceresi</h3>
+Bu, sağ üst köşede bulunur ve isteklerin ve yanıtların görüntülenebildiği yerdir. Ayrıca, burada bir <a href="../start/concepts/breakpoints.html">ara noktası</a> 
+isabet aldı.
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="tabs/request.html">İstek sekmesi</a></td><td>Bu, tarayıcınızın uygulamaya gönderdiği verileri gösterir</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="tabs/response.html">Yanıt sekmesi</a></td><td>Bu, uygulamanın tarayıcınıza gönderdiği verileri gösterir</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="tabs/break.html">Ara sekmesi</a></td><td>Bu, bilgiler üzerinde oynamalar yapmanıza izin verir</td></tr>
+</table>
+
+<h3>'Bilgi' penceresi</h3>
+Bu alt kısımda gösterilir ve yararlı bilgilerin görüntülendiği yerdedir.
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="tabs/history.html">Geçmiş sekmesi</a></td><td>Bu istekleri yapılış sırasına göre gösterir</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="tabs/search.html">Arama sekmesi</a></td><td>Bu tüm istekleri ve yanıtları aramanıza izin verir</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="tabs/breakpoints.html">Ayrılma noktaları sekmesi</a></td><td>Bu, ara noktaların ayarını gösterir</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="tabs/alerts.html">Uyarı sekmesi</a></td><td>Bu, uygulama üzerinde ortaya çıkan uyarıları gösterir</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="tabs/ascan.html">Aktif tarama sekmesi</a></td><td>Bu aktif taramaları gösterir</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="tabs/spider.html">Örümcek sekmesi</a></td><td>Bu henüz ziyaret edilmeyen URL'leri gösterir</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="tabs/params.html">Parametreler sekmesi</a></td><td>Bu bir sitenin kullandığı parametrelerin bir özetini gösterir</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="tabs/output.html">Çıkış sekmesi</a></td><td>Bu çeşitli bilgilendirici mesajları gösterir</td></tr>
+</table>
+
+<p>
+Sekme başlığındaki gri 'x' simgesini tıklayarak gerekli sekmeler hariç hepsini gizleyebilirsiniz.<br>
+Gizlemiş olduğunuzu şunun sayesinde de görüntüleyebilirsiniz: <a href="tlmenu/view.html">İzleme Menüsü</a>.<br>
+Gizli sekmeler başka bir işlem tarafından 'etkinleştirildiğinde' de görünebilir.
+
+<h2>Ayrıca bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../start/start.html">Başlıyoruz</a></td><td>zAP kullanımına başlamak 
+için detaylar</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="dialogs/dialogs.html">Diyaloglar</a></td><td>diyalog ve açılır pencere deyatları için </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Giriş</a></td><td>ZAP'a giriş</td></tr>
+</table>
+
+</body>
+</html>

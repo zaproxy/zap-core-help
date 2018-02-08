@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Görüntü Seçenekleri ekranı
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Görüntü Seçenekleri ekranı</h1>
+<p>
+Görüntü ekranı yapılandırmanızı sağlar:
+
+<h3>Görüntüler</h3>
+ZAP görüntülerini işleyecekse.
+
+<h3>(Yerel) BAĞLANTI isteklerini göster</h3>
+Tarafından gelen HTTP CONNECT istekleri <a href="localproxy.html">Yerel Proxyler</a> mevcut durumda devam etmelidir
+<a href="../../tlmenu/file.html">oturum</a> ve geçmiş sekmesinde <a href="../../tabs/history.html">gösterilen</a>. Varsayılan değer şudur:
+Bu istekleri göstermemek için sıkça gerçekleşir (TLS / SSL, WebSocket ... bağlantılarına hazırlık amacıyla) ve, teftiş edilmedikçe istemci uygulamanın davranışı, (genellikle) çok fazla ilgi çekici değildir.
+
+<h3>Görünüm</h3>
+3 ana panelin yerleşimi.<br>
+Aşağıdaki seçenekler mevcuttur:
+<ul>
+    <li>Sola sığdır (Siteler) sekmesi - Siteler sekmesini içeren 'ağaç' paneli genişler        sol tarafın tam uzunluğu olması için. Bu, 'bilgi' panelinde kullanılabilen alan miktarını azaltacaktır.        </li>
+    <li>Alt sekmeleri (Geçmiş vb.) maksimize et - 'Bilgi' paneli alt kısmın tam uzunluğu
+        boyunca genişler. Bu 'ağaç' paneli için kullanılabilecek alanın miktarını
+        azaltacaktır.</li>
+    <li>Tam Düzenleme - Seçilen sekme tüm ekranı kaplar. Bu küçük
+        ekranlar üzerinde ZAP kullanıldığı zaman yararlıdır.</li>
+</ul>
+
+<h3>Yanıt Kontrol Panosu Konumu</h3>
+İstek sekmesine göre cevap sekmesinin konumunun yapılandırılmasına izin ver.<br>
+Aşağıda ki seçenekler kullanılabilir:
+<ul>
+    <li>Sekmeler yan yana - Talep ve yanıt sekmeleri yan yana. Bu
+ görğntğlenen bilgiyi arttırır ama talep
+ ve cevabı aynı anda göremezsiniz.</li>
+    <li>Yan Yana Paneller - Talep paneli Yanıt panelinin sol tarafında
+        gösterilir. Bu gösterilebilen bilgileri azaltır fakat istek ve cevabın ikisini de aynı anda görebilirsiniz.</li>
+    <li>Talep Üzerinde Gösterilen Talep - Talep paneli Yanıt Paneli'nin üzerinde gösterilir. Bu görüntülenen bilgiyi azaltır ama talep ve
+ cevabı aynı anda görmenizi sağlar.</li>
+</ul>
+Görüntüleme seçeneği Tam Düzen olarak ayarlandığı zaman Yanıt Paneli Konumu seçeneği geçerli olmaz.
+
+<h3>Ara düğmelerini göster</h3>
+Ara düğmelerinin yerleri.
+
+<h3>Büyük talep görüntüsü min boyutu</h3>
+Gerçek bütün yerine 'büyük bütün isteği' iletisi gösterildiği zaman byte cinsinden istek bütününün minimum boyutu.<br>
+Bu çok büyük bütünlerin kullanıcı arayüzünü yavaşlatmasını engellemek içindir.<br>
+Bu değeri -1 yapmak talebin boyutuna bakmaksızın gösterilmesini sağlar.
+
+<h3>Büyük cevap görünümü min boyut</h3>
+Gerçek bütün yerine 'büyük cevap bütünü' iletisi gösterildiği zaman byte cinsinden cevap bütününün minimum boyutu.<br>
+Bu, çok büyük gövdelerin UI'yı yavaşlatmasının önüne geçmek içindir.<br>
+Bu değeri -1 olarak ayarladığınız takdirde, yanıt ne kadar büyük olursa olsun, her zaman görüntülenecektir.
+
+<h3>Çıkış Sekmeleri Zaman Damgası Seçenekleri</h3>
+Çıktı sekmesi üzeride zaman damgalarını bir kez etkinleştirdiğiniz zaman artık içinde zaman damgalarının görünmesini istediğiniz formatı yapılandırabilirsiniz. 
+Ya aşağı açılır listeden önceden tanımlanmış bir format seçin ya da kendi seçtiklerinizden birini girin. Bu format, Java'nın SimpleDateFormat'ını temel alır. Zaman damgası formatını seçtikten ya da girdikten sonra girişe basarsanız sağdaki örnek sizin seçiminizi yansıtacak şekilde güncellenir. Eğer ZAP girmiş olduğunuz formatı kullanamazsa o zaman örnek Varsayılan format 
+şeklinde gösterilecek.
+
+<table border="1" cellpadding="5">
+<tr> <td> Uzun &amp; Varsayılan </td> <td> yyyy-AA-gg SS:dd-ss </td> </tr>
+<tr> <td> ISO8601 </td> <td> yyyy-MM-dd'T'HH:mm:ssZ </td> </tr>
+<tr> <td> Sadece Zaman </td> <td> SS:dd:ss </td> </tr>
+</table>
+
+<h3>Yazı Tipi Boyutu</h3>
+ZAP ekranında kullanılan varsayılan metin boyutu. Bunu -1 olarak ayarlarsanız, sistem varsayılan boyutu kullanılacaktır.<br>
+'Yazı Tipi Örneki' alanı varsayılan metnin ne kadar büyük görüntüleneceğini gösterir.<br>
+ZAP yeniden başlatıldığında bu ayar yalnızca etkindir.
+
+<h2>Ayrıca Bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../overview.html">Kullanıcı arayüzüne genel bakış</a></td><td>kullanıcı arayüzünün genel görünümü için.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="options.html">Seçenekler diyalogları</a></td><td>diğer Seçenekler diyalog ekranlarının ayrıntıları için.</td></tr>
+</table>
+
+<h2>Dış bağlantılar</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html">Java'nın SimpleDataFormat detayları için</a></td></tr>
+</table>
+
+</body>
+</html>

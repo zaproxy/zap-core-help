@@ -3,17 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Release 1.3.0
+الإصدار 1.0.0
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Release 1.3.0</h1>
+<h1>الإصدار 1.0.0</h1>
 <p>
-The following changes were made in this release:
+تم إجراء التغييرات التالية في هذا الإصدار:
 </p>
-<h2>Significant changes:</h2>
+<h2>التغييرات الهامة:</h2>
 
-<h3>Fuzzing</h3>
+<h3>التضبيب</h3>
 Strings in a response can now be fuzzed to try to find vulnerabilities.<br>
 Anti CRSF tokens can be detected and automatically regenerated when fuzzing.<br/>
 This functionality is based on code from the OWASP JBroFuzz project.
@@ -31,40 +31,40 @@ If ZAP is running as a daemon then the API is automatically enabled, otherwise t
 The API can be navigated by opening http://zap/ in your browser when proxying via ZAP. 
 
 <h3>دمج Beanshell</h3>
-The <a href="http://www.beanshell.org/">BeanShell</a> is an interactive Java shell that can be used to execute BeanShell scripts.<br> 
+على <a href="http://www.beanshell.org/">BeanShell</a> is an interactive Java shell that can be used to execute BeanShell scripts.<br> 
 These scripts are a simplified form of Java that use many elements from Java syntax, but in a simpler scripting format. <br>
 All Java code is also valid BeanShell code.<br>
 BeanShell integration in OWASP ZAP enables you to write scripts using the ZAP functions and data set.<br> 
 This can be a very powerful feature for analyzing web applications.<br>
 
 
-<h3>Full internationalisation</h3>
+<h3>تدويل</h3>
 All display string are now fully internationalised.
 
-<h3>Localisation</h3>
+<h3>الأوضاع</h3>
 Out of the box support for the following languages:
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>الإنكليزية</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Brazilian Portuguese</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Chinese</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>French</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>German</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Greek</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Indonesian</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Japanese</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Polish</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Spanish</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>البرتغالية البرازيلية</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>الصينية</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>الفرنسية</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>الألمانية</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>اليونانية</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>الإندونيسية</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>ياباني</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>البولندية</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>الأسبانية</td></tr>
 </table>
 
 
-<h2>Minor changes:</h2>
+<h2>تغييرات طفيفة:</h2>
 
 <h3>Hex view</h3>
-The <a href="../ui/tabs/request.html">طلب</a>, <a href="../ui/tabs/response.html">استجابة</a> tabs now provide
+على <a href="../ui/tabs/request.html">طلب</a>, <a href="../ui/tabs/response.html">استجابة</a> tabs now provide
 a 'Hex View' option which will display the request and response bodies in hex format. 
 
-<h3>Search results</h3>
-The <a href="../ui/tabs/search.html">Search tab </a> now displays all instances of a string found rather than just the first instance
+<h3>نتائج البحث</h3>
+على <a href="../ui/tabs/search.html">ألسنة البحث </a> now displays all instances of a string found rather than just the first instance
 in each request or response. 
 
 <h3>Exclude URLs</h3>

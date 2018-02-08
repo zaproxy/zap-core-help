@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Uyarılar
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Uyarılar</h1>
+<p>
+Uyarı, olası bir güvenlik açığı olup, belirli bir istekle ilişkilidir.<br/>
+Bir isteğin birden fazla uyarısı olabilir.<br/>
+</p>
+<p>
+Uyarılar UI'de riski belirten bir bayrakla gösterilir:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/071.png" align="bottom" width="16" height="16" />&nbsp; Yüksek</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/076.png" align="bottom" width="16" height="16" />&nbsp; Orta</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/074.png" align="bottom" width="16" height="16" />&nbsp; Düşük</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/073.png" align="bottom" width="16" height="16" />&nbsp; Bilgilendirici</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/072.png" align="bottom" width="16" height="16" />&nbsp; Yalnış pozitif</td><td></td></tr>
+</table>
+
+<p>
+Uyarılar, bunlarla sınırlı olmamakla beraber, çeşitli ZAP bileşenleri tarafından eklentiler (uzantılar) veya <a href="../../ui/dialogs/addalert.html">Add Alert dialog</a> (uyarı ayrıntılarını / bilgileri güncellemenize yada değiştirmenize izin veren) aracılığıyla geliştirilebilir: <a href="ascan.html">active scanning</a>, <a href="pscan.html">passive scanning</a>,.
+</p>
+<p>
+Uyarılar <a href="../../ui/tabs/history.html">Geçmiş sekmesinde</a> en yüksek tehlike uyarısını gösteren bir bayrak ile işaretlenir.<br/>
+<a href="../../ui/tabs/alerts.html">Uyarılar sekmesindeki</a> tüm uyarılar, ve tehlikeye göre toplam uyarı sayısı <a href="../../ui/footer.html">alt bilgide</a> gösterilir.
+</p>
+
+<a name="alertoverrides"></a><h2>Uyarı geçersiz kılmaları</h2> 
+
+ZAP tarafından ortaya atılan uyarılarda, ortaya çıkan uyarılar hakkında genel ve özel bilgiler bulunur.
+Spesifik bilgiler, URL ve etkilenen parametre gibi doğrudan potansiyel sorunlarla ilgilidir.
+Genel bilgi, bir açıklama ve ilgili çevrimiçi kaynaklara bağlantılar gibi şeyleri içerir.
+<p>
+Bir 'uyarı geçersiz kılma' yapılandırma dosyası kullanarak jenerik bilgileri değiştirebilir veya ekleyebilirsiniz.
+Bu, zorunlu politikalar, dahili bağlantılar veya kullandığınız belirli teknolojilere ilişkin tavsiyeler gibi şirketinize özgü bilgileri eklemenize izin verir.
+<p>
+Bir uyarıyı geçersiz kılma yapılandırma dosyası, sadece değiştirmek istediğiniz bilgileri içeren bir UTF-8 özellik dosyasıdır.
+'#' ile başlayan satırlar yorum olarak kabul edilir ve göz ardı edilirler.
+<p>
+Format şöyledir:
+<pre>
+&lt;alertid&gt;.&lt;property&gt; = [ + | - ] &lt;your information&gt;
+</pre>
+Aşağıdaki özellikler desteklenir:
+<ul>
+<li>isim</li>
+<li>açıklama</li>
+<li>çözüm</li>
+<li>diğer bilgi</li>
+<li>referans</li>
+</ul>  
+
+Örneğin
+<pre>
+# 40012 = Yansıtılan XSS 
+40012.çözümü için = http://internet.example.com/xss.html adresindeki firmamıza ait özel yönergeleri takip edin
+</pre>
+Değer '+' ile başlarsa o zaman mevcut bilgiye eklenir.
+<br>
+Eğer bir '-' ile başlarsa o zaman mevcut bilginin başına eklenir.
+<br>
+Eğer bir '+' veya '-' ile başlamıyorsa o zaman var olan bilgiyi yenisiyle değiştirir.
+<p>
+Uyarıyı geçersiz olarak ayarlama dosya yolu ile yapılabilir <a href="api.html">API</a>,
+<a href="../../ui/dialogs/options/alert.html">Seçenek Uyarı ekranı</a>
+veya <a href="../../cmdline.html">komut satırı</a> seçenek:  
+<pre>-config alert.overridesFilename=&lt;filename&gt; kullanın</pre>
+
+<h2>Ayrıca bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/overview.html">UI Genel Bakış</a></td><td>kullanıcı ara yüzünün bir genel görünümü için</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="concepts.html">Özellikler</a></td><td>ZAP tarafından sağlanır</td></tr>
+</table>
+
+</body>
+</html>

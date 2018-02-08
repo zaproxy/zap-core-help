@@ -3,78 +3,72 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Session Context screens
+Pantallas de contexto de sesión
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Session Context screens</h1>
+<h1>Pantallas de Contexto de Sesión</h1>
 <p>
-These screens allows you manage <a href="../../../start/concepts/contexts.html">contexts</a>.
+Estas pantallas le permiten controlar <a href="../../../start/concepts/contexts.html">contextos</a>.
 </p>
 <p>
-There is a set of screens for each context you define.
+Hay un conjunto de pantallas para cada contexto que defina.
 </p>
 
-<h3>Top screen</h3>
-This allows you to set the context name and description.
+<h3>Pantalla superior</h3>
+Esto te permite escoger el nombre y descripción de contexto.
 
-<h3>Include in context</h3>
-This allows you to manage the URLs which will be included in the context.<br/>
-URLs which dont match any of the regexs will not be included in the context.
+<h3>Incluir en el contexto</h3>
+Esto le permite administrar las direcciones URL que serán incluidas en el contexto.<br/>
+Las direcciones URL que no coincidan con ninguna de las expresiones regulares, no serán incluidas en el contexto.
 
-<h3>Exclude from context</h3>
-This allows you to manage the URLs which will be excluded from the context.<br/>
-You only need to specify regexs for URLs that you do not want to include but which match one or more
-of the 'include' regexes.
+<h3>Excluir del contexto</h3>
+Esto te permite manejar las direcciones URL que serán excluidas del contexto.<br/>
+Sólo necesitará especificar regexs para direcciones URL que no desea incluir pero que coinciden con una o más de los regexes 'incluir'.
 
-<h3><a name="struct">Structure</a></h3>
+<h3><a name="struct">Estructura</a></h3>
 See the <a href="context-struct.html">Session Context Structure screen</a>.
 
-<h3>Technology</h3>
-This allows you to specify the technologies used in the context, if known.<br/>
-By default all technologies are included.<br/>
-If you exclude technologies that you know are not used then this may speed up 
-<a href="../../../start/concepts/ascan.html">active scanning</a> as rules specific to the excluded
-technologies can be skipped.
+<h3>Tecnología</h3>
+Esto te permite especificar las tecnologías usadas en el contexto, en caso de que se conozcan.<br/>
+Por defecto, todas las tecnologías están incluidas.<br/>
+Si excluye tecnologías que sabe que no se utilizan, entonces esto puede acelerar 
+<a href="../../../start/concepts/ascan.html">el escaneo activo</a> como normas específicas para las tecnologías excluidas pueden ser saltadas.
 
-<h3><a name="auth">Authentication</a></h3>
-See the <a href="context-auth.html">Session Context Authentication screen</a>.
+<h3><a name="auth">Autenticación</a></h3>
+Ver la <a href="context-auth.html">Session Context Authentication screen</a>.
 
-<h3><a name="sm">Session Management</a></h3>
-This allows you to manage the way in which Session Management is being done for the Context. 
-After selecting the Session Management Method type, the options that need to be configured 
-depend on the Session Management Method.
+<h3><a name="sm">Manejo de sesiones</a></h3>
+Esto te permite administrar la manera en la que el Control de Sesiones se está haciendo para el Contexto. 
+Luego de seleccionar el tipo de Método de Control de Sesión, las opciones que necesitan ser configuradas dependen del Método de Manejo de Sesión.
 
-<h4>Cookie-Based Session Management</h4>
-No configuration is needed for this session management method. <small>Read  
+<h4>Administración de sesiones basada en cookies</h4>
+No se necesita ninguna configuración para este método de control de sesión. <small>Read  
 <a href="../../../start/concepts/sessionManagement.html#cbsm">more</a>...</small>
 
-<h4>HTTP Authentication Session Management</h4>
-No configuration is needed for this session management method. <small>Read
+<h4>Control de Sesión de Autenticación de HTTP</h4>
+No se necesita ninguna configuración para este método de control de sesión. <small>Read
 <a href="../../../start/concepts/sessionManagement.html#hasm">more</a>...</small>
 
 
-<h3><a name="users">Users</a></h3>
-This allows you to configure a set of Users that may be used for various other actions
-throughout the application.
-<p>The credentials section of the Users depends on the Authentication Method configured
-for the Context.</p>
+<h3><a name="users">Usuarios</a></h3>
+Esto te permite configurar un conjunto de Usuarios que pueden ser utilizados para diversas acciones a lo largo de la aplicación.
+<p>La sección de credenciales del Usuario depende del Método de Autenticación configurado para el Contexto.</p>
 
 <h2>URL regexs</h2>
-In the <i>Include in *</i>, <i>Exclude from *</i> panels and the <i>Logged in/out indicators</i> of the <i>Authentication</i> panel, you can enter regular expressions to define excluded URLs.
-While you can escape a single meta-character with a backslash, you can also use the <b>\Q...\E</b> escape sequence. All the characters between the <b>\Q</b> and the <b>\E</b> are interpreted as literal characters. E.g. \Q*\d+*\E matches the literal text *\d+*.
-This escape sequence is used in ZAP when you exclude URLs via some context menus.
+En el <i>Incluir en *</i>, <i>Excluir de *</i> panels and the <i>Indicadores de inicio/cierre de sesión</i> of the <i>Autenticación</i> panel, you can enter regular expressions to define excluded URLs.
+While you can escape a single meta-character with a backslash, you can also use the <b>\Q...\E</b> escape sequence. All the characters between the <b>\Q</b> y el <b>\E</b> se interpretan como caracteres literales. Por ejemplo, \Q*\d+*\E es asignado al texto literal *\d+*. Esta secuencia de escape se utiliza en ZAP cuando excludes URLs a través de algunos menús de contexto.
 <br>
-<b>Note:</b> If your URL contains a "\E", then you have to do the following steps when using the <b>\Q...\E</b> escape sequence:
+<b>Nota:</b> Si tu URL contiene un "\E" entonces debes seguir los siguientes pasos al utilizar la <b>\Q...\E</b> secuencia de escape:
 <ul>
-	<li>Open the escape sequence</li>
-	<li>Close the escape sequence before the "character" \E</li>
+	<li>Abre la secuencia de escape</li>
+	<li>Cierra la secuencia de escape antes del "caracter" \E</li>
 	<li>Escape the backslash</li>
 	<li>Open after the "\E" another escape sequence;</li>
-	<li>Close the escape sequence as normally would.</li>
+	<li>Cierra la secuencia de escape como normalmente lo harías.</li>
 </ul>
 <br>
-Example: subdomain.example.com/path?a=<b>\E</b>&amp;moredata=2 should appear as
+Por ejemplo: subdomain.example.com/path?a=<b>\E</b>&amp;moredata=2 debe aparecer como
 <i>\Qsubdomain.example.com/path?a=\E</i><b>\\E</b><i>\Q&amp;moredata=2\E</i>
   
 <h2>Acceso vía</h2>
@@ -90,9 +84,9 @@ Example: subdomain.example.com/path?a=<b>\E</b>&amp;moredata=2 should appear as
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../dialogs.html">Cuadros de diálogo</a></td><td>para detalles de los cuadros de diálogos o popups </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../../start/concepts/authentication.html">Autenticación</a></td><td>for an overview of Authentication </td></tr>
+<a href="../../../start/concepts/authentication.html">Autenticación</a></td><td>para un resumen de Autenticación </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../../start/concepts/sessionManagement.html">Session Management</a></td><td>for an overview of Session Management </td></tr>
+<a href="../../../start/concepts/sessionManagement.html">Control de Sesiones</a></td><td>for an overview of Session Management </td></tr>
 </table>
 
 

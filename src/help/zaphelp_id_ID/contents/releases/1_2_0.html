@@ -3,74 +3,71 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Release 1.2.0
+Rilis 1.3.0
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Release 1.2.0</h1>
+<h1>Rilis 1.3.0</h1>
 <p>
-The following changes were made in this release:
+Berikut perubahan yang dibuat dalam rilis ini:
 </p>
-<h2>Significant changes:</h2>
+<h2>Perubahan yang signifikan:</h2>
 
-<h3>Memory Leaks</h3>
-Memory leaks have been fixed in the <a href="../start/concepts/ascan.html">active scanner</a> and
-<a href="../start/concepts/spider.html">spider</a>.
+<h3>Bocoran memori</h3>
+Kebocoran pada memori telah di perbaiki <a href="../start/concepts/ascan.html">Pembersih aktif</a> dan
+<a href="../start/concepts/spider.html">laba-laba</a>.
 
-<h3>Invoke applications</h3>
-External applications can now be invoked from the Sites and History tabs.
+<h3>Mengelola aplikasi</h3>
+Eksternal aplikasi sekarang bisa diminta dari Situs dan Riwayat tab.
 
-<h3>Passive Scanner</h3>
-The <a href="../start/concepts/pscan.html">passive scanner</a> now looks for vulnerabilities, such as:
+<h3>Pemindai pasif</h3>
+The <a href="../start/concepts/pscan.html">pemindai pasif</a> sekarang melihat untuk kerentanan, seperti:
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Autocomplete forms with password fields</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Cookies without the 'HttpOnly' flag</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>SSL Cookies without the 'secure' flag</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Weak authentication</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Perlengkapan formulir otomatis dengan Bidang kata Sandi</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Kue tanpa bendera ‘Http saja’</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Cookies SSL tanda tanda 'aman'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Otentikasi proxy</td></tr>
 </table>
 
-<h2>Minor changes:</h2>
+<h2>Perubahan kecil:</h2>
 
-<h3>XML Reports</h3>
-A new 'Generate XML Report...' menu item is now included in the top level <a href="../ui/tlmenu/report.html">Reports</a> 
+<h3>Laporan XML</h3>
+dari hasil laporan XML ,  menu item yang baru sekarang termasuk dalam tingkat atas <a href="../ui/tlmenu/report.html">Laporan</a> 
 menu.
 
-<h3>Manual Request Editor and Resend dialogs</h3>
-Requests submitted by the <a href="../ui/dialogs/man_req.html">Penyunting Editor Manual</a> and
-<a href="../ui/dialogs/resend.html">Kirim ulang</a> dialogs are now shown in the <a href="../ui/tabs/sites.html">Situs</a> and 
-<a href="../ui/tabs/history.html">Histori</a> tabs.<br>
-A new 'Method' pull down allows you to switch between the HTTP methods, this automatically moves parameters
-between the URL and the body when a POST method is selected or deselected.
+<h3>Meminta editan manual dan mengirim kembali dialog</h3>
+Permintaan yang dikirimkan oleh <a href="../ui/dialogs/man_req.html">Penyunting Editor Manual</a> Dan
+<a href="../ui/dialogs/resend.html">Kirim ulang</a> sekarang di tampilkan di dialog <a href="../ui/tabs/sites.html">Situs</a> dan 
+<a href="../ui/tabs/history.html">Riwayat</a> tab.<br>
+Sebuah 'Metode' baru tarik turun ke bawah mengizinkan anda untuk mengganti antara metode HTTP, parameter ini secara otomatis memindahkan
+antara URL dan badan ketika sebuah metode POST yang dipilih atau tidak dipilih.
 
-<h3>Alerts UI</h3>
-The <a href="../ui/tabs/sites.html">Situs</a> tab now shows any alerts as flags to the right of any node names.<br>
-The alert counts in the <a href="../ui/footer.html">footer</a> now show the number of different types of alerts rather than
-the total number of instances. 
+<h3>Penjelasan UI</h3>
+The <a href="../ui/tabs/sites.html">Situs</a> tab sekarang menunjukkan peringatan apapun sebagai tanda disebelah kanan nama simpul apapun.<br>
+Jumlah peringatan dalam <a href="../ui/footer.html">footer</a> sekarang menunjukkan jumlah berbagai jenis peringatan daripada jumlah total contoh. 
 
-<h3>Active scanner delay option</h3>
-The delay in milliseconds between each <a href="../start/concepts/ascan.html">active scanner</a> request can now be set via the  
-<a href="../ui/dialogs/options/ascan.html">Options Active Scan screen</a>. This will increase the time an active scan takes
-but will reduce the load on the target.
+<h3>Aktif scanner penundaan pilihan</h3>
+Keterlambatan dalam milidetik antara masing-masing <a href="../start/concepts/ascan.html">pemindai pasif</a> permintaan dapat sekarang diatur melalui  
+<a href="../ui/dialogs/options/ascan.html">Pilihan aktif Scan layar</a>. Hal ini akan meningkatkan waktu pemindaian yang aktif tetapi akan mengurangi beban pada target.
 
-<h3>UI Changes</h3>
-The <a href="../ui/tabs/sites.html">Situs</a> tab now takes up all of the left hand side - this can be changed back 
-via the <a href="../ui/dialogs/options/ascan.html">Options Display screen</a> if required.<br>
+<h3>Perubahan UI</h3>
+The <a href="../ui/tabs/sites.html">Situs</a> tab sekarang mengambil semua dari sisi kiri - hal ini dapat diubah kembali melalui <a href="../ui/dialogs/options/ascan.html">Pilihan tampilan layar</a> jika diperlukan.<br>
 <br>
-The 'toolbar' on the <a href="../ui/tabs/request.html">Request</a>, <a href="../ui/tabs/response.html">Response</a> and
-<a href="../ui/tabs/break.html">Break</a> tabs and the <a href="../ui/dialogs/man_req.html">Penyunting Editor Manual</a> and
-<a href="../ui/dialogs/resend.html">Kirim ulang</a> dialogs is now at the top rather than the bottom.<br>
+Pada 'toolbar' <a href="../ui/tabs/request.html">Permintaan</a>, <a href="../ui/tabs/response.html">Respon</a> dan
+<a href="../ui/tabs/break.html">Istirahat</a> dan tab <a href="../ui/dialogs/man_req.html">Penyunting Editor Manual</a> dan
+<a href="../ui/dialogs/resend.html">Kirim ulang</a> dialog sekarang berada di atas bukan di bagian bawah.<br>
 <br>
-The scanner counts in the <a href="../ui/footer.html">footer</a> are now displayed on the right hand side.<br>
+Pembersihan penting dalam <a href="../ui/footer.html">footer</a> Saat ini di tampilkan  di sebelah kanan.<br>
 <br>
 
-<h2>See also</h2>
+<h2>Lihat juga</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<a href="../intro.html">Lihat juga</a></td><td>pengantar ZAP</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<a href="releases.html">Rilis</a></td><td>set lengkap rilis</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<a href="../credits.html">Kredit</a></td><td>orang-orang dan kelompok-kelompok yang telah membuat rilis ini mungkin</td></tr>
 </table>
 </body>
 </html>

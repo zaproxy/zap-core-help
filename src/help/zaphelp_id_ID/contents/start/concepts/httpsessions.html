@@ -2,87 +2,65 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>HTTP Sessions</title>
+<title>Sesi HTTP</title>
 </head>
 <body bgcolor="#ffffff">
-	<h1>HTTP Sessions</h1>
-	<p>This tool keeps track of the existing HTTP Sessions on a
-		particular Site and allows the Zaproxy user to force all requests to
-		be on a particular session. Basically, it allows the user to easily
-		switch between user sessions on a Site and to create a new Session
-		without "destroying" the existing ones.</p>
+	<h1>Sesi HTTP</h1>
+	<p>Alat ini melacak Sesi HTTP yang ada di Situs tertentu dan memungkinkan pengguna Zaproxy untuk memaksa semua permintaan berada pada sesi tertentu. Pada dasarnya, ini memungkinkan pengguna untuk dengan mudah beralih di antara sesi pengguna di Situs dan membuat Sesi baru tanpa "menghancurkan" yang sudah ada.</p>
 
 	<p>
-		It is based on the concept of Session Tokens, which are HTTP message
-		parameters (for now only Cookies) which allow an HTTP server to
-		connect a request message with any previous requests or data stored.
-		In the case of Zaproxy, conceptually, session tokens have been
-		classified into 2 categories: default session tokens and site session
-		tokens. The default session tokens are the ones that the user can set
-		in the <a href="../../ui/dialogs/options/httpsessions.html">Options
-			screen</a> and are tokens that are, by default, automatically considered
-		session tokens for any site (eg. phpsessid, jsessionid, etc). The site
-		session tokens are a set of tokens for a particular site and are
-		usually set up using the popup menus available in the <a
+		Hal ini didasarkan pada konsep dari Sesi Token, yang pesan HTTP
+ parameter (untuk sekarang hanya Cookie)
+yang memungkinkan sebuah server HTTP untuk
+ menghubungkan pesan permintaan dengan permintaan sebelumnya atau data yang disimpan.
+		Dalam kasus Zaproxy, secara konseptual, token sesi telah dikelompokkan menjadi 2 kategori: token sesi default dan token sesi situs. Default session token adalah orang-orang yang pengguna dapat mengatur dalam <a href="../../ui/dialogs/options/httpsessions.html">Pilihan layar</a> dan token yang, secara default, secara otomatis dianggap token sesi untuk setiap situs (misalnya. phpsessid, jsessionid, dll). Situs token sesi ini adalah satu set token untuk situs tertentu dan biasanya diatur dengan menggunakan popup menu yang tersedia dalam <a
 			href="../../ui/tabs/params.html">Params Tab</a>.
 	</p>
 
 	<p>
-		This tool automatically detects, using the defined session tokens or
-		the automatically detected default session tokens, any HTTP session
-		which exists in the communication. The detected sessions are shown in
-		the <a href="../../ui/tabs/httpsessions.html">HTTP Sessions Tab</a>.
+		Alat ini secara otomatis mendeteksi, menggunakan token sesi yang ditentukan atau token sesi default yang terdeteksi secara otomatis, setiap sesi HTTP yang ada dalam komunikasi. Sesi yang terdeteksi ditampilkan pada <a href="../../ui/tabs/httpsessions.html">HTTP Sessions Tab</a>.
 	</p>
 
 	<p>
-		The user can, using the button available on the <a
-			href="../../ui/tabs/httpsessions.html">HTTP Sessions Tab</a>, create
-		a new session without destroying the existing one, or can force one of
-		the sessions as 'active'. When a session is 'active', all the outbound
-		requests sent to the corresponding Site are modified, the session
-		tokens being set up to match the active session. In this way, the user
-		can easily force some messages to be 'part of' a particular session
-		and then switch and send messages on another session.
+		Pengguna dapat menggunakan tombol tersedia pada <a
+			href="../../ui/tabs/httpsessions.html">Tab HTTP sesi</a>, menciptakan sesi baru tanpa merusak yang sudah ada, atau dapat memaksa salah satu sesi sebagai 'aktif'. Ketika sesi 'aktif', semua permintaan outbound dikirim ke Situs yang sesuai yang dimodifikasi, sesi token yang dibentuk untuk menyesuaikan sesi aktif. Dengan cara ini, pengguna dapat dengan mudah memaksa beberapa pesanan untuk menjadi 'bagian dari' sesi tertentu dan kemudian beralih dan mengirim pesan pada sesi lain.
 	</p>
 
 	<p>
-		The HTTP Sessions tool is configured using the <a
-			href="../../ui/dialogs/options/httpsessions.html">HTTP Sessions
-			Options screen</a>.
+		Alat HTTP sesi dikonfigurasi menggunakan <a
+			href="../../ui/dialogs/options/httpsessions.html">HTTP sesi pilihan layar</a>.
 	</p>
 
-	<h2>Accessed via</h2>
+	<h2>Diakses melalui</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/tabs/httpsessions.html">HTTP Sessions
-					tab</a></td>
+			<td><a href="../../ui/tabs/httpsessions.html">HTTP sesi tab</a></td>
 			<td></td>
 		</tr>
 	</table>
 
-	<h2>See also</h2>
+	<h2>Lihat juga</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/overview.html">UI Overview</a></td>
-			<td>for an overview of the user interface</td>
+			<td><a href="../../ui/overview.html">Ikhtisar UI</a></td>
+			<td>untuk Ikhtisar antarmuka pengguna</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="concepts.html">Features</a></td>
-			<td>provided by ZAP</td>
+			<td><a href="concepts.html">Fitur</a></td>
+			<td>disediakan oleh ZAP</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/options/httpsessions.html">HTTP
-					Sessions Options screen</a></td>
-			<td>for an overview of the tool's Options</td>
+			<td><a href="../../ui/dialogs/options/httpsessions.html">Layar pilihan sesi HTTP</a></td>
+			<td>untuk ikhtisar opsi Alat</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			<td><a href="../../ui/tabs/params.html">Params Tab</a></td>
-			<td>for an overview of Params Tab</td>
+			<td>untuk ikhtisar Tab Params</td>
 		</tr>
 
 	</table>

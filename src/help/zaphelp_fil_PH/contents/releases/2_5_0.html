@@ -3,180 +3,176 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-  Release 2.5.0
+  Inilabas na 2.5.0
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Release 2.5.0</h1>
+<h1>Inilabas na 2.5.0</h1>
 
 <p>
-The following changes were made in this release:
+Ang mga sumusunod na pagbabago ay ginawa sa inilabas na ito:
 </p>
 
-<h2>ZAP API Changes:</h2>
+<h2>Mga pagbabago sa ZAP API:</h2>
 
 <h3>VIEW authorization / getAuthorizationDetectionMethod</h3>
 
-Now returns data wrapped in an object called authorizationDetectionMethod
-
-For example:
+Nagbabalik ngayun ang datos na nakabalot sa isang bagay na tinatawag na authorizationDetectionMethod:
 <pre>{"authorizationDetectionMethod":{"statusCode":"-1"..."headerRegex":""}}</pre>
-instead of:
+maliban sa:
 <pre>{"statusCode":"-1"..."headerRegex":""}</pre>
 
-<h3>VIEW context / context + technologyList</h3>
-Both now return data wrapped in an object called "context"
-
-For example:
+<h3>Tingnan ang context / context + technologyList</h3>
+Ngayon, ibalik ang parehas na datos na nakabalot sa bagay na tinatawag na "context":
 <pre>{"context":{"id":"1", ..., "inScope":"true","loggedOutPattern":""}}</pre>
-instead of:
+maliban sa:
 <pre>{"id":"1", ..., "inScope":"true","loggedOutPattern":""}</pre>
 
 <h3>ACTION spider / scan + scanAsUser</h3>
 </ul>
-Both now support a new optional 'subtreeOnly' parameter which limits the spider to the specified subtree.
-The 'url' parameter is also now optional, as long as a valid 'context' parameter is supplied
+Ngayon, ang parehas na pagsuporta sa bagong opsyunal 'subtreeOnly' parameter na syang nagbibigay hangganan sa spider hanggang sa tinututkoy na substree. Ang 'url' parameter ay isa na ngayong opsyunal, hanggat ang mabisang 'context' parameter ay natutustusan
 
-<h3>New 'stats' component</h3>
-The new 'stats' API component provides access to the <a href="../start/concepts/stats.html">stats</a>
-now maintained by ZAP.<br><br>
+<h3>Ang bagong bumubuo sa 'stats'</h3>
+Ang bagong bumubuo ng API 'stats' ay nagbibigay daan sa <a href="../start/concepts/stats.html">stats</a>
+na ngayon ay pinanatili ng ZAP.<br><br>
 
-Note that some existing components will also have new operations, see the 
-<a href="../start/concepts/api.html">API Web UI</a> for more details.
+Tandaan na ang mga nananatiling mga bahagi ay dapat magkaroon din ng mga bagong pagpapatakbo, tingnan ang 
+<a href="../start/concepts/api.html">API Web UI</a> para sa iba pang mga detalye.
  
 
-<h2>Enhancements:</h2>
+<h2>Ang mga pagpapahusay:</h2>
 <ul>
-<li>Issue 266 : Add auto tagging for setting cookies, json</li>
-<li>Issue 646 : Password outgoing proxy in plain text on screen</li>
-<li>Issue 1171 : Sites tree to raise 'new site / new node' events</li>
-<li>Issue 1229 : Update Extensions/Plugins to Take Advantage of New Confidence Scale</li>
-<li>Issue 1341 : Update alert XML schema to remove element-level name collision</li>
-<li>Issue 1590 : Mode to apply when running as a daemon</li>
-<li>Issue 1713 : Source Code Disclosure SVN Throws False Positive</li>
-<li>Issue 1864 : Copy scan progress as text to clipboard</li>
-<li>Issue 1958 : Allow to disable database (HSQLDB) log</li>
-<li>Issue 1959 : Allow to active scan headers of all requests</li>
-<li>Issue 1980 : Add ZAP CLI to Docker images</li>
-<li>Issue 2068 :  LoggedIn and LoggedOut indicators inside authentication scripts</li>
-<li>Issue 2070 : It should be possible for the authentication scripts to configure how the messages are sent</li>
-<li>Issue 2121 : Disable Req/Resp tabs position options when in "Expand Full" layout</li>
-<li>Issue 2127 : Warn if the report generation failed</li>
-<li>Issue 2162 : add-marketplace-sorting</li>
-<li>Issue 2171 : Add-ons managed via api, cli</li>
-<li>Issue 2174 : ExpressionLanguageInjectionPlugin - Needs logging fix </li>
-<li>Issue 2177 : SourceCodeDisclosureSVN - Can't write to temp DB</li>
-<li>Issue 2183 : API: Include quality in the ascan/progress response</li>
-<li>Issue 2237 : Allow java max mem to be overridden on the cmdline</li>
-<li>Issue 2238 : spider: fallback to parse HTML comments as plain text if no URL found</li>
-<li>Issue 2272 : SQLInjectionHypersonic (Beta) - Exceptions</li>
-<li>Issue 2273 : Support site level stats</li>
-<li>Issue 2274 : Allow to spider just a site's subtree</li>
-<li>Issue 2275 : spider: do not require a URL, through the API, if the context has seeds</li>
-<li>Issue 2277 : spider: preserve query parameters with same name when canonicalising URL</li>
-<li>Issue 2289 : Record site based response time stats</li>
-<li>Issue 2324 : Include scanners' quality in API scanners views</li>
-<li>Issue 2330 : Add authentication stats</li>
-<li>Issue 2335 : Add Outbound Proxy Password Peak</li>
-<li>Issue 2342 : Ability to manage Sites in ZAP via API</li>
-<li>Issue 2347 : Allow to remove context factories from View/Model</li>
-<li>Issue 2361 : Rename tool bar option Expand Full to Full Layout</li>
-<li>Issue 2362 : Allow to select all Spider results</li>
-<li>Issue 2367 : Change break buttons location without restarting ZAP</li>
-<li>Issue 2368 : Do not require a restart to show/hide the main tool bar</li>
-<li>Issue 2381 : Do not allow to save/write to read-only files</li>
-<li>Issue 2400 : Show a more informative message on read timeouts through the proxy</li>
-<li>Issue 2410 : Show HTTP messages in the Spider tab</li>
-<li>Issue 2413 : Disable "Show in History Tab" if message not valid</li>
-<li>Issue 2418 : Spider: support maximum duration in mins option</li>
-<li>Issue 2420 : Allow active scanners to notify that a message was sent</li>
-<li>Issue 2422 : Support Statsd and moved stats to new ext</li>
-<li>Issue 2465 : Allow to wait for ZAP to start with ClientApi</li>
-<li>Issue 2466 : Allow to access a URL through the ZAP API</li>
-<li>Issue 2479 : Show User Guide even if a search view has errors</li>
-<li>Issue 2481 : Set correct application name in Linux</li>
-<li>Issue 2482 : Normalise Session dialogue tables "Exclude from"</li>
-<li>Issue 2484 : Circular Redirects</li>
-<li>Issue 2486 : Clear ScriptVars on session change</li>
-<li>Issue 2494 : ZAP Proxy is not showing the HTTP CONNECT Request in history tab.</li>
-<li>Issue 2504 : Explicitly add manual HTTP requests to Sites tree</li>
-<li>Issue 2506 : Do not discard the session for file based database</li>
-<li>Issue 2512 : Update HSQLDB library to version 2.3.4</li>
-<li>Issue 2519 : Enable menu/button when help add-on is installed</li>
+<li>Isyu 266 : magdagdag ng auto ng pag-tag para sa setting ng mga cookie, json</li>
+<li>Isyu 646 : Ang papalabas na proxy ng password sa plain text sa screen</li>
+<li>Isyu 1171 : Ang mga puno ng site ay nagtataas ng mga bagong site / bagong node ng mga kaganapan</li>
+<li>Isyu 1229 : I-update ang mga extention/plugins sa bagong Confidence Scale Upang Magamit</li>
+<li>Isyu 1341 : I-update ang alert XML schema upang alisin ang banggaan sa antas ng elemento</li>
+<li>Isyu 1590 : Ilapat ang mode kapag tumatakbo bilang isang daemon</li>
+<li>Isyu 1713 : Pagbubunyag ng Source Code SVN Throws False Positive</li>
+<li>Isyu 1864 : kopyahin ang progreso ng pag-scan bilang teksto sa clipboard</li>
+<li>Isyu 1958 : payagan na huwag paganahin ang (HSQLDB) log na database</li>
+<li>Isyu 1959 : Payagan ang scan headers na maging aktibo para sa lahat ng mga kahilingan</li>
+<li>Isyu 1980 : Magdagdag ng ZAP CLI sa mga larawan ng Docker</li>
+<li>Isyu 2068 : Ang Loggedin at Loggedout na tagapagpahiwatig ay nag papatunay sa loob ng script</li>
+<li>Isyu 2070 : Posible para sa mga script ng pagpapatunay na makumpigura kung paano ipapadala ang mga mensahe</li>
+<li>Isyu 2121 : Huwag paganahin ang mga pagpipilian sa posisyon ng tab na Req/resp kapag nasa layout na "Expand Full"</li>
+<li>Isyu 2127 : Balaan kung ang ulat ng henerasyon ay nabigo</li>
+<li>Isyu 2162 : add-marketplace-sorting</li>
+<li>Isyu 2171 : Mga Add-on na pinamamahalaan sa pamamagitan ng api, cli</li>
+<li>Isyu 2174 : ExpressionLanguageInjectionPlugin - kinakailangan ang pag aayos ng pag-log </li>
+<li>Isyu 2177 : SourceCodeDisclosuresvn - Hindi maaaring sumulat sa temp DB</li>
+<li>Isyu 2183 : API: Isama ang kalidad sa pagtugon sa ascan/progress</li>
+<li>Isyu 2237 : Pahintulutan ang java max mem na i-override sa cmdline</li>
+<li>Isyu 2238 : spider : Bumalik sa HTML upang suriin ang mga komento bilang payak na teksto kung walang URL</li>
+<li>Isyu 2272 : SQLInjectionHypersonic (Beta) - Exceptions</li>
+<li>Isyu 2273 : Mga antas ng istatistika na sumusuporta sa site</li>
+<li>Isyu 2274 : Ipahintulot lamang sa spider ang isang sites subtree</li>
+<li>Isyu 2275 : spider: Sa pamamagitan ng API, hindi nangangailangan ng isang URL, kung ang konteksto ay may binhi</li>
+<li>Isyu 2277 : spider: panatilihin ang mga parameter ng query na may parehas na pangalan kapag canonicalising URL</li>
+<li>Isyu 2289 : Nakatala ang site batay sa tugon ng oras ng istatistika</li>
+<li>Isyu 2324 : Ang kalidad ng scanners' ay isama sa mga view ng scanners ng API</li>
+<li>Isyu 2330 : Magdagdag ng mga pagpapatotoo na istatistika</li>
+<li>Isyu 2335 : Magdagdag ng Add Outbound Proxy Password Peak</li>
+<li>Isyu 2342 : Kakayahang mamahala ng mga site sa ZAP sa pamamagitan ng API</li>
+<li>Isyu 2347 : Ang context factories ay pinapayagan na tanggalin mula sa View/Model</li>
+<li>Isyu 2361 : Palitan ang pangalan ng pag pipilian sa tool bar Expand Full na Full Layout</li>
+<li>Isyu 2362 : Payagan piliin ang lahat ng mga resulta ng Spider</li>
+<li>Isyu 2367 : Pagbabago ng lokasyon ng mga sirang buton nang hindi muling nagsisimula ang ZAP</li>
+<li>Isyu 2368 : Hindi nangangailangan na muling simulan para ipakita/itago ang pangunahing tool bar</li>
+<li>Isyu 2381 : Huwag hayaang mag-seyb/magsulat sa basahin-lamang na payls</li>
+<li>Isyung 2400 : Magpakita ng mas maraming nakapagtuturo na mensahe sa mga oras ng pagbabasa sa pamamagitan ng proxy</li>
+<li>Isyu 2410 : Ipakita ang mga mensahe ng HTTP sa tab ng spider</li>
+<li>Isyu 2413 : Huwag paganahin ang "Show in History Tab" kung ang mensahe ay hindi balido</li>
+<li>Isyu 2418 : Spider: suportahan ang maximum na tagal sa pagpipilan na min</li>
+<li>Isyung 2420 : hayaang ipaalam ng aktibong scanner na ang isang mensahe ay ipinadala</li>
+<li>Isyu : Suportahan ang Statsd at inililipat ang istatistka sa bagong ext</li>
+<li>Isyu 2465 : Ang ZAP ay hayaang hintayin upang magsimula sa ClientApi</li>
+<li>Isyu 2466 : Hayaang maging daan ang URL sa pamamagitan ng ZAP API</li>
+<li>Isyung 2479 : Ipakita sa gumagamit ng pag-gabay kahit na nakikita ang hinahanap ay mali</li>
+<li>Isyu 2481 Itakda ang tamang pangalan ng aplikasyon sa Linux</li>
+<li>Isyu 2482 : Ibalik sa normal na estado ang Session dialog tables "Exclude from"</li>
+<li>Isyu 2484: Ang Circular Redirects</li>
+<li>Isyu 2486 : Linisin ang ScriptVars sa pagbabago ng sesyon</li>
+<li>Isyu 2494 : Hindi ipinapakita ng ZAP Proxy ang kahilingan ng HTTP CONNECT sa kasaysayan ng tab.</li>
+<li>Isyu 2504 : Ang manual HTTP ay tahasang pinagdadagdag ng kahilingan sa mga puno ng site</li>
+<li>Isyu 2506 : Huwag itapon ang session sa file na nakabatay sa database</li>
+<li>Isyu 2512 : I-update ang HSQLDB library sa bersiyon ng 2.3.4</li>
+<li>Isyu 2519 : Ang menu/buton ay paganahin kapag ang add-on na naka-install ay nakatulong</li>
 </ul>
 
-<h2>Bug fixes:</h2>
+<h2>Mga pag-aayos ng Bug:</h2>
 <ul>
-<li>Issue 1529 : TestExternalRedirect Missing Use Case plus Performance and FP Improvements</li>
-<li>Issue 1597 : Java 8 - Mac OS/X package</li>
-<li>Issue 1786 : Activescan Scripts Silent Failure</li>
-<li>Issue 1801 : URL StandardParameterParser not working correctly with QueryString</li>
-<li>Issue 1848 : VariantURLQuery throwing exceptions on active scan</li>
-<li>Issue 1874 : Two Cookie line in the header when adding a cookie with an httpsender script and doing an active scan</li>
-<li>Issue 1875 : Scanner temp history not cleaned on close</li>
-<li>Issue 2090 : Context: Rename User, can't select in Forced User Panel</li>
-<li>Issue 2110 : SQL Injection gets skipped</li>
-<li>Issue 2112 : Wrong policy on active Scan</li>
-<li>Issue 2115 : Python API context.context("MyContext") is broken</li>
-<li>Issue 2119 : Context's description not imported</li>
-<li>Issue 2122 : Change SpiderAPI to ignore empty context names when handling scan action</li>
-<li>Issue 2125 : Log the exception when opening session file and internationalise message</li>
-<li>Issue 2126 : Fix NullPointerException on missing context's authentication script</li>
-<li>Issue 2132 : Zap Report Counting Bug</li>
-<li>Issue 2142 : Fuzzer throwing exceptions</li>
-<li>Issue 2144 : Java.lang.NullPointerException in "AWT-EventQueue-0" </li>
-<li>Issue 2151 : AJAX Spider does not click all elements set in the options</li>
-<li>Issue 2153 : 2.4.3 failed parse the POST Data containts bracket([]) </li>
-<li>Issue 2193 : Initialise Technology tab with selected context in Active Scan dialogue</li>
-<li>Issue 2197 : Install new versions of the add-ons after downloading with -addonupdate</li>
-<li>Issue 2199 : Disallow Spider scans when ZAP is in Safe (or Protected) mode</li>
-<li>Issue 2203 : Fix findbugs warnings</li>
-<li>Issue 2208 : Prevent the active scanner from reporting progress higher than 100%</li>
-<li>Issue 2226 : ZAP should handle HttpSessionsSite's cookie errors more gracefully</li>
-<li>Issue 2246 : Error in sessions view with tokens</li>
-<li>Issue 2259 : Fix NullPointerException in VariantCookie implementation</li>
-<li>Issue 2281 : Filter params for a specific site</li>
-<li>Issue 2282 : Spider a whole context at once</li>
-<li>Issue 2292 : Enhance alertFingerPrint</li>
-<li>Issue 2297 : AWT blocker activation interrupted - java.lang.InterruptedException </li>
-<li>Issue 2307 : Add missing optional parameter "scanPolicyName" to ascan API actions</li>
-<li>Issue 2312 : Give focus to "Edit Keyboard Shortcut" dialogue</li>
-<li>Issue 2313 : Properly convert (old) excluded proxy domains</li>
-<li>Issue 2314 : Cannot add several payloads to fuzzer (NullPointerException)</li>
-<li>Issue 2323 : Fix (secure) ZAP API request loop</li>
-<li>Issue 2328 : Fix issue during uninstallation of named extension</li>
-<li>Issue 2329 : Filter seeds immediately before running the spider</li>
-<li>Issue 2331 : Custom Context Panels not show in existing contexts after installation of add-on</li>
-<li>Issue 2336 : BadLocationException thrown when using Fuzzer</li>
-<li>Issue 2357 : Inconsistencies while changing between panel layouts</li>
-<li>Issue 2363 : Keep break buttons in sync when changing mode</li>
-<li>Issue 2366 : Inconsistencies in break buttons shown</li>
-<li>Issue 2373 : Show Tab not working correctly in Full Layout for non-information tabs</li>
-<li>Issue 2374 : Unable to change response tab position without main tool bar</li>
-<li>Issue 2390 : HeadlessException should be handled more gracefully & README needs Headless details</li>
-<li>Issue 2394 : Change API authorization view to wrap its object</li>
-<li>Issue 2399 : Timeout requests not shown in ZAP</li>
-<li>Issue 2421 : Active scanner request count mismatch</li>
-<li>Issue 2428 : Memory leak on session creation/loading</li>
-<li>Issue 2429 : InterruptedExceptions while stopping the spider with user authentication</li>
-<li>Issue 2435 : Clean up spider task resources, when not consumed</li>
-<li>Issue 2436 : Unable to dynamically uninstall WebSockets add-on</li>
-<li>Issue 2440 : Exception while opening the Active Scan dialogue</li>
-<li>Issue 2451 : Only a single Data Driven Node can be saved in a context</li>
-<li>Issue 2463 : Websocket not proxied when outgoing proxy is set</li>
-<li>Issue 2469 : Always return 100% when spider stopped</li>
-<li>Issue 2472 : Use file name case when loading policies from file</li>
-<li>Issue 2474 : Add multiple context URL in/exclusions at once</li>
-<li>Issue 2475 : Correct help page for Passive Scan Rules options</li>
-<li>Issue 2487 : Wrong charset used in HTTP body</li>
-<li>Issue 2516 : Add auth and spider task types to temporary types</li>
+<li>Isyu 1529 : Subukan ang External Redirect Missing Gamit ang Case plus Performance at FP improvements</li>
+<li>Isyu 1597 : Ang Java 8 - Mac OS/X package</li>
+<li>Isyu 1639 : Ang XSS False Negative sa script injection sa mga Referer HTTP header</li>
+<li>Isyu 1786 : Ang Activescan Scripts Silent Failure</li>
+<li>Isyu 1801 : Ang URL na StandardParameterParser na hindi nagtratrabaho ng tama sa QueryString</li>
+<li>Isyu 1848 : VariantYRLQuery Pagbubukod-bukod ng paglipat sa aktibong pag-iskan</li>
+<li>Isyu 1874 : Ang dalawang linya ng Cookie sa ulunan kapag nagdagdag ng cookie kasama ng httpsender iskrip at paggawa ng aktibong iskan</li>
+<li>Isyu 1875 : Ang kasaysayan ng iskaner temp ay hindi nalinis nang isinara</li>
+<li>Isyu 2090 : Konteksto: pag papalit ng pangalan ng gumagamit , hindi maaring piliin sa sapilitang pag gamit ng panel</li>
+<li>Isyu 2110 : Ang SQL Injection ay nakuhang kumawala</li>
+<li>Isyu 2112 : Maling pamamalakad sa aktibong iskan</li>
+<li>Isyu 2115 : Python API context.context("MyContext") ay nasira</li>
+<li>Isyu 2119 : Ang pag lalarawan sa mga konteksto ay hindi maisalin</li>
+<li>Isyu 2122 : Ang SpiderAPI ay palitan upang maisawalang-bahala ang mga pangalan ng konteksto na walang laman pagka umaaksiyon ang humahawak sa iskan</li>
+<li>Isyung 2125: Mag-log sa eksepsyon habang ang sesyon ng file at internationalise na menshe ay nagbubukas</li>
+<li>Isyu 2126 : Ang pag-aayos ng NullPointerException sa mga nawawalang konteksto ng pagpapatunay ng iskrip</li>
+<li>Isyu : 2132 : Ang ulat ng bilang nang Bug sa Zap</li>
+<li>Isyu 1242 : Ang mga pagsasalin at pag bubukod-bukod ng Fuzzer</li>
+<li>Isyu : 2144 : Java.lang.NullPointerException sa "AWT-EventQueue-0" </li>
+<li>Isyu 2152 : Ang AJAX Spider ay hindi maaaring i-click sa lahat ng mga elemento ng mga pagpipilian</li>
+<li>Isyu 2153 : 2.4.3 ay nabigo na suriin ang POST Data na nag lalaman ng panaklong([]) </li>
+<li>Isyu 2193 : Ang Initialise teknolohiya na tab sa napiling konteksto sa aktibong iskan ng dayalogo</li>
+<li>Isyu 2197 : Magsalin ng bagong bersyon ng add-ons matapos ang pag-download sa -addonupdate</li>
+<li>Isyu 2199 : Huwag pahintulutan i-iskan ang mga Spider kapag ang ZAP ay nasa ligtas (o protektado) na pamamaraan</li>
+<li>Isyu 2203 : Ang pag-sasaayos ng mga babala ng findbugs</li>
+<li>Isyu 2208 : Ang aktibong iskaner ay piglian na maiulat ang pagsulong mula sa mas mataas sa 100%</li>
+<li>Isyu 2226 : Dapat na mapanghawakan ng ZAP ang mga pagkakamali ng cookie HttpSessionSite's ng mas maganda</li>
+<li>Isyu 2246 : tingnan ang mali sa mga sesyon kasama ang mga token</li>
+<li>Isyu 2259 : Ayusin ang NullpointerExemption sa VariantCookie na nagpapatupad</li>
+<li>Isyu 2281 : Isang tiyak na site para sa Filter params</li>
+<li>Isyu 2282 : Ang pag-sasamasama sa isang buong konteksto ng Spider</li>
+<li>Isyu 2292 : Ang alertFingerPrint ay gawing mas maganda</li>
+<li>Isyu 2292: Ang aktibasyon ng AWT blocker ay nagambala - java.lang.interruptedException </li>
+<li>Isyu 2307 : Ang nawawalang opsyonal na parameter ay dagdagan "scanPolicyName" sa kilos ng ascan API</li>
+<li>Isyu 2312 : Bigyan ng pokus ang dyalogo na "I-edit ang shortcut ng tipahan"</li>
+<li>Isyu : Maayos na palitan ang (luma) maliban sa mga proxy na domain</li>
+<li>Isyu : Hindi maidagdag ang mga ilang payloads sa fuzzer ng (NullPointerException)</li>
+<li>Isyu 2323 : Ayusin ang (sigurudad) sa loop na hinihiling ng ZAP API</li>
+<li>Isyu 2328 : ayusin ang isyu habang ang pangalan ng ekstensiyon ay tinatanggal</li>
+<li>Isyu 2329 : Salain kaagad ang mga binhi bago tumakbo ang spider</li>
+<li>Isyu 2331 : Hindi nag papakita ang mga konteksto ng custom panel sa mga namamalaging konteksto pagkatapos isalin ang add-on</li>
+<li>Isyu 2336 : Ang BadLocationException ay inaalis habang gamit ang Fuzzer</li>
+<li>Isyu 2357 : Ang pabago-bago habang nag papalit-palit sa gitna ng ayos ng mga panel</li>
+<li>Isyu 2363 : Itago ang mga sirang buton sa sync kapag ang mode ay binago</li>
+<li>Isyu 2366 : Ang pag babago-bago ng mga sirang buton ay ipinakita</li>
+<li>Isyu 2373 : Ipakita ang tab na hindi gumagana ng tama sa buong plano para sa tab na walang impormasyon</li>
+<li>Isyu 2374 : Hindi maaaring palitan ang posisyon ng tab na tumutugon ng walang pangunahing gamit na bar</li>
+<li>Isyu 2390 : Ang HeadlessException ay dapat na nahahawakan ng mas maganda at ang README ay kinakailangan ng walang pangunahing detalye</li>
+<li>Isyu 2394 : Ang awtorisasyon view ng API ay baguhin para mabalot ang bagay na ito</li>
+<li>Isyu 2399 : Ang hinihiling na mga pagtigil ng oras ay hindi ipinakita sa ZAP</li>
+<li>Isyu 2421 : Ang hiling na bilang ng aktibong iskaner ay hindi tugma</li>
+<li>Isyu 2428 : Ang pagtagas ng memorya sa sesyon ng paglikha/paglo-load</li>
+<li>Isyu 2429 : Interruptedexceptions habang hinihinto ang spider ng may awtorisasyon ng gumagamit</li>
+<li>Isyu 2435 : Linisin ang tungkulin ng spider ng mga pinagkukunan, habang hindi ito nakokonsumo</li>
+<li>Isyu 2436 : Walang kakayanan ang daynamikali sa pagtanggal ng isinalin sa mga WebSockets add-on</li>
+<li>Isyu 2440 : Pagbubukod-bukod habang nagbubukas ang Aktibong Iscan diyalogo</li>
+<li>Isyu 2451 : Ang solong Data Driven Node lamang ang maaaring i-save sa isang konteksto</li>
+<li>Isyu 2463 : Ang Websocket ay di panghalili habang ang papalabas na proxy ay nakatakda</li>
+<li>Isyu 2469 : Habang ang spider ay nakahinto laging bumalik sa ika-isang daang pursyento</li>
+<li>Isyu 2472 : Gamitin ang kaso ng pangalan sa file habang nag dadagdag ng mga patakaran mula sa file</li>
+<li>Isyu 2474 : Magdagdag ng maramihang konteksto ng URL in/exclusions nang magkakasabay-sabay</li>
+<li>Isyu 2475 : Tulong ng tamang pahina para sa patakaran at mga pagpipilian sa passive iskan</li>
+<li>Isyu 2487 : Maling paggamit ng charset sa katawan ng HTTP</li>
+<li>Isyu 2516 : Idagdag ang auth at spider sa mga tipo ng gawain at sa mga uri na pansamantala</li>
 </ul>
 
-<h2>See also</h2>
+<h2>Tingnan din sa</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Pagpapakilala</a></td><td>ang pagpapakilala sa ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Mga inilabas</a></td><td>ang kabuuang hanay ng mga inilabas</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Ang mga kredito</a></td><td>ang mga tao at mga grupo na ginawang posible sa inilabas na ito</td></tr>
 </table>
 </body>
 </html>

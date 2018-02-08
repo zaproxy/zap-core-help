@@ -12,11 +12,7 @@ Manejo de Anti CSRF
 Los tokens anti CSRF son parámetros (pseudo) aleatorios utilizados para proteger contra ataques de Falsificación de Peticiónes en sitios cruzados.<br> Sin embargo, dificultan el trabajo de los testers de penetración, especialmente si las fichas son regeneradas cada ves que se pide un formulario.<br>
 </p>
 <p>
-ZAP detects anti CSRF tokens purely by attribute names - the list of attribute names considered to be anti CSRF tokens
-is configured using the <a href="../../ui/dialogs/options/anticsrf.html">Options Anti CSRF screen</a>.<br/>
-When ZAP detects these tokens it records the token value and which URL generated the token.<br/>
-Other scanners, like <a href="ascan.html">active scanner</a>, have options which
-cause ZAP to automatically regenerate the tokens when required.
+ZAP detecta anti token CSRF puramente por los nombres de atributos - la lista de nombres de atributos considerados anti token CSRF se configura utilizando la <a href="../../ui/dialogs/options/anticsrf.html">pantalla de opciones Anti CSRF</a>. <br/> Cuando ZAP detecta estas fichas registra el valor simbólico y que URL genera el token de. <br/> Otros exploradores, como el <a href="ascan.html">Explorador activo</a>, con opciones que ZAP regenerar automáticamente las fichas cuando se requiera.
 </p>
 
 <h2>Vease también</h2>

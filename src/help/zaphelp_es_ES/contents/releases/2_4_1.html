@@ -9,80 +9,80 @@
 <body bgcolor="#ffffff">
 <h1>Release 2.4.1</h1>
 <p>
-This release includes important security fixes - users are urged to upgrade asap.
+Esta versión incluye arreglos de seguridad importantes - los usuarios son instados a actualizar cuanto antes.
 </p>
 <p>
-One of the changes means that an API key is created by default, which means that any applications using the ZAP API will fail unless they are updated to use that key.<br>
-The API Key can be found in the <a href="../ui/dialogs/options/api.html">API Options screen</a><br>
-You can also set it from the command line using an option like: 
+Uno de los cambios quiere decir que un API key se crea por defecto, lo que significa que todas las aplicaciones utilizando la API de ZAP fallará a menos que se actualizan para usar esa clave.<br>
+La clave API se puede encontrar en el <a href="../ui/dialogs/options/api.html">API Options screen</a><br>
+También se puede definir la línea de comandos utilizando una opción como: 
 <pre>-config api.key=change-me-9203935709</pre><br>
-For more details see <a href="https://github.com/zaproxy/zaproxy/wiki/FAQapikey">https://github.com/zaproxy/zaproxy/wiki/FAQapikey</a><br>
+Mostrar más detalles <a href="https://github.com/zaproxy/zaproxy/wiki/FAQapikey">https://github.com/zaproxy/zaproxy/wiki/FAQapikey</a><br>
  
 </p>
 
 <p>
-The following changes were made in this release:
+Se hicieron los siguientes cambios en esta versión:
 </p>
 
-<h2>Enhancements:</h2>
+<h2>Mejoras:</h2>
 <ul>
-<li>Issue 321 : Support multiple databases</li>
-<li>Issue 1459 : Add an HTTP sender listener script</li>
-<li>Issue 1500 : Update Bouncy Castle libs</li>
-<li>Issue 1566 : Improve active scan's reported progress</li>
-<li>Issue 1573 : Add option to inject plugin ID in header for all ascan requests</li>
-<li>Issue 1607 : Unable to save the test session via API</li>
-<li>Issue 1621 : AScan API - Allow to scan as a user</li>
-<li>Issue 1625 : Support multiple structural params and ones on top level nodes</li> 
-<li>Issue 1653 : Support context menu key for trees</li>
-<li>Issue 1655 : Copy Session Token from Http Sessions tab to clipboard</li>
-<li>Issue 1662 : Add default Rails anti-CSRF token parameter</li>
-<li>Issue 1664 : Clients tab autoscroll</li>
-<li>Issue 1684 : Unable to set technology via API</li>
-<li>Issue 1688 : Updating owasp/zap2docker image with Python Client API</li>
-<li>Issue 1690 : Bump key pair size to 2048 for all certs in the (proxy's) chain of trust</li>
-<li>Issue 1695 : Change SSL cert signature algorithm to "SHA-256 with RSA Encryption"</li>
-<li>Issue 1699 : Allow ApiImplementor's to add custom headers</li>
-<li>Issue 1715 : Unable to pass arguments when launching ZAP from the command line on Mac OS X</li>
-<li>Issue 1728 : Update JRE to 1.7u79 (CPU) for MacOS</li>
+<li>Número 321: Soporte de múltiples bases de datos</li>
+<li>Número 1459: Añadir una secuencia de comandos del agente de escucha HTTP remitente</li>
+<li>Tema 1500: Bibliotecas de actualización Bouncy Castle</li>
+<li>Número 1566: Mejorar progreso reportado activo de exploración</li>
+<li>Problema de 1573: Se agrega opción para inyectar plugin ID en cabecera para todas las solicitudes de ascan</li>
+<li>Problema de 1607: No se puede guardar la sesión de prueba a través de API</li>
+<li>Problema de 1621: AScan API - permiten analizar como usuario</li>
+<li>Edición 1625: Soporte múltiples parámetros estructurales y sobre los nodos de nivel superior</li> 
+<li>Edición 1653: Tecla de menú de contexto soporte para árboles</li>
+<li>Problema de 1655: Copia sesión Token ficha sesiones Http en el portapapeles</li>
+<li>Problema de 1662: Agregar el parámetro token por defecto carriles anti CSRF</li>
+<li>Problema de 1664: Clientes ficha desplazamiento automático</li>
+<li>Edición 1684: No se puede establecer la tecnología a través de API</li>
+<li>Edición 1688: Actualización owasp/zap2docker imagen con la API de cliente de Python</li>
+<li>Edición 1690: Bump tamaño par de claves de 2048 para todos certificados en cadena de la (del proxy) de confianza</li>
+<li>Tema 1695: Cambiar algoritmo de firma de certificado SSL a "SHA-256 con cifrado RSA"</li>
+<li>Edición 1699: Permite ApiImplementor agregar encabezados personalizados</li>
+<li>Problema de 1715: Incapaz de pasar argumentos al lanzar el ZAP de la línea de comandos en Mac OS X</li>
+<li>Problema de 1728: Actualización JRE a 1.7u79 (CPU) para MacOS</li>
 
 </ul>
 
-<h2>Bug fixes:</h2>
+<h2>Corrección de error:</h2>
 <ul>
-<li>Issue 444 : Guaranteed NPE on AliasCertificate.getName() if getCN()==null</li>
-<li>Issue 1442 : Up/Down arrow keys in results stop working if "reflected"</li>
-<li>Issue 1473 : Spider does not handle URLs extracted from meta tags correctly</li>
-<li>Issue 1497 : The spider is extracting and reporting links from comments - event when instructed not to do so</li>
-<li>Issue 1598 : startup script lacks support for FreeBSD</li>
-<li>Issue 1615 : Search "All" option not working</li>
-<li>Issue 1617 : ZAP 2.4.0 throws HeadlessExceptions when running in daemon mode on headless machine</li>
-<li>Issue 1618 : Target Technology Not Honored</li>
-<li>Issue 1619 : Search regex might not be validated</li>
-<li>Issue 1624 : Error while loading ZAP 2.4.0</li>
-<li>Issue 1626 : Structural parameters not saved when context exported and not available via the API</li>
-<li>Issue 1636 : Users (for auth) & Forced User not loaded from session</li>
-<li>Issue 1647 : Wrong reference in Zest Result</li>
-<li>Issue 1674 : Ajax spider not considering get parameters</li>
-<li>Issue 1677 : Fuzzers can't be expanded on OS X</li>
-<li>Issue 1694 : "Error: setting file is missing. Program will exit." even if file exists</li>
-<li>Issue 1698 : Escape API exceptions</li>
-<li>Issue 1700 : Forced Browse Lists Missing from Drop-Down in 2.4.0</li>
-<li>Issue 1706 : Add API security options</li>
-<li>Issue 1708 : Context's technology tree can get out of sync</li>
-<li>Issue 1709 : Applications are not (immediately) shown after start</li>
-<li>Issue 1714 : PNH should not reflect API key unless user supplies it</li>
-<li>Issue 1716 : Restrict use of CORS header in pnh</li>
-<li>Issue 1720 : Add more security options for JSONP API</li>
-<li>Issue 1724 : Ensure API component names are escaped in the HTML output</li>
-<li>Issue 1735 : Context's technologies not used in active scan unless overridden</li>
+<li>Número 444: Garantizado NPE en AliasCertificate.getName() si getCN () == null</li>
+<li>Edición 1442: Arriba/abajo teclas de flecha en los resultados de dejar de trabajar si "refleja"</li>
+<li>Edición 1473: spider no maneja URLs extraídas de etiquetas meta correctamente</li>
+<li>Número 1497: spider es extraer y reportando enlaces desde comentarios - evento cuando se le indique no hacerlo</li>
+<li>Edición 1598: script de arranque carece de soporte para FreeBSD</li>
+<li>Problema de 1615: Busca la opción "Todos" no funciona</li>
+<li>Número 1617: ZAP 2.4.0 lanza HeadlessExceptions cuando se ejecuta en modo demonio en máquina sin cabeza</li>
+<li>Problema de 1618: Tecnología de destino no</li>
+<li>Edición 1619: Regex búsqueda no puede ser validado</li>
+<li>Problema de 1624: Error al cargar el ZAP 2.4.0</li>
+<li>Edición 1626: Parámetros estructurales no guardan cuando contexto exportado y no disponible a través de la API</li>
+<li>Número 1636: Usuarios (auth) y no cargado de sesión de usuario forzado</li>
+<li>Problema de 1647: Mal referencia Zest resultado</li>
+<li>Edición 1674: Araña de Ajax no teniendo en cuenta parámetros get</li>
+<li>Edición 1677: Fuzzers no se puede ampliar en OS X</li>
+<li>Edición 1694: "Error: el archivo de configuración. Programa voluntad salida."incluso si el archivo existe</li>
+<li>Edición 1698: Excepciones de API escapar</li>
+<li>Edición 1700: Listas de navegación forzada falta de Drop-Down en 2.4.0</li>
+<li>Edición 1706: Añadir opciones de seguridad de API</li>
+<li>Problema de 1708: Árbol de tecnología de contexto puede conseguir fuera de sincronización</li>
+<li>Número 1709: Las aplicaciones no son (inmediatamente) se muestra después de comienzo</li>
+<li>Número 1714: PNH no reflejara API key a menos que el usuario provee</li>
+<li>Edición 1716: Restringir el uso de la Rúbrica CORS en pnh</li>
+<li>Número 1720: Añadir más opciones de seguridad de API de JSONP</li>
+<li>Número 1724: Asegurar el componente API nombres se escapan en la salida HTML</li>
+<li>Edición 1735: Tecnologías de contexto no escaneo activo a menos que se reemplaza</li>
 </ul>
 
-<h2>See also</h2>
+<h2>Véase también</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introducción</a></td><td>introducción a ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Lanzamientos</a></td><td>el conjunto completo de lanzamientos</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Créditos</a></td><td>las personas y grupos que han hecho posible esta versión</td></tr>
 </table>
 </body>
 </html>

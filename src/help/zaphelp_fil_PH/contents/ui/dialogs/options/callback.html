@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Mga opsyon ng Address ng Callback screen
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Mga opsyon ng Address ng Callback screen</h1>
+<p>
+Ang address ng callback screen ay pumapayag na mai-configure mo ang address gamitin para makita ang mga kahinaan na pumapahintulot sa attacker sa call remote URLs.<br> Sa nakaraang bersyon ang ZAP API ay ginamit sa layuning ito, pero mula sa 2.6.0 pasulong ang isang magkahiwalay na endpoint ay ang ginamit kaya ang target ng mga sistema ay hindi na kailangan ng access para sa API.
+</p>
+
+<h3>Lokal na Address (e.g.0.0.0.0)</h3>
+
+Ang lokal na addres ng ZAP ay nakikinig sa darating na koneksyon. Ang default na halaga ng '0.0.0.0' ibig sabihin na ang ZAP ay nakikinig sa lahat ng pwedeng gamitin na lokal na addres.
+
+<h3>Remote ng Addres</h3>
+
+Ang addres na maaaring tumukoy sa may kaugnayang mga atake. 
+Ang addres na ito ay dapat magkaroon ng access mula sa target na sistema. 
+Pwede mong gamitin ang Test URL para matignan na ito ang kaso.
+
+<h3>Walang katiyakang Port</h3>
+
+Sa pamamagitan ng default ng ZAP ay maaaring gumamit ng isang magkakaibang port kada oras na tumatakbo. 
+Kung kailangan mong gumamit ng parehong port (para sa halimbawa pahihintulutan magaccess sa pamamagitan ng mga firewall) tapos i-uncheck ang opsyon na ito.
+
+<h3>Ispesipikong Port</h3>
+
+Kung ang opsyon ng walang katiyakang port ay naka-uncheck kung magkagayon ang port na ito ang pinapakinggan ng ZAP. 
+Ito ay dapat kakaiba sa ibang mga port ng ZAP na ginagamit, para sa halimbawa ang port na ginagamit ay para sa pag proxy ng mga koneksyon.
+
+<h3>Test URL</h3>
+
+Ito ang tes URL na pwede mong subukang i-access mula sa sistema ng remote. 
+Ang lahat ng access sa Test URL ay nakatala sa ZAP log file na nasa INFO level. 
+Kung ikaw ay gumagamit ng ZAP UI kung magkagayon ang pagaccess ay makikita sa <a href="../../tabs/output.html">Output tab</a>.
+
+<h2>Tignan din</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../overview.html">Pangkalahatang-ideya ng UI</a></td><td>para sa isang pangkalahatang-ideya ng mga gumagamit ng interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="options.html">Mga opsyon ng dayalogo</a></td><td>para sa mga detalye ng ibang mga opsyon na dayalogo ng mga screen</td></tr>
+</table>
+
+</body>
+</html>

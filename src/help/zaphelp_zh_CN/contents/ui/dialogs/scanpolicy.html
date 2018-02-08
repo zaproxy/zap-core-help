@@ -3,48 +3,47 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Scan Policy Dialog
+扫描策略对话框
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Scan Policy Dialog</h1>
+<h1>扫描策略对话框</h1>
 <p>
-This allows you to enable and disable the rules that are run when performing an <a href="../../start/concepts/ascan.html">active scan</a>.<br>
-The first screen allows you to define the default levels as well as the levels for all of the rules in a specific category.<br>
+它允许您启用和禁用正在执行一个<a href="../../start/concepts/ascan.html">活动扫描</a>时运行的规则。<br>
+第一个屏幕允许您定义特定规则中所有规则的默认级别与级别。<br>
 <br>
-The category screens allow you to define the levels for every individual rule.<br>
+类别屏幕允许您定义每个个体规则的级别。<br>
 <br>
 <br>
-Note that <a href="../../start/concepts/pscan.html">passive scan</a> rules are no longer managed via this dialog but are instead 
-managed via the <a href="../../ui/dialogs/options/pscanrules.html">Options Passive Scan Rules</a>.
+请注意<a href="../../start/concepts/pscan.html">被动扫描</a>规则不再通过此对话框而是通过<a href="../../ui/dialogs/options/pscanrules.html">选项被动扫描规则</a>进行管理。.
 </p>
 
-<h3>Threshold</h3>
-This controls how likely ZAP is to report potential vulnerabilities.<br>
+<h3>阈值</h3>
+这控制了ZAP报告潜在漏洞的可能性。<br>
 <ul>
-	<li>If you select Off then the scanner won't run.</li>
-	<li>If you select Low then more potential issues will be raised which may increase the number of false positives.</li>
-	<li>If you select High then fewer potential issues will be raised which may mean that some real issues are missed (false negatives).</li>
+	<li>如果您选择关闭，则扫描仪将不会运行。</li>
+	<li>如果您选择“低”’这个选项，则会引发更多潜在的问题。这可能会导致误报数量的增加。</li>
+	<li>如果选择“高”，潜在的问题则会被提高而一些真正的问题可能会被遗漏 
+（或漏报）。</li>
 </ul>  
 
-<h3>Strength</h3>
-This controls the number of attacks that ZAP will perform.<br>
-If you select Low then fewer attacks will be used which will be quicker but may miss some issues.<br>
-If you select High then more attacks will be used which may find more issues but will take longer.<br>
-The Insane level should typically only be used for small parts of an application as it can result in a very large number of 
-attacks being used, which can take a considerable length of time.
+<h3>强度</h3>
+这会控制ZAP即将开始进行攻击的次数。<br>
+如果您选择“低”这个选项，那将会使用更少的攻击。虽然会更快但可能会遗漏一些问题。<br>
+如果您选择“高”，则会使用更多的攻击。虽然可能会发现更多的问题但会花费更多的时间。<br>
+“疯狂”的级别通常只应用于应用程序的小部分，它可能会导致大量的攻击而且会占用相当长的时间。
 
-<h2>Accessed via</h2>
+<h2>通过访问</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="scanpolicymgr.html">Scan Policy Manager dialog</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="scanpolicymgr.html">扫描策略管理器对话框</a></td><td></td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>详情请参阅</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../overview.html">UI综览</a></td><td>有关用户界面的概述</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+<a href="dialogs.html">对话框</a></td><td>有关对话框或弹出窗口的详情 </td></tr>
 </table>
 
 </body>

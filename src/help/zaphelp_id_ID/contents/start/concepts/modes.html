@@ -3,43 +3,43 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Modes
+Modus
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Modes</h1>
+<h1>Modus</h1>
 <p>
-ZAP has a 'mode' which can be:
+ZAP memiliki 'mode' yang dapat:
 <ul>
-<li>Safe - no potentially dangerous operations permitted</li>
-<li>Protected - you can only perform (potentially) dangerous actions on URLs in the <a href="scope.html">Scope</a></li>
-<li>Standard - as in previous releases, you can do anything</li>
-<li>ATTACK - new nodes that are in <a href="scope.html">Scope</a> are <a href="ascan.html">actively scanned</a> as soon as they are discovered</li>
+<li>Aman - tidak ada operasi yang berpotensi berbahaya yang diizinkan</li>
+<li>Dilindungi - anda hanya dapat melakukan (berpotensi) tindakan-tindakan berbahaya pada Url dalam <a href="scope.html">ruang Lingkup</a></li>
+<li>Standar - seperti pada rilis sebelumnya, anda dapat melakukan apapun</li>
+<li>SERANGAN - node baru yang ada di <a href="scope.html">ruang Lingkup</a> <a href="ascan.html">aktif dipindai</a> segera setelah mereka menemukan</li>
 </ul>
-It is recommended that you use the Protected mode to ensure that you only attack sites that you mean to.<br/><br/>
+Disarankan bahwa anda menggunakan mode Perlindungan untuk memastikan bahwa anda hanya menyerang situs yang anda maksud.<br/><br/>
 
-The mode can be changed via the <a href="../../ui/tltoolbar.html">toolbar</a>
-(or the ZAP API) and is persisted between sessions.<br/><br/>
+Mode dapat diubah melalui <a href="../../ui/tltoolbar.html">toolbar</a>
+(atau ZAP API) dan bertahan diantara sesi.<br/><br/>
 
-Examples of the things that will not be possible in either Safe mode or in Protected mode when not acting on URLs in the Scope:
+Contoh dari hal-hal yang tidak akan mungkin dilakukan dalam mode Aman atau dalam mode Perlindungan ketika tidak bertindak berdasarkan URL dalam Lingkupan:
 
 <ul>
-<li>Spidering</li>
-<li>Active Scanning</li>
+<li>Spindering</li>
+<li>Pemindaian aktif</li>
 <li>Fuzzing</li>
-<li>Force Browsing</li>
+<li>Penjalajahan paksa</li>
 <li>Breaking (intercepting)</li>
-<li>Resending requests</li>
+<li>Mengirim ulang permintaan</li>
 </ul>
 
-You can define the <a href="scanpolicy.html">Scan Policy</a> to be used for the Attack mode the <a href="../../ui/dialogs/options/ascan.html">Options Active Scan screen</a>.<br>
+Anda dapat menentukan <a href="scanpolicy.html">Kebijakan Pindai</a> digunakan untuk mode serangan <a href="../../ui/dialogs/options/ascan.html">Pilihan aktif Scan layar</a>.<br>
 
-<h2>See also</h2>
+<h2>Lihat juga</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../ui/overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../ui/overview.html">Ikhtisar UI</a></td><td>untuk Ikhtisar antarmuka pengguna</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="concepts.html">Features</a></td><td>provided by ZAP</td></tr>
+<a href="concepts.html">Fitur</a></td><td>disediakan oleh ZAP</td></tr>
 </table>
 
 </body>

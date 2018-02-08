@@ -2,60 +2,40 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>HTTP Sessions tab</title>
+<title>Ficha de sesiones HTTP</title>
 </head>
 <body bgcolor="#ffffff">
-	<h1>HTTP Sessions tab</h1>
+	<h1>Ficha de sesiones HTTP</h1>
 	<p>
-		This tab shows you the set of identified HTTP sessions for each Site,
-		as detected by the <a href="../../start/concepts/httpsessions.html">HTTP
-			Sessions extension</a>.
+		Esta ficha muestra el conjunto de sesiones HTTP identificadas para cada sitio, según lo detectado por la <a href="../../start/concepts/httpsessions.html">extensión de sesiones HTTP</a>.
 	</p>
 
 	<p>
-		The current Site the information is referring to can be selected via
-		the toolbar or the <a href="sites.html">Sites tab</a>.
+		El sitio actual de a que la información se refiere puede ser seleccionado mediante la barra de herramientas o la <a href="sites.html">Sites tab</a>.
 	</p>
 
-	<p>The toolbar provides a button ("New Session") which allows you
-		to start a new session, forcing all outgoing request messages to be
-		without the session tokens set, so the server considers it's a new
-		session. This allows the creation of a new session, without destroying
-		the old one.</p>
+	<p>La barra de herramientas proporciona un botón ("New Session") que le permite iniciar una nueva sesión, obligando a todos los mensajes de solicitud saliente para estar sin el conjunto de tokens de sesión, el servidor considera que es una nueva sesión. Esto permite la creación de una nueva sesión, sin destruir la anterior.</p>
 
-	<p>Each of the entries in the Sessions table (each session)
-		initially has a generated name, but it can be changed by selecting the
-		'Name' cell and editing it.</p>
+	<p>Cada una de las entradas en la tabla de sesiones (each session) tiene inicialmente un nombre generado, pero se puede cambiar seleccionando la celda de 'Name' y editarlo.</p>
 
-	<p>Each of the entries in the Sessions table can be right clicked,
-		which activates the Popup Menu, with the following options:</p>
+	<p>Cada una de las entradas en la tabla de sesiones puede ser derecha clic, que activa el menú emergente, con las siguientes opciones:</p>
 	<ul>
 		<li>Remove Session - deletes the session</li>
-		<li>Set as active (available only on non-active sessions) - marks
-			this session as active. If any session was previously set as active,
-			it will be unset as active and, if it doesn't specify any token
-			values, it is deleted.</li>
-		<li>Unset as active (available only on the active session) -
-			marks this session as not being active anymore. If the session
-			doesn't specify any token values, it is deleted.</li>
+		<li>Establecer como activo (disponible sólo en las sesiones inactivas) - marca esta sesión como activo. Si cualquier período de sesiones fue establecida previamente como activos, será desactivada como activa y, si no especifica ningún valor simbólico, se eliminará.</li>
+		<li>Marca (disponible sólo en la sesión activa) - como activo esta sesión por no ser activo ya. Si la sesión no especifica ningún valor simbólico, se eliminará.</li>
 	</ul>
 
-	<i>Regarding the active session, more details can be read on the
-		general concepts help page of the <a
-		href="../../start/concepts/httpsessions.html">HTTP Sessions
-			extension</a>
+	<i>Con respecto a la sesión activa, se pueden leer más detalles en la página de ayuda de conceptos generales de la <a
+		href="../../start/concepts/httpsessions.html">Sesions extension HTTP</a>
 	</i>
 	<br />
 
-	<br /> For each session you can see:
+	<br /> Para cada sesión se puede ver:
 	<ul>
-		<li>Active - Whether this is the active session or not</li>
-		<li>Name - The session name</li>
-		<li>Session Tokens' Values - the list of values associated to
-			each of the session tokens. The entries are separated by the ';'
-			symbol.</li>
-		<li>Messages Matched - the number of HTTP messages that have been
-			matched by the extension with this session</li>
+		<li>Activa - ya sea la sesión activa o no</li>
+		<li>Name - El nombre de la sesion</li>
+		<li>Valores de Tokens de sesión: la lista de valores asociados a cada uno de los tokens de sesión. Las entradas están separadas por el ';' símbolo.</li>
+		<li>Mensajes Matched: el número de mensajes HTTP que la extensión ha igualado con esta sesión</li>
 	</ul>
 
 
@@ -64,19 +44,19 @@
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			<td><a href="../overview.html">UI Overview</a></td>
-			<td>Para una vista general sobre la interfaz de usuario</td>
+			<td>Para una vista general del IU</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			<td><a href="../../start/concepts/httpsessions.html">HTTP
 					Sessions Extension</a></td>
-			<td>for an overview of the extension</td>
+			<td>para una vista general de la herramienta</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			<td><a href="../../ui/dialogs/options/httpsessions.html">HTTP
 					Sessions Options screen</a></td>
-			<td>for an overview of the extension's Options</td>
+			<td>para una vista general de las opciones de la herramienta</td>
 		</tr>
 	</table>
 

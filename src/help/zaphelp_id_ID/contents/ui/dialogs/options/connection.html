@@ -3,34 +3,52 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Options Connection screen
+Pilihan layar Koneksi
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Options Connection screen</h1>
+<h1>Pilihan layar Koneksi</h1>
 <p>
-The Options Connection screen allows you to configure the ZAP connection options:
+Sebuah Pilihan layar Koneksi mengizinkan kamu untuk mengkonfigurasi koneksi pilihan ZAP:
 
-<h3>Timeout in seconds</h3>
-This makes is easier to test slow applications.
+<h3>Waktu habis dalam hitungan detik</h3>
+Ini membuat lebih mudah untuk menguji kelambatan aplikasi.
 
-<h3>Single Cookie Request Header</h3>
-Controls whether the ZAP's managed cookies (<a href="../../tlmenu/edit.html">Aktifkan Session Tracking (Cookie)</a>) should be set
-on a single "Cookie" request header or multiple "Cookie" request headers, when sending an HTTP request to the server.
+<h3>Kegagalan Agen Pengguna</h3>
+Agen Pengguna harus menggunakan ZAP ketika membuat pesan HTPP (sebagai contok, penjebakan pesan atau permintaan KONEKSI untuk keluar proxy).
 
-<h3>Use Proxy chain</h3>
-This section allows you to connect to another proxy for outgoing connections.<br/>
-This is often required in a corporate environment.
+<h3>Pemintaan Header Cookie Single</h3>
+Mengontrol jikalau cookie dikelola ZAP (<a href="../../tlmenu/edit.html">Aktifkan Session Tracking (Cookie)</a>) harus ditetapkan 
+pada satu permintaan header "Cookie" atau beberapa permintaan header "Cookie", saat mengirim permintaan HTTP ke server.
 
-<h3>Otentikasi proxy</h3>
-This section allows you to configure the outgoing proxy authentication. 
+<h3>DNS</h3>
+<h4>TTL Permintaan yang Berhasil</h4>
+Mendefinisikan berapa lama permintaan DNS yang berhasil harus disembunyikan:<ul>
+<li>Negatif angka, sembunyikan selamanya;</li>
+<li>Nol, menonaktifkan persembunyian;</li>
+<li>Positif angka, jumlah detik permintaan akan disembunyikan.</li></ul>
+<strong>Catatan:</strong> Perubahan diterapkan setelah restart.<p>
+Sebuah pilihan bisa juga ditetapkan menggunakan sebuah <code>-config</code> argumen batas perintah dengan tombol <code>connection.dnsTtlSuccessfulQueries</code>.
 
-<h2>See also</h2>
+<h3>Protokol Keamanan</h3>
+Mengizinkan untuk memilih versi SSL/TLS yang diaktifkan untuk koneksi keluar (sebagai contoh, ke server). Paling sedikit satu versi harus diaktifkan, versi yang tidak didukung oleh JRE tidak akan dipilih dan dinonaktifkan.
+<br>Sebuah pilihan SSLv2Hello harus dipilih dalam hubungannya setidaknya dengan satu versi SSL/TLS.
+
+<h3>Menggunakan rantai Proxy</h3>
+Bagian ini memungkinkan Anda terhubung ke proxy lain untuk koneksi keluar.<br/>
+Hal ini sering dibutuhkan di lingkungan perusahaan.
+
+<h3>Proxy membuktikan</h3>
+Bagian ini menizinkan kamu untuk mengkonfigurasi pengeluaran pembuktian proxy. 
+
+<h2>Melihat juga</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../overview.html">Ikhtisar UI</a></td><td>untuk ikhtisar antarmuka pengguna</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+<a href="options.html">Pilihan dialog</a></td><td>sebagai rincian layar dialog Pilihan lainnya</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../../cmdline.html">Batas Perintah</a></td><td>sebagai rincian sebuah Batas Rincian</td></tr>
 </table>
 
 </body>

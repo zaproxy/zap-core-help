@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Options Callback Address screen
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Options Callback Address screen</h1>
+<p>
+A Visszahívási Cím képernyőn beállíthatja, hogy a cím kimutatására használt biztonsági rések, amelyek lehetővé teszik, hogy a támadó hívás távoli Url-eket.<br>
+A korábbi verziókban a ZAP API-t használták erre a célra, de a 2.6.0-től külön végpont úgy alkalmazzák, hogy a cél rendszerek
+többé nem kell a hozzáférést az API.
+</p>
+
+<h3>Local Address (e.g. 0.0.0.0)</h3>
+
+The local address that ZAP will listen on for incoming connections. 
+The default value of '0.0.0.0' means that ZAP will listen on all available local addresses.
+
+<h3>Remote Address</h3>
+
+The address that will be specified in the relevant attacks. 
+This address must be accessible from the target system. 
+You can use the Test URL to check that this is the case.
+
+<h3>Random Port</h3>
+
+By default ZAP will use a different port each time it is run. 
+If you need to use the same port (for example to allow access through firewalls) then uncheck this option.
+
+<h3>Specify Port</h3>
+
+Ha a Véletlenszerű Port opció nincs bejelölve, akkor ez a port, hogy ZAP hallgat. 
+Lehet más a más portok ZAP használ, például a portot használja a proxy kapcsolat.
+
+<h3>Test URL</h3>
+
+Ez a teszt URL-t, hogy próbálja meg elérni a távoli rendszerek. 
+All accesses to the Test URL will be recorded in the ZAP log file at INFO level. 
+If you are using the ZAP UI then accesses will also be shown in the <a href="../../tabs/output.html">Output tab</a>.
+
+<h2>See also</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+</table>
+
+</body>
+</html>

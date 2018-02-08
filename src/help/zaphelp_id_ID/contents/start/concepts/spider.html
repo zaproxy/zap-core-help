@@ -2,112 +2,86 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Spider</title>
+<title>Laba - laba</title>
 </head>
 <body bgcolor="#ffffff">
-	<h1>Spider</h1>
-	<p>The spider is a tool that is used to automatically discover new
-		resources (URLs) on a particular Site. It begins with a list of URLs
-		to visit, called the seeds, which depends on how the Spider is
-		started. The Spider then visits these URLs, it identifies all the
-		hyperlinks in the page and adds them to the list of URLs to visit and
-		the process continues recursively as long as new resources are found.
+	<h1>Laba - laba</h1>
+	<p>Laba -laba adalah alat yang di gunakan untuk menemukan sumber - sumber baru (URL) pada situs tertentu secara otomatis. Ini dimulai dengan sebuah daftar dari URL
+		untuk dikunjungi, yang disebut biji, yang tergantung tentang bagaimana Laba-laba tersebut
+		dimulai. Laba-laba menambahkan mereka ke daftar URL untuk mengunjungi dan proses terus secara rekursif sebagai sumber daya baru yang ditemukan. mengunjungi URL tersebut, mengidentifikasi semua hyperlink di halaman dan.
 	</p>
 
-	<p>There are 4 methods of starting the Spider, differentiated by the
-		seed list with which it starts:</p>
-	<ul>
-		<li>Spider Site - The seed list contains all the existing URIs
-			already found for the selected site.</li>
-		<li>Spider Subtree - The seed list contains all the existing URIs
-			already found and present in the subtree of the selected node.</li>
-		<li>Spider URL - The seed list contains only the URI
-			corresponding to the selected node (in the Site Tree).</li>
-		<li>Spider all in Scope - The seed list contains all the URIs the
-			user has selected as being 'In Scope'.</li>
-		<li>Spider all in Context... - The seed list contains all the URIs
-			user has selected as being in the selected context.</li>
-	</ul>
-	<i>More details can be found below, in the "Accessed via" section </i>
+	<p>Laba-laba dapat digunakan dan dijalankan menggunakan <a href="../../ui/dialogs/spider.html">Spider dialogue</a>.</p>
 
-
-	<p>During the processing of an URL, the Spider makes a request to
-		fetch the resource and then parses the response, identifying
-		hyperlinks. It currently has the following behavior when processing
-		types of responses:</p>
+	<p>Selama pemrosesan URL, Laba-laba membuat permintaan untuk mengambil sumberdaya dan memparsing respon, identifikasi hyperlink. Saat ini memiliki perilaku berikut ketika pengolahan
+jenis tanggapan:</p>
 
 	<h4>HTML</h4>
-	Processes the specific tags, identifying links to new resources:
+	Memproses label spesifik, identifikasi link ke sumberdaya baru:
 	<ul>
-		<li>Base - Proper handling</li>
+		<li>Dasar - Penanganan yang tepat</li>
 		<li>A, Link, Area - 'href' attribute</li>
 		<li>Frame, IFrame, Script, Img - 'src' attribute</li>
 		<li>Meta - 'http-equiv' for 'location' and 'refresh'</li>
-		<li>Form - proper handling of Forms with both GET and POST
-			method. The fields values are generated validly, including <a
-			href="http://www.w3schools.com/html5/html5_form_input_types.asp">HTML
-				5.0 input types</a>.
+		<li>Formulir - menangani dengan tepat dari Formulir dengan metode GET dan POST. Nilai field dihasilkan secara valid, termasuk <a
+			href="http://www.w3schools.com/html5/html5_form_input_types.asp">Tipe masukan
+				HTML 5.0</a>.
 		</li>
-		<li>Comments - Valid tags found in comments are also analyzed, if
-			specified in the <a href="../../ui/dialogs/options/spider.html">Options
-				Spider screen</a>
+		<li>Komentar - Tag yang valid ditemukan pada komentar juga dianalisis, jika
+			ditetapkan pada <a href="../../ui/dialogs/options/spider.html">Pilihannya
+				Laba-laba layar</a>
 		</li>
 	</ul>
 
-	<h4>Robots.txt file</h4>
-	If set in the
-	<a href="../../ui/dialogs/options/spider.html">Options Spider
-		screen</a>, it also analyzes the 'Robots.txt' file and tries to identify
-	new resources using the specified rules. It has to be mentioned that
-	the Spider does not follow the rules specified in the 'Robots.txt'
-	file.
+	<h4>Berkas Robots.txt</h4>
+	Jika diatur pada
+	<a href="../../ui/dialogs/options/spider.html">Pilihan Spider
+layar</a>juga mengkaji file 'Robots.txt' dan mencoba untuk mengidentifikasi sumber baru yang menerapkan peraturan yang ditetapkan. Itu harus disebutkan bahwa
+laba-Laba tidak mengikuti aturan yang ditentukan dalam 'Robots.txt'
+file.
 
-	<h4>OData Atom format</h4>
-	OData content using the Atom format is currently supported. All included links 
-	(relative or absolute) are processed.
+	<h4>Bentuk DataO Atom</h4>
+	Konten Odata yang menggunakan format Atom yang saat ini didukung. Semua mencakup link (relatif atau absolut) yang diproses.
 
-	<h4>Non-HTML Text Response</h4>
-	Text responses are parsed scanning for the URL pattern
+	<h4>Non-HTML Respon Teks</h4>
+	Teks tanggapan diurai memindai URL pola
 
-	<h4>Non-Text response</h4>
-	Currently, the Spider does not process this type of resources.
+	<h4>Non-teks tanggapan</h4>
+	Saat ini, laba-Laba tidak proses ini jenis sumber daya.
 
-	<h2>Other aspects</h2>
+	<h2>Aspek-aspek lain</h2>
 	<ul>
-	<li> When checking if an URL was already visited, the behaviour regarding how
-	parameters are handled can be configured on the Spider Options screen.
+	<li> Ketika memeriksa jika sebuah URL yang telah dikunjungi, perilaku mengenai cara
+parameter yang ditangani dapat dikonfigurasi pada laba-Laba Pilihan layar.
 	</li>
-	<li> When checking if an URL was already visited, there are a few common parameters
-	which are ignored: jsessionid, phpsessid, aspsessionid, utm_*
+	<li> Ketika memeriksa jika sebuah URL yang telah dikunjungi, ada beberapa parameter yang umum
+yang diabaikan: jsessionid, phpsessid, aspsessionid, utm_*
 	</li>
-	<li> The Spider's behaviour regarding cookies is defined by the option present in the
-	<i>Edit -&gt; Enable Session Tracking</i> option. If that option is enabled, the Spider
-	will properly handle any cookies received from the server and will send them back accordingly.
-	If the option is disabled, the Spider will not send any cookies in its requests.
+	<li> Laba-Laba perilaku mengenai cookie tergantung pada bagaimana laba-laba mulai dan pilihan yang diaktifkan. Untuk lebih
+rincian mengacu pada laba-Laba Pilihan layar.
 	</li>
 	</ul>
 	<p>
-		The spider is configured using the <a
-			href="../../ui/dialogs/options/spider.html">Spider Options screen</a>.
+		Laba-laba dikonfigurasi menggunakan <a
+			href="../../ui/dialogs/options/spider.html">Spider Option screen</a>.
 	</p>
 
-	<h2>See also</h2>
+	<h2>Lihat juga</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/overview.html">UI Overview</a></td>
-			<td>for an overview of the user interface</td>
+			<td><a href="../../ui/overview.html">UI Gambaran</a></td>
+			<td>petunjuk untuk pengguna antar muka</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="concepts.html">Features</a></td>
-			<td>provided by ZAP</td>
+			<td><a href="concepts.html">Gambaran</a></td>
+			<td>di terbitkan oleh ZAP</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/options/spider.html">Spider
-					Options screen</a></td>
-			<td>for an overview of the Spider Options</td>
+			<td><a href="../../ui/dialogs/options/spider.html">Pilihan layar laba - laba</a></td>
+			<td>pilih pintasan untuk laba - laba</td>
 		</tr>
 	</table>
 

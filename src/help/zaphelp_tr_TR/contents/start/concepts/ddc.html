@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Veri Güdümlü İçerik
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Veri Güdümlü İçerik</h1>
+<p>
+Veri güdümlü içerik veri ifade eden URL yollarını tanımlayan
+<a href="structmods.html">Yapısal Düzenleyici</a>'nin türüdür.<br>
+<p>
+'Geleneksel' web uygulamalarında, uygulamanın yapısı genellikle URL yolları ile tanımlanır ve veriler URL parametrelerinde ve POST verisi içinde yer alır.<br>
+URL 'ler gibi:
+<ul>
+<li>https://www.örneğin.com/app/aaa?ddd=eee
+<li>https://www.örneğin.com/app/aaa?ddd=fff
+<li>https://www.örneğin.com/app/bbb?ddd=eee
+</ul>
+içinde gösterilir <a href="../../ui/tabs/sites.html">Siteler sekmesi</a> iki 'ağ' Ağaçtaki düğümler olarak:
+<ul>
+<li>Siteler
+	<ul>
+	<li>https://www.örneğin.com
+		<ul>
+		<li>uygulama
+			<ul>
+			<li>GET:aaa(ddd)
+			<li>GET:bbb(ddd)
+			</ul>
+		</ul>
+	</ul>
+</ul>
+Siteler ağacı ZAP'ın uygulama yapısının anlamını yansıttığı için önemlidir.<br>
+Eğer yapının iyi bir temsili yoksa ZAP uygulamaya etkin bir biçimde saldırması mümkün değildir.<br>
+<br>
+Bazı uygulamalar URL yollarında veri içerir.<br>
+Örneğin: 
+<ul>
+<li>https://www.example.com/app/company1/aaa?ddd=eee
+<li>https://www.example.com/app/company2/aaa?ddd=fff
+<li>https://www.example.com/app/company3/aaa?ddd=ggg
+</ul>
+Bu 3 URL aynı sayfayı temsil etmektedir ama farklı verilerle, ancak varsayılan olarak ZAP onları üç ayrı düğüm olarak temsil edecektir:
+<ul>
+<li>Siteler
+	<ul>
+	<li>https://www.örneğin.com
+		<ul>
+		<li>uygulama
+			<ul>
+			<li>şirket1
+				<ul>
+				<li>GET:aaa(ddd)
+				</ul>
+			<li>şirket2
+				<ul>
+				<li>GET:aaa(ddd)
+				</ul>
+			<li>şirket3
+				<ul>
+				<li>GET:aaa(ddd)
+				</ul>
+			</ul>
+		</ul>
+	</ul>
+</ul>
+Bu bir problem çünkü sadece onlardan birine saldırması gerektiği zaman ZAP şimdi 3 sayfaya birden saldıracak.<br>
+Bu durumda 3 defa aynı sayfaya saldırması büyük bir problem değil, ama eğer yüzlerce yada binlerce varsa
+gibi sayfalar, uygulamayı taramak için gereken süreyi önemli ölçüde artıracaktır.<br>
+<br>
+ZAP terimlerinde 'şirket' düğümleri 'veri odaklı içerik''tir - Uygulama yapısının bir bölümünü temsil etmek
+ yerine veri içeren URL yolu öğeleri.<br>
+Veri odaklı içeriği, uygulamayı ekleyerek tanımlayabilirsiniz <a href="contexts.html">İçerik</a>
+ve daha sonra onları yapılandırma <a href="../../ui/tabs/sites.html">Siteler sekmesi</a> 'İçerik olarak İşaretle &gt; <i>İçerik Adı</i> Veriye dayalı ağ' sağ tık menü öğesi<br>
+Bunu tamamladığınız anda, sayfa düğüm 1 olarak doğru bir şekilde gösterilecektir:
+<ul>
+<li>Siteler
+	<ul>
+	<li>https://www.örneğin.com
+		<ul>
+		<li>uygulama
+			<ul>
+			<li>&#x00AB;kuruluş&#x00BB;
+				<ul>
+				<li>GET:aaa(ddd)
+				</ul>
+			</ul>
+		</ul>
+	</ul>
+</ul>
+Karakterler &#x00AB; ve &#x00BB; bu 'özel' bir düğüm ve düğüm adı (Bu durumda 'şirket') sizin tarafınızdan bu düğümü temsil eder belirtmek için ayarlanabilir belirtmek için kullanılır.
+
+<h2>Üzerinden erişildi</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/sites.html">Siteler sekmesi</a></td><td>'Bağlam olarak bayrakla' - &gt;<i>Bağlam Adı</i> Veri güdümlü node'un sağ tık menü öğesi</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/history.html">Geçmiş sekmesi</a></td><td>'Bağlam olarak bayrakla' - &gt;<i>Bağlam Adı</i> Veri güdümlü node'un sağ tık menü öğesi</td></tr>
+</table>
+
+<h2>Ayrıca bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">UI Genel Bakış</a></td><td>kullanıcı ara yüzüne genel bakış için</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="concepts.html">Özellikler</a></td><td>ZAP tarafından sağlanmaktadır</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="structparams.html">Yapısal Parametreler</a></td><td>kullanıcı verisi yerine uygulama yapısını temsil eden parametreleri belirleyen</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/dialogs/session/context-struct.html">Oturum Bağlam Yapısı Ekranı</a></td></tr>
+</table>
+
+</body>
+</html>

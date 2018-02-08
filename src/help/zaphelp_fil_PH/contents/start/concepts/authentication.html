@@ -2,201 +2,186 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Authentication</title>
+<title>Awtentikasyon</title>
 </head>
 <body bgcolor="#ffffff">
-	<h1>Authentication</h1>
+	<h1>Pagpapatunay</h1>
 	<p>
-		ZAP handles multiple types of authentication (called <b>Authentication
-			Methods</b>) that can be used for websites / webapps. Each <b><a
-			href="contexts.html">Context</a></b> has an Authentication Method
-		defined which dictates how authentication is handled. The
-		authentication is used to create Web Sessions that correspond to
-		authenticated webapp <a href="users.html">Users</a>.
+		Pinamamahalaan ng ZAP ang iba't ibang uri ng pagpapatunay (tinatawag na <b>mga pamamaraan ng pagpapatunay</b>) na maaaring gamitin para sa mga website / mga webapp. Ang bawat <b><a
+			href="contexts.html">Konteksto</a></b> ay may Paraan ng Pagpapatunay na tumutukoy kung saan dinidiktahan kung paano pamamahalaan ang patunay. Ang pagpapatotoo ay ginagamit sa paglikha ng mga Web Session na tumutugma sa tunay na webapp <a href="users.html">Gumagamit</a>.
 	</p>
 
 	<p>
-		In order to detect when response messages from web servers correspond
-		to authenticated requests, a set of indicators can be configured. The
-		<b>Logged in indicator</b>, when present in a response message (either
-		the header or the body), signifies that the response message
-		corresponds to an authenticated request (e.g. presence of a 'logout
-		link' or a 'Welcome back, User X' pattern). Similarly, the <b>Logged
-			out indicator</b> indicates an unauthenticated request (e.g. presence of
-		a 'login link'). Only the presence of one of the 2 indicators is
-		sufficient for proper functionality. In the case neither of the
-		indicators has been specified, all messages are considered, by
-		default, authenticated.
+		Upang makita kung ang mga tumugon na mensahe ay tumutugma sa mga web server para sa mga kahilingan na pinatotohanan isang grupo ng mga tagapagbatid ang maaaring mag ayos nito. Ang
+	<b>Taga-pahiwatig ng Pag-login</b>, kapag kasalukuyang nasa loob ng mensahe sa pagtugon (na nasa header o sa laman), magpapakahulugan na ang pagtugon na mensahe ay nagpapatugma sa isang awtentikadong rekwest (e.g. presensya ng isang 'paglogout na link' o isang 'Maligayang pagdating ulit, Tagagamit X' na hulmahan). Sa pagkakatulad, ang <b>Paglog-out
+			na tagapahiwatig</b> ay nagpapahiwatig ng isang hindi napatunayang rekwest (e.g. presensya ng isang 'paglogin na link'). Kung ang ZAP ay nakadetekta ng na paglog out na tagapahiwatig ito ay magpapatunay,
+		kung hindi man ito ay mapapalagay na napatunay na at magpapatuloy katulad ng dati.  
+		Isa lamang (1) sa dalawang (2) tagapahiwatig ang kinakailangan para sa
+		huwastong pagpapaandar. Sa kaso ng wala sa
+		napahiwatig ang natukoy, lahat ng mga mensahe ay matuturing, sa
+		default, na auwtentikado.
 	</p>
 		
-	<p> To set one of the <b>Logged in/out Indicators</b>, either type the regex 
-		directly in the <i><a href="../../ui/dialogs/session/contexts.html#auth">Session
-		Properties</a> dialog -> Authentication panel -> Logged In/Out Indicator field</i>,
-		either find an authenticated message in the Sites Tree, select it, open the
-		Response View and select the text you wish to define as the indicator using the
-		mouse and select the <i>Flag as Context... Logged in/out indicator</i> right-click menu option.
+	<p> Upang matalaga ang isa sa <b>Paglog-in/Paglog-out na Tagapahiwatig</b>, alinman sa pagtype sa regex 
+		diretso sa loob ng <i><a href="../../ui/dialogs/session/contexts.html#auth">Mga Katangian ng
+		Sesyon</a> na diyalogo -> Panel ng Awtentikasyon -> Paglog-in/Paglog-out na Tagapahiwatig na field</i>,
+		alinman sa paghahanap ng isang awtentikadong mensahe sa Mga Sayt na Kahoy, piliin ito, buksan sa
+		Pagtugon na View at piliin ang teksto na nais mong bigyan ng kahulugan bilang tagapahiwatig gamit ang
+		mouse at piliin ang <i>I-flag bilang Konteksto... Paglog in/out na pahiwatig</i> opsyon sa kanang pagpindot ng menu.
 	</p>
 
-	<p>In order to perform the authentication of a user on a website /
-		in a webapp, the Authentication Method defines how the authentication
-		is done (the process), while the necessary credentials (the exact
-		identifiers) are dependent on the user, so, in ZAP, they are
-		configured in the Users.</p>
+	<p>Upang maisagawa ang awtentikasyon ng isang user sa isang website / sa loob ng isang webapp, ang Paraan sa Awtentikasyon ay magpapakahulugan kung paano ang awtentikasyon ay maisasagawa (ang proseso), habang ang mga kinakailangang mga kredential (ang eksaktong mga pakakakilanlan) ay umaasa sa tagagamit, kaya, sa ZAP, sila ay nakakompigura sa mga Tagagamit.</p>
 	
-	<p>The generic <b>main steps</b> that are needed to configure authentication for a web application
-	are the following:
+	<p>Ang generikang <b>pangunahing mga hakbang</b> na kinakailangan upang makompigura ang awtentikasyon para sa isang web na aplikasyon
+	ay ang mga sumusnod:
 	<ol>
-		<li>properly configure a ZAP <a href="contexts.html">Context</a> for the web application</li>
-		<li>set up the <a href="sessionManagement.html">session management method</a> for the context to
-		the one that is used in your app</li>
-		<li>set up the authentication method for the context:
+		<li>maayos na pagkompigura sa ZAP na <a href="contexts.html">Konteksto</a> para sa web na aplikasyon</li>
+		<li>magset up ng <a href="sessionManagement.html">paraan ng pagpapamahala ng sesyon</a> para sa konteksto sa
+		isa na ginagamit ng iyong app</li>
+		<li>magset up ng paraan ng awtentikasyon para sa konteksto:
 			<ol>
-				<li>set up at least one of the <i>Logged In Indicator</i> or the <i>Logged out indicator</i>,
-				as described above</li>
-				<li>configure the authentication method for your application, specifying all the requirements
-				(as seen below)</li>
+				<li>magset up ng kahit isa sa <i>Pagpapahiwatig sa Paglog in</i> o sa <i>Pagpapahiwatig sa Paglog out</i>,</li>
+				<li>magkompigura sa paraan ng awtentikasyon para sa iyong aplikasyon, nagtutukoy sa lahat ng mga kinakailangan
+				(sa kung ano ang makikita sa ibaba)</li>
 			</ol>
 		</li> 
-		<li>configure a set of <a href="users.html">users</a> for the context that directly correspond to the
-		authentication method for the context</li>
+		<li>magkompigura ng gurpo ng <a href="users.html">mga tagagamit</a> para sa konteksto na direktang tumutugma sa 
+		paraan ng awtentikasyon para sa konteksto</li>
 	</ol>
 
-	<p>Authentication methods can be used in multiple places around
-		ZAP. Some of the examples include:</p>
+	<p>Ang mga paraan ng awtentikasyon ay maaring magamit sa iba't ibang mga lugar sa loob ng
+		ZAP. Ang ibang mga halimbawa ay mapapaloob ng:</p>
 	<ul>
-		<li>defining Users and automatic login</li>
-		<li>detection of authenticated/unauthenticated states</li>
-		<li>performing automatic re-authentication</li>
+		<li>pagbibigay kahulugan sa mga Tagagamit at awtomatikong paglogin</li>
+		<li>pagtutuklas sa awtentikado/hindi awtentikadong mga estado</li>
+		<li>pagsagawa ng awtomatikong muling pag-awtentiko</li>
 	</ul>
 
-	<p>Multiple authentication methods have been implemented and the
-		system supports easy addition of new methods, according to user needs.
-		They main ones are described below.</p>
+	<p>Iba't ibang mga paraan ng awtentikasyon ay na implementa at ang
+		sistema ay sumusuporta ng madaling karagadagan sa bagong mga paraan, ayon sa kung ano ang mga kinakailangan ng tagagamit.
+		Sila ang mga pangunahin na binigyan ng kahulugan sa ibaba.</p>
 
 	<h3>
-		<a name="manual">Manual Authentication</a>
+		<a name="manual">Manuwal na Awtentikasyon</a>
 	</h3>
-	<p>This method allows users to perform the authentication manually
-		(e.g. authenticate in the browser while proxy-ing through ZAP) and
-		then select the corresponding HTTP session. As the actual
-		authentication is being performed by you, this method does not support
-		re-authentication in case the webapp logs a user out.
+	<p>Ang parang ito ay magpapahintulot sa mga tagagamit na isagawa ang awtentikasyon ng manual
+		(e.g. pag-awtentiko sa loob ng browser habang nagpo-proxy gamit ang ZAP) at
+		pagpili sa tugmang sesyon ng HTTP. Hanngang sa ang aktuwal na
+		awtentikasyon ay kasalukuyang mong isinasagawa, ang paraang ito ay hindi sumusuporta ng 
+		muling pag-awtentika kung sakaling ang webapp ay maglog out na tagagamit.
 	</p>
 	
-	<p>When using this authentication method, configuring a User for the context 
-	require choosing an authenticated HTTP session.</p>
+	<p>Kapag gumagamit ng paraan ng awtentikasyong ito, ang pagkompigura ng Tagagamit para sa konteksto ay
+	mangangailangang mamili ng isang awtentikadong sesyon ng HTTP.</p>
 
 	<h3>
-		<a name="formBased">Form-Based Authentication</a>
+		<a name="formBased">Awtentikasyon na Batay-sa-Anyo</a>
 	</h3>
 	<p>
-		This method is used for websites / webapps where authentication is
-		done by submitting a form or performing a GET request to a 'login url'
-		using a 'username/password' pair of authentication credentials.
-		Re-authentication is possible. Configuration can be done using the <a
-			href="../../ui/dialogs/session/contexts.html#auth">Session
-			Contexts Dialog</a> or using the contextual PopupMenu: <i>Flag as...
-			Form-Based Authentication Login Request</i>.
+		Ang paraang ito ay ginagamit para sa mga website / webapp na kung saan ang awtentikasyon ay
+		ginagawa sa pamamagitan ng pagsumite ng form o pagsagawa ng GET na rekwest upang a 'url ng paglogin' gamit ang 'username/password' na pares ng awtentikasyon na mga kredensyal.
+		Muling pag-awtentika ay posible. Ang kompigurasyon ay maaring maisagawa gamit ang <a
+			href="../../ui/dialogs/session/contexts.html#auth">Diyalogo
+			ng Mga Konteksto ng Sesyon</a> o gamit sa kontekstuwal na PopulMenu: <i>Iflag bilang...
+			Paghiling ng Batay-sa-Anyo na Awtentikasyon sa Paglogin</i>.
 	</p>
-	<p>When using this authentication method, configuring a User for the context requires
-	setting up the <i>username/password</i> pair of credentials that are used for the form based
-	authentication.</p>
+	<p>Kapag gumagamit nitong paraan sa awtentikasyon, ang pagkompigura ng isang Tagagamit para sa konteksto ay mangangailangan ng
+	pagset up sa <i>username/password</i> na pares ng mga kredensyal na magagamit para sa batay sa anyo na
+	awtentikasyon.</p>
 	
 	<h3>
-		<a name="httpAuth">HTTP/NTLM Authentication</a>
+		<a name="httpAuth">Awtentikasyon sa HTTP/NTLM</a>
 	</h3>
 	<p>
-		This method is used for websites / webapps where authentication is
-		enforced using the HTTP or NTLM Authentication mechanisms employing HTTP message headers. 
-		Three authentication schemes are supported: Basic, Digest and NTLM.
-		Re-authentication is possible, as the authentication headers are sent with every authenticated
-		request. Configuration can be done using the <a
-			href="../../ui/dialogs/session/contexts.html#auth">Session
-			Contexts Dialog</a>.
+		Ang paraang ito ay magagamit para sa mga website / webapp na kung saan ang awtentikasyon ay
+		ipinapatupad gamit ang mekanismo sa HTTP o NTLM na Awtentikasyon na magsasapasok sa mga header ng HTTP na mensahe. 
+		Ang tatlong iskima ng awtentikasyon ay suportado: Pangunahin, Digest, at NTLM.
+		Ang muling pag-awtentika ay posible, dahil ang mga header ng awtentikasyon ay mapapadala sa bawat awtentikadong
+		pagrekwest. Ang kompigurasyon ay maaring maisagawa gamit ang <a
+			href="../../ui/dialogs/session/contexts.html#auth">Diyalogo
+			ng mga Konteksto ng Sesyon</a>.
 	</p>
-	<p>When using this authentication method, configuring a User for the context requires
-	setting up the <i>username/password</i> pair of credentials that are used for the HTTP/NTLM authentication.</p>
+	<p>Kapang gumagamit nitong paraan sa awtentikasyon, ang pagkompigura ng isang Tagagamit para sa konteksto ay mangangailangan ng
+	pagset up sa <i>username/password</i> na pares ng mga kredensyal na magagamitsa HTTP/NTLM na awtentikasyon.</p>
 	
 	<h3>
-		<a name="scriptBased">Script-Based Authentication</a>
+		<a name="scriptBased">Awtentikasyon na Base-sa-Script</a>
 	</h3>
 	<p>
-		This method is useful for websites / webapps where the authentication is a more complex one and some custom
-		scripts that handle the authentication process are beneficial. To use this method, you must first define an Authentication script
-		which sends messages or performs other actions as needed by your web-application. This script is then selected for use for a given Context
-		and it is called whenever an authentication is performed. Re-authentication is possible. 
-		Configuration can be done using the <a href="../../ui/dialogs/session/contexts.html#auth">Session
-			Contexts Dialog</a> and requires you to have the Scripts Console ZAP Addon installed from the Marketplace.
+		Ang paraang ito ay kapaki-pakinabang para sa mga website / webapp na kung saan ang awtentikasyon ay mas komplikado at ang ibang kustom na
+		mga script na naghahawak sa proseso ng awtentikayon ay kapaki-pakinabang. Upang magamit ang paraang ito, kailangan mo munang bigyan ng kahulugan ang script ng Awtentikasyon
+		na magpapadala sa mga mensahe o magsasagawa ng ibang aksyon na kinakailangan ng iyong web na aplikasyon. Ang script na ito ay mapipili para magamit sa ibinigay na Konteksto
+		at matatawag kapag ang awtentikasyon ay maisasagawa. Ang muling pag-awtentika ay posible. 
+		Ang kompigurasyon ang maaring magawa gamit ang <a href="../../ui/dialogs/session/contexts.html#auth">Diyalogo
+			ng mga Konteksto na Sesyon</a> at mangangailangan sa iyo na magkaroon ng Addon ng ZAP sa Scripts na Console na naka-instola mula sa Marketplace.
 	</p>
-	<p>When using this authentication method, configuring a User for the context requires
-	setting up the a set of parameters defined in the script. For more details, see the provided Authentication Script examples.</p>
+	<p>Kapag ginagamit ang ganitong pamamaraan ng pagpapatunay, sinasaayos ang mga User para sa konteksto ay nangangailangan ng pag-set up ng isang set ng mga parameter na tinukoy sa script. up sa grupo ng mga parametro na binigyan ng kahulugan sa script. Para sa iba pang mga detalye, tingnan ang ibinigay na mga halimbawa ng Awtentikasyon na Script.</p>
 	
-	<h2>Configuration example</h2>
-	<p>A configuration example showing how to fully configure a webapp that uses <i>form-based authentication</i> and
-	<i>cookie-based session management</i> is 
-	seen below:
+	<h2>Halimbawa ng Kompigurasyon</h2>
+	<p>Ang halimbawa ng kompigurasyon na nagpapakita kung paanon buong makompigura ang webapp na gumagamit ng <i>batay-sa-anyo na awtentikasyon</i> at
+	<i>batay-sa-cookie na pamamahala ng sesyon</i> ay 
+	makikita sa ibaba:
 	<ol>
-		<li>set up a context for the web application</li>
-		<li>set up the session management method to <i>Cookie-based Session Management</i></li>
-		<li>make sure your browser proxies everything through ZAP and log into your application using the browser</li>
-		<li>go to ZAP and identify the request that was done for the login (most usually it's a HTTP POST request 
-		containing the username and the password and possibly other elements)</li>
-		<li>right click on the request and Flag as Context... Form-based Auth Login Request</li>
-		<li>a window will be opened already containing the request URL and the parameters (if any). Use 
-		the dropdown options to select which of the parameters correspond to the username and to the password</li>
-    	<li>then you need to tell ZAP how to identify whether an authentication succeeded or not. You can do 
-    	this by setting logged in or logged indicators. These are regex patterns which, if found in a 
-    	response, tell ZAP whether it's authenticated or not (e.g. presence of a 
-    	http://example.com/logout link or the presence of a 'Welcome, User X'). Only one of them is
-    	necessary. To set one of them, either type the regex directly in the Session Properties -> 
-    	Authentication -> Logged In Indicator, either find an authenticated message in the Sites Tree,
-    	select it, open the Response View and select the text you wish to define as the indicator using
-    	the mouse and select the Flag as Context... Logged in indicator right-click menu option.</li>
-    	<li>define as many users as you need in the Session Properties -> Users section.</li>
-    	<li>after this step, various actions are available in ZAP. For example, you now have a new right click option: Attack -> Spider Context As User. Or, using the Forced User Mode, you can force all the interactions that go through ZAP for a given Context to be from the perspective of a User. The User Forced Mode is enabled via the previous-to-last button in the toolbar (the one with the user and the lock) and is configured via Session Properties -> Forced User Mode.</li>
+		<li>magset up ng konteksto para sa web na aplikasyon</li>
+		<li>magset up ng paraan sa pamamahala ng sesyon sa <i>Pamamahala batay-sa-cookie na Sesyon</i></li>
+		<li>siguraduin na ang iyong browser ay nagpo-proxy sa lahat gamit ang ZAP at maglog sa loob ng iyong aplikasyon gamit ang browser</li>
+		<li>pumunta sa ZAP at kilalanin ang rekwest na naisagawa para sa paglogin (kadalasan ay isang request ng HTTP na POST 
+		na naglalaman ng username at password at posible ng ibang mga elemento)</li>
+		<li>kanang pagpindot sa rekwest at I-flag bilang Konteksto... Batay-sa-Anyo na Auth Login na Rekwest</li>
+		<li>ang window ay mabubuksan kaagad na maglalaman sa URL ng rekwest at the mga parametro (kung mayroon). Gumamit 
+		ng dropdown na pagpipilian upang mapili kung saan sa mga parametro ang magtutugma sa username at sa password</li>
+    	<li>pagkatapos ay mangangailang mong sabihin sa ZAP kung paano matukoy kung ang awtentikasyon ay nagtagumpay o hindi. Maaring mong gawin 
+    	ito sa pamamagitan ng pagset sa na-log in o na-log out na mga pahiwatig. Ito ang mga regex na mga pattern na kung saan, kung makikita sa loob ng 
+    	tugon, ay magsasabi sa ZAP kung ito ay awtentikado o hindi (e.g. presensya ng isang 
+    	http://example.com/logout link o ang presensya ng isang 'Maligayang pagdating, Tagagamit X'). Isa lamang sa kanila ang
+    	kinakailangan. Upang matalaga ang isa sa kanila, i-type ang regex diretso sa Mga Katangian ng Sesyon -> 
+        	Awtentikasyon -> Paglog in na Pagpapahiwatig, maghanap ng awtentikadong mensahe sa Sites na Puno,
+    	piliin ito, at buksan ang Tugon na View at pillin ang teksto na nais mong bigyan ng kahulugan bilang pagpapahiwatig gamit
+    	ang mouse at pumili ng Iflag bilang Konteksto...	 Paglog-in na pagpapahiwatig na kanang-pagpindot na opsyong ng menu.</li>
+    	<li>magbigay ng kahulugan sa mas maraming tagagamit na kailangan mo sa Mga Katangian ng Sesyon -> seksyon ng mga Tagagamit.</li>
+    	<li>pagkatapos sa hakbang na ito, iba't ibang mga aksyon ang magagamit sa ZAP. Halimbawa, maari mo nang pumili ng user sa <a href="../../ui/dialogs/spider.html">Ispayder na dialogo</a>. O, sa paggamit sa Puwersang Mode ng Tagagamit, maari mong puwersahin ang lahat ng mga interkasyon na dumadaan sa ZAP para sa bigay na Konteksto na manggagaling sa perspektibo ng Tagagamit. Ang Puwersang Mode ng Tagagamit ay pinapagana gamit ang dumaan-hanggang-sa-huli na button sa toolbar (ang isa na may user at lock) at kinokompigura gamit ang Mga Katangian ng Sesyon -> Puwersang Mode ng Tagagamit.</li>
 	</ol>
 	
-	Most of the steps above apply as well for other authentication methods. The only things that change when trying
-	to configure authentication using a different method are steps 3, 4, 5 and 6. Instead of these, select the authentication
-	method required from the drop-down list and configure it as needed. More details about configuring each type 
-	of authentication can be above and <a href="../../ui/dialogs/session/contexts.html">here</a>.
+	Ang kadalasang mga hakbang sa taas ay magagamit din sa ibang mga paraan ng awtentikasyon. Ang tanging mga bagay na maaring mabago kapag sinusubukang magkompigura ng awtentikasyon sa paggamit ng iba't ibang mga paraan ay ang mga step 3, 4, 5 at 6. Sa halip ng mga ito, pumili ng paraan ng
+	awtentikasyon na kinakailangan mula sa drop-down na listahan at ikompigura kung ito ay kinakailangan. Karagdagang mga detalye patungkol sa pagkokompigura sa bawat uri 
+	ng awtentikasyon ay maaring itaas at <a href="../../ui/dialogs/session/contexts.html">dito</a>.
 
-	<h2>Configured via</h2>
+	<h2>Nakompigura gamit ang</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/session/contexts.html#auth">Session Properties dialog</a></td>
+			<td><a href="../../ui/dialogs/session/contexts.html#auth">Ang Mga Katangian ng Sesyon na diyalogo</a></td>
 			<td></td>
 		</tr>
 	</table>
 
-	<h2>See also</h2>
+	<h2>Tingnan din</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="http://youtu.be/cR4gw-cPZOA">Youtube tutorial</a></td>
-			<td>of the Authentication, Session Management and Users Management features of ZAP [external link to http://youtu.be/cR4gw-cPZOA].</td>
+			<td><a href="https://youtu.be/cR4gw-cPZOA">Pagtururo sa Youtube</a></td>
+			<td>sa Awtentikasyon, Pamamahala ng Sesyon at Pamamahala ng Mga Tagagamit na mga tampok ng ZAP [eksternal na link sa https://youtu.be/cR4gw-cPZOA].</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/overview.html">UI Overview</a></td>
-			<td>for an overview of the user interface</td>
+			<td><a href="../../ui/overview.html">Pangkalahatang Ideya ng UI</a></td>
+			<td>para sa pangkalahatang ideya sa interface ng tagagamit</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="concepts.html">Features</a></td>
-			<td>provided by ZAP</td>
+			<td><a href="concepts.html">Mga tampok</a></td>
+			<td>na handog ng ZAP</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/session/contexts.html">Session
-					Contexts Dialog</a></td>
-			<td>for an overview of the Session Properties</td>
+			<td><a href="../../ui/dialogs/session/contexts.html">Mga Konteksto
+					ng Sesyon na Diyalogo</a></td>
+			<td>para sa pangkalahatang ideya ng Mga Katangian ng Seayon</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="users.html">Users</a></td>
-			<td>for an overview of Users</td>
+			<td><a href="users.html">Mga Tagagamit</a></td>
+			<td>para sa pangkalahatang ideya ng mga Tagagamit</td>
 		</tr>
 
 	</table>

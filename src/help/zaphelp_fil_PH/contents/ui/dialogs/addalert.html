@@ -3,54 +3,57 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Add Alert dialog
+Add Alert na dialog
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Add Alert dialog</h1>
+<h1>Add Alert na dialog</h1>
 <p>
-This dialog allows you to manually add or change an <a href="../../start/concepts/alerts.html">Alert</a> associated
-with a specific request.<br/>
+Ang dialog na ito ay nagpapahintulot sa iyo na manu-manong magdagdag o magbago ng isang <a href="../../start/concepts/alerts.html"> Alert </> na nauugnay
+na may isang partikular na kahilingan.<br/>
 </p>
 
-<h2>Fields</h2>
-The dialog has the following fields:
+<h2>Mga larangan</h2>
+Ang diyalogo ay ang mga sumusunod na larangan:
 
-<h3>Type</h3>
-The type of the alert is a pull down field which allows you to select one of a prepopulated set of issue types.<br/>
-You can also enter your own text or change the text of one of the items you selected.<br/>
-If you select on of the existing types then the Description, Solution and Other Info fields
+<h3>Ang uri</h3>
+Sa uri ng alerto ay may humihila pababa sa bukid na nagpapahintulot sa iyo na pumili ng isa sa isang prepopulated na set ng mga uri ng isyu.<br/>
+Maaari din ipasok ang iyong sariling teksto o baguhin ang text ng isa sa mga aytem na napili mo.<br/>
+If you select one of the existing types then the Description, Solution and Other Info fields
 will be populated with text associated with the item you chose. 
 
 <h3>Panganib</h3>
-A pull down field which allows you to specify how serious you think the risk is:
+May humihila pababa sa larangan na kung saan ay nagbibigay-daan sa iyo upang tukuyin kung paano malubhang palagay mo ang mga panganib ay:
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Informational</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Low</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Medium</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>High</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Impormasyon</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Mababang</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Katamtaman</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Mataas</td><td></td></tr>
 </table>
 
-<h3>Confidence</h3>
-A pull down field which allows you to specify how confident you are in the validity of the finding:
+<h3>Kumpiyansa</h3>
+May humihila pababa sa larangan na kung saan ay nagbibigay-daan sa iyo upang tukuyin ang nakakasiguro ka ay sa ang katumpakan ng mga paghahanap:
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>False Positive</td><td>for potential issues that you later find are not exploitable</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Low</td><td>for unconfirmed issues</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Medium</td><td>for issues you are somewhat confident of</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>High</td><td>for findings you are highly confident in</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Confirmed</td><td>for confirmed issues</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>False Positive</td><td>sapagkat hindi ay pagsasamantalahan ang potensyal na mga isyu na makikita mo mamaya</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Mababa</td><td>para sa mga hindi nakumpirma na isyu</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Katamtaman</td><td>para sa mga isyu mo ay medyo kumpyansa sa</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Mataas</td><td>para sa mga natuklasan mo ay lubos na tiwala sa</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Nakumpirma</td><td>para sa mga hindi nakumpirma na isyu</td></tr>
 </table>
 
-<h3>Parameter</h3>
-A pull down field which allows you to specify which parameter the issue is associated with.<br/>
-The field is prepopulated with any URL and FORM parameters found, but you can also enter your own parameter name. 
+<h3>Parameters</h3>
+Kaakibat ang isang pull down ang patlang na kung saan ay nagbibigay-daan sa iyo upang tukuyin kung aling mga parameter sa isyu.<br/>
+Ang field na ito ay prepopulated sa anumang URL at FORM na parameter na matatagpuan, ngunit ikaw ay maaari ding dumating ng sariling ngalan ng parameter.<br />
+Array parameters (in URL query component and <code>x-www-form-urlencoded</code> request body) are identified with its index. For
+example, for a request containing <code>choices[]=ChoiceA&amp;choices[]=ChoiceB</code> the first parameter would be identified
+as <code>choices[0]</code> and the second as <code>choices[1]</code>.
 
 <h3>Deskripsyon</h3>
 A general description of the type of issue found.<br/>
-This is populated when you select one of the predefined types, but you can also change it as required.<br/>
-Note that any changes you make will be lost if you select another type.
+Ito ay populated kapag pinili mo ang isa sa mga paunang natukoy na uri, ngunit maaari mo ring baguhin ito bilang kinakailangan.<br/>
+Tandaan na anumang pagbabago na gumawa ka ng mawawala kung pumili ka ng isa pang uri.
  
-<h3>Other Info</h3>
+<h3>Iba pang impormasyon</h3>
 Information specific to the particular issue you have found.<br/>
 This is not prepopulated.
 
@@ -59,25 +62,25 @@ Recommendations about how to fix the issue.<br/>
 This is populated when you select one of the predefined types, but you can also change it as required.<br/>
 Note that any changes you make will be lost if you select another type.
  
-<h3>Reference</h3>
+<h3>Sanggunian</h3>
 One or more URLs pointing to more information on the internet about the selected type of alert.<br/>
 This is populated when you select one of the predefined types, but you can also change it as required.<br/>
 Note that any changes you make will be lost if you select another type.
  
-<h2>Accessed via</h2>
+<h2>Ma-access sa pamamagitan ng</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../tabs/history.html">History tab</a></td><td>'New Alert...' right click menu item</td></tr>
+<a href="../tabs/history.html">Pangkasaysayan na tab</a></td><td>'Bagong Alert...' i-right click ang menu item</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../tabs/alerts.html">Alerts tab</a></td><td>double clicking on an existing alert</td></tr>
+<a href="../tabs/alerts.html">Mga Pang-alerto na tab</a></td><td>double-click sa isang umiiral na alerto</td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Tignan din</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../overview.html">UI buod</a></td><td>para sa buod ng user interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+<a href="dialogs.html">Mga dayalogo</a></td><td>para sa detalye ng mga dialog o mga popup </td></tr>
 </table>
 
 </body>

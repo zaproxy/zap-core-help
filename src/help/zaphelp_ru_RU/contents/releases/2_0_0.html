@@ -9,67 +9,67 @@
 <body bgcolor="#ffffff">
 <h1>Release 2.0.0</h1>
 <p>
-The following changes were made in this release:
+В этом выпуске были внесены следующие изменения:
 </p>
 
 <h2>Significant changes:</h2>
 
 
-<h3>An integrated add-ons marketplace</h3>
+<h3>Интегрированные дополнения рынок</h3>
 
-ZAP can be extended by add-ons that have full access to all of the ZAP internals. Anyone can write add-ons and upload them to the ZAP Add-on Marketplace (OK, so its a Google code project called zap-extensions, but you get the idea).
+ZAP может быть расширен надстройками, которые имеют полный доступ ко всем внутренним ZAP. Любой может написать дополнения и загрузить их на Zap Add-on Marketplace (ОК, так что это проект Google code под названием zap-extensions, но вы получите идею).
 <br/>
-More importantly you can now browse, download and install those add-ons from within ZAP. Most add-ons can be dynamically installed (and uninstalled) so you wont even need a restart.
+Что еще более важно, теперь вы можете просматривать, загружать и устанавливать эти дополнения из ZAP. Большинство надстроек могут быть динамически установлены (и удалены), так что вам даже не потребуется перезагрузка.
 <br/>
-You can choose to be notified of updates, and even be automatically updated. And as the scan rules are now implemented as add-ons you can get the latest rules as soon as they are published.
+Вы можете выбрать, чтобы получать уведомления об обновлениях, и даже автоматически обновляются. И поскольку правила сканирования теперь реализованы в качестве дополнений, вы можете получить последние правила, как только они будут опубликованы.
 
-<h3>A replacement for the 'standard' Spider</h3>
+<h3>Замена для "стандартного" Паука</h3>
 
-The ‘old’ Spider was showing its age, so its been completely rewritten, and is much faster and more comprehensive than the old one. This is still a 'traditional' spider that analyses the HTML code for any links it can find.
+"Старый" Паук показывал свой возраст, поэтому он был полностью переписан, и намного быстрее и более всесторонний, чем старый. Это все еще "традиционный" паук, который анализирует HTML-код для любых ссылок, которые он может найти.
 
-<h3>A new 'Ajax' spider</h3>
+<h3>Новый паук "Ajax"</h3>
 
-In addition to the 'traditional' spider we've added an Ajax spider which is more effective with applications that make heavy use of JavaScript. This uses the Crawljax project which drives a browser (using Selenium) and so can discover any links an application generates, even ones generated client side.
+В дополнение к "традиционному" пауку мы добавили Ajax spider, который более эффективен с приложениями, которые интенсивно используют JavaScript. Это использует проект Crawljax, который управляет браузером (используя Selenium), и поэтому может обнаружить любые ссылки, генерируемые приложением, даже те, которые генерируются клиентской стороной.
 
 <h3>Web Socket support</h3>
 
-ZAP now supports WebSockets, so ZAP can now see all WebSocket messages sent to and from your browser. As with HTTP based messages, ZAP can also intercept WebSocket messages and allows you to change them on the fly.
+Зап теперь поддерживает websockets, поэтому зап можете теперь видеть все через websocket сообщения, отправляемые и получаемые с вашего браузера. Как и в случае с сообщениями на основе HTTP, ZAP также может перехватывать сообщения WebSocket и позволяет изменять их на лету.
 <br/>
-You can also fuzz WebSockets messages as well using all of the fuzzing payloads included in ZAP from projects like JBroFuzz and fuzzdb. And of course you can easily add your own fuzzing files.
+Вы также можете пушком сообщения веб-сокетов, а также используя все содержимое фаззинг включенными в зап из проектов, как JBroFuzz и fuzzdb. И, конечно, вы можете легко добавить свои собственные fuzzing файлы.
 
-<h3>Quick Start tab</h3>
+<h3>Вкладка быстрого запуска</h3>
 
 The first main tab you will now see is a ‘Quick Start’ tab which allows you to just type in a URL and scan it with one click.
 <br/>
-This is an ideal starting point for people new to application security, but experts can easily remove it if they find it distracting.
+Это идеальная отправная точка для людей, новых для безопасности приложений, но эксперты могут легко удалить его, если они находят его отвлекающим.
 
-<h3>Session awareness</h3>
+<h3>Осведомленность о сессии</h3>
 
-ZAP is now session awareness, so that ZAP can recognise and keep track of multiple sessions. It allows you to create new sessions, switch between them, and applies to all of the other components, like the Spider and Active Scanner.
+ZAP теперь осведомленность о сеансе, так что ZAP может распознавать и отслеживать несколько сеансов. Он позволяет создавать новые сеансы, переключаться между ними и применяется ко всем другим компонентам, таким как Spider и активный сканер.
 
-<h3>User defined Contexts</h3>
+<h3>Пользовательские контексты</h3>
 
-You can now define any number of ‘contexts’ - related sets of URLs which make up an application. You can then target all URLs in a context, for example using the Spider or Active Scanner. You can also add the contexts to the scope, and associate other information, such as authentication details.
+Теперь вы можете определить любое количество "контекстов" связанных наборов URL - адресов, которые составляют приложение. Затем можно указать все URL-адреса в контексте, например с помощью Spider или активного сканера. Можно также добавить контексты в область и связать другие сведения, такие как сведения проверки подлинности.
 
 <h3>Session scope</h3>
 
-The session scope allows you to specify which contexts you are interested at any one time. You can restrict what you see in various tabs to just the URLs in scope, and prevent accidentally attacking URLs not in scope by using the Protected mode.
+Область сеанса позволяет указать, какие контексты Вас интересуют в любой момент времени. Вы можете ограничить то, что вы видите на различных вкладках, только URL-адресами в области и предотвратить случайную атаку URL-адресов, не находящихся в области, с помощью защищенного режима.
 
 <h3>Different modes</h3>
 
 ZAP now supports 3 modes:
 <ul>
-<li>Safe, in which no potentially dangerous operations permitted</li>
-<li>Protected, in which you can perform any actions on URLs in scope</li>
-<li>Standard, in which you can do anything to any URLs</li>
+<li>Сейф, в котором никакие потенциально опасные деятельности не позволили</li>
+<li>Защищенный, в котором можно выполнять любые действия с URL-адресами в области</li>
+<li>Стандартный, в котором вы можете сделать что-нибудь для любых URL</li>
 </ul>
 <h3>Authentication handling</h3>
 
-You can now associate authentication details with any context, which allows ZAP to do things like detect if and when you are logged out and automatically log you back in again. This is especially useful when used via the API in security regression tests.
+Теперь вы можете связать данные аутентификации с любым контекстом, который позволяет ZAP делать такие вещи, как обнаружение, если и когда вы вышли из системы, и автоматически регистрировать Вас снова. Это особенно полезно при использовании через API в регрессионных тестах безопасности.
 
 <h3>More API support</h3>
 
-The REST API has been significantly extended, giving you much more access to the functionality ZAP provides.
+Rest API был значительно расширен, что дает вам гораздо больше доступа к функциональности ZAP обеспечивает.
 
 <h3>Fine grained scanning controls</h3>
 

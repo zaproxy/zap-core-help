@@ -29,7 +29,7 @@ Certificados SSL Dinâmicos
 
 <h2>Certificado CA raiz do ZAP</h2>
 <p>
-	Imagine que você está visitando múltiplos sites protegidos com SSL. Toda vez que o seu browser se conecta a um deles, um novo certificado SSL é criado.
+	Imagine you're visiting multiple SSL protected sites. Toda vez que o seu browser se conecta a um deles, um novo certificado SSL é criado.
 	Mas esses certificados não são reconhecidos por ninguém (porque foram criados pelo ZAP).
 	Ou seja, nem o seu browser vai aceitar esses certificados.
 	Você pode estar familiarizado com essas situações, mas mesmas que acontecem quando o seu browser reclama de um erro de certificado, mas você manualmente cria uma regra de exceção para aquele servidor.  
@@ -127,9 +127,7 @@ E esse exemplo funciona - é o certificado Superfish!
 	Isso significa que o certificado da Autoridade Certificadora Raiz é utilizado como um emissor de certificados.
 </p>
 <p>
-	Every dynamically generated certificate is valid for 1000 days.<br>
-	Every dynamically generated certificate is 2048 bit strong (RSA with SHA1).<br>
-	Every dynamically generated certificate has a random serial number. 
+	Todo certificados gerado dinamicamente é válido por 1000 dias. <br>Todo certificado gerado dinamicamente tem força de 2048 bits (RSA com SHA1). <br>Todo certificado gerado dinamicamente tem um número de série aleatório. 
 	Todo certificado gerado dinamicamente consiste dos seguintes identificadores:
 </p>
 <p style="padding-left: 20pt;">
@@ -160,7 +158,7 @@ OU = Zed Attack Proxy Project<br>
 'Instalar certificado'. Outro jeito é salvar/exportar o certificado 
 gerado (copie para o computador-alvo) e clique no arquivo .CER. 
 	Quando fizer isso o Wizard de ajuda à instalação de certificados do Windows aparecerá.
-	Nesse wizard, selecione o armazenamento de certificados. Não deixe o Windows eseolher automaticamente o armazenamento.
+	In this wizard manually choose the certificate store. Não deixe o Windows eseolher automaticamente o armazenamento.
 	Escolha 'certificados raiz confiáveis' ou 'trusted root certificates' como local de armazenamento e finalize o wizard.
 </p>
 <p>
@@ -184,8 +182,8 @@ importá-lo duas vezes, quando estiver utilizando o ZAP e o browser no Windows.
 	<li>Entre em Preferências</li>
 	<li>Aba Avançado</li>
 	<li>Aba Criptografia/Certificados</li>
-	<li>Clique Ver certificados</li>
-	<li>Clique na aba Certificados raiz confiáveis</li>
+	<li>Click View Certificates</li>
+	<li>Click Authorities tab</li>
 	<li>Clique Importar e escolha o arquivo <tt>owasp_zap_root_ca.cer</tt> salvo anteriormente</li>
 	<li>No wizard escolha utilizar este certificado para identificar sites (deixe checadas as caixas de diálogo)</li>
 	<li>Encerre o wizard</li>

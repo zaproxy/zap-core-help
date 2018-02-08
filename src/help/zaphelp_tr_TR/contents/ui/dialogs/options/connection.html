@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Bağlantı Ayarları Ekranı
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Bağlantı Ayarları Ekranı</h1>
+<p>
+Seçenekler Bağlantısı ekranı ZAP bağlantı seçeneklerini yapılandırmanızı sağlar:
+
+<h3>Saniye olarak zaman aşımı</h3>
+Yavaş uygulamaları test etmeyi kolaylaştırır.
+
+<h3>Varsayılan Kullanıcı Aracı</h3>
+ZAP'ın HTTP mesajları oluştururken kullanması gereken kullanıcı aracı (örneğin, örümcek mesajlar ya da gönderilen proxy'e BAĞLANTI istekleri).
+
+<h3>Tekil Çerez Talep Başlığı</h3>
+ZAP'ın yönetilen çerezlerini kontrol eder (<a href="../../tlmenu/edit.html">Oturum Takibini Etkinleştir(Çerez)</a>) sunucuya bir HTTP isteği gönderirken, tek bir "Çerez" istek başlığına veya birden fazla "Çerez" istek başlığına ayarlanmalıdır.
+
+<h3>DNS</h3>
+<h4>TTL Başarılı Sorguları</h4>
+Başarılı DNS sorgularının önbelleğe alınması gereken süreyi tanımlar:<ul>
+<li>Negatif sayı, sonsuza dek önbellekte tut;</li>
+<li>Sıfır, ön belleğe alınımı etkisiz kılar;</li>
+<li>Pozitif sayı, sorguların ön belleğe alınacağı saniye sayısı.</li></ul>
+<strong>Not:</strong> Bir tekrar başlatmadan sonra değişiklikler uygulanır.<p>
+Bu ayar ayrıca şunu kullanarak da kurulabilir <code>-config</code> anahtar ile komut satırı argümanı <code>connection.dnsTtlSuccessfulQueries</code>.
+
+<h3>Güvenlik Protokolleri</h3>
+Gönderilen bağlantılar için etkin SSL/TLS veriyonlarının seçimini mümkün kılar (örneğin, sunuculara) En azından bir versiyon etkin olmalıdır. JRE tarafından desteklenmeyen versiyonlar seçilmemiş olarak işaretlenecek ve etkinliği kaldırılacaktır.
+<br>SSLv2Hello seçeneği, en az bir SSL / TLS sürümü ile beraber seçilmelidir.
+
+<h3>Proxy zinciri kullan</h3>
+Bu bölüm giden bağlantılar için başka proxy'e bağlanmanıza olanak sağlar.<br/>
+Bu genellikle kurumsal bir ortamda gereklidir.
+
+<h3>Proxy kimlik doğrulaması</h3>
+Bu bölüm giden proxy kimlik doğrulamasını yapılandırmanıza izin verir. 
+
+<h2>Ayrıca bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../overview.html">UI Genel Bakış</a></td><td>kullanıcı arayüzüne genel bir bakış için</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="options.html">Seçenekler diyalogları</a></td><td>diğer seçenekler diyalog ekranlarının detayları için</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../../cmdline.html">Komut Satırı</a></td><td>Komut Satırının detayları için</td></tr>
+</table>
+
+</body>
+</html>

@@ -3,52 +3,46 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Spider dialog
+Diyalogo ng Spider
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Spider dialog</h1>
+<h1>Diyalogo ng Spider</h1>
 <p>
-This dialog launches the <a href="../../start/concepts/spider.html">spider</a>.<br>
+Ang diyalogong ito ay naglulunsad ng <a href="../../start/concepts/spider.html">spider</a>.<br>
   
-<h2>Scope</h2>
-The first tab allows you to select or change the starting point.<br>
-If the starting point is in one or more <a href="../../start/concepts/contexts.html">Contexts</a> then you will be able to choose one of them.<br>
-If that context has any <a href="../../start/concepts/users.html">Users</a> defined then you will be able to select one of them.<br>
-If you select one of the users then the spider will be performed as that user, with ZAP (re)authenticating as that user whenever necessary.
+<h2>Saklaw</h2>
+Ang unang tab ay nagpapahintulot sa iyo na pumili o baguhin ang panimula.<br>
+Kung ang panimulang punto ay nasa isa o higit pang <a href="../../start/concepts/contexts.html">Konteksto</a> magagawa mong pumili ng isa sa kanila.<br>
+Kung ang kontekstong iyon ay mayroong anumang <a href="../../start/concepts/users.html">Mga Gumagamit</a> na itinutukoy, magagawa mong pumili ng isa sa kanila.<br>
+Kung pumili ka ang isa sa mga gumagamit, ang spider ay magsasagawa bilang gumagamit na iyo, na ang ZAP ay (muli)nagpapatunay bilang gumagamit kung kinakailangan.
 <br><br>
-If you select 'recurse' then all of the nodes underneath the one selected will also be used to seed the spider.
+Kung pumili ka ng 'recurse' ang lahat ng mga noda sa ilalim ng isa sa pinili ay magagamit din upang mag-seed sa spider.
 <br><br>
-If you select 'Spider Subtree Only' the spider will only access resources that are under the starting point (URI).
-When evaluating if a resource is found within the specified subtree, the spider considers only the scheme, host, port, and path components of the URI.
+Kung pumila ka 'Spider Subtree Lamang', ang spider ay mag-a-access lamang ng mga mapagkukunan na nasa ilalin ng panimulang punto(URI).
+Kapag sinusuri kung aang mapagkukunan ay natagpuan sa loon ng tinutukoy na subtree, ang spider ay itinuturing lamang ang pamamaraan, host, port, at ang mga bahagi ng path ng URI.
 <br><br>
-If you select 'Show advanced options' then the following tab will be shown which provide fine grain control over the spider process.
+Kung pumili ka ng 'Ipakita ang mga advance na opsyon', ang mga sumusunod na tab ay ipapakita na nagbibigay mg pinong kontrol ng grain sa proseso ng spider.
 <br><br>
-Clicking on the 'Reset' button will reset all of the options to their default values. 
+Pag-click sa 'I-reset' na pindutan ay magri-reset sa lahat ng mga opsyon sa kanilang default na halaga. 
 
 <h2>Advanced</h2>
 
-Most of the parameters on this tab correspond to the same parameters on the <a href="options/spider.html">Options Spider screen</a>.<br>
+Ang mga parameter sa tab na ito ay tumutugon sa parehong parameter sa <a href="options/spider.html">Mga Opsyon ng Spider screen</a>.
 
-<h3>Maximum children to crawl</h3>
-This parameter limits the number of children that will be crawled at every node in the tree.<br>
-This is useful for data driven applications that have large numbers of 'pages' that are in fact exactly the same code but 
-containing different data, for example from a database.<br>
-By default this is set to zero which means there are no limits applied to the number of child nodes crawled.
-
-<h2>Accessed via</h2>
+<h2>Na-access sa pamamagitan ng</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/spider.html">Spider tab</a></td><td>'New Scan' button</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/sites.html">Sites tab</a></td><td>'Attack / Spider...' right click menu item</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/history.html">History tab</a></td><td>'Attack / Spider...' right click menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/spider.html">Spider tab</a></td><td>'Bagong Pag-scan' na pindutan</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/sites.html">Tab ng mga Site</a></td><td>'Atake / Spider...' right click menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/history.html">Tab ng Kasaysayan</a></td><td>'Atake / Spider...' right click menu item</td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Tingnan din</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../overview.html">Pangkalahatang-ideya ng UI</a></td><td>para sa pangkalahatang-ideya ng interface ng gumagamit</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+<a href="dialogs.html">Mga Diyalogo</a></td><td>para sa mga detalye ng mga diyalogo o popup </td></tr>
 </table>
 
 </body>

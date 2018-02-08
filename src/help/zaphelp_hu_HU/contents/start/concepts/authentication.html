@@ -23,8 +23,10 @@
 		corresponds to an authenticated request (e.g. presence of a 'logout
 		link' or a 'Welcome back, User X' pattern). Similarly, the <b>Logged
 			out indicator</b> indicates an unauthenticated request (e.g. presence of
-		a 'login link'). Only the presence of one of the 2 indicators is
-		sufficient for proper functionality. In the case neither of the
+		a 'login link'). If ZAP detects the logged out indicator it will re-authenticate,
+		otherwise it's assumed that's already authenticated and will continue as usual.  
+		Only one (1) of the two (2) indicators is necessary for 
+		proper functionality. In the case neither of the
 		indicators has been specified, all messages are considered, by
 		default, authenticated.
 	</p>
@@ -66,7 +68,7 @@
 	<ul>
 		<li>defining Users and automatic login</li>
 		<li>detection of authenticated/unauthenticated states</li>
-		<li>performing automatic re-authentication</li>
+		<li>elvégzi az automatikus újra-hitelesítés</li>
 	</ul>
 
 	<p>Multiple authentication methods have been implemented and the
@@ -108,7 +110,7 @@
 	<p>
 		This method is used for websites / webapps where authentication is
 		enforced using the HTTP or NTLM Authentication mechanisms employing HTTP message headers. 
-		Three authentication schemes are supported: Basic, Digest and NTLM.
+		Három hitelesítési rendszerek támogatottak: Alapvető, Megemészteni, NTLM.
 		Re-authentication is possible, as the authentication headers are sent with every authenticated
 		request. Configuration can be done using the <a
 			href="../../ui/dialogs/session/contexts.html#auth">Session
@@ -132,31 +134,31 @@
 	setting up the a set of parameters defined in the script. For more details, see the provided Authentication Script examples.</p>
 	
 	<h2>Configuration example</h2>
-	<p>A configuration example showing how to fully configure a webapp that uses <i>form-based authentication</i> és
-	<i>cookie-based session management</i> is 
+	<p>Egy konfigurációs példa mutatja, hogy teljes mértékben konfigurálható egy webapp, hogy használ <i>forma-alapú hitelesítés</i> és
+	<i>a cookie-alapú munkamenet-kezelés</i> is 
 	seen below:
 	<ol>
-		<li>set up a context for the web application</li>
-		<li>set up the session management method to <i>Cookie-based Session Management</i></li>
-		<li>make sure your browser proxies everything through ZAP and log into your application using the browser</li>
+		<li>létrehozott egy összefüggésben a webes alkalmazás</li>
+		<li>állítsa be a munkamenet-kezelési módszer, hogy a <i>Cookie-alapú Munkamenet-kezelés</i></li>
+		<li>győződjön meg róla, hogy a böngésző proxy mindent át ZAP, majd jelentkezzen be a kérelmet a böngésző segítségével</li>
 		<li>go to ZAP and identify the request that was done for the login (most usually it's a HTTP POST request 
 		containing the username and the password and possibly other elements)</li>
-		<li>right click on the request and Flag as Context... Form-based Auth Login Request</li>
+		<li>kattintson jobb gombbal a kérést, Zászló, mint az Összefüggésben... Űrlap alapú Auth Login Kérés</li>
 		<li>a window will be opened already containing the request URL and the parameters (if any). Use 
 		the dropdown options to select which of the parameters correspond to the username and to the password</li>
-    	<li>then you need to tell ZAP how to identify whether an authentication succeeded or not. You can do 
-    	this by setting logged in or logged indicators. These are regex patterns which, if found in a 
+    	<li>akkor meg kell mondani, ZAP, hogyan kell azonosítani, hogy egy hitelesítés sikerült, vagy nem. You can do 
+    	this by setting logged in or logged out indicators. These are regex patterns which, if found in a 
     	response, tell ZAP whether it's authenticated or not (e.g. presence of a 
     	http://example.com/logout link or the presence of a 'Welcome, User X'). Only one of them is
     	necessary. To set one of them, either type the regex directly in the Session Properties -> 
     	Authentication -> Logged In Indicator, either find an authenticated message in the Sites Tree,
     	select it, open the Response View and select the text you wish to define as the indicator using
-    	the mouse and select the Flag as Context... Logged in indicator right-click menu option.</li>
-    	<li>define as many users as you need in the Session Properties -> Users section.</li>
-    	<li>after this step, various actions are available in ZAP. For example, you now have a new right click option: Attack -> Spider Context As User. Or, using the Forced User Mode, you can force all the interactions that go through ZAP for a given Context to be from the perspective of a User. The User Forced Mode is enabled via the previous-to-last button in the toolbar (the one with the user and the lock) and is configured via Session Properties -> Forced User Mode.</li>
+    	the mouse and select the Flag as Context... Bejelentkezett mutató kattintson a jobb gombbal a menü opciót.</li>
+    	<li>meg, mint sok felhasználó számára, amennyire szüksége van az Ülésen Tulajdonságok -> Felhasználók szakasz.</li>
+    	<li>miután ezt a lépést, különböző műveletek érhetők el a ZAP. Például, most válassza ki a felhasználó a <a href="../../ui/dialogs/spider.html">Pók párbeszéd</a>. Vagy használja a Kényszerű Felhasználói Módban erő, a kölcsönhatások, hogy menjen át ZAP egy adott Összefüggésben, hogy abból a szempontból egy Felhasználó. A Felhasználó Kénytelen Üzemmód engedélyezve van-e keresztül a korábbi utolsó gombot az eszköztáron (az egyik a felhasználó a zárolás) úgy van beállítva keresztül Ülés Tulajdonságok -> Kényszerített Felhasználói Mód.</li>
 	</ol>
 	
-	Most of the steps above apply as well for other authentication methods. The only things that change when trying
+	A legtöbb a fenti lépéseket alkalmazni, valamint más hitelesítési módszerek. The only things that change when trying
 	to configure authentication using a different method are steps 3, 4, 5 and 6. Instead of these, select the authentication
 	method required from the drop-down list and configure it as needed. More details about configuring each type 
 	of authentication can be above and <a href="../../ui/dialogs/session/contexts.html">itt</a>.
@@ -174,13 +176,13 @@
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="http://youtu.be/cR4gw-cPZOA">Youtube tutorial</a></td>
-			<td>of the Authentication, Session Management and Users Management features of ZAP [external link to http://youtu.be/cR4gw-cPZOA].</td>
+			<td><a href="https://youtu.be/cR4gw-cPZOA">Youtube tutorial</a></td>
+			<td>of the Authentication, Session Management and Users Management features of ZAP [external link to https://youtu.be/cR4gw-cPZOA].</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			<td><a href="../../ui/overview.html">UI Overview</a></td>
-			<td>for an overview of the user interface</td>
+			<td>az áttekintést a felhasználói felület</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
@@ -191,12 +193,12 @@
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			<td><a href="../../ui/dialogs/session/contexts.html">Session
 					Contexts Dialog</a></td>
-			<td>for an overview of the Session Properties</td>
+			<td>az áttekintést az Ülés Tulajdonságai</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			<td><a href="users.html">Felhasználók</a></td>
-			<td>for an overview of Users</td>
+			<td>a áttekintést Felhasználók</td>
 		</tr>
 
 	</table>

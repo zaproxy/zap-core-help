@@ -3,72 +3,72 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-  Release 2.4.3
+  Inilabas na 2.4.3
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Release 2.4.3</h1>
+<h1>Inilabas na 2.4.3</h1>
 
 <p>
-The following changes were made in this release:
+Ang sumusunod na mga pagbabago ay ginawa dito sa inilabas na ito:
 </p>
 
-<h2>Enhancements:</h2>
+<h2>Mga pagpapahusay:</h2>
 <ul>
-<li>Issue 1576 : Define URL path elements as 'non structural'</li>
-<li>Issue 1711 : Feature request: Option to specify number of token to be generated.</li>
-<li>Issue 1768 : Update to use a more recent user-agent</li>
-<li>Issue 1894 : ZAP only scans "User-Agent", "Referer", and "Host" request headers</li>
-<li>Issue 1911 : Search AJAX spider requests</li>
-<li>Issue 1913 : Pass all params across to zap.sh - debian package</li>
-<li>Issue 1914 : Multiple add-on directories</li>
-<li>Issue 1920 : Report the host:port ZAP is listening on in daemon mode, or exit if it cant</li>
-<li>Issue 1927 : Enhancement: Break only for in-scope URLs.</li>
-<li>Issue 1944 : Chart responses per second in ascan progress</li>
-<li>Issue 1953 : Allow to spider a context through the ZAP API</li>
-<li>Issue 1962 : Install and update add-ons from the command line</li>
-<li>Issue 1975 : RC4-SHA SSL cipher suite not supported</li>
-<li>Issue 1980 : Add ZAP CLI to Docker images</li>
-<li>Issue 1985 : Bring up the Modify dialog if the user doubles on a row in a AbstractMultipleOptionsBaseTablePanel</li>
-<li>Issue 2009 : Add Online links to the FAQ and Newsletter pages</li>
-<li>Issue 2084 : Warn users if they are probably using out of date versions</li>
-<li>Issue 2086 : Report request counts per plugin</li>
-<li>Issue 2088 : Support an 'update all' button for installing all updated add-ons</li>
-<li>Issue 2094 : Support a '-addoninstallall' command line option</li>
-<li>Issue 2102 : Allow ajax spider options to be set via the API</li>
+<li>Isyu 1576 : Tukuyin ang URL path ng mga elemento bilang 'hindi struktura'</li>
+<li>Isyu 1711 : Kahilingan ng itinatampok: Pagpipilian upang matukoy ang bilang ng token na nabuo.</li>
+<li>Isyu 1768 : Baguhin upang magamit ng higit pa sa mas bagong gumagamit na agent</li>
+<li>Isyu 1894 : Sinusuri lamang ng ZAP ang "Gumagamit na Agent","Nagsangguni", at "Host" ang kahilingan ng mga header</li>
+<li>Isyu 1911 : Hanapin ang mga kahilingan ng AJAX Ispayder</li>
+<li>Isyu 1913 : Ipasa lahat ng mga param sa kabuuan ng zap.sh - debian package</li>
+<li>Isyu 1914 : Maramihang mga kategorya ng add-on</li>
+<li>Isyu 1920: Iulat ang host:port ZAP ay nakikinig sa paraan ng daemon, o ilabas kung hindi kaya</li>
+<li>Isyu 1927 : Pagpapahusay: Mag-break lamang sa saklaw ng mga URl.</li>
+<li>Isyu 1944 : Mga pagtugon sa Chart kada segundo sa progreso ng ascan</li>
+<li>Isyu 1953 : Payagang ang ispayder sa isang konteksto sa pamamagitan ng ZAP API</li>
+<li>Isyu 1962 : Magsalin at baguhin ang mga add-on mula sa linya ng nag-uutos</li>
+<li>Isyu 1975 : RC4-SHA SSL cipher na sumusunod ay hindi suportado</li>
+<li>Magdagdag ng ZAP CLI sa mga imahe ng Docker</li>
+<li>Isyu 1985 : Dalahin ang binagong diyalogo kung ang gumagamit ay dumoble ang isang hilera sa AbstractMultipleOptionsBaseTablePanel</li>
+<li>Isyu 2009 : Magdagdag ng mga link ng Online sa FAQ at mga pahina ng Newsletter</li>
+<li>Balaan ang mga gumagamit kung sila marahil ay gumagamit ng mga bersyon na wala na sa panahon</li>
+<li>Iulat ang mga bilang ng kahilingan kada plugin</li>
+<li>Isyu 2088 : Suportahan ang isang 'baguhin ang lahat' na buton para sa pagsasalin ng lahat ng mga add-on na binago</li>
+<li>Isyu 2094 : Suportahan ang isang '-addoninstallall' sa linya ng pagpipilian ng taga-utos</li>
+<li>Isyu 2102 : Payagan ang ajax spider sa mga pagpipilian na maaaring itakda sa pamamagitan ng API</li>
 </ul>
 
-<h2>Bug fixes:</h2>
+<h2>Ang mga Pag-aayos ng Bug:</h2>
 <ul>
-<li>Issue 1070 : Breaking on custom URL with query parameters does not work.</li>
-<li>Issue 1555 : SAXParseException while generating the report</li>
-<li>Issue 1617 : ZAP 2.4.0 throws HeadlessExceptions when running in daemon mode on headless machine</li>
-<li>Issue 1877 : fix path to .ZAP_JVM.properties in zap.sh</li>
-<li>Issue 1893 : Regression: Can't disable and enable specific scanners through the API</li>
-<li>Issue 1910 : API does not return content in the expected encoding, on errors</li>
-<li>Issue 1917 : Request and Response tabs dont scale the text</li>
-<li>Issue 1939 : Scripts - Save Button Enablement Issue</li>
-<li>Issue 1949 : Script with missing type prevents scripts and templates from being loaded</li>
-<li>Issue 1950 : Connection closed without response, with an Authentication script with errors</li>
-<li>Issue 1951 : Exception when trying to add users before loading an authentication script</li>
-<li>Issue 1960 : Active Scan dialogue might use outdated scan policy</li>
-<li>Issue 1969 : Issues with installation of scanners</li>
-<li>Issue 1970 : Installed add-on dependencies might not be taken into account when installing add-ons</li>
-<li>Issue 1973 : Returned HAR/list does not contain correct redirection messages</li>
-<li>Issue 1981 : Spider might not report the correct number of URIs found</li>
-<li>Issue 2005 : Active scanning incorrectly performed on sibling nodes</li>
-<li>Issue 2044 : Issues in Hirschberg's algorithm implementation</li>
-<li>Issue 2045 : Dont copy old configs if -dir option used</li>
-<li>Issue 2052 : Authentication changes done through the API not saved to session</li>
+<li>Isyu 1070 : Ang paglabag sa custom ng URL kasama ang query na mga parametro ay hindi gumagana.</li>
+<li>Isyu 1555: SAXParseException habang bumubuo ng ulat</li>
+<li>Isyu 1617 : ZAP 2.4.0 throws HeadlessExceptions habang tumatakbo sa paraan ng daemon sa makinang headless</li>
+<li>Isyu 1877 : Ayusin ang path sa mga .ZAP_JVM.property sa zap.sh</li>
+<li>Isyu 1893 : Regresyon: Hindi pwedeng i-disable at paganahin ang tinutukoy na mga nagsusuri sa pamamagitan ng API</li>
+<li>Isyu 1910 : Ang API ay hindi naibabalik sa nilalaman ang inasahan na pag-encode, sa mga pagkakamali</li>
+<li>Isyu 1917 : Kahilingan at Pagtugon ng mga tabs ay huwag i-scale ang teksto</li>
+<li>Isyu 1939 : Ang mga Iskrip - I-seyb ang buton na enablement issue</li>
+<li>Isyu 1949 : ang iskrip kasama ng nawawalang tipo ng mga pumupigil sa mga iskrip at mga templates mula sa pagiging loaded</li>
+<li>Isyu 1950 : Ang koneksyon ay sarado ng walang pag tugon, kasama ng isang awtentikasyon ng iskrip kasama ng mga kamalian</li>
+<li>Isyu 1951 : Pagbubukod kapag sinusubukan na magdagdag ng gumagamit bago mag-load ang isang awtentikasyon ng iskrip</li>
+<li>Isyu 1960 : Aktibong pagsuri ng diyalogo sa maaaring magamit sa outdated na patakaran ng pagsusuri</li>
+<li>Isyu 1969 : Mga isyu kasama ng isinalin na mga nagsusuri</li>
+<li>Isyu : Ang isinalin na mga dependensya sa add-on ay maaaring hindi pwedeng kuhanin sa account habang nagsasalin ng mga add-on</li>
+<li>Isyu 1973 : Ibinalik na HAR/listahan ay hindi naglalaman ng tamang redirection ng mga mensahe</li>
+<li>Isyu 1981 : Ang ispayder ay maaaring hindi mag ulat ng tamang mga bilang sa mga URl na nakita</li>
+<li>Isyu 2005 : Ang aktibong nagsusuri ay hindi tama sa isinagawang mga sibling node</li>
+<li>Isyu 2044 : Mga isyu sa Hirschberg's algorithm na inimplementasyon</li>
+<li>Isyu 2045 : Huwag kopyahin ang lumang mga configs kung ang -dir na nagamit na pagpipilian</li>
+<li>Isyu 2052 : Mga pagbabago ng awtentikasyon ay tapos na sa pamamagitan ng API na hindi nai-seyb sa sesyon</li>
 </ul>
 
 
 
-<h2>See also</h2>
+<h2>Maaari ring tingnan</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Pangbungad</a></td><td>ang pangbungad sa ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Mga Inilabas</a></td><td>ang buong takda ng mga inilabas</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Mga kredito</a></td><td>ang mga tao at mga grupo na gumawa nito ay ginawa itong posible upang mailabas ito</td></tr>
 </table>
 </body>
 </html>

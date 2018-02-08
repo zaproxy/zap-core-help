@@ -2,81 +2,59 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>HTTP Sessions tab</title>
+<title>Tab Sesi HTTP</title>
 </head>
 <body bgcolor="#ffffff">
-	<h1>HTTP Sessions tab</h1>
+	<h1>Tab Sesi HTTP</h1>
 	<p>
-		This tab shows you the set of identified HTTP sessions for each Site,
-		as detected by the <a href="../../start/concepts/httpsessions.html">HTTP
-			Sessions extension</a>.
+		Tab ini menunjukkan kumpulan sesi HTTP yang teridentifikasi untuk masing-masing situs, seperti yang terdeteksi oleh <a href="../../start/concepts/httpsessions.html">HTTP sesi ekstensi</a>.
 	</p>
 
 	<p>
-		The current Site the information is referring to can be selected via
-		the toolbar or the <a href="sites.html">Sites tab</a>.
+		Situs saat ini informasi yang dimaksud dapat dipilih melalui alat bar atau <a href="sites.html">situs tab</a>.
 	</p>
 
-	<p>The toolbar provides a button ("New Session") which allows you
-		to start a new session, forcing all outgoing request messages to be
-		without the session tokens set, so the server considers it's a new
-		session. This allows the creation of a new session, without destroying
-		the old one.</p>
+	<p>Alat bar menyediakan sebuah tombol ("Sesi Baru") yang memungkinkan anda untuk memulai sesi baru, memaksa semua pesan permintaan keluar tanpa sesi token yang ditetapkan, sehingga server menganggap itu adalah sesi yang baru. Hal ini memungkinkan pembuatan sesi baru, tanpa merusak yang lama.</p>
 
-	<p>Each of the entries in the Sessions table (each session)
-		initially has a generated name, but it can be changed by selecting the
-		'Name' cell and editing it.</p>
+	<p>Setiap entri pada tabel Sesi (setiap sesi) awalnya memiliki nama yang dihasilkan, namun bisa diubah dengan memilih beri 'Nama' dan mengeditnya.</p>
 
-	<p>Each of the entries in the Sessions table can be right clicked,
-		which activates the Popup Menu, with the following options:</p>
+	<p>Setiap entri dalam tabel Sesi dapat diklik dengan benar, yang mengaktifkan Menu Popup, dengan pilihan berikut:</p>
 	<ul>
-		<li>Remove Session - deletes the session</li>
-		<li>Set as active (available only on non-active sessions) - marks
-			this session as active. If any session was previously set as active,
-			it will be unset as active and, if it doesn't specify any token
-			values, it is deleted.</li>
-		<li>Unset as active (available only on the active session) -
-			marks this session as not being active anymore. If the session
-			doesn't specify any token values, it is deleted.</li>
+		<li>Menghapus sesi - sesi yang dihapus</li>
+		<li>Tetapkan sebagai aktif (hanya tersedia pada sesi tidak-aktif) tanda sesi ini aktif. Jika sesi sebelumnya ditetapkan sebagai aktif, itu akan menjadi tidak diatur sebagai aktif dan, jika tidak menentukan setiap nilai token, itu akan dihapus.</li>
+		<li>Tidak diatur sebagai aktif (hanya tersedia pada sesi aktif) - menandai sesi ini sebagai tidak aktif lagi. Jika sesi ini tidak menentukan setiap nilai token, itu akan dihapus.</li>
 	</ul>
 
-	<i>Regarding the active session, more details can be read on the
-		general concepts help page of the <a
-		href="../../start/concepts/httpsessions.html">HTTP Sessions
-			extension</a>
+	<i>Mengenai sesi aktif, rincian lebih lanjut dapat dibaca di konsep umum yang membantu halaman Sesi HTTP <a
+		href="../../start/concepts/httpsessions.html"> ekstensi</a>
 	</i>
 	<br />
 
-	<br /> For each session you can see:
+	<br /> Untuk setiap sesi anda dapat melihat:
 	<ul>
-		<li>Active - Whether this is the active session or not</li>
-		<li>Name - The session name</li>
-		<li>Session Tokens' Values - the list of values associated to
-			each of the session tokens. The entries are separated by the ';'
-			symbol.</li>
-		<li>Messages Matched - the number of HTTP messages that have been
-			matched by the extension with this session</li>
+		<li>Aktif - Apakah ini sesi aktif atau tidak</li>
+		<li>Nama - Nama sesi</li>
+		<li>Sesi nilai Token - daftar nilai yang terkait masing-masing sesi token. Entrinya dipisahkan oleh simbol ';'.</li>
+		<li>Pesan Sesuai - jumlah pesan HTTP yang telah ada diimbangi perpanjangan dengan sesi ini</li>
 	</ul>
 
 
-	<h2>See also</h2>
+	<h2>Lihat juga</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../overview.html">UI Overview</a></td>
-			<td>for an overview of the user interface</td>
+			<td><a href="../overview.html">Ikhtisar UI</a></td>
+			<td>untuk ikhtisar antarmuka pengguna</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../start/concepts/httpsessions.html">HTTP
-					Sessions Extension</a></td>
-			<td>for an overview of the extension</td>
+			<td><a href="../../start/concepts/httpsessions.html">Sesi Ekstensi HTTP</a></td>
+			<td>untuk ikhtisar dari ekstensi</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/options/httpsessions.html">HTTP
-					Sessions Options screen</a></td>
-			<td>for an overview of the extension's Options</td>
+			<td><a href="../../ui/dialogs/options/httpsessions.html">Layar sesi pilihan HTTP</a></td>
+			<td>untuk ikhtisar dari pilihan ekstensi</td>
 		</tr>
 	</table>
 

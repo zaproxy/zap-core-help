@@ -9,68 +9,64 @@ Release 1.2.0
 <body bgcolor="#ffffff">
 <h1>Release 1.2.0</h1>
 <p>
-The following changes were made in this release:
+Ang mga sumusunod na pagbabago ay ginawa para sa release na ito:
 </p>
-<h2>Significant changes:</h2>
+<h2>Mga Mahahalagang pagbabago:</h2>
 
 <h3>Memory Leaks</h3>
-Memory leaks have been fixed in the <a href="../start/concepts/ascan.html">active scanner</a> and
+Ang Memory Leaks ay naayos sa <a href="../start/concepts/ascan.html">aktibong scanner</a> at
 <a href="../start/concepts/spider.html">spider</a>.
 
-<h3>Invoke applications</h3>
-External applications can now be invoked from the Sites and History tabs.
+<h3>Pagtawag ng mga application</h3>
+Ang mga external na mga application ay maari nang matawag mula sa mga Site at History na mga tab.
 
 <h3>Passive Scanner</h3>
-The <a href="../start/concepts/pscan.html">passive scanner</a> now looks for vulnerabilities, such as:
+Ang <a href="../start/concepts/pscan.html">passive scanner</a> ay naghahanap na ngayon ng mga kahinaan, gaya ng:
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Autocomplete forms with password fields</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Cookies without the 'HttpOnly' flag</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>SSL Cookies without the 'secure' flag</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Weak authentication</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Mga form na autocomplete na may password na field</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Cookies na wala ang 'HttpOnly' flag</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>SSL Cookies na wala ang 'secure' flag</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Mahinang pagpapatunay</td></tr>
 </table>
 
-<h2>Minor changes:</h2>
+<h2>Maliit na mga pagbabago:</h2>
 
-<h3>XML Reports</h3>
-A new 'Generate XML Report...' menu item is now included in the top level <a href="../ui/tlmenu/report.html">Reports</a> 
+<h3>Mga XML Report</h3>
+Ang bagong 'Bumuo ng XML Report...' na menu item ay kasama na ngayon sa pinakamataas na antas ng <a href="../ui/tlmenu/report.html">Reports</a> 
 menu.
 
-<h3>Manual Request Editor and Resend dialogs</h3>
-Requests submitted by the <a href="../ui/dialogs/man_req.html">Manual Request Editor</a> and
-<a href="../ui/dialogs/resend.html">Resend</a> dialogs are now shown in the <a href="../ui/tabs/sites.html">Sites</a> and 
-<a href="../ui/tabs/history.html">History</a> tabs.<br>
-A new 'Method' pull down allows you to switch between the HTTP methods, this automatically moves parameters
-between the URL and the body when a POST method is selected or deselected.
+<h3>Manu-manong Request Editor at Resend dialogs</h3>
+Ang mga request na naisumite ng <a href="../ui/dialogs/man_req.html">Manu-manong Request Editor</a> at
+<a href="../ui/dialogs/resend.html">Resend</a> dialogs ay makikita na ngayon sa <a href="../ui/tabs/sites.html">Sites</a> at 
+<a href="../ui/tabs/history.html">History</a> na mga tab.<br>
+Isang bagong 'Method' na pull down ay nagpapahintulot sa iyo na palitan sa pagitan ng mga HTTP method, ito ay awtomatikong naglilipat ng maga parameter sa pagitan ng URL at ng body kapag ang POST method ay napili o hindi napili.
 
-<h3>Alerts UI</h3>
-The <a href="../ui/tabs/sites.html">Sites</a> tab now shows any alerts as flags to the right of any node names.<br>
-The alert counts in the <a href="../ui/footer.html">footer</a> now show the number of different types of alerts rather than
-the total number of instances. 
+<h3>UI ng mga Alerto</h3>
+Ang <a href="../ui/tabs/sites.html">Sites</a> tab ay nagpapakita na ngayon ng anumang alerto bilang flag sa kanan ng anumang mga pangalan ng node.<br>
+Ang bilang nga alerto sa <a href="../ui/footer.html">footer</a> ay nagpapakita na ngayon ng bilang ng magkaibang uri ng mga alerto sa halip na kabuuang bilang ng mga instance. 
 
-<h3>Active scanner delay option</h3>
-The delay in milliseconds between each <a href="../start/concepts/ascan.html">active scanner</a> request can now be set via the  
-<a href="../ui/dialogs/options/ascan.html">Options Active Scan screen</a>. This will increase the time an active scan takes
-but will reduce the load on the target.
+<h3>Pagpipilian na antala ng aktibong scanner</h3>
+Ang antala sa milliseconds sa pagitan ng bawat <a href="../start/concepts/ascan.html">aktibong scanner</a> request ay maitatakda gamit ang  
+<a href="../ui/dialogs/options/ascan.html">Screen na Options Active Scan</a>. Ito ay magdaragdag ng oras na kailangan ng isang aktibong scan ngunit mababawasan ang load sa target.
 
-<h3>UI Changes</h3>
-The <a href="../ui/tabs/sites.html">Sites</a> tab now takes up all of the left hand side - this can be changed back 
-via the <a href="../ui/dialogs/options/ascan.html">Options Display screen</a> if required.<br>
+<h3>Mga pagbabago sa UI</h3>
+Ang <a href="../ui/tabs/sites.html">Sites</a> tab ay kumukuha ng lahat ng kaliwang bahagi - ito ay maaring baguhin pabalik sa pamamagitan ng <a href="../ui/dialogs/options/ascan.html">Options Display screen</a> kung kinakailangan.<br>
 <br>
-The 'toolbar' on the <a href="../ui/tabs/request.html">Request</a>, <a href="../ui/tabs/response.html">Response</a> and
-<a href="../ui/tabs/break.html">Break</a> tabs and the <a href="../ui/dialogs/man_req.html">Manual Request Editor</a> and
-<a href="../ui/dialogs/resend.html">Resend</a> dialogs is now at the top rather than the bottom.<br>
+Ang 'toolbar' sa <a href="../ui/tabs/request.html">Request</a>, <a href="../ui/tabs/response.html">Response</a> at
+<a href="../ui/tabs/break.html">Break</a> tabs at ang <a href="../ui/dialogs/man_req.html">Manu-manong Request Editor</a> at
+<a href="../ui/dialogs/resend.html">Resend</a> dialogs ay nasa taas na ngayon sa halip na nasa ibaba.<br>
 <br>
-The scanner counts in the <a href="../ui/footer.html">footer</a> are now displayed on the right hand side.<br>
+Ang bilang ng scanner sa <a href="../ui/footer.html">footer</a> ay makikita na ngayon sa kaliwang bahagi.<br>
 <br>
 
-<h2>See also</h2>
+<h2>Tingnan din sa</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<a href="../intro.html">Panimula</a></td><td>ang panimula ng ZAP</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<a href="releases.html">Mga Release</a></td><td>ang buong set nga mga release</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<a href="../credits.html">Credits</a></td><td>mga tao at grupo na ginawang posible ang release na ito</td></tr>
 </table>
 </body>
 </html>

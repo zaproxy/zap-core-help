@@ -44,16 +44,20 @@ Estescomplememntos estarão revisados, mas geralmente estão  na fase inicial de
 Podem estar incompletos, conter problemas relevantes ou causar problemas de estabilidade.
 
 <h3>Diretórios de complementos</h3>
-O  ZAP irá carregar todos os complementos localizados no diretório de 'plugins' liberados, bem como qualquer um que for baixado e estiver no diretório local 'plugins'.<br>
-Você também pode adicionar tantos diretórios de complementos quanto precisar, e fará isto aqui.<br>
-Isso pode ser muito útil quando várias instâncias do ZAP estiverem sendo executadas em uma máquina.<br>
-Você pode então apenas baixar Complementos novos ou  atualizados e e imediatamente compartilhá-los entre as várias instâncias.<br>
-Complementos baixados em diretórios compartilhados serão adicionados apenas para novas instâncias do ZAP, e não para aqueles que já estão em execução, com exceção da instância que baixou aquele complemento. 
+ZAP will load all of the add-ons from the <a href="../../../start/concepts/addons.html">default <code>plugin</code>
+directories</a>.<br>
+You can also add as many additional add-on directories as you need by adding them here.<br>
+This can be very useful when running multiple ZAP instances on one machine, for example in a CI environment.<br>
+You can then just download new or updated add-ons once and immediately share them between multiple instances.<br>
+Add-ons downloaded into shared directories will be only added to new ZAP instances, not to ones that are already running,
+with the exception of the instance that actually downloaded the add-on. 
 
 <h3>Diretório de Download</h3>
-Este é o diretório onde o Zap irá baixar complementos novos ou atualizados.<br>
-Por padrão será o diretório local, mas você também pode escolher um dos diretórios compartilhados, contanto que esta instância do ZAP possa escrever nele.<br>
-O ZAP só moverá Complementos para um diretório compartilhado depois que eles estiverem completamente baixados, para que outras instâncias ZAP não tentem carregar um complemento incompleto.
+This is the directory ZAP will download new or updated add-ons to.<br>
+By default it will be the local directory, but you can also choose one of the shared directories as long as this ZAP
+instance can write to it.<br>
+ZAP will only move add-ons to a shared directory after they are completely downloaded, so that other ZAP instances
+do not try to load an incomplete add-on.
 
 <h2>Leia também</h2>
 <table>

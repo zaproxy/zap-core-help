@@ -22,16 +22,25 @@ Aumentar o número de subdivisões vai acelerar o escaneamento mas pode sobrecar
 Número de resultados que será exibido na aba Varredura Ativa.<br>
 Exibir um grande número de resultados pode aumentar bastante o tempo que a varredura vai levar.
 
-<h3>Retardo de varredura em milissegundos</h3>
+<h3>Duração máxima da regra (min, 0 é ilimitado)</h3>
+O tempo máximo que qualquer regra individual pode rodar, em minutos. Zero significa sem limite. Isto pode ser usado para evitar as regras que estão tomando uma quantidade excessiva de tempo. 
+
+<h3>Duração máxima da varredura (min, 0 é ilimitado)</h3>
+O tempo máximo que a varredura inteira pode rodar, em minutos. Zero significa sem limite. Isso pode ser usado para garantir que uma verificação seja concluída em torno de um tempo definido. 
+
+<h3>Atraso da varredura em milissegundos</h3>
 O intervalo em milissegundos entre dois requests sucessivos.<br>
 Deixar esta variável com um valor diferente de zero vai elevar o tempo da varredura ativa mas aliviará a carga no host-alvo.
 
+<h3>Injetar o plugin ID no cabeçalho para todas as solicitações de varredura ativa</h3>
+Se esta opção for selecionada o scanner ativo vai injetar o cabeçalho de solicitação <code>X-ZAP-Scan-ID</code> com o ID do scanner que está enviando as solicitações HTTP.
+
 <h3>Manipular tokens anti CSRF</h3>
 Se esta opção estiver selecionada, a varredura ativa tentará automaticamente solicitar tokens 
-<a href="../../../start/concepts/anticsrf.html">anti CSRF</a> quando sollicitado.<br>
+<a href="../../../start/concepts/anticsrf.html">anti CSRF</a> .<br>
 Observe que isto é uma funcionalidade experimental  e vai desacelerar o processo de varredura porque ele não será subdividido em threads para garantir que os tokens anti CSRF não se percam. 
 
-<h3>Solicitação para reescanear nós quando muda o escopo, no modo de Ataque</h3>
+<h3>Prompt em modo de ataque para examinar nós quando alterado o escopo</h3>
 Se esta opção estiver selecionada, quando você utilizar o <a href="../../../start/concepts/modes.html">modo</a> de ataque você será convidado a decidir se vai reescanear nós no nesse escopo.<br>
 Se a opção não estiver selecionada então essa decisão (se os nós serão reescaneados) fica para a próxima opção.
 
@@ -40,14 +49,15 @@ Se esta opção estiver selecionada, então quando for selecionado o <a href="..
 Isso não é recomendável para  sites grandes porque pode tomar muito tempo.
 
 <h3>Política padrão de varredura ativa</h3>
-É a <a href="../../../start/concepts/scanpolicy.html">política de varredura</a> utilizada por padrão quando você inicia uma varredura ativa.
+A <a href="../../../start/concepts/scanpolicy.html">política de varredura</a> utilizada por padrão quando você inicia uma varredura ativa.
 
 <h3>Política de varredura do modo Ataque</h3>
-É a <a href="../../../start/concepts/scanpolicy.html">Política de Varredura</a> utilizada para escaneamento no modo de <a href="../../../start/concepts/modes.html">Ataque</a>.
+A <a href="../../../start/concepts/scanpolicy.html">Política de Varredura</a> utilizada para escaneamento no modo de <a href="../../../start/concepts/modes.html">Ataque</a>.
 
-<h3>Max progress chart in mins</h3>
-The maximum time in minutes for which response codes will be charted in the
-<a href="../scanprogress.html">Scan Progress dialog</a>, with zero meaning no limit.
+<h3>Gráfico de progresso em minutos</h3>
+O tempo máximo em minutos, para o qual os códigos de resposta vão ser grafados no
+<a href="../scanprogress.html">Diálogo de progresso da Varredura</a>.<br>
+Para desabilitar o gráfico a opção deve ser definida como zero minutos.
 
 <h2>Leia também</h2>
 <table>

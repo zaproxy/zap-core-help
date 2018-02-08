@@ -68,7 +68,6 @@
         <mapID target="ui.dialogs.addbreak" url="contents/ui/dialogs/addbreak.html"/>
         <mapID target="ui.dialogs.addnote" url="contents/ui/dialogs/addnote.html"/>
         <mapID target="ui.dialogs.advascan" url="contents/ui/dialogs/advascan.html"/>
-        <mapID target="ui.dialogs.beanshell" url="contents/ui/dialogs/beanshell.html"/>
         <mapID target="ui.dialogs.contexts" url="contents/ui/dialogs/session/contexts.html"/>
         <mapID target="ui.dialogs.context-auth" url="contents/ui/dialogs/session/context-auth.html"/>
         <mapID target="ui.dialogs.context-struct" url="contents/ui/dialogs/session/context-struct.html"/>
@@ -115,6 +114,8 @@
         <mapID target="zap.releases.2.4.2" url="contents/releases/2_4_2.html"/>
         <mapID target="zap.releases.2.4.3" url="contents/releases/2_4_3.html"/>
         <mapID target="zap.releases.2.5.0" url="contents/releases/2_5_0.html"/>
+        <mapID target="zap.releases.2.6.0" url="contents/releases/2_6_0.html"/>
+        <mapID target="zap.releases.2.7.0" url="contents/releases/2_7_0.html"/>
         <mapID target="zap.credits" url="contents/credits.html" />
         <mapID target="zap.todo" url="contents/todo.html" />
      	<mapID target="ui.dialogs.options.ascan" url="contents/ui/dialogs/options/ascan.html"/>
@@ -124,6 +125,7 @@
      	<mapID target="ui.dialogs.options.api" url="contents/ui/dialogs/options/api.html"/>
      	<mapID target="ui.dialogs.options.ext" url="contents/ui/dialogs/options/ext.html"/>
         <mapID target="ui.dialogs.options.breakpoints" url="contents/ui/dialogs/options/breakpoints.html"/>
+     	<mapID target="ui.dialogs.options.callback" url="contents/ui/dialogs/options/callback.html"/>
      	<mapID target="ui.dialogs.options.certificate" url="contents/ui/dialogs/options/certificate.html"/>
      	<mapID target="ui.dialogs.options.checkforupdates" url="contents/ui/dialogs/options/checkforupdates.html"/>
    		<mapID target="ui.dialogs.options.connection" url="contents/ui/dialogs/options/connection.html"/>
@@ -138,6 +140,8 @@
      	<mapID target="ui.dialogs.options.localproxy" url="contents/ui/dialogs/options/localproxy.html"/>
      	<mapID target="ui.dialogs.options.pscan" url="contents/ui/dialogs/options/pscan.html"/>
      	<mapID target="ui.dialogs.options.pscanrules" url="contents/ui/dialogs/options/pscanrules.html"/>
+     	<mapID target="ui.dialogs.options.pscan.main" url="contents/ui/dialogs/options/pscanner.html"/>
+     	<mapID target="ui.dialogs.options.ruleconfig" url="contents/ui/dialogs/options/ruleconfig.html" />
      	<mapID target="ui.dialogs.options.script" url="contents/ui/dialogs/options/script.html" />
      	<mapID target="ui.dialogs.options.search" url="contents/ui/dialogs/options/search.html" />
      	<mapID target="ui.dialogs.options.spider" url="contents/ui/dialogs/options/spider.html"/>

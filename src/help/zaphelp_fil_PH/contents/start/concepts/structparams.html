@@ -3,26 +3,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Structural Parameters
+Mga Parametro ng Estruktura
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Structural Parameters</h1>
+<h1>Mga Parametro ng Estruktura</h1>
 <p>
-Structural parameters are a type of <a href="structmods.html">Structural Modifier</a>
-which identify parameters that represent application structure instead of user data.<br>
+Mga parametro ng Estruktura ay isang tipo ng <a href="structmods.html">Pag-iiba ng Estruktura</a> kung saan tinutukoy ang mga parametro ng kumakatawan sa aplikasyon ng estruktura sa halip na gumamit ng datos.<br>
 <p>
-In 'traditional' web applications the structure of the application is typically defined by the URL paths
-and the data is contained in the URL parameters and POST data.<br>
-URLs like:
+Sa 'tradisyonal' na mga aplikasyon ng web ang estruktura ng mga aplikasyon ay tipikal na tinukoy sa pamamagitan ng mga path ng URL at ang datos ay naglalaman ng mga parametero ng URL at datos ng POST.<br>
+Mga URL gaya ng:
 <ul>
 <li>https://www.example.com/app/aaa?ddd=eee
 <li>https://www.example.com/app/aaa?ddd=fff
 <li>https://www.example.com/app/aaa?ddd=ggg
 </ul>
-are represented in the <a href="../../ui/tabs/sites.html">Sites tab</a> as one 'node' in the tree:
+ay kinakatawan ng <a href="../../ui/tabs/sites.html">Mga site tab</a> bilang isang 'node' sa puno:
 <ul>
-<li>Sites
+<li>Mga Site
 	<ul>
 	<li>https://www.example.com
 		<ul>
@@ -33,18 +31,18 @@ are represented in the <a href="../../ui/tabs/sites.html">Sites tab</a> as one '
 		</ul>
 	</ul>
 </ul>
-The Sites tree is very important as it reflects ZAP's understanding of the application structure.<br>
-If it is not a good representation of the structure then ZAP will not be able to attack the application effectively.<br>
+Ang mga Site ng puno ay napakahalaga bilang ito ay mga sumasalamin ng ZAP sa pag-unawa ng aplikasyon ng estruktura.<br>
+Kung hindi ito magandang representasyon ng estraktura pagkatapos ng ZAP ay hindi magagawang umatake ng epektibo sa aplikasyon.<br>
 <br>
-In 'single' page applications a parameter is used to indicate the logical 'page':
+Sa 'solo' na pahina ng mga aplikasyon sa isang parametro ay ginamit sa pagpapahiwatig ng lohikal ng 'pahina':
 <ul>
 <li>https://www.example.com/app/aaa?page=p1&amp;ddd=eee
 <li>https://www.example.com/app/aaa?page=p2&amp;ddd=fff
 <li>https://www.example.com/app/aaa?page=p3&amp;ddd=ggg
 </ul>
-these 3 URLs represent different logical pages, but by default ZAP will still represent them as one node:
+itong 3 mga URL na kumakatawan sa iba't ibang lohikal ng mga pahina, pero sa pamamagitan ng default ZAP ay maaari pa rin kumatawan para sa kanila bilang isang node:
 <ul>
-<li>Sites
+<li>Mga Site
 	<ul>
 	<li>https://www.example.com
 		<ul>
@@ -55,14 +53,14 @@ these 3 URLs represent different logical pages, but by default ZAP will still re
 		</ul>
 	</ul>
 </ul>
-This is a problem because ZAP will now not attack all of the application's functionality.<br>
+Ito ay isang problema dahil ang ZAP ay hindi na ngayon aatakihin ang lahat ng pagpapaandar ng aplikasyon.<br>
 <br>
-In ZAP terms the 'page' URL parameter is a 'structural parameter' - a parameter that defines part of the application structure.<br>
-You can define structural parameters by adding the application to a <a href="contexts.html">Context</a>
-and then configuring them via the <a href="../../ui/dialogs/session/context-struct.html">Session Context Structure screen</a>.<br>
-Once you have done this the pages will be correctly represented as 3 nodes:
+Sa mga term ng ZAP ang 'pahina' ng parametro ng URL ay isang 'parametro ng estruktura' - ang isang parametro ay mga tumutukoy ng parte ng estruktura ng aplikasyon.<br>
+Maaari mong tukuyin ang estruktura ng mga parametro sa pamamagitan ng pagdagdag ng aplikasyon sa isang <a href="contexts.html">Konteksto</a>
+at pagkatapos ng mga ito kumpigurahin sa pamamagitan ng <a href="../../ui/dialogs/session/context-struct.html">Konteksto ng Sesyon sa Estruktura ng Iskrin</a>.<br>
+Kapag nagawa mo na itong mga pahina ay magiging tama ang kinatawan bilang 3 mga node:
 <ul>
-<li>Sites
+<li>Mga Site
 	<ul>
 	<li>https://www.example.com
 		<ul>
@@ -72,24 +70,24 @@ Once you have done this the pages will be correctly represented as 3 nodes:
 				<ul>
 				<li>GET:p1(ddd,page)
 				<li>GET:p2(ddd,page)
-				<li>GET:p3(ddd,page)
+				<li>Get:p3(ddd,page)
 				</ul>
 			</ul>
 		</ul>
 	</ul>
 </ul>
 
-<h2>Accessed via</h2>
+<h2>Na-access sa pamamagitan ng</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/dialogs/session/context-struct.html">Session Context Structure screen</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/dialogs/session/context-struct.html">Konteksto ng Sesyon sa Estruktura ng Iskrin</a></td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Maaari ring tingnan sa</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="concepts.html">Features</a></td><td>provided by ZAP</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="structmods.html">Structural Modifiers</a></td><td>controls which change how ZAP represents the structure of the application</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="ddc.html">Data Driven Content</a></td><td>which identify URL paths that represent data</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">Pangkalahatang ideya ng UI</a></td><td>para sa pangkalahatang ideya ng gumagamit ng interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="concepts.html">Mga tampok</a></td><td>ibinigay ng ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="structmods.html">Mga babaguhing estruktura</a></td><td>mga kontrol kung saan babaguhin kung paano ang mga kumakatawan sa ZAP ng estruktura ng aplikasyon</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="ddc.html">Nilalaman ng Driven na Datos</a></td><td>kung saan tinutukoy ang mga path ng URL sa kinatawan ng datos</td></tr>
 </table>
 
 </body>

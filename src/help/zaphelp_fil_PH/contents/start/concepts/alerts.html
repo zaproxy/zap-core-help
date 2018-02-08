@@ -3,43 +3,81 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Alerts
+Mga alerto
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Alerts</h1>
+<h1>Mga alerto</h1>
 <p>
-An alert is a potential vulnerability and is associated with a specific request.<br/>
-A request can have more than one alert.<br/>
+Ang alerto ay isang potential na kahinaan at ay nag-uugnay sa isang tiyak na kahilingan.<br/>
+Isang kahilingan ay maaring magkaroon ng higit sa isang alerto.<br/>
 </p>
 <p>
-Alerts are shown in the UI with a flag indicating the risk:
+Ang mga alerto ay ipinakita sa UI kasama ang isang bandila na nagsasaad ng panganib:
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/071.png" align="bottom" width="16" height="16" />&nbsp; High</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/076.png" align="bottom" width="16" height="16" />&nbsp; Medium</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/074.png" align="bottom" width="16" height="16" />&nbsp; Low</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/073.png" align="bottom" width="16" height="16" />&nbsp; Informational</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/072.png" align="bottom" width="16" height="16" />&nbsp; False Positive</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/071.png" align="bottom" width="16" height="16" />&nbsp; Mataas</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/076.png" align="bottom" width="16" height="16" />&nbsp; Katamtaman</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/074.png" align="bottom" width="16" height="16" />&nbsp; Mababa</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/073.png" align="bottom" width="16" height="16" />&nbsp; Nagbibigay impormasyon</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/072.png" align="bottom" width="16" height="16" />&nbsp; Hindi totoong positibo</td><td></td></tr>
 </table>
 
 <p>
-Alerts can be raised by various ZAP components, including but not limited to: <a href="ascan.html">active scanning</a>, <a href="pscan.html">passive scanning</a>, 
-scripts, by addons (extensions), or manually using the <a href="../../ui/dialogs/addalert.html">Add Alert dialog</a> 
-(which also allows you to update or change alert details/information).
+Ang mga alerto ay maaring itaas sa pamamagitan ng iba't ibang mga component, kabilang ngunit hindi limitado sa: <a href="ascan.html">aktibong scanning</a>,<a href="pscan.html">passive na scanning</a>, mga script, sa pamamagitan ng mga addon (mga extension), o manwal na ginagamit ang <a href="../../ui/dialogs/addalert.html">Magdagdag ng Alertong dialog</a> (na kung saan din ay nagbibigay-daan sa iyo upang i-update o baguhin ang alerto ng mga detalye/impormasyon).
 </p>
 <p>
-Alerts are flagged in the <a href="../../ui/tabs/history.html">History tab</a> with a flag which indicates
-the highest risk alert.<br/>
-All alerts are listed in the <a href="../../ui/tabs/alerts.html">Alerts tab</a> 
-and a count of the total number of alerts by risk is shown in the <a href="../../ui/footer.html">footer</a>.
+Ang mga alerto ay naka-flag sa <a href="../../ui/tabs/history.html">Kasaysayan na tab</a> na may isang flag na nagpapahiwatig ng pinakamataas na peligrong alerto.<br/>
+Ang lahat ng mga alerto ay naka-lista sa <a href="../../ui/tabs/alerts.html">Mga alerto na tab</a>
+at isang count ng kabuuang numero ng mga alerto na may panganib ay ipinakita sa <a href="../../ui/footer.html">footer</a>.
 </p>
 
-<h2>See also</h2>
+<a name="alertoverrides"></a><h2>Ang alerto na nag-overrides</h2> 
+
+Ang mga alerto na itinaas sa pamamagitan ng ZAP ay kinabibilangan ng kapwa generic at tiyak na impormasyon tungkol sa mga alerto na itinaas.
+Ang tiyak na impormasyon ay nag-uugnay nang direkta sa potensyal na isyu na nakita, gaya ng URL at ng parameter na apektado.
+Ang generic na impormasyon ay kinabibilangan ng mga bagay tulad ng isang deskripsyon at mga link na kaugnay sa online resources.
+<p>
+Maaari mong palitan o dagdagan ang generic na impormasyon na paggamit ng 'nag-aalerto ng override' configuration file.
+Ito ay nagpapahintulot sa inyo na isama ang impormasyon na ito ay particular sa iyong kumpanya tulad ng mandato na mga patakaran, ang panloob na mga link o 
+payo para sa tiyak na mga teknolohiya na gagamitin mo.
+<p>
+Isang alertong override na configuration file ay isang UTF-8 property file na naglalaman lamang ng impormasyon na gusto mong baguhin. Ang mga linya na nagsisimula sa "#" ay itinuturing na mga komento at hindi pinansin.
+<p>
+Ang format ay:
+<pre>
+&lt;alertid&gt;.&lt;property&gt; = [ + | - ] &lt;your information&gt;
+</pre>
+Ang mga sumusunod na mga katangian ay suportado:
+<ul>
+<li>pangalan</li>
+<li>dsksripsyon</li>
+<li>solusyon</li>
+<li>otherInfo</li>
+<li>reperensiya</li>
+</ul>  
+
+Para sa halimbawa
+<pre>
+# 40012 = nagsasalarawan ng XSS
+40012.solusyon= Sundin ang ating kumpanya sa mga tiyak na mga alituntunin sa http://internet.example.com/xss.html
+</pre>
+Kung ang value ay nagsisimula sa isang '+' pagkatapos nito ay nakadugtong ng mga umiiral na impormasyon.
+<br>
+Kung nagsisimula na may '-' pagkatapos nito ay nakadugtong ng mga umiiral na impormasyon.
+<br>
+Kung ito ay hindi nagsisimula na may '+' o '-' pagkatapos nito ay pinapalitan ang umiiral na impormasyon.
+<p>
+Ang alerto ay nag-override ng configuration file ay maaaring tinukoy sa pamamagitan ng <a href="api.html">API</a>,
+<a href="../../ui/dialogs/options/alert.html">Mga opsyon ng alertong screen</a>
+o gamit ang <a href="../../cmdline.html">command line</a> opsyon:  
+<pre>-config alert.overridesFilename=&lt;filename&gt;</pre>
+
+<h2>Tingnan din</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../ui/overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../ui/overview.html">Ang UI Overview</a></td><td>para sa isang overview sa user interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="concepts.html">Features</a></td><td>provided by ZAP</td></tr>
+<a href="concepts.html">Mga feature</a></td><td>ibinagay ni ZAP</td></tr>
 </table>
 
 </body>

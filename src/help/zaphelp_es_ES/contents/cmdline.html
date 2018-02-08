@@ -7,41 +7,66 @@ Command Line
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Command Line</h1>
+<h1>Línea de comando</h1>
 
-ZAP supports the following command line options:
+Para ejecutar Zap a través la línea de comando, se necesita ubicar el script de inicio de ZAP.<br/>
+<strong>Windows:</strong><br/>
+<pre>C:\Program Files (x86)\OWASP\Zed Attack Proxy\zap.bat</pre>
+<strong>Mac:</strong><br/>
+<pre>/Applications/OWASP\ ZAP.app/Contents/Java/zap.sh</pre>
+<strong>Linux:</strong><br/>
+<code>zap.sh</code> estará debajo del directorio donde se instaló ZAP.
+<br/><br/>
+Como alternativa, se puede ejecutar el archivo JAR directamente:<br/>
+<pre>java -jar zap.jar</pre>
+Todas las opciones de abajo se pueden pasar a cualquiera de estos.
+
+<h2>Opciones</h2>
+
+ZAP soporta las siguientes opciones de línea de comando:
 
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-cmd</td><td>Runs ZAP 'inline', ie without starting the UI or a daemon</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-config</td><td>Overrides the specified key=value pair in the configuration file</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-daemon</td><td>Starts ZAP in 'daemon' mode, ie without a UI</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-dir</td><td>Uses the specified directory instead of the default one</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-installdir</td><td>Overrides the code that detects where ZAP has been installed with the specified directory</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-h</td><td>Shows all of the command line options available, including those added by add-ons</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-help</td><td>The same as -h </td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-host</td><td>Overrides the host used for proxying specified in the configuration file</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-port</td><td>Overrides the port used for proxying specified in the configuration file</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-version</td><td>Reports the ZAP version</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-newsession</td><td>Creates a new session at the given location</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-session</td><td>Opens the given session after starting ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-version</td><td>Informa la versión de ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-cmd</td><td>Ejecución en línea (sale cuando se completa las opciones de la línea de comando)</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-daemon</td><td>Inicia ZAP en modo daemon, por ejemplo sin IU</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-config &lt;kvpair&gt;</td><td>Anula el par específico clave=valor en el archivo de configuración. Las opciones de línea de comando <code>-config</code> se aplican en el orden especificado.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-configfile &lt;path&gt;</td><td>Anula los pares key=value con esos en el archivo de propiedades especificado</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-dir &lt;dir&gt;</td><td>Utiliza el directorio especificado en lugar del predeterminado</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-installdir &lt;dir&gt;</td><td>Anula el código que detecta donde ZAP ha sido instalado con el directorio especificado</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-h</td><td>Muestra todas las opciones de línea de comando disponibles, incluyendo los agregados por los complementos</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-help</td><td>Lo mismo que -h</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-newsession &lt;path&gt;</td><td>Crea una nueva sesión en la ubicación especificada</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-session &lt;path&gt;</td><td>Abre la sesión determinada luego de iniciar ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-host &lt;host&gt;</td><td>Anula el host usado para el proxy especificado en el archivo de configuración</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-port &lt;port&gt;</td><td>Anula el puerto utilizado para el proxy especificado en el archivo de configuración</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-lowmem</td><td>Utiliza la base de datos en lugar de la memoria tanto como sea posible. Esto es experimental</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-experimentaldb</td><td>Usa el código genérico de la base de datos experimental. Este también es experimental</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstall &lt;addon&gt;</td><td>Instala el complemento especificado desde el Marketplace de ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstallall</td><td>Instala todos los complementos disponibles desde el Marketplace de ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonuninstall &lt;addon&gt;</td><td>Desinstala el complemento especificado</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonupdate</td><td>Actualiza todos los complementos cambiados desde el Marketplace de ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonlist</td><td>Elabora una lista de los complementos instalados</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-script &lt;script&gt;</td><td>Ejecuta un script especificado (ruta del sistema de archivo) si la línea de comand o dameon, o simplemente cargarlo si GUI</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-last_scan_report &lt;path&gt;</td><td>Genera el "Último informe del Análisis" dentro de la ruta especificada</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-suppinfo</td><td>Detalles relevantes de salidas para soporte y solución de problemas (a la consola o salida estándar). Como: versión de ZAP, versión Java, complementos instalados y su versión, información local, sistema operativo, etc.</td></tr>
 </table>
 <br>
-The options '-session' and '-newsession' are mutually exclusive. An error will be shown and ZAP exit (if not in GUI) when both options are set.
+Las opciones <code>-session</code> and <code>-newsession</code> son mutuamente excluyentes. Se mostrará un error y se saldrá de ZAP (si no está en GUI) cuando se configuren ambas opciones.
 <br>
-Relative paths to session file are resolved against the "session" directory located in ZAP's home directory (default or specified with -dir option).
+Las rutas relativas al archivo de la sesión se solucionan por el directorio "sesión" ubicado en el directorio principal de ZAP (predeterminado o especificado con la opción <code>-dir</code> ).
 <br/>
-Configuration keys should be specified using the dot notation based their location in the XML of the configuration file, eg:<br/>
-<pre>-config api.key=12345 -config connection.timeoutInSecs=60</pre>  
-Note that add-ons can add extra command line options.
+Las claves de configuración deben especificarse utilizando la notación de puntos basada en su ubicación el el XML del archivo de configuración, por ejemplo:<br/>
+<pre>&lt;zap-script&gt; -config api.key=12345 -config connection.timeoutInSecs=60</pre>
+Tenga en cuenta que los complementos pueden agregar opciones adicionales de línea de comandos.
 
 <p>
-Examples:
+Ejemplos:
 	<ul>
-		<li>Start ZAP in 'daemon' mode with a new session created at a given path:
-			<pre>-daemon -newsession session</pre>
+		<li>Iniciar ZAP en modo "daemon" con una nueva sesión creada en una ruta determinada:
+			<pre>&lt;zap-script&gt; -daemon -newsession session</pre>
 		</li>
-		<li>Create a report of the last scan of an existing session and exit ZAP once finished:
-			<pre>-last_scan_report /path/to/save/report.xml -session /path/to/existing/session -cmd</pre>
+		<li>Crea un informe del último análisis de una sesión existente y sale de ZAP una vez terminada:
+			<pre>&lt;zap-script&gt; -last_scan_report /full/path/to/save/report.xml -session /full/path/to/existing/session -cmd</pre>
 		</li>
 	</ul>
 
@@ -50,7 +75,7 @@ Examples:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="intro.html">Introducción</a></td><td>Introducción a ZAP</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="start/concepts/api.html">API</a></td><td>to control ZAP programmatically</td></tr>
+<a href="start/concepts/api.html">API</a></td><td>para controlar mediante programación el ZAP</td></tr>
 </table>
 
 </body>

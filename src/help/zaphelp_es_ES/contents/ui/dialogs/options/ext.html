@@ -6,12 +6,9 @@
 </head>
 <body bgcolor="#ffffff">
 	<h1>Options Extensions screen</h1>
-	<p>This screen allows you to enable/disable extensions that are
-		available to ZAP.</p>
-	<h3>Enable/Disable Extensions</h3>
-	Enabled extensions will be loaded by ZAP, thus adding the
-	functionalities provided by those extensions. Disabled extensions will
-	not be loaded.
+	<p>Esta pantalla te permite habilitar/deshabilitar extensiones disponibles en ZAP, bien sea incluidas en el núcleo o agregadas por <a href="../../../start/concepts/addons.html">complementos</a>.</p>
+	<h3>Habilitar/Deshabilitar Extensiones</h3>
+	Las extensiones habilitadas serán cargadas por ZAP, agregando las funcionalidades de estas extensiones. Las extensiones deshabilitadas no se cargarán.
 
 	<h3>Core Extensions</h3>
 	Core extensions are extensions that if disabled will impair ZAP's
@@ -21,25 +18,11 @@
 			file, although it's not recommend.</i>
 	</p>
 
-	<h3>Extensions' Dependencies</h3>
-	Extensions may depend on other extensions to work. When one of those
-	extensions (dependencies) is disabled it will make ZAP automatically
-	disable all the extensions that depend on them. So it may happen that
-	when disabling one extension other extensions (that depend on it) will
-	also be disabled. Automatically disabled extensions will not be allowed
-	to be enabled until all the dependencies are enabled.
-
-	<h3>Location of extensions available to ZAP</h3>
-	To make an extension available to ZAP it must be in one the following
-	locations:
-	<ul>
-		<li>"plugin" directory located in the ZAP's folder;</li>
-		<li>"plugin" directory located in the ZAP user's folder.</li>
-	</ul>
+	<h3>Dependencias de Extensiones</h3>
+	Las extensiones pueden depender de otras extensiones para trabajar. Cuando algunas de estas extensiones (dependencias) se deshabilita, ZAP deshabilitará automáticamente todas las extensiones que dependen de ella. Así que es posible que al deshabilitar una extensión otras extensiones (que dependen de ella) también sean deshabilitadas. Las extensiones deshabilitadas automáticamente no se podrán habilitar hasta que todas las dependencias se habiliten.
 
 	<p>
-		<i>Note: You will need to restart ZAP for the changes to take
-			effect.</i>
+		<i>Nota: Deberás reiniciar ZAP para que los cambios tengan efecto.</i>
 	</p>
 
 	<h2>Vease también</h2>

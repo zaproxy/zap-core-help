@@ -3,28 +3,27 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Statistics
+Estatísticas
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Statistics</h1>
+<h1>Estatísticas</h1>
 <p>
-ZAP maintains statistics which can help you understand what is really happening when interacting with large applications.
+ZAP mantém estatísticas que podem ajudá-lo a entender o que realmente está acontecendo, ao interagir com aplicativos grandes.
 </p>
 <p>
-The statistics are available via the <a href="api.html">API</a> and can be also sent to a Statsd server when 
-configured via the <a href="../../ui/dialogs/options/stats.html">Options Statistics screen</a>.
+As estatísticas estão disponíveis através da <a href="api.html">API</a> e também podem ser enviadas para um servidor de Statsd quando configurado através da <a href="../../ui/dialogs/options/stats.html">tela de opções de estatísticas</a>.
 </p>
 
-<h3>Site based statistics</h3>
-Statistics maintained on a per site basis include:
+<h3>Estatísticas baseadas em site</h3>
+Estatísticas mantidas com base em sites incluem:
 <ul>
-<li>response codes, eg:
+<li>códigos de resposta, por exemplo:
 	<ul>
-	<li>stats.code.200</li>
-	<li>stats.code.302</li>
+	<li>stats.Code.200</li>
+	<li>stats.Code.200</li>
 	</ul></li>
-<li>response times in ms (using a logarithmic scale), eg:
+<li>tempos de resposta em ms (usar uma escala logarítmica), por exemplo:
 	<ul>
 	<li>stats.responseTime.1</li>
 	<li>stats.responseTime.2</li>
@@ -32,36 +31,36 @@ Statistics maintained on a per site basis include:
 	<li>stats.responseTime.8</li>
 	<li>stats.responseTime.16</li>
 	</ul></li>
-<li>content types, eg:
+<li>tipos de conteúdo, por exemplo:
 	<ul>
 	<li>stats.contentType.text/css</li>
 	<li>stats.contentType.text/html;charset=utf-8</li>
 	</ul></li>
-<li><a href="tags.html">tags</a>, eg:
+<li><a href="tags.html">tags</a>, por exemplo:
 	<ul>
 	<li>stats.tag.Password</li>
 	<li>stats.tag.Hidden</li>
 	</ul></li>
-<li>anticsrf tokens generated:
+<li>anticsrf tokens gerados:
 	<ul>
 	<li>stats.acsrf.anticsrf</li>
 	</ul></li>
-<li>authentication info:
+<li>Informações de autenticação:
 	<ul>
-	<li>stats.auth.success (number of authentication successes)</li>
-	<li>stats.auth.failure (number of authentication failures)</li>
-	<li>stats.auth.state.loggedin (number of responses that appear to be logged in)
-	<li>stats.auth.state.loggedout (number of responses that appear to be logged out)
-	<li>stats.auth.state.noindicator (number of responses where no logged in or out indicators have been set)
-	<li>stats.auth.state.unknown (number of responses which don't contain either logged in or out indicators)
+	<li>stats.auth.Success (número de sucessos de autenticação)</li>
+	<li>stats.auth.Failure (número de falhas de autenticação)</li>
+	<li>stats.auth.State.LoggedIn (número de respostas que parecem ter logado)
+	<li>stats.auth.State.LoggedOut (número de respostas que parecem ter feito logout)
+	<li>stats.auth.State.noindicator (número de respostas onde não há indicadores de login ou logout)
+	<li>stats.auth.State.Unknown (número de respostas que não contêm qualquer registro de login ou logout)
 	</ul></li>
 </ul>
 </p>
 
-<h2>See also</h2>
+<h2>Ver também</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="concepts.html">Features</a></td><td>provided by ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">Visão geral da interface do usuário</a></td><td>para uma visão geral a interface do usuário</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="concepts.html">Destaques</a></td><td>fornecidos pelo ZAP</td></tr>
 </table>
 
 </body>

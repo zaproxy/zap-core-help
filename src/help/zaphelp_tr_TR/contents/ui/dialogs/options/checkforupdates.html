@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Güncellemeler ekranı için Seçenek Denetimi
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Güncellemeler ekranı için Seçenek Denetimi</h1>
+<p>
+Bu ekran ZAP'in başlatıldığında son sürümü kullanıp kullanmadığınızı kontrol etmesini, ve son sürüm ise ne yapar özelliğini yapılandırmanızı sağlar.
+</p>
+
+<h3>Başlangıçta güncellemeleri kontrol et</h3>
+Eğer seçiliyse, ZAP başlatıldığında tüm uygulamanın ve eklentilerin güncellemelerini otomatik olarak kontrol edecektir.<br>
+Bu kutuyu işaretlemeniz şiddetle tavsiye edilir.<br>
+Herhangi bir sebepten dolayı bunu yapmamayı seçerseniz o zaman güncellemeleri el ile sıkça kontrol etmelisiniz.<br>
+ZAPA sadece tek istekte bulunur, ve içinde ki bilgi şu anda kullandığınız mevcut sürüm olur.
+
+<h3>ZAP sürümlerini otomatik olarak indir</h3>
+Eğer seçilirse, ZAP otomatik olarak yeni ZAP sürümleri kullanılabilir olduğunda onları indirir ve yüklemenizi ister. 
+
+<h3>Yüklü olan eklentiler için güncellemeleri otomatik olarak yükle</h3>
+Eğer seçiliyse, ZAP yüklü olan eklentilerin güncellemelerini otomatik olarak indirir ve kurar.
+
+<h3>Yüklü olan tarayıcı kuralları güncellemelerini otomatik olarak yükle</h3>
+Eğer seçiliyse, ZAP yüklü olan tarayıcı kuralları güncellemelerini otomatik olarak indirir ve yükler.<br>
+Bunlar yüklü eklentiler setinin bir alt kümesidir.
+
+<h3>Yeni sürüm kalite eklentilerini bildirin</h3>
+Eğer seçilirse, herhangi bir eklenti ne zaman yayın kalitesine yükseltilirse ZAP sizi bilgilendirecek.<br>
+Bu eklentiler tamamen test edilecek ve gözden geçirilecek ve onların en yüksek kalitede olduğundan emin olabilirsin.
+
+<h3>Yeni beta kalitesi eklentilerini bildirin</h3>
+Eğer seçilirse, herhangi bir eklenti ne zaman ikinci derece kaliteye yükseltilirse ZAP sizi bilgilendirecek.<br>
+Bu eklentiler tamamen test edilecek, gözden geçirilecek ve uygun bir kalitede olduğu  
+ve amaca neredeyse tamamen uygun olduğu kabul edilecek.<br>
+Ancak tamamlanmamış olabilirler ya da daha fazla test yapılması gerekebilir.<br>
+ZAP ile varsayılan olarak dahil edilmiş olan bazı eklentiler hala beta seviyesindedir.  
+
+<h3>Yeni alfa kalitesi eklentileri bildirin</h3>
+Eğer seçilirse, herhangi bir eklenti ne zaman birinci derece kaliteye yükseltilirse ZAP sizi bilgilendirecek.<br>
+Bu eklentiler gözden geçirilecek ancak bunlar genel anlamda gelişimin erken döneminde.<br>
+Tamamlanmamış olabilir, önemli problemler içerebilir veya denge problemlerine yol açabilirler.
+
+<h3>Eklenti dizinleri</h3>
+ZAP şuradan bütün eklentileri yükleyecek <a href="../../../start/concepts/addons.html">varsayılan <code>eklenti</code>
+dizinleri</a>.<br>
+Ayrıca buraya ekleyerek ihtiyaç duyduğunuz kadar ek eklenti dizini ekleyebilirsiniz.<br>
+Bir makinede birden fazla ZAP örneği açıkken bu çok işinize yarayabilir, örnek olarak CI ortamı.<br>
+Daha sonra yeni ya da güncellenmiş eklentileri bir kere indirebilir ve çabucak birden fazla örnek arasında paylaşabilirsiniz.<br>
+Paylaşılan dizinlere indirilen eklentiler, eklentiyi gerçekten indiren örnek dışında, yalnızca çalışmakta olanlara değil, yeni ZAP örneklerinede eklenecektir. 
+
+<h3>İndirme dizini</h3>
+Bu ZAP'ın yeni veya güncellenmiş eklentileri indireceği dizindir.<br>
+Varsayılan olarak yerel dizin olacaktır, fakat bu ZAP örneği yazılabileceği sürece paylaşılan dizinlerden bir tanesini seçebilirsiniz.<br>
+Bunlar tamamen indirildikten sonra ZAP sadece eklentileri kaylaşılan hedefe taşıyacaktır bu yüzden diğer ZAP oluşumları tamamlanmamış eklentileri yüklemeyi denemez.
+
+<h2>Ayrıca Bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../overview.html">Kullanıcı Arayüzüne Genel Bakış</a></td><td>bir kullanıcı arayüzüne genel bakış için</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="options.html">Seçenekler penceresi</a></td><td>diğer seçenekler diyalog ekranlarının ayrıntıları için</td></tr>
+</table>
+
+</body>
+</html>

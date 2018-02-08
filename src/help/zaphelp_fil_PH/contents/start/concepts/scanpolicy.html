@@ -3,64 +3,44 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Scan Policy
+Ang Patakaran ng Pagsusuri
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Scan Policy</h1>
+<h1>Ang Patakaran ng Pagsusuri</h1>
 <p>
-A scan policy defines exactly which <a href="../checks.html">rules</a> are run as part of an <a href="ascan.html">active scan</a>.<br>
-It also defines how these rules run influencing how many requests are made and how likely potential issues are to be flagged.<br>
-You can define as many scan policies as you like and select the most appropriate one when you start the scan via
-the <a href="../../ui/dialogs/advascan.html">Active Scan Dialog</a>.<br>
-You can define the default scan policy to be used for active scans and for the <a href="modes.html">Attack mode</a> via the 
-<a href="../../ui/dialogs/options/ascan.html">Options Active Scan screen</a>.<br>
+Ang isang patakaran ng pagsusuri ay eksaktong tumutukoy sa kung alin <a href="../checks.html">mga patakaran</a> ay mga tumatakbo bilang parte ng isang <a href="ascan.html">Aktibong pagsusuri</a>.<br> Ito ay tumutukoy din kung paanong ang mga patakaran na ito ay nagpapatakbo ng may impluwensya kung gaano karami ang mga kahilingan na nagagawa at kung gaano kadali ang potensyal na mga isyu ay maaaring ma-flag.<br> Maaari mong tukuyin kung gaano karami ang mga patakaran ng pagsusuri hangga't gusto mo at piliin ang pinaka wasto kapag inumpisahan ng magsuri sa pamamagitan ng <a href="../../ui/dialogs/advascan.html">Aktibong Pagsusuri ng Diyalogo</a>.<br> Maaari mong tukuyin ang default ng patakaran nag pagsusuri upang magamit para sa aktibong mga pagsusuri at para sa <a href="modes.html">Paraan ng Pag-atake</a> sa pamamagitan <a href="../../ui/dialogs/options/ascan.html">mga Pagpipilian ng Aktibong Pagsusuri sa iskrin</a>.<br>
  
 
 </p>
 <p>
-Active scanning is an attack on those targets. <br/>
-You should NOT use it on web applications that you do not own.
+Ang aktibong pagsusuri ay isang pag-atake sa mga target na maga iyon. <br/> Hindi mo ito maaaring gamitin sa mga aplikasyon ng web na hindi mo pag-aari.
 </p>
 <p>
-It should be noted that active scanning can only find certain types of vulnerabilities.<br/>
-Logical vulnerabilities, such as broken access control, will not be found by
-any active or automated vulnerability scanning.<br/>
-Manual penetration testing should always be performed in addition to active
-scanning to find all types of vulnerabilities. 
+Dapat na alalahanin na ang aktibong pagsusuri ay makikita lamang sa tiyak na mga tipo ng mga kahinaan.<br/> Mga lohikal na kahinaan, tulad ng sirang pag-acces ng pag-control, ay hindi maaaring makita sa kahit na anung aktibo o awtomatikong pagsusuri ng kahinaan.<br/> Manwal na penetrasyong pagsubok ay dapat laging gawin sa pagdagdag sa aktibong pagsusuri sa paghanap ng lahat ng mga tipo ng mga kahinaan. 
 </p>
 
 <p>
-Active scanning is configured using the 
-<a href="../../ui/dialogs/options/ascan.html">Options Active Scan screen</a>.<br>
-You can also define as many scan policies as you like - these define exactly which rules are run and how they work. 
+Ang aktibong pagsusuri ay kinumpigura gamit ang <a href="../../ui/dialogs/options/ascan.html">Mga pagpipilian ng aktibong pagsusuri ng iskrin</a>.<br> Maaari mo ring tukuyin kung gaano karami ang mga patakaran ng pagsusuri hangga't gusto mo - ito ay eksaktong tumutukoy kung aling mga patakaran ang tumatakbo at kung paano sila gumagana. 
 
 </p>
 
-<h2>Accessed via</h2>
+<h2>Kumpigura sa pamamagitan</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../ui/tabs/ascan.html">Active Scan tab</a></td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../ui/tabs/sites.html">Sites tab</a></td><td>'Attack/Active Scan site' right click menu item</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../ui/tabs/sites.html">Sites tab</a></td><td>'Attack/Active Scan node' right click menu item</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../ui/tabs/history.html">History tab</a></td><td>'Scan this History' right click menu item</td></tr>
+<a href="../../ui/dialogs/scanpolicymgr.html">Tagapamahala ng pagsusuri ng patakarang diyalogo</a></td><td>kung saan pinapayagan ka na pamahalaan ang mga patakaran ng pagsusuri</td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Maaari rin tingnan</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../ui/overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../ui/overview.html">Ang Pangkalahatang ideya ng UI</a></td><td>para sa isang pangkalahatan ng mga gumagamit ng interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="concepts.html">Features</a></td><td>provided by ZAP</td></tr>
+<a href="concepts.html">Mga tampok</a></td><td>ibinigay ni ZAP</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="pscan.html">Passive scanning</a></td><td></td></tr>
+<a href="pscan.html">Pasibong pagsusuri</a></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../ui/dialogs/scanpolicymgr.html">Scan Policy Manager Dialog</a></td><td>which allows you to manage the scan policies</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../checks.html">Scanner Rules</a></td><td>supported by default</td></tr>
+<a href="../checks.html">Mga patakaran ng pagsusuri</a></td><td>supportado ng default</td></tr>
 </table>
 
 </body>

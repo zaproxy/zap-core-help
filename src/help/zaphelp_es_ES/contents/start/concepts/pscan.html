@@ -9,23 +9,17 @@ Escaneo Pasivo
 <body bgcolor="#ffffff">
 <h1>Escaneo Pasivo</h1>
 <p>
-ZAP passively scans all of the responses from the web application being tested.<br/>
-Passive scanning does not change the responses in any way and is therefore safe to use.<br/>
-Scanned is performed in a background thread to ensure that it does not slow down the exploration
-of an application.
+ZAP pasivamente por defecto escanea los mensajes HTTP (solicitudes y respuestas) enviados a la aplicación web están probada. <br/> Exploración pasiva no cambie las solicitudes ni las respuestas de ninguna manera y por lo tanto es segura de usar. <br/> La exploración se realiza en un subproceso en segundo plano para asegurar que no demorar la exploración de una aplicación.
 </p>
 <p>
-In this release ZAP passive scanning is used for automatically adding <a href="tags.html">tags</a>
-and raising <a href="alerts.html">alerts</a> for potential issues. 
+El comportamiento (principal) del escáner pasivo puede configurarse utilizando la <a href="../../ui/dialogs/options/pscanner.html">Pantalla de escáner pasivo opciones</a>.
+</p>
+<p>
+Exploración pasiva también puede utilizarse para automáticamente agregar <a href="tags.html">etiquetas</a> y levantar <a href="alerts.html">alertas</a> de problemas potenciales. <br>Un conjunto de reglas para el etiquetado automático se proporcionan por defecto. Estos pueden ser cambiados, eliminados o añadidos a través de la <a href="../../ui/dialogs/options/pscan.html">pantalla de opciones de etiquetas de exploración pasiva</a>.
 </p>
 
 <p>
-A set of rules for automatic tagging are provided by default.<br>
-These can be changed, deleted or added to via the <a href="../../ui/dialogs/options/pscan.html">Options Passive Scan Tags screen</a>.<br/>
-</p>
-<p>
-The alerts raised by passive scanning can be configured using the 
-<a href="../../ui/dialogs/options/pscanrules.html">Options Passive Scan Rules screen</a>.<br/>
+Las alertas por escáneres pasivos pueden configurarse utilizando la <a href="../../ui/dialogs/options/pscanrules.html">pantalla de opciones pasivo analizar las reglas de</a>.<br/>
 </p>
 
 <h2>Vease también</h2>
@@ -35,7 +29,7 @@ The alerts raised by passive scanning can be configured using the
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="concepts.html">Caracteristicas</a></td><td>proporcionado por ZAP</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="ascan.html">Active scanning</a></td><td></td></tr>
+<a href="ascan.html">Escaneo activo</a></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../checks.html">Reglas de escaneo</a></td><td>soportadas por omisión</td></tr>
 </table>

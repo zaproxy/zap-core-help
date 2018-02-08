@@ -3,26 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Add Alert dialog
+添加警报对话框
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Add Alert dialog</h1>
+<h1>添加警报对话框</h1>
 <p>
-This dialog allows you to manually add or change an <a href="../../start/concepts/alerts.html">Alert</a> associated
-with a specific request.<br/>
+此对话框允许您手动添加或更改与特定请求关联的<a href="../../start/concepts/alerts.html">警报</a>。<br/>
 </p>
 
-<h2>Fields</h2>
-The dialog has the following fields:
+<h2>字段</h2>
+该对话框有以下字段:
 
 <h3>类型</h3>
-The type of the alert is a pull down field which allows you to select one of a prepopulated set of issue types.<br/>
-You can also enter your own text or change the text of one of the items you selected.<br/>
-If you select on of the existing types then the Description, Solution and Other Info fields
+警报类型是一个下拉字段，它允许你选择一组已预先填充的问题类型。<br/>
+您还可以输入自己的文本或者更改所选项目之一的文本。<br/>
+If you select one of the existing types then the Description, Solution and Other Info fields
 will be populated with text associated with the item you chose. 
 
-<h3>Risk</h3>
+<h3>风险</h3>
 A pull down field which allows you to specify how serious you think the risk is:
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Informational</td><td></td></tr>
@@ -43,18 +42,21 @@ A pull down field which allows you to specify how confident you are in the valid
 
 <h3>Parameter</h3>
 A pull down field which allows you to specify which parameter the issue is associated with.<br/>
-The field is prepopulated with any URL and FORM parameters found, but you can also enter your own parameter name. 
+The field is prepopulated with any URL and FORM parameters found, but you can also enter your own parameter name.<br />
+Array parameters (in URL query component and <code>x-www-form-urlencoded</code> request body) are identified with its index. For
+example, for a request containing <code>choices[]=ChoiceA&amp;choices[]=ChoiceB</code> the first parameter would be identified
+as <code>choices[0]</code> and the second as <code>choices[1]</code>.
 
 <h3>说明</h3>
 A general description of the type of issue found.<br/>
 This is populated when you select one of the predefined types, but you can also change it as required.<br/>
 Note that any changes you make will be lost if you select another type.
  
-<h3>Other Info</h3>
+<h3>其他信息</h3>
 Information specific to the particular issue you have found.<br/>
 This is not prepopulated.
 
-<h3>Solution</h3>
+<h3>解决方案</h3>
 Recommendations about how to fix the issue.<br/>
 This is populated when you select one of the predefined types, but you can also change it as required.<br/>
 Note that any changes you make will be lost if you select another type.
@@ -64,20 +66,20 @@ One or more URLs pointing to more information on the internet about the selected
 This is populated when you select one of the predefined types, but you can also change it as required.<br/>
 Note that any changes you make will be lost if you select another type.
  
-<h2>Accessed via</h2>
+<h2>通过访问</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../tabs/history.html">History tab</a></td><td>'New Alert...' right click menu item</td></tr>
+<a href="../tabs/history.html">历史记录选项卡</a></td><td>"新警报..."右键单击菜单项</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../tabs/alerts.html">Alerts tab</a></td><td>double clicking on an existing alert</td></tr>
+<a href="../tabs/alerts.html">警报选项卡</a></td><td>双击现有警报</td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>另请参阅</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../overview.html">UI综述</a></td><td>关于用户界面的概述</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+<a href="dialogs.html">对话框</a></td><td>有关对话框或弹出窗口的详情 </td></tr>
 </table>
 
 </body>

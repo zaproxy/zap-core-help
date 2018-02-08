@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Komut Satırı
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Komut Satırı</h1>
+
+Komut satırı aracılığıyla ZAP'i çalıştırmak için, Zap başlatma komutlarını bulmanız gerekir.<br/>
+<strong>Windows:</strong><br/>
+<pre>C: \ Program Dosyaları (x86) \ OWASP \ Zed Attack Proxy \ zap.bat</pre>
+<strong>Mac:</strong><br/>
+<pre>/ Uygulamalar / OWASP \ ZAP.app/Contents/Java/zap.sh</pre>
+<strong>Linux:</strong><br/>
+<code>zap.sh</code> ZAP yüklendiği zaman dizinin altında olacaktır.
+<br/><br/>
+Alternatif olarak, JAR dosyasını doğrudan çalıştırabilirsiniz:<br/>
+<pre>java -jar zap.jar</pre>
+Aşağıdaki tüm seçenekler bunlardan herhangi birine geçirilebilir.
+
+<h2>Seçenekler</h2>
+
+ZAP takip eden komut satırı seçeneklerini destekler:
+
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-versiyon</td><td>ZAP versiyonunu rapor et</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-cmd</td><td>Satır içinde çalıştırır (komut satırı seçenekleri tamamlandığında çıkar)</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-daemon</td><td>ZAP'i hayalet modunda başlat, örn bir arayüz olmadan</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-config &lt;kvpair&gt;</td><td>Yapılandırma dosyasındaki belirli anahtar=değer çiftini geçersiz kılar. <code>-config</code> komut satırı seçenekleri belirtildikleri sırada uygulanır.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-configfile &lt;path&gt;</td><td>Belirtilen özellikler dosyasında olanlar ile anahtar=değer çiftlerini geçersiz kılar</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-dir &lt;dir&gt;</td><td>Varsayılan dizin yerine belirtilen dizini kullanır</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-installdir &lt;dir&gt;</td><td>Belirtilen dizinle ZAP'in nerede yüklendiğini algılayan kodu geçersiz kılar</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-h</td><td>Eklentiler tarafından eklenenmiş olanlar dahil kullanılabilir tüm komut satırı seçeneklerini gösterir</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-yardım</td><td>-h ile aynı</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-newsession &lt;path&gt;</td><td>Belirtilen konumda yeni bir oturum oluşturur</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-session &lt;path&gt;</td><td>ZAP'ı başlattıktan sonra verilen oturumu açar</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-host &lt;host&gt;</td><td>Yapılandırılan dosya içinde belirtilen, proxy için kullanılan ana makinayı geçersiz kılar</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-port &lt;port&gt;</td><td>Yapılandırma dosyasında belirtilen proxy için kullanılan bağlantı noktasını geçersiz kılar</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-lowmem</td><td>Bellek yerine veritabanını mümkün olduğunca kullanın - bu hala deneyseldir</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-experimentaldb</td><td>Deneysel genel veritabanı kodunu kullanın, bu da beklendiği gibi hala deneyseldir</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstall &lt;addon&gt;</td><td>ZAP Pazaryeri'nden belitilen eklentiyi yükle</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstallall</td><td>ZAP Pazaryeri'nden tüm müsait eklentileri yükle</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonuninstall &lt;addon&gt;</td><td>Belirtilen eklentiyi kaldırır</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonupdate</td><td>ZAP Pazaryeri'nden tüm değişmiş eklentileri güncelle</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonlist</td><td>Yüklenen eklentilerin tümünü listeler</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-script &lt;script&gt;</td><td>Eğer komut satırı/hayalet modu ise belirtilen komut dosyasını (dosya sistemi yolu) çalıştırın ya da eğer grafik kullanıcı arayüzü ise sadece yükleyin</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-last_scan_report &lt;path&gt;</td><td>'Son Tarama Raporu'nu' belirtilen yolda oluşturun</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-suppinfo</td><td>ZAP sürümü, java sürümü gibi: yüklü eklentileri ve sürümü, yerel ayar bilgileri, işletim sistemi, vb Destek ve sorun giderme ile ilgili detayları verir (Konsol çıktısına).</td></tr>
+</table>
+<br>
+Seçenekler <code>-session</code> ve <code>-newsession</code> birbirini dışlayan komutlardır. İki seçenek de ayarlandığında bir hata gösterilecek ve ZAP kapanacaktır (eğer grafik kullanıcı arayüzünde değilse).
+<br>
+Oturum dosyasına göreceli yollar, ZAP'ın ana dizininde bulunan "oturum" dizinine karşı (varsayılan veya belirtilen) karşı çözümlenir <code>-dir</code> option).
+<br/>
+Yapılandırma anahtarları, yapılandırma dosyasını XML'indeki konumlarına göre nokta gösterimi kullanılarak belirtilmelidir, örn:<br/>
+<pre>&lt;zap-script&gt; -config api.key=12345 -config connection.timeoutInSecs=60</pre>
+Unutmayın bu eklentiler ilave komut satırı seçenekleri ekleyebilir.
+
+<p>
+Örnekler:
+	<ul>
+		<li>Verilen yolda oluşturulmuş yeni bir oturum ile ZAP'i 'hayalet' modunda başlatın:
+			<pre>&lt;zap-script&gt; -daemon -newsession session</pre>
+		</li>
+		<li>Mevcut bir oturumda son taramadan rapor yarat ve ZAP yüklenmeden çık:
+			<pre>&lt;zap-script&gt; -last_scan_report /full/path/to/save/report.xml -session /full/path/to/existing/session -cmd</pre>
+		</li>
+	</ul>
+
+<h2>Ayrıca bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="intro.html">Giriş</a></td><td>ZAP'e giriş</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="start/concepts/api.html">API</a></td><td>programlı olarak ZAP'ı denetleme</td></tr>
+</table>
+
+</body>
+</html>

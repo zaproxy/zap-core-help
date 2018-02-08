@@ -3,96 +3,91 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Options Display screen
+Ang mga opsyon sa display screen
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Options Display screen</h1>
+<h1>Mga opsyon ng display screen</h1>
 <p>
-The Display screen allows you to configure:
+Ang mga Display screen ay nagpapahintulot sa iyo na magkumpigura sa:
 
-<h3>Images</h3>
-If ZAP processes images.
+<h3>Imahe</h3>
+Kung ang ZAP ay nagproproseso ng mga imahe.
 
-<h3>Show (local) CONNECT requests</h3>
-If the HTTP CONNECT requests received by the <a href="localproxy.html">Local Proxy</a> should be persisted in the current
-<a href="../../tlmenu/file.html">session</a> and shown in the <a href="../../tabs/history.html">History tab</a>. The default is
-to not show those requests, they happen frequently (in preparation for TLS/SSL, WebSocket... connections) and, unless inspecting
-the behaviour of the client application, are not (usually) of much interest.
+<h3>Ipakita ang (lokal) na CONNECT ng mga kahilingan</h3>
+Kung ang mga kahilingan ng HTTP CONNECT ay matatanggap sa pamamagitan ng <a href="localproxy.html">Lokal na Proxies</a> dapat ay magpatuloy sa kasalukuyang
+<a href="../../tlmenu/file.html">sesyon</a> at ipinapakita sa <a href="../../tabs/history.html">History tab</a>. Ang default ay para sa hindi pagpapakita ng mga kahilingan, ito ay nangyayaring madalas (sa paghahanda para sa TLS/SSL, Websocket... koneksyon) at, maliban pagaralan ang ugali ng kliyenteng may application, ay hindi (gaano) nakakainteresado.
 
 <h3>Display</h3>
-The layout of the 3 main panels.<br>
-The following options are available:
+Ang layout ng 3 pangaunahing mga panel.<br>
+Ang mga sumusunod na mga opsyon ay magagamit:
 <ul>
-    <li>Maximise left (Sites) tab - The 'tree' panel containing the Sites tab extends
-        for the full length of the left hand side. This will reduce the amount of
-        space available to the 'information' panel.</li>
-    <li>Maximise bottom (History etc) tabs - The 'information' panel extends for the
-        full length of the bottom. This will reduce the amount of space available to
-        the 'tree' panel.</li>
-    <li>Full Layout - The selected tab takes up the full screen. This is
-        useful when using ZAP on small screens.</li>
+    <li>Palakihin ng labis ang kaliwang (mga Site) tab - Ang 'tatlong' panel ay naglalaman ng mga site tab na pwedeng makadagdag
+        Mula sa buong haba ng kaliwang kamay. Mababawasan nito ang halaga ng
+       espasyo na pwedeng gamitin para sa 'impormasyon' sa panel.</li>
+    <li>I-maximise ang buttom (History etc) mga tab- Ang 'impormasyon' ng panel ay palawigin para sa
+        Ang buong haba ng buttom. Mababawasan nito ang halaga ng espasyo na pwedeng gamitin para
+        sa 'tatlong' panel.</li>
+    <li>Ang kabuoang Layout - Ang napiling tab ay kukuwa ng buong screen. ito ay        kagamit-gamit sa tuwing gagamit ng ZAP sa maliit na mga screen.</li>
 </ul>
 
-<h3>Response Panel Position</h3>
-Allows to configure the position of the Response tab with respect to Request tab.<br>
-The following options are available:
+<h3>Tumugon sa Posisyon ng Panel</h3>
+Ang pagpapahintulot upang ma i-configure ang posisyon ng tab sa pagtugon at respeto sa tab ng kahilingan.<br>
+Ang mga sumusunod na mga opsyon ay maaaging magamt:
 <ul>
-    <li>Tabs Side by Side - The Request and Response tabs are side by side. This
-        increases the information that can be displayed but means you cannot see both the
-        request and response at the same time.</li>
-    <li>Panels Side by Side - The Request panel is shown to the left of the Response
-        panel. This decreases the information that can be displayed but means you can see both
-        the request and response at the same time.</li>
-    <li>Request Shown Above Response - The Request panel is shown above the Response
-        panel. This decreases the information that can be displayed but means you can see both
-        the request and response at the same time.</li>
+    <li>Ang mga tab side by side - Ang kahilingan at pagtugon na mga tabs ay gilid sa gilid din. Ang
+       pagtaas na ito ang impormasyon na maaaring makita pero ibig sabihin hindi mo maaaring makita ang parehong
+        kahilingan at katugunan sa parehong oras.</li>
+    <li>Mga magkakatabing panel - Ang kahilingan ng panel ay maipakita ang natitira sa mga katugunan sa
+        panel. Ang pagbawas ng impormasyon na maaaring maipakita pero ibig sabihin maaari mong makita pareho
+         ang kahilingan at katugunan sa magkaparehang oras.</li>
+    <li>Ang kahilingan ay makikita sa taas ng pagtugon - Ang hiling na panel ay makikita sa taas ng pagtugon sa
+         panel. Ang pagbaba na ito ay ang impormasyon na maaaring makita pero ibig sabihin maaari mo rin itong makita pareho
+          ang kahilingan at pagtugon  sa magkaparihong oras.</li>
 </ul>
-The Response Panel Position option does not apply when the Display option is set to Full Layout.
+Ang katugunan na panel sa posisyon ng opsyon ay hindi ma-a-apply kapag ang opsyon ng display ay naitakda na sa kabuoang layout.
 
-<h3>Show break buttons</h3>
-The location of the break buttons.
+<h3>Ipakita ang mga break button</h3>
+Ang lokasyon ng mga break button.
 
-<h3>Large request view min size</h3>
-The minimum size of a request body in bytes at which point a 'large request body' message will be shown instead of the actual body.<br>
-This is to prevent very large bodies from slowing down the UI.<br>
-Setting this value to -1 will result in request always being displayed no matter how large it is.
+<h3>Ang malaking kahilingan na makita ang laki ng min</h3>
+Ang minimum na laki ng isang katawan ng aplikasyon sa mga byte na kung saan ang punto ng isang 'malaking katawan ng aplikasyon' ang minsahe ay maaaring makita kaysa sa aktwal na katawan.<br>
+Ito ay para maiwasan ang pinakamalaking katawan sa pagkababa ng UI.<br>
+Ang paglagay ng halaga sa -1 ay resulta sa aplikasyon ito ay laging makikita gaano man kalaki ito.
 
-<h3>Large response view min size</h3>
+<h3>Ang malaking pagtugon na makikita ang laki ng min</h3>
 The minimum size of a response body in bytes at which point a 'large response body' message will be shown instead of the actual body.<br>
-This is to prevent very large bodies from slowing down the UI.<br>
-Setting this value to -1 will result in response always being displayed no matter how large it is.
+Ito ay para maiwasan ang pagbagal ng malaking katawan ng UI.<br>
+Ang paglagay ng halaga sa -1 ay resulta sa aplikasyon ito ay laging makikita gaano man kalaki ito.
 
-<h3>Output Tabs Time Stamp Options</h3>
-Once you've enabled time stamps on the output tab you can configure the format you would like those time stamps to appear in. 
-Either select a pre-defined format from the drop-down list or enter one of your own choosing. The format is based on Java's
-SimpleDateFormat. After choosing or entering a time stamp format if you press enter the example on the right will be updated
-to reflect your choice. If ZAP is unable to use a format you've entered then the example is displayed based 
-on the Default format.
+<h3>Opsyon ng Output ng mga tab ng Time Stamp</h3>
+Sa oras na pinagana mo ang time stamps sa output tab maaari mo itong i-configure ang pormat na nais mong lumabas na mga time stamp. 
+Alinman ang piliin sa isang pre-defined na pormat mula sa listahan ng drop-down o ilagay ang isa sa iyong napili. Ang pormat ay base sa Java
+SimplengdatePormat. Pagkatapos mong mamili o ilagay ang pormat ng time stamp kung pipindutin mo ang enter ang halimbawa sa kanan ay maga-update para magrepleka sa iyong napili. Kung ang ZAP ay di maaaring magamit para magamit ang isang pormat na iyong nilagay kung magkagayon ang halimbawa ay makikita base lamang sa pormat ng Default.
 
 <table border="1" cellpadding="5">
-<tr> <td> Long &amp; Default </td> <td> yyyy-MM-dd HH:mm:ss </td> </tr>
+<tr> <td> Mahaba &amp; Default </td> <td> yyyy-MM-dd HH:mm:ss </td> </tr>
 <tr> <td> ISO8601 </td> <td> yyyy-MM-dd'T'HH:mm:ssZ </td> </tr>
-<tr> <td> Time Only </td> <td> HH:mm:ss </td> </tr>
+<tr> <td> Oras Lamang </td> <td> HH:mm:ss </td> </tr>
 </table>
 
-<h3>Font Size</h3>
-The default text size used for the ZAP display. If you set this to -1 then the system default size will be used.<br>
-The 'Font Example' field will show you how large the default text will appear.<br>
-This setting will only take effect when ZAP is restarted.
+<h3>Laki ng Font</h3>
+Ang default na laki ng teksto ay ginamit para sa display ng ZAP. Kung itatakda mo ito sa -1 kung magkagayon ang sistema ng laki ng default ay maaaring gamitin.<br>
+Ang 'Halimbawa ng Font' ay maipapakita sayo ang larangan kung gaano kalagi ang defualt ng teksto na lumabas.<br>
+Ang setting ay magkakaroon lamang ng epekto kapag ang ZAP ay nagsimulang muli.
 
-<h2>See also</h2>
+<h2>Tignan din</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface.</td></tr>
+<a href="../../overview.html">Kabuoang ideya ng UI</a></td><td>para sa kabuoang ideya ng gumagamit ng interface.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens.</td></tr>
+<a href="options.html">Opsyon ng dayalogo</a></td><td>para sa detalye ng iba pang mga opsyon ng mga dayalogo sa screen.</td></tr>
 </table>
 
-<h2>External Links</h2>
+<h2>Ekstenal na mga Link</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html</td><td>For details of Java's SimpleDateFormat.</td></tr>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html">Mga detalye ng Java Simplengdatepormat</a></td></tr>
 </table>
 
 </body>

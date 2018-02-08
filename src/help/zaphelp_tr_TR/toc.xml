@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE toc
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 2.0//EN"
+         "http://java.sun.com/products/javahelp/toc_2_0.dtd">
+<!-- 
+	NOTE: Do not change the tocitem's tocid attribute without changing the TOC merger first. Otherwise the nodes will not be
+	correctly merged.
+
+	TOC merger is defined in org.zaproxy.zap.extension.help.ZapTocMerger.
+-->
+<toc version="2.0">
+ <tocitem text="ZAP Kullanma Kılavuzu" image="toplevelfolder" tocid="toplevelitem">
+
+   <tocitem text="Giriş" target="zap.intro"/>
+
+   <tocitem text="Başlarken" target="start.start">
+      <tocitem text="Proxy Yapılandırma" target="start.proxy"/>
+      <!--tocitem text="Explore the application" target="start.explore"/-->
+      <tocitem text="Özellikler" target="start.concepts">
+         <tocitem text="Aktif Tarama" target="start.concepts.ascan"/>
+         <tocitem text="Eklentiler" target="start.concepts.addons"/>
+         <tocitem text="Uyarılar" target="start.concepts.alerts"/>
+         <tocitem text="Anti CSRF tokenleri" target="start.concepts.anticsrf"/>
+         <tocitem text="API" target="start.concepts.api"/>
+         <tocitem text="Kimlik Doğrulama" target="start.concepts.auth"/>
+         <tocitem text="Break Points" target="start.concepts.breakpoints"/>
+         <tocitem text="İçerikler" target="start.concepts.contexts"/>
+         <tocitem text="Veri yönelik içerik" target="start.concepts.ddc"/>
+         <tocitem text="Filtreler" target="start.concepts.filters"/>
+         <tocitem text="Küresel hariç tutulan URL'ler" target="start.concepts.globalexcludeurl"/>
+         <tocitem text="HTTP Oturumları" target="start.concepts.httpsessions"/>
+         <tocitem text="Man-in-the-middle Proxy" target="start.concepts.intercept"/>
+         <tocitem text="Modlar" target="start.concepts.modes"/>
+         <tocitem text="Notlar" target="start.concepts.notes"/>
+         <tocitem text="Pasif Tarama" target="start.concepts.pscan"/>
+         <tocitem text="Tarama İlkeleri" target="start.concepts.scanpolicy"/>
+         <tocitem text="Kapsam" target="start.concepts.scope"/>
+         <tocitem text="Oturum Yönetimi" target="start.concepts.sessmanag"/>
+         <tocitem text="Örümcek" target="start.concepts.spider"/>
+         <tocitem text="İstatistikler" target="start.concepts.stats"/>
+         <tocitem text="Yapısal Değiştiriciler" target="start.concepts.structmods"/>
+         <tocitem text="Yapısal Parametreler" target="start.concepts.structparams"/>
+         <tocitem text="Etiketler" target="start.concepts.tags"/>
+         <tocitem text="Kullanıcılar" target="start.concepts.users"/>
+      </tocitem>
+      <tocitem text="Tarama Kuralları" target="start.check"/>
+      <tocitem text="Basit Penetration testi" target="start.pentest"/>
+   </tocitem>
+
+   <!--tocitem text="Common Vulnerabilities" target="vulns.vuln">
+      <tocitem text="Cross Site Request Forgery" target="vulns.csrf"/>
+      <tocitem text="Insecure Direct Object References" target="vulns.idor"/>
+      <tocitem text="Information Leakage / Improper Error Handling" target="vulns.leak"/>
+      <tocitem text="Insecure Communications" target="vulns.nossl"/>
+      <tocitem text="SQL Injection" target="vulns.sqli"/>
+      <tocitem text="Failure to restrict URL access" target="vulns.urla"/>
+      <tocitem text="Cross Site Scripts" target="vulns.xss"/>
+   </tocitem-->
+
+   <tocitem text="Kullanıcı Arayüzü" target="ui.overview">
+      <tocitem text="Genel Bakış" target="ui.overview"/>
+      <tocitem text="Üst Düzey Menü" target="ui.topmenu"/>
+      <tocitem text="Üst Düzey Araç Çubuğu" target="ui.toptoolbar"/>
+      <tocitem text="Sekmeler">
+         <tocitem text="Siteler" target="ui.tabs.sites"/>
+         <tocitem text="İstek" target="ui.tabs.request"/>
+         <tocitem text="Yanıt" target="ui.tabs.response"/>
+         <tocitem text="Mola" target="ui.tabs.break"/>
+         <tocitem text="Geçmiş" target="ui.tabs.history"/>
+         <tocitem text="Arama" target="ui.tabs.search"/>
+         <tocitem text="Break Points" target="ui.tabs.breakpoints"/>
+         <tocitem text="Uyarılar" target="ui.tabs.alerts"/>
+         <tocitem text="Aktif Tarama" target="ui.tabs.ascan"/>
+         <tocitem text="Örümcek" target="ui.tabs.spider"/>
+         <tocitem text="Parametreler" target="ui.tabs.params"/>
+         <tocitem text="HTTP Oturumları" target="ui.tabs.httpsessions"/>
+         <tocitem text="Çıktı" target="ui.tabs.output"/>
+      </tocitem>
+      <tocitem text="Dialoglar" target="ui.dialogs">
+         <tocitem text="Aktif Tarama" target="ui.dialogs.advascan"/>
+         <tocitem text="Uyarı Ekle" target="ui.dialogs.addalert"/>
+         <tocitem text="Break Point ekle" target="ui.dialogs.addbreak"/>
+         <tocitem text="Not Ekle" target="ui.dialogs.addnote"/>
+         <tocitem text="Encode/Decode/Hash" target="ui.dialogs.enc_dec"/>
+         <tocitem text="Filtre" target="ui.dialogs.filter"/>
+         <tocitem text="Bul" target="ui.dialogs.find"/>
+         <tocitem text="Geçmiş Filtresi" target="ui.dialogs.historyfilter"/>
+         <tocitem text="Manuel Talep Düzenleyici" target="ui.dialogs.manreq"/>
+         <tocitem text="Eklentileri Yönet" target="ui.dialogs.manageaddons"/>
+         <tocitem text="Etiketleri Yönet" target="ui.dialogs.managetags"/>
+         <tocitem text="Seçenekler" target="ui.dialogs.options">
+         	<tocitem text="Aktif Tarama" target="ui.dialogs.options.ascan"/>
+         	<tocitem text="Aktif Tarama Girdi Vektörleri" target="ui.dialogs.options.ascaninput"/>
+         	<tocitem text="Uyarılar" target="ui.dialogs.options.alert"/>
+         	<tocitem text="Anti CSRF Token'leri" target="ui.dialogs.options.anticsrf"/>
+         	<tocitem text="API" target="ui.dialogs.options.api"/>
+            <tocitem text="Breakpoints" target="ui.dialogs.options.breakpoints"/>
+            <tocitem text="Geri arama Adresi" target="ui.dialogs.options.callback"/>
+         	<tocitem text="Sertifika" target="ui.dialogs.options.certificate"/>
+         	<tocitem text="Güncellemeleri Denetle" target="ui.dialogs.options.checkforupdates"/>
+			<tocitem text="Bağlantı" target="ui.dialogs.options.connection"/>
+			<tocitem text="Veritabanı" target="ui.dialogs.options.database"/>
+         	<tocitem text="Görünüm" target="ui.dialogs.options.view"/>
+         	<tocitem text="Dinamik SSL Sertifikaları" target="ui.dialogs.options.dynsslcert"/>
+            <tocitem text="Uzantılar" target="ui.dialogs.options.ext"/>
+            <tocitem text="Küresel olarak dışarıda bırakılan URL" target="ui.dialogs.options.globalexcludeurl"/>
+         	<tocitem text="HTTP Oturumları" target="ui.dialogs.options.httpsessions"/>
+         	<tocitem text="JVM" target="ui.dialogs.options.jvm"/>
+         	<tocitem text="Klavye" target="ui.dialogs.options.keyboard"/>
+         	<tocitem text="Dil" target="ui.dialogs.options.language"/>
+         	<tocitem text="Yerel Proxyler" target="ui.dialogs.options.localproxy"/>
+         	<tocitem text="Pasif Tarama Kuralları" target="ui.dialogs.options.pscanrules"/>
+         	<tocitem text="Pasif Tarama Etiketleri" target="ui.dialogs.options.pscan"/>
+         	<tocitem text="Pasif Tarayıcı" target="ui.dialogs.options.pscan.main"/>
+         	<tocitem text="Kural Yapılandırması" target="ui.dialogs.options.ruleconfig"/>
+         	<tocitem text="Komutlar" target="ui.dialogs.options.script"/>
+         	<tocitem text="Arama" target="ui.dialogs.options.search"/>
+         	<tocitem text="Örümcek" target="ui.dialogs.options.spider"/>
+         	<tocitem text="İstatistik" target="ui.dialogs.options.stats"/>
+         </tocitem>
+         <tocitem text="Oturumu Sürdür" target="ui.dialogs.persistsession"/>
+         <tocitem text="Tekrar Gönder" target="ui.dialogs.resend"/>
+         <tocitem text="Tarama İlkesi Yöneticisi" target="ui.dialogs.scanpolicymgr">
+	         <tocitem text="Tarama İlkesi" target="ui.dialogs.scanpolicy"/>
+         </tocitem>
+         <tocitem text="Tarama İlerlemesi" target="ui.dialogs.scanprogress"/>
+         <tocitem text="Oturum" target="ui.dialogs.sessprop">
+	         <tocitem text="Oturum Özellikleri" target="ui.dialogs.sessprop"/>
+	         <tocitem text="Oturum İçerikleri" target="ui.dialogs.contexts"/>
+	         <tocitem text="Oturum İçerikleri Kimlik Doğrulaması" target="ui.dialogs.context-auth"/>
+	         <tocitem text="Oturum İçerik Yapısı" target="ui.dialogs.context-struct"/>
+         </tocitem>
+         <tocitem text="Örümcek" target="ui.dialogs.spider"/>
+      </tocitem>
+      <tocitem text="The Footer" target="ui.footer"/>
+   </tocitem>
+
+   <tocitem text="Komut Satırı" target="cmdline"/>
+
+   <tocitem text="Eklentiler" target="addon.introduction" tocid="addons" />
+   
+   <tocitem text="Sürümler" target="zap.releases">
+      <tocitem text="2.7.0" target="zap.releases.2.7.0"/>
+      <tocitem text="2.6.0" target="zap.releases.2.6.0"/>
+      <tocitem text="2.5.0" target="zap.releases.2.5.0"/>
+      <tocitem text="2.4.3" target="zap.releases.2.4.3"/>
+      <tocitem text="2.4.2" target="zap.releases.2.4.2"/>
+      <tocitem text="2.4.1" target="zap.releases.2.4.1"/>
+      <tocitem text="2.4.0" target="zap.releases.2.4.0"/>
+      <tocitem text="2.3.1" target="zap.releases.2.3.1"/>
+      <tocitem text="2.3.0" target="zap.releases.2.3.0"/>
+      <tocitem text="2.2.2" target="zap.releases.2.2.2"/>
+      <tocitem text="2.2.1" target="zap.releases.2.2.1"/>
+      <tocitem text="2.2.0" target="zap.releases.2.2.0"/>
+      <tocitem text="2.1.0" target="zap.releases.2.1.0"/>
+      <tocitem text="2.0.0" target="zap.releases.2.0.0"/>
+      <tocitem text="1.4.1" target="zap.releases.1.4.1"/>
+      <tocitem text="1.4.0" target="zap.releases.1.4.0"/>
+      <tocitem text="1.3.4" target="zap.releases.1.3.4"/>
+      <tocitem text="1.3.3" target="zap.releases.1.3.3"/>
+      <tocitem text="1.3.2" target="zap.releases.1.3.2"/>
+      <tocitem text="1.3.1" target="zap.releases.1.3.1"/>
+      <tocitem text="1.3.0" target="zap.releases.1.3.0"/>
+      <tocitem text="1.2.0" target="zap.releases.1.2.0"/>
+      <tocitem text="1.1.0" target="zap.releases.1.1.0"/>
+      <tocitem text="1.0.0" target="zap.releases.1.0.0"/>
+   </tocitem>
+   <tocitem text="Paros Proxy" target="zap.paros"/>
+
+   <tocitem text="Katkıda Bulunanlar" target="zap.credits"/>
+
+ </tocitem>
+</toc>

@@ -33,32 +33,26 @@ Right clicking on a node will bring up a menu which will allow you to:
 
 <h3>Támadás</h3>
 The Attack menu has the following submenus:
-<h4>Active Scan Site</h4>
-This will initiate an 
-<a href="../../start/concepts/ascan.html">active scan</a> of the whole of the site containing the selected node.<br/>
-A <a href="ascan.html">Active Scan tab</a> will be display and will show the progress of the scan.<br/>
 
-<h4>Active Scan Node</h4>
-This will initiate an 
-<a href="../../start/concepts/ascan.html">active scan</a> of just the node selected.<br/>
-A <a href="ascan.html">Active Scan tab</a> will be display and will show the progress of the scan.<br/>
+<h4>Active Scan...</h4>
+This will launch the <a href="../dialogs/advascan.html">Active Scan dialog</a> which allows you to initiate an 
+<a href="../../start/concepts/ascan.html">active scan</a> with the starting point set to the request you selected.<br/>
 
-<h4>Spider Site</h4>
-This will initiate a 
-<a href="../../start/concepts/spider.html">pók</a> of the whole of the site containing the selected node.<br/>
-A <a href="spider.html">Spider tab</a> will be display and will show the progress of the scan.<br/>
+<h4>Spider...</h4>
+This will launch the <a href="../dialogs/spider.html">Spider dialog</a> which allows you to initiate the 
+<a href="../../start/concepts/spider.html">spider</a> with the starting point set to the request you selected.<br/>
 
 <h3>Include in Context</h3>
 This menu allows you to include the selected nodes and all of their subordinates in the specified
 <a href="../../start/concepts/contexts.html">context</a>.<br/>
 You also have the option to create a new context.<br/>
-A <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
+The <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
 allow you to make any additional changes.
 
 <h3>Exclude from Context</h3>
 This menu allows you to exclude the selected nodes and all of their subordinates from the specified
 <a href="../../start/concepts/contexts.html">context</a>.<br/>
-A <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
+The <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
 allow you to make any additional changes.
 
 <h3>Flag as context</h3>
@@ -68,12 +62,12 @@ This menu has the following submenus for each of the
 <h4><i>Context name</i> Form-based Auth Login request</h4>
 This identifies the specified node as a login request for the specified context.<br/>
 You may only have one node identified as such in any one context.<br/> 
-A <a href="../dialogs/session/context-auth.html">Session Context Authentication</a> screen will be displayed to
+The <a href="../dialogs/session/context-auth.html">Session Context Authentication</a> screen will be displayed to
 allow you to make any additional changes.
 
 <h4><i>Context name</i> Data driven node</h4>
 This identifies the specified node as <a href="../../start/concepts/ddc.html">Data driven content</a> for the specified context.<br/>
-A <a href="../dialogs/session/context-struct.html">Session Context Structure</a> screen will be displayed to
+The <a href="../dialogs/session/context-struct.html">Session Context Structure</a> screen will be displayed to
 allow you to make any additional changes.
 
 <h3>Exclude from</h3>
@@ -83,15 +77,15 @@ This menu has the following submenus:
 This will exclude the selected nodes from the proxy. They will still be proxied via ZAP but will not be shown 
 in any of the tabs.<br/>
 This can be used to ignore URLs that you know are not relevant to the system you are currently testing.<br/>
-The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> párbeszédpanel   
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
 
-<h4>Szkenner</h4>
+<h4>Scanner</h4>
 This will prevent the selected nodes from being actively scanned.<br/>
-The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> párbeszédpanel   
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
 
-<h4>Pók</h4>
+<h4>Spider</h4>
 This will prevent the selected nodes from being spidered.<br/>
-The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> párbeszédpanel   
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
 
 <h3>Resend...</h3>
 This will bring up the
@@ -101,7 +95,7 @@ resend the request after making any changes to it that you want to.
 <h3>New Alert...</h3>
 This will bring up the
 <a href="../dialogs/addalert.html">Add Alert dialog</a> which allows you to manually record a new  
-<a href="../../start/concepts/alerts.html">figyelmeztetés</a> against this request.
+<a href="../../start/concepts/alerts.html">alert</a> against this request.
 
 <h3>Show in History tab</h3>
 This will show the selected node in the <a href="history.html">History tab</a>.

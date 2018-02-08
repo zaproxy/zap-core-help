@@ -3,33 +3,34 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-BeanShell Console dialog
+BeanShell Console
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>BeanShell Console dialog</h1>
-<h3>Introduction / What is the BeanShell</h3>
+<h1>BeanShell Console diyalogo</h1>
+<h3>Pambungad o ano ang BeanShell</h3>
 <p>
-The <a href="http://www.beanshell.org/">BeanShell</a> is an interactive Java shell that can be used to execute BeanShell scripts. These scripts are a simplified form of Java that use many elements from Java syntax, but in a simpler scripting format. All Java code is also valid BeanShell code.
-BeanShell integration in OWASP ZAP enables you to write scripts using the ZAP functions and data set. This can be a very powerful feature for analyzing web applications.
+Ang <a href="http://www.beanshell.org/">BeanShell</a> ay isang interactive na shell ng Java na maaaring magamit upang isagawa ang BeanShell script. Ang mga script na ito ay pinasimpleng porma ng Java na gumamit ng maraming elemento mula sa syntax ng Java, ngunit sa mas panisimpleng scripting format. Lahat ng Java code ay balido ding Beanshell code.
+Integrasyon ng BeanShell sa OWASP ZAP ay nagbibigay-daan sa iyo na magsulat ng script gamit ang mga function ng ZAP at data set. Ito ay maaaring maging isang napaka na malakas na tampok para sa pagsusuri ng mga web application.
 </p>
 <h3>BeanShell Console</h3>
 <p>
-The console is started from the Tools menu, and contains a split screen where the top half is the interactive BeanShell console and the bottom half is a simple text editor. For complex scripts, you're encouraged to use a Java editor.  Scripts can be loaded, saved and evaluated from the editor.
+Ang console ay nagsimula mula sa kasangkapan menu, at naglalaman ng isang split screen na kung saan ay sa itaas na kalahati ng interactive console ng BeanShell at sa ilalim ay kalahati sa isang simpleng text editor. Para sa mga kumplikadong script, ikaw ay hinihikayat na gamitin ang isang editor ng Java.  Ang mga script ay pwedeng ma-load, naligtas at nasuri mula sa editor.
 </p>
 <p>
-When the BeanShell starts a number of objects from ZAP are available for use, namely:
+Kapag ang BeanShell ay nagsimula sa isang numero ng mga bagay mula sa ZAP ay magagamit para sa paggamit, namely:
 <ul>
-<li>the <i>Model</i> singleton, through the object named <b><i>model</i></b></li>
-<li>the <i>SiteTree</i> tree of current sites through the <b><i>sites</i></b> object</li>
-<li>an instance of <i>HttpSender</i> through the <b><i>sender</i></b> object</li>
+<li>ang <i>modelo</i> pareho, sa pamamagitan ng mga bagay na ito ay pinangalanan ng <b><i>modelo</i></b></li>
+<li>sa <i>SiteTree</i> puno ng kasalukuyang site sa pamamagitan ng ang <b><i>site</i></b> na bagay</li>
+<li>isang halimbawa ng <i>HttpSender</i> sa pamamagitan ng ang mga pakay ng <b><i>nagpadala</i></b></li>
 </ul>
 <p>
-Notice that the BeanShell is loosely typed. Therefore, it is not necessary to declare variables before using them – this makes scripts a bit more concise than regular Java. But of course, if you did want to define the type you can.
+Pansinin na ang BeanShell ay maluwag na uri. Samakatuwid, ito ay hindi kinakailangan upang ipahayag ang mga variable bago
+	gamitin ang mga ito - dahil ito ang mga script na medyo maikli kaysa regulat na Java. Pero Siyempre, kung gusto mong tukuyin ang uri ng maaari mong.
 </p>
-<h3>Using the Site Map</h3>
+<h3>Ang paggamit sa Mapa sa site</h3>
 <p>
-Let's start with something useful and typical: Iterate through all the site nodes and check for the existence of a file. A script has already been created that accomplishes this, choose <i>Load</i> and select the <i>example.tree.bsh</i> file.
+Magsimula tayo sa isang bagay kapaki-pakinabang at karaniwang: Iterate sa pamamagitan ng lahat ng mga site na noda at suriin para sa pagkakaroon ng isang file na ito. Isang script na ito ay nalikha na isinasagawa ang mga ito, pinili <i>na Load</i> at pumili ng mga file na <i>example.tree.bsh</i>.
 </p>
 <pre>
 import org.apache.commons.httpclient.URI;
@@ -67,58 +68,58 @@ Tree () {
 }
 </pre>
 <p>
-Before clicking Evaluate, first browse to a site through ZAP to populate the tree:
+Bago pag-click Evaluate, una mag-browse sa isang site sa pamamagitan ng ZAP dagdagan ang puno:
 </p>
 <p>
-Now click on evaluate to execute the script that's in the editor. If there are no errors, then you can now start using the object defined in the script by issuing these commands:
+Ngayon i-click ang evaluate para magsagawa ng script na nasa editor. Kung walang mga mali, saka ikaw ay pwedeng mag-umpisa gamit ang object defined na nasa script sa pamamagitan ng issuing sa mga command na ito:
 </p>
 <pre>
 t = Tree();
 </pre>
 <p>
-This constructs a new Tree object and assigns a reference to <i>t</i>.
+Ito ay nagtayo ng isang bagong bagay sa puno at nagtatalaga ng isang reference sa <i>t</i>.
 </p>
 <pre>
 t.find(sites.getRoot(), "index.html");
 </pre>
 <p>
-Call the <i>find</i> method on t, which takes a <i>SiteNode</i> as the first argument and a resource to find as the second. In this case, the method will iterate through all the nodes in the tree, because we started at the root, and will find index.html files.
+Tawagan ang <i>Maghanap ng</i> paraan sa h, na kung saan ay tumatagal ng isang <i>SiteNode</i> bilang ang unang argument at sanggunian upang mahanap ang bilang ikalawang. Sa kasong ito, ang pamamaraan ay iterate sa pamamagitan ng lahat ng mga nodes sa mga puno, dahil tayo ay nagsimula sa ugat, at makikita ang index.html file.
 </p>
 <p>
-Instead of iterating through all the nodes, we could also choose to start a specific node by using the <i>findChild</i> method.
+Sa halip na iterating sa pamamagitan ng lahat ng mga nodes, din makakapili tayo upang simulan ang isang partikular na node gamit ang <i>findChild</i> na pamamaraan.
 </p>
 <p>
-This should give you some idea of the power of the BeanShell in ZAP. But to fully exploit it, you'll need to familiarize yourself with the internal API and the BeanShell's features. The BeanShell has been setup so as to allow full access to all internal objects and methods – even private ones.
+Ito ay dapat magbigay sayo ng ilang ideya ng kapangyarihan ng BeanShell sa ZAP. Ngunit lubos na kasakapanin ito, kailangan mong pag-aralang mabuti ang mga panloob na API at mga BeanShell na mga tampok. Ang Beanshell ang naging setup para mabigyan na ganap na access sa lahat ng mga panloob na mga bagay ay mga pamamaraan - maging pribadong isa.
 </p>
-<h3>Simple HTTP Request</h3>
+<h3>Ang Simpleng HTTP na hiling</h3>
 <p>
-In the next example, we create and send an HTTP request directly in the interactive console:
+Sa susunod na halimbawa, lumikha kami at magpadala ng direktang HTTP sa interactive console:
 </p>
 <pre>
 TBD
 </pre>
 <p>
-To fully utilize the power of the BeanShell, you should familiarize yourself with ZAP's internals. The <i>sender</i> object is the same instance as is used by the <a href="man_req.html">Manual Request Editor</a> and will therefore automatically use proxy settings set in the ZAP configuration.
+Upang lubos na magamit ang kapangyarihan ng BeanShell, dapat mong pamilyar sa mga internasyonal na ZAP. Ang nagpadala na object ay parehong instance sa paggamit ng Manual Request Editor at nga awtomatiko na gumamit ng proxy na mga setting na nagtakda sa ZAP na configurasyon.
 </p>
 <pre>
 TBD
 </pre>
-<h3>Tips</h3>
+<h3>Mga tip</h3>
 <p>
-Use the <i>unset(String)</i> command to unset any declared variables, methods or objects. This is useful if you want to replace a method declaration in the current namespace. Note that the command takes a String argument, not an Object, so to unset the <i>t</i> object we used above, it should be: <i>unset("t");</i> and not <i>unset(t);</i>
+Gamitin ang unset(String) command para ma-unset ang anumang idineklarang mga variable, mga pamamaraan o mga bagay. Ito ay kapaki-pakinabang kung gusto mong palitan ang isang paraan na pagpapahayag sa kasalukuyang namespace. Tandaan na ang utos ay tumatagal ng isang String argumento, hindi isang bagay, kaya sa pag-unset sa bagay na ginagamit natin sa itaas, ito ay dapat: unset(“t”); at hindi unset(t)
 </p>
-<h2>Accessed via</h2>
+<h2>Ma-access sa pamamagitan ng</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../tlmenu/tools.html">Top level Tools menu</a></td><td>'BeanShell Console' menu item</td></tr>
+<a href="../tlmenu/tools.html">Itaas ang antas ng menu ng Tools</a></td><td>Item na 'BeanShell Console'</td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Tignan din</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../overview.html">Ang UI Overview</a></td><td>para sa kabuoan gumagamit ng interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+<a href="dialogs.html">Mga dialogo</a></td><td>para sa mga detalye ng diyalogo o mga popup </td></tr>
 </table>
 
 </body>

@@ -3,29 +3,63 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Options Local Proxy screen
+Pilihan Proxy Lokal layar
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Options Local Proxy screen</h1>
+<h1>Layar Pilihan Proxy Lokal</h1>
 <p>
-The Options Connection screen allows you to configure the address and port 
-on which ZAP accepts incoming connections.<br/>
-It is this address and port that you must configure your browser to use as a proxy.
+Pilihan Koneksi layar memungkinkan anda untuk mengkonfigurasi alamat dan port 
+di mana ZAP menerima koneksi masuk.<br/>
+
+<h2>Proxy lokal</h2>
+Secara default ZAP akan mendengarkan pada satu alamat lokal dan port, dan ini adalah alamat dan port yang harus anda gunakan untuk mengkonfigurasi browser untuk menggunakan proxy.
 </p>
+<h3>Alamat</h3>
+Alamat lokal yang akan digunakan ZAP. Semua alamat yang tersedia diidentifikasi secara otomatis.
 
-<h3>Modify/Remove "Accept-Encoding" request-header</h3>
-Allows the proxy to modify/remove the "Accept-Encoding" request-header field so 
-no encoding transformations are done to the response.<br/>
-This option should be always enabled unless when testing the encoding transformations.<br/>
-The messages encoded will not be correctly scanned (either by passive and active scanners).
+<h3>Pelabuhan</h3>
+Pelabuhan yang ZAP akan mendengarkan.
 
-<h2>See also</h2>
+<h3>Dibelakang NAT</h3>
+Menunjukkan bahwa Lokal Proxy (ZAP) adalah di belakang NAT. Ketika dipilih ZAP akan mencoba untuk
+menentukan alamat IP publik, untuk benar-benar mendeteksi dan menangani permintaan dengan publik
+Alamat IP (misalnya, untuk dilayani oleh ZAP API).
+<p>
+<strong>Catatan:</strong> Pilihan ini hanya didukung ketika ZAP berjalan di sebuah Contoh AWS EC2.
+ZAP akan mendapatkan alamat IP publik dari
+<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html#working-with-ip-addresses">AWS EC2
+instance's metadata</a>.<br>
+ZAP harus dimulai dengan opsi ini diaktifkan jika akses ke API, melalui alamat IP publik, diperlukan:
+<blockquote>zap.sh -daemon -port 8080 -host 0.0.0.0 -config proxy.behindnat=true</blockquote>
+Also, the <a href="api.html">API</a> perlu dikonfigurasi untuk menerima alamat IP eksternal (yaitu IP
+alamat dari mana ZAP sedang diakses).
+
+<h3>Hapus Pengkodean yang Tidak ada dukungan</h3>
+Memungkinkan proxy untuk menghapus yang tidak didukung pengkodean dari "Accept-Encoding" bidang header permintaan, sehingga 
+tidak ada (tidak didukung) pengkodean dan transformasi yang dilakukan untuk respon.<br/>
+Opsi ini harus selalu diaktifkan kecuali ketika pengujian transformasi encoding.<br/>
+Pesan dikodekan dengan tidak didukung penyandiaksaraan akan tidak benar dipindai (baik dengan scanner pasif dan aktif).
+
+<h3>Protokol keamanan</h3>
+Memungkinkan untuk memilih SSL/TLS versi diaktifkan untuk masuk ke koneksi (misalnya, dari browser). Setidaknya
+salah satu versi harus diaktifkan, versi tidak didukung oleh JRE akan tidak dipilih dan dinonaktifkan.
+<br>
+Pilihan SSLv2Hello harus dipilih dalam hubungannya dengan setidaknya satu SSL/TLS versi.
+<br>
+Opsi keamanan berlaku untuk kedua utama dan semua proxy tambahan.
+
+<h2>Tambahan proxy</h2>
+Anda dapat menambahkan sebanyak alamat tambahan dan pelabuhan untuk ZAP untuk mendengarkan pada yang Anda inginkan.<br>
+Hal ini dapat berguna ketika pengujian aplikasi mobile - anda dapat proxy mobile aplikasi melalui antarmuka Wi-Fi pada saat yang sama
+dengan menggunakan backend situs ini diatas menggunakan browser proxy melalui ZAP meniru pengguna mobile agent.
+
+<h2>Lihat juga</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../overview.html">Ikhtisar UI</a></td><td>untuk Ikhtisar antarmuka pengguna</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+<a href="options.html">Pilih dialog</a></td><td>untuk rincian layar dialog Opsi lain</td></tr>
 </table>
 
 </body>

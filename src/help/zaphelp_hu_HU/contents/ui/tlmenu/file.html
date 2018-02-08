@@ -24,26 +24,32 @@ This persists the current session. <br/>
 While the session is always stored in a database on disk, it will be lost when ZAP is stopped unless it has been persisted.<br/>
 You only need to persist it once - after that all changes will be saved.
 
-<h3>Snapshot Session</h3>
+<h3>Snapshot Session As...</h3>
 This saves a snapshot of a session that has already been persisted.<br/>
-It will use the same filename with a date-time string appended to it.<br/>
+It will suggest the same filename as the persisted session with a date-time string appended to it, and allow the user to set whatever name they choose.<br/>
 
-<h3>Properties...</h3>
+<h3>Session Properties...</h3>
 This displays the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog.<br/>
 This allows you to set the session name and description.
 
+<h3>Import Context...</h3>
+Allows to import a <a href="../../start/concepts/contexts.html">Context</a>.
+
+<h3>Export Context...</h3>
+Allows to export a Context.
+
 <h3>Load Add-on file...</h3>
-Load a local <a href="../../start/concepts/addons.html">add-on</a> fájl.<br/>
+Load a local <a href="../../start/concepts/addons.html">add-on</a> file.<br/>
 Add-ons are typically installed from via the <a href="../dialogs/manageaddons.html">Manage Add-ons</a> dialog, but this
 option can be useful if you have downloaded an add-on manually or are testing one you have developed yourself.<br/>
 Add-ons remain installed until you manually uninstall them. 
 
-<h3>Exit and delete session...</h3>
+<h3>Exit and Delete Session...</h3>
 This will exit ZAP and delete the session, even if you have previously persisted it.<br/>
 The session will no longer be accessible when you restart ZAP, although any snapshots you took will still be available.<br/> 
 A warning dialog will be displayed to ensure you really meant to choose this option.
 
-<h3>Kilép</h3>
+<h3>Exit</h3>
 This will exit ZAP.<br/>
 If you have not saved the current session then you will be given the option to do so.
 

@@ -3,63 +3,54 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-The Edit menu
+编辑菜单
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>The Edit menu</h1>
-This menu handles finding strings in specific tabs, searching for strings across all 
-requests and responses and managing session tracking.
+<h1>编辑菜单</h1>
+此菜单处理在特定选项卡中查找字符串，在所有 请求和响应中搜索字符串以及管理会话跟踪。
 
 <h3>查找...</h3>
-This opens the <a href="../dialogs/find.html">Find dialog</a> which allows you to find a string in the currently selected window.<br/>
+这将打开 <a href="../dialogs/find.html">查找对话框</a> 它允许您在当前所选的窗口查找字符串。<br/>
 
 <h3>启用会话跟踪(Cookie)</h3>
 This allows session details stored in cookies to be tracked.<br/>
-This option must be selected to enable the "Use current tracking session" checkbox
-in the <a href="../dialogs/resend.html">重发送</a> and 
-<a href="../dialogs/man_req.html">Manual Request Editor dialogs</a>. <br/>
-Session tracking ensures that any requests are sent with the latest session
-details.<br/>
+必须选择此选项以启动"使用当前跟踪会话"复选框 <a href="../dialogs/resend.html">重发送</a> 和 
+<a href="../dialogs/man_req.html">手动请求编辑器对话框</a>. <br/>
+会话跟踪确保所有请求都随最新的会话详情一起发送。<br/>
 For example you may record a session when logged in as one user and then logout
 and login as another user.<br/>
-If you resend a request from the first session without
-session tracking then it will use the cookies from the first session.<br/>
-If you resend the same request with session tracking then it will use the
-cookies from the second session.
+在没有会话跟踪的情况下，如果您从第一个会话中重新发送请求，则它将使用第一个会话中的cookie。<br/>
+在有会话跟踪的情况下，如果您重新发送相同的请求，则它将会使用第二个会话中的cookie。
 
 <h3>重置会话状态</h3>
-This clears the session tracking.<br/>
+这将清除会话跟踪。<br/>
 
 <h3>搜索...</h3>
-This selects the <a href="../tabs/search.html">Search tab</a> which allows you to search for regular expressions
-in all URLs, requests and responses..
+This selects the <a href="../tabs/search.html">搜索标签</a> 它允许您在所有url，请求和响应中搜索正则表达式。
 
 <h3>下一个</h3>
 This selects the next occurrence of the last string searched for.<br/>
 The relevant message will be selected in the Search tab and the string will be displayed
-and highlighted in the <a href="../tabs/request.html">请求</a> or
+and highlighted in the <a href="../tabs/request.html">请求</a> 或
 <a href="../tabs/response.html">响应</a> tab as appropriate.
 
 <h3>前一个</h3>
 This selects the previous occurrence of the last string searched for.<br/>
 The relevant message will be selected in the Search tab and the string will be displayed
-and highlighted in the <a href="../tabs/request.html">请求</a> or
+and highlighted in the <a href="../tabs/request.html">请求</a> 或
 <a href="../tabs/response.html">响应</a> tab as appropriate.
 
-<h3>编码/解码/哈希...</h3>
-This displays the <a href="../dialogs/enc_dec.html">Encode/Decode/Hash dialog</a>.
-
 <p>
-Note that <a href="../../start/concepts/addons.html">add-ons</a> can add additional menu items.
+请注意，<a href="../../start/concepts/addons.html">加载项</a>可以添加其他菜单项。
 </p>
 
-<h2>See also</h2>
+<h2>另请参阅</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="tlmenu.html">The top level menu</a></td><td></td></tr>
+<a href="tlmenu.html">顶层菜单</a></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../overview.html">UI综述</a></td><td>关于用户界面的概述</td></tr>
 </table>
 </body>
 </html>

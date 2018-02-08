@@ -9,234 +9,233 @@
 <body bgcolor="#ffffff">
 <h1>Release 2.4.0</h1>
 <p>
-The following changes were made in this release:
+Se hicieron los siguientes cambios en esta versión:
 </p>
 
-<h2>Significant changes:</h2>
+<h2>Cambios significativos:</h2>
 
-<h3>Attack mode</h3>
+<h3>Menú de ataque</h3>
 
-A new 'ATTACK' <a href="../start/concepts/modes.html">Mode</a> has been added - new nodes that are in <a href="../start/concepts/scope.html">Scope</a> are 
-<a href="../start/concepts/ascan.html">actively scanned</a> as soon as they are discovered.
+Un nuevo 'ATAQUE' <a href="../start/concepts/modes.html">Modo</a> ha sido agregado - nuevos nodos que están en <a href="../start/concepts/scope.html">Ámbito</a> son 
+<a href="../start/concepts/ascan.html">escaneo activo</a> tan pronto como son descubiertos.
 
-<h3>Advanced fuzzing</h3>
+<h3>Configuración avanzada</h3>
 
-A completely new fuzzing dialog has been introduced that allows multiple injection points to be attacked at the same time.<br> 
-This supports new attack payloads including the option to use scripts for generating the payloads as well as pre and post attack manipulation and analysis.
+Se ha introducido un diálogo de fuzz completamente nuevo que permite atacar múltiples puntos de inyección al mismo tiempo.<br> 
+Esto admite nuevas cargas útiles de ataque, incluida la opción de utilizar scripts para generar las cargas útiles, así como la manipulación y el análisis antes y después del ataque.
 
-<h3>Scan dialogs with advanced options</h3>
+<h3>Escanear diálogos con opciones avanzadas</h3>
 
-New <a href="../ui/dialogs/advascan.html">Escaneo Activo</a>, <a href="../ui/dialogs/spider.html">Spider(Araña)</a> and AJAX Spider dialogs have replaced
-the increasing number of right click 'Attack' options.<br>
-These provide easy access to all of the most common options and optionally a wide range of advanced options. 
+Nuevo <a href="../ui/dialogs/advascan.html">Escaneo Activo</a>, <a href="../ui/dialogs/spider.html">Spider(Araña)</a> y los diálogos AJAX Spider han reemplazado el creciente número de opciones de 'Ataque' con el botón derecho.<br>
+Estos proporcionan un acceso fácil a todas las opciones más comunes y, opcionalmente, a una amplia gama de opciones avanzadas. 
 
-<h3>Scan Policies</h3>
+<h3>Reglas de escaneo...</h3>
 
-A new <a href="../ui/dialogs/scanpolicymgr.html">Scan Policy Manager dialog</a> allows you to create as many 
-<a href="../start/concepts/scanpolicy.html">Scan Policies</a> as you need.<br>
-Scan policies define exactly which rules are run as part of an <a href="../start/concepts/ascan.html">Escaneo Activo</a>.<br>
-They also define how these rules run influencing how many requests are made and how likely potential issues are to be flagged.<br>
+Un nuevo <a href="../ui/dialogs/scanpolicymgr.html">Diálogo del administrador de política de escaneo</a> te permite crear tantos 
+<a href="../start/concepts/scanpolicy.html">Reglas de escaneo...</a> como necesites.<br>
+Las políticas de escaneo definen exactamente qué reglas se ejecutan como parte de un <a href="../start/concepts/ascan.html">Escaneo Activo</a>.<br>
+También definen cómo se ejecutan estas reglas, lo que influye en la cantidad de solicitudes que se realizan y en la probabilidad de que se marquen los posibles problemas.<br>
 
-<h3>Unused tabs hidden</h3>
+<h3>Pestañas no utilizadas ocultas</h3>
 
-By default only the essential tabs are now shown when ZAP starts up.<br>
-The remaining tabs are revealed when they are used (e.g. for the spider and active scanner) or when you display them via the 
-special tab on the far right of each window with the green '+' icon. This special tab disappears if there are no hidden tabs.<br>
-Tabs can be closed via a small 'x' icon which is shown when the tab is selected.<br>
-Tabs can also be 'pinned' using a small 'pin' icon that is also shown when the tab is selected - pinned tabs will be shown
-when ZAP next starts up. 
+De forma predeterminada, solo se muestran las pestañas esenciales cuando se inicia ZAP.<br>
+Las pestañas restantes se revelan cuando se usan (por ejemplo, para la araña y el escáner activo) o cuando las muestras a través de la pestaña especial en el extremo derecho de cada ventana con el ícono verde "+". Esta pestaña especial desaparece si no hay pestañas ocultas.<br>
+Las pestañas se pueden cerrar mediante un pequeño ícono 'x' que se muestra cuando se selecciona la pestaña.<br>
+Las pestañas también se pueden 'fijar' usando un pequeño ícono 'pin' que también se muestra cuando se selecciona la pestaña: se mostrarán pestañas fijas cuando se inicie ZAP. 
 
-<h3>Enablers for Sequence scanning add-on</h3>
+<h3>Habilitadores para el complemento de escaneo de secuencia</h3>
 
-A new optional 'alpha' quality add-on adds the ability to scan 'sequences' of web pages, in other words pages that must be visited
-in a strict order in order to work correctly. 
+Un nuevo complemento opcional de calidad 'alfa' agrega la capacidad de escanear 'secuencias' de páginas web, en otras palabras, páginas que deben visitarse en un orden estricto para funcionar correctamente. 
 
-<h3>Enablers for access control testing add-on</h3>
+<h3>Habilitadores para el complemento de prueba de control de acceso</h3>
 
-A new optional 'alpha' quality add-on adds the ability to automate many aspects of access control testing. 
+Un nuevo complemento opcional de calidad 'alpha' agrega la capacidad de automatizar muchos aspectos de las pruebas de control de acceso. 
 
-<h3>Note for API Users</h3>
-Please be aware that the Plugin ID for the External Redirect scanner has changed from 30000 to 20019.
+<h3>Nota para los usuarios de la API</h3>
+Tenga en cuenta que el identificador del Plugin para el explorador redirección externa ha cambiado de 30000 a 20019.
 
-<h2>Full list of changes:</h2>
+<h2>Lista completa de cambios:</h2>
 <ul>
-<li>Issue 117 : Enhancement: Compare crawling sessions for authentication issues</li>
-<li>Issue 234 : Support for fuzzing multiple parts</li>
-<li>Issue 329 : Enhancement: Add sitemap.xml support</li>
-<li>Issue 389 : Enable technology scope for scanners</li>
-<li>Issue 414 : API: Support scripts</li>
-<li>Issue 445 : SSLContextManager.isProviderAvailable() returns true as default</li>
-<li>Issue 557 : SQL injection false negatives</li>
-<li>Issue 642 : Output tab needs timestamps</li>
-<li>Issue 653 : Handle updates better on Kali Linux</li>
-<li>Issue 704 : ZAP Error: handshake alert: unrecognized_name</li>
-<li>Issue 722 : ZAP UI doesnt handle multiple active scans well</li>
-<li>Issue 883 : Support multiple scans in the API</li>
-<li>Issue 949 : Spider (site) does not follow hyperlinks in JSON documents</li>
-<li>Issue 959 : add-on updater might ignore outbound proxy changes</li>
-<li>Issue 990 : Allow to delete alerts through the API</li>
-<li>Issue 1151 : Active Scan in Scope finishes before scanning all messages in scope if multiple domains available</li>
-<li>Issue 1154 : Tool tip text "Show tab names and tab icons"  IdealFirstBug</li>
-<li>Issue 1175 : Support a Contexts tree</li>
-<li>Issue 1176 : Spider advanced scan dialog</li>
-<li>Issue 1180 : Proxy corrupts URL when there are multiple question marks</li>
-<li>Issue 1184 : Improve support for IBM JDK</li>
-<li>Issue 1207 : AScan API - Change the "scanners" view to include the dependencies</li>
-<li>Issue 1208 : Search classes/resources in add-ons declared as dependencies</li>
-<li>Issue 1209 : Additional Reliability Values/Options &amp; Rename Reliability to Confidence in UI</li>
-<li>Issue 1214 : Sorting in Scan Policy Dialogs  Usability</li>
-<li>Issue 1215 : Alert Tree Ordering/Sorting Issue  Usability</li>
-<li>Issue 1216 : Typo in scripts tab</li>
-<li>Issue 1217 : Table format does not display information when charset is present in Content-Type header</li>
-<li>Issue 1224 : Display Quality/Status in Scan Policy Dialogs  Usability</li>
-<li>Issue 1226 : Active scanner excluded parameter's regexes not validated</li>
-<li>Issue 1227 : Active scanner sends GET requests with content in request body</li>
-<li>Issue 1238 : NullPointerException if an active scanner raises an alert with null attack</li>
-<li>Issue 1239 : Allow extending the Spider from Extensions</li>
-<li>Issue 1241 : Active scanner might not report finished state when using host scanners</li>
-<li>Issue 1242 : Active scanner might use outdated policy settings</li>
-<li>Issue 1243 : NullPointerException if a script type does not have core bundled script templates</li>
-<li>Issue 1244 : Scripts Active Scanner should be category Misc not Injection  Usability</li>
-<li>Issue 1252 : Connection Exception during shutdown while running scans through the API</li>
-<li>Issue 1256 : Revisit missing X-Frame-Options scanner level</li>
-<li>Issue 1257 : Create a passive rule which detects big redirects</li>
-<li>Issue 1261 : NPE on "Plug-n-Hack Configuration" update from market place</li>
-<li>Issue 1262 : Address "Passive Rules - Risk - Reliability" [User controllable HTML element attribute (potential XSS), and Timestamp Disclosure - Unix]</li>
-<li>Issue 1263 : Generate Report Clobbers Existing Files Without Prompting</li>
-<li>Issue 1264 : Manual authentication - Cookie mismatch due to wrong handling of domain and path</li>
-<li>Issue 1265 : Context import and export</li>
-<li>Issue 1272 : ZAP API: Core.MessagesHAR() fails if a HTTP Request contains invalid Cookie header(s)</li>
-<li>Issue 1274 : ZAP Error [javax.net.ssl.SSLException]: Unsupported record version SSLv2Hello</li>
-<li>Issue 1275 : SpiderODataAtomParser must return true from "parseResource"</li>
-<li>Issue 1278 : Safe menu items not available in protected and safe modes</li>
-<li>Issue 1279 : Active scanner excluded parameters not working when "Where" is "Any"</li>
-<li>Issue 1280 : API shortcuts not removed when the ApiImplementor is removed</li>
-<li>Issue 1281 : QuickStart - Allow to generate the report when the view is initialised</li>
-<li>Issue 1282 : Extension#stop() is never called before destroy()</li>
-<li>Issue 1283 : SQLDataException: data exception: string data, right truncation while writing an alert to DB</li>
-<li>Issue 1286 : Fuzzer seems to be slow</li>
-<li>Issue 1290 : "Port Scan host" menu item enabled even if a port scan is already in progress</li>
-<li>Issue 1291 : 407 Proxy Authentication Required while active scanning</li>
-<li>Issue 1292 : NullPointerException while attempting to remove an unregistered ManualRequestEditorDialog</li>
-<li>Issue 1294 : Trivial_UI_Issue: Word - 'will be' appears twice under 'Session Properties' prompt.</li>
-<li>Issue 1295 : Enhancement Request - New Active Scan Rule to Check HTTP Access to HTTPS Content</li>
-<li>Issue 1300 : Add-ons show incorrect language when English is selected on non English locale</li>
-<li>Issue 1301 : AbstractPanel leak through TabbedPanel2</li>
-<li>Issue 1302 : Context menu item action might not get executed</li>
-<li>Issue 1303 : HttpPanel[SyntaxHighlight]TextArea leak through HighlighterManager</li>
-<li>Issue 1304 : ZapMenuItem leak through ExtensionKeyboard</li>
-<li>Issue 1305 : Outgoing proxy is disabled when updating from old versions</li>
-<li>Issue 1307 : Ant OS X build of zip gets spaces in file name confused</li>
-<li>Issue 1308 : ZAP icns resolution too low</li>
-<li>Issue 1309 : NullPointerExceptions during a failed uninstallation of an add-on</li>
-<li>Issue 1310 : Allow to set history types as temporary</li>
-<li>Issue 1311 : Differentiate temporary internal messages from temporary scanner messages</li>
-<li>Issue 1312 : Misleading error message when unable to bind the local proxy to specified address</li>
-<li>Issue 1319 : Add API support for configuring a Context's authorization detection</li>
-<li>Issue 1322 : Remove deprecated Auth API</li>
-<li>Issue 1324 : Include add-on api calls in the generated apis</li>
-<li>Issue 1325 : Option to delete contexts</li>
-<li>Issue 1326 : Move Ajax Spider Extension from Beta to Release status</li>
-<li>Issue 1333 : ExtensionAntiCSRF ConcurrentModificationException</li>
-<li>Issue 1334 : ZAP does not handle API requests on reused connections leading to UnknownHostException: www.zap.com</li>
-<li>Issue 1335 : NullPointerException while selecting a node in the "Alerts" tab after excluding sites from proxy</li>
-<li>Issue 1339 : Introduce a simple event bus</li>
-<li>Issue 1343 : XContentTypeOptionsScanner Internationalization  Usability</li>
-<li>Issue 1345 : Support Attack mode</li>
-<li>Issue 1346 : Breaking gziped responses fails in the browser</li>
-<li>Issue 1348 : Java client api Ant tasks dont wait</li>
-<li>Issue 1353 : Simpler break option</li>
-<li>Issue 1355 : Html report generation through the API</li>
-<li>Issue 1356 : Fix CacheControlScanner Typos</li>
-<li>Issue 1357 : Hide unused tabs</li>
-<li>Issue 1359 : Reinstate splash screen</li>
-<li>Issue 1360 : New add-on - Tips and Tricks</li>
-<li>Issue 1361 : No data appears on 'Spider' and 'Active Scan' panel while spidering or scanning by API</li>
-<li>Issue 1362 : Being allowed to add duplicated Anti-CSRF tokens only by API</li>
-<li>Issue 1363 : Missing API to get contextId</li>
-<li>Issue 1367 : Can't detect "Xpath Injection" on a certain environment.</li>
-<li>Issue 1377 : "Source Code Disclosure - SVN" is missing regex escape</li>
-<li>Issue 1378 : Revamp active scan panel</li>
-<li>Issue 1379 : Not all extension's listeners are hooked during add-on installation</li>
-<li>Issue 1381 : Cleanly close breakpoint Add/Edit dialog on Cancel</li>
-<li>Issue 1383 : NullPointerException if an anti CSRF token does not have a value</li>
-<li>Issue 1384 : HttpSessions API does not accept URIs with path component</li>
-<li>Issue 1385 : XML report is not generated through the API if ZAP is not run from default installation dir</li>
-<li>Issue 1386 : PScan API - Allow to change and view alert thresholds</li>
-<li>Issue 1387 : Unable to change the proxy's port/address if the port/address was specified through the command line</li>
-<li>Issue 1388 : Not all translated files are updated when "zaplang" package is imported</li>
-<li>Issue 1389 : NullPointerException during startup if core help jar is not found</li>
-<li>Issue 1390 : Force https on cfu call</li>
-<li>Issue 1391 : Active Scan send wrong payload of multipart/form-data type</li>
-<li>Issue 1394 : Import vulnerabilities.xml files when updating the translated resources</li>
-<li>Issue 1395 : vulnerabilities' data kept in memory even if not used</li>
-<li>Issue 1397 : Move help files into add-ons</li>
-<li>Issue 1399 : Enhance help to open 'external' links in the users default browser</li>
-<li>Issue 1404 : SpiderODataAtomParser must return true only if links are detected</li>
-<li>Issue 1406 : Move online menu items to an add-on</li>
-<li>Issue 1409 : Speed up ZAP startup</li>
-<li>Issue 1415 : Fixed file uploads > 128k</li>
-<li>Issue 1412 : Manage scan policies</li>
+<li>Problema 117: Mejora: comparar sesiones arrastran problemas de autenticación</li>
+<li>Número 234: Soporte para fuzzing múltiples partes</li>
+<li>Edición 329: Mejora: Añadir soporte de sitemap.xml</li>
+<li>Edición 389: Habilitar posibilidades de la tecnología de escáneres</li>
+<li>Edición 414: API: apoyo de secuencias de comandos</li>
+<li>Número 445: SSLContextManager.isProviderAvailable() devuelve true por defecto</li>
+<li>Edición 557: Falsos negativos SQL inyección</li>
+<li>Edición 642: Ficha salida necesita marcas de tiempo</li>
+<li>Edición 653: Mango actualizaciones mejor en Kali Linux</li>
+<li>Tema 704: ZAP Error: alerta de apretón de manos: unrecognized_name</li>
+<li>Edición 722: ZAP UI no maneja múltiples escaneos activos bien</li>
+<li>Número 883: Apoyar múltiples exploraciones en la API</li>
+<li>Número 949: Araña (sitio) no sigue los hipervínculos en documentos JSON</li>
+<li>Número 959: actualización Add-on puede ignorar cambios de proxy saliente</li>
+<li>Cuestión 984: Mejorar la ascan API para permitir el método para especificar</li>
+<li>Número 990: Permiten para eliminar alertas a través de la API</li>
+<li>Número 1151: Exploración activa en el ámbito de aplicación termina antes de escanear todos los mensajes de alcance si múltiples dominios disponibles</li>
+<li>Número 1154: Herramienta de punta de texto "Mostrar la ficha nombres y los iconos de la pestaña" IdealFirstBug</li>
+<li>Número 1175: Apoyar un árbol de contextos</li>
+<li>Número 1176: Diálogo de exploración avanzada spider</li>
+<li>Problema de 1180: Proxy corrompe URL cuando hay múltiples signos de interrogación</li>
+<li>Número 1184: Mejorado el soporte para IBM JDK</li>
+<li>Problema de 1207: AScan API - cambiar la vista de "exploradores" para incluir las dependencias</li>
+<li>Problema 1208: Clases y recursos de búsqueda de complementos declarado como dependencias</li>
+<li>Número 1209: Fiabilidad adicional valores y opciones y fiabilidad de renombrar a la confianza en la interfaz de usuario</li>
+<li>Número 1214: Clasificación en la política de exploración de cuadros de diálogo de usabilidad</li>
+<li>Número 1215: Árbol alerta ordenar/clasificar tema usabilidad</li>
+<li>Problema de 1216: Error en la ficha secuencias de comandos</li>
+<li>Número 1217: Formato de la tabla no muestra información al conjunto de caracteres está presente en el encabezado Content-Type</li>
+<li>Número 1224: Mostrar la calidad, estado en exploración usabilidad de diálogos de política</li>
+<li>Número 1226: Scanner activo excluidos regexes del parámetro no validado</li>
+<li>Número 1227: Scanner activo envía solicitudes GET con contenido en el cuerpo de la solicitud</li>
+<li>Número 1238: NullPointerException si un escáner activo plantea una alerta con ataque null</li>
+<li>Número 1239: Permite que la spider se extiende desde extensiones</li>
+<li>Número 1241: Scanner activo podría no indicar Estado terminado al utilizar escáneres de host</li>
+<li>Problema de 1242: Scanner activo puede utilizar configuración política anticuada</li>
+<li>Número 1243: NullPointerException si un tipo de secuencia de comandos no tiene núcleo incluye plantillas de scripts</li>
+<li>Número 1244: Secuencias de comandos activa escáner debería ser categoría Misc no inyección de usabilidad</li>
+<li>Número 1252: Excepción de conexión durante el apagado mientras se está ejecutando exploraciones a través de la API</li>
+<li>Número 1256: Revisar falta nivel del explorador X-Frame-Options</li>
+<li>Problema de 1257: Crear una regla de pasiva que detecta gran redirecciones</li>
+<li>Número 1261: NPE en "Configuración de Plug-n-Hack" actualización del mercado</li>
+<li>Edición 1262: Dirección "Pasivo reglas – riesgo – confiabilidad" [usuario controlable HTML elemento atributo (potencial XSS) y Timestamp revelación - Unix]</li>
+<li>Problema de 1263: Generar informe anula archivos existentes sin preguntar al usuario</li>
+<li>Número 1264: Autenticación Manual - desajuste de galleta debido a mal manejo de dominio y ruta de acceso</li>
+<li>Edición 1265: Contexto de importación y exportación</li>
+<li>Problema 1272: API ZAP: Core.MessagesHAR () falla si una solicitud HTTP contiene encabezado (s) de cookie no válido</li>
+<li>Problema 1274: Error de ZAP [javax.net.ssl.SSLException]: versión de registro no compatible SSLv2Hello</li>
+<li>Problema 1275: SpiderODataAtomParser debe devolver verdadero de "parseResource"</li>
+<li>Problema 1278: Elementos de menú seguros no disponibles en modos protegidos y seguros</li>
+<li>Problema 1279: los parámetros excluidos del escáner activo no funcionan cuando "Where" is "Any"</li>
+<li>Número 1280: Accesos directos de la API que no se quitan cuando se quita el ApiImplementor</li>
+<li>Número 1281: QuickStart - permite generar el informe cuando la vista está inicializada</li>
+<li>Número 1282: Extension#stop() no se llama nunca antes destroy()</li>
+<li>Problema de 1283: SQLDataException: excepción de datos: datos de cadena, truncamiento derecho escribiendo una alerta a DB</li>
+<li>Número 1286: Fuzzer parece lento</li>
+<li>Número 1290: "Exploración de puertos host" del menú activado incluso si una exploración de puerto ya está en marcha</li>
+<li>1291:407 autenticación de Proxy necesaria de emitir durante el escaneo activo</li>
+<li>Número 1292: NullPointerException cuando trataban de retirar un ManualRequestEditorDialog no registrado</li>
+<li>Problema de 1294: Trivial_UI_Issue: de la palabra - 'será' aparece dos veces bajo el indicador de 'Propiedades de la sesión'.</li>
+<li>Número 1295: Petición de mejora - nueva regla de exploración activa para comprobar el acceso HTTP a HTTPS contenido</li>
+<li>Problema de 1300: Complementos Mostrar idioma incorrecto cuando inglés es seleccionado en configuración regional de inglés no</li>
+<li>Número 1301: Fuga de AbstractPanel a través de TabbedPanel2</li>
+<li>Número 1302: Acción de elemento del menú de contexto podría no se ejecutan</li>
+<li>Número 1303: Fuga de HttpPanel[SyntaxHighlight]TextArea a través de HighlighterManager</li>
+<li>Número 1304: Fuga de ZapMenuItem a través de ExtensionKeyboard</li>
+<li>Número 1305: Proxy saliente está deshabilitado durante la actualización de versiones antiguas</li>
+<li>Número 1307: Build Ant OS X de zip obtiene espacios de nombre de archivo confundido</li>
+<li>Problema 1308: resolución de icns de ZAP demasiado baja</li>
+<li>Problema 1308: resolución de icns de ZAP demasiado baja</li>
+<li>Edición 1310: Permite establecer tipos de historia como temporal</li>
+<li>Número 1311: Diferenciar los mensajes internos temporales de los mensajes de escáner temporal</li>
+<li>Número 1312: Engañoso mensaje de error cuando no se puede enlazar el proxy local a la dirección especificada</li>
+<li>Número 1319: Añadir soporte de API para la configuración de detección de un contexto autorización</li>
+<li>Número 1322: Quitar deprecated API Auth</li>
+<li>Número 1324: Incluyen complemento que llama a api en el API generado</li>
+<li>Número 1325: Opción eliminar contextos</li>
+<li>Número 1326: Movimiento araña Ajax extensión de Beta al estado de liberación</li>
+<li>Número 1333: ExtensionAntiCSRF ConcurrentModificationException</li>
+<li>Problema de 1334: ZAP no maneja solicitudes de API en reutilizadas conexiones hacia UnknownHostException: www.zap.com</li>
+<li>Número 1335: NullPointerException mientras selecciona un nodo en la pestaña de "Alertas" después de excluir sitios de proxy</li>
+<li>Número 1339: Introducir un bus de eventos simple</li>
+<li>Problema de 1343: Usabilidad de internacionalización de XContentTypeOptionsScanner</li>
+<li>Número 1345: Modo de ataque de apoyo</li>
+<li>Edición 1346: Romper las respuestas gziped falla en el navegador</li>
+<li>Cuestión 1348: Cliente Java api no esperen las tareas Ant</li>
+<li>Problema de 1353: Opción de descanso más simple</li>
+<li>Número 1355: Generación de informes Html a través de la API</li>
+<li>Edición 1356: Corregir errores tipográficos de CacheControlScanner</li>
+<li>Número 1357: Ocultar pestañas sin usar</li>
+<li>Problema de 1359: Restablecer pantalla de inicio</li>
+<li>Número 1360: Nuevo Add-on-consejos y trucos</li>
+<li>Edición 1361: No hay datos aparecen en panel 'Spider' y 'Escaneo activo' spidering o exploración por API</li>
+<li>Edición 1362: Se permite añadir duplica fichas Anti CSRF solamente por API</li>
+<li>Edición 1363: Falta API para obtener contextId</li>
+<li>Edición 1367: No puede detectar "Xpath Injection" en un determinado ambiente.</li>
+<li>Edición 1377: "Divulgación del código de fuente – SVN" falta escape regex</li>
+<li>Edición 1378: Renovar el panel de exploración activa</li>
+<li>Número 1379: Oyentes de la extensión no todos están enganchados durante la instalación de Add-on</li>
+<li>Edición 1381: Limpiamente cerrar cuadro de diálogo de agregar/editar punto de interrupción en cancelar</li>
+<li>Número 1383: NullPointerException si un token CSRF anti no tiene un valor</li>
+<li>Problema de 1384: HttpSessions API no acepta a URIs con componente de trazado</li>
+<li>Edición 1385: Informe XML no se genera a través de la API si ZAP no se ejecuta desde el directorio de instalación predeterminado</li>
+<li>Número 1386: PScan API - permite cambiar y ver los umbrales de alerta</li>
+<li>Problema de 1387: No pueden cambiar de dirección/puerto del proxy si se especifica la dirección del puerto a través de la línea de comandos</li>
+<li>Número 1388: No todos los archivos de traducción se actualizan cuando se importa el paquete "zaplang"</li>
+<li>Problema de 1389: NullPointerException durante el inicio si no se encuentra el núcleo ayuda jar</li>
+<li>Número 1390: Fuerza https en UFC llamada</li>
+<li>Problema de 1391: Exploración activa enviar carga mal de tipo multipart/formularios de datos</li>
+<li>Edición 1394: Importar archivos de vulnerabilities.xml durante la actualización de los recursos traducidos</li>
+<li>Número 1395: datos de vulnerabilidades en la memoria incluso si no utiliza</li>
+<li>Problema 1397: mueva archivos de ayuda a complementos</li>
+<li>Problema 1399: mejora la ayuda para abrir enlaces 'externos' en el navegador predeterminado de los usuarios</li>
+<li>Problema 1404: SpiderODataAtomParser debe devolver verdadero solo si se detectan enlaces</li>
+<li>Problema 1406: mueva los elementos del menú en línea a un complemento</li>
+<li>Problema 1409: acelere el inicio de ZAP</li>
+<li>Problema 1415: Carga de archivos fijos> 128k</li>
+<li>Problema 1412: Administrar políticas de escaneo</li>
 <li>Issue 1416 : Allow spider to be restricted by the number of children</li>
-<li>Issue 1418 : Option for ZAP to stay on top when breakpoint hit</li>
-<li>Issue 1419 : Include alert's evidence in HTML report</li>
-<li>Issue 1420 : Change spider's URLCanonicalizer to skip URIs without authority</li>
-<li>Issue 1427 : Standardize on [Cancel] [OK] button order</li>
-<li>Issue 1433 : Spider Select target not selected automatically</li>
-<li>Issue 1446 : Downloaded addons failure not handled correctly.</li>
-<li>Issue 1447 : Update RSyntaxTextArea library</li>
-<li>Issue 1449 : Resend / Manual Request help out of date</li>
-<li>Issue 1458 : Change home/installation dir paths to be always absolute</li>
-<li>Issue 1460 : Script types are not shown in "Script" tree when script type is added during installation of an add-on</li>
-<li>Issue 1461 : Core API - Allow to get a message by ID in HTTP Archive format</li>
-<li>Issue 1462 : Allow to remove script types</li>
-<li>Issue 1463 : Allow scripts to access classes of add-ons</li>
-<li>Issue 1464 : Allow to send "Referer" header in spider requests</li>
-<li>Issue 1465 : Translated files are not copied to correct directory if ZAP is not run from default installation dir</li>
-<li>Issue 1466 : Config option for 'large display' size</li>
-<li>Issue 1467 : AuthenticationApiExample not working</li>
-<li>Issue 1468 : Script templates not available when new script types are added during an installation of an add-on</li>
-<li>Issue 1469 : Automatically add a user if form based authentication specified based on a request</li>
-<li>Issue 1472 : Allow extensions to specify a name for UI components</li>
-<li>Issue 1475 : Alerts with different name from same scanner might not be shown in report</li>
-<li>Issue 1476 : Display contexts in the Sites tree</li>
-<li>Issue 1483 : MissingResourceException after uninstalling an add-on with passive scanners</li>
-<li>Issue 1484 : NullPointerException during uninstallation of an add-on with active scanners</li>
-<li>Issue 1485 : Do not allow to reselect an add-on if the uninstallation was unsuccessful</li>
-<li>Issue 1486 : Add-on components leak</li>
-<li>Issue 1489 : Version number in window title</li>
-<li>Issue 1490 : Update HarLib library</li>
-<li>Issue 1491 : Add versioned AbstractParam</li>
-<li>Issue 1492 : Update commons-csv library</li>
-<li>Issue 1493 : Remove deprecated authentication classes</li>
-<li>Issue 1494 : Support script directories</li>
-<li>Issue 1502 : Allow to remove script engine wrappers</li>
-<li>Issue 1503 : Not all engines are shown when creating a script from type</li>
-<li>Issue 1504 : Exception when a script engine is not installed/found</li>
-<li>Issue 1505 : Not all "Forced Browse" components are unloaded during uninstallation</li>
-<li>Issue 1507 : Not all "Script Console" components are unloaded during uninstallation</li>
-<li>Issue 1508 : Alerts added in view in daemon mode</li>
-<li>Issue 1510 : New Extension.postInit() method to be called once all extensions loaded</li>
-<li>Issue 1511 : Add option to only allow secure connections to the API</li>
-<li>Issue 1514 : Root CA cert not generated in daemon mode</li>
-<li>Issue 1515 : Not all "Zest" components are unloaded during uninstallation</li>
-<li>Issue 1520 : Add lock icon to https sites in the Sites tree</li>
-<li>Issue 1521 : Throwable errors like StackOverflowError not caught by passive scanner</li>
-<li>Issue 1524 : New Persist Session dialog</li> 
-<li>Issue 1525 : Introduce a database interface layer to allow for alternative implementations</li> 
-<li>Issue 1528 : Support user defined font size</li>
-<li>Issue 1530 : Default attack strength and alert threshold, set in 'Scan Policy', not used by scanners</li>
-<li>Issue 1534 : Change "Ajax Spider" add-on to depend on "Selenium" add-on</li>
-<li>Issue 1535 : Update Crawljax library and dependencies ("Ajax Spider" add-on)</li>
-<li>Issue 1536 : Change "Zest" add-on to depend on "Selenium" add-on</li>
-<li>Issue 1537 : ZAP should allow importing CA certificates</li>
-<li>Issue 1540 : Allow proxy scripts to fake responses</li>
-<li>Issue 1541 : Enable active scan scripts to scan just a URL rather than every parameter</li>
-<li>Issue 1544 : Support persistent script variables</li>
-<li>Issue 1551 : ZAP does not detect Relative Path Confusion (aka "Relative Path Overwrite" / "Path Relative Stylesheet Import")</li>
-<li>Issue 1552 : ZAP does not detect Forward / Reverse Proxies</li>
-<li>Issue 1553 : ZAP does not detect Storability / Cacheability of a response</li>
-<li>Issue 1557 : Deadlock on making manual request</li>
+<li>Problema 1418: Opción para que ZAP permanezca en la parte superior cuando golpee el punto de ruptura</li>
+<li>Problema 1419: incluir evidencia de alerta en el informe HTML</li>
+<li>Problema 1420: cambie el URLCanonicalizer de araña para omitir URI sin autorización</li>
+<li>Problema 1427: Estandarizar en el orden de los botones [Cancelar] [Aceptar]</li>
+<li>Problema 1433: Spider Select target no seleccionado automáticamente</li>
+<li>Problema 1439: botón para mostrar / ocultar solo el contexto / sitios con ámbito en la pestaña del sitio</li>
+<li>Problema 1445: Propiedades de sesión muestra el ID de contexto no el nombre de contexto</li>
+<li>Problema 1446: la falla de complementos descargados no se manejó correctamente.</li>
+<li>Problema 1447: actualización de la biblioteca RSyntaxTextArea</li>
+<li>Problema 1449: Reenviar / Manual Solicitar ayuda desactualizada</li>
+<li>Problema 1458: Cambiar las rutas del directorio de inicio / instalación para que sean siempre absolutas</li>
+<li>Problema 1460: los tipos de script no se muestran en el árbol "Script" cuando se agrega el tipo de script durante la instalación de un add-on</li>
+<li>Problema 1461: API principal: permite obtener un mensaje por ID en formato de archivo HTTP</li>
+<li>Problema 1461: API principal: permite obtener un mensaje por ID en formato de archivo HTTP</li>
+<li>Problema 1463: permitir que las secuencias de comandos accedan a clases de complementos</li>
+<li>Problema 1464: Permitir enviar encabezado "Referer" en solicitudes de spider</li>
+<li>Problema 1465: los archivos traducidos no se copian en el directorio correcto si ZAP no se ejecuta desde el directorio de instalación predeterminado</li>
+<li>Problema 1466: opción de configuración para el tamaño de 'pantalla grande'</li>
+<li>Problema 1467: AuthenticationApiExample no funciona</li>
+<li>Problema 1468: las plantillas de scripts no están disponibles cuando se agregan nuevos tipos de scripts durante la instalación de un add-on</li>
+<li>Problema 1469: agregue automáticamente un usuario si la autenticación basada en formulario se ha especificado en función de una solicitud</li>
+<li>Problema 1472: Permitir que las extensiones especifiquen un nombre para los componentes de la interfaz de usuario</li>
+<li>Problema 1475: Es posible que las alertas con un nombre diferente del mismo escáner no se muestren en el informe</li>
+<li>Problema 1475: Es posible que las alertas con un nombre diferente del mismo escáner no se muestren en el informe</li>
+<li>Problema 1483: MissingResourceException después de desinstalar un complemento con escáneres pasivos</li>
+<li>Problema 1484: NullPointerException durante la desinstalación de un complemento con escáneres activos</li>
+<li>Problema 1485: no permitir volver a seleccionar un complemento si la desinstalación no fue correcta</li>
+<li>Problema 1486: pérdida de componentes de complementos</li>
+<li>Problema 1489: Número de versión en el título de la ventana</li>
+<li>Problema 1489: Número de versión en el título de la ventana</li>
+<li>Problema de 1491: Añadir versión AbstractParam</li>
+<li>Edición 1492: Actualizar biblioteca commons-csv</li>
+<li>Edición 1493: Eliminar obsoletas las clases de autenticación</li>
+<li>Problema de 1494: Directorios de secuencia de comandos de apoyo</li>
+<li>Edición 1502: Permiten para quitar contenedores de motor de secuencia de comandos</li>
+<li>Problema de 1503: No todos los motores se muestran al crear una secuencia de comandos de tipo</li>
+<li>Edición 1504: Excepción de cuando un motor de secuencias de comandos no está instalado/encontrado</li>
+<li>Edición 1505: "Obligado examinar" no todos los componentes estén completamente vacíos durante la desinstalación</li>
+<li>Número 1507: No todos los componentes de "Consola de comandos" se descarguen durante la desinstalación</li>
+<li>Edición 1508: Alertas añadidos a la vista en modo demonio</li>
+<li>Edición 1510: Nuevo método de Extension.postInit() que se llamará una vez todas las extensiones cargadas</li>
+<li>Edición 1511: Agregar la opción Permitir sólo conexiones seguras a la API</li>
+<li>Número 1514: Certificado de CA raíz no generada en modo demonio</li>
+<li>Problema de 1515: No todos los componentes "Ralladura" son descargados durante la desinstalación</li>
+<li>Edición 1520: Añadir icono de bloqueo a sitios https en el árbol de sitios</li>
+<li>Edición 1521: Throwable errores como StackOverflowError no atrapado por escáner pasivo</li>
+<li>Problema de 1524: Cuadro de diálogo nuevo sesión persiste</li> 
+<li>Problema de 1525: Introducir una capa de interfaz de base de datos para permitir implementaciones alternativas</li> 
+<li>Edición 1528: Tamaño de fuente definido por el usuario de apoyo</li>
+<li>Edición 1530: Por defecto fuerza de ataque y umbral de alerta, en 'La exploración política', no por exploradores</li>
+<li>Tema 1534: Cambiar complemento de "la spider del Ajax" dependen de complemento "Selenio"</li>
+<li>: 1535 actualización Crawljax biblioteca y dependencias (complemento de "la spider del Ajax")</li>
+<li>Problema de 1536: Cambio "Zest" Add-on depender de complemento "Selenio"</li>
+<li>Número 1537: ZAP debe permitir importar certificados de CA</li>
+<li>Edición 1540: Permitir secuencias de comandos de proxy simular las respuestas</li>
+<li>Edición 1541: Permitir secuencias de comandos de exploración activa escanear a una dirección URL en lugar de cada parámetro</li>
+<li>Edición 1544: Apoyar las variables de script persistente</li>
+<li>Edición de 1551: ZAP no detecta confusión de ruta de acceso relativa (aka "relativa camino sobrescribir" / "Importar ruta relativa hoja de estilos")</li>
+<li>Edición 1552: ZAP no detectar hacia adelante / reversa Proxies</li>
+<li>Edición de 1553: ZAP no detecta la capacidad de almacenamiento / almacenamiento en caché de una respuesta</li>
+<li>Número 1557: Bloqueo solicitud manual</li>
 
 </ul>
 
@@ -245,9 +244,9 @@ Please be aware that the Plugin ID for the External Redirect scanner has changed
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../intro.html">Introducción</a></td><td>Introducción a ZAP</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="releases.html">Lanzamientos</a></td><td>the full set of releases</td></tr>
+<a href="releases.html">Lanzamientos</a></td><td>el conjunto completo de los comunicados de</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<a href="../credits.html">Créditos</a></td><td>las personas y grupos que han hecho posible esta versión</td></tr>
 </table>
 </body>
 </html>

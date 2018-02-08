@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Yerel Proxy'ler Ayarları Ekranı
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Yerel Proxy'ler Ayarlar Ekranı</h1>
+<p>
+Bağlantı Ayarları ekranı, adresleri ve bağlantı noktalarını yapılandırmanıza imkan verir; 
+ZAP'ın gelen bağlantıları kabul ettiklerini.<br/>
+
+<h2>Yerel Proxy</h2>
+Varsayılan olarak, ZAP bir yerel adres ve bağlantı noktasını dinleyecektir ve bu adres ve bağlantı noktaları tarayıcınızı proxy olarak kullanmak üzere yapılandırmanız gereken adres ve bağlantı noktalarıdır.
+</p>
+<h3>Adres</h3>
+ZAP'in kullanacağı yerel adres. Geçerli adreslerin tümü otomatik olarak tespit edilir.
+
+<h3>Bağlantı noktası</h3>
+ZAP'ın dinleyeceği bağlantı noktası.
+
+<h3>NAT'ın arkasında</h3>
+Yerel Proxy'nin (ZAP) NAT'ın arkasında olduğunu gösterir. Seçildiğinde, ZAP genel IP adresini belirlemeye, düzgün algılar oluşturmaya ve kamusal istekleri işlemeye çalışacaktır.
+IP adresi (örneğin, ZAP API tarafından sunulacak).
+<p>
+<strong>Not:</strong> Bu seçenek yalnızca ZAP AWS EC2 örneğinde çalışırken destekleniyor.
+ZAP genel IP'yi şuradan elde edecek
+<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html#working-with-ip-addresses">AWS EC2
+örneğinin metaverisi</a>.<br>
+API erişiminin, genel IP adresi üzerinden yapılması gerekiyorsa, ZAP'ın bu seçenek etkin halde iken başlatılması gerekir:
+<blockquote>zap.sh -daemon -port 8080 -host 0.0.0.0 -config proxy.behindnat=true</blockquote>
+Ayrıca, <a href="api.html">API</a> 'nin harici IP adreslerini kabul edecek şekilde yapılandırılması gerekir (örneğin ZAP'ın üzerinden erişiminin olduğu IP adresleri).
+
+<h3>Desteklenmeyen kodlamaları kaldır</h3>
+Proxy'nin desteklenmeyen kodlamaları "Accept-Encoding" üst bilgi istek kısmından kaldırmasına olanak verir, böylece 
+(desteklenmeyen) dönüt içerisinde kodlama dönüştürmeleri yapılmaz.<br/>
+Kodlama dönüşümleri test edilmiyorsa, bu seçenek her zaman etkin olmalıdır.<br/>
+Desteklenmeyen kodlamalarla kodlanmış mesajlar doğru şekilde taranmayacaktır. (tarayıcı pasif ya da aktif olsa da).
+
+<h3>Güvenlik Protokolleri</h3>
+Gelen bağlantılar için gelen bağlantılar için SSL/TLS versiyonlarını seçebilmeye izin verir(örneğin, tarayıcılardan). En azından bir versiyon etkin olmalı, JRE tarafından desteklenmeyen versiyonlar seçilmemiş olarak işaretlenecek ve etkinliği kaldırılacaktır.
+<br>
+SSLv2Hello seçeneği, en az bir SSL / TLS sürümü ile birlikte seçilmelidir.
+<br>
+Güvenlik ayarları ana ve ilave proxy'lerin tamamına uygulanır.
+
+<h2>Ek Proxy'ler</h2>
+ZAP'ın dinlemesi için dilediğiniz gibi bağlantı noktaları ve ek adresler ekleyebilirsiniz.<br>
+Bu, mobil uygulamarı test ederken yararlı olabilir - örneğin bir mobil uygulamayı, bir mobil kullanıcı aracısını taklit eden ZAP üzerinden, proxy sunucu tarayıcısı kullanarak, direkt olarak, arka uç sitesini kullanırken bir Wi-Fi arabirimi vasıtasıyla proxy haline getirebilirsiniz.
+
+<h2>Ayrıca Bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../overview.html">UI Genel bakış</a></td><td>kullanıcı arayüzüne genel bir bakış için</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="options.html">Seçenekler diyalogları</a></td><td>diğer Seçenekler diyalog ekranlarının detayları için</td></tr>
+</table>
+
+</body>
+</html>

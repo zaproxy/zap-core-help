@@ -37,7 +37,7 @@ Dinamički SSL Certifikati
 
 <h2>ZAP Root CA certificate</h2>
 <p>
-	Imagine your're visiting multiple SSL protected sites. Every time your
+	Imagine you're visiting multiple SSL protected sites. Every time your
 	browser connects such a site, a new SSL certificate is created.
 	But, these certificates are not trusted by anyone (because self created by ZAP).
 	In other words, your browser will not accept such certificates in the first place.
@@ -205,7 +205,7 @@ And yes, that example will work - its the Superfish certificate!
 	certificate (copy it to you target computer) and double click the .CER file. 
 	When doing so, the regular Windows wizard for certificate installation
 	assistance is poping up.
-	In the this wizard manually choose the certificate store. Do NOT let
+	In this wizard manually choose the certificate store. Do NOT let
 	Windows choose automatically the certificate store.
 	Choose 'trusted root certificates' as store and finalize the wizard.
 </p>
@@ -230,8 +230,8 @@ And yes, that example will work - its the Superfish certificate!
 	<li>Go to Preferences</li>
 	<li>Tab Advanced</li>
 	<li>Tab Cryptography/Certificates</li>
-	<li>Click View certificates</li>
-	<li>Click tab Trusted root certificates</li>
+	<li>Click View Certificates</li>
+	<li>Click Authorities tab</li>
 	<li>Click Import and choose the saved <tt>owasp_zap_root_ca.cer</tt> file</li>
 	<li>In the wizard choose to trust this certificate to identify web sites (check on the boxes)</li>
 	<li>Finalize the wizard</li>

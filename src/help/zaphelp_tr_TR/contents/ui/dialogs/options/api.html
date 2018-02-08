@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+API seçenekleri ekranı
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>API seçenekler ekranı</h1>
+<p>
+Bu ekran şunu yapılandırmanıza izin verir <a href="../../../start/concepts/api.html">API</a> seçenekler:
+
+<h3>Etkin</h3>
+
+Etkinse o zaman API bir proxy olarak ZAP kullanabilen tüm makineler için müsaittir.<br/>
+
+<h3>UI Etkin</h3>
+
+Etkinleştirildiğinde, API Web Kullanıcı Arayüzü ZAP'ı proxy olarak kullanabilen tüm makineler için kullanılabilir. API Web UI'sine erişmek için tarayıcınızın ZAP'ın dinlediği ana bilgisayara ve bağlantı noktasına yönlendirin.<br/>
+
+<h3>Yalnızca Güvenli</h3>
+
+Etkinse o zaman API sadece HTTPS üzerinden geçerli olacak. Aksi halde HTTP ve HTTPS'in ikisi üzerinden geçerli olacak.<br/>
+
+<h3>API Anahtarı</h3>
+
+Tüm API 'işlemleri' ve bazı 'diğer' işlemlerde belirtilmesi gereken bir anahtar.<br/>
+API anahtarı, kötü amaçlı sitelerin ZAP API'sine erişmesini önlemek için kullanılır.<br/>
+Tamamen yalıtılmış bir çevrede ZAP kullanmadıkça bir anahtar ayarlamanız şiddetle tavsiye edilir.<br/>
+
+<h3>API'yı kullanmasına izin verilen adresler</h3>
+
+Varsayılan olarak yalnızca çalışan ZAP makinası ZAP API'ye erişebilir.<br/>
+Uygun regex kalıpları ekleyerek diğer makinelere API'ye erişime izin verebilirsiniz.<br/>
+Yalnızca güvendiğiniz IP adreslerini eklemelisiniz.<br/>
+ZAP API'sinin ana makine üstbilgisini de kontrol ettiğini ve izin verilen adreslerden biri olması gerektiğini unutmayın.
+
+<h3>API Anahtarını devre dışı bırak</h3>
+
+Bu seçeneği belirlemek API anahtarını devre dışı bırakır.<br/>
+ZAP'ı tamamen izole edilmiş bir ortamda kullanmadıkça kötü amaçlı sitelerin ZAP uygulamasına erişmesine izin verdiğinden dolayı önerilmez.
+
+<h3>Güvenli işlemler için API anahtarı gerekmez</h3>
+
+Eğer etkinleştirilirse 'güvenli' olarak görülen Görüntülemeler ve Diğer işlemler, diğer bir deyişle ZAP'ta herhangi bir değişiklik meydana getirmeyen işlemler için API anahtarı gerekmez. 
+Bu tür işlemler, uyarı, mesajlar ve dosya sistemi yolları gibi ZAP verilerine erişebilirler.  
+ZAP'ın varlığını saptamak için web uygulamaları tarafından da kullanılabilirler.
+
+<h3>İzin hatalarını API üzerinden bildir</h3>
+
+Eğer etkinleştirilirse ZAP, ZAP'ın varlığını belirlemek için internet ağı eklentileri tarafından kullanılabilen API aracılığıyla izin hatalarını raporlayacak.
+Bu güvenli bir ortamda ciddi bir sorun değildir, ancak potansiyel olarak kötü amaçlı sitelere karşı ZAP kullanıyorsanız, etkinleştirmemelisiniz.
+
+<h3>Hata ayrıntılarını API aracılığıyla raporla</h3>
+
+Bu seçenek seçilirse API üzerinden daha fazla hata ayrıntısı döndürülür.<br/>
+Bu hata mesajları kötü niyetli sitelere bilgi sızdırdığından hata ayıklama amacı dışında bu önerilmez.<br/>
+Tam hata ayrıntılarının daima ZAP günlük dosyasına yazıldığını unutmayın. 
+
+<h3>API kullanıcı arayüzünde otomatik doldurma API anahtarı</h3>
+
+Bu seçenek seçilirse, API anahtarı API kullanıcı arayüzüne otomatik olarak dahil edilir.<br/>
+Kötü amaçlı sitelere ZAP API Anahtarına erişim izni verdiğinden dolayı ZAP'ı tamamen izole edilmiş bir çevrede kullanmıyorsanız bu tavsiye edilmez.<br/>
+
+<h3>JSONP'yi etkinleştir</h3>
+
+Bu seçeneğin seçilmesi JSONP formatını etkinleştirir.<br/>
+Bu bazı uygulamalar için kullanışlı olabilir fakat ZAP saldırı yüzey alanını arttırdığı yani kötü amaçlı siteler kötüye kullanabileceği için bir özellik olduğu için genellikle tavsiye edilmez.<br/>
+Eğer JSONP etkinleştirilmişse, JSONP (görünümler dahil) kullanan tüm API işlemleri zararlı sitelerin ZAP tarafından korunan hassas bilgilere (örneğin, oturum tuşları gibi) erişmesini önlemek için API anahtarını gerektirir. 
+
+<h2>Ayrıca bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../overview.html">UI Genel Bakış</a></td><td>kullanıcı ara yüzüne genel bakış için</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="options.html">Seçenekler diyalog kutuları</a></td><td>diğer Seçenekler diyalog ekranının ayrıntıları için</td></tr>
+</table>
+
+</body>
+</html>

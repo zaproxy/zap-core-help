@@ -45,22 +45,18 @@ Depois de selecionar o tipo de método de gerenciamento de sessão, as opções 
 <h4>Gerenciamento de sessão baseado em cookies</h4>
 Nenhuma configuração é necessária para este método de gerenciamento de sessão. <small>Leia <a href="../../../start/concepts/sessionManagement.html#cbsm">mais</a>...</small>
 
-<h4>HTTP Authentication Session Management</h4>
-No configuration is needed for this session management method. <small>Read
-<a href="../../../start/concepts/sessionManagement.html#hasm">more</a>...</small>
+<h4>Gerenciamento de sessão de autenticação HTTP</h4>
+Nenhuma configuração é necessária para este método de gerenciamento de sessão. <small>Leia <a href="../../../start/concepts/authentication. html#httpAuth">mais</a>...</small>
 
 
 <h3><a name="users">Usuários</a></h3>
-This allows you to configure a set of Users that may be used for various other actions
-throughout the application.
+Isso permite a você configurar um conjunto de usuários que podem ser utilizados para várias outras ações em todo o aplicativo.
 <p>A seção de credenciais dos usuários depende do método de autenticação configurado para o contexto.</p>
 
 <h2>Regex de URL</h2>
-In the <i>Incluir em *</i>, <i>Excluir de *</i> panels and the <i>indicadores de login/logout</i> of the <i>painel de Autenticação</i> panel, you can enter regular expressions to define excluded URLs.
-While you can escape a single meta-character with a backslash, you can also use the <b>a sequência \Q...\E</b> escape sequence. All the characters between the <b>\Q</b> and the <b>\E</b> are interpreted as literal characters. E.g. \Q*\d+*\E matches the literal text *\d+*.
-This escape sequence is used in ZAP when you exclude URLs via some context menus.
+Nos paineis <i>Incluir em *</i>, <i>Excluir de *</i> e nos <i>indicadores de login/logout</i> do <i>painel de Autenticação</i> você pode digitar expressões regulares para definir URLs excluídas. Além de poder dar escape em determinados metacaracteres com uma barra invertida, também pode usar <b>a sequência \Q...\E</b> de escape. Todos os caracteres entre o <b>\Q</b> e o <b>\E</b> são interpretados como caracteres literais. Por exemplo, o \Q*\d+*\E coincidem com o texto literal * \d+*. Esta sequência de escape é usada no ZAP quando você exclui URLs através de alguns menus de contexto.
 <br>
-<b>Nota:</b> If your URL contains a "\E", then you have to do the following steps when using the <b>a sequência \Q...\E</b> escape sequence:
+<b>Nota:</b> Se sua URL contém um "\E", então você tem que dar os seguintes passos ao usar a <b>a sequência \Q...\E</b> para escape:
 <ul>
 	<li>Abra a seqüência de escape</li>
 	<li>Feche a seqüência de escape antes do "caractere" \E</li>
@@ -69,7 +65,7 @@ This escape sequence is used in ZAP when you exclude URLs via some context menus
 	<li>Feche a seqüência de escape como normalmente faria.</li>
 </ul>
 <br>
-Example: subdomain.example.com/path?a=<b>\E</b>&amp;moredata=2 should appear as
+Exemplo: subdomain.example.com/path?a=<b>\E</b>&moredata=2 deve aparecer como
 <i>\Qsubdomain.example.com/path?a=\E</i><b>\\E</b><i>\Q&moredata=2\E</i>
   
 <h2>Acessado via</h2>

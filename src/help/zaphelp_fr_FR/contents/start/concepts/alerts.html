@@ -30,12 +30,54 @@ scripts, by addons (extensions), or manually using the <a href="../../ui/dialogs
 Les alertes sont signalisées dans <a href="../../ui/tabs/history.html">l'onglet Historique</a> avec un drapeau qui indique l'alerte de risque le plus élevé. <br/> Toutes les alertes sont répertoriées dans <a href="../../ui/tabs/alerts.html">l'onglet Alertes</a> et le nombre total d'alertes est affiché par risque dans le <a href="../../ui/footer.html">pied de page</a>.
 </p>
 
-<h2>Voir aussi</h2>
+<a name="alertoverrides"></a><h2>Alert overrides</h2> 
+
+Alerts raised by ZAP include both generic and specific information about the alerts raised.
+The specific information relates directly to the potential issue found, such as the URL and the parameter affected.
+The generic information includes things like a description and links to related online resources.
+<p>
+You can replace or add to the generic information using an 'alert override' configuration file.
+This allows you to include information that is specific to your company such as mandated policies, internal links or 
+advice for specific technologies you use.
+<p>
+An alert override configuration file is a UTF-8 property file containing just the information you would like to change.
+Lines starting with '#' are treated as comments and ignored.
+<p>
+The format is:
+<pre>
+&lt;alertid&gt;.&lt;property&gt; = [ + | - ] &lt;your information&gt;
+</pre>
+The following properties are supported:
+<ul>
+<li>name</li>
+<li>description</li>
+<li>solution</li>
+<li>otherInfo</li>
+<li>reference</li>
+</ul>  
+
+For example
+<pre>
+# 40012 = Reflected XSS
+40012.solution = Follow our company specific guidelines at http://internet.example.com/xss.html
+</pre>
+If the value starts with a '+' then it is appended to the existing information.
+<br>
+If it starts with a '-' then it is prepended to the existing information.
+<br>
+If it does not start with a '+' or '-' then it replaces the existing information.
+<p>
+The alert override configuration file can be specified via the <a href="api.html">API</a>,
+<a href="../../ui/dialogs/options/alert.html">Options Alert screen</a>
+or using the <a href="../../cmdline.html">command line</a> option:  
+<pre>-config alert.overridesFilename=&lt;filename&gt;</pre>
+
+<h2>See also</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../ui/overview.html">Aperçu de l'interface utilisateur</a></td><td>pour un aperçu de l'interface utilisateur</td></tr>
+<a href="../../ui/overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="concepts.html">Fonctionnalités</a></td><td>fournies par ZAP</td></tr>
+<a href="concepts.html">Features</a></td><td>provided by ZAP</td></tr>
 </table>
 
 </body>

@@ -2,69 +2,61 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Session Management</title>
+<title>Ang Pamamahala ng Sesyon</title>
 </head>
 <body bgcolor="#ffffff">
-	<h1>Session Management</h1>
+	<h1>Pamamahala ng Sesyon</h1>
 	<p>
-		ZAP handles multiple types of session management (called <b>Session
-			Management Methods</b>) that can be used for websites / webapps. Each <b><a
-			href="contexts.html">Context</a></b> has a Session Management
-		Method defined which dictates how sessions are kept.
+		Ang ZAP ay naghahawak ng maramihang mga tipo ng pamamahala ng sesyon (tinatawag na <b>Mga Pamamaraan ng Pamamahala ng Sesyon</b>) na maaari mong gamitin sa mga website / mga webapp. Bawat <b><a
+			href="contexts.html">Konteksto</a></b> ay may isang Pamamaraan na Namamahala ng Sesyon na tumutukoy kung saan mga nakadikta kung paano ang mga sesyon ay iniingatan.
 	</p>
 
-	<p>So far, just cookie based and HTTP authentication session management methods have been
-		implemented, but the system supports easy addition of new methods,
-		according to user needs.</p>
+	<p>Sa ngayon, batay lamang sa cookie at ang awtentikasyon ng HTTP na mga pamamaraan ng pamamahala sa sesyon ay ipinatupad, ngunit madali na ang mga suporta sa sistema ng pagdadagdag ng bagong mga pamamaraan, ayon sa pangangailangan ng gumagamit.</p>
 
 	<h3>
-		<a name="cbsm">Cookie-Based Session Management</a>
+		<a name="cbsm">Cookie-Base sa Pamamahala ng Sesyon</a>
 	</h3>
 	<p>
-		In the case of this method the session is being tracked through
-		cookies. Currently, the session tokens that are used are imported from
-		the <a href="httpsessions.html">HTTP Sessions</a> Extension.
+		Sa ganitong kaso ng pamamaraan ng sesyon ay sinusubaybayan ito sa pamamagitan ng cookie. Kasalukuyan, ang mg token ng sesyon na nagamit ay na-import mula sa <a href="httpsessions.html">Mga HTTP Sesyon</a> karugtong.
 	</p>
 
 	<h3>
-		<a name="hasm">HTTP Authentication Session Management</a>
+		<a name="hasm">Ang Awtentikasyon ng HTTP na Pamamahal ng Sesyon</a>
 	</h3>
 	<p>
-		In the case of this method the session is managed with HTTP request header <code>Authorization</code>.
+		Sa kaso ng pamamaraang ito ang sesyon ay pinamahalaan kasama ng HTTP header ng kahilingan <code>Awtorisasyon</code>.
 	</p>
 
-	<h2>Configured via</h2>
+	<h2>Kinumpigura sa pamamagitan ng</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/session/contexts.html#sm">Session
-					Contexts Dialog</a></td>
+			<td><a href="../../ui/dialogs/session/contexts.html#sm">Sesyon</a></td>
 			<td></td>
 		</tr>
 	</table>
 
-	<h2>See also</h2>
+	<h2>Maaari ring tingnan sa</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="http://youtu.be/cR4gw-cPZOA">Youtube tutorial</a></td>
-			<td>of the Authentication, Session Management and Users Management features of ZAP [external link to http://youtu.be/cR4gw-cPZOA].</td>
+			<td><a href="https://youtu.be/cR4gw-cPZOA">Pagtuturo sa YouTube</a></td>
+			<td>ng Awtentikasyon, Pamamahala ng Sesyon at Ang mga pag-gamit ng pamamahala na mga tampok sa ZAP [external link to https://youtu.be/cR4gw-cPZOA].</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/overview.html">UI Overview</a></td>
-			<td>for an overview of the user interface</td>
+			<td><a href="../../ui/overview.html">Ang pangkalahatng ideya ng UI</a></td>
+			<td>para sa pangkalahatang ideya ng mga gumagamit ng interface</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="concepts.html">Features</a></td>
-			<td>provided by ZAP</td>
+			<td><a href="concepts.html">Mga tampok</a></td>
+			<td>ibinigay ni ZAP</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/session/contexts.html">Session
-					Contexts Dialog</a></td>
-			<td>for an overview of the Session Properties</td>
+			<td><a href="../../ui/dialogs/session/contexts.html">Session mga konteksto ng diyalogo</a></td>
+			<td>para sa pangkalahatang mga pag-aari ng sesyon</td>
 		</tr>
 
 	</table>

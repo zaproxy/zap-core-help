@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Arama sekmesi
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Arama sekmesi</h1>
+
+<p>Arama sekmesi, URL'lerin, isteklerin, yanıtların, başlıkların ve eklentiler tarafından sağlanan diğer işlevlerin tümünün içinde düzenli ifadeleri aramanıza olanak verir.</p>
+<p>Aramak istediğiniz düzenli ifadeyi arama kutusuna girin ve geri dön'e basın veya ara butonuna tıklayın: 
+<img src="../../images/16/049.png" align="bottom" width="16" height="16" /></p>
+<p>Aşağı doğru çekme, URL'lerde, isteklerde, yanıtlarda veya her şeyde arama yapmayı seçmenize izin verir.</p>
+<p>Arama modelini içeren tüm URL'ler, istekler veya yanıtlar sekmesinde görüntülenecektir. <0 />
+Arama teriminize. * Eklemeniz yararlı olabilir -
+bu size daha fazla bağlam verecektir; parola.*</p>
+<p>Bulunan arama terimlerini 
+<a href="request.html">İstekler</a> 
+ve 
+<a href="response.html">Yanıt sekmeleri</a>'nde görüntülemek için<img src="../../images/16/107.png" align="bottom" width="16" height="16" />Sonraki<img src="../../images/16/108.png" align="bottom" width="16" height="16" /> ve <1/>Önceki düğmelerini kullanabilirsiniz. <br/>
+<p>Sonuçlar listesinde uygun satıra tıklayarak doğrudan özel bir örneğe
+gidebilirsiniz.</p>
+
+<h2>Sağ tık menüsü</h2>
+Bir node'a sağ tıklamak size şunları yapmanıza izin veren bir menü getirecek:
+
+<h3>Atak</h3>
+Saldırı menüsünde aşağıdaki alt menüler bulunur:
+
+<h4>Aktif Tarama...</h4>
+Bu şunu başlatacak <a href="../dialogs/advascan.html">Aktif tarama penceresi</a> şunu başlatmanıza imkan sağlar 
+<a href="../../start/concepts/ascan.html">aktif tarama</a> seçtiğiniz sorgulamaya başlangıç noktası ayarlamak ile.<br/>
+
+<h4>Ağ...</h4>
+Bu şunu başlatacak <a href="../dialogs/spider.html">Örümcek diyaloğu</a> başlatmanıza olanak sağlar 
+<a href="../../start/concepts/spider.html">örümcek</a> seçmiş olduğunuz talebin başlangıç noktası ile.<br/>
+
+<h3>İçeriğe dahil et</h3>
+Bu menü, seçilen düğümleri ve ona ait belirtilen tüm bağlı bileşenleri dahil etmenize izin verir
+<a href="../../start/concepts/contexts.html">içerik</a>.<br/>
+Ayrıca, yeni bir içerik yaratma seçeneğine sahipsiniz.<br/>
+O <a href="../dialogs/session/contexts.html">Oturum İçerikleri</a> ek değişiklik yapmanıza izin vermek için iletişim kutusu görüntülenecektir.
+
+<h3>İçeriğin dışında bırakma</h3>
+Bu menü, belirtilen düğümleri ve bu düğümlerin tüm astlarını çıkartmak için izin verir
+<a href="../../start/concepts/contexts.html">içerik</a>.<br/>
+O <a href="../dialogs/session/contexts.html">Oturum İçerikleri</a> ek değişiklik yapmanıza izin vermek için diyalog görüntülenecektir.
+
+<h3>İçerik olarak işaretle</h3>
+Bu menü takip eden diğer her bir alt menüyü 
+<a href="../../start/concepts/contexts.html">bağlamlar</a> tanımladığınız:
+
+<h4><i>Bağlam ismi</i> Form-temelli Doğrulama Oturum Açma talebi</h4>
+Belirtilen bağlam için belirtilen düğümü bir oturum açma talebi olarak tanımlar.<br/>
+Bir ortamda sadece bir düğüm tanımlayabilirsiniz.<br/> 
+The <a href="../dialogs/session/context-auth.html">Oturum Bağlam Doğrulama</a> ekranı daha fazla değişiklik yapabilmeniz için gösterilecektir.
+
+<h4><i>Bağlam ismi</i> Veri odaklı düğüm</h4>
+Bu belirtilen düğümü şu olarak tanımlar <a href="../../start/concepts/ddc.html">Veri odaklı içerik</a> belirtilen bağlam için.<br/>
+The <a href="../dialogs/session/context-struct.html">Oturum Bağlam Yapısı</a> ekranı daha fazla değişiklik yapabilmeniz için gösterilecektir.
+
+<h3>Şundan hariç tut</h3>
+Bu menü aşağıdaki alt menülere sahiptir:
+
+<h4>Proxy</h4>
+Bu, seçilen düğümleri proxy'den hariç tutacaktır. Hala ZAP ile proxy'leneceklerdir ancak sekmelerin hiçbirinde gösterilmeyeceklerdir.<br/>
+Bu, şu an test etmekte olduğunuz sistemle alakası olmayan URL'leri görmezden gelmek için kullanılabilir.<br/>
+Düğüm şunun aracılığıyla tekrardan dahil edilebilir <a href="../dialogs/session/sessprop.html">Oturum Özellikleri</a> pencere   
+
+<h4>Tarayıcı</h4>
+Bu seçili düğümlerin taranmasını engeller.<br/>
+Düğümler aracılığıyla tekrar dahil edilebilir <a href="../dialogs/session/sessprop.html">Oturum Özellikleri</a> diyalog   
+
+<h4>Ağ</h4>
+Bu düğümlerin spidered olmasını önleyecektir.<br/>
+Düğümler aracılığıyla tekrar dahil edilebilir <a href="../dialogs/session/sessprop.html">Oturum Özellikleri</a> diyalog   
+
+<h3>Tekrar gönder...</h3>
+Bu şunu öne çıkaracaktır
+<a href="../dialogs/resend.html">Yeniden gönder diyaloğu</a> yapmak istediğiniz değişiklikleri yaptıktan sonra talebi tekrar göndermenizi sağlar.
+
+<h3>Yeni Uyarı...</h3>
+Bu şunu öne çıkaracaktır
+<a href="../dialogs/addalert.html">Uyarı diyaloğu ekle</a> manuel olarak yeni bir... kaydetmenizi sağlar  
+<a href="../../start/concepts/alerts.html">uyarı</a> bu talebe karşın.
+
+<h3>Geçmiş Sekmesinde Göster</h3>
+Bu ...'da seçilmiş düğümleri gösterecektir <a href="history.html">Geçmiş Sekmesi</a>.
+
+<h3>Siteler sekmesinde göster</h3>
+Bu ...'da seçilen mesajı gösterecektir <a href="sites.html">Siteler sekmesi</a>.
+
+<h3>Tarayıcıda URL aç</h3>
+Bu varsayılan tarayıcınızda seçilen node'un URL'sini açacak.
+
+<h2>Ayrıca bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../overview.html">UI Genel Bakış</a></td><td>kullanıcı arayüzüne genel bir bakış için</td></tr>
+</table>
+
+</body>
+</html>

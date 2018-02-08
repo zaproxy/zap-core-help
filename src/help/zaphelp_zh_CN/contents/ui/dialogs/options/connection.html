@@ -14,9 +14,27 @@ The Options Connection screen allows you to configure the ZAP connection options
 <h3>Timeout in seconds</h3>
 This makes is easier to test slow applications.
 
+<h3>Default User Agent</h3>
+The user agent that ZAP should use when creating HTTP messages (for example, spider messages or CONNECT requests to outgoing
+proxy).
+
 <h3>Single Cookie Request Header</h3>
 Controls whether the ZAP's managed cookies (<a href="../../tlmenu/edit.html">启用会话跟踪(Cookie)</a>) should be set
 on a single "Cookie" request header or multiple "Cookie" request headers, when sending an HTTP request to the server.
+
+<h3>DNS</h3>
+<h4>TTL Successful Queries</h4>
+Defines for how long the successful DNS queries should be cached:<ul>
+<li>Negative number, cache forever;</li>
+<li>Zero, disables caching;</li>
+<li>Positive number, the number of seconds the queries will be cached.</li></ul>
+<strong>Note:</strong> Changes are applied after a restart.<p>
+The option can also be set using the <code>-config</code> command line argument with the key <code>connection.dnsTtlSuccessfulQueries</code>.
+
+<h3>Security Protocols</h3>
+Allows to choose the SSL/TLS versions enabled for outgoing connections (for example, to servers). At least
+one version must be enabled, versions unsupported by the JRE will be unselected and disabled.
+<br>The option SSLv2Hello must be selected in conjunction with at least one SSL/TLS version.
 
 <h3>Use Proxy chain</h3>
 This section allows you to connect to another proxy for outgoing connections.<br/>
@@ -31,6 +49,8 @@ This section allows you to configure the outgoing proxy authentication.
 <a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../../cmdline.html">Command Line</a></td><td>for details of the Command Line</td></tr>
 </table>
 
 </body>

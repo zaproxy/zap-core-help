@@ -3,81 +3,83 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Add Alert dialog
+Menambahkan dialog peringatan
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Add Alert dialog</h1>
+<h1>Tambahkan Alert dialog</h1>
 <p>
-This dialog allows you to manually add or change an <a href="../../start/concepts/alerts.html">Alert</a> associated
-with a specific request.<br/>
+Dialog ini memungkinkan anda untuk menambahkan secara manual atau mengubah <a href="../../start/concepts/alerts.html">Alert</a> terkait dengan permintaan tertentu.<br/>
 </p>
 
-<h2>Fields</h2>
-The dialog has the following fields:
+<h2>Bidang</h2>
+Dialog memiliki bidang-bidang berikut:
 
 <h3>Tipe</h3>
-The type of the alert is a pull down field which allows you to select one of a prepopulated set of issue types.<br/>
-You can also enter your own text or change the text of one of the items you selected.<br/>
-If you select on of the existing types then the Description, Solution and Other Info fields
-will be populated with text associated with the item you chose. 
+Jenis lansiran adalah penurunan bidang yang memungkinkan kamu memilih salah satu dari jenis isu yang terpilah.<br/>
+Kamu juga dapat memasukkan teks kamu sendiri atau mengubah teks dari salah satu item yang kamu pilih.<br/>
+Jika anda memilih salah satu dari tipe yang ada lalu Deskripsinya, Solusi dan Info bidang Lainnya
+akan ditempatkan dengan teks yang berhubungan dengan item yang anda pilih. 
 
 <h3>Resiko</h3>
-A pull down field which allows you to specify how serious you think the risk is:
+Tarik ke bawah bidang yang memungkinkan Anda untuk menentukan seberapa serius Anda berpikir risiko adalah:
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Informational</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Low</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Medium</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>High</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Informasi</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Lemah</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Sedang</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tinggi</td><td></td></tr>
 </table>
 
-<h3>Confidence</h3>
-A pull down field which allows you to specify how confident you are in the validity of the finding:
+<h3>Kepercayaan</h3>
+Tarik ke bawah bidang yang memungkinkan Anda untuk menentukan seberapa yakin Anda berada di validitas menemukan:
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>False Positive</td><td>for potential issues that you later find are not exploitable</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Low</td><td>for unconfirmed issues</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Medium</td><td>for issues you are somewhat confident of</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>High</td><td>for findings you are highly confident in</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Confirmed</td><td>for confirmed issues</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Positif palsu</td><td>untuk isu-isu potensial yang Anda kemudian menemukan tidak exploitasi</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Lemah</td><td>untuk masalah yang belum dikonfirmasi</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Sedang</td><td>untuk masalah Anda agak yakin</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tinggi</td><td>untuk temuan sangat percaya diri dalam</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Konfirmasi</td><td>untuk masalah yang dikonfirmasi</td></tr>
 </table>
 
 <h3>Parameter</h3>
-A pull down field which allows you to specify which parameter the issue is associated with.<br/>
-The field is prepopulated with any URL and FORM parameters found, but you can also enter your own parameter name. 
+Tarik ke bawah bidang yang memungkinkan Anda untuk menentukan parameter yang masalah terkait dengan.<br/>
+Bidang diisi dengan parameter URL dan formulir mana pun, namun kamu juga dapat memasukkan nama parameter kamu sendiri.<br />
+Parameter Array (pada komponen kueri URL dan <code>x-www-form-urlencoded</code> permintaan badan) yang diidentifikasi dengan indeknya. Sebagai
+contoh, untuk permintaan yang mengandung <code>choices[]=ChoiceA&amp;choices[]=ChoiceB</code> parameter pertamanya itu akan diidentifikasi
+sebagai <code>choices[0]</code> and the second as <code>choices[1]</code>.
 
 <h3>Deskripsi</h3>
 A general description of the type of issue found.<br/>
-This is populated when you select one of the predefined types, but you can also change it as required.<br/>
-Note that any changes you make will be lost if you select another type.
+Ini adalah padat bila Anda memilih salah satu jenis standar, tetapi Anda juga dapat mengubah seperti yang diperlukan.<br/>
+Catat bahwa setiap perubahan yang anda buat akan hilang jika anda memilih tipe yang lainnya.
  
-<h3>Other Info</h3>
+<h3>Info Lainnya</h3>
 Information specific to the particular issue you have found.<br/>
 This is not prepopulated.
 
 <h3>Solusi</h3>
-Recommendations about how to fix the issue.<br/>
+Rekomendasi mengenai bagaimana untuk memperbaiki suatu masalah.<br/>
+Ini akan ditempatkan ketika anda memilih salah satu dari tipe yang telah ditetapkan sebelumnya, tetapi anda juga bisa mengubahnya seperti yang dibutuhkan.<br/>
+Perhatikan bahwa perubahan apapun yang anda lakukan akan bisa hilang jika anda memilih tipe yang lain.
+ 
+<h3>Referensi</h3>
+Satu atau beberapa URL yang mengarah kepada informasi lebih lanjut pada internet tentang tipe peringatan yang terpilih.<br/>
 This is populated when you select one of the predefined types, but you can also change it as required.<br/>
 Note that any changes you make will be lost if you select another type.
  
-<h3>Reference</h3>
-One or more URLs pointing to more information on the internet about the selected type of alert.<br/>
-This is populated when you select one of the predefined types, but you can also change it as required.<br/>
-Note that any changes you make will be lost if you select another type.
- 
-<h2>Accessed via</h2>
+<h2>Diakses melalui</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../tabs/history.html">History tab</a></td><td>'New Alert...' right click menu item</td></tr>
+<a href="../tabs/history.html">Tab riwayat</a></td><td>'Peringatan baru...' Klik kanan menu item</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../tabs/alerts.html">Alerts tab</a></td><td>double clicking on an existing alert</td></tr>
+<a href="../tabs/alerts.html">Lansiran tab</a></td><td>mengklik ganda pada peringatan yang ada</td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Lihat juga</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../overview.html">Ikhtisar UI</a></td><td>untuk peninjauan antarmuka pengguna</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+<a href="dialogs.html">Dialog</a></td><td>untuk rincian dari dialog atau popup </td></tr>
 </table>
 
 </body>

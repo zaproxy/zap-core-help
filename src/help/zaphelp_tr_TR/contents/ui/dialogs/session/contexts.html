@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Oturum İçerik Ekranları
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Oturum İçerik Ekranları</h1>
+<p>
+Bu ekranlar <a href="../../../start/concepts/contexts.html">içerikler</a> i yönetmenizi sağlar.
+</p>
+<p>
+Tanımladığınız her bağlam için bir ekran dizisi vardır.
+</p>
+
+<h3>Üst Ekran</h3>
+Bu, bağlam adını ve açıklamasını düzenlemenizi sağlar.
+
+<h3>İçeriğe dahil et</h3>
+Bu, bağlama dahil edilecek URL'leri yönetmenize olanak verir.<br/>
+Düzenli ifadelerden herhangi biriyle eşleşmeyen URL'ler bağlama dahil edilmez.
+
+<h3>İçerikten hariç tut</h3>
+Bu, bağlamdan hariç tutulacak URL'leri yönetmenize olanak verir.<br/>
+İçermesini istemediğiniz fakat bir ya da birden fazla 'içeren' regexlerle eşleşenler için sadece URL ler için regexleri özelleştirmeniz gerekir.
+
+<h3><a name="struct">Yapı</a></h3>
+Bakınız <a href="context-struct.html">Oturum Bağlamı Ekranı</a>.
+
+<h3>Teknoloji</h3>
+Bu, eğer belliyse, içerikte kullanılan teknolojileri belirtmenize olanak sağlar.<br/>
+Varsayılan olarak tüm teknolojiler dahil edilmiştir.<br/>
+Kulanılmadığını bildiğiniz teknolojileri hariç tutarsanız, hızlanabilir 
+<a href="../../../start/concepts/ascan.html">aktif tarama</a> özel kurallarda dışlanan teknolojiler atlanabilir.
+
+<h3><a name="auth">Doğrulama</a></h3>
+Bakınız <a href="context-auth.html">Oturum İçerik Doğrulama ekranı</a>.
+
+<h3><a name="sm">Oturum Yönetimi</a></h3>
+Bu size İçerik için Oturum Yönetimi yapılan yerdeki yöntemi yönetmenize olanak sağlar. 
+Oturum Yönetme Metot tipini seçtikten sonra Oturum Yönetim Metotuna göre ayarların yeniden düüzenlenmesi gerekebilir.
+
+<h4>Çerez Temelli Oturum Yönetimi</h4>
+Bu oturum yönetimi metodu için düzenleme gerekmemektedir. <small><a href="../../../start/concepts/sessionManagement.html#cbsm">Daha çok</a> Oku...</small>
+
+<h4>HTTP Doğrulama Oturum Yönetimi</h4>
+Bu oturum yönetimi metodu için düzenleme gerekmemektedir. <small><a href="../../../start/concepts/sessionManagement.html#hasm">Daha çok</a> Oku...</small>
+
+
+<h3><a name="users">Kullanıcılar</a></h3>
+Bu size uygulama dahilinde daha farklı aksiyonlar için de kullanılabilecek bir Kullanıcı kümesi düzenlemeye izin verir.
+<p>Kullanıcıların kimlik bilgileri bölümü İçerik için düzenlenen Doğrulama Metotuna bağlıdır.</p>
+
+<h2>URL regexleri</h2>
+İçinde <i>Dahil *</i>, <i>* dan hariç</i> paneller ve <i>Giriş/Çıkış göstergeleri</i> 'nun <i>Doğrulama</i> panelde, hariç tutulan URL'leri tanımlamak için normal ifadeler girebilirsiniz. Bir tek bir ters eğik çizgiyle meta karakter kaçabilir, Ayrıca............... kullanabilirsiniz <b>\Q...\E</b> çıkış sırası..... arasındaki bütün karakterler <b>\Q</b> ve <b>\E</b> doğru karakterler olarak çevrilir.Örneğin Q*\d+*\E doğru karakterde *\d+* ile eşleşir.
+Bu çıkış sırası ZAP tarafından bazı içerik menüleri ile URL'leri çıkardığınızda kullanılır.
+<br>
+<b>Not:</b> Eğer URL'niz bir "\E" içeriyorsa, onu kullanırken aşağıdaki adımları yapmak zorundasınız <b>\Q...\E</b> çıkış sırası:
+<ul>
+	<li>Çıkış sırası aç</li>
+	<li>''karakter'' \E den önce çıkış sırasını kapatın.</li>
+	<li>Ters eğik çizgi çıkışı</li>
+	<li>"\E"den sonra başka bir çıkış sırası aç;</li>
+	<li>Normal olarak yapılacağı gibi çıkış sırasını kapat.</li>
+</ul>
+<br>
+Örnek: subdomain.example.com/path?a=<b>\E</b>&amp; moredata = 2 olarak görünmelidir
+<i>\Qsubdomain.example.com/path?a=\E</i><b>\\E</b><i>\Q &amp; moredata = 2\E</i>
+  
+<h2>Üzerinden erişildi</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../tlmenu/file.html">Üst Seviye Dosya menüsü</a></td><td>'Özellikler...' menü öğesi</td></tr>
+</table>
+
+<h2>Ayrıca bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../overview.html">UI'ya Genel Bakış</a></td><td>kullanıcı arayüzüne genel bakış için</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../dialogs.html">Diyaloglar</a></td><td>diyalogların ve açılır pencerelerin ayrıntıları için </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../../start/concepts/authentication.html">Doğrulama</a></td><td>doğrulamaya genel bakış için </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../../start/concepts/sessionManagement.html">Oturum Yönetimi</a></td><td>Oturum Yönetimine bir bakış için </td></tr>
+</table>
+
+
+</body>
+</html>

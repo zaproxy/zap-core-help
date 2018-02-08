@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Geri Arama Adresi Ekran Seçenekleri
+</title>
+</head>
+<body bgcolor="#ffffff">
+<h1>Geri Arama Adresi ekran seçenekleri</h1>
+<p>
+Geri Arama Adres ekranı, bir saldırganın uzak URL'leri çağırmasına izin veren güvenlik açıklarını tespit etmek için kullanılan adresi yapılandırmanıza izin verir.<br>
+Önceki sürümlerde bu amaçla ZAP API kullanıldı, ancak 2.6.0'dan itibaren ayrı bir uç nokta kullanıldı, böylece hedef sistemlerin
+artık API'ya erişimi gerekmiyor.
+</p>
+
+<h3>Yerel Adres (örn. 0.0.0.0)</h3>
+
+ZAP'ın gelen bağlantıları dinleyeceği yerel adres.
+'0.0.0.0' değerinin varsayılan değeri, ZAP'ın mevcut tüm yerel adresleri dinleyeceği anlamına gelir.
+
+<h3>Uzak Adres</h3>
+
+Ilgili saldırılarda belirtilecek adres. Bu adres hedef sistemde erişilebilir olmalıdır. bu şekilde olup olmadığını kontrol etmek için Test URL'sini kullanabilirsiniz.
+
+<h3>Rasgele Bağlantı Noktası</h3>
+
+Varsayılan olarak ZAP, her çalıştırıldığında farklı bir port kullanacaktır.
+Aynı bağlantı noktasını kullanmanız gerekiyorsa (örneğin güvenlik duvarları üzerinden erişime izin vermek için) bu seçeneğin işaretini kaldırın.
+
+<h3>Bağlantı Noktası Belirtin</h3>
+
+Rastgele Bağlantı Noktası seçeneği işaretli değilse, bu, ZAP'ın dinleyeceği bağlantı noktasıdır.
+ZAP'in kullandığı diğer bağlantı noktalarına, örneğin bağlantıları proxy oluşturmak için kullandığı bağlantı noktasına göre farklı olmalıdır.
+
+<h3>URL ' test et</h3>
+
+Uzaktaki sistemlerden erişmeyi deneyebileceğiniz test URL'si. 
+Test URL'sine yapılan erişimler bilgi düzeyinde ZAP günlük dosyasında kaydedilir. 
+ZAP UI'sını kullanıyorsanız, ayrıca erişimlerde gösterilir <a href="../../tabs/output.html">Çıkış sekmesi</a>.
+
+<h2>Ayrıca bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../overview.html">UI Genel Bakış</a></td><td>kullanıcı arayüzüne genel bakış için</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="options.html">Seçenekler pencereleri</a></td><td>diğer seçenekler iletişim kutusu ekranlarının ayrıntıları için</td></tr>
+</table>
+
+</body>
+</html>

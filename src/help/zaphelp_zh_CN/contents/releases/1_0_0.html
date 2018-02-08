@@ -3,103 +3,91 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Release 1.0.0
+1.0.0版本
 </title>
 </head>
 <body bgcolor="#ffffff">
-<h1>Release 1.0.0</h1>
+<h1>1.0.0版本</h1>
 <p>
-The following changes were made in this release:
+本版本进行了以下更改：
 </p>
-<h2>Significant changes:</h2>
+<h2>重大变化：</h2>
 
-<h3>Help screens</h3>
-Help screens have been added for all of the functionality now provided by ZAP.<br/>
-Context sensitive help has also been implemented so that when you press the F1 key then the
-help screen associated with the tab you have selected will be displayed.
+<h3>帮助界面</h3>
+为ZAP现在提供的所有功能添加了帮助面板。<br/>
+上下文相关的帮助也已经实现，所以当您按F1键时，将显示与所选标签关联的帮助面板。
 
 <h3>断点</h3>
-The implementation of <a href="../start/concepts/breakpoints.html">断点</a> has been changed to be closer to that provided by 
-software Integrated Development Environments.<br/>
-The break point controls have been moved to the new <a href="../ui/tltoolbar.html">Top Level Toolbar</a>.<br/>
-Break points can now also be set by right clicking nodes in the 
-<a href="../ui/tabs/sites.html">站点</a> and <a href="../ui/tabs/history.html">History tabs</a>.
+断点的 <a href="../start/concepts/breakpoints.html">实现</a> 已经变得更接近软件集成开发环境所提供的。<br/>
+断点控制已经移到新的 <a href="../ui/tltoolbar.html">顶级工具栏</a>.<br/>
+断点现在也可以通过右击节点来设置 
+<a href="../ui/tabs/sites.html">站点</a> 和 <a href="../ui/tabs/history.html">历史记录选项卡</a>.
 
-<h3>Report menu</h3>
-The <a href="../ui/tlmenu/report.html">Report Menu</a> has been significant changed and now includes the
-following menu items:
+<h3>报告菜单</h3>
+报告 <a href="../ui/tlmenu/report.html">菜单</a> 已经发生了重大的变化，现在包括了以下菜单项：
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Generate Report...</td><td>Which now generates reports on demand</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>将信息导出到文件中...</td><td>Moved from the <a href="../ui/tlmenu/file.html">File Menu</a></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>导出响应信息到文件中...</td><td>Moved from the <a href="../ui/tlmenu/file.html">File Menu</a></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Export ALL URLs to File...</td><td>New functionality</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Compare with another session...</td><td>New functionality</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>生成报告</td><td>现在按需生成报告</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>将信息导出到文件中...</td><td>从<a href="../ui/tlmenu/file.html">文件菜单</a>移入</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>导出响应信息到文件中...</td><td>从<a href="../ui/tlmenu/file.html">文件菜单</a>移入</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>将所有的URL导出到文件</td><td>新功能</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>与另一个会话进行比较</td><td>新功能</td></tr>
 </table>
 
-<h3>Improved history searching</h3>
-The new <a href="../ui/tabs/search.html">Search tab</a> allows you to search for regular expressions 
-in all of the URLs, requests and responses. <br/>
-Next and previous buttons allow you view the found search terms in the 
-<a href="../ui/tabs/request.html">请求</a> and <a href="../ui/tabs/response.html">Response tabs</a>. <br/>
+<h3>改进的历史搜索</h3>
+新的 <a href="../ui/tabs/search.html">搜索标签</a> 允许您在所有的URL，请求和响应中搜索正则表达式。 <br/>
+下一个和上一个按钮允许您查看找到的搜索项 
+<a href="../ui/tabs/request.html">请求</a> 和 <a href="../ui/tabs/response.html">响应选项卡</a>. <br/>
 
-<h3>History filter</h3>
-<a href="../ui/tabs/history.html">The History Filter Toolbar</a> has been added which allows you to restrict
-which requests are displayed.<br/>
-Requests can be filtered based on the HTTP methods, the HTTP result codes,
-and any <a href="../start/concepts/tags.html">tags</a>, <a href="../start/concepts/alerts.html">alerts</a>, or
-<a href="../start/concepts/notes.html">notes</a> that have been applied.    
+<h3>历史过滤器</h3>
+<a href="../ui/tabs/history.html">历史过滤器工具栏</a> 已被添加，这可以让您限制显示哪些请求。<br/>
+请求可以基于HTTP方法，HTTP结果代码，和任何 <a href="../start/concepts/tags.html">标签</a>, <a href="../start/concepts/alerts.html">警报</a>或者
+<a href="../start/concepts/notes.html">备注</a> （之前已被应用的）    
 
-<h3>Notes</h3>
-You can now associate <a href="../start/concepts/notes.html">notes</a> with any request.    
+<h3>备注</h3>
+您现在可以将 <a href="../start/concepts/notes.html">备注</a> 和任何请求相关联。    
 
-<h3>Multiple Tags</h3>
-You can now associate multiple <a href="../start/concepts/tags.html">tags</a> with any request.    
+<h3>多重标签</h3>
+您现在可以将多个 <a href="../start/concepts/tags.html">标签</a> 与任何请求相关联。    
 
-<h3>More control over the alerts</h3>
-The <a href="../ui/dialogs/addalert.html">Add Alert dialog</a> allows you to manually add or change an
-alert. 
+<h3>更好的控制警报</h3>
+添加 <a href="../ui/dialogs/addalert.html">警报对话框</a> 使您可以手动添加或更改警报。 
 
-<h3>New encoder/decoder</h3>
-A new <a href="../ui/dialogs/enc_dec.html">Encode/Decode/Hash dialog</a> has replaced the previous 
-Encoder/Decoder. 
+<h3>新的编码器/解码器</h3>
+一个新的 <a href="../ui/dialogs/enc_dec.html">编码/解码/哈希会话</a> 已经取代了之前的编码器/解码器。 
 
-<h3>Passive scanning</h3>
-<a href="../start/concepts/pscan.html">Passive scanning</a> has been added.<br/>
-In this release ZAP will only use passive scanning for automatically adding <a href="../start/concepts/tags.html">tags</a>.<br/>
-In future releases it may also raise <a href="../start/concepts/alerts.html">alerts</a> for potential issues. 
+<h3>被动扫描</h3>
+<a href="../start/concepts/pscan.html">被动扫描</a> 已经添加。<br/>
+在这次的版本中，ZAP将只使用被动扫描自动添加 <a href="../start/concepts/tags.html">标签</a>.<br/>
+在未来的版本中，它也可能会触发 <a href="../start/concepts/alerts.html">警报</a> 当遇到潜在问题的时候。 
     
-<h2>Minor changes:</h2>
+<h2>小更改：</h2>
 
-<h3>The Top Level Toolbar</h3>
-<a href="../ui/tltoolbar.html">The Top Level Toolbar</a> has been added which
-provides a set up buttons for commonly used functionality. 
+<h3>顶级工具栏</h3>
+<a href="../ui/tltoolbar.html">顶级工具栏</a> 已添加，用来提供常用功能的设置按钮。 
 
-<h3>Alert footer summaries</h3>
-Counts of the High, Medium, Low and Informational <a href="../start/concepts/alerts.html">alerts</a>
-are now displayed in the <a href="../ui/footer.html">footer</a>.
+<h3>警报页脚摘要</h3>
+高，中，低不同级别的和信息的 <a href="../start/concepts/alerts.html">警报</a>
+现在可以显示在 <a href="../ui/footer.html">页脚</a>.
 
-<h3>New look and feel</h3>
-A new look and feel 'Nimbus' is used.
+<h3>新的外观和体验</h3>
+使用新的外观。
 
-<h3>Proxy password handling</h3>
-<a href="../ui/dialogs/options/connection.html">The Options Connection screen</a> has a new option to 
-'Prompt for proxy credentials on start up'.<br/>
-If this option is selected then your proxy password will not be stored on the hard disk.  
+<h3>代理密码处理</h3>
+<a href="../ui/dialogs/options/connection.html">选项连接屏幕</a> 有一个新选项，用于'启动时提示代理凭据'。<br/>
+如果选择此选项，则您的代理密码将不会存储在硬盘上。  
 
-<h3>Resend from the Sites tab</h3>
-The <a href="../ui/tabs/sites.html">Sites tab</a> has a new right click menu item that allows
-you to resend the request after making any changes to it that you want to.  
+<h3>从站点选项卡重新发送</h3>
+站点 <a href="../ui/tabs/sites.html">选项卡</a> 有一个新的右键菜单选项，允许您在对它进行任何您想要的更改后重新发送请求。  
 
-<h3>User directory maintained between sessions</h3>
-The last directory used by the user is now stored in the config file so that it is
-maintained between sessions.
+<h3>会话之间维护的用户目录</h3>
+用户使用的最后一个目录现在被保存在配置文件中，以便在会话之间进行维护。
 
-<h2>See also</h2>
+<h2>请参阅</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<a href="../intro.html">简介</a></td><td>ZAP简介</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<a href="releases.html">版本</a></td><td>版本发布</td></tr>
 </table>
 </body>
 </html>
