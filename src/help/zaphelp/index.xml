@@ -32,8 +32,6 @@
     <indexitem text="dialogs" target="ui.dialogs" />
     <indexitem text="encode / decode / hash dialog" target="ui.dialogs.enc_dec" />
     <indexitem text="features" target="start.concepts" />
-    <indexitem text="filter dialog" target="ui.dialogs.filter" />
-    <indexitem text="filters" target="start.concepts.filters" />
     <indexitem text="find dialog" target="ui.dialogs.find" />
     <indexitem text="footer" target="ui.footer" />
     <indexitem text="getting started" target="start.start" />

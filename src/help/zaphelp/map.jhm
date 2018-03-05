@@ -21,7 +21,6 @@
         <mapID target="start.concepts.breakpoints" url="contents/start/concepts/breakpoints.html" />
         <mapID target="start.concepts.contexts" url="contents/start/concepts/contexts.html" />
         <mapID target="start.concepts.ddc" url="contents/start/concepts/ddc.html" />
-        <mapID target="start.concepts.filters" url="contents/start/concepts/filters.html" />
         <mapID target="start.concepts.globalexcludeurl" url="contents/start/concepts/globalexcludeurl.html" />
         <mapID target="start.concepts.httpsessions" url="contents/start/concepts/httpsessions.html" />
         <mapID target="start.concepts.intercept" url="contents/start/concepts/intercept.html" />
@@ -72,7 +71,6 @@
         <mapID target="ui.dialogs.context-auth" url="contents/ui/dialogs/session/context-auth.html"/>
         <mapID target="ui.dialogs.context-struct" url="contents/ui/dialogs/session/context-struct.html"/>
         <mapID target="ui.dialogs.enc_dec" url="contents/ui/dialogs/enc_dec.html"/>
-        <mapID target="ui.dialogs.filter" url="contents/ui/dialogs/filter.html"/>
         <mapID target="ui.dialogs.find" url="contents/ui/dialogs/find.html"/>
         <mapID target="ui.dialogs.historyfilter" url="contents/ui/dialogs/hist_filter.html"/>
         <mapID target="ui.dialogs.manreq" url="contents/ui/dialogs/man_req.html"/>

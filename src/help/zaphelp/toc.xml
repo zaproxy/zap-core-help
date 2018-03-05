@@ -26,7 +26,6 @@
          <tocitem text="Break Points" target="start.concepts.breakpoints"/>
          <tocitem text="Contexts" target="start.concepts.contexts"/>
          <tocitem text="Data Driven Content" target="start.concepts.ddc"/>
-         <tocitem text="Filters" target="start.concepts.filters"/>
          <tocitem text="Globally Excluded URLs" target="start.concepts.globalexcludeurl"/>
          <tocitem text="HTTP Sessions" target="start.concepts.httpsessions"/>
          <tocitem text="Man-in-the-middle Proxy" target="start.concepts.intercept"/>
@@ -82,7 +81,6 @@
          <tocitem text="Add Break Point" target="ui.dialogs.addbreak"/>
          <tocitem text="Add Note" target="ui.dialogs.addnote"/>
          <tocitem text="Encode/Decode/Hash" target="ui.dialogs.enc_dec"/>
-         <tocitem text="Filter" target="ui.dialogs.filter"/>
          <tocitem text="Find" target="ui.dialogs.find"/>
          <tocitem text="History Filter" target="ui.dialogs.historyfilter"/>
          <tocitem text="Manual Request Editor" target="ui.dialogs.manreq"/>
