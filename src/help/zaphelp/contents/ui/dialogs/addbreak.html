@@ -3,21 +3,33 @@
 <HEAD>
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
 <TITLE>
-Add Break Point dialog
+Add/Edit Break Point dialog
 </TITLE>
 </HEAD>
 <BODY BGCOLOR="#ffffff">
-<H1>Add Break Point dialog</H1>
+<H1>Add/Edit Break Point dialog</H1>
 <p>
-This allows you to set a 
-<a href="../../start/concepts/breakpoints.html">break point</a> on a URL.
-</p>
+This dialogue allows you to add and edit <a href="../../start/concepts/breakpoints.html">HTTP break points</a>.
+
 <p>
-The break point is defined via a regex expression.<br/>
-If you visit a URL which matches this 
-expression then ZAP will intercept it and allow you to change either the request and/or the
-response.
-</p>
+A break point is defined by the following fields:
+
+<ul>
+	<li><strong>Location</strong> - where the <code>String</code> is checked in the
+		HTTP message: <code>URL</code>, <code>Request Header</code>, <code>Request Body</code>,
+		<code>Response Header</code>, or <code>Response Body</code>.</li>
+	<li><strong>Match</strong> - how the <code>String</code> is interpreted, <code>Regex</code>
+		or <code>Contains</code>, for regular expression or exact match, respectively, in the <code>Location</code>.
+		The regular expression does not need to match the whole content of the <code>Location</code>.</li>
+	<li><strong>String</strong> - the string that triggers the break point.</li>
+	<li><strong>Inverse</strong> - if the result of the <code>Match</code> should be
+		the inverse.</li>
+	<li><strong>Ignore case</strong> - if the case of the <code>String</code> should be
+		ignored.</li>
+</ul>
+
+If you proxy a HTTP message that matches a break point then ZAP will intercept it and allow you to change either the request
+and/or the response.
 
 <H2>Accessed via</H2>
 <table>
