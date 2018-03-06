@@ -78,7 +78,7 @@
       <tocitem text="The Dialogs" target="ui.dialogs">
          <tocitem text="Active Scan" target="ui.dialogs.advascan"/>
          <tocitem text="Add Alert" target="ui.dialogs.addalert"/>
-         <tocitem text="Add Break Point" target="ui.dialogs.addbreak"/>
+         <tocitem text="Add/Edit Break Point" target="ui.dialogs.addbreak"/>
          <tocitem text="Add Note" target="ui.dialogs.addnote"/>
          <tocitem text="Encode/Decode/Hash" target="ui.dialogs.enc_dec"/>
          <tocitem text="Find" target="ui.dialogs.find"/>
