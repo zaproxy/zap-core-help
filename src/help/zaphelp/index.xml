@@ -79,7 +79,6 @@
     <indexitem text="release 2.7.0" target="zap.releases.2.7.0" />
     <indexitem text="releases" target="zap.releases" />
     <indexitem text="request tab" target="ui.tabs.request" />
-    <indexitem text="resend dialog" target="ui.dialogs.resend" />
     <indexitem text="response tab" target="ui.tabs.response" />
     <indexitem text="scanner rules" target="start.check" />
     <indexitem text="scan policy" target="start.concepts.scanpolicy" />

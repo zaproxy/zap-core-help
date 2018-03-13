@@ -78,7 +78,6 @@
         <mapID target="ui.dialogs.managetags" url="contents/ui/dialogs/managetags.html"/>
         <mapID target="ui.dialogs.options" url="contents/ui/dialogs/options/options.html"/>
         <mapID target="ui.dialogs.persistsession" url="contents/ui/dialogs/persistsession.html"/>
-        <mapID target="ui.dialogs.resend" url="contents/ui/dialogs/resend.html"/>
         <mapID target="ui.dialogs.scanpolicy" url="contents/ui/dialogs/scanpolicy.html"/>
         <mapID target="ui.dialogs.scanpolicymgr" url="contents/ui/dialogs/scanpolicymgr.html"/>
         <mapID target="ui.dialogs.scanprogress" url="contents/ui/dialogs/scanprogress.html"/>
