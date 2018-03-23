@@ -31,6 +31,11 @@ A break point is defined by the following fields:
 If you proxy a HTTP message that matches a break point then ZAP will intercept it and allow you to change either the request
 and/or the response.
 
+<p>
+<strong>Note:</strong> ZAP will warn and prevent adding break points with a fragment identifier component (<code>#</code>), if
+the break point has match <code>Contains</code> and location <code>URL</code>. Such break point would not work because the 
+fragment identifier is not sent to the server.
+
 <H2>Accessed via</H2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
