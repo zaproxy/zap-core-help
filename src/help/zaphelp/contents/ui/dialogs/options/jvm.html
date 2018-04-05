@@ -39,6 +39,24 @@ If that happens then deleting this file should fix the problem.
 <p>
 <strong>Windows Notes:</strong> These options are not used when starting ZAP via the executable. The directory where the file <code>.ZAP_JVM.properties</code> is located depends on the environment variable <code>%USERPROFILE%</code>.
 
+<H3>JVM Memory Details</H3>
+The lower portion of the dialog displays details of the current JVM memory configuration. Including: 
+  <ul>
+    <li>Size - the amount of memory currently allocated to the JVM.</li> 
+    <li>Used - the amount of currently allocated memory used (not free).</li>
+    <li>Max - the amount of memory that the JVM could grow to occupy.</li>
+  </ul>
+The values are displayed in human readable IEC units based on base 2 calculation (for example: 1024Bytes equals 1KiB, etc).
+<p>
+Generally max should be close to -Xmx (if specified). However, the following behavior was observed during testing under Java 8 on Windows OS.
+<p>
+-Xmx512m was specified (which should calculate out to ~488MiB), however, 455.5MiB was displayed.<br>
+-Xms512m -Xmx512m was specified, however, 475MiB was displayed.<br>
+-XX:+AlwaysPreTouch -Xms512m -Xmx512m, and 474.5MiB was displayed.
+<p>
+So it seems the JVM does some calculation/manipulation at execution which may mean that the results may not align as expected for the 
+options the user inputs (this is a JVM issue, not a ZAP issue).
+
 <H2>See also</H2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
