@@ -28,6 +28,19 @@ a HTTP GET, otherwise an HTTP POST is used. The credentials themselves
 are configured in the <a href="contexts.html#users">Users</a> tab. <small>Read  
 <a href="../../../start/concepts/authentication.html#formBased">more</a>...</small> 
 
+<h4>JSON-Based Authentication</h4>
+To configure this authentication method, you need to supply the <b>login url</b>, to which the login
+request is performed, the <b>JSON object</b> (POST data, <code>application/json</code>), and identify
+the <b>parameters</b> used to supply the 'username' and 'password'.  The credentials themselves
+are configured in the <a href="contexts.html#users">Users</a> tab. <small>Read 
+<a href="../../../start/concepts/authentication.html#jsonBased">more</a>...</small>
+<br>Examples of POST data:
+<ul>
+	<li><code>{"username":"{%username%}","password":"{%password%}"}</code></li>
+	<li><code>{"user":{"mail":"{%username%}","password":"{%password%}"}}</code></li>
+</ul>
+where <code>{%username%}</code> and <code>{%password%}</code> indicate where the authentication credentials are set.
+
 <h4>HTTP/NTLM Authentication</h4>
 To configure this authentication method, you need to supply the <b>hostname</b> and the <b>port</b> of the server
 the authentication is done with and the <b>realm</b> the credentials apply to. The credentials themselves
