@@ -16,7 +16,7 @@ You can add, modify and remove the tags via the appropriate buttons.
 
 <H2>Tag Interpolation</H2>
 In order to allow some flexibility in Tag creation and content it is possible for the user to specify a regular expression with capturing groups
-which will be used to replace the group identifiers (ex: $1) in the tag configuration (text).
+which will be used to replace the group identifiers (ex: $1) in the resulting tag.
 <p>
 For example, a tag could be defined as follows:
 <table border=1>
@@ -27,7 +27,7 @@ For example, a tag could be defined as follows:
     <td>Name:</td><td>Test</td><td>&nbsp;</td>
   </tr>
   <tr>
-    <td>Configuration:</td><td>$1-SOMETAG</td><td>&nbsp;</td>
+    <td>Tag:</td><td>$1-SOMETAG</td><td>&nbsp;</td>
   </tr>
   <tr>
     <td>Response Body Regex:</td><td>(\d{3})</td><td>Find strings of 3 numbers, using a capturing group (round brackets).</td>
