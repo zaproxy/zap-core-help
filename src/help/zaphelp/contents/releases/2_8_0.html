@@ -18,6 +18,14 @@ ZAP, has now been removed, the same and much more can be achieved with scripts a
 To prevent add-ons (inadvertently) use/override core files ZAP will no longer start (and show an error) if the home and the
 installation directories are the same.
 
+<H2>Changes in Bundled Libraries</H2>
+The following libraries are no longer being bundled with ZAP (core):
+<ul>
+  <li>BrowserLauncher2, it was replaced with the usage of JRE class <code>java.awt.Desktop</code>. Add-ons should use that class or bundle the library.</li>
+  <li>HttpComponents Client/Core, no longer in use by core, any add-ons that require them should bundle them.</li>
+  <li>JavaFX runtime, now relying on JRE (for example, OracleJDK, OpenJDK+OpenJFX).</li>
+</ul>
+
 <H2>Enhancements</H2>
 
 <H2>Bug fixes</H2>
