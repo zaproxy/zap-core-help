@@ -39,14 +39,6 @@
         <mapID target="start.concepts.users" url="contents/start/concepts/users.html" />
         <mapID target="start.checks" url="contents/start/checks.html" />
         <mapID target="start.pentest" url="contents/pentest/pentest.html" />
-        <!--mapID target="vulns.vuln" url="contents/vulns/vulnerabilities.html" /-->
-        <!--mapID target="vulns.csrf" url="contents/vulns/csrf.html" /-->
-        <!--mapID target="vulns.idor" url="contents/vulns/idor.html" /-->
-        <!--mapID target="vulns.leak" url="contents/vulns/leak.html" /-->
-        <!--mapID target="vulns.nossl" url="contents/vulns/nossl.html" /-->
-        <!--mapID target="vulns.sqli" url="contents/vulns/sqli.html" /-->
-        <!--mapID target="vulns.urla" url="contents/vulns/urla.html" /-->
-        <!--mapID target="vulns.xss" url="contents/vulns/xss.html" /-->
         <mapID target="ui.overview" url="contents/ui/overview.html" />
         <mapID target="ui.topmenu" url="contents/ui/tlmenu/tlmenu.html" />
         <mapID target="ui.toptoolbar" url="contents/ui/tltoolbar.html" />
