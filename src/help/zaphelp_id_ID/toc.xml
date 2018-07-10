@@ -47,16 +47,6 @@
       <tocitem text="Sederhanakan Penetrasi Tes" target="start.pentest"/>
    </tocitem>
 
-   <!--tocitem text="Common Vulnerabilities" target="vulns.vuln">
-      <tocitem text="Cross Site Request Forgery" target="vulns.csrf"/>
-      <tocitem text="Insecure Direct Object References" target="vulns.idor"/>
-      <tocitem text="Information Leakage / Improper Error Handling" target="vulns.leak"/>
-      <tocitem text="Insecure Communications" target="vulns.nossl"/>
-      <tocitem text="SQL Injection" target="vulns.sqli"/>
-      <tocitem text="Failure to restrict URL access" target="vulns.urla"/>
-      <tocitem text="Cross Site Scripts" target="vulns.xss"/>
-   </tocitem-->
-
    <tocitem text="Antarmuka pengguna" target="ui.overview">
       <tocitem text="Ikhtisar" target="ui.overview"/>
       <tocitem text="Menu tingkat atas" target="ui.topmenu"/>
