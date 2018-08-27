@@ -48,8 +48,26 @@ to specify exactly what should be scanned.<br>
 	</ul>
 
 	<p>For each spider message, shown under the Messages tab, you can see details of the request sent and response
-		received, moreover it's indicated, in the column <code>Processed</code>, whether or not the message was processed
-		(that is, the response was successfully received and parsed).
+		received. The <code>Processed</code> column, indicates whether:
+	<ul>
+		<li><img align="bottom" alt="successful parse" src="../../images/16/152.png">Successfully
+			- the response was successfully received and parsed</li>
+		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Empty
+			Message - the response was not parsed because it was empty</li>
+		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">I/O
+			Error - an input/output error occurred while fetching the response</li>
+		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Max
+			Children - the response was not parsed because the corresponding parent Sites node
+			already has more child nodes than the maximum allowed</li>
+		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Max
+			Depth - the response was not parsed because it passed the maximum depth allowed</li>
+		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Max
+			Size - the response was not parsed because its size is not under the maximum allowed</li>
+		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Not
+			Text - the response was not parsed because it's not text, for example, an image</li>
+		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Spider
+			Stopped - the response was not fetched or parsed because the spider was already stopped</li>
+	</ul>
 
 	<h2>See also</h2>
 	<table>
