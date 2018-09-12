@@ -26,9 +26,14 @@ The following libraries are no longer being bundled with ZAP (core):
   <li>JavaFX runtime, now relying on JRE (for example, OracleJDK, OpenJDK+OpenJFX).</li>
 </ul>
 
+<H2>Active Scan Input Vectors Change</H2>
+Users now have the option of whether or not to add a query parameter to GET requests that did not have them to start with.
+In previous versions this behavior was not user controllable and was on by default. With the new user option the default has 
+been changed to off.
+
 <H2>Enhancements</H2>
 
-<H2>Bug fixes</H2>
+<H2>Bug Fixes</H2>
 
 <H2>ZAP API Breaking Changes:</H2>
 
@@ -111,6 +116,9 @@ Added optional parameters <code>name</code> and <code>overwrite</code>, to allow
 
 <H2>ZAP API New Endpoints:</H2>
 
+<H3>View ascan / optionAddQueryParam</H3>
+Tells whether or not the active scanner should add a query parameter to GET request that don't have parameters to start with.
+
 <H3>VIEW context / urls</H3>
 Lists the URLs accessed through/by ZAP, that belong to the context with the given name.
 
@@ -128,6 +136,9 @@ Gets the value of the variable with the given key for the given script. Returns 
 
 <H3>VIEW script / scriptVars</H3>
 Gets all the variables (key/value pairs) of the given script. Returns an API error (DOES_NOT_EXIST) if no script with the given name exists.
+
+<H3> ACTION ascan / setOptionAddQueryParam</H3>
+ Sets whether or not the active scanner should add a query param to GET requests which do not have parameters to start with.
 
 <H3>ACTION script / clearGlobalVar</H3>
 Clears the global variable with the given key.
