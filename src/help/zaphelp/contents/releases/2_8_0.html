@@ -37,6 +37,30 @@ been changed to off.
 
 <H2>ZAP API Breaking Changes:</H2>
 
+<H3>VIEW acsrf / optionTokensNames</H3>
+
+This change will break the consumers that were manually parsing/extracting the names from the string. The structure of the data
+returned was changed to properly separate each name:
+<blockquote><pre><code>
+{"optionTokensNames":["anticsrf","CSRFToken"]}
+</code></pre></blockquote>
+and:
+<blockquote><pre><code>
+&lt;optionTokensNames type="list"&gt;
+    &lt;tokenName&gt;anticsrf&lt;/tokenName&gt;
+    &lt;tokenName&gt;CSRFToken&lt;/tokenName&gt;
+&lt;/optionTokensNames&gt;
+</code></pre></blockquote>
+
+instead of:
+<blockquote><pre><code>
+{"TokensNames":"[anticsrf, CSRFToken]"}
+</code></pre></blockquote>
+and:
+<blockquote><pre><code>
+&lt;optionTokensNames&gt;[anticsrf, CSRFToken]&lt;/optionTokensNames&gt;
+</code></pre></blockquote>
+
 <H3>VIEW authentication / getAuthenticationMethod</H3>
 
 This change will break the consumers that were manually parsing/extracting the JSON response (and XML response, for manual
