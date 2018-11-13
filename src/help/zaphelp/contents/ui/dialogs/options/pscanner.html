@@ -34,6 +34,15 @@
 			<td align="center">Deselected</td>
 			<td>Key: <code>pscans.scanFuzzerMessages</code><br>Values: <code>true</code> or <code>false</code></td>
 		</tr>
+		<tr>
+			<td>Max alerts any rule can raise</td>
+			<td>Sets the maximum number of alerts a passive scan rule should raise. This may be slightly exceeded due to threading.
+			This setting is typically only useful for automated scanning. Scan rules that exceed this value will be disabled
+			and will need to be manually enabled if a new session is started.
+			</td>
+			<td align="center">0 (unset)</td>
+			<td>Key: <code>pscans.maxAlertsPerRule</code><br>Values: <code>0</code>: unset or <code>> 0</code> the maximum number of alerts</td>
+		</tr>
 	</table>
 
 	<H2>See also</H2>
