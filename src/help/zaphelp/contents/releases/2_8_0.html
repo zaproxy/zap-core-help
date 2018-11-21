@@ -121,6 +121,10 @@ The view will now validate the risk ID, returning an error (ILLEGAL_PARAMETER) i
 
 <H2>ZAP API Changed Endpoints:</H2>
 
+<H3>ACTION authentication / setAuthenticationMethod</H3>
+The action will no longer remove existing users, instead the user is disabled and its credentials reset if the type of
+credentials of the authentication method being set is different.
+
 <H3>ACTION context / excludeContextTechnologies</H3>
 The action will now accept the string with technologies even if there are spaces before or after the names, for example:
 <blockquote><pre><code>
