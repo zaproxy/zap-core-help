@@ -7,18 +7,34 @@ Options Certificate screen
 </TITLE>
 </HEAD>
 <BODY BGCOLOR="#ffffff">
-<H1>Options Certificate screen</H1>
+<H1>Options Client Certificate screen</H1>
 <p>
-The Certificate screen allows you to add a client certificate for ZAP to use when testing applications
+The Client Certificate screen allows you to add a client certificate for ZAP to use when testing applications
 protected using mutual SSL.
 </p>
-
+It is also possible to set the Client Certificate from the command line with the following switches:
+<pre>
+-config certificate.use=true
+-config certificate.pkcs12.path=/path/to/file.p12
+-config certificate.pkcs12.password=WhateverThePasswordIs
+-config certificate.pkcs12.index=1
+-config certificate.persist=true
+</pre>
+<p>
+<code>-config certificate.pkcs12.index</code> is only necessary if the file contains multiple certificates 
+and you wish to use one other than the first. Index values start at zero (0) which is the first certificate
+in the file.<br><br>
+<code>-config certificate.persist=true</code> is only necessary if you would like the settings persisted in ZAP's regular 
+configuration file (so that they apply for subsequent ZAP use).
+</p>
 <H2>See also</H2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../../cmdline.html">Command Line</a></td><td>for details of the Command Line</td></tr>
 </table>
 
 </BODY>
