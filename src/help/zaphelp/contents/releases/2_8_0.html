@@ -31,6 +31,10 @@ Users now have the option of whether or not to add a query parameter to GET requ
 In previous versions this behavior was not user controllable and was on by default. With the new user option the default has 
 been changed to off.
 
+<H2>JSON Report Change</H2>
+For consistency the <code>site</code> property will be always an array regardless of the number of sites that the report contains,
+previously it would be an object if only one site and an array if more than one.
+
 <H2>Enhancements</H2>
 
 <H2>Bug Fixes</H2>
