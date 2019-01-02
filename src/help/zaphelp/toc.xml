@@ -15,7 +15,6 @@
 
    <tocitem text="Getting Started" target="start.start">
       <tocitem text="Configuring proxies" target="start.proxy"/>
-      <!--tocitem text="Explore the application" target="start.explore"/-->
       <tocitem text="Features" target="start.concepts">
          <tocitem text="Active Scan" target="start.concepts.ascan"/>
          <tocitem text="Add-ons" target="start.concepts.addons"/>

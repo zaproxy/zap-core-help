@@ -10,7 +10,6 @@
         <mapID target="start.start" url="contents/start/start.html" />
         <mapID target="start.proxy" url="contents/start/proxies.html" />
         <mapID target="start.check" url="contents/start/checks.html" />
-        <mapID target="start.explore" url="contents/start/explore.html" />
         <mapID target="start.concepts" url="contents/start/concepts/concepts.html" />
         <mapID target="start.concepts.ascan" url="contents/start/concepts/ascan.html" />
         <mapID target="start.concepts.addons" url="contents/start/concepts/addons.html" />
@@ -106,7 +105,6 @@
         <mapID target="zap.releases.2.6.0" url="contents/releases/2_6_0.html"/>
         <mapID target="zap.releases.2.7.0" url="contents/releases/2_7_0.html"/>
         <mapID target="zap.credits" url="contents/credits.html" />
-        <mapID target="zap.todo" url="contents/todo.html" />
      	<mapID target="ui.dialogs.options.ascan" url="contents/ui/dialogs/options/ascan.html"/>
      	<mapID target="ui.dialogs.options.ascaninput" url="contents/ui/dialogs/options/ascaninput.html"/>
      	<mapID target="ui.dialogs.options.alert" url="contents/ui/dialogs/options/alert.html"/>
