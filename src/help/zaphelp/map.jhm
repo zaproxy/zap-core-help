@@ -18,6 +18,7 @@
         <mapID target="start.concepts.api" url="contents/start/concepts/api.html" />
         <mapID target="start.concepts.auth" url="contents/start/concepts/authentication.html" />
         <mapID target="start.concepts.breakpoints" url="contents/start/concepts/breakpoints.html" />
+        <mapID target="start.concepts.callbacks" url="contents/start/concepts/callbacks.html" />
         <mapID target="start.concepts.contexts" url="contents/start/concepts/contexts.html" />
         <mapID target="start.concepts.ddc" url="contents/start/concepts/ddc.html" />
         <mapID target="start.concepts.globalexcludeurl" url="contents/start/concepts/globalexcludeurl.html" />
@@ -40,6 +41,7 @@
         <mapID target="ui.overview" url="contents/ui/overview.html" />
         <mapID target="ui.topmenu" url="contents/ui/tlmenu/tlmenu.html" />
         <mapID target="ui.toptoolbar" url="contents/ui/tltoolbar.html" />
+        <mapID target="ui.tabs.callbacks" url="contents/ui/tabs/callbacks.html" />
         <mapID target="ui.tabs.sites" url="contents/ui/tabs/sites.html" />
         <mapID target="ui.tabs.request" url="contents/ui/tabs/request.html" />
         <mapID target="ui.tabs.response" url="contents/ui/tabs/response.html" />
