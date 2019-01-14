@@ -23,6 +23,7 @@
          <tocitem text="API" target="start.concepts.api"/>
          <tocitem text="Authentication" target="start.concepts.auth"/>
          <tocitem text="Break Points" target="start.concepts.breakpoints"/>
+         <tocitem text="Callbacks" target="start.concepts.callbacks"/>
          <tocitem text="Contexts" target="start.concepts.contexts"/>
          <tocitem text="Data Driven Content" target="start.concepts.ddc"/>
          <tocitem text="Globally Excluded URLs" target="start.concepts.globalexcludeurl"/>
@@ -63,6 +64,7 @@
          <tocitem text="Params" target="ui.tabs.params"/>
          <tocitem text="HTTP Sessions" target="ui.tabs.httpsessions"/>
          <tocitem text="Output" target="ui.tabs.output"/>
+         <tocitem text="Callbacks" target="ui.tabs.callbacks"/>
       </tocitem>
       <tocitem text="The Dialogs" target="ui.dialogs">
          <tocitem text="Active Scan" target="ui.dialogs.advascan"/>
