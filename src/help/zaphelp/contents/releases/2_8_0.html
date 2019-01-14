@@ -162,6 +162,9 @@ Lists the URLs accessed through/by ZAP, that belong to the context with the give
 <H3>VIEW httpSessions / defaultSessionTokens</H3>
 Gets the default session tokens.
 
+<H3>VIEW pscan / maxAlertsPerRule</H3>
+Gets the maximum number of alerts a passive scan rule should raise.
+
 <H3>VIEW script / globalVar</H3>
 Gets the value of the global variable with the given key. Returns an API error (DOES_NOT_EXIST) if no value was previously set.
 
@@ -188,6 +191,9 @@ Removes the default session token with the given name.
 
 <H3>ACTION httpSessions / setDefaultSessionTokenEnabled</H3>
 Sets whether or not the default session token with the given name is enabled.
+
+<H3>ACTION pscan / setMaxAlertsPerRule</H3>
+Sets the maximum number of alerts a passive scan rule should raise.
 
 <H3>ACTION script / clearGlobalVar</H3>
 Clears the global variable with the given key.
