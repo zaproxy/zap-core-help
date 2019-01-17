@@ -10,7 +10,7 @@ This User Guide has been translated into many languages, all of which are availa
 
 The most completely translated guides are also available online:
 
-* [Filpino](https://github.com/zaproxy/zap-core-help-fil_PH/wiki/HelpIntro)
+* [Filipino](https://github.com/zaproxy/zap-core-help-fil_PH/wiki/HelpIntro)
 * [Indonesian](https://github.com/zaproxy/zap-core-help-id_ID/wiki/HelpIntro)
 * [Portuguese, Brazilian](https://github.com/zaproxy/zap-core-help-pt_BR/wiki/HelpIntro)
 * [Spanish](https://github.com/zaproxy/zap-core-help-es_ES/wiki/HelpIntro)
