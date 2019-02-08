@@ -8,7 +8,8 @@ include("commonFiles")
 var addOns = listOf(
     "help",
     "help_ar_SA",
-    "help_az_AZ"
+    "help_az_AZ",
+    "help_bs_BA"
 )
 
 addOns.forEach { include("$addOnsProjectName:$it") }
