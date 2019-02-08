@@ -32,7 +32,8 @@ var addOns = listOf(
     "help_si_LK",
     "help_sk_SK",
     "help_sl_SI",
-    "help_sq_AL"
+    "help_sq_AL",
+    "help_sr_CS"
 )
 
 addOns.forEach { include("$addOnsProjectName:$it") }
