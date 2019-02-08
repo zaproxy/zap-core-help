@@ -20,7 +20,8 @@ var addOns = listOf(
     "help_hi_IN",
     "help_hr_HR",
     "help_hu_HU",
-    "help_id_ID"
+    "help_id_ID",
+    "help_it_IT"
 )
 
 addOns.forEach { include("$addOnsProjectName:$it") }
