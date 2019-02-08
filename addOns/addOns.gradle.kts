@@ -85,6 +85,10 @@ subprojects {
         }
     }
 
+    dependencies {
+        "implementation"(project(":commonFiles"))
+    }
+
     afterEvaluate {
         val language = ext["language"]
 

@@ -4,6 +4,7 @@
 /build
 /buildSrc/build
 /addOns/*/build
+/commonFiles/build
 
 # IDEA
 # ----
@@ -26,6 +27,7 @@
 /bin
 /buildSrc/bin
 /addOns/*/bin
+/commonFiles/bin
 
 # NetBeans
 # --------

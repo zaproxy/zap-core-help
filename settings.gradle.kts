@@ -2,6 +2,7 @@ rootProject.name = "zap-core-help"
 
 val addOnsProjectName = "addOns"
 include(addOnsProjectName)
+include("commonFiles")
 
 // Keep the add-ons in alphabetic order.
 var addOns = listOf(
