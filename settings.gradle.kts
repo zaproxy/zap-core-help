@@ -7,7 +7,8 @@ include("commonFiles")
 // Keep the add-ons in alphabetic order.
 var addOns = listOf(
     "help",
-    "help_ar_SA"
+    "help_ar_SA",
+    "help_az_AZ"
 )
 
 addOns.forEach { include("$addOnsProjectName:$it") }
