@@ -79,10 +79,6 @@ subprojects {
         wikiGen {
             wikiFilesPrefix.set("Help")
         }
-
-        zapVersions {
-            downloadUrl.set("https://github.com/zaproxy/zap-extensions/releases/download/2.7")
-        }
     }
 
     dependencies {
