@@ -6,7 +6,7 @@
 <helpset version="2.0" xml:lang="en-GB">
 
   <!-- title -->
-  <title>ZAP - User Guide</title>
+  <title>ZAP - Desktop User Guide</title>
 
   <!-- maps -->
   <maps>
@@ -48,7 +48,7 @@
      <name>main window</name>
      <size width="1000" height="600" />
      <location x="200" y="200" />
-     <title>ZAP - User Guide</title>
+     <title>ZAP - Desktop User Guide</title>
      <image>toplevelicon</image>
      <toolbar>
 	<helpaction>javax.help.BackAction</helpaction>
@@ -65,6 +65,6 @@
      <name>main</name>
      <size width="400" height="400" />
      <location x="200" y="200" />
-     <title>ZAP - User Guide</title>
+     <title>ZAP - Desktop User Guide</title>
   </presentation>
 </helpset>
