@@ -41,6 +41,7 @@ ZAP supports the following command line options:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-port &lt;port&gt;</td><td>Overrides the port used for proxying specified in the configuration file</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-lowmem</td><td>Use the database instead of memory as much as possible - this is still experimental</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-experimentaldb</td><td>Use the experimental generic database code, which is not surprisingly also still experimental</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-nostdout</td><td>Disables the default logging through standard output</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstall &lt;addon&gt;</td><td>Install the specified add-on from the ZAP Marketplace</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstallall</td><td>Install all available add-ons from the ZAP Marketplace</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonuninstall &lt;addon&gt;</td><td>Uninstall the specified add-on</td></tr>
@@ -49,6 +50,10 @@ ZAP supports the following command line options:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-script &lt;script&gt;</td><td>Run the specified script (file system path) if command line/daemon, or just load it if GUI</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-last_scan_report &lt;path&gt;</td><td>Generate the 'Last Scan Report' into the specified path</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-suppinfo</td><td>Outputs details relevant for support and troubleshooting (to the console/standard out). Such as: ZAP version, java version, installed add-ons and version, locale info, operating system, etc.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-certload &lt;path&gt;</td><td>Loads the Root CA certificate from the specified file name</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-certpubdump &lt;path&gt;</td><td>Dumps the Root CA public certificate into the specified file name, this is suitable for importing into browsers</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-certfulldump &lt;path&gt;</td><td>Dumps the Root CA full certificate (including the private key) into the specified file name, this is suitable for importing into ZAP</td></tr>
+
 </table>
 <br>
 The options <code>-session</code> and <code>-newsession</code> are mutually exclusive. An error will be shown and ZAP exit (if not in GUI) when both options are set.
