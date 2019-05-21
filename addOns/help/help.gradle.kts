@@ -8,6 +8,7 @@ zapAddOn {
 
     manifest {
         url.set("https://github.com/zaproxy/zap-core-help/wiki/HelpIntro")
+        notBeforeVersion.set("2.8.0")
     }
 
     wikiGen {
