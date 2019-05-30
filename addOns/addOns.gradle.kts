@@ -20,31 +20,6 @@ eclipse {
 
 description = "Common configuration of the add-ons."
 
-val mainAddOns = listOf("help")
-val weeklyAddOns = mainAddOns + listOf()
-
-mapOf("main" to mainAddOns, "weekly" to weeklyAddOns).forEach { entry ->
-    tasks {
-        val name = entry.key
-        val nameCapitalized = name.capitalize()
-        register("copy${nameCapitalized}AddOns") {
-            group = "ZAP"
-            description = "Copies the $name release add-ons to zaproxy project."
-            childProjects(entry.value) {
-                dependsOn(it.tasks.named(AddOnPlugin.COPY_ADD_ON_TASK_NAME))
-            }
-        }
-
-        register("list${nameCapitalized}AddOns") {
-            group = "ZAP"
-            description = "Lists the $name release add-ons."
-            doLast {
-                childProjects(entry.value) { println(it.name) }
-            }
-        }
-    }
-}
-
 subprojects {
     apply(plugin = "java-library")
     apply(plugin = "org.zaproxy.add-on")
