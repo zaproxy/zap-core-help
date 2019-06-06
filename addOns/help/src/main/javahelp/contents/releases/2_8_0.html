@@ -89,6 +89,9 @@ in the file.<br><br>
 configuration file (so that they apply for subsequent ZAP use).
 </p>
 
+<H2>Source Code Restructuring</H2>
+The ZAP repositories have all been migrated to use Gradle from Ant. Standard source code formatting is also now enforced for consistency.
+
 <H2>Changes in Bundled Libraries</H2>
 The following libraries are no longer being bundled with ZAP (core):
 <ul>
@@ -215,6 +218,7 @@ Edit and Resend tool, etc.).
 <li>Issue 4762 : Added pscan stats and API call for getting current rule</li>
 <li>Issue 4767 : Be more lenient when parsing techs through the API</li>
 <li>Issue 4771 : Bundle required files in the zap.jar</li>
+<li>Issue 4780 : Tidy up dependencies</li>
 <li>Issue 4810 : Exit on exception during GUI start</li>
 <li>Issue 4819 : Added childNodes view</li>
 <li>Issue 4833 : Added alert api endpoints</li>
@@ -335,12 +339,12 @@ Edit and Resend tool, etc.).
 <li>Issue 5160 : Show/edit expected breakpoint with sorting</li>
 <li>Issue 5162 : Inconsistent JSON report format</li>
 <li>Issue 5207 : Hook OverrideMessageProxyListener also on install</li>
+<li>Issue 5221 : ZAP failing Nexus scan</li>
 <li>Issue 5252 : Unable to CONNECT to authority with underscore</li>
 <li>Issue 5257 : Improve error handling on shutdown</li>
 <li>Issue 5259 : GUI hang (and NPE exceptions) when using Context Alert Filters</li>
 <li>Issue 5352 : Fix exceptions during config update</li>
 </ul>
-
 
 <H2>ZAP API Breaking Changes:</H2>
 
