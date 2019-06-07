@@ -53,17 +53,13 @@ The following scan rules have been promoted:
 <li>Promote Cookie Loosely Scoped Scanner to release (Issue 4459).</li>
 </ul>
 
-<H2>Filters Removal</H2>
-Deprecated since ZAP 2.4.0 the Filters functionality, that allowed to change/access some HTTP messages sent/received through
-ZAP, has now been removed, the same and much more can be achieved with scripts and Replacer add-on.
+<H2>Headless Browser Support</H2>
+Headless browsers are now supported by the Selenium add-on and the add-ons that use it. Both the Ajax Spider and the DOM XSS scan rule now default to headless Firefox.
 
 <H2>Command Line Changes</H2>
 <h3>-dir &lt;dir&gt;</h3>
 To prevent add-ons (inadvertently) use/override core files ZAP will no longer start (and show an error) if the home and the
 installation directories are the same.
-
-<H2>Headless Browser Support</H2>
-Headless browsers are now supported by the Selenium add-on and the add-ons that use it. Both the Ajax Spider and the DOM XSS scan rule now default to headless Firefox.
 
 <h3>CA Certificate Handling</h3>
 The following options allow the root CA certificate to be set and read:
@@ -94,6 +90,10 @@ configuration file (so that they apply for subsequent ZAP use).
 
 <H2>Source Code Restructuring</H2>
 The ZAP repositories have all been migrated to use Gradle from Ant. Standard source code formatting is also now enforced for consistency.
+
+<H2>Filters Removal</H2>
+Deprecated since ZAP 2.4.0 the Filters functionality, that allowed to change/access some HTTP messages sent/received through
+ZAP, has now been removed, the same and much more can be achieved with scripts and Replacer add-on.
 
 <H2>Changes in Bundled Libraries</H2>
 The following libraries are no longer being bundled with ZAP (core):
