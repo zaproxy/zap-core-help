@@ -25,15 +25,21 @@ To configure this authentication method, you need to supply the <b>login url</b>
 request is performed, the <b>request body</b> (POST data), if needed, and identify the <b>parameters</b> used to supply
 the 'username' and 'password'. If no request body is supplied, the login request is performed as 
 a HTTP GET, otherwise an HTTP POST is used. The credentials themselves
-are configured in the <a href="contexts.html#users">Users</a> tab. <small>Read  
-<a href="../../../start/concepts/authentication.html#formBased">more</a>...</small> 
+are configured in the <a href="contexts.html#users">Users</a> tab.
+The <b>login page</b> can also be supplied to indicate from where to obtain a new session (e.g. cookies)
+and regenerate <a href="../../../start/concepts/anticsrf.html">Anti CSRF tokens</a> present in the <b>request body</b>.
+If the <b>login page</b> is not supplied it is used the <b>login url</b>.
+<br><small>Read <a href="../../../start/concepts/authentication.html#formBased">more</a>...</small>
 
 <h4>JSON-Based Authentication</h4>
 To configure this authentication method, you need to supply the <b>login url</b>, to which the login
 request is performed, the <b>JSON object</b> (POST data, <code>application/json</code>), and identify
 the <b>parameters</b> used to supply the 'username' and 'password'.  The credentials themselves
-are configured in the <a href="contexts.html#users">Users</a> tab. <small>Read 
-<a href="../../../start/concepts/authentication.html#jsonBased">more</a>...</small>
+are configured in the <a href="contexts.html#users">Users</a> tab.
+The <b>login page</b> can also be supplied to indicate from where to obtain a new session (e.g. cookies).
+If the <b>login page</b> is not supplied it is used the <b>login url</b>.
+<br><small>Read <a href="../../../start/concepts/authentication.html#jsonBased">more</a>...</small>
+
 <br>Examples of POST data:
 <ul>
 	<li><code>{"username":"{%username%}","password":"{%password%}"}</code></li>
