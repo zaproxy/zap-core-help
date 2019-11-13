@@ -16,6 +16,20 @@ These release notes do not include all of the changes included in add-ons update
 <br><br>
 Some of the more significant enhancements include:
 
+<H2>Custom Global/Script Variables</H2>
+It's now possible for scripts to share custom global/script variables, which can be of any type not
+just strings, for example, lists, maps, GUI models.<br/>
+In JavaScript they are accessed/set as follows:
+<blockquote><pre><code>
+var ScriptVars = Java.type("org.zaproxy.zap.extension.script.ScriptVars")
+
+ScriptVars.setScriptCustomVar(this.context, "var.name", {x: 1, y: 3})
+print(ScriptVars.getScriptCustomVar(this.context, "var.name").y) // Prints 3
+
+ScriptVars.setGlobalCustomVar("var.name", ["A", "B", "C", "D"])
+print(ScriptVars.getGlobalCustomVar("var.name")[2]) // Prints C
+</code></pre></blockquote>
+
 <H2>Filters Classes Removal</H2>
 The classes/code for Filters functionality, deprecated since ZAP 2.4.0, has been removed. Add-ons that still use that will stop working.
 
@@ -46,6 +60,26 @@ The following libraries were updated:
 
 <H2>Bug fixes</H2>
 
+
+<H2>ZAP API New Endpoints:</H2>
+
+<H3>VIEW script / globalCustomVar</H3>
+Gets the value (string representation) of a global custom variable. Returns an API error (DOES_NOT_EXIST) if no value was previously set.
+
+<H3>VIEW script / globalCustomVars</H3>
+Gets all the global custom variables (key/value pairs, the value is the string representation).
+
+<H3>VIEW script / scriptCustomVar</H3>
+Gets the value (string representation) of a custom variable. Returns an API error (DOES_NOT_EXIST) if no script with the given name exists or if no value was previously set.
+
+<H3>VIEW script / scriptCustomVars</H3>
+Gets all the custom variables (key/value pairs, the value is the string representation) of a script. Returns an API error (DOES_NOT_EXIST) if no script with the given name exists.
+
+<H3>ACTION script / clearGlobalCustomVar</H3>
+Clears a global custom variable.
+
+<H3>ACTION script / clearScriptCustomVar</H3>
+Clears a script custom variable.
 
 <H2>See also</H2>
 <table>
