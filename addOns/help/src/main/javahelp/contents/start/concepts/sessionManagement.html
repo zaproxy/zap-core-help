@@ -13,10 +13,6 @@
 		Method defined which dictates how sessions are kept.
 	</p>
 
-	<p>So far, just cookie based and HTTP authentication session management methods have been
-		implemented, but the system supports easy addition of new methods,
-		according to user needs.</p>
-
 	<h3>
 		<a name="cbsm">Cookie-Based Session Management</a>
 	</h3>
@@ -31,6 +27,18 @@
 	</h3>
 	<p>
 		In the case of this method the session is managed with HTTP request header <code>Authorization</code>.
+	</p>
+
+	<h3>
+		<a name="sbsm">Script-Based Session Management</a>
+	</h3>
+	<p>
+		This method is useful for websites / webapps where the session management is a more complex one and some custom
+		scripts that handle the process are beneficial. To use this method, you must first define a Session Management script
+		which analyses messages or performs other actions as needed by your web-application. This script is then selected for use for a given Context
+		and it is called whenever session management actions are performed. 
+		Configuration can be done using the <a href="../../ui/dialogs/session/contexts.html#sm">Session
+			Contexts Dialog</a> and requires you to have the Scripts Console ZAP Addon installed from the Marketplace.
 	</p>
 
 	<h2>Configured via</h2>
