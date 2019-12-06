@@ -10,7 +10,7 @@
 
   <!-- maps -->
   <maps>
-     <homeID>top</homeID>
+     <homeID>zap.intro</homeID>
      <mapref location="map.jhm"/>
   </maps>
 
