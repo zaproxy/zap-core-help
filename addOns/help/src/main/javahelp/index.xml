@@ -15,15 +15,15 @@
     <indexitem text="add-ons" target="start.concepts.addons"/>
     <indexitem text="add-ons" target="addon.introduction"/>
     <indexitem text="add alert dialog" target="ui.dialogs.addalert" />
-    <indexitem text="add/edit break point dialog" target="ui.dialogs.addbreak" />
+    <indexitem text="add/edit breakpoint dialog" target="ui.dialogs.addbreak" />
     <indexitem text="add note dialog" target="ui.dialogs.addnote" />
     <indexitem text="alerts tab" target="ui.tabs.alerts" />
     <indexitem text="alerts" target="start.concepts.alerts" />
     <indexitem text="api" target="start.concepts.api" />
     <indexitem text="authentication auth form-based manual login" target="start.concepts.auth" />
     <indexitem text="basic penetration test" target="start.pentest" />
-    <indexitem text="break points tab" target="ui.tabs.breakpoints" />
-    <indexitem text="break points" target="start.concepts.breakpoints" /> 
+    <indexitem text="breakpoints tab" target="ui.tabs.breakpoints" />
+    <indexitem text="breakpoints" target="start.concepts.breakpoints" /> 
     <indexitem text="break tab" target="ui.tabs.break" />
     <indexitem text="callbacks tab" target="ui.tabs.callbacks" />
     <indexitem text="command line" target="cmdline" />

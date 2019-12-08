@@ -22,7 +22,7 @@
          <tocitem text="Anti CSRF Tokens" target="start.concepts.anticsrf"/>
          <tocitem text="API" target="start.concepts.api"/>
          <tocitem text="Authentication" target="start.concepts.auth"/>
-         <tocitem text="Break Points" target="start.concepts.breakpoints"/>
+         <tocitem text="Breakpoints" target="start.concepts.breakpoints"/>
          <tocitem text="Callbacks" target="start.concepts.callbacks"/>
          <tocitem text="Contexts" target="start.concepts.contexts"/>
          <tocitem text="Data Driven Content" target="start.concepts.ddc"/>
@@ -57,7 +57,7 @@
          <tocitem text="Break" target="ui.tabs.break"/>
          <tocitem text="History" target="ui.tabs.history"/>
          <tocitem text="Search" target="ui.tabs.search"/>
-         <tocitem text="Break Points" target="ui.tabs.breakpoints"/>
+         <tocitem text="Breakpoints" target="ui.tabs.breakpoints"/>
          <tocitem text="Alerts" target="ui.tabs.alerts"/>
          <tocitem text="Active Scan" target="ui.tabs.ascan"/>
          <tocitem text="Spider" target="ui.tabs.spider"/>
@@ -69,7 +69,7 @@
       <tocitem text="The Dialogs" target="ui.dialogs">
          <tocitem text="Active Scan" target="ui.dialogs.advascan"/>
          <tocitem text="Add Alert" target="ui.dialogs.addalert"/>
-         <tocitem text="Add/Edit Break Point" target="ui.dialogs.addbreak"/>
+         <tocitem text="Add/Edit Breakpoint" target="ui.dialogs.addbreak"/>
          <tocitem text="Add Note" target="ui.dialogs.addnote"/>
          <tocitem text="Encode/Decode/Hash" target="ui.dialogs.enc_dec"/>
          <tocitem text="Find" target="ui.dialogs.find"/>
