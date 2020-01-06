@@ -45,6 +45,24 @@ ScriptVars.setGlobalCustomVar("var.name", ["A", "B", "C", "D"])
 print(ScriptVars.getGlobalCustomVar("var.name")[2]) // Prints C
 </code></pre></blockquote>
 
+<H2>Scan Rule Promotions</H2>
+
+The following scan rules have been promoted:
+
+<h3>Passive Scan Rules - Release</h3>
+<ul>
+<li>Cookie Without SameSite Attribute</li>
+<li>Cross Domain Misconfiguration</li>
+<li>Information Disclosure: In URL</li>
+<li>Information Disclosure: Referrer</li>
+<li>Information Disclosure: Suspicious Comments</li>
+<li>Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s)</li>
+<li>Timestamp Disclosure</li>
+<li>Username Hash Found</li>
+<li>X-AspNet-Version Response Header Scanner</li>
+<li>X-Debug-Token Information </li>
+</ul>
+
 <H2>Filters Classes Removal</H2>
 The classes/code for Filters functionality, deprecated since ZAP 2.4.0, has been removed. Add-ons that still use that will stop working.
 
