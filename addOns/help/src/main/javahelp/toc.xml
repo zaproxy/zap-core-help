@@ -125,7 +125,7 @@
 
    <tocitem text="Command Line" target="cmdline"/>
 
-   <tocitem text="Add Ons" target="addon.introduction" tocid="addons" />
+   <tocitem text="Add-ons" target="addons.introduction" tocid="addons" image="addons.icon" />
    
    <tocitem text="Releases" target="zap.releases">
       <tocitem text="2.9.0" target="zap.releases.2.9.0"/>
