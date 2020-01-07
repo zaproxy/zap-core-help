@@ -37,7 +37,7 @@
         <mapID target="start.concepts.tags" url="contents/start/concepts/tags.html" />
         <mapID target="start.concepts.users" url="contents/start/concepts/users.html" />
         <mapID target="start.checks" url="contents/start/checks.html" />
-        <mapID target="start.pentest" url="contents/pentest/pentest.html" />
+        <mapID target="start.pentest" url="contents/start/pentest.html" />
         <mapID target="ui.overview" url="contents/ui/overview.html" />
         <mapID target="ui.topmenu" url="contents/ui/tlmenu/tlmenu.html" />
         <mapID target="ui.toptoolbar" url="contents/ui/tltoolbar.html" />
