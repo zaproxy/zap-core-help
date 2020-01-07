@@ -78,7 +78,8 @@
         <mapID target="ui.dialogs.spider" url="contents/ui/dialogs/spider.html"/>
         <mapID target="ui.footer" url="contents/ui/footer.html" />
         <mapID target="ui.views" url="contents/ui/views.html" />
-        <mapID target="addon.introduction" url="contents/addon/introduction.html" />
+        <mapID target="addons.introduction" url="contents/addons/introduction.html" />
+        <mapID target="addons.icon" url="contents/images/fugue/block.png" />
         <mapID target="cmdline" url="contents/cmdline.html" />
         <mapID target="zap.paros" url="contents/paros.html" />
         <mapID target="zap.releases" url="contents/releases/releases.html"/>
