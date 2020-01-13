@@ -10,32 +10,32 @@
         <mapID target="start.start" url="contents/start/start.html" />
         <mapID target="start.proxy" url="contents/start/proxies.html" />
         <mapID target="start.check" url="contents/start/checks.html" />
-        <mapID target="start.concepts" url="contents/start/concepts/concepts.html" />
-        <mapID target="start.concepts.ascan" url="contents/start/concepts/ascan.html" />
-        <mapID target="start.concepts.addons" url="contents/start/concepts/addons.html" />
-        <mapID target="start.concepts.alerts" url="contents/start/concepts/alerts.html" />
-        <mapID target="start.concepts.anticsrf" url="contents/start/concepts/anticsrf.html" />
-        <mapID target="start.concepts.api" url="contents/start/concepts/api.html" />
-        <mapID target="start.concepts.auth" url="contents/start/concepts/authentication.html" />
-        <mapID target="start.concepts.breakpoints" url="contents/start/concepts/breakpoints.html" />
-        <mapID target="start.concepts.callbacks" url="contents/start/concepts/callbacks.html" />
-        <mapID target="start.concepts.contexts" url="contents/start/concepts/contexts.html" />
-        <mapID target="start.concepts.ddc" url="contents/start/concepts/ddc.html" />
-        <mapID target="start.concepts.globalexcludeurl" url="contents/start/concepts/globalexcludeurl.html" />
-        <mapID target="start.concepts.httpsessions" url="contents/start/concepts/httpsessions.html" />
-        <mapID target="start.concepts.intercept" url="contents/start/concepts/intercept.html" />
-        <mapID target="start.concepts.modes" url="contents/start/concepts/modes.html" />
-        <mapID target="start.concepts.notes" url="contents/start/concepts/notes.html" />
-        <mapID target="start.concepts.pscan" url="contents/start/concepts/pscan.html" />
-        <mapID target="start.concepts.scanpolicy" url="contents/start/concepts/scanpolicy.html" />
-        <mapID target="start.concepts.scope" url="contents/start/concepts/scope.html" />
-        <mapID target="start.concepts.sessmanag" url="contents/start/concepts/sessionManagement.html" />
-        <mapID target="start.concepts.spider" url="contents/start/concepts/spider.html" />
-        <mapID target="start.concepts.stats" url="contents/start/concepts/stats.html" />
-        <mapID target="start.concepts.structmods" url="contents/start/concepts/structmods.html" />
-        <mapID target="start.concepts.structparams" url="contents/start/concepts/structparams.html" />
-        <mapID target="start.concepts.tags" url="contents/start/concepts/tags.html" />
-        <mapID target="start.concepts.users" url="contents/start/concepts/users.html" />
+        <mapID target="start.features" url="contents/start/features/features.html" />
+        <mapID target="start.features.ascan" url="contents/start/features/ascan.html" />
+        <mapID target="start.features.addons" url="contents/start/features/addons.html" />
+        <mapID target="start.features.alerts" url="contents/start/features/alerts.html" />
+        <mapID target="start.features.anticsrf" url="contents/start/features/anticsrf.html" />
+        <mapID target="start.features.api" url="contents/start/features/api.html" />
+        <mapID target="start.features.auth" url="contents/start/features/authentication.html" />
+        <mapID target="start.features.breakpoints" url="contents/start/features/breakpoints.html" />
+        <mapID target="start.features.callbacks" url="contents/start/features/callbacks.html" />
+        <mapID target="start.features.contexts" url="contents/start/features/contexts.html" />
+        <mapID target="start.features.ddc" url="contents/start/features/ddc.html" />
+        <mapID target="start.features.globalexcludeurl" url="contents/start/features/globalexcludeurl.html" />
+        <mapID target="start.features.httpsessions" url="contents/start/features/httpsessions.html" />
+        <mapID target="start.features.intercept" url="contents/start/features/intercept.html" />
+        <mapID target="start.features.modes" url="contents/start/features/modes.html" />
+        <mapID target="start.features.notes" url="contents/start/features/notes.html" />
+        <mapID target="start.features.pscan" url="contents/start/features/pscan.html" />
+        <mapID target="start.features.scanpolicy" url="contents/start/features/scanpolicy.html" />
+        <mapID target="start.features.scope" url="contents/start/features/scope.html" />
+        <mapID target="start.features.sessmanag" url="contents/start/features/sessionManagement.html" />
+        <mapID target="start.features.spider" url="contents/start/features/spider.html" />
+        <mapID target="start.features.stats" url="contents/start/features/stats.html" />
+        <mapID target="start.features.structmods" url="contents/start/features/structmods.html" />
+        <mapID target="start.features.structparams" url="contents/start/features/structparams.html" />
+        <mapID target="start.features.tags" url="contents/start/features/tags.html" />
+        <mapID target="start.features.users" url="contents/start/features/users.html" />
         <mapID target="start.checks" url="contents/start/checks.html" />
         <mapID target="start.pentest" url="contents/start/pentest.html" />
         <mapID target="ui.overview" url="contents/ui/overview.html" />
