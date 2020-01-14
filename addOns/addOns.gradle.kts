@@ -4,11 +4,10 @@ import org.zaproxy.gradle.addon.manifest.ManifestExtension
 import org.zaproxy.gradle.addon.misc.ConvertMarkdownToHtml
 import org.zaproxy.gradle.addon.misc.CreateGitHubRelease
 import org.zaproxy.gradle.addon.misc.ExtractLatestChangesFromChangelog
-import org.zaproxy.gradle.addon.wiki.WikiGenExtension
 
 plugins {
     eclipse
-    id("org.zaproxy.add-on") version "0.2.0" apply false
+    id("org.zaproxy.add-on") version "0.3.0" apply false
 }
 
 eclipse {
@@ -34,10 +33,6 @@ subprojects {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
-    tasks.named<Jar>("jarJavaHelpDataForWiki") {
-        from(configurations.named("runtimeClasspath").map { it.files.map { file -> if (file.isDirectory) file else project.zipTree(file) } })
-    }
-
     zapAddOn {
         zapVersion.set("2.7.0")
 
@@ -45,12 +40,8 @@ subprojects {
 
         manifest {
             author.set("ZAP Crowdin Team")
-            url.set("https://github.com/zaproxy/zap-core-help/")
+            repo.set("https://github.com/zaproxy/zap-core-help/")
             changesFile.set(tasks.named<ConvertMarkdownToHtml>("generateManifestChanges").flatMap { it.html })
-        }
-
-        wikiGen {
-            wikiFilesPrefix.set("Help")
         }
     }
 
@@ -122,6 +113,3 @@ val Project.zapAddOn: AddOnPluginExtension get() =
 
 fun AddOnPluginExtension.manifest(configure: ManifestExtension.() -> Unit): Unit =
     (this as ExtensionAware).extensions.configure("manifest", configure)
-
-fun AddOnPluginExtension.wikiGen(configure: WikiGenExtension.() -> Unit): Unit =
-    (this as ExtensionAware).extensions.configure("wikiGen", configure)

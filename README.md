@@ -2,7 +2,7 @@
 
 Welcome to the OWASP Zed Attack Proxy (ZAP) Desktop User Guide.
 
-This is available both as context sensitive help within ZAP and online here in the [wiki](https://github.com/zaproxy/zap-core-help/wiki).
+This is available both as context sensitive help within ZAP and online in the [ZAP website](https://www.zaproxy.org/docs/desktop/).
 
 The English help files are under the [/addOns/help](https://github.com/zaproxy/zap-core-help/tree/master/addOns/help) directory, so if you'd like to make a change, create a pull request against those files, and they will be updated in the wiki.
 
