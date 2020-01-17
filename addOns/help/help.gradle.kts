@@ -1,6 +1,6 @@
 import org.zaproxy.gradle.addon.AddOnStatus
 
-version = "10"
+version = "11"
 extra["language"] = "English"
 
 zapAddOn {
