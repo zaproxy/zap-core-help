@@ -1,14 +1,14 @@
-# [![](https://raw.githubusercontent.com/wiki/zaproxy/zaproxy/images/zap32x32.png)](https://www.owasp.org/index.php/ZAP) OWASP ZAP Desktop User Guide
+# [![](https://raw.githubusercontent.com/wiki/zaproxy/zaproxy/images/zap32x32.png)](https://www.zaproxy.org/) OWASP ZAP Desktop User Guide
 
 Welcome to the OWASP Zed Attack Proxy (ZAP) Desktop User Guide.
 
 This is available both as context sensitive help within ZAP and online in the [ZAP website](https://www.zaproxy.org/docs/desktop/).
 
-The English help files are under the [/addOns/help](https://github.com/zaproxy/zap-core-help/tree/master/addOns/help) directory, so if you'd like to make a change, create a pull request against those files, and they will be updated in the wiki.
+The English help files are under the [/addOns/help](https://github.com/zaproxy/zap-core-help/tree/master/addOns/help) directory, so if you'd like to make a change, create a pull request against those files, and they will be updated in the site (eventually).
 
-This User Guide has been translated into many languages, all of which are available via the [ZAP Marketplace](https://github.com/zaproxy/zap-extensions).
+This User Guide has been translated into many languages, all of which are available via the [ZAP Marketplace](https://www.zaproxy.org/addons/).
 
-The most completely translated guides are also available online:
+The most completely translated guides are also available online in the wiki:
 
 * [Filipino](https://github.com/zaproxy/zap-core-help-fil_PH/wiki/HelpIntro)
 * [Indonesian](https://github.com/zaproxy/zap-core-help-id_ID/wiki/HelpIntro)
