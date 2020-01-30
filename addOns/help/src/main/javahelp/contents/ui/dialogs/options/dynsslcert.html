@@ -189,7 +189,7 @@ And yes, that example will work - its the Superfish certificate!
 		serial number 2314, the second one 2315, the third one 2316 and so on.
 		The reason for this is simple: browsers are also caching certificates.
 		When you restart ZAP but don't restart your browser, it could happen,
-		the the browser sees the same certificate but with different serial number.
+		that the browser sees the same certificate but with different serial number.
 		In the end, the browser would complain about and reject the certificate.
 		By using the random offset (internally 48bit random number), the chances
 		are 1 to 281.474.976.710.656 that when restarting ZAP, the serial number
