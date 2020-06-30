@@ -71,7 +71,6 @@
          <tocitem text="Add Alert" target="ui.dialogs.addalert"/>
          <tocitem text="Add/Edit Breakpoint" target="ui.dialogs.addbreak"/>
          <tocitem text="Add Note" target="ui.dialogs.addnote"/>
-         <tocitem text="Encode/Decode/Hash" target="ui.dialogs.enc_dec"/>
          <tocitem text="Find" target="ui.dialogs.find"/>
          <tocitem text="History Filter" target="ui.dialogs.historyfilter"/>
          <tocitem text="Manual Request Editor" target="ui.dialogs.manreq"/>
