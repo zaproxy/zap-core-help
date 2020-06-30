@@ -31,7 +31,6 @@
     <indexitem text="credits" target="zap.credits" />
     <indexitem text="data driven content" target="start.features.ddc" />
     <indexitem text="dialogs" target="ui.dialogs" />
-    <indexitem text="encode / decode / hash dialog" target="ui.dialogs.enc_dec" />
     <indexitem text="features" target="start.features" />
     <indexitem text="find dialog" target="ui.dialogs.find" />
     <indexitem text="footer" target="ui.footer" />
