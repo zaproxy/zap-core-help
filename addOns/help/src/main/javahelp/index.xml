@@ -39,7 +39,7 @@
     <indexitem text="history tab" target="ui.tabs.history" />
     <indexitem text="http sessions tab" target="ui.tabs.httpsessions" />
     <indexitem text="http sessions" target="start.features.httpsessions" />
-    <indexitem text="man-in-the-middle proxy" target="start.features.intercept"/>
+    <indexitem text="manipulator-in-the-middle proxy" target="start.features.intercept"/>
     <indexitem text="introduction" target="zap.intro" />
     <indexitem text="manage tabs dialog" target="ui.dialogs.managetags" />
     <indexitem text="manual request dialog" target="ui.dialogs.manreq" />
