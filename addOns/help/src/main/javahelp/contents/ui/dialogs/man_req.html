@@ -41,6 +41,10 @@ send attempts from the Manual Request dialog?<br>
 <H3><img src="../../images/16/118.png" align="bottom" width="16" height="16" />&nbsp; Follow redirect</H3>
 If selected automatically follows any redirects sent to the browser.<br>
 
+<H3><img src="../../images/fugue/application-resize.png" align="bottom" width="16" height="16" />&nbsp; Update Content Length</H3>
+By default ZAP will automatically update (or add) the Content-Length header to match the size of the data submitted. 
+If this option is unselected then ZAP will not update the header allowing you to specify any value you like.<br>
+
 <H3><img src="../../images/csrf-button.png" align="bottom" width="16" height="16" />&nbsp; Regenerate Anti-CSRF</H3>
 If selected automatically regenerates Anti-CSRF tokens if any exist.
 Currently only supported in the message body and requires that the Anti-CSRF extension is enabled.<br>
