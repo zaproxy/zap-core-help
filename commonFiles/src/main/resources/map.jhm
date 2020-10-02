@@ -29,7 +29,9 @@
         <mapID target="start.features.pscan" url="contents/start/features/pscan.html" />
         <mapID target="start.features.scanpolicy" url="contents/start/features/scanpolicy.html" />
         <mapID target="start.features.scope" url="contents/start/features/scope.html" />
+        <mapID target="start.features.scripts" url="contents/start/features/scripts.html" />
         <mapID target="start.features.sessmanag" url="contents/start/features/sessionManagement.html" />
+        <mapID target="start.features.sitestree" url="contents/start/features/sitestree.html" />
         <mapID target="start.features.spider" url="contents/start/features/spider.html" />
         <mapID target="start.features.stats" url="contents/start/features/stats.html" />
         <mapID target="start.features.structmods" url="contents/start/features/structmods.html" />
