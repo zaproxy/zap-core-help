@@ -34,7 +34,9 @@
          <tocitem text="Passive Scan" target="start.features.pscan"/>
          <tocitem text="Scan Policies" target="start.features.scanpolicy"/>
          <tocitem text="Scope" target="start.features.scope"/>
+         <tocitem text="Scripts" target="start.features.scripts"/>
          <tocitem text="Session Management" target="start.features.sessmanag"/>
+         <tocitem text="Sites Tree" target="start.features.sitestree"/>
          <tocitem text="Spider" target="start.features.spider"/>
          <tocitem text="Statistics" target="start.features.stats"/>
          <tocitem text="Structural Modifiers" target="start.features.structmods"/>

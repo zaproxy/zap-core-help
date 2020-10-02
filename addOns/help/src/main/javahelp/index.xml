@@ -87,12 +87,14 @@
     <indexitem text="scan policy dialog" target="ui.dialogs.scanpolicy" />
     <indexitem text="scan policy manager dialog" target="ui.dialogs.scanpolicymgr" />
     <indexitem text="scan progress dialog" target="ui.dialogs.scanprogress" />
+    <indexitem text="scripts" target="start.features.scripts" />
     <indexitem text="search tab" target="ui.tabs.search" />
     <indexitem text="session context screens" target="ui.dialogs.contexts" />
     <indexitem text="session context authentication screen" target="ui.dialogs.context-auth" />
     <indexitem text="session context structure screen" target="ui.dialogs.context-struct" />
     <indexitem text="session properties dialog" target="ui.dialogs.sessprop" />
     <indexitem text="sites tab" target="ui.tabs.sites" />
+    <indexitem text="sites tree" target="start.features.sitestree" />
     <indexitem text="spider" target="start.features.spider" />
     <indexitem text="spider dialog" target="ui.dialogs.spider" />
     <indexitem text="spider tab" target="ui.tabs.spider" />
