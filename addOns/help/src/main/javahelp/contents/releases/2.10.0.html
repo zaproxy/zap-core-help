@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<TITLE>
+  Release 2.10.0
+</TITLE>
+</HEAD>
+<BODY>
+<H1>Release 2.10.0</H1>
+
+This is a 10 year anniversary bug fix and enhancement release, which requires a minimum of Java 8. 
+Note that a minimum of Java 11 is recommended, especially for high DPI displays.
+<br><br>
+These release notes do not include all of the changes included in add-ons updated since 2.9.0.
+<br><br>
+Some of the more significant enhancements include:
+
+TBA
+
+<H2>Changes in Bundled Libraries</H2>
+The following libraries were updated:
+<ul>
+  <li>Bouncy Castle, 1.61 → 1.66</li>
+  <li>Commons Codec, 1.13 → 1.15</li>
+  <li>Commons CSV, 1.7 → 1.8</li>
+  <li>Commons IO, 2.6 → 2.8.0</li>
+  <li>Commons Lang3, 3.9 → 3.11</li>
+  <li>Commons Text, 1.8 → 1.9</li>
+  <li>Commons Validator, 1.6 → 1.7</li>
+  <li>HSQLDB, 2.5.0 → 2.5.1</li>
+  <li>Nashorn Sandbox, 0.1.26 → 0.1.28</li>
+  <li>JFreeChart, 1.0.13 → 1.5.0</li>
+  <li>RSyntaxTextArea, 3.0.4 → 3.1.1</li>
+  <li>SQLite JDBC, 3.28.0 → 3.32.3.2</li>
+</ul>
+
+<H2>Enhancements</H2>
+<ul>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/9">Issue 9</a> : No Way to Specify Custom 404</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/29">Issue 29</a> : SOCKS (outgoing) proxy support</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/78">Issue 78</a> : Show message type in History tab</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/111">Issue 111</a> : Provide a button on the resend screen to inject a CSRF token</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/408">Issue 408</a> : Add support to encoding transformations</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/560">Issue 560</a> : Content-Length header always updated on Send - cannot Resend some requests</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/1351">Issue 1351</a> : Decode gzip'ed content in Request tab</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/1701">Issue 1701</a> : Lack of Encoding Breaks Syntax Highlighting</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/2620">Issue 2620</a> : Allow to add/remove authentication and session management methods</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/3452">Issue 3452</a> : Add "Remove from site tree" in search</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5542">Issue 5542</a> : Improve dark mode</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5732">Issue 5732</a> : HTML Reports should offer a table based on alert names</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5738">Issue 5738</a> : Improve version message in Manage Add-ons dialogue</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5844">Issue 5844</a> : Add context menu item to mark false positives</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5845">Issue 5845</a> : Alert API Additions</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5873">Issue 5873</a> : Add FlatLaf L&amp;F, for dark mode</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5874">Issue 5874</a> : Revise Site Certificates to Max 398d</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5923">Issue 5923</a> : Expose enable related state in scripts API</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5934">Issue 5934</a> : Allow language to be specified on commandline</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5963">Issue 5963</a> : Add host and path columns to the history table</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5973">Issue 5973</a> : added known csrf token for pfsense</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6038">Issue 6038</a> : Allow Parsing of Some Non-text Messages by the Spider</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6075">Issue 6075</a> : Allow to override ApiImplementor i18n key prefix</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6079">Issue 6079</a> : Allow to differentiate requests by body content in Sites tree</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6084">Issue 6084</a> : Add generation date to the HTML and MD reports</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6126">Issue 6126</a> : Add more control over the site tree</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6196">Issue 6196</a> : Upgrade the version of log4j</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6201">Issue 6201</a> : Support dynamic Look and Feel switching</li>
+</ul>
+
+<H2>Bug Fixes</H2>
+<ul>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/1584">Issue 1584</a> : GZip de-compression causes loss of newlines</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/4235">Issue 4235</a> : Warn when unable to save (malformed) HTTP message in Request/Response panels</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5701">Issue 5701</a> : Fuzzer runs progressively slower</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5899">Issue 5899</a> : Allows Regex duplication in the same Context through the UI</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5902">Issue 5902</a> : Active scan script - JSON number values - Weird replaces</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5952">Issue 5952</a> : Stats includes Content-Type byteranges limits</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5991">Issue 5991</a> : Hook HttpSenderListener when installing add-ons</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6008">Issue 6008</a> : Initialization of scripts via ZAP API</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6037">Issue 6037</a> : Changing look and feel messes with macOS integrations</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6138">Issue 6138</a> : Persistent growing high CPU usage with proxy</li>
+</ul>
+
+
+<H2>ZAP API New Endpoints:</H2>
+
+<H3>TBA</H3>
+
+<H2>See Also</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+</table>
+</BODY>
+</HTML>
