@@ -38,7 +38,17 @@
 			and will need to be manually enabled if a new session is started.
 			</td>
 			<td align="center">0 (unset)</td>
-			<td>Key: <code>pscans.maxAlertsPerRule</code><br>Values: <code>0</code>: unset or <code>> 0</code> the maximum number of alerts</td>
+			<td>Key: <code>pscans.maxAlertsPerRule</code><br>Values: <code>0</code>: unset or the maximum number of alerts</td>
+		</tr>
+		<tr>
+			<td>Max body size in bytes to scan</td>
+			<td>Sets the maximum size request or response body size in bytes that the passive scanner will scan.
+			This can be used if passive scan rules take too long scanning very large requests or responses.
+			If set the number of ignored requests and responses are recorded in the stats using the keys 
+			<code>stats.pscan.reqBodyTooBig</code> and <code>stats.pscan.respBodyTooBig</code> respectively.
+			<td align="center">0 (unset)</td>
+			<td>Key: <code>pscans.maxBodySizeInBytes</code><br>Values: <code>0</code>: unset or the maximum body size in bytes</td>
+			</td>
 		</tr>
 	</table>
 
