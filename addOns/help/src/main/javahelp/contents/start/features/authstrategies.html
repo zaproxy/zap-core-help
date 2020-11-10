@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<title>Authentication Verification Strategies</title>
+</head>
+<body>
+	<h1>Authentication Verification Strategies</h1>
+
+	<h2><a name="response">Verification Strategies</a></h2>
+	
+	ZAP supports multiple <b>Verification Strategies</b> in order to detect when messages correspond to authenticated requests.
+
+	<h3><a name="response">Check every Response</a></h3>
+	
+	When this strategy is used then ZAP will use the specified Regex Patterns on every response.
+	This is typically useful for traditional webapps which return full HTML pages.
+
+	<h3><a name="response">Check every Request</a></h3>
+	
+	When this strategy is used then ZAP will use the specified Regex Patterns on every request.
+	This is typically useful for modern webapps which maintain some session state client side, such as a JWT, which is submitted with every request.
+
+	<h3><a name="response">Check every Request or Response</a></h3>
+	
+	When this strategy is used then ZAP will use the specified Regex Patterns on both the request and response of every message.
+
+	<h3><a name="response">Poll the Specified URL</a></h3>
+	
+	When this strategy is used then ZAP will poll the specified URL at the given frequency. 
+	Messages will be treated as logged in or logged out based on the last poll request.
+	The specified Regex Patterns will only be used on the response to the poll request.
+	This strategy is typically useful for any application for which there is at least one URL 
+	that can reliably be used to detect if a user is logged in or out.
+	
+	<h2><a name="regex">Regex Patterns</a></h2>
+	
+	All of the strategies use 2 Regex Patterns to tell if a specified message is logged in or not.
+	You can supply one or both regexes - if you do not supply either then the Authentication Strategy will not be used.
+
+	<p>
+	To set one of the <b>Logged in/out Indicators</b>, either type the regex 
+	directly in the <i><a href="../../ui/dialogs/session/context-auth.html">Session
+	Context Authentication screen</a> dialog -> Authentication panel -> Logged In/Out Indicator field</i>,
+	or find an authenticated message in the Sites Tree or History tab, select it, open the
+	Response View and select the text you wish to define as the indicator using the
+	mouse and select the <i>Flag as Context... Logged in/out indicator</i> right-click menu option.
+
+	<h2>Configured via</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/session/contexts.html#auth">Session Properties dialog</a></td>
+			<td></td>
+		</tr>
+	</table>
+
+	<h2>See also</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="authentication.html">Authentication</a></td>
+			<td>overview</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="https://youtu.be/cR4gw-cPZOA">Youtube tutorial</a></td>
+			<td>of the Authentication, Session Management and Users Management features of ZAP [external link to https://youtu.be/cR4gw-cPZOA].</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/overview.html">UI Overview</a></td>
+			<td>for an overview of the user interface</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="features.html">Features</a></td>
+			<td>provided by ZAP</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/session/contexts.html">Session
+					Contexts Dialog</a></td>
+			<td>for an overview of the Session Properties</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="users.html">Users</a></td>
+			<td>for an overview of Users</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="anticsrf.html">Anti-CSRF tokens</a></td>
+			<td>for an overview of anti-CSRF tokens</td>
+		</tr>
+
+	</table>
+
+</body>
+</html>
