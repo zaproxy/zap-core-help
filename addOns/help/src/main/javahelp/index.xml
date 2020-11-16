@@ -21,6 +21,8 @@
     <indexitem text="alerts" target="start.features.alerts" />
     <indexitem text="api" target="start.features.api" />
     <indexitem text="authentication auth form-based manual login" target="start.features.auth" />
+    <indexitem text="authentication methods" target="start.features.authmethods" />
+    <indexitem text="authentication verification strategies" target="start.features.authstrategies" />
     <indexitem text="basic penetration test" target="start.pentest" />
     <indexitem text="breakpoints tab" target="ui.tabs.breakpoints" />
     <indexitem text="breakpoints" target="start.features.breakpoints" /> 

@@ -25,10 +25,9 @@
 		Management defined for the Context). After that, requests sent from
 		the point of view of a User are modified (if necessary) and sent in
 		such a way that the web server identifies them as being sent by an
-		authenticated webapp/website user. If anytime a message is sent from
-		the perspective of a User and the response received seems
-		unauthenticated (as identified using the <i>Logged In</i> and <i>Logged
-			Out</i> <a href="authentication.html">Authentication indicators</a>), a new
+		authenticated webapp/website user. If anytime a User appears to
+		be unauthenticated (as determined by the 
+		<a href="authstrategies.html">Authentication Verification Strategy</a>), a new
 		authentication is performed and the Session is updated accordingly.
 	</p>
 

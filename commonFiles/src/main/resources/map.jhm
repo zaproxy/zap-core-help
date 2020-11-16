@@ -17,6 +17,8 @@
         <mapID target="start.features.anticsrf" url="contents/start/features/anticsrf.html" />
         <mapID target="start.features.api" url="contents/start/features/api.html" />
         <mapID target="start.features.auth" url="contents/start/features/authentication.html" />
+        <mapID target="start.features.authmethods" url="contents/start/features/authmethods.html" />
+        <mapID target="start.features.authstrategies" url="contents/start/features/authstrategies.html" />
         <mapID target="start.features.breakpoints" url="contents/start/features/breakpoints.html" />
         <mapID target="start.features.callbacks" url="contents/start/features/callbacks.html" />
         <mapID target="start.features.contexts" url="contents/start/features/contexts.html" />

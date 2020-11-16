@@ -11,16 +11,19 @@ Session Context Authentication screen
 <p>
 This is one of the <a href="contexts.html">Session Context screens</a>
 which allows you to manage the way in which <a href="../../../start/features/authentication.html">Authentication</a> is being done for the Context.
-After selecting the Authentication Method type, the options that need to be configured depend on the Authentication Method.
+
+<H2>Authentication Method</H2>
+
+After selecting the <a href="../../../start/features/authmethods.html">Authentication Method</a> type, the options that need to be configured depend on the Authentication Method.
 <p>
 <strong>Note:</strong> Changing the authentication method after Users have been defined might cause its credentials to be reset,
 as the type of user credentials need to match the authentication scheme. A confirmation dialogue will be shown when that happens.
 
-<h4>Manual Authentication</h4>
+<h3>Manual Authentication</h3>
 No configuration is needed for this authentication method. <small>Read  
 <a href="../../../start/features/authentication.html#manual">more</a>...</small>
 
-<h4>Form-Based Authentication</h4>
+<h3>Form-Based Authentication</h3>
 To configure this authentication method, you need to supply the <b>login url</b>, to which the login
 request is performed, the <b>request body</b> (POST data), if needed, and identify the <b>parameters</b> used to supply
 the 'username' and 'password'. If no request body is supplied, the login request is performed as 
@@ -31,7 +34,7 @@ and regenerate <a href="../../../start/features/anticsrf.html">Anti CSRF tokens<
 If the <b>login page</b> is not supplied it is used the <b>login url</b>.
 <br><small>Read <a href="../../../start/features/authentication.html#formBased">more</a>...</small>
 
-<h4>JSON-Based Authentication</h4>
+<h3>JSON-Based Authentication</h3>
 To configure this authentication method, you need to supply the <b>login url</b>, to which the login
 request is performed, the <b>JSON object</b> (POST data, <code>application/json</code>), and identify
 the <b>parameters</b> used to supply the 'username' and 'password'.  The credentials themselves
@@ -47,13 +50,13 @@ If the <b>login page</b> is not supplied it is used the <b>login url</b>.
 </ul>
 where <code>{%username%}</code> and <code>{%password%}</code> indicate where the authentication credentials are set.
 
-<h4>HTTP/NTLM Authentication</h4>
+<h3>HTTP/NTLM Authentication</h3>
 To configure this authentication method, you need to supply the <b>hostname</b> and the <b>port</b> of the server
 the authentication is done with and the <b>realm</b> the credentials apply to. The credentials themselves
 are configured in the <a href="contexts.html#users">Users</a> tab. <small>Read  
 <a href="../../../start/features/authentication.html#httpAuth">more</a>...</small> 
 
-<h4>Script-Based Authentication</h4>
+<h3>Script-Based Authentication</h3>
 To use this authentication method, you <b>first</b> need to write (and save) an <b>Authentication Script</b> 
 using the <b>Scripts</b> tab (see the provided examples and templates for this script type in the Scripts tab).
 Then you need to supply the name of the script in the dropdown list. After selecting the script, you need to press 
@@ -67,11 +70,52 @@ during the authentication processed can be also specified in the Authentication 
 <a href="contexts.html#users">Users</a> tab.
 <small>Read <a href="../../../start/features/authentication.html#scriptBased">more</a>...</small> 
 
+<H2>Authentication Verification</H2>
+
+<H3>Verification Strategy</H3>
+
+Select the <a href="../../../start/features/authstrategies.html">Authentication Verification Strategy</a> required.
+
+<H3><a name="regexloggedin">Regex pattern used to identify Logged in messages</a></H3>
+
+If this regex pattern is specified and matches any string in the specified message then ZAP will treat this message as logged in.
+For example the pattern could be used to match a http://example.com/logout link or the presence of a 'Welcome, User X' message.
+
+<H3><a name="regexloggedout">Regex pattern used to identify Logged out messages</a></H3>
+
+If this regex pattern is specified and matches any string in the specified message then ZAP will treat this message as logged out.
+For example the pattern could be used to match a http://example.com/login link or the presence of a 'Welcome, Guest' message.
+
+<H3><a name="pollfreq">Poll Frequency</a></H3>
+
+This controls how frequently ZAP will poll to see if a user is still authenticated. 
+The integer will either represent the number of Requests that will be made before ZAP will poll again or the number of Seconds before
+it will poll again, depending on pulldown selected.<br/>
+The option is only relevant if the "Poll the Specified URL" Verification Strategy has been selected.
+  
+<H3><a name="pollurl">URL to Poll for Verification</a></H3>
+
+This is the URL that ZAP will poll to see if a user is still authenticated.<br/>
+The option is only relevant if the "Poll the Specified URL" Verification Strategy has been selected.
+ 
+<H3><a name="polldata">Poll Request POST Data</a></H3>
+
+If supplied then this will be sent as a POST in the poll request. If it is empty then ZAP will make a GET request<br/>
+The option is only relevant if the "Poll the Specified URL" Verification Strategy has been selected.
+  
+<H3><a name="pollheaders">Additional Poll Request Headers</a></H3>
+
+An optional set of headers that will be sent with the poll request. Each line should be one header and value separated by a colon e.g<br/>
+<pre>
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+</pre>
+The option is only relevant if the "Poll the Specified URL" Verification Strategy has been selected.
   
 <H2>Accessed via</H2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../tlmenu/file.html">Top level File menu</a></td><td>'Properties...' menu item</td></tr>
+<a href="../../tabs/sites.html">Sites tab</a></td><td>Double click a Context</td></tr>
 </table>
 
 <H2>See also</H2>
