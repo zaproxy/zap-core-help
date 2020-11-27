@@ -26,6 +26,7 @@
         <mapID target="start.features.globalexcludeurl" url="contents/start/features/globalexcludeurl.html" />
         <mapID target="start.features.httpsessions" url="contents/start/features/httpsessions.html" />
         <mapID target="start.features.intercept" url="contents/start/features/intercept.html" />
+        <mapID target="start.features.marketplace" url="contents/start/features/marketplace.html" />
         <mapID target="start.features.modes" url="contents/start/features/modes.html" />
         <mapID target="start.features.notes" url="contents/start/features/notes.html" />
         <mapID target="start.features.pscan" url="contents/start/features/pscan.html" />

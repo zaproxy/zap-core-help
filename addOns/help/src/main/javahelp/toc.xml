@@ -31,6 +31,7 @@
          <tocitem text="Globally Excluded URLs" target="start.features.globalexcludeurl"/>
          <tocitem text="HTTP Sessions" target="start.features.httpsessions"/>
          <tocitem text="Manipulator-in-the-middle Proxy" target="start.features.intercept"/>
+         <tocitem text="Marketplace" target="start.features.marketplace"/>
          <tocitem text="Modes" target="start.features.modes"/>
          <tocitem text="Notes" target="start.features.notes"/>
          <tocitem text="Passive Scan" target="start.features.pscan"/>
