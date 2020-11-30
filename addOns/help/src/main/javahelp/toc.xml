@@ -121,7 +121,8 @@
 	         <tocitem text="Session Properties" target="ui.dialogs.sessprop"/>
 	         <tocitem text="Session Contexts" target="ui.dialogs.contexts"/>
 	         <tocitem text="Session Context Authentication" target="ui.dialogs.context-auth"/>
-	         <tocitem text="Session Context Structure" target="ui.dialogs.context-struct"/>
+	         <tocitem text="Session Context Structural Parameters" target="ui.dialogs.context-struct"/>
+	         <tocitem text="Session Context Data Driven Nodes" target="ui.dialogs.context-ddn"/>
          </tocitem>
          <tocitem text="Spider" target="ui.dialogs.spider"/>
       </tocitem>

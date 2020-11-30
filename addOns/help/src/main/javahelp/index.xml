@@ -96,7 +96,8 @@
     <indexitem text="search tab" target="ui.tabs.search" />
     <indexitem text="session context screens" target="ui.dialogs.contexts" />
     <indexitem text="session context authentication screen" target="ui.dialogs.context-auth" />
-    <indexitem text="session context structure screen" target="ui.dialogs.context-struct" />
+    <indexitem text="session context structural parameters screen" target="ui.dialogs.context-struct" />
+    <indexitem text="session context data driven nodes screen" target="ui.dialogs.context-ddn" />
     <indexitem text="session properties dialog" target="ui.dialogs.sessprop" />
     <indexitem text="sites tab" target="ui.tabs.sites" />
     <indexitem text="sites tree" target="start.features.sitestree" />
