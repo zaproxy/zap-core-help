@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<TITLE>
+Session Context Data Driven Nodes screen
+</TITLE>
+</HEAD>
+<BODY>
+<H1>Session Context Data Driven Nodes screen</H1>
+<p>
+This is one of the <a href="contexts.html">Session Context screens</a>
+which allows you to manage ZAP's understanding of the structure of the application.
+
+<H2>Data Driven Nodes</H2>
+Data Driven Nodes are a type of <a href="../../../start/features/structmods.html">Structural Modifier</a> that apply to this context.  For more details see the <a href="../../../start/features/ddc.html">Data Driven Content</a> help page.
+
+<H3>Hierarchy</H3>
+Data Driven Nodes can be structured into a Hierarchy so that the children of a Data Driven Node will inherent the parent's patterns as a prefix to their own patterns.  This allows for multiple DDNs to be applied to a single URL (ie. http://example.org/path/to/ddn/123/another/ddn/987/ can be replaced with http://example.org/path/to/ddn/«node1»/another/ddn/«node2»/).
+The order of the Data Driven Nodes also dictates their priority; Data Driven Nodes which are closer to the top of the Tree and at the top of their parent's children list will be applied first.
+When Data Driven Nodes are evaluated once a match is found the remaining DDNs in the collection are not evaluated and instead evaluation continues with the Matched DDN's children.  This can be thought of as a 'greedy' matching approach which is dictated by the DDN's priority in the collection.
+
+<H3>Tips & Tricks</H3>
+<ul>
+<li>Non-replacing Nodes : Data Driven Nodes only require a Name and a Prefix Pattern.  DDNs which do not have a Data Node Pattern are considered Non-replacing Nodes and function to support the structure of the Data Driven Nodes Tree.  For instance, you may want to group your DDNs by the Host that they apply to; in order to do so you could add a DDN to the root who's Prefix Pattern matches the Host in question.  Then add any additional Replacing DDNs as children of the Host Node with appropriate Prefix Patterns matching only the necessary Path portions of the URL.
+<li>Recommended Data Node Pattern : The more specific the RegEx pattern to match the Data Node portion of the URL the better, but a generally recommended pattern is <code>.+?'</code> which will match 1 or more of any characters.
+<li>Data Node Pages, Subpages & the Suffix Pattern : To support both Data Node Pages and Subpages beneath them two Data Driven Node entries are required.  The two entries will use the same patterns for Prefix & Data Node, but for the Data Node Page the Suffix Pattern will be left blank and for the Data Node Subpages the Suffix Pattern will be '/'.  It is recommended to name each DDN Entry with a different name (ie. DataNodePage & DataNodeSubpages) to distinguish between them in the Site Tree. 
+</ul>
+
+<H2>Accessed via</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../tabs/sites.html">Sites tab</a></td><td>Double click a Context</td></tr>
+</table>
+
+<H2>See also</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../../start/features/structmods.html">Structural Modifiers</a></td><td>for an overview of all available modifiers</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="contexts.html">Session Context screens</a></td><td>for details of the other Context screens</td></tr>
+</table>
+
+</BODY>
+</HTML>
