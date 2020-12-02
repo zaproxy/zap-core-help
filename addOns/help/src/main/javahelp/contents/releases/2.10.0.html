@@ -16,6 +16,19 @@ These release notes do not include all of the changes included in add-ons update
 <br><br>
 Some of the more significant enhancements include:
 
+<H3>Custom Pages</H3>
+TBA
+
+<H3>Authentication Polling</H3>
+TBA
+
+<H3>Site Tree Control</H3>
+TBA
+
+<H3>Dynamic Look and Feel including Dark Mode</H3>
+TBA
+
+<H3>Authentication Headers via Env Vars</H3>
 TBA
 
 <H2>Changes in Bundled Libraries</H2>
@@ -54,17 +67,28 @@ The following libraries were updated:
 <li><a href="https://github.com/zaproxy/zaproxy/issues/5845">Issue 5845</a> : Alert API Additions</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/5873">Issue 5873</a> : Add FlatLaf L&amp;F, for dark mode</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/5874">Issue 5874</a> : Revise Site Certificates to Max 398d</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5898">Issue 5898</a> : Allow to import from file into regular expression panels (e.g. Include in Context)</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/5923">Issue 5923</a> : Expose enable related state in scripts API</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/5934">Issue 5934</a> : Allow language to be specified on commandline</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/5963">Issue 5963</a> : Add host and path columns to the history table</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/5973">Issue 5973</a> : added known csrf token for pfsense</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6010">Issue 6010</a> : Do not recompile unchanged scripts</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/6038">Issue 6038</a> : Allow Parsing of Some Non-text Messages by the Spider</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6068">Issue 6068</a> : On CSRF variable detection search for partial match instead of full</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/6075">Issue 6075</a> : Allow to override ApiImplementor i18n key prefix</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/6079">Issue 6079</a> : Allow to differentiate requests by body content in Sites tree</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/6084">Issue 6084</a> : Add generation date to the HTML and MD reports</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/6126">Issue 6126</a> : Add more control over the site tree</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6163">Issue 6163</a> : Support authentication polling</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/6196">Issue 6196</a> : Upgrade the version of log4j</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/6201">Issue 6201</a> : Support dynamic Look and Feel switching</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6226">Issue 6226</a> : Allow to define the maximum body size to passive scan</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6277">Issue 6277</a> : Add OneTouchExapandable control to Sites Tree/Request&Response panels</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6278">Issue 6278</a> : Add Alert reference field</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6296">Issue 6296</a> : Add auth header define in envvars</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6299">Issue 6299</a> : Tweak browser page for browser launch</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6313">Issue 6313</a> : Manual Request response send</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6333">Issue 6333</a> : Refactor SessionStructure and Session</li>
 </ul>
 
 <H2>Bug Fixes</H2>
@@ -78,9 +102,14 @@ The following libraries were updated:
 <li><a href="https://github.com/zaproxy/zaproxy/issues/5991">Issue 5991</a> : Hook HttpSenderListener when installing add-ons</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/6008">Issue 6008</a> : Initialization of scripts via ZAP API</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/6037">Issue 6037</a> : Changing look and feel messes with macOS integrations</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6043">Issue 6043</a> : Active scanner tests the same request twice</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6102">Issue 6102</a> : Error starting Active Scan in "Everything in Scope" mode.</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6121">Issue 6121</a> : html encode in Generate anti-CSRF Test FORM</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/6138">Issue 6138</a> : Persistent growing high CPU usage with proxy</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6206">Issue 6206</a> : Unable to import context without optional fields</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6223">Issue 6223</a> : Exception while authenticating with form-based and anti-csrf tokens</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6267">Issue 6267</a> : HTML / Markdown Report Generation Fails When Path Contains '#'</li>
 </ul>
-
 
 <H2>ZAP API New Endpoints:</H2>
 
