@@ -113,7 +113,44 @@ The following libraries were updated:
 
 <H2>ZAP API New Endpoints:</H2>
 
-<H3>TBA</H3>
+<H3>VIEW ascrf / optionPartialMatchingEnabled</H3>
+Define if ZAP should detect CSRF tokens by searching for partial matches
+
+<H3>ACTION ascrf / setOptionPartialMatchingEnabled</H3>
+Define if ZAP should detect CSRF tokens by searching for partial matches.
+
+<H3>ACTION alert / updateAlertsConfidence</H3>
+Update the confidence of the alerts.
+
+<H3>ACTION alert / updateAlertsRisk</H3>
+Update the risk of the alerts.
+
+<H3>ACTION context / setContextCheckingStrategy</H3>
+Set the checking strategy for a context - this defines how ZAP checks that a request is authenticated.
+
+<H3>VIEW core / optionUseSocksProxy</H3>
+Gets whether or not the SOCKS proxy should be used.
+
+<H3>ACTION core / setOptionUseSocksProxy</H3>
+Sets whether or not the SOCKS proxy should be used.
+
+<H3>VIEW users / getAuthenticationState</H3>
+Gets the authentication state information for the user identified by the Context and User Ids.
+
+<H3>VIEW users / getAuthenticationSession</H3>
+Gets the authentication session information for the user identified by the Context and User Ids, e.g. cookies and realm credentials.
+
+<H3>Action users / authenticateAsUser</H3>
+Tries to authenticate as the identified user, returning the authentication request and whether it appears to have succeeded.
+
+<H3>Action users / pollAsUser</H3>
+Tries to poll as the identified user, returning the authentication request and whether it appears to have succeeded. This will only work if the polling verification strategy has been configured.
+
+<H3>Action users / setAuthenticationState</H3>
+Sets fields in the authentication state for the user identified by the Context and User Ids.
+
+<H3>Action users / setCookie</H3>
+Sets the specified cookie for the user identified by the Context and User Ids.
 
 <H2>See Also</H2>
 <table>
