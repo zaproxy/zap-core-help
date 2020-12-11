@@ -75,8 +75,14 @@ throughout the application.
 <p>The credentials section of the Users depends on the Authentication Method configured
 for the Context.</p>
 
+<H2><a name="custompages">Custom Page</a></H2>
+This functionality allows you to handle situations in which the target does not return a RFC compliant or expected error response when for conditions such as 
+404 - Not Found, 500 - Internal Server Error, etc. Often developers implement custom 404 or 500 handling but do not actually return an appropriate status code.
+Leveraging Custom Page definitions you can define URLs or response content which identify error responses regardless of the status code associated with the response.
+<small>Read <a href="../../../start/features/custompages.html">more</a>...</small>
+
 <H2>URL regexs</H2>
-In the <I>Include in *</I>, <I>Exclude from *</I> panels and the <i>Logged in/out indicators</i> of the <i>Authentication</i> panel, you can enter regular expressions to define excluded URLs.
+In the <I>Include in *</I>, <I>Exclude from *</I> panels and the <i>Logged in/out indicators</i> of the <i>Authentication</i> panel, etc. you can enter regular expressions to define excluded URLs.
 While you can escape a single meta-character with a backslash, you can also use the <B>\Q...\E</B> escape sequence. All the characters between the <B>\Q</B> and the <B>\E</B> are interpreted as literal characters. E.g. \Q*\d+*\E matches the literal text *\d+*.
 This escape sequence is used in ZAP when you exclude URLs via some context menus.
 <BR>
@@ -108,6 +114,8 @@ Example: subdomain.example.com/path?a=<B>\E</B>&amp;moredata=2 should appear as
 <a href="../../../start/features/authentication.html">Authentication</a></td><td>for an overview of Authentication </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../../../start/features/sessionManagement.html">Session Management</a></td><td>for an overview of Session Management </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../../start/features/custompages.html">Custom Page</a></td><td>for an overview of Custom Page details </td></tr>
 </table>
 
 

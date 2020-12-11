@@ -22,6 +22,7 @@
         <mapID target="start.features.breakpoints" url="contents/start/features/breakpoints.html" />
         <mapID target="start.features.callbacks" url="contents/start/features/callbacks.html" />
         <mapID target="start.features.contexts" url="contents/start/features/contexts.html" />
+        <mapID target="start.features.custompages" url="contents/start/features/custompages.html" />
         <mapID target="start.features.ddc" url="contents/start/features/ddc.html" />
         <mapID target="start.features.globalexcludeurl" url="contents/start/features/globalexcludeurl.html" />
         <mapID target="start.features.httpsessions" url="contents/start/features/httpsessions.html" />

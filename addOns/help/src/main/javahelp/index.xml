@@ -31,6 +31,7 @@
     <indexitem text="command line" target="cmdline" />
     <indexitem text="contexts" target="start.features.contexts" />
     <indexitem text="credits" target="zap.credits" />
+    <indexitem text="custompages" target="start.features.custompages" /> 
     <indexitem text="data driven content" target="start.features.ddc" />
     <indexitem text="dialogs" target="ui.dialogs" />
     <indexitem text="features" target="start.features" />
