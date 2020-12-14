@@ -17,19 +17,31 @@ These release notes do not include all of the changes included in add-ons update
 Some of the more significant enhancements include:
 
 <H3>Custom Pages</H3>
-TBA
+<a href="../start/features/custompages.html">Custom Pages</a> can be defined on a per context basis - 
+these allow ZAP to identify various non-standard error handling conditions such as custom error pages and handle them more effectively.
 
 <H3>Authentication Polling</H3>
-TBA
+The concept of <a href="../start/features/authstrategies.html">Authentication Verification Strategies</a> has been introduced which allows ZAP to handle
+a wider range of authentication mechanisms including the option to poll a specified page for the authentication status of a user.
 
 <H3>Site Tree Control</H3>
-TBA
+Scripts and add-ons now have full access to how nodes are represented in the <a href="../start/features/sitestree.html">Sites Tree</a>.
+Both <a href="https://github.com/zaproxy/community-scripts/tree/master/variant">Input Vector Scripts</a> and add-ons which include implementations of the 
+<a href="https://static.javadoc.io/org.zaproxy/zap/2.10.0/org/parosproxy/paros/core/scanner/Variant.html">Variant</a> class can change both the tree
+structure and names used for new nodes.
+<br><br>
+For more details see the <a href="https://www.zaproxy.org/blog/2020-09-22-sites-tree-modifiers/">Site Tree Modifiers</a> Blog post.
 
 <H3>Dynamic Look and Feel including Dark Mode</H3>
-TBA
+The Desktop UI includes a new set of open source Look and Feel's c/o <a href="https://github.com/JFormDesigner/FlatLaf">FlatLaf</a> including 2 Dark Mode options.<br>
+You can also dynamically switch the Look and Feel via a button on the <a href="../ui/tltoolbar.html">Top Level Toolbar</a>.
+<br><br>
+For more details of the dark mode see the <a href="https://www.zaproxy.org/blog/2020-03-04-dark-mode-in-the-weekly-release/">Dark Mode in the Weekly Release</a> Blog post.
 
 <H3>Authentication Headers via Env Vars</H3>
-TBA
+A new set of environmental variables are available which allow you to easily add an authentication header to all of the requests that are proxied through ZAP or initiated
+by the ZAP tools, including the spiders and active scanner.
+These are documented on the <a href="../start/features/authentication.html#envvars">Authentication</a> page.
 
 <H3>SOCKS Proxy Configuration</H3>
 It is now possible to dynamically configure the outgoing SOCKS proxy in the <a href="../ui/dialogs/options/connection.html">Options' Connection screen</a>.
