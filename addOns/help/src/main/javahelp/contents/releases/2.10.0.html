@@ -31,6 +31,20 @@ TBA
 <H3>Authentication Headers via Env Vars</H3>
 TBA
 
+<H3>SOCKS Proxy Configuration</H3>
+It is now possible to dynamically configure the outgoing SOCKS proxy in the <a href="../ui/dialogs/options/connection.html">Options' Connection screen</a>.
+By default the SOCKS proxy configuration applies to all connections made by ZAP.
+
+<H3>Cached Scripts</H3>
+The following script types are now cached between invocations reducing the time it takes to reuse them:
+<ul>
+<li>Active Rules</li>
+<li>HTTP Sender</li>
+<li>Input Vectors, when used for the Sites tree</li>
+<li>Passive Rules</li>
+<li>Proxy</li>
+</ul>
+
 <H2>Changes in Bundled Libraries</H2>
 The following libraries were updated:
 <ul>
