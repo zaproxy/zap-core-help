@@ -21,7 +21,7 @@ as the type of user credentials need to match the authentication scheme. A confi
 
 <h3>Manual Authentication</h3>
 No configuration is needed for this authentication method. <small>Read  
-<a href="../../../start/features/authentication.html#manual">more</a>...</small>
+<a href="../../../start/features/authmethods.html#manual">more</a>...</small>
 
 <h3>Form-Based Authentication</h3>
 To configure this authentication method, you need to supply the <b>login url</b>, to which the login
@@ -32,7 +32,7 @@ are configured in the <a href="contexts.html#users">Users</a> tab.
 The <b>login page</b> can also be supplied to indicate from where to obtain a new session (e.g. cookies)
 and regenerate <a href="../../../start/features/anticsrf.html">Anti CSRF tokens</a> present in the <b>request body</b>.
 If the <b>login page</b> is not supplied it is used the <b>login url</b>.
-<br><small>Read <a href="../../../start/features/authentication.html#formBased">more</a>...</small>
+<br><small>Read <a href="../../../start/features/authmethods.html#formBased">more</a>...</small>
 
 <h3>JSON-Based Authentication</h3>
 To configure this authentication method, you need to supply the <b>login url</b>, to which the login
@@ -41,7 +41,7 @@ the <b>parameters</b> used to supply the 'username' and 'password'.  The credent
 are configured in the <a href="contexts.html#users">Users</a> tab.
 The <b>login page</b> can also be supplied to indicate from where to obtain a new session (e.g. cookies).
 If the <b>login page</b> is not supplied it is used the <b>login url</b>.
-<br><small>Read <a href="../../../start/features/authentication.html#jsonBased">more</a>...</small>
+<br><small>Read <a href="../../../start/features/authmethods.html#jsonBased">more</a>...</small>
 
 <br>Examples of POST data:
 <ul>
@@ -54,7 +54,7 @@ where <code>{%username%}</code> and <code>{%password%}</code> indicate where the
 To configure this authentication method, you need to supply the <b>hostname</b> and the <b>port</b> of the server
 the authentication is done with and the <b>realm</b> the credentials apply to. The credentials themselves
 are configured in the <a href="contexts.html#users">Users</a> tab. <small>Read  
-<a href="../../../start/features/authentication.html#httpAuth">more</a>...</small> 
+<a href="../../../start/features/authmethods.html#httpAuth">more</a>...</small> 
 
 <h3>Script-Based Authentication</h3>
 To use this authentication method, you <b>first</b> need to write (and save) an <b>Authentication Script</b> 
@@ -68,7 +68,7 @@ required by the Authentication script you re-load the script. Otherwise, the par
 not be the ones used during the authentication and errors might occur. The <i>credentials</i> used for each User 
 during the authentication processed can be also specified in the Authentication Script and are configured in the 
 <a href="contexts.html#users">Users</a> tab.
-<small>Read <a href="../../../start/features/authentication.html#scriptBased">more</a>...</small> 
+<small>Read <a href="../../../start/features/authmethods.html#scriptBased">more</a>...</small> 
 
 <H2>Authentication Verification</H2>
 

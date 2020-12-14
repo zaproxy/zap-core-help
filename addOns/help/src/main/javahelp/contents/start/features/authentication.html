@@ -74,6 +74,16 @@
 	of authentication can be found in the <a href="authmethods.html">Authentication Methods</a> page and in the 
 	<a href="../../ui/dialogs/session/contexts.html">Context Session screens</a>.
 
+	<h2><a name="envvars">Authentication Header Environmental Variables</a></h2>
+	A set of environmental variables are available which allow you to easily add an authentication header to all of the requests that are proxied through ZAP or initiated
+	by the ZAP tools, including the spiders and active scanner: 
+	<ul>
+	<li>ZAP_AUTH_HEADER_VALUE - if this is defined then its value will be added as a header to all of the requests</li>
+	<li>ZAP_AUTH_HEADER - if this is defined then its value will be used as the header name - if it is not defined then the standard 
+	<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization">Authorization</a> header will be used</li>
+	<li>ZAP_AUTH_HEADER_SITE - if this is defined then header will only be included in sites who's name includes its value</li>
+	</ul>
+
 	<h2>Configured via</h2>
 	<table>
 		<tr>
