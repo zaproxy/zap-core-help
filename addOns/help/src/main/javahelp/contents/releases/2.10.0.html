@@ -34,19 +34,28 @@ TBA
 <H2>Changes in Bundled Libraries</H2>
 The following libraries were updated:
 <ul>
-  <li>Bouncy Castle, 1.61 → 1.66</li>
+  <li>Bouncy Castle, 1.61 → 1.67</li>
   <li>Commons Codec, 1.13 → 1.15</li>
   <li>Commons CSV, 1.7 → 1.8</li>
   <li>Commons IO, 2.6 → 2.8.0</li>
   <li>Commons Lang3, 3.9 → 3.11</li>
   <li>Commons Text, 1.8 → 1.9</li>
-  <li>Commons Validator, 1.6 → 1.7</li>
   <li>HSQLDB, 2.5.0 → 2.5.1</li>
-  <li>Nashorn Sandbox, 0.1.26 → 0.1.28</li>
-  <li>JFreeChart, 1.0.13 → 1.5.0</li>
+  <li>JFreeChart, 1.0.13 → 1.5.1</li>
   <li>RSyntaxTextArea, 3.0.4 → 3.1.1</li>
   <li>SQLite JDBC, 3.28.0 → 3.32.3.2</li>
 </ul>
+
+<H3>Logging Library</H3>
+The logging library, Log4j, was updated to the new major version (2.x). The previous version is still included for compatibility with existing code, add-on and script authors are encouraged to migrate to the new API.
+<br>
+For example, the logger can now be obtained with:
+<pre><code class="language-java">import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+// ...
+
+Logger logger = LogManager.getLogger(MyClass.class);</pre></code>
 
 <H2>Enhancements</H2>
 <ul>
