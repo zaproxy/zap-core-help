@@ -34,7 +34,7 @@ subprojects {
     }
 
     zapAddOn {
-        zapVersion.set("2.7.0")
+        zapVersion.set("2.9.0")
 
         releaseLink.set(project.provider { "https://github.com/zaproxy/zap-core-help/releases/${zapAddOn.addOnId.get()}-v@CURRENT_VERSION@" })
 

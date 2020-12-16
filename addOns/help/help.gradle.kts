@@ -8,6 +8,6 @@ zapAddOn {
 
     manifest {
         url.set("https://www.zaproxy.org/docs/desktop/")
-        notBeforeVersion.set("2.9.0")
+        notBeforeVersion.set("2.10.0")
     }
 }

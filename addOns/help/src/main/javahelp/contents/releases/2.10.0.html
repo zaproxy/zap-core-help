@@ -57,16 +57,59 @@ The following script types are now cached between invocations reducing the time 
 <li>Proxy</li>
 </ul>
 
-<H2>New Add-Ons</H2>
+<H2>Add-Ons</H2>
+<H3>New Add-Ons</H3>
 The following add-ons are included by default in this release for the first time:
 <ul>
   <li><a href="https://www.zaproxy.org/docs/desktop/addons/encode-decode-hash/">Advanced Encode / Decode / Hash dialog</a> - this replaces the old core encode/decode/hash dialog</li>
   <li><a href="https://www.zaproxy.org/docs/desktop/addons/dom-xss-active-scan-rule/">DOM XSS Scan Rule</a> - an Active Scan rule for detecting DOM XSS vulnerabilities</li>
   <li><a href="https://www.zaproxy.org/docs/desktop/addons/form-handler/">Form Handler</a> - allows for the custom configuration of values used in forms based on field names</li>
   <li><a href="https://www.zaproxy.org/docs/desktop/addons/graalvm-javascript/">GraalVM JavaScript</a> - included as Java 15+ no longer includes the Oracle Nashorn JavaScript engine</li>
-  <li><a href="https://www.zaproxy.org/docs/desktop/addons/graphql-support/">GraphQL Supprt</a> - allows you to import and active scan GraphQL definitions</li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/graphql-support/">GraphQL Support</a> - allows you to import and active scan GraphQL definitions</li>
   <li><a href="https://www.zaproxy.org/docs/desktop/addons/retire.js/">Retire.js</a> - a Passive Scan rule which implements checks provided by <a href="https://retirejs.github.io/retire.js/">Retire.js</a> in order to identify vulnerable or out-dated JavaScript packages</li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/soap-support/">SOAP Support</a> - allows you to import and active scan WSDL files containing SOAP endpoints</li>
 </ul>
+
+<H3>Updated Add-Ons</H3>
+The following add-ons have been updated since the last full release:
+<ul>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/ajax-spider/">Ajax Spider</a></li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/">Active Scan Rules</a></li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/forced-browse/">Forced Browse</a></li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/fuzzer/">Fuzzing</a></li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/getting-started-guide/">Getting Started Guide</a></li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/hud/">The HUD</a></li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/online-menu/">Online Menu</a></li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/openapi-support/">OpenAPI Support</a></li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/">Passive Scan Rules</a></li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/quick-start/">Quick Start</a></li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/script-console/">Script Console</a></li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/selenium/">Selenium</a></li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/linux-webdrivers/">Linux WebDrivers</a></li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/macos-webdrivers/">MacOS WebDrivers</a></li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/windows-webdrivers/">Windows WebDrivers</a></li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/websockets/">WebSockets</a></li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/zest/">Zest</a></li>
+</ul>
+
+<H2>Docker Updates</H2>
+The following changes are included in the latest Stable Docker image:
+<ul>
+	<li>Update Webswing to latest version (20.2.1) to work with newer Java versions.</li>
+	<li>Update Java in stable image to version 11.</li>
+	<li>Add support for authenticated scans.</li>
+	<li>Add zap_tune function (disable all tags and limit pscan alerts to 10), zap_tuned hook and disable recovery log.</li>
+	<li>Update zap-api-scan.py to add support for GraphQL.</li>
+	<li>Fail immediately if the spider scans were not started to provide better error message.</li>
+	<li>Packaged scans will use the provided context when spidering and active scanning.</li>
+	<li>Add `IS_CONTAINERIZED` environment variable to the container image, used in the python script to check for containerized environments (e.g. containerd) without relying on container runtime specific files.</li>
+	<li>Make podman compatible</li>
+	<li>Make docker stable use ubuntu 20.04</li>
+	<li>Make `python` command use Python 3.</li>
+	<li>Removed python 2, only python 3 will be supported going forward.</li>
+	<li>Changed zap-full-scan.py and zap-api-scan.py to include the -I option to ignore only warning used by zap-baseline-scan.py</li>
+</ul>
+For full list of changes made to the docker images see the docker <a href="https://github.com/zaproxy/zaproxy/blob/develop/docker/CHANGELOG.md">CHANGELOG.md</a>.
 
 <H2>Changes in Bundled Libraries</H2>
 The following libraries were updated:
