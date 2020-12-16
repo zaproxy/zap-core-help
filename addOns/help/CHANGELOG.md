@@ -3,6 +3,10 @@ All notable changes to this add-on will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## Unreleased
+### Changed
+- Remove extra column in a videos table.
+
 ## [11] - 2020-12-16
 
 - Update for 2.10.0 release.
