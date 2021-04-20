@@ -7,7 +7,7 @@ import org.zaproxy.gradle.addon.misc.ExtractLatestChangesFromChangelog
 
 plugins {
     eclipse
-    id("org.zaproxy.add-on") version "0.3.0" apply false
+    id("org.zaproxy.add-on") version "0.5.0" apply false
 }
 
 eclipse {
