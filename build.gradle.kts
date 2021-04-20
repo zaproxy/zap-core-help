@@ -1,9 +1,9 @@
 plugins {
-    id("com.diffplug.gradle.spotless") version "3.18.0"
+    id("com.diffplug.spotless") version "5.12.1"
 }
 
 allprojects {
-    apply(plugin = "com.diffplug.gradle.spotless")
+    apply(plugin = "com.diffplug.spotless")
 
     repositories {
         mavenCentral()
