@@ -1,13 +1,19 @@
-import org.zaproxy.gradle.addon.AddOnPlugin
+import java.util.regex.Pattern
 import org.zaproxy.gradle.addon.AddOnPluginExtension
+import org.zaproxy.gradle.addon.internal.GitHubReleaseExtension
+import org.zaproxy.gradle.addon.internal.model.AddOnRelease
+import org.zaproxy.gradle.addon.internal.model.ProjectInfo
+import org.zaproxy.gradle.addon.internal.model.ReleaseState
+import org.zaproxy.gradle.addon.internal.tasks.CreatePullRequest
+import org.zaproxy.gradle.addon.internal.tasks.CreateTagAndGitHubRelease
+import org.zaproxy.gradle.addon.internal.tasks.GenerateReleaseStateLastCommit
+import org.zaproxy.gradle.addon.internal.tasks.HandleRelease
 import org.zaproxy.gradle.addon.manifest.ManifestExtension
 import org.zaproxy.gradle.addon.misc.ConvertMarkdownToHtml
-import org.zaproxy.gradle.addon.misc.CreateGitHubRelease
-import org.zaproxy.gradle.addon.misc.ExtractLatestChangesFromChangelog
 
 plugins {
     eclipse
-    id("org.zaproxy.add-on") version "0.5.0" apply false
+    id("org.zaproxy.add-on") version "0.6.0" apply false
 }
 
 eclipse {
@@ -18,6 +24,38 @@ eclipse {
 }
 
 description = "Common configuration of the add-ons."
+
+val ghReleaseDataProvider = provider {
+    subprojects.first().zapAddOn.gitHubRelease
+}
+val generateReleaseStateLastCommit by tasks.registering(GenerateReleaseStateLastCommit::class)
+
+val handleRelease by tasks.registering(HandleRelease::class) {
+    user.set(ghReleaseDataProvider.map { it.user.get() })
+    repo.set(ghReleaseDataProvider.map { it.marketplaceRepo.get() })
+}
+
+val prepareNextDevIter by tasks.registering {
+    mustRunAfter(handleRelease)
+}
+
+val releasedProjects = mutableListOf<Project>()
+val createPullRequestNextDevIter by tasks.registering(CreatePullRequest::class) {
+    user.set(ghReleaseDataProvider.map { it.user.get() })
+    repo.set(ghReleaseDataProvider.map { it.repo.get() })
+    branchName.set("bump-version")
+
+    commitSummary.set("Prepare next dev iteration(s)")
+    commitDescription.set(provider {
+        "Update version and changelog for:\n" + releasedProjects.map {
+            " - ${it.zapAddOn.addOnName.get()}"
+        }.sorted().joinToString("\n")
+    })
+
+    dependsOn(prepareNextDevIter)
+}
+
+val releaseAddOn by tasks.registering
 
 subprojects {
     apply(plugin = "java-library")
@@ -58,49 +96,74 @@ subprojects {
             addOnName.set("Help - $language")
         }
     }
-}
 
-System.getenv("GITHUB_REF")?.let { ref ->
-    if ("refs/tags/" !in ref || !ref.contains(Regex(".*-v.*"))) {
-        return@let
+    val projectInfo = ProjectInfo.from(project)
+    generateReleaseStateLastCommit {
+        projects.add(projectInfo)
     }
 
-    tasks.register<CreateGitHubRelease>("createReleaseFromGitHubRef") {
-        val targetTag = ref.removePrefix("refs/tags/")
-        val (targetAddOnId, targetAddOnVersion) = targetTag.split("-v")
-        val addOnProject = childProject(targetAddOnId)
+    if (ReleaseState.read(projectInfo).isNewRelease()) {
+        releasedProjects.add(project)
 
-        authToken.set(System.getenv("GITHUB_TOKEN"))
-        repo.set(System.getenv("GITHUB_REPOSITORY"))
-        tag.set(targetTag)
+        val versionProvider = project.zapAddOn.addOnVersion
+        val tagProvider = versionProvider.map { "${project.zapAddOn.addOnId.get()}-v$it" }
+        val createReleaseAddOn by project.tasks.named<CreateTagAndGitHubRelease>("createRelease") {
+            tag.set(tagProvider)
+            val message = versionProvider.map { "${project.zapAddOn.addOnName.get()} version $it" }
+            tagMessage.set(message)
+            title.set(message)
+        }
+        releaseAddOn {
+            dependsOn(createReleaseAddOn)
 
-        title.set(addOnProject.map { "${it.zapAddOn.addOnName.get()} version ${it.zapAddOn.addOnVersion.get()}" })
-        bodyFile.set(addOnProject.flatMap { it.tasks.named<ExtractLatestChangesFromChangelog>("extractLatestChanges").flatMap { it.latestChanges } })
-
-        assets {
-            register("add-on") {
-                file.set(addOnProject.flatMap { it.tasks.named<Jar>(AddOnPlugin.JAR_ZAP_ADD_ON_TASK_NAME).flatMap { it.archiveFile } })
-            }
+            dependsOn(handleRelease)
+            dependsOn(createPullRequestNextDevIter)
         }
 
-        doFirst {
-            val addOnVersion = addOnProject.get().zapAddOn.addOnVersion.get()
-            require(addOnVersion == targetAddOnVersion) {
-                "Version of the tag $targetAddOnVersion does not match the version of the add-on $addOnVersion"
-            }
+        val addOnRelease = AddOnRelease.from(project)
+        addOnRelease.downloadUrl.set(addOnRelease.addOn.map { it.asFile.name }.map {
+            "https://github.com/${ghReleaseDataProvider.get().repo.get()}/releases/download/${tagProvider.get()}/$it"
+        })
+
+        handleRelease {
+            addOns.add(addOnRelease)
+
+            mustRunAfter(createReleaseAddOn)
+        }
+
+        val prepareNextDevIterAddOn by project.tasks.named("prepareNextDevIter") {
+            mustRunAfter(handleRelease)
+        }
+        prepareNextDevIter {
+            dependsOn(prepareNextDevIterAddOn)
         }
     }
 }
 
-fun childProject(addOnId: String): Provider<Project> =
-    project.provider {
-        val addOnProject = childProjects.values.firstOrNull { addOnId == it.zapAddOn.addOnId.get() }
-        require(addOnProject != null) { "Add-on with ID $addOnId not found." }
-        addOnProject
-    }
+val createPullRequestRelease by tasks.registering(CreatePullRequest::class) {
+    System.getenv("ADD_ON_IDS")?.let {
+        val projects = it.split(Pattern.compile(" *, *")).map { name ->
+            val project = subprojects.find { it.name == name }
+            require(project != null) { "Add-on with project name $name not found." }
+            project
+        }
 
-fun childProjects(addOns: List<String>, action: (Project) -> Unit) =
-    childProjects.values.filter { addOns.contains(it.name) }.forEach(action)
+        projects.forEach {
+            dependsOn(it.tasks.named("prepareRelease"))
+        }
+
+        user.set(ghReleaseDataProvider.map { it.user.get() })
+        repo.set(ghReleaseDataProvider.map { it.repo.get() })
+        branchName.set("release")
+
+        commitSummary.set("Release add-on(s)")
+        commitDescription.set(provider {
+            "Release the following add-ons:\n" + projects.map {
+                " - ${it.zapAddOn.addOnName.get()} version ${it.zapAddOn.addOnVersion.get()}"
+            }.sorted().joinToString("\n")
+        })
+    }
+}
 
 fun Project.java(configure: JavaPluginExtension.() -> Unit): Unit =
     (this as ExtensionAware).extensions.configure("java", configure)
@@ -110,6 +173,9 @@ fun Project.zapAddOn(configure: AddOnPluginExtension.() -> Unit): Unit =
 
 val Project.zapAddOn: AddOnPluginExtension get() =
     (this as ExtensionAware).extensions.getByName("zapAddOn") as AddOnPluginExtension
+
+val AddOnPluginExtension.gitHubRelease: GitHubReleaseExtension get() =
+    (this as ExtensionAware).extensions.getByName("gitHubRelease") as GitHubReleaseExtension
 
 fun AddOnPluginExtension.manifest(configure: ManifestExtension.() -> Unit): Unit =
     (this as ExtensionAware).extensions.configure("manifest", configure)
