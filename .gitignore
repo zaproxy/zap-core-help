@@ -3,6 +3,7 @@
 .gradle
 /build
 /buildSrc/build
+/addOns/build
 /addOns/*/build
 /commonFiles/build
 

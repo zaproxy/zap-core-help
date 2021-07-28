@@ -13,13 +13,24 @@ import org.zaproxy.gradle.addon.misc.ConvertMarkdownToHtml
 
 plugins {
     eclipse
-    id("org.zaproxy.add-on") version "0.6.0" apply false
+    id("org.zaproxy.add-on") version "0.7.0" apply false
+    id("org.zaproxy.crowdin") version "0.1.0"
 }
 
 eclipse {
     project {
         // Prevent collision with zap-extensions' addOns project.
         name = "addOnsHelp"
+    }
+}
+
+crowdin {
+    credentials {
+        token.set(System.getenv("CROWDIN_AUTH_TOKEN"))
+    }
+
+    configuration {
+        file.set(file("$rootDir/gradle/crowdin.yml"))
     }
 }
 
@@ -118,6 +129,9 @@ subprojects {
 
             dependsOn(handleRelease)
             dependsOn(createPullRequestNextDevIter)
+            if (project.zapAddOn.addOnId.get() == "help") {
+                dependsOn(":addOns:crowdinUploadSourceFiles")
+            }
         }
 
         val addOnRelease = AddOnRelease.from(project)
