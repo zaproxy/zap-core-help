@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Ang Ispayder</title>
+</head>
+<body>
+	<h1>Ang Ispayder</h1>
+	<p>Ang ispayder ay isng kasangkapan na ginagamit sa awtomatikong pagtuklas ng bagong pinagkukunan ng mga (URL) sa isang partikular na sayt. Ito ay nagsisimula kasama ang listahan ng mga URL
+ na binibisita, ito ay tinatawag na ang mga seed, kung saan ito ay naka depende kung paano amg is[ayder ay sinisimulan. Ang Spider pagkatapos ay bibisita itong mga URL, ito ay kumikilala sa laht ng mga 
+ hyperlink sa mga pahina at idinadagdag ang mga ito sa mga listahan ng mga URL na bumisita at ang prosesong ito na nagpatuloy ng recursively hanggat may mga bagong pinagkukuhaan na nakita.
+	</p>
+
+	<p>Maaaring makumpigura ang ispayder at magsimula gamit ang <a href="../../ui/dialogs/spider.html">diyalogo ng ispayder</a>.</p>
+
+	<p>Sa panahon ng proseso ng isang URL, ang ispayder ay gagawa ng isang kahilingan na ikuha sa pinagmumulan at pagkatapos ay siyasatin ang tugon, pagkilala sa mga hyperlink. Ito ay kasalukuyang mayroong sumusunod na pag-uugali habang nagpa-process ng mga klase ng mga tugon:</p>
+
+	<h4>Ang HTML</h4>
+	Ang pag-process ng mga partikular ng mga tag, pagkilala sa mga link ng bagong mga pinagkukunan:
+	<ul>
+		<li>Base - ang tamang pamamahala</li>
+		<li>Isang, Link, lugar - 'href' katangian</li>
+		<li>Kuwadro, IFrame, iskrip, Img - 'src' katangian</li>
+		<li>Meta - 'http-equiv' para sa 'lokasyon' at 'refresh'</li>
+		<li>Ang anyo - tamang pag gamit ng mga anyo na may parehong GET at POST na paraan. Ang kahalagahan ng mga field ay ang wastong pagbuo, kasama ang <a
+			href="http://www.w3schools.com/html5/html5_form_input_types.asp">mga klase ng HTML 5.0 na pag-input</a>.
+		</li>
+		<li>Mga komentaryo - makikita ang mga wastong tag sa mga komentaryo na sinusuri din, kung tumutukoy sa Mga <a href="../../ui/dialogs/options/spider.html"> Opsyon ng Ispayder ng iskrin</a>
+		</li>
+	</ul>
+
+	<h4>Ang Robots.txt na payl</h4>
+	Kung nakatakda sa mga
+	<a href="../../ui/dialogs/options/spider.html">Opsyon ng ispayder</a>, ang 'robot.txt na payl ay sinusuri din at sinusubukan na kilalanin ang bagong sanggunian 
+gamit ang tinutukoy na mga patakaran. Dapat ito ay mabanggit na ang ispayder ay hindi sumusunod sa mga patakaran na tinutukoy sa mga 'robot.txt'na payl.
+
+	<h4>Ang ayos ng OData Atom</h4>
+	Ang nilalaman ng OData gamit ang ayos ng Atom ay kasalukuyang sinusuportahan. kasama ang lhat ng mga link na (kaugnay o lubos) ang pag-proseso.
+
+	<h4>Ang teksto ng tugon na di-HTML</h4>
+	Ang teksto ng mga tugon ay sinusuri ng pag-iskan para sa mga gayahan ng URL
+
+	<h4>Ang di-txt na tugon</h4>
+	Kasalukuyang, ang ispayder ay hindi naproseso ang klase nato ng sanggunian.
+
+	<h2>Ang Iba pang mga aspeto</h2>
+	<ul>
+	<li> Habang nagsisiyasat kung ang URL ay binisita, ang gawain tungkol sa kung paano ang mga parametro ay mahahawakan na maaaring makumpigura sa mga ispayder ng mga opsyon ng iskrin.
+	</li>
+	<li> Habang nagsisiyasat kung ang isang URL aybinisita, mayroong isang madalang na karaniwang mga parametro kung saan ay hindi pinapansin: jsessionid, phpsessid, aspsessionid, utm_*
+	</li>
+	<li> Ang gawain ng mga ispayder tungko sa mga cookie na nakadepende s kung paano ang ispayder ay magsisimula at kung alin sa mga opsyon ay pagaganahin.
+Para sa iba pang mga detalye sumangguni sa mga opsyon ng ispayder ng iskrin.
+	</li>
+	</ul>
+	<p>
+		Ang ispayder ay makukumpigura gamit ang <a
+			href="../../ui/dialogs/options/spider.html">Mga Opsiyon ng Ispayder ng iskrin</a>.
+	</p>
+
+	<h2>Tingnan din sa</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/overview.html">Ang pangkalahatang ideya ng UI</a></td>
+			<td>para sa pangkalahatang ideya ng mga gumagamit ng interface</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="features.html">Ang mga tampok</a></td>
+			<td>ang ibinigay sa pamamagitan ng ZAP</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/options/spider.html">Ang mga opsyon ng ispader ng iskrin</a></td>
+			<td>para sa isang pangkalahatang ideya ng mga opsyon sa mga ispayder</td>
+		</tr>
+	</table>
+
+<h2>Official Videos</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><a href="https://play.sonatype.com/watch/rLq2nvgbuGwVn2BX9gA8r2">ZAP In Ten: Explore Your Applications</a> (10:36)</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><a href="https://youtu.be/mz2nhYpU-sw">ZAP Deep Dive: Exploring Applications: Standard Spider</a> (34:35)</td></tr>
+</table>
+
+</body>
+</html>

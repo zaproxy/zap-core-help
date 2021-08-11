@@ -6,11 +6,10 @@
 Sesi konteks layar
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Layar Konteks Sesi</h1>
 <p>
-Layar ini memungkinkan anda mengatur
-<a href="../../../start/concepts/contexts.html">contexts</a>.
+These screens allows you manage <a href="../../../start/features/contexts.html">contexts</a>.
 </p>
 <p>
 Ada satu set layar untuk setiap kontek yang Anda tetapkan.
@@ -19,49 +18,75 @@ Ada satu set layar untuk setiap kontek yang Anda tetapkan.
 <h3>Layar atas</h3>
 Hal ini memungkinkan Anda untuk menetapkan konteks nama dan deskripsi.
 
-<h3>Termasuk dalam konteks</h3>
+<h3>Include in Context</h3>
 Ini memungkinkan Anda mengelola URL yang akan disertakan dalam konteks.<br/>
 URL yang tidak sesuai dengan salah satu regexs tidak akan disertakan dalam konteks.
+<br><strong>Note:</strong> The regular expressions must match the whole URL.
 
-<h3>Mengecualikan dari konteks</h3>
-Hal ini memungkinkan Anda untuk mengelola URL yang akan dikeluarkan dari konteks.<br/>
-Anda hanya perlu menentukan regex untuk URL yang tidak ingin Anda sertakan tapi yang cocok dengan satu atau lebih regex 'include'.
+<h3>Exclude from Context</h3>
+This allows you to manage the URLs which will be excluded from the context.<br/>
+You only need to specify regexs for URLs that you do not want to include but which match one or more
+of the 'include' regexes.
+<br><strong>Note:</strong> The regular expressions must match the whole URL.
 
 <h3><a name="struct">Struktur</a></h3>
-Lihat <a href="context-struct.html">Sesi struktur konteks layar</a>.
+See the <a href="context-struct.html">Sesi struktur konteks layar</a>.
 
 <h3>Teknologi</h3>
-Hal ini memungkinkan Anda untuk menentukan teknologi yang digunakan dalam konteks, jika diketahui.<br/>
-Secara default semua teknologi disertakan.<br/>
-Jika Anda mengecualikan teknologi yang Anda tahu tidak digunakan kemudian ini dapat mempercepat 
-<a href="../../../start/concepts/ascan.html">pemindaian aktif</a> karena aturan khusus untuk teknologi yang dikecualikan dapat dilewati.
+This allows you to specify the technologies used in the context, if known.<br/>
+By default all technologies are included.<br/>
+If you exclude technologies that you know are not used then this may speed up 
+<a href="../../../start/features/ascan.html">pemindaian aktif</a> as rules specific to the excluded
+technologies can be skipped.
 
 <h3><a name="auth">Otentikasi</a></h3>
-Lihat <a href="context-auth.html">Layar Otentikasi Sesi Konteks</a>.
+See the <a href="context-auth.html">Layar Otentikasi Sesi Konteks</a>.
 
 <h3><a name="sm">Manajemen sesi</a></h3>
-Hal ini memungkinkan Anda untuk mengelola cara di mana Session Management sedang dilakukan untuk konteks. 
-Setelah memilih jenis metode manajemen sesi, pilihan yang perlu dikonfigurasi
-bergantung pada metode manajemen sesi.
+This allows you to manage the way in which Session Management is being done for the Context. 
+After selecting the Session Management Method type, the options that need to be configured 
+depend on the Session Management Method.
 
 <h4>Manajemen Sesi Berbasis Cookie</h4>
-Tidak ada konfigurasi yang diperlukan untuk metode manajemen sesi ini. <small>Baca  
-<a href="../../../start/concepts/sessionManagement.html#cbsm">more</a>...</small>
+Tidak diperlukan konfigurasi untuk metode manajemen sesi ini. <small>Read  
+<a href="../../../start/features/sessionManagement.html#cbsm">more</a>...</small>
 
 <h4>Manajemen Sesi Otentikasi HTTP</h4>
-Tidak diperlukan konfigurasi untuk metode manajemen sesi ini. <small>Baca
-<a href="../../../start/concepts/sessionManagement.html#hasm">more</a>...</small>
+No configuration is needed for this session management method. <small>Read
+<a href="../../../start/features/sessionManagement.html#hasm">more</a>...</small>
+
+<h4>Script-Based Session Management</h4>
+
+To use this session management method, you <b>first</b> need to write (and save) a <b>Session Management Script</b> 
+using the <b>Scripts</b> tab (see the provided examples and templates for this script type in the Scripts tab).
+Then you need to supply the name of the script in the dropdown list. After selecting the script, you need to press 
+the <b>Load</b> button, loading all the requirements of the script.
+Any parameters that you have specified as <i>required</i> or <i>optional</i> in the script will
+be shown in the interface to be defined. Their values are available to be used in the script, during the session management process, as seen
+in the provided examples for Session Management Scripts. Make sure that after doing any changes to the parameters 
+required by the Session Management script you re-load the script. Otherwise, the parameters shown in the interface might
+not be the ones used during the session management process and errors might occur. 
+<small>Read <a href="../../../start/features/sessionManagement.html#sbsm">more</a>...</small>
 
 
 <h3><a name="users">Pengguna</a></h3>
-Hal ini memungkinkan Anda untuk mengkonfigurasi satu set pengguna yang dapat digunakan untuk berbagai tindakan lain seluruh aplikasi.
+This allows you to configure a set of Users that may be used for various other actions
+throughout the application.
 <p>Bagian kredensial pengguna tergantung pada metode otentikasi yang dikonfigurasi
 untuk konteks.</p>
 
-<h2>Regex URL</h2>
-Dalam <i>Sertakan dalam*</i>, <i>Kecualikan dari*</i> panel dan <i>Log in / out indikator</i> dari <i>Otentikasi</i> panel, Anda dapat memasukkan ekspresi reguler untuk menentukan URL yang dikecualikan. Sementara Anda bisa melepaskan satu karakter meta dengan garis miring terbalik, Anda juga bisa menggunakan <b>\Q...\E</b> urutan pelarian. Semua karakter antara <b>\Q</b> dan <b>\E</b> dinterpretasikan sebagai karakter literal. Contohnya \Q*\d+*\E sesuai dengan teks literal *\d+*. Urutan pelarian ini digunakan pada ZAP ketika anda mengecualikan URL melalui beberapa menu konteks.
+<h2><a name="custompages">Custom Page</a></h2>
+This functionality allows you to handle situations in which the target does not return a RFC compliant or expected error response when for conditions such as 
+404 - Not Found, 500 - Internal Server Error, etc. Often developers implement custom 404 or 500 handling but do not actually return an appropriate status code.
+Leveraging Custom Page definitions you can define URLs or response content which identify error responses regardless of the status code associated with the response.
+<small>Read <a href="../../../start/features/custompages.html">more</a>...</small>
+
+<h2>URL regexs</h2>
+In the <i>Include in *</i>, <i>Exclude from *</i> panels and the <i>Logged in/out indicators</i> of the <i>Authentication</i> panel, etc. you can enter regular expressions to define excluded URLs.
+While you can escape a single meta-character with a backslash, you can also use the <b>\Q...\E</b> escape sequence. All the characters between the <b>\Q</b> and the <b>\E</b> are interpreted as literal characters. E.g. \Q*\d+*\E matches the literal text *\d+*.
+This escape sequence is used in ZAP when you exclude URLs via some context menus.
 <br>
-<b>catatan:</b> Jika URL anda berisi "\E", maka anda harus melakukan langkah-langkah berikut saat menggunakan <b>\Q...\E</b> urutan pelarian:
+<b>Note:</b> If your URL contains a "\E", then you have to do the following steps when using the <b>\Q...\E</b> escape sequence:
 <ul>
 	<li>Buka urutan pelarian</li>
 	<li>Tutup urutan pelarian sebelum "karakter"\E</li>
@@ -70,25 +95,27 @@ Dalam <i>Sertakan dalam*</i>, <i>Kecualikan dari*</i> panel dan <i>Log in / out 
 	<li>Melarikan diri dari garis miring terbalik.</li>
 </ul>
 <br>
-Contoh: subdomain.example.com/path?a=<b>\E</b>& amp; moredata = 2 seharusnya muncul sebagai
+Example: subdomain.example.com/path?a=<b>\E</b>&amp;moredata=2 should appear as
 <i>\Qsubdomain.example.com/path?a=\E</i><b>\\E</b><i>\Q&amp;moredata=2\E</i>
   
-<h2>Diakses via</h2>
+<h2>Accessed via</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../tlmenu/file.html">Menu File tingkat atas</a></td><td>'Properties...' menu item</td></tr>
+<a href="../../tabs/sites.html">Sites tab</a></td><td>Double click a Context</td></tr>
 </table>
 
-<h2>Lihat juga</h2>
+<h2>See also</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../../overview.html">Ikhtisar UI</a></td><td>untuk ikhtisar antarmuka pengguna</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../dialogs.html">Dialog</a></td><td>untuk rincian dariuntuk rincian dialog atau popup dialog atau popup </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../../start/concepts/authentication.html">Otentikasi</a></td><td>untuk Ikhtisar otentikasi </td></tr>
+<a href="../../../start/features/authentication.html">Otentikasi</a></td><td>untuk Ikhtisar otentikasi </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../../start/concepts/sessionManagement.html">Sesi manajemen</a></td><td>untuk ikhtisar sesi manajemen </td></tr>
+<a href="../../../start/features/sessionManagement.html">Sesi manajemen</a></td><td>untuk ikhtisar sesi manajemen </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../../start/features/custompages.html">Custom Page</a></td><td>for an overview of Custom Page details </td></tr>
 </table>
 
 

@@ -6,7 +6,7 @@
 Aba de histórico
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Aba de histórico</h1>
 <p>
 A aba de histórico mostra uma lista de todas as solicitações/requests, na ordem em que elas foram feitas.<br/>
@@ -26,11 +26,11 @@ Para cada solicitação, você pode ver:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 <td>O tempo que levou a toda solicitação</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td><a href="../../start/concepts/alerts.html">Alertas</a> sobre o pedido</td></tr>
+<td>Any <a href="../../start/features/alerts.html">Alerts</a> on the request</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td>Quaisquer <a href="../../start/concepts/notes.html">notas</a> que você tiver adicionado ao request</td></tr>
+<td>Any <a href="../../start/features/notes.html">Notes</a> you have added to request</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td>Qualquer <a href="../../start/concepts/tags.html">Tag</a> na solicitação</td></tr>
+<td>Any <a href="../../start/features/tags.html">Tags</a> on the request</td></tr>
 </table>
 
 Selecionar um pedido irá exibi-lo na <a href="request.html">Aba de Request</a> e 
@@ -52,91 +52,102 @@ O menu de ataque tem os seguintes submenus:
 
 <h4>Varredura ativa...</h4>
 Isto irá lançar o diálogo de <a href="../dialogs/advascan.html">Varredura Ativa</a> que permite a você iniciar uma 
-<a href="../../start/concepts/ascan.html">Varredura Ativa</a> no ponto de partida definido para a solicitação que você escolheu.<br/>
+<a href="../../start/features/ascan.html">Varredura Ativa</a> no ponto de partida definido para a solicitação que você escolheu.<br/>
 
 <h4>Spider...</h4>
 Isto irá lançar o diálogo de <a href="../dialogs/spider.html">Spider</a> que permite a você iniciar o 
-<a href="../../start/concepts/spider.html">Spider</a> no ponto de partida definido para a solicitação que você escolheu.<br/>
+<a href="../../start/features/spider.html">Spider</a> no ponto de partida definido para a solicitação que você escolheu.<br/>
 
 <h3>Incluir no contexto</h3>
 Este menu permite que você inclua os nós selecionados e todos os seus subordinados no
-<a href="../../start/concepts/contexts.html">contexto especificado</a>.<br/>
+<a href="../../start/features/contexts.html">contexto especificado</a>.<br/>
 Você também tem a opção para criar um novo contexto.<br/>
 O diálogo <a href="../dialogs/session/contexts.html">Contextos da sessão</a> será exibido para que você possa fazer alterações adicionais.
 
 <h3>Excluir do contexto</h3>
 Este menu permite que você exclua os nós selecionados e todos os seus subordinados do
-<a href="../../start/concepts/contexts.html">contexto especificado</a>.<br/>
+<a href="../../start/features/contexts.html">contexto especificado</a>.<br/>
 Os diálogos de <a href="../dialogs/session/contexts.html">Contextos da sessão</a> serão exibidos para que você possa fazer alterações adicionais.
 
 <h3>Flag como contexto</h3>
 Este menu tem os seguintes submenus para cada um dos 
-<a href="../../start/concepts/contexts.html">contextos</a> que você definiu:
+<a href="../../start/features/contexts.html">contextos</a> que você definiu:
 
 <h4>Solicitação de Login de Autenticação baseado em formulário do <i>Nome do contexto</i></h4>
 Isto identifica o nó especificado como uma solicitação de logon para o contexto especificado.<br/>
 Você pode ter apenas um nó identificado como tal em cada contexto.<br/> 
 A tela do diálogo de <a href="../dialogs/session/context-auth.html">Autenticação de contexto de sessão</a> será exibida para que você possa fazer alterações adicionais.
 
-<h4>Nó baseado em<i>Nome de contexto</i></h4>
-Isto identifica o nó especificado como <a href="../../start/concepts/ddc.html">Orientado a dados</a> para o contexto especificado.<br/>
-A tela do diálogo de <a href="../dialogs/session/context-struct.html">Estrutura de contexto de sessão</a> será exibida para que você possa fazer alterações adicionais.
+<h4><i>Context name</i> JSON-based Auth Login request</h4>
+This identifies the specified node as a login request for the specified context.<br/>
+You may only have one node identified as such in any one context.<br/> 
+A tela do diálogo de <a href="../dialogs/session/context-auth.html">Session Context Authentication</a> será exibida para que você possa fazer alterações adicionais.
+
+<h4><i>Context name</i> Data driven node</h4>
+This identifies the specified node as <a href="../../start/features/ddc.html">Data driven content</a> for the specified context.<br/>
+The <a href="../dialogs/session/context-struct.html">Session Context Structure</a> screen will be displayed to
+allow you to make any additional changes.
 
 <h3>Excluir de</h3>
-Este menu possui os seguintes submenus:
+This menu has the following submenus:
 
 <h4>Proxy</h4>
-Isto irá excluir do proxy os nós selecionados. Eles ainda passarão pelo ZAP, mas não serão exibidos em qualquer uma das guias.<br/>
-Isto pode ser usado para ignorar URLs que você sabe que não são relevantes para o sistema que você está testando.<br/>
-Os nós podem ser incluídos novamente através do diálogo <a href="../dialogs/session/sessprop.html">Propriedades da Sessão</a>     
+This will exclude the selected nodes from the proxy. They will still be proxied via ZAP but will not be shown 
+in any of the tabs.<br/>
+This can be used to ignore URLs that you know are not relevant to the system you are currently testing.<br/>
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Propriedades da Sessão</a> dialog   
 
 <h4>Scanner</h4>
-Isto irá impedir que os nós selecionados entrem na varredura ativa.<br/>
-Os nós podem ser incluídos novamente através do diálogo <a href="../dialogs/session/sessprop.html">Propriedades da Sessão</a>     
+This will prevent the selected nodes from being actively scanned.<br/>
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Propriedades da Sessão</a> dialog   
 
 <h4>Spider</h4>
-Isto irá impedir que os nós selecionados sejam percorridos pelo spider.<br/>
-Os nós podem ser incluídos novamente através do diálogo <a href="../dialogs/session/sessprop.html">Propriedades da Sessão</a>     
+This will prevent the selected nodes from being spidered.<br/>
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
 
 <h3>Gerenciar Tags...</h3>
-Isso irá abrir o diálogo
-<a href="../dialogs/managetags.html">Gerenciar Tags</a> que permite a você alterar as <a href="../../start/concepts/tags.html">tags</a> associadas com a solicitação.
+This will bring up the
+<a href="../dialogs/managetags.html">Manage Tags dialog</a> which allows you to change 
+the <a href="../../start/features/tags.html">tags</a> associated with the
+request.
 
 <h3>Notas...</h3>
-Isso irá abrir o diálogo
-<a href="../dialogs/addnote.html">Acrescentar nota</a> que permite a você gravar 
-<a href="../../start/concepts/notes.html">notas</a> relacionadas com o pedido.
+This will bring up the
+<a href="../dialogs/addnote.html">Add Note dialog</a> which allows you to record 
+<a href="../../start/features/notes.html">notes</a> related to the
+request.
 
 <h3>Deletar</h3>
-Isto irá remover o nó e todos os seus 'filhos' do ZAP.<br/>
-No entanto, eles podem ser adicionados de volta, para impedir que isso aconteça no menu 'Excluir de'. 
+This will remove the node and all of its children from ZAP.<br/>
+However they can be added back in, to prevent this use the 'Exclude from' menus. 
 
 <h3>Pausa...</h3>
-Isso irá abrir o diálogo
-<a href="../dialogs/addbreak.html">Adicionar ponto de interrupção</a> que permite a você definir um ponto de interrupção naquela URL.<br/>
+This will bring up the
+<a href="../dialogs/addbreak.html">Add Breakpoint dialog</a> which allows 
+you to set a breakpoint on that URL.<br/>
 
-<h3>Alerts for this node</h3>
-If the URL selected has <a href="../../start/concepts/alerts.html">alerts</a> associated with it then 
+<h3>Alertas para este alvo</h3>
+If the URL selected has <a href="../../start/features/alerts.html">alerts</a> associated with it then 
 they will be listed under this menu.<br>
 Selecting one of the alerts will cause it to be displayed.
 
-<h3>Resend...</h3>
+<h3>Open/Resend with Request Editor...</h3>
 This will bring up the
-<a href="../dialogs/resend.html">Resend dialog</a> which allows you to  
+<a href="../dialogs/man_req.html">Manual Request Editor dialog</a> which allows you to  
 resend the request after making any changes to it that you want to.
 
-<h3>New Alert...</h3>
-Isso irá abrir o
+<h3>Novo Alerta...</h3>
+This will bring up the
 <a href="../dialogs/addalert.html">Add Alert dialog</a> which allows you to manually record a new  
-<a href="../../start/concepts/alerts.html">alert</a> against this request.
+<a href="../../start/features/alerts.html">alert</a> against this request.
 
-<h3>Show in Sites tab</h3>
+<h3>Mostrar na Aba de Sites</h3>
 This will show the selected message in the <a href="sites.html">Sites tab</a>.
 
-<h3>Open URL in Browser</h3>
+<h3>Ver no Navegador</h3>
 This will open the URL of the selected node in your default browser.
 
-<h3>Generate anti CSRF test form</h3>
+<h3>Gerar formulário de teste anti CSRF</h3>
 This will open a URL which will give you a generated form for testing for CSRF issues.<br>
 It will only be enabled for POST requests, if the API is enabled and if Java supports the opening of URLs 
 in a browser on your platform.

@@ -6,7 +6,7 @@
 Tela de opções de configuração de regra
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Tela de opções de configuração de regra</h1>
 <p>
 Esta tela permite que você configure o comportamento de regras específicas de varredura ativa e passiva.
@@ -22,6 +22,12 @@ As regras incluídas incluem:<br><br>
 <tr><td>rules.csrf.ignorelist</td><td></td><td>Uma lista de identificadores separados por vírgulas.
 Todos os formulários com um nome ou ID que correspondam a um desses identificadores serão ignorados em varreduras de tokens de Anti-CSRF ausentes.
 Só use esse recurso para ignorar os formulários que você sabe que são seguros, por exemplo, os de busca.</td></tr>
+<tr><td>rules.csrf.ignore.attname</td><td></td><td>The name of an HTML attribute that can be used to indicate that a form does
+not need an anti-CSRF Token. If <code>rules.csrf.ignore.attvalue</code> is specified then this must also match the attribute's value. If
+found any related alerts will be raised at INFO level.</td></tr>
+<tr><td>rules.csrf.ignore.attvalue</td><td></td><td>The value of an HTML attribute named by <code>rules.csrf.ignore.attname</code>
+that can be used to indicate that a form does not need an anti-CSRF Token. If found any related alerts will be raised at INFO level.</td></tr>
+<tr><td>rules.domains.trusted</td><td></td><td>A comma separated list of URL regex patterns. Any URLs that match the patterns will be considered trusted domains and the issues ignored.</td></tr>
 </table>
 
 

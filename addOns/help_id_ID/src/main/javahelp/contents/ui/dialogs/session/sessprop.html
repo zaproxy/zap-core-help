@@ -6,7 +6,7 @@
 Sesi dialog Properti
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Sesi dialog Properti</h1>
 <p>
 Ini memungkinkan kamu mengatur properti sesi dan terdiri dari layar berikut:
@@ -24,10 +24,10 @@ Ini memungkinkan kamu mengelola URL yang akan diabaikan oleh pemindai.
 Hal ini memungkinkan anda untuk mengelola URL yang akan diabaikan oleh laba-laba (standar dan AJAX).
 
 <h3>Konteks</h3>
-Satu set layar untuk mengelola <a href="../../../start/concepts/contexts.html">konteks</a>
+Satu set layar untuk mengelola <a href="../../../start/features/contexts.html">konteks</a>
 
-<h2>URL regexs</h2>
-In the <i>Tidak termasuk *</i> dialog, anda dapat memasukkan ekspresi reguler untuk mendefinisikan Url dikecualikan.
+<h2>URL regexes</h2>
+Dalam <i>Tidak termasuk *</i> dialog, anda dapat memasukkan ekspresi reguler untuk mendefinisikan Url dikecualikan.
 Sementara anda dapat membuka satu meta-karakter dengan garis miring, anda juga dapat menggunakan <b>\Q...\E</b> escape sequence. Semua karakter antara <b>\Q</b> dan <b>\E</b> ditafsirkan sebagai karakter yang persis. Contoh: \Q*\d+*\E persis dengan teks *\d+*.
 Urutan keluar ini digunakan di dalam ZAP saat mengecualikan URL melalui beberapa konteks menu.
 <br>
@@ -41,12 +41,12 @@ Urutan keluar ini digunakan di dalam ZAP saat mengecualikan URL melalui beberapa
 </ul>
 <br>
 Contoh: subdomain.example.com/path?a=<b>\E</b>&amp;moredata=2 seharusnya muncul sebagai
-<i>\Qsubdomain.example.com/path?a=\E</i><b>\\E</b><i>\Q&amp;moredata=2\E</i>
+<i>Contoh: subdomain.example.com/path?a=</i><b>\\E</b><i>\Q&amp;moredata=2\E</i>
   
 <h2>Diakses melalui</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../tlmenu/file.html">Tingkat atas menu File</a></td><td>'Properties...' menu item</td></tr>
+<a href="../../tlmenu/file.html">Tingkat atas menu File</a></td><td>'Session Properties...' menu item</td></tr>
 </table>
 
 <h2>Lihat juga</h2>

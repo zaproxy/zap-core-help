@@ -3,84 +3,82 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Add Alert na dialog
+Ang pagdadagdag ng alerto ng diyalogo
 </title>
 </head>
-<body bgcolor="#ffffff">
-<h1>Add Alert na dialog</h1>
+<body>
+<h1>Ang pagdadagdag ng alerto ng diyalogo</h1>
 <p>
-Ang dialog na ito ay nagpapahintulot sa iyo na manu-manong magdagdag o magbago ng isang <a href="../../start/concepts/alerts.html"> Alert </> na nauugnay
-na may isang partikular na kahilingan.<br/>
+This dialog allows you to manually add or change an <a href="../../start/features/alerts.html">Alert</a> associated
+with a specific request.<br/>
 </p>
 
-<h2>Mga larangan</h2>
+<h2>Ang mga larangan</h2>
 Ang diyalogo ay ang mga sumusunod na larangan:
 
-<h3>Ang uri</h3>
-Sa uri ng alerto ay may humihila pababa sa bukid na nagpapahintulot sa iyo na pumili ng isa sa isang prepopulated na set ng mga uri ng isyu.<br/>
-Maaari din ipasok ang iyong sariling teksto o baguhin ang text ng isa sa mga aytem na napili mo.<br/>
-If you select one of the existing types then the Description, Solution and Other Info fields
-will be populated with text associated with the item you chose. 
+<h3>Ang klase</h3>
+Ang klase ng mga alerto ay isang paghila pababa sa larangan na kung saan ay nagpapahintulot saiyo na piliin ang isa sa isang prepopulated na ayos ng mga klase ng isyu.<br/>
+Maaari mong pasukin ang iyong sariling teksto o baguhin ang teksto ng isa sa mga aytem na iyong napili.<br/>
+Kung iyong napili ang isa sa mga umiiral na mga klase pagkatapos ang paglalawaran. ang solusyon at ang iba pang impormasyon sa mga larangan ay mapupuno sa pamamagitan ng kaugnayan ng teksto sa mga aytem na iyong pinili. 
 
-<h3>Panganib</h3>
-May humihila pababa sa larangan na kung saan ay nagbibigay-daan sa iyo upang tukuyin kung paano malubhang palagay mo ang mga panganib ay:
+<h3>Ang peligro</h3>
+Ang isang humihila pababa sa larangan kung saan ay pinahihintulutan ka na tukuyin kung paano seryosong pag-isipan ang peligro ay:
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Impormasyon</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Mababang</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Katamtaman</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Mataas</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ang impormasyon</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ang mababa</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ang katamtaman</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ang mataas</td><td></td></tr>
 </table>
 
-<h3>Kumpiyansa</h3>
-May humihila pababa sa larangan na kung saan ay nagbibigay-daan sa iyo upang tukuyin ang nakakasiguro ka ay sa ang katumpakan ng mga paghahanap:
+<h3>Ang kumpiyansa</h3>
+Ans isang humuhila pababa sa larangan kung saan ay pinahihitkung paano ang kumpiyansa mo ay nasa bisa ng mga hinahanap:
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>False Positive</td><td>sapagkat hindi ay pagsasamantalahan ang potensyal na mga isyu na makikita mo mamaya</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Mababa</td><td>para sa mga hindi nakumpirma na isyu</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Katamtaman</td><td>para sa mga isyu mo ay medyo kumpyansa sa</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Mataas</td><td>para sa mga natuklasan mo ay lubos na tiwala sa</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Nakumpirma</td><td>para sa mga hindi nakumpirma na isyu</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ang hindi positibo</td><td>para sa potensyal na mga isyu na nakita mo kinalaunan ay hindi makikita</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ang mababa</td><td>para sa mga isyu na hindi kumpirmado</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ang katamtaman</td><td>para sa mga isyu na hindi masyadong pinagkatiwalaan</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ang mataas</td><td>para sa mga nakita mo na iyong lubos na pinagkatiwalaan</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Kumpirmado</td><td>para sa mga isyu na kumpirmado</td></tr>
 </table>
 
-<h3>Parameters</h3>
-Kaakibat ang isang pull down ang patlang na kung saan ay nagbibigay-daan sa iyo upang tukuyin kung aling mga parameter sa isyu.<br/>
-Ang field na ito ay prepopulated sa anumang URL at FORM na parameter na matatagpuan, ngunit ikaw ay maaari ding dumating ng sariling ngalan ng parameter.<br />
-Array parameters (in URL query component and <code>x-www-form-urlencoded</code> request body) are identified with its index. For
-example, for a request containing <code>choices[]=ChoiceA&amp;choices[]=ChoiceB</code> the first parameter would be identified
-as <code>choices[0]</code> and the second as <code>choices[1]</code>.
+<h3>Ang mga parametro</h3>
+Ang isang humihila pababa sa larangan kung saan ay pinahihintulutan ka na matukoy kung alin parametro ang may kaugnayan na isyu na kasama.<br/>
+Ang larangan ay napupuno sa pamamagitan ng kahit anong URL at anyo ng mga parametro na nakita, pero maaari mo itong pasukin ng sarili mong pangalan ng parametro.<br />
+Ang ayos ng mga parametro ( sa tanong ng nilalaman ng URL at <code>x-www-form-urlencoded</code> na bahagi ng kahilingan) ay natukoy sa pamamagitan ng indeks nito. para sa halimbawa, para sa isang nilalaman ng kahilingan <code>choices[]=ChoiceA&amp;choices[]=ChoiceB</code> ang unang parametro na dapat na matukoy 
+bilang <code>choices[0]</code> at ang pangalawa gaya ng <code>choices[1]</code>.
 
-<h3>Deskripsyon</h3>
-A general description of the type of issue found.<br/>
-Ito ay populated kapag pinili mo ang isa sa mga paunang natukoy na uri, ngunit maaari mo ring baguhin ito bilang kinakailangan.<br/>
-Tandaan na anumang pagbabago na gumawa ka ng mawawala kung pumili ka ng isa pang uri.
+<h3>Ang paglalarawan</h3>
+Ang pangkalahatang paglalarawan ng mga klase ng isyu na nakita.<br/>
+Ito ay mapupuno kapag pinili mo ang isa sa mga paunang natukoy na mga klase, pero maaari mo rin palitan ito kung kinakailngan.<br/>
+Tandaan na ang kahit anong pagbabago na gawin mo ay mawawala kapag pinili mo ang ibang pang klase.
  
-<h3>Iba pang impormasyon</h3>
-Information specific to the particular issue you have found.<br/>
-This is not prepopulated.
+<h3>Ang iba pang impormasyon</h3>
+Ang impormasyon na tinutukoy sa mga partikular na isyu na iyong nakita.<br/>
+Ito ay hindi paunang mapupuno.
 
-<h3>Solusyon</h3>
-Recommendations about how to fix the issue.<br/>
-This is populated when you select one of the predefined types, but you can also change it as required.<br/>
-Note that any changes you make will be lost if you select another type.
+<h3>Ang solusyon</h3>
+Ang mga rekomendasyon tungkol sa kung paano maayos ang isyu.<br/>
+Ito ay mapupuno kapag iyong pinili ang isa sa mga klase ng paunang natukoy, pero maaari moitong palitan kung kinakailangan.<br/>
+Paalala na ang alin man sa mga pagbabago na ginawa mo ay mawawala kung iyong napili ang iba pang klase.
  
-<h3>Sanggunian</h3>
-One or more URLs pointing to more information on the internet about the selected type of alert.<br/>
-This is populated when you select one of the predefined types, but you can also change it as required.<br/>
-Note that any changes you make will be lost if you select another type.
+<h3>Ang reperensiya</h3>
+Isa o higit pang mga URL na pinupunto sa higit pang impormasyon sa mga internet tungkol sa napiling klase ng alerto.<br/>
+Ito ay mapupuno kapag iyong pinili ang isa sa mga paunang natukoy ng mga klase, pero maaari mo rin itong palitan kung kinakailangan.<br/>
+Paalala na kahit anong mga pagbabago na ginawa mo ay maaaring mawala kung pipiliin mo ang iba pang klase.
  
-<h2>Ma-access sa pamamagitan ng</h2>
+<h2>Ang pag-access sa pamamagitan ng</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../tabs/history.html">Pangkasaysayan na tab</a></td><td>'Bagong Alert...' i-right click ang menu item</td></tr>
+<a href="../tabs/history.html">Ang kasaysayan ng tab</a></td><td>'ang bagong alerto...' kanang pindutan ng menu ng aytem</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../tabs/alerts.html">Mga Pang-alerto na tab</a></td><td>double-click sa isang umiiral na alerto</td></tr>
+<a href="../tabs/alerts.html">Ang mga alerto ng tab</a></td><td>ang pagdoble ng pindot sa isang umiiral na alerto</td></tr>
 </table>
 
-<h2>Tignan din</h2>
+<h2>Tignan din sa</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">UI buod</a></td><td>para sa buod ng user interface</td></tr>
+<a href="../overview.html">Ang pangkalahatang ideya ng UI</a></td><td>para sa pangkalahatang ideya ng mga gumagamit ng interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="dialogs.html">Mga dayalogo</a></td><td>para sa detalye ng mga dialog o mga popup </td></tr>
+<a href="dialogs.html">Ang mga diyalogo</a></td><td>para sa mga detalye ng mga diyalogo o mga popup </td></tr>
 </table>
 
 </body>

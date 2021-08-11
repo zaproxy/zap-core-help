@@ -6,10 +6,10 @@
 Options Active Scan Input Vectors screen
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Options Active Scan Input Vectors screen</h1>
 <p>
-This screen allows you to configure the <a href="../../../start/concepts/ascan.html">active scan</a> input vectors.<br>
+This screen allows you to configure the <a href="../../../start/features/ascan.html">active scan</a> input vectors.<br>
 These are the elements that the active scanner will attack.<br>
 Scanning all of the elements supported will take longer, but not scanning some elements may cause some vulnerabilities to be missed.
 
@@ -18,8 +18,12 @@ The request elements that the active scanner will target:
 
 <h4>URL Query String & Data Driven Nodes</h4>
 Key value pairs in the request URL query, ie after the <code>?</code>.<br>
-If there are no query parameters then an arbitrary one will be tested.  
-If <a href="../../../start/concepts/ddc.html">Data Driven Nodes</a> are defined within a Context they will be tested.
+If <a href="../../../start/features/ddc.html">Data Driven Nodes</a> are defined within a Context they will be tested.
+
+<h5>Add URL Query Parameter?</h5>
+When selected ZAP will add a query parameter to GET requests which did not originally have one. 
+This may increase scan time, however, it may also reveal issues that would otherwise go un-noticed.
+
 <h4>POST Data</h4>
 Key value pairs in the request POST data.
 
@@ -54,6 +58,9 @@ which are not supported by default.
 
 <p>
 This screen also allows you to configure the parameters which will be ignored by the active scanner.
+<br />
+Refer to <code>Parameter</code> section in <a href="../addalert.html">Add Alert</a> dialogue for more details about the
+parameter names.
 
 <h2>Voir aussi</h2>
 <table>

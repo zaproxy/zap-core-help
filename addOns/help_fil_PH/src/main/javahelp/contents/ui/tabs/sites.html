@@ -3,117 +3,154 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Mga site na tab
+Ang mga site ng tab
 </title>
 </head>
-<body bgcolor="#ffffff">
-<h1>Tab ng mga site</h1>
-<p>
-Ang tab ng mga site ay nagpapakita sa lahat ng mga URL na nabisita sa isang kahoy na istraktura.<br/>
-Maari ka'ng pumili ng kahit anong mga noda sa loob ng kahoy upang mapakita ang rekwest at tugon para sa URL 
-na nasa loob mga tab na may katuturan.<br/>
-</p>
+<body>
+<h1>Ang mga sayt ng tab</h1>
+The sites tab contains two trees, one for <a href="../../start/features/contexts.html">Contexts</a> and the other for the <a href="../../start/features/sitestree.html">Sites Tree</a>.
 
-<h2>Kanang pagpindot ng menu</h2>
-Ang kanang pagpindot sa isang noda ay magdadala pataas ng isang menu na magpapahintulot sa iyo na:
+<h2>Contexts tree</h2>
+Shows the contexts contained in the current session. It allows to quickly access its properties by double clicking them and
+provides access to other functionality through the component's context menu.
 
-<h3>Pag-atake</h3>
-Ang Pag-atake na menu ay mayroong sumusunod na mga submenu:
+<h3>Right click menu</h3>
+Right clicking on a context will bring up a menu which will allow you to:
 
-<h4>Aktibong PagScan...</h4>
-Ito ay maglulunsad ng <a href="../dialogs/advascan.html">Aktibong Pagscan</a> dialogo na magpapahintulot sa iyo na magpasimula ng 
-<a href="../../start/concepts/ascan.html">aktibong pagscan</a> na may panimulang punto na itinakda sa rekwest na iyong pinili.<br/>
+<h4>Ang aktibong pag-iskan...</h4>
+This will launch the <a href="../dialogs/advascan.html">Active Scan dialog</a> which allows you to initiate an 
+<a href="../../start/features/ascan.html">active scan</a> with the starting point set to the context you selected.<br/>
 
-<h4>Ispayder...</h4>
-Ito ay maglulunsad sa <a href="../dialogs/spider.html">Ispayder</a> dialogo na magpapahintulot sa iyo na simulan ang 
-<a href="../../start/concepts/spider.html">ispayder</a> na may panimulang punto na itinakda sa rekwest na iyong pinili.<br/>
+<h4>Ang Ispayder...</h4>
+This will launch the <a href="../dialogs/spider.html">Spider dialog</a> which allows you to initiate the 
+<a href="../../start/features/spider.html">spider</a> with the starting point set to the context you selected.<br/>
 
-<h3>Isali sa Konteksto</h3>
-Ang menung ito ay magpapahintulot sa iyo na isali ang napiling mga noda at sa lahat ng kanilang mga subordinado sa natukoy
-<a href="../../start/concepts/contexts.html">na konteksto</a>.<br/>
-Ikaw din ay mayroong apgpipilian na gumawa ng bagong konteksto.<br/>
-Ang <a href="../dialogs/session/contexts.html">Mga Konteksto ng Sesyon</a> dialogo na makikita upang
-magpapahintulot sa iyo na gumawa ng kahit anong mga karagdagang pagbabago.
+<h4>Add to Scope/Remove from Scope</h4>
+Allows to add or remove the selected context from the <a href="../../start/features/scope.html">scope</a>.
 
-<h3>Huwag isali mula sa Konteksto</h3>
-Ang menung ito ay magpapahintulot sa iyo na huwag isali ang mga napiling mga noda at sa lahat ng kanilang mga subordinado mula sa natukoy
-<a href="../../start/concepts/contexts.html">na konteksto</a>.<br/>
-Ang <a href="../dialogs/session/contexts.html">Mga Konteksto ng Sesyon</a> na dialogo ay makikita upang
-magpapahintulot sa iyo na gumawa ng kahit anong mga karagdagang pagbabago.
+<h4>Delete</h4>
+Allows to delete the selected context.
 
-<h3>I-flag bilang konteksto</h3>
-Ang menung ito ay mayroong sumusunod na mga submenu para sa bawat 
-<a href="../../start/concepts/contexts.html">mga konteksto</a> na iyong binigyan ng kahulugan:
+<h4><img src="../../images/fugue/application-blue-export.png" />Export Context...</h4>
+Allows to export the selected context.
 
-<h4><i>Pangalan ng konteksto</i> Binase sa Form na request ng Auth na Pag-login</h4>
-Ito ay magkikilala sa mga natukoy na noda bilang isang login na rekwest para sa natukoy na konteksto.<br/>
-Ikaw ay maaring magkaroon lamang ng isang noda na nakilala sa isa sa kahit anong konteksto.<br/> 
-Ang <a href="../dialogs/session/context-auth.html">Authentikasyon ng Konteksto ng Sesyon</a> ang screen ay makikita upang magpapahintulot sa iyo na gumawa ng kahit anong mga karagdagang pagbabago.
+<h4>Export URLs for Context</h4>
+Allows to export the URLs of the selected context.
 
-<h4><i>Pangalan ng konteksto</i> Noda na pinapagana sa datos</h4>
-Ito ay magkikilala sa natukoy na noda bilang <a href="../../start/concepts/ddc.html">Nilalaman na pinapagana sa datos</a> para sa natukoy na konteksto.<br/>
-Ang <a href="../dialogs/session/context-struct.html">Istraktura sa Koneksto ng Sesyon</a> ang screen ay makikita upang magpapahintulot sa iyo na gumawa ng kahit anong mga karagdagang pagbabago.
+<h2>Sites tree</h2>
+Shows all of the URLs visited in a tree structure. <br/>
+You can select any of the nodes in the tree to display the request and response for that URL 
+in the relevant tabs.<br/>
 
-<h3>Ibukod mula sa</h3>
-Ang menung ito ay may sumusunod na mga submenu:
+<h3>Right click menu</h3>
+Right clicking on a node will bring up a menu which will allow you to:
 
-<h4>Proxy</h4>
-Ito ay magbubukod sa mga napiling mga noda mula sa proxy. Ito ay mapo-proxy parin sa pamamagitan ng ZAP pero hindi makikita 
-sa kahit anong mga tab.<br/>
-Ito ay maaring magamit upang mapasawalang bahala ang mga URL na alam mong hindi ugnay sa sistema na kasalukuyan mong tini-test.<br/>
-Ang mga noda ay maaring mapasali ulit gamit ang <a href="../dialogs/session/sessprop.html">Mga Katangian ng Sesyon</a> na dialogo   
+<h4>Attack</h4>
+The Attack menu has the following submenus:
 
-<h4>Iskaner</h4>
-Ito ay magpipigil sa mga napiling mga noda na aktibong ma-scan.<br/>
-Ang mga noda ay maaring mapasali ulit gamit ang <a href="../dialogs/session/sessprop.html">Mga Katangian ng Sesyon</a> na dialogo   
+<h5>Active Scan...</h5>
+This will launch the <a href="../dialogs/advascan.html">Active Scan</a> dialog which allows you to initiate an 
+<a href="../../start/features/ascan.html">active scan</a> with the starting point set to the request you selected.<br/>
 
-<h4>Ispayder</h4>
-Ito ay magpipigil sa mga napiling mga noda na ma-ispayder.<br/>
-Ang mga noda ay maaring mapasali ulit gamit ang <a href="../dialogs/session/sessprop.html">Mga Katangian ng Sesyob</a> na dialogo   
+<h5>Spider...</h5>
+This will launch the <a href="../dialogs/spider.html">Spider</a> dialog which allows you to initiate the 
+<a href="../../start/features/spider.html">spider</a> with the starting point set to the request you selected.<br/>
 
-<h3>Burahin</h3>
-Ito ay magbubura ng noda at sa lahat ng mga anak nito mula sa ZAP.<br/>
-Gayunpaman sila ay maari pa ring madagdag pabalik, upang papigilan itong gumamit ng 'Ibukod mula sa' na mga menu. 
+<h4>Include in Context</h4>
+This menu allows you to include the selected nodes and all of their subordinates in the specified
+<a href="../../start/features/contexts.html">context</a>.<br/>
+You also have the option to create a new context.<br/>
+The <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
+allow you to make any additional changes.
 
-<h3>Pag-break...</h3>
-Ito ay magdadala pataas sa isang bagong window na magpapahintulot sa iyo na italaga ang 
-<a href="../../start/concepts/breakpoints.html">punto ng pagbreak</a> sa URL na iyan.<br/>
-Ang punto ng pagbreak ay pinagkakahulugan gamit ang regular na ekspresyon. Kung gusto mong bumisita ng URL na magtutugma nitong 
-ekspresyon kaya ang ZAP ay magsasansala nito at magpapahintulot sa iyo na baguhin ang rekwes at/o ang tugon.
+<h4>Exclude from Context</h4>
+This menu allows you to exclude the selected nodes and all of their subordinates from the specified
+<a href="../../start/features/contexts.html">context</a>.<br/>
+The <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
+allow you to make any additional changes.
 
-<h3>Mga alerto para sa nodang ito</h3>
-Kung ang napiling URL ay mayroong <a href="../../start/concepts/alerts.html">mga alerto</a> na kaugnay nito kaya 
-sila ay malilista sa ibaba ng menung ito.<br>
-Ang pagpili sa isa sa mga alerto ay magiging dahilan ng pagpapakita nito.
+<h4>Flag as context</h4>
+This menu has the following submenus for each of the 
+<a href="../../start/features/contexts.html">contexts</a> you have defined:
 
-<h3>Muling Pagresend...</h3>
-Ito ay magdadala pataas sa
-<a href="../dialogs/resend.html">Dialogo ng Pagresend</a> na magpapahintulot sa iyo na 
-muling ipadala ang rekwest pagkatapos gumawa ng kahit anong mga pagbabago nito na gusto mo.
+<h5><i>Context name</i> Form-based Auth Login request</h5>
+This identifies the specified node as a login request for the specified context.<br/>
+You may only have one node identified as such in any one context.<br/> 
+The <a href="../dialogs/session/context-auth.html">Session Context Authentication</a> screen will be displayed to
+allow you to make any additional changes.
 
-<h3>Bagong Alerto...</h3>
-Ito ay magdadala palabas ng
-<a href="../dialogs/addalert.html">Magdagdag ng Alerto na dialogo</a> na magpapahintulot sa iyo na manual na italaga ang isang bagong  
-<a href="../../start/concepts/alerts.html">alerto</a> laban sa rekwest na ito.
+<h4><i>Context name</i> JSON-based Auth Login request</h4>
+This identifies the specified node as a login request for the specified context.<br/>
+You may only have one node identified as such in any one context.<br/> 
+The <a href="../dialogs/session/context-auth.html">Session Context Authentication</a> screen will be displayed to
+allow you to make any additional changes.
 
-<h3>Ipakita sa Kasaysayan na tab</h3>
-Ito ay magpapakita sa napiling noda sa loob ng <a href="history.html">Kasaysayan na tab</a>.
+<h5><i>Context name</i> Data driven node</h5>
+This identifies the specified node as <a href="../../start/features/ddc.html">Data driven content</a> for the specified context.<br/>
+The <a href="../dialogs/session/context-struct.html">Session Context Structure</a> screen will be displayed to
+allow you to make any additional changes.
 
-<h3>Buksan ang URL sa loob ng Browser</h3>
-Ito ay magbubukas ng URL sa napiling noda sa iyong default na browser.
+<h4>Exclude from</h4>
+This menu has the following submenus:
 
-<h3>Gumawa ng anti CSRF na pangtest na form</h3>
-Ito ay magbubukas ng URL na magbibigay sa iyo ng isang nagawang form para sa pagtest ng mga isyu ng CSRF.<br>
-Ito ay mapapagana lamang para sa mga POST na rekwest, kung ang API na pinaga at ang Java ay sumusuporta ng pagbukas ng mga URL 
-sa loob ng browser sa iyong plataporma. 
+<h5>Proxy</h5>
+This will exclude the selected nodes from the proxy. They will still be proxied via ZAP but will not be shown 
+in any of the tabs.<br/>
+This can be used to ignore URLs that you know are not relevant to the system you are currently testing.<br/>
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
 
-<h3>Mag-refresh sa kahoy ng mga Site</h3>
-Kadalasan ang kahoy ng mga Site ay maaring maling makita - ang opsyong ito ay muling magpapalabas nito.
+<h5>Scanner</h5>
+This will prevent the selected nodes from being actively scanned.<br/>
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
 
-<h2>Tingnan din</h2>
+<h5>Spider</h5>
+This will prevent the selected nodes from being spidered.<br/>
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
+
+<h4>Delete</h4>
+This will remove the node and all of its children from ZAP.<br/>
+However they can be added back in, to prevent this use the 'Exclude from' menus. 
+
+<h4>Break...</h4>
+This will bring up a new window which will allow you to set a 
+<a href="../../start/features/breakpoints.html">breakpoint</a> on that URL.<br/>
+The breakpoint is defined via a regular expression. If you visit a URL which matches this 
+expression then ZAP will intercept it and allow you to change either the request and/or the
+response.
+
+<h4>Alerts for this node</h4>
+If the URL selected has <a href="../../start/features/alerts.html">alerts</a> associated with it then 
+they will be listed under this menu.<br>
+Selecting one of the alerts will cause it to be displayed.
+
+<h4>Open/Resend with Request Editor...</h4>
+This will bring up the
+<a href="../dialogs/man_req.html">Manual Request Editor dialog</a> which allows you to  
+resend the request after making any changes to it that you want to.
+
+<h4>New Alert...</h4>
+This will bring up the
+<a href="../dialogs/addalert.html">Add Alert dialog</a> which allows you to manually record a new  
+<a href="../../start/features/alerts.html">alert</a> against this request.
+
+<h4>Show in History tab</h4>
+This will show the selected node in the <a href="history.html">History tab</a>.
+
+<h4>Open URL in Browser</h4>
+This will open the URL of the selected node in your default browser.
+
+<h4>Generate anti CSRF test form</h4>
+This will open a URL which will give you a generated form for testing for CSRF issues.<br>
+It will only be enabled for POST requests, if the API is enabled and if Java supports the opening of URLs 
+in a browser on your platform. 
+
+<h4>Refresh Sites tree</h4>
+Occasionally the Sites tree can be displayed incorrectly - this option will redraw it.
+
+<h2>See also</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">Pangkalahatang Ideya ng UI</a></td><td>para sa pangkalahatang ideya ng interpeys ng tagagamit</td></tr>
+<a href="../overview.html">Ang pangkalahatang Ideya ng UI</a></td><td>para sa pangkalahatang ideya ng mga gumagamit ng interface</td></tr>
 </table>
 
 </body>

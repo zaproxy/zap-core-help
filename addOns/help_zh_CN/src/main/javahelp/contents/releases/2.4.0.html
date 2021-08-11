@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  2.4.0版本
+</title>
+</head>
+<body>
+<h1>2.4.0版本</h1>
+<p>
+此版本进行了以下更改：
+</p>
+
+<h2>重大变化：</h2>
+
+<h3>攻击模式</h3>
+
+一个新的‘攻击’ <a href="../start/features/modes.html">模式</a> 已经添加 - 新的节点 <a href="../start/features/scope.html">Scope</a> are 
+<a href="../start/features/ascan.html">actively scanned</a> as soon as they are discovered.
+
+<h3>高级模糊化</h3>
+
+引入了一个全新的模糊对话框，允许同时攻击多个注入点。<br> 
+支持新的攻击有效载荷，包括使用脚本生成有效载荷的选项，以及攻击前后的操作和分析。
+
+<h3>高级选项扫描对话框</h3>
+
+新的 <a href="../ui/dialogs/advascan.html">主动扫描</a>, <a href="../ui/dialogs/spider.html">Spider</a> 和AJAX Spider的对话框已经取代了越来越多的右击‘攻击’选项。<br>
+这使得可以轻松访问所有最常用的选项，也可选择广泛的高级选项。 
+
+<h3>扫描策略</h3>
+
+一个新的 <a href="../ui/dialogs/scanpolicymgr.html">扫描策略管理器对话框</a> 允许您创建尽可能多的 
+<a href="../start/features/scanpolicy.html">扫描策略</a> 如您所需的。<br>
+扫描策略确切地定义哪些规则作为部分 <a href="../start/features/ascan.html">主动扫描</a>.<br>
+它们还定义了这些规则如何运行，影响了多少请求以及潜在的问题被标记的方式。<br>
+
+<h3>隐藏未使用的选项卡</h3>
+
+默认情况下，现在ZAP启动时只显示核心选项卡。<br>
+其余的选项卡将在它们被使用时显示（例如，对于Spider和主动扫描器），或者您可以通过每个窗口最右侧的特殊选项卡的绿色‘+’图标来显示它们。 如果没有隐藏的选项卡，此特殊选项卡将消失。<br>
+选项卡可以通过已选择的选项卡显示的小‘x’图标关闭。<br>
+选项卡也可以通过使用一个小的‘pin’图标被‘固定’，这个‘pin’图标也会显示在当选项卡已被选中的时候 - 当ZAP下一次启动的时候会显示被固定的选项卡。 
+
+<h3>顺序扫描附加选项的启动码</h3>
+
+一个新的可选的‘alpha’质量附加组件增加了扫描网页‘序列’的功能，换言之，必须严格遵守访问页面的顺序才能正常工作。 
+
+<h3>访问控制测试附加组件的启动码</h3>
+
+一个新的可选的‘alpha‘质量附加组件增加了自动化访问控制测试的许多方面的能力。 
+
+<h3>API用户注意事项</h3>
+请注意，外部重定向扫描器的插件ID已从30000更改为20019。
+
+<h2>完整的更改列表：</h2>
+<ul>
+<li>问题117：增强的功能：对身份验证问题的爬网会话进行比较</li>
+<li>问题234：支持模糊多个部分</li>
+<li>问题329：增强的功能：添加对sitemap.xml的支持</li>
+<li>问题389：启用扫描器的技术范围</li>
+<li>问题414：API：支持脚本</li>
+<li>问题445：SSLContextManager.isProviderAvailable( ) 默认返回true</li>
+<li>问题557：SQL注入错误否定</li>
+<li>问题642：输出选项卡需要时间戳</li>
+<li>问题653：在Kali Linux上更好地处理更新</li>
+<li>问题704：ZAP错误：握手警报：unrecognized_name</li>
+<li>问题722：ZAP UI不能很好地处理多个主动扫描</li>
+<li>问题883：支持API中的多个扫描</li>
+<li>问题949：Spider（站点）不遵循JSON文档中的超链接</li>
+<li>问题959：加载项更新程序可能会忽略出站代理更改</li>
+<li>问题984：增强ascan API以允许用指定的方法</li>
+<li>问题990：允许通过API删除警报</li>
+<li>问题1151：如果有多个域可用，在扫描范围内的主动扫描完成之前扫描范围内的所有邮件</li>
+<li>Issue 1154 : Tool tip text "Show tab names and tab icons"  IdealFirstBug</li>
+<li>问题1175：支持上下文树</li>
+<li>问题1176：Spider高级扫描对话框</li>
+<li>问题1180：当URL中有多个问号时，代理会被破坏</li>
+<li>问题1184：改进对IBM JDK的支持</li>
+<li>问题1207：主动扫描 API - 更改“扫描器”视图以包括依赖关系</li>
+<li>问题1208：搜索附加组件中声明为依赖关系的类/资源</li>
+<li>问题1209：附加的可靠性值/选项 & 在UI中重命名可靠性</li>
+<li>问题1214：在扫描策略对话框中依据可用性进行排序</li>
+<li>Issue 1215 : Alert Tree Ordering/Sorting Issue  Usability</li>
+<li>问题1216：在脚本选项卡中的书写错误</li>
+<li>问题1217：当内容类型的标头中存在字符集时，表格格式不显示信息</li>
+<li>问题1224：显示扫描策略对话框中的质量/状态</li>
+<li>问题1226：主动扫描器排除参数的正则表达式未验证</li>
+<li>问题1227：主动扫描器发送请求正文内容的GET请求</li>
+<li>问题1238：如果主动扫描器引发空攻击的警报时产生NullPointerException异常</li>
+<li>问题1239：允许从扩展中扩展Spider</li>
+<li>问题1241：使用主机扫描器时，主动扫描器可能无法报告完成状态</li>
+<li>问题1242：主动扫描器可能使用过时的扫描策略设置</li>
+<li>问题1243：如果脚本类型没有包含核心捆绑脚本模板会产生NullPointerException异常</li>
+<li>Issue 1244 : Scripts Active Scanner should be category Misc not Injection  Usability</li>
+<li>问题1252：通过API运行扫描的关闭期间的连接异常</li>
+<li>Issue 1256 : Revisit missing X-Frame-Options scanner level</li>
+<li>问题1257：创建一个检测大重定向的被动规则</li>
+<li>问题1261：NPE从市场上更新“即插即用配置”</li>
+<li>问题1262：地址“被动规则 - 风险 - 可靠性”[用户可控的HTML元素的属性（潜在XSS）和时间戳泄漏 - Unix]</li>
+<li>问题1263：生成报告Clobbers现有文件没有提示</li>
+<li>问题1264：手动身份验证 - 由于错误地处理域和路径导致Cookie不匹配</li>
+<li>问题1265：上下文导入和导出</li>
+<li>问题1272：ZAP API：如果HTTP请求包含无效Cookie标头，Core.MessagesHAR( )失败</li>
+<li>问题1274 : ZAP 错误 - [javax.net.ssl.SSLException]: 不支持的记录版本 SSLv2Hello</li>
+<li>问题1275：SpiderODataAtomParser必须从“parseResource”返回true</li>
+<li>问题1278：安全菜单项在受保护和安全模式下不可用</li>
+<li>问题1279：当“Where”为“Any”时，主动扫描器排除不起作用的参数</li>
+<li>问题1280：ApiImplementor被删除时不删除API的快捷方式</li>
+<li>问题1281：快速开始 - 允许在视图初始化时生成报告</li>
+<li>问题1282：扩展 stop( )从不在destroy( )之前被调用</li>
+<li>问题1283：SQLDataException：数据异常：字符串数据，向数据库写入警报时被右截断</li>
+<li>问题1286：模糊器似乎很缓慢</li>
+<li>问题1290：即使端口扫描已在进行中，也会启用“端口扫描主机”菜单项</li>
+<li>问题1291：主动扫描时需要407代理验证</li>
+<li>问题1292：尝试删除未注册的ManualRequestEditorDialog时发生NullPointerException异常</li>
+<li>问题1294：Trivial_UI_Issue（不重要的UI问题）：单词 - ‘将会’在‘会话属性’提示下出现两次。</li>
+<li>问题1295：增强请求 - 新的主动扫描规则检查HTTP访问的HTTPS内容</li>
+<li>问题1300：在非英语语言环境中选择英语时，加载项显示不正确的语言</li>
+<li>问题1301：AbstractPanel通过TabbedPanel2泄漏</li>
+<li>问题1302：上下文菜单项操作可能无法执行</li>
+<li>Issue 1303 : HttpPanel[SyntaxHighlight]TextArea leak through HighlighterManager</li>
+<li>问题1304：通过ExtensionKeyboard泄漏ZapMenuItem</li>
+<li>问题1305：从旧版本更新时，传出代理被禁用</li>
+<li>问题1307：当文件名称中有空格的时候，压缩的Ant OS X版本变得不能正常工作</li>
+<li>问题1308：ZAP icns分辨率太低</li>
+<li>问题1309：在加载项卸载失败时产生NullPointerExceptions异常</li>
+<li>问题1310：允许将历史记录类型设置为临时的</li>
+<li>问题1311：区分临时内部消息与临时扫描器消息</li>
+<li>问题1312：无法将本地代理绑定到指定地址时产生误导性错误消息</li>
+<li>问题1319：添加API支持配置上下文的授权检测</li>
+<li>问题1322：删除弃用的Auth API</li>
+<li>问题1324：在生成的apis中包含附加api调用</li>
+<li>问题1325：删除上下文的选项</li>
+<li>问题1326：将Ajax Spider扩展从Beta版转移到发布版本</li>
+<li>问题1333：ExtensionAntiCSRF ConcurrentModificationException</li>
+<li>Issue 1334 : ZAP does not handle API requests on reused connections leading to <code>UnknownHostException: www.zap.com</code></li>
+<li>问题1335：在从代理中排除站点后，在“警报”选项卡中选择一个节点时产生NullPointerException异常</li>
+<li>问题1339：引入一个简单的事件总线</li>
+<li>问题1343：XContentTypeOptionsScanner国际化</li>
+<li>问题1345：支持攻击模式</li>
+<li>问题1346：中断gzip的响应在浏览器中失败</li>
+<li>问题1348：Java客户端api Ant任务不等待</li>
+<li>问题1353：更简单的中断选项</li>
+<li>问题1355：通过API生成HTML报告</li>
+<li>问题1356：修复CacheControlScanner的拼写错误</li>
+<li>问题1357：隐藏未使用的选项卡</li>
+<li>问题1359：恢复闪屏画面</li>
+<li>问题1360：新的附加组件 - 提示和技巧</li>
+<li>问题1361：同时通过API进行抓取或扫描时，Spider和主动扫描面板上不显示数据</li>
+<li>问题1362：允许仅通过API添加重复的Anti-CSRF令牌</li>
+<li>问题1363：缺少API来获取contextId</li>
+<li>问题1367：在特定环境下无法检测到“Xpath 注入”。</li>
+<li>问题1377：“源代码披露 - SVN”缺少正则表达式转义</li>
+<li>问题1378：修复主动扫描面板</li>
+<li>问题1379：在附加组件安装期间，并非所有扩展的侦听器都被挂钩</li>
+<li>问题1381：在取消时完全关闭断点添加/编辑对话框</li>
+<li>问题1383：如果反CSRF令牌没有值则产生NullPointerException异常</li>
+<li>问题1384：HttpSessions API不接受具有路径组件的URI</li>
+<li>问题1385：如果ZAP没有从默认安装目录运行，则不会通过API生成XML报告</li>
+<li>问题1386：PScan API - 允许更改和查看警报阈值</li>
+<li>问题1387：如果通过命令行指定端口/地址，则无法更改代理的端口/地址</li>
+<li>问题1388：当“zaplang”包被导入时并不是所有的翻译文件都被更新</li>
+<li>问题1389：在启动期间如果找不到核心帮助jar则产生NullPointerException异常</li>
+<li>问题1390：在cfu呼叫上强制使用https</li>
+<li>问题1391：主动扫描发送multipart/form-data类型的错误有效载荷</li>
+<li>问题1394：在更新已翻译的资源时导入weakrabilities.xml文件</li>
+<li>问题1395：漏洞的数据保存在内存中，即使不使用</li>
+<li>问题1397：将帮助文件移动到加载项中</li>
+<li>问题1399：增强在用户默认浏览器中打开“外部”链接的帮助</li>
+<li>问题1404：SpiderODataAtomParser只有在检测到链接时才返回true</li>
+<li>问题1406：将联机菜单项移动到加载项中</li>
+<li>问题1409：加速ZAP启动</li>
+<li>问题1415：修复了文件上传 > 128k</li>
+<li>问题1412：管理扫描策略</li>
+<li>问题1416：允许Spider受到子类数目的限制</li>
+<li>问题1418：在断点命中时ZAP保持在顶部的选项</li>
+<li>问题1419：在HTML报告中包含警报的证据</li>
+<li>问题1420：更改Spider的URLCanonicalizer以跳过没有权限的URI</li>
+<li>问题1427：标准化[Cancel][OK]按钮的顺序</li>
+<li>问题1433：Spide选择没有自动选定目标</li>
+<li>问题1439：按钮在站点选项卡中仅显示/隐藏上下文/作用域的站点</li>
+<li>问题1445：会话属性显示上下文ID而不是上下文名称</li>
+<li>问题1446：当下载插件失败时处理不正确。</li>
+<li>问题1447：更新RSyntaxTextArea库</li>
+<li>问题1449：重新发送/手动请求帮助时无响应</li>
+<li>问题1458：更改主页/安装目录路径始终是绝对路径</li>
+<li>问题1460：在加载项的安装过程中添加脚本类型时，脚本类型不会显示在“脚本”树中</li>
+<li>问题1461：核心API - 允许通过HTTP存档格式的ID获取消息</li>
+<li>问题1462：允许删除脚本类型</li>
+<li>问题1463：允许脚本访问加载项的类</li>
+<li>问题1464：允许在Spider请求中发送“Referer”标头</li>
+<li>问题1465：如果未从默认安装目录运行ZAP，则翻译的文件不会复制到正确的目录中</li>
+<li>问题1466：“大显示”的大小的配置选项</li>
+<li>问题1467：AuthenticationApiExample不起作用</li>
+<li>问题1468：在安装加载项期间添加新脚本类型时，脚本模板不可用</li>
+<li>问题1469：如果基于请求指定基于表单的身份验证，则自动添加用户</li>
+<li>问题1472：允许扩展为UI组件指定一个名称</li>
+<li>问题1475：来自同一台扫描器的不同名称的警报可能不会显示在报告中</li>
+<li>问题1476：在站点树中显示上下文</li>
+<li>问题1483：使用被动扫描器卸载附加组件之后产生MissingResourceException异常</li>
+<li>问题1484：使用主动扫描器卸载加载项时产生NullPointerException异常</li>
+<li>问题1485：如果卸载不成功，则不允许重新选择加载项</li>
+<li>问题1486：附加组件泄漏</li>
+<li>问题1489：窗口标题中的版本号</li>
+<li>问题1490：更新HarLib库</li>
+<li>问题1491：添加版本化的AbstractParam</li>
+<li>问题1492：更新commons-csv库</li>
+<li>问题1493：删除已经弃用的身份验证类</li>
+<li>问题1494：支持脚本目录</li>
+<li>问题1502：允许删除脚本引擎包装</li>
+<li>问题1503：从类型创建脚本时不显示所有引擎</li>
+<li>问题1504：未安装/找到脚本引擎时发生异常</li>
+<li>问题1505：并非所有“强制浏览”组件在卸载过程中被卸载</li>
+<li>问题1507：并非所有“脚本控制台”组件在卸载过程中被卸载</li>
+<li>问题1508：在守护进程模式下可视化添加警报</li>
+<li>问题1510：当所有的扩展加载后，新的Extension.postInit( )方法被调用</li>
+<li>问题1511：添加选项只允许安全连接到API</li>
+<li>问题1514：在守护进程模式下不会生成根CA证书</li>
+<li>问题1515：在卸载过程中并不是所有的“Zest”组件都被卸载</li>
+<li>问题1520：将“锁定”图标添加到站点树中的https站点</li>
+<li>问题1521：像StackOverflowError这种可丢失的错误没有被被动扫描器捕获</li>
+<li>问题1524：新的持续会话对话框</li> 
+<li>问题1525：引入一个数据库接口层以允许其他实现的接入</li> 
+<li>问题1528：支持用户定义的字体大小</li>
+<li>问题1530：“扫描策略”中设置的默认攻击强度和警报阈值不被扫描器使用</li>
+<li>问题1534：更改“Ajax Spider”插件取决于“Selenium”插件</li>
+<li>问题1535：更新Crawljax的库和依赖项（“Ajax Spider”加载项）</li>
+<li>问题1536：更改“Zest”插件取决于“Selenium”插件</li>
+<li>问题1537：ZAP应该允许导入CA证书</li>
+<li>问题1540：允许代理脚本伪造响应</li>
+<li>问题1541：启用主动扫描脚本只扫描一个URL而不是每个参数</li>
+<li>问题1544：支持持久性脚本变量</li>
+<li>问题1551：ZAP不检测相对路径混淆（又名“相对路径覆盖”/“路径相对样式表导入”）</li>
+<li>问题1552：ZAP不检测正向/反向代理</li>
+<li>问题1553：ZAP不检测响应的存储/缓存能力</li>
+<li>问题1557：制作手动请求时出现死锁</li>
+
+</ul>
+
+<h2>请参阅</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">简介</a></td><td>ZAP简介
+</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">版本发布</a></td><td>所有版本</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">版权</a></td><td>所有参与这次版本更新的人和组织</td></tr>
+</table>
+</body>
+</html>

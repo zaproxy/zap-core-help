@@ -6,21 +6,30 @@
 Tela das opções de conexão
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Tela das opções de conexão</h1>
 <p>
 A tela das opções de conexão permite a você configurar as opções de conexão do ZAP:
 
-<h3>Timeout em segundos</h3>
+<h3>Timeout (in seconds)</h3>
 Isso facilita o teste em aplicações lentas.
 
-<h3>Default User Agent</h3>
-The user agent that ZAP should use when creating HTTP messages (for example, spider messages or CONNECT requests to outgoing
-proxy).
+<h3>Usuário Agente Padrão</h3>
+O usuário agente que o ZAP deve utilizar ao criar mensagens HTTP (por exemplo, mensagens de spider ou solicitações CONNECT para o proxy de saída).
 
-<h3>Single Cookie Request Header</h3>
-Controls whether the ZAP's managed cookies (<a href="../../tlmenu/edit.html">(Habilitiar o Rastreamento da Sessão  - Cookie</a>) should be set
+<h3>Cabeçalho de Requisição de Um Cookie</h3>
+Controls whether the ZAP's managed cookies (Enable (Global) HTTP State) should be set
 on a single "Cookie" request header or multiple "Cookie" request headers, when sending an HTTP request to the server.
+
+<h3>Enable (Global) HTTP State</h3>
+This allows session details stored in cookies to be tracked.<br/>
+This option must be selected to enable the "Use current tracking session" checkbox in the 
+<a href="../../dialogs/man_req.html">Manual Request Editor dialogs</a>.<br/>
+Session tracking ensures that any requests are sent with the latest session details.<br/>
+For example you may record a session when logged in as one user and then logout and login as another user.<br/>
+If you resend a request from the first session without session tracking then it will use the cookies from 
+the first session.<br/>
+If you resend the same request with session tracking then it will use the cookies from the second session.
 
 <h3>DNS</h3>
 <h4>TTL das queries bem-sucedidas</h4>
@@ -29,28 +38,61 @@ Defines for how long the successful DNS queries should be cached:<ul>
 <li>Zero, desativa o cache;</li>
 <li>Número positivo, o número de segundos que as consultas serão armazenadas.</li></ul>
 <strong>Nota:</strong> Changes are applied after a restart.<p>
-A opção também pode ser definida usando o <code>-config</code> como argumento de linha de comando com a chave <code>connection.dnsTtlSuccessfulQueries</code>.
+The option can also be set using the <code>-config</code> command line argument with the key <code>connection.dnsTtlSuccessfulQueries</code>.
 
 <h3>Security Protocols</h3>
 Allows to choose the SSL/TLS versions enabled for outgoing connections (for example, to servers). At least
 one version must be enabled, versions unsupported by the JRE will be unselected and disabled.
 <br>The option SSLv2Hello must be selected in conjunction with at least one SSL/TLS version.
 
-<h3>Use Proxy chain</h3>
+<h3>Use Proxy Chain</h3>
 This section allows you to connect to another proxy for outgoing connections.<br/>
 This is often required in a corporate environment.
 
-<h3>Proxy authentication</h3>
+<h3>Proxy Authentication</h3>
 This section allows you to configure the outgoing proxy authentication. 
 
-<h2>Veja também</h2>
+<h3>SOCKS Proxy</h3>
+This section allows you to configure an outgoing SOCKS proxy, by default the SOCKS proxy configuration applies to all connections made by ZAP.
+<p>
+The SOCKS proxy system properties (e.g. <code>socksProxyHost</code>, <code>socksProxyPort</code>) take precedence over the persisted configurations
+for compatibility with older ZAP versions. ZAP will use and display the values of the system's properties when defined at startup, the configurations
+can still be changed in this panel.
+<p><strong>Note:</strong> Loopback addresses (e.g. <code>localhost</code>, <code>127.0.01</code>, <code>::1</code>) are not proxied through the SOCKS proxy, the connections will be done directly.
+<h4>Enabled</h4>
+If ZAP should use the configured SOCKS proxy.
+<br>Default: <code>unselected</code>, unless the SOCKS proxy system properties are defined, in which case it is <code>selected</code>.
+<h4>Host</h4>
+The host name or address of the SOCKS proxy.
+<br>Default: <code>localhost</code>.
+<h4>Port</h4>
+The port of the SOCKS proxy.
+<br>Default: <code>1080</code>.
+<h4>Version</h4>
+The version of the SOCKS proxy.
+<br>Default: <code>5</code>.
+<h4>Use SOCKS' DNS</h4>
+If ZAP should let the SOCKS proxy resolve the host names. Requires a version 5 SOCKS proxy.
+<br>This might lead to connection failures if the SOCKS proxy is not able to resolve the host name (e.g. use of names that are defined in a <code>hosts</code> file).
+<br>Default: <code>selected</code>.
+<h4>Authentication</h4>
+The following fields allow to configure the authentication credentials for the SOCKS proxy.
+<h5>User Name</h5>
+The user name.
+<br>Default: none.
+<h5>Password</h5>
+The password.
+<br>Default: none.
+<br><strong>Note:</strong> Stored in clear text in the configuration file.
+
+<h2>See also</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">Visão geral da IU</a></td><td>para uma visão geral da interface do usuário</td></tr>
+<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Diálogo de opções</a></td><td>para detalhes de outras telas de diálogos de Opções</td></tr>
+<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../../cmdline.html">Linha de comando</a></td><td>para obter detalhes da linha de comando</td></tr>
+<a href="../../../cmdline.html">Command Line</a></td><td>for details of the Command Line</td></tr>
 </table>
 
 </body>

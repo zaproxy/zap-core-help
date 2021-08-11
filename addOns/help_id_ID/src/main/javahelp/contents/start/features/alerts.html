@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Peringatan
+</title>
+</head>
+<body>
+<h1>Peringatan</h1>
+<p>
+Peringatan adalah sebuah potensi kerentanan dan dikaitkan dengan permintaan tertentu.<br/>
+Permintaan bisa memiliki lebih dari satu peringatan.<br/>
+</p>
+<p>
+Tanda ditunjukkan di UI dengan bendera yang menunjukkan risikonya:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/071.png" align="bottom" width="16" height="16" />&nbsp; Tinggi</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/076.png" align="bottom" width="16" height="16" />&nbsp; Sedang</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/074.png" align="bottom" width="16" height="16" />&nbsp; Rendah</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/073.png" align="bottom" width="16" height="16" />&nbsp; Informasi</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/072.png" align="bottom" width="16" height="16" />&nbsp; Positif Salah</td><td></td></tr>
+</table>
+
+<p>
+Peringatan bisa diajukan oleh berbagai komponen ZAP, termasuk tetapi tidak terbatas pada: <a href="ascan.html">pemindaian aktif</a>, <a href="pscan.html">pemidaian pasif</a>, naskah, dengan pengaya (eksistensi), atau secara manual menggunkan <a href="../../ui/dialogs/addalert.html">Tambahan dialog Peringatan</a> (yang juga memungkinkan anda untuk memperbarui atau mengubah rincian/informasi peringatan).
+</p>
+<p>
+Peringatan telah ditandai di <a href="../../ui/tabs/history.html">tab Riwayat</a> dengan sebuah bendera yang mengindikasikan
+peringatan resiko tertinggi.<br/>
+Semua peringatan dicantumkan di <a href="../../ui/tabs/alerts.html">tab Peringatan</a> 
+dan hitungan jumlah total dari peringatan dengan resiko ditampilkan di <a href="../../ui/footer.html">footer</a>.
+</p>
+
+<a name="alertoverrides"></a><h2>Menimpa peringatan</h2> 
+
+Peringatan yang ditonjolkan oleh ZAP termasuk informasi umum dan spesifik tentang peringatan yang ditonjolkan.
+Informasi yang spesifik berkaitan secara langsung terhadap potensi masalah yang ditemukan, seperti URL dan parameter yang berpengaruh.
+Informasi umum meliputi hal-hal seperti deskripsi dan tautan ke sumber online terkait.
+<p>
+Anda dapat mengganti atau menambah informasi generik menggunakan file konfigurasi 'alert override'.
+Hal ini memungkinkan anda untuk memasukkan informasi yang lebih spesifik bagi perusahaan anda seperti kebijakan yang diamanatkan, tautan internal atau saran untuk teknologi tertentu yang anda gunakan.
+<p>
+Tanda peringatan menimpa file konfigurasi adalah file properti UTF-8 yang hanya berisi informasi yang ingin Anda ubah.
+Baris yang dimulai dengan '#' diperlakukan sebagai komentar dan diabaikan.
+<p>
+Formatnya adalah:
+<pre>
+&lt;alertid&gt;.&lt;property&gt; = [ + | - ] &lt;your information&gt;
+</pre>
+Properti berikut didukung:
+<ul>
+<li>nama</li>
+<li>deskripsi</li>
+<li>solusi</li>
+<li>Info lain</li>
+<li>referensi</li>
+</ul>  
+
+Sebagai contoh
+<pre>
+# 40012 = Reflected XSS
+40012.solution = Ikuti pedoman spesifik perusahaan kami di http://internet.example.com/xss.html
+</pre>
+Jika nilainya dimulai dengan '+' maka itu ditambahkan ke informasi yang ada.
+<br>
+Jika dimulai dengan '-' maka itu adalah prepended terhadap informasi yang ada.
+<br>
+Jika tidak dimulai dengan '+' atau '-' maka akan menggantikan informasi yang ada.
+<p>
+File konfigurasi penyesalan waspada dapat ditentukan melalui <a href="api.html">API</a>,
+<a href="../../ui/dialogs/options/alert.html">Layar pilihan selalu siap</a>
+atau menggunakan <a href="../../cmdline.html">garis komando</a> pilihan:  
+<pre>-config waspada.menimpaNamafile=&lt;filename&gt;</pre>
+
+<h2>Lihat juga</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/overview.html">Ikhtisar UI</a></td><td>untuk ikhtisar antarmuka pengguna</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="features.html">Fitur</a></td><td>disediakan oleh ZAP</td></tr>
+</table>
+
+</body>
+</html>

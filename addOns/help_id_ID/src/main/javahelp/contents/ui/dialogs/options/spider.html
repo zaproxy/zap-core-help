@@ -4,18 +4,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Pilihan layar Spider</title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 	<h1>Pilihan layar Spider</h1>
 	<p>
-		Layar ini mengizinkan anda untuk mengubah pilihan <a
-			href="../../../start/concepts/spider.html">sipder</a>.</p> 
+		This screen allows you to configure the <a
+			href="../../../start/features/spider.html">spider</a> options.</p> 
 	<p>Perlu dicatat bahwa mengubah sebagian besar opsi ini akan mempengaruhi Spider yang sedang berjalan.
 	</p>
 
 	<h3>Kedalaman maksimum untuk dicrawl</h3>
-	Parameter menentukan kedalaman maksimum dalam proses crawling dimana laman harus ditemukan agar bisa diproses. Sumber daya yang ditemukan melebihi level ini tidak diambil dan di urai oleh spider.
+	Parameter menentukan kedalaman maksimum dalam proses crawling dimana laman harus ditemukan agar bisa diproses. Sumber daya yang ditemukan melebihi level ini tidak diambil dan di urai oleh spider. The value
+	zero means unlimited depth.
 	<p>
-		Kedalaman dihitung mulai dari sumber, demikian jika pemindaian spider dimulai dengan hanya satu URL (misalnya. URL Spider), kedalaman nya dihitung mulai dari yang satu ini. Namun, jika pemindaian dimulai dengan beberapa sumber (misalnya. Spider site), sumber daya nya diproses jika kedalaman nya relatif terhadap <i>setiap</i> sumber kurang dari yang ditentukan.
+		Kedalaman dihitung mulai dari sumber, demikian jika pemindaian spider dimulai dengan hanya satu URL (misalnya. URL manually specified), the depth is
+		calculated from this one. Namun, jika pemindaian dimulai dengan beberapa sumber (misalnya. recurse and Sites tree node with children), a resource is processed if it's depth
+		relative to <i>any</i> of the seeds is less than the defined one.
 	</p>
 
 	<h3>Jumlah lembar yang digunakan</h3>
@@ -52,8 +55,8 @@ Nol (default) berarti Spider akan berjalan sampai menemukan semua tautan yang bi
 	Jika opsi dinonaktifkan, Spider tidak akan mengirim cookie kedalam permintaan nya. Sebagai contoh, ini bisa mengontrol apakah spider menggunakan sesi yang sama disepanjang pemindaian spidering atau tidak.
 	<br>Pada saat menerima cookie, cookie tidak dibagi diantara pemindai spider, setiap pemindai memiliki cookie jar sendiri.
 	<br>Pilihan ini memiliki prioritas yang rendah, Spider akan mematuhi opsi (global) lainnya yang berkaitan dengan status HTTP. Opsi ini akan diabaikan jika, misalkan pilihannya
-	<a href="../../tlmenu/edit.html">Aktifkan Sesi Pelacakan (Cookie)</a> diaktifkan, ketika spidering sebagai <a href="../../../start/concepts/users.html">Pengguna</a> atau saat
-	<a href="../../../start/concepts/httpsessions.html">Sesi HTTP</a> aktif.
+	<a href="connection.html">Enable (Global) HTTP State</a> diaktifkan, ketika spidering sebagai <a href="../../../start/features/users.html">Pengguna</a> atau saat
+	<a href="../../../start/features/httpsessions.html">Sesi HTTP</a> aktif.
 
 	<h3>Bentuk-bentuk proses</h3>
 	Selama proses penjelajahan, tindakan spider saat menemukan bentuk-bentuk HTML ditentukan oleh opsi ini. Jika di nonaktifkan, bentuk HTML tidak akan diproses semuanya. Jika diaktifkan, bentuk dari HTML dengan metode yang diartikan sebagai HTTP GET akan diserahkan dengan beberapa nilai yang dihasilkan. Tindakan ketika menghadapi bentuk dengan metode yang diartikan sebagai HTTP POST dikonfigurasi oleh opsi berikutnya.
@@ -81,7 +84,7 @@ Nol (default) berarti Spider akan berjalan sampai menemukan semua tautan yang bi
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../../start/concepts/spider.html">Spider</a></td>
+			<td><a href="../../../start/features/spider.html">Spider</a></td>
 			<td>untuk tinjauan spider</td>
 		</tr>
 		<tr>

@@ -3,77 +3,92 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Ang mga diyalogo Dialog ng Manu-manong Kahilingan Editor
+Ang manu-manong kahilingan ng editor ng diyalogo
 </title>
 </head>
-<body bgcolor="#ffffff">
-<h1>Ang mga diyalogo ng Manu-manong Kahilingan Editor</h1>
+<body>
+<h1>Ang manu-manong kahilingan ng editor ng diyalogo</h1>
 
-Ang Ang mga diyalogo na ito ay nagbibigay-daan sa iyo upang lumikha ng isang kahilingan mula sa simula na isusumite sa tinukoy na target.
+This dialog allows you to create a request from scratch which will be submitted to the specified target,
+or resend an existing request after making any changes to it that you want to.
 
-<h2>Humiling ng tab</h2>
+<h2>Ang kahilingan ng tab</h2>
 
-Ipinapakita nito ang header at data ng kahilingan, alinman sa isa o dalawa panel depende sa mga pagpipilian na pinili.
+Ipinapakita nito ang kahilingan ng header at ng datos, sinuman sa isa o dalawang mga panel ang nakadepende sa mga opsyon ng napili.
 <br/>
 <br/>
-Ang mga diyalogo ng Manu-manong Kahilingan Editor.<br>
-Tandaan na kapag ang paraan ay binago sa isang POST pagkatapos ay ang anumang mga parameter ng URL ay inilipat sa katawan, at kapag ang pamamaraan ay binago mula sa isang POST pagkatapos ay ang anumang mga parameter sa katawan ay inililipat sa URL.
+Ang isang 'paraan' ng paghatak pababa ay pinahihintulutan ka na magpalit sa pagitan ng HTTP na mga paraan.<br>
+Paalala na kung ang paraan ay nabago sa isang POST pagkatapos ang alinman sa URL ng mga parametro ay naalis mula sa bahagi, at habang ang 
+paraan ay nabago mula sa isang POST pagkatapos ng alinman sa mga parametro sa mga bahagi ay naalis sa mga URL.
 <br/>
 <br/>
-Pull down ay nagbibigay-daan sa iyo upang pumili ng iba't ibang <a href="../views.html">Mga Pananaw</a> para sa kahilingan ng header at katawan.
+Ang mga paghatak pababa ay pinahihintulutan ka na pumili ng ibat-ibang <a href="../views.html">Mga Pananaw</a> para sa mga kahilingan ng header at bahagi.
 
-<h3><img src="../../images/view_split.png" align="bottom" width="16" height="16" />&nbsp; Hatiin ang display para sa header at katawan</h3>
-Binabago nito ang display upang ang mga hiwalay na pane ay ginagamit para sa header at katawan.<br> 
+<h3><img src="../../images/view_split.png" align="bottom" width="16" height="16" />&nbsp; Paghiwalayin ang ipinapakita para sa header at bahagi</h3>
+Ang mga pagbabagong ito na ipinakita kaya ang hiniwalay na mga pane ay ginamit para sa header at bahagi.<br> 
 
-<h3><img src="../../images/view_all.png" align="bottom" width="16" height="16" />&nbsp; Pinagsamang display para sa header at katawan</h3>
-Binabago nito ang display upang ang header at katawan ay ipinapakita sa isang pane.<br> 
+<h3><img src="../../images/view_all.png" align="bottom" width="16" height="16" />&nbsp; Ang kombinasyon ng pagpapakita para sa header at bahagi</h3>
+Ang pagbabgong ito na ipinakita kaya ang header at bahagi ay makikita sa isang pane.<br> 
 
-<h3><img src="../../images/fugue/cookie.png" align="bottom" width="16" height="16" />&nbsp; Gumamit ng kasalukuyang session sa pagsubaybay</h3>
-Tingnan ang 'Paganahin ang item sa pagsubaybay ng session (Cookie)' sa <a href="../tlmenu/edit.html">I-edit ang menu</a>.<br>  
+<h3><img src="../../images/fugue/globe-green.png" align="bottom" width="16" height="16" />&nbsp; Ang paggamit ng kasalukyang pagsubaybay sa sesyon</h3>
+See the 'Enable (Global) HTTP State' option in the <a href="./options/connection.html">Options Connection screen</a>.<br>
 
-<h3><img src="../../images/16/118.png" align="bottom" width="16" height="16" />&nbsp; Sundin ang pag-redirect</h3>
-Kung pinili awtomatikong sumusunod ang anumang mga redirect na ipinadala sa browser.<br> 
+<h3><img src="../../images/fugue/cookie.png" align="bottom" width="16" height="16" />&nbsp; Accept cookies</h3>
+This option controls whether encountered cookies should be added to subsequent requests. 
+For example if a request is sent that results in a response with Set-Cookie header(s) should those cookies values be added to subsequent 
+send attempts from the Manual Request dialog?<br>
 
-<h3><img src="../../images/layout_tabbed.png" align="bottom" width="16" height="16" />&nbsp; Ang mga tab na Hiling at Tugon ay magkatabi</h3>
-Binabago nito ang display upang ang tab ng kahilingan at tugon ay magkatabi.<br> 
-Pinatataas nito ang impormasyon na maaaring maipakita ngunit nangangahulugang hindi mo makita ang parehong kahilingan at tugon nang sabay.
+<h3><img src="../../images/16/118.png" align="bottom" width="16" height="16" />&nbsp; Follow redirect</h3>
+If selected automatically follows any redirects sent to the browser.<br>
 
-<h3><img src="../../images/layout_vertical_split.png" align="bottom" width="16" height="16" />&nbsp; Kahilingan na ipinapakita sa itaas Tugon</h3>
-Binabago nito ang display upang ang panel ng kahilingan ay ipinapakita sa itaas ng panel ng tugon.<br> 
-Binabawasan nito ang impormasyon na maaaring maipakita ngunit nangangahulugang maaari mong makita ang parehong kahilingan at tugon sa parehong oras.
+<h3><img src="../../images/fugue/application-resize.png" align="bottom" width="16" height="16" />&nbsp; Update Content Length</h3>
+By default ZAP will automatically update (or add) the Content-Length header to match the size of the data submitted. 
+If this option is unselected then ZAP will not update the header allowing you to specify any value you like.<br>
 
-<h3><img src="../../images/layout_horizontal_split.png" align="bottom" width="16" height="16" />&nbsp; Ang mga kahilingan sa Kahilingan at Tugon ay magkatabi</h3>
-Binabago nito ang display upang ang panel ng kahilingan ay ipinapakita sa kaliwa ng panel ng tugon.<br> 
-Binabawasan nito ang impormasyon na maaaring maipakita ngunit nangangahulugang maaari mong makita ang parehong kahilingan at tugon sa parehong oras.
+<h3><img src="../../images/csrf-button.png" align="bottom" width="16" height="16" />&nbsp; Regenerate Anti-CSRF</h3>
+If selected automatically regenerates Anti-CSRF tokens if any exist.
+Currently only supported in the message body and requires that the Anti-CSRF extension is enabled.<br>
 
-<h2>Tab na Tugon</h2>
+<h3><img src="../../images/layout_tabbed.png" align="bottom" width="16" height="16" />&nbsp; Request and Response tabs side by side</h3>
+This changes the display so that the request and response tabs are side by side.<br> 
+This increases the information that can be displayed but means you cannot see both the request and response at the same time.
 
-Ipinapakita nito ang data na ipinadala sa iyong browser bilang tugon sa kahilingan na iyong isinumite, alinman sa isa o dalawa panel depende sa mga pagpipilian na pinili.<br/><br/>
+<h3><img src="../../images/layout_vertical_split.png" align="bottom" width="16" height="16" />&nbsp; Request shown above Response</h3>
+This changes the display so that the request panel is shown above the response panel.<br> 
+This decreases the information that can be displayed but means you can see both the request and response at the same time.
 
-Pull down ay nagbibigay-daan sa iyo upang pumili ng iba't ibang <a href="../views.html">Mga Pananaw</a> para sa header at katawan ng Tugon.
+<h3><img src="../../images/layout_horizontal_split.png" align="bottom" width="16" height="16" />&nbsp; Request and Response panels side by side</h3>
+This changes the display so that the request panel is shown to the left of the response panel.<br> 
+This decreases the information that can be displayed but means you can see both the request and response at the same time.
 
-<h2>Mag-right click menu</h2>
-Ang pag-click sa kanan ay magdadala ng isang menu na magbibigay-daan sa iyo upang:
+<h2>Ang tugon ng tab</h2>
 
-<h3>Maghanap ng...</h3>
-Dadalhin nito ang <a href="../dialogs/find.html">Hanapin ang dialog</a>.
+This shows the data sent to your browser in response to the request that you submitted, either in one or two panels depending on the options chosen.<br/><br/>
 
-<h3>Encode / Decode...</h3>
-Dadalhin nito ang <a href="../dialogs/enc_dec.html">Encode / Decode Ang mga diyalogo</a>.<br/>
-Kung na-highlight mo na ang kahit anong teksto ay ito ay automatikong masasali sa loob ng dialogo.
- 
-<h2>Na-access sa pamamagitan ng</h2>
+Pull downs allow you to select different <a href="../views.html">Mga Pananaw</a> for the Response header and body.
+
+<h2>Ang tamang pagpindot ng menu</h2>
+Right clicking will bring up a menu which will allow you to:
+
+<h3>Find...</h3>
+This will bring up the <a href="../dialogs/find.html">Hinahanap na diyalogo</a>.
+
+<h2>Ang pagpapagana sa pamamagitan ng</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../tlmenu/tools.html">Nangungunang menu ng Mga tool sa antas</a></td><td>'Manual Request Editor ...' menu item</td></tr>
+<a href="../tlmenu/tools.html">Ang mataas na lebel ng mga kasangkapan ng menu</a></td><td>ang 'manu-manong editor ng kahilingan ...' ng menu aytem</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../tabs/sites.html">Sites tab</a></td><td>'Open/Resend with Request Editor...' right click menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../tabs/history.html">History tab</a></td><td>'Open/Resend with Request Editor...' right click menu item</td></tr>
 </table>
 
-<h2>Tingnan din</h2>
+<h2>Tingnan din sa</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">Pangkalahatang-ideya ng UI</a></td><td>para sa isang pangkalahatang-ideya ng user interface</td></tr>
+<a href="../overview.html">Ang pangkalahatang ideya ng UI</a></td><td>para sa isang pangkalahatang ideya ng mga gumamit ng interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="dialogs.html">Ang mga diyalogo</a></td><td>para sa mga detalye ng mga Ang mga diyalogo o mga popup </td></tr>
+<a href="dialogs.html">Ang mga diyalogo</a></td><td>para sa mga detalye ng mga diyalogo o mga popup </td></tr>
 </table>
 
 </body>

@@ -1,0 +1,541 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<TITLE>
+  Release 2.8.0
+</TITLE>
+</HEAD>
+<BODY>
+<H1>Release 2.8.0</H1>
+
+This is a bug fix and enhancement release, which requires a minimum of Java 8. 
+Note that a minimum of Java 11 is recommended, especially for high DPI displays.
+<br><br>
+These release notes do not include all of the changes included in add-ons updated since 2.7.0.
+<br><br>
+Some of the more significant enhancements include:
+
+<H2>Heads Up Display</H2>
+
+The ZAP Heads Up Display (HUD) brings all of the essential ZAP functionality into your browser. 
+It is ideal for people new to web security and also allows experienced penetration testers to focus on an 
+application's features while providing key security information and functionality. <br>
+The HUD can be enabled when proxying a browser through ZAP via the new 'Manual Explore' screen and a top level toolbar button.
+
+<H2>Quick Start Screens</H2>
+
+The Quick Start tab has been reworked to provide 3 screens:
+<ul>
+<li>Automated Scan: allows you to launch an automated scan against an application and the choice of traditional and/or ajax spider</li>
+<li>Manual Explore: allows you to launch browsers configured to proxy via ZAP with the option to enable the HUD</li>
+<li>Learn More: provides links to local and remote resources which you can use to learn more about ZAP</li>
+</ul>
+The tab also provides a news panel that provides a summary of ZAP news along with a link for more details. 
+News items can be hidden when no longer needed.
+
+<H2>Scan Rule Promotions</H2>
+
+The following scan rules have been promoted:
+<h3>Active Scan Rules - Release</h3>
+<ul>
+<li>Promote Source Code Disclosure WEB-INF (Issue 4448).</li>
+</ul>
+
+<h3>Passive Scan Rules - Release</h3>
+<ul>
+<li>Promote Charset Mismatch Scanner to release (Issue 4460).</li>
+<li>Promote ViewState Scanner to release (Issue 4453).</li>
+<li>Promote Insecure JSF ViewState Scanner to release (Issue 4455).</li>
+<li>Promote Insecure Authentication Scanner to release (Issue 4456).</li>
+<li>Promote Information Disclosure Debug Errors Scanner to release (Issue 4457).</li>
+<li>Promote CSRF Countermeasures Scanner to release (Issue 4458).</li>
+<li>Promote Cookie Loosely Scoped Scanner to release (Issue 4459).</li>
+</ul>
+
+<H2>Headless Browser Support</H2>
+Headless browsers are now supported by the Selenium add-on and the add-ons that use it. Both the Ajax Spider and the DOM XSS scan rule now default to headless Firefox.
+
+<H2>Command Line Changes</H2>
+<h3>-dir &lt;dir&gt;</h3>
+To prevent add-ons (inadvertently) use/override core files ZAP will no longer start (and show an error) if the home and the
+installation directories are the same.
+
+<h3>CA Certificate Handling</h3>
+The following options allow the root CA certificate to be set and read:
+<pre>
+-certload &lt;path&gt;      Loads the Root CA certificate from the specified file name
+-certpubdump &lt;path&gt;   Dumps the Root CA public certificate into the specified file name, this is suitable for importing into browsers
+-certfulldump &lt;path&gt;  Dumps the Root CA full certificate (including the private key) into the specified file name, this is suitable for importing into ZAP
+</pre>
+These options are particularly useful when running ZAP headless in Docker, as they allow you to either specify the CA certificate to use or to access the one that 
+ZAP creates automatically for you.
+
+<h3>Client Certificate Handling</h3>
+It is now possible to set the Client Certificate from the command line with the following switches:
+<pre>
+-config certificate.use=true
+-config certificate.pkcs12.path=/path/to/file.p12
+-config certificate.pkcs12.password=WhateverThePasswordIs
+-config certificate.pkcs12.index=1
+-config certificate.persist=true
+</pre>
+<p>
+<code>-config certificate.pkcs12.index</code> is only necessary if the file contains multiple certificates 
+and you wish to use one other than the first. Index values start at zero (0) which is the first certificate
+in the file.<br><br>
+<code>-config certificate.persist=true</code> is only necessary if you would like the settings persisted in ZAP's regular 
+configuration file (so that they apply for subsequent ZAP use).
+</p>
+
+<H2>Source Code Restructuring</H2>
+The ZAP repositories have all been migrated to use Gradle from Ant. Standard source code formatting is also now enforced for consistency.
+
+<H2>Filters Removal</H2>
+Deprecated since ZAP 2.4.0 the Filters functionality, that allowed to change/access some HTTP messages sent/received through
+ZAP, has now been removed, the same and much more can be achieved with scripts and Replacer add-on.
+
+<H2>Changes in Bundled Libraries</H2>
+The following libraries are no longer being bundled with ZAP (core):
+<ul>
+  <li>BrowserLauncher2, it was replaced with the usage of JRE class <code>java.awt.Desktop</code>. Add-ons should use that class or bundle the library.</li>
+  <li>HttpComponents Client/Core, no longer in use by core, any add-ons that require them should bundle them.</li>
+  <li>JavaFX runtime, now relying on JRE (for example, OracleJDK, OpenJDK+OpenJFX).</li>
+</ul>
+
+The following libraries will be removed in a future release:
+<ul>
+  <li>JDOM</li>
+  <li>Diff Utils</li>
+</ul>
+no longer in use by core, add-ons should bundle the library, if needed.
+
+The following libraries were updated:
+<ul>
+  <li>Bouncy Castle, 1.52 → 1.61</li>
+  <li>Commons BeanUtils, 1.8.3 → 1.9.3</li>
+  <li>Commons Codec, 1.9 → 1.12</li>
+  <li>Commons Configuration, 1.9 → 1.10</li>
+  <li>Commons CSV, 1.1 → 1.6</li>
+  <li>Commons IO, 2.4 → 2.6</li>
+  <li>Commons Lang, 3.7 → 3.9</li>
+  <li>Commons Text, 1.3 → 1.6</li>
+  <li>HSQLDB, 2.3.4 → 2.4.1</li>
+  <li>Java SemVer, 0.8.0 → 0.9.0</li>
+  <li>Jericho HTML Parser, 3.1 → 3.4</li>
+  <li>RSyntaxTextArea, 2.5.8 → 3.0.3</li>
+  <li>SQLite JDBC, 3.8.11.1 → 3.27.2.1</li>
+  <li>SwingX, 1.6.4 → 1.6.5-1</li>
+</ul>
+
+<H2>Active Scan Input Vectors Change</H2>
+Users now have the option of whether or not to add a query parameter to GET requests that did not have them to start with.
+In previous versions this behavior was not user controllable and was on by default. With the new user option the default has 
+been changed to off.
+
+<H2>JSON Authentication Method</H2>
+An authentication method has been added which allows a JSON object to be sent in the request body.
+
+<H2>JSON Report Change</H2>
+For consistency the <code>site</code> property will be always an array regardless of the number of sites that the report contains,
+previously it would be an object if only one site and an array if more than one.
+
+<H2>Display Options - Font Controls</H2>
+In the Options dialog Display panel it is now possible for the user to select a General font and size for ZAPs GUI, 
+as well as a Work Panel font and size used for the top right section of ZAP's main window (Ex: Request/Response, the 
+Edit and Resend tool, etc.).
+
+<H2>Enhancements</H2>
+<ul>
+<li>Issue 1067 : User conversion between changes of AuthenticationMethods</li>
+<li>Issue 1370 : Login HTTP requests without cookies with Form-based Authentication</li>
+<li>Issue 1429 : Option to add custom ZAP header</li>
+<li>Issue 2023 : Allow to set client certificate (PKCS#12) through the ZAP API</li>
+<li>Issue 2182 : Add support for dynamic fields in Form-based authentication method</li>
+<li>Issue 2439 : Configure Authentication with Json object</li>
+<li>Issue 2528 : Feature request: Passive scanning during fuzzing</li>
+<li>Issue 2950 : Script change monitor</li>
+<li>Issue 2964 : Allow to select the look and feel</li>
+<li>Issue 2965 : Support scanning multipart filename and content parameter</li>
+<li>Issue 3447 : Param Tab Truncation</li>
+<li>Issue 3485 : Minor Enhancement: Indicate amount of Java memory actually used in JVM Options Panel</li>
+<li>Issue 3528 : Minor Enhancement: Add Date Format Preference</li>
+<li>Issue 3734 : Allow add-ons without extensions to have help pages</li>
+<li>Issue 3841 : Allow add-ons without extensions to have resource messages</li>
+<li>Issue 3879 : Auto Set Active Imported Certificate</li>
+<li>Issue 3930 : Add a status panel for the scanner callbacks</li>
+<li>Issue 3952 : Show number of new alerts in Active Scan tab</li>
+<li>Issue 4100 : Skip plugins if there's nothing to scan</li>
+<li>Issue 4102 : Allow to delete site nodes with keyboard shortcut</li>
+<li>Issue 4122 : Add unicode functions.</li>
+<li>Issue 4123 : Passive Scan Tags interpolation</li>
+<li>Issue 4135 : REST API to manage script variables</li>
+<li>Issue 4153 : ZAP doesn't ask for confirmation before overwriting an existing session</li>
+<li>Issue 4201 : Alert Tab UI Tweaks</li>
+<li>Issue 4236 : Expand node of first context added</li>
+<li>Issue 4244 : Change variant cookie to behave like browsers do</li>
+<li>Issue 4245 : Add shortcut key to Sites' Delete pop menu item</li>
+<li>Issue 4253 : Allow to remove API callbacks</li>
+<li>Issue 4277 : Warn if a # is specified in a breakpoint URL</li>
+<li>Issue 4283 : Update ZAP logo in HTML report</li>
+<li>Issue 4307 : Allow to delete all alerts through the GUI</li>
+<li>Issue 4318 : Enhancement - Allow addons to "opt-in" for passive scanning</li>
+<li>Issue 4319 : Expose UI component (table) of History tab</li>
+<li>Issue 4325 : Improve form submission in API Web UI</li>
+<li>Issue 4331 : Allow to show Request and Response in the same tab</li>
+<li>Issue 4333 : Include ID of the HTTP message in returned HAR</li>
+<li>Issue 4352 : Allow to send a message body with all methods</li>
+<li>Issue 4364 : Allow to obtain context's URLs through the API</li>
+<li>Issue 4365 : Allow to specify a name for session snapshot through the API</li>
+<li>Issue 4391 : Enhancement: Params Tab - Multipart Form Params</li>
+<li>Issue 4400 : Allow to scan from Contexts tree</li>
+<li>Issue 4422 : Spider Scan does not understand HTML 5 form syntax</li>
+<li>Issue 4474 : pscan - Expose getPluginPassiveScanners()</li>
+<li>Issue 4477 : Enable help in Add/Edit Breakpoint dialogue</li>
+<li>Issue 4484 : Added Django csrf_token</li>
+<li>Issue 4498 : Added support for launching JVM enabled for remote debugging</li>
+<li>Issue 4541 : Expand node of selected context</li>
+<li>Issue 4542 : Ensure node selected param panel is visible</li>
+<li>Issue 4548 : ATTACK Mode Enablement Suggestion</li>
+<li>Issue 4557 : Tweak JVM panel to resize properly</li>
+<li>Issue 4592 : Keep panel of selected context selected</li>
+<li>Issue 4599 : Keep backup of malformed config.xml file</li>
+<li>Issue 4604 : Do not automatically add an empty user</li>
+<li>Issue 4612 : HTTP Sessions Tab Messages Matched - drill down to matched messages</li>
+<li>Issue 4616 : Add option for custom font in work panels</li>
+<li>Issue 4638 : Allow to reinstall (local) add-on</li>
+<li>Issue 4647 : Skip plugins if no input vectors enabled</li>
+<li>Issue 4668 : Make Passive Scan Tags management cleaner</li>
+<li>Issue 4679 : Inform when the add-on has finished installing</li>
+<li>Issue 4688 : Allow to view script types through the API</li>
+<li>Issue 4694 : Provide details of why the add-on is not valid</li>
+<li>Issue 4698 : TLS 1.3 UI Components</li>
+<li>Issue 4707 : Allow to use add-on icons in Sites tree</li>
+<li>Issue 4709 : Allow to change proxy's hostname already bound</li>
+<li>Issue 4712 : Add Passive Scan Footer Icon/Status</li>
+<li>Issue 4714 : Inform if passive scanner is still running</li>
+<li>Issue 4726 : Added contexts setContextRegexs API endpoint</li>
+<li>Issue 4729 : Allow to add/remove an anti-CSRF token from all parameters in Params tab</li>
+<li>Issue 4743 : Dynamically add/remove extensions' help</li>
+<li>Issue 4753 : Exporting response bodies of many messages at the same time from History tab</li>
+<li>Issue 4762 : Added pscan stats and API call for getting current rule</li>
+<li>Issue 4767 : Be more lenient when parsing techs through the API</li>
+<li>Issue 4771 : Bundle required files in the zap.jar</li>
+<li>Issue 4780 : Tidy up dependencies</li>
+<li>Issue 4810 : Exit on exception during GUI start</li>
+<li>Issue 4819 : Added childNodes view</li>
+<li>Issue 4833 : Added alert api endpoints</li>
+<li>Issue 4835 : Improve 'port in use' error message</li>
+<li>Issue 4836 : Add option to prevent windows from grabbing focus from other apps</li>
+<li>Issue 4892 : Allow to set client certificate (PKCS#12) from CLI</li>
+<li>Issue 4933 : New/Updated Global Excludes</li>
+<li>Issue 4935 : Minor 'find' enhancement - when searching in request/response</li>
+<li>Issue 4943 : Global Excludes No Longer Beta</li>
+<li>Issue 4946 : added _csrf to default ACSRF token names</li>
+<li>Issue 4976 : ascan: Make addition of query param optional</li>
+<li>Issue 4988 : Spider: Parse robots.txt even if no content-type</li>
+<li>Issue 4997 : Allow to manage default session tokens (API)</li>
+<li>Issue 5010 : Show Version in Marketplace Installed Addons Tab</li>
+<li>Issue 5023 : Let fields in StandardFieldsDialog get all space</li>
+<li>Issue 5029 : Discard edits of new field in StandardFieldsDialog</li>
+<li>Issue 5064 : Extend TableHistory with filter for "historyid > x" </li>
+<li>Issue 5065 : Listening for changes of the message in the Request/Response panels</li>
+<li>Issue 5076 : Global Excludes - Consolidate Mozilla/Firefox Entries?</li>
+<li>Issue 5091 : Add _csrfSecret to list of default CSRF tokens</li>
+<li>Issue 5116 : Passive scan max alerts option</li>
+<li>Issue 5148 : Show add-on details in a panel instead of tool tip</li>
+<li>Issue 5161 : Allow to listen for script output</li>
+<li>Issue 5192 : Break/wrap long URLs and base64 data in HTML report</li>
+<li>Issue 5219 : Ensure The Scan Policy Sticks Between Active Scan Runs</li>
+<li>Issue 5226 : schedule or queue active scan</li>
+<li>Issue 5236 : Expose the local add-ons through the ZAP API</li>
+<li>Issue 5239 : Provide add-on file path in API/GUI</li>
+<li>Issue 5256 : Added Import top-level Menu</li>
+<li>Issue 5277 : Active Scan Scripts - References Functionality</li>
+<li>Issue 5300 : Ignore "javax.faces.ViewState" parameter in active scans</li>
+<li>Issue 5304 : Improve error message when failed to connect to outgoing proxy</li>
+<li>Issue 5324 : Enhancement: Spider handle Hyperlink Auditing Functionality</li>
+<li>Issue 5335 : Add feedback on search progress</li>
+<li>Issue 5343 : Show UI name of dependent extensions</li>
+<li>Issue 5345 : Add cmdline options for loading and dumping root cert</li>
+<li>Issue 5350 : Enable custom (script) input vectors by default.</li>
+<li>Issue 5351 : Apply installer CFU options on update</li>
+<li>Issue 5354 : New silent option to disable all calls home</li>
+<li>Issue 5366 : Fallback to bundled Messages file</li>
+</ul>
+
+<H2>Bug fixes</H2>
+<ul>
+<li>Issue 1142 : Session Fixation False positive</li>
+<li>Issue 1161 : [Enable Session Tracking (Cookie)] and [Use current tracking session] toggle button</li>
+<li>Issue 1287 : PKCS11: Error, maybe your password or driver is wrong.</li>
+<li>Issue 1470 : spider scan() API errors with 'No seeds available for the Spider. Cancelling scan...'</li>
+<li>Issue 1642 : Change of view type in Break tab not saved when ZAP closed/reopened.</li>
+<li>Issue 2531 : Cookie is not set during script authentication when following redirect</li>
+<li>Issue 2626 : Error on Debian with Java 8: "Could not generate DH keypair"</li>
+<li>Issue 2998 : Zap Report Generation Bug</li>
+<li>Issue 3075 : ZAP not relinquishing top window position sometimes after intercept being on</li>
+<li>Issue 3399 : Do not uninstall files that are declared by other add-ons</li>
+<li>Issue 3959 : Properly generate cert for ZAP API and Callback when accessed with IP address</li>
+<li>Issue 4016 : Proxying https://ipaddress raise a CERT_COMMON_NAME_INVALID Error in Browser </li>
+<li>Issue 4097 : python api returns the wrong content for authentication.get_authentication_method()</li>
+<li>Issue 4111 : ZAP Python API: zap.context.alerts_summary() returns 0</li>
+<li>Issue 4119 : Ajax Spider deadlock</li>
+<li>Issue 4130 : Do not return duplicate URLs in urls core view</li>
+<li>Issue 4147 : Unable to add PKCS#11 certs with Java 9+</li>
+<li>Issue 4166 : Unable to import Root CA Cert from PEM file with Java 9+</li>
+<li>Issue 4194 : Size of the configuration file keeps increasing each time ZAP is started with Java 9+</li>
+<li>Issue 4196 : Supported core extensions not available when using experimental DB option</li>
+<li>Issue 4197 : Warn and prevent snapshot to current session file</li>
+<li>Issue 4202 : API Spider call not taking existing URLs as input</li>
+<li>Issue 4226 : Prevent use of install dir as home dir</li>
+<li>Issue 4247 : ZAP should accept/parse cookies without name</li>
+<li>Issue 4252 : Dont restrict callback urls to the specified addresses</li>
+<li>Issue 4265 : Unable to spider with unlimited depth</li>
+<li>Issue 4279 : Python Passive Rules scan all message types by default</li>
+<li>Issue 4291 : Manual Request Editor keeps using Forced User even if disabled</li>
+<li>Issue 4306 : Clear Sites nodes' alert state on alerts deletion</li>
+<li>Issue 4356 : Internal Error while obtaining URLs through the API</li>
+<li>Issue 4357 : Do not submit unused parameters in API Web UI</li>
+<li>Issue 4368 : Exclude from Context not used by active scan</li>
+<li>Issue 4379 : Remove custom vectors' highlights when cleared</li>
+<li>Issue 4387 : Internal Error while saving the session (again) through the API</li>
+<li>Issue 4408 : Reinstate locale mapping</li>
+<li>Issue 4428 : Zap waiting for Spider endlessly when it crashed.</li>
+<li>Issue 4515 : AuthenticationScript (Python, Ruby, Groovy) does not work without logged in/out indicators</li>
+<li>Issue 4538 : Local ZapVersions.xml is saved with default character encoding</li>
+<li>Issue 4575 : Stop spider scans when mode changed to Safe</li>
+<li>Issue 4576 : Skip Token Generator responses for HTTP Sessions</li>
+<li>Issue 4581 : Skip Access Control responses for HTTP Sessions</li>
+<li>Issue 4590 : ZAP API converts data to wrong format</li>
+<li>Issue 4623 : Message caught in Break tab but break buttons remain disabled</li>
+<li>Issue 4627 : Add proxy related listeners to alternative proxies</li>
+<li>Issue 4646 : Allow to specify higher values for delay while scanning through the UI</li>
+<li>Issue 4655 : Track the directories with scripts</li>
+<li>Issue 4691 : Correctly JSON encode context regexs</li>
+<li>Issue 4711 : sites tree no longer accessible</li>
+<li>Issue 4749 : Handling of empty client certificates</li>
+<li>Issue 4756 : Correct install dir detection from ZAP JAR</li>
+<li>Issue 4772 : Correct generated certificates' validity period</li>
+<li>Issue 4789 : Break tab is not automatically shown in full layout when breakpoint is hit</li>
+<li>Issue 4807 : Add all dangling event consumers</li>
+<li>Issue 4814 : Don't open the report if it does not exist</li>
+<li>Issue 4817 : Skip dependent extensions of failed uninstallation</li>
+<li>Issue 4818 : Correct API response on failed installations</li>
+<li>Issue 4827 : Allow consumers to remove themselves during events</li>
+<li>Issue 4846 : User-Agent changes from configured value</li>
+<li>Issue 4869 : Delay initialisation of keyboard mappings</li>
+<li>Issue 4911 : ConcurrentModificationException thrown in PassiveScanThread</li>
+<li>Issue 4945 : Don't use HTTP session for manual auth if not set</li>
+<li>Issue 4970 : Don't parse (plain) API parameters as JSON</li>
+<li>Issue 4971 : Made active scan progress consistent with spider, show progress of 100 if scan is stopped</li>
+<li>Issue 4993 : Change API view optionTokensNames to return a list</li>
+<li>Issue 5003 : SSE are not supported in some cases</li>
+<li>Issue 5021 : Active Scan API - Scan whole context as user incorrectly requires a URL</li>
+<li>Issue 5027 : Restore info message in Input Vectors tab</li>
+<li>Issue 5033 : Do not add auth context menus in daemon mode</li>
+<li>Issue 5060 : Custom Vectors don't work properly if plugin ID is injected in the message</li>
+<li>Issue 5066 : Correct request rewrite when following redirection</li>
+<li>Issue 5068 : Fix typo in sql script adding the tag column</li>
+<li>Issue 5118 : Global Excludes Modify Description Doesn't Work</li>
+<li>Issue 5156 : Return proper errors in break API</li>
+<li>Issue 5160 : Show/edit expected breakpoint with sorting</li>
+<li>Issue 5162 : Inconsistent JSON report format</li>
+<li>Issue 5207 : Hook OverrideMessageProxyListener also on install</li>
+<li>Issue 5221 : ZAP failing Nexus scan</li>
+<li>Issue 5252 : Unable to CONNECT to authority with underscore</li>
+<li>Issue 5257 : Improve error handling on shutdown</li>
+<li>Issue 5259 : GUI hang (and NPE exceptions) when using Context Alert Filters</li>
+<li>Issue 5352 : Fix exceptions during config update</li>
+</ul>
+
+<H2>ZAP API Breaking Changes:</H2>
+
+<H3>VIEW acsrf / optionTokensNames</H3>
+
+This change will break the consumers that were manually parsing/extracting the names from the string. The structure of the data
+returned was changed to properly separate each name:
+<blockquote><pre><code>
+{"optionTokensNames":["anticsrf","CSRFToken"]}
+</code></pre></blockquote>
+and:
+<blockquote><pre><code>
+&lt;optionTokensNames type="list"&gt;
+    &lt;tokenName&gt;anticsrf&lt;/tokenName&gt;
+    &lt;tokenName&gt;CSRFToken&lt;/tokenName&gt;
+&lt;/optionTokensNames&gt;
+</code></pre></blockquote>
+
+instead of:
+<blockquote><pre><code>
+{"TokensNames":"[anticsrf, CSRFToken]"}
+</code></pre></blockquote>
+and:
+<blockquote><pre><code>
+&lt;optionTokensNames&gt;[anticsrf, CSRFToken]&lt;/optionTokensNames&gt;
+</code></pre></blockquote>
+
+<H3>VIEW authentication / getAuthenticationMethod</H3>
+
+This change will break the consumers that were manually parsing/extracting the JSON response (and XML response, for manual
+authentication method). The structure of the data was changed to have an object wrap the authentication method data, to be
+consistent with all other views. The returned data would be, for example:
+<blockquote><pre><code>
+{
+  "method": {
+    "port": "443",
+    "host": "example.com",
+    "methodName": "httpAuthentication",
+    "realm": "example"
+  }
+}
+</code></pre></blockquote>
+
+instead of:
+<blockquote><pre><code>
+{
+  "port": "443",
+  "host": "example.com",
+  "methodName": "httpAuthentication",
+  "realm": "example"
+}
+</code></pre></blockquote>
+
+<H3>VIEW core / alertsSummary</H3>
+
+This change will break the consumers that were manually parsing/extracting the JSON response. The structure of the data was
+changed to have an object wrap the alerts summary, to be consistent with all other views. The returned data would be, for
+example:
+<blockquote><pre><code>
+{
+  "alertsSummary": {
+    "High": 0,
+    "Low": 3,
+    "Medium": 1,
+    "Informational": 1
+  }
+}
+</code></pre></blockquote>
+
+instead of:
+<blockquote><pre><code>
+{
+  "High": 0,
+  "Low": 3,
+  "Medium": 1,
+  "Informational": 1
+}
+</code></pre></blockquote>
+
+<H3>VIEW core / alerts</H3>
+The view will now validate the risk ID, returning an error (ILLEGAL_PARAMETER) if not valid.
+
+<H3>VIEW core / numberOfAlerts</H3>
+The view will now validate the risk ID, returning an error (ILLEGAL_PARAMETER) if not valid.
+
+<H2>ZAP API Deprecated Endpoints:</H2>
+
+All alert related core endpoints were deprecated, they are now accessible through a new component <code>alert</code>.
+
+<H2>ZAP API Changed Endpoints:</H2>
+
+<H3>ACTION authentication / setAuthenticationMethod</H3>
+The action will no longer remove existing users, instead the user is disabled and its credentials reset if the type of
+credentials of the authentication method being set is different.
+
+<H3>ACTION context / excludeContextTechnologies</H3>
+The action will now accept the string with technologies even if there are spaces before or after the names, for example:
+<blockquote><pre><code>
+os.linux, db.mysql
+</code></pre></blockquote>
+will now be valid.
+
+<H3>ACTION context / includeContextTechnologies</H3>
+The action will now accept the string with technologies even if there are spaces before or after the names, for example:
+<blockquote><pre><code>
+os.linux, db.mysql
+</code></pre></blockquote>
+will now be valid.
+
+<H3>ACTION core / snapshotSession</H3>
+Added optional parameters <code>name</code> and <code>overwrite</code>, to allow to specify a name and overwrite existing files.
+
+<H2>ZAP API New Endpoints:</H2>
+
+<H3>View ascan / optionAddQueryParam</H3>
+Tells whether or not the active scanner should add a query parameter to GET request that don't have parameters to start with.
+
+<H3>VIEW autoupdate / localAddons</H3>
+Returns a list with all local add-ons, installed or not.
+
+<H3>VIEW context / urls</H3>
+Lists the URLs accessed through/by ZAP, that belong to the context with the given name.
+
+<H3>VIEW httpSessions / defaultSessionTokens</H3>
+Gets the default session tokens.
+
+<H3>VIEW pscan / maxAlertsPerRule</H3>
+Gets the maximum number of alerts a passive scan rule should raise.
+
+<H3>VIEW script / globalVar</H3>
+Gets the value of the global variable with the given key. Returns an API error (DOES_NOT_EXIST) if no value was previously set.
+
+<H3>VIEW script / globalVars</H3>
+Gets all the global variables (key/value pairs).
+
+<H3>VIEW script / listTypes</H3>
+Lists the script types available.
+
+<H3>VIEW script / scriptVar</H3>
+Gets the value of the variable with the given key for the given script. Returns an API error (DOES_NOT_EXIST) if no script with the given name exists or if no value was previously set.
+
+<H3>VIEW script / scriptVars</H3>
+Gets all the variables (key/value pairs) of the given script. Returns an API error (DOES_NOT_EXIST) if no script with the given name exists.
+
+<H3>ACTION ascan / setOptionAddQueryParam</H3>
+Sets whether or not the active scanner should add a query param to GET requests which do not have parameters to start with.
+
+<H3>ACTION core / enablePKCS12ClientCertificate </H3>
+Enables use of a PKCS12 client certificate for the certificate with the given file system path, password, and optional index.
+
+<H3>ACTION core / disableClientCertificate</H3>
+Disables the option for use of client certificates.
+
+<H3>ACTION httpSessions / addDefaultSessionToken</H3>
+Adds a default session token with the given name and enabled state.
+
+<H3>ACTION httpSessions / removeDefaultSessionToken</H3>
+Removes the default session token with the given name.
+
+<H3>ACTION httpSessions / setDefaultSessionTokenEnabled</H3>
+Sets whether or not the default session token with the given name is enabled.
+
+<H3>ACTION pscan / setMaxAlertsPerRule</H3>
+Sets the maximum number of alerts a passive scan rule should raise.
+
+<H3>ACTION script / clearGlobalVar</H3>
+Clears the global variable with the given key.
+
+<H3>ACTION script / clearGlobalVars</H3>
+Clears the global variables.
+
+<H3>ACTION script / clearScriptVar</H3>
+Clears the variable with the given key of the given script. Returns an API error (DOES_NOT_EXIST) if no script with the given name exists.
+
+<H3>ACTION script / clearScriptVars</H3>
+Clears the variables of the given script. Returns an API error (DOES_NOT_EXIST) if no script with the given name exists.
+
+<H3>ACTION script / setGlobalVar</H3>
+Sets the value of the global variable with the given key.
+
+<H3>ACTION script / setScriptVar</H3>
+Sets the value of the variable with the given key of the given script. Returns an API error (DOES_NOT_EXIST) if no script with the given name exists.
+
+<H2>See also</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+</table>
+</BODY>
+</HTML>

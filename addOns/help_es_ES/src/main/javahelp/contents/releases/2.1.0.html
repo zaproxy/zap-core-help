@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  Versión 2.1.0
+</title>
+</head>
+<body>
+<h1>Versión 2.1.0</h1>
+<p>
+Se hicieron los siguientes cambios en esta versión:
+</p>
+
+<h2>Cambios menores:</h2>
+
+<h3>Número 355: Permiten Fuzzing posicional</h3>
+<h3>Emisión 475: Valor sesiones Http cookies personalizadas</h3>
+<h3>484 del problema: Compruebe la versión del java en zap.sh</h3>
+<h3>Edición 496: Permite ver la solicitud y respuesta al mismo tiempo en la ventana principal</h3>
+<h3>Issue 505: Http Session API Implementation</h3>
+<h3>Edición 515: Cambiar add-ons para hacer uso de carga automática de mensajes</h3>
+<h3>Número 516: Cambiar complementos mensajes claves que prefijo único</h3>
+<h3>Edición 518: Agregar compatibilidad con OData</h3>
+<h3>Edición 537: Opción a fuerza de buscar archivos y recursos con las extensiones definidas por el usuario</h3>
+<h3>Problema 538: Permitir que se seleccionen líneas no secuenciales en el registro de historial</h3>
+<h3>Número 542: ver api - ventana pronto para permitir</h3>
+<h3>Edición 551: Añadir csrfmiddlewaretoken a la lista de tokens de predeterminados Anti csrf</h3>
+<h3>Problema 552: haga ZapPortNumberSpinner una subclase de ZapNumberSpinner</h3>
+<h3>Problema 553: opción Agregar para filtrar alertas por alcance</h3>
+<h3>Edición 561: Opción de copiar los enlaces con el clic</h3>
+<h3>Edición 566: Clase abstracta para crear popups genéricos</h3>
+<h3>Problema 568: Permitir que las extensiones se ejecuten desde la línea de comando</h3>
+<h3>Problema 569: permitir que Spider Scan comience sin una visita previa</h3>
+<h3>Problema 587: Actualice a JBroFuzz ​​2.5</h3>
+<h3>Problema 592: No mostrar el menú emergente principal si no tiene elementos visibles del menú emergente</h3>
+<h3>Problema 597: se muestra el campo "Autor" en los complementos disponibles (pestaña "Mercado")</h3>
+<h3>Problema 602: Permitir (explícitamente) elegir el tipo de archivo al exportar URLs al archivo</h3>
+<h3>Issue 605: Force intercepts via header</h3>
+<h3>Problema 621: maneja las solicitudes al proxy URL (y genera un archivo PAC)</h3>
+<h3>Problema 638: Sesiones persistentes e instantáneas en lugar de guardarlas</h3>
+
+<h2>Corrección de error:</h2>
+
+<h3>Problema 150: java.io.IOException en org.owasp.jbrofuzz.system.Logger.checkOrCreateDirs</h3>
+<h3>Problema 205: una opción previamente guardada (Barra de herramientas) no está configurada en el inicio cuando está marcado "Solicitar credenciales de proxy al iniciar".</h3>
+<h3>Problema 317: Mueva (o proteja) el botón 'Bin'</h3>
+<h3>Problema 452: API: cierre asíncrono</h3>
+<h3>Problema 488: categorías de Fuzz disponibles para la categoría predeterminada no actualizadas después de instalar / desinstalar un complemento (con archivos fuzz)</h3>
+<h3>Problema 490: la nueva autenticación solo funciona con el escáner activo</h3>
+<h3>Problema 499: NullPointerException al desinstalar un complemento con un editor de solicitud manual</h3>
+<h3>Problema 500: NullPointerException al desinstalar manualmente un complemento instalado</h3>
+<h3>Problema 501: ExtensionFactory conserva referencias a complementos desinstalados (con extensiones)</h3>
+<h3>Problema 502: los complementos instalados manualmente no permanecen instalados</h3>
+<h3>Problema 504: la tabla de complementos instalados puede no actualizarse después de instalar manualmente un complemento</h3>
+<h3>Problema 507: la pestaña Inicio rápido no tiene un panel de desplazamiento</h3>
+<h3>Número 508: Algunos complementos no descarga todos sus componentes al desinstalar</h3>
+<h3>Edición 509: Quitar complemento ResourceBundle al desinstala un complemento</h3>
+<h3>Edición 509: Quitar complemento ResourceBundle al desinstala un complemento</h3>
+<h3>Edición 511: Permitir complementos quitar etiquetas de estado de pie de página</h3>
+<h3>Problema de 512: Permiten para quitar la etiqueta de estado de pie de página añadida por la ScanPanel</h3>
+<h3>Edición 513: Etiquetas de estado de pie de página no inmediatamente se muestra cuando un Add-on está instalado</h3>
+<h3>Edición 514: Etiqueta de estado de pie de página navegación forzada todavía utiliza icono de llave inglesa</h3>
+<h3>Número 517: Add-ons se añaden al cargador de clases "principales" cuando se instala</h3>
+<h3>Edición 520: MissingResourceException al generar "Alertas" Informe</h3>
+<h3>Edición 524: Autenticación de Host se utiliza incluso cuando deshabilita</h3>
+<h3>Edición 525: Falla "Informe / exportar todas las direcciones URL a archivo..."</h3>
+<h3>Número 528: Diálogo de progreso de la exploración puede mostrar tiempos de progreso negativo</h3>
+<h3>Edición 533: Por defecto los puertos 80 y 443 se añaden a los sitios en el árbol de sitio</h3>
+<h3>Edición 540: Fichas de trabajo maximizados ocultados cuando respuesta ficha cambiadas de posición</h3>
+<h3>Número 548: Mensajes de Diff se anexan al diálogo "Diff"</h3>
+<h3>Edición 549: Diff del menú cuando se seleccionaron el nodo de raíz de árbol de "Sitios" y un nodo secundario</h3>
+<h3>Edición 550: Fuzzer - paradas de desbordamiento de búfer debido a java.sql.SQLDataException: excepción de datos: datos de cadena, truncamiento derecho</h3>
+<h3>Edición 558: Auto Etiquetado roto</h3>
+<h3>Edición 564: Scanner activo puede colgar si utilizan las dependencias</h3>
+<h3>Edición 565: Mercado: descargas no usan configuración Proxy ascendente</h3>
+<h3>Número 567: Error de ortografía</h3>
+<h3>Número 574: Spider falla cuando se invoca mediante la API</h3>
+<h3>Edición 579: Algunos objetivos (estructura) incorrectamente se basan en la codificación predeterminada de plataforma</h3>
+<h3>Edición 582: NullPointerException al abrir una sesión en modo demonio</h3>
+<h3>Edición 583: NullPointerException al mismo tiempo, una sesión en modo demonio con «WebSockets» complemento instalado</h3>
+<h3>Edición 588: ExtensionHistory.historyIdToRef debe ser despejó al cambiar sesión</h3>
+<h3>Edición 593: Inicio rápido puede comenzar la exploración activa sin esperar a que la spider terminar</h3>
+<h3>Edición 614: Etiquetas de SessionFixation mal</h3>
+<h3>Edición 616: Manijas de spider forman incorrectamente acciones que contengan fragmentos (#)</h3>
+<h3>Edición 617: NullPointerException cuando spidering un contexto</h3>
+<h3>Edición 622: Pide proxy Local no puede detectar correctamente a sí mismo</h3>
+<h3>: 626 barra de desplazamiento de áreas de texto de alerta se trata siempre en la parte inferior</h3>
+<h3>Edición 627: Permitir complementos quitar botones/separadores de barra de herramienta principal</h3>
+<h3>Edición 628: Permitir complementos quitar la API registrada</h3>
+<h3>Edición 632: Manual Editor de pedir diálogo (HTTP) las configuraciones que no se guardan correctamente</h3>
+<h3>Edición 633: Escáneres de etiqueta automática se muestran en tabla de escáneres pasivos</h3>
+<h3>Edición 633: Escáneres de etiqueta automática se muestran en tabla de escáneres pasivos</h3>
+
+<h2>Vease también</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Introducción</a></td><td>Introducción a ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Lanzamientos</a></td><td>el conjunto completo de los comunicados de</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Créditos</a></td><td>las personas y grupos que han hecho posible esta versión</td></tr>
+</table>
+</body>
+</html>

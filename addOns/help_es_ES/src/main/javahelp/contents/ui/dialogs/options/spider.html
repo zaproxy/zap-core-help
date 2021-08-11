@@ -4,11 +4,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Opciones de Spider de la pantalla</title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 	<h1>Pantalla de opciones de Spider</h1>
 	<p>
-		Esta pantalla le permite configurar ls opciones de  <a
-			href="../../../start/concepts/spider.html">Spider</a> .</p> 
+		This screen allows you to configure the <a
+			href="../../../start/features/spider.html">spider</a> options.</p> 
 	<p>Cabe señalar que la modificación de la mayoría de estas opciones también afecta a
 el funcionamiento de Spider.
 	</p>
@@ -16,12 +16,13 @@ el funcionamiento de Spider.
 	<h3>Máxima profundidad para rastrear</h3>
 	El parámetro define la profundidad máxima en el proceso de rastreo donde un
 la página debe estar en orden para que sea procesada. Los recursos que se encuentran
-más profundo que este nivel no se recopila y analiza la Spider.
+más profundo que este nivel no se recopila y analiza la Spider. The value
+	zero means unlimited depth.
 	<p>
-		la profundidad es calculada partiendo de las seeds, así, si una exploración de spider empieza con una única URL (ejemplo: Spider URL), la profundidad es
-calculado a partir de este. Sin embargo, si el análisis se inicia con múltiples
-las seeds (por ejemplo. Spider site), un recurso es procesada si la profundidad de
-en relación a <i>cualquier</i> de las seeds es menor que el definido uno.
+		la profundidad es calculada partiendo de las seeds, así, si una exploración de spider empieza con una única URL (ejemplo: URL manually specified), the depth is
+		calculated from this one. Sin embargo, si el análisis se inicia con múltiples
+las seeds (por ejemplo. recurse and Sites tree node with children), a resource is processed if it's depth
+		relative to <i>any</i> of the seeds is less than the defined one.
 	</p>
 
 	<h3>Número de threads usados</h3>
@@ -61,8 +62,8 @@ Cero (por defecto) significa que la spider se va a ejecutar hasta que se ha enco
 	Si la opción se encuentra deshabilitada, la spider no enviará ninguna cookie en sus solicitudes. Por ejemplo, esto podría controlar si la spider usa o nó la misma sesión a través de un escaneo de spider.
 	<br>Al aceptar las cookies, ellas no son compartidas entre escaneos de spider, cada escaneo tiene su propia jarra para estas.
 	<br>Esta opción tiene una baja prioridad, la araña respetará las otras opciones (globales) relacionadas al estado de HTTP. Esta opción es ignorada si, por ejemplo, la opción
-	<a href="../../tlmenu/edit.html">Habilitar rastreo de sesión (Cookie)</a> se ecncuentra habilitada, mientras de hace el escaneo de spider como un <a href="../../../start/concepts/users.html">Usuario</a> o cuando una
-	<a href="../../../start/concepts/httpsessions.html">Sesión HTTP</a> este activa.
+	<a href="connection.html">Enable (Global) HTTP State</a> se ecncuentra habilitada, mientras de hace el escaneo de spider como un <a href="../../../start/features/users.html">Usuario</a> o cuando una
+	<a href="../../../start/features/httpsessions.html">Sesión HTTP</a> este activa.
 
 	<h3>Formas de Procesos</h3>
 	Durante el proceso de arrastre, el comportamiento de la spider cuando se encuentra con formas HTML queda definido por esta opción. Si se encuentra desactivado, los formularios HTML no serán procesados en lo absoluto. De encontrarse habilitado, las formas HTML con los métodos definidos como HTTP GET serán presentados con algunos valores generados. El comportamiento al encontrarse formas con el método definido como HTTP POST es configurado mediante la siguiente opción.
@@ -90,7 +91,7 @@ Cero (por defecto) significa que la spider se va a ejecutar hasta que se ha enco
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../../start/concepts/spider.html">Spider(Araña)</a></td>
+			<td><a href="../../../start/features/spider.html">Spider(Araña)</a></td>
 			<td>para una vista general sobre la araña</td>
 		</tr>
 		<tr>

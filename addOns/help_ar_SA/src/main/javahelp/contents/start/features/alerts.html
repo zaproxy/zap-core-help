@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+تنبيهات
+</title>
+</head>
+<body>
+<h1>تنبيهات</h1>
+<p>
+التنبيه هو ثغرة أمنية محتملة ويرتبط بطلب معين.<br/>
+يمكن أن يحتوي الطلب على أكثر من تنبيه.<br/>
+</p>
+<p>
+تنبيهات تظهر في واجهة المستخدم مع علامة تشير إلى خطر:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/071.png" align="bottom" width="16" height="16" />&nbsp; عالي</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/076.png" align="bottom" width="16" height="16" />&nbsp; متوسط</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/074.png" align="bottom" width="16" height="16" />&nbsp; منخفض</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/073.png" align="bottom" width="16" height="16" />&nbsp; معلومات</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/072.png" align="bottom" width="16" height="16" />&nbsp; إيجابية كاذبة</td><td></td></tr>
+</table>
+
+<p>
+تنبيهات يمكن أن تثيرها مختلف انطلق العناصر, بما في ذلك ولكن لا تقتصر على: <a href="ascan.html">active scanning</a>, <a href="pscan.html">المسح السلبي</a>, 
+البرامج النصية ، addons (امتداد) أو يدويا باستخدام <a href="../../ui/dialogs/addalert.html">إضافة تنبيه الحوار</a> 
+(والذي يسمح لك أيضا إلى تحديث أو تغيير تفاصيل التنبيه/المعلومات).
+</p>
+<p>
+التنبيهات توضع في <a href="../../ui/tabs/history.html">التبويب التاريخ</a> مع العلم مما يدل على
+أعلى المخاطر في حالة تأهب.<br/>
+جميع التنبيهات المذكورة في <a href="../../ui/tabs/alerts.html">تنبيهات التبويب</a> 
+و عد من إجمالي عدد التنبيهات من المخاطر هو مبين في <a href="../../ui/footer.html">تذييل</a>.
+</p>
+
+<a name="alertoverrides"></a><h2>تنبيه يتجاوز</h2> 
+
+التنبيهات التي أثارها انطلق تشمل كل عام و معلومات محددة حول التنبيهات التي أثيرت.
+معلومات محددة تتعلق مباشرة إلى مشكلة محتملة وجدت مثل URL المعلمة المتضررة.
+معلومات عامة تشمل أشياء مثل وصف وصلات إلى الموارد على الانترنت.
+<p>
+يمكنك استبدال أو إضافة إلى معلومات عامة باستخدام تنبيه تجاوز' ملف التكوين.
+هذا يسمح لك أن تشمل المعلومات التي تخص الشركة مثل تكليف السياسات الروابط الداخلية أو 
+نصيحة محددة التقنيات التي تستخدمها.
+<p>
+تنبيه تجاوز ملف التكوين هو UTF-8 المنشأة ملف يتضمن فقط المعلومات التي تريد تغييرها.
+الخطوط بدءا من '#' يتم التعامل مع التعليقات تجاهلها.
+<p>
+الشكل:
+<pre>
+
+
+&lt;alertid&gt;.&lt;property&gt; = [ + | - ] &lt;your information&gt;
+</pre>
+الخصائص التالية معتمدة:
+<ul>
+<li>الإسم</li>
+<li>الوصف</li>
+<li>الحل</li>
+<li>معلومات أخرى</li>
+<li>إشارة</li>
+</ul>  
+
+على سبيل المثال
+<pre>
+# 40012 = ينعكس XSS
+40012.الحل = تتبع شركتنا مبادئ توجيهية محددة في http://internet.example.com/xss.html
+</pre>
+إذا كانت قيمة تبدأ مع '+' ثم هو إلحاق المعلومات الحالية.
+<br>
+إذا كان يبدأ مع '-' ثم يتم إرفاق مسبقا إلى المعلومات الموجودة.
+<br>
+إذا لم تبدأ مع '+' أو '-' ثم فإنه يستبدل المعلومات الحالية.
+<p>
+تنبيه تجاوز ملف التكوين يمكن تحديد طريق <a href="api.html">API</a>,
+<a href="../../ui/dialogs/options/alert.html">خيارات التنبيه الشاشة</a>
+أو باستخدام <a href="../../cmdline.html">سطر الأوامر</a> خيار صندوق قائمة  
+<pre>-التكوين في حالة تأهب.overridesFilename=&lt;filename&gt;</pre>
+
+<h2>أنظر أيضاً</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/overview.html">نظرة عامة</a></td><td>للحصول على نظرة عامة حول واجهة المستخدم</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="features.html">الميزات</a></td><td>التي تقدمها انطلق</td></tr>
+</table>
+
+</body>
+</html>

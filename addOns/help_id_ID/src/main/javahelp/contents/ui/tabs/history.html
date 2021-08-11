@@ -6,7 +6,7 @@
 Riwayat Tab
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Riwayat Tab</h1>
 <p>
 Tab Sejarah menampilkan daftar semua permintaan dalam urutan yang mereka dibuat.<br/>
@@ -26,11 +26,11 @@ Setiap permintaan Anda dapat Melihatnya:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 <td>Lamanya seluruh waktu permintaan mengambil</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td>Setiap <a href="../../start/concepts/alerts.html">Peringatan</a> pada permintaan tersebut</td></tr>
+<td>Any <a href="../../start/features/alerts.html">Alerts</a> on the request</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td>Setiap <a href="../../start/concepts/notes.html">Catatan</a> anda telah menambahkan ke permintaan</td></tr>
+<td>Any <a href="../../start/features/notes.html">Notes</a> you have added to request</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td>Setiap <a href="../../start/concepts/tags.html">Tag</a> pada permintaan tersebut</td></tr>
+<td>Any <a href="../../start/features/tags.html">Tags</a> on the request</td></tr>
 </table>
 
 Memilih sebuah permintaan yang akan menampilkannya di <a href="request.html">Tab permintaan</a> dan 
@@ -52,93 +52,107 @@ Menu Attack memiliki beberapa submenu berikut:
 
 <h4>Aktif Scan...</h4>
 Ini akan meluncurkan <a href="../dialogs/advascan.html">Scan Aktif</a> dialog yang memungkinkan anda untuk memulai sebuah 
-<a href="../../start/concepts/ascan.html">aktif scan</a> dengan titik awal sesuai dengan permintaan yang anda pilih.<br/>
+<a href="../../start/features/ascan.html">aktif scan</a> dengan titik awal sesuai dengan permintaan yang anda pilih.<br/>
 
 <h4>Laba-laba...</h4>
 Ini akan meluncurkan <a href="../dialogs/spider.html">Laba-laba</a> dialog yang memungkinkan anda untuk memulai 
-<a href="../../start/concepts/spider.html">laba laba</a> dengan titik awal sesuai dengan permintaan yang anda pilih.<br/>
+<a href="../../start/features/spider.html">laba laba</a> dengan titik awal sesuai dengan permintaan yang anda pilih.<br/>
 
 <h3>Sertakan dalam Konteks</h3>
 Dengan menu ini anda dapat memasukkan node yang dipilih dan semua bawahannya di tempat yang ditentukan
-<a href="../../start/concepts/contexts.html">konteks</a>.<br/>
+<a href="../../start/features/contexts.html">konteks</a>.<br/>
 Anda juga memiliki pilihan untuk membuat sebuah konteks yang baru.<br/>
 Itu <a href="../dialogs/session/contexts.html">Konteks Sesi</a> dialog akan ditampilkan untuk
 memungkinkan anda untuk membuat perubahan tambahan.
 
 <h3>Kecualikan dari Konteks</h3>
 Dengan menu ini anda dapat mengecualikan node yang dipilih dan semua bawahan mereka dari yang ditentukan
-<a href="../../start/concepts/contexts.html">konteks</a>.<br/>
+<a href="../../start/features/contexts.html">konteks</a>.<br/>
 Itu <a href="../dialogs/session/contexts.html">Konteks Sesi</a> dialog akan ditampilkan untuk
 memungkinkan anda untuk membuat perubahan tambahan.
 
 <h3>Tandai sebagai konteks</h3>
 Menu ini memiliki beberapa submenu untuk masing-masing 
-<a href="../../start/concepts/contexts.html">konteks</a> anda telah mendefinisikan:
+<a href="../../start/features/contexts.html">konteks</a> anda telah mendefinisikan:
 
 <h4><i>Nama konteks</i> Permintaan Login Auth Form berbasis</h4>
 Ini mengidentifikasi simpul yang ditentukan sebagai permintaan masuk untuk konteks yang ditentukan.<br/>
 Anda mungkin hanya memiliki satu simpul yang diidentifikasi seperti itu dalam satu konteks.<br/> 
 Itu <a href="../dialogs/session/context-auth.html">Otentikasi Konteks Sesi</a> layar akan ditampilkan untuk memungkinkan anda untuk melakukan perubahan tambahan.
 
-<h4><i>Nama konteks</i> Data digerakkan node</h4>
-Ini mengidentifikasi node yang ditentukan sebagai <a href="../../start/concepts/ddc.html">Konten yang digerakkan data</a> untuk konteks yang ditentukan.<br/>
-Itu <a href="../dialogs/session/context-struct.html">Konteks sesi struktur</a> layar akan ditampilkan untuk memungkinkan anda untuk membuat setiap perubahan tambahan.
+<h4><i>Context name</i> JSON-based Auth Login request</h4>
+This identifies the specified node as a login request for the specified context.<br/>
+You may only have one node identified as such in any one context.<br/> 
+Itu <a href="../dialogs/session/context-auth.html">Session Context Authentication</a> layar akan ditampilkan untuk memungkinkan anda untuk membuat setiap perubahan tambahan.
+
+<h4><i>Context name</i> Data driven node</h4>
+This identifies the specified node as <a href="../../start/features/ddc.html">Data driven content</a> for the specified context.<br/>
+The <a href="../dialogs/session/context-struct.html">Session Context Structure</a> screen will be displayed to
+allow you to make any additional changes.
 
 <h3>Keluarkan dari</h3>
-Menu ini memiliki beberapa submenu berikut:
+This menu has the following submenus:
 
 <h4>Proxy</h4>
-Ini akan mengecualikan node yang dipilih dari proxy. Mereka masih akan di proxy melalui ZAP tapi tidak akan ditampilkan di tab mana pun.<br/>
-Ini dapat digunakan untuk mengabaikan URL yang anda tahu yang tidak relevan dengan sistem yang sedang anda uji.<br/>
-Simpul bisa dimasukkan lagi melalui <a href="../dialogs/session/sessprop.html">Properti Sesi</a> dialog   
+This will exclude the selected nodes from the proxy. They will still be proxied via ZAP but will not be shown 
+in any of the tabs.<br/>
+This can be used to ignore URLs that you know are not relevant to the system you are currently testing.<br/>
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Properti Sesi</a> dialog   
 
-<h4>Pemindai</h4>
-Ini akan mencegah agar simpul yang dipilih tidak aktif dipindai.<br/>
-Simpul bisa dimasukkan lagi melalui <a href="../dialogs/session/sessprop.html">Properti Sesi</a> dialog   
+<h4>Scanner</h4>
+This will prevent the selected nodes from being actively scanned.<br/>
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Properti Sesi</a> dialog   
 
-<h4>Laba-laba</h4>
-Ini akan mencegah simpul yang dipilih agar tidak dijelajahi.<br/>
-Simpul bisa dimasukkan lagi melalui <a href="../dialogs/session/sessprop.html">Properti Sesi</a> dialog   
+<h4>Spider</h4>
+This will prevent the selected nodes from being spidered.<br/>
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
 
 <h3>Tangani Tags...</h3>
-Ini akan memunculkan
-<a href="../dialogs/managetags.html">Mengelola tag dialog</a> yang memungkinkan anda untuk mengubah itu <a href="../../start/concepts/tags.html">tag</a> terkait dengan permintaan.
+This will bring up the
+<a href="../dialogs/managetags.html">Manage Tags dialog</a> which allows you to change 
+the <a href="../../start/features/tags.html">tags</a> associated with the
+request.
 
 <h3>Catatan...</h3>
-Ini akan memunculkan
-<a href="../dialogs/addnote.html">Tambahkan Catatan dialog</a> yang memungkinkan anda untuk merekam 
-<a href="../../start/concepts/notes.html">catatan</a> terkait dengan permintaan.
+This will bring up the
+<a href="../dialogs/addnote.html">Add Note dialog</a> which allows you to record 
+<a href="../../start/features/notes.html">notes</a> related to the
+request.
 
 <h3>Hapus</h3>
-Ini akan menghapus node dan semua anak-anaknya dari ZAP.<br/>
-Namun mereka dapat ditambahkan kembali, untuk mencegah penggunaan menu 'Kecualikan dari' ini. 
+This will remove the node and all of its children from ZAP.<br/>
+However they can be added back in, to prevent this use the 'Exclude from' menus. 
 
 <h3>Istirahat...</h3>
-Ini akan memunculkan
-<a href="../dialogs/addbreak.html">Tambahkan titik temu dialog</a> yang memungkinkan anda untuk menetapkan titik temu pada URL itu.<br/>
+This will bring up the
+<a href="../dialogs/addbreak.html">Add Breakpoint dialog</a> which allows 
+you to set a breakpoint on that URL.<br/>
 
 <h3>Lansiran untuk simpul ini</h3>
-Jika URL yang dipilih telah <a href="../../start/concepts/alerts.html">peringatan</a> terkait dengan itu kemudian mereka akan terdaftar di bawah menu ini.<br>
-Memilih salah satu peringatan akan menyebabkannya ditampilkan.
+If the URL selected has <a href="../../start/features/alerts.html">alerts</a> associated with it then 
+they will be listed under this menu.<br>
+Selecting one of the alerts will cause it to be displayed.
 
-<h3>Kirim ulang...</h3>
-Ini akan memunculkan
-<a href="../dialogs/resend.html">Kirim ulang dialog</a> yang memungkinkan anda untuk mengirim ulang permintaan tersebut setelah melakukan setiap perubahan yang anda inginkan.
+<h3>Open/Resend with Request Editor...</h3>
+This will bring up the
+<a href="../dialogs/man_req.html">Manual Request Editor dialog</a> which allows you to  
+resend the request after making any changes to it that you want to.
 
 <h3>Peringatan Baru...</h3>
-Ini akan memunculkan
-<a href="../dialogs/addalert.html">Menambahkan dialog peringatan</a> yang memungkinkan anda untuk merekam yang baru secara manual  
-<a href="../../start/concepts/alerts.html">waspada</a> melawan permintaan ini.
+This will bring up the
+<a href="../dialogs/addalert.html">Add Alert dialog</a> which allows you to manually record a new  
+<a href="../../start/features/alerts.html">alert</a> against this request.
 
 <h3>Tampilkan di tab situs</h3>
-Ini akan menampilkan pesan yang dipilih di <a href="sites.html">Tab situs</a>.
+This will show the selected message in the <a href="sites.html">Sites tab</a>.
 
 <h3>Buka URL di Browser</h3>
-Ini akan membuka URL simpul yang dipilih di browser default anda.
+This will open the URL of the selected node in your default browser.
 
 <h3>Buat formulir tes anti CSRF</h3>
-Ini akan membuka URL yang akan memberi anda formulir yang dihasilkan untuk pengujian masalah CSRF.<br>
-Ini hanya akan diaktifkan untuk permintaan POST, jika API itu diaktifkan dan jika Java mendukung pembukaan URL di browser pada platform anda.
+This will open a URL which will give you a generated form for testing for CSRF issues.<br>
+It will only be enabled for POST requests, if the API is enabled and if Java supports the opening of URLs 
+in a browser on your platform.
 <h2>Lihat juga</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>

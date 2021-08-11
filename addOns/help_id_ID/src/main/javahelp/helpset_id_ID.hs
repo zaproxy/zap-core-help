@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE helpset PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp HelpSet Version 2.0//EN" "http://java.sun.com/products/javahelp/helpset_2_0.dtd">
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE helpset PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp HelpSet Version 2.0//EN" "http://java.sun.com/products/javahelp/helpset_2_0.dtd">
 <helpset version="2.0" xml:lang="id-ID">
 
   <!-- title -->
-  <title>ZAP - Panduan Pengguna</title>
+  <title>ZAP - Desktop User Guide</title>
 
   <!-- maps -->
   <maps>
-     <homeID>top</homeID>
+     <homeID>zap.intro</homeID>
      <mapref location="map.jhm"/>
   </maps>
 
@@ -21,7 +20,7 @@
 
   <view mergetype="javax.help.SortMerge">
     <name>Index</name>
-    <label>Index</label>
+    <label>Indeks</label>
     <type>javax.help.IndexView</type>
     <data>index.xml</data>
   </view>
@@ -45,7 +44,7 @@
      <name>main window</name>
      <size height="600" width="1000"/>
      <location x="200" y="200"/>
-     <title>ZAP - Panduan Pengguna</title>
+     <title>ZAP - Desktop User Guide</title>
      <image>toplevelicon</image>
      <toolbar>
 	<helpaction>javax.help.BackAction</helpaction>
@@ -62,6 +61,6 @@
      <name>main</name>
      <size height="400" width="400"/>
      <location x="200" y="200"/>
-     <title>ZAP - Panduan Pengguna</title>
+     <title>ZAP - Desktop User Guide</title>
   </presentation>
 </helpset>

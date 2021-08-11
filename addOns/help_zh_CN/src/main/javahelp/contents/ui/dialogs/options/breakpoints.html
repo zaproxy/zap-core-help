@@ -3,35 +3,47 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Options Breakpoints screen
+断点选项屏幕
 </title>
 </head>
-<body bgcolor="#ffffff">
-<h1>Options Breakpoints screen</h1>
+<body>
+<h1>断点选项屏幕</h1>
 <p>
-This screen allows you to configure the <a href="../../../start/concepts/breakpoints.html">break point</a> options:
+该屏幕允许您配置 <a href="../../../start/features/breakpoints.html">breakpoint</a> 选项：
 
-<h3>Confirm drop trapped message</h3>
-Asks for confirmation when a request or response is dropped.
+<h3>确认丢弃被困信息</h3>
+请求或响应丢失时要求确认。
 
-<h3>Only break on messages in scope</h3>
-The 'global' break point will only be triggered by requests that are in  
-<a href="../../../start/concepts/scope.html">scope</a>.<br>
-Custom break points will not be affected.
+<h3>仅在范围内中断消息</h3>
+The 'global' breakpoint will only be triggered by requests that are in  
+<a href="../../../start/features/scope.html">(Scope)</a>.<br>
+Custom breakpoints will not be affected.
 
-<h3>ZAP always on top when breakpoint hit</h3>
-If selected this will mean that ZAP stays on top of all other windows whenever a breakpoint is hit.<br>
+<h3>当断点出现时，ZAP始终处于最前端</h3>
+如果选中此项，这意味着只要命中断点，ZAP就会保持在所有其它窗口之上。<br>
+
+<h3>Show buttons to select the requests you don't want ZAP to break on</h3>
+This controls whether the buttons to select the file types you don't want ZAP to break on and the scope filter appear in the break panel.<br>
+
+<h4>Javascript URL regex</h4>
+This sets the regex used to predict if the content in the response will be a Javascript file.
+
+<h4>CSS and Fonts URL regex</h4>
+This sets the regex used to predict if the content in the response will be a CSS or a Font file.
+
+<h4>Multimedia URL regex</h4>
+This sets the regex used to predict if the content in the response will be a multimedia file (images, videos or sounds).
 
 <h3>Break buttons mode</h3>
 This controls whether there is a single combined break button on the <a href="../../tltoolbar.html">Top Level Toolbar</a>
 or separate ones for Requests and Responses.
 
-<h2>See also</h2>
+<h2>另请参阅</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../overview.html">UI综览</a></td><td>有关用户界面的概述</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+<a href="options.html">选项对话框</a></td><td>有关其他选项对话框屏幕的详细信息</td></tr>
 </table>
 
 </body>

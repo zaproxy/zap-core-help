@@ -3,64 +3,64 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Penguasaan konfigurasi
+Mengkonfigurasikan Proxy
 </title>
 </head>
-<body bgcolor="#ffffff">
-<h1>Penguasaan konfigurasi</h1>
+<body>
+<h1>Mengkonfigurasi Proxy</h1>
 <p>
-Anda perlu untuk mengkonfigurasi browser Anda untuk menggunakan ZAP sebagai persetujuan. <br>Standarnya ZAP menggunakan alamat dari 'host lokal ' dan cara kerja dari '8080', akan tetapi ini dapat diubah melalui <a href="../ui/dialogs/options/localproxy.html">persetujuan lokal pilihan layar</a>. 
+Anda perlu mengkonfigurasikan peramban untuk menggunakan ZAP sebagai proxy.<br> Secara bawaan ZAP menggunakan Alamat dari 'localhost' dan Port dari '8080', namun ini bisa diubah melalui <a href="../ui/dialogs/options/localproxy.html">Pilihan Layar Proxy Lokal</a>. 
 
-Teks untuk Terjemahan
-Peraturan untuk versi terbaru browser yang paling umum digunakan: 
+Instruksi untuk versi terbaru dari peramban yang paling umum digunakan: 
 </p>
 
-<h3>Warna kuning pada jendela</h3>
+<h3>Chrome (pada Windows)</h3>
 
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tekanlah</td><td> menyesuaikan tombol kanan atas dan mengontrol google chrome</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pilih lah</td><td> pilihan menu pada item</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tekanlah</td><td> ganti tombol petunjuk</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tekan lah</td><td> pengaturan tombol LAN</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ikutilah</td><td> berikut ini adalah pengaturan LAN</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tekan</td><td> Tombol 'Menyesuaikan dan kontrol Google Chrome' (kanan atas)</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pilih</td><td> Item menu 'Pilihan..'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tekan</td><td> Tombol 'Ubah pengaturan proxy'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tekan</td><td> Tombol 'Pengaturan LAN'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ikuti</td><td> Bagian di bawah ini 'Pengaturan LAN Windows'</td></tr>
 </table>
+<strong>Note:</strong> To proxy <code>localhost</code> (and related addresses) with newer Chrome versions (>= 72) the command line argument <code>--proxy-bypass-list=&lt;-loopback&gt;</code> must be provided.
 
-<h3>Pada jendela berwarna kuning</h3>
+<h3>Firefox (pada Windows)</h3>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pilih lah</td><td> peralatan menu </td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Agar memilih</td><td> pilihan menu item</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tekan lah</td><td> memajukan tombol</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pilih lah</td><td> tab jaringan</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Menekan</td><td> tombol pengaturan</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pilih lah</td><td> petunjuk manual untuk konfigurasi tombol radio</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Masukan di</td><td> 'HTTP Proxy:' field 'Alamat' anda dikonfigurasi dalam 
-<a href="../ui/dialogs/options/localproxy.html">Pilihan Proxy Lokal layar</a></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Masukkan dalam</td><td> 'Port' kanan 'HTTP Proxy' lapangan 'Port' anda dikonfigurasi dalam 
-<a href="../ui/dialogs/options/localproxy.html">Pilihan Proxy Lokal layar</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pilih lah</td><td> Menu 'Tools' </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pilih</td><td> Item menu 'Pilihan..'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select the</td><td> 'General' panel</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Scroll to</td><td> 'Network Settings' section</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tekan</td><td> Tombol 'Setelan...'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pilih</td><td> petunjuk manual untuk konfigurasi tombol radio</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Masukan di</td><td> 'HTTP Proxy:' bidang 'Alamat' yang Anda konfigurasikan di 
+<a href="../ui/dialogs/options/localproxy.html">Pilihan Layar Proxy Lokal</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Masukkan dalam</td><td> 'Port' field to the right of the 'HTTP Proxy' field the 'Port' you configured in the 
+<a href="../ui/dialogs/options/localproxy.html">Options Local Proxies screen</a>. Ensure 'SSL Proxy' is also configured, either by selecting 'Use this proxy server for all protocols' or by setting the corresponding values.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tekan</td><td> Pengaturan koneksi tombol 'OK'</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tekan</td><td> Pilihan tombol 'OK'</td></tr>
 </table>
+<strong>Note:</strong> To proxy <code>localhost</code> (and related addresses) with newer Firefox versions (>= 67) the preference <code>network.proxy.allow_hijacking_localhost</code> (accessible through the <code>about:config</code> page) must be set to <code>true</code>.
 
-<h3>Firefox (di Linux)</h3>
+<h3>Firefox (pada Linux)</h3>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pilih</td><td>'Edit' menu</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>PilihPilih</td><td>'Preferensi' item menu</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ikuti</td><td>petunjuk di atas dari tombol 'Advanced'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pilih</td><td>Menu 'Sunting'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>PilihPilih</td><td>Item menu 'Preferensi'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ikuti</td><td>instructions above from the 'General' panel</td></tr>
 </table>
 
 <h3>Firefox (pada OS X)</h3>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pilih</td><td> Menu 'Firefox' </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pilih</td><td> 'Preferensi...' item menu</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tekan</td><td> tombol 'Advanced'</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ikuti</td><td> petunjuk di atas dari tombol 'Advanced'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Follow the</td><td> instructions above from the 'General' panel</td></tr>
 </table>
 
 <h3>Internet Explorer 7 dan 8</h3>
 
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pilih</td><td> Menu 'Tools' </td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pilih</td><td> 'Internet Options' item menu</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pilih</td><td> Menu item 'Pilihan Internet'</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pilih</td><td> Tab 'Koneksi'</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tekan</td><td> Tombol 'Pengaturan LAN'</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ikuti</td><td> 'Windows LAN Settings' bagian bawah</td></tr>
@@ -84,13 +84,13 @@ Peraturan untuk versi terbaru browser yang paling umum digunakan:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tekan</td><td> Preferensi tombol 'OK'</td></tr>
 </table>
 
-<h3>Safari (OS X)</h3>
+<h3>Safari (pada OS X)</h3>
 
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tekan</td><td> 'Setelan Safari' tombol di sudut kanan atas</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pilih</td><td> 'Preferensi' item menu</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pilih</td><td> 'Advanced' tab</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tekan</td><td> 'Mengubah Pengaturan' tombol di sebelah 'Proxy' label</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tekan</td><td> Tombol 'Ubah Setelan' di sebelah label 'Proxy'</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ikuti</td><td> 'OS X Sistem pengaturan Proxy' bagian bawah</td></tr>
 </table>
 
@@ -99,9 +99,9 @@ Peraturan untuk versi terbaru browser yang paling umum digunakan:
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tekan</td><td> 'Menampilkan menu general setelan Safari' tombol di sudut kanan atas</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pilih</td><td> 'Preferensi' item menu</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pilih</td><td> 'Advanced' tab</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pilih</td><td> Tab 'Lanjutan'</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tekan</td><td> 'Mengubah Pengaturan' tombol di sebelah 'Proxy' label</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tekan</td><td> 'LAN Settings' tombol</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tekan</td><td> Tombol 'Pengaturan LAN'</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ikuti</td><td> 'Windows LAN Settings' bagian bawah</td></tr>
 </table>
 
@@ -117,23 +117,22 @@ Peraturan untuk versi terbaru browser yang paling umum digunakan:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tekan</td><td> Jaringan Pilihan 'Terapkan' tombol</td></tr>
 </table>
 
-<h3>Jendela Pengaturan LAN</h3>
+<h3>Setelan LAN Windows</h3>
 
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pilih</td><td> 'Gunakan server proxy untuk LAN anda' checkbox</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pilih</td><td> kotak centang 'Gunakan server proxy untuk LAN anda'</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Masukkan di</td><td> 'Alamat:' field 'Alamat' anda dikonfigurasi dalam 
 <a href="../ui/dialogs/options/localproxy.html">Pilihan Proxy Lokal layar</a></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Masukkan di</td><td> 'Port' lapangan 'Port' anda dikonfigurasi dalam 
 <a href="../ui/dialogs/options/localproxy.html">Pilihan Proxy Lokal layar</a></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tekan</td><td> Local Area Network (LAN) Pengaturan tombol 'OK'</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tekan</td><td> Internet Pilihan tombol 'OK'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tekan</td><td> Tombol 'OK' Pengaturan Local Area Network (LAN)</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tekan</td><td> Tombol 'OK' Pilihan Internet</td></tr>
 </table>
 
 <h2>Lihat juga</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="start.html">Mulai</a></td><td>untuk rincian tentang bagaimana untuk
-mulai menggunakan ZAP</td></tr>
+<a href="start.html">Mulai</a></td><td>untuk rincian bagaimana cara menggunakan ZAP</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../intro.html">Pengenalan</a></td><td>pengantar ZAP</td></tr>
 </table>

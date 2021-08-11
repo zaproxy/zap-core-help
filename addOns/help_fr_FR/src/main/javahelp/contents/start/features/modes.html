@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Modes
+</title>
+</head>
+<body>
+<h1>Modes</h1>
+<p>
+ZAP has a 'mode' which can be:
+<ul>
+<li>Safe - no potentially dangerous operations permitted</li>
+<li>Protected - you can only perform (potentially) dangerous actions on URLs in the <a href="scope.html">Scope</a></li>
+<li>Standard - as in previous releases, you can do anything</li>
+<li>ATTACK - new nodes that are in <a href="scope.html">Scope</a> are <a href="ascan.html">actively scanned</a> as soon as they are discovered</li>
+</ul>
+It is recommended that you use the Protected mode to ensure that you only attack sites that you mean to.<br/><br/>
+
+The mode can be changed via the <a href="../../ui/tltoolbar.html">toolbar</a>
+(or the ZAP API) and is persisted between sessions.<br/><br/>
+
+Examples of the things that will not be possible in either Safe mode or in Protected mode when not acting on URLs in the Scope:
+
+<ul>
+<li>Spidering</li>
+<li>Active Scanning</li>
+<li>Générateur de bruit</li>
+<li>Force Browsing</li>
+<li>Breaking (intercepting)</li>
+<li>Resending requests</li>
+</ul>
+
+You can define the <a href="scanpolicy.html">Stratégie de balayage</a> to be used for the Attack mode the <a href="../../ui/dialogs/options/ascan.html">Options Active Scan screen</a>.<br>
+
+<h2>Voir aussi</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/overview.html">Aperçu de l'interface utilisateur</a></td><td>pour un aperçu de l'interface utilisateur</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="features.html">Fonctionnalités</a></td><td>fournies par ZAP</td></tr>
+</table>
+
+</body>
+</html>

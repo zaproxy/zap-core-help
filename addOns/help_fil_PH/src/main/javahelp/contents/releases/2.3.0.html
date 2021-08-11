@@ -1,0 +1,344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  Inilabas 2.3.0
+</title>
+</head>
+<body>
+<h1>Inilabas 2.3.0 Ang Json Rpc na mga parametro ay hindi nai-ayos ng tama</h1>
+<p>
+Ang sumusunod na mga pagbabago ay ginawa sa inilabas na ito:
+</p>
+
+<h2>Ang mga Makabuluhang pagbabago:</h2>
+
+<h3>Ang Bersyon ng 'lite' sa ZAP</h3>
+Para sa inilabas na ito kami ay nagbibigay ng isang <i>'lite'</i> na bersyon ng ZAP sa karagdagan ng mga <i>'lubos'</i> na bersyon. 
+Naglalaman ito ng eksaktong magkaparehas sa core ng code, ngunit ito ay pinagssama lamang ng mas kaunting mga default add-on.
+Siyempre, maaari mong i-download ang lahat ng 'nawawalang' mga add-on mula sa pamilihan ng ZAP para sa 'pagpapataas' ng bersyon ng lite para sa isang lubos.<br>
+Ang <i>'lite'</i> ang layunin ng isang bersyon sa seguridad ng mga bagong tao na nangangailangan ng mas kaunting paunang pag-andar na inaasahang magiging mas madali para magsimula. Ito rin ay nababagay para sa mga taong naghahanap ng isang mas kaunting pag-download o sa mga humihiling eksaktong ipasadya ang mga add-on na na-install nila.
+
+<h3>Ang mga pag suporta para sa kaganapan ng Clien side ng (browser)</h3>
+Ngayon maaari monagn tingnan, maharang, manipulahin at ipadalang muli at ang fuzz <b>ay mga kaganapan sa client-side</b>. Kinakailngan nito ng mga postMessage, kaya ito ay maaari mo ng subukan ang DOM batay sa XSS na mga kahinaan ng mga postMessage. Ito ay ang unang bahagi ng isang hanay ng mga planadong pagbabago na suportahan ang pagsusuri ng mga AJAX at HTML5 na aplikasyon kahit na epektibo.
+
+<h3>Ang pagpapahusay ng pagpapatunay ng suporta</h3>
+Ang pagpaptunay ng pag suporata ng ZAP ay inayos ng kumpleto para sa madaling pamamahala ng mga kumplikadong klase ng <b>ng mga nag papatunay na paraan at mmga senaryo</b>. ang pagsuporta ay idinagdag din para sa mga itinakdang mga iskrip na nagbibigay sa iyo nahawakan ang mga pasadyang pamaraan ng pagpapatunay. sa karagdagan, ang mga pag-unawa ngayon ng ZAP at pagpapahintulot na makumpigura <b>ng mga gumagamit ng mga aplikasyon ng web</b> kaya ang mga ibat-ibang aksyon ng lahat ng parte ng ZAP na maaring magsagawa mula sa punto ng mga ipinapakita ng mga nilinaw ng mga gumamit. para makapag-umpisa, suriin ang mga bagong <i>Mga pagpapatunay</i> at <i>Ang mga Gumagamit</i> na mga panel sa mga Sesyon ng mga katangian para sa bawat isa sa mga itinukoy na konteksto.
+
+<h3>Ang pag-suporta para sa pamantayan ng mga app</h3>
+Ang inilabas na ito ay kabilang ng pag suporta para sa <b>mga 'solong pahina'ng mga aplikasyon</b> at <b>di-pamantayang key-value ng mga pang hiwalay</b>. Maari mo nang kontrolin ang mga setting na ito sa pamamagitan ng bagong <i>Istraktura</i> sa mga Katangian ng panel ng Sesyon.
+
+<h3>Ang mga bagong Input ng Vector kabilang ang mga iskripto ng user-defined</h3>
+Ang mga pag suporta ng ZAP sa mga bagong opsyon para sa pagtukoy ng <b>ang mga input ng vector</b> ang mga kahilingan ng mga elemento ng ZAP sa pag attack. Ang mga bagong opsyon ay magagamit sa mga <i>Ang mga aktibong iskan ng Input ng Vector</i> ang mga panel ng opsyon. Ang supota na maaaring maidagdag para sa pagtukoy ng mga pasadyang iskrip na nagtutukoy ng bagong input ng mga vector.
+
+<h3>Ang patakaran ng pag-iskan - ang mabuting grained ng kontrol</h3>
+Ang patakaran ng pag-scan ngayon ay may isang <b>mabuting grained na kontrol</b>, Ang pagpapahintulot sa iyo upang baguhin ang indibidwal na mga patakaran ng scanner. Maari mo ring tukuyin, ang pag-load at pag-save ng mga patakaran ng pag-iskan, nagpapahintulot sa iyo na mapanatili ang isang hanay ng mga patakaran na gumawa ng mahusay sa iba't-ibang mga kalagayan.<br>
+Sa kagdagan, sa pamamagitan ng default ng ZAP ay hindi na ngayon ma-iskan ang mga kilalang parametro ng serbisyo (e.g. __VIEWSTATE) nagpapabilis ng kabuuang proseso ng pag-iskan. Ito ay kumpletong pag gamit ng pagkukumpigura, na nagpapahintulot sa iyo na eksaktong matukoy ang mga parametro na dapat balewalain ng ZAP.  
+
+<h3>Ang advance na diyalogo ng Aktibong Pag-iskan</h3>
+Ang bagong <i>Ang advance ng Aktibong Pag-iskan'</i> na diyalogo ay nagpapahintulot sa iyo na eksaktong matuloy kung paano mo gustuhing paganahin ang aktibong scanner. Ito ay nagpapahintulot sa iyo ng pagtukoy ng <b>mga ‘custom vector’</b> na pinagtitiwalaan na tukuyin ang anumang mga string na gusto mong atakihin. Ito rin ay sumusuporta ng opsyon na mag-scan ng anumang natukoy na mga gumagamit na maaari mong tukuyin para sa mga aplikasyon sa ilalim ng pagsasanay. Ang pag-uumpisa ng isang <i>Aktibong iskan na advance</i> sa pamamagitan ng <i>Mga kasangkapan</i> ng menu o sa pamamagitan ng <i>Pag-atake</i> seksyon ng right click popup na menu. 
+
+<h3>Ang mga opsyon ng pagpapalawak ng command line</h3>
+Maaari mo ngayon na patakbuhin ang ZAP ng 'inline' halimbawa. <b>ng walang pagsisimula ng ZAP UI o ng isang daemon</b>. Sa kalakarang ito maaari mong patakbuhin ang mga simpleng atake o magpatakbo ng mga iskrip na maaaring mag-access sa lahat ng pagpapatakbo ng ZAP. Maari mo ngayong i-override ang kahit alinmang opsyon na tinukoy sa file ng kumpigurasyon sa pamamagitan ng command line ng mga parametro.
+
+<h3>Ang lalo pang pagsuporta ng API</h3>
+Ang pagpapahaba ng API upang suportahan ang mas higit pang pagpapatakbo ng ZAP.
+
+<h3>Ang pang-international na tulong ng payl</h3>
+Ang pang-international na tulong ng payl at ang nasa proseso ng katauhan ng pagsasalin ng maraming mga salita sa pamamagitan ng <a href="https://crowdin.com/project/owasp-zap-help">https://crowdin.com/project/owasp-zap-help</a>. Kung ang pag gamit mo ng ZAP sa isa ng mga maraming salita na sinuportahan namin, pagkatapos ang mga tulong ng file ay kabilang ang lahat ng paggamit ng pagsasalin para sa wikang iyon habang binabalik ang default sa Ingles para sa mga kataga na hindi pa naisalin.<br>
+Ang isang salita na may kabuluhang halaga ng isinalin na tulong ng pahina na kabilang:
+<ul>
+<li>Ang Bosnian</li>
+<li>Ang Pranses</li>
+<li>Ang Wikang Hapon</li>
+<li>Ang Espanyol</li>
+</ul>
+
+<h3>Ang mga shortcut ng keyboard</h3>
+Ang lahat ng aytem sa menu ay maaring nang pakiusapan sa pamamagitan ng keyboard na shortcut. Tinukoy ang mga default para sa katunayan ng lahat ng mga kaso, subalit maaring mo itong makumpigura sa iyong sariling kagustuhan sa mga <i>Keyboard</i> ng panel ng mga opsyon.
+
+<h3>Ang bagong mga opsyon ng UI</h3>
+Mayroon isang bagong opsyon sa pagpapabago ng display upang ang napiling tab ay tumatagal ng hanggang sa <b>buong iskrin</b>. kapag ginamit ang ZAP ay kapakipakinabang ito sa maliit na iskrin. ito ay mayroon ding isang opsyon na <b>mag-toggle ng pagtanaw ng mga pangalan ng tab</b> sa isang off para lalo pang makatipid ng espasyo.
+
+<p>Ang higit sa mga listahan ng UI ay napalitan na rin ng mga tables, kung saan pinahihintulutan ka na palitan ang lapad ng hanay at tukuyin ang eksakto ang anumang hanay na ipinapakita, at paano ang mga talahanayan ay pinagsunodsunod.</p>
+
+<h3>Ang karagdagang pagpapatakbo ng paglipat ng mga add-on</h3>
+Karamihan sa mga pangunahing pagpapatakbo ay nailipat sa mga add-on kung saan ay nagpapahintulot sa atin na maghatid ng mga update sa pamamagitan ng ZAP ng pamilihan sa halip na nangangailangan ng mga bagong buong mga inilabas.<br>
+This includes the language packs, so translations made to the ZAP UI via https://crowdin.com/project/owasp-zap can be downloaded within ZAP or even automatically installed.
+
+<h3>Bago at mas pinaganda na aktibo at pasibong pag-iskan ng mga patakaran</h3>
+Marami sa mga kalidad ng inilabas na aktibo at pasibong patakaran ng pag-iskan ay napabuti. Mayroong bagong alpha at beta na kalidad ng patakaran at maraming patakaran ang naitaguyod mula sa alpha hanggang beta at mula sa beta sa inilabas na kalidad.
+
+<h3>Iba pang mga halu-halong mga pagbabago at pagdaragdag</h3>
+<ul>
+<li>Isang bagong opsyon para ihinto ang mga patakaran ng opag-iskan ng indibidwal nang hindi hinihinto ang buong pag-iskan</li>
+<li>Isang bagong toolbar na buton na nagpapahintulot sa iyo na mapabilis at mapadali ang pagtala ng mga Zest ng mga iskrip.</li>
+<li>Isang bagong grupo para maibahagi ang mga skrip ng ZAP (<a href="https://groups.google.com/group/zaproxy-scripts">https://groups.google.com/group/zaproxy-scripts</a>) na nalikha.</li>
+<li>Ang kakayahan ng spider ng mga aplikasyon na batay sa pinagmulan ng kontrol ng metadata (SVN at Git) na nakalantad sa pamamagitan ng isang web server</li>
+<li>Ang kakayahan ng sapilitang pagpapahinto mula sa loob ng Proxy iskrip</li>
+</ul>
+
+<h2>Kabuuang listahan ng mga pagbabago:</h2>
+<ul>
+<li>Isyu 122: Ang ProxyThread ng pagla-log ng mga binasa ng timeout na may maling mensahe ng (URL) </li>
+<li>Isyu 207: Ang pagpapahusay: Hotkeys </li>
+<li>Isyu 362: Ang pagpapahintulot ng mga listahan ng mga alerto na sinala sa pamamagitan ng pagpipilian sa mga sayt ng pane </li>
+<li>Isyu 399: Ang pagpangangasiwa ng direktoryo ng zap.sh </li>
+<li>Isyu 412: Ang pagpapagan ng hindi ligtas na SSL/TLS ng renegotiation ng opsyon na hindi nai-save </li>
+<li>Isyu 416: Ang pag normalise paano ang  dami ng kaugnayan ng mga opsyon ay napapangalagaan sa pamamagitan ng ZAP at pagpapahusay ng paggamit ng ilang mga opsyon sa Paggamit </li>
+<li>Isyu 485: Ang paggawa ng mga lengguwahe ng pack sa add-on </li>
+<li>Isyu 503: Ang pag bago ng footer ng mga tab para maipakita ang datos sa may tahanayan sa halip ng mga listahan ng Paggamit </li>
+<li>Isyu 572: Ang pagbago ng generate_root_ca property sa isang pagpapatakbo sa Python API </li>
+<li>Isyu 575: Ang pagbalik ng listahan ng mga alerto sa Python API sa halip sa isang diksyunaryo na may isang pagpasok </li>
+<li>Isyu 585: Ang Proxy - "502 Bad Gateway" na mga mali na tumutugon bilang "504 Gateway Timeout" </li>
+<li>Isyu 589: Ang paglipat ng paghayag ng ekstensiyon sa ZAP sa ekstensiyon ng proyekto </li>
+<li>Isyu 590: Ang sapilitang paggamit ng Browse na gumagamit ng maling pamamaraan kapag "umaatake" sa isang sayt na mapatakbo ang isang ligtas na koneksiyon (HTTPS) sa isang non-default port </li>
+<li>Isyu 591: Ang mga magagamit na sayt/hosts (sa footer ng mga panel) na nawala kapag ang moda ay binago sa "safe" </li>
+<li>Isyu 595: Ang nabigong pagsisimula ng ispayder sa (footer panel) sa isang sayt na pinatakbo sa isang ligtas na koneksiyon (HTTPS) sa isang non-default port </li>
+<li>Isyu 606: Huwag paganahin ang "start" na button ng pag-iskan kapag ang "--napiling sayt--" na opsyon ay pinili </li>
+<li>Isyu 607: Ang kahilingan na mano mano ng mga sayt na ipinakita gaya ng pag-iskan sa footer ng mga panel kapag napili ng mga "sayt" ng tab </li>
+<li>Isyu 609: Ang pagbibigay ng isang karaniwang interface para matanong at ma-access ang datos ng (HttpMessage at HistoryReference) na ipinakita sa mga tab </li>
+<li>Isyu 613: paglipat ng nai-save na mga baguhan na HttpMessage na ekstensiyon ng proyekto ng ZAP ng mga ekstensiyon </li>
+<li>Isyu 619: Ang sapilitang paglipat ng nai-Browse na ekstensiyon sa proyekto ng ZAP ng mga ekstensiyon </li>
+<li>Isyu 620: Ang sapilitang paglipat sa Pag-browse ng mga payl sa proyekto ng ZAP ng mga ekstensiyon </li>
+<li>Isyu 783: Ang shutdown ay dapat na isang paraan sa mga espesyalista ng zap.core api </li>
+<li>Isyu 788: Ang pag-update ng Java para sa paglabas ng mac </li>
+<li>Isyu 793: Ang pagpapatunay / Sessionmanagement na dinamikang pamamaraan ng paglo-load sa mga API ay hindi maaasahan </li>
+<li>Isyu 799: Ang pagdadagdag ng HttpAuthentication bilang isang paraan ng Pagpapatunay </li>
+<li>Isyu 803: Ang patse para sa /trunk/src/help/zaphelp/zaphelp/credits.html </li>
+<li>Isyu 804: Ang pagdadagdag ng suporta para sa iba't-ibang klase ng pagpapatunay para sa isang konteksto </li>
+<li>Isyu 805: Ang pagdadagdag ng suporta para sa iba't-ibang klase ng pamamahala ng sesyon para sa isang konteksto </li>
+<li>Isyu 806: Ang pagdadagdag ng suporta para sa mga gumagamit ng webapp </li>
+<li>Isyu 807: Ang kamalian habang naglo-load ng ZAP kapag ang Quick Start Tab ay nakasara </li>
+<li>Isyu 816: Ang pagdadagdag ng right-click na Kopya/I-paster &amp; Ang paghanap ng mga opsyon sa Encode/Decode/Hash na diyalogo </li>
+<li>Isyu 817: Ang phyton API ay hindi napanghawakan ang "ibang" operasyon ng tama </li>
+<li>Isyu 822: Ang Java API: ApiResponseSet.getAttributes() ay hindi gumagana </li>
+<li>Isyu 825: Ang lumang bersyon ng Rhino na sinama sa lib ng direktoryo </li>
+<li>Isyu 827: Ang default na sesyon ng mga token ay hindi mas mababang cased kapag nagdaragdag sa pamamagitan ng diyalogo ng mga opsyon </li>
+<li>Isyu 828: Ang NullPointerException habang nag a-access ng HttpSessions API view "sessionTokens" kapag ang sayt ay hindi umiiral o walang mga token </li>
+<li>Isyu 829: Ang JSONException kapag tumatawag ng isang API view ng wala na wala ang mga kinakailangan na parametro(s) </li>
+<li>Isyu 830: Ang Java Client API ay hindi nag-encode ng mga tanong ng parametro kapag nagpapadala ng mga kahilingan sa ZAP API </li>
+<li>Isyu 832: Ang mga tab ng sesyon ng Http ay dapat na alisin kapag ang isang bagong sesyon ay nalikha </li>
+<li>Isyu 837: ang pag-update, lagi, ang kahilingan ng HTTP na naipadala/pasulong sa pamamagitan ng mga proxy ng ZAP </li>
+<li>Isyu 838: Ang paghahanap ng Api - Ang pagdagdag ng mga view ng paghahanap na ibinabalik ng mga mensahe ng HTTP </li>
+<li>Isyu 839: Ang paghahanap ng API - Ang pagdagdag ng mga view ng paghahanap na ibinabalik ng mg mensahe sa ayos ng archive ng HTTP </li>
+<li>Isyu 840: Ang Core API - Pag papahintulot na kunin ang mga mensahe sa ayos ng archive ng HTTP </li>
+<li>Isyu 841: Ang NullPointerException pagkatapos ng pagpapadala ng isang mano manong kahilingan ng HTTP na hindi pinagana ng ExtensionHistory </li>
+<li>Isyu 842: Ang NullPointerException habang ang pag-iskan ay aktibo sa hindi gumaganang ExtensionAntiCSRF </li>
+<li>Isyu 843: Ang NullPointerException pagkatapos ng pagpapadala/pagpo-proxy ng isang kahilingan ng HTTP sa hindi gumaganang ExtensionAntiCSRF </li>
+<li>Isyu 844: Ang NullPointerException habang ang panawagan ng "Patakaran ng Pag-iskan"na diyalogo sa hindi gumaganang ExtensionPassiveScan </li>
+<li>Isyu 845: Ang pagdadagdag ng dalawang beses ng AbstractPanel sa TabbedPanel2 sa ExtensionLoader#addTabPanel </li>
+<li>Isyu 846: Ang NullPointerException habang angpag-iskan ay aktibo sa hindi gumaganang ExtensionScript </li>
+<li>Isyu 849: Ang NullPointerException habang nagpapatunay sa hindi gumaganang ExtensionHistory </li>
+<li>Isyu 852: Ang paghahanap ng API - Ang mga view ng URL ay nagbabalik ng pareho sa URL nang ilang ulit </li>
+<li>Isyu 853: Ang Core API - Nagpapahintulot na kunin ang bilang nga mga alerto </li>
+<li>Isyu 854: Ang Core API - Nagpapahintulot na kunin ang bilang ng mga mensahe </li>
+<li>Isu 855: Ang Core API - Nagpapahintulot na kunin ang isang mensahe sa pamamagitan ng ID </li>
+<li>Isyu 856: Ang Core API - Nagpapahintulot na kunin ang isang alerto sa pamamagitan ng ID </li>
+<li>Isyu 857: Ang Core API - ang "alerto" ng mga view ay maaaring magbalik ng hindi inaasahang mga alerto habang ang pagination ay ginagamit </li>
+<li>Isyu 858: Ang Core API -Ang view ng "mga mensahe" ay maaaring magbalik ng hindi inaasahang mga mensahe habang ang pagination ay ginagamit </li>
+<li>Isyu 859: Ang PScan API - Nagpapahintulot na paganahin/hindi paganahin ang pasibong pag-iskan </li>
+<li>Isyu 860: Ang PScan API - Nagpapahintulot na ilista/kunin ang mga pasibong pag-iskan </li>
+<li>Isyu 861: Ang PScan API - Nagpapahintulot na paganahin/hindi paganahin ang lahat ng mga pasibong pag-iskan </li>
+<li>Isyu 862: Ang PScan API - Nagpapahintulot na paganahin/hindi paganahin ang ibinigay na pasibong pag-iskan </li>
+<li>Isyu 863: Ang AScan API - Nagpapahintulot na ilista/kunin ang mga aktibong pag-iskan </li>
+<li>Isyu 864: Ang AScan API - Nagpapahintulot na paganahin/hindi paganahin ang lahat ng mga aktibong pag-iskan </li>
+<li>Isyu 865: Ang AScan API - Nagpapahintulot na paganahin/hindi paganahin ang ibinigay na aktibong pag-iskan </li>
+<li>Isyu 866: Ang alerto ay nagpapanatili sa HttpMessage nang mas matagal kaysa sa kinakailangan kapag ang HistoryReference ay itinakda/magagamit </li>
+<li>Isyu 867: Ang HttpMessage#getFormParams ay dapat magbalik sa isang bakanteng TreeSet kung ang kinatawan ng kahilingan ay hindi "x-www-form-urlencoded" </li>
+<li>Isyu 868: Ang Core API - ang "mga mensahe" ng view ay hindi dapat magbalik ng panloob/pansamantala na mga mensahe </li>
+<li>Isyu 869Ibahin ang mga pag-proxy ng mga kahilingan mula sa mga kahilingan ng gumagamit ng (ZAP) </li>
+<li>Isyu 870: Baguhin ang MainToolbarPanel na pinalawak na mga buton upang magamit ang ButtonGroup at Aksyon </li>
+<li>Isyu 871: ang titulo ay hindi nag-update kapag ang pangalan ng sesyon ay nabago sa pamamagitan ng pangunahing tool bar na buton "Mga Katangian ng Sesyon..." </li>
+<li>Isyu 872: Ang Core API - Nagpapahintulot na ipadala ang isang manu-manong kahilingan </li>
+<li>Isyu 873: Ang Core API - Nagpapahintulot na ipadala ang manu-manong kahilingan sa HAR na ayos </li>
+<li>Isyu 874: Ang pagbabago ng BreakPanelToolbarFactory para magamit ang mga Aksyon </li>
+<li>Isyu 875: Ang pag-alis ng i18n na direktoryo </li>
+<li>Isyu 876: Ang pagtakwil ng FuzzerPanel#PANEL_NAME </li>
+<li>Isyu 877: Ang ExtensionPopupMenuItem#isEnableForComponent ay tinatawag na pareho sa ilang mga menu ng pop up sa bawat
+oras ay ipinapakita ang pag gamit sa MainPopupMenu </li>
+<li>Isyu 878: Ang ExtensionPopupMenuItem#getMenuIndex() bilang walang epekto sa MainPopupMenu </li>
+<li>Isyu 879: Ang Pop up menu na "Konteksto ng ispayder..." ay pinagana kahit na kung ang ExtensionSpider ay hindi pinagana </li>
+<li>Isyu 880: Tandaan ang huling napiling direktoryo kapag nagdadagdag ng mga pasadyang fuzz na mga file </li>
+<li>Isyu 881: Mabibigo kaagad kung ang zapdb.script file ay hindi makita </li>
+<li>Isyu 882: Ang pagtanggal ng "Kopya" ng pop up ng menu ng aytem na ipanapakita sa mga tab ng "Sapilitang Pag-browse" </li>
+<li>Isyu 884: Ang ikalawang yugto ng Plug-n-Hack </li>
+<li>Isyu 885: Ang API - mga aksyon ng tugon na hindi ipinapakita habang ginagamit ang ayos HTML </li>
+<li>Isyu 886: Ang pangunahing pop up na menu kapag ginamit ng doble sa ilang mga bahagi </li>
+<li>Isyu 887: Ang mga Pause buton ng scanner ay hindi tugma sa pagpipilian/pinaganang estado </li>
+<li>Isyu 888: Ang paghahanap ng API - ang mga view ng URL ay maaaring magbalik ng hindi inaasahan habang ang pagination ay ginagamit </li>
+<li>Isyu 889: Ang JSONException habang tinatawag ang isang API na "iba" na walang kinakailngan na mga parametro(s) </li>
+<li>Isyu 890: Ang pagpapahintulot na alisin ang "output" na tab </li>
+<li>Isyu 891: Ang pinupuntiryang pagbuo ng "generate-javadocs" ay dapat ilapat ng SVN mime-type sa lahat ng katangian na mga nabuong payl </li>
+<li>Isyu 892: Ang tugon ng cache sa haba ng bahagi sa HistoryReference ay maaaring hindi wasto </li>
+<li>Isyu 896: Ang PnH: ang pag-falg ng anumang mga pag-atake ng fuzz na tumama sa DOM XSS oracle </li>
+<li>Isyu 897: Ang pagdadgdag ng isang JToggleButton na nagpapahintulot para ayusin ang isang kasangkapan ng ng tip ng teksto batay sa estado ng mga buton </li>
+<li>Isyu 898: Ang pagpapalit ng lahat na toggle na mga buton na na-ayos ng isang kasangkapan ng tip ng teksto sa estado ng mga button sa ZapToggleButton </li>
+<li>Isyu 899: Ang "manu-mano" na pag-aalis ng na-update na mga toggle na buton ng icon batay sa estado ng mga pindutan </li>
+<li>Isyu 900: Ang IllegalArgumentException habang nananawagan ng pangunahing pop up menu sa mga menu o super menu na may mataas na index na menu </li>
+<li>Isyu 901: Ang pop up menu na "nagtagumpay" na panghiwalay ay hindi nadagdag habang gamit ang sub-menu sa MainPopupMenu </li>
+<li>Isyu 902: Ang pagbago ng lahat ng ExtensionAdaptor#hook(ExtensionHook) ng pag-override ng mga pamamaraan na naka base ng pamamaraan ay matawagan </li>
+<li>Isyu 903: Ang pagpalit ng mga hibla ng slider para magamit sa parehong bahagi </li>
+<li>Isyu 904: Ang pagdagdag ng isang grupo ngbuton na nagpapahintulot di-piliin ang mga napiling buton </li>
+<li>Isyu 905: Ang di-tamang link sa "break ng tab" sa mga tulong ng pahina </li>
+<li>Isyu 910: Ang sapilitang paggamit na hindi mababago </li>
+<li>Isyu 911: Ang AScan API -ang pagbago ng "scanners" ng view para maisama ang estado ng mga aktibong pag-iskan </li>
+<li>Isyu 912: ang PSscan API - ang pagbago ang "scanners" ng view para maisama ang estado ng mga pasibong pag-iskan </li>
+<li>Isyu 913: Ang AScan API - Nagpapahintulot na ilista/kunin ang aktibong pag-iskan sa mga patakaran </li>
+<li>Isyu 914: Ang AScan API - Nagpapahintulot na ayusin ang aktibong pag-iskan ng mga patakaran na pinagana </li>
+<li>Isyu 915: Ang mga dinamikong piltro ng mga kasaysayan batay sa pagpipilian sa window ng mga sayt </li>
+<li>Isyu 919: Ang pagpapahintulot ng vulnerabilities.xml na gawing lokal ang  IdealFirstBug </li>
+<li>Isyu 920: Ang pagdagdag ng isama/ibukod na mga pattern ng url sa piltro ng kasaysayan </li>
+<li>Isyu 921: Ang PnH2: bukas bilang sinubaybayang url </li>
+<li>Isyu 923: ang pagpahitulot ng indibidwal na mga patakaran ng mga threshold at mga puwersa para i-ayos sa pamamagitan ng GUI </li>
+<li>Isyu 925: Ang mga isyu sa ulat ng HTML </li>
+<li>Isyu 929: Ang AScan API - ang pagpapahintulot na maayos ang kalakasan ng pag-atake at ang alerto ng threshold ng mga aktibong pag-iskan ng mga parakaran at mga aktibong pag-iskan </li>
+<li>Isyu 930: ang AScan API - Ang pagpapahintulot na ilista/kunin ang mga aktibong pag-iskan sa pamamagitan ng patakaran ng ID </li>
+<li>Isyu 931: Ang pagpapahintulot sa mga extension na kunin ang command line ng mga arg sa moda ng GUI </li>
+<li>Isyu 932: Ang pagpapahintulot sa mga skrip na matukoy ang mga command line </li>
+<li>Isyu 933: Ang Awtomatikong pagtukoy ng pag-install ng dir </li>
+<li>Isyu 934: Ang paghawak ng mga payl sa command line sa pamamagitan ng ekstensiyon </li>
+<li>Isyu 935: Ang pagpapahusay ng pagkakakilanlan ng bersyon ng Java </li>
+<li>Isyu 939: Dapat tanggapin ng ZAP ang mga koneksyon ng SSL ng awtomatikong di-pamantayan ng mga port </li>
+<li>Isyu 947: Ang ispayder ay di nagtagumpay sa mga URL na may mga tauhan na ilegal </li>
+<li>Isyu 950: kopyahin sa pamamagitan ng mga add-on na naglalaman ng mga nakopyang mga payl ng direkta sa mga plugin ng direktoryo </li>
+<li>Isyu 951: Ang 1.1 at 1.2 na mga bersyon ng TLS ay hindi pinagana bilang default </li>
+<li>Isyu 954: Ang mga pagbabago sa siguradong mga field sa mga GUI ay hindi nai-save pagkatapos ng pag-click ng OK/Ipagpatuloy </li>
+<li>Isyu 955: Ang pokus ng keyboard na nawala habang ang malaking bahagi ng katawan ay natagpuan </li>
+<li>Isyu 956: Ang pagkopya ng mga URL na hindi nakopya ng maramihan </li>
+<li>Isyu 957: Ang Reperensiya para sa alerto "X-Content-Type-Options ng nawawalang header" </li>
+<li>Isyu 963: Ang pagdadagdag ng add-on sa blocklist kung ito ay hindi maaaring tanggalin sa pag-update </li>
+<li>Isyu 965: Ang pagsuporta sa mga app na 'solong pahina' at 'di-huwaran' na panghiwalay na mga parametro </li>
+<li>Isyu 966: Ang Opsyon na quickstart command line </li>
+<li>Isyu 967: Ang InvalidParameterException habang nag-update ang "iskrip ng console" ng add-on </li>
+<li>Isyu 968: Ang pagpapahintulot na pumili ng gumaganang mga protokol ng SSL/TLS </li>
+<li>Isyu 969: Ang proxy - Ang lupon ng tugon ay huwag isama kapag sinasagot ang nabigong mga kahilingan ng HEAD </li>
+<li>Isyu 970: Ang lupon ng mga kahilingan ng DELETE ay dapat maipadala/mapasulong </li>
+<li>Isyu 974: Ang pag-iskan ng mga elemento ng URL path </li>
+<li>Isyu 975: Ang kabaligtaran ng paghahanap ng Fuzz ng mga resulta ng buggy </li>
+<li>Isyu 976: Ang konteksto ng pag-atake ng ispayder ay dahilan ng pag-ispayder sa labas ng konteksto </li>
+<li>Isyu 979: Ang mga puno ng sayt at alerto ay maaaring makakuha ng sira </li>
+<li>Isyu 981: ang internationalize na tulong ng payl </li>
+<li>Isyu 982: Ang API key </li>
+<li>Isyu 986: Ang bagong diyalogo ng ScanProgress na ipinapatupad at ang paglaktaw ng plugin ng pag-andar </li>
+<li>Isyu 987: Ang pagpapahintulot ng dimakatwirang mga halaga ng kumpig na payl na inayos sa pamamagitan ng command line </li>
+<li>Isyu 988: Ang tulong ng ZAP ay bumabagsak bago nagsisimula </li>
+<li>Isyu 989: Ang pagdagdag ng opsyon sa isang right click ng "Magdagdag ng gumagamit" sa sesyon ng HTTP </li>
+<li>Isyu 991: Ang Add-on/Pag-iskan na patakaran ng pagsusuring muli ng kahilingan ng - Paulit-ulit na XSS </li>
+<li>Isyu 996: Ang lahat ng mga didiyalogo ay siguruhing nakasara kapag ang escape key ay napindot </li>
+<li>Isyu 997: Ang session.open ay dumadaing tungkol sa maling paggamit ng addPath </li>
+<li>Isyu 998: Ang hangal na regexp na paghahanap ay pumapatay sa ZAP </li>
+<li>Isyu 999: Ang paglo-load ng kasaysayan sa maling pagkasunod-sunod </li>
+<li>Isyu 1002: ang pagdaragdag ng suporta para sa Pagpapatunay sa pamamagitan ng mga Script </li>
+<li>Isyu 1003: Ang kahinaan ng XXE na sinubukan ng plugin </li>
+<li>Isyu 1004: Ang paghahayag sa Source Code gamit ang Git meta-data </li>
+<li>Isyu 1005: Ang paghahayag sa Source Code gamit ang Subversion meta-data </li>
+<li>Isyu 1006: Ang pag-spider sa mga aplikasyon sa Web gamit ang Git meta-data </li>
+<li>Isyu 1007: Ang pag-spider sa mga aplikasyon ng Web gamit ang Subversion (SVN) meta-data </li>
+<li>Isyu 1010: Ang pagpapahintulot na ibukod ang mga resulta ng fuzz </li>
+<li>Isyu 1012: Ang Diyalogo ng Encode / Decode - Ang pagsuporta sa HTML at ng JavaScript ng pag-encode ng IdealFirstBug </li>
+<li>Isyu 1016: Ang pagpapakita ng isyu ng pag-encode ng HTML sa credits.html </li>
+<li>Isyu 1017: Ang proxy na nakatakda sa 0.0.0.0 ay dahilan ng maling PAC na payl na nabuo </li>
+<li>Isyu 1018: Ang pagbibigay ng AbstractAppParamPlugin ng mga pagpapatupad ng pagpapagana sa mga klase ng parametro </li>
+<li>Isyu 1019: Ang ZAP startup na may masamang JAVA_HOME na nagpapakita ng nakalilitong maling mensahe </li>
+<li>Isyu 1020: Ang pagkopya ng "Body: Table" plug-able na ipinakita sa mga tab ng kahilingan/pagtigil </li>
+<li>Isyu 1021: Ang OutOutOfMemoryError habang pinapatakbo ang aktibong scanner </li>
+<li>Isyu 1022: Ang proxy - Ang pagpapahintulot sa pag-override ng pag-proxy na mensahe </li>
+<li>Isyu 1023: Ang iskrip Console - ang takbo/hinto na mga buton ng paiba-ibang estado </li>
+<li>Isyu 1024: Ang malawak na pagtugon na ipinapakita kahit na ang isang bahagi ng tugon ay wala rito </li>
+<li>Isyu 1025: Ang NullPointerException habang pinipindot ang isang key ng "iskrip na Console" sa mga lugar ng teksto na napili </li>
+<li>Isyu 1030: Ang pag-load at pag-save ng mga patakaran ng pag-iskan </li>
+<li>Isyu 1031: Ang pagdaragdag ng parametro ng Pagbubukod sa mga Aktibong Scanner </li>
+<li>Isyu 1032: Ang pagdaragdag ng suporta ng API para sa pagpapatunay na nakabatay sa iskrip </li>
+<li>Isyu 1033: Ang org.zaproxy.clientapi.core.Alert ay hindi nag-override sa equals() na pamamaraan </li>
+<li>Isyu 1037 : Ang JSON RPC na parametro ay hindi nai-ayos ng tama </li>
+<li>Isyu 1039 : Ang pagpapabuti ng kawastuhan ng panlabas na Redirect plugin </li>
+<li>Isyu 1041: ang mga plugin ng Aktibong Pag-scan na hindi nagsisimula kung ang sayt ay lokal ng 127.0.0.1 </li>
+<li>Isyu 1042: Ang pagkakaroon ng mga mahahalagang isyu na binuksan ng nakaraang sesyon</li>
+<li>Isyu 1043: Ang diyalogo ng pasadyang aktibong pag-scan </li>
+<li>Isyu 1044: Ang sapilitang paggamit ng mode ay hindi nagpatuloy sa kabilang panig ng sesyon ng pag-save/pag-load </li>
+<li>Isyu 1046: Ang getHttpCookies() na paraan sa mga HttpResponseHeader ay hindi tamang nai-ayos sa domain </li>
+<li>Isyu 1047: Ang mga Backup na payl ay hindi natukoy sa pamamagitan ng Zap </li>
+<li>Isyu 1049: Ang mabilisang pagdami ng pattern ng bahagi ng paghahanap </li>
+<li>Isyu 1050: Ang pag-script na nakabatay sa Input ng mga Vectors </li>
+<li>Isyu 1051: Ang Zap ay maaaring matiyak sa mga serbisyo sa lahat ng mga network ng mga interface </li>
+<li>Isyu 1052: Ang Callback API para sa aktibong pag-iskan ng mga plugin </li>
+<li>Isyu 1053: Ang pagkakapareho ng string at bahagi ng LCS algorithm </li>
+<li>Isyu 1055: Ang pag-load ng mga ekstensiyon bago ang mga plugin </li>
+<li>Isyu 1057: Ang pagdadagdag ng isang Extension.postInstall() na paraan para sa mga aksyon ng pag-install ng post </li>
+<li>Isyu 1059: Ang pagdadagdag ng suporta ng Jython para sa pagpapatunay ng iskrip-based </li>
+<li>Isyu 1060: Ang pagdaragdag ng suporta ng JRuby para sa Pagpapatunay ng Script-Based </li>
+<li>Isyu 1061: Ang pagpili ng tamang klase ng iskrip, Ang makina at Template habang lumilikha ng bagong iskrip </li>
+<li>Isyu 1063: Ang Opsyon para mabasa ang naidagdag na gzipped na nilalaman ng (ay mahawakan ang pag-compress para sa mga iskrip) </li>
+<li>Isyu 1065: Ang pagpalit ng pangalan ng mga ExtensionScripts  sa  pagpapanatili ng ExtensionScriptsConsole </li>
+<li>Isyu 1066: Ang pagdaragdag ng suporta para sa madaliang setting ng iskrip na nakabatay ng pagpapatunay mula sa mga iskrip ng UI </li>
+<li>Isyu 1068: Ang Zap ay hindi maramdaman sa pinagkukunan ng code sa mga tugon </li>
+<li>Isyu 1069: Ang pagsuporta .-: sa mga pangalan ng Zest na pabagubago </li>
+<li>Isyu 1071: Ang paggamit ng Zest-Script ng "Pagpapalit ng pagtugon-kabuuan" ay naghahatid ng maling nilalaman-haba ng header. </li>
+<li>Isyu 1072: Ang SQLDataException: Ang data eksepsyon: hanay ng data, ng tamang truncation </li>
+<li>Isyu 1074: Ang pagdadagdag ng opsyon na pinapakita lamang ng output mula sa ipinakitang iskrip </li>
+<li>Isyu 1075: Ang pagbabago ng TableHistory upang burahin ang mga itinala sa mga batch ng pagganap </li>
+<li>Isyu 1076: Ang pagbabago ng aktibong scanner na hindi mabura ang mga pansamantalang mga mensahe na binubuo ng pagganap </li>
+<li>Isyu 1077 : ang pagbabago ng  (HTTP) fuzzer na hindi mabura ang pansamantalang mga mensahe ng binubuo ng pagganap </li>
+<li>Isyu 1078: Ang pababago ng ExtensionBreak upang umurong sa pag base ng mensahe ng klase ng breakpoint ng pagpapatupag ng tagapamahala </li>
+<li>Isyu 1079: Ang pagtanggal ng namaling pangunahing pop up ng menu sa mga panghiwalay </li>
+<li>Isyu 1080: Ang gumagamit ng gabay ng mga pahina na hindi tamang pag-asa sa mga plataporma ng pag-encode </li>
+<li>Isyu 1081: Ang ExtensionPopupMenu ay dapat "magbigay alam" sa child ExtensionPopupMenu (at ExtensionPopupMenuItem) kapag ginamit ang pop up </li>
+<li>Isyu 1082: Ang paghahanap ng URL na tumutugma sa naka-highlight sa maling posisyon </li>
+<li>Isyu 1083: Ang pagtakwil ng pamamaraan ng ExtensionPopupMenuItem#isSuperMenu() </li>
+<li>Isyu 1084: Ang NullPointerException habang pinipili ang isang node sa mga tab ng mga "Site" </li>
+<li>Isyu 1084: Huwag idagdag/tanggalin ang pop up menu ng mga aytem sa pamamagitan ng pamamaraan na View#getPopupMenu() </li>
+<li>Isyu 1086: Ang pagpapahintulot sa dinamikong pagdagdag/pagtanggal ng mga pasibong scanner </li>
+<li>Isyu 1087: ang pagpapalit ng mga ekstensiyon sa dinamiko ng mga dinagdag na mga pasibong scanner </li>
+<li>Isyu 1088: Ang pagtakwil sa pamamaraan ng ExtensionPopupMenu#prepareShow </li>
+<li>Isyu 1089: Ang pagpalit ng ExtensionPopupMenu para parangalan ang ekstensiyon ng pop up na mga pamamaraan </li>
+<li>Isyu 1090: Huwag magdagdag ng pop up ng mga menu kung ang pinupuntirya ng extension ay hindi pinagana </li>
+<li>Isyu 1091: Ang CoreAPI - Huwag kunin ang mga ID ng pansamantalang kasaysayan ng mga talaan </li>
+<li>Isyu 1092: Ang SearchThread - Huwag kunin ang mga ID ng mga itinapong mensahe </li>
+<li>Isyu 1093: Ang pagdagdag ng isang HTTP ng kahilingan sa pagpapakita ng kabuuan na nagbabala sa malaking kabuuan </li>
+<li>Isyu 1094: Ang pagbago ng ExtensionManualRequestEditor para lamang magdagdag ng mga bahagi ng ipinapakitang bahagi kung nasa GUI mode </li>
+<li>Isyu 1095: Ang pagpalit ng pangunahing pop up ng mga sub menu ng ExtensionPopupMenu habang bagay </li>
+<li>Isyu 1096: Ang AddOnLoader na tumatawag ng maling abiso ng pamamaraan pagkatapos ng pag-unistall ng mga payl ng add-on </li>
+<li>Isyu 1097: Ang paglipat ng "pagpapatakbo ng mga aplikasyon" (tawag) ng mga zap-ekstensiyon ng proyekto </li>
+<li>Isyu 1098: Ang paglipat AJAX Sipder ng mga pahina ng pagtulong sa add-on na "Ajax Spider" (at i-update ang mga ito) </li>
+<li>Isyu 1099: Ang pagpapahintulot ng anotasyon sa mga pamamaraan ng opsyon bilang hindi pagpansin para sa ZAP API </li>
+<li>Isyu 1100: Ang anotasyon ng opsyon ng mga pamamaraan na hindi dapat malantad sa mga ZAP API </li>
+<li>Isyu 1101: Ang pagbabago ng mga pasibong scanner para malantad ang mga ID nito </li>
+<li>Isyu 1102: Ang Ajax Spider - Pagpapalit ng ajax spider proxy ng core proxy </li>
+<li>Isyu 1103: Ang iskrip ng Console - Pagpapahintulot ng malinaw na out put kahit na ang "linaw sa pagtakbo" ay pinagana </li>
+<li>Isyu 1104: Ang pagpapalit ng lahat ng toggle na mga pindutan na inayos sa isang kasangkapan ng tip ng teksto base sa mga estado ng mga buton sa Zap togglebutton ng mga (add-on) </li>
+<li>Isyu 1105: Ang pagtatanggal ng "manu-mano" na pag-update sa toggle ng mga buton na nakabase sa mga buton ng estado ng mga (add-on) </li>
+<li>Isyu 1106: Ang mga historylist ng paggawa ng kasaysayan ng ID na ilista ang mga index na hindi na-update habang ang kasaysayan ng pagpasok ay binura </li>
+<li>Isyu 1110: Ang Spider API - hindi maaari na maayos kung paano ang mga parametro ay nahahawakan gamit ang API </li>
+<li>Isyu 1111: Ang pagsisiyasat para sa mga Update sa startup na makukuha ng (awtomatikong) pag-disable habang ang pag-access ng diyalogo ng mga "Opsyon" </li>
+<li>Isyu 1112" Ang pagbago ng ZAP (core) apra suportahan ang bagong add-on ng dir ng istraktura </li>
+<li>Isyu 1113: Ang pagbago ng add-on ng dir ng istraktura ng (pagtulong at mga pinagkukunan) </li>
+<li>Isyu 1118: Ang mga alerto ng tab na maaaring makuha sa labas ng sync</li>
+<li>Isyu 1119: Ang ispayder na hindi maramdaman ang mga maramihan na mga anyo sa parehong URL</li>
+<li>Isyu 1120: Ang pag-uninstall ng nabigong mga add-on kung ang mga patakaran na ginamit ng bigkis na mensahe sa pag-uninstall </li>
+<li>Isyung 1121: Ang progreso ng pag-iskan ng mga diyalogo na maaaring dahilan ng paghinto ng UI </li>
+<li>Isyu 1122: Ang karagdagang impormasyon ng add-on </li>
+<li>Isyu 1125: Hindi ma-import muli ang jython na iskrip bilang isang proxy na iskrip </li>
+<li>Isyu 1126: Ang mga bug sa breakpoint ng mga piltro </li>
+<li>Isyu 1127: Ang tampok na kahilingan: Ang pagpapahintulot sa mga iskrip na bumuo ng mga break </li>
+<li>Isyu 1131: Ang pagsuporta ng Zest Interceptsa mga aksiyon sa add-on </li>
+<li>Isyu 1132: Ang HttpSender hindi pinansin ang opsyon na "Magpadala ng solong header ng kahilingan ng cookie" ng opsyon </li>
+<li>Isyu 1134: Ang pasibong pag-iskan ng patakaran ng mga regex na hindi nabalido </li>
+<li>Isyu 1135: Ang pamilihan ng tab ay di maaaring maging imbalido kung ang cfu ay tumatakbo sa panimula</li>
+<li>Isyu 1137: Ang ZAP ay isinasara habang nag tatanggal ng mga node</li>
+<li>Isyu 1138: Ang pasibong pag-iskan ng patakaran ng mga pagbabago ay hindi na seyb</li>
+<li>Isyu 1145: Ang cookie parsing ay mali kung ang isang kuwit ay ginagamit</li>
+</ul>
+
+<h2>Tingnan din</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Ang panimula</a></td><td>ang panimula sa ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Mga inilabas</a></td><td>ang buong hanay ng mga inilabas</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Mga kredito</a></td><td>ang mga tao at mga grupo na ginawang posible ang inilabas na ito</td></tr>
+</table>
+</body>
+</html>

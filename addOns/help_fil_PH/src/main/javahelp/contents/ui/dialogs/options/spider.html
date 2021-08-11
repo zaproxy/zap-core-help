@@ -2,133 +2,107 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Mga opsyon sa screen ng Spider</title>
+<title>Ang mga opsyon ng iskrin ng ispayder</title>
 </head>
-<body bgcolor="#ffffff">
-	<h1>Mga opsyon sa iskrin ng Spider</h1>
+<body>
+	<h1>Ang mga opsyon ng iskrin ng ispayder</h1>
 	<p>
-		Ang iskrin na ito ay pinahihintulutan ka na isaayos ang <a
-			href="../../../start/concepts/spider.html">spider</a> na mga opsyon.</p> 
-	<p>Dapat itoy makilala na ang sakdalang pagsasaayos ng bahagya nitong mga opsyon ay ma-aapektohan ang gumaganang Spider.
+		This screen allows you to configure the <a
+			href="../../../start/features/spider.html">spider</a> options.</p> 
+	<p>Ito ay dapat na maitala na ang karamihan ng pagbabago ng mga opsyon na ito ay nakakaapekto sa pagpapatakbo ng ispayder.
 	</p>
 
-	<h3>Ang pinaka mataas na kalaliman sa pag gapang</h3>
-	Ang paramiter ay tumutukoy sa pinakamataas na kalaliman ng pag-gapang na kung saan ang
-	pahina ay makikita sa kautusan para dito upang mai-proseso na. Nakita na ang mga Pinagmulan
-	ang mas malalim pa sa level na ito ay kinuha at nai-parse na sa pamamagitan ng spider.
+	<h3>Ang pinakamalalim na pag gapang</h3>
+	Ang parametro na tumutukoy sa pinakamalalim sa mga pag gapang ng proseso kung saan ang isang pahina ay dapat na maging kita sa ayos para sa magiging proseso na ito. Ang mga pinagmumulan na natagpuan 
+ ang malalim pa sa lebel na ito ay hindi kinuha at sinuri ng mga ispayder. The value
+	zero means unlimited depth.
 	<p>
-		Ang lalim ay kinalkula na ito ay nag-simula mula sa mga binhi, kaya, kapag ang spider scan ay
-		magsisimula ng nagiisa lamang na URL (eg. Spider URL), ang kalaliman ay
-		nakalkula na mula sa isang ito. Gayon pa man, kapag ang scan ay nagsimula ng may maraming
-		mga binhi (eg. Ang site ng spider), ang pinagkukunan ay naka proseso kung ang kalaliman nito ay
-		nababagay sa <i>anuman</i> sa mga binhi ay mas mababa kesa sa isa pang nilarawan.
+		Ang lalim ay kalkulado mula sa simula ng mga seed, kaya, kung ang isang ispayder ng pag-iskan ay nagsisismula sa isang solong URL lamang (hal. URL manually specified), the depth is
+		calculated from this one. Ganun pa man, kung ang mga simula ng maramihang pag-iskan ng mga seed (hal. recurse and Sites tree node with children), a resource is processed if it's depth
+		relative to <i>any</i> of the seeds is less than the defined one.
 	</p>
 
-	<h3>Bilang ng mga thread na nagamit</h3>
-	Ang spider ay maraming mga thread at ito ang bilang na nilalarawan ang
-	napakaraming bilang ng gumaganang thread na ginagamit sa pag gapang na proseso. Baguhin itong
-	paramiter na walang anumang epekto sa kahit anong pag-gapang na nasa pag unlad. 
+	<h3>Ang bilang ng mga ginagamit na mga Thread</h3>
+	Ang ispayder ay maramihang mga thread at ito ay ang bilang na mga inilarawan sa pinakamataas na bilang ng mga manggagawa ng mga thread na ginamit sa mga proseso ng paggapang. Ang pagbabago ng parametrong ito na hindi nakakaapekto sa kahit na anumang proseso ng paggapang. 
 
-	<h3>Pinakamataas na durasyon</h3>
-	Ang pinaka-mahaba na oras na ang spider ay gumana para sa, sinukat na mga minuto.
-	sero (ang default) na nanganga-hulugang ang spider ay gumana hanggang sa makita ang lahat ng mga link na pwede sa. 
+	<h3>Pinakamataas na tagal</h3>
+	Ang pinakamahaba na oras para ang ispayder ay dapat na tumakbo, ay nasusukat sa mga minuto. ang sero 
+(Ang default) ay nangangahulugan na ang ispayder ay tatakbo hanggang sa makita ang lahat ng mga link na ito ay ginawa na. 
 
-	<h3>Pinakamataas na anak para gumapang</h3>
-	Ang paramiter na ito ay nililimitahan ang bilang ng mga bata na gumagapang sa bawat node na nasa puno.<br>
-	Ito ay kapaki pakinabang para sa mga aplikasyong pinapatakbo ng datos na mayroong malaking mga bilang ng 'mga pahina' ito ay katotohanan eksakto ang kaparehas na code ngunit naglalaman ng ibat ibang datos. halimbawa mula sa database.<br>
-	Sa pamamagitan ng default ito ay maitatakda sa sero na nanganga-hulugang wala itong limitasyon na ginamit sa bilang ng mga buhol ng mga batang gumagapang.
+	<h3>Ang pinakamataas na bata ng paggapang</h3>
+	Ang bilang ng parametro ay nilimitahan sa mga bata na gumagapang at ang bawat node sa mga puno.<br>
+	Ito ay tulong para sa datos na pinapatakbo ng mga aplikasyon na mayroong malaking mga bilang ng mga 'pahina' ng nasa totoo talaga na mga parehas na code pero
+naglalaman ng ibat-ibang datos, para sa halimbawa para sa isang database.<br>
+	Sa pamamagitan ng default ito ay itinakda sa sero kung saan ay nangangahulugan na doon ay walang mga limitasyon na nailapat sa mga bilang ng bata na mga node na gumapang.
 
-	<h3>Pinaka-mataas na sukat ng parse</h3>
-	Ipaliwanag ang pinakamataas na sukat, sa bytes, na ang tugon ay kailangan i-parsed. Pinapayagan nito
-	ang spider upang laktawan ang malaking mga pagtugon/mga files.
+	<h3>Ang pinakamataas na sukat ng parse</h3>
+	Ang pagtukoy sa pinakamataas na sukat, sa mga byte, na ang isang tugon ay dapat na maging parse. ito pinahihintulutan ng ispayder na laktawan ang mga tugon/mga payl.
 
-	<h3>Ang Domain ay laging nasa Abot ng isip</h3>
-	Payagan na pamahalaan ang string na literals ng domain o karaniwan na mga ekspresyon, na nasa
-	abot ng kaisipan ng spider. Ang normal na ugali ng spider ay magfollow lamang ng mga link sa mga mapagkukunan
-	na nakita sa kaparehas na saklaw tulad ng pahina kung saan ang scan ay magsisimula. Gayon man,
-	ang opsyon na ito ay pinapayagan ka na ipaliwanag ang mga karagdagang mga domain na itinuturing
-	"sa abot ng isip" habang nasa proseso ng pag-gapang. Mga pahina dito sa mga domain ay
-	naka-proseso habang nagii-scan.
+	<h3>Ang mga domain ay laging nasa saklaw</h3>
+	At pagpapahintulot ng pamamahala ng mga domain, ang mga literala na hanay o ang mga palagiang ekspresyon, na nasa saklaw ng mga ispayder. Ang normal na pag-uugali ng mga ispayder ay ang pagsunod lamang sa mga link na makita ang mga pinagkukunan sa mga magkakaparehong domain bialng ang pahina kung saan nagsimula ang pag-iskan. Ganunpaman, 
+ang opsyon na ito ay pinahihintulutan ka na matukoy ang mga karagdagan ng domain ay na itinuturing "sa saklaw" habang ang pag gapang ay nasa proseso. Ang mga pahina ng mga domain na ito ay pinuproseso habang nag-i-iskan.
 		
-	<h3>Mga Pag-usisa sa pag-kontrol ng mga paramiter</h3>
-	Kapag gumagapang na, ang Spider ay mayroong nasa loob na mekanismo na markahan kung alin ang mga pahina
-	na tapos ng bisitahin, kaya hindi na ulit sila mag po-proseso. Nang itong pagsusuri ay nagawa,
-	ang pamamaraan ng mga paramiter ng mga URI ay hinawakan ito ay itinakda gamit ang opsyon na ito. Mayroon ditong
-	tatlong magagamit na mga opsyon:
+	<h3>Ang pag-uusisa sa mga hinahawakang mga parametro</h3>
+	Habang gumagapang, ang ispayder ay mayroong isang panloob na mekanismo na nagmamarka kung alin mga pahina ay nabisita na, kaya sila ay hindi na maproproseso ulit. Habang ginagawa ang pagsusuring ito,
+ang paraan ng mga URL ay maayos na nahahawakan ng mga parametro gamit ang opsyon na ito. Mayroong tatlong opsyon na magagamit:
 	<ul>
-	<li><b>Lubos na wag pansinin ang mga paramiter</b> - kapag ang www.example.org/?bar=456 ay binisita,
-	tapos ang www.example.org/?foo=123 ay hindi binisita</li>
-	<li><b>Ang kinikilala lamang ay ang pangalan ng paramiter</b> (huwag pansinin ang halaga ng perimiter) - kapag ang
-	www.example.org/?foo=123 ay binisita, tapos ang www.example.org/?foo=456 ay hindi binisita, 
-	ngunit ang www.example.org/?bar=789 o kaya www.example.org/?foo=456&amp;bar=123 ay binisita</li>
-	<li><b>Kinikilala ang dalawa ang pangalan at halaga ng parameter</b> - kapag ang www.example.org/?123 ay binisita,
-	ang anumang ibang uri ito ay magkaiba (kasama ang, para sa halimbawa, www.example.org/?foo=456 or 
-	www.example.org/?bar=abc) ay binisita</li>
+	<li><b>ang kumpletong pag-iwas ng mga parametro</b> -kung ang www.example.org/?bar=456 ay nabisita,
+pagkatapos ang www.example.org/?foo=123 ay hindi nabisita</li>
+	<li><b>Ang itinuturing lamang na pangalan ng mga parametro</b> (ang pag-iwas sa mga halaga ng mga parametro) - habang ang
+	www.example.org/?foo=123 ay nabisita, pagkatapos ang www.example.org/?foo=456 ay hindi nabisita, 
+	subalit ang www.example.org/?bar=789 o ang www.example.org/?foo=456&amp;bar=123 ay nabisita</li>
+	<li><b>itinuturing ang dalawang pangalan ng mga parametro at halaga </b> - kung ang www.example.org/?123 ay nabisita,
+	ang anumang uri yan ay magkaiba (kasama ang, para sa halimbawa, www.example.org/?foo=456 o
+	www.example.org/?bar=abc) ay nabisita</li>
 	</ul>
 
-	<h3>Magpadala ng "Tumutukoy sa" pinuno</h3>
-	Kapag ang mga paki usap ay naipadala na ng may "Tumutukoy" sa pinuno.
+	<h3>Ang pagpapadala sa header ng "referer"</h3>
+	Kung ang mga kahilingan ng ispayder ay dapat na maipadala sa mga "referer" ng header.
 
-	<h3>Tanggapin ang mga Cookie</h3>
-	Kapag ang mga scan ng spider ay tinanggap ang mga cookie habang nag spidering. Kung maaari ang spider ay
-	maayos na hahawakan ang mga natanggap na cookie mula sa server at ipapadala nila pabalik ng naaayon.
-	Kung ang opinyon ay hindi pwede, ang Spider ay hindi magpapadala ng kahit anong mga cookie sa kahit anong mga paghiling. Para
-	sa halimbawa, itoy kino-kontrol kung oo o hindi ang Spider ay gumagamit ng parehas na sesyon habang labas ang
-	pag-spidering scan.
-	<br>Kapag tumanggap ng mga cookie ang mga cookie ay hindi ibinahagi sa pagitan ng mga pag-scan sa spider, ang bawat pag-scan ay mayroong
-	sariling banga ng cookie.
-	<br>Ang opsyong ito ay maymababang prioridad, ang Spider ay irerespeto ng iba (pandaigdigan) mga opsyong kaugnay
-	sa HTTP state. Ang opsyong ito ay hindi pinansin kung, para sa halimbawa, ang opsyon
-	<a href="../../tlmenu/edit.html">Paganahin ang Sesyon sa Pagsubaybay (Cookie)</a> ay paganahin, kapag
-	nag-spidering katulad ng <a href="../../../start/concepts/users.html">Gumagamit</a> o kapag ang
-	<a href="../../../start/concepts/httpsessions.html">HTTP Sesyon</a> ay aktibo.
+	<h3>Ang pagtanggap sa mga cookies</h3>
+	Kung ang mga pag-iskan ng ispayder ay dapat na tanggapin ng mga cookie habang nag-ispayder. Kung ang ispayder ay pinagana ng maayos na paghawak sa anumang tinanggap ng mga cookie mula sa server at ipinapadala sa kanila pabalik alinsunod dito.
+	Kung ang opsyon ay hindi pwede, ang ispayder ay hindi magpapadala ng anumang mga cookie na nsa kahilingan nito. Para
+ sa halimbawa, maaari nitong kontrolin maging o hindi ang ispayder ang gumamit sa magkaprehas na sesyon sa lahat ng parte ng pag -iskan ng ispayder.
+	<br>Kapag tinanggap ang mga cookie ang mga cooki ay hindi maibabahagi sa pagitan ng mga pag-iskan ng ispayder, bawat pag-iskan nito ay mayroong cookie jar.
+	<br>Ang opsyon na ito ay mayroong mababang prayoridad, ang ispayder ay nirerespeto ang ibang (global) na mga opsyon na may kaugnayan sa mga estado ng HTTP. ang opsyon na ito ay hindi pinapansin kung, para sa halimbawa, ang opsyon
+	<a href="connection.html">Enable (Global) HTTP State</a> ay paganahin, habang
+ang pag-ispayder ng tulad ng <a href="../../../start/features/users.html">Gumagamit</a> o habang ang isang
+	<a href="../../../start/features/httpsessions.html">Sesyon ng HTTP</a> ay aktibo.
 
-	<h3>Mga form sa pag proseso</h3>
-	Habang nag po-proseso ang pag gapang, ang ugali ng spider kapag itoy
-	makakatagpo ng HTML na mga form ay nililinawsa pamamagitan ng opsyon na ito. Kapag hindi pwede, ang mga anyo ng HTML
-	ay hindi magpo-proseso sa lahat. Kung gumagana, ang mga form ng HTML na may
-	paraan na isinasaad sa HTTP GET ay isinusumite na mayroong ilang lumilikha ng
-	mga halaga. Ang ugali kapag nag-engkwentro ang mga form na may paraang nagpapalinaw
-	tulad ng HTTP POST ay na-kumpigur sa mga susunod na opsyon.
+	<h3>Ang mga anyo ng proseso</h3>
+	Habang ang proseso ng pag gapang, ang kilos ng mga ispayder habang ang pagtatagpo ng mga anyo ng HTML ay tinutukoy sa pamamagitan ng opsyon na ito. Kung di gumana, ang mga anyo ng HTML ay hindi mapoproseso sa lahat. Kung gumana, ang mga anyo ng HTML sa mga paraan na tinukoy bilang HTTP GET ay maisasailalim sa mga binuong mga halaga. Ang kilos habang nagtatagpo ang mga anyo sa mga paraan na natukoy bilang HTTP POST ay nakumpigura sa mga susunod na opsyon.
 
-	<h3>Mga form sa POST</h3>
-	Tulad ng agarang pag lalarawan ng mga nakaraang talata (Mga form ng Pag-proseso), itong
-	opsyon ay nagkukumpigur ng ugali ng spider kapag
-	<i>Mga form sa Pag=proseso</i> ay gumagana at kapag nagkatagpo ang mga form ng HTML na
-	mayroon para makapag POSTed.
+	<h3>Ang mga anyo ng POST</h3>
+	Bilang madaling sabi ng pagtukoy ng mga nakaraang talata (ang mga anyo ng proseso), ang opsyon na ito na kinumpigura ng kilos ng mga ispayder habang
+	<i>Ang mga anyo ng proseso</i> ay gumagana at habang nagtatagpo ang mga anyo ng HTML kinakailangang ma post.
 
-	<h3>Mga komento sa Parse HTML</h3>
-	Ang opsyon ay nagpapaliwanag kung ang spider ay spider ang HTML
-	pagsusuri sa mga komento para sa mga link hanggang sa pinag-kukunan. Ang mapagkukunan lamang ang nakatagpo dito
-	sa mga balidong komento HTML ang pag-tag ay nakaproseso.
+	<h3>Mga komento sa Parse ng HTML</h3>
+	Ang mga opsyon na ito na tinukoy kung ang ispayder ay dapat din sa ispayder sa HTML na mga komento ng paghahanap para sa mga link ng mga pinagmulan. Ang pinagmumulan at makikita lamang sa balidong comento ng HTML ng mga tag na naproseso.
 
-	<h3>Parse 'robots.txt' mga file</h3>
-	Ang opsyon na ito ay nagpapaliwanag kung ang spider ay spider ang
-	robots.txt mga file na makikita sa mga website, magsiyasat tungkol sa mga link sa mga pinagkukunan.
-	Ang opsyong ito ay hindi ipinapaliwanag kung ang spider ay sumusnod sa mga kautusan
-	inilagay ng robots.txt file.
+	<h3>Ang parse"robots,txt' na mga payl</h3>
+	Ang opsyon na ito na tinutukoy habang ang ispayder ay dapat na ispayder din sa robot.txt na mga payl na makikita sa mga website,ang paghahanap para sa mga link sa mga pinagmumulan.
+	Ang mga opsyon na ito ay hindi matutukoy habang ang ispayder ay dapat na masundan ang mga patakaran na ipinapataw sa pamamagitan ng robot.txt na payl.
 
-	<h3>Hawakan ang OData-natatangi mga paramiter</h3>
-	Ang opsyong ito ay nagpapaliwanag kung ang spider ay susubukan na alamin ang natatanging mga paramiter ng OData
-	 (i.e. pinagkukunan tagapagpaliwanag) sa utos na maayos na i-proseso nila
-	ayon sa mga rule na kanilang ipinaliwanag sa pamamagitan ng "Humahawak sa mga paramiter ng pag-usisa" opsyon.
+	<h3>Ang paghawak ng OData-specific na mga parametro</h3>
+	Ang opsyon na ito na tumutukoy habang ang ispayder ay dapat na subukang malaman ang OData-specific
+na mga parametro (i.e. ang mga pinagmumulan ng mga pagkakakilanlan) sa kaayusan ng pagpapatakbo ng maayos sa kanila ayon sa mga patakaran ng tinukoy sa pamamagitan ng "paghawak ng mga tanong ng mga parametro" ng opsyon.
 
-	<h2>Tingnan din</h2>
+	<h2>Tingnan din sa</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../overview.html">UI Overview</a></td>
-			<td>para sa overview ng interface ng gumagamit</td>
+			<td><a href="../../overview.html">Ang pangkalahatang-idea ng UI</a></td>
+			<td>para sa pangkalahatang -idea ng mga gumamit ng interface</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../../start/concepts/spider.html">Spider</a></td>
-			<td>para sa pag-overview ng Spider</td>
+			<td><a href="../../../start/features/spider.html">Ang ispayder</a></td>
+			<td>para sa isang pangkalahatang-idea ng mga ispayder</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../../ui/tabs/spider.html">Spider Tab</a></td>
-			<td>para sa overview ng Spider tab</td>
+			<td><a href="../../../ui/tabs/spider.html">Ang tab ng ispayder</a></td>
+			<td>para sa isang pangkalahatang -idea ng mga tab ng ispayder</td>
 		</tr>
 	</table>
 

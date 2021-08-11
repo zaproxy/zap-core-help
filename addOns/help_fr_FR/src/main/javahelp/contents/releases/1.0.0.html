@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Version 1.0.0
+</title>
+</head>
+<body>
+<h1>Version 1.0.0</h1>
+<p>
+Les modifications suivantes ont été apportées dans cette version :
+</p>
+<h2>Changements majeurs :</h2>
+
+<h3>Écrans d'aide</h3>
+Les écrans d'aide ont été ajoutés pour toutes les fonctionnalités actuellement offertes par ZAP.<br/>
+L'aide contextuelle a également été implémentée afin que lorsque vous appuyez sur la touche F1, l'écran d'aide associé à l'onglet que vous avez sélectionné s'affichera.
+
+<h3>Breakpoints</h3>
+L'implémentation des <a href="../start/features/breakpoints.html">Breakpoints</a> a été changé pour être plus proche de celle fournie par les logiciels d'Environnements de Développement Intégrés.<br/>
+The breakpoint controls have been moved to the new <a href="../ui/tltoolbar.html">Barre d'outils de Haut Niveau</a>.<br/>
+Breakpoints can now also be set by right clicking nodes in the 
+<a href="../ui/tabs/sites.html">Sites</a> et les <a href="../ui/tabs/history.html">Onglets d'Histoire</a>.
+
+<h3>Menu du rapport</h3>
+Le <a href="../ui/tlmenu/report.html">Menu du rapport</a> a été significativement changé et inclut maintenant les objets du menu suivants :
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Génération de rapport...</td><td>Qui maintenant génère des rapports sur demande</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Exporter les messages dans un fichier...</td><td>Déplacé depuis le <a href="../ui/tlmenu/file.html">Menu du fichier</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Exporter la réponse dans un fichier...</td><td>Déplacé depuis le <a href="../ui/tlmenu/file.html">Menu du fichier</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Exporter TOUTES les URLs dans un fichier...</td><td>Nouvelle fonctionnalité</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Comparer avec une autre session...</td><td>Nouvelle fonctionnalité</td></tr>
+</table>
+
+<h3>Amélioration de la recherche de l'histoire</h3>
+La nouvelle <a href="../ui/tabs/search.html">Barre de Recherche</a> vous permet de rechercher des expressions régulières dans toutes les URLs, les demandes et les réponses. <br/>
+Les boutons Suivant et Précédent vous permettent de voir les termes de votre recherche dans la 
+<a href="../ui/tabs/request.html">Requête</a> et <a href="../ui/tabs/response.html">Onglets de Réponse</a>. <br/>
+
+<h3>Filtre de l'histoire</h3>
+<a href="../ui/tabs/history.html">La barre d'outils du filtre de l'histoire</a> a été ajoutée et elle vous permet de limiter les demandes qui sont affichées.<br/>
+Les requêtes peuvent être filtrées selon les méthodes HTTP, les codes de résultat HTTP, et tous les <a href="../start/features/tags.html">tags</a>, <a href="../start/features/alerts.html">les alertes</a>, ou
+<a href="../start/features/notes.html">les notes</a> qui ont été appliquées.    
+
+<h3>Notes</h3>
+Il est maintenant possible d'associer <a href="../start/features/notes.html">les notes</a> lors d'une requête.    
+
+<h3>Les Tags Multiples</h3>
+Il est maintenant possible d'associer plusieurs <a href="../start/features/tags.html">tags</a> lors d'une requête.    
+
+<h3>Plus de contrôle sur les alertes</h3>
+La <a href="../ui/dialogs/addalert.html">Boîte de Dialogue d'Alerte</a> vous permet d'ajouter ou de changer manuellement une alerte. 
+
+<h3>Nouvel encodeur/décodeur</h3>
+A new Encode/Decode/Hash dialog has replaced the previous 
+Encoder/Decoder. 
+
+<h3>Scan Passif</h3>
+<a href="../start/features/pscan.html">Passive scanning</a> has been added.<br/>
+In this release ZAP will only use passive scanning for automatically adding <a href="../start/features/tags.html">tags</a>.<br/>
+In future releases it may also raise <a href="../start/features/alerts.html">alerts</a> for potential issues. 
+    
+<h2>Changements mineurs :</h2>
+
+<h3>La Barre d'outils de Haut Niveau</h3>
+<a href="../ui/tltoolbar.html">The Top Level Toolbar</a> has been added which
+provides a set up buttons for commonly used functionality. 
+
+<h3>Résumés des alertes dans le pied de page</h3>
+Counts of the High, Medium, Low and Informational <a href="../start/features/alerts.html">alerts</a>
+are now displayed in the <a href="../ui/footer.html">footer</a>.
+
+<h3>Nouveau look</h3>
+A new look and feel 'Nimbus' is used.
+
+<h3>Gestion de mot de passe Proxy</h3>
+<a href="../ui/dialogs/options/connection.html">The Options Connection screen</a> has a new option to 
+'Prompt for proxy credentials on start up'.<br/>
+If this option is selected then your proxy password will not be stored on the hard disk.  
+
+<h3>Renvoyer depuis les onglets des Sites</h3>
+The <a href="../ui/tabs/sites.html">Sites tab</a> has a new right click menu item that allows
+you to resend the request after making any changes to it that you want to.  
+
+<h3>Répertoire de l'utilisateur maintenu entre les sessions</h3>
+The last directory used by the user is now stored in the config file so that it is
+maintained between sessions.
+
+<h2>Voir aussi</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Introduction</a></td><td>l'introduction de ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Versions</a></td><td>l'ensemble complet des versions</td></tr>
+</table>
+</body>
+</html>

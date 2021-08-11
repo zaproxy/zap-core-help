@@ -6,20 +6,24 @@
 Tela de opções dos vetores de entrada da varredura ativa
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Tela de Entrada de opções para Vetores de Varredura Ativa</h1>
 <p>
-Esta tela permite que você configure a entrada de vetores para <a href="../../../start/concepts/ascan.html">varredura ativa</a> .<br>
+Esta tela permite que você configure a entrada de vetores para <a href="../../../start/features/ascan.html">varredura ativa</a> .<br>
 Estes são os elementos que a varredura ativa irá atacar.<br>
 Varrer todos os elementos disponíveis vai demorar mais, mas não varrer alguns deixará escapar algumas vulnerabilidades.
 
 <h3>Alvos injetáveis</h3>
 Os elementos de request que o scanner ativo terá como alvo:
 
-<h4>URL Query String & Data Driven Nodes</h4>
+<h4>String de consulta de URL e nós orientados a dados</h4>
 Par de valores-chave na URL query, ou seja, depois do '?' <code>?</code>.<br>
-If there are no query parameters then an arbitrary one will be tested.  
-If <a href="../../../start/concepts/ddc.html">Data Driven Nodes</a> are defined within a Context they will be tested.
+If <a href="../../../start/features/ddc.html">Nós orientados por dados</a> são definidos dentro de um contexto em que serão testados.
+
+<h5>Add URL Query Parameter?</h5>
+When selected ZAP will add a query parameter to GET requests which did not originally have one. 
+This may increase scan time, however, it may also reveal issues that would otherwise go un-noticed.
+
 <h4>Dados do POST</h4>
 Key value pairs in the request POST data.
 
@@ -29,7 +33,7 @@ Path elements in the request URL, ie the elements separated by <code>/</code>.
 <h4>Cabeçalhos HTTP</h4>
 Request HTTP Headers.
 
-<h5>Todas as solicitações</h5>
+<h5>All Requests</h5>
 Allows to scan the HTTP Headers of all requests. Not just requests that send parameters, through the query or request body.
 
 <h4>Dados do cookie</h4>
@@ -54,6 +58,9 @@ which are not supported by default.
 
 <p>
 Esta tela também permite a você configurar os parâmetros a serem ignorados pela varredura ativa.
+<br />
+Refer to <code>Parameter</code> section in <a href="../addalert.html">Add Alert</a> dialogue for more details about the
+parameter names.
 
 <h2>Leia também</h2>
 <table>

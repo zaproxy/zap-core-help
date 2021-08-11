@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Oturum Yönetimi</title>
+</head>
+<body>
+	<h1>Oturum Yönetimi</h1>
+	<p>
+		ZAP, çoklu oturum yönetimi tiplerini (<b> Oturum olarak anılır) işlemektedir
+Yönetim Yöntemleri </>) web siteleri / webapps için kullanılabilir. Her <b><a
+			href="contexts.html"> Bağlamı </>, bir Oturum Yönetimi
+Oturumların nasıl tutulacağını belirleyen yöntem.
+	</p>
+
+	<h3>
+		<a name="cbsm">Çerez Temelli Oturum Yönetimi</a>
+	</h3>
+	<p>
+		In the case of this method the session is being tracked through
+		cookies. Currently, the session tokens that are used are imported from
+		the <a href="httpsessions.html">HTTP Sessions</a> Extension.
+	</p>
+
+	<h3>
+		<a name="hasm">HTTP Kimlik Doğrulama Oturum Yönetimi</a>
+	</h3>
+	<p>
+		In the case of this method the session is managed with HTTP request header <code>Authorization</code>.
+	</p>
+
+	<h3>
+		<a name="sbsm">Script-Based Session Management</a>
+	</h3>
+	<p>
+		This method is useful for websites / webapps where the session management is a more complex one and some custom
+		scripts that handle the process are beneficial. To use this method, you must first define a Session Management script
+		which analyses messages or performs other actions as needed by your web-application. This script is then selected for use for a given Context
+		and it is called whenever session management actions are performed. 
+		Configuration can be done using the <a href="../../ui/dialogs/session/contexts.html#sm">Session
+			Contexts Dialog</a> and requires you to have the Scripts Console ZAP Addon installed from the Marketplace.
+	</p>
+
+	<h2>Via Yapılandırması</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/session/contexts.html#sm">Oturum, toplantı, celse
+Bağlam Diyaloğu</a></td>
+			<td></td>
+		</tr>
+	</table>
+
+	<h2>Ayrıca bakınız</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="https://youtu.be/cR4gw-cPZOA">Youtube öğretici</a></td>
+			<td>zAP'ın Kimlik Doğrulama, Oturum Yönetimi ve Kullanıcı Yönetimi özelliklerinin [https://youtu.be/cR4gw-cPZOA'ya harici bağlantı].</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/overview.html">UI Genel Bakış</a></td>
+			<td>kullanıcı ara yüzüne genel bakış için</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="features.html">Özellikler</a></td>
+			<td>zAP tarafından sağlanmaktadır</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/session/contexts.html">Oturum, toplantı, celse
+Bağlam Diyaloğu</a></td>
+			<td>oturum Özellikleri'ne genel bakış için</td>
+		</tr>
+
+	</table>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Release 1.3.0
+</title>
+</head>
+<body>
+<h1>1.3.0 ریلیز</h1>
+<p>
+اس رہائی میں مندرجہ ذیل تبدیلیاں کی گئی تھیں:
+</p>
+<h2>اہم تبدیلیاں:</h2>
+
+<h3>فجینگ</h3>
+ایک جواب میں ہڑتال اب کمزوریاں تلاش کرنے کی کوشش کرنے کے لئے پریشان ہوسکتی ہیں.<br>
+فجینگ کرتے وقت اینٹی CSRF ٹکنز کا پتہ چلا اور خود کار طریقے سے دوبارہ تخلیق کیا جاسکتا ہے.<br/>
+یہ فعالیت OWASP JBroFuzz پروجیکٹ سے کوڈ پر مبنی ہے.
+
+<h3>متحرک SSL سرٹیفکیٹ</h3>
+ایس ایس ایل کنکشن کے لئے تعاون بہتر اور آسان کیا گیا تھا.<br>
+یوزر کا اب اپنا اپنا جڑ سرٹیفکیٹ تشکیل دے سکتا ہے اور اسے اپنے HTTP گاہکوں میں تقسیم کر سکتا ہے.<br>
+دیکھو <a href="../ui/dialogs/options/dynsslcert.html">اختیاری: متحرک SSL سرٹیفکیٹس</a> مزید تفصیلات کے لیے.  
+
+<h3>ڈیمون موڈ اور API</h3>
+"ڈیڈینیم" کمانڈ لائن اختیاری کے ساتھ ZAP شروع کرنا اس کے نتیجے میں 'سرless' موڈ میں پس منظر میں چلاتا ہے،
+مطلب یہ ہے کہ کوئی UI نہیں دکھایا گیا ہے.<br>
+ایک ابتدائی API کو XML، JSON اور HTML میں لاگو کیا گیا ہے.<br>
+اگر ZAP ڈیمون کے طور پر چل رہا ہے تو API خود بخود فعال ہوجاتا ہے، دوسری صورت میں API کو API API کے ذریعے فعال ہونا ضروری ہے.<br>
+API آپ کے براؤزر میں ZAP کے ذریعے proxying جب http: // زپ / کھولنے کی طرف سے نیویگیشن کیا جا سکتا ہے. 
+
+<h3>بیشیل انضمام</h3>
+اس قدر <a href="http://www.beanshell.org/">بین شیل</a> ایک انٹرایکٹو جاوا شیل ہے جو BeanShell سکرپٹ کو عمل کرنے کے لئے استعمال کیا جا سکتا ہے.<br> 
+یہ سکرپٹ جاوا کے ایک سادہ شکل ہیں جو جاوا نحو سے بہت سے عناصر کا استعمال کرتے ہیں، لیکن ایک آسان سکرپٹ کی شکل میں. <br>
+تمام جاوا کوڈ بھی درست شین شیل کوڈ ہے.<br>
+OWASP ZAP میں بین انضمام آپ کو ZAP افعال اور ڈیٹا سیٹ کا استعمال کرکے سکرپٹ لکھنے کے قابل بناتا ہے.<br> 
+یہ ویب ایپلی کیشنز کا تجزیہ کرنے کے لئے بہت طاقتور خصوصیت ہوسکتی ہے.<br>
+
+
+<h3>مکمل بین الاقوامی کاری</h3>
+تمام ڈسپلے سٹرنگ اب مکمل طور پر بین الاقوامی بنائے جاتے ہیں.
+
+<h3>Localisation</h3>
+Out of the box support for the following languages:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>English</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Brazilian Portuguese</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Chinese</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>French</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>German</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Greek</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Indonesian</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Japanese</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Polish</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Spanish</td></tr>
+</table>
+
+
+<h2>Minor changes:</h2>
+
+<h3>Hex view</h3>
+The <a href="../ui/tabs/request.html">Request</a>, <a href="../ui/tabs/response.html">Response</a> tabs now provide
+a 'Hex View' option which will display the request and response bodies in hex format. 
+
+<h3>Search results</h3>
+The <a href="../ui/tabs/search.html">Search tab </a> now displays all instances of a string found rather than just the first instance
+in each request or response. 
+
+<h3>Exclude URLs</h3>
+URLs can be explicitly excluded from the active scanner, spider and from the proxy.
+
+<h3>Copy support</h3>
+Most of the panels now provide a 'right click' 'Copy' menu option, including the Port Scan and Brute Force panels.
+
+<h3>Undo/Redo support</h3>
+All of the input fields now support Undo/Redo actions using the operating systems default Undo/Redo accelerators:
+<ul>
+<li>Windows/Linux: Ctrl+Z / Ctrl+Y
+<li>Mac OS X: Cmd+Z / Cmd+Shift+Z
+</ul>
+
+<h3>Port scanner proxy support and timeout option</h3>
+The Port Scanner can now use the outgoing proxy (if configured) and the timeout in milliseconds can also now be set.
+
+<h3>Request and response break buttons</h3>
+There are now 2 'Set Break' buttons to allow breaks to be set on all requests and all responses independently. 
+
+<h3>Expand Sites and Information tab buttons</h3>
+There are now 2 buttons which allow you to switch between having the Sites and Information tabs expanded.
+
+<h3>Break tab icon changes colour when breakpoint hit</h3>
+While the Break tab is not in use its icon is a grey cross: &nbsp;
+<img src="../images/16/101grey.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
+When a <a href="../start/features/breakpoints.html">breakpoint</a> is hit the tab icon is changed 
+to a red cross: &nbsp;
+<img src="../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
+
+<h3>Adjustable timeout</h3>
+The <a href="../ui/dialogs/options/connection.html">Option: Connection</a> screen allows you to set the timeout in seconds
+to make it easier to test slow applications.
+
+<h3>Library updates</h3>
+Most of the libraries used by ZAP have been updated to the latest versions.
+
+<h3>A new icon :)</h3>
+Thanks to Simon Egli and all others for submitting cool icon suggestions.
+
+<h2>Known issues:</h2>
+<h3>Mac OS X: Dynamic SSL and Google Chrome</h3>
+Currently Dynamic SSL is not working when using Google Chrome. This is because of an unresolved known issue with Google Chrome and Mac OS X Keychain. When importing OWASP ZAP's Root CA into the keychain and requesting a SSL website, an "Invalid certificate" error message is shown.
+
+<h2>See also</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+</table>
+</body>
+</html>

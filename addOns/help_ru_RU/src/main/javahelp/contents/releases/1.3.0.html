@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Выпуск 1.3.0
+</title>
+</head>
+<body>
+<h1>Выпуск 1.3.0</h1>
+<p>
+В этом выпуске были внесены следующие изменения:
+</p>
+<h2>Важные перемены:</h2>
+
+<h3>Fuzzing</h3>
+Строки в ответе теперь могут быть заполнены, чтобы попытаться найти уязвимости.<br>
+Анти маркеры CRSF можно обнаружить и автоматически восстанавливаются при фаззинг.<br/>
+Эта функциональность основана на коде из проекта OWASP JBroFuzz.
+
+<h3>Динамические SSL-сертификаты</h3>
+Поддержка SSL-соединений была улучшена и упрощена.<br>
+Теперь пользователь может создать свой собственный корневой сертификат и распространить его на свои HTTP-клиенты.<br>
+Прочитайте <a href="../ui/dialogs/options/dynsslcert.html">Вариант: динамические сертификаты SSL</a> более подробный.  
+
+<h3>Режим демона и API</h3>
+Начиная зап с "демона" в командной строке, чтобы запустить в фоновом режиме в безголовый режим, 
+это означает, что пользовательский интерфейс не отображается.<br>
+Начальный API был реализован в XML, JSON и HTML.<br>
+Если зап запущен в качестве демона, то API включена автоматически, в противном случае API должен быть включен через экран АПИ функции.<br>
+Для навигации по API можно открыть http://zap / в вашем браузере при проксировании через ZAP. 
+
+<h3>Интеграция с BeanShell</h3>
+The <a href="http://www.beanshell.org/">BeanShell</a> это интерактивный Шелл java, которая может быть использована для выполнения beanshell скрипты.<br> 
+Эти сценарии являются упрощенной формой Java, которые используют много элементов из синтаксиса Java, но в более простом формате сценариев. <br>
+Все java-код и валидный код состоит.<br>
+Интеграция состоит в список зап позволяет писать скрипты с использованием зап функции и набор данных.<br> 
+Это может быть очень мощным инструментом для анализа веб-приложений.<br>
+
+
+<h3>Полная интернационализация</h3>
+Все строки отображения теперь полностью интернационализированы.
+
+<h3>Локализация</h3>
+Из коробки поддержка следующих языков:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Английский</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Португальский (Бразилия)</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Chinese</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>French</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>German</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Greek</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Indonesian</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Japanese</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Polish</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Spanish</td></tr>
+</table>
+
+
+<h2>Minor changes:</h2>
+
+<h3>Hex view</h3>
+The <a href="../ui/tabs/request.html">Запрос</a>, <a href="../ui/tabs/response.html">Ответ</a> вкладки теперь обеспечивают
+Опция "Hex View", которая будет отображать тела запроса и ответа в шестнадцатеричном формате. 
+
+<h3>Search results</h3>
+The <a href="../ui/tabs/search.html">Search tab </a> теперь отображаются Все экземпляры найденной строки, а не только первый экземпляр
+в каждом запросе или ответе. 
+
+<h3>Exclude URLs</h3>
+Url-адреса могут быть явно исключены из активного сканера, spider и из прокси-сервера.
+
+<h3>Поддержка копирования</h3>
+Большинство панелей теперь предоставляют опцию меню "правой кнопкой ""копировать", включая панели сканирования портов и грубой силы.
+
+<h3>Undo/Redo support</h3>
+Все поля ввода теперь поддерживают действия отмены / повтора с использованием ускорителей отмены/повтора по умолчанию для операционных систем:
+<ul>
+<li>Windows/Linux: Ctrl+Z / Ctrl+Y
+<li>Mac OS X: Cmd+Z / Cmd+Shift+Z
+</ul>
+
+<h3>Поддержка прокси-сервера сканера портов и опция тайм-аута</h3>
+Теперь сканер портов может использовать исходящий прокси (если он настроен), а также можно задать время ожидания в миллисекундах.
+
+<h3>Request and response break buttons</h3>
+Теперь есть 2 "Set Break" кнопки, чтобы позволить перерывы должны быть установлены на все запросы и все ответы независимо друг от друга. 
+
+<h3>Разверните вкладки сайты и информация</h3>
+Теперь есть 2 кнопки, которые позволяют переключаться между сайтами и информацией вкладки расширенные.
+
+<h3>Break tab icon changes colour when breakpoint hit</h3>
+While the Break tab is not in use its icon is a grey cross: &nbsp;
+<img src="../images/16/101grey.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
+When a <a href="../start/features/breakpoints.html">breakpoint</a> is hit the tab icon is changed 
+to a red cross: &nbsp;
+<img src="../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
+
+<h3>Adjustable timeout</h3>
+The <a href="../ui/dialogs/options/connection.html">Option: Connection</a> экран позволяет установить тайм-аут в секундах
+чтобы упростить тестирование медленных приложений.
+
+<h3>Library updates</h3>
+Большинство библиотек, используемых ZAP, обновлены до последних версий.
+
+<h3>A new icon :)</h3>
+Благодаря Саймон Эгли и все другие для представления прохладно предложения значок.
+
+<h2>Known issues:</h2>
+<h3>Mac OS X: Dynamic SSL and Google Chrome</h3>
+Currently Dynamic SSL is not working when using Google Chrome. This is because of an unresolved known issue with Google Chrome and Mac OS X Keychain. При импорте корневого ЦС OWASP ZAP в связку ключей и запросе веб-сайта SSL отображается сообщение об ошибке "недопустимый сертификат".
+
+<h2>See also</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Introduction</a></td><td>введение в зап</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Releases</a></td><td>полный набор релизов</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Credits</a></td><td>люди и группы, которые сделали этот релиз возможным</td></tr>
+</table>
+</body>
+</html>

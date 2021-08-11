@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  Release 2.7.0
+</title>
+</head>
+<body>
+<h1>Release 2.7.0</h1>
+
+This is a bug fix and enhancement release, which requires a minimum of Java 8.<br><br>
+Some of the more significant enhancements include:
+<ul>
+<li>Browser launch included by default - this allows you to launch browsers from ZAP that are preconfigured to proxy 
+through ZAP and ignore the certificate warnings due to the ZAP root certificate.</li>
+<li>Allow ZAP to listen on multiple addresses/ports</li>
+<li>Support Server Name Indication</li>
+<li>Updated NTLM engine implementation - this fixes the cases where the domain is being validated and improves interoperability with other (server) NTLM implementations</li>
+<li>Lots of new API endpoints - see below for details</li>
+</ul>
+Note that if you do have any problems with this release then there is also a new 'Help/Support Info...' menu item 
+that provides essential information about your ZAP installation which you should include with any issues you raise.
+
+<h2>Enhancements:</h2>
+<ul>
+<li>Issue 1015 : Support Server Name Indication</li>
+<li>Issue 1313 : Spider - Allow to configure the size limit of parseable responses</li>
+<li>Issue 1604 : Import policy file via API</li>
+<li>Issue 1620 : Add endpoint to get number of alerts grouped by risk level</li>
+<li>Issue 1681 : Change 'Active Scan' to show the last n requests instead of the first ones</li>
+<li>Issue 2411 : Warn if dynamic SSL root CA certificate is expired</li>
+<li>Issue 2615 : Filtering ZAP Reports to Show High Risk Items</li>
+<li>Issue 3040 : Export param tab contents</li>
+<li>Issue 3101 : Allow add-ons to use Semantic Versioning</li>
+<li>Issue 3156 : Use G1 as default garbage collector</li>
+<li>Issue 3253 : Export URLs Per Context</li>
+<li>Issue 3365 : Enhancement: Additional Global Exclude default patterns</li>
+<li>Issue 3367 : Expose ZAP's home dir path through the ZAP API</li>
+<li>Issue 3374 : Adjust to more user favorable column widths</li>
+<li>Issue 3381 : i18n Core Extension Names</li>
+<li>Issue 3387 : Allow esc to close AbstractFormDialog</li>
+<li>Issue 3392 : Show all messages sent by the Spider</li>
+<li>Issue 3395 : Add option to spider anonymously with a session</li>
+<li>Issue 3398 : Increase limit of global script variables' value</li>
+<li>Issue 3404 : Add new Default CSRF Token for OWASP CSRF Guard</li>
+<li>Issue 3408 : Improve error handling when resetting the options</li>
+<li>Issue 3443 : Expose Alerts options through the ZAP API</li>
+<li>Issue 3446 : Enhancement: Add ability to export a Site Map via Context Menu</li>
+<li>Issue 3457 : Allow to filter core view "urls" by base URL</li>
+<li>Issue 3460 : Enhancement: Provide help finding the Log directory in the UI</li>
+<li>Issue 3461 : Enhancement: Browse API Doesn't work when browser isn't using ZAP as proxy</li>
+<li>Issue 3476 : Allow passive rules to choose the type of msgs</li>
+<li>Issue 3481 : Export Tables via UI</li>
+<li>Issue 3498 : Minor Enhancement: Support Same Columns in Search Results as History Tab</li>
+<li>Issue 3500 : Allow to manage messages' tags in multiple tabs</li>
+<li>Issue 3508 : Use newer ECMAScript engine if available</li>
+<li>Issue 3514 : Allow to obtain multiple messages by ID</li>
+<li>Issue 3521 : Enhancement Request: Add Filter To Passive Scan Rules Options Panel</li>
+<li>Issue 3527 : Update baseline script to support python 3</li>
+<li>Issue 3529 : Allow to add tags with Passive Rules</li>
+<li>Issue 3533 : Additional Table Export Buttons</li>
+<li>Issue 3539 : Enhancement: Collect messages to scan before active scanning</li>
+<li>Issue 3552 : Expose message's tags through the ZAP API</li>
+<li>Issue 3559 : ZAP API option to output report in JSON format</li>
+<li>Issue 3574 : Show the add-on name in Extensions panel</li>
+<li>Issue 3587 : Allow to use system's locale for formatting</li>
+<li>Issue 3595 : Print args and error msg when failed to parse args</li>
+<li>Issue 3599 : Always attack Data Driven Nodes </li>
+<li>Issue 3619 : Show plugin as OFF, in policy panels, if disabled</li>
+<li>Issue 3626 : Allow to delete messages with keyboard shortcut</li>
+<li>Issue 3676 : Enhancement: Delete single Alert using the api</li>
+<li>Issue 3681 : Use number spinner for connection timeout</li>
+<li>Issue 3686 : Allow to select alert's CWE/WASC IDs and Source</li>
+<li>Issue 3688 : Show scanner's ID/name in Alert tab</li>
+<li>Issue 3691 : Modernized and refined HTML reports</li>
+<li>Issue 3700 : Ensure panel with validation errors is visible</li>
+<li>Issue 3714 : Spider - report # of new endpoints discovered</li>
+<li>Issue 3727 : Sites Tree Alpha Sort should ignore HTTP Method</li>
+<li>Issue 3733 : Ascan API - Return alert count for each scanner</li>
+<li>Issue 3739 : Allow to skip pending scanners</li>
+<li>Issue 3765 : Show alert count in Scan Progress dialogue</li>
+<li>Issue 3769 : Add Check for Updates toolbar button</li>
+<li>Issue 3770 : Clear dockerfiles</li>
+<li>Issue 3782 : Add msg and alert count to active scans API view</li>
+<li>Issue 3787 : Added passive scan timeout</li>
+<li>Issue 3793 : Allow to filter Keyboard options panel</li>
+<li>Issue 3808 : added bare docker image file</li>
+<li>Issue 3810 : Add JSON output support to zap-full-scan.py</li>
+<li>Issue 3818 : Change right-click "Resend..." to "Send to Manual Request Editor"</li>
+<li>Issue 3836 : Allow IPv6 loopback address to access the API by default</li>
+<li>Issue 3837 : Add anoncsrf as anticsrf token name</li>
+<li>Issue 3851 : Spider New Scan UI Consistency</li>
+<li>Issue 3871 : Default to checking for updates on start</li>
+<li>Issue 3878 : Support persistent connections in the API</li>
+<li>Issue 3910 : Allow to skip scanners through the API</li>
+<li>Issue 3918 : improved docker file</li>
+<li>Issue 3922 : Refactor target access in docker scripts</li>
+<li>Issue 3931 : Minor Enhancement to Very large response body message</li>
+<li>Issue 3977 : Include spider messages when comparing sessions</li>
+<li>Issue 3983 : Allow ZAP to listen on multiple addresses/ports</li>
+<li>Issue 3992 : Allow to enable code folding in body text views</li>
+<li>Issue 3993 : Added checkbox secure to callback option dialog. </li>
+<li>Issue 4001 : Allow to delete a Context with keyboard shortcut</li>
+<li>Issue 4049 : Allow to delete alerts with keyboard shortcut</li>
+<li>Issue 4053 : AlertViewPanel line wrapping</li>
+<li>Issue 4055 : New splash screen</li>
+<li>Issue 4061 : Update NTLM engine implementation</li>
+<li>Issue 4063 : Validate that -cmd and -daemon are not both set</li>
+<li>Issue 4066 : Improve error message in script API</li>
+</ul>
+
+<h2>Bug fixes:</h2>
+<ul>
+<li>Issue 765 : Ctrl-F key doesnt work on Resend / Manual Request Editor dialogs</li>
+<li>Issue 1222 : False positive: XSS scanning</li>
+<li>Issue 1984 : Alerts API should always return 'evidence' (and all other keys)</li>
+<li>Issue 2375 : Unable to change Mode without main tool bar</li>
+<li>Issue 2496 : ZAP only report the first alert in array</li>
+<li>Issue 2744 : Unable to enable/disable Forced User mode without main tool bar</li>
+<li>Issue 2756 : Class loading deadlock when loading httpsender script from API call and spidering</li>
+<li>Issue 2989 : Redirect history not recorded when resend request</li>
+<li>Issue 3154 : Execution Order for Plugins Displayed in Scan Progress Details, Progress Tab</li>
+<li>Issue 3207 : History tab cleared when session persisted</li>
+<li>Issue 3284 : Accept underscores in hostnames</li>
+<li>Issue 3289 : Proxy excluded URLs still processed by ZAP</li>
+<li>Issue 3350 : wrong comparison of HTTP Messages in queryEquals() method of HttpMessage class</li>
+<li>Issue 3351 : the url disappear when i click it</li>
+<li>Issue 3353 : ZAP API View:contextList method returns a string instead of JSON list</li>
+<li>Issue 3359 : Missing Help details Options Connection screen</li>
+<li>Issue 3363 : Spider Messages View Includes Underused Tags Column</li>
+<li>Issue 3377 : ZAP can no longer load non UTF8 scripts</li>
+<li>Issue 3382 : Fix "internal error" in ScriptAPI</li>
+<li>Issue 3394 : Enable Session Tracking (Cookie) option not persisted</li>
+<li>Issue 3397 : Do not uninstall a file if it no longer exists</li>
+<li>Issue 3411 : Clear cached certs when setting Root CA cert</li>
+<li>Issue 3440 : Log Exception when the provided config file could not be parsed</li>
+<li>Issue 3456 : Bug: Paused Scans Wiped Out when Persisting a Session</li>
+<li>Issue 3459 : Prescan Output is Confusing. Please Clarify.</li>
+<li>Issue 3490 : Poor font rendering on linux</li>
+<li>Issue 3531 : Docker scripts might get stuck on "Records to passive scan" seemingly indefinitely</li>
+<li>Issue 3555 : Changing Session Name, doesn't Update the Window Name</li>
+<li>Issue 3571 : Require extension's dependencies during extension loading</li>
+<li>Issue 3590 : Set installation status to marketplace add-ons</li>
+<li>Issue 3591 : Correctly check for add-on updates on dep calc</li>
+<li>Issue 3620 : Return correct error on missing auth parameters</li>
+<li>Issue 3621 : Sync HistoryReference cache in ExtensionHistory</li>
+<li>Issue 3632 : Do not close session when changing its properties</li>
+<li>Issue 3633 : "Generate Anti-CSRF Test Form" not working</li>
+<li>Issue 3648 : Correct state of adv option in Spider dialogue</li>
+<li>Issue 3667 : Markdown report heading format issue</li>
+<li>Issue 3673 : API: sendHarRequest results in error if redirects are true</li>
+<li>Issue 3675 : Sites tree option Show only URLs in Scope not working</li>
+<li>Issue 3692 : zap-api-scan.py correct path handling</li>
+<li>Issue 3696 : Correct API response for outgoing proxy changes</li>
+<li>Issue 3703 : org.parosproxy.paros.db.DatabaseException: java.sql.SQLException: Can not issue executeUpdate() or executeLargeUpdate() for SELECTs</li>
+<li>Issue 3711 : Session snapshots might "break" running scans</li>
+<li>Issue 3723 : Properly reset Database options panel</li>
+<li>Issue 3748 : Automatically skip dependent scanners</li>
+<li>Issue 3759 : Update version check in zap.sh script for Java 9</li>
+<li>Issue 3771 : Add-on files not updated when running newer ZAP/core version</li>
+<li>Issue 3779 : Can't open the Resend window because of missing font</li>
+<li>Issue 3799 : Declare ExtensionDynSSL as supporting low mem</li>
+<li>Issue 3825 : Show error if failed to active the certificate</li>
+<li>Issue 3827 : mysql NULL value in where in CLAUSE</li>
+<li>Issue 3832 : Errors in Input Vector Templates</li>
+<li>Issue 3849 : Pscanrule Content Type Missing not working with Spider messages</li>
+<li>Issue 3854 : Error whilst using Api - ERROR ExtensionUserManagement - Unable to persist Users</li>
+<li>Issue 3889 : Initialise the source of the Alert always</li>
+<li>Issue 3895 : JSON Input Vector fails if string has quoted chars</li>
+<li>Issue 3907 : Normalise form-based login URL validation/usage</li>
+<li>Issue 3912 : VariantDirectWebRemotingQuery might hang in infinite loop</li>
+<li>Issue 3914 : Use ZapVersions.xml file in Docker images</li>
+<li>Issue 3927 : zap-full-scan on docker tries to reach out to external network</li>
+<li>Issue 3955 : Database too small to handle large login request bodies</li>
+<li>Issue 3965 : Empty Cookie header causes errors</li>
+<li>Issue 3969 : Logged in/out indicators not persisted when cleared</li>
+<li>Issue 4004 : zap.bat should use %USERPROFILE% instead of %HOMEDRIVE%%HOMEPATH%</li>
+<li>Issue 4013 : Sending to the Callback Endpoint while proxying through ZAP logs an error</li>
+<li>Issue 4014 : Issue when attempting to ignore all rules for a URL</li>
+<li>Issue 4028 : Warn when check for updates fails</li>
+<li>Issue 4056 : Use realm as domain for NTLM authentication</li>
+<li>Issue 4065 : Deleting a parent URL in History tab should not delete all child URLs</li>
+<li>Issue 4079 : Cookie with unknown path is falsely rejected by ZAP</li>
+</ul>
+
+<h2>ZAP API Breaking Changes:</h2>
+
+<h3>ACTION authentication / setAuthenticationMethod</h3>
+The authentication type "formBasedAuthentication" will now require the login URL always in encoded form. The change ensures the
+login URL is used/sent as it was specified. Previously it would accept partially encoded URLs but they would be re-encoded when
+used, potentially leading to a different URL being used/sent.
+
+<h3>VIEW context / contextList</h3>
+
+This change will break the consumers that were manually parsing/extracting the names from the string. The structure of the data
+returned was changed to properly separate each name:
+<blockquote><pre><code>
+{"contextList":["Context 1","Context 2"]}
+</code></pre></blockquote>
+and:
+<blockquote><pre><code>
+&lt;contextList type="list"&gt;
+    &lt;contextName&gt;Context 1&lt;/contextName&gt;
+    &lt;contextName&gt;Context 2&lt;/contextName&gt;
+&lt;/contextList&gt;
+</code></pre></blockquote>
+
+instead of:
+<blockquote><pre><code>
+{"contextList":"[Context 1, Context 2]"}
+</code></pre></blockquote>
+and:
+<blockquote><pre><code>
+&lt;contextList&gt;[Context 1, Context 2]&lt;/contextList&gt;
+</code></pre></blockquote>
+
+<h3>VIEW core / setOptionUseProxyChain</h3>
+Changed to return <code>FAIL</code> if the outgoing proxy was not enabled (because the required address/hostname was not
+previously set), before it would return always <code>OK</code>.
+
+<h2>ZAP API Changed Endpoints:</h2>
+
+<h3>VIEW core / alerts</h3>
+Added optional riskId parameter to facilitate filtering the risk. Where riskId is in the range 0 for Informational 
+and 3 for High. 
+
+<h3>VIEW core / numberOfAlerts</h3>
+Added optional riskId parameter to facilitate filtering the risk. Where riskId is in the range 0 for Informational 
+and 3 for High. 
+
+<h3>VIEW core / urls</h3>
+Added optional <code>baseurl</code> parameter, to filter the URLs that are returned.
+
+<h3>VIEW ascan / scans</h3>
+Changed to also return the total number of alerts raised and messages sent during each scan.
+
+<h3>VIEW ascan / scanProgress</h3>
+Changed to also return the number of alerts raised by each scanner.
+
+<h2>ZAP API New Endpoints:</h2>
+
+<h3>VIEW core / alertsSummary</h3>
+A new summary view for Alerts which displays counts of Alerts per Risk level. Optionally, filtered by a baseurl value. 
+
+<blockquote><pre><code>
+{"High":0,"Low":132,"Medium":39,"Informational":153}
+</code></pre></blockquote>
+
+<h3>VIEW core / messagesById</h3>
+Gets the HTTP messages with the given IDs.
+
+<h3>VIEW core / messagesHarById</h3>
+Gets the HTTP messages with the given IDs, in HAR format.
+
+<h3>VIEW core / optionAlertOverridesFilePath</h3>
+Gets the path to the file with alert overrides. 
+
+<h3>VIEW core / optionMaximumAlertInstances</h3>
+Gets the maximum number of alert instances to include in a report. 
+
+<h3>VIEW core / optionMergeRelatedAlerts</h3>
+Gets whether or not related alerts will be merged in any reports generated. 
+
+<h3>VIEW core / zapHomePath</h3>
+Gets the path to ZAP's home directory.
+
+<h3>VIEW localProxies / additionalProxies</h3>
+Gets all of the additional proxies that have been configured.
+
+<h3>VIEW spider / optionAcceptCookies</h3>
+Gets whether or not a spider process should accept cookies while spidering.
+
+<h3>ACTION core / deleteAlert</h3>
+Deletes the alert with the given ID.
+
+<h3>ACTION core / setOptionAlertOverridesFilePath</h3>
+Sets (or clears, if empty) the path to the file with alert overrides. 
+
+<h3>ACTION core / setOptionMaximumAlertInstances</h3>
+Sets the maximum number of alert instances to include in a report. A value of zero is treated as unlimited. 
+
+<h3>ACTION core / setOptionMergeRelatedAlerts</h3>
+Sets whether or not related alerts will be merged in any reports generated. 
+
+<h3>ACTION ascan / importScanPolicy</h3>
+Imports a Scan Policy using the given file system path.
+
+<h3>ACTION ascan / skipScanner</h3>
+Skips the scanner using the IDs of the scan and the scanner.
+
+<h3>VIEW localProxies / addAdditionalProxy</h3>
+Adds an new proxy using the details supplied. See the <a href="../ui/dialogs/options/localproxy.html">Options Local Proxies screen</a> for details of the parameters.
+
+<h3>VIEW localProxies / removeAdditionalProxy</h3>
+Removes the additional proxy with the specified address and port.
+
+<h3>ACTION spider / setOptionAcceptCookies</h3>
+Sets whether or not a spider process should accept cookies while spidering.
+
+<h2>Vulnerability Details</h2>
+
+The following vulnerability has been reported in a previous version of ZAP.<br>
+Many thanks to all of the researchers who have ethically reported issues to us via our <a href="https://bugcrowd.com/owaspzap">bug bounty program</a>.<br> 
+If you need more details about this vulnerability then please contact us.
+
+<h3>Windows Uninstaller Vulnerable to DLL Hijacking</h3>
+
+The ZAP Windows Uninstaller for 2.6.0 is vulnerable to DLL Hijacking on Windows.
+This was a vulnerability in the 3rd party installer Install4j which has now been fixed.<br>
+Note that this can only occur if a malicious DLL is already on the path.
+<br><br>
+<b>Credit: Sajeeb Lohani (sml555) of Bulletproof ZDS</b>
+
+
+<h2>See also</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+</table>
+</body>
+</html>

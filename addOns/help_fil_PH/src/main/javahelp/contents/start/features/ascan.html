@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Aktibong Pag-scan
+</title>
+</head>
+<body>
+<h1>Aktibong Pag-scan</h1>
+<p>
+Ang aktibong pag-scan ay nagtatangka na makahanap ng potensiyal na mga kahinaan sa pamamagitan ng paggamit ng mga kilalang atake laban sa mga napiling target.
+</p>
+<p>
+Ang aktibong pag-scan ay isang atake sa mga target na iyon. <br/> HINDI mo dapat gamitin ito sa mga web application na hindi mo pag-aari.
+</p>
+<p>
+In order to facilitate identifying ZAP traffic and Web Application Firewall exceptions, ZAP is accompanied 
+by a script "AddZapHeader.js" which can be used to add a specific header to all traffic that passes through 
+or originates from ZAP. eg: <tt>X-ZAP-Initiator: 3</tt>
+</p>
+<p>
+It should be noted that active scanning can only find certain types of vulnerabilities.<br/>
+Logical vulnerabilities, such as broken access control, will not be found by
+any active or automated vulnerability scanning.<br/>
+Manual penetration testing should always be performed in addition to active
+scanning to find all types of vulnerabilities. 
+</p>
+
+<p>
+Active scanning is configured using the 
+<a href="../../ui/dialogs/options/ascan.html">Options Active Scan screen</a>.<br>
+The rules that run are configured via <a href="scanpolicy.html">Scan Policies</a> - you can have as many of these as you like. 
+
+</p>
+
+<h2>Na-access sa pamamagitan ng</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/ascan.html">Tab ng Aktibong Pag-scan</a></td><td>'Bagong Pag-scan' na pindutan</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/sites.html">Tab ng Sites</a></td><td>'Atake/Aktibong Pag-scan...' right click na aytem sa menu</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/history.html">Tab ng Kasaysayan</a></td><td>'Atake/Aktibong Pag-scan...' right click na aytem sa menu</td></tr>
+</table>
+
+<h2>Tingnan din</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/overview.html">Pangkalahatang-ideya ng UI</a></td><td>para sa pangkalahatang-ideya ng interface ng gumagamit</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="features.html">Mga Tampok</a></td><td>na ibinigay ng ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="pscan.html">Passive na pag-scan</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/dialogs/scanpolicymgr.html">Diyalogo ng tagapamahala sa patakaran ng pag-scan</a></td><td>na nagpapahintulot sa iyo na pamahaalan ang mga patakaran ng pag-scan</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../checks.html">Mga Patakaran ng Scanner</a></td><td>suportado bilang default</td></tr>
+</table>
+
+<h2>Official Videos</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><a href="https://play.sonatype.com/watch/ZcEfSihgQSzuthJi4qEeW3">ZAP In Ten: Active Scanning</a> (9:47)</td></tr>
+</table>
+
+</body>
+</html>

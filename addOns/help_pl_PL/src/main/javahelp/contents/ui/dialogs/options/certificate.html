@@ -3,22 +3,56 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Options Certificate screen
+Options Client Certificate screen
 </title>
 </head>
-<body bgcolor="#ffffff">
-<h1>Options Certificate screen</h1>
+<body>
+<h1>Options Client Certificate screen</h1>
 <p>
-The Certificate screen allows you to add a client certificate for ZAP to use when testing applications
-protected using mutual SSL.
+The Client Certificate screen allows you to add a client certificate for ZAP to use when testing applications
+protected using mutual SSL. Currently supported ways to utilize certificates are PKCS12 and PKCS11.
 </p>
-
-<h2>Zobacz również</h2>
+<h2>Using PKCS12</h2>
+<p>
+It is possible to set the Client Certificate from the command line with the following switches:
+</p>
+<pre>
+-config certificate.use=true
+-config certificate.pkcs12.path=/path/to/file.p12
+-config certificate.pkcs12.password=WhateverThePasswordIs
+-config certificate.pkcs12.index=1
+-config certificate.persist=true
+</pre>
+<p>
+<code>-config certificate.pkcs12.index</code> is only necessary if the file contains multiple certificates 
+and you wish to use one other than the first. Index values start at zero (0) which is the first certificate
+in the file.<br><br>
+<code>-config certificate.persist=true</code> is only necessary if you would like the settings persisted in ZAP's regular 
+configuration file (so that they apply for subsequent ZAP use).
+</p>
+<h2>Using PKCS11</h2>
+<p>PKCS11 is one of the Public-Key Cryptography Standards. Usually PKCS11 is used with Hardware Tokens (mostly USB style) 
+that store the cryptographic material in a secure way. Thus usually a driver is needed. The drivers are most commonly provided 
+by the Issuer of the Certificate stored on the token or the provider of the token. Certain tokens (especially if running 
+under Linux) are supported by opensc/libccid combination.</p>
+<p>
+It is possible to set the Client Certificate from the command line with the following switches:
+</p>
+<pre>
+-config certificate.use=true
+-config certificate.experimentalSlotListIndex=true
+</pre>
+</p>Setting PKCS11 Driver, Pin, and active certificate is not possible from the command line for the moment.
+Using <code>certificate.experimentalSlotListIndex=true</code> is only required for some cards. If without does not 
+work try adding it.</p>
+<h2>See also</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../../cmdline.html">Command Line</a></td><td>for details of the Command Line</td></tr>
 </table>
 
 </body>

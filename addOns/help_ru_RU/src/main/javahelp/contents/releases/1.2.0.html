@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Версия 1.0.0
+</title>
+</head>
+<body>
+<h1>Версия 1.0.0</h1>
+<p>
+В этой версии были сделаны следующие изменения:
+</p>
+<h2>Существенные изменения:</h2>
+
+<h3>Потеря памяти</h3>
+Утечки памяти были исправлены в <a href="../start/features/ascan.html">активным сканером</a> и
+<a href="../start/features/spider.html">паука</a>.
+
+<h3>Управление приложениями</h3>
+Теперь внешние приложения можно активировать на вкладках Сайты и История.
+
+<h3>Пассивный сканер</h3>
+В <a href="../start/features/pscan.html">пассивный сканер</a> теперь ищет уязвимости, такие как:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Автозаполнение форм с поля пароля</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Печенье без флага «HttpOnly»</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>SSL печенье без «безопасной» флаг</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Локальная аутентификация</td></tr>
+</table>
+
+<h2>Незначительные изменения:</h2>
+
+<h3>Мои отчеты</h3>
+Новый пункт меню «Генерировать XML-отчет...» теперь входит в верхнем уровне <a href="../ui/tlmenu/report.html">Отчёты</a> 
+меню.
+
+<h3>Ручной запрос редактора и переслать диалоги</h3>
+Просьбы, представленные <a href="../ui/dialogs/man_req.html">Manual Request Editor and
+Resend dialogs</a> are now shown in the <a href="../ui/tabs/sites.html">Sites</a> and 
+<a href="../ui/tabs/history.html">History</a> tabs.<br>
+A new 'Method' pull down allows you to switch between the HTTP methods, this automatically moves parameters
+between the URL and the body when a POST method is selected or deselected.
+
+<h3>Сигналы интерфейса</h3>
+The <a href="../ui/tabs/sites.html">Sites</a> tab now shows any alerts as flags to the right of any node names.<br>
+The alert counts in the <a href="../ui/footer.html">footer</a> now show the number of different types of alerts rather than
+the total number of instances. 
+
+<h3>Параметр задержки активные сканера</h3>
+The delay in milliseconds between each <a href="../start/features/ascan.html">active scanner</a> request can now be set via the  
+<a href="../ui/dialogs/options/ascan.html">Options Active Scan screen</a>. This will increase the time an active scan takes
+but will reduce the load on the target.
+
+<h3>Изменения</h3>
+The <a href="../ui/tabs/sites.html">Sites</a> tab now takes up all of the left hand side - this can be changed back 
+via the <a href="../ui/dialogs/options/ascan.html">Options Display screen</a> if required.<br>
+<br>
+The 'toolbar' on the <a href="../ui/tabs/request.html">Request</a>, <a href="../ui/tabs/response.html">Response</a> and
+<a href="../ui/tabs/break.html">Break</a> tabs and the <a href="../ui/dialogs/man_req.html">Manual Request Editor and
+Resend dialogs</a> is now at the top rather than the bottom.<br>
+<br>
+The scanner counts in the <a href="../ui/footer.html">footer</a> are now displayed on the right hand side.<br>
+<br>
+
+<h2>Смотрите также</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Введение</a></td><td>введение в зап</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Версии</a></td><td>полный набор релизы</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Кредиты</a></td><td>люди и группы, которые сделали возможным этот релиз</td></tr>
+</table>
+</body>
+</html>

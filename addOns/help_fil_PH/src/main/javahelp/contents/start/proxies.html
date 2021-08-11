@@ -6,8 +6,8 @@
 Ang pagbabago sa mga Proxy
 </title>
 </head>
-<body bgcolor="#ffffff">
-<h1>Ang Pagbabago sa mga Proxy</h1>
+<body>
+<h1>Ang Pagkumpigura sa mga Proxy</h1>
 <p>
 Kailangan mong baguhin ang iyong browser upang gamitin ang ZAP bilang isang proxy <br> sa pamamagitan ng pag default sa ZAP sa paggamit ng Address ng 'localhost' at isang Port ng '8080', subalit ang mga ito ay pwedeng mabago sa pamamagitan ng <a href="../ui/dialogs/options/localproxy.html"> Mga Opsiyon para sa local proxy screen</a>. 
 
@@ -17,40 +17,42 @@ Mga tagubilin para sa mga pinakabagong bersyon ng mga karaniwang ginagamit na br
 <h3>Ang Chrome ( sa Windows)</h3>
 
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pindutin ang</td><td> 'Baguhin ang ayos ng kontrol button ng Google Chrome' (itaas sa kanan)</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pindutin lang ang</td><td> 'Baguhin ang ayos ng kontrol button ng Google Chrome' (itaas sa kanan)</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Piliin ang</td><td> item menu ng "Mga Opsiyon'</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pindutin ang</td><td> Buton para sa 'Baguhin ang mga setting ng proxy'</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pindutin ang</td><td> Buton ng 'Mga Setting ng LAN'</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Sundin ang</td><td> Seksyon sa ibaba para sa 'Mga Setting para sa Windows LAN'</td></tr>
 </table>
+<strong>Note:</strong> To proxy <code>localhost</code> (and related addresses) with newer Chrome versions (>= 72) the command line argument <code>--proxy-bypass-list=&lt;-loopback&gt;</code> must be provided.
 
 <h3>Ang Firefox ( sa Windows)</h3>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Piliin ang</td><td> Menu ng 'Mga Tool' </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Piliin ang</td><td> item menu ng 'Mga Opsiyon'</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pindutin ang</td><td> 'Advanced' button</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Piliin ang</td><td> tab ng 'Network'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select the</td><td> 'General' panel</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Scroll to</td><td> 'Network Settings' section</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pindutin ang</td><td> Buton para sa 'Mga Setting...'</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Piliin ang</td><td> 'Manu-manong pagbabago ng proxy' sa radio button</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pumasok sa</td><td> 'HTTP Proxy:' i-field ang 'Address' na iyong binago sa <a href="../ui/dialogs/options/localproxy.html">Mga Opsiyon para sa Local Proxy screen</a></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pumasok sa</td><td> 'Port' i-field sa kanan ng 'HTTP Proxy' i-field ang 'Port' na iyong binago sa <a href="../ui/dialogs/options/localproxy.html">Mga Opsiyon para sa Local screen</a></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pindutin ang</td><td> 'OK' button ng Connection Setting</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pindutin ang</td><td> 'OK' button ng mga Opsiyon</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pumasok sa</td><td> 'Port' field to the right of the 'HTTP Proxy' field the 'Port' you configured in the 
+<a href="../ui/dialogs/options/localproxy.html">Options Local Proxies screen</a>. Ensure 'SSL Proxy' is also configured, either by selecting 'Use this proxy server for all protocols' or by setting the corresponding values.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pindutin ang</td><td> 'OK' button ng Connection Seting</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pindutin ang</td><td> 'OK' na button ng mga Opsyon</td></tr>
 </table>
+<strong>Note:</strong> To proxy <code>localhost</code> (and related addresses) with newer Firefox versions (>= 67) the preference <code>network.proxy.allow_hijacking_localhost</code> (accessible through the <code>about:config</code> page) must be set to <code>true</code>.
 
 <h3>Ang Firefox (sa Linux)</h3>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Piliin ang</td><td>menu para sa 'I-edit'</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Piliin ang</td><td>item menu para sa 'Mga Preference'</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Sundin ang</td><td>mga tagubilin na nasa itaas ng 'Advanced' button</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Piliin lang ang</td><td>ang menu para sa 'I-edit'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Piliin lang ang</td><td>ang item menu para sa 'Mga Preference'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Sundin lang ang</td><td>instructions above from the 'General' panel</td></tr>
 </table>
 
 <h3>Ang Firefox (sa Os X)</h3>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Piliin ang</td><td> menu ng 'Firefox' </td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Piliin ang</td><td> item menu para sa 'Mga Preferences...'</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pindutin ang</td><td> 'Advanced' button</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Sundin ang</td><td> tagubilin na nasa itaas ng 'Advanced' button</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Piliin lang ang</td><td> ang menu ng 'Firefox' </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Piliin lang ang</td><td> ang item na menu para sa 'Mga Preferences...'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Follow the</td><td> instructions above from the 'General' panel</td></tr>
 </table>
 
 <h3>Ang Internet Explorer 7 at 8</h3>
@@ -58,7 +60,7 @@ Mga tagubilin para sa mga pinakabagong bersyon ng mga karaniwang ginagamit na br
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Piliin ang</td><td> menu ng mga 'Tool' </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Piliin ang</td><td> item menu ng ' Mga pagpipilian para sa Internet'</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Piliin ang</td><td> tab para sa 'Mga Koneksyon'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Piliin ang</td><td> ang tab para sa 'Mga Koneksyon'</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pindutin ang</td><td> buton para sa 'Mga setting ng LAN'</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Sundin ang</td><td> Seksyon sa ibaba para sa 'Mga Setting ng Windows LAN'</td></tr>
 </table>
@@ -82,8 +84,8 @@ Mga tagubilin para sa mga pinakabagong bersyon ng mga karaniwang ginagamit na br
 <h3>Ang Safari (sa OS X)</h3>
 
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pindutin ang</td><td> buton para sa 'Mga setting ng Safari' sa itaas ng kanang bahagi</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Piliin ang</td><td> item menu para sa 'Mga Preference'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pindutin lang ang</td><td> buton para sa 'Mga setting ng Safari' sa itaas ng kanang bahagi</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Piliin ang</td><td> 'Aytem menu para sa 'Mga Preference'</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Piliin ang</td><td> 'Advanced' tab</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pindutin ang</td><td> 'Buton ng Baguhin ang mga Setting' kasunod ng 'Mga Proxy' label</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Sundin ang</td><td> 'Mga setting ng Proxy para sa OS X System' na nasa ibabang seksyon</td></tr>
@@ -106,15 +108,15 @@ Mga tagubilin para sa mga pinakabagong bersyon ng mga karaniwang ginagamit na br
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Piliin ang</td><td> 'Web Proxy (HTTP)</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pumasok sa</td><td> 'Address: i-field ang 'Address' na iyong binago sa <a href="../ui/dialogs/options/localproxy.html">Mga Pagpipilian para sa Local Proxy screen</a></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pumasok sa</td><td> 'Port' i-field ang 'Port' na iyong binago sa <a href="../ui/dialogs/options/localproxy.html">Mga Pagpipilian para sa Local Proxy screen</a></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pindutin ang</td><td> 'OK' button para sa Proxy setting</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pindutin ang</td><td> Buton para sa 'I-aplay' ang mga Network Opsiyon</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pindutin ang</td><td> 'OK' button para sa Proxy seting</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pindutin ang</td><td> Buton para sa 'I-aplay' ang mga Network Opsyon</td></tr>
 </table>
 
 <h3>Mga Setting para sa Windows LAN</h3>
 
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Piliin ang</td><td> 'Gumamit ng proxy server para sa iyong LAN' checkbox</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pumasok sa</td><td> 'Address:' i-field ang 'Address' na iyong binago sa <a href="../ui/dialogs/options/localproxy.html">Mga Opsiyon para sa Local Proxy screen</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pumasok lang sa</td><td> 'Address:' i-field ang 'Address' na iyong binago sa <a href="../ui/dialogs/options/localproxy.html">Mga Opsiyon para sa Local Proxy screen</a></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pumasok sa</td><td> 'Port' i-field ang 'port' na iyong binago sa <a href="../ui/dialogs/options/localproxy.html">Mga opsiyon para sa Local Proxy screen</a></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pindutin ang</td><td> 'OK' button na para sa mga Setting ng Local Area Network (LAN)</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pindutin ang</td><td> 'OK' button na para sa mga Internet Option</td></tr>
@@ -125,7 +127,7 @@ Mga tagubilin para sa mga pinakabagong bersyon ng mga karaniwang ginagamit na br
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="start.html">Nag-uumpisa</a></td><td>sa mga detalye kung paano mag simula gamit ang ZAP</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../intro.html">Panimula</a></td><td>ang panimula sa ZAP</td></tr>
+<a href="../intro.html">Ang Panimula</a></td><td>ang panimula sa ZAP</td></tr>
 </table>
 
 </body>

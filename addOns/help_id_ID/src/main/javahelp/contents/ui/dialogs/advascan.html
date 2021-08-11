@@ -6,22 +6,22 @@
 Dialog Pemindaian Aktif
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Dialog Pemindaian Aktif</h1>
 <p>
-Dialog ini meluncurkan <a href="../../start/concepts/ascan.html">pemindai aktif</a>.<br>
+Dialog ini meluncurkan <a href="../../start/features/ascan.html">pemindai aktif</a>.<br>
   
 <h3>Cakupan</h3>
 Tab pertama memungkinkan Anda untuk memilih atau mengubah titik awal.<br>
-Jika Anda punya lebih dari satu <a href="../../start/concepts/scanpolicy.html">kebijakan pemindaian</a> maka Anda akan dapat memilih mana yang akan digunakan.<br>
-Jika titik awal adalah satu atau lebih <a href="../../start/concepts/contexts.html">Konteks</a> maka Anda akan dapat memilih salah satunya.<br>
-Jika konteks tersebut memiliki <a href="../../start/concepts/users.html">Pengguna</a> yang ditetapkan maka Anda akan dapat memilih salah satunya.<br>
+Jika Anda punya lebih dari satu <a href="../../start/features/scanpolicy.html">kebijakan pemindaian</a> maka Anda akan dapat memilih mana yang akan digunakan.<br>
+Jika titik awal adalah satu atau lebih <a href="../../start/features/contexts.html">Konteks</a> maka Anda akan dapat memilih salah satunya.<br>
+Jika konteks tersebut memiliki <a href="../../start/features/users.html">Pengguna</a> yang ditetapkan maka Anda akan dapat memilih salah satunya.<br>
 Jika Anda memilih salah satu pengguna maka pindai aktif akan dijalankan sebagai pengguna tersebut, dengan ZAP (re)otentikasi sebagai pengguna tersebut kapanpun diperlukan.
 <br><br>
-Jika Anda memilih 'rekursi' maka semua node di bawah yang sudah dipilih akan dipindai juga.<br>
+If you select 'Recurse' then all of the nodes underneath the one selected will also be scanned.<br>
 Vektor masukan tersuai hanya didukung jika opsi ini tidak dipilih.
 <br><br>
-Jika Anda memilih 'Tampilkan pilihan lanjutan' maka tab berikutnya akan ditampilkan yang mana akan memberikan kontrol yang sangat tepat terhadap proses pemindaian aktif.
+If you select 'Show Advanced Options' then the following tabs will be shown which provide fine grain control over the active scanning process.
 <br><br>
 Mengeklik tombol 'Reset' akan mengatur ulang semua opsi ke nilai bawaannya. 
 
@@ -32,7 +32,7 @@ Mengeklik tombol 'Reset' akan mengatur ulang vektor masukan ke opsi bawaannya.
 
 <h3>Vektor Suai</h3>
 Tab Vektor Suai memungkinkan Anda menentukan lokasi tertentu dalam permintaan untuk menyerang.<br> 
-Vektor Suai hanya tersedia jika opsi 'rekursi' pada tab pertama tidak dipilih.<br>
+Custom Vectors are only available if the 'Recurse' option on the first tab is not selected.<br>
 Untuk menambahkan vektor masukan sorot karakter yang ingin Anda serang dalam permintaan dan klik tombol 'Tambah'.<br>
 Anda dapat menambahkan vektor masukan suai sebanyak yang Anda inginkan.<br>
 Untuk menghapus vektor masukan suai sorot karakter mana saja yang dipilih dan klik tombol 'Hapus'.<br>
@@ -44,7 +44,20 @@ Membatalkan pilihan teknologi yang Anda tahu tidak ada dalam aplikasi tujuan dap
 
 <h3>Kebijakan</h3>
 Tab Kebijakan memungkinkan Anda untuk membatalkan pengaturan apapun yang ditetapkan dalam 
-<a href="../../start/concepts/scanpolicy.html">kebijakan pemindaian</a>. 
+<a href="../../start/features/scanpolicy.html">kebijakan pemindaian</a>. 
+
+<h3>Filter</h3>
+The Filter tab allows you to specify filter criteria and active scan will filter requests based on these criteria's.
+<br/> 
+There are four filter criteria's available in the filter tab <br/>
+<ul>
+<li>HTTP method</li>
+<li>Status code</li>
+<li>Tags</li>
+<li>URL pattern</li>
+</ul>
+HTTP method and Status code filter criteria are only applied to check if a request can be included in active scan or not,<br/> where as
+Tags and URL pattern filter criteria can be applied to include or exclude a request.
 
 <br><br>
 

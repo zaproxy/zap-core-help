@@ -6,10 +6,10 @@
 Telas de Contexto de Sessão
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Telas de Contexto de Sessão</h1>
 <p>
-Estas telas permitem que você gerencie <a href="../../../start/concepts/contexts.html">contextos</a>.
+These screens allows you manage <a href="../../../start/features/contexts.html">contexts</a>.
 </p>
 <p>
 Há um conjunto de telas para cada contexto que você definir.
@@ -18,45 +18,74 @@ Há um conjunto de telas para cada contexto que você definir.
 <h3>Parte superior</h3>
 Isso permite que você defina o nome do contexto e a sua descrição.
 
-<h3>Incluir no contexto</h3>
+<h3>Include in Context</h3>
 Isso permite que você gerencie as URLs que serão incluídas no contexto.<br/>
 URLs que não correspondem a nenhum do regexs não serão incluídas no contexto.
+<br><strong>Note:</strong> The regular expressions must match the whole URL.
 
-<h3>Excluir do contexto</h3>
-Isso permite que você gerencie as URLs que serão excluídas do contexto.<br/>
-Você só precisa especificar regexs para URLs que você não deseja incluir, mas que combinem com uma ou mais das regexes de 'incluir'.
+<h3>Exclude from Context</h3>
+This allows you to manage the URLs which will be excluded from the context.<br/>
+You only need to specify regexs for URLs that you do not want to include but which match one or more
+of the 'include' regexes.
+<br><strong>Note:</strong> The regular expressions must match the whole URL.
 
 <h3><a name="struct">Estrutura</a></h3>
-Consulte a <a href="context-struct.html">Tela de estrutura do contexto de sessão</a>.
+See the <a href="context-struct.html">Tela de estrutura do contexto de sessão</a>.
 
 <h3>Tecnologia</h3>
-Isso permite que você especifique as tecnologias utilizadas no contexto, se conhecidas.<br/>
-Por padrão, todas as tecnologias são incluídas.<br/>
-Se você excluir tecnologias que você sabe que não são usadas, então isto pode acelerar a 
-<a href="../../../start/concepts/ascan.html">varredura ativa</a> já que as regras específicas para as tecnologias excluídas podem ser ignoradas.
+This allows you to specify the technologies used in the context, if known.<br/>
+By default all technologies are included.<br/>
+If you exclude technologies that you know are not used then this may speed up 
+<a href="../../../start/features/ascan.html">varredura ativa</a> as rules specific to the excluded
+technologies can be skipped.
 
 <h3><a name="auth">Autenticação</a></h3>
-Consulte a <a href="context-auth.html">Tela de autenticação de contexto de sessão</a>.
+See the <a href="context-auth.html">Tela de autenticação de contexto de sessão</a>.
 
 <h3><a name="sm">Gerenciamento de sessão</a></h3>
-Isso permite a você gerenciar a maneira pela qual o gerenciamento de sessão está sendo feito para o contexto. 
-Depois de selecionar o tipo de método de gerenciamento de sessão, as opções que precisam ser configuradas dependem desse método de gerenciamento de sessão.
+This allows you to manage the way in which Session Management is being done for the Context. 
+After selecting the Session Management Method type, the options that need to be configured 
+depend on the Session Management Method.
 
 <h4>Gerenciamento de sessão baseado em cookies</h4>
-Nenhuma configuração é necessária para este método de gerenciamento de sessão. <small>Leia <a href="../../../start/concepts/sessionManagement.html#cbsm">mais</a>...</small>
+Nenhuma configuração é necessária para este método de gerenciamento de sessão. <small>Read  
+<a href="../../../start/features/sessionManagement.html#cbsm">more</a>...</small>
 
 <h4>Gerenciamento de sessão de autenticação HTTP</h4>
-Nenhuma configuração é necessária para este método de gerenciamento de sessão. <small>Leia <a href="../../../start/concepts/authentication. html#httpAuth">mais</a>...</small>
+No configuration is needed for this session management method. <small>Read
+<a href="../../../start/features/sessionManagement.html#hasm">more</a>...</small>
+
+<h4>Script-Based Session Management</h4>
+
+To use this session management method, you <b>first</b> need to write (and save) a <b>Session Management Script</b> 
+using the <b>Scripts</b> tab (see the provided examples and templates for this script type in the Scripts tab).
+Then you need to supply the name of the script in the dropdown list. After selecting the script, you need to press 
+the <b>Load</b> button, loading all the requirements of the script.
+Any parameters that you have specified as <i>required</i> or <i>optional</i> in the script will
+be shown in the interface to be defined. Their values are available to be used in the script, during the session management process, as seen
+in the provided examples for Session Management Scripts. Make sure that after doing any changes to the parameters 
+required by the Session Management script you re-load the script. Otherwise, the parameters shown in the interface might
+not be the ones used during the session management process and errors might occur. 
+<small>Read <a href="../../../start/features/sessionManagement.html#sbsm">more</a>...</small>
 
 
 <h3><a name="users">Usuários</a></h3>
-Isso permite a você configurar um conjunto de usuários que podem ser utilizados para várias outras ações em todo o aplicativo.
+This allows you to configure a set of Users that may be used for various other actions
+throughout the application.
 <p>A seção de credenciais dos usuários depende do método de autenticação configurado para o contexto.</p>
 
-<h2>Regex de URL</h2>
-Nos paineis <i>Incluir em *</i>, <i>Excluir de *</i> e nos <i>indicadores de login/logout</i> do <i>painel de Autenticação</i> você pode digitar expressões regulares para definir URLs excluídas. Além de poder dar escape em determinados metacaracteres com uma barra invertida, também pode usar <b>a sequência \Q...\E</b> de escape. Todos os caracteres entre o <b>\Q</b> e o <b>\E</b> são interpretados como caracteres literais. Por exemplo, o \Q*\d+*\E coincidem com o texto literal * \d+*. Esta sequência de escape é usada no ZAP quando você exclui URLs através de alguns menus de contexto.
+<h2><a name="custompages">Custom Page</a></h2>
+This functionality allows you to handle situations in which the target does not return a RFC compliant or expected error response when for conditions such as 
+404 - Not Found, 500 - Internal Server Error, etc. Often developers implement custom 404 or 500 handling but do not actually return an appropriate status code.
+Leveraging Custom Page definitions you can define URLs or response content which identify error responses regardless of the status code associated with the response.
+<small>Read <a href="../../../start/features/custompages.html">more</a>...</small>
+
+<h2>URL regexs</h2>
+In the <i>Include in *</i>, <i>Exclude from *</i> panels and the <i>Logged in/out indicators</i> of the <i>Authentication</i> panel, etc. you can enter regular expressions to define excluded URLs.
+While you can escape a single meta-character with a backslash, you can also use the <b>a sequência \Q...\E</b> escape sequence. All the characters between the <b>\Q</b> and the <b>\E</b> are interpreted as literal characters. E.g. \Q*\d+*\E matches the literal text *\d+*.
+This escape sequence is used in ZAP when you exclude URLs via some context menus.
 <br>
-<b>Nota:</b> Se sua URL contém um "\E", então você tem que dar os seguintes passos ao usar a <b>a sequência \Q...\E</b> para escape:
+<b>Note:</b> If your URL contains a "\E", then you have to do the following steps when using the <b>\Q...\E</b> escape sequence:
 <ul>
 	<li>Abra a seqüência de escape</li>
 	<li>Feche a seqüência de escape antes do "caractere" \E</li>
@@ -65,25 +94,27 @@ Nos paineis <i>Incluir em *</i>, <i>Excluir de *</i> e nos <i>indicadores de log
 	<li>Feche a seqüência de escape como normalmente faria.</li>
 </ul>
 <br>
-Exemplo: subdomain.example.com/path?a=<b>\E</b>&moredata=2 deve aparecer como
-<i>\Qsubdomain.example.com/path?a=\E</i><b>\\E</b><i>\Q&moredata=2\E</i>
+Example: subdomain.example.com/path?a=<b>\E</b>&amp;moredata=2 should appear as
+<i>\Qsubdomain.example.com/path?a=\E</i><b>\\E</b><i>\Q&amp;moredata=2\E</i>
   
-<h2>Acessado via</h2>
+<h2>Accessed via</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../tlmenu/file.html">Menu de arquivo de nível superior</a></td><td>Item de menu 'Propriedades...'</td></tr>
+<a href="../../tabs/sites.html">Sites tab</a></td><td>Double click a Context</td></tr>
 </table>
 
-<h2>Leia também</h2>
+<h2>See also</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../../overview.html">Visão geral da interface do usuário</a></td><td>para uma visão geral da interface do usuário</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../dialogs.html">Caixas de diálogo</a></td><td>para obter detalhes das caixas de diálogo ou pop-ups </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../../start/concepts/authentication.html">Autenticação</a></td><td>para uma visão geral da autenticação </td></tr>
+<a href="../../../start/features/authentication.html">Autenticação</a></td><td>para uma visão geral da autenticação </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../../start/concepts/sessionManagement.html">Gerenciamento de sessão</a></td><td>para uma visão geral do gerenciamento de sessão </td></tr>
+<a href="../../../start/features/sessionManagement.html">Gerenciamento de sessão</a></td><td>para uma visão geral do gerenciamento de sessão </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../../start/features/custompages.html">Custom Page</a></td><td>for an overview of Custom Page details </td></tr>
 </table>
 
 

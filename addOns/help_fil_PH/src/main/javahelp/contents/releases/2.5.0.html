@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  Pagpapakawala na 2.5.0
+</title>
+</head>
+<body>
+<h1>Pagpapakawala 2.5.0</h1>
+
+<p>
+Ang mga sumusunod na pagbabago ay ginawa sa pagpapakawala na ito:
+</p>
+
+<h2>Ang Mga pagbabago sa API ng ZAP:</h2>
+
+<h3>TINGNAN ang pagpapahintulot / getAuthorizationDetectionMethod</h3>
+
+Ngayon ay muling nagbabalik ang datos na nakabalot sa bagay na tinatawag na authorizationDetectionMethod:
+<pre>{"authorizationDetectionMethod":{"statusCode":"-1"..."headerRegex":""}}</pre>
+kaysa sa:
+<pre>{"statusCode":"-1"..."headerRegex":""}</pre>
+
+<h3>SURIIN ang konteksto / konteksto + technologyList</h3>
+Magkaparehas ngayon ay muling nagbabalik ang data wrapped sa bagay na tinatawag na "context":
+
+Halimbawa na lamang:
+<pre>{"context":{"id":"1", ..., "inScope":"true","loggedOutPattern":""}}</pre>
+kaysa sa:
+<pre>{"id":"1", ..., "inScope":"true","loggedOutPattern":""}</pre>
+
+<h3>AKSYON ng ispayder / scan + scanAsUser</h3>
+</ul>
+Magkaparehas ngayon ang pagsuporta sa bagong opsyonal na 'subtreeOnly' paramiter na syang nagbibigay ng hangganan sa ispayder hanggang sa tinututkoy na substree. Ang 'url' parameter ay isa na ngayong opsyonal, hanggat ang mabisang 'context' paramiter ay natutustusan
+
+<h3>Ang bagong 'stats' na komponent</h3>
+Ang bagong 'stats' API ay nagbibigay ng pagpasok sa <a href="../start/features/stats.html">ang stats</a>
+ngayoy patuloy na pina-natili ng ZAP.<br><br>
+
+Tandaan na ang mga nananatiling komponent ay dapat lamang na magkaroon din ng mga bagong pagpapatakbo, tingnan lang ang 
+<a href="../start/features/api.html">Ang API Web UI</a> para sa iba pang mga detalye.
+ 
+
+<h2>Ang mga pagpaunlad:</h2>
+<ul>
+<li>Usapin 266 : magdagdag ng auto tagging para sa seting ng mga cookie, json</li>
+<li>Usapin 646 : Ang papalabas na proxy ng password sa plain text ng iskrin</li>
+<li>Usapin 1171 : Ang Sites tree upang iangat ang 'bagong site / bagong node' at mga kaganapan</li>
+<li>Usapin 1229 : I-update lamang ang mga extention/plugins sa bagong Confidence Scale Upang Magamit</li>
+<li>Usapin 1341 : I-update lang ang alerto ng XML schema upang alisin ang antas ng elemento na tinatawag na banggaan</li>
+<li>Usapin 1590 : Ilapat lang ang mowd kapag gumagana bilang daemon</li>
+<li>Usapin 1713 : Ang Pagbubunyag ng Source Code SVN Throws False Positive</li>
+<li>Usapin 1864 : gayahin ang progreso ng pag-scan bilang teksto ng clipboard</li>
+<li>Usapin1958 : Pahintulotan na huwag paganahin ang log ng database (HSQLDB)</li>
+<li>Usapin 1959 : Pahintulotan ang scan headers na maging aktibo para sa lahat ng mga pag hiling</li>
+<li>Usapin 1980 : Magdagdag lamang ng ZAP CLI sa mga larawan ng Docker</li>
+<li>Usapin 2068 : Ang Loggedin at Loggedout na mga tagapagpahiwatig ay nag papatunay ng mga iskrip</li>
+<li>Usapin 2070 : Maari na para sa mga iskrip ng pagpapatunay na makumpigura kung paano ipapadala ang mga mensahe</li>
+<li>Usapin 2121 : Huwag paganahin ang mga Req/resp na pagpipilian sa posisyon ng tab kapag nasa "Expand Full" na ayos</li>
+<li>Usapin 2127 : Bigyang babala kung ang ulat ng henerasyon ay nabigo</li>
+<li>Usapin 2162 : add-marketplace-sorting</li>
+<li>Usapin 2171 : Mga Add-on na pinamamahalaan sa pamamagitan ng api, cli</li>
+<li>Usapin 2174 : ExpressionLanguageInjectionPlugin - kinakailangan ng logging fix </li>
+<li>Usapin 2177 : SourceCodeDisclosuresvn - Ang pasulat sa temp DB ay hindi maaari</li>
+<li>Usapin 2183 : Ang API: Ibilang ang kalidad sa pagtugon sa ascan/progress</li>
+<li>Usapin 2237 : Pahintulutan ang java max mem na mag overriden sa cmdline</li>
+<li>Usapin 2238 : ispayder : Bumalik sa parse HTML na mga komento bilang payak na teksto kung walang URL na makita</li>
+<li>Usapin 2272 : SQLInjectionHypersonic (Beta) - Exceptions</li>
+<li>Usapin 2273 : Sumusuporta sa site level stats</li>
+<li>Usapin 2274 : Pahintulotan na mag ispayder ang isang sites subtree</li>
+<li>Usapin 2275 : ispayder: Sa pamamagitan ng API, hindi nangangailangan ng isang URL, kung ang konteksto ay may mga binhi</li>
+<li>Usapin 2277 : ispayder: panatilihin ang mga paramiter ng query na may parehas na pangalan kapag canonicalising URL</li>
+<li>Usapin 2289 : I-tala ang site na basehan ng tugon sa oras ng istatistika</li>
+<li>Usapin 2324 : Kabilang ang mga scanner' Ang kalidad ng scanners' ang kalidad ny API na mga view ng scanner</li>
+<li>Usapin 2330 : Magdagdag ng mga authentication stat</li>
+<li>Usapin 2335 : Magdagdag ng Outbound Proxy Password Peak</li>
+<li>Usapin 2342 : Kakayahang pamahalaan ang mga Site sa ZAP sa pamamagitan ng API</li>
+<li>Usapin 2347 : Pinapayagan na mag alis ng context factories mula sa View/Model</li>
+<li>Usapin 2361 : Pangalanan muli ang opsyon sa tool bar Expand Full papunta sa Full Layout</li>
+<li>Usapin 2362 : Payagan piliin ang lahat ng mga resulta ng Ispader</li>
+<li>Usapin 2367 : Pagbabago ng lokasyon ng mga sirang buton nang walang pag sisimulang muli sa ZAP</li>
+<li>Usapin 2368 : Hindi nangangailangan na muling simulan para ipakita/itago ang pangunahing tool bar</li>
+<li>Usapin 2381 : Huwag pahintulotan na mag-save/magsulat upang basahin-lamang na payls</li>
+<li>Usapin 2400 : Magpakita ng mas maraming nakapagtuturong mga mensahe sa mga oras ng pagbabasa sa pamamagitan ng proxy</li>
+<li>Usapin 2410 : Ipakita ang HTTP na mga mensahe na nasa Ispayder</li>
+<li>Usapin 2413 : Huwag paganahin ang "Show in History Tab" kung ang mensahe ay hindi balido</li>
+<li>Usapin 2418 : Ang Ispayder: suportahan ang maximum na durasyon sa opsyon ng min</li>
+<li>Isyung 2420 : Pahintulotan ang aktibong scanner upang paalam na ang isang mensahe ay ipinadala na</li>
+<li>Usapin : Suportahan ang Statsd at ilipat ang stats sa bagong ext</li>
+<li>Usapin 2465 : Hayaang maghintay ang ZAP upang magsimula sa ClientApi</li>
+<li>Usapin 2466 : Pahintulotan makapasok ang URL sa pamamagitan ng ZAP API</li>
+<li>Usapin 2479 : Magpakita ng Gabay sa pag gamit kahit na ang nakikitang hinahanap ay mali</li>
+<li>Usapin 2481 Itakda ang tamang pangalan ng aplikasyon sa Linux</li>
+<li>Usapin 2482 : Ibalik sa normal na estado ang Session dialog tables "Exclude from"</li>
+<li>Usapin 2484: Ang Circular Redirects</li>
+<li>Usapin 2486 : Linisin ang ScriptVars sa pagbabago ng sesyon</li>
+<li>Usapin 2494 : Ang ZAP Proxy ay hindi nagpapakita ng kahilingan ng HTTP CONNECT sa kasaysayan ng tab.</li>
+<li>Usapin 2504 : Magdagdag ng manual HTTP na mga kahilingan sa Sites tree</li>
+<li>Usapin 2506 : Huwag itapon ang sesyon sa payl na nakabase sa database</li>
+<li>Usapin 2512 : I-update ang HSQLDB na library sa bersiyon ng 2.3.4</li>
+<li>Usapin 2519 : Ang menu/buton ay paganahin kapag tutulungan ang add-on na naka-install</li>
+</ul>
+
+<h2>Mga pag-aayos ng Bug:</h2>
+<ul>
+<li>Usapin 1529 : TestExternalRedirect Nawawalang Case idagdag pa ang Performance at FP na mga pag unlad</li>
+<li>Usapin 1597 : Ang Java 8 - Mac OS/X na package</li>
+<li>Usapin 1639 : Ang XSS False Negative sa script injection sa mga Referer HTTP header</li>
+<li>Usapin 1786 : Ang Activescan Scripts Silent Failure</li>
+<li>Usapin 1801 : Ang URL na StandardParameterParser na hindi kumikilos ng tama sa QueryString</li>
+<li>Usapin 1848 : VariantYRLQuery Pagbubukod-bukod ng paglipat sa aktibong pag scan</li>
+<li>Usapin 1874 : Ang dalawang linya ng Cookie sa header kung magda-dagdag ng cookie kasama ng httpsender iskrip at paggawa ng aktibong iskan</li>
+<li>Usapin 1875 : Ang scanner temp na kasaysayan ay hindi nalinis nang isinara</li>
+<li>Usapin 2090 : Konteksto: Pangalanan ang gumagamit , hindi maaring piliin sa Forced User Panel</li>
+<li>Usapin 2110 : Ang SQL Injection ay mayroong kinaligtaan</li>
+<li>Usapin 2112 : Ang Maling pamamalakad sa aktibong pag iskan</li>
+<li>Usapin 2115 : Ang Python API konteksto.konteksto("MyContext") ay nasira</li>
+<li>Usapin 2119 : Ang pag lalarawan sa mga konteksto ay hindi maisalin ng maayos</li>
+<li>Usapin 2122 : Palitan ang IspayderAPI upang maisawalang-bahala ang mga pangalan ng konteksto na walang laman pagka umaaksiyon ang humahawak sa iskan</li>
+<li>Usapin 2125: Ang Pag-log sa eksepsyon habang ang sesyon ng payl at internationalise message ay nagbubukas</li>
+<li>Usapin 2126 : Pagsasaayos ng NullPointerException sa mga nawawalang mga konteksto ng pagpapatunay ng iskrip</li>
+<li>Usapin : 2132 : Ang ulat sa Zap tungkol sa bilang nang Bug</li>
+<li>Usapin 1242 : Ang mga pagsasalin at pag bubukod-bukod ng Fuzzer</li>
+<li>Usapin : 2144 : Java.lang.NullPointerException sa "AWT-EventQueue-0" </li>
+<li>Usapin 2152 : Ang AJAX Ispayder ay hindi maaaring pumindot sa lahat ng mga elemento sa mga pagpipilian</li>
+<li>Usapin 2153 : 2.4.3 ay nabigo na suriin ang mga POST Data na nag lalaman ng panaklong([]) </li>
+<li>Usapin 2193 : Ang pagpapagana sa teknolohiya na tab sa napiling konteksto sa aktibong iskan ng dayalogo</li>
+<li>Usapin 2197 : Mag install ng bagong bersyon ng mga add-on matapos ang pag-download sa -addonupdate</li>
+<li>Usapin 2199 : Hindi maaaring pahintulutan na mag iskan ang mga Ispayder kapag ang ZAP ay nasa ligtas (o protektado) na pamamaraan</li>
+<li>Usapin 2203 : Ang wastong pag-sasaayos ng mga babala sa findbugs</li>
+<li>Usapin 2208 : Ang aktibong iskaner ay pinipigilan na maiulat ang pag unlad mula sa mas mataas sa 100%</li>
+<li>Usapin 2226 : Marapat lamang na panghawakan ng ZAP ang mga pagkakamali ng cookie HttpSessionSite's ng mas mas maayos</li>
+<li>Usapin 2246 : suriin ang pagkakamali sa mga sesyon kasama ang mga token</li>
+<li>Usapin 2259 : Wastong Isaayos ang NullpointerExemption sa VariantCookie na nagpapatupad</li>
+<li>Usapin 2281 : Isang tiyak na site para sa Filter params</li>
+<li>Usapin 2282 : Ang pag-sasamasama sa isang buong konteksto ng Ispayder</li>
+<li>Usapin 2292 : Ang alertFingerPrint ay gawing higit na mas maayos</li>
+<li>Usapin 2292: Ang pag aktibasyon ng AWT blocker ay nagambala - java.lang.interruptedException </li>
+<li>Usapin 2307 : Ang pagdagdag ng nawawalang opsyonal na paramiter "scanPolicyName" sa mga aksyon ng ascan API</li>
+<li>Usapin 2312 : Magtuon ng pansin sa "Edit Keyboard Shortcut" na diyalogo</li>
+<li>Usapin : Ang Maayos na palitan ang (luma) maliban sa mga proxy na mga domain</li>
+<li>Usapin : Hindi kayang idagdag ang mga ilang mga payload sa fuzzer ng (NullPointerException)</li>
+<li>Usapin 2323 : Wastong isaayos ang (sigurudad) sa loop na hinihingi ng ZAP API</li>
+<li>Usapin 2328 : Wastong Ayusin ang isyu habang ang pangalan ng ekstensiyon ay inaalis na</li>
+<li>Usapin 2329 : Salain kaagad ang mga binhi bago umandar ang ispayder</li>
+<li>Usapin 2331 : Custom Context Panels ay nakatago sa namamalagi na mga konteksto pagkatapos ng pag install ng add-on</li>
+<li>Usapin 2336 : BadLocationException ito ang nagaalis gamit ang Fuzzer</li>
+<li>Usapin 2357 : Ang pabago-bago habang nag papalit-palit sa pagitan ng pagkakaayos ng mga panel</li>
+<li>Usapin 2363 : Itago ang mga sirang buton sa sync habang ang mowd ay binabago</li>
+<li>Usapin 2366 : Ang mga pag babago-bago ng mga sirang buton ay inilantad</li>
+<li>Usapin 2373 : Ipakita ang Tab na hindi maayos ang pag gana sa buong plano para sa tab na walang impormasyon</li>
+<li>Usapin 2374 : Hindi maaaring palitan ang tugon ng tab na posisyon ng walang pangunahing gamit na bar</li>
+<li>Usapin 2390 : Ang HeadlessException ay dapat na nahahawakan ng mas maayos at ang README ay kinakailangan na walang headless details</li>
+<li>Usapin 2394 : Ang pagbabago ng awtorisasyon ng API ay suriin upang maayos na maibalot ang bagay na ito</li>
+<li>Usapin 2399 : Ang hinihingi na mga pag hinto ng oras ay hindi ipinakita sa ZAP</li>
+<li>Usapin 2421 : Ang hinihingi ng aktibong iskaner ay hindi man lamang nag tugma</li>
+<li>Usapin 2428 : Ang pagtagas ng memorya na nasa sesyon ng paglikha/paglo-load</li>
+<li>Usapin 2429 : Interruptedexceptions habang pina hihinto ang ispayder ng may awtorisasyon ng gumagamit</li>
+<li>Usapin 2435 : Linisin ang tungkulin ng ispayder ng mga pinagkukunan, habang ito ay hindi komu-konsumo</li>
+<li>Usapin 2436 : Walang kakayanan ang dynamically sa pagalis ng isinalin na WebSockets add-on</li>
+<li>Usapin 2440 : Ang Pagbubukod-bukod habang nagbubukas pa lamang ang Aktibong pag scan na diyalogo</li>
+<li>Usapin 2451 : Ang nagiisang Data Driven Node ay maaaring i-save sa konteksto</li>
+<li>Usapin 2463 : Ang Websocket ay di lamang panghalili habang ang papalabas na proxy ay itinakda na</li>
+<li>Usapin 2469 : Habang ang ispayder ay nakatigil madalas na bumalik sa 100%</li>
+<li>Usapin 2472 : Gamitin lamang ang kaso ng pangalan sa file habang patuloy na nag dadagdag ng mga patakaran na nagmula sa payl</li>
+<li>Usapin 2474 : Patuloy na Magdagdag ng maramihang konteksto na URL in/exclusions nang magkakasabay-sabay</li>
+<li>Usapin 2475 : Ang Tulong ng tamang pahina para sa patakaran at mga pagpipilian sa passive na pag scan</li>
+<li>Usapin 2487 : Maling paggamit ng charset sa katawan ng HTTP</li>
+<li>Usapin 2516 : Idagdag ang auth at spider sa mga tipo ng gawain at sa mga uri na pansamantala</li>
+</ul>
+
+<h2>Tingnan din sa</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Pagpapakilala</a></td><td>ang pagpapakilala sa ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Mga Pagpapakawala</a></td><td>ang kabuuang hanay ng mga pagpapakawala</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Ang mga kredito</a></td><td>ang mga tao at mga grupo na ginawang posible sa inilabas na ito</td></tr>
+</table>
+</body>
+</html>

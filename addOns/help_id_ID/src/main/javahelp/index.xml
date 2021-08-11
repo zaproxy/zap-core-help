@@ -9,101 +9,107 @@
 
 <index version="2.0">
 
-    <indexitem text="aktif scan" target="start.concepts.ascan" />
+    <indexitem text="aktif scan" target="start.features.ascan" />
     <indexitem text="dialog pemindaian aktif" target="ui.dialogs.advascan" />
     <indexitem text="active scan tab" target="ui.tabs.ascan"/>
-    <indexitem text="add-ons" target="start.concepts.addons"/>
-    <indexitem text="add-ons" target="addon.introduction"/>
+    <indexitem text="add-ons" target="start.features.addons"/>
+    <indexitem text="add-ons" target="addons.introduction"/>
     <indexitem text="tambahkan alert dialog" target="ui.dialogs.addalert" />
-    <indexitem text="tambahkan break point dialog" target="ui.dialogs.addbreak" />
+    <indexitem text="add/edit breakpoint dialog" target="ui.dialogs.addbreak" />
     <indexitem text="tambahkan catatan dialog" target="ui.dialogs.addnote" />
     <indexitem text="peringatan tab" target="ui.tabs.alerts" />
-    <indexitem text="peringatan" target="start.concepts.alerts" />
-    <indexitem text="api" target="start.concepts.api" />
-    <indexitem text="otentikasi otentikasi berbasis form login manual" target="start.concepts.auth" />
-    <indexitem text="uji coba penetrasi dasar" target="start.pentest" />
-    <indexitem text="break point tab" target="ui.tabs.breakpoints" />
-    <indexitem text="break points" target="start.concepts.breakpoints" /> 
+    <indexitem text="peringatan" target="start.features.alerts" />
+    <indexitem text="api" target="start.features.api" />
+    <indexitem text="otentikasi otentikasi berbasis form login manual" target="start.features.auth" />
+    <indexitem text="authentication methods" target="start.features.authmethods" />
+    <indexitem text="authentication verification strategies" target="start.features.authstrategies" />
+    <indexitem text="basic penetration test" target="start.pentest" />
+    <indexitem text="breakpoints tab" target="ui.tabs.breakpoints" />
+    <indexitem text="breakpoints" target="start.features.breakpoints" /> 
     <indexitem text="break tab" target="ui.tabs.break" />
-    <indexitem text="baris perintah" target="cmdline" />
-    <indexitem text="konteks" target="start.concepts.contexts" />
-    <indexitem text="kredit" target="zap.credits" />
-    <indexitem text="data driven konten" target="start.concepts.ddc" />
-    <indexitem text="dialog" target="ui.dialogs" />
-    <indexitem text="encode / decode / hash dialog" target="ui.dialogs.enc_dec" />
-    <indexitem text="fitur" target="start.concepts" />
-    <indexitem text="filter dialog" target="ui.dialogs.filter" />
-    <indexitem text="filter" target="start.concepts.filters" />
-    <indexitem text="menemukan dialog" target="ui.dialogs.find" />
+    <indexitem text="callbacks tab" target="ui.tabs.callbacks" />
+    <indexitem text="command line" target="cmdline" />
+    <indexitem text="contexts" target="start.features.contexts" />
+    <indexitem text="credits" target="zap.credits" />
+    <indexitem text="custompages" target="start.features.custompages" /> 
+    <indexitem text="data driven content" target="start.features.ddc" />
+    <indexitem text="dialogs" target="ui.dialogs" />
+    <indexitem text="features" target="start.features" />
+    <indexitem text="find dialog" target="ui.dialogs.find" />
     <indexitem text="footer" target="ui.footer" />
-    <indexitem text="memulai" target="start.start" />
-    <indexitem text="sejarah filter dialog" target="ui.dialogs.historyfilter" />
-    <indexitem text="sejarah tab" target="ui.tabs.history" />
-    <indexitem text="http sesi tab" target="ui.tabs.httpsessions" />
-    <indexitem text="http sesi" target="start.concepts.httpsessions" />
-    <indexitem text="man-in-the-middle proxy" target="start.concepts.intercept"/>
-    <indexitem text="pendahuluan" target="zap.intro" />
-    <indexitem text="mengatur tab dialog" target="ui.dialogs.managetags" />
-    <indexitem text="manual permintaan dialog" target="ui.dialogs.manreq" />
-    <indexitem text="mode" target="start.concepts.modes" />
-    <indexitem text="catatan" target="start.concepts.notes" />
-    <indexitem text="pilihan dialog" target="ui.dialogs.options" />
+    <indexitem text="getting started" target="start.start" />
+    <indexitem text="history filter dialog" target="ui.dialogs.historyfilter" />
+    <indexitem text="history tab" target="ui.tabs.history" />
+    <indexitem text="http sessions tab" target="ui.tabs.httpsessions" />
+    <indexitem text="http sessions" target="start.features.httpsessions" />
+    <indexitem text="manipulator-in-the-middle proxy" target="start.features.intercept"/>
+    <indexitem text="introduction" target="zap.intro" />
+    <indexitem text="manage tabs dialog" target="ui.dialogs.managetags" />
+    <indexitem text="manual request dialog" target="ui.dialogs.manreq" />
+    <indexitem text="marketplace" target="start.features.marketplace" />
+    <indexitem text="modes" target="start.features.modes" />
+    <indexitem text="notes" target="start.features.notes" />
+    <indexitem text="options dialog" target="ui.dialogs.options" />
     <indexitem text="output tab" target="ui.tabs.output" />
     <indexitem text="params tab" target="ui.tabs.params" />
     <indexitem text="paros proxy" target="zap.paros" />
-    <indexitem text="passive scan" target="start.concepts.pscan" />
-    <indexitem text="pasif scanner pilihan" target="ui.dialogs.options.pscan.main" />
-    <indexitem text="bertahan sesi dialog" target="ui.dialogs.persistsession" />
+    <indexitem text="passive scan" target="start.features.pscan" />
+    <indexitem text="passive scanner options" target="ui.dialogs.options.pscan.main" />
+    <indexitem text="persist session dialog" target="ui.dialogs.persistsession" />
     <indexitem text="proxy configuration" target="start.proxy" />
-    <indexitem text="rilis 1.0.0" target="zap.releases.1.0.0" />
-    <indexitem text="rilis 1.1.0" target="zap.releases.1.1.0" />
-    <indexitem text="rilis 1.2.0" target="zap.releases.1.2.0" />
-    <indexitem text="rilis 1.3.0" target="zap.releases.1.3.0" />
-    <indexitem text="rilis 1.3.1" target="zap.releases.1.3.1" />
-    <indexitem text="rilis 1.3.2" target="zap.releases.1.3.2" />
-    <indexitem text="rilis 1.3.3" target="zap.releases.1.3.3" />
-    <indexitem text="rilis 1.3.4" target="zap.releases.1.3.4" />
-    <indexitem text="pelepasan 1.4.0" target="zap.releases.1.4.0" />
-    <indexitem text="pelepasan 1.4.1" target="zap.releases.1.4.1" />
-    <indexitem text="pelepasan 2.0.0" target="zap.releases.2.0.0" />
-    <indexitem text="pelepasan 2.1.0" target="zap.releases.2.1.0" />
-    <indexitem text="rilis 2.2.0" target="zap.releases.2.2.0" />
-    <indexitem text="lepaskan 2.2.1" target="zap.releases.2.2.1" />
-    <indexitem text="pelepasan 2.2.2" target="zap.releases.2.2.2" />
-    <indexitem text="pelepasan 2.3.0" target="zap.releases.2.3.0" />
-    <indexitem text="pelepasan 2.3.1" target="zap.releases.2.3.1" />
-    <indexitem text="pelepasan 2.4.0" target="zap.releases.2.4.0" />
-    <indexitem text="pelepasan 2.4.1" target="zap.releases.2.4.1" />
-    <indexitem text="pelepasan 2.4.2" target="zap.releases.2.4.2" />
-    <indexitem text="pelepasan 2.4.3" target="zap.releases.2.4.3" />
-    <indexitem text="pelepasan 2.5.0" target="zap.releases.2.5.0" />
-    <indexitem text="pelepasan 2.6.0" target="zap.releases.2.6.0" />
-    <indexitem text="rilis 2.7.0" target="zap.releases.2.7.0" />
-    <indexitem text="rilis" target="zap.releases" />
-    <indexitem text="tab permintaan" target="ui.tabs.request" />
-    <indexitem text="kirim ulang dialog" target="ui.dialogs.resend" />
-    <indexitem text="tab respon" target="ui.tabs.response" />
-    <indexitem text="aturan pemindai" target="start.check" />
-    <indexitem text="memindai kebijakan" target="start.concepts.scanpolicy" />
-    <indexitem text="memindai dialog kebijakan" target="ui.dialogs.scanpolicy" />
-    <indexitem text="pindai dialog manajer kebijakan" target="ui.dialogs.scanpolicymgr" />
-    <indexitem text="scan perkembangan dialog" target="ui.dialogs.scanprogress" />
-    <indexitem text="tab pencarian" target="ui.tabs.search" />
-    <indexitem text="sesi konteks layar" target="ui.dialogs.contexts" />
-    <indexitem text="konteks sesi otentikasi layar" target="ui.dialogs.context-auth" />
-    <indexitem text="sesi konteks struktur layar" target="ui.dialogs.context-struct" />
-    <indexitem text="dialog properti sesi" target="ui.dialogs.sessprop" />
-    <indexitem text="tab situs" target="ui.tabs.sites" />
-    <indexitem text="laba-laba" target="start.concepts.spider" />
-    <indexitem text="dialog laba-laba" target="ui.dialogs.spider" />
-    <indexitem text="tab laba-laba" target="ui.tabs.spider" />
-    <indexitem text="statistik" target="start.concepts.stats" />
-    <indexitem text="struktural pengubah" target="start.concepts.structmods" />
-    <indexitem text="parameter struktural" target="start.concepts.structparams" />
-    <indexitem text="tag" target="start.concepts.tags" />
-    <indexitem text="tingkat atas menu" target="ui.topmenu" />
+    <indexitem text="release 1.0.0" target="zap.releases.1.0.0" />
+    <indexitem text="release 1.1.0" target="zap.releases.1.1.0" />
+    <indexitem text="release 1.2.0" target="zap.releases.1.2.0" />
+    <indexitem text="release 1.3.0" target="zap.releases.1.3.0" />
+    <indexitem text="release 1.3.1" target="zap.releases.1.3.1" />
+    <indexitem text="release 1.3.2" target="zap.releases.1.3.2" />
+    <indexitem text="release 1.3.3" target="zap.releases.1.3.3" />
+    <indexitem text="release 1.3.4" target="zap.releases.1.3.4" />
+    <indexitem text="release 1.4.0" target="zap.releases.1.4.0" />
+    <indexitem text="release 1.4.1" target="zap.releases.1.4.1" />
+    <indexitem text="release 2.0.0" target="zap.releases.2.0.0" />
+    <indexitem text="release 2.1.0" target="zap.releases.2.1.0" />
+    <indexitem text="release 2.2.0" target="zap.releases.2.2.0" />
+    <indexitem text="release 2.2.1" target="zap.releases.2.2.1" />
+    <indexitem text="release 2.2.2" target="zap.releases.2.2.2" />
+    <indexitem text="release 2.3.0" target="zap.releases.2.3.0" />
+    <indexitem text="release 2.3.1" target="zap.releases.2.3.1" />
+    <indexitem text="release 2.4.0" target="zap.releases.2.4.0" />
+    <indexitem text="release 2.4.1" target="zap.releases.2.4.1" />
+    <indexitem text="release 2.4.2" target="zap.releases.2.4.2" />
+    <indexitem text="release 2.4.3" target="zap.releases.2.4.3" />
+    <indexitem text="release 2.5.0" target="zap.releases.2.5.0" />
+    <indexitem text="release 2.6.0" target="zap.releases.2.6.0" />
+    <indexitem text="release 2.7.0" target="zap.releases.2.7.0" />
+    <indexitem text="release 2.8.0" target="zap.releases.2.8.0" />
+    <indexitem text="release 2.9.0" target="zap.releases.2.9.0" />
+    <indexitem text="release 2.10.0" target="zap.releases.2.10.0" />
+    <indexitem text="releases" target="zap.releases" />
+    <indexitem text="request tab" target="ui.tabs.request" />
+    <indexitem text="response tab" target="ui.tabs.response" />
+    <indexitem text="scanner rules" target="start.check" />
+    <indexitem text="scan policy" target="start.features.scanpolicy" />
+    <indexitem text="scan policy dialog" target="ui.dialogs.scanpolicy" />
+    <indexitem text="scan policy manager dialog" target="ui.dialogs.scanpolicymgr" />
+    <indexitem text="scan progress dialog" target="ui.dialogs.scanprogress" />
+    <indexitem text="scripts" target="start.features.scripts" />
+    <indexitem text="search tab" target="ui.tabs.search" />
+    <indexitem text="session context screens" target="ui.dialogs.contexts" />
+    <indexitem text="session context authentication screen" target="ui.dialogs.context-auth" />
+    <indexitem text="session context structure screen" target="ui.dialogs.context-struct" />
+    <indexitem text="session properties dialog" target="ui.dialogs.sessprop" />
+    <indexitem text="sites tab" target="ui.tabs.sites" />
+    <indexitem text="sites tree" target="start.features.sitestree" />
+    <indexitem text="spider" target="start.features.spider" />
+    <indexitem text="spider dialog" target="ui.dialogs.spider" />
+    <indexitem text="spider tab" target="ui.tabs.spider" />
+    <indexitem text="statistics" target="start.features.stats" />
+    <indexitem text="structural modifiers" target="start.features.structmods" />
+    <indexitem text="structural parameters" target="start.features.structparams" />
+    <indexitem text="tags" target="start.features.tags" />
+    <indexitem text="top level menu" target="ui.topmenu" />
     <indexitem text="top level toolbar" target="ui.toptoolbar" />
-    <indexitem text="ikhtisar ui" target="ui.overview" />
-    <indexitem text="pandangan" target="ui.views" />
+    <indexitem text="ui overview" target="ui.overview" />
+    <indexitem text="views" target="ui.views" />
 
 </index>

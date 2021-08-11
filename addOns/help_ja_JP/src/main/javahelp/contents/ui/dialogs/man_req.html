@@ -6,10 +6,11 @@
 Manual Request Editor dialog
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Manual Request Editor dialog</h1>
 
-This dialog allows you to create a request from scratch which will be submitted to the specified target.
+This dialog allows you to create a request from scratch which will be submitted to the specified target,
+or resend an existing request after making any changes to it that you want to.
 
 <h2>リクエストタブ</h2>
 
@@ -29,11 +30,24 @@ This changes the display so that separate panes are used for the header and body
 <h3><img src="../../images/view_all.png" align="bottom" width="16" height="16" />&nbsp; Combined display for header and body</h3>
 This changes the display so that the header and body are shown in one pane.<br> 
 
-<h3><img src="../../images/fugue/cookie.png" align="bottom" width="16" height="16" />&nbsp; Use current tracking session</h3>
-See the 'Enable session tracking (Cookie)' menu item in the <a href="../tlmenu/edit.html">Edit menu</a>.<br>  
+<h3><img src="../../images/fugue/globe-green.png" align="bottom" width="16" height="16" />&nbsp; Use current tracking session</h3>
+See the 'Enable (Global) HTTP State' option in the <a href="./options/connection.html">Options Connection screen</a>.<br>
+
+<h3><img src="../../images/fugue/cookie.png" align="bottom" width="16" height="16" />&nbsp; Accept cookies</h3>
+This option controls whether encountered cookies should be added to subsequent requests. 
+For example if a request is sent that results in a response with Set-Cookie header(s) should those cookies values be added to subsequent 
+send attempts from the Manual Request dialog?<br>
 
 <h3><img src="../../images/16/118.png" align="bottom" width="16" height="16" />&nbsp; Follow redirect</h3>
-If selected automatically follows any redirects sent to the browser.<br> 
+If selected automatically follows any redirects sent to the browser.<br>
+
+<h3><img src="../../images/fugue/application-resize.png" align="bottom" width="16" height="16" />&nbsp; Update Content Length</h3>
+By default ZAP will automatically update (or add) the Content-Length header to match the size of the data submitted. 
+If this option is unselected then ZAP will not update the header allowing you to specify any value you like.<br>
+
+<h3><img src="../../images/csrf-button.png" align="bottom" width="16" height="16" />&nbsp; Regenerate Anti-CSRF</h3>
+If selected automatically regenerates Anti-CSRF tokens if any exist.
+Currently only supported in the message body and requires that the Anti-CSRF extension is enabled.<br>
 
 <h3><img src="../../images/layout_tabbed.png" align="bottom" width="16" height="16" />&nbsp; Request and Response tabs side by side</h3>
 This changes the display so that the request and response tabs are side by side.<br> 
@@ -59,14 +73,14 @@ Right clicking will bring up a menu which will allow you to:
 <h3>Find...</h3>
 This will bring up the <a href="../dialogs/find.html">Find dialog</a>.
 
-<h3>Encode/Decode...</h3>
-This will bring up the <a href="../dialogs/enc_dec.html">Encode/Decode dialog</a>.<br/>
-If you have highlighted any text then this will be automatically included in the dialog.
- 
 <h2>ここから参照されています</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../tlmenu/tools.html">Top level Tools menu</a></td><td>'Manual Request Editor ...' menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../tabs/sites.html">Sites tab</a></td><td>'Open/Resend with Request Editor...' right click menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../tabs/history.html">History tab</a></td><td>'Open/Resend with Request Editor...' right click menu item</td></tr>
 </table>
 
 <h2>関連情報</h2>

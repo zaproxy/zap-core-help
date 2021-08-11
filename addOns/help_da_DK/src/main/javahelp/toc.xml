@@ -9,45 +9,50 @@
 	TOC merger is defined in org.zaproxy.zap.extension.help.ZapTocMerger.
 -->
 <toc version="2.0">
- <tocitem text="ZAP User Guide" image="toplevelfolder" tocid="toplevelitem">
+ <tocitem text="ZAP Desktop User Guide" image="toplevelfolder" tocid="toplevelitem">
 
    <tocitem text="Introduction" target="zap.intro"/>
 
    <tocitem text="Getting Started" target="start.start">
       <tocitem text="Configuring proxies" target="start.proxy"/>
-      <!--tocitem text="Explore the application" target="start.explore"/-->
-      <tocitem text="Features" target="start.concepts">
-         <tocitem text="Aktivt Scan" target="start.concepts.ascan"/>
-         <tocitem text="Add-ons" target="start.concepts.addons"/>
-         <tocitem text="Alarmer" target="start.concepts.alerts"/>
-         <tocitem text="Anti CSRF Tokens" target="start.concepts.anticsrf"/>
-         <tocitem text="API" target="start.concepts.api"/>
-         <tocitem text="Godkendelses algoritme" target="start.concepts.auth"/>
-         <tocitem text="Breakpoints" target="start.concepts.breakpoints"/>
-         <tocitem text="Contexts" target="start.concepts.contexts"/>
-         <tocitem text="Filtre" target="start.concepts.ddc"/>
-         <tocitem text="Filters" target="start.concepts.filters"/>
-         <tocitem text="Globally Excluded URLs" target="start.concepts.globalexcludeurl"/>
-         <tocitem text="HTTP Sessions" target="start.concepts.httpsessions"/>
-         <tocitem text="Man-in-the-middle Proxy" target="start.concepts.intercept"/>
-         <tocitem text="Modes" target="start.concepts.modes"/>
-         <tocitem text="Notes" target="start.concepts.notes"/>
-         <tocitem text="Passiv Scanning" target="start.concepts.pscan"/>
-         <tocitem text="Scan Policies" target="start.concepts.scanpolicy"/>
-         <tocitem text="Scope" target="start.concepts.scope"/>
-         <tocitem text="Session Management" target="start.concepts.sessmanag"/>
-         <tocitem text="Spider" target="start.concepts.spider"/>
-         <tocitem text="Statistics" target="start.concepts.stats"/>
-         <tocitem text="Structural Modifiers" target="start.concepts.structmods"/>
-         <tocitem text="Structural Parameters" target="start.concepts.structparams"/>
-         <tocitem text="Tags" target="start.concepts.tags"/>
-         <tocitem text="Users" target="start.concepts.users"/>
+      <tocitem text="Features" target="start.features">
+         <tocitem text="Aktivt Scan" target="start.features.ascan"/>
+         <tocitem text="Add-ons" target="start.features.addons"/>
+         <tocitem text="Alarmer" target="start.features.alerts"/>
+         <tocitem text="Anti CSRF Tokens" target="start.features.anticsrf"/>
+         <tocitem text="API" target="start.features.api"/>
+         <tocitem text="Godkendelses algoritme" target="start.features.auth"/>
+         <tocitem text="Authentication Methods" target="start.features.authmethods"/>
+         <tocitem text="Authentication Verification Strategies" target="start.features.authstrategies"/>
+         <tocitem text="Breakpoints" target="start.features.breakpoints"/>
+         <tocitem text="Callbacks" target="start.features.callbacks"/>
+         <tocitem text="Contexts" target="start.features.contexts"/>
+         <tocitem text="Custom Page" target="start.features.custompages"/>
+         <tocitem text="Data Driven Content" target="start.features.ddc"/>
+         <tocitem text="Globally Excluded URLs" target="start.features.globalexcludeurl"/>
+         <tocitem text="HTTP Sessions" target="start.features.httpsessions"/>
+         <tocitem text="Manipulator-in-the-middle Proxy" target="start.features.intercept"/>
+         <tocitem text="Marketplace" target="start.features.marketplace"/>
+         <tocitem text="Modes" target="start.features.modes"/>
+         <tocitem text="Notes" target="start.features.notes"/>
+         <tocitem text="Passive Scan" target="start.features.pscan"/>
+         <tocitem text="Scan Policies" target="start.features.scanpolicy"/>
+         <tocitem text="Scope" target="start.features.scope"/>
+         <tocitem text="Scripts" target="start.features.scripts"/>
+         <tocitem text="Session Management" target="start.features.sessmanag"/>
+         <tocitem text="Sites Tree" target="start.features.sitestree"/>
+         <tocitem text="Spider" target="start.features.spider"/>
+         <tocitem text="Statistics" target="start.features.stats"/>
+         <tocitem text="Structural Modifiers" target="start.features.structmods"/>
+         <tocitem text="Structural Parameters" target="start.features.structparams"/>
+         <tocitem text="Tags" target="start.features.tags"/>
+         <tocitem text="Users" target="start.features.users"/>
       </tocitem>
       <tocitem text="Scanner Rules" target="start.check"/>
       <tocitem text="A Simple Penetration Test" target="start.pentest"/>
    </tocitem>
 
-   <tocitem text="The User Interface" target="ui.overview">
+   <tocitem text="The Desktop User Interface" target="ui.overview">
       <tocitem text="Overview" target="ui.overview"/>
       <tocitem text="The Top Level Menu" target="ui.topmenu"/>
       <tocitem text="The Top Level Toolbar" target="ui.toptoolbar"/>
@@ -65,19 +70,18 @@
          <tocitem text="Params" target="ui.tabs.params"/>
          <tocitem text="Parametre" target="ui.tabs.httpsessions"/>
          <tocitem text="Output" target="ui.tabs.output"/>
+         <tocitem text="Callbacks" target="ui.tabs.callbacks"/>
       </tocitem>
       <tocitem text="The Dialogs" target="ui.dialogs">
          <tocitem text="Aktivt Scan" target="ui.dialogs.advascan"/>
          <tocitem text="Tilføj Alarm" target="ui.dialogs.addalert"/>
-         <tocitem text="Add Break Point" target="ui.dialogs.addbreak"/>
+         <tocitem text="Add/Edit Breakpoint" target="ui.dialogs.addbreak"/>
          <tocitem text="Tilføj Note" target="ui.dialogs.addnote"/>
-         <tocitem text="BeanShell Terminal" target="ui.dialogs.enc_dec"/>
-         <tocitem text="Filter" target="ui.dialogs.filter"/>
-         <tocitem text="Filter" target="ui.dialogs.find"/>
+         <tocitem text="Find" target="ui.dialogs.find"/>
          <tocitem text="History Filter" target="ui.dialogs.historyfilter"/>
          <tocitem text="Manual Request Editor" target="ui.dialogs.manreq"/>
          <tocitem text="Manage Add-ons" target="ui.dialogs.manageaddons"/>
-         <tocitem text="Manuel Forespørgsels Editor" target="ui.dialogs.managetags"/>
+         <tocitem text="Manage Tags" target="ui.dialogs.managetags"/>
          <tocitem text="Options" target="ui.dialogs.options">
          	<tocitem text="Active Scan" target="ui.dialogs.options.ascan"/>
          	<tocitem text="Active Scan Input Vectors" target="ui.dialogs.options.ascaninput"/>
@@ -108,9 +112,8 @@
          	<tocitem text="Spider" target="ui.dialogs.options.spider"/>
          	<tocitem text="Statistics" target="ui.dialogs.options.stats"/>
          </tocitem>
-         <tocitem text="Administrér Tags" target="ui.dialogs.persistsession"/>
-         <tocitem text="Indstillinger" target="ui.dialogs.resend"/>
-         <tocitem text="Send igen" target="ui.dialogs.scanpolicymgr">
+         <tocitem text="Persist Session" target="ui.dialogs.persistsession"/>
+         <tocitem text="Scan Policy Manager" target="ui.dialogs.scanpolicymgr">
 	         <tocitem text="Scan Policy" target="ui.dialogs.scanpolicy"/>
          </tocitem>
          <tocitem text="Scan Progress" target="ui.dialogs.scanprogress"/>
@@ -127,9 +130,12 @@
 
    <tocitem text="Command Line" target="cmdline"/>
 
-   <tocitem text="Add Ons" target="addon.introduction" tocid="addons" />
+   <tocitem text="Add-ons" target="addons.introduction" tocid="addons" image="addons.icon" />
    
    <tocitem text="Releases" target="zap.releases">
+      <tocitem text="2.10.0" target="zap.releases.2.10.0"/>
+      <tocitem text="2.9.0" target="zap.releases.2.9.0"/>
+      <tocitem text="2.8.0" target="zap.releases.2.8.0"/>
       <tocitem text="2.7.0" target="zap.releases.2.7.0"/>
       <tocitem text="2.6.0" target="zap.releases.2.6.0"/>
       <tocitem text="2.5.0" target="zap.releases.2.5.0"/>

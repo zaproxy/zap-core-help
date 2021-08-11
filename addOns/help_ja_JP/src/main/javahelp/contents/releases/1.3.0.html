@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+リリース 1.3.0
+</title>
+</head>
+<body>
+<h1>リリース 1.3.0</h1>
+<p>
+本リリースでは以下のような変更が行われました。
+</p>
+<h2>重要な変更</h2>
+
+<h3>ファジング</h3>
+Strings in a response can now be fuzzed to try to find vulnerabilities.<br>
+Anti CRSF tokens can be detected and automatically regenerated when fuzzing.<br/>
+This functionality is based on code from the OWASP JBroFuzz project.
+
+<h3>ダイナミック SSL証明書</h3>
+The support for SSL connections was improved and simplified.<br>
+User's can now create their own root certificate and distribute this into their HTTP clients.<br>
+See <a href="../ui/dialogs/options/dynsslcert.html">Option: Dynamic SSL Certificates</a> for more details.  
+
+<h3>デーモンモードと API</h3>
+Starting ZAP with the "-daemon" command line option will cause it to run in the background in 'headless' mode, 
+meaning that no UI is displayed.<br>
+An initial API has been implemented in XML, JSON and HTML.<br>
+If ZAP is running as a daemon then the API is automatically enabled, otherwise the API must be enabled via the Options API screen.<br>
+The API can be navigated by opening http://zap/ in your browser when proxying via ZAP. 
+
+<h3>Beanshell 統合</h3>
+　 <a href="http://www.beanshell.org/">BeanShell</a> is an interactive Java shell that can be used to execute BeanShell scripts.<br> 
+These scripts are a simplified form of Java that use many elements from Java syntax, but in a simpler scripting format. <br>
+All Java code is also valid BeanShell code.<br>
+BeanShell integration in OWASP ZAP enables you to write scripts using the ZAP functions and data set.<br> 
+This can be a very powerful feature for analyzing web applications.<br>
+
+
+<h3>国際化対応</h3>
+すべての表示文字列は、完全に国際化対応されました。
+
+<h3>ローカライゼーション</h3>
+次の言語のサポート:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>英語</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>ポルトガル語（ブラジル）</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>中国語</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>フランス語</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>ドイツ語</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>ギリシャ語</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>インドネシア語</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>日本語</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>ポーランド語</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>スペイン語</td></tr>
+</table>
+
+
+<h2>小変更：</h2>
+
+<h3>16 進表示</h3>
+　 <a href="../ui/tabs/request.html">リクエスト</a>, <a href="../ui/tabs/response.html">レスポンス</a> tabs now provide
+a 'Hex View' option which will display the request and response bodies in hex format. 
+
+<h3>検索結果</h3>
+　 <a href="../ui/tabs/search.html">検索タブ </a> now displays all instances of a string found rather than just the first instance
+in each request or response. 
+
+<h3>除外URL</h3>
+URLs can be explicitly excluded from the active scanner, spider and from the proxy.
+
+<h3>コピーのサポート</h3>
+Most of the panels now provide a 'right click' 'Copy' menu option, including the Port Scan and Brute Force panels.
+
+<h3>Undo/Redoのサポート</h3>
+All of the input fields now support Undo/Redo actions using the operating systems default Undo/Redo accelerators:
+<ul>
+<li>Windows/Linux: Ctrl+Z / Ctrl+Y
+<li>Mac OS X: Cmd+Z / Cmd+Shift+Z
+</ul>
+
+<h3>ポートスキャナーのプロキシサポートとタイムアウトオプション</h3>
+The Port Scanner can now use the outgoing proxy (if configured) and the timeout in milliseconds can also now be set.
+
+<h3>Request and response break buttons</h3>
+There are now 2 'Set Break' buttons to allow breaks to be set on all requests and all responses independently. 
+
+<h3>Expand Sites and Information tab buttons</h3>
+There are now 2 buttons which allow you to switch between having the Sites and Information tabs expanded.
+
+<h3>Break tab icon changes colour when breakpoint hit</h3>
+While the Break tab is not in use its icon is a grey cross: &nbsp;
+<img src="../images/16/101grey.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
+When a <a href="../start/features/breakpoints.html">breakpoint</a> is hit the tab icon is changed 
+to a red cross: &nbsp;
+<img src="../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
+
+<h3>調節可能なタイムアウト</h3>
+　 <a href="../ui/dialogs/options/connection.html">Option: Connection</a> screen allows you to set the timeout in seconds
+to make it easier to test slow applications.
+
+<h3>ライブラリの更新</h3>
+ZAPで使用されるライブラリのほとんどは最新のバージョンに更新されました。
+
+<h3>新しいアイコン:)</h3>
+Simon Egliおよびその他の素敵なアイコンの提案を送ってくれた方々のおかげです。
+
+<h2>既知の問題:</h2>
+<h3>Mac OS x: 動的 SSL と Google Chrome</h3>
+Currently Dynamic SSL is not working when using Google Chrome. This is because of an unresolved known issue with Google Chrome and Mac OS X Keychain. When importing OWASP ZAP's Root CA into the keychain and requesting a SSL website, an "Invalid certificate" error message is shown.
+
+<h2>関連情報</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">はじめに</a></td><td>ZAPのご紹介</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">リリース</a></td><td>リリース一覧</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">クレジット</a></td><td>このリリースを可能にしたユーザーおよびグループ</td></tr>
+</table>
+</body>
+</html>

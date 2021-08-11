@@ -6,10 +6,10 @@
 Break tab
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Pestaña de interrupción</h1>
 <p>
-La pestaña de interrupción permite cambiar una solicitud o respuesta cuando ha sido capturado por ZAP a través del <a href="../../start/concepts/breakpoints.html">punto de interrupción</a>.<br/>
+La pestaña de interrupción permite cambiar una solicitud o respuesta cuando ha sido capturado por ZAP a través del <a href="../../start/features/breakpoints.html">breakpoint</a>.<br/>
 Permite cambiar los elementos que normalmente no se pueden cambiar a través el navegador, incluyendo:
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
@@ -29,20 +29,40 @@ Los dos paneles solo contendrán algo si ZAP captura una solicitud o una respues
 Los pull downs permiten seleccionar diferentes <a href="../views.html">vistas</a> para el encabezado y cuerpo de la solicitud o respuesta.
 </p>
 <p>
-Cuando la pestaña de Interrupción no está en uso su icono es una cruz gris: &nbsp;
-<img src="../../images/16/101grey.png" align="bottom" width="16" height="16" />&nbsp;.<br/> Cuando se presiona un <a href="../../start/concepts/breakpoints.html">punto de interrupción</a> la pestaña cambia a una cruz roja: &nbsp;<img src="../../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
+While the Break tab is not in use its icon is a grey cross: &nbsp;
+<img src="../../images/16/101grey.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
+When a <a href="../../start/features/breakpoints.html">breakpoint</a> is hit the tab icon is changed 
+to a red cross: &nbsp;
+<img src="../../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
 
 </p>
 
+<p>
+    If you have selected "Show buttons to select the requests you don't want ZAP to break on" in the
+    <a href="../dialogs/options/breakpoints.html">options menu</a> you will be able to select if you just want to break
+    on requests that are in scope and you will be able to select the file extensions you don't want to break on:<br>
+<table>
+    <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td><img src="../../images/javascript.png" align="bottom" width="16" height="16" />&nbsp; Javascript Files</td></tr>
+    <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td><img src="../../images/cssAndFonts.png" align="bottom" width="16" height="16"/>&nbsp; CSS and Fonts Files </td></tr>
+    <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td><img src="../../images/multimedia.png" align="bottom" width="16" height="16" />&nbsp; Multimedia Files</td></tr>
+    <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td><img src="../../images/fugue/target.png" align="bottom" width="16" height="16" />&nbsp; Only in scope</td></tr>
+</table>
+</p>
+
+<h3><img src="../../images/fugue/application-resize.png" align="bottom" width="16" height="16" />&nbsp; Update Content Length</h3>
+By default ZAP will automatically update (or add) the HTTP(S) Content-Length header to match the size of the data submitted. 
+If this option is unselected then ZAP will not update the header allowing you to specify any value you like.<br>
+This button will only be shown for HTTP(S) messages.
+
 <h2>Menú de botón derecho</h2>
-Al hacer clic derecho sobre un nodo se abrirá un menú que permitirá:
+Right clicking on a node will bring up a menu which will allow you to:
 
-<h3>Buscar...</h3>
+<h3>Find...</h3>
 This will bring up the <a href="../dialogs/find.html">Find dialog</a>.
-
-<h3>Codificar/Descodificar/Hash...</h3>
-This will bring up the <a href="../dialogs/enc_dec.html">Encode/Decode/Hash dialog</a>.<br/>
-If you have highlighted any text then this will be automatically included in the dialog.
 
 <h3>Copiar</h3>
 This will copy the selected string to the clipboard.
@@ -52,7 +72,7 @@ This will copy the selected string to the clipboard.
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../overview.html">UI Overview</a></td><td>Para una vista general sobre la interfaz de usuario</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="breakpoints.html">Break Points tab</a></td><td>for details of how to change or delete break points</td></tr>
+<a href="breakpoints.html">Breakpoints tab</a></td><td>for details of how to change or delete breakpoints</td></tr>
 </table>
 
 </body>

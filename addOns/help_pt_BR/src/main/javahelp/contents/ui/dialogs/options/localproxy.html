@@ -3,56 +3,59 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Options Local Proxies screen
+Tela de opções de Proxis Locais
 </title>
 </head>
-<body bgcolor="#ffffff">
-<h1>Options Local Proxies screen</h1>
+<body>
+<h1>Tela de opções de Proxis Locais</h1>
 <p>
-The Options Connection screen allows you to configure the addresses and ports 
+This screen allows you to configure the addresses and ports 
 on which ZAP accepts incoming connections.<br/>
 
 <h2>Local Proxy</h2>
 By default ZAP will listen on one local address and port, and these are the address and port that you must configure your browser to use as a proxy.
 </p>
-<h3>Address</h3>
-The local address which ZAP will use. All of the available addresses are automatically identified.
+<h3>Endereço</h3>
+O endereço local que o ZAP vai usar. Todos os endereços disponíveis são, automaticamente, identificados.
 
-<h3>Port</h3>
-The port on which ZAP will listen.
+<h3>Porta</h3>
+A porta que o ZAP vai escutar.
 
-<h3>Behind NAT</h3>
-Indicates that the Local Proxy (ZAP) is behind NAT. When selected ZAP will attempt to
-determine the public IP address, to properly detect and handle requests with the public
-IP address (for example, to be served by the ZAP API).
+<h3>Atrás do NAT</h3>
+Indica que o Proxy Local (ZAP) está atrás do NAT. Quando selecionado, o ZAP tentará determinar o endereço IP público, para detectar e tratar adequadamente as solicitações com o endereço IP público (por exemplo, para ser servido pela API ZAP).
 <p>
-<strong>Note:</strong> This option is only supported when ZAP is running in an AWS EC2 instance.
-ZAP will obtain the public IP address from
-<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html#working-with-ip-addresses">AWS EC2
-instance's metadata</a>.<br>
-ZAP should be started with this option enabled if access to the API, through the public IP address, is required:
+<strong>Nota:</strong> Esta opção só é compatível quando o ZAP está sendo executado em uma instância do AWS EC2. ZAP obterá o endereço IP público de
+<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html#working-with-ip-addresses">Metadados da instância AWS EC2</a>.<br>
+O ZAP deve ser iniciado com esta opção habilitada se o acesso à API, por meio do endereço IP público, for necessário:
 <blockquote>zap.sh -daemon -port 8080 -host 0.0.0.0 -config proxy.behindnat=true</blockquote>
-Also, the <a href="api.html">API</a> needs to be configured to accept external IP addresses (i.e. the IP
-address from where ZAP is being accessed).
+Também a <a href="api.html">(API) Interface de programação de aplicativo</a> precisa ser configurado para aceitar endereços IP externos (ou seja, o endereço IP de onde o ZAP está sendo acessado).
 
-<h3>Remove Unsupported Encodings</h3>
-Allows the proxy to remove unsupported encodings from the "Accept-Encoding" request-header field, so 
-no (unsupported) encoding transformations are done to the response.<br/>
-This option should be always enabled unless when testing the encoding transformations.<br/>
-The messages encoded with unsupported encodings will not be correctly scanned (either by passive and active scanners).
+<h3>Remover as Codificações não Suportadas</h3>
+Permite que o proxy remova codificações sem suporte do campo de cabeçalho de request "Accept-Encoding", para que nenhuma transformação de codificação (sem suporte) seja feitas na resposta.<br/>
+Esta opção deve ser sempre habilitada, a menos seja um  teste das transformações de codificação.<br/>
+As mensagens montadas com codificações não suportadas não serão corretamente varridas (seja por scanners passivos ou ativos).
 
-<h3>Security Protocols</h3>
-Allows to choose the SSL/TLS versions enabled for incoming connections (for example, from browsers). At least
-one version must be enabled, versions unsupported by the JRE will be unselected and disabled.
+<h3>Protocolos de Segurança</h3>
+Permite escolher as versões SSL / TLS habilitadas para conexões de entrada (por exemplo, de navegadores). Pelo menos uma versão deve ser habilitada; as versões não suportadas pelo JRE serão desmarcadas e desabilitadas.
 <br>
-The option SSLv2Hello must be selected in conjunction with at least one SSL/TLS version.
+A opção SSLv2Hello deve ser selecionada em conjunto com pelo menos uma versão SSL / TLS.
 <br>
-The security options apply to both the main and all of the additional proxies.
+As opções de segurança se aplicam ao proxy principal e a todos os proxies adicionais.
 
-<h2>Additional Proxies</h2>
-You can add as many additional addresses and ports for ZAP to listen on as you like.<br>
-This can be useful when testing mobile applications - you can proxy the mobile application via a Wi-Fi interface at the same time
-as using the backend site directly using a browser proxying through ZAP emulating a mobile user agent.
+<h2>Proxis Adicionais</h2>
+Você pode adicionar quantos endereços e portas adicionais para o ZAP escutar quantos desejar.<br>
+Isso pode ser útil ao testar aplicativos móveis - você pode fazer o proxy do aplicativo móvel por meio de uma interface Wi-Fi ao mesmo tempo em que usa o site de back-end diretamente usando um navegador que faz proxy por meio do ZAP emulando um agente de usuário móvel.
+
+<h2>Intercepting/Transparent Proxy</h2>
+The local proxies can be used as intercepting/transparent proxies for both HTTP and HTTPS. For HTTPS the client applications
+(e.g. browser) need to use the TLS extension <a href="https://tools.ietf.org/html/rfc6066#section-3">Server Name Indication</a>.
+This allows you to set up a testing LANs (or VMs) where all HTTP and HTTPS traffic is proxied regardless of software settings.
+<p>
+For example, if you have a Linux machine you use for testing, you can do something like the following to forward all HTTP and
+HTTPS traffic to a local proxy listening on <code>192.168.0.14:8080</code>:
+<pre><code>iptables -t nat -A OUTPUT -p tcp --dport 443 -j DNAT --to-destination 192.168.0.14:8080
+iptables -t nat -A OUTPUT -p tcp --dport 80 -j DNAT --to-destination 192.168.0.14:8080
+</code></pre>
 
 <h2>See also</h2>
 <table>

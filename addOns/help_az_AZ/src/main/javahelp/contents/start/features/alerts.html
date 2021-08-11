@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Alertlər
+</title>
+</head>
+<body>
+<h1>Alertlər</h1>
+<p>
+Xəbərdarlıq-bu, potensial və Açığı ilə bağlı konkret tələb edir.<br/> sorğu ola bilər, daha bir xəbərdarlıq.<br/>
+</p>
+<p>
+Siqnallar göstərilir istifadəçi interfeysi bayrağı ilə göstərən bir risk:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/071.png" align="bottom" width="16" height="16" />&nbsp; Yüksək</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/076.png" align="bottom" width="16" height="16" />&nbsp; Orta </td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/074.png" align="bottom" width="16" height="16" />&nbsp; Zəif</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/073.png" align="bottom" width="16" height="16" />&nbsp; İnformasiyalı</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/072.png" align="bottom" width="16" height="16" />&nbsp; False Positive</td><td></td></tr>
+</table>
+
+<p>
+Xəbərdarlıq təsir edə bilər, müxtəlif zap komponentləri, o cümlədən, lakin məhdud deyil: <a href="ascan.html">fəal scan</a>, <a href="pscan.html">passiv scan</a>, skript istifadə edərək, addons (uzantıları), və ya əl ilə <a href="../../ui/dialogs/addalert.html">Əlavə et Алерт dialoq</a> (ki, bu da imkan verir yeniləmək və ya dəyişmək xəbərdarlıq məlumat/məlumat).
+</p>
+<p>
+Xəbərdarlıq qeyd olunur <a href="../../ui/tabs/history.html">bookmark "Tarix" </a> bayrağı ilə olan göstərir ki, yüksək risk xəbərdarlıq edir.<br/> Bütün xəbərdarlıq verilən <a href="../../ui/tabs/alerts.html">siqnallar nişanõ</a> və counter ümumi sayının xəbərdarlıq risk təmsil <a href="../../ui/footer.html">футер</a>.
+</p>
+
+<a name="alertoverrides"></a><h2>Xəbərdarlıq ləğv edir</h2> 
+
+Siqnallar zap daxildir həm ümumi, həm də konkret məlumatlar haqqında bildiriş.
+Konkret məlumatlar aiddir birbaşa potensial problemi, məsələn, URL-ünvanı və parametr təsir edir.
+Ümumi məlumat daxildir, belə şeylər kimi təsviri və links müvafiq internet resursları.
+<p>
+Əvəz edə bilərsiniz və ya əlavə etmək üçün Ümumi məlumatlar istifadə edərək, konfiqurasiya faylı və siqnallar yalnış'.
+Bu, imkan verir məlumatları daxil nəzərdə tutulmuşdur üçün Sizin şirkət kimi elan siyasət, daxili bağlantılar və ya məsləhətlər üzrə xüsusi texnologiyalar istifadə etdiyiniz.
+<p>
+An alert override configuration file is a UTF-8 property file containing just the information you would like to change. Lines starting with '#' are treated as comments and ignored.
+<p>
+Format:
+<pre>
+&lt;alertid&gt;.&lt;property&gt; = [ + | - ] &lt;your information&gt;
+</pre>
+Dəstəklənir aşağıdakı xassələri:
+<ul>
+<li>name</li>
+<li>description</li>
+<li>solution</li>
+<li>otherInfo</li>
+<li>reference</li>
+</ul>  
+
+For example
+<pre>
+# 40012 = əks xss azn 40012.qərar = saxlamaq üçün bizim konkret rəhbər prinsipləri, şirkətin http://internet.example.com/xss.html
+</pre>
+Əgər əhəmiyyəti ilə başlayır'+', onda o əlavə edilir və mövcud məlumat.
+<br>
+Əgər o, başlayır ' - ' o əlavə edilir və mövcud məlumat.
+<br>
+Əgər o, heç bir ilə başlayır '+' və ya ' - ' o əvəz mövcud məlumat.
+<p>
+Konfiqurasiya siqnallar yalnış fayl vasitəsilə göstərilə bilər <a href="api.html">API</a>,
+<a href="../../ui/dialogs/options/alert.html">Options Alert screen</a>
+or using the <a href="../../cmdline.html">command line</a> option:  
+<pre>-config alert.overridesFilename=&lt;filename&gt;</pre>
+
+<h2>See also</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="features.html">Features</a></td><td>provided by ZAP</td></tr>
+</table>
+
+</body>
+</html>

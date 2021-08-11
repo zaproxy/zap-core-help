@@ -6,46 +6,49 @@
 Ang mga opsyon sa display screen
 </title>
 </head>
-<body bgcolor="#ffffff">
-<h1>Mga opsyon ng display screen</h1>
+<body>
+<h1>Ang mga opsyon ng display screen</h1>
 <p>
-Ang mga Display screen ay nagpapahintulot sa iyo na magkumpigura sa:
+Ang mga Display screen ay nagpapahintulot sa iyo na kumpigurahin ang:
 
-<h3>Imahe</h3>
-Kung ang ZAP ay nagproproseso ng mga imahe.
+<h3>Ang imahe</h3>
+Kapag ang ZAP ay nagproproseso ng mga imahe.
 
-<h3>Ipakita ang (lokal) na CONNECT ng mga kahilingan</h3>
-Kung ang mga kahilingan ng HTTP CONNECT ay matatanggap sa pamamagitan ng <a href="localproxy.html">Lokal na Proxies</a> dapat ay magpatuloy sa kasalukuyang
-<a href="../../tlmenu/file.html">sesyon</a> at ipinapakita sa <a href="../../tabs/history.html">History tab</a>. Ang default ay para sa hindi pagpapakita ng mga kahilingan, ito ay nangyayaring madalas (sa paghahanda para sa TLS/SSL, Websocket... koneksyon) at, maliban pagaralan ang ugali ng kliyenteng may application, ay hindi (gaano) nakakainteresado.
+<h3>Ipakita ang (lokal) na CONNECT ng mga pakiusap</h3>
+Kung ang mga kahilingan ng HTTP CONNECT ay matatanggap sa pamamagitan ng <a href="localproxy.html">Lokal na mga Proxies</a> dapat lang na magpatuloy sa kasalukuyan
+<a href="../../tlmenu/file.html">ang sesyon</a> at ipinapakita na sa <a href="../../tabs/history.html">Ang History tab</a>. Ang default ay para lamang sa hindi pagpapakita ng mga kahilingan, ito ay nangyayaring madalas (sa paghahanda para sa TLS/SSL, Websocket... koneksyon) at, maliban pagaralan ang ugali ng kliyenteng may aplikasyon, ay hindi (gaano) nakakainteresado.
 
-<h3>Display</h3>
+<h3>Ang Display</h3>
 Ang layout ng 3 pangaunahing mga panel.<br>
-Ang mga sumusunod na mga opsyon ay magagamit:
+Ang mga sumusunod na mga opsyon ay magagamit sa:
 <ul>
-    <li>Palakihin ng labis ang kaliwang (mga Site) tab - Ang 'tatlong' panel ay naglalaman ng mga site tab na pwedeng makadagdag
+    <li>Palakihin ng labis na kaliwang (mga Site) tab - Ang 'tatlong' panel ay naglalaman ng mga site tab na pwedeng makadagdag
         Mula sa buong haba ng kaliwang kamay. Mababawasan nito ang halaga ng
        espasyo na pwedeng gamitin para sa 'impormasyon' sa panel.</li>
-    <li>I-maximise ang buttom (History etc) mga tab- Ang 'impormasyon' ng panel ay palawigin para sa
+    <li>Palakihin ang nasa ilalim na  (History atbp) mga tab- Ang 'impormasyon' ng panel ay palawigin para sa
         Ang buong haba ng buttom. Mababawasan nito ang halaga ng espasyo na pwedeng gamitin para
         sa 'tatlong' panel.</li>
-    <li>Ang kabuoang Layout - Ang napiling tab ay kukuwa ng buong screen. ito ay        kagamit-gamit sa tuwing gagamit ng ZAP sa maliit na mga screen.</li>
+    <li>Ang kabuoang Pagkakaayos - Ang napiling tab ay kukuwa ng buong screen. ito ay        kagamit-gamit sa tuwing gagamit ng ZAP sa maliit na mga screen.</li>
 </ul>
 
 <h3>Tumugon sa Posisyon ng Panel</h3>
-Ang pagpapahintulot upang ma i-configure ang posisyon ng tab sa pagtugon at respeto sa tab ng kahilingan.<br>
-Ang mga sumusunod na mga opsyon ay maaaging magamt:
+Ang pagpapahintulot upang kumpigurahin ang posisyon ng tab sa pagtugon at respeto sa tab ng kahilingan.<br>
+Ang mga sumusunod na mga opsyon ay maaari ng magamit:
 <ul>
     <li>Ang mga tab side by side - Ang kahilingan at pagtugon na mga tabs ay gilid sa gilid din. Ang
        pagtaas na ito ang impormasyon na maaaring makita pero ibig sabihin hindi mo maaaring makita ang parehong
         kahilingan at katugunan sa parehong oras.</li>
-    <li>Mga magkakatabing panel - Ang kahilingan ng panel ay maipakita ang natitira sa mga katugunan sa
-        panel. Ang pagbawas ng impormasyon na maaaring maipakita pero ibig sabihin maaari mong makita pareho
-         ang kahilingan at katugunan sa magkaparehang oras.</li>
-    <li>Ang kahilingan ay makikita sa taas ng pagtugon - Ang hiling na panel ay makikita sa taas ng pagtugon sa
-         panel. Ang pagbaba na ito ay ang impormasyon na maaaring makita pero ibig sabihin maaari mo rin itong makita pareho
+    <li>Side by Side in Tab - The Request and Response panels are shown side by side in
+        the same tab. This decreases the information that can be displayed but means you can
+        see both the request and response at the same time.</li>
+    <li>Panels Side by Side - The Request panel is shown to the left of the Response
+        panel. Ang pagbaba na ito ay ang impormasyon na maaaring makita pero ibig sabihin maaari mo rin itong makita pareho
           ang kahilingan at pagtugon  sa magkaparihong oras.</li>
+    <li>Request Shown Above Response - The Request panel is shown above the Response
+        panel. This decreases the information that can be displayed but means you can see both
+        the request and response at the same time.</li>
 </ul>
-Ang katugunan na panel sa posisyon ng opsyon ay hindi ma-a-apply kapag ang opsyon ng display ay naitakda na sa kabuoang layout.
+Ang Response Panel Position na opsyon ay hindi ma-a-apply kapag ang opsyon ng display ay naitakda na sa kabuoang pagkakaayos.
 
 <h3>Ipakita ang mga break button</h3>
 Ang lokasyon ng mga break button.
@@ -56,14 +59,14 @@ Ito ay para maiwasan ang pinakamalaking katawan sa pagkababa ng UI.<br>
 Ang paglagay ng halaga sa -1 ay resulta sa aplikasyon ito ay laging makikita gaano man kalaki ito.
 
 <h3>Ang malaking pagtugon na makikita ang laki ng min</h3>
-The minimum size of a response body in bytes at which point a 'large response body' message will be shown instead of the actual body.<br>
+Ang pinakamaliit ng laki ng nilalaman ng tugon sa bytes kung saan ang mensahe na 'malaking nilalaman ng tugon' ay makikita sa halip na ang aktwal na nilalaman.<br>
 Ito ay para maiwasan ang pagbagal ng malaking katawan ng UI.<br>
 Ang paglagay ng halaga sa -1 ay resulta sa aplikasyon ito ay laging makikita gaano man kalaki ito.
 
 <h3>Opsyon ng Output ng mga tab ng Time Stamp</h3>
 Sa oras na pinagana mo ang time stamps sa output tab maaari mo itong i-configure ang pormat na nais mong lumabas na mga time stamp. 
 Alinman ang piliin sa isang pre-defined na pormat mula sa listahan ng drop-down o ilagay ang isa sa iyong napili. Ang pormat ay base sa Java
-SimplengdatePormat. Pagkatapos mong mamili o ilagay ang pormat ng time stamp kung pipindutin mo ang enter ang halimbawa sa kanan ay maga-update para magrepleka sa iyong napili. Kung ang ZAP ay di maaaring magamit para magamit ang isang pormat na iyong nilagay kung magkagayon ang halimbawa ay makikita base lamang sa pormat ng Default.
+SimpleDateFormat. Pagkatapos mong mamili o ilagay ang pormat ng time stamp kung pipindutin mo ang enter ang halimbawa sa kanan ay maga-update para magrepleka sa iyong napili. Kung ang ZAP ay di maaaring magamit para magamit ang isang pormat na iyong nilagay kung magkagayon ang halimbawa ay makikita base lamang sa pormat ng Default.
 
 <table border="1" cellpadding="5">
 <tr> <td> Mahaba &amp; Default </td> <td> yyyy-MM-dd HH:mm:ss </td> </tr>
@@ -71,15 +74,22 @@ SimplengdatePormat. Pagkatapos mong mamili o ilagay ang pormat ng time stamp kun
 <tr> <td> Oras Lamang </td> <td> HH:mm:ss </td> </tr>
 </table>
 
-<h3>Laki ng Font</h3>
-Ang default na laki ng teksto ay ginamit para sa display ng ZAP. Kung itatakda mo ito sa -1 kung magkagayon ang sistema ng laki ng default ay maaaring gamitin.<br>
+<h3>Font Controls</h3>
+The General Font section controls default text font and size used for the ZAP display, while the Work Panels Font section 
+controls the font used for the top right section of ZAP's main window (Ex: Request/Response, Edit and Resend tool, etc.).
+If you set this to -1 then the system default size will be used.<br>
 Ang 'Halimbawa ng Font' ay maipapakita sayo ang larangan kung gaano kalagi ang defualt ng teksto na lumabas.<br>
-Ang setting ay magkakaroon lamang ng epekto kapag ang ZAP ay nagsimulang muli.
+<strong>Note:</strong> This setting will only take effect when ZAP is restarted.
 
-<h2>Tignan din</h2>
+<h3>Look and Feel</h3>
+Allows to choose the look and feel of ZAP. If empty the default is used, <code>Nimbus</code> in Windows and Linux, the native
+system look and feel in macOS.<br />
+The system property <code>swing.defaultlaf</code> takes precedence over this option.
+
+<h2>Tingnan din</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">Kabuoang ideya ng UI</a></td><td>para sa kabuoang ideya ng gumagamit ng interface.</td></tr>
+<a href="../../overview.html">Ang UI Overview</a></td><td>para sa kabuoang ideya ng gumagamit ng interface.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="options.html">Opsyon ng dayalogo</a></td><td>para sa detalye ng iba pang mga opsyon ng mga dayalogo sa screen.</td></tr>
 </table>

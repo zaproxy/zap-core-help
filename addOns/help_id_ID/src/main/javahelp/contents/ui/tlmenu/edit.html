@@ -6,41 +6,44 @@
 Edit menu
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Edit menu</h1>
-Menu ini menangani menemukan string di tab tertentu, mencari string di semua 
-permintaan dan tanggapan dan mengelola sesi pelacakan.
+This menu handles finding strings in specific tabs, searching for strings across all 
+requests and responses, changing ZAP's mode, and managing forced user mode.
 
-<h3>Cari...</h3>
-Ini akan membuka <a href="../dialogs/find.html">Menemukan dialog</a> yang memungkinkan Anda untuk menemukan sebuah string di jendela yang dipilih saat ini.<br/>
+<h3>ZAP Mode</h3>
+This allows you to change the current <a href="../../start/features/modes.html">mode</a>.
 
-<h3>Aktifkan Session Tracking (Cookie)</h3>
-Hal ini memungkinkan rincian sesi yang disimpan dalam cookie yang akan dilacak.<br/>
-Opsi ini harus dipilih untuk mengaktifkan kotak centang "Gunakan saat ini sesi pelacakan" dalam <a href="../dialogs/resend.html">Kirim ulang</a> dan 
-<a href="../dialogs/man_req.html">Manual meminta Editor dialog</a>. <br/>
-Sesi pelacakan memastikan bahwa setiap permintaan yang dikirim dengan rincian sesi terbaru.<br/>
-Misalnya, anda dapat merekam sesi ketika masuk sebagai salah satu pengguna dan kemudian keluar dan masuk sebagai pengguna lain.<br/>
-Jika Anda mengirim permintaan dari sesi pertama tanpa sesi pelacakan maka akan menggunakan cookie dari sesi pertama.<br/>
-Jika Anda mengirim permintaan yang sama dengan sesi pelacakan maka akan menggunakan cookie dari sesi kedua.
+<h3>Find...</h3>
+This opens the <a href="../dialogs/find.html">Find dialog</a> which allows you to find a string in the currently selected window.<br/>
 
-<h3>Reset Keadaan Sesi</h3>
-Ini membersihkan pelacakan sesi.<br/>
+<h3>Search...</h3>
+This sub-menu facilitates access to the following items:
 
-<h3>Telusuri...</h3>
-Ini memilih <a href="../tabs/search.html">Telusur</a> yang memungkinkan anda untuk mencari ekspresi reguler di semua URL, permintaan dan tanggapan..
+<h4>Search...</h4>
+This selects the <a href="../tabs/search.html">Search tab</a> which allows you to search for regular expressions
+in all URLs, requests, and responses.
 
-<h3>Selanjutnya</h3>
-Ini memilih terjadinya berikutnya string terakhir mencari.<br/>
-Pesan yang relevan akan dipilih di tab Pencarian dan string yang akan ditampilkan dan disorot dalam <a href="../tabs/request.html">Permintaan</a> atau
-<a href="../tabs/response.html">Respon</a> tab yang sesuai.
+<h4>Next Result</h4>
+This selects the next occurrence of the last string searched for.<br/>
+The relevant message will be selected in the Search tab and the string will be displayed
+and highlighted in the <a href="../tabs/request.html">Request</a> or
+<a href="../tabs/response.html">Response</a> tab as appropriate.
 
-<h3>Sebelumnya Previous</h3>
-Ini memilih terjadinya sebelumnya string terakhir mencari.<br/>
-Pesan yang relevan akan dipilih pada tab Pencarian dan string akan ditampilkan dan disoroti pada <a href="../tabs/request.html">Permintaan</a> atau
-<a href="../tabs/response.html">Respon</a> tab yang sesuai.
+<h4>Previous Result</h4>
+This selects the previous occurrence of the last string searched for.<br/>
+The relevant message will be selected in the Search tab and the string will be displayed
+and highlighted in the <a href="../tabs/request.html">Request</a> or
+<a href="../tabs/response.html">Response</a> tab as appropriate.
+
+<h3>Enable / Disable Forced User Mode</h3>
+This switches forced user mode on and off.<br/>
+The menu item is only enabled when you have defined a forced user for at least one 
+<a href="../../start/features/contexts.html">context</a>, which can be done via the 
+<a href="../dialogs/session/contexts.html">Session Contexts</a> dialog.
 
 <p>
-Perhatikan bahwa <a href="../../start/concepts/addons.html">add-ons</a> bisa menambahkan item menu tambahan.
+Note that <a href="../../start/features/addons.html">add-ons</a> can add additional menu items.
 </p>
 
 <h2>Lihat juga</h2>

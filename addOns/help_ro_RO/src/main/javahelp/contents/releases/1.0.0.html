@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Versiunea 1.0.0
+</title>
+</head>
+<body>
+<h1>Versiunea 1.0.0</h1>
+<p>
+Următoarele schimbări au fost aduse acestei versiuni:
+</p>
+<h2>Schimbări semnificative:</h2>
+
+<h3>Ecranele de ajutor</h3>
+Ecrane de ajutor au fost adăugate pentru toate funcțiile oferite de ZAP.<br/>
+Ajutorul contextual a fost de asemenea implementat, astfel când apeși tasta F1 va fi afișat ecranul de ajutor asociat tab-ului selectat.
+
+<h3>Breakpoints</h3>
+Implementarea <a href="../start/features/breakpoints.html">Breakpoints</a> a fost schimbată pentru a fi mai apropiată software-ului mediilor de integrare a dezvoltării.<br/>
+The breakpoint controls have been moved to the new <a href="../ui/tltoolbar.html">Top Level Toolbar</a>.<br/>
+Breakpoints can now also be set by right clicking nodes in the 
+<a href="../ui/tabs/sites.html">tab-ul Site-uri</a> și <a href="../ui/tabs/history.html">Istoric</a>.
+
+<h3>Meniu pentru rapoarte</h3>
+Meniul <a href="../ui/tlmenu/report.html">pentru rapoarte</a> a suferit schimbări majore, incluzând următoarele elemente de meniu:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Generează Raport...</td><td>Ce poate acum genera rapoarte la cerere</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Exportă Mesaje către Fișier...</td><td>Mutat din <a href="../ui/tlmenu/file.html">Meniu Fișier</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Exportă Răspuns către Fișier...</td><td>Mutat din <a href="../ui/tlmenu/file.html">Meniu Fișier</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Exportă toate URL-urile către Fișier...</td><td>Funcționalitate nouă</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Compară cu alte sesiuni...</td><td>Funcționalitate nouă</td></tr>
+</table>
+
+<h3>Căutare îmbunătățită a istoricului</h3>
+Noul <a href="../ui/tabs/search.html">tab de Căutări</a> îți permite să cauți exprimări normale în cererile și răspunsurile tuturor URL-urilor. <br/>
+Butoanele următorul și anteriorul îți permit să vizualizezi termenii căutați în 
+<a href="../ui/tabs/request.html">tab-ul Cerere</a> și <a href="../ui/tabs/response.html">Răspuns</a>. <br/>
+
+<h3>Filtrul pentru istoric</h3>
+<a href="../ui/tabs/history.html">Toolbar-ul pentru a filtra istoricul</a> a fost adăugat pentru a îți permite să restricționezi cererile afișate.<br/>
+Cererile pot fi filtrate în baza metodelor HTTP, codurilor de rezultat HTTP, și orice <a href="../start/features/tags.html">tag-uri</a>, <a href="../start/features/alerts.html">alerte</a>sau
+<a href="../start/features/notes.html">notițe</a> ce au fost aplicate.    
+
+<h3>Notițe</h3>
+Acum poți asocia <a href="../start/features/notes.html">notițe</a> oricărei cereri.    
+
+<h3>Tag-uri multiple</h3>
+Acum poți asocia multiple <a href="../start/features/tags.html">tag-uri </a> oricărei cereri.    
+
+<h3>Mai mult control asupra alertelor</h3>
+Căsuța <a href="../ui/dialogs/addalert.html">de dialog Adaugă Alertă</a> îți permite să adaugi sau să schimbi manual o alertă. 
+
+<h3>Noul codor/decodor</h3>
+A new Encode/Decode/Hash dialog has replaced the previous 
+Encoder/Decoder. 
+
+<h3>Scanare pasivă</h3>
+<a href="../start/features/pscan.html">Passive scanning</a> has been added.<br/>
+In this release ZAP will only use passive scanning for automatically adding <a href="../start/features/tags.html">tags</a>.<br/>
+In future releases it may also raise <a href="../start/features/alerts.html">alerts</a> for potential issues. 
+    
+<h2>Schimbări minore:</h2>
+
+<h3>Toolbar-ul Top Level</h3>
+<a href="../ui/tltoolbar.html">The Top Level Toolbar</a> has been added which
+provides a set up buttons for commonly used functionality. 
+
+<h3>Rezumatele alertelor de subsol</h3>
+Counts of the High, Medium, Low and Informational <a href="../start/features/alerts.html">alerts</a>
+are now displayed in the <a href="../ui/footer.html">footer</a>.
+
+<h3>Un nou aspect</h3>
+A new look and feel 'Nimbus' is used.
+
+<h3>Manipularea parolelor proxy</h3>
+<a href="../ui/dialogs/options/connection.html">The Options Connection screen</a> has a new option to 
+'Prompt for proxy credentials on start up'.<br/>
+If this option is selected then your proxy password will not be stored on the hard disk.  
+
+<h3>Retrimite din tab-ul Site-uri</h3>
+The <a href="../ui/tabs/sites.html">Sites tab</a> has a new right click menu item that allows
+you to resend the request after making any changes to it that you want to.  
+
+<h3>Directorul utilizatorului este menținut între sesiuni</h3>
+The last directory used by the user is now stored in the config file so that it is
+maintained between sessions.
+
+<h2>Consultă și</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Introducere</a></td><td>introducerea în ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Lansări</a></td><td>setul complet de versiuni lansate</td></tr>
+</table>
+</body>
+</html>

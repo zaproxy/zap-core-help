@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Data Driven Content
+</title>
+</head>
+<body>
+<h1>Data Driven Content</h1>
+<p>
+Data driven content is type of <a href="structmods.html">Structural Modifier</a>
+which identifies URL paths that represent data.<br>
+<p>
+В "традиционных" веб-приложения структура приложения, как правило, определяется URL-адреса 
+и данные содержатся в параметрах URL и данных POST.<br>
+URLs like:
+<ul>
+<li>https://www.example.com/app/aaa?ddd=eee
+<li>https://www.example.com/app/aaa?ddd=fff
+<li>https://www.example.com/app/bbb?ddd=eee
+</ul>
+are represented in the <a href="sitestree.html">Sites Tree</a> as two 'nodes' in the tree:
+<ul>
+<li>Sites
+	<ul>
+	<li>https://www.example.com
+		<ul>
+		<li>app
+			<ul>
+			<li>GET:aaa(ddd)
+			<li>GET:bbb(ddd)
+			</ul>
+		</ul>
+	</ul>
+</ul>
+Дерево сайтов очень важно, так как оно отражает понимание ZAP структуры приложения.<br>
+Если это не хорошее представление структуры, то ZAP не сможет эффективно атаковать приложение.<br>
+<br>
+Некоторые приложения включают данные в URL-пути.<br>
+For example: 
+<ul>
+<li>https://www.example.com/app/company1/aaa?ddd=eee
+<li>https://www.example.com/app/company2/aaa?ddd=fff
+<li>https://www.example.com/app/company3/aaa?ddd=ggg
+</ul>
+These 3 URLs represent the same page but with different data, but by default ZAP will represent them as three separate nodes:
+<ul>
+<li>Sites
+	<ul>
+	<li>https://www.example.com
+		<ul>
+		<li>app
+			<ul>
+			<li>company1
+				<ul>
+				<li>GET:aaa(ddd)
+				</ul>
+			<li>company2
+				<ul>
+				<li>GET:aaa(ddd)
+				</ul>
+			<li>company3
+				<ul>
+				<li>GET:aaa(ddd)
+				</ul>
+			</ul>
+		</ul>
+	</ul>
+</ul>
+Это проблема, потому что ZAP теперь будет атаковать все 3 страницы, когда он только должен атаковать один из них.<br>
+In this case attacking the same page 3 times is not a big problem, but if you have hundreds or thousands 
+of pages like this will significantly increase the time it takes to scan the application.<br>
+<br>
+In ZAP terms the 'company' nodes are 'data driven content' - URL path elements that contain
+data instead of representing part of the application structure.<br>
+You can define data driven content by adding the application to a <a href="contexts.html">Context</a>
+and then configuring them via the <a href="../../ui/tabs/sites.html">Sites tab</a> 'Flag as Context -&gt; <i>Context Name</i> Data driven node' right click menu item<br>
+После этого страницы будут правильно представлены как 1 узел:
+<ul>
+<li>Sites
+	<ul>
+	<li>https://www.example.com
+		<ul>
+		<li>app
+			<ul>
+			<li>&#x00AB;company&#x00BB;
+				<ul>
+				<li>GET:aaa(ddd)
+				</ul>
+			</ul>
+		</ul>
+	</ul>
+</ul>
+The characters &#x00AB; and &#x00BB; are used to indicate that this is a 'special' node and the 
+node name (in this case 'company') can be set by you to indicate what that node represents.
+
+<h2>Accessed via</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/sites.html">Sites tab</a></td><td>'Flag as Context -&gt; <i>Context Name</i> Data driven node' right click menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/history.html">History tab</a></td><td>'Flag as Context -&gt; <i>Context Name</i> Data driven node' right click menu item</td></tr>
+</table>
+
+<h2>See also</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">UI Overview</a></td><td>обзор пользовательского интерфейса</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="features.html">Features</a></td><td>provided by ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="structparams.html">Structural Parameters</a></td><td>которые идентифицируют параметры, представляющие структуру приложения, а не пользовательские данные</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/dialogs/session/context-struct.html">Session Context Structure screen</a></td></tr>
+</table>
+
+</body>
+</html>

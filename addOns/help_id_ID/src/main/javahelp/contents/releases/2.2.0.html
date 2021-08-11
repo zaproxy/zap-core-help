@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  Rilis 1.3.0
+</title>
+</head>
+<body>
+<h1>Rilis 1.3.0</h1>
+<p>
+Berikut perubahan yang dibuat dalam rilis ini:
+</p>
+
+<h2>Perubahan kecil:</h2>
+
+<h3>Issue 717 : Scripts: mendukung banyak skrip dan embedding dalam komponen ZAP</h3>
+<h3>Dukungan untuk Mozilla Zest:
+https://developer.mozilla.org/en-US/docs/Zest</h3>
+<h3>Dukungan untuk Mozilla Plug-n-Hack:
+https://developer.mozilla.org/en-US/docs/Plug-n-Hack</h3>
+<h3>Mendukung untuk pemindaian judul serta format JSON dan XML</h3>
+
+<h2>Perubahan kecil:</h2>
+
+<h3>Edisi 711 : Mendukung pemindaian permintaan XML</h3>
+<h3>Edisi 713 : Menambahkan nomor CWE dan WASC ke terbitan</h3>
+<h3>Issue 719 : Custom http breakpoints with more options</h3>
+<h3>Edisi 738 : pilihan untuk menyembunyikan tab / window</h3>
+<h3>Edisi 750 : upgrade naskah konsol untuk mendukung naskah bahasa tanpa teks</h3>
+<h3>Edisi 752 : menciptakan root CA yang baru saat pertama kali dijalankan</h3>
+<h3>Edisi 755 : Memungkinkan host untuk ditetapkan melalui saluran perintah</h3>
+
+
+<h2>Perbaikan bug:</h2>
+
+<h3>Edisi 555 : panel Http default ke tampilan hex</h3>
+<h3>Edisi 599 : sesi save api tidak dibolehkan untuk menimpa sesi yang sudah memiliki nama yang sama</h3>
+<h3>Sesi 630 : URLCanonicalizer.getCanonicalURL
+menghasilkan kode URL "half"</h3>
+<h3>Edisi 631 :
+URLCanonicalizer.buildCleanedParametersURIRepresentation mengembalikan URI dalam bentuk percent-encoded dan decoded</h3>
+<h3>Edisi 625 : Shutdown setelah melakukan pemindaian besar membutuhkan waktu yang lama (menghapus catatan pemindaian)</h3>
+<h3>Edisi 655 : edisi pengkodean API</h3>
+<h3>Masalah 665 : NullPointerException sementara proxy dengan URI dengan kosong jalan komponen</h3>
+<h3>Masalah 666 : JSONException sambil memanggil API tindakan tanpa parameter yang dibutuhkan(s)</h3>
+<h3>Edisi 669 : Kendala sertifikat algoritma di Java 1.7</h3>
+<h3>Edisi 674 : Tambahkan HttpSessionAPI ke ApiGeneratorUtils</h3>
+<h3>Edisi 685 : Tambahkan berkas dummy ke daftar "fuzzers"</h3>
+<h3>Edisi 686 : Masukan HttpException (terjadi kesalahan) didalam ProxrThread</h3>
+<h3>Edisi 687 : Mengubah parser respon HTTP header menjadi lebih sempurna</h3>
+<h3>Edisi 690 : Konteks URL otentikasi tidak terkendala penimpaan manual.</h3>
+<h3>Edisi 691 : Menangani plugin tua</h3>
+<h3>Edisi 692 : Laporan versi java berdasarkan zap.sh</h3>
+<h3>Edisi 693 : jalur perintah harus menunjukkan semua pilihan</h3>
+<h3>Edisi 694 : UI API gagal di IE API</h3>
+<h3>Edisi 695 : Batang situs tidak jelas pada sesi baru yang dibuat oleh API</h3>
+<h3>Edisi 696 : Mengubah opsi add-on "Ajax Spider" untuk menggunakan ZapNumberSpinner</h3>
+<h3>Edisi 697 : Tindakan API "proxy.pac" dapat mengembalikan domain/port yang salah</h3>
+<h3>Edisi 698 : Pemindaian pasif API melihat kembali -1"recordsToScan" setelah selesai memindai pesan</h3>
+<h3>Edisi 699 : Memperbaiki kesalahan HTML di halaman bantuan</h3>
+<h3>Edisi 702 : Jangan memuat add-on versi baru jika bukan ditujukan untuk versi ZAP yang sedang berjalan</h3>
+<h3>Masalah 703 : Add-on ZAP versi kendala "tidak-sebelum-version" dan "tidak-dari-versi" tidak dihormati karena sudah "diinstal" add-ons</h3>
+<h3>Masalah 706 : ZAP API tidak mengurai dengan benar parameter kueri dengan "&amp;" karakter</h3>
+<h3>Masalah 710 : URLCanonicalizer.getCanonicalURL gagal untuk benar mengurai parameter kueri dengan "&amp;" dan "=" karakter</h3>
+<h3>Masalah 712 : HttpSessions API action "setSessionTokenValue" harus menambahkan sesi token nama untuk situs session token</h3>
+<h3>Issue 720 : Cannot send non standard http methods
+ Masalah 720 : Tidak bisa mengirim non-standar metode http</h3>
+<h3>Masalah 721 : Non POS dan MENEMPATKAN permintaan menerima 504 ketika server mengharapkan permintaan tubuh</h3>
+<h3>Masalah 724 : Jangan clone peringatan pesan yang akan ditampilkan di pesan panel</h3>
+<h3>Edisi 725: Jelas lansiran panel bidang</h3>
+<h3>Masalah 726 : Menangkap aktif scanner varian' pengecualian</h3>
+<h3>Masalah 727 : Nama secara otomatis dibuat HTTP sesi selalu dalam bahasa inggris</h3>
+<h3>Masalah 728 : Memungkinkan untuk membuat sebuah sesi dengan nama yang diberikan melalui HttpSessions API</h3>
+<h3>Masalah 729 : Memperbarui kode otentikasi NTLM</h3>
+<h3>Masalah 730 : MissingResourceException saat memilih keluarga ekstensi (add-on) pada "Ekstensi" pilihan panel</h3>
+<h3>Masalah 731 : MissingResourceException dengan ExtensionFuzz diaktifkan dan ExtensionBruteForce dinonaktifkan</h3>
+<h3>Edisi 736 : Ubah cara memuat kelas add-on menjadi parent-last</h3>
+<h3>Masalah 737 : Mengembalikan "Ajax laba-laba" add-on dependensi</h3>
+<h3>Edisi 756 : Izinkan Panel konteks saling terhubung</h3>
+<h3>Edisi 753 : Laporan XML Kosong saat digunakan dalam mode daemon</h3>
+<h3>Edisi 764 : HTTP fuzz tidak mendukung menu klik kanan</h3>
+<h3>Pencarian hasil fuzz tidak termasuk header</h3>
+<h3>Masalah 767: HTTP sesi API bisa kurang ketat</h3>
+<h3>Masalah 772 : Restrukturisasi Menyimpan/Memuat Konteks Data</h3>
+<h3>Masalah 774 : Membangun tidak termasuk script directory</h3>
+<h3>Masalah 776 : Biarkan add-ons untuk memperingatkan pengguna jika mereka menutup ZAP dengan sumber daya yang belum diselamatkan terbuka</h3>
+<h3>Masalah 777 : tidak Dapat membatalkan perubahan ketika menggunakan Sertakan/Kecualikan dari Konteks</h3>
+<h3>Masalah 782 : NoSuchMethodError ketika tidak termasuk WebSocket channel URL dari konteks</h3>
+<h3>Ubah zap.sh untuk mengatasi Java 1.8</h3>
+<h3>Edisi 786 : Item menu sesi snapshot tidak berfungsi</h3>
+
+<h2>Lihat juga</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Lihat juga</a></td><td>pengantar ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Rilis</a></td><td>set lengkap rilis</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Kredit</a></td><td>orang-orang dan kelompok-kelompok yang telah membuat rilis ini mungkin</td></tr>
+</table>
+</body>
+</html>

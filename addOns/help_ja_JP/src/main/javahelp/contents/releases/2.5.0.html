@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  リリース 2.5.0
+</title>
+</head>
+<body>
+<h1>リリース 2.5.0</h1>
+
+<p>
+本リリースでは以下のような変更が行われました。
+</p>
+
+<h2>ZAP API の変更:</h2>
+
+<h3>VIEW authorization / getAuthorizationDetectionMethod</h3>
+
+Now returns data wrapped in an object called authorizationDetectionMethod
+
+For example:
+<pre>{"authorizationDetectionMethod":{"statusCode":"-1"..."headerRegex":""}}</pre>
+instead of:
+<pre>{"statusCode":"-1"..."headerRegex":""}</pre>
+
+<h3>VIEW context / context + technologyList</h3>
+Both now return data wrapped in an object called "context"
+
+For example:
+<pre>{"context":{"id":"1", ..., "inScope":"true","loggedOutPattern":""}}</pre>
+instead of:
+<pre>{"id":"1", ..., "inScope":"true","loggedOutPattern":""}</pre>
+
+<h3>ACTION spider / scan + scanAsUser</h3>
+</ul>
+Both now support a new optional 'subtreeOnly' parameter which limits the spider to the specified subtree.
+The 'url' parameter is also now optional, as long as a valid 'context' parameter is supplied
+
+<h3>New 'stats' component</h3>
+The new 'stats' API component provides access to the <a href="../start/features/stats.html">stats</a>
+now maintained by ZAP.<br><br>
+
+Note that some existing components will also have new operations, see the 
+<a href="../start/features/api.html">API Web UI</a> for more details.
+ 
+
+<h2>機能拡張:</h2>
+<ul>
+<li>Issue 266 : Add auto tagging for setting cookies, json</li>
+<li>Issue 646 : Password outgoing proxy in plain text on screen</li>
+<li>Issue 1171 : Sites tree to raise 'new site / new node' events</li>
+<li>Issue 1229 : Update Extensions/Plugins to Take Advantage of New Confidence Scale</li>
+<li>Issue 1341 : Update alert XML schema to remove element-level name collision</li>
+<li>Issue 1590 : Mode to apply when running as a daemon</li>
+<li>Issue 1713 : Source Code Disclosure SVN Throws False Positive</li>
+<li>Issue 1864 : Copy scan progress as text to clipboard</li>
+<li>Issue 1958 : Allow to disable database (HSQLDB) log</li>
+<li>Issue 1959 : Allow to active scan headers of all requests</li>
+<li>Issue 1980 : Add ZAP CLI to Docker images</li>
+<li>Issue 2068 :  LoggedIn and LoggedOut indicators inside authentication scripts</li>
+<li>Issue 2070 : It should be possible for the authentication scripts to configure how the messages are sent</li>
+<li>Issue 2121 : Disable Req/Resp tabs position options when in "Expand Full" layout</li>
+<li>Issue 2127 : Warn if the report generation failed</li>
+<li>Issue 2162 : add-marketplace-sorting</li>
+<li>Issue 2171 : Add-ons managed via api, cli</li>
+<li>Issue 2174 : ExpressionLanguageInjectionPlugin - Needs logging fix </li>
+<li>Issue 2177 : SourceCodeDisclosureSVN - Can't write to temp DB</li>
+<li>Issue 2183 : API: Include quality in the ascan/progress response</li>
+<li>Issue 2237 : Allow java max mem to be overridden on the cmdline</li>
+<li>Issue 2238 : spider: fallback to parse HTML comments as plain text if no URL found</li>
+<li>Issue 2272 : SQLInjectionHypersonic (Beta) - Exceptions</li>
+<li>Issue 2273 : Support site level stats</li>
+<li>Issue 2274 : Allow to spider just a site's subtree</li>
+<li>Issue 2275 : spider: do not require a URL, through the API, if the context has seeds</li>
+<li>Issue 2277 : spider: preserve query parameters with same name when canonicalising URL</li>
+<li>Issue 2289 : Record site based response time stats</li>
+<li>Issue 2324 : Include scanners' quality in API scanners views</li>
+<li>Issue 2330 : Add authentication stats</li>
+<li>Issue 2335 : Add Outbound Proxy Password Peak</li>
+<li>Issue 2342 : Ability to manage Sites in ZAP via API</li>
+<li>Issue 2347 : Allow to remove context factories from View/Model</li>
+<li>Issue 2361 : Rename tool bar option Expand Full to Full Layout</li>
+<li>Issue 2362 : Allow to select all Spider results</li>
+<li>Issue 2367 : Change break buttons location without restarting ZAP</li>
+<li>Issue 2368 : Do not require a restart to show/hide the main tool bar</li>
+<li>Issue 2381 : Do not allow to save/write to read-only files</li>
+<li>Issue 2400 : Show a more informative message on read timeouts through the proxy</li>
+<li>Issue 2410 : Show HTTP messages in the Spider tab</li>
+<li>Issue 2413 : Disable "Show in History Tab" if message not valid</li>
+<li>Issue 2418 : Spider: support maximum duration in mins option</li>
+<li>Issue 2420 : Allow active scanners to notify that a message was sent</li>
+<li>Issue 2422 : Support Statsd and moved stats to new ext</li>
+<li>Issue 2465 : Allow to wait for ZAP to start with ClientApi</li>
+<li>Issue 2466 : Allow to access a URL through the ZAP API</li>
+<li>Issue 2479 : Show User Guide even if a search view has errors</li>
+<li>Issue 2481 : Set correct application name in Linux</li>
+<li>Issue 2482 : Normalise Session dialogue tables "Exclude from"</li>
+<li>Issue 2484 : Circular Redirects</li>
+<li>Issue 2486 : Clear ScriptVars on session change</li>
+<li>Issue 2494 : ZAP Proxy is not showing the HTTP CONNECT Request in history tab.</li>
+<li>Issue 2504 : Explicitly add manual HTTP requests to Sites tree</li>
+<li>Issue 2506 : Do not discard the session for file based database</li>
+<li>Issue 2512 : Update HSQLDB library to version 2.3.4</li>
+<li>Issue 2519 : Enable menu/button when help add-on is installed</li>
+</ul>
+
+<h2>バグ修正:</h2>
+<ul>
+<li>Issue 1529 : TestExternalRedirect Missing Use Case plus Performance and FP Improvements</li>
+<li>Issue 1597 : Java 8 - Mac OS/X package</li>
+<li>Issue 1639 : XSS False Negative on script injections into the Referer HTTP header</li>
+<li>Issue 1786 : Activescan Scripts Silent Failure</li>
+<li>Issue 1801 : URL StandardParameterParser not working correctly with QueryString</li>
+<li>Issue 1848 : VariantURLQuery throwing exceptions on active scan</li>
+<li>Issue 1874 : Two Cookie line in the header when adding a cookie with an httpsender script and doing an active scan</li>
+<li>Issue 1875 : Scanner temp history not cleaned on close</li>
+<li>Issue 2090 : Context: Rename User, can't select in Forced User Panel</li>
+<li>Issue 2110 : SQL Injection gets skipped</li>
+<li>Issue 2112 : Wrong policy on active Scan</li>
+<li>Issue 2115 : Python API context.context("MyContext") is broken</li>
+<li>Issue 2119 : Context's description not imported</li>
+<li>Issue 2122 : Change SpiderAPI to ignore empty context names when handling scan action</li>
+<li>Issue 2125 : Log the exception when opening session file and internationalise message</li>
+<li>Issue 2126 : Fix NullPointerException on missing context's authentication script</li>
+<li>Issue 2132 : Zap Report Counting Bug</li>
+<li>Issue 2142 : Fuzzer throwing exceptions</li>
+<li>Issue 2144 : Java.lang.NullPointerException in "AWT-EventQueue-0" </li>
+<li>Issue 2151 : AJAX Spider does not click all elements set in the options</li>
+<li>Issue 2153 : 2.4.3 failed parse the POST Data containts bracket([]) </li>
+<li>Issue 2193 : Initialise Technology tab with selected context in Active Scan dialogue</li>
+<li>Issue 2197 : Install new versions of the add-ons after downloading with -addonupdate</li>
+<li>Issue 2199 : Disallow Spider scans when ZAP is in Safe (or Protected) mode</li>
+<li>Issue 2203 : Fix findbugs warnings</li>
+<li>Issue 2208 : Prevent the active scanner from reporting progress higher than 100%</li>
+<li>Issue 2226 : ZAP should handle HttpSessionsSite's cookie errors more gracefully</li>
+<li>Issue 2246 : Error in sessions view with tokens</li>
+<li>Issue 2259 : Fix NullPointerException in VariantCookie implementation</li>
+<li>Issue 2281 : Filter params for a specific site</li>
+<li>Issue 2282 : Spider a whole context at once</li>
+<li>Issue 2292 : Enhance alertFingerPrint</li>
+<li>Issue 2297 : AWT blocker activation interrupted - java.lang.InterruptedException </li>
+<li>Issue 2307 : Add missing optional parameter "scanPolicyName" to ascan API actions</li>
+<li>Issue 2312 : Give focus to "Edit Keyboard Shortcut" dialogue</li>
+<li>Issue 2313 : Properly convert (old) excluded proxy domains</li>
+<li>Issue 2314 : Cannot add several payloads to fuzzer (NullPointerException)</li>
+<li>Issue 2323 : Fix (secure) ZAP API request loop</li>
+<li>Issue 2328 : Fix issue during uninstallation of named extension</li>
+<li>Issue 2329 : Filter seeds immediately before running the spider</li>
+<li>Issue 2331 : Custom Context Panels not show in existing contexts after installation of add-on</li>
+<li>Issue 2336 : BadLocationException thrown when using Fuzzer</li>
+<li>Issue 2357 : Inconsistencies while changing between panel layouts</li>
+<li>Issue 2363 : Keep break buttons in sync when changing mode</li>
+<li>Issue 2366 : Inconsistencies in break buttons shown</li>
+<li>Issue 2373 : Show Tab not working correctly in Full Layout for non-information tabs</li>
+<li>Issue 2374 : Unable to change response tab position without main tool bar</li>
+<li>Issue 2390 : HeadlessException should be handled more gracefully & README needs Headless details</li>
+<li>Issue 2394 : Change API authorization view to wrap its object</li>
+<li>Issue 2399 : Timeout requests not shown in ZAP</li>
+<li>Issue 2421 : Active scanner request count mismatch</li>
+<li>Issue 2428 : Memory leak on session creation/loading</li>
+<li>Issue 2429 : InterruptedExceptions while stopping the spider with user authentication</li>
+<li>Issue 2435 : Clean up spider task resources, when not consumed</li>
+<li>Issue 2436 : Unable to dynamically uninstall WebSockets add-on</li>
+<li>Issue 2440 : Exception while opening the Active Scan dialogue</li>
+<li>Issue 2451 : Only a single Data Driven Node can be saved in a context</li>
+<li>Issue 2463 : Websocket not proxied when outgoing proxy is set</li>
+<li>Issue 2469 : Always return 100% when spider stopped</li>
+<li>Issue 2472 : Use file name case when loading policies from file</li>
+<li>Issue 2474 : Add multiple context URL in/exclusions at once</li>
+<li>Issue 2475 : Correct help page for Passive Scan Rules options</li>
+<li>Issue 2487 : Wrong charset used in HTTP body</li>
+<li>Issue 2516 : Add auth and spider task types to temporary types</li>
+</ul>
+
+<h2>関連情報</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">はじめに</a></td><td>ZAPの紹介</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">リリース</a></td><td>リリース一覧</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">謝辞</a></td><td>リリースに携わったユーザーやグループ</td></tr>
+</table>
+</body>
+</html>

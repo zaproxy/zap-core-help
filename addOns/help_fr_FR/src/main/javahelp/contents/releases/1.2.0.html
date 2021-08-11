@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Release 1.2.0
+</title>
+</head>
+<body>
+<h1>Release 1.2.0</h1>
+<p>
+Les modifications suivantes ont été apportées dans cette version :
+</p>
+<h2>Significant changes:</h2>
+
+<h3>Memory Leaks</h3>
+Les fuites de mémoire ont été corrigés dans la <a href="../start/features/ascan.html">scanner actif</a> and
+<a href="../start/features/spider.html">spider</a>.
+
+<h3>Invoke applications</h3>
+Les applications externes peuvent maintenant être appelée à partir de ces Sites et de l'Histoire des onglets.
+
+<h3>Passive Scanner</h3>
+The <a href="../start/features/pscan.html">passive scanner</a> regarde maintenant pour vulnérabilités, telles que:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>La saisie semi-automatique des formulaires avec des champs de mot de passe</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Cookies sans le "HttpOnly" drapeau</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>SSL Cookies sans le "sécuriser" drapeau</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>La faiblesse de l'authentification</td></tr>
+</table>
+
+<h2>Changements mineurs :</h2>
+
+<h3>XML Reports</h3>
+Un nouveau "Générer de Rapport XML..." du menu est maintenant inclus dans le niveau supérieur <a href="../ui/tlmenu/report.html">Reports</a> 
+menu.
+
+<h3>Manuel de l'Éditeur de Requête et Renvoyer les boîtes de dialogue</h3>
+Les demandes présentées par les <a href="../ui/dialogs/man_req.html">Manual Request Editor and
+Resend dialogs</a> are now shown in the <a href="../ui/tabs/sites.html">Sites</a> and 
+<a href="../ui/tabs/history.html">History</a> tabs.<br>
+A new 'Method' pull down allows you to switch between the HTTP methods, this automatically moves parameters
+between the URL and the body when a POST method is selected or deselected.
+
+<h3>Alerts UI</h3>
+The <a href="../ui/tabs/sites.html">Sites</a> tab now shows any alerts as flags to the right of any node names.<br>
+The alert counts in the <a href="../ui/footer.html">footer</a> now show the number of different types of alerts rather than
+the total number of instances. 
+
+<h3>Active scanner l'option retard</h3>
+The delay in milliseconds between each <a href="../start/features/ascan.html">active scanner</a> request can now be set via the  
+<a href="../ui/dialogs/options/ascan.html">Options Active Scan screen</a>. This will increase the time an active scan takes
+but will reduce the load on the target.
+
+<h3>UI Changes</h3>
+The <a href="../ui/tabs/sites.html">Sites</a> tab now takes up all of the left hand side - this can be changed back 
+via the <a href="../ui/dialogs/options/ascan.html">Options Display screen</a> if required.<br>
+<br>
+The 'toolbar' on the <a href="../ui/tabs/request.html">Request</a>, <a href="../ui/tabs/response.html">Response</a> and
+<a href="../ui/tabs/break.html">Break</a> tabs and the <a href="../ui/dialogs/man_req.html">Manual Request Editor and
+Resend dialogs</a> is now at the top rather than the bottom.<br>
+<br>
+The scanner counts in the <a href="../ui/footer.html">footer</a> are now displayed on the right hand side.<br>
+<br>
+
+<h2>Voir aussi</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Introduction</a></td><td>l'introduction de ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Releases</a></td><td>l'ensemble complet des releases</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Crédits</a></td><td>les personnes et les groupes qui ont rendu cette release possible</td></tr>
+</table>
+</body>
+</html>

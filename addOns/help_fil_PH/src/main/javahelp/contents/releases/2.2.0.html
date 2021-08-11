@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  Ang ika 2.2.0 Paglabas
+</title>
+</head>
+<body>
+<h1>Mga pagpapakawala 2.2.0</h1>
+<p>
+Ang mga sumusunod na mga pagbabago ay gawa ng pagbabagong ito:
+</p>
+
+<h2>Malaking pagbabago:</h2>
+
+<h3>Usapin 717 : Mga Iskrip: pag suporta sa maraming mga iskrip at ipailalim sa mga Komponent ng ZAP</h3>
+<h3>Pag-suporta sa Mozilla Zest:https://developer.mozilla.org/en-US/docs/Zest</h3>
+<h3>Sumuporta para sa Mozilla Plug-n-Hack:https://developer.mozilla.org/en-US/docs/Plug-n-Hack</h3>
+<h3>Suporta para sa pag iscan ng header tulad ng nasa JSON at XML na ayos</h3>
+
+<h2>Malaking pagbabago:</h2>
+
+<h3>Usapin 711 : Suporta ng pag-scan sa mga kailangan ng XML</h3>
+<h3>Usapin 713 : Magdagdag ng CWE at WASC na mga numero sa mga Usapin</h3>
+<h3>Issue 719 : Custom http breakpoints with more options</h3>
+<h3>Usapin 738 : Ang mga opsyon upang itago ang mga tab / windows</h3>
+<h3>Usapin 750 : Mag Upgrade ang script console upang suportahan ang non textbased scripting languages</h3>
+<h3>Usapin 752 : gumawa ng bagong root CA kapag unang gumana</h3>
+<h3>Usapin 775 : Pahintulotan ang host upang mag-takda sa pamamagitan ng command line</h3>
+
+
+<h2>Mga pagaayos ng Bug:</h2>
+
+<h3>Isyu 555 : Kakulangan ng mga panel ng Http sa pag-view ng hex</h3>
+<h3>Isyu 599 : Ang save sesyon api ay hindi pinahihintulutan na i-overwrite ang sesyon na may parehong pangalan</h3>
+<h3>Isyu 630 : URLCanonicalizer.getCanonicalURL ay gumagawa ng mga URL na "kalahating" decoded</h3>
+<h3>Isyu 631 : URLCanonicalizer.buildCleanedParametersURIRepresentation nagbabalik ng mga URL sa porsyento-naka-encode na form at i-decode</h3>
+<h3>Isyu 652 : Pagsasara matapos ng malaking pag scan ay tumatagal ng napakahaba (pagbubura sa mga talaan ng scan)</h3>
+<h3>Isyu 655 : Mga isyu ng pag-encode ng API</h3>
+<h3>Isyu 665 : NullPointerException habang nagsisilbing proxy sa isang URI na may walang laman na komponent</h3>
+<h3>Isyu 666 : JSONException kapag tumatawag sa isang aksyon API nang walang kinakailangan parameter(s)</h3>
+<h3>Isyu 696 : Mga limitasyon sa Sertipiko ng algorithm sa java 1.7</h3>
+<h3>Isyu 674 : Magdagdag ng HttpsessionAPI sa ApiGeneratorUtils</h3>
+<h3>Isyu 685 : Magdagdag ng dummy payl sa direktaryo ng "mga fuzzer"</h3>
+<h3>Isyu 686 : mag-log sa HttpExceptio (bilang error) na nasa ProxyThread</h3>
+<h3>Isyu 687 : Pagbabago sa HTTP response header parser upang maging mas mahigpit</h3>
+<h3>Isyu 690 : Ang mga URL na nagpapatunay sa mga konteksto upang hindi mabigo sa manu manong pag overwrite.</h3>
+<h3>Isyu 691 : Pangasiwaan ang mga lumang plugin</h3>
+<h3>Isyu 692 : Ipagbigay alam ang bersiyon ng java na natagpuan ng zap.sh</h3>
+<h3>Isyu 693 : Nararapat na ipakita ng command line ang lahat ng opsyon</h3>
+<h3>Isyu 694 : Ang API UI ay nabigo sa IE</h3>
+<h3>Isyu 695 : Ang mga puno ng site ay hindi malinaw sa bagong sesyon na nilikha ng API</h3>
+<h3>Isyu 696 : Pagbabago sa mga add-on opsyon ng "Ajax Ispayder" upang magamit ang ZapNumberSpinner</h3>
+<h3>Isyu 697 : Ang pagkilos ng API sa "proxy.pac" ay maaaring bumalik sa hindi tamang domain/port</h3>
+<h3>Isyu 698 : Ang Passive Scanner API ay nakikita ang mga "recordToScan" return -1 pagkatapos na ma-scan ang mensahe</h3>
+<h3>Isyu 699 : Ayusin ang mga error sa mga help page ng HTML</h3>
+<h3>Isyu 702 : Huwag mag-load ng mga mas bagong bersyon ng add-on kung hindi ito naka-target para sa tumatakbong ZAP bersyon</h3>
+<h3>Isyu 703 : Ang mga hadlang na Add-on ZAP bersyon "hindi-bagong-bersyon" at "hindi-mula sa-bersyon ay hindi iganagalan ng mga add-on na "naka-instal na "</h3>
+<h3>Isyu 706 : Ang ZAP API ay hindi ma-parse nang wasto ang query ng mga parameter sa pamamagitan ng mga &amp; karakter</h3>
+<h3>Isyu 710 : URLCanonicalizer.getCanonicalURL ay nabigong iwasto ang parse ng mga query parameter sa pamamagitan ng &amp; at "=" mga karakter</h3>
+<h3>Isyu 712 : Httpsession API aksyon "setsessionTokenValue" dapat idagdag ang pangalan ng sesyon token sa mga site ng sesyon token</h3>
+<h3>Isyu 720 : Hindi maaaring magpadala ng hindi standard ang mga pamamaraan ng http</h3>
+<h3>Isyu 721 : Ang kahilingan ng mga hindi POST at PUT ay makakatangap ng 504 kapag ang request body ay inaasahan ng server</h3>
+<h3>Isyu 724 : Huwag i-clone ang mga alerto ng mensahe na ipinapakita sa mga panel ng mensahe</h3>
+<h3>Isyu 725 : I-Clear ang mga alerto ng mga panel field</h3>
+<h3>Isyu 726 : Makuha ang aktibong scanner ng mga variant exception</h3>
+<h3>Isyu 727 : Ang Pangalan na automatikong gumagawa ng HTTP sesyon ay laging nasa English</h3>
+<h3>Isyu 728 : Pinahihintulutan na gumawa ng isang sesyon na may isang pangalan sa pamamagitan ng HttpSessions API</h3>
+<h3>Isyu 729 : I-Update ang NTLM authentication code</h3>
+<h3>Isyu 730 : MisingResourceException habang pumipili ng isang disabled extension (mula sa add-on) na nasa mga "Extension" opsyon panel</h3>
+<h3>Isyu 731 : MissingResourceException na may ExtensionFuzz enabled at ExtensionBruteForce disabled</h3>
+<h3>Isyu 736 : Baguhin ang klase ng loading strategy sa parent-last</h3>
+<h3>Isyu 737 : Ibalik ang "Ajax ispayder" add-on dependencies</h3>
+<h3>Isyu 756 : Pinahihintulutan ang mga context panel intercommunication</h3>
+<h3>Isyu 763 : ANg report ng XML ay walang laman kapag gamit sa daemon mode</h3>
+<h3>Isyu 764 : Ang resulta ng HTTP fuzz ay hindi sinusuportahan ang mga kanang click menu</h3>
+<h3>Isyu 766 : Ang Paghahanap ng mga fuzz result ay hindi kasama ang header</h3>
+<h3>Isyu 767 Maaring ang HttP Sesyon API ay mas mahigpit</h3>
+<h3>Isyu 772 : Restructuring ng pag save/Loading ng context data</h3>
+<h3>Isyu 774 : Ang pagbubuo ay walang nakalagay na mga iskrip na direktoryo</h3>
+<h3>Isyu 776 : Pinahihintulutan ang mga add-on na balaan ang gumagamit kung isinasara nila ang ZAP na may ruong hindi na i-save sa mga bukas na resources</h3>
+<h3>Isyu 777 : Hindi mapahinto ang mga pagbabago kapag ginagamit isama sa/Exclude mula sa kontesto</h3>
+<h3>Isyu 782 : NoSuchMethodError kapag hindi kasama ang isang Websocket channel URL mula sa kontesto</h3>
+<h3>Isyu 785 : Baguhin ang zap.sh para makaya ang java 1.8</h3>
+<h3>Isyu 786 Ang item menu ng Snapshot sesyon ay hindi gumagana</h3>
+
+<h2>Tignan din</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Pambungad</a></td><td>ang panimula sa ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Mga inilabas</a></td><td>ang buong set ng mga inilabas</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Mga kredito</a></td><td>ang mga tao at grupo na ginawang possible ang pag labas na ito</td></tr>
+</table>
+</body>
+</html>

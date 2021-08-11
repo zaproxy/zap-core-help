@@ -6,7 +6,7 @@
 Pantalla de opciones de la regla de configuración
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Pantalla de opciones de configuración de la regla</h1>
 <p>
 Esta pantalla te permite configurar el comportamiento de reglas de exploración específicas, tanto pasivas cómo activas.
@@ -23,6 +23,12 @@ Las cookies incluidas en ésta lista serán ignoradas cuando se realice el escan
 <tr><td>rules.csrf.ignorelist</td><td></td><td>Una lista de identificadores separados con una coma.
 Cualquier Forma con un nombre o una identificación que coincida con uno de estos identificadores será ignorado cuando se realice el escaneo de los tokens Anti-CSRF faltantes.
 Solo use esta función para ignorar las Formas que ya sabe que sean seguras, como por ejemplo, las formas de busqueda.</td></tr>
+<tr><td>rules.csrf.ignore.attname</td><td></td><td>The name of an HTML attribute that can be used to indicate that a form does
+not need an anti-CSRF Token. If <code>rules.csrf.ignore.attvalue</code> is specified then this must also match the attribute's value. If
+found any related alerts will be raised at INFO level.</td></tr>
+<tr><td>rules.csrf.ignore.attvalue</td><td></td><td>The value of an HTML attribute named by <code>rules.csrf.ignore.attname</code>
+that can be used to indicate that a form does not need an anti-CSRF Token. If found any related alerts will be raised at INFO level.</td></tr>
+<tr><td>rules.domains.trusted</td><td></td><td>A comma separated list of URL regex patterns. Any URLs that match the patterns will be considered trusted domains and the issues ignored.</td></tr>
 </table>
 
 

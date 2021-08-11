@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Gerenciamento de sessão</title>
+</head>
+<body>
+	<h1>Gerenciamento de sessão</h1>
+	<p>
+		O ZAP trata vários tipos de gerenciamento de sessão (chamados de <b>Métodos de gerenciamento de sessão</b>) que podem ser usados para sites / webapps. Cada <b><a
+			href="contexts.html">contexto</a></b> tem um método de gerenciamento de sessão definido, que determina como as sessões são mantidas.
+	</p>
+
+	<h3>
+		<a name="cbsm">Gerenciamento de sessão baseado em cookies</a>
+	</h3>
+	<p>
+		In the case of this method the session is being tracked through
+		cookies. Currently, the session tokens that are used are imported from
+		the <a href="httpsessions.html">HTTP Sessions</a> Extension.
+	</p>
+
+	<h3>
+		<a name="hasm">Gerenciamento de sessão de autenticação HTTP</a>
+	</h3>
+	<p>
+		In the case of this method the session is managed with HTTP request header <code>Authorization</code>.
+	</p>
+
+	<h3>
+		<a name="sbsm">Script-Based Session Management</a>
+	</h3>
+	<p>
+		This method is useful for websites / webapps where the session management is a more complex one and some custom
+		scripts that handle the process are beneficial. To use this method, you must first define a Session Management script
+		which analyses messages or performs other actions as needed by your web-application. This script is then selected for use for a given Context
+		and it is called whenever session management actions are performed. 
+		Configuration can be done using the <a href="../../ui/dialogs/session/contexts.html#sm">Session
+			Contexts Dialog</a> and requires you to have the Scripts Console ZAP Addon installed from the Marketplace.
+	</p>
+
+	<h2>Configurados através de</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/session/contexts.html#sm">Diálogo de contextos de sessão</a></td>
+			<td></td>
+		</tr>
+	</table>
+
+	<h2>Leia também</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="https://youtu.be/cR4gw-cPZOA">YouTube-tutorial</a></td>
+			<td>dos recursos de autenticação, gerenciamento de sessão e gerenciamento de usuários do ZAP [link externo de http://youtu.be/cR4gw-cPZOA].</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/overview.html">Visão geral da interface do usuário</a></td>
+			<td>para uma visão geral da interface do usuário</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="features.html">Recursos</a></td>
+			<td>fornecidos pelo ZAP</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/session/contexts.html">Diálogo de contextos de sessão</a></td>
+			<td>para uma visão geral das propriedades de sessão</td>
+		</tr>
+
+	</table>
+
+</body>
+</html>

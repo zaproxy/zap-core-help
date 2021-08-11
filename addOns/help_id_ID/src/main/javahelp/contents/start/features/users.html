@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Pengguna</title>
+</head>
+<body>
+	<h1>Pengguna</h1>
+	<p>
+		Pengguna adalah representasi ZAP dari pengguna situs web/aplikasi web. Mereka mengizinkan tindakan tertentu untuk dilakukan dari sudut pandang pengguna aplikasi web. Untuk setiap <b><a href="contexts.html">Konteks</a></b>,
+satu set Pengguna dapat didefinisikan, yang kemudian dapat digunakan dalam tindakan
+terkait dengan konteks. Paling umum, selama berbagai pemindaian
+		pesan permintaan dapat dikirim dari sudut pandang Pengguna.
+	</p>
+
+	<p>
+		Konsep Pengguna sangat terkait dengan konsep <a
+			href="sessionManagement.html">Manajemen Sesi</a> dan <a
+			href="authentication.html">Otentikasi</a>. Ketika Pengguna pertama
+digunakan di suatu tempat di ZAP, otentikasi dilakukan (menurut
+Metode Otentikasi yang ditetapkan untuk Konteks) dan Sesi
+dibuat dan dikonfigurasi untuk pengguna ini (menurut Sesi
+Manajemen didefinisikan untuk Konteks). Setelah itu, permintaan yang dikirim dari sudut pandang Pengguna yang dimodifikasi (jika perlu) dan dikirim sedemikian rupa sehingga server web mengidentifikasi mereka sebagai kiriman dari pengguna aplikasi web/situs web yang terotentifikasi. If anytime a User appears to
+		be unauthenticated (as determined by the 
+		<a href="authstrategies.html">Authentication Verification Strategy</a>), a new
+		authentication is performed and the Session is updated accordingly.
+	</p>
+
+	<p>Untuk melakukan otentikasi pengguna pada situs web / pada aplikasi web, Metode Otentikasi menentukan bagaimana otentikasi dilakukan (proses), sedangkan kredensial yang diperlukan (pengidentifikasi yang tepat) bergantung pada pengguna, sehingga di ZAP, mereka dikonfigurasikan dalam Pengguna.</p>
+
+	<h2>Dikonfigurasi melalui</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/session/contexts.html#users">Sesi
+Konteks Dialog</a></td>
+			<td></td>
+		</tr>
+	</table>
+
+	<h2>Lihat juga</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="https://youtu.be/cR4gw-cPZOA">Tutorial Youtube</a></td>
+			<td>dari otentikasi, Sesi Manajemen dan Pengguna fitur Manajemen ZAP [tautan luar ke https://youtu.be/cR4gw-cPZOA].</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="authentication.html">Ikhtisar Autentikasi</a></td>
+			<td>untuk gambaran Otentikasi di ZAP</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/overview.html">Ikhtisar UI</a></td>
+			<td>untuk gambaran dari antarmuka pengguna</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="features.html">Fitur</a></td>
+			<td>ditawarkan oleh ZAP</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/session/contexts.html">Sesi</a></td>
+			<td>untuk gambaran dari Sesi Properti</td>
+		</tr>
+
+	</table>
+
+</body>
+</html>

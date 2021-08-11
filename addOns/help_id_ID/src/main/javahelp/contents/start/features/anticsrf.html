@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Penanganan Anti CSRF
+</title>
+</head>
+<body>
+<h1>Token Anti Anti CSRF</h1>
+<p>
+Token Anti CSRF adalah (pseudo) parameter acak yang digunakan untuk melindungi serangan dari Cross Site Request Forgery (CSRF).<br> Namun mereka juga membuat pekerjaan penguji penetrasi lebih keras, terutama jika tokennya dihasilkan setiap kali ada permintaan form.<br>
+</p>
+<p>
+ZAP mendeteksi anti CSRF token murni dengan atribut nama-nama - daftar nama atribut yang dianggap anti CSRF token
+dikonfigurasi menggunakan <a href="../../ui/dialogs/options/anticsrf.html">Pilihan Anti CSRF layar</a>.<br/>
+Ketika ZAP mendeteksi token ini mencatat nilai token dan URL yang dihasilkan token.<br/>
+Scanner lainnya, seperti <a href="ascan.html">aktif scanner</a>, memiliki pilihan yang
+penyebab ZAP untuk secara otomatis menumbuhkan token ketika diperlukan.
+</p>
+
+<h2>Lihat juga</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/overview.html">Ikhtisar UI</a></td><td>untuk ikhtisar antarmuka pengguna</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="features.html">Fitur</a></td><td>disediakan oleh ZAP</td></tr>
+</table>
+
+</body>
+</html>

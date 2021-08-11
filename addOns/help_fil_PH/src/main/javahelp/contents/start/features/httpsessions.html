@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Ang HTTP ng mga sesyon</title>
+</head>
+<body>
+	<h1>Ang HTTP ng mga sesyon</h1>
+	<p>Ang kasangkapan na ito ay nagpapanatili na sundan ang mga umiirala ng HTTP ng mga sesyon sa isang 
+ partikular na sayt at pinahihintulutan ang gumagmit ng Zaproxy na pwersahin ang lahat ng mga kahilingan upang maging isang partikular na sesyon. Talagang, pinahihintulutan ito ang gumagamit upang madaling ilipat ang pagitan ng aggamit ng mga sesyon sa isang sayt para makabuo ng isang bagong sesyon ng walang "nasisira " na umiiral na.</p>
+
+	<p>
+		Ito ay batay sa mga konsepto ng sesyon ng mga token, kung saan ay ang HTTP ng mensahe ng mga parametro (para sa ngayon ang mga cookie lamang) kung saan pinahintulutan ang isang server ng HTTP na kumonek sa isang kahilingan na mensahe sa pamamagitan ng alin man sa nakaraang mga kahilingan o datos na naitago.
+		Sa mga kaso ng Zaproxy, conceptually, ang sesyon ng mga token ay natutukoy mula sa dalawang kategorya: ang sesyon ng default na mga token at sayt ng sesyon ng mga token. Ang default na sesyon ng mga token at ang isa sa mga gumamit na maaaring maitakda
+ sa mga <a href="../../ui/dialogs/options/httpsessions.html">opsyon ng iskrin</a> at ay mga token na, sa pamamagitan ng default, ay awtomatikong itinuturing na sesyon ng mga token para sa kahit anong sayt (eg. phpsessid, jsessionid, at iba pa). Ang sayt ng sesyon ng mga token at isang pagtakda sa mga token para sa isang partikular na sayt at ay karaniwang naisaayos gamit ang popup na mga menu na magagamit sa mga <a
+			href="../../ui/tabs/params.html">Params ng tab</a>.
+	</p>
+
+	<p>
+		Ang kasangkapan na ito ay awtomatikong natutuklasan, gamit ang natukoy na sesyon ng mga token o ang awtomatikong natuklasan ng default ng sesyon ng mga token, kahit anong HTTP ng sesyon ng kahit aling umiiral sa mga komunikasyon. Ang mga natuklasang sesyon ay naipakita sa mga <a href="../../ui/tabs/httpsessions.html">HTTP ng mga sesyon ng tab</a>.
+	</p>
+
+	<p>
+		Ang gumagamit ay maaaring, gumamit ng buton na pwede sa mga <a
+			href="../../ui/tabs/httpsessions.html">HTTP ng mga sesyon ng tab</a>, bumuo ng isang bagong sesyon ng walang nasisirang mga umiirala na, o maaaring pwersahin ang isa sa mga sesyon bilang 'aktibo'. Habang ang isang sesyon ay 'aktibo', ang lahat ng mga papalabas na mga kahilingan na naipadala sa mga kaukulang mga sayt na nabago, ang sesyon ng mga token na naisaayos na upang tumugma sesyon na aktibo. Sa paraang ito, ang gumagamit
+ay madaling mapipilit ang ibang mga mensahe na maging 'bahagi ng isang partikular na sesyon at pagkatapos palitan at ipadala ang mga mensahe sa iba pang sesyon.
+	</p>
+
+	<p>
+		Ang HTTP ng mga sesyon ng kasangkapan ay nakumpigura gamit ang <a
+			href="../../ui/dialogs/options/httpsessions.html">HTTP ng mga sesyon ng mga opsyon ng iskrin</a>.
+	</p>
+
+	<h2>Ang pagpapatakbo sa pamamagitan ng</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/tabs/httpsessions.html">Ang mga sesyon ng HTTP</a></td>
+			<td></td>
+		</tr>
+	</table>
+
+	<h2>Tingnan din sa</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/overview.html">Ang pangkalahatang ideya ng UI</a></td>
+			<td>para sa pangkalahatang ideya ng mga gumagamit ng interface</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="features.html">Ang mga tampok</a></td>
+			<td>ang binigay sa pamamagitan ng ZAP</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/options/httpsessions.html">Ang HTTP ng mga sesyon ng mga opsyon ng iskrin</a></td>
+			<td>pasa sa isang pangkalahatang ideya ng mga kasangkapan ng mga opsyon</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/tabs/params.html">Ang parmas ng tab</a></td>
+			<td>para sa isang pangkalahatang ideya ng params ng tab</td>
+		</tr>
+
+	</table>
+
+</body>
+</html>

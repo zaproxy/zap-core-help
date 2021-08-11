@@ -6,10 +6,10 @@
 Seçenekler Aktif Tarama Giriş Vektörleri ekranı
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Seçenekler Aktif Tarama Giriş Vektörleri ekranı</h1>
 <p>
-Bu ekran yapılandırmanıza olanak sağlar <a href="../../../start/concepts/ascan.html">aktif tarama</a> giriş vektörleri.<br>
+Bu ekran yapılandırmanıza olanak sağlar <a href="../../../start/features/ascan.html">aktif tarama</a> giriş vektörleri.<br>
 Bunlar aktif tarayıcının saldırıya uğrayacağı unsurlardır.<br>
 Desteklenen tüm öğelerde tarama daha uzun sürer, fakat bazı öğelerin taranmaması durumunda bazı güvenlik açıkları ortaya çıkabilir.
 
@@ -18,24 +18,29 @@ Aktif tarayıcının hedeflediği istek öğeleri:
 
 <h4>URL Sorgu Dizesi ve Veri Tabanlı Düğümler</h4>
 İstek URL sorgusundaki anahtar değer çiftleri, yani <code>?</code>.<br>
-Sorgu parametresi yoksa, rastgele bir tanesi test edilir <a href="../../../start/concepts/ddc.html">Veri Sürücüsü Düğümleri</a> test edilecekleri bir Ortam içerisinde tanımlanır.
+If <a href="../../../start/features/ddc.html">Veri Sürücüsü Düğümleri</a> test edilecekleri bir Ortam içerisinde tanımlanır.
+
+<h5>Add URL Query Parameter?</h5>
+When selected ZAP will add a query parameter to GET requests which did not originally have one. 
+This may increase scan time, however, it may also reveal issues that would otherwise go un-noticed.
+
 <h4>POST Verisi</h4>
-İstek POST verilerinde anahtar değer çiftleri.
+Key value pairs in the request POST data.
 
 <h4>URL Yolu</h4>
-Stek URL'sindeki yol öğeleri, yani tarafından ayrılmış öğeler <code>/</code>.
+Path elements in the request URL, ie the elements separated by <code>/</code>.
 
 <h4>HTTP Başlıkları</h4>
-HTTP Başlıklarını iste.
+Request HTTP Headers.
 
-<h5>Tüm İstekler</h5>
-Tüm isteklerin HTTP Üstbilgilerini taramaya izin verir. Sorgu veya talep gövdesi aracılığıyla parametre gönderme isteklerini değil.
+<h5>All Requests</h5>
+Allows to scan the HTTP Headers of all requests. Not just requests that send parameters, through the query or request body.
 
 <h4>Çerez verisi</h4>
-Çerezleri iste.
+Request cookies.
 
 <h3>Yerleşik Girdi Vektörü Yöneticileri</h3>
-Etkin tarayıcının hedeflediği veri biçimleri:
+The data formats that the active scanner will target:
 
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Çok Katmanlı Form Verisi</td><td></td></tr>
@@ -47,12 +52,15 @@ Etkin tarayıcının hedeflediği veri biçimleri:
 
 
 <h3>Komut Dosyası Girişi Vektörlerini Etkinleştir</h3>
-Bu seçenek seçilirse aktif tarayıcı etkin komut dosyası giriş vektörlerini kullanır.<br>
-Komut dosyası girdi vektörleri, ZAP'a yazdığınız veya içe aktardığınız ve sizin de öğeleri hedeflemenize izin veren komut dosyalarıdır.
-varsayılan olarak desteklenmemektedir.
+If this option is selected then the active scanner will use any enabled script input vectors.<br>
+Script input vectors are scripts which you have written or imported into ZAP and allow you to target elements 
+which are not supported by default.
 
 <p>
 Bu ekran aynı zamanda aktif tarayıcı tarafından gözardı edilen parametreleri yapılandırmanıza izin verir.
+<br />
+Refer to <code>Parameter</code> section in <a href="../addalert.html">Add Alert</a> dialogue for more details about the
+parameter names.
 
 <h2>Ayrıca Bakınız</h2>
 <table>

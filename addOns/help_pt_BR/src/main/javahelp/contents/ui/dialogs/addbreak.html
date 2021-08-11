@@ -3,32 +3,53 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Adicionar ponto de interrupção
+Add/Edit Breakpoint dialog
 </title>
 </head>
-<body bgcolor="#ffffff">
-<h1>Adicionar ponto de interrupção</h1>
+<body>
+<h1>Add/Edit Breakpoint dialog</h1>
 <p>
-Permite que você defina um <a href="../../start/concepts/breakpoints.html">ponto de interrupção</a> em uma URL.
-</p>
-<p>
-O ponto de interrupção é definido através de uma expressão regex. <br/> Se você visitar uma URL que corresponde a esta expressão, a ZAP vai interceptá-la e permitir que você altere a solicitação e/ou a resposta.
-</p>
+This dialogue allows you to add and edit <a href="../../start/features/breakpoints.html">HTTP breakpoints</a>.
 
-<h2>Acessado via</h2>
+<p>
+A breakpoint is defined by the following fields:
+
+<ul>
+	<li><strong>Location</strong> - where the <code>String</code> is checked in the
+		HTTP message: <code>URL</code>, <code>Request Header</code>, <code>Request Body</code>,
+		<code>Response Header</code>, or <code>Response Body</code>.</li>
+	<li><strong>Match</strong> - how the <code>String</code> is interpreted, <code>Regex</code>
+		or <code>Contains</code>, for regular expression or exact match, respectively, in the <code>Location</code>.
+		The regular expression does not need to match the whole content of the <code>Location</code>.</li>
+	<li><strong>String</strong> - the string that triggers the breakpoint.</li>
+	<li><strong>Inverse</strong> - if the result of the <code>Match</code> should be
+		the inverse.</li>
+	<li><strong>Ignore case</strong> - if the case of the <code>String</code> should be
+		ignored.</li>
+</ul>
+
+If you proxy a HTTP message that matches a breakpoint then ZAP will intercept it and allow you to change either the request
+and/or the response.
+
+<p>
+<strong>Note:</strong> ZAP will warn and prevent adding breakpoints with a fragment identifier component (<code>#</code>), if
+the breakpoint has match <code>Contains</code> and location <code>URL</code>. Such breakpoint would not work because the 
+fragment identifier is not sent to the server.
+
+<h2>Accessed via</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../tabs/history.html">Aba de histórico</a></td><td>'Break...' item de menu de botão direito do mouse</td></tr>
+<a href="../tabs/history.html">History tab</a></td><td>'Break...' right click menu item</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../tabs/sites.html">Aba de Sites</a></td><td>'Break...' item de menu de botão direito do mouse</td></tr>
+<a href="../tabs/sites.html">Sites tab</a></td><td>'Break...' right click menu item</td></tr>
 </table>
 
-<h2>Leia também</h2>
+<h2>See also</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">Visão geral da interface do usuário</a></td><td>para uma visão geral da interface do usuário</td></tr>
+<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="dialogs.html">Caixas de diálogo</a></td><td>para obter detalhes das caixas de diálogo ou pop-ups </td></tr>
+<a href="dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
 </table>
 
 </body>

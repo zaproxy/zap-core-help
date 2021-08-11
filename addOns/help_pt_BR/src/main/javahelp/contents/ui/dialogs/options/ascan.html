@@ -6,55 +6,55 @@
 Tela de Opções da Varredura Ativa
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Opções, tela de Varredura Ativa</h1>
 <p>
-Esta tela permite a você configurar as opções de <a href="../../../start/concepts/ascan.html">Varredura Ativa</a> .
+Esta tela permite a você configurar as opções de <a href="../../../start/features/ascan.html">Varredura Ativa</a> .
 
-<h3>Número de hosts examinados simultaneamente</h3>
+<h3>Number of Hosts Scanned Concurrently</h3>
 É o número máximo de hosts que podem ser escaneados ao mesmo tempo. Aumentá-lo vai acrescentar carga ao computados onde o ZAP está rodando.
 
-<h3>Número de varreduras simultâneas em cada host</h3>
+<h3>Concurrent Scanning Threads per Host</h3>
 Número de subdivisões de varreduras (threads) que o ZAP vai fazer em cada host.<br>
 Aumentar o número de subdivisões vai acelerar o escaneamento mas pode sobrecarregar tanto o computador onde o ZAP está rodando quando o host alvo.
 
-<h3>Número máximo de resultados na lista</h3>
+<h3>Max Results to List</h3>
 Número de resultados que será exibido na aba Varredura Ativa.<br>
 Exibir um grande número de resultados pode aumentar bastante o tempo que a varredura vai levar.
 
-<h3>Duração máxima da regra (min, 0 é ilimitado)</h3>
+<h3>Maximum Rule Duration (minutes; 0 is unlimited)</h3>
 O tempo máximo que qualquer regra individual pode rodar, em minutos. Zero significa sem limite. Isto pode ser usado para evitar as regras que estão tomando uma quantidade excessiva de tempo. 
 
-<h3>Duração máxima da varredura (min, 0 é ilimitado)</h3>
+<h3>Maximum Scan Duration (minutes; 0 is unlimited)</h3>
 O tempo máximo que a varredura inteira pode rodar, em minutos. Zero significa sem limite. Isso pode ser usado para garantir que uma verificação seja concluída em torno de um tempo definido. 
 
-<h3>Atraso da varredura em milissegundos</h3>
+<h3>Delay When Scanning (In Milliseconds)</h3>
 O intervalo em milissegundos entre dois requests sucessivos.<br>
 Deixar esta variável com um valor diferente de zero vai elevar o tempo da varredura ativa mas aliviará a carga no host-alvo.
 
-<h3>Injetar o plugin ID no cabeçalho para todas as solicitações de varredura ativa</h3>
+<h3>Inject plugin ID in header for all active scan requests.</h3>
 Se esta opção for selecionada o scanner ativo vai injetar o cabeçalho de solicitação <code>X-ZAP-Scan-ID</code> com o ID do scanner que está enviando as solicitações HTTP.
 
-<h3>Manipular tokens anti CSRF</h3>
+<h3>Handle anti-CSRF tokens (experimental functionality).</h3>
 Se esta opção estiver selecionada, a varredura ativa tentará automaticamente solicitar tokens 
-<a href="../../../start/concepts/anticsrf.html">anti CSRF</a> .<br>
+<a href="../../../start/features/anticsrf.html">anti CSRF</a> .<br>
 Observe que isto é uma funcionalidade experimental  e vai desacelerar o processo de varredura porque ele não será subdividido em threads para garantir que os tokens anti CSRF não se percam. 
 
-<h3>Prompt em modo de ataque para examinar nós quando alterado o escopo</h3>
-Se esta opção estiver selecionada, quando você utilizar o <a href="../../../start/concepts/modes.html">modo</a> de ataque você será convidado a decidir se vai reescanear nós no nesse escopo.<br>
+<h3>In Attack Mode prompt to rescan nodes when scope changed.</h3>
+Se esta opção estiver selecionada, quando você utilizar o <a href="../../../start/features/modes.html">modo</a> de ataque você será convidado a decidir se vai reescanear nós no nesse escopo.<br>
 Se a opção não estiver selecionada então essa decisão (se os nós serão reescaneados) fica para a próxima opção.
 
-<h3>No modo de Ataque, sempre reescaneie nós quando o escopo mudar</h3>
-Se esta opção estiver selecionada, então quando for selecionado o <a href="../../../start/concepts/modes.html">modo</a> de ataque todos os nós no escopo serão reescaneados se o escopo mudar.<br>
+<h3>In Attack Mode always rescan nodes when scope changed.</h3>
+Se esta opção estiver selecionada, então quando for selecionado o <a href="../../../start/features/modes.html">modo</a> de ataque todos os nós no escopo serão reescaneados se o escopo mudar.<br>
 Isso não é recomendável para  sites grandes porque pode tomar muito tempo.
 
-<h3>Política padrão de varredura ativa</h3>
-A <a href="../../../start/concepts/scanpolicy.html">política de varredura</a> utilizada por padrão quando você inicia uma varredura ativa.
+<h3>Default Active Scan Policy</h3>
+A <a href="../../../start/features/scanpolicy.html">política de varredura</a> utilizada por padrão quando você inicia uma varredura ativa.
 
-<h3>Política de varredura do modo Ataque</h3>
-A <a href="../../../start/concepts/scanpolicy.html">Política de Varredura</a> utilizada para escaneamento no modo de <a href="../../../start/concepts/modes.html">Ataque</a>.
+<h3>Attack Mode Scan Policy</h3>
+A <a href="../../../start/features/scanpolicy.html">Política de Varredura</a> utilizada para escaneamento no modo de <a href="../../../start/features/modes.html">Ataque</a>.
 
-<h3>Gráfico de progresso em minutos</h3>
+<h3>Max Progress Chart in Mins</h3>
 O tempo máximo em minutos, para o qual os códigos de resposta vão ser grafados no
 <a href="../scanprogress.html">Diálogo de progresso da Varredura</a>.<br>
 Para desabilitar o gráfico a opção deve ser definida como zero minutos.

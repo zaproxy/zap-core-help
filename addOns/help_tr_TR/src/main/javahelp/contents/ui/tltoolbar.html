@@ -6,13 +6,13 @@
 Üst Seviye Araç Çubuğu
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Üst Seviye Araç Çubuğu</h1>
 <p>
 Bu araç çubuğu, yaygın olarak kullanılan işlevler için bir dizi denetim sunar.
 
-<h2>Mod açma</h2>
-Bu geçerli <a href="../start/concepts/modes.html">mod</a> değiştirmeni sağlar.
+<h2>Mode pulldown</h2>
+This allows you to change the current <a href="../start/features/modes.html">mode</a>.
 
 <h2><img src="../images/16/171.png" align="bottom" width="16" height="16" />&nbsp; Yeni Oturum</h2>
 Bu buton <a href="tlmenu/file.html">Dosya Menüsü</a> 'Yeni Oturum' menü öğesiyle aynıdır.
@@ -32,111 +32,120 @@ Bu buton <a href="tlmenu/file.html">Dosya Menüsü</a> 'Özellikler...' menü ö
 <h2><img src="../images/16/041.png" align="bottom" width="16" height="16" />&nbsp; Seçenekler...</h2>
 Bu buton <a href="tlmenu/tools.html">Ayarlar Menüsü</a> 'Seçenekler...' menü öğesiyle aynıdır.
 
-<h2><img src="../images/fugue/ui-tab-show.png" align="bottom" width="16" height="16" />&nbsp; Bütün sekmeleri göster</h2>
-Bu buton, tüm gizli sekmeleri gösterir.
+<h2><img src="../images/fugue/ui-color-picker-switch.png" align="bottom" width="16" height="16" />&nbsp; Dynamically switch the Look and Feel</h2>
+This allows you to dynamically switch the Look and Feel which defines the appearance of the ZAP Desktop UI and includes support for 'Dark Modes'.
 
-<h2><img src="../images/fugue/ui-tab-hide.png" align="bottom" width="16" height="16" />&nbsp; Sabitlenmemiş sekmeleri gizle</h2>
-Bu düğme, 'sabitlenmemiş' tüm sekmeleri gizler. Sekmeler, sekme seçildiğinde gösterilen küçük 'iğne' simgesi aracılığıyla tutturulabilir ve sabitlenebilir.
+<h2><img src="../images/fugue/ui-tab-show.png" align="bottom" width="16" height="16" />&nbsp; Show all tabs</h2>
+This button reveals all of the hidden tabs.
 
-<h2><img src="../images/ui_tab_text.png" align="bottom" width="16" height="16" />&nbsp; Sekme isimleri ve ikonları göster</h2>
-Bu buton sekme isimlerinin görünümünü değiştirir.
+<h2><img src="../images/fugue/ui-tab-hide.png" align="bottom" width="16" height="16" />&nbsp; Hide unpinned tabs</h2>
+This button hides all of the tabs that are 'unpinned'. Tabs can be pinned and unpinned via the small 'pin' icon that is shown when the tab is selected.
 
-<h2><img src="../images/expand_sites.png" align="bottom" width="16" height="16" />&nbsp; Siteler sekmesini genişlet</h2>
-Böylece, Siteler sekmesini içeren 'ağaç' penceresinin sol tarafın tam uzunluğu boyunca uzanması 
-için ekranı değişitirir.<br>
-Bu, 'bilgi' penceresi için kullanılabilecek alan miktarını azaltacaktır.
+<h2><img src="../images/ui_tab_text.png" align="bottom" width="16" height="16" />&nbsp; Show tab names and icons</h2>
+This button toggles the displaying of the tab names.
 
-<h2><img src="../images/expand_info.png" align="bottom" width="16" height="16" />&nbsp; Bilgi sekmelerini genişlet</h2>
-Bu, ekranı değiştirerek 'bilgi' penceresi alt kısmının uzunluğunu uzatırsınız.<br>
-Bu, 'ağaç' penceresinde kullanılabilir alan miktarını azaltacaktır.
+<h2><img src="../images/expand_sites.png" align="bottom" width="16" height="16" />&nbsp; Expand Sites Tab</h2>
+This changes the display so that the 'tree' window containing the Sites tab extends for the full length of the 
+left hand side.<br>
+This will reduce the amount of space available to the 'information' window.
 
-<h2><img src="../images/expand_full.png" align="bottom" width="16" height="16" />&nbsp; Tüm Düzen</h2>
-Bu görünümü seçili sekmenin tüm ekranı kaplamasına dönüştürür.<br>
-Bu ZAP'ı küçük ekranlarda kullanırken kullanışlıdır.
+<h2><img src="../images/expand_info.png" align="bottom" width="16" height="16" />&nbsp; Expand Information Tabs</h2>
+This changes the display so that the 'information' window extends for the full length of the bottom.<br> 
+This will reduce the amount of space available to the 'tree' window.
+
+<h2><img src="../images/expand_full.png" align="bottom" width="16" height="16" />&nbsp; Full Layout</h2>
+This changes the display so that the selected tab takes up the full screen.<br> 
+This is useful when using ZAP on small screens.
 
 <h2><img src="../images/layout_tabbed.png" align="bottom" width="16" height="16" />&nbsp; Request and Response tabs side by side</h2>
-Bu, talep ve cevap sekmelerinin yan yana olması için ekranı değiştirir.<br> Bu, görüntülenecek bilgileri artırır, ancak aynı anda hem talebi hem de cevabı göremezsiniz.
+This changes the display so that the request and response tabs are side by side.<br> 
+This increases the information that can be displayed but means you cannot see both the request and response at the same time.
 
-<h2><img src="../images/layout_vertical_split.png" align="bottom" width="16" height="16" />&nbsp; Yanıtın üst kısmında görünen istek</h2>
-Bu, talep paneli yanıt panelinin üstünde gösterilecek şekilde ekranı değiştirir.<br>
-Bu, görüntülenecek bilgileri azaltır, ancak hem istek hem de yanıtı aynı anda görebilirsiniz.
+<h2><img src="../images/layout_tabbed_split.png" align="bottom" width="16" height="16" />&nbsp; Request and Response panels side by side in the same tab</h2>
+This changes the display so that the request and response panels are shown side by side in the same tab.<br> 
+This decreases the information that can be displayed but means you can see both the request and response at the same time.
 
-<h2><img src="../images/layout_horizontal_split.png" align="bottom" width="16" height="16" />&nbsp; İstek ve Yanıt panelleri yan yana</h2>
-Bu, talep panelinin yanıt panelinin solunda gösterileceği şekilde ekranı değiştirir.<br>
-Bu, görüntülenecek bilgileri azaltır, ancak hem istek hem de yanıtı aynı anda görebilirsiniz.
+<h2><img src="../images/layout_vertical_split.png" align="bottom" width="16" height="16" />&nbsp; Request shown above Response</h2>
+This changes the display so that the request panel is shown above the response panel.<br> 
+This decreases the information that can be displayed but means you can see both the request and response at the same time.
+
+<h2><img src="../images/layout_horizontal_split.png" align="bottom" width="16" height="16" />&nbsp; Request and Response panels side by side</h2>
+This changes the display so that the request panel is shown to the left of the response panel.<br> 
+This decreases the information that can be displayed but means you can see both the request and response at the same time.
 
 
 <h2><img src="../images/16/152.png" align="bottom" width="16" height="16" />&nbsp;/&nbsp;
 <img src="../images/16/151.png" align="bottom" width="16" height="16" />&nbsp;
-Tüm istekler ve cevaplarda kırılmayı ayarlayın/kaldırın.</h2>
-Bu, bir 'genel'<a href="../start/concepts/breakpoints.html">kırılma noktası</a>'nı ayarlar ve düzenler
-<a href="tabs/break.html">kırılma sekmesinde</a>sonraki istek veya yanıtı yakalar ve görüntüler.<br/>
-Ardından, istediğiniz isteğin veya yanıtın herhangi bir bölümünü değiştirebilir ve hedefe gönderebilirsiniz.
-'Adım' veya 'Devam et' düğmelerinden birine basarak uygulayın.<br/>
-Alternatif olarak, isteği veya yanıtı elden çıkarmak için 'Bırak' düğmesine basabilirsiniz.<br/>
-Tek bir 'kombine edilmiş' kırılma butonu arasında geçiş yapabilir ve bu buton ile istekler ve yanıtlar için ayrım yapabilirsiniz.
-<a href="dialogs/options/breakpoints.html">Kırılma noktaları ekranı seçenekleri</a>
-
+Set / Unset break on all requests and responses</h2>
+This sets and unsets a 'global' <a href="../start/features/breakpoints.html">breakpoint</a> that will
+trap and display the next request or response in the <a href="tabs/break.html">Break tab</a>.<br/>
+You can then change any part of the request or response that you want to and send it to the target
+application by pressing either of the 'Step' or 'Continue' buttons.<br/>
+Alternatively you can press the 'Drop' button to dispose of the request or response.<br/>
+You can switch between a single 'combined' break button and separates ones for requests and responses via the 
+<a href="dialogs/options/breakpoints.html">Options breakpoints screen</a>
 
 <h2><img src="../images/16/105.png" align="bottom" width="16" height="16" />&nbsp;/&nbsp;
 <img src="../images/16/105r.png" align="bottom" width="16" height="16" />&nbsp;
-Tüm isteklerde kırılma ayarla/kaldır</h2>
-Bu, bir 'genel'<a href="../start/concepts/breakpoints.html">kırılma noktası</a>'nı ayarlar ve düzenler
-<a href="tabs/break.html">kırılma sekmesinde</a>sonraki istek veya yanıtı yakalar ve görüntüler.<br/>
-Ardından, istediğiniz isteğin veya yanıtın herhangi bir bölümünü değiştirebilir ve hedefe gönderebilirsiniz.
-'Adım' veya 'Devam et' düğmelerinden birine basarak uygulayın.<br/>
-Alternatif olarak, isteği veya yanıtı elden çıkarmak için 'Bırak' düğmesine basabilirsiniz.<br/>
-Tek bir 'kombine edilmiş' kırılma butonu arasında geçiş yapabilir ve bu buton ile istekler ve yanıtlar için ayrım yapabilirsiniz.
-<a href="dialogs/options/breakpoints.html">Kırılma noktaları ekranı seçenekleri</a>
+Set / Unset break on all requests</h2>
+This sets and unsets a 'global' <a href="../start/features/breakpoints.html">breakpoint</a> that will
+trap and display the next request in the <a href="tabs/break.html">Break tab</a>.<br/>
+You can then change any part of the request that you want to and send it to the target
+application by pressing either of the 'Step' or 'Continue' buttons.<br/>
+Alternatively you can press the 'Drop' button to dispose of the request.<br/>
+You can switch between a single 'combined' break button and separates ones for requests and responses via the 
+<a href="dialogs/options/breakpoints.html">Options breakpoints screen</a>
 
 <h2><img src="../images/16/106.png" align="bottom" width="16" height="16" />&nbsp;/&nbsp;
 <img src="../images/16/106r.png" align="bottom" width="16" height="16" />&nbsp;
-Tüm isteklerde kırılma ayarla/kaldır</h2>
-Bu, bir 'genel'<a href="../start/concepts/breakpoints.html">kırılma noktası</a>'nı ayarlar ve düzenler
-<a href="tabs/break.html">kırılma sekmesinde</a>sonraki istek veya yanıtı yakalar ve görüntüler.<br/>
-Ardından, istediğiniz isteğin veya yanıtın herhangi bir bölümünü değiştirebilir ve hedefe gönderebilirsiniz.
-'Adım' veya 'Devam et' düğmelerinden birine basarak uygulayın.<br/>
-Alternatif olarak, isteği veya yanıtı elden çıkarmak için 'Bırak' düğmesine basabilirsiniz.<br/>
-Tek bir 'kombine edilmiş' kırılma butonu arasında geçiş yapabilir ve bu buton ile istekler ve yanıtlar için ayrım yapabilirsiniz.
-<a href="dialogs/options/breakpoints.html">Kırılma noktaları ekranı seçenekleri</a>
+Set / Unset break on all responses</h2>
+This sets and unsets a 'global' <a href="../start/features/breakpoints.html">breakpoint</a> that will
+trap and display the next response in the <a href="tabs/break.html">Break tab</a>.<br/>
+You can then change any part of the response that you want to and send it to your browser
+by pressing either of the 'Step' or 'Continue' buttons.<br/>
+Alternatively you can press the 'Drop' button to dispose of the request.<br/>
+You can switch between a single 'combined' break button and separates ones for requests and responses via the 
+<a href="dialogs/options/breakpoints.html">Options breakpoints screen</a>
 
-<h2><img src="../images/16/143.png" align="bottom" width="16" height="16" />&nbsp; Adım</h2>
-Bu, sıkışmış istek veya yanıta uygulamanıza veya tarayıcınıza 
-yaptığınız değişikliklerle devam etmesini sağlar.<br/>
-'Küresel'<a href="../start/concepts/breakpoints.html">kesme noktası</a>,
-bir sonraki istek veya cevap da yakalanacaktır. <br/>
-Bu düğme, yalnızca bir istek veya yanıt sıkıştığında etkinleştirilir.
+<h2><img src="../images/16/143.png" align="bottom" width="16" height="16" />&nbsp; Step</h2>
+This allows the trapped request or response to continue to the application or your browser
+with any changes that you have made to it.<br/>
+The 'global' <a href="../start/features/breakpoints.html">breakpoint</a> will remain set so that
+the next request or response will also be caught.<br/>
+This button is only enabled when a request or response is trapped.
 
-<h2><img src="../images/16/131.png" align="bottom" width="16" height="16" />&nbsp; Devam</h2>
-'Genel'<a href="../start/concepts/breakpoints.html">kırılma noktası</a>, şu şekilde ayarlanacaktır:
-belirli bağlantı adresleri üzerinde kesme noktaları belirlemediğiniz sürece, daha sonraki istek ve yanıtlar ZAP tarafından yakalanmayacaktır.<br/>
-Bu düğme, yalnızca bir istek veya yanıt sıkıştığında etkinleştirilir.
+<h2><img src="../images/16/131.png" align="bottom" width="16" height="16" />&nbsp; Continue</h2>
+The 'global' <a href="../start/features/breakpoints.html">breakpoint</a> will be unset so that
+subsequent requests and responses will no longer be caught by ZAP unless you have set breakpoints on specific URLs.<br/>
+This button is only enabled when a request or response is trapped.
 
-<h2><img src="../images/16/150.png" align="bottom" width="16" height="16" />&nbsp; Düşür</h2>
-Bu yakalanmış istek veya yanıtı düşürür ki uygulamaya ya da tarayıcınıza geçmesin.<br/>
-Bu buton yalnızca bir istek veya yanıt yakalandığında etkinleşir.
+<h2><img src="../images/16/150.png" align="bottom" width="16" height="16" />&nbsp; Drop</h2>
+This drops the trapped request or response so that it is not passed on to the application
+or your browser.<br/>
+This button is only enabled when a request or response is trapped.
 
-<h2><img src="../images/16/break_add.png" align="bottom" width="16" height="16" />&nbsp; Özel HTTP ayrılma noktası ekle</h2>
-Bu <a href="dialogs/addbreak.html">Ayrılma noktası ekle</a> kutusunu gösterir, bu da <a href="../start/concepts/breakpoints.html">ayrılma noktası</a> için bir kriter belirlemenize olanak sağlar.
+<h2><img src="../images/16/break_add.png" align="bottom" width="16" height="16" />&nbsp; Add a custom HTTP breakpoint</h2>
+This displays the <a href="dialogs/addbreak.html">Add breakpoint</a> dialog which allows you to specify the criteria for a 
+<a href="../start/features/breakpoints.html">breakpoint</a>.
 
-<h2><img src="../images/fugue/equalizer.png" align="bottom" width="16" height="16" />&nbsp; Tarama İlkesi Yöneticisi...</h2>
-<a href="../start/concepts/scanpolicy.html">Tarama politikalarının yapılandırılmasına izin veren<a href="dialogs/scanpolicymgr.html">Tarama İlkesi Yöneticisi</a>iletişim kutusunu gösterir</a>.
+<h2><img src="../images/fugue/equalizer.png" align="bottom" width="16" height="16" />&nbsp; Scan Policy Manager...</h2>
+Shows the <a href="dialogs/scanpolicymgr.html">Scan Policy Manager</a> dialog which allows configuration of <a href="../start/features/scanpolicy.html">scan policies</a>.
 
-<h2><img src="../images/fugue/block.png" align="bottom" width="16" height="16" />&nbsp; Eklentileri yönet</h2>
-Bu, <a href="dialogs/manageaddons.html">Eklentileri Yönetme</a> iletişim kutusunu gösterir
-çevrimiçi pazarın eklentilerini keşfedin, kurun ve güncelleyin.<br/>
-Ayrıca, eklentileri kaldırmanıza izin verir.
+<h2><img src="../images/fugue/block.png" align="bottom" width="16" height="16" />&nbsp; Manage Add-ons</h2>
+This shows the <a href="dialogs/manageaddons.html">Manage Add-ons</a> dialog which allows you to
+discover, install and update add-ons from the online marketplace.<br/>
+It also allows you to uninstall add-ons.
 
 <h2><img src="../images/fugue/forcedUserOff.png" align="bottom" width="16" height="16" />&nbsp;/&nbsp;
 <img src="../images/fugue/forcedUserOn.png" align="bottom" width="16" height="16" />&nbsp;
-Zorlanmış Kullanıcı Modu Açık / Kapalı</h2>
-Bu, kullanıcı modunu zorla açar ve kapatır.<br/>
-Düğme, yalnızca en az bir kullanıcı için zorunlu bir kullanıcı tanımladığınızda etkinleştirilir 
-<a href="../start/concepts/contexts.html">Şartlar</a>,
-<a href="dialogs/session/contexts.html">Oturum Şartları</a> iletişim kutusu aracılığı ile yapılabilir.
+Forced User Mode On / Off</h2>
+This switches forced user mode on and off.<br/>
+The button is only enabled when you have defined a forced user for at least one 
+<a href="../start/features/contexts.html">context</a>, which can be done via the 
+<a href="dialogs/session/contexts.html">Session Contexts</a> dialog.
 
 <p>
-Not olarak, <a href="../start/concepts/addons.html">add-ons</a>, fazladan buton ekler.
+Note that <a href="../start/features/addons.html">add-ons</a> can add additional buttons.
 </p>
 
 <h2>Ayrıca bakınız</h2>

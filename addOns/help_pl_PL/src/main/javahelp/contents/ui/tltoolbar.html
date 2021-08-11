@@ -6,13 +6,13 @@
 Top Level Toolbar
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Top Level Toolbar</h1>
 <p>
 This toolbar provides a set of controls for commonly used functionality.
 
 <h2>Mode pulldown</h2>
-This allows you to change the current <a href="../start/concepts/modes.html">mode</a>.
+This allows you to change the current <a href="../start/features/modes.html">mode</a>.
 
 <h2><img src="../images/16/171.png" align="bottom" width="16" height="16" />&nbsp; New Session</h2>
 This button is the same as the <a href="tlmenu/file.html">File menu</a> 'New Session' menu item.
@@ -31,6 +31,9 @@ This button is the same as the <a href="tlmenu/file.html">File menu</a> 'Propert
 
 <h2><img src="../images/16/041.png" align="bottom" width="16" height="16" />&nbsp; Options...</h2>
 This button is the same as the <a href="tlmenu/tools.html">Tools menu</a> 'Options...' menu item.
+
+<h2><img src="../images/fugue/ui-color-picker-switch.png" align="bottom" width="16" height="16" />&nbsp; Dynamically switch the Look and Feel</h2>
+This allows you to dynamically switch the Look and Feel which defines the appearance of the ZAP Desktop UI and includes support for 'Dark Modes'.
 
 <h2><img src="../images/fugue/ui-tab-show.png" align="bottom" width="16" height="16" />&nbsp; Show all tabs</h2>
 This button reveals all of the hidden tabs.
@@ -58,6 +61,10 @@ This is useful when using ZAP on small screens.
 This changes the display so that the request and response tabs are side by side.<br> 
 This increases the information that can be displayed but means you cannot see both the request and response at the same time.
 
+<h2><img src="../images/layout_tabbed_split.png" align="bottom" width="16" height="16" />&nbsp; Request and Response panels side by side in the same tab</h2>
+This changes the display so that the request and response panels are shown side by side in the same tab.<br> 
+This decreases the information that can be displayed but means you can see both the request and response at the same time.
+
 <h2><img src="../images/layout_vertical_split.png" align="bottom" width="16" height="16" />&nbsp; Request shown above Response</h2>
 This changes the display so that the request panel is shown above the response panel.<br> 
 This decreases the information that can be displayed but means you can see both the request and response at the same time.
@@ -70,7 +77,7 @@ This decreases the information that can be displayed but means you can see both 
 <h2><img src="../images/16/152.png" align="bottom" width="16" height="16" />&nbsp;/&nbsp;
 <img src="../images/16/151.png" align="bottom" width="16" height="16" />&nbsp;
 Set / Unset break on all requests and responses</h2>
-This sets and unsets a 'global' <a href="../start/concepts/breakpoints.html">break point</a> that will
+This sets and unsets a 'global' <a href="../start/features/breakpoints.html">breakpoint</a> that will
 trap and display the next request or response in the <a href="tabs/break.html">Break tab</a>.<br/>
 You can then change any part of the request or response that you want to and send it to the target
 application by pressing either of the 'Step' or 'Continue' buttons.<br/>
@@ -81,7 +88,7 @@ You can switch between a single 'combined' break button and separates ones for r
 <h2><img src="../images/16/105.png" align="bottom" width="16" height="16" />&nbsp;/&nbsp;
 <img src="../images/16/105r.png" align="bottom" width="16" height="16" />&nbsp;
 Set / Unset break on all requests</h2>
-This sets and unsets a 'global' <a href="../start/concepts/breakpoints.html">break point</a> that will
+This sets and unsets a 'global' <a href="../start/features/breakpoints.html">breakpoint</a> that will
 trap and display the next request in the <a href="tabs/break.html">Break tab</a>.<br/>
 You can then change any part of the request that you want to and send it to the target
 application by pressing either of the 'Step' or 'Continue' buttons.<br/>
@@ -92,7 +99,7 @@ You can switch between a single 'combined' break button and separates ones for r
 <h2><img src="../images/16/106.png" align="bottom" width="16" height="16" />&nbsp;/&nbsp;
 <img src="../images/16/106r.png" align="bottom" width="16" height="16" />&nbsp;
 Set / Unset break on all responses</h2>
-This sets and unsets a 'global' <a href="../start/concepts/breakpoints.html">break point</a> that will
+This sets and unsets a 'global' <a href="../start/features/breakpoints.html">breakpoint</a> that will
 trap and display the next response in the <a href="tabs/break.html">Break tab</a>.<br/>
 You can then change any part of the response that you want to and send it to your browser
 by pressing either of the 'Step' or 'Continue' buttons.<br/>
@@ -103,13 +110,13 @@ You can switch between a single 'combined' break button and separates ones for r
 <h2><img src="../images/16/143.png" align="bottom" width="16" height="16" />&nbsp; Step</h2>
 This allows the trapped request or response to continue to the application or your browser
 with any changes that you have made to it.<br/>
-The 'global' <a href="../start/concepts/breakpoints.html">break point</a> will remain set so that
+The 'global' <a href="../start/features/breakpoints.html">breakpoint</a> will remain set so that
 the next request or response will also be caught.<br/>
 This button is only enabled when a request or response is trapped.
 
 <h2><img src="../images/16/131.png" align="bottom" width="16" height="16" />&nbsp; Continue</h2>
-The 'global' <a href="../start/concepts/breakpoints.html">break point</a> will be unset so that
-subsequent requests and responses will no longer be caught by ZAP unless you have set break points on specific URLs.<br/>
+The 'global' <a href="../start/features/breakpoints.html">breakpoint</a> will be unset so that
+subsequent requests and responses will no longer be caught by ZAP unless you have set breakpoints on specific URLs.<br/>
 This button is only enabled when a request or response is trapped.
 
 <h2><img src="../images/16/150.png" align="bottom" width="16" height="16" />&nbsp; Drop</h2>
@@ -117,12 +124,12 @@ This drops the trapped request or response so that it is not passed on to the ap
 or your browser.<br/>
 This button is only enabled when a request or response is trapped.
 
-<h2><img src="../images/16/break_add.png" align="bottom" width="16" height="16" />&nbsp; Add a custom HTTP break point</h2>
-This displays the <a href="dialogs/addbreak.html">Add break point</a> dialog which allows you to specify the criteria for a 
-<a href="../start/concepts/breakpoints.html">break point</a>.
+<h2><img src="../images/16/break_add.png" align="bottom" width="16" height="16" />&nbsp; Add a custom HTTP breakpoint</h2>
+This displays the <a href="dialogs/addbreak.html">Add breakpoint</a> dialog which allows you to specify the criteria for a 
+<a href="../start/features/breakpoints.html">breakpoint</a>.
 
 <h2><img src="../images/fugue/equalizer.png" align="bottom" width="16" height="16" />&nbsp; Scan Policy Manager...</h2>
-Shows the <a href="dialogs/scanpolicymgr.html">Scan Policy Manager</a> dialog which allows configuration of <a href="../start/concepts/scanpolicy.html">scan policies</a>.
+Shows the <a href="dialogs/scanpolicymgr.html">Scan Policy Manager</a> dialog which allows configuration of <a href="../start/features/scanpolicy.html">scan policies</a>.
 
 <h2><img src="../images/fugue/block.png" align="bottom" width="16" height="16" />&nbsp; Manage Add-ons</h2>
 This shows the <a href="dialogs/manageaddons.html">Manage Add-ons</a> dialog which allows you to
@@ -134,11 +141,11 @@ It also allows you to uninstall add-ons.
 Forced User Mode On / Off</h2>
 This switches forced user mode on and off.<br/>
 The button is only enabled when you have defined a forced user for at least one 
-<a href="../start/concepts/contexts.html">context</a>, which can be done via the 
+<a href="../start/features/contexts.html">context</a>, which can be done via the 
 <a href="dialogs/session/contexts.html">Session Contexts</a> dialog.
 
 <p>
-Note that <a href="../start/concepts/addons.html">add-ons</a> can add additional buttons.
+Note that <a href="../start/features/addons.html">add-ons</a> can add additional buttons.
 </p>
 
 <h2>Zobacz również</h2>

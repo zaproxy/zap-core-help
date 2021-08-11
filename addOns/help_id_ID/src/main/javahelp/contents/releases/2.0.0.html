@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  Rilis 1.3.0
+</title>
+</head>
+<body>
+<h1>Rilis 1.3.0</h1>
+<p>
+Berikut perubahan yang dibuat dalam rilis ini:
+</p>
+
+<h2>Perubahan yang signifikan:</h2>
+
+
+<h3>Pasar add-on terintegrasi</h3>
+
+ZAP dapat diperluas dengan add-on yang memiliki akses penuh ke semua internal ZAP. Siapapun dapat menulis pengaya dan mengunggah mereka ke pasar pengaya ZAP (OK, jadi itu adalah sebuah proyek kode Google yang disebut zap-ekstensi, tetapi anda mendapatkan ide).
+<br/>
+Lebih penting sekarang peramban anda bisa, unduh dan pasang pengaya tersebut dari dalam ZAP. Kebanyakan penyaga dapat secara dinamis dipasang (dan dicabut pemasangan) sehingga anda bahkan tidak perlu mulai ulang.
+<br/>
+Anda dapat memilih untuk diberitahu tentang pembaruan, dan bahkan akan diperbarui secara otomatis. Dan saat aturan pemindaian sekarang diterapkan sebagai add-on Anda bisa mendapatkan peraturan terbaru segera setelah dipublikasikan.
+
+<h3>Pengganti Spider 'standar'</h3>
+
+Spider 'tua' menunjukkan umurnya, jadi sudah benar-benar ditulis ulang, dan jauh lebih cepat dan lebih komprehensif daripada yang lama. Ini masih merupakan laba-laba 'tradisional' yang menganalisis kode HTML untuk setiap tautan yang dapat ditemukannya.
+
+<h3>Laba-laba 'Ajax' baru</h3>
+
+Selain laba-laba 'tradisional' kami telah menambahkan Ajax laba-laba yang lebih efektif dengan aplikasi yang membuat penggunaan berat JavaScript. Ini menggunakan proyek Crawljax yang mendorong browser (menggunakan Selenium) dan sehingga dapat menemukan link apapun aplikasi menghasilkan, bahkan yang dihasilkan sisi klien.
+
+<h3>Dukungan Socket Web</h3>
+
+ZAP sekarang mendukung WebSockets, jadi ZAP sekarang dapat melihat semua pesan WebSocket yang dikirim ke dan dari browser Anda. Seperti dengan pesan berbasis HTTP, ZAP juga bisa mencegat pesan WebSocket dan memungkinkan Anda untuk mengubah mereka pada terbang.
+<br/>
+Anda juga dapat fuzz WebSockets pesan serta menggunakan semua muatan fuzzing yang termasuk dalam ZAP dari proyek-proyek seperti JBroFuzz dan fuzzdb. Dan tentu saja Anda dapat dengan mudah menambahkan file fuzzing.
+
+<h3>Mulai cepat</h3>
+
+Tab utama pertama yang Anda akan melihat adalah 'Cepat mulai' tab yang memungkinkan Anda untuk cukup ketik URL dan scan dengan satu klik.
+<br/>
+Ini adalah titik awal yang ideal untuk orang baru untuk aplikasi keamanan, tetapi para ahli dengan mudah dapat menghapusnya jika mereka menemukan mengganggu.
+
+<h3>Sesi kesadaran</h3>
+
+ZAP ini sekarang sesi kesadaran, sehingga ZAP yang dapat mengenali dan tetap melacak beberapa sesi. Ini memungkinkan Anda untuk menciptakan sesi baru, beralih di antara mereka, dan berlaku untuk semua komponen lain, seperti laba-laba dan aktif Scanner.
+
+<h3>Didefinisikan pengguna konteks</h3>
+
+Anda sekarang dapat menentukan jumlah 'konteks' - terkait set URL yang membuat aplikasi. Anda dapat menargetkan semua URL dalam konteks, misalnya menggunakan Spider atau aktif Scanner. Anda juga dapat menambahkan konteks untuk lingkup, dan mengaitkan informasi lainnya, seperti rincian otentikasi.
+
+<h3>Lingkup Sesi</h3>
+
+Lingkup sesi memungkinkan Anda untuk menentukan konteks yang Anda tertarik pada satu waktu. Anda dapat membatasi apa yang Anda lihat dalam berbagai tab untuk hanya URL dalam lingkup, dan mencegah sengaja menyerang URL tidak dalam lingkup dengan menggunakan modus dilindungi.
+
+<h3>Host yang berbeda</h3>
+
+ZAP sekarang mendukung 3 mode:
+<ul>
+<li>Brankas, di mana tidak ada operasi berbahaya diizinkan</li>
+<li>Dilindungi, di mana Anda dapat melakukan tindakan pada URL dalam lingkup</li>
+<li>Standar, di mana Anda dapat melakukan apa pun untuk setiap URL</li>
+</ul>
+<h3>Otentikasi dibatalkan</h3>
+
+Anda sekarang dapat mengaitkan rincian otentikasi dengan konteks apapun, yang memungkinkan ZAP untuk melakukan hal-hal seperti mendeteksi jika dan ketika Anda log dan secara otomatis log Anda kembali lagi. Hal ini sangat berguna bila digunakan melalui API di tes regresi keamanan.
+
+<h3>Lebih banyak dukungan API</h3>
+
+REST API telah secara signifikan diperpanjang, memberikan Anda lebih banyak akses ke fungsionalitas ZAP menyediakan.
+
+<h3>Baik kontrol pemindaian berkurai</h3>
+
+Aturan aktif scan sekarang dapat disetel untuk menyesuaikan kekuatan mereka (jumlah serangan mereka melakukan) dan ambang batas yang mereka melaporkan potensi masalah.
+
+<h3>Baru dan peningkatan aktif dan pasif pemindaian aturan</h3>
+
+
+Kami telah meng-upload hasil dari menjalankan ZAP 2.0.0 terhadap wavsep (paling komprehensif sumber terbuka evaluasi proyek kami sadar) untuk ZAP wiki: https://github.com/zaproxy/zaproxy/wiki/Testing TODO ;)
+
+
+
+<h2>Daftar lengkap perubahan:</h2>
+
+<h3>Isu 43: Cakupan pilihan untuk penyaringan</h3>
+<h3>Isu 163: Pemindai aktif gagal terhadap DVWA [ tinggi palsu positif benar negatif tingkat]</h3>
+<h3>Isu 175: Lebih baik bruteforce wordlist</h3>
+<h3>Isu 240: SocketException sementara fuzzing tidak ditangani dengan benar.</h3>
+<h3>Isu 278: Sertifikat CA root untuk SSL dinamis tidak valid pada beberapa platform karena ExtendeKeyUsage ekstensi</h3>
+<h3>Isu 281: Peringatan ketergantungan kelas JSON</h3>
+<h3>Isu 299: Permintaan fitur: Tampilkan hitungan URI yang ditemukan selama Spider</h3>
+<h3>Isu 305: Aturan pemindaian pasif untuk komentar mencurigakan seperti TODO dan FIXME</h3>
+<h3>Isu 326: Waktu tanggapan dan panjang total permintaan manual</h3>
+<h3>Isu 330: robots.txt parsing</h3>
+<h3>Isu 332: Dukungan untuk mode</h3>
+<h3>Isu 333: Spider - tambahkan pilihan untuk merangkup semuanya</h3>
+<h3>Isu 335: Soket Web - tambahkan dukungan untuk mode dan cakupan</h3>
+<h3>Isu 342: Tambahkan sebagai HttpSenderListener</h3>
+<h3>Isu 350: Manajemen otentikasi</h3>
+<h3>Isu 354: String serangan fuzzer tidak diperlihatkan</h3>
+<h3>Isu 356: Buat formulir tes CSRF</h3>
+<h3>Isu 358: Typo dalam "XFO Header Tidak Diatur" Solusi</h3>
+<h3>Isu 360: subdirektori kekerasan</h3>
+<h3>Isu 361: dapatkan HostPort pada HttpRequestHeader untuk HTTP CONNECT permintaan kembali port yang salah</h3>
+<h3>Isu 370: API - simpan sesi penanganan kesalahan yang lebih baik</h3>
+<h3>Isu 374: API - simpan sesi sinkron atau memberikan status</h3>
+<h3>Isu 376: Menutupi kata sandi penyediaan untuk otentikasi</h3>
+<h3>Isu 385: Dukungan konteks</h3>
+<h3>Isu 386: API Web UI - dukungan parameter dengan pandangan</h3>
+<h3>Isu 388: Memungkinkan pengguna untuk menentukan teknologi mana yang sesuai dengan konteks</h3>
+<h3>Isu 390: Spider - Tambahkan pilhan untuk semua spider dalam konteks</h3>
+<h3>Isu 391: Perbaikan kinerja ZAP</h3>
+<h3>Isu 393: Lebih banyak tautan online dari menu</h3>
+<h3>Isu 397: Dukungan mingguan dibangun</h3>
+<h3>Isu 400: Membuat sertifikat CA baru akan selamanya menghasilkan sertifikat dengan nomor serial yang sama</h3>
+<h3>Isu 401: Pengecualian saat spider (baru) dimulai melalui API</h3>
+<h3>Isu 402: Label GUI tidak ditampilkan dengan benar pada Linux (ketika bahasa diatur ke polandia)</h3>
+<h3>Isu 403: Tetapkan pilihan melalui API menggunakan refleksi</h3>
+<h3>Isu 404: Label tidak ditampilkan dengan benar saat bahasa Persia dipilih</h3>
+<h3>Isu 406: Spider - Tambahkan pilihan untuk mengontrol efek dari parameter pada URL yang dikunjungi</h3>
+<h3>Isu 410: charset dibalut tanda petik</h3>
+<h3>Isu 411: Memungkinkan port proxy ditentukan pada baris perintah</h3>
+<h3>Isu 417: IndexOutOfBoundsException di ExtensionHTTPSessions dalam mode daemon</h3>
+<h3>Isu 419: Restrukturisasi kode muat jar</h3>
+<h3>Isu 420: API - dukungan jalur sesi absolut</h3>
+<h3>Isu 421: Membersihkan semua benang pemindai aktif saat mematikan</h3>
+<h3>Isu 422: Gunakan exec di zap.sh agar proses baru tidak bercabang</h3>
+<h3>Isu 423: Pemindai aktif dan spider bisa kebuntuan jika mematikan ZAP saat mereka berlari</h3>
+<h3>Isu 424: Pengecualian di Web Socket ketika membuka sesi</h3>
+<h3>Isu 425: Tambahkan tab mulai cepat</h3>
+<h3>Isu 428: Dukungan ZAP Pasar</h3>
+<h3>Edisi 429: Aktif Scan URL melalui API scan lebih dari sekedar URL tertentu</h3>
+<h3>Edisi 433: API: memperkenalkan parameter wajib dan opsional Deskripsi</h3>
+<h3>Edisi 435: Aktif scan tanda mungkin "hilang" setelah menyimpan sesi</h3>
+<h3>Edisi 436: Mengunci pada sesi Simpan atau shutdown melalui API</h3>
+<h3>Isu 438: Penyempurnaan API</h3>
+<h3>Isu 441: Lihat yang salah diinisialisasikan di banyak tempat saat berada dalam mode daemon</h3>
+<h3>Edisi 443: "tidak ada tanda-tanda Anti-CSRF ditemukan di formulir pengajuan HTML" terdaftar sebagai "tidak ada. Peringatan hanya."</h3>
+<h3>Isu 446: KeyStore dari penyedia PKCS#11 yang terdaftar tidak diambil jika penyedia PKCS#11 sudah terdaftar</h3>
+<h3>Isu 447: Sorotan serangan saat menampilkan peringatan</h3>
+<h3>Isu 448: Ubah nama Brute Force ext menjadi Forced Browse dan tambahkan URL ke pokok</h3>
+<h3>Isu 449: Halaman bantuan hilang untuk panel "ekstensi" dalam dialog "Pilihan"</h3>
+<h3>Isu 451: Pemeriksaan secara manual untuk pembaruan tidak bekerja dengan benar dalam rilis mingguan terbaru</h3>
+<h3>Isu 453: Pemuatan dinamis dan bongkar muat dari pengaya</h3>
+<h3>Edisi 455: Fuzzbd keluar berpecah addon baru</h3>
+<h3>Edisi 456: Spider sesi penanganan tweeks</h3>
+<h3>Edisi 457: Search Tab tombol panah dukungan</h3>
+<h3>Edisi 459: Aktif scanner penguncian</h3>
+<h3>Edisi 460: Menambahkan dialog progres scan</h3>
+<h3>Edisi 461: Menambahkan bantuan file untuk memulai cepat addon</h3>
+<h3>Isu 462: Pratinjau: Path/Review: SSLSocketFactory dengan TLS diaktifkan dan default pilihan Cipher</h3>
+<h3>Edisi 466: Bergerak Port Scan perpanjangan untuk ZAP ekstensi proyek</h3>
+<h3>Isu 468: Meningkatkan injeksi SQL aturan untuk 'rilis'</h3>
+<h3>Isu 469: Mungkinkan token anti csrf untuk ditambahkan dan dihapus melalui API</h3>
+<h3>Isu 471: Pindahkan ekstensi BeanSell ke proyek ekstensi ZAP</h3>
+<h3>Edisi 472: Spider mengakses panel UI dalam modus daemon</h3>
+<h3>Isu 473: Mungkinkan pengaya untuk hapus pandangan/komponen untuk panel pesan</h3>
+<h3>Isu 474: Promosikan awal yang cepat untuk status perilisan</h3>
+<h3>Isu 478: Mungkinkan untuk memilih ke mengirim cookie yang dikelola ZAP pada header tunggal permintaan Cookie dan menetapkannya sebagai bawaan</h3>
+
+
+
+<h2>Lihat juga</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Lihat juga</a></td><td>pengantar ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Rilis</a></td><td>set lengkap rilis</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Kredit</a></td><td>orang-orang dan kelompok-kelompok yang telah membuat rilis ini mungkin</td></tr>
+</table>
+</body>
+</html>

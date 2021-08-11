@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Sesi HTTP</title>
+</head>
+<body>
+	<h1>Sesi HTTP</h1>
+	<p>Alat ini melacak Sesi HTTP yang ada di Situs tertentu dan memungkinkan pengguna Zaproxy untuk memaksa semua permintaan berada pada sesi tertentu. Pada dasarnya, ini memungkinkan pengguna untuk dengan mudah beralih di antara sesi pengguna di Situs dan membuat Sesi baru tanpa "menghancurkan" yang sudah ada.</p>
+
+	<p>
+		Hal ini berdasarkan pada konsep Token Sesi, yang merupakan parameter pesan HTTP (untuk saat ini hanya Cookies) serta memungkinkan server HTTP menghubungkan pesan permintaan dengan setiap permintaan sebelumnya atau data yang tersimpan.
+		Dalam kasus Zaproxy, secara konseptual, token sesi telah dikelompokkan menjadi 2 kategori: token sesi default dan token sesi situs. Token sesi default adalah salah satu yang dapat disetel pengguna di <a href="../../ui/dialogs/options/httpsessions.html">Pilihan layar</a> dan merupakan tolak ukur secara default, yang secara otomatis dianggap token sesi untuk situs manapun (mis. phpsessid, jsessionid, dll). Token sesi situs adalah sekumpulan token untuk situs khusus dan biasanya disiapkan dengan menggunakan menu popup yang tersedia di <a
+			href="../../ui/tabs/params.html">Tab Params</a>.
+	</p>
+
+	<p>
+		Alat ini secara otomatis mendeteksi, menggunakan token sesi yang ditentukan atau token sesi default yang terdeteksi secara otomatis, setiap sesi HTTP yang ada dalam komunikasi. Sesi yang terdeteksi ditampilkan pada <a href="../../ui/tabs/httpsessions.html">HTTP Sessions Tab</a>.
+	</p>
+
+	<p>
+		Pengguna bisa menggunakan tombol yang tersedia di <a
+			href="../../ui/tabs/httpsessions.html">HTTP Tab Sesi</a>, buat sesi baru tanpa merusak yang telah tersedia, atau bisa dengan paksa salah satu sesi sebagai 'aktif'. Ketika sesi 'aktif', semua permintaan outbound dikirim ke Situs yang sesuai yang dimodifikasi, sesi token yang dibentuk untuk menyesuaikan sesi aktif. Dengan cara ini, pengguna dapat dengan mudah memaksa beberapa pesanan untuk menjadi 'bagian dari' sesi tertentu dan kemudian beralih dan mengirim pesan pada sesi lain.
+	</p>
+
+	<p>
+		Alat HTTP sesi dikonfigurasi menggunakan <a
+			href="../../ui/dialogs/options/httpsessions.html">HTTP sesi pilihan layar</a>.
+	</p>
+
+	<h2>Diakses melalui</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/tabs/httpsessions.html">HTTP sesi tab</a></td>
+			<td></td>
+		</tr>
+	</table>
+
+	<h2>Lihat juga</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/overview.html">Ikhtisar UI</a></td>
+			<td>untuk Ikhtisar antarmuka pengguna</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="features.html">Fitur</a></td>
+			<td>disediakan oleh ZAP</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/options/httpsessions.html">Layar pilihan sesi HTTP</a></td>
+			<td>untuk ikhtisar opsi Alat</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/tabs/params.html">Params Tab</a></td>
+			<td>untuk ikhtisar Tab Params</td>
+		</tr>
+
+	</table>
+
+</body>
+</html>

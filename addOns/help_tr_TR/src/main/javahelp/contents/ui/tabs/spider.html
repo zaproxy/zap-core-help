@@ -4,11 +4,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Örümcek sekmesi</title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 	<h1>Örümcek sekmesi</h1>
 	<p>
-		Örümcek sekmesi size taramalar sırasında <a
-			href="../../start/concepts/spider.html">Örümcek</a> tarafından bulunan eşsiz URL'lerin kümesini gösterir.
+		The Spider tab shows you the set of unique URIs found by the <a
+			href="../../start/features/spider.html">Spider</a> during the scans.
 	</p>
 
 	<p>
@@ -26,10 +26,8 @@ Durdur (ve <img alt="devam etme tuşu" src="../../images/16/131.png"> devam etti
  örümcek taramasını durdur;</li>
 		<li><img align="bottom" alt="tarama tuşunu temizle" src="../../images/fugue/broom.png">
 			Tamamlanan taramaları temizle;</li>
-		<li><img align="bottom" alt="mesajları göster butonu" src="../../images/16/178.png">
-			Mesajları Göster/Gizle - seçili örümcek taraması tarafından gönderilen tüm HTTP mesajlarını gösteren sekmeyi (Mesajlar denen) gösterir/gizler;</li>
-		<li><img align="bottom" alt="örümcek seçenekleri tuşu" src="../../images/16/041.png">
-			<a href="../../ui/dialogs/options/spider.html">Örümcek Seçenekleri ekranını</a> aç.</li>
+		<li><img align="bottom" alt="spider options button" src="../../images/16/041.png">
+			Open the <a href="../../ui/dialogs/options/spider.html">Spider Options screen</a>.</li>
 	</ul>
 	İlerleme göstergesi, seçilen örümcek taramasının ne kadar ilerlediğini gösterir. Ayrıca aktif örümcek taramalarının sayısını ve seçilen taramada bulunan URI sayısı gösterilir.
 	<p>Bulunan her URL için şunu görebilirsiniz:
@@ -41,9 +39,27 @@ Durdur (ve <img alt="devam etme tuşu" src="../../images/16/131.png"> devam etti
 niye işleme alınmadığı)</li>
 	</ul>
 
-	<p>Mesajlar sekmesinde gösterilen her örümcek mesajı için, talep ve cevap detaylarını 
-görebilir hatta sütunlar işaretlidir <code>İşlendi</code>mesajın işleme alınıp alınmadığı
-(yanıtın başarılı bir şekilde alınıp çözümlendiği).
+	<p>For each spider message, shown under the Messages tab, you can see details of the request sent and response
+		received. The <code>İşlendi</code> column, indicates whether:
+	<ul>
+		<li><img align="bottom" alt="successful parse" src="../../images/16/152.png">Successfully
+			- the response was successfully received and parsed</li>
+		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Empty
+			Message - the response was not parsed because it was empty</li>
+		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">I/O
+			Error - an input/output error occurred while fetching the response</li>
+		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Max
+			Children - the response was not parsed because the corresponding parent Sites node
+			already has more child nodes than the maximum allowed</li>
+		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Max
+			Depth - the response was not parsed because it passed the maximum depth allowed</li>
+		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Max
+			Size - the response was not parsed because its size is not under the maximum allowed</li>
+		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Not
+			Text - the response was not parsed because it's not text, for example, an image</li>
+		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Spider
+			Stopped - the response was not fetched or parsed because the spider was already stopped</li>
+	</ul>
 
 	<h2>Ayrıca bakınız</h2>
 	<table>
@@ -54,7 +70,7 @@ görebilir hatta sütunlar işaretlidir <code>İşlendi</code>mesajın işleme a
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../start/concepts/spider.html">Ağ</a></td>
+			<td><a href="../../start/features/spider.html">Ağ</a></td>
 			<td>örümceğe genel bir bakış için</td>
 		</tr>
 		<tr>

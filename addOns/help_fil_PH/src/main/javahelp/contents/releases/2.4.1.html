@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  Pagpapakawala 2.4.1
+</title>
+</head>
+<body>
+<h1>Ang Pagpakawala 2.4.1</h1>
+<p>
+Itong Pagpapakawala ay mayroong mga mahalagang seguridad na inayos - ang mga gumagamit ay mahigpit na inirekomenda upang ma-upgrade agad.
+</p>
+<p>
+Isa din sa mga pagbabago na nangangahulugan na ang susi dito sa API ay nilikha sa pamamagitan ng default, ang kahulugan nito ay ang kahit anong aplikasyon na gumagamit ng ZAP API ay nagkamali maliban na lamang kung sila ay mag-update sa pagamit ng ganyang susi.<br>
+Ang Susi ng API ay maaaring mahanap sa <a href="../ui/dialogs/options/api.html">Ang mga Opsyon na iskrin ng API</a><br>
+Maaari mo din na itakda ito mula pa sa ipinaguutos na linya sa pamamagitan ng opsyon tulad ng: 
+<pre>-config api. susi=baguhin-ako-9203935709</pre><br>
+Para sa marami pang mga detalye ay tingnan lamang ang <a href="https://www.zaproxy.org/faq/why-is-an-api-key-required-by-default/">https://www.zaproxy.org/faq/why-is-an-api-key-required-by-default/</a><br>
+ 
+</p>
+
+<p>
+Ang mga sumunsunod na pagbago ay bunga ng pagpapakawala na ito:
+</p>
+
+<h2>Ang mga pagpapaunlad:</h2>
+<ul>
+<li>Usapin 321 : Suportahan ang marami pang mga database</li>
+<li>Usapin 1459 : Magdagdag lamang ng HTTP nagpapadala nakikinig sa iskrip</li>
+<li>Usapin 1500 : Mag-update lamang ny Bouncy Castle libs</li>
+<li>Usapin 1566 : Pagbutihin lamang ang active scan reported na pagpapahusay</li>
+<li>Usapin 1573 : Magdagdag pa ng mga opsyon para ma-inject ang plugin ID sa header para sa lahat ng mga kailangan para sa ascan</li>
+<li>Usapin 1607 : Hindi maaari na mag-save ng pagsusulit ng sesyon sa pamamagitan ng API</li>
+<li>Usapin 1621 : AScan API - Pinahintulutan na mag-scan bilang taga gamit</li>
+<li>Usapin 1625 : Suportahan lamang ang estruktural na params at isa sa pinakamataas na antas na nodes</li> 
+<li>Usapin 1653 : Ang Pag-suporta sa konteksto sa menu susi para sa mga puno</li>
+<li>Issue 1655 : Ang Sesyon sa Pag-kopya ng Token mula pa sa Http Sessions tab hanggang k board clipboard</li>
+<li>Usapin 1662 : Magdagdag ng default Rails kontra sa CSRF paramiter ng token</li>
+<li>Usapin 1664 : Ang tab ng mga kliyente ay nag kusang pag-iskrol</li>
+<li>Usapin 1684 : Hindi maari na itakda ang teknolohiya sa pamamagitan lamang ng API</li>
+<li>Usapin 1688 : Mag update ng owasp/zap2docker na imahe at ng Python Client API</li>
+<li>Usapin 1690 : Ang Bump na magkapares na susi ito ay susukatin sa 2048 upang sa lahat ng certs na nasa kadena ng pagtitiwala ng (proxy)</li>
+<li>Usapin 1695 : Baguhin ang SSL mag lagda ng cert algorithm sa "SHA-256 na mayroong RSA Encryption"</li>
+<li>Usapin 1699 : Pahintulutan angbApiImplementor's na magdagdag pa ng custom headers</li>
+<li>Usapin 1715 : Hindi maari na makapasa sa mga argumento kung magla-launch sa ZAP mula sa linyang ipinag utos sa Mac OS X</li>
+<li>Usapin 1728 : I-update ang JRE sa 1.7u79 (CPU) para sa MacOS</li>
+
+</ul>
+
+<h2>Ang Mga pagsasaayos ng Bug:</h2>
+<ul>
+<li>Usapin 444 : Ang Garantisadong NPE na nasa AliasCertificate.getName() if getCN()==null</li>
+<li>Usapin 1442 : I-taas/baba ang arrow keys sa mga resulta at ito ay titigil kapag "nag-rerepleksyon"</li>
+<li>Usapin 1473 : Ang Ispayder ay hindi maaaring humawak ng mga URL na hango ng tama mula sa meta tags</li>
+<li>Usapin 1497 : Ang ispayder ay kumukuha at nag-uulat ng mga link mula sa mga komento - pangyayare nang tinuruan hindi upang gawin ito</li>
+<li>Usapin 1598 : magsimula sa iskrip kulang ng pag-suporta para sa LibrengBSD</li>
+<li>Usapin 1615 : Suriin "Lahat" ng hindi na gumaganang opsyon</li>
+<li>Usapin 1617 : ZAP 2.4.0 itapon ang Headless Exceptios kapag gumagana sa daemon na kalakaran sa walang namumuno ng makina</li>
+<li>Usapin 1618 : Hindi Pinarangalan ang target na Teknolohiya</li>
+<li>Usapin 1619 : Maaaring hindi napatunayan ang Pagsusuri ng regex</li>
+<li>Usapin 1624 : Habang nagkakarga ang ZAP 2.4.0 ay nag eror</li>
+<li>Usapin 1626 : Mga Istruktural na mga paramiter na hindi naka save kapag ang kontexto na ito ay hindi magagamit sa pamamagitan ng API at ito din ay lumalabas</li>
+<li>Usapin 1636 : Gumagamit (para sa auth) & pinipilit ang gumagamit na hindi magkarga mula sa sesyon</li>
+<li>Usapin 1647 : Maling sanggunian sa resulta ng Zest</li>
+<li>Usapin 1674 : Ang Ajax spider ay hindi isinaalang-alang na kumuha ng mga parameter</li>
+<li>Usapin 1677 : Ang mga fuzzer ay hindi maaaring palawakin sa OS X</li>
+<li>Usapin 1694 : Ang "Error: setting file ay nawawala. Ang Program naman ay lumalabas." Maging ang file ay nagiging iisa</li>
+<li>Usapin 1698 : Takasan ang mga sesyon sa API</li>
+<li>Usapin 1700 : Pilitin ang mga Talaan ng nawawala sa Browse mula sa Drop-Down sa 2.4.0</li>
+<li>Usapin 1706 : Magdagdag sa API ng seguridad na opsyon</li>
+<li>Usapin 1708 : Mga kontexto ng puno ng teknolohiya maaaring makalabas sa sync</li>
+<li>Usapin 1709 : Ang mga Aplikasyon ay hindi (kaagad na) nakikita matapos magsimula</li>
+<li>Usapin 1714 : Ang PNH ay hindi nagre-repleksyon ang API na susi maliban na lamang kung ang gumagamit ay gagamitin ito</li>
+<li>Usapin 1716 : Pinagbabawal ang pag-gamitng CORS na namumuno sa pnh</li>
+<li>Usapin 1720 : Magdagdag ng madaming mga seguridad na opsyon para sa JSONP API</li>
+<li>Usapin 1724 : Siguraduhin ang komponent na mga pangalan sa API ay makakaalis sa HTML output</li>
+<li>Usapin 1735 : Ang mga konteksto ng mga teknolohiya na hindi magagamit sa aktibong pag-scan maliban na lamang kung lumabis ang ridden</li>
+</ul>
+
+<h2>Tingnan din</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Pagpapakilala</a></td><td>ang pagpapakilala sa ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Mga pagpapakawala</a></td><td>ang buong kabuoan ng mga pagpapakawala</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Mga kredito</a></td><td>ang mga tao at mga grupo na ginawang posible ang pagpakawala</td></tr>
+</table>
+</body>
+</html>

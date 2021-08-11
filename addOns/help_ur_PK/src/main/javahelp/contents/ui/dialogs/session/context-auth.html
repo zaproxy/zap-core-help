@@ -6,35 +6,57 @@
 Session Context Authentication screen
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Session Context Authentication screen</h1>
 <p>
 This is one of the <a href="contexts.html">Session Context screens</a>
-which allows you to manage the way in which <a href="../../../start/concepts/authentication.html">Authentication</a> is being done for the Context. Note that
-changing the authentication method after Users have been defined will cause them to be deleted, as
-the type of user credentials needs to match the authentication scheme. 
-After selecting the Authentication Method type, the options that need to be configured 
-depend on the Authentication Method.
+which allows you to manage the way in which <a href="../../../start/features/authentication.html">Authentication</a> is being done for the Context.
 
-<h4>Manual Authentication</h4>
+<h2>Authentication Method</h2>
+
+After selecting the <a href="../../../start/features/authmethods.html">Authentication Method</a> type, the options that need to be configured depend on the Authentication Method.
+<p>
+<strong>Note:</strong> Changing the authentication method after Users have been defined might cause its credentials to be reset,
+as the type of user credentials need to match the authentication scheme. A confirmation dialogue will be shown when that happens.
+
+<h3>Manual Authentication</h3>
 No configuration is needed for this authentication method. <small>Read  
-<a href="../../../start/concepts/authentication.html#manual">more</a>...</small>
+<a href="../../../start/features/authmethods.html#manual">more</a>...</small>
 
-<h4>Form-Based Authentication</h4>
+<h3>Form-Based Authentication</h3>
 To configure this authentication method, you need to supply the <b>login url</b>, to which the login
 request is performed, the <b>request body</b> (POST data), if needed, and identify the <b>parameters</b> used to supply
 the 'username' and 'password'. If no request body is supplied, the login request is performed as 
 a HTTP GET, otherwise an HTTP POST is used. The credentials themselves
-are configured in the <a href="contexts.html#users">Users</a> tab. <small>Read  
-<a href="../../../start/concepts/authentication.html#formBased">more</a>...</small> 
+are configured in the <a href="contexts.html#users">Users</a> tab.
+The <b>login page</b> can also be supplied to indicate from where to obtain a new session (e.g. cookies)
+and regenerate <a href="../../../start/features/anticsrf.html">Anti CSRF tokens</a> present in the <b>request body</b>.
+If the <b>login page</b> is not supplied it is used the <b>login url</b>.
+<br><small>Read <a href="../../../start/features/authmethods.html#formBased">more</a>...</small>
 
-<h4>HTTP/NTLM Authentication</h4>
+<h3>JSON-Based Authentication</h3>
+To configure this authentication method, you need to supply the <b>login url</b>, to which the login
+request is performed, the <b>JSON object</b> (POST data, <code>application/json</code>), and identify
+the <b>parameters</b> used to supply the 'username' and 'password'.  The credentials themselves
+are configured in the <a href="contexts.html#users">Users</a> tab.
+The <b>login page</b> can also be supplied to indicate from where to obtain a new session (e.g. cookies).
+If the <b>login page</b> is not supplied it is used the <b>login url</b>.
+<br><small>Read <a href="../../../start/features/authmethods.html#jsonBased">more</a>...</small>
+
+<br>Examples of POST data:
+<ul>
+	<li><code>{"username":"{%username%}","password":"{%password%}"}</code></li>
+	<li><code>{"user":{"mail":"{%username%}","password":"{%password%}"}}</code></li>
+</ul>
+where <code>{%username%}</code> and <code>{%password%}</code> indicate where the authentication credentials are set.
+
+<h3>HTTP/NTLM Authentication</h3>
 To configure this authentication method, you need to supply the <b>hostname</b> and the <b>port</b> of the server
 the authentication is done with and the <b>realm</b> the credentials apply to. The credentials themselves
 are configured in the <a href="contexts.html#users">Users</a> tab. <small>Read  
-<a href="../../../start/concepts/authentication.html#httpAuth">more</a>...</small> 
+<a href="../../../start/features/authmethods.html#httpAuth">more</a>...</small> 
 
-<h4>Script-Based Authentication</h4>
+<h3>Script-Based Authentication</h3>
 To use this authentication method, you <b>first</b> need to write (and save) an <b>Authentication Script</b> 
 using the <b>Scripts</b> tab (see the provided examples and templates for this script type in the Scripts tab).
 Then you need to supply the name of the script in the dropdown list. After selecting the script, you need to press 
@@ -46,13 +68,54 @@ required by the Authentication script you re-load the script. Otherwise, the par
 not be the ones used during the authentication and errors might occur. The <i>credentials</i> used for each User 
 during the authentication processed can be also specified in the Authentication Script and are configured in the 
 <a href="contexts.html#users">Users</a> tab.
-<small>Read <a href="../../../start/concepts/authentication.html#scriptBased">more</a>...</small> 
+<small>Read <a href="../../../start/features/authmethods.html#scriptBased">more</a>...</small> 
 
+<h2>Authentication Verification</h2>
+
+<h3>Verification Strategy</h3>
+
+Select the <a href="../../../start/features/authstrategies.html">Authentication Verification Strategy</a> required.
+
+<h3><a name="regexloggedin">Regex pattern used to identify Logged in messages</a></h3>
+
+If this regex pattern is specified and matches any string in the specified message then ZAP will treat this message as logged in.
+For example the pattern could be used to match a http://example.com/logout link or the presence of a 'Welcome, User X' message.
+
+<h3><a name="regexloggedout">Regex pattern used to identify Logged out messages</a></h3>
+
+If this regex pattern is specified and matches any string in the specified message then ZAP will treat this message as logged out.
+For example the pattern could be used to match a http://example.com/login link or the presence of a 'Welcome, Guest' message.
+
+<h3><a name="pollfreq">Poll Frequency</a></h3>
+
+This controls how frequently ZAP will poll to see if a user is still authenticated. 
+The integer will either represent the number of Requests that will be made before ZAP will poll again or the number of Seconds before
+it will poll again, depending on pulldown selected.<br/>
+The option is only relevant if the "Poll the Specified URL" Verification Strategy has been selected.
+  
+<h3><a name="pollurl">URL to Poll for Verification</a></h3>
+
+This is the URL that ZAP will poll to see if a user is still authenticated.<br/>
+The option is only relevant if the "Poll the Specified URL" Verification Strategy has been selected.
+ 
+<h3><a name="polldata">Poll Request POST Data</a></h3>
+
+If supplied then this will be sent as a POST in the poll request. If it is empty then ZAP will make a GET request<br/>
+The option is only relevant if the "Poll the Specified URL" Verification Strategy has been selected.
+  
+<h3><a name="pollheaders">Additional Poll Request Headers</a></h3>
+
+An optional set of headers that will be sent with the poll request. Each line should be one header and value separated by a colon e.g<br/>
+<pre>
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+</pre>
+The option is only relevant if the "Poll the Specified URL" Verification Strategy has been selected.
   
 <h2>Accessed via</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../tlmenu/file.html">Top level File menu</a></td><td>'Properties...' menu item</td></tr>
+<a href="../../tabs/sites.html">Sites tab</a></td><td>Double click a Context</td></tr>
 </table>
 
 <h2>See also</h2>
@@ -60,7 +123,7 @@ during the authentication processed can be also specified in the Authentication 
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="contexts.html">Session Context screens</a></td><td>for details of the other Context screens</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../../start/concepts/authentication.html">Authentication</a></td><td>for an overview of Authentication </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../../start/features/authentication.html">Authentication</a></td><td>for an overview of Authentication </td></tr>
 </table>
 
 

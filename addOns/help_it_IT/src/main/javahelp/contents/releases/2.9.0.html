@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<TITLE>
+  Release 2.9.0
+</TITLE>
+</HEAD>
+<BODY>
+<H1>Release 2.9.0</H1>
+
+This is a bug fix and enhancement release, which requires a minimum of Java 8. 
+Note that a minimum of Java 11 is recommended, especially for high DPI displays.
+<br><br>
+These release notes do not include all of the changes included in add-ons updated since 2.8.0.
+<br><br>
+Some of the more significant enhancements include:
+
+<H2>Session Management Scripts</H2>
+It's now possible to define scripts which handle non standard or more complex session management.<br>
+Session Management scripts have full access to the authentication request and response and can define custom
+mandatory and optional parameters.
+An example session management script for OWASP Juice shop is provided.
+
+<H2>Active Scan Filter</H2>
+It's now possible to filter requests in Active Scan. Below are the supported criteria's:
+<ul>
+	<li>HTTP method</li>
+	<li>Status code</li>
+	<li>Tags</li>
+	<li>URL pattern</li>	
+</ul>
+
+<H2>Custom Global/Script Variables</H2>
+It's now possible for scripts to share custom global/script variables, which can be of any type not
+just strings, for example, lists, maps, GUI models.<br/>
+In JavaScript they are accessed/set as follows:
+<blockquote><pre><code>
+var ScriptVars = Java.type("org.zaproxy.zap.extension.script.ScriptVars")
+
+ScriptVars.setScriptCustomVar(this.context, "var.name", {x: 1, y: 3})
+print(ScriptVars.getScriptCustomVar(this.context, "var.name").y) // Prints 3
+
+ScriptVars.setGlobalCustomVar("var.name", ["A", "B", "C", "D"])
+print(ScriptVars.getGlobalCustomVar("var.name")[2]) // Prints C
+</code></pre></blockquote>
+
+<H2>Scan Rule Promotions</H2>
+
+The following scan rules have been promoted:
+
+<h3>Passive Scan Rules - Release</h3>
+<ul>
+<li>Cookie Without SameSite Attribute</li>
+<li>Cross Domain Misconfiguration</li>
+<li>Information Disclosure: In URL</li>
+<li>Information Disclosure: Referrer</li>
+<li>Information Disclosure: Suspicious Comments</li>
+<li>Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s)</li>
+<li>Timestamp Disclosure</li>
+<li>Username Hash Found</li>
+<li>X-AspNet-Version Response Header Scanner</li>
+<li>X-Debug-Token Information </li>
+</ul>
+
+<H2>Filters Classes Removal</H2>
+The classes/code for Filters functionality, deprecated since ZAP 2.4.0, has been removed. Add-ons that still use that will stop working.
+
+<H2>Changes in Bundled Libraries</H2>
+The following libraries were removed:
+<ul>
+  <li>JDOM</li>
+  <li>Diff Utils</li>
+</ul>
+no longer in use by core, add-ons should bundle the library, if needed.
+
+The following libraries were updated:
+<ul>
+  <li>Bouncy Castle, 1.61 → 1.64</li>
+  <li>Commons BeanUtils, 1.9.3 → 1.9.4</li>
+  <li>Commons Codec, 1.12 → 1.13</li>
+  <li>Commons CSV, 1.6 → 1.7</li>
+  <li>Commons Text, 1.6 → 1.8</li>
+  <li>HSQLDB, 2.4.1 → 2.5.0</li>
+  <li>Nashorn Sandbox, 0.1.25 → 0.1.26</li>
+  <li>RSyntaxTextArea, 3.0.3 → 3.0.4</li>
+  <li>SQLite JDBC, 3.27.2.1 → 3.28.0</li>
+</ul>
+
+
+<H2>Enhancements</H2>
+<ul>
+<li>Issue 2016 : Choose a unique port in the GUI if theres a clash</li>
+<li>Issue 2619 : Allow add-ons to declare/bundle its dependencies</li>
+<li>Issue 3358 : Enhancement: Options Panel Filter</li>
+<li>Issue 3402 : Share custom variables between scripts</li>
+<li>Issue 3491 : Feature-Request: Select Multiple Contexts</li>
+<li>Issue 4963 : Allow to specify the URI of the login page</li>
+<li>Issue 5278 : Ability to filter what requests the Active Scans run against</li>
+<li>Issue 5303 : API calls for adding and changing alerts</li>
+<li>Issue 5436 : Add new languages to context tech</li>
+<li>Issue 5464 : Deprecate Context.getIndex and implement Context.getId</li>
+<li>Issue 5466 : Add utility methods to Alert class</li>
+<li>Issue 5550 : Load additional local proxies with defaults</li>
+<li>Issue 5563 : Include Import/Online menus in Options > Keyboard</li>
+<li>Issue 5598 : Revise site certificate validity period to 825d</li>
+<li>Issue 5614 : Manual Request Editor Icon</li>
+<li>Issue 5630 : Support session management scripts</li>
+<li>Issue 5656 : Add Base64url to Encoder/Decoder Tool</li>
+<li>Issue 5667 : Improve permissions and space handling when saving/exporting</li>
+<li>Issue 5671 : Check for updates in daemon mode</li>
+<li>Issue 5672 : Do not prompt to accept the license on first start</li>
+<li>Issue 5680 : Update dependencies</li>
+<li>Issue 5681 : Remove unused dependencies</li>
+<li>Issue 5691 : Expose Context details to passive scan rules</li>
+<li>Issue 5696 : Expose Context techset directly to passive scan rules</li>
+<li>Issue 5723 : AntiCSRF Tokens Add New Defaults</li>
+<li>Issue 5756 : HttpHeader provide List variant for getHeaders(String)</li>
+<li>Issue 5774 : Allow to enable/disable all passive tags through the API</li>
+<li>Issue 5779 : MacOS DMG - switch back to HFS+</li>
+<li>Issue 5782 : Update default user agent</li>
+<li>Issue 5785 : Add tooltip listing all proxies to the footer Primary Proxy label</li>
+<li>Issue 5795 : Handle quoted URL in meta refresh</li>
+</ul>
+
+<H2>Bug fixes</H2>
+<ul>
+<li>Issue 1164 : Manual "Resend" sets cookies on response</li>
+<li>Issue 4003 : Issues when using 'low memory' mode.</li>
+<li>Issue 5427 : Update HTTP Protocol Version in Manual Request Editor</li>
+<li>Issue 5449 : API not responding  - Internal Error</li>
+<li>Issue 5452 : Do not remove resource bundle of other extensions</li>
+<li>Issue 5486 : Fix counting error in Statistics</li>
+<li>Issue 5487 : Add saved scripts of registered script type</li>
+<li>Issue 5490 : Anti-CSRF tokens not encoded in authentication requests</li>
+<li>Issue 5491 : Auth request without request-target from auth script causes exceptions</li>
+<li>Issue 5492 : Improve error handling when creating scan policies</li>
+<li>Issue 5518 : ZAP might not use outgoing proxy authentication credentials</li>
+<li>Issue 5585 : ZAP 2.8.1 hanging on kali</li>
+<li>Issue 5613 : Cope with missing token in auth POST data</li>
+<li>Issue 5619 : The -configfile option can fail with arrays</li>
+<li>Issue 5622 : Consistent SessionTracking Button Sync</li>
+<li>Issue 5624 : Alert parameter might not be properly loaded</li>
+<li>Issue 5636 : script.js never served on localhost </li>
+<li>Issue 5704 : Wait for add-ons to be installed</li>
+<li>Issue 5743 : Find + Cancel buttons are neither centered nor flush right</li>
+<li>Issue 5744 : Improve labels of Search menu items</li>
+<li>Issue 5780 : Don't display messages when deleting them</li>
+<li>Issue 5783 : Disable JAR caching by default</li>
+<li>Issue 5794 : Correct MailTo pattern for RegexAutoTagScanner</li>
+<li>Issue 5803 : Do not require the user password through the API</li>
+</ul>
+
+<H2>ZAP API New Endpoints:</H2>
+
+<H3>VIEW script / globalCustomVar</H3>
+Gets the value (string representation) of a global custom variable. Returns an API error (DOES_NOT_EXIST) if no value was previously set.
+
+<H3>VIEW script / globalCustomVars</H3>
+Gets all the global custom variables (key/value pairs, the value is the string representation).
+
+<H3>VIEW script / scriptCustomVar</H3>
+Gets the value (string representation) of a custom variable. Returns an API error (DOES_NOT_EXIST) if no script with the given name exists or if no value was previously set.
+
+<H3>VIEW script / scriptCustomVars</H3>
+Gets all the custom variables (key/value pairs, the value is the string representation) of a script. Returns an API error (DOES_NOT_EXIST) if no script with the given name exists.
+
+<H3>ACTION alert / addAlert</H3>
+Add an alert associated with the given message ID, with the provided details. (The ID of the created alert is returned.)
+
+<H3> ACTION alert / updateAlert</H3>
+Update the alert with the given ID, with the provided details.
+
+<H3>ACTION pscan / disableAllTags</H3>
+Disables all passive scan tags.
+
+<H3>ACTION pscan / enableAllTags</H3>
+Enables all passive scan tags.
+
+<H3>ACTION script / clearGlobalCustomVar</H3>
+Clears a global custom variable.
+
+<H3>ACTION script / clearScriptCustomVar</H3>
+Clears a script custom variable.
+
+<H2>See also</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+</table>
+</BODY>
+</HTML>

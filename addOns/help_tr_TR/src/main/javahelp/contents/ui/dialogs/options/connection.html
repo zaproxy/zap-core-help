@@ -6,48 +6,93 @@
 Bağlantı Ayarları Ekranı
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Bağlantı Ayarları Ekranı</h1>
 <p>
 Seçenekler Bağlantısı ekranı ZAP bağlantı seçeneklerini yapılandırmanızı sağlar:
 
-<h3>Saniye olarak zaman aşımı</h3>
+<h3>Timeout (in seconds)</h3>
 Yavaş uygulamaları test etmeyi kolaylaştırır.
 
 <h3>Varsayılan Kullanıcı Aracı</h3>
 ZAP'ın HTTP mesajları oluştururken kullanması gereken kullanıcı aracı (örneğin, örümcek mesajlar ya da gönderilen proxy'e BAĞLANTI istekleri).
 
 <h3>Tekil Çerez Talep Başlığı</h3>
-ZAP'ın yönetilen çerezlerini kontrol eder (<a href="../../tlmenu/edit.html">Oturum Takibini Etkinleştir(Çerez)</a>) sunucuya bir HTTP isteği gönderirken, tek bir "Çerez" istek başlığına veya birden fazla "Çerez" istek başlığına ayarlanmalıdır.
+Controls whether the ZAP's managed cookies (Enable (Global) HTTP State) should be set
+on a single "Cookie" request header or multiple "Cookie" request headers, when sending an HTTP request to the server.
+
+<h3>Enable (Global) HTTP State</h3>
+This allows session details stored in cookies to be tracked.<br/>
+This option must be selected to enable the "Use current tracking session" checkbox in the 
+<a href="../../dialogs/man_req.html">Manual Request Editor dialogs</a>.<br/>
+Session tracking ensures that any requests are sent with the latest session details.<br/>
+For example you may record a session when logged in as one user and then logout and login as another user.<br/>
+If you resend a request from the first session without session tracking then it will use the cookies from 
+the first session.<br/>
+If you resend the same request with session tracking then it will use the cookies from the second session.
 
 <h3>DNS</h3>
 <h4>TTL Başarılı Sorguları</h4>
-Başarılı DNS sorgularının önbelleğe alınması gereken süreyi tanımlar:<ul>
+Defines for how long the successful DNS queries should be cached:<ul>
 <li>Negatif sayı, sonsuza dek önbellekte tut;</li>
 <li>Sıfır, ön belleğe alınımı etkisiz kılar;</li>
 <li>Pozitif sayı, sorguların ön belleğe alınacağı saniye sayısı.</li></ul>
-<strong>Not:</strong> Bir tekrar başlatmadan sonra değişiklikler uygulanır.<p>
-Bu ayar ayrıca şunu kullanarak da kurulabilir <code>-config</code> anahtar ile komut satırı argümanı <code>connection.dnsTtlSuccessfulQueries</code>.
+<strong>Not:</strong> Changes are applied after a restart.<p>
+The option can also be set using the <code>-config</code> command line argument with the key <code>connection.dnsTtlSuccessfulQueries</code>.
 
-<h3>Güvenlik Protokolleri</h3>
-Gönderilen bağlantılar için etkin SSL/TLS veriyonlarının seçimini mümkün kılar (örneğin, sunuculara) En azından bir versiyon etkin olmalıdır. JRE tarafından desteklenmeyen versiyonlar seçilmemiş olarak işaretlenecek ve etkinliği kaldırılacaktır.
-<br>SSLv2Hello seçeneği, en az bir SSL / TLS sürümü ile beraber seçilmelidir.
+<h3>Security Protocols</h3>
+Allows to choose the SSL/TLS versions enabled for outgoing connections (for example, to servers). At least
+one version must be enabled, versions unsupported by the JRE will be unselected and disabled.
+<br>The option SSLv2Hello must be selected in conjunction with at least one SSL/TLS version.
 
-<h3>Proxy zinciri kullan</h3>
-Bu bölüm giden bağlantılar için başka proxy'e bağlanmanıza olanak sağlar.<br/>
-Bu genellikle kurumsal bir ortamda gereklidir.
+<h3>Use Proxy Chain</h3>
+This section allows you to connect to another proxy for outgoing connections.<br/>
+This is often required in a corporate environment.
 
-<h3>Proxy kimlik doğrulaması</h3>
-Bu bölüm giden proxy kimlik doğrulamasını yapılandırmanıza izin verir. 
+<h3>Proxy Authentication</h3>
+This section allows you to configure the outgoing proxy authentication. 
 
-<h2>Ayrıca bakınız</h2>
+<h3>SOCKS Proxy</h3>
+This section allows you to configure an outgoing SOCKS proxy, by default the SOCKS proxy configuration applies to all connections made by ZAP.
+<p>
+The SOCKS proxy system properties (e.g. <code>socksProxyHost</code>, <code>socksProxyPort</code>) take precedence over the persisted configurations
+for compatibility with older ZAP versions. ZAP will use and display the values of the system's properties when defined at startup, the configurations
+can still be changed in this panel.
+<p><strong>Note:</strong> Loopback addresses (e.g. <code>localhost</code>, <code>127.0.01</code>, <code>::1</code>) are not proxied through the SOCKS proxy, the connections will be done directly.
+<h4>Enabled</h4>
+If ZAP should use the configured SOCKS proxy.
+<br>Default: <code>unselected</code>, unless the SOCKS proxy system properties are defined, in which case it is <code>selected</code>.
+<h4>Host</h4>
+The host name or address of the SOCKS proxy.
+<br>Default: <code>localhost</code>.
+<h4>Port</h4>
+The port of the SOCKS proxy.
+<br>Default: <code>1080</code>.
+<h4>Version</h4>
+The version of the SOCKS proxy.
+<br>Default: <code>5</code>.
+<h4>Use SOCKS' DNS</h4>
+If ZAP should let the SOCKS proxy resolve the host names. Requires a version 5 SOCKS proxy.
+<br>This might lead to connection failures if the SOCKS proxy is not able to resolve the host name (e.g. use of names that are defined in a <code>hosts</code> file).
+<br>Default: <code>selected</code>.
+<h4>Authentication</h4>
+The following fields allow to configure the authentication credentials for the SOCKS proxy.
+<h5>User Name</h5>
+The user name.
+<br>Default: none.
+<h5>Password</h5>
+The password.
+<br>Default: none.
+<br><strong>Note:</strong> Stored in clear text in the configuration file.
+
+<h2>See also</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Genel Bakış</a></td><td>kullanıcı arayüzüne genel bir bakış için</td></tr>
+<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Seçenekler diyalogları</a></td><td>diğer seçenekler diyalog ekranlarının detayları için</td></tr>
+<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../../cmdline.html">Komut Satırı</a></td><td>Komut Satırının detayları için</td></tr>
+<a href="../../../cmdline.html">Command Line</a></td><td>for details of the Command Line</td></tr>
 </table>
 
 </body>

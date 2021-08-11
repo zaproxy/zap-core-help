@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+数据驱动内容
+</title>
+</head>
+<body>
+<h1>数据驱动内容</h1>
+<p>
+数据驱动内容是<a href="structmods.html">结构修饰符</a>的类型，它标识代表数据的URL路径。<br>
+<p>
+在‘传统’Web应用程序中，应用程序的结构通常由URL路径定义，并且数据包含在URL参数和POST数据中。<br>
+URLs如下：
+<ul>
+<li>https://www.example.com/app/aaa?ddd=eee
+<li>https://www.example.com/app/aaa?ddd=fff
+<li>https://www.example.com/app/bbb?ddd=eee
+</ul>
+被表示在 <a href="sitestree.html">Sites Tree</a> ，作为树中的两个‘节点’：
+<ul>
+<li>站点
+	<ul>
+	<li>https://www.example.com
+		<ul>
+		<li>应用程序
+			<ul>
+			<li>GET:aaa(ddd)
+			<li>GET:bbb(ddd)
+			</ul>
+		</ul>
+	</ul>
+</ul>
+“站点”树很重要，因为它反映了ZAP对应用程序结构的理解。<br>
+如果它不能很好地表示结构，那么ZAP将无法有效地攻击应用程序。<br>
+<br>
+某些应用程序在URL路径中包含数据。<br>
+例如： 
+<ul>
+<li>https://www.example.com/app/company1/aaa?ddd=eee
+<li>https://www.example.com/app/company2/aaa?ddd=fff
+<li>https://www.example.com/app/company3/aaa?ddd=ggg
+</ul>
+这3个URL表示相同的页面，但有不同的数据，但默认情况下，ZAP将它们表示为三个独立的节点：
+<ul>
+<li>站点
+	<ul>
+	<li>https://www.example.com
+		<ul>
+		<li>应用程序
+			<ul>
+			<li>company1
+				<ul>
+				<li>GET:aaa(ddd)
+				</ul>
+			<li>company2
+				<ul>
+				<li>GET:aaa(ddd)
+				</ul>
+			<li>company3
+				<ul>
+				<li>GET:aaa(ddd)
+				</ul>
+			</ul>
+		</ul>
+	</ul>
+</ul>
+这是一个问题，因为当ZAP只需要攻击其中一个时，但ZAP会攻击所有的3个页面。<br>
+在这种情况下，攻击同一页面3次并不是什么大问题，但是如果您有几百或几千页这样的页面会大大增加扫描应用程序所花费的时间。<br>
+<br>
+在ZAP术语中，“company”节点是“数据驱动内容” - 包含数据而不是代表应用程序结构一部分的URL路径元素。<br>
+You can define data driven content by adding the application to a <a href="contexts.html">Context</a>
+and then configuring them via the <a href="../../ui/tabs/sites.html">Sites tab</a> 'Flag as Context -&gt; <i>Context Name</i> Data driven node' right click menu item<br>
+完成此操作后，页面将被正确表示为1个节点：
+<ul>
+<li>站点
+	<ul>
+	<li>https://www.example.com
+		<ul>
+		<li>应用程序
+			<ul>
+			<li>&#x00AB;company&#x00BB;
+				<ul>
+				<li>GET:aaa(ddd)
+				</ul>
+			</ul>
+		</ul>
+	</ul>
+</ul>
+The characters &#x00AB; and &#x00BB; are used to indicate that this is a 'special' node and the 
+node name (in this case 'company') can be set by you to indicate what that node represents.
+
+<h2>访问途径</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/sites.html">站点选项卡</a></td><td>'Flag as Context -&gt; <i>Context Name</i> Data driven node' right click menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/history.html">历史记录选项卡</a></td><td>'Flag as Context -&gt; <i>Context Name</i> Data driven node' right click menu item</td></tr>
+</table>
+
+<h2>另请参阅</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">UI综览</a></td><td>有关用户界面的概述</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="features.html">功能</a></td><td>由ZAP提供</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="structparams.html">结构参数</a></td><td>它用于标识表示应用程序结构而不是用户数据的参数</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/dialogs/session/context-struct.html">会话上下文结构屏幕</a></td></tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Release 1.1.0
+</title>
+</head>
+<body>
+<h1>Release 1.1.0</h1>
+<p>
+Les modifications suivantes ont été apportées dans cette version :
+</p>
+<h2>Significant changes:</h2>
+
+<h3>OWASP rebranding</h3>
+ZAP has been accepted as an OWASP project.<br>
+Its homepage is now: https://owasp.org/www-project-zap/
+
+<h3>Attaque par force brute</h3>
+La possibilité de forcer par la force des fichiers et des répertoires basés sur le code du projet OWASP DirBuster. <br>
+Le nouvel onglet Brute Force affiche les fichiers et répertoires trouvés.
+
+<h3>Scan de port</h3>
+La possibilité de porter les sites d'analyse. <br>
+Le nouvel onglet Port Scan affiche les ports trouvés.
+
+<h3>Onglet Analyse active</h3>
+The new <a href="../ui/tabs/ascan.html">Active Scan tab</a> montre les demandes et les réponses à la suite de l'analyse active d'un site.
+
+<h3>Onglet robot</h3>
+The <a href="../ui/tabs/spider.html">Onglet robot</a> vous permet maintenant de continuer à utiliser ZAP tout en cherchant un site.<br>
+Vous pouvez également mettre en pause et reprendre l'araignée.    
+
+<h3>Support de carte à puce</h3>
+Le support de la carte à puce a été ajouté au projet Andiparos.<br>
+Les périphériques à carte à puce suivants ont été testés sur Windows:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Safeguard</td><td>Aladdin eToken</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td></td><td>Aladdin eToken Pro</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Omnikey</td><td>Omnikey 3121</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td></td><td>CardMan 6121</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Gemalto</td><td>Reflex 20 V2</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td></td><td>Swiss Stick</td></tr>
+</table>
+The following smartcard devices are reported to work:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Omnikey</td><td>CardMan 4040</td></tr>
+</table>
+
+<h3>Attack menu</h3>
+The new <a href="../ui/tabs/sites.html">Onglet sites</a> cliquez avec le bouton droit de la souris sur le menu "Attaque" pour lancer plusieurs analyses.
+
+<h3>Plus d'internationalisation</h3>
+Tous les onglets principaux et les éléments de menu ont maintenant été internationalisés.
+
+<h3>Localisation</h3>
+La prise en charge des langues suivantes est intégrée dans cette version:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Anglais</td><td>La langue par défaut</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Portugais brésilien</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Allemand</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Polish</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Spanish</td><td></td></tr>
+</table>
+    
+<h3>Language selection</h3>
+Au démarrage, vous serez invité à choisir la langue à utiliser.<br>
+New languages are automatically detected by the presence of files with names of the form Messages_&lt;locale&gt;.properties in the ZAP directory. 
+
+<h2>Changements mineurs :</h2>
+
+<h3>Disabled 'default file' plugins</h3>
+Les plugins qui détectent les fichiers par défaut sont effectivement rendus redondants par le nouveau
+scanner de force brute.<br>
+Ceux-ci ont donc été désactivés.
+
+<h3>Résumés de scanner</h3>
+Récapitulatifs du scannerLes montants du nombre et des types des analyses en cours sont désormais affichés dans le <a href="../ui/footer.html">footer</a>.
+
+
+<h2>Voir aussi</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Introduction</a></td><td>l'introduction de ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Releases</a></td><td>l'ensemble complet des releases</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Crédits</a></td><td>les personnes et les groupes qui ont rendu cette release possible</td></tr>
+</table>
+</body>
+</html>

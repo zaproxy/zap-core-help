@@ -6,21 +6,33 @@
 Opcije Tačke prekida ekran
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Opcije Tačke prekida ekran</h1>
 <p>
-This screen allows you to configure the <a href="../../../start/concepts/breakpoints.html">break point</a> options:
+This screen allows you to configure the <a href="../../../start/features/breakpoints.html">breakpoint</a> options:
 
 <h3>Confirm drop trapped message</h3>
 Asks for confirmation when a request or response is dropped.
 
 <h3>Only break on messages in scope</h3>
-The 'global' break point will only be triggered by requests that are in  
-<a href="../../../start/concepts/scope.html">scope</a>.<br>
-Custom break points will not be affected.
+The 'global' breakpoint will only be triggered by requests that are in  
+<a href="../../../start/features/scope.html">scope</a>.<br>
+Custom breakpoints will not be affected.
 
 <h3>ZAP always on top when breakpoint hit</h3>
 If selected this will mean that ZAP stays on top of all other windows whenever a breakpoint is hit.<br>
+
+<h3>Show buttons to select the requests you don't want ZAP to break on</h3>
+This controls whether the buttons to select the file types you don't want ZAP to break on and the scope filter appear in the break panel.<br>
+
+<h4>Javascript URL regex</h4>
+This sets the regex used to predict if the content in the response will be a Javascript file.
+
+<h4>CSS and Fonts URL regex</h4>
+This sets the regex used to predict if the content in the response will be a CSS or a Font file.
+
+<h4>Multimedia URL regex</h4>
+This sets the regex used to predict if the content in the response will be a multimedia file (images, videos or sounds).
 
 <h3>Break buttons mode</h3>
 This controls whether there is a single combined break button on the <a href="../../tltoolbar.html">Top Level Toolbar</a>

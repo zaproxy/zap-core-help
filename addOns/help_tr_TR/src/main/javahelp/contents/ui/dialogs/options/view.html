@@ -6,7 +6,7 @@
 Görüntü Seçenekleri ekranı
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Görüntü Seçenekleri ekranı</h1>
 <p>
 Görüntü ekranı yapılandırmanızı sağlar:
@@ -38,10 +38,15 @@ Aşağıda ki seçenekler kullanılabilir:
     <li>Sekmeler yan yana - Talep ve yanıt sekmeleri yan yana. Bu
  görğntğlenen bilgiyi arttırır ama talep
  ve cevabı aynı anda göremezsiniz.</li>
-    <li>Yan Yana Paneller - Talep paneli Yanıt panelinin sol tarafında
-        gösterilir. Bu gösterilebilen bilgileri azaltır fakat istek ve cevabın ikisini de aynı anda görebilirsiniz.</li>
-    <li>Talep Üzerinde Gösterilen Talep - Talep paneli Yanıt Paneli'nin üzerinde gösterilir. Bu görüntülenen bilgiyi azaltır ama talep ve
+    <li>Side by Side in Tab - The Request and Response panels are shown side by side in
+        the same tab. This decreases the information that can be displayed but means you can
+        see both the request and response at the same time.</li>
+    <li>Panels Side by Side - The Request panel is shown to the left of the Response
+        panel. Bu görüntülenen bilgiyi azaltır ama talep ve
  cevabı aynı anda görmenizi sağlar.</li>
+    <li>Request Shown Above Response - The Request panel is shown above the Response
+        panel. This decreases the information that can be displayed but means you can see both
+        the request and response at the same time.</li>
 </ul>
 Görüntüleme seçeneği Tam Düzen olarak ayarlandığı zaman Yanıt Paneli Konumu seçeneği geçerli olmaz.
 
@@ -69,10 +74,17 @@ Ya aşağı açılır listeden önceden tanımlanmış bir format seçin ya da k
 <tr> <td> Sadece Zaman </td> <td> SS:dd:ss </td> </tr>
 </table>
 
-<h3>Yazı Tipi Boyutu</h3>
-ZAP ekranında kullanılan varsayılan metin boyutu. Bunu -1 olarak ayarlarsanız, sistem varsayılan boyutu kullanılacaktır.<br>
+<h3>Font Controls</h3>
+The General Font section controls default text font and size used for the ZAP display, while the Work Panels Font section 
+controls the font used for the top right section of ZAP's main window (Ex: Request/Response, Edit and Resend tool, etc.).
+If you set this to -1 then the system default size will be used.<br>
 'Yazı Tipi Örneki' alanı varsayılan metnin ne kadar büyük görüntüleneceğini gösterir.<br>
-ZAP yeniden başlatıldığında bu ayar yalnızca etkindir.
+<strong>Note:</strong> This setting will only take effect when ZAP is restarted.
+
+<h3>Look and Feel</h3>
+Allows to choose the look and feel of ZAP. If empty the default is used, <code>Nimbus</code> in Windows and Linux, the native
+system look and feel in macOS.<br />
+The system property <code>swing.defaultlaf</code> takes precedence over this option.
 
 <h2>Ayrıca Bakınız</h2>
 <table>

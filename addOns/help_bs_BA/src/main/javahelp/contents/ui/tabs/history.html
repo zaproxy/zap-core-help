@@ -6,7 +6,7 @@
 Historija tab
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Historija tab</h1>
 <p>
 The History tab shows a list of all of the requests in the order in which they were made.<br/>
@@ -26,11 +26,11 @@ Za svaki zahtjev možete vidjeti:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 <td>Dužina vremena koliko čitavi zahtjev traje</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td>Bilo koja <a href="../../start/concepts/alerts.html">Upozorenja</a> na zahtjev</td></tr>
+<td>Any <a href="../../start/features/alerts.html">Alerts</a> on the request</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td>Bilo koje <a href="../../start/concepts/notes.html">Bilješke</a> koje ste dodali na zahtjev</td></tr>
+<td>Any <a href="../../start/features/notes.html">Notes</a> you have added to request</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td>Bilo koji <a href="../../start/concepts/tags.html">Tagvi</a> na zahtjevu</td></tr>
+<td>Any <a href="../../start/features/tags.html">Tags</a> on the request</td></tr>
 </table>
 
 SOdaberi zahtjeve koji će se prikazati u <a href="request.html">Zahtjevi tab</a> and 
@@ -52,28 +52,28 @@ Napad meni ima sljedeće podmenije:
 
 <h4>Active Scan...</h4>
 This will launch the <a href="../dialogs/advascan.html">Aktivno Skeniranje</a> dialog which allows you to initiate an 
-<a href="../../start/concepts/ascan.html">aktivni sken</a> with the starting point set to the request you selected.<br/>
+<a href="../../start/features/ascan.html">aktivni sken</a> with the starting point set to the request you selected.<br/>
 
 <h4>Pauk...</h4>
 This will launch the <a href="../dialogs/spider.html">Pauk</a> dialog which allows you to initiate the 
-<a href="../../start/concepts/spider.html">pauk</a> with the starting point set to the request you selected.<br/>
+<a href="../../start/features/spider.html">pauk</a> with the starting point set to the request you selected.<br/>
 
 <h3>Include in Context</h3>
 This menu allows you to include the selected nodes and all of their subordinates in the specified
-<a href="../../start/concepts/contexts.html">context</a>.<br/>
+<a href="../../start/features/contexts.html">context</a>.<br/>
 You also have the option to create a new context.<br/>
 The <a href="../dialogs/session/contexts.html">Sesijski Konteksti</a> dialog will be displayed to
 allow you to make any additional changes.
 
 <h3>Exclude from Context</h3>
 This menu allows you to exclude the selected nodes and all of their subordinates from the specified
-<a href="../../start/concepts/contexts.html">context</a>.<br/>
+<a href="../../start/features/contexts.html">context</a>.<br/>
 The <a href="../dialogs/session/contexts.html">Sesijski Konteksti</a> dialog will be displayed to
 allow you to make any additional changes.
 
 <h3>Flag as context</h3>
 This menu has the following submenus for each of the 
-<a href="../../start/concepts/contexts.html">contexts</a> you have defined:
+<a href="../../start/features/contexts.html">contexts</a> you have defined:
 
 <h4><i>Context name</i> Form-based Auth Login request</h4>
 This identifies the specified node as a login request for the specified context.<br/>
@@ -81,8 +81,14 @@ You may only have one node identified as such in any one context.<br/>
 The <a href="../dialogs/session/context-auth.html">Session Context Authentication</a> screen will be displayed to
 allow you to make any additional changes.
 
+<h4><i>Context name</i> JSON-based Auth Login request</h4>
+This identifies the specified node as a login request for the specified context.<br/>
+You may only have one node identified as such in any one context.<br/> 
+The <a href="../dialogs/session/context-auth.html">Session Context Authentication</a> screen will be displayed to
+allow you to make any additional changes.
+
 <h4><i>Context name</i> Data driven node</h4>
-This identifies the specified node as <a href="../../start/concepts/ddc.html">Data driven content</a> for the specified context.<br/>
+This identifies the specified node as <a href="../../start/features/ddc.html">Data driven content</a> for the specified context.<br/>
 The <a href="../dialogs/session/context-struct.html">Session Context Structure</a> screen will be displayed to
 allow you to make any additional changes.
 
@@ -95,24 +101,24 @@ in any of the tabs.<br/>
 This can be used to ignore URLs that you know are not relevant to the system you are currently testing.<br/>
 The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Svojstva Sesije</a> dialog   
 
-<h4>Skener</h4>
+<h4>Scanner</h4>
 This will prevent the selected nodes from being actively scanned.<br/>
-The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Svojstva Sesije</a> dialog   
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
 
-<h4>Pauk</h4>
+<h4>Spider</h4>
 This will prevent the selected nodes from being spidered.<br/>
 The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
 
 <h3>Upravljaj Tagovima...</h3>
 This will bring up the
 <a href="../dialogs/managetags.html">Manage Tags dialog</a> which allows you to change 
-the <a href="../../start/concepts/tags.html">tags</a> associated with the
+the <a href="../../start/features/tags.html">tags</a> associated with the
 request.
 
 <h3>Zabilješka...</h3>
 This will bring up the
 <a href="../dialogs/addnote.html">Add Note dialog</a> which allows you to record 
-<a href="../../start/concepts/notes.html">notes</a> related to the
+<a href="../../start/features/notes.html">notes</a> related to the
 request.
 
 <h3>Obriši</h3>
@@ -121,23 +127,23 @@ However they can be added back in, to prevent this use the 'Exclude from' menus.
 
 <h3>Prekid...</h3>
 This will bring up the
-<a href="../dialogs/addbreak.html">Add Break Point dialog</a> which allows 
-you to set a break point on that URL.<br/>
+<a href="../dialogs/addbreak.html">Add Breakpoint dialog</a> which allows 
+you to set a breakpoint on that URL.<br/>
 
 <h3>Alerts for this node</h3>
-If the URL selected has <a href="../../start/concepts/alerts.html">alerts</a> associated with it then 
+If the URL selected has <a href="../../start/features/alerts.html">alerts</a> associated with it then 
 they will be listed under this menu.<br>
 Selecting one of the alerts will cause it to be displayed.
 
-<h3>Resend...</h3>
+<h3>Open/Resend with Request Editor...</h3>
 This will bring up the
-<a href="../dialogs/resend.html">Resend dialog</a> which allows you to  
+<a href="../dialogs/man_req.html">Manual Request Editor dialog</a> which allows you to  
 resend the request after making any changes to it that you want to.
 
 <h3>New Alert...</h3>
 This will bring up the
 <a href="../dialogs/addalert.html">Add Alert dialog</a> which allows you to manually record a new  
-<a href="../../start/concepts/alerts.html">alert</a> against this request.
+<a href="../../start/features/alerts.html">alert</a> against this request.
 
 <h3>Show in Sites tab</h3>
 This will show the selected message in the <a href="sites.html">Sites tab</a>.

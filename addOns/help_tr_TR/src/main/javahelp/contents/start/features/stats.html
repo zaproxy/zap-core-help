@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+İstatistikler
+</title>
+</head>
+<body>
+<h1>İstatistikler</h1>
+<p>
+ZAP, büyük uygulamalarla etkileşimde bulunulduğunda, gerçekte neler olduğunu anlamanıza yardımcı olabilecek istatistikleri korur.
+</p>
+<p>
+İstatistikler <a href="api.html">API</a> aracılığıyla kullanılmaya uygun ve ayrıca aşağıdaki durumlarda bir Statsd sunucusuna da gönderilebilir:
+<a href="../../ui/dialogs/options/stats.html">Seçenek İstatistikleri ekranı</a>nda yapılanmış.
+</p>
+
+<h3>Site tabanlı istatistikler</h3>
+İstatistikler, site bazında tutulmuştur:
+<ul>
+<li>response codes, eg:
+	<ul>
+	<li>stats.code.200</li>
+	<li>stats.code.302</li>
+	</ul></li>
+<li>ms cinsinden yanıt süreleri (bir logaritmik ölçek kullanarak), örneğin:
+	<ul>
+	<li>stats.responseTime.1</li>
+	<li>stats.responseTime.2</li>
+	<li>stats.responseTime.4</li>
+	<li>stats.responseTime.8</li>
+	<li>stats.responseTime.16</li>
+	</ul></li>
+<li>içerik türleri, örnek:
+	<ul>
+	<li>stats.contentType.text/css</li>
+	<li>stats.contentType.text/html;charset=utf-8</li>
+	</ul></li>
+<li><a href="tags.html">etiketler</a>Örneğin:
+	<ul>
+	<li>stats.tag.Password</li>
+	<li>stats.tag.Hidden</li>
+	</ul></li>
+<li>anticsrf üretilen belirteçler:
+	<ul>
+	<li>stats.acsrf.anticsrf</li>
+	</ul></li>
+<li>kimlik doğrulama bilgi:
+	<ul>
+	<li>stats.auth.success (başarılı doğrulama sayısı)</li>
+	<li>stats.auth.failure (başarısız doğrulama sayısı)</li>
+	<li>stats.auth.state.assumedin (number of messages between successful polls that are assumed to be logged in)</li>
+	<li>stats.auth.state.loggedin (number of messages that appear to be logged in)
+	<li>stats.auth.state.loggedout (number of messages that appear to be logged out)
+	<li>stats.auth.state.noindicator (number of messages where no logged in or out indicators have been set)
+	<li>stats.auth.state.unknown (number of messages which don't contain either logged in or out indicators)
+	</ul></li>
+</ul>
+
+<h2>Ayrıca bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">UI Genel Bakış</a></td><td>kullanıcı ara yüzüne genel bakış için</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="features.html">Özellikler</a></td><td>ZAP tarafından sağlanmaktadır</td></tr>
+</table>
+
+</body>
+</html>

@@ -6,7 +6,7 @@
 Geçmiş sekmesi
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Geçmiş sekmesi</h1>
 <p>
 Geçmiş sekmesi, tüm istekleri yapıldığı sırayla gösterir.<br/>
@@ -26,11 +26,11 @@ Görebileceğiniz her talep için:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 <td>Tüm isteğin aldığı süre</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td>Talep üzerindeki <a href="../../start/concepts/alerts.html">Uyarılar</a></td></tr>
+<td>Any <a href="../../start/features/alerts.html">Alerts</a> on the request</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td>Talepe eklediğiniz <a href="../../start/concepts/notes.html">Notlar</a></td></tr>
+<td>Any <a href="../../start/features/notes.html">Notes</a> you have added to request</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td>Talep üzerindeki <a href="../../start/concepts/tags.html">Etiketler</a></td></tr>
+<td>Any <a href="../../start/features/tags.html">Tags</a> on the request</td></tr>
 </table>
 
 Seçilen bir istek şurada gösterilecek <a href="request.html">İstek sekmesi</a> ve 
@@ -52,94 +52,105 @@ Saldırı menüsünün sahip olduğu alt-menüler:
 
 <h4>Aktif Tarama...</h4>
 Bunun başlatacağı şey <a href="../dialogs/advascan.html">Aktif tarama</a> bir şey başlatmanızı sağlayan bir diyaloğu 
-<a href="../../start/concepts/ascan.html">aktif tarama</a> seçtiğiniz talebi başlangıç noktası alarak.<br/>
+<a href="../../start/features/ascan.html">aktif tarama</a> seçtiğiniz talebi başlangıç noktası alarak.<br/>
 
 <h4>Örümcek...</h4>
 Bu, şunu başlatacak <a href="../dialogs/spider.html">Örümcek</a> başlatmanızı sağlayan iletişim kutusu 
-<a href="../../start/concepts/spider.html">örümcek</a> seçtiğiniz talebi başlangıç noktası olarak ayarlayın.<br/>
+<a href="../../start/features/spider.html">örümcek</a> seçtiğiniz talebi başlangıç noktası olarak ayarlayın.<br/>
 
 <h3>İçeriğe dahil et</h3>
 Bu menü sizin seçilen ağları ve onun belirlenmiş astlarının hepsini dahil etmenize izin verir
-<a href="../../start/concepts/contexts.html">içerik</a>.<br/>
+<a href="../../start/features/contexts.html">içerik</a>.<br/>
 Siz ayrıca yeni bir ortam yaratma seçeneğine de sahipsiniz.<br/>
 The <a href="../dialogs/session/contexts.html">Oturum Bağlamları</a> ek değişiklik yapmanıza izin vermek için iletişim kutusu görüntülenecektir.
 
 <h3>Bağlamdan Dışla</h3>
 Bu menü, seçilen düğümleri ve belirtilen tüm astları çıkarmak için izin verir
-<a href="../../start/concepts/contexts.html">içerik</a>.<br/>
+<a href="../../start/features/contexts.html">içerik</a>.<br/>
 The <a href="../dialogs/session/contexts.html">Oturum Bağlamları</a> iletişim kutusu görüntülenecek ek değişiklikler yapmanıza izin verir.
 
 <h3>İçerik olarak işaretle</h3>
 Bu menü aşağıdaki alt menüleri sağlar 
-<a href="../../start/concepts/contexts.html">içerikler</a> tanımladığınız:
+<a href="../../start/features/contexts.html">içerikler</a> tanımladığınız:
 
 <h4><i>Bağlam adı</i> Form-bazlı Kimlik Girişi talebi</h4>
 Bu belirtilen nokta belirtilen içerik için bir oturum açma isteği olarak tanımlar.<br/>
 Herhangi bir ortamda olduğu gibi siz yalnızca bir tane ağ tanımlamasına sahip olabilirsiniz.<br/> 
 The <a href="../dialogs/session/context-auth.html">Oturum İçerikleri Kimlik Doğrulaması</a> ek değişiklikler yapabilmeniz için ekran görüntülenecektir.
 
-<h4><i>Context name</i> Veri odaklı düğüm</h4>
-Bu, belirtilen node'yi aşağıdaki gibi tanımlar <a href="../../start/concepts/ddc.html">Veri güdümlü içerik</a> belirtilen içerik için.<br/>
-The <a href="../dialogs/session/context-struct.html">Oturum İçerik Yapısı</a> ek değişiklikler yapabilmeniz için ekran görüntülenecektir.
+<h4><i>Context name</i> JSON-based Auth Login request</h4>
+This identifies the specified node as a login request for the specified context.<br/>
+You may only have one node identified as such in any one context.<br/> 
+The <a href="../dialogs/session/context-auth.html">Session Context Authentication</a> ek değişiklikler yapabilmeniz için ekran görüntülenecektir.
+
+<h4><i>Context name</i> Data driven node</h4>
+This identifies the specified node as <a href="../../start/features/ddc.html">Data driven content</a> for the specified context.<br/>
+The <a href="../dialogs/session/context-struct.html">Session Context Structure</a> screen will be displayed to
+allow you to make any additional changes.
 
 <h3>Hariç tut</h3>
-Bu menüde aşağıdaki alt menüler bulunur:
+This menu has the following submenus:
 
 <h4>Proxy</h4>
-Bu durum, seçilen düğümleri proxy dışında bırakacaktır. ZAP üzerinde hala proxylenmiş olarak kalacaklar ancak herhangi bir sekmede gösterilmeyecekler.<br/>
-Bu, şu anda test ettiğiniz sistem ile ilgili olmadığı bilinen URL'leri yok saymak için kullanılabilir.<br/>
-Nodeler tekrar şunun aracılığıyla dahil edilebilir <a href="../dialogs/session/sessprop.html">Oturum özellikleri</a> diyalog   
+This will exclude the selected nodes from the proxy. They will still be proxied via ZAP but will not be shown 
+in any of the tabs.<br/>
+This can be used to ignore URLs that you know are not relevant to the system you are currently testing.<br/>
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Oturum özellikleri</a> dialog   
 
-<h4>Tarayıcı</h4>
-Seçili düğümlerin etkin olarak taranmasını engeller.<br/>
-Nodeler tekrar şunun aracılığıyla dahil edilebilir <a href="../dialogs/session/sessprop.html">Oturum özellikleri</a> diyalog   
+<h4>Scanner</h4>
+This will prevent the selected nodes from being actively scanned.<br/>
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Oturum Özellikleri</a> dialog   
 
-<h4>Örümcek</h4>
-Bu, seçilen düğümlerin örümcek olmasını önleyecektir.<br/>
-Düğümler şunun aracılığıyla tekrar dahil edilebilir <a href="../dialogs/session/sessprop.html">Oturum Özellikleri</a> diyalog   
+<h4>Spider</h4>
+This will prevent the selected nodes from being spidered.<br/>
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
 
 <h3>Etiketleri Yönet...</h3>
-Bu şunu öne çıkaracak
-<a href="../dialogs/managetags.html">Etiketler Diyaloğunu Yönet</a> değiştirmenize olanak sağlar <a href="../../start/concepts/tags.html">etiketler</a> istek ile eşleştirilmiş.
+This will bring up the
+<a href="../dialogs/managetags.html">Manage Tags dialog</a> which allows you to change 
+the <a href="../../start/features/tags.html">tags</a> associated with the
+request.
 
 <h3>Not...</h3>
-Bu, şunu ansızın durduracak
-<a href="../dialogs/addnote.html">Not diyaloğu ekle</a> kaydetmeniz için size imkan veren 
-<a href="../../start/concepts/notes.html">notlar</a> istek ile
-bağlantılı.
+This will bring up the
+<a href="../dialogs/addnote.html">Add Note dialog</a> which allows you to record 
+<a href="../../start/features/notes.html">notes</a> related to the
+request.
 
 <h3>Sil</h3>
-Bu ağı ve onun bütün alttakilerini ZAP'tan kaldıracak.<br/>
-Fakat bunlar yeniden eklenebilir, bunu engellemek için 'Hariç tut' menülerini kullanın. 
+This will remove the node and all of its children from ZAP.<br/>
+However they can be added back in, to prevent this use the 'Exclude from' menus. 
 
 <h3>Kırılma...</h3>
-Bu şunu öne çıkarır
-<a href="../dialogs/addbreak.html">Kırılma Noktası Ekle penceresi</a> o URL'e bir durma noktası ayarlamanıza izin verir.<br/>
+This will bring up the
+<a href="../dialogs/addbreak.html">Add Breakpoint dialog</a> which allows 
+you to set a breakpoint on that URL.<br/>
 
 <h3>Bu düğüm için uyarılar</h3>
-Eğer seçili URL,  <a href="../../start/concepts/alerts.html">uyarılar</a> bununla bağlantılı ise
-bu menü altında listelenecektir.<br>
-Uyarılardan birisini seçmek onun oynatılmasına sebep olacaktır.
+If the URL selected has <a href="../../start/features/alerts.html">alerts</a> associated with it then 
+they will be listed under this menu.<br>
+Selecting one of the alerts will cause it to be displayed.
 
-<h3>Tekrar gönder...</h3>
-Bu şunu öne çıkaracak
-<a href="../dialogs/resend.html">Yeniden gönderilen diyalog</a> istediğiniz herhangi bir değişiklik yaptıktan sonra isteği tekrar göndermenizi sağlar.
+<h3>Open/Resend with Request Editor...</h3>
+This will bring up the
+<a href="../dialogs/man_req.html">Manual Request Editor dialog</a> which allows you to  
+resend the request after making any changes to it that you want to.
 
 <h3>Yeni uyarı...</h3>
-Bu şunu öne çıkaracak
-<a href="../dialogs/addalert.html">Uyarı penceresi ekle</a> elinizle yeni bir kayıt almanıza izin veren  
-<a href="../../start/concepts/alerts.html">uyarı</a> bu talebe karşı.
+This will bring up the
+<a href="../dialogs/addalert.html">Add Alert dialog</a> which allows you to manually record a new  
+<a href="../../start/features/alerts.html">alert</a> against this request.
 
 <h3>Siteler sekmesinde göster</h3>
-Bu, seçili mesajı şurada gösterecek <a href="sites.html">Siteler sekmesi</a>.
+This will show the selected message in the <a href="sites.html">Sites tab</a>.
 
 <h3>URL'yi Tarayıcıda Aç</h3>
-Bu, varsayılan tarayıcınızda seçili düğümün URL'sini açar.
+This will open the URL of the selected node in your default browser.
 
 <h3>Anti CSRF test formu oluştur</h3>
-Bu, CSRF sorunlarını test etmek için oluşturulan bir form veren URL açacaktır.<br>
-Eğer API etkin ise ve eğer Java platformunuz üzerindeki tarayıcıda URLlerin açılmasını destekliyorsa bu 
-sadece POST istekleri için etkinleştirilebilir.
+This will open a URL which will give you a generated form for testing for CSRF issues.<br>
+It will only be enabled for POST requests, if the API is enabled and if Java supports the opening of URLs 
+in a browser on your platform.
 <h2>Ayrıca bakınız</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>

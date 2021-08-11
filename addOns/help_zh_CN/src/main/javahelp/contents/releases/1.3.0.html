@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+1.3.0版本
+</title>
+</head>
+<body>
+<h1>1.3.0版本</h1>
+<p>
+本版本进行了以下更改：
+</p>
+<h2>重大变化：</h2>
+
+<h3>模糊化</h3>
+现在响应中的字符串可以模糊化以便发现漏洞。<br>
+反CSRF令牌可以被检测到，并在模糊化时自动重新生成。<br/>
+该功能基于OWASP JBroFuzz项目的代码。
+
+<h3>动态SSL证书</h3>
+对SSL连接的支持得到了改进和简化。<br>
+用户现在可以创建自己的根证书并将其分发到他们的HTTP客户端。<br>
+请参阅 <a href="../ui/dialogs/options/dynsslcert.html">选项：动态SSL证书</a> 以获取更多信息。  
+
+<h3>守护进程模式和API</h3>
+使用“-daemon”命令行选项启动ZAP将使其在“无头”模式下在后台运行，这意味着没有UI显示。<br>
+最初版本的API已经在XML，JSON和HTML中实现。<br>
+如果ZAP作为守护程序运行，则API将自动启用，否则API必须通过选项 API屏幕启用。<br>
+在通过ZAP进行代理时，可以通过在浏览器中打开http://zap/ 来浏览API。 
+
+<h3>Beanshell集成</h3>
+The <a href="http://www.beanshell.org/">BeanShell</a> 是一个交互式的Java shell，可以用来执行BeanShell脚本。<br> 
+这些脚本是Java的一种简化形式，它使用Java语法中的许多元素，但采用更简单的脚本格式。 <br>
+所有的Java代码也是有效的BeanShell代码。<br>
+OWASP ZAP中的BeanShell集成使您能够使用ZAP函数和数据集编写脚本。<br> 
+这可以是分析Web应用程序的一个非常强大的功能。<br>
+
+
+<h3>更国际化</h3>
+所有显示的字符串现在已经完全国际化。
+
+<h3>本地化</h3>
+对下列语言内置支持：
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>英文</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>巴西 葡萄牙语</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>中文</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>法语</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>德语</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>希腊语</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>印尼语</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>日语</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>波兰语</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>西班牙语</td></tr>
+</table>
+
+
+<h2>小更改：</h2>
+
+<h3>十六进制视图</h3>
+一个 <a href="../ui/tabs/request.html">请求</a>, <a href="../ui/tabs/response.html">响应</a> tabs now provide
+a 'Hex View' option which will display the request and response bodies in hex format. 
+
+<h3>搜索结果</h3>
+The <a href="../ui/tabs/search.html">Search tab </a> now displays all instances of a string found rather than just the first instance
+in each request or response. 
+
+<h3>排除地址（URLs）</h3>
+URLs可以明确地从主动扫描器，Spider和代理中排除。
+
+<h3>提供复制功能</h3>
+大多数面板现在提供“右键单击”“复制”菜单选项，包括端口扫描面板和蛮力组件面板。
+
+<h3>提供Undo/Redo功能</h3>
+所有输入字段区域现在都支持使用操作系统默认的撤销/重做加速器的撤消/重做操作：
+<ul>
+<li>Windows/Linux: Ctrl+Z / Ctrl+Y
+<li>Mac OS X: Cmd+Z / Cmd+Shift+Z
+</ul>
+
+<h3>端口扫描器代理支持和超时选项</h3>
+端口扫描器现在可以使用传出代理（如果已配置），现在也可以设置超时（以毫秒为单位）。
+
+<h3>请求和响应中断按钮</h3>
+There are now 2 'Set Break' buttons to allow breaks to be set on all requests and all responses independently. 
+
+<h3>Expand Sites and Information tab buttons</h3>
+There are now 2 buttons which allow you to switch between having the Sites and Information tabs expanded.
+
+<h3>Break tab icon changes colour when breakpoint hit</h3>
+当中断选项卡没有被使用时，它的图标是灰色的十字：
+<img src="../images/16/101grey.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
+当一个 <a href="../start/features/breakpoints.html">breakpoint</a> 被点击时，图标变为红色的十字：
+<img src="../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
+
+<h3>可调整的超时设置</h3>
+一个 <a href="../ui/dialogs/options/connection.html">选项：连接</a> screen allows you to set the timeout in seconds
+to make it easier to test slow applications.
+
+<h3>库的更新</h3>
+ZAP使用的大多数库已经更新到最新版本。
+
+<h3>一个新的图标</h3>
+感谢Simon Egli和所有其他人提交的很酷的图标建议。
+
+<h2>已知问题：</h2>
+<h3>Mac OS X：动态SSL和Google Chrome浏览器</h3>
+目前动态SSL在使用Google Chrome时无法使用。 这是因为Google Chrome和Mac OS X钥匙串尚未解决的已知问题。 将OWASP ZAP的根CA导入钥匙串并请求SSL网站时，会显示“无效证书”错误消息。
+
+<h2>请参阅</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">简介</a></td><td>ZAP简介</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">版本发布</a></td><td>所有版本</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">版权</a></td><td>所有参与这次版本更新的人和组织</td></tr>
+</table>
+</body>
+</html>

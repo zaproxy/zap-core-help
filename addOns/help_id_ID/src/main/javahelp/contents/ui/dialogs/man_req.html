@@ -6,10 +6,11 @@
 Manual meminta Editor dialog
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Manual meminta Editor dialog</h1>
 
-Dialog ini memungkinkan kamu membuat permintaan dari awal yang akan diserahkan ke target yang ditentukan.
+This dialog allows you to create a request from scratch which will be submitted to the specified target,
+or resend an existing request after making any changes to it that you want to.
 
 <h2>Permintaan tab</h2>
 
@@ -28,44 +29,57 @@ Hal ini akan mengubah tampilan sehingga panel terpisah digunakan untuk header da
 <h3><img src="../../images/view_all.png" align="bottom" width="16" height="16" />&nbsp; Tampilan gabungan untuk header dan tubuh</h3>
 Hal ini akan mengubah tampilan sehingga header dan tubuh ditampilkan dalam satu pane.<br> 
 
-<h3><img src="../../images/fugue/cookie.png" align="bottom" width="16" height="16" />&nbsp; Gunakan sesi pelacakan saat ini</h3>
-Lihat 'Aktifkan sesi pelacakan (Cookie)' item menu di <a href="../tlmenu/edit.html">Sunting menu</a>.<br>  
+<h3><img src="../../images/fugue/globe-green.png" align="bottom" width="16" height="16" />&nbsp; Gunakan sesi pelacakan saat ini</h3>
+See the 'Enable (Global) HTTP State' option in the <a href="./options/connection.html">Options Connection screen</a>.<br>
 
-<h3><img src="../../images/16/118.png" align="bottom" width="16" height="16" />&nbsp; Ikuti pengalihan</h3>
-Jika dipilih secara otomatis mengikuti pengalihan yang dikirim ke browser.<br> 
+<h3><img src="../../images/fugue/cookie.png" align="bottom" width="16" height="16" />&nbsp; Accept cookies</h3>
+This option controls whether encountered cookies should be added to subsequent requests. 
+For example if a request is sent that results in a response with Set-Cookie header(s) should those cookies values be added to subsequent 
+send attempts from the Manual Request dialog?<br>
 
-<h3><img src="../../images/layout_tabbed.png" align="bottom" width="16" height="16" />&nbsp; Permintaan dan respon tab berdampingan</h3>
-Ini mengubah tampilan sehingga tab permintaan dan respons berdampingan.<br> 
-Hal ini meningkatkan informasi yang dapat ditampilkan namun berarti kamu tidak dapat melihat permintaan dan tanggapan pada saat bersamaan.
+<h3><img src="../../images/16/118.png" align="bottom" width="16" height="16" />&nbsp; Follow redirect</h3>
+If selected automatically follows any redirects sent to the browser.<br>
 
-<h3><img src="../../images/layout_vertical_split.png" align="bottom" width="16" height="16" />&nbsp; Permintaan ditampilkan diatas Tanggapan</h3>
-Ini akan merubah tampilan sehingga panel permintaan ditampilkan diatas panel tanggapan.<br> 
-Hal ini menurunkan informasi yang bisa ditampilkan namun berarti kamu dapat melihat permintaan dan tanggapan pada saat bersamaan.
+<h3><img src="../../images/fugue/application-resize.png" align="bottom" width="16" height="16" />&nbsp; Update Content Length</h3>
+By default ZAP will automatically update (or add) the Content-Length header to match the size of the data submitted. 
+If this option is unselected then ZAP will not update the header allowing you to specify any value you like.<br>
 
-<h3><img src="../../images/layout_horizontal_split.png" align="bottom" width="16" height="16" />&nbsp; Panel permintaan dan tanggapan berdampingan</h3>
-Ini merubah tampilan sehingga panel permintaan ditampilkan disebelah kiri panel tanggapan.<br> 
-Hal ini menurunkan informasi yang dapat ditampilkan tetapi menunjukkan bahwa anda bisa melihat permintaan dan tanggapan pada waktu yang bersamaan.
+<h3><img src="../../images/csrf-button.png" align="bottom" width="16" height="16" />&nbsp; Regenerate Anti-CSRF</h3>
+If selected automatically regenerates Anti-CSRF tokens if any exist.
+Currently only supported in the message body and requires that the Anti-CSRF extension is enabled.<br>
+
+<h3><img src="../../images/layout_tabbed.png" align="bottom" width="16" height="16" />&nbsp; Request and Response tabs side by side</h3>
+This changes the display so that the request and response tabs are side by side.<br> 
+This increases the information that can be displayed but means you cannot see both the request and response at the same time.
+
+<h3><img src="../../images/layout_vertical_split.png" align="bottom" width="16" height="16" />&nbsp; Request shown above Response</h3>
+This changes the display so that the request panel is shown above the response panel.<br> 
+This decreases the information that can be displayed but means you can see both the request and response at the same time.
+
+<h3><img src="../../images/layout_horizontal_split.png" align="bottom" width="16" height="16" />&nbsp; Request and Response panels side by side</h3>
+This changes the display so that the request panel is shown to the left of the response panel.<br> 
+This decreases the information that can be displayed but means you can see both the request and response at the same time.
 
 <h2>Tab Tanggapan</h2>
 
-Ini menunjukkan data yang dikirim ke browser kamu sebagai tanggapan atas permintaan yang kamu kirimkan, baik dalam satu atau dua panel tergantung pada pilihan yang dipilih.<br/><br/>
+This shows the data sent to your browser in response to the request that you submitted, either in one or two panels depending on the options chosen.<br/><br/>
 
-Pull downs memungkinkan anda untuk memilih sesuatu yang berbeda <a href="../views.html">Tampilan</a> untuk Respon header dan body.
+Pull downs allow you to select different <a href="../views.html">Tampilan</a> for the Response header and body.
 
 <h2>Klik kanan menu</h2>
-Mengklik kanan akan memunculkan menu yang akan mengizinkan anda untuk:
+Right clicking will bring up a menu which will allow you to:
 
-<h3>Mencari...</h3>
-Ini akan memunculkan <a href="../dialogs/find.html">Mencari dialog</a>.
+<h3>Find...</h3>
+This will bring up the <a href="../dialogs/find.html">Mencari dialog</a>.
 
-<h3>Encode/Decode...</h3>
-Ini akan memunculkan <a href="../dialogs/enc_dec.html">Encode/Decode dialog</a>.<br/>
-Jika anda menyoroti setiap teks maka ini akan secara otomatis disertakan dalam dialog.
- 
 <h2>Diakses melalui</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../tlmenu/tools.html">Alat menu tingkat atas</a></td><td>'Editor Permintaan Manual ...' item menu</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../tabs/sites.html">Sites tab</a></td><td>'Open/Resend with Request Editor...' right click menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../tabs/history.html">History tab</a></td><td>'Open/Resend with Request Editor...' right click menu item</td></tr>
 </table>
 
 <h2>Lihat juga</h2>

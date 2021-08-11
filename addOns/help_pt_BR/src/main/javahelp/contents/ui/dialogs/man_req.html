@@ -6,10 +6,11 @@
 Editor de Request Manual
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Editor de Request Manual</h1>
 
-Esta caixa de diálogo permite a você criar uma request do zero, que será enviada para o alvo especificado.
+This dialog allows you to create a request from scratch which will be submitted to the specified target,
+or resend an existing request after making any changes to it that you want to.
 
 <h2>Aba de Request</h2>
 
@@ -28,44 +29,57 @@ Aqui se altera a exibição, para que painéis separados sejam usados para o cab
 <h3><img src="../../images/view_all.png" align="bottom" width="16" height="16" />&nbsp; Visualização combinada para cabeçalho e corpo</h3>
 Isso altera a exibição para que o cabeçalho e o corpo sejam mostrados em um só painel.<br> 
 
-<h3><img src="../../images/fugue/cookie.png" align="bottom" width="16" height="16" />&nbsp; Usar as sessões de rastreamento atuais</h3>
-Consulte o item de menu 'Habilitar rastreamento de sessão (Cookie)' no <a href="../tlmenu/edit.html">Menu Editar</a>.<br>  
+<h3><img src="../../images/fugue/globe-green.png" align="bottom" width="16" height="16" />&nbsp; Usar as sessões de rastreamento atuais</h3>
+See the 'Enable (Global) HTTP State' option in the <a href="./options/connection.html">Options Connection screen</a>.<br>
 
-<h3><img src="../../images/16/118.png" align="bottom" width="16" height="16" />&nbsp; Seguir os redirecionamentos</h3>
-Se selecionado automaticamente segue qualquer redirecionamento enviado ao navegador.<br> 
+<h3><img src="../../images/fugue/cookie.png" align="bottom" width="16" height="16" />&nbsp; Accept cookies</h3>
+This option controls whether encountered cookies should be added to subsequent requests. 
+For example if a request is sent that results in a response with Set-Cookie header(s) should those cookies values be added to subsequent 
+send attempts from the Manual Request dialog?<br>
 
-<h3><img src="../../images/layout_tabbed.png" align="bottom" width="16" height="16" />&nbsp; Abas de Request e Resposta ao lado</h3>
-Isso altera a exibição para que as abas de Request e Resposta estejam lado a lado.<br> 
-Isto aumenta o volume de informação que pode ser exibida, mas significa que você não pode ver o Request e a Resposta ao mesmo tempo.
+<h3><img src="../../images/16/118.png" align="bottom" width="16" height="16" />&nbsp; Follow redirect</h3>
+If selected automatically follows any redirects sent to the browser.<br>
 
-<h3><img src="../../images/layout_vertical_split.png" align="bottom" width="16" height="16" />&nbsp; Request exibido acima da Resposta</h3>
-Isso altera a exibição para que o painel de Request seja exibido acima do painel de resposta.<br> 
-Isto reduz o volume de informação que pode ser exibida, mas significa que você consegue ver o Request e a Resposta ao mesmo tempo.
+<h3><img src="../../images/fugue/application-resize.png" align="bottom" width="16" height="16" />&nbsp; Update Content Length</h3>
+By default ZAP will automatically update (or add) the Content-Length header to match the size of the data submitted. 
+If this option is unselected then ZAP will not update the header allowing you to specify any value you like.<br>
 
-<h3><img src="../../images/layout_horizontal_split.png" align="bottom" width="16" height="16" />&nbsp; Painéis de Request e Resposta ao lado</h3>
-Isso altera a exibição para que o painel de Request seja mostrado à esquerda do painel de resposta.<br> 
-Isto reduz o volume de informação que pode ser exibida, mas significa que você consegue ver o Request e a Resposta ao mesmo tempo.
+<h3><img src="../../images/csrf-button.png" align="bottom" width="16" height="16" />&nbsp; Regenerate Anti-CSRF</h3>
+If selected automatically regenerates Anti-CSRF tokens if any exist.
+Currently only supported in the message body and requires that the Anti-CSRF extension is enabled.<br>
+
+<h3><img src="../../images/layout_tabbed.png" align="bottom" width="16" height="16" />&nbsp; Request and Response tabs side by side</h3>
+This changes the display so that the request and response tabs are side by side.<br> 
+This increases the information that can be displayed but means you cannot see both the request and response at the same time.
+
+<h3><img src="../../images/layout_vertical_split.png" align="bottom" width="16" height="16" />&nbsp; Request shown above Response</h3>
+This changes the display so that the request panel is shown above the response panel.<br> 
+This decreases the information that can be displayed but means you can see both the request and response at the same time.
+
+<h3><img src="../../images/layout_horizontal_split.png" align="bottom" width="16" height="16" />&nbsp; Request and Response panels side by side</h3>
+This changes the display so that the request panel is shown to the left of the response panel.<br> 
+This decreases the information that can be displayed but means you can see both the request and response at the same time.
 
 <h2>Aba de Resposta</h2>
 
-Isto mostra os dados enviados para seu navegador em resposta à solicitação que você enviou, em um ou dois painéis, dependendo das opções escolhidas.<br/><br/>
+This shows the data sent to your browser in response to the request that you submitted, either in one or two panels depending on the options chosen.<br/><br/>
 
-Menus pull-down permitem que você selecione diferentes <a href="../views.html">Visualizações</a> para o cabeçalho de resposta e o corpo.
+Pull downs allow you to select different <a href="../views.html">Visualizações</a> for the Response header and body.
 
 <h2>Menu do botão direito</h2>
-Clicando no botão direito do mouse fará aparecer um menu que permitirá a você:
+Right clicking will bring up a menu which will allow you to:
 
-<h3>Localizar...</h3>
-Isso irá abrir o <a href="../dialogs/find.html">diálogo Localizar</a>.
+<h3>Find...</h3>
+This will bring up the <a href="../dialogs/find.html">diálogo Localizar</a>.
 
-<h3>Codificar/decodificar...</h3>
-Isso irá abrir o <a href="../dialogs/enc_dec.html">diálogo Codificar/Decodificar</a>.<br/>
-Se você tem algum texto realçado, ele será automaticamente incluído na caixa de diálogo.
- 
 <h2>Acessado via</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../tlmenu/tools.html">Menu de ferramentas de nível superior</a></td><td>Item do menu 'Editor de Request Manual...'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../tabs/sites.html">Sites tab</a></td><td>'Open/Resend with Request Editor...' right click menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../tabs/history.html">History tab</a></td><td>'Open/Resend with Request Editor...' right click menu item</td></tr>
 </table>
 
 <h2>Leia também</h2>

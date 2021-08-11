@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Alertes
+</title>
+</head>
+<body>
+<h1>Alertes</h1>
+<p>
+Une alerte est une vulnérabilité potentielle. Elle est associée à une requête spécifique. <br/>  Une requête peut avoir plus d'une alerte.<br/>
+</p>
+<p>
+Les alertes sont affichées dans l'interface utilisateur avec un drapeau qui en indique le risque :
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/071.png" align="bottom" width="16" height="16" />&nbsp; Haut</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/076.png" align="bottom" width="16" height="16" />&nbsp; Moyen</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/074.png" align="bottom" width="16" height="16" />&nbsp; Bas</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/073.png" align="bottom" width="16" height="16" />&nbsp; Pour information</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/072.png" align="bottom" width="16" height="16" />&nbsp; Faux positif</td><td></td></tr>
+</table>
+
+<p>
+Alerts can be raised by various ZAP components, including but not limited to: <a href="ascan.html">active scanning</a>, <a href="pscan.html">passive scanning</a>, 
+scripts, by addons (extensions), or manually using the <a href="../../ui/dialogs/addalert.html">Add Alert dialog</a> 
+(which also allows you to update or change alert details/information).
+</p>
+<p>
+Les alertes sont signalisées dans <a href="../../ui/tabs/history.html">l'onglet Historique</a> avec un drapeau qui indique l'alerte de risque le plus élevé. <br/> Toutes les alertes sont répertoriées dans <a href="../../ui/tabs/alerts.html">l'onglet Alertes</a> et le nombre total d'alertes est affiché par risque dans le <a href="../../ui/footer.html">pied de page</a>.
+</p>
+
+<a name="alertoverrides"></a><h2>Alert overrides</h2> 
+
+Alertes soulevées par ZAP comprennent à la fois génériques et spécifiques d'informations sur les alertes soulevées.
+L'information spécifique se rapporte directement à la question potentielle trouvé, comme l'URL et le paramètre concerné.
+Le générique de l'information inclut des choses comme une description et liens vers des ressources en ligne.
+<p>
+You can replace or add to the generic information using an 'alert override' configuration file.
+Ceci vous permet d'inclure des informations spécifiques à votre entreprise, tel que mandaté des politiques, des liens internes ou 
+des conseils pour des technologies spécifiques que vous utilisez.
+<p>
+Une alerte remplacer le fichier de configuration est un UTF-8 fichier de propriétés contenant les informations que vous souhaitez modifier.
+Les lignes commençant par '#' sont traitées comme des commentaires et sont ignorées.
+<p>
+The format is:
+<pre>
+&lt;alertid&gt;.&lt;property&gt; = [ + | - ] &lt;your information&gt;
+</pre>
+The following properties are supported:
+<ul>
+<li>name</li>
+<li>description</li>
+<li>solution</li>
+<li>otherInfo</li>
+<li>reference</li>
+</ul>  
+
+For example
+<pre>
+# 40012 = Reflected XSS
+40012.solution = Follow our company specific guidelines at http://internet.example.com/xss.html
+</pre>
+If the value starts with a '+' then it is appended to the existing information.
+<br>
+If it starts with a '-' then it is prepended to the existing information.
+<br>
+If it does not start with a '+' or '-' then it replaces the existing information.
+<p>
+The alert override configuration file can be specified via the <a href="api.html">API</a>,
+<a href="../../ui/dialogs/options/alert.html">Options Alert screen</a>
+or using the <a href="../../cmdline.html">command line</a> option:  
+<pre>-config alert.overridesFilename=&lt;filename&gt;</pre>
+
+<h2>See also</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="features.html">Features</a></td><td>provided by ZAP</td></tr>
+</table>
+
+</body>
+</html>

@@ -6,10 +6,10 @@
 Oturum İçerik Ekranları
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Oturum İçerik Ekranları</h1>
 <p>
-Bu ekranlar <a href="../../../start/concepts/contexts.html">içerikler</a> i yönetmenizi sağlar.
+These screens allows you manage <a href="../../../start/features/contexts.html">contexts</a>.
 </p>
 <p>
 Tanımladığınız her bağlam için bir ekran dizisi vardır.
@@ -18,46 +18,74 @@ Tanımladığınız her bağlam için bir ekran dizisi vardır.
 <h3>Üst Ekran</h3>
 Bu, bağlam adını ve açıklamasını düzenlemenizi sağlar.
 
-<h3>İçeriğe dahil et</h3>
+<h3>Include in Context</h3>
 Bu, bağlama dahil edilecek URL'leri yönetmenize olanak verir.<br/>
 Düzenli ifadelerden herhangi biriyle eşleşmeyen URL'ler bağlama dahil edilmez.
+<br><strong>Note:</strong> The regular expressions must match the whole URL.
 
-<h3>İçerikten hariç tut</h3>
-Bu, bağlamdan hariç tutulacak URL'leri yönetmenize olanak verir.<br/>
-İçermesini istemediğiniz fakat bir ya da birden fazla 'içeren' regexlerle eşleşenler için sadece URL ler için regexleri özelleştirmeniz gerekir.
+<h3>Exclude from Context</h3>
+This allows you to manage the URLs which will be excluded from the context.<br/>
+You only need to specify regexs for URLs that you do not want to include but which match one or more
+of the 'include' regexes.
+<br><strong>Note:</strong> The regular expressions must match the whole URL.
 
 <h3><a name="struct">Yapı</a></h3>
-Bakınız <a href="context-struct.html">Oturum Bağlamı Ekranı</a>.
+See the <a href="context-struct.html">Oturum Bağlamı Ekranı</a>.
 
 <h3>Teknoloji</h3>
-Bu, eğer belliyse, içerikte kullanılan teknolojileri belirtmenize olanak sağlar.<br/>
-Varsayılan olarak tüm teknolojiler dahil edilmiştir.<br/>
-Kulanılmadığını bildiğiniz teknolojileri hariç tutarsanız, hızlanabilir 
-<a href="../../../start/concepts/ascan.html">aktif tarama</a> özel kurallarda dışlanan teknolojiler atlanabilir.
+This allows you to specify the technologies used in the context, if known.<br/>
+By default all technologies are included.<br/>
+If you exclude technologies that you know are not used then this may speed up 
+<a href="../../../start/features/ascan.html">aktif tarama</a> as rules specific to the excluded
+technologies can be skipped.
 
 <h3><a name="auth">Doğrulama</a></h3>
-Bakınız <a href="context-auth.html">Oturum İçerik Doğrulama ekranı</a>.
+See the <a href="context-auth.html">Oturum İçerik Doğrulama ekranı</a>.
 
 <h3><a name="sm">Oturum Yönetimi</a></h3>
-Bu size İçerik için Oturum Yönetimi yapılan yerdeki yöntemi yönetmenize olanak sağlar. 
-Oturum Yönetme Metot tipini seçtikten sonra Oturum Yönetim Metotuna göre ayarların yeniden düüzenlenmesi gerekebilir.
+This allows you to manage the way in which Session Management is being done for the Context. 
+After selecting the Session Management Method type, the options that need to be configured 
+depend on the Session Management Method.
 
 <h4>Çerez Temelli Oturum Yönetimi</h4>
-Bu oturum yönetimi metodu için düzenleme gerekmemektedir. <small><a href="../../../start/concepts/sessionManagement.html#cbsm">Daha çok</a> Oku...</small>
+Bu oturum yönetimi metodu için düzenleme gerekmemektedir. <small>Read  
+<a href="../../../start/features/sessionManagement.html#cbsm">more</a>...</small>
 
 <h4>HTTP Doğrulama Oturum Yönetimi</h4>
-Bu oturum yönetimi metodu için düzenleme gerekmemektedir. <small><a href="../../../start/concepts/sessionManagement.html#hasm">Daha çok</a> Oku...</small>
+No configuration is needed for this session management method. <small>Read
+<a href="../../../start/features/sessionManagement.html#hasm">more</a>...</small>
+
+<h4>Script-Based Session Management</h4>
+
+To use this session management method, you <b>first</b> need to write (and save) a <b>Session Management Script</b> 
+using the <b>Scripts</b> tab (see the provided examples and templates for this script type in the Scripts tab).
+Then you need to supply the name of the script in the dropdown list. After selecting the script, you need to press 
+the <b>Load</b> button, loading all the requirements of the script.
+Any parameters that you have specified as <i>required</i> or <i>optional</i> in the script will
+be shown in the interface to be defined. Their values are available to be used in the script, during the session management process, as seen
+in the provided examples for Session Management Scripts. Make sure that after doing any changes to the parameters 
+required by the Session Management script you re-load the script. Otherwise, the parameters shown in the interface might
+not be the ones used during the session management process and errors might occur. 
+<small>Read <a href="../../../start/features/sessionManagement.html#sbsm">more</a>...</small>
 
 
 <h3><a name="users">Kullanıcılar</a></h3>
-Bu size uygulama dahilinde daha farklı aksiyonlar için de kullanılabilecek bir Kullanıcı kümesi düzenlemeye izin verir.
+This allows you to configure a set of Users that may be used for various other actions
+throughout the application.
 <p>Kullanıcıların kimlik bilgileri bölümü İçerik için düzenlenen Doğrulama Metotuna bağlıdır.</p>
 
-<h2>URL regexleri</h2>
-İçinde <i>Dahil *</i>, <i>* dan hariç</i> paneller ve <i>Giriş/Çıkış göstergeleri</i> 'nun <i>Doğrulama</i> panelde, hariç tutulan URL'leri tanımlamak için normal ifadeler girebilirsiniz. Bir tek bir ters eğik çizgiyle meta karakter kaçabilir, Ayrıca............... kullanabilirsiniz <b>\Q...\E</b> çıkış sırası..... arasındaki bütün karakterler <b>\Q</b> ve <b>\E</b> doğru karakterler olarak çevrilir.Örneğin Q*\d+*\E doğru karakterde *\d+* ile eşleşir.
-Bu çıkış sırası ZAP tarafından bazı içerik menüleri ile URL'leri çıkardığınızda kullanılır.
+<h2><a name="custompages">Custom Page</a></h2>
+This functionality allows you to handle situations in which the target does not return a RFC compliant or expected error response when for conditions such as 
+404 - Not Found, 500 - Internal Server Error, etc. Often developers implement custom 404 or 500 handling but do not actually return an appropriate status code.
+Leveraging Custom Page definitions you can define URLs or response content which identify error responses regardless of the status code associated with the response.
+<small>Read <a href="../../../start/features/custompages.html">more</a>...</small>
+
+<h2>URL regexs</h2>
+In the <i>Include in *</i>, <i>Exclude from *</i> panels and the <i>Logged in/out indicators</i> of the <i>Authentication</i> panel, etc. you can enter regular expressions to define excluded URLs.
+While you can escape a single meta-character with a backslash, you can also use the <b>\Q...\E</b> escape sequence. All the characters between the <b>\Q</b> and the <b>\E</b> are interpreted as literal characters. E.g. \Q*\d+*\E matches the literal text *\d+*.
+This escape sequence is used in ZAP when you exclude URLs via some context menus.
 <br>
-<b>Not:</b> Eğer URL'niz bir "\E" içeriyorsa, onu kullanırken aşağıdaki adımları yapmak zorundasınız <b>\Q...\E</b> çıkış sırası:
+<b>Note:</b> If your URL contains a "\E", then you have to do the following steps when using the <b>\Q...\E</b> escape sequence:
 <ul>
 	<li>Çıkış sırası aç</li>
 	<li>''karakter'' \E den önce çıkış sırasını kapatın.</li>
@@ -66,25 +94,27 @@ Bu çıkış sırası ZAP tarafından bazı içerik menüleri ile URL'leri çık
 	<li>Normal olarak yapılacağı gibi çıkış sırasını kapat.</li>
 </ul>
 <br>
-Örnek: subdomain.example.com/path?a=<b>\E</b>&amp; moredata = 2 olarak görünmelidir
-<i>\Qsubdomain.example.com/path?a=\E</i><b>\\E</b><i>\Q &amp; moredata = 2\E</i>
+Example: subdomain.example.com/path?a=<b>\E</b>&amp;moredata=2 should appear as
+<i>\Qsubdomain.example.com/path?a=\E</i><b>\\E</b><i>\Q&amp;moredata=2\E</i>
   
-<h2>Üzerinden erişildi</h2>
+<h2>Accessed via</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../tlmenu/file.html">Üst Seviye Dosya menüsü</a></td><td>'Özellikler...' menü öğesi</td></tr>
+<a href="../../tabs/sites.html">Sites tab</a></td><td>Double click a Context</td></tr>
 </table>
 
-<h2>Ayrıca bakınız</h2>
+<h2>See also</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../../overview.html">UI'ya Genel Bakış</a></td><td>kullanıcı arayüzüne genel bakış için</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../dialogs.html">Diyaloglar</a></td><td>diyalogların ve açılır pencerelerin ayrıntıları için </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../../start/concepts/authentication.html">Doğrulama</a></td><td>doğrulamaya genel bakış için </td></tr>
+<a href="../../../start/features/authentication.html">Doğrulama</a></td><td>doğrulamaya genel bakış için </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../../start/concepts/sessionManagement.html">Oturum Yönetimi</a></td><td>Oturum Yönetimine bir bakış için </td></tr>
+<a href="../../../start/features/sessionManagement.html">Oturum Yönetimi</a></td><td>Oturum Yönetimine bir bakış için </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../../start/features/custompages.html">Custom Page</a></td><td>for an overview of Custom Page details </td></tr>
 </table>
 
 

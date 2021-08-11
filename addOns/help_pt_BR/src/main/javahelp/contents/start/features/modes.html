@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Modos
+</title>
+</head>
+<body>
+<h1>Modos</h1>
+<p>
+O ZAP tem um 'modo', que pode ser:
+<ul>
+<li>Seguro - nenhuma operação potencialmente perigosa é permitidas</li>
+<li>Protegido - você só pode executar ações perigosas (potencialmente) em URLs dentro do <a href="scope.html">escopo</a></li>
+<li>Padrão - como nas versões anteriores, você pode fazer qualquer coisa</li>
+<li>ATAQUE - novos nós que estão no <a href="scope.html">escopo</a> são <a href="ascan.html">ativamente varridos</a> tão logo são descobertos</li>
+</ul>
+É recomendável que você use o modo protegido para garantir que só ataque sites que você escolha.<br/><br/>
+
+O modo pode ser alterado através da <a href="../../ui/tltoolbar.html">barra de ferramentas</a>
+(ou a API do ZAP) e é persistente entre as sessões.<br/><br/>
+
+Exemplos de coisas que não serão possíveis nem no modo de segurança nem no modo protegido quando não se está agindo nas URLs do escopo:
+
+<ul>
+<li>Spidering</li>
+<li>Varredura ativa</li>
+<li>Fuzzing/difusão</li>
+<li>Navegação forçada</li>
+<li>Interrupção (na interceptação)</li>
+<li>Reenviar solicitações/requests</li>
+</ul>
+
+Você pode definir as <a href="scanpolicy.html">Políticas de varredura</a> a serem usadas no modo de ataque pela <a href="../../ui/dialogs/options/ascan.html">Tela de opções da Varredura Ativa</a>.<br>
+
+<h2>Leia também</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/overview.html">Visão geral da interface do usuário</a></td><td>para uma visão geral da interface do usuário</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="features.html">Recursos</a></td><td>fornecidos pelo ZAP</td></tr>
+</table>
+
+</body>
+</html>

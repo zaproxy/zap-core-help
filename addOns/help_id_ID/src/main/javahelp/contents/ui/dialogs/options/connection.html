@@ -6,49 +6,93 @@
 Pilihan layar Koneksi
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Pilihan layar Koneksi</h1>
 <p>
 Sebuah Pilihan layar Koneksi mengizinkan kamu untuk mengkonfigurasi koneksi pilihan ZAP:
 
-<h3>Waktu habis dalam hitungan detik</h3>
+<h3>Timeout (in seconds)</h3>
 Ini membuat lebih mudah untuk menguji kelambatan aplikasi.
 
-<h3>Kegagalan Agen Pengguna</h3>
+<h3>Agen Pengguna Bawaan</h3>
 Agen Pengguna harus menggunakan ZAP ketika membuat pesan HTPP (sebagai contok, penjebakan pesan atau permintaan KONEKSI untuk keluar proxy).
 
 <h3>Pemintaan Header Cookie Single</h3>
-Mengontrol jikalau cookie dikelola ZAP (<a href="../../tlmenu/edit.html">Aktifkan Session Tracking (Cookie)</a>) harus ditetapkan 
-pada satu permintaan header "Cookie" atau beberapa permintaan header "Cookie", saat mengirim permintaan HTTP ke server.
+Controls whether the ZAP's managed cookies (Enable (Global) HTTP State) should be set
+on a single "Cookie" request header or multiple "Cookie" request headers, when sending an HTTP request to the server.
+
+<h3>Enable (Global) HTTP State</h3>
+This allows session details stored in cookies to be tracked.<br/>
+This option must be selected to enable the "Use current tracking session" checkbox in the 
+<a href="../../dialogs/man_req.html">Manual Request Editor dialogs</a>.<br/>
+Session tracking ensures that any requests are sent with the latest session details.<br/>
+For example you may record a session when logged in as one user and then logout and login as another user.<br/>
+If you resend a request from the first session without session tracking then it will use the cookies from 
+the first session.<br/>
+If you resend the same request with session tracking then it will use the cookies from the second session.
 
 <h3>DNS</h3>
 <h4>TTL Permintaan yang Berhasil</h4>
-Mendefinisikan berapa lama permintaan DNS yang berhasil harus disembunyikan:<ul>
+Defines for how long the successful DNS queries should be cached:<ul>
 <li>Negatif angka, sembunyikan selamanya;</li>
 <li>Nol, menonaktifkan persembunyian;</li>
 <li>Positif angka, jumlah detik permintaan akan disembunyikan.</li></ul>
-<strong>Catatan:</strong> Perubahan diterapkan setelah restart.<p>
-Sebuah pilihan bisa juga ditetapkan menggunakan sebuah <code>-config</code> argumen batas perintah dengan tombol <code>connection.dnsTtlSuccessfulQueries</code>.
+<strong>Catatan:</strong> Changes are applied after a restart.<p>
+The option can also be set using the <code>-config</code> command line argument with the key <code>connection.dnsTtlSuccessfulQueries</code>.
 
-<h3>Protokol Keamanan</h3>
-Mengizinkan untuk memilih versi SSL/TLS yang diaktifkan untuk koneksi keluar (sebagai contoh, ke server). Paling sedikit satu versi harus diaktifkan, versi yang tidak didukung oleh JRE tidak akan dipilih dan dinonaktifkan.
-<br>Sebuah pilihan SSLv2Hello harus dipilih dalam hubungannya setidaknya dengan satu versi SSL/TLS.
+<h3>Security Protocols</h3>
+Allows to choose the SSL/TLS versions enabled for outgoing connections (for example, to servers). At least
+one version must be enabled, versions unsupported by the JRE will be unselected and disabled.
+<br>The option SSLv2Hello must be selected in conjunction with at least one SSL/TLS version.
 
-<h3>Menggunakan rantai Proxy</h3>
-Bagian ini memungkinkan Anda terhubung ke proxy lain untuk koneksi keluar.<br/>
-Hal ini sering dibutuhkan di lingkungan perusahaan.
+<h3>Use Proxy Chain</h3>
+This section allows you to connect to another proxy for outgoing connections.<br/>
+This is often required in a corporate environment.
 
-<h3>Proxy membuktikan</h3>
-Bagian ini menizinkan kamu untuk mengkonfigurasi pengeluaran pembuktian proxy. 
+<h3>Proxy Authentication</h3>
+This section allows you to configure the outgoing proxy authentication. 
 
-<h2>Melihat juga</h2>
+<h3>SOCKS Proxy</h3>
+This section allows you to configure an outgoing SOCKS proxy, by default the SOCKS proxy configuration applies to all connections made by ZAP.
+<p>
+The SOCKS proxy system properties (e.g. <code>socksProxyHost</code>, <code>socksProxyPort</code>) take precedence over the persisted configurations
+for compatibility with older ZAP versions. ZAP will use and display the values of the system's properties when defined at startup, the configurations
+can still be changed in this panel.
+<p><strong>Note:</strong> Loopback addresses (e.g. <code>localhost</code>, <code>127.0.01</code>, <code>::1</code>) are not proxied through the SOCKS proxy, the connections will be done directly.
+<h4>Enabled</h4>
+If ZAP should use the configured SOCKS proxy.
+<br>Default: <code>unselected</code>, unless the SOCKS proxy system properties are defined, in which case it is <code>selected</code>.
+<h4>Host</h4>
+The host name or address of the SOCKS proxy.
+<br>Default: <code>localhost</code>.
+<h4>Port</h4>
+The port of the SOCKS proxy.
+<br>Default: <code>1080</code>.
+<h4>Version</h4>
+The version of the SOCKS proxy.
+<br>Default: <code>5</code>.
+<h4>Use SOCKS' DNS</h4>
+If ZAP should let the SOCKS proxy resolve the host names. Requires a version 5 SOCKS proxy.
+<br>This might lead to connection failures if the SOCKS proxy is not able to resolve the host name (e.g. use of names that are defined in a <code>hosts</code> file).
+<br>Default: <code>selected</code>.
+<h4>Authentication</h4>
+The following fields allow to configure the authentication credentials for the SOCKS proxy.
+<h5>User Name</h5>
+The user name.
+<br>Default: none.
+<h5>Password</h5>
+The password.
+<br>Default: none.
+<br><strong>Note:</strong> Stored in clear text in the configuration file.
+
+<h2>See also</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">Ikhtisar UI</a></td><td>untuk ikhtisar antarmuka pengguna</td></tr>
+<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Pilihan dialog</a></td><td>sebagai rincian layar dialog Pilihan lainnya</td></tr>
+<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../../cmdline.html">Batas Perintah</a></td><td>sebagai rincian sebuah Batas Rincian</td></tr>
+<a href="../../../cmdline.html">Command Line</a></td><td>for details of the Command Line</td></tr>
 </table>
 
 </body>

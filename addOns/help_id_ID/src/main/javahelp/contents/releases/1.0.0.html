@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Rilis 1.3.0
+</title>
+</head>
+<body>
+<h1>Rilis 1.0.0</h1>
+<p>
+Berikut perubahan yang dibuat dalam rilis ini:
+</p>
+<h2>Perubahan yang signifikan:</h2>
+
+<h3>Layar bantuan</h3>
+Layar bantuan yang telah ditambahkan untuk semua fungsi sekarang disediakan oleh ZAP.<br/>
+Bantuan sensitif konteks juga telah diimplementasikan sehingga ketika Anda menekan tombol F1 maka layar bantuan yang terkait dengan tab yang telah Anda pilih yang akan ditampilkan.
+
+<h3>Breakpoints</h3>
+Implementasi dari <a href="../start/features/breakpoints.html">Breakpoints</a> telah diubah untuk menjadi lebih dekat dengan yang disediakan oleh perangkat lunak Lingkungan Pengembangan Terpadu.<br/>
+The breakpoint controls have been moved to the new <a href="../ui/tltoolbar.html">Bilah Alat Aras Puncak yang baru</a>.<br/>
+Breakpoints can now also be set by right clicking nodes in the 
+<a href="../ui/tabs/sites.html">tab Situs</a> dan <a href="../ui/tabs/history.html">Sejarah</a>.
+
+<h3>Menu laporan</h3>
+  <a href="../ui/tlmenu/report.html">Menu Laporan</a> telah berubah signifikan dan sekarang meliputi butir-butir menu berikut:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Buat Laporan...</td><td>Yang sekarang menghasilkan laporan saat diminta</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ekspor Pesan ke Berkas...</td><td>Pindah dari <a href="../ui/tlmenu/file.html">Menu Berkas</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ekspor Respon ke Berkas...</td><td>Pindah dari <a href="../ui/tlmenu/file.html">Menu Berkas</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ekspor Semua URL ke Berkas...</td><td>Fungsionalitas baru</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Bandingkan dengan sesi lain...</td><td>Fungsionalitas baru</td></tr>
+</table>
+
+<h3>Pencarian sejarah yang lebih baik</h3>
+  <a href="../ui/tabs/search.html">Tab pencarian yang baru</a> memungkinkan Anda untuk mencari ekspresi reguler pada semua URL, permintaan, dan tanggapan. <br/>
+Tombol selanjutnya dan sebelumnya memungkinkan Anda melihat istilah pencarian yang ditemukan di 
+<a href="../ui/tabs/request.html">tab Permintaan</a> dan <a href="../ui/tabs/response.html">Tanggapan</a>. <br/>
+
+<h3>Penyaring riwayat</h3>
+<a href="../ui/tabs/history.html">Bilah Alat Penyaring Riwayat</a> sudah ditambahkan yang memungkinkan anda untuk membatasi permintaan yang ditampilkan.<br/>
+Permintaan dapat difilter berdasarkan metode HTTP, kode hasil HTTP,
+dan apapun <a href="../start/features/tags.html">tag</a>, <a href="../start/features/alerts.html">peringatan</a>, apa
+<a href="../start/features/notes.html">catatan</a> yang telah diterapkan.    
+
+<h3>Catatan</h3>
+Anda sekarang bisa mengasosiasikannya <a href="../start/features/notes.html">catatan</a> dengan permintaan apapun.    
+
+<h3>Beberapa Tag</h3>
+Sekarang Anda dapat mengaitkan beberapa <a href="../start/features/tags.html">tag</a> dengan permintaan apapun.    
+
+<h3>Lebih banyak kontrol atas peringatan</h3>
+Itu <a href="../ui/dialogs/addalert.html">Menambahkan dialog lampiran</a> memungkinkan anda menambahkan atau mengubah peringatan secara manual. 
+
+<h3>Encoder / decoder baru</h3>
+A new Encode/Decode/Hash dialog has replaced the previous 
+Encoder/Decoder. 
+
+<h3>Pemindai pasif</h3>
+<a href="../start/features/pscan.html">Passive scanning</a> has been added.<br/>
+In this release ZAP will only use passive scanning for automatically adding <a href="../start/features/tags.html">tags</a>.<br/>
+In future releases it may also raise <a href="../start/features/alerts.html">alerts</a> for potential issues. 
+    
+<h2>Perubahan kecil:</h2>
+
+<h3>Tingkat atas Toolbar</h3>
+<a href="../ui/tltoolbar.html">The Top Level Toolbar</a> has been added which
+provides a set up buttons for commonly used functionality. 
+
+<h3>Ringkasan fotter peringatan</h3>
+Counts of the High, Medium, Low and Informational <a href="../start/features/alerts.html">alerts</a>
+are now displayed in the <a href="../ui/footer.html">footer</a>.
+
+<h3>Tampilan dan nuansa baru</h3>
+A new look and feel 'Nimbus' is used.
+
+<h3>Penanganan password proxy</h3>
+<a href="../ui/dialogs/options/connection.html">The Options Connection screen</a> has a new option to 
+'Prompt for proxy credentials on start up'.<br/>
+If this option is selected then your proxy password will not be stored on the hard disk.  
+
+<h3>Kirim ulang dari tab Sites</h3>
+The <a href="../ui/tabs/sites.html">Sites tab</a> has a new right click menu item that allows
+you to resend the request after making any changes to it that you want to.  
+
+<h3>Direktori pengguna dipertahankan antara sesi</h3>
+The last directory used by the user is now stored in the config file so that it is
+maintained between sessions.
+
+<h2>Lihat juga</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Pengenalan</a></td><td>pengantar ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Rilis</a></td><td>set lengkap rilis</td></tr>
+</table>
+</body>
+</html>
