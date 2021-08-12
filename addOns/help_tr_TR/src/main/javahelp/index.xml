@@ -9,101 +9,107 @@
 
 <index version="2.0">
 
-    <indexitem text="aktif tarama" target="start.concepts.ascan" />
+    <indexitem text="aktif tarama" target="start.features.ascan" />
     <indexitem text="aktif tarama iletişim kutusu" target="ui.dialogs.advascan" />
     <indexitem text="aktif tarama sekmesi" target="ui.tabs.ascan"/>
-    <indexitem text="eklentiler" target="start.concepts.addons"/>
-    <indexitem text="eklentiler" target="addon.introduction"/>
+    <indexitem text="eklentiler" target="start.features.addons"/>
+    <indexitem text="eklentiler" target="addons.introduction"/>
     <indexitem text="uyarı iletişim kutusu ekle" target="ui.dialogs.addalert" />
-    <indexitem text="kesme noktası iletişim kutusu ekle" target="ui.dialogs.addbreak" />
+    <indexitem text="add/edit breakpoint dialog" target="ui.dialogs.addbreak" />
     <indexitem text="not iletişim kutusu ekle" target="ui.dialogs.addnote" />
     <indexitem text="uyarılar sekmesi" target="ui.tabs.alerts" />
-    <indexitem text="uyarılar" target="start.concepts.alerts" />
-    <indexitem text="api" target="start.concepts.api" />
-    <indexitem text="kimlik doğrulama yetkili tabanlı el ile giriş" target="start.concepts.auth" />
-    <indexitem text="temel penetrasyon testi" target="start.pentest" />
-    <indexitem text="mola noktaları sekmesi" target="ui.tabs.breakpoints" />
-    <indexitem text="mola noktaları" target="start.concepts.breakpoints" /> 
-    <indexitem text="mola sekmesi" target="ui.tabs.break" />
-    <indexitem text="komut satırı" target="cmdline" />
-    <indexitem text="bağlamlar" target="start.concepts.contexts" />
-    <indexitem text="katkıda bulunanlar" target="zap.credits" />
-    <indexitem text="veri güdümlü içerik" target="start.concepts.ddc" />
-    <indexitem text="diyaloglar" target="ui.dialogs" />
-    <indexitem text="Kodlama / Kod Çözme / Hash penceresi" target="ui.dialogs.enc_dec" />
-    <indexitem text="özellikler" target="start.concepts" />
-    <indexitem text="diyalog filtrele" target="ui.dialogs.filter" />
-    <indexitem text="filtreler" target="start.concepts.filters" />
-    <indexitem text="diyalog bul" target="ui.dialogs.find" />
-    <indexitem text="alt bilgi" target="ui.footer" />
-    <indexitem text="başlarken" target="start.start" />
-    <indexitem text="geçmiş filtresi diyaloğu" target="ui.dialogs.historyfilter" />
-    <indexitem text="geçmiş sekmesi" target="ui.tabs.history" />
-    <indexitem text="http oturumları sekmesi" target="ui.tabs.httpsessions" />
-    <indexitem text="http oturumları" target="start.concepts.httpsessions" />
-    <indexitem text="man-in-the-middle proxy" target="start.concepts.intercept"/>
-    <indexitem text="giriş" target="zap.intro" />
-    <indexitem text="sekmeleri yönet iletişim kutusu" target="ui.dialogs.managetags" />
-    <indexitem text="manüel istek iletişim kutusu" target="ui.dialogs.manreq" />
-    <indexitem text="modlar" target="start.concepts.modes" />
-    <indexitem text="notlar" target="start.concepts.notes" />
-    <indexitem text="seçenekler iletişim kutusu" target="ui.dialogs.options" />
-    <indexitem text="çıktı sekmesi" target="ui.tabs.output" />
-    <indexitem text="parametreler sekmesi" target="ui.tabs.params" />
+    <indexitem text="uyarılar" target="start.features.alerts" />
+    <indexitem text="api" target="start.features.api" />
+    <indexitem text="kimlik doğrulama yetkili tabanlı el ile giriş" target="start.features.auth" />
+    <indexitem text="authentication methods" target="start.features.authmethods" />
+    <indexitem text="authentication verification strategies" target="start.features.authstrategies" />
+    <indexitem text="basic penetration test" target="start.pentest" />
+    <indexitem text="breakpoints tab" target="ui.tabs.breakpoints" />
+    <indexitem text="breakpoints" target="start.features.breakpoints" /> 
+    <indexitem text="break tab" target="ui.tabs.break" />
+    <indexitem text="callbacks tab" target="ui.tabs.callbacks" />
+    <indexitem text="command line" target="cmdline" />
+    <indexitem text="contexts" target="start.features.contexts" />
+    <indexitem text="credits" target="zap.credits" />
+    <indexitem text="custompages" target="start.features.custompages" /> 
+    <indexitem text="data driven content" target="start.features.ddc" />
+    <indexitem text="dialogs" target="ui.dialogs" />
+    <indexitem text="features" target="start.features" />
+    <indexitem text="find dialog" target="ui.dialogs.find" />
+    <indexitem text="footer" target="ui.footer" />
+    <indexitem text="getting started" target="start.start" />
+    <indexitem text="history filter dialog" target="ui.dialogs.historyfilter" />
+    <indexitem text="history tab" target="ui.tabs.history" />
+    <indexitem text="http sessions tab" target="ui.tabs.httpsessions" />
+    <indexitem text="http sessions" target="start.features.httpsessions" />
+    <indexitem text="manipulator-in-the-middle proxy" target="start.features.intercept"/>
+    <indexitem text="introduction" target="zap.intro" />
+    <indexitem text="manage tabs dialog" target="ui.dialogs.managetags" />
+    <indexitem text="manual request dialog" target="ui.dialogs.manreq" />
+    <indexitem text="marketplace" target="start.features.marketplace" />
+    <indexitem text="modes" target="start.features.modes" />
+    <indexitem text="notes" target="start.features.notes" />
+    <indexitem text="options dialog" target="ui.dialogs.options" />
+    <indexitem text="output tab" target="ui.tabs.output" />
+    <indexitem text="params tab" target="ui.tabs.params" />
     <indexitem text="paros proxy" target="zap.paros" />
-    <indexitem text="pasif tarama" target="start.concepts.pscan" />
-    <indexitem text="pasif tarayıcı seçenekleri" target="ui.dialogs.options.pscan.main" />
-    <indexitem text="oturuma devam etme iletişim kutusu" target="ui.dialogs.persistsession" />
-    <indexitem text="proxy yapılandırması" target="start.proxy" />
-    <indexitem text="sürüm 1.0.0" target="zap.releases.1.0.0" />
-    <indexitem text="sürüm 1.1.0" target="zap.releases.1.1.0" />
-    <indexitem text="sürüm 1.2.0" target="zap.releases.1.2.0" />
-    <indexitem text="sürüm 1.3.0" target="zap.releases.1.3.0" />
-    <indexitem text="sürüm 1.3.1" target="zap.releases.1.3.1" />
-    <indexitem text="sürüm 1.3.2" target="zap.releases.1.3.2" />
-    <indexitem text="sürüm 1.3.3" target="zap.releases.1.3.3" />
-    <indexitem text="sürüm 1.3.4" target="zap.releases.1.3.4" />
-    <indexitem text="sürüm 1.4.0" target="zap.releases.1.4.0" />
-    <indexitem text="sürüm 1.4.1" target="zap.releases.1.4.1" />
-    <indexitem text="sürüm 2.0.0" target="zap.releases.2.0.0" />
-    <indexitem text="sürüm 2.1.0" target="zap.releases.2.1.0" />
-    <indexitem text="sürüm 2.2.0" target="zap.releases.2.2.0" />
-    <indexitem text="sürüm 2.2.1" target="zap.releases.2.2.1" />
-    <indexitem text="sürüm 2.2.2" target="zap.releases.2.2.2" />
-    <indexitem text="sürüm 2.3.0" target="zap.releases.2.3.0" />
-    <indexitem text="sürüm 2.3.1" target="zap.releases.2.3.1" />
-    <indexitem text="sürüm 2.4.0" target="zap.releases.2.4.0" />
-    <indexitem text="sürüm 2.4.1" target="zap.releases.2.4.1" />
-    <indexitem text="sürüm 2.4.2" target="zap.releases.2.4.2" />
-    <indexitem text="sürüm 2.4.3" target="zap.releases.2.4.3" />
-    <indexitem text="sürüm 2.5.0" target="zap.releases.2.5.0" />
-    <indexitem text="sürüm 2.6.0" target="zap.releases.2.6.0" />
-    <indexitem text="sürüm 2.7.0" target="zap.releases.2.7.0" />
-    <indexitem text="sürümler" target="zap.releases" />
-    <indexitem text="istek sekmesi" target="ui.tabs.request" />
-    <indexitem text="diyaloğu tekrar gönder" target="ui.dialogs.resend" />
-    <indexitem text="yanıt sekmesi" target="ui.tabs.response" />
-    <indexitem text="tarayıcı kuralları" target="start.check" />
-    <indexitem text="tarama ilkesi" target="start.concepts.scanpolicy" />
-    <indexitem text="tarama ilkesi iletişim kutusu" target="ui.dialogs.scanpolicy" />
-    <indexitem text="tarama politikası yönetim diyaloğu" target="ui.dialogs.scanpolicymgr" />
-    <indexitem text="tarama ilerlemesi diyaloğu" target="ui.dialogs.scanprogress" />
-    <indexitem text="arama sekmesi" target="ui.tabs.search" />
-    <indexitem text="oturum bağlam ekranları" target="ui.dialogs.contexts" />
-    <indexitem text="oturum bağlam doğrulama ekranı" target="ui.dialogs.context-auth" />
-    <indexitem text="oturum bağlam yapı ekranı" target="ui.dialogs.context-struct" />
-    <indexitem text="oturum özellikleri diyaloğu" target="ui.dialogs.sessprop" />
-    <indexitem text="siteler sekmesi" target="ui.tabs.sites" />
-    <indexitem text="örümcek" target="start.concepts.spider" />
-    <indexitem text="örümcek diyaloğu" target="ui.dialogs.spider" />
-    <indexitem text="örümcek sekmesi" target="ui.tabs.spider" />
-    <indexitem text="istatistikler" target="start.concepts.stats" />
-    <indexitem text="yapısal düzenleyiciler" target="start.concepts.structmods" />
-    <indexitem text="yapısal parametreler" target="start.concepts.structparams" />
-    <indexitem text="etiketler" target="start.concepts.tags" />
-    <indexitem text="üst düzey menü" target="ui.topmenu" />
-    <indexitem text="üst seviye araç çubuğu" target="ui.toptoolbar" />
-    <indexitem text="kullanıcı arayüzü genel bakış" target="ui.overview" />
-    <indexitem text="görünümler" target="ui.views" />
+    <indexitem text="passive scan" target="start.features.pscan" />
+    <indexitem text="passive scanner options" target="ui.dialogs.options.pscan.main" />
+    <indexitem text="persist session dialog" target="ui.dialogs.persistsession" />
+    <indexitem text="proxy configuration" target="start.proxy" />
+    <indexitem text="release 1.0.0" target="zap.releases.1.0.0" />
+    <indexitem text="release 1.1.0" target="zap.releases.1.1.0" />
+    <indexitem text="release 1.2.0" target="zap.releases.1.2.0" />
+    <indexitem text="release 1.3.0" target="zap.releases.1.3.0" />
+    <indexitem text="release 1.3.1" target="zap.releases.1.3.1" />
+    <indexitem text="release 1.3.2" target="zap.releases.1.3.2" />
+    <indexitem text="release 1.3.3" target="zap.releases.1.3.3" />
+    <indexitem text="release 1.3.4" target="zap.releases.1.3.4" />
+    <indexitem text="release 1.4.0" target="zap.releases.1.4.0" />
+    <indexitem text="release 1.4.1" target="zap.releases.1.4.1" />
+    <indexitem text="release 2.0.0" target="zap.releases.2.0.0" />
+    <indexitem text="release 2.1.0" target="zap.releases.2.1.0" />
+    <indexitem text="release 2.2.0" target="zap.releases.2.2.0" />
+    <indexitem text="release 2.2.1" target="zap.releases.2.2.1" />
+    <indexitem text="release 2.2.2" target="zap.releases.2.2.2" />
+    <indexitem text="release 2.3.0" target="zap.releases.2.3.0" />
+    <indexitem text="release 2.3.1" target="zap.releases.2.3.1" />
+    <indexitem text="release 2.4.0" target="zap.releases.2.4.0" />
+    <indexitem text="release 2.4.1" target="zap.releases.2.4.1" />
+    <indexitem text="release 2.4.2" target="zap.releases.2.4.2" />
+    <indexitem text="release 2.4.3" target="zap.releases.2.4.3" />
+    <indexitem text="release 2.5.0" target="zap.releases.2.5.0" />
+    <indexitem text="release 2.6.0" target="zap.releases.2.6.0" />
+    <indexitem text="release 2.7.0" target="zap.releases.2.7.0" />
+    <indexitem text="release 2.8.0" target="zap.releases.2.8.0" />
+    <indexitem text="release 2.9.0" target="zap.releases.2.9.0" />
+    <indexitem text="release 2.10.0" target="zap.releases.2.10.0" />
+    <indexitem text="releases" target="zap.releases" />
+    <indexitem text="request tab" target="ui.tabs.request" />
+    <indexitem text="response tab" target="ui.tabs.response" />
+    <indexitem text="scanner rules" target="start.check" />
+    <indexitem text="scan policy" target="start.features.scanpolicy" />
+    <indexitem text="scan policy dialog" target="ui.dialogs.scanpolicy" />
+    <indexitem text="scan policy manager dialog" target="ui.dialogs.scanpolicymgr" />
+    <indexitem text="scan progress dialog" target="ui.dialogs.scanprogress" />
+    <indexitem text="scripts" target="start.features.scripts" />
+    <indexitem text="search tab" target="ui.tabs.search" />
+    <indexitem text="session context screens" target="ui.dialogs.contexts" />
+    <indexitem text="session context authentication screen" target="ui.dialogs.context-auth" />
+    <indexitem text="session context structure screen" target="ui.dialogs.context-struct" />
+    <indexitem text="session properties dialog" target="ui.dialogs.sessprop" />
+    <indexitem text="sites tab" target="ui.tabs.sites" />
+    <indexitem text="sites tree" target="start.features.sitestree" />
+    <indexitem text="spider" target="start.features.spider" />
+    <indexitem text="spider dialog" target="ui.dialogs.spider" />
+    <indexitem text="spider tab" target="ui.tabs.spider" />
+    <indexitem text="statistics" target="start.features.stats" />
+    <indexitem text="structural modifiers" target="start.features.structmods" />
+    <indexitem text="structural parameters" target="start.features.structparams" />
+    <indexitem text="tags" target="start.features.tags" />
+    <indexitem text="top level menu" target="ui.topmenu" />
+    <indexitem text="top level toolbar" target="ui.toptoolbar" />
+    <indexitem text="ui overview" target="ui.overview" />
+    <indexitem text="views" target="ui.views" />
 
 </index>

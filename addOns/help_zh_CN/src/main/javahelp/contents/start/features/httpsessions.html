@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>HTTP会话</title>
+</head>
+<body>
+	<h1>HTTP会话</h1>
+	<p>此工具可以跟踪特定站点上现有的HTTP会话，并允许Zaproxy用户强制所有请求处于特定会话中。 基本上，它允许用户在网站上的用户会话之间轻松切换，并创建一个新的会话而不会“销毁”现有会话。</p>
+
+	<p>
+		它基于会话令牌的概念，它是HTTP消息参数（目前仅为cookie），允许HTTP服务器将请求消息与先前存储的任何请求或数据连接起来。
+		就Zaproxy而言，从概念上讲，会话令牌已被分为两类：默认会话令牌和站点会话令牌。 默认会话令牌是用户可以在<a href="../../ui/dialogs/options/httpsessions.html">选项屏幕</a>中设置的令牌，默认情况下会自动将会话令牌视为任何网站的会话令牌（例如， phpsessid，jsessionid等）。 站点会话令牌是特定站点的一组令牌，通常使用<a
+			href="../../ui/tabs/params.html">参数选项卡</a>中提供的弹出式菜单进行设置.
+	</p>
+
+	<p>
+		该工具使用定义的会话令牌或自动检测到的默认会话令牌自动检测通信中存在的任何HTTP会话。 检测到的会话显示在<a href="../../ui/tabs/httpsessions.html">HTTP会话选项卡</a>中.
+	</p>
+
+	<p>
+		用户可以使用<a
+			href="../../ui/tabs/httpsessions.html">HTTP会话选项卡</a>上提供的按钮创建新会话而不破坏现有会话，也可以强制其中一个会话处于“活动”状态。 当会话处于“活动”状态时，所有发送到相应站点的出站请求都会被修改，会话令牌将被设置为与活动会话相匹配。 通过这种方式，用户可以轻松地强制某些消息成为特定会话的‘一部分’，然后在另一个会话中切换并发送消息。
+	</p>
+
+	<p>
+		HTTP会话工具使用<a
+			href="../../ui/dialogs/options/httpsessions.html">HTTP会话选项屏幕</a>进行配置.
+	</p>
+
+	<h2>访问途径</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/tabs/httpsessions.html">HTTP Sessions tab</a></td>
+			<td></td>
+		</tr>
+	</table>
+
+	<h2>请参阅</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/overview.html">UI综览</a></td>
+			<td>有关用户界面的概述</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="features.html">功能</a></td>
+			<td>由ZAP提供</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/options/httpsessions.html">HTTP会话选项屏幕</a></td>
+			<td>了解该工具的选项概述</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/tabs/params.html">参数选项卡</a></td>
+			<td>有关参数选项卡的概述</td>
+		</tr>
+
+	</table>
+
+</body>
+</html>

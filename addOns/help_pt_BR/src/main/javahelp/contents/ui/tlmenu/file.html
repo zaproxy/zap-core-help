@@ -6,7 +6,7 @@
 Menu de Arquivo
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Menu de Arquivo</h1>
 Este menu é da sessão atual. Por default, estão presentes nele os seguintes itens:<br/>
 
@@ -24,37 +24,36 @@ Faz com que a sessão atual persista (continue). <br/>
 Embora uma sessão seja sempre salva em disco, ela será perdida quando o ZAP for fechado, a menos que tenha sito "persistida".<br/>
 Você só precisa assinalar 'persistir' uma vez - depois disso todas as alterações serão salvas.
 
-<h3>Snapshot Session As...</h3>
+<h3>Salvar estado atual da Sessão como...</h3>
 Isso salva o estado atual de uma sessão persistente.<br/>
-It will suggest the same filename as the persisted session with a date-time string appended to it, and allow the user to set whatever name they choose.<br/>
+Essa opção vai sugerir o mesmo nome de arquivo que a opção Persistir com a sessão, mas com a data e hora adicionada ao nome, e permitirá ao usuário alterar o nome.<br/>
 
-<h3>Session Properties...</h3>
+<h3>Propriedades da Sessão...</h3>
 Isso exibe o <a href="../dialogs/session/sessprop.html">diálogo de Propriedades da Sessão</a> .<br/>
 Isso permite que você defina o nome da sessão e sua descrição.
 
-<h3>Import Context...</h3>
-Allows to import a <a href="../../start/concepts/contexts.html">Context</a>.
+<h3>Importar Contexto... </h3>
+Permite importar um <a href="../../start/features/contexts.html">Contexto</a>.
 
-<h3>Export Context...</h3>
-Allows to export a Context.
+<h3>Exportar Contexto...</h3>
+Permite exportar um Contexto.
 
-<h3>Load Add-on file...</h3>
-Load a local <a href="../../start/concepts/addons.html">add-on</a> file.<br/>
-Add-ons are typically installed from via the <a href="../dialogs/manageaddons.html">Manage Add-ons</a> dialog, but this
-option can be useful if you have downloaded an add-on manually or are testing one you have developed yourself.<br/>
-Add-ons remain installed until you manually uninstall them. 
+<h3>Carregar arquivo de Complemento...</h3>
+Carrega um arquivo de <a href="../../start/features/addons.html">complemento</a> .<br/>
+Complementos são normalmente instalados através do diálogo <a href="../dialogs/manageaddons.html">Gerenciar complementos,</a> mas esta opção pode ser útil se você baixou manualmente um complemento ou está testando um que você desenvolveu.<br/>
+Complementos permanecem instalados até você manualmente desinstalá-los. 
 
-<h3>Exit and Delete Session...</h3>
-This will exit ZAP and delete the session, even if you have previously persisted it.<br/>
-The session will no longer be accessible when you restart ZAP, although any snapshots you took will still be available.<br/> 
-A warning dialog will be displayed to ensure you really meant to choose this option.
+<h3>Sair e Apagar Sessão...</h3>
+Isto encerra o ZAP e apaga a sessão, mesmo que você tenha antes ligado a persistẽncia dela.<br/>
+A sessão não será mais acessível quando você reiniciar o ZAP - mas qualquer instantâneo gravado continuará disponível.<br/> 
+Uma caixa de diálogo de aviso será exibida para garantir que você realmente pretende escolher essa opção.
 
-<h3>Exit</h3>
-This will exit ZAP.<br/>
-If you have not saved the current session then you will be given the option to do so.
+<h3>Sair</h3>
+Isso encerrará o ZAP.<br/>
+Se você não salvou a sessão atual, não terá mais a opção de fazer isso.
 
 <p>
-Observe que <a href="../../start/concepts/addons.html">Complementos</a> podem acrescentar outros itens de menu.
+Note that <a href="../../start/features/addons.html">add-ons</a> can add additional menu items.
 </p>
 
 <h2>Leia também</h2>

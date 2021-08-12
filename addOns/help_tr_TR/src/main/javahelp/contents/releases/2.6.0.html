@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  Sürüm 2.6.0
+</title>
+</head>
+<body>
+<h1>Sürüm 2.6.0</h1>
+
+Bu sürüm, özellikle ZAP API'sinde çok sayıda değişiklik içeriyor.<br>
+ZAP'ı API aracılığıyla tamamen kontrol edilebilir hale getirme hedefimize yönelik olarak, önemli sayıda yeni API son nokta ekledik.
+Ayrıca mevcut bitiş noktalarının bazılarını değiştirdik ve her durumda bu değişiklikler geriye dönmeye uyumludur.
+<p>
+Tam sürüm, ayrıca çeşitli tarayıcılar aracılığı ile ZAP etkileşimini daha da kolaylaştırmak amacıyla platforma özgü ağ sürücüsü ile birlikte yeni bir JxTarayıcı eklentisi içerir.
+
+<h2>API güvenlik değişiklikleri</h2> 
+
+<a href="https://bugcrowd.com/owaspzap">hata ödenek programı</a> ile bize bildirilen konular karşısında APİ güvenliğini değiştirdik. 
+Güvenlik Açıkları ayrıntıları aşağıda belirtilmiştir.<br>
+Güvenli ortamda ZAP kullanırsanız, devre dışı bırakmanız için seçenek eklememize rağmen, güvenlik değişiklikleri zorunlu olarak geriye dönük uyumlu değildir.
+<p>
+
+Varsayılan olarak, tüm API çağrıları artık API anahtarını veya bir nonce'ı gerektirir. 
+Bunlar, URL parametreleri, POST parametreleri veya başlıklar aracılığıyla sağlanabilir.
+Desteklenen ZAP API istemcileri (Java ve Python da dahil olmak üzere) bir üstbilgi aracılığıyla API anahtarını sağlamak üzere güncellendi.
+Nonces, ZAP tarafından üretilir ve ZAP API'sine erişmesi gereken ZAP eklentileri tarafından kullanılmak üzere tasarlanmıştır. 
+Tüm ayrıntılar için <a href="../ui/dialogs/options/api.html">APİ ekran seçenekleri</a> bakınız.
+<p>
+Bunlar güvenlik ile ilgili yeni APİ seçenekleri serisidir:
+<ul>
+<li>UI Etkin - Etkinleştirildiğinde, API Web Kullanıcı Arayüzü, ZAP'ı proxy olarak kullanabilen tüm makinelerde kullanılabilir. Bu varsayılan olarak etkindir.</li>
+<li>API kullanımına izin verilen IP adresleri - Varsayılan olarak yalnızca ZAP çalışan makine ZAP API'sine erişebilir. Uygun regex kalıpları ekleyerek diğer makinelere API'ye erişime izin verebilirsiniz. Sadece güvendiğiniz İP adreslerini eklemelisiniz.</li>
+<li>Güvenli işlemler için bir API anahtarı gerektirmeyin - Etkinleştirildiğinde, API anahtarı, Görünümler veya 'güvenli' olarak kabul edilen diğer işlemler için gerekli değildir, başka bir deyişle ZAP'ta herhangi bir değişiklik yapmayan işlemler. Bu tür işlemler, uyarı, mesajlar ve dosya sistemi yolları gibi ZAP verilerine erişebilirler.  ZAP'ın varlığını saptamak için web uygulamaları tarafından da kullanılabilirler.</li>
+<li>İzin hatalarını API ile bildirin - Etkinleştirilirse, ZAP, API aracılığıyla izin hataları bildirir; bu, ZAP'ın varlığını tespit etmek için web uygulamaları tarafından kullanılabilir. Bu güvenli bir ortamda ciddi bir sorun değildir, ancak potansiyel olarak kötü amaçlı sitelere karşı ZAP kullanıyorsanız, etkinleştirmemelisiniz.</li>
+</ul>
+
+All ZAP options can be specified via the command line when you start ZAP - see 
+<a href="https://www.zaproxy.org/faq/why-is-an-api-key-required-by-default/">https://www.zaproxy.org/faq/why-is-an-api-key-required-by-default/</a>
+ tüm detayları için.<br>
+Güçlü bir İçerik Güvenlik Politikası ile birlikte API'ye çok daha fazla güvenlik üstbilgisi ekledik.
+
+<h2>Geliştirmeler</h2>
+<ul>
+<li>Sorun 368 : API - Sadece örümcek bulunduğunda URL'leri raporla</li>
+<li>Sorun 689 : Kapsam yönetimini geliştirme</li>
+<li>Sorun 958 : Java için çevresel değişkenler çıktığındaki Java sürüm kimlik saptaması</li>
+<li>Issue 1644 : Add response headers to Params tab</li>
+<li>Issue 1853 : Allow to active scan a Context through ZAP API</li>
+<li>Issue 1952 : Do not allow Contexts with same name</li>
+<li>Issue 2117 : set / update default threshold and strength for a scan policy</li>
+<li>Issue 2334 : Enable searching in ZAP Addons Pop-up</li>
+<li>Issue 2415 : Show the reason why an active scanner was skipped</li>
+<li>Issue 2559 : Do not clean up unsaved (file based) sessions</li>
+<li>Issue 2570 : Change proxy option to remove unsupported encoding</li>
+<li>Issue 2592 : Differentiate the source of alerts</li>
+<li>Issue 2611 : Change HTTP breakpoint dialogues to modal</li>
+<li>Issue 2633 : Enhance Client Cert File Chooser</li>
+<li>Issue 2647 : Support a/pscan rule configuration</li>
+<li>Issue 2655 : Provide skip reason for Script Active Scan Rules</li>
+<li>Issue 2682 : Sort (main) help add-on TOC entries</li>
+<li>Issue 2690 : Support ignoring specified forms when checking for CSRF vulnerabilities</li>
+<li>Issue 2699 : Enhancement Request: Improve SSL Negotiation Failure Error Handling</li>
+<li>Issue 2701 : Enhancement Request: Factory Reset</li>
+<li>Issue 2723 : Support POST requests for API actions</li>
+<li>Issue 2728 : Allow to remove spider parsers and filters</li>
+<li>Issue 2742 : Allow for override/customization of Java's "networkaddress.cache.ttl" value</li>
+<li>Issue 2750 : Add a reasonably strong CSP to the API</li>
+<li>Issue 2773 : Use UTF-8 to read/write ZAP scripts</li>
+<li>Issue 2782 : Support the -configfile cmdline parameter</li>
+<li>Issue 2825 : Additional Commentary for JS templates</li>
+<li>Issue 2853 : Override Alert details</li>
+<li>Issue 2855 : Support break functionality in the API</li>
+<li>Issue 2865 : Normalise Include/Exclude context panels</li>
+<li>Issue 2886 : Option to generate reports in Markdown format</li>
+<li>Issue 2891 : Show the cause why a script was not loaded</li>
+<li>Issue 2936 : Always set Java mem to 1/4 available (over 512Mb)</li>
+<li>Issue 2937 : Change ZAP API to read/use the request body</li>
+<li>Issue 2939 : Use non absolute URI base HTML element in spider</li>
+<li>Issue 2951 : Support active scan rule and scan max duration</li>
+<li>Issue 2954 : Allow to export a Context through the context menu</li>
+<li>Issue 2966 : Use L&amp;F specified through JVM args</li>
+<li>Issue 2970 : Allow to configure, by script type, the enabled state of new/loaded scripts</li>
+<li>Issue 2982 : Allow to disable default standard output logging</li>
+<li>Issue 2994 : show column 'Size Resp. Body' of history in bytes</li>
+<li>Issue 3004 : Allow to passive scan just HTTP messages in scope</li>
+<li>Issue 3028 : Value Generator (previously Form Handling)</li>
+<li>Issue 3038 : Return request's type through the ZAP API</li>
+<li>Issue 3042 : Allow to select multiple parameters in Params tab</li>
+<li>Issue 3050 : Return requests' timestamp/RTT through the ZAP API</li>
+<li>Issue 3058 : Allow to configure the domains always in spider scope (Spider API)</li>
+<li>Issue 3061 : Allow to deprecate API endpoints</li>
+<li>Issue 3069 : Context structural parameter only accepts alphanumeric charts</li>
+<li>Issue 3079 : Added cookie ignore list rule and inc sleep default to 20 to reduce FPs</li>
+<li>Issue 3081 : Change default time to 15 and make publicly accessible</li>
+<li>Issue 3090 : Be more lenient on add-on's file name format</li>
+<li>Issue 3098 : Log to file even if ZAP is run 'inline'</li>
+<li>Issue 3118 : include subjectAlternativeName extension in generated certificates</li>
+<li>Issue 3123 : Added security annotations for forms that dont need anti CSRF tokens</li>
+<li>Issue 3130 : Added autoupdate API calls</li>
+<li>Issue 3149 : Baseline: Support context file and in-progress issues</li>
+<li>Issue 3159 : Allow esc to Close Marketplace Dialog</li>
+<li>Issue 3163 : Autoselect Imported Certificate</li>
+<li>Issue 3176 : Allow to show more request data in History tab</li>
+<li>Issue 3195 : Add workaround to local proxy for Android emulator</li>
+<li>Issue 3226 : Option to supply API key or nonces via header</li>
+<li>Issue 3227 : Limit API access to whitelisted IP addresses</li>
+<li>Issue 3229 : Use Referrer-Policy in ZAP API</li>
+<li>Issue 3232 : Active Scan API - Allow to start the scans with non-leaf nodes</li>
+<li>Issue 3238 : Add driver entries for CSPid Virtual Smartcards</li>
+<li>Issue 3261 : Client Cert PKCS#11 - UI/Exception Handling</li>
+<li>Issue 3285 : Edit Alert Enhancements</li>
+<li>Issue 3290 : Show requests with I/O errors in Spider tab</li>
+<li>Issue 3296 : Create script directories when initialising the home dir</li>
+<li>Issue 3297 : Start local proxy after processing command line arguments when in daemon mode</li>
+</ul>
+
+<h2>Bug düzeltmeler</h2>
+<ul>
+<li>Sorun 1107 : Komut Dizisi Şablonları/Örnekleri için Ek Yorum gereklidir</li>
+<li>Sorun 1152 : Pasif CSRF Algılayıcı, yalnızca Anti-CSRF Belirteçleri eksik POST İsteklerini değil, tüm Formlar için CSRF Belirteç Eksiklerini Rapor Etmiştir</li>
+<li>Sorun 1212 : SQLi testlerinde yanlış pozitifler</li>
+<li>Sorun 2176 : Zapbot WAVSEP taramaları sırasında NPE'ler</li>
+<li>Sorun 2218 : Sürekli Oturumlar, yapılandırılmamış Varsayılan Bağlamı kaydetmez</li>
+<li>Sorun 2546 : Kapsam dışı olan ZAP erişim URL'leri</li>
+<li>Sorun 2550 : Tarama İlerleme diyaloğu açılırken GUI donar</li>
+<li>Sorun 2561 : HTML Raporu yazmak için UTF-8 kullanın</li>
+<li>Sorun 2578 : İkincil Kullanılabilir Sorun: Satır seçmek için Seçenekler sütunundaki metne tıklamanız gerekir</li>
+<li>Sorun 2585 : Oturum temizlemesinde geçici sıralama isteklerini kaldır</li>
+<li>Sorun 2586 : Aktif Tarama diyaloğu için Tüm Talepler seçeneğini kullanın</li>
+<li>Sorun 2605 : Geçmişe iletiler eklendiği zaman GUI 'nin asılı kalmasını engeller</li>
+<li>Sorun 2608 : Bir DDN' i İçerikten Kaldırma, Siteler sekmesine Güncelleştirmeyi tetiklemiyor gibi görünüyor</li>
+<li>Sorun 2637 : Bir çerçevede yüklenen API kullanıcı arayüzünü önleyin</li>
+<li>Sorun 2642 : Site ağacında yavaş fare çarkı kaydırma</li>
+<li>Sorun 2657 : Engellenmiş uzantıların devamlılığını doğrula</li>
+<li>Sorun 2674 : HTTP Oturumları sekmesinde gösterilen otomatik kimlik doğrulama istekleri</li>
+<li>Sorun 2681 : API aracılığıyla komut dosyası eklerken özel durumu düzelt</li>
+<li>Sorun 2694 : Dahil Edilmeyen Parametreleri API'dan ayarlama özelliği</li>
+<li>Sorun 2696 : Tüm mesajlar için Kopya URL'leri açılan menü öğesini etkinleştir</li>
+<li>Sorun 2707 : Manuel eklenti kurulumuna daha anlamlı diyalog mesajları gerekiyor</li>
+<li>Sorun 2735 : Wiki: ModesAndScope, SALDIRI modunu kapsamaz</li>
+<li>Sorun 2736 : Yazılım Hatası: Kaydedilmiş oturum verisinden raporlar oluşturamıyor</li>
+<li>Sorun 2737 : Eksik komut dosyası parametrelerinde doğru API hatası mesajı</li>
+<li>Sorun 2745 : sitemap.xml bulunamadığında Ağ Kural Dışı Durumu</li>
+<li>Sorun 2748 : Birden fazla gönder tuşlu ZAP Ağ' lı HTML Formları</li>
+<li>Sorun 2757 : Farklı istek metodlarına sahip uyarılar aynı kabul edilmiş</li>
+<li>Sorun 2774 : Birleşik görünümle seçildiğinde, gövde metni için fuzz konumunda gösterilen yanlış değer</li>
+<li>Sorun 2792 : Fuzz (HTTP) konumlarını çakıştırabilme</li>
+<li>Sorun 2793 : Bağlantı isteğinin son aşamasıyla birleşmiş görünümde yanlış vurgulama</li>
+<li>Sorun 2810 : Aktif tarayıcı uyarıları, Grafiksel Kullanıcı Arayüzü ile iken iki kez devam etti</li>
+<li>Sorun 2836 : Temizleme sırasında kayıt silinirken ZAP hsqldb OutOfMemoryError</li>
+<li>Sorun 2862 : Parametre bulunmayan sayfadaki url' de XSS bulunamadı</li>
+<li>Sorun 2874 : Yazı bağlantı görünümünde offset hesaplamalarını düzelt</li>
+<li>Sorun 2898 : URL'ler çevresinde eşleşen parantezleri yoksaymak / bölmek için örümcek bölümleyicisini ayrıştır</li>
+<li>Sorun 2935 : Eğer karakter kümesi yoksa, yanıt hacminde yanlış karakter kümesi kullanılmıştır</li>
+<li>Sorun 2977 : HTTP500 from JSON/httpSessions/view/sessions/?site=FOO</li>
+<li>Sorun 3002 : Onay kutusu ağacındaki tüm düğümlerin doğru işlenmesi</li>
+<li>Sorun 3041 : ZAP olaylarını yayınlarken eşzamanlılık sorunlarını düzelt</li>
+<li>Sorun 3052 : Uzantıların etkin durumlarının dolumunu düzelt</li>
+<li>Sorun 3054 : Bir oturum dolarken, her zaman, eski içerikleri temizle</li>
+<li>Sorun 3073 : HTTP Oturumları sekmesi için otomatikleştirilmiş mesajları işlemeyi atla</li>
+<li>Sorun 3100 : Faaliyet alanı değişikliğindeki içerikler uygulanmayabilir</li>
+<li>Sorun 3142 : ZAP API aracılığıyla dahil edilmeyen parametreleri uygun şekilde gösterin</li>
+<li>Sorun 3157 : Oturum Karşılaştırma Olağandışılığı</li>
+<li>Sorun 3175 : Kaçış anahtarında StandardFieldsDialog'u iptal et/kaydet</li>
+<li>Sorun 3192: Bağlamda bulunan URL'ler örümcek tarafından göz ardı edilir</li>
+<li>Sorun 3211 : Windows'ta zap.bat kullanılırken %HOMEPATH% ile .ZAP_JVM.properties bulunamıyor</li>
+<li>Sorun 3215 : Geçmiş Filtreleme diyaloğu ölçeklenemedi</li>
+<li>Sorun 3221 : Bazı ikonlar doğru ölçeklenemedi</li>
+<li>Sorun 3224 : "Uyarı" sekmesinde HTML injeksiyonu</li>
+<li>Sorun 3275 : Küresel Hariç Tutulmuş URL (beta) - kapatma ve yeniden açma işleminden sonra URL' leri hariç tutmak için eklenen düzenli ifadeleri almıyor</li>
+<li>Sorun 3278 : Yeni oturumda proxy tarafından dışlanmış URL' leri sıfırlama</li>
+<li>Sorun 3309 : Ön tarama aşamasında düğüm sayımını geliştirin</li>
+<li>Sorun 3320 : Git/SVN ağ temellerinin doğru oluşturulması</li>
+<li>Sorun 3330 : Yapılandırma değişkenlerini belirtilen sırada uygula</li>
+</ul>
+
+<h2>ZAP API Değiştirilmiş Bitiş Noktaları:</h2>
+
+<h3>EYLEM ascan / scan</h3>
+
+Url parametresi isteğe bağlıdır ve isteğe bağlı bir contextId parametresi eklenmiştir. Bunlardan birini sağlamanız gerekir.
+
+<h3>EYLEM ascan / scanAsUser</h3>
+
+Url ve contextId parametreleri artık opsiyoneldir. Bunlardan birini sağlamanız gerekir.
+
+<h3>EYLEM ascan / addScanPolicy</h3>
+
+İsteğe bağlı alertThreshold ve attackStrength parametreleri eklendi.
+
+
+<h2>ZAP API Yeni Bitiş Noktaları:</h2>
+
+<h3>GÖRÜNÜM ascan / optionMaxRuleDurationInMins</h3>
+
+Sıfırın sınırsız olduğu bir tarama kuralının çalışabileceği maksimum süreyi dakika cinsinden verir.
+
+<h3>GÖRÜNÜM ascan / optionMaxScanDurationInMins</h3>
+
+Tam bir taramanın çalışabileceği maksimum süreyi dakika cinsinden döndürür, sıfır sınırsızdır.
+
+<h3>EYLEM ascan / setOptionMaxRuleDurationInMins</h3>
+
+Bir tarama kuralının çalışabileceği maksimum süreyi dakika cinsinden ayarlar, sıfır sonsuzdur.
+
+<h3>EYLEM ascan / setOptionMaxScanDurationInMins</h3>
+
+Bütün taramanın çalıştırabileceği maksimum süreyi dakika cinsinden ayarlar, sıfır sonsuzdur.
+
+<h3>EYLEM ascan / updateScanPolicy</h3>
+
+Belirtilen tarama ilkesini alertThreshold veya attackStrength ile günceller.
+
+<h3>Görünüm Sonu / isBreakAll</h3>
+
+Eğer ZAP, hem istekleri hem de yanıtları keserse Doğru'ya döner.
+
+<h3>Görünüm Sonu / isBreakRequest</h3>
+
+Eğer ZAP taleplerde kesintiye uğrarsa Doğru'ya döner.
+
+<h3>Görünüm sonu / isBreakResponse</h3>
+
+Eğer ZAP cevapları keserse doğruya döner.
+
+<h3>Görünüm Sonu / httpMessage</h3>
+
+Halihazırda engellenen HTTP iletisini döndürür (varsa).
+
+<h3>EYLEM kesme / kesme</h3>
+
+Küresel ara işlevselliğini kontrol eder. Türü aşağıdakilerden biri olabilir: http-hepsi http-isteği veya http-yanıtı. Durum (Belirtilen türde arayı açmak için) doğru veya (arayı kapatmak için) yanlış olabilir. Faaliyet alani şu anda kullanılmıyor.
+
+<h3>EYLEM sonu / setHttpMessage</h3>
+
+Sağlanan verileri şu anda engellenen mesajın üzerine yazar.
+
+<h3>EYLEM kesme / devam etme</h3>
+
+Submits the currently intercepted message and unsets the global request/response breakpoints.
+
+<h3>EYLEM kesme / girme</h3>
+
+Halihazırda engellenen iletiyi gönderir, bir sonraki istek veya cevap otomatik olarak engellenir.
+
+<h3>EYLEM kesme / düşme</h3>
+
+Halihazırda engellenen mesajı bırakır.
+
+<h3>Çekirdeği Görüntüle / optionDnsTtlSuccessfulQueries</h3>
+
+Başarılı DNS sorgularının TTL'lerini (saniyeler içinde) getirir.
+
+<h3>EYLEM çekirdek / Istekgonderme</h3>
+
+Aşağıdaki yeniden yönlendirmelerle, isteğe bağlı olarak HTTP isteği gönderir. Eğer varsa, gönderilen istek ve alınan yanıt ve takip edilen yönlendirmeleri döndürür. İstek yollandığında (takip eden yeniden yönlendirmeyle) mod zorla kabul ettirilir, özel ayarlanan isteklere, kapsam dışındaysa 'Güvenli' modda veya ' Koruma' modunda izin verilmez.
+
+<h3>EYLEM çekirdek / setOptionDnsTtlSuccessfulQueries</h3>
+
+Başarılı DNS sorgularının TTL'sını (saniyeler içinde) ayarlar (ZAP yeniden başlatıldıktan sonra).
+
+<h3>Diğer çekirdek / mdreport</h3>
+
+Markdown formatında bir rapor oluşturur.
+
+<h3>Görüntüle httpSessions / sites</h3>
+
+Oturumu olan bütün siteleri getirir.
+
+<h3>İNCELE ptarama / SadeceFaaliyetAlanındatarama</h3>
+
+Pasif taramanın sadece kapsam alanındaki mesajlarda uygulanıp uygulanmaması gerektiğini söyler.
+
+<h3>EYLEM ptarama / SadeceFaaliyetAlanındatarama</h3>
+
+Pasif taramanın sadece kapsam alanındaki mesajlarda uygulanıp uygulanmaması gerektiğini belirler.
+
+<h3>INCELE örümcek / butunUrl</h3>
+
+Örümcek tarafından eklenen HTTP mesajlarına dayalı geçmiş tablosundan benzersiz URL'lerin bir listesini verir.
+
+<h3>Ağ görüntüle / optionMaxChildren</h3>
+
+Taranabilecek maksimum alt düğüm sayısını (düğüm başına) alır, 0 limiti olmaz demektir.
+
+<h3>EYLEM Ağı / setOptionMaxChildren</h3>
+
+Taranabilecek maksimum alt düğüm sayısını (düğüm başına) alır, 0 limit olmaz demektir.
+
+<h2>Güvenlik Açığı Detayları</h2>
+
+Aşağıdaki güvenlik açıkları ZAP'ın önceki sürümlerinde bildirilmiştir. Ve elbette diğer daha az ciddi sorunlar da onarılmıştır.<br>
+Aracılığı ile bu sorunları etik bir şekilde bize bildiren tüm araştırmacılara teşekkürler <a href="https://bugcrowd.com/owaspzap">hata ödenek programı</a>Eğer bu güvenlik açıkları ile ilgili daha fazla ayrıntıya ihtiyacınız varsa lütfen bizimle iletişime geçiniz.
+
+<h3>Anti CSRF Test Formu ve API Anahtar Açıklaması ile RCE</h3>
+
+Eğer kullanıcı Anti CSRF Sinama Formu'nu, özel olarak hazırlanmış bir HTML sayfasına karşı kullanırsa, API anahtarı bu siteye sızdırılır.
+Site daha sonrasında ZAP APİ'e ulaşabilir ve ZAP komut dosyalarını yüklemek dahil bütün eylemleri gerçekleştirebilir. Komut dosyaları sadece 'yerel' dosya sistemlerinden yüklenebilir, ancak kullanıcı Windows'ta ZAP çalıştırıyorsa, saldırgan kamuya açık bir SMB paylaşımı yoluyla kötü amaçlı bir komut dosyası hazırlayabilir. Yerel bir dosya olmak için ZAP'a görünür ve bu nedenle komut dosyası APİ tarafından yükelenebilir ve çalıştırılabilir.
+<br>
+Değişken eklentilerde APİ anahtarının sızmasını önlemek amacıyla tek seferlik anahtar kullanımının olduğu gibi APİ anahtarı gereksinimi veya APİ operasyonlarında kullanmak üzere tek seferlik anahtar gereksinimi bu güvenlik açığının doğrudan bir sonucudur.
+<br><br>
+<b>Kredi: Artemy Bogdanov (@Abr1k0s)</b>
+<br>
+Bu gönderinin bir sonucu olarak Artemy 1000 dolar hata (yazılım hatası bulanlara verilen ödül) ikramiyesiyle ödüllendirildi. Bu bize ödenilen ilk hata ikramiyesiydi - tebrikler Artemy!
+
+<h3>Windows Yükleyicisi DLL Kaçırmasına karşı savunmasızdır</h3>
+
+2.5.0 sürümüne kadarki (2.5.0 sürümü dahil) bütün versiyonlar için ZAP Windows Yükleyicisi'nin, Windows 7 ve daha önceki sürümlerindeki DLL Korsanlığına, güvenlik açığı vardır.
+Bu, 3. parti İnnoKurulum yükleyicide güvenlik açığına sahiptir.
+Artık 2.6.0 Yükleyiciler (bütün platformlarda) 4JYükle kullanılarak oluşturulur.
+<br><br>
+Herhangi bir nedenle Windows 7'ye veya daha eski sürümlerine ZAP'ın önceki sürümlerini yüklemek durumunda kalırsanız, kurucuyu çalıştırmadan önce temiz bir dizine taşımanızı öneririz.
+<br><br>
+Burp Suite'in Install4J'yi kullandığını ve böylece Install4j-üretilen yükleyicilerde gelecekteki güvenlik açıklarının Burp Suite hata ödül programı için geçerli olabileceğini unutmayın: <a href="https://hackerone.com/portswigger">https://hackerone.com/portswigger</a>
+<br><br>
+<b>Jenerik: James Kettle (Burp Suite)</b>
+
+<h3>Başlangıç Uygulama Parametre Ekleme yoluyla Rastgele Kod Çalıştırma</h3>
+ 
+Eğer kullanıcı hedeflenen uygulamayı ZAP lı parametre içermesini isteyerek başlatırsa, HTML parametreleri özellikle rastgele kod çalıştırmaya neden olacak şekilde yaratılabilir.
+<br>
+Eklenti Başlangıç Uygulamaları bu sorunları gidermek için güncellendi - Eklentiyi kullanmaya devam etmeden önce bütün ZAP kullanıcıları bu yeni versiyonu yüklemelidir.
+<br><br>
+<b>Jenerik: Artemy Bogdanov (@Abr1k0s)</b>
+
+<h3>Anti CSRF Test Formu üzerinden XSS</h3>
+
+CSRF önleyici deneme formunun, özel olarak hazırlanmış HTML sayfasına karşı çalıştırılırsa, XSS saldırılarla karşı güvenlik açığı vardır.
+<br>
+APİ artık bu tarz sorunları önlemek amacıyla güçlü İçerik Güvenlik İlkesi'ni kullanır
+<br><br>
+<b>Kredi: g_sato - <a href="https://bugcrowd.com/g_sato">https://bugcrowd.com/g_sato</a></b>
+
+<h3>DNS Rebinding'e APİ'nin Güvenlik Açığı</h3>
+
+APİ'nin DNS Rebinding saldırılarına karşı güvenlik açığı vardır.
+Şu anda sunucu bağlantıyı denetlemektedir ve beklenmedik sunuculardan olan bütün istekleri geri çevirir.
+<br><br>
+<b>Kredi: Artemy Bogdanov (@Abr1k0s)</b>
+
+<h2>Ayrıca bakın</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Tanıtım</a></td><td>ZAP'ın tanıtımı</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Sürümler</a></td><td>sürümlerin tam seti</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Katkıda bulunanlar</a></td><td>bu sürümü mümkün kılan insanlar ve gruplar</td></tr>
+</table>
+</body>
+</html>

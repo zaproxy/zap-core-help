@@ -6,24 +6,26 @@
 Certificados SSL Dinámicos
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Opción: Certificados SSL Dinámicos</h1>
 	<p>
 	OWASP ZAP le permite descifrar las conexiones SSL de forma transparente.
 	Para hacerlo, ZAP tiene que cifrar cada solicitud antes de enviar al servidor y descifrar cada respuesta, que viene detrás.
 	Pero, esto ya lo hace el navegador.
-	Por eso, la única forma de descifrar o interceptar la transmisión es hacer un enfoque de "man in the middle".
+	That's why, the only way to decrypt or intercept the transmission,
+	is to do a 'manipulator in the middle' approach.
 	</p>
 
 
 <h2>Resumen</h2>
 <p>
-	<img alt="man in the middle" src="../../../images/maninthemiddle.png">
+	<img alt="manipulator in the middle" src="../../../images/manipulatorinthemiddle.png">
 </p>
 <p>
 	En palabras resumidas, cada dato enviado y recibido del servidor se encripta/desencripta utilizando el certificado original del servidor dentro de ZAP. De esta manera, ZAP conoce el texto plano.
 	Para establecer una sesión protegida por SSL para ti (tu navegador), ZAP utiliza su propio certificado. Este es el que puedes crear.
-	Cada certificado creado por ZAP será firmado por el mismo nombre del servidor. En el ejemplo superior, ZAP creará un certificado para el nombre de servidor "www.example.com". De esta manera, tu navegador realizará la encriptación SSL normal.
+	Cada certificado creado por ZAP será firmado por el mismo nombre del servidor. In the example above, ZAP will create a certificate
+	for the server's name <code>www.example.com</code>. De esta manera, tu navegador realizará la encriptación SSL normal.
 </p>
 
 
@@ -39,19 +41,26 @@ Certificados SSL Dinámicos
 	(Para más detalles sobre la cadena de confianza, utiliza tu motor de búsqueda favorito ;-) )
 Esto significa, tú (tu navegador) solo debes confiar en el certificado ZAP Root CA una vez, y cualquier otro certificado será aceptado automáticamente. En otras palabras, una vez hayas agregado el certificado ZAP Root CA a tu lista de Root CAs de confianza, tu navegador no reconoce un ataque intermediario. 
 </p>
+<p>
+	<strong>Note:</strong>
+	<blockquote>On iOS 10.3 and onwards, you also need to enable full trust for the root certificate:
+	
+	Go to Settings > General > About > Certificate Trust Settings.
+	Under “Enable full trust for root certificates”, turn on trust for the certificate.</blockquote>
+</p>
 
 <h3>Generar</h3>
 <p>
-	Si estás ejecutando ZAP por primera vez, debes generar un certificado Root CA primero.
-	Una vez hayas generado uno, debes instalarlo en tu navegador 
-o aplicación de cliente HTTP. Ve la sección de <a href="#install">instalación</a>
-para más detalles.
+	When you are running ZAP for the first time then it will generate a Root CA certificate just for you.
+	If you do not use the 'browser launch' feature then you have to install it within your browser 
+	or HTTP client application. See section <a href="#install">installation</a> 
+	for more details.
 </p>
 <p>
-	Cada certificado Root CA generado es válido por un año. Después de este periodo debes
-crear uno nuevo.<br>
-Cada certificado Root CA generado tiene fortaleza de 2048 bit (RSA con SHA1).<br>
-Cada certificado Root CA generado inicia con número de serial "1". 
+	Every generated Root CA certificate is valid for one year. After that period you have
+	to create a new one.<br>
+	Every generated Root CA certificate is 2048 bit strong (RSA with SHA1).<br>
+	Every generated Root CA certificate starts with serial number "1". 
 	Every generated Root CA certificate consists of the following identifiers:
 </p>
 <p style="padding-left: 20pt;">
@@ -64,18 +73,26 @@ Cada certificado Root CA generado inicia con número de serial "1".
 	</code>
 </p>
 <p>
-	Como se puede ver, hay un identificador de localización (L) que es sólo un número hexadecimal.
-	Este número se construye fuera de dos códigos de hash de 32 bits: nombre de usuario y directorio home del usuario.
-	De esta manera puede identificar su propio certificado al utilizar múltiples instalaciones.
-	Pero no hay manera de que alguien pueda encontrar tu nombre de este código de hash.
+	As you can see, there's a Location identifier (L) which is only a hexadecimal number.
+	This number is constructed out of two 32bit hash codes: user's name and user's home directory.
+	This way you can identify your own certificate when using multiple installations.
+	But there's no way, that anyone can figure out your name from this hash code.
 </p>
 
 <h3>Importar</h3>
 <p>
-	Cuando está utilizando la instalación múltiple de ZAP y desea usar el mismo certificado de CA raíz, para que pueda importarlo. Simply use one installation of OWASP ZAP
+	When you're using multiple ZAP installation and you want to use the same
+	Root CA certificate, so you can import it. Simply use one installation of OWASP ZAP
 	to generate one Root CA certificate.<br>
 	Copy the file 'OWASP ZAP/config.xml' from your users home directory to 
 	the PC, where you want to use the same certificate and press 'import' to import it.
+</p>
+<p>
+	Alternatively you can use the <a href="../../../cmdline.html">command line</a> options:
+	<ul>
+	<li>-certfulldump &lt;path&gt; to dump the certificate from one ZAP instance
+	<li>-certload &lt;path&gt; to load the certificate into another ZAP instance
+	</ul>
 </p>
 <p>
 	You can also import certificates stored in pem files as long as they include both
@@ -120,27 +137,34 @@ And yes, that example will work - its the Superfish certificate!
 
 <h3><a name="view">Ver</a></h3>
 <p>
-	En el cuadro de diálogo de opciones de ZAP, está viendo los bytes sin formato (hexadecimales codificados) del certificado. La opción "view" intenta usar la herramienta de visualización predeterminada de su sistema para los archivos ".CER". En Windows, esto suele ser el mismo, al exportar el certificado y hacer doble clic en él.
+	In the options dialog of ZAP you're seeing the raw bytes (hexa-decimal encoded)
+	of the certificate. The option "view" tries to use your system's default
+	viewing tool for ".CER" files. On Windows, this is typically the same,
+	when exporting the certificate and double clicking on it.
 </p>
 
 <h3>Guardar/Exportar</h3>
 <p>
-	En el cuadro de diálogo de opciones de ZAP, está viendo los bytes sin formato (hexadecimales codificados) del certificado. Muchos programas usan este formato simple para funciones de importación / exportación. Al hacer clic en "export", estos bytes se guardan en el disco.
-	Esto es igual a seleccionar todo y hacer CTRL + C (copiar al portapapeles) y guardarlo en un nuevo archivo .CER (que es texto simple como se ve en el cuadro de diálogo).
+	In the options dialog of ZAP you're seeing the raw bytes (hexa-decimal encoded)
+	of the certificate. Many programs are using this simple format for import/export
+	functions. When clicking 'export', these bytes are saved to disk.
+	This is equal to selecting all and doing CTRL+C (copy to clipboard) and
+	save it into a new .CER file (which is simple text as you see in the dialog).
 </p>
 
 <h2><a name="dynamic_certificates">Certificados SSL Dinámicos</a></h2>
 <p>
-	Cada instancia de ZAP está usando su propio certificado raíz. Por supuesto, puede importar certificados raíz para usarlos en varias máquinas.
-	Cuando se ejecuta, habrá sub-certificado creado, cada vez que un HTTPS
-recurso solicitado
-	Eso significa que el certificado de CA raíz se usa como emisor.
+	Each ZAP instance is using it's own root certificate. Of course, you can
+	import root certificates, to use them on multiple machines.
+	When running, there will be sub-certificated created, each time a HTTPS 
+	resource is requested.
+	That means, the Root CA certificate is used as an issuer.
 </p>
 <p>
-	Cada certificado generado dinámicamente es válido por 1000 días. <br>
-Cada certificado generado dinámicamente tiene una potencia de 2048 bits (RSA con SHA1). <br>
-Cada certificado generado dinámicamente tiene un número de serie aleatorio. 
-	Cada certificado generado dinámicamente consta de los siguientes identificadores:
+	Every dynamically generated certificate is valid for 1000 days.<br>
+	Every dynamically generated certificate is 2048 bit strong (RSA with SHA1).<br>
+	Every dynamically generated certificate has a random serial number. 
+	Every dynamically generated certificate consists of the following identifiers:
 </p>
 <p style="padding-left: 20pt;">
 	<code>
@@ -153,49 +177,56 @@ Cada certificado generado dinámicamente tiene un número de serie aleatorio.
 </p>
 <p>
 	<i>
-Nota al margen:
-Cada vez que inicia ZAP, internamente se genera un desplazamiento de número de serie aleatorio.
-		Cada certificado generado dinámicamente usará este desplazamiento más un
-aumentar el contador. Por ejemplo, primero se ha certificado dinámicamente
-número de serie 2314, el segundo 2315, el tercero 2316 y así sucesivamente.
-		La razón de esto es simple: los navegadores también están almacenando certificados en caché.
-		Cuando reinicie ZAP pero no reinicie su navegador, podría suceder,
-el navegador ve el mismo certificado pero con un número de serie diferente.
-		Al final, el navegador se quejaría y rechazaría el certificado.
-		Al usar el desplazamiento aleatorio (número aleatorio interno de 48 bits), las posibilidades
-son 1 a 281.474.976.710.656 que al reiniciar ZAP, el número de serie
-el desplazamiento es diferente. <br>
-En el raro caso, está descubriendo que su navegador se queja de
-un número de serie roto dentro del certificado, solo reinicie su navegador ;-)
-</>.
+		Side note:
+		Each time you start ZAP, internally a random serial number offset is generated.
+		Every dynamically generated certificate will use this offset plus an
+		increasing counter. For example, first dynamically certificate has 
+		serial number 2314, the second one 2315, the third one 2316 and so on.
+		The reason for this is simple: browsers are also caching certificates.
+		When you restart ZAP but don't restart your browser, it could happen,
+		that the browser sees the same certificate but with different serial number.
+		In the end, the browser would complain about and reject the certificate.
+		By using the random offset (internally 48bit random number), the chances
+		are 1 to 281.474.976.710.656 that when restarting ZAP, the serial number
+		offset is a different one.<br>
+		So in the rare case, you are discovering that you browser complains about
+		a broken serial number within the certificate, just restart your browser ;-)
+	</i>.
 </p>
 
-<h2><a name="install">Install ZAP Root CA certificate</a></h2>
+<h2><a name="install">¿Como Instalar el Certificado Raíz de la AC de ZAP?</a></h2>
 <p>
-	Cualquier cliente HTTPS para utilizar, tiene que saber el certificado CA raíz de la OWASP como 'certificado raíz de confianza'. Por lo general usted tiene que instalar manualmente el certificado ZAP en lista del explorador de certificados raíz de confianza.
+	Any HTTPS client you want to use, has to know the OWASP Root CA certificate
+	as 'trusted root certificate'. Typically you have to install manually the
+	ZAP certificate into your browser's list of trusted root certificates.
 </p>
 <h3>Windows / Internet Explorer</h3>
 <p>
-	La manera más fácil es hacer click en <a href="#view">ver</a> y escoger 'Instalar certificado'. Alternativamente, puedes guardar/exportar tu certificado generado (copiarlo a tu computadora destino) y hacer doble click en el archivo .CER. 
-	Al hacer esto, el asistente usual de Windows para la asistencia en instalación de certficados se mostrará.
-	En este asistente selecciona manualmente la tienda de certificado. NO permitas que Windows seleccione la tienda de certificado automáticamente.
-	Elija 'Trusted Root Certificates' como almacen y finalice el asistente.
+	The easiest way is to click on <a href="#view">view</a> and choose
+	'Install certificate'. Alternatively, you can save/export your generated
+	certificate (copy it to you target computer) and double click the .CER file. 
+	When doing so, the regular Windows wizard for certificate installation
+	assistance is poping up.
+	In this wizard manually choose the certificate store. Do NOT let
+	Windows choose automatically the certificate store.
+	Choose 'trusted root certificates' as store and finalize the wizard.
 </p>
 <p>
-	Después de una instalación satisfactoria, puedes revisar el certificado.
+	After successfully installation, you can check the certificate.
 </p>
 	<ol>
 	<li>Ir a opciones de Internet</li>
 	<li>Contenido de la Pestaña</li>
 	<li>Haz click en certificados</li>
 	<li>Haz click en la pestaña de certificados de raíz de confianza</li>
-	<li>The OWASP ZAP Root CA should be there</li>
+	<li>El The OWASP ZAP Root CA debería estar allí</li>
 	</ol>
 
 <h3>Mozilla Firefox</h3>
 <p>
-	Firefox usa su propia tienda de certificados. Es por esto que debes importarlo dos veces, cuando utilices ambos navegadores en Windows.
-	La instalación y validación tardía se realiza en el mismo cuadro de diálogo de preferencia:
+	Firefox is using it's own certificate store. Thats why you have to
+	import it twice, when you're using both browser on windows.
+	Installation and late on validation is done in the same preferences dialog:
 </p>
 	<ol>
 	<li>Ir a Preferencias</li>
@@ -210,10 +241,13 @@ un número de serie roto dentro del certificado, solo reinicie su navegador ;-)
 
 <h2 style="color: red; font-weight: bold; text-decoration: underline;">Riesgos</h2>
 <p>
-	<b>Atención, ¡hay riesgos!</b><br>
-Cuando se agregan certificados Root CA autogenerados a la lista de certificados de raíz de confianza,
-toda persona con el certificado raíz puede introducir datos a tu sistema (navegador).
-	En otras palabras cuando no estás realizando pruebas en un entorno seguro, sino en máquinas en producción, ten en cuenta que estás abriendo un vector de ataque adicional a tu sistema.  
+	<b>Attention, there are risks!</b><br>
+	When adding self generated Root CA certificates to your list of trusted 
+	root certificates, everyone with the root certificate can smuggle data
+	into your system (browser).
+	In other words when you're not testing in a safe environment, but on
+	productive machines, be aware that you're opening an additional attack
+	vector to your system.  
 </p>
 
 <h2>Vease también</h2>

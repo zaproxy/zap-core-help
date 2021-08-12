@@ -6,12 +6,13 @@
 Komandna Linija
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Komandna Linija</h1>
 
 To run ZAP via the command line, you will need to locate the ZAP startup script.<br/>
 <strong>Windows:</strong><br/>
 <pre>C:\Program Files (x86)\OWASP\Zed Attack Proxy\zap.bat</pre>
+<strong>Note:</strong> The command line options are not used by the executable (<code>zap.exe</code>) only the bat file.<br/><br/>
 <strong>Mac:</strong><br/>
 <pre>/Applications/OWASP\ ZAP.app/Contents/Java/zap.sh</pre>
 <strong>Linux:</strong><br/>
@@ -31,7 +32,7 @@ ZAP supports the following command line options:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-daemon</td><td>Starts ZAP in daemon mode, ie without a UI</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-config &lt;kvpair&gt;</td><td>Overrides the specified key=value pair in the configuration file. <code>-config</code> command line options are applied in the order they are specified.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-configfile &lt;path&gt;</td><td>Overrides the key=value pairs with those in the specified properties file</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-dir &lt;dir&gt;</td><td>Uses the specified directory instead of the default one</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-dir &lt;dir&gt;</td><td>Uses the specified directory as home directory, instead of the default one. To prevent add-ons (inadvertently) use/override core files ZAP will not start (and show an error) if the home and the installation directories are the same.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-installdir &lt;dir&gt;</td><td>Overrides the code that detects where ZAP has been installed with the specified directory</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-h</td><td>Shows all of the command line options available, including those added by add-ons</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-help</td><td>The same as -h</td></tr>
@@ -41,14 +42,20 @@ ZAP supports the following command line options:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-port &lt;port&gt;</td><td>Overrides the port used for proxying specified in the configuration file</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-lowmem</td><td>Use the database instead of memory as much as possible - this is still experimental</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-experimentaldb</td><td>Use the experimental generic database code, which is not surprisingly also still experimental</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstall &lt;addon&gt;</td><td>Install the specified add-on from the ZAP Marketplace</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-nostdout</td><td>Disables the default logging through standard output</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-silent</td><td>Ensures ZAP does not make any unsolicited requests, including check for updates</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstall &lt;addOnId&gt;</td><td>Installs the add-on with specified ID from the ZAP Marketplace. The IDs of the add-ons available in the marketplace can be consulted in the Marketplace tab of <a href="ui/dialogs/manageaddons.html">Manage Add-ons dialogue</a>.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstallall</td><td>Install all available add-ons from the ZAP Marketplace</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonuninstall &lt;addon&gt;</td><td>Uninstall the specified add-on</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonuninstall &lt;addOnId&gt;</td><td>Uninstalls the add-on with specified ID. Use <code>-addonlist</code> or check the Installed tab of <a href="ui/dialogs/manageaddons.html">Manage Add-ons dialogue</a> to know the IDs of the installed add-ons.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonupdate</td><td>Update all changed add-ons from the ZAP Marketplace</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonlist</td><td>List all of the installed add-ons</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-script &lt;script&gt;</td><td>Run the specified script (file system path) if command line/daemon, or just load it if GUI</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-last_scan_report &lt;path&gt;</td><td>Generate the 'Last Scan Report' into the specified path</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-suppinfo</td><td>Outputs details relevant for support and troubleshooting (to the console/standard out). Such as: ZAP version, java version, installed add-ons and version, locale info, operating system, etc.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-certload &lt;path&gt;</td><td>Loads the Root CA certificate from the specified file name</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-certpubdump &lt;path&gt;</td><td>Dumps the Root CA public certificate into the specified file name, this is suitable for importing into browsers</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-certfulldump &lt;path&gt;</td><td>Dumps the Root CA full certificate (including the private key) into the specified file name, this is suitable for importing into ZAP</td></tr>
+
 </table>
 <br>
 The options <code>-session</code> and <code>-newsession</code> are mutually exclusive. An error will be shown and ZAP exit (if not in GUI) when both options are set.
@@ -75,7 +82,7 @@ Examples:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="intro.html">Uvod</a></td><td>uvod u ZAP</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="start/concepts/api.html">API</a></td><td>to control ZAP programmatically</td></tr>
+<a href="start/features/api.html">API</a></td><td>to control ZAP programmatically</td></tr>
 </table>
 
 </body>

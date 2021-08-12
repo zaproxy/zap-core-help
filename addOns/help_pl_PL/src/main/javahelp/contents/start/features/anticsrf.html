@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Anti CSRF Handling
+</title>
+</head>
+<body>
+<h1>Anti CSRF Tokens</h1>
+<p>
+Anti CSRF tokens are (pseudo) random parameters used to protect against Cross Site Request Forgery (CSRF) attacks.<br>
+However they also make a penetration testers job harder, especially if the tokens are regenerated every time a form is requested.<br>
+</p>
+<p>
+ZAP detects anti CSRF tokens purely by attribute names - the list of attribute names considered to be anti CSRF tokens
+is configured using the <a href="../../ui/dialogs/options/anticsrf.html">Options Anti CSRF screen</a>.<br/>
+When ZAP detects these tokens it records the token value and which URL generated the token.<br/>
+Other scanners, like <a href="ascan.html">active scanner</a>, have options which
+cause ZAP to automatically regenerate the tokens when required.
+</p>
+
+<h2>Zobacz również</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="features.html">Features</a></td><td>provided by ZAP</td></tr>
+</table>
+
+</body>
+</html>

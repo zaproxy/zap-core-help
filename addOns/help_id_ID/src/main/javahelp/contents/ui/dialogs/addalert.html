@@ -6,10 +6,11 @@
 Menambahkan dialog peringatan
 </title>
 </head>
-<body bgcolor="#ffffff">
-<h1>Tambahkan Alert dialog</h1>
+<body>
+<h1>Tambahkan dialog peringatan</h1>
 <p>
-Dialog ini memungkinkan anda untuk menambahkan secara manual atau mengubah <a href="../../start/concepts/alerts.html">Alert</a> terkait dengan permintaan tertentu.<br/>
+This dialog allows you to manually add or change an <a href="../../start/features/alerts.html">Alert</a> associated
+with a specific request.<br/>
 </p>
 
 <h2>Bidang</h2>
@@ -22,21 +23,21 @@ Jika anda memilih salah satu dari tipe yang ada lalu Deskripsinya, Solusi dan In
 akan ditempatkan dengan teks yang berhubungan dengan item yang anda pilih. 
 
 <h3>Resiko</h3>
-Tarik ke bawah bidang yang memungkinkan Anda untuk menentukan seberapa serius Anda berpikir risiko adalah:
+Bidang pull down memungkinkan anda untuk menentukan seberapa serius risiko tersebut menurut anda:
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Informasi</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Lemah</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Rendah</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Sedang</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tinggi</td><td></td></tr>
 </table>
 
 <h3>Kepercayaan</h3>
-Tarik ke bawah bidang yang memungkinkan Anda untuk menentukan seberapa yakin Anda berada di validitas menemukan:
+Bidang pull down memungkinkan anda untuk menentukan seberapa anda yakin terhadap validitas temuan:
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Positif palsu</td><td>untuk isu-isu potensial yang Anda kemudian menemukan tidak exploitasi</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Lemah</td><td>untuk masalah yang belum dikonfirmasi</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Sedang</td><td>untuk masalah Anda agak yakin</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tinggi</td><td>untuk temuan sangat percaya diri dalam</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Positif palsu</td><td>untuk masalah potensial yang nantinya anda temukan tidak dapat dieksploitasi</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Rendah</td><td>untuk masalah yang belum dikonfirmasi</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Sedang</td><td>untuk masalah yang sedikit anda yakini</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tinggi</td><td>untuk temuan yang sangat anda yakini</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Konfirmasi</td><td>untuk masalah yang dikonfirmasi</td></tr>
 </table>
 
@@ -44,17 +45,17 @@ Tarik ke bawah bidang yang memungkinkan Anda untuk menentukan seberapa yakin And
 Tarik ke bawah bidang yang memungkinkan Anda untuk menentukan parameter yang masalah terkait dengan.<br/>
 Bidang diisi dengan parameter URL dan formulir mana pun, namun kamu juga dapat memasukkan nama parameter kamu sendiri.<br />
 Parameter Array (pada komponen kueri URL dan <code>x-www-form-urlencoded</code> permintaan badan) yang diidentifikasi dengan indeknya. Sebagai
-contoh, untuk permintaan yang mengandung <code>choices[]=ChoiceA&amp;choices[]=ChoiceB</code> parameter pertamanya itu akan diidentifikasi
-sebagai <code>choices[0]</code> and the second as <code>choices[1]</code>.
+contoh, untuk permintaan yang mengandung <code>pilihan[]=ilihanA&amp;pilihan[]=ChoiceB</code> parameter pertamanya itu akan diidentifikasi
+sebagai <code>pilihan[0]</code> dan yang kedua sebagai <code>pilihan[1]</code>.
 
 <h3>Deskripsi</h3>
-A general description of the type of issue found.<br/>
-Ini adalah padat bila Anda memilih salah satu jenis standar, tetapi Anda juga dapat mengubah seperti yang diperlukan.<br/>
+Deskripsi umum dari jenis masalah yang ditemukan.<br/>
+Ini diisi ketika anda memilih salah satu jenis yang telah ditentukan, namun anda juga bisa mengubahnya sesuai dengan kebutuhan.<br/>
 Catat bahwa setiap perubahan yang anda buat akan hilang jika anda memilih tipe yang lainnya.
  
 <h3>Info Lainnya</h3>
-Information specific to the particular issue you have found.<br/>
-This is not prepopulated.
+Informasi khusus untuk masalah tertentu yang anda temukan.<br/>
+Ini belum terisi.
 
 <h3>Solusi</h3>
 Rekomendasi mengenai bagaimana untuk memperbaiki suatu masalah.<br/>
@@ -63,8 +64,8 @@ Perhatikan bahwa perubahan apapun yang anda lakukan akan bisa hilang jika anda m
  
 <h3>Referensi</h3>
 Satu atau beberapa URL yang mengarah kepada informasi lebih lanjut pada internet tentang tipe peringatan yang terpilih.<br/>
-This is populated when you select one of the predefined types, but you can also change it as required.<br/>
-Note that any changes you make will be lost if you select another type.
+Ini diisi ketika anda memilih salah satu dari tipe yang telah ditentukan, namun anda juga dapat mengubahnya sesuai kebutuhan.<br/>
+Perhatikan bahwa setiap perubahan yang anda lakukan akan hilang jika anda memilih jenis lain.
  
 <h2>Diakses melalui</h2>
 <table>

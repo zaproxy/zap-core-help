@@ -6,10 +6,11 @@
 Diálogo Acrescentar Alerta
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Diálogo Acrescentar Alerta</h1>
 <p>
-Esta caixa de diálogo permite que você manualmente adicione ou altere um <a href="../../start/concepts/alerts.html">alerta</a> associado a uma request específica.<br/>
+This dialog allows you to manually add or change an <a href="../../start/features/alerts.html">Alert</a> associated
+with a specific request.<br/>
 </p>
 
 <h2>Campos</h2>
@@ -18,8 +19,7 @@ A caixa de diálogo possui os seguintes campos:
 <h3>Tipo</h3>
 O tipo do alerta é um campo 'pull down' que permite a você selecionar um conjunto de tipos de problemas já definidos.<br/>
 Você também pode inserir seu próprio texto ou alterar o texto de um dos itens selecionados.<br/>
-If you select one of the existing types then the Description, Solution and Other Info fields
-will be populated with text associated with the item you chose. 
+Se você selecionar um dos tipos existentes, então os campos Descrição, Solução e Outras Informações serão preenchidos com texto associado ao item que você escolheu. 
 
 <h3>Risco</h3>
 Um campo pull down que permite a você especificar o grau de risco:
@@ -43,28 +43,26 @@ Um campo pull down que permite a você especificar seu grau de confiança sobre 
 <h3>Parâmetro</h3>
 Um campo pull down que permite a você especificar a que parâmetro o problema está associado.<br/>
 O campo é previamente preenchido com quaisquer parâmetros encontrados de URL ou formulário, mas você também pode inserir seu próprio nome de parâmetro.<br />
-Array parameters (in URL query component and <code>x-www-form-urlencoded</code> request body) are identified with its index. For
-example, for a request containing <code>choices[]=ChoiceA&amp;choices[]=ChoiceB</code> the first parameter would be identified
-as <code>choices[0]</code> and the second as <code>choices[1]</code>.
+A matriz de parâmetros (no componente de query da URL <code>x-www-form-urlencoded</code> no corpo da requisição) é identificada com o seu índice. Por exemplo, para uma requisição contendo <code>escolhas[]=EscolhaA&amp;escolhas[]=EscolhaB</code> o primeiro parâmetro será identificado como <code>escolhas[0]</code> e o segundo como <code>escolhas[1]</code>.
 
 <h3>Descrição</h3>
-A general description of the type of issue found.<br/>
+Uma descrição geral do tipo de problema encontrado.<br/>
 Isto é preenchido quando você seleciona um dos tipos predefinidos, mas você também pode alterá-lo conforme necessário.<br/>
 Observe que as alterações feitas serão perdidas se você selecionar outro tipo.
  
 <h3>Outras informações</h3>
-Information specific to the particular issue you have found.<br/>
-This is not prepopulated.
+Informações específicas para o problema que você encontrou.<br/>
+Isto não é previamente preenchido.
 
 <h3>Solução</h3>
-Recommendations about how to fix the issue.<br/>
-This is populated when you select one of the predefined types, but you can also change it as required.<br/>
-Note that any changes you make will be lost if you select another type.
+Recomendações sobre como corrigir o problema.<br/>
+Isto é preenchido quando você seleciona um dos tipos predefinidos, mas você também pode alterá-lo conforme necessário.<br/>
+Observe que as alterações feitas serão perdidas se você selecionar outro tipo.
  
 <h3>Referência</h3>
-One or more URLs pointing to more information on the internet about the selected type of alert.<br/>
-This is populated when you select one of the predefined types, but you can also change it as required.<br/>
-Note that any changes you make will be lost if you select another type.
+Uma ou mais URLs apontando para mais informações na internet sobre o tipo de alerta selecionado.<br/>
+Isto é preenchido quando você seleciona um dos tipos predefinidos, mas você também pode alterá-lo conforme necessário.<br/>
+Observe que as alterações feitas serão perdidas se você selecionar outro tipo.
  
 <h2>Acessado via</h2>
 <table>

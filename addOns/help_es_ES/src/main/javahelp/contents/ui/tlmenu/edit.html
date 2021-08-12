@@ -6,40 +6,44 @@
 El menú "Editar"
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>El menú Editar</h1>
-Este menú se encarga de encontrar cadenas en pestañas específicas, buscando cadenas por todas las solicitudes y respuestas y gestionando el rastreo de sesión.
+This menu handles finding strings in specific tabs, searching for strings across all 
+requests and responses, changing ZAP's mode, and managing forced user mode.
 
-<h3>Buscar...</h3>
-Esto abre el <a href="../dialogs/find.html">Cuadro de diálogo Encontrar</a> que permite encontrar una cadena en la ventana seleccionada actual.<br/>
+<h3>ZAP Mode</h3>
+This allows you to change the current <a href="../../start/features/modes.html">mode</a>.
 
-<h3>Habilitar seguimiento de la sesión (Cookie)</h3>
-Esto permite rastrear los detalles de la sesión almacenada en cookies.<br/>
-Esta opción debe seleccionarse para habilitar la casilla "Utilizar la sesión de rastreo actual" en los cuadros de diálogos <a href="../dialogs/resend.html">Reenviar</a> y en la  
-<a href="../dialogs/man_req.html">Editor de solicitudes manuales</a>. <br/>
-El rastreo de sesión asegura que cualquier solicitud sea enviada con los detalles de la sesión actualizados.<br/>
-Por ejemplo, se puede registrar una sesión cuando se ingrese como un usuario y que cierre sesión e ingresar como otro usuario.<br/>
-Si reenvias una solicitud desde la primera sesión sin el rastreo de sesión entonces utilizará las cookies de la primera sesión.<br/>
-Si se reenvia la misma solicitud con el rastreo de sesión entonces utilizará las cookies de la segunda sesión.
+<h3>Find...</h3>
+This opens the <a href="../dialogs/find.html">Find dialog</a> which allows you to find a string in the currently selected window.<br/>
 
-<h3>Reiniciar estado de la sesión</h3>
-Esto borra el rastreo de la sesión.<br/>
+<h3>Search...</h3>
+This sub-menu facilitates access to the following items:
 
-<h3>Buscar...</h3>
-Esto selecciona el <a href="../tabs/search.html">Pestaña de búsquedas</a> el cual le permite buscar expresiones regulares en todos los enlaces, solicitudes y respuestas..
+<h4>Search...</h4>
+This selects the <a href="../tabs/search.html">Search tab</a> which allows you to search for regular expressions
+in all URLs, requests, and responses.
 
-<h3>Siguiente</h3>
-Esto selecciona la siguiente ocurrencia de la última cadena buscada.<br/>
-El mensaje relevante se seleccionará en la pestaña Buscar y la cadena se mostrará y resaltará en la pestaña <a href="../tabs/request.html">Solicitud</a> o
-<a href="../tabs/response.html">Respuesta</a> según corresponda.
+<h4>Next Result</h4>
+This selects the next occurrence of the last string searched for.<br/>
+The relevant message will be selected in the Search tab and the string will be displayed
+and highlighted in the <a href="../tabs/request.html">Request</a> or
+<a href="../tabs/response.html">Response</a> tab as appropriate.
 
-<h3>Anterior</h3>
-Esto selecciona las ocurrencias anteriores de la última cadena buscada.<br/>
-El mensaje relevante será seleccionado en la pestaña de búsqueda y la cadena será mostrada <a href="../tabs/request.html">Petición</a> o
-<a href="../tabs/response.html">Respuesta</a> según la pestaña que corresponda.
+<h4>Previous Result</h4>
+This selects the previous occurrence of the last string searched for.<br/>
+The relevant message will be selected in the Search tab and the string will be displayed
+and highlighted in the <a href="../tabs/request.html">Request</a> or
+<a href="../tabs/response.html">Response</a> tab as appropriate.
+
+<h3>Enable / Disable Forced User Mode</h3>
+This switches forced user mode on and off.<br/>
+The menu item is only enabled when you have defined a forced user for at least one 
+<a href="../../start/features/contexts.html">context</a>, which can be done via the 
+<a href="../dialogs/session/contexts.html">Session Contexts</a> dialog.
 
 <p>
-Tome en cuenta que los <a href="../../start/concepts/addons.html">add-ons</a> pueden agregar elementos adicionales al menú.
+Note that <a href="../../start/features/addons.html">add-ons</a> can add additional menu items.
 </p>
 
 <h2>Vease también</h2>

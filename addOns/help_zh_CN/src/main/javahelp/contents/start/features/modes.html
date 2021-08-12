@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+模式
+</title>
+</head>
+<body>
+<h1>模式</h1>
+<p>
+ZAP的模式可以是：
+<ul>
+<li>安全 - 不允许有潜在危险的操作</li>
+<li>受保护 - 您只能对<a href="scope.html">范围</a>中的网址执行（可能的）危险操作</li>
+<li>标准 - 和以前的版本一样，您可以做任何事情</li>
+<li>攻击 - 一旦发现<a href="scope.html">范围</a>中的新节点，就立即进行<a href="ascan.html">主动扫描</a></li>
+</ul>
+建议您使用保护模式来确保您只攻击您指定的网站。<br/><br/>
+
+The mode can be changed via the <a href="../../ui/tltoolbar.html">toolbar</a>
+(or the ZAP API) and is persisted between sessions.<br/><br/>
+
+在不对范围中的网址进行操作时，在安全模式或保护模式下无法实现的示例：
+
+<ul>
+<li>抓取</li>
+<li>主动扫描</li>
+<li>模糊化</li>
+<li>强制浏览</li>
+<li>中断</li>
+<li>重新发送请求</li>
+</ul>
+
+您可以定义 <a href="scanpolicy.html">扫描策略</a> to be used for the Attack mode the <a href="../../ui/dialogs/options/ascan.html">Options Active Scan screen</a>.<br>
+
+<h2>请参阅</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/overview.html">UI综览</a></td><td>有关用户界面的概述</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="features.html">功能</a></td><td>由ZAP提供</td></tr>
+</table>
+
+</body>
+</html>

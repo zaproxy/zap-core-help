@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Alertas
+</title>
+</head>
+<body>
+<h1>Alertas</h1>
+<p>
+Una alerta es una vulnerabilidad potencial y se asocia con una petición específica. <br/> Una solicitud puede tener más de una alerta.<br/>
+</p>
+<p>
+Alertas se muestran en la interfaz de usuario con una bandera que indica el riesgo:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/071.png" align="bottom" width="16" height="16" />&nbsp; Alto</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/076.png" align="bottom" width="16" height="16" />&nbsp; Medio</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/074.png" align="bottom" width="16" height="16" />&nbsp; Bajo</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/073.png" align="bottom" width="16" height="16" />&nbsp; Informativo</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/072.png" align="bottom" width="16" height="16" />&nbsp; Falso positivo</td><td></td></tr>
+</table>
+
+<p>
+Alertas pueden ser levantados por varios componentes ZAP, incluyendo pero no limitado a: <a href="ascan.html">exploración activa</a>, <a href="pscan.html">escaneo pasivo</a>, scripts, addons (extensiones), o manualmente usando el <a href="../../ui/dialogs/addalert.html">cuadro de diálogo Agregar alerta</a> (que también le permite actualizar o cambiar los datos de alerta / información).
+</p>
+<p>
+Alertas están marcados en la <a href="../../ui/tabs/history.html">ficha historial</a> con una bandera que indica que la alerta máxima de riesgo. <br/> Todas las alertas aparecen en la <a href="../../ui/tabs/alerts.html">pestaña de alertas</a> y en el <a href="../../ui/footer.html">pie de página</a> se muestra un recuento del número total de alertas por riesgo.
+</p>
+
+<a name="alertoverrides"></a><h2>Alerta de sobreescritura</h2> 
+
+Alertas por ZAP incluyen información genérica y específica sobre las alertas levantado.
+La información específica se relaciona directamente con el posible problema encontrado, tal como el URL y el parámetro afectado.
+La información genérica incluye cosas como una descripción y vínculos a recursos en línea relacionados.
+<p>
+Puede reemplazar o agregar información genérica utilizando un archivo de configuración de "anulación de alerta".
+Esto le permite incluir información específica a las políticas de la empresa tales como el mandato, enlaces internos o Consejo para tecnologías específicas que utilizas.
+<p>
+Un archivo de configuración de alerta de la anulación es un archivo de propiedades de UTF-8 que contiene sólo la información que le gustaría cambiar. Líneas que comienzan con '#' son tratadas como comentarios y no hizo caso.
+<p>
+El formato es:
+<pre>
+&lt;alertid&gt;.&lt;property&gt; = [ + | - ] &lt;your information&gt;
+</pre>
+Están compatible con las siguientes propiedades:
+<ul>
+<li>nombre</li>
+<li>Descripción</li>
+<li>Solución</li>
+<li>otherInfo</li>
+<li>Referencia</li>
+</ul>  
+
+Por ejemplo
+<pre>
+# 40012 = XSS reflejado
+40012.solution = Sigue las directrices específicas de nuestra compañía en http://internet.example.com/xss.html
+</pre>
+Si el valor comienza con un '+' entonces se agrega a la información existente.
+<br>
+Si el valor comienza con un '+' entonces se agrega a la información existente.
+<br>
+Si no se inicia con un '+' o '-' entonces reemplaza la información existente.
+<p>
+El archivo de configuración de alerta de anulación puede ser especificado a través de la <a href="api.html">API</a>,
+<a href="../../ui/dialogs/options/alert.html">Pantalla de alerta de opciones</a>
+o el uso de la <a href="../../cmdline.html">línea de comando</a> opciones:  
+<pre>-config alert.overridesFilename=&lt;filename&gt;</pre>
+
+<h2>Véase también</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/overview.html">Resumen de IU</a></td><td>para tener una visión general de la interfaz de usuario</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="features.html">Caracteristicas</a></td><td>proporcionado por ZAP</td></tr>
+</table>
+
+</body>
+</html>

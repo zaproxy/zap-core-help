@@ -9,45 +9,50 @@
 	TOC merger is defined in org.zaproxy.zap.extension.help.ZapTocMerger.
 -->
 <toc version="2.0">
- <tocitem text="ZAP Panduan Pengguna" image="toplevelfolder" tocid="toplevelitem">
+ <tocitem text="ZAP Desktop User Guide" image="toplevelfolder" tocid="toplevelitem">
 
    <tocitem text="Perkenalan" target="zap.intro"/>
 
    <tocitem text="Memulai" target="start.start">
       <tocitem text="Konfigurasi proxy" target="start.proxy"/>
-      <!--tocitem text="Explore the application" target="start.explore"/-->
-      <tocitem text="Fitur" target="start.concepts">
-         <tocitem text="Scan Aktif" target="start.concepts.ascan"/>
-         <tocitem text="Add-ons" target="start.concepts.addons"/>
-         <tocitem text="Peringatan" target="start.concepts.alerts"/>
-         <tocitem text="Token Anti Anti CSRF" target="start.concepts.anticsrf"/>
-         <tocitem text="API" target="start.concepts.api"/>
-         <tocitem text="Otentikasi" target="start.concepts.auth"/>
-         <tocitem text="Poin-poin Break" target="start.concepts.breakpoints"/>
-         <tocitem text="Konteks" target="start.concepts.contexts"/>
-         <tocitem text="Filter" target="start.concepts.ddc"/>
-         <tocitem text="Filter" target="start.concepts.filters"/>
-         <tocitem text="URL Dilarang Secara Global" target="start.concepts.globalexcludeurl"/>
-         <tocitem text="Sesi HTTP" target="start.concepts.httpsessions"/>
-         <tocitem text="Man-in-the-middle Proxy" target="start.concepts.intercept"/>
-         <tocitem text="Mode" target="start.concepts.modes"/>
-         <tocitem text="Catatan" target="start.concepts.notes"/>
-         <tocitem text="Scan Pasif" target="start.concepts.pscan"/>
-         <tocitem text="Kebijakan Memindai" target="start.concepts.scanpolicy"/>
-         <tocitem text="Ruang lingkup" target="start.concepts.scope"/>
-         <tocitem text="Sesi Manajemen" target="start.concepts.sessmanag"/>
-         <tocitem text="Laba-laba" target="start.concepts.spider"/>
-         <tocitem text="Statistik" target="start.concepts.stats"/>
-         <tocitem text="Struktural Pengubah" target="start.concepts.structmods"/>
-         <tocitem text="Parameter Struktural" target="start.concepts.structparams"/>
-         <tocitem text="Tag" target="start.concepts.tags"/>
-         <tocitem text="Pengguna" target="start.concepts.users"/>
+      <tocitem text="Fitur" target="start.features">
+         <tocitem text="Scan Aktif" target="start.features.ascan"/>
+         <tocitem text="Tambahkan-ons" target="start.features.addons"/>
+         <tocitem text="Peringatan" target="start.features.alerts"/>
+         <tocitem text="Token Anti Anti CSRF" target="start.features.anticsrf"/>
+         <tocitem text="API" target="start.features.api"/>
+         <tocitem text="Otentikasi" target="start.features.auth"/>
+         <tocitem text="Authentication Methods" target="start.features.authmethods"/>
+         <tocitem text="Authentication Verification Strategies" target="start.features.authstrategies"/>
+         <tocitem text="Breakpoints" target="start.features.breakpoints"/>
+         <tocitem text="Callbacks" target="start.features.callbacks"/>
+         <tocitem text="Contexts" target="start.features.contexts"/>
+         <tocitem text="Custom Page" target="start.features.custompages"/>
+         <tocitem text="Data Driven Content" target="start.features.ddc"/>
+         <tocitem text="Globally Excluded URLs" target="start.features.globalexcludeurl"/>
+         <tocitem text="HTTP Sessions" target="start.features.httpsessions"/>
+         <tocitem text="Manipulator-in-the-middle Proxy" target="start.features.intercept"/>
+         <tocitem text="Marketplace" target="start.features.marketplace"/>
+         <tocitem text="Modes" target="start.features.modes"/>
+         <tocitem text="Notes" target="start.features.notes"/>
+         <tocitem text="Passive Scan" target="start.features.pscan"/>
+         <tocitem text="Scan Policies" target="start.features.scanpolicy"/>
+         <tocitem text="Scope" target="start.features.scope"/>
+         <tocitem text="Scripts" target="start.features.scripts"/>
+         <tocitem text="Session Management" target="start.features.sessmanag"/>
+         <tocitem text="Sites Tree" target="start.features.sitestree"/>
+         <tocitem text="Spider" target="start.features.spider"/>
+         <tocitem text="Statistics" target="start.features.stats"/>
+         <tocitem text="Structural Modifiers" target="start.features.structmods"/>
+         <tocitem text="Structural Parameters" target="start.features.structparams"/>
+         <tocitem text="Tags" target="start.features.tags"/>
+         <tocitem text="Users" target="start.features.users"/>
       </tocitem>
       <tocitem text="Scanner Aturan" target="start.check"/>
       <tocitem text="Sederhanakan Penetrasi Tes" target="start.pentest"/>
    </tocitem>
 
-   <tocitem text="Antarmuka pengguna" target="ui.overview">
+   <tocitem text="The Desktop User Interface" target="ui.overview">
       <tocitem text="Ikhtisar" target="ui.overview"/>
       <tocitem text="Menu tingkat atas" target="ui.topmenu"/>
       <tocitem text="Tingkat atas Toolbar" target="ui.toptoolbar"/>
@@ -58,78 +63,80 @@
          <tocitem text="Istirahat" target="ui.tabs.break"/>
          <tocitem text="Histori" target="ui.tabs.history"/>
          <tocitem text="Telusuri" target="ui.tabs.search"/>
-         <tocitem text="Poin-poin Break" target="ui.tabs.breakpoints"/>
+         <tocitem text="Breakpoints" target="ui.tabs.breakpoints"/>
          <tocitem text="Peringatan" target="ui.tabs.alerts"/>
          <tocitem text="Scan Aktif" target="ui.tabs.ascan"/>
          <tocitem text="Laba-laba" target="ui.tabs.spider"/>
          <tocitem text="Parameter" target="ui.tabs.params"/>
          <tocitem text="Parameter" target="ui.tabs.httpsessions"/>
-         <tocitem text="Output" target="ui.tabs.output"/>
+         <tocitem text="
+Keluaran" target="ui.tabs.output"/>
+         <tocitem text="Callbacks" target="ui.tabs.callbacks"/>
       </tocitem>
       <tocitem text="Dialog" target="ui.dialogs">
          <tocitem text="Scan Aktif" target="ui.dialogs.advascan"/>
          <tocitem text="Tambah Peringatan" target="ui.dialogs.addalert"/>
-         <tocitem text="Add Break Point" target="ui.dialogs.addbreak"/>
+         <tocitem text="Add/Edit Breakpoint" target="ui.dialogs.addbreak"/>
          <tocitem text="Tambahkan Catatan" target="ui.dialogs.addnote"/>
-         <tocitem text="Konsol BeanShell" target="ui.dialogs.enc_dec"/>
-         <tocitem text="Filter" target="ui.dialogs.filter"/>
-         <tocitem text="Menemukan" target="ui.dialogs.find"/>
-         <tocitem text="Cari" target="ui.dialogs.historyfilter"/>
-         <tocitem text="Penyunting Editor Manual" target="ui.dialogs.manreq"/>
-         <tocitem text="Mengelola Add-ons" target="ui.dialogs.manageaddons"/>
-         <tocitem text="Penyunting Editor Manual" target="ui.dialogs.managetags"/>
-         <tocitem text="Pilihan" target="ui.dialogs.options">
-         	<tocitem text="Scan Aktif" target="ui.dialogs.options.ascan"/>
+         <tocitem text="Find" target="ui.dialogs.find"/>
+         <tocitem text="History Filter" target="ui.dialogs.historyfilter"/>
+         <tocitem text="Manual Request Editor" target="ui.dialogs.manreq"/>
+         <tocitem text="Manage Add-ons" target="ui.dialogs.manageaddons"/>
+         <tocitem text="Manage Tags" target="ui.dialogs.managetags"/>
+         <tocitem text="Options" target="ui.dialogs.options">
+         	<tocitem text="Active Scan" target="ui.dialogs.options.ascan"/>
          	<tocitem text="Active Scan Input Vectors" target="ui.dialogs.options.ascaninput"/>
-         	<tocitem text="Peringatan" target="ui.dialogs.options.alert"/>
+         	<tocitem text="Alerts" target="ui.dialogs.options.alert"/>
          	<tocitem text="Anti CSRF Tokens" target="ui.dialogs.options.anticsrf"/>
          	<tocitem text="API" target="ui.dialogs.options.api"/>
             <tocitem text="Breakpoints" target="ui.dialogs.options.breakpoints"/>
             <tocitem text="Callback Address" target="ui.dialogs.options.callback"/>
          	<tocitem text="Certificate" target="ui.dialogs.options.certificate"/>
-         	<tocitem text="Periksa pembaruan" target="ui.dialogs.options.checkforupdates"/>
-			<tocitem text="Koneksi" target="ui.dialogs.options.connection"/>
+         	<tocitem text="Check for Updates" target="ui.dialogs.options.checkforupdates"/>
+			<tocitem text="Connection" target="ui.dialogs.options.connection"/>
 			<tocitem text="Database" target="ui.dialogs.options.database"/>
-         	<tocitem text="Tampilan" target="ui.dialogs.options.view"/>
-         	<tocitem text="Sertifikat SSL Dinamis" target="ui.dialogs.options.dynsslcert"/>
-            <tocitem text="Eksistensi" target="ui.dialogs.options.ext"/>
+         	<tocitem text="Display" target="ui.dialogs.options.view"/>
+         	<tocitem text="Dynamic SSL Certificates" target="ui.dialogs.options.dynsslcert"/>
+            <tocitem text="Extensions" target="ui.dialogs.options.ext"/>
             <tocitem text="Global Exclude URL" target="ui.dialogs.options.globalexcludeurl"/>
          	<tocitem text="HTTP Sessions" target="ui.dialogs.options.httpsessions"/>
          	<tocitem text="JVM" target="ui.dialogs.options.jvm"/>
          	<tocitem text="Keyboard" target="ui.dialogs.options.keyboard"/>
-         	<tocitem text="Bahasa" target="ui.dialogs.options.language"/>
+         	<tocitem text="Language" target="ui.dialogs.options.language"/>
          	<tocitem text="Local Proxies" target="ui.dialogs.options.localproxy"/>
          	<tocitem text="Passive Scan Rules" target="ui.dialogs.options.pscanrules"/>
-         	<tocitem text="Pasif Memindai Tag" target="ui.dialogs.options.pscan"/>
-         	<tocitem text="Pemindai Pasif" target="ui.dialogs.options.pscan.main"/>
+         	<tocitem text="Passive Scan Tags" target="ui.dialogs.options.pscan"/>
+         	<tocitem text="Passive Scanner" target="ui.dialogs.options.pscan.main"/>
          	<tocitem text="Rule Configuration" target="ui.dialogs.options.ruleconfig"/>
-         	<tocitem text="Skrip" target="ui.dialogs.options.script"/>
-         	<tocitem text="Pencarian" target="ui.dialogs.options.search"/>
-         	<tocitem text="Laba-laba" target="ui.dialogs.options.spider"/>
-         	<tocitem text="Statistik" target="ui.dialogs.options.stats"/>
+         	<tocitem text="Scripts" target="ui.dialogs.options.script"/>
+         	<tocitem text="Search" target="ui.dialogs.options.search"/>
+         	<tocitem text="Spider" target="ui.dialogs.options.spider"/>
+         	<tocitem text="Statistics" target="ui.dialogs.options.stats"/>
          </tocitem>
-         <tocitem text="Tangani Tag" target="ui.dialogs.persistsession"/>
-         <tocitem text="Kirim ulang" target="ui.dialogs.resend"/>
-         <tocitem text="Kirim ulang" target="ui.dialogs.scanpolicymgr">
+         <tocitem text="Persist Session" target="ui.dialogs.persistsession"/>
+         <tocitem text="Scan Policy Manager" target="ui.dialogs.scanpolicymgr">
 	         <tocitem text="Scan Policy" target="ui.dialogs.scanpolicy"/>
          </tocitem>
          <tocitem text="Scan Progress" target="ui.dialogs.scanprogress"/>
          <tocitem text="Session" target="ui.dialogs.sessprop">
-	         <tocitem text="Sesi Properti" target="ui.dialogs.sessprop"/>
-	         <tocitem text="Sesi Konteks" target="ui.dialogs.contexts"/>
-	         <tocitem text="Konteks Sesi Otentikasi" target="ui.dialogs.context-auth"/>
-	         <tocitem text="Sesi Konteks Struktur" target="ui.dialogs.context-struct"/>
+	         <tocitem text="Session Properties" target="ui.dialogs.sessprop"/>
+	         <tocitem text="Session Contexts" target="ui.dialogs.contexts"/>
+	         <tocitem text="Session Context Authentication" target="ui.dialogs.context-auth"/>
+	         <tocitem text="Session Context Structure" target="ui.dialogs.context-struct"/>
          </tocitem>
-         <tocitem text="Laba-laba" target="ui.dialogs.spider"/>
+         <tocitem text="Spider" target="ui.dialogs.spider"/>
       </tocitem>
-      <tocitem text="The Footer" target="ui.footer"/>
+      <tocitem text="Footer" target="ui.footer"/>
    </tocitem>
 
-   <tocitem text="Command Line" target="cmdline"/>
+   <tocitem text="Baris Perintah" target="cmdline"/>
 
-   <tocitem text="Add Ons" target="addon.introduction" tocid="addons" />
+   <tocitem text="Add-ons" target="addons.introduction" tocid="addons" image="addons.icon" />
    
-   <tocitem text="Releases" target="zap.releases">
+   <tocitem text="Rilis" target="zap.releases">
+      <tocitem text="2.10.0" target="zap.releases.2.10.0"/>
+      <tocitem text="2.9.0" target="zap.releases.2.9.0"/>
+      <tocitem text="2.8.0" target="zap.releases.2.8.0"/>
       <tocitem text="2.7.0" target="zap.releases.2.7.0"/>
       <tocitem text="2.6.0" target="zap.releases.2.6.0"/>
       <tocitem text="2.5.0" target="zap.releases.2.5.0"/>

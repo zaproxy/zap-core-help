@@ -6,55 +6,66 @@
 Ang magilas na sertipiko ng SSL
 </title>
 </head>
-<body bgcolor="#ffffff">
-<h1>Magilas na Opsyonal ng SSL at mga Katunayan</h1>
+<body>
+<h1>Ang Opsyon ng Dynamic SSL Certificates</h1>
 	<p>
-	Ang OWASP ZAP ay pinapayagan kang makitang malinaw ang descrypt SSL na koneksyon.
-	Sa pag gawa nito, ang AP ay mayroong encrypt sa bawat kahilingan bago ipasa sa server at derypt sa bawat sagot, kung saan ito ay bumabalik.
-	Ngunit, ito ay kasalukuyang tapos na ng browser.
-	Kaya nga, ang tanging paraan upang i-decrypt o maharang ang pag send o pag hatid ay upang gawin ang isang 'tao sa gitna' ('man in the middle') na diskarte.
+	Ikaw ay Pinapahintulutan ng OWASP ZAP na malinaw na makita ang descrypt SSL na koneksyon.
+	Sa pag kilos nito, mayroong encrypt ang AP sa bawat kahilingan bago ipadala sa server at derypt sa bawat sagot, kung saan bumabalik ito.
+	Pero, ito ay natapos sa pamamagitan ng browser.
+	That's why, the only way to decrypt or intercept the transmission,
+	is to do a 'manipulator in the middle' approach.
 	</p>
 
 
-<h2>Balik Tanaw</h2>
+<h2>Ang Pag Babalik Tanaw</h2>
 <p>
-	<img alt="ang lalaki sa gitna" src="../../../images/maninthemiddle.png">
+	<img alt="manipulator in the middle" src="../../../images/manipulatorinthemiddle.png">
 </p>
 <p>
-	Sa maikling mga salita, ang lahat ng datos na sinesend o pinpasa kay at ang mga nirerecieve o tinatanggap galing kay ay naka encrypt/naka decrypt sa pamamagitan ng pag gamit ng orihinal na katunayan ng server sa loob ng ZAP. Sa ganitong paraan. Ang ZAP ay alam ang malinaw ng teksto.
-	Para maisagawa ang Protektadong sesyon ng SSL mula sa iyo (browser mo), Gagamitin ng ZAP ang sariling katunayan. Ito ang isa sa kaya mong likhain o gawin.
-	Ang bawat katunayan na ginawa ng ZAP ay pipirmahan ng kaparehong pangalan ng server. Sa halimbawa sa itaas, ang ZAP ay gagawa ng katunayan para sa mga pangalan ng server "www.example.com". Sa ganitong paraan. ang iyong browser ay gagawin ang regular ng SSL encryption.
+	Sa madaling salita, halos lahat ng datos na ipinadala o pinapasa kay at ang mga natanggap o tinatanggap galing kay ay naka encrypt/naka decrypt sa pamamagitan ng pag gamit ng orihinal na katunayan ng server sa loob ng ZAP. Sa paraan na ito. Nalalaman ng ZAP ang malinaw na teksto.
+	Para maisagawa ang Protektadong sesyon ng SSL mula sa iyo (browser mo), Ang ZAP ay gumagamit ng sariling katibayan. Ito ang isa sa kaya mong likhain o gawin.
+	Sa bawat katibayan na ginawa ng ZAP ay pipirmahan ng kaparehong
+	pangalan ng server. In the example above, ZAP will create a certificate
+	for the server's name <code>www.example.com</code>. Sa ganitong paraan. ang iyong browser ay gagawin ang regular ng SSL encryption.
 </p>
 
 
-<h2>Ang katunayan ng ZAP Root CA</h2>
+<h2>Ang katibayan ng ZAP Root CA</h2>
 <p>
-	Imagine you're visiting multiple SSL protected sites. Sa tuwing ang iyong browser ay kumokonek sa katulad ng site, ang katunayan bagong SSL ay magagawa.
+	Isipin na ikaw ay bumibisita sa maraming site na protektado ng SSL. Sa tuwing ang iyong browser ay kumokonekta sa katulad ng site, ang katibayan ng bagong SSL ay lilikhain.
 	Ngunit, ang katunayan na ito ay hindi pinagkakatiwalaan ng lahat (dahil sa ito ay sariling gawa ng ZAP).
 	Sa madaling salita. ang browser ay hindi tanggap sa sa ibang katunayan sa kabilang banda.
-	Siguro'y pamilyar ka sa mga sitwasyong ito, kung ang yong browser ay nag reklamo sa katunayan o sa sertipiko 
+	Maaring ikaw ay may alam sa mga sitwasyong ito, kung ang yong browser complains certificate ay nagreklamo
 kung mali pero manwal mong ginawa ito ay isang eksepsyon sa mga rules o tuntunin sa server.  
 </p>
 <p>
-	Ang mga sertipikasyon o mga katunayan ay gawa ng ZAP ay direktang nkakadena sa pagtitiwala kay "ZAP" ugat o Root CA" sertipikasyon. 
-	(Para sa mas maraming pang detalye para sa kadena ng pagtitiwala o sa chain of trust, gamitin ang iyong paboritong search engine ;-) )
-Ibig sabihin. ikaw (ang iyong browser) ay una na nagtitiwala lamang sa ZAP Root CA. Sa madaling salita,
-Kapag ikaw ay nagdagdag ng katunayan ng ZAP Root CA sa iyong listahan ng pinagkakatiwalaan
-Root CAs, ang iyong browser ay hindi kilala ng gitnang tao o ang man in the middle. 
+	Ang mga sertipikasyon o mga katunayan ay gawa ng ZAP ay direkta na nkakadena sa pagtitiwala sa "ZAP Root CA" na katibayan. 
+	(Para sa mas maraming pang mga detalye para sa kadena ng pagtitiwala o sa chain of trust, gamitin ang iyong paboritong search engine ;-) )
+Ito ay nangunguhulugan na, ikaw (ang iyong browser) ay una na nagtitiwala lamang sa ZAP Root CA ang kahit anong mga katibayan ay awtomatikong nagtitiwala. Sa madaling salita,
+Kapag ikaw ay nagdagdag ng katibayan ng ZAP Root CA sa iyong listahan ng pinagkakatiwalaan
+Root CAs, ang iyong browser ay hindi kilala ng gitnang tao. 
+</p>
+<p>
+	<strong>Note:</strong>
+	<blockquote>On iOS 10.3 and onwards, you also need to enable full trust for the root certificate:
+	
+	Go to Settings > General > About > Certificate Trust Settings.
+	Under “Enable full trust for root certificates”, turn on trust for the certificate.</blockquote>
 </p>
 
-<h3>Gumawa o Bumuo</h3>
+<h3>Ang Pag Gawa</h3>
 <p>
-	Kung ikaw ay unang beses pa lamang ng pag gamit ng ZAP, kailangan mong bumuo o gumawa katunayan ng Root CA.
-	Kapag nakagawa ka na, kailangan iinstall ito sa iyong browser o sa aplikasyon ng kliyente sa HTTP. Tignan ang seksyon <a href="#install">installation</a> 
-para sa mas marami pang detalye.
+	When you are running ZAP for the first time then it will generate a Root CA certificate just for you.
+	If you do not use the 'browser launch' feature then you have to install it within your browser 
+	or HTTP client application. See section <a href="#install">installation</a> 
+	for more details.
 </p>
 <p>
-	Sa tuwing mag gegenerate ka ng katunayan ng Root CA ito ay balido lamang ng isang taon. Pagkatapos ng panahon na mayroon ka
-sa pag gawa ng bago. <br>
-Ang lahat ng nagenerate na sertipikasyon ng Root CA ay may lakas na 2048 bit(RSA with SHA1).<br>
-Ang lahat ng na generate na sertipikasyon ng Root CA na may serial na numero "1". 
-	Sa lahat ng nagenerate na sertipikasyon ng Root CA ay naglalaman ng mga sumusunod ng mga tagapagkilala:
+	Every generated Root CA certificate is valid for one year. After that period you have
+	to create a new one.<br>
+	Every generated Root CA certificate is 2048 bit strong (RSA with SHA1).<br>
+	Every generated Root CA certificate starts with serial number "1". 
+	Every generated Root CA certificate consists of the following identifiers:
 </p>
 <p style="padding-left: 20pt;">
 	<code>
@@ -66,20 +77,31 @@ Ang lahat ng na generate na sertipikasyon ng Root CA na may serial na numero "1"
 	</code>
 </p>
 <p>
-	Kung mapapansin mo, mayroon itong tagahanap ng lokasyon o "Location Identifier (L) kung saan ito ay hexadecimal na numero lamang.
-	Ang numerong ito ay gawa sa dalawang 32bit ng hash ng mga code: user's name o ang pangalan ng gumagamit at ang user's home directory o ang bahay ng derektoryo ng gumagamit.
-	Sa ganitong paraan ay magagawa mong malaman ang sariling sertipikasyon gamit ang maraming installation.
-	Pero walang paraan, na ang lahat ay kayang malaman ang iyong pangalan gamit ang hash code.
+	As you can see, there's a Location identifier (L) which is only a hexadecimal number.
+	This number is constructed out of two 32bit hash codes: user's name and user's home directory.
+	This way you can identify your own certificate when using multiple installations.
+	But there's no way, that anyone can figure out your name from this hash code.
 </p>
 
-<h3>Pag angkat</h3>
+<h3>Ang Pag angkat</h3>
 <p>
-	Kapag gumagamit ka ng maraming pag lagay ng ZAP at gusto mong gamitin ang parehong Root CA na sertipikasyon, kaya maaari mo itong i-angkat o kuhain. Gamitin lamang ang isang pag-install ng OWASP ZAP para guamawa ng isang sertipiko ng Root CA. Kopyahin ang file na 'OWASP ZAP/config. xml' mula sa direktoryo ng iyong mga user sa PC, kung saan gusto mong gamitin ang parehong sertipikasyon at pindutin ang 'import' upang i-angkat ito.
+	When you're using multiple ZAP installation and you want to use the same
+	Root CA certificate, so you can import it. Simply use one installation of OWASP ZAP
+	to generate one Root CA certificate.<br>
+	Copy the file 'OWASP ZAP/config.xml' from your users home directory to 
+	the PC, where you want to use the same certificate and press 'import' to import it.
 </p>
 <p>
-	Maari mo ring iimport ang sertipikasyon na naka stored sa itom pem files hanggat ito ay magkasama.
-ang sertipikasyon ang ang pribadong encrpyted na key ay sa sumusunod na pormat.<br>
- <code><br>
+	Alternatively you can use the <a href="../../../cmdline.html">command line</a> options:
+	<ul>
+	<li>-certfulldump &lt;path&gt; to dump the certificate from one ZAP instance
+	<li>-certload &lt;path&gt; to load the certificate into another ZAP instance
+	</ul>
+</p>
+<p>
+	You can also import certificates stored in pem files as long as they include both
+	the certificate and the unencrypted private key in the following format:<br>
+	<code><br>
 -----BEGIN CERTIFICATE-----<br>
 MIIC9TCCAl6gAwIBAgIJANL8E4epRNznMA0GCSqGSIb3DQEBBQUAMFsxGDAWBgNV<br>
 BAoTD1N1cGVyZmlzaCwgSW5jLjELMAkGA1UEBxMCU0YxCzAJBgNVBAgTAkNBMQsw<br>
@@ -114,36 +136,39 @@ j48o5+RLKvqrpxNlMeS5AkEA6qIdW/yp5N8b1j2OxYZ9u5O//BvspwRITGM60Cps<br>
 yemZE/ua8wm34SKvDHf5uxcmofShW17PLICrsLJ7P35y/A== <br>
 -----END PRIVATE KEY-----<br>
   	</code><br>
-At oo iyan ang ehemplong gagana - ito ay ang sertipikasyon ng  Superfish!
+And yes, that example will work - its the Superfish certificate!
 </p>
 
-<h3><a name="view">Sa paningin</a></h3>
+<h3><a name="view">Tingnan</a></h3>
 <p>
-	Sa mga opsyonal sa dayalogo ng ZAP ikaw nakakakita ng raw bytes (hexadecimal encoded)
-mg sertipiko. Ang Opsonal "tingin "sinusubukan ang pag gamit ng deafault system ng pag tingin na gamit sa ".CER"na files. Sa windows, ito ay tipikal na nagkakapareho.
-sa pag exxport ng sertipikasyon at sa dobleng pag pindot dito.
+	In the options dialog of ZAP you're seeing the raw bytes (hexa-decimal encoded)
+	of the certificate. The option "view" tries to use your system's default
+	viewing tool for ".CER" files. On Windows, this is typically the same,
+	when exporting the certificate and double clicking on it.
 </p>
 
-<h3>Isave/Pag export</h3>
+<h3>Mag save/Mag export</h3>
 <p>
-	Sa mga opsyonal na dayalogo ng ZAP ikaw ay nakakakita ng raw bytes (dexadecimal encoded)
-sa mga sertipikasyon. Marami sa mga programa ay gumagamit ng simpleng pormat sa pag import/ pag export. Kapag pinindot ang écpor't', ang bytes ay masesave sa disk.
-	Ito ay pantay sa pag select ng lahat ng mga gawa ang CTRL+C(copy to clipbioard) at ang pag save sa bagong .CER na file (na ang simpleng teksto ay makikita mo sa dayalogo/).
+	In the options dialog of ZAP you're seeing the raw bytes (hexa-decimal encoded)
+	of the certificate. Many programs are using this simple format for import/export
+	functions. When clicking 'export', these bytes are saved to disk.
+	This is equal to selecting all and doing CTRL+C (copy to clipboard) and
+	save it into a new .CER file (which is simple text as you see in the dialog).
 </p>
 
-<h2><a name="dynamic_certificates">Daynamikong sertipikasyon</a></h2>
+<h2><a name="dynamic_certificates">Ang Daynamikong mga katibayan</a></h2>
 <p>
-	Sa bawat ZAP ay may pagkakataong gumamit ng sariling sertipikasyon ng Root. Siyempre, ikaw rin
-Pag import root ng sertipikasyon, para magamit sila sa maraming makina.
-	Kapag ginagamit, magkakaroon ng sub-certificated sa oras ng HTTPS.
-hinihiling na may pagkukunan.
-	Ibig sabihin ang Root CA na katunayan o sertipikasyon ay gamit ng may ari.
+	Each ZAP instance is using it's own root certificate. Of course, you can
+	import root certificates, to use them on multiple machines.
+	When running, there will be sub-certificated created, each time a HTTPS 
+	resource is requested.
+	That means, the Root CA certificate is used as an issuer.
 </p>
 <p>
-	Ang bawat daynamikong nabuo ng sertipiko ay may bisa sa 1000 araw. <br>
-Ang bawat daynamikong nabuo ng sertipiko ay 2048 bit strong (RSA na may SHA1). <br>
-Ang bawat daynamikong nabuo ng sertipiko ay may random na serial numero. 
-	Sa bawat daynamikong na generate ng sertipikassyon ay naglalaman ng mga sumusunod ng pagkakakilanlan:
+	Every dynamically generated certificate is valid for 1000 days.<br>
+	Every dynamically generated certificate is 2048 bit strong (RSA with SHA1).<br>
+	Every dynamically generated certificate has a random serial number. 
+	Every dynamically generated certificate consists of the following identifiers:
 </p>
 <p style="padding-left: 20pt;">
 	<code>
@@ -156,73 +181,78 @@ Ang bawat daynamikong nabuo ng sertipiko ay may random na serial numero.
 </p>
 <p>
 	<i>
-		Gilid na sulat:
-		Sa tuwing mag iistart ng ZAP, Sa loob ng isang random na serial na numero ay offset ay nabuo.
-
- 
-Context | Request Context.
-		Ang daynamika na nagenerate ng sertipikasyon ay ma ooffset dagdag pa nito ang pagtaas ng pag bilang. Halimbawa, mayroon nang unang daynamikong sertipiko ang
-serial numero ay 2314, ang pangalawang isa 2315, ang ikatlong isa 2316 at iba pa.
-		Ang rason para dito ay simple, ang browser ay isang sertipkong caching din.
-		Kapag na-restart mo ang ZAP ngunit huwag mong i-restart ang browser, maaari itong mangyari,
-nakikita ng browser ang parehong sertipikasyon ngunit may iba't ibang serial numero.
-		Sa bandang huli, ang browser ay mag co complain tungkol sa mga reject sa hindi tinanggap ng sertipikasyon.
-		Sa pag gamit ng ilang mga offset na( internal ng 48bit at ilang numero ), ang tyansa.
-ay 1 to 281.474.976.710.656 kapag inulit sa umpisa ang ZAP, ang serial numero.
-ibang-iba ang offset.<br>
-		Kaya sa mga pambihirang kaso, natuklasan mo na ang browser mo ay nagreklamo
-isang sira na serial na numero sa loob ng sertipiko, i-restart lang ang iyong browser ;-)
-	</i>v.
+		Side note:
+		Each time you start ZAP, internally a random serial number offset is generated.
+		Every dynamically generated certificate will use this offset plus an
+		increasing counter. For example, first dynamically certificate has 
+		serial number 2314, the second one 2315, the third one 2316 and so on.
+		The reason for this is simple: browsers are also caching certificates.
+		When you restart ZAP but don't restart your browser, it could happen,
+		that the browser sees the same certificate but with different serial number.
+		In the end, the browser would complain about and reject the certificate.
+		By using the random offset (internally 48bit random number), the chances
+		are 1 to 281.474.976.710.656 that when restarting ZAP, the serial number
+		offset is a different one.<br>
+		So in the rare case, you are discovering that you browser complains about
+		a broken serial number within the certificate, just restart your browser ;-)
+	</i>.
 </p>
 
-<h2><a name="install">Àng pag install ng ZAP Root CA na sertipikasyon</a></h2>
+<h2><a name="install">Àng pag install ng ZAP Root CA na katibayan</a></h2>
 <p>
-	Kahit na ang HTTPS na kliyente na gusto mong gumamit, ay kaialngang may alam sa OWASP Root CA na sertipikasyon o katunayan. Tipikal na meron kang manwal ng iinstall ang ZAP na katunayn sa iyong browser na listahan sa pinakakatiwalaang root na sertipikasyon.
+	Any HTTPS client you want to use, has to know the OWASP Root CA certificate
+	as 'trusted root certificate'. Typically you have to install manually the
+	ZAP certificate into your browser's list of trusted root certificates.
 </p>
-<h3>Windows / Internet Explorer</h3>
+<h3>Ang Windows / Internet Explorer</h3>
 <p>
-	Ang pinakamadaling paraan ay pindutin ang view at piliin ang 'I-install ang certificate'. Bilang kapalit, maaari mong i-save / i-export ang iyong nabuong sertipiko (kopyahin ito sa target mo na computer) at idoble ang pag pindot ng. Cer file. 
-	Kapag ginagawa ito, ang regular na Windows wizard para sa tulong sa pag-install ng sertipikasyon ay mag pa pop up.
-	In this wizard manually choose the certificate store. Huwag hayaan ang Windows na pumili nang awtomatiko sa store ng sertipiko.
-	Pumili ng 'pinagkakatiwalaang mga sertipiko ng root' bilang store at i-finalize ang wizard.
+	The easiest way is to click on <a href="#view">view</a> and choose
+	'Install certificate'. Alternatively, you can save/export your generated
+	certificate (copy it to you target computer) and double click the .CER file. 
+	When doing so, the regular Windows wizard for certificate installation
+	assistance is poping up.
+	In this wizard manually choose the certificate store. Do NOT let
+	Windows choose automatically the certificate store.
+	Choose 'trusted root certificates' as store and finalize the wizard.
 </p>
 <p>
-	Matapos ang matagumapay ng pag install, maari mo nang icheck ang sertipikasyon mo.
+	After successfully installation, you can check the certificate.
 </p>
 	<ol>
-	<li>Oumunta sa opsyonal na internet</li>
-	<li>I-tab ang nilalaman</li>
-	<li>Pindutin ang sertipikasyon</li>
+	<li>O
+Pumunta sa opsyonal na internet</li>
+	<li>Mag tab ng nilalaman</li>
+	<li>Pindutin ang mga katibayan</li>
 	<li>Pindutin ang tab na pinagkakatiwalaan na sertipikasyon ng root</li>
 	<li>Ang OWASP ZAP na root CA ay kailangang naroon</li>
 	</ol>
 
-<h3>Mozilla Firefox</h3>
+<h3>Ang Mozilla Firefox</h3>
 <p>
-	Ang Firefox ay gumagamit ng sariling sertipikasyon na store. Kayat kung bakit kailangan mong i-import ito nang dalawang beses, kapag gumagamit ka ng parehong browser sa mga windows,.
-	Ang pag-install at huli sa pagpapatunay na tapos na sa parehong dayalogo ng mga kagustuhan:
+	Firefox is using it's own certificate store. Thats why you have to
+	import it twice, when you're using both browser on windows.
+	Installation and late on validation is done in the same preferences dialog:
 </p>
 	<ol>
-	<li>Pumunta sa preferences</li>
+	<li>Puntahan ang mga Preperensya</li>
 	<li>Tab Advanced</li>
-	<li>Tab Cryptography/Certificates</li>
-	<li>Pindutin ang View Certificates</li>
-	<li>Pindutin ang Authoties tab</li>
-	<li>Pindutin ang import at pumili ng mga nala saved <tt>owasp_zap_root_ca.cer</tt> file</li>
-	<li>Sa wizard ang napiling magtiwala sa sertipiko na ito upang kilalanin ang mga web site (tingnan ang mga kahon)</li>
-	<li>Tapusin ang wizard</li>
+	<li>Ang Tab Cryptography/Certificates</li>
+	<li>Click View Certificates</li>
+	<li>Click Authorities tab</li>
+	<li>Pindutin laman ang import at pumili ng mga naka save na <tt>owasp_zap_root_ca.cer</tt> na payl</li>
+	<li>Na nasa wizard ang napiling pagtiwalaan sa katibayan na ito upang kilalanin ang mga web site (tingnan ang mga kahon)</li>
+	<li>Ang pagtapos ng wizard</li>
 	</ol>
 
-<h2 style="color: red; font-weight: bold; text-decoration: underline;">Mga Panganib</h2>
+<h2 style="color: red; font-weight: bold; text-decoration: underline;">Ang Mga Panganib</h2>
 <p>
-	<b> Atensyon, may mga panganib! </> <br>
-Kapag nagdadagdag ng self generated ROOT CA ang sertipikasyon sa iyong listahan ng mga pinagkakatiwalaang
-Mga sertipiko ng ugat, ang lahat ng may sertipiko ng root ay maaaring magpadala ng data
-sa iyong system (browser).
-
-	Ibig sabihin kapag hindi mo sinusubukan sa isang ligtas na kapaligiran, ngunit sa
-produktibong mga makina, magkaroon ng kamalayan na binubuksan mo ang isang karagdagang pag-atake
-mga pwedeng magdala at magbigay ng mga virus sa iyong system.  
+	<b>Attention, there are risks!</b><br>
+	When adding self generated Root CA certificates to your list of trusted 
+	root certificates, everyone with the root certificate can smuggle data
+	into your system (browser).
+	In other words when you're not testing in a safe environment, but on
+	productive machines, be aware that you're opening an additional attack
+	vector to your system.  
 </p>
 
 <h2>Tingnan din

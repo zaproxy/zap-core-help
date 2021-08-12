@@ -6,60 +6,60 @@
 オプション 動的スキャン画面
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>オプション 動的スキャン画面</h1>
 <p>
-この画面が設定できるのは <a href="../../../start/concepts/ascan.html">動的スキャン</a> オプションです。
+この画面が設定できるのは <a href="../../../start/features/ascan.html">動的スキャン</a> オプションです。
 
-<h3>並列スキャンするホスト数</h3>
+<h3>Number of Hosts Scanned Concurrently</h3>
 The maximum number of hosts that will be scanned at the same time.
 Increasing this may put extra strain on the computer ZAP is running on.
 
-<h3>並列スキャンスレッド数</h3>
+<h3>Concurrent Scanning Threads per Host</h3>
 The number of threads the scanner will use per host.<br>
 Increasing the number of threads will speed up the scan but may put extra strain on the computer ZAP is running on and the target host.
 
-<h3>Max results to list</h3>
+<h3>Max Results to List</h3>
 The number of results that will be shown in the Active Scan tab.<br>
 Displaying a large number of results can significantly increase the time a scan takes.
 
-<h3>Maximum rule duration (min, 0 is unlimited)</h3>
+<h3>Maximum Rule Duration (minutes; 0 is unlimited)</h3>
 The maximum time any individual rule can run for in minutes. Zero means no limit. This can be used to prevent rules that are taking an excessive amount of time. 
 
-<h3>Maximum scan duration (min, 0 is unlimited)</h3>
+<h3>Maximum Scan Duration (minutes; 0 is unlimited)</h3>
 The maximum time that the whole scan can run for in minutes. Zero means no limit. This can be used to ensure that a scan is completed around a set time. 
 
-<h3>Delay when scanning in milliseconds</h3>
+<h3>Delay When Scanning (In Milliseconds)</h3>
 The delay in milliseconds between each request.<br>
 Setting this to a non zero value will increase the time an active scan takes, but will put less of a strain
 on the target host.
 
-<h3>Inject plugin ID in header for all active scan requests</h3>
+<h3>Inject plugin ID in header for all active scan requests.</h3>
 If this option is selected the active scanner will inject the request header <code>X-ZAP-Scan-ID</code> with the ID of
 the scanner that's sending the HTTP requests.
 
-<h3>Handle anti CSRF tokens</h3>
+<h3>Handle anti-CSRF tokens (experimental functionality).</h3>
 If this option is selected then the active scanner will attempt to automatically request 
-<a href="../../../start/concepts/anticsrf.html">anti CSRF</a> tokens when required.<br>
+<a href="../../../start/features/anticsrf.html">anti CSRF</a> tokens when required.<br>
 Note that this is experimental functionality and will slow down the scanning process as only one thread will be used to ensure
 that anti CSRF token requests dont get out of step. 
 
-<h3>In Attack mode prompt to rescan nodes when scope changed</h3>
-If this option is selected then when you select Attack <a href="../../../start/concepts/modes.html">mode</a> you will be prompted to choose whether to rescan nodes in scope.<br>
+<h3>In Attack Mode prompt to rescan nodes when scope changed.</h3>
+If this option is selected then when you select Attack <a href="../../../start/features/modes.html">mode</a> you will be prompted to choose whether to rescan nodes in scope.<br>
 If the option is not selected then the following option will control whether the nodes are rescanned.
 
-<h3>In Attack mode always rescan nodes when scope changed</h3>
-If this option is selected then when running in Attack <a href="../../../start/concepts/modes.html">mode</a> all nodes in scope will be rescanned if the scope changes.<br>
+<h3>In Attack Mode always rescan nodes when scope changed.</h3>
+If this option is selected then when running in Attack <a href="../../../start/features/modes.html">mode</a> all nodes in scope will be rescanned if the scope changes.<br>
 This is not recommended for large sites as it could take a long time.
 
-<h3>Default active scan policy</h3>
-The <a href="../../../start/concepts/scanpolicy.html">スキャンポリシー</a> that is used by default when you start an active scan.
+<h3>Default Active Scan Policy</h3>
+The <a href="../../../start/features/scanpolicy.html">スキャンポリシー</a> that is used by default when you start an active scan.
 
-<h3>Attack mode scan policy</h3>
-The <a href="../../../start/concepts/scanpolicy.html">スキャンポリシー</a> that is used for scanning in 
-Attack <a href="../../../start/concepts/modes.html">mode</a>.
+<h3>Attack Mode Scan Policy</h3>
+The <a href="../../../start/features/scanpolicy.html">スキャンポリシー</a> that is used for scanning in 
+Attack <a href="../../../start/features/modes.html">mode</a>.
 
-<h3>Max progress chart in mins</h3>
+<h3>Max Progress Chart in Mins</h3>
 The maximum time in minutes for which response codes will be charted in the
 <a href="../scanprogress.html">Scan Progress dialog</a>.<br>
 To disable the chart the option should be set to zero minutes.

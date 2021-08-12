@@ -6,7 +6,7 @@
 Search tab
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Search tab</h1>
 
 <p>The Search tab allows you to search for regular expressions in all of the
@@ -36,28 +36,28 @@ The Attack menu has the following submenus:
 
 <h4>Active Scan...</h4>
 This will launch the <a href="../dialogs/advascan.html">Active Scan dialog</a> which allows you to initiate an 
-<a href="../../start/concepts/ascan.html">active scan</a> with the starting point set to the request you selected.<br/>
+<a href="../../start/features/ascan.html">active scan</a> with the starting point set to the request you selected.<br/>
 
 <h4>Spider...</h4>
 This will launch the <a href="../dialogs/spider.html">Spider dialog</a> which allows you to initiate the 
-<a href="../../start/concepts/spider.html">spider</a> with the starting point set to the request you selected.<br/>
+<a href="../../start/features/spider.html">spider</a> with the starting point set to the request you selected.<br/>
 
 <h3>Include in Context</h3>
 This menu allows you to include the selected nodes and all of their subordinates in the specified
-<a href="../../start/concepts/contexts.html">context</a>.<br/>
+<a href="../../start/features/contexts.html">context</a>.<br/>
 You also have the option to create a new context.<br/>
 The <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
 allow you to make any additional changes.
 
 <h3>Exclude from Context</h3>
 This menu allows you to exclude the selected nodes and all of their subordinates from the specified
-<a href="../../start/concepts/contexts.html">context</a>.<br/>
+<a href="../../start/features/contexts.html">context</a>.<br/>
 The <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
 allow you to make any additional changes.
 
 <h3>Flag as context</h3>
 This menu has the following submenus for each of the 
-<a href="../../start/concepts/contexts.html">contexts</a> you have defined:
+<a href="../../start/features/contexts.html">contexts</a> you have defined:
 
 <h4><i>Context name</i> Form-based Auth Login request</h4>
 This identifies the specified node as a login request for the specified context.<br/>
@@ -65,8 +65,14 @@ You may only have one node identified as such in any one context.<br/>
 The <a href="../dialogs/session/context-auth.html">Session Context Authentication</a> screen will be displayed to
 allow you to make any additional changes.
 
+<h4><i>Context name</i> JSON-based Auth Login request</h4>
+This identifies the specified node as a login request for the specified context.<br/>
+You may only have one node identified as such in any one context.<br/> 
+The <a href="../dialogs/session/context-auth.html">Session Context Authentication</a> screen will be displayed to
+allow you to make any additional changes.
+
 <h4><i>Context name</i> Data driven node</h4>
-This identifies the specified node as <a href="../../start/concepts/ddc.html">Data driven content</a> for the specified context.<br/>
+This identifies the specified node as <a href="../../start/features/ddc.html">Data driven content</a> for the specified context.<br/>
 The <a href="../dialogs/session/context-struct.html">Session Context Structure</a> screen will be displayed to
 allow you to make any additional changes.
 
@@ -81,21 +87,21 @@ The nodes can be included again via the <a href="../dialogs/session/sessprop.htm
 
 <h4>Scanner</h4>
 This will prevent the selected nodes from being actively scanned.<br/>
-The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Właściwości sesji</a> dialog   
 
 <h4>Spider</h4>
 This will prevent the selected nodes from being spidered.<br/>
-The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Właściwości sesji</a> dialog   
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
 
-<h3>Prześlij ponownie...</h3>
+<h3>Open/Resend with Request Editor...</h3>
 This will bring up the
-<a href="../dialogs/resend.html">Resend dialog</a> which allows you to  
+<a href="../dialogs/man_req.html">Manual Request Editor dialog</a> which allows you to  
 resend the request after making any changes to it that you want to.
 
 <h3>Nowe zagrożenie...</h3>
 This will bring up the
 <a href="../dialogs/addalert.html">Add Alert dialog</a> which allows you to manually record a new  
-<a href="../../start/concepts/alerts.html">alert</a> against this request.
+<a href="../../start/features/alerts.html">alert</a> against this request.
 
 <h3>Show in History tab</h3>
 This will show the selected node in the <a href="history.html">History tab</a>.

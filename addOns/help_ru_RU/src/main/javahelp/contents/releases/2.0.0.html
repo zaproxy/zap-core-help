@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  Release 2.0.0
+</title>
+</head>
+<body>
+<h1>Release 2.0.0</h1>
+<p>
+В этом выпуске были внесены следующие изменения:
+</p>
+
+<h2>Важные перемены:</h2>
+
+
+<h3>Интегрированные дополнения рынок</h3>
+
+ZAP может быть расширен надстройками, которые имеют полный доступ ко всем внутренним ZAP. Любой может написать дополнения и загрузить их на Zap Add-on Marketplace (ОК, так что это проект Google code под названием zap-extensions, но вы получите идею).
+<br/>
+Что еще более важно, теперь вы можете просматривать, загружать и устанавливать эти дополнения из ZAP. Большинство надстроек могут быть динамически установлены (и удалены), так что вам даже не потребуется перезагрузка.
+<br/>
+Вы можете выбрать, чтобы получать уведомления об обновлениях, и даже автоматически обновляются. И поскольку правила сканирования теперь реализованы в качестве дополнений, вы можете получить последние правила, как только они будут опубликованы.
+
+<h3>Замена для "стандартного" Паука</h3>
+
+"Старый" Паук показывал свой возраст, поэтому он был полностью переписан, и намного быстрее и более всесторонний, чем старый. Это все еще "традиционный" паук, который анализирует HTML-код для любых ссылок, которые он может найти.
+
+<h3>Новый паук "Ajax"</h3>
+
+В дополнение к "традиционному" пауку мы добавили Ajax spider, который более эффективен с приложениями, которые интенсивно используют JavaScript. Это использует проект Crawljax, который управляет браузером (используя Selenium), и поэтому может обнаружить любые ссылки, генерируемые приложением, даже те, которые генерируются клиентской стороной.
+
+<h3>Поддержка веб-Сокетов</h3>
+
+Зап теперь поддерживает websockets, поэтому зап можете теперь видеть все через websocket сообщения, отправляемые и получаемые с вашего браузера. Как и в случае с сообщениями на основе HTTP, ZAP также может перехватывать сообщения WebSocket и позволяет изменять их на лету.
+<br/>
+Вы также можете пушком сообщения веб-сокетов, а также используя все содержимое фаззинг включенными в зап из проектов, как JBroFuzz и fuzzdb. И, конечно, вы можете легко добавить свои собственные fuzzing файлы.
+
+<h3>Вкладка быстрого запуска</h3>
+
+Первая главная вкладка, которую вы теперь увидите, - это вкладка "Быстрый старт", которая позволяет Вам просто ввести URL-адрес и сканировать его одним щелчком мыши.
+<br/>
+Это идеальная отправная точка для людей, новых для безопасности приложений, но эксперты могут легко удалить его, если они находят его отвлекающим.
+
+<h3>Осведомленность о сессии</h3>
+
+ZAP теперь осведомленность о сеансе, так что ZAP может распознавать и отслеживать несколько сеансов. Он позволяет создавать новые сеансы, переключаться между ними и применяется ко всем другим компонентам, таким как Spider и активный сканер.
+
+<h3>Пользовательские контексты</h3>
+
+Теперь вы можете определить любое количество "контекстов" связанных наборов URL - адресов, которые составляют приложение. Затем можно указать все URL-адреса в контексте, например с помощью Spider или активного сканера. Можно также добавить контексты в область и связать другие сведения, такие как сведения проверки подлинности.
+
+<h3>Область сеанса</h3>
+
+Область сеанса позволяет указать, какие контексты Вас интересуют в любой момент времени. Вы можете ограничить то, что вы видите на различных вкладках, только URL-адресами в области и предотвратить случайную атаку URL-адресов, не находящихся в области, с помощью защищенного режима.
+
+<h3>Разные режимы</h3>
+
+ZAP теперь поддерживает 3 режима:
+<ul>
+<li>Сейф, в котором никакие потенциально опасные деятельности не позволили</li>
+<li>Защищенный, в котором можно выполнять любые действия с URL-адресами в области</li>
+<li>Стандартный, в котором вы можете сделать что-нибудь для любых URL</li>
+</ul>
+<h3>Обработка проверки подлинности</h3>
+
+Теперь вы можете связать данные аутентификации с любым контекстом, который позволяет ZAP делать такие вещи, как обнаружение, если и когда вы вышли из системы, и автоматически регистрировать Вас снова. Это особенно полезно при использовании через API в регрессионных тестах безопасности.
+
+<h3>Дополнительная поддержка API</h3>
+
+Rest API был значительно расширен, что дает вам гораздо больше доступа к функциональности ZAP обеспечивает.
+
+<h3>Элементы управления мелкозернистым сканированием</h3>
+
+Правила активного сканирования теперь можно настроить таким образом, чтобы настроить их силу (количество атак, которые они выполняют) и порог, при котором они сообщают о потенциальных проблемах.
+
+<h3>Новые и улучшенные правила активного и пассивного сканирования</h3>
+
+
+Мы загрузили результаты выполнения зап 2.0.0 против wavsep (наиболее полным открытым исходным кодом оценке проекта мы в курсе) на зап Вики: https://github.com/zaproxy/zaproxy/wiki/Testing ТОДО ;)
+
+
+
+<h2>Полный список изменений:</h2>
+
+<h3>Вопрос 43: вариант рамки для фильтрации</h3>
+<h3>Проблема 163: сбой активного сканера для DVWA [ высокий уровень ложных срабатываний / истинных отрицательных значений]</h3>
+<h3>Выпуск 175: лучший список слов bruteforce</h3>
+<h3>Вопрос 240: исключения socketexception во время фаззинга не правильно.</h3>
+<h3>Вопрос 278: корневой сертификат центра сертификации для динамического протокола SSL недействительными на некоторых платформах из-за ExtendeKeyUsage расширение</h3>
+<h3>Проблема 281: зависимость JSON класса предупреждений</h3>
+<h3>Проблема 299: запрос функции: показать количество найденных URI во время Spider</h3>
+<h3>Вопрос 305: пассивная правило сканер подозрительных комментарии типа todo и вообще</h3>
+<h3>Выпуск 326: Время отклика и общая длина в ручном запросе</h3>
+<h3>Выпуск 330: роботы.текстовый парсинг</h3>
+<h3>Проблема 332: Поддержка режимов</h3>
+<h3>Вопрос 333: вариант Спайдера - добавить ползать все функция inscope</h3>
+<h3>Проблема 335: веб-сокеты-добавление поддержки режимов и области</h3>
+<h3>Проблема 342: Добавление HttpSenderListener</h3>
+<h3>Проблема 350: Управление проверкой подлинности</h3>
+<h3>Вопрос 354: Fuzzer атаки струны не показали</h3>
+<h3>Вопрос 356: генерировать csrf в тестовой форме</h3>
+<h3>Вопрос 358: опечатка в "Заголовок xfo по-не установлен" решение</h3>
+<h3>Выпуск 360: подкаталоги грубой силы</h3>
+<h3>Вопрос 361: getHostPort на HttpRequestHeader для https-запросы на подключение, возвращает неправильный порт</h3>
+<h3>Проблема 370: API - сохранение сеанса улучшенная обработка ошибок</h3>
+<h3>Issue 374: API - save session synchronous or provide status</h3>
+<h3>Issue 376: Masking the passwords provided for Authentication</h3>
+<h3>Issue 385: Support contexts</h3>
+<h3>Issue 386: API Web UI - support parameters with views</h3>
+<h3>Issue 388: Allow user to specify which technologies apply to a context</h3>
+<h3>Issue 390: Spider - Add option to spider all in context</h3>
+<h3>Issue 391: ZAP Performance improvements</h3>
+<h3>Issue 393: More online links from menu</h3>
+<h3>Issue 397: Support weekly builds</h3>
+<h3>Issue 400: Generate new CA certificate will always produce certificate with same serial number</h3>
+<h3>Issue 401: Exception when the (new) Spider is started through the API</h3>
+<h3>Issue 402: GUI labels are not properly displayed on Linux (when language set to Polish)</h3>
+<h3>Issue 403: Set options via the API using reflection</h3>
+<h3>Issue 404: Labels not properly displayed when the Persian language is chosen</h3>
+<h3>Issue 406: Spider - Add option to control the effect of parameters on visited URLs</h3>
+<h3>Issue 410: charset wrapped in quotation marks</h3>
+<h3>Issue 411: Allow proxy port to be specified on the command line</h3>
+<h3>Issue 417: IndexOutOfBoundsException in ExtensionHttpSessions in daemon mode</h3>
+<h3>Issue 419: Restructure jar loading code</h3>
+<h3>Issue 420: API - support absolute session paths</h3>
+<h3>Issue 421: Cleanly shut down any active scan threads on shutdown</h3>
+<h3>Issue 422: Use exec in zap.sh so a new process is not forked</h3>
+<h3>Issue 423: Active scanner and spider can deadlock if ZAP is shutdown while they are running</h3>
+<h3>Issue 424: Exceptions in Web Sockets when session opened</h3>
+<h3>Issue 425: Add quick start tab</h3>
+<h3>Issue 428: ZAP Marketplace support</h3>
+<h3>Issue 429: Active Scan URL via API scans more than just the specified URL</h3>
+<h3>Issue 433: API: introduce mandatory parameters and optional descriptions</h3>
+<h3>Issue 435: Active scan alerts may be "lost" after saving the session</h3>
+<h3>Issue 436: Locking on session save or shutdown via the API</h3>
+<h3>Issue 438: API enhancements</h3>
+<h3>Issue 441: View incorrectly initialised in many places when in daemon mode</h3>
+<h3>Issue 443: "No Anti-CSRF tokens were found in a HTML submission form" listed as "None. Warning only."</h3>
+<h3>Issue 446: KeyStore of a registered PKCS#11 provider is not retrieved if a PKCS#11 provider is already registered</h3>
+<h3>Issue 447: Highlight attack when displaying alerts</h3>
+<h3>Issue 448: Rename Brute Force ext to Forced Browse and add URLs to the tree</h3>
+<h3>Issue 449: Missing help page for "Extensions" panel in the "Options" dialogue</h3>
+<h3>Issue 451: Manual check for updates doesn't work correctly in the newest weekly releases</h3>
+<h3>Issue 453: Dynamic loading and unloading of add-ons</h3>
+<h3>Issue 455: Split fuzzbd out into a new addon</h3>
+<h3>Issue 456: Spider session handling tweeks</h3>
+<h3>Issue 457: Search Tab arrow key support</h3>
+<h3>Issue 459: Active scanner locking</h3>
+<h3>Issue 460: Add a scan progress dialog</h3>
+<h3>Issue 461: Add help file for Quick Start addon</h3>
+<h3>Issue 462: Review: 	Patch/Review: SSLSocketFactory with TLS enabled and default Cipher options</h3>
+<h3>Issue 466: Move Port Scan extension to ZAP extensions project</h3>
+<h3>Issue 468: Upgrade SQL Injection rule to 'release'</h3>
+<h3>Issue 469: Allow anti csrf token to be added and removed via the API</h3>
+<h3>Issue 471: Move BeanSell extension to ZAP extensions project</h3>
+<h3>Issue 472: Spider accesses UI panel in daemon mode</h3>
+<h3>Issue 473: Allow add-ons to remove views/components added to the message panels</h3>
+<h3>Issue 474: Promote quick start to release status</h3>
+<h3>Issue 478: Allow to choose to send ZAP's managed cookies on a single Cookie request header and set it as the default</h3>
+
+
+
+<h2>See also</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+</table>
+</body>
+</html>

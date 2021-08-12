@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Contenido manejado por datos
+</title>
+</head>
+<body>
+<h1>Contenido manejado por datos</h1>
+<p>
+El contenido dirigido por datos es tipo de <a href="structmods.html"> Modificador estructural </>
+que identifica rutas de URL que representan datos.<br>
+<p>
+En las aplicaciones web 'tradicionales', la estructura de la aplicación se define típicamente por las rutas URL y los datos están contenidos en los parámetros URL y datos POST.<br>
+URLs como:
+<ul>
+<li>https://www.example.com/app/aaa?ddd=eee
+<li>https://www.example.com/app/aaa?ddd=fff
+<li>https://www.example.com/app/bbb?ddd=eee
+</ul>
+están representados en el <a href="sitestree.html">Sites Tree</a> como dos 'nodos' en el árbol:
+<ul>
+<li>Sitios
+	<ul>
+	<li>https://www.example.com
+		<ul>
+		<li>app
+			<ul>
+			<li>GET:aaa(ddd)
+			<li>GET:bbb(ddd)
+			</ul>
+		</ul>
+	</ul>
+</ul>
+El árbol de Sitios es muy importante ya que refleja la comprensión de ZAP de la estructura de la aplicación.<br>
+Si no es una buena representación de la estructura, entonces ZAP no podrá atacar la aplicación de manera efectiva.<br>
+<br>
+Algunas aplicaciones incluyen datos en rutas URL.<br>
+Por ejemplo: 
+<ul>
+<li>https://www.example.com/app/company1/aaa?ddd=eee
+<li>https://www.example.com/app/company2/aaa?ddd=fff
+<li>https://www.example.com/app/company3/aaa?ddd=ggg
+</ul>
+Estas 3 URL representan la misma página pero con datos diferentes, pero por defecto ZAP las representará como tres nodos separados:
+<ul>
+<li>Sitios
+	<ul>
+	<li>https://www.example.com
+		<ul>
+		<li>app
+			<ul>
+			<li>company1
+				<ul>
+				<li>GET:aaa(ddd)
+				</ul>
+			<li>company2
+				<ul>
+				<li>GET:aaa(ddd)
+				</ul>
+			<li>company3
+				<ul>
+				<li>GET:aaa(ddd)
+				</ul>
+			</ul>
+		</ul>
+	</ul>
+</ul>
+Esto es un problema porque ZAP ahora atacará las 3 páginas cuando solo necesite atacar a una de ellas.<br>
+En este caso atacar la misma página 3 veces no es un gran problema, pero si tiene cientos o miles
+de páginas como esta aumentarán significativamente el tiempo que lleva escanear la aplicación.<br>
+<br>
+En términos de ZAP, los nodos de "empresa" son "contenido dirigido por datos": elementos de ruta de URL que contienen datos en lugar de representar parte de la estructura de la aplicación.<br>
+Puede definir contenido dirigido por datos agregando la aplicación a un <a href="contexts.html">Contexto</a>
+y luego configurarlos a través de la <a href="../../ui/tabs/sites.html">Pestaña del sitio</a> 'Marcar como Contexto -&gt; <i>Nombre del Contexto</i> Nodo manejado por datos' click derecho en ítem de menú<br>
+Una vez que haya hecho esto, las páginas se representarán correctamente como 1 nodo:
+<ul>
+<li>Sitios
+	<ul>
+	<li>https://www.example.com
+		<ul>
+		<li>app
+			<ul>
+			<li>&#x00AB;company&#x00BB;
+				<ul>
+				<li>GET:aaa(ddd)
+				</ul>
+			</ul>
+		</ul>
+	</ul>
+</ul>
+Los personajes & # x00AB; y & # x00BB; se utilizan para indicar que este es un nodo "especial" y usted puede establecer el nombre del nodo (en este caso, "empresa") para indicar qué representa ese nodo.
+
+<h2>Accedido mediante</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/sites.html">Pestaña Sitios</a></td><td>'Marcar como Contexto -&gt;<i>Nombre del Contexto</i> Nodo manejado por datos' click derecho en ítem de menú</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/history.html">Pestaña Historia</a></td><td>'Flag as Context -&gt; <i>Context Name</i> Data driven node' right click menu item</td></tr>
+</table>
+
+<h2>Véase también</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">Resumen de IU</a></td><td>para tener una visión general de la interfaz de usuario</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="features.html">Caracteristicas</a></td><td>proporcionado por ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="structparams.html">Parámetros estructurales</a></td><td>que identifica los parámetros que representan la estructura de la aplicación en lugar de los datos del usuario</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/dialogs/session/context-struct.html">Pantalla de estructura de contexto de sesión</a></td></tr>
+</table>
+
+</body>
+</html>

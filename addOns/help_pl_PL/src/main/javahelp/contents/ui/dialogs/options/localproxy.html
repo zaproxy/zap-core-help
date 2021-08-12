@@ -6,10 +6,10 @@
 Options Local Proxies screen
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Options Local Proxies screen</h1>
 <p>
-The Options Connection screen allows you to configure the addresses and ports 
+This screen allows you to configure the addresses and ports 
 on which ZAP accepts incoming connections.<br/>
 
 <h2>Local Proxy</h2>
@@ -53,6 +53,17 @@ The security options apply to both the main and all of the additional proxies.
 You can add as many additional addresses and ports for ZAP to listen on as you like.<br>
 This can be useful when testing mobile applications - you can proxy the mobile application via a Wi-Fi interface at the same time
 as using the backend site directly using a browser proxying through ZAP emulating a mobile user agent.
+
+<h2>Intercepting/Transparent Proxy</h2>
+The local proxies can be used as intercepting/transparent proxies for both HTTP and HTTPS. For HTTPS the client applications
+(e.g. browser) need to use the TLS extension <a href="https://tools.ietf.org/html/rfc6066#section-3">Server Name Indication</a>.
+This allows you to set up a testing LANs (or VMs) where all HTTP and HTTPS traffic is proxied regardless of software settings.
+<p>
+For example, if you have a Linux machine you use for testing, you can do something like the following to forward all HTTP and
+HTTPS traffic to a local proxy listening on <code>192.168.0.14:8080</code>:
+<pre><code>iptables -t nat -A OUTPUT -p tcp --dport 443 -j DNAT --to-destination 192.168.0.14:8080
+iptables -t nat -A OUTPUT -p tcp --dport 80 -j DNAT --to-destination 192.168.0.14:8080
+</code></pre>
 
 <h2>See also</h2>
 <table>

@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<TITLE>
+Sites Tree
+</TITLE>
+</HEAD>
+<BODY>
+<H1>Sites Tree</H1>
+<p>
+The Sites Tree is ZAP's internal representation of the sites that you access and is displayed in the <a href="../../ui/tabs/sites.html">Sites tab</a>.
+If it does not accurately reflect the sites then ZAP will not be able to attack them effectively.
+Each node in the tree represents a different piece of functionality in a site. 
+By default ZAP will create unique nodes in the tree based on the HTTP method and the parameter names.
+</p>
+<p>
+This means that the following requests will all end up having different tree nodes:
+<ul>
+<li>GET https://www.example.com/ex1?a=b&amp;c=d</li>
+<li>GET https://www.example.com/ex1?a=b&amp;d=c</li>
+<li>POST https://www.example.com/ex1?a=b&amp;c=d</li>
+</ul>
+
+And the following requests will end up having the same node:
+<ul>
+<li>GET https://www.example.com?a=b&amp;c=d</li>
+<li>GET https://www.example.com?a=c&amp;c=c</li>
+<li>GET https://www.example.com?a=e&amp;c=f</li>
+</ul>
+
+This works pretty well in lots of cases - different HTTP methods and parameter names typically mean different actions while the parameter values usually don’t change the outcome.
+
+<H2>Exceptions</H2>
+
+There are always exceptions.
+
+<H3>Structural Parameters</H3>
+
+Take the case where the action to be taken is actually defined in a parameter value:
+<ul>
+<li>GET https://www.example.com?a=b&amp;action=add</li>
+<li>GET https://www.example.com?a=b&amp;action=delete</li>
+</ul>
+
+In this case both URLs will end up in the same Sites Tree node, which means that in practice only one of them will be attacked. 
+The other URL will not be attacked and so any vulnerabilities specific to that action will not be found.
+<p>
+In ZAP the solution to this is to define the ‘action’ parameter as a <a href="structparams.html">Structural Parameter</a>, 
+in other words a parameter whose value actually affects the structure of a site. 
+Once you have done that (and revisited the URLs) then they will appear as 2 different nodes and ZAP will attack them separately.
+
+<H3>Data Driven Nodes</H3>
+
+Conversely we have the case where a URL path element is actually part of the data and not part of the structure of the site. 
+For example the following URLs could all represent the same functionality if the second path element (companyX) is actually data:
+
+<ul>
+<li>https://www.example.com/app/company1/aaa?ddd=eee</li>
+<li>https://www.example.com/app/company2/aaa?ddd=fff</li>
+<li>https://www.example.com/app/company3/aaa?ddd=ggg</li>
+</ul>
+
+In this case all 3 URLs will end up in unique nodes and ZAP will attack each of them even though it doesn't really need to. 
+This probably is not a big problem if there are just 3 instances, but in most cases this data will be coming from a database so there could be a huge number of such nodes.
+<p>
+The solution to this is to define the relevant path element as <a href="ddc.html">Data Driven Content</a> which means path elements that really contain data rather than represent part of the site structure.
+Once you have done that (and revisited the URLs) then they will all be represented as just 1 node and ZAP will only attack them once.
+<p>
+You will need to define both Structural Parameters and Data Driven Nodes manually - ZAP does not currently have the capability to automatically detect these situations.
+
+<H3>Custom Parameters</H3>
+
+Finally there are cases where sites define custom parameters which ZAP does not natively understand. 
+As a result ZAP may not be able to correctly split requests into suitable nodes.
+<p>
+In these cases you can use Input Vector <a href="scripts.html">Scripts</a> which can represent request in the Sites Tree in any way you want.
+
+<H2>See also</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="features.html">Features</a></td><td>provided by ZAP</td></tr>
+</table>
+
+<H2>External links</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="https://www.zaproxy.org/blog/2020-09-22-sites-tree-modifiers/">ZAP Blog: Sites Tree Modifiers</a></td></tr>
+</table>
+
+</BODY>
+</HTML>

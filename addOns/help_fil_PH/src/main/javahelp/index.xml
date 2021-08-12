@@ -9,52 +9,54 @@
 
 <index version="2.0">
 
-    <indexitem text="ang aktibong scan" target="start.concepts.ascan" />
+    <indexitem text="ang aktibong scan" target="start.features.ascan" />
     <indexitem text="ang aktibong scan na diyalogo" target="ui.dialogs.advascan" />
     <indexitem text="ang aktibong scan na tab" target="ui.tabs.ascan"/>
-    <indexitem text="mga add-on" target="start.concepts.addons"/>
-    <indexitem text="mga add-on" target="addon.introduction"/>
+    <indexitem text="mga add-on" target="start.features.addons"/>
+    <indexitem text="mga add-on" target="addons.introduction"/>
     <indexitem text="magdagdag ng alerto na diyalogo" target="ui.dialogs.addalert" />
-    <indexitem text="magdagdag ng break point na diyalogo" target="ui.dialogs.addbreak" />
+    <indexitem text="add/edit breakpoint dialog" target="ui.dialogs.addbreak" />
     <indexitem text="magdagdag ng nota na dayalogo" target="ui.dialogs.addnote" />
     <indexitem text="mga alerto na tab" target="ui.tabs.alerts" />
-    <indexitem text="mga alerto" target="start.concepts.alerts" />
-    <indexitem text="ang api" target="start.concepts.api" />
-    <indexitem text="ang pagpapatunay auto form-batay sa manwal login" target="start.concepts.auth" />
-    <indexitem text="ang pangunahing pagtagos na pagsubok" target="start.pentest" />
-    <indexitem text="ang mga break point na tab" target="ui.tabs.breakpoints" />
-    <indexitem text="ang mga break point" target="start.concepts.breakpoints" /> 
-    <indexitem text="ang break na tab" target="ui.tabs.break" />
-    <indexitem text="ang command line" target="cmdline" />
-    <indexitem text="ang mga konteksto" target="start.concepts.contexts" />
-    <indexitem text="ang mga credit" target="zap.credits" />
-    <indexitem text="ang data driven na content" target="start.concepts.ddc" />
-    <indexitem text="ang mga diyalogo" target="ui.dialogs" />
-    <indexitem text="mag-encode/mag-decode/hash diyalogo" target="ui.dialogs.enc_dec" />
-    <indexitem text="mga feature" target="start.concepts" />
-    <indexitem text="ang filter na diyalogo" target="ui.dialogs.filter" />
-    <indexitem text="ang mga filter" target="start.concepts.filters" />
-    <indexitem text="maghanap ng diyalogo" target="ui.dialogs.find" />
-    <indexitem text="ang footer" target="ui.footer" />
-    <indexitem text="gabay sa pagsisimula" target="start.start" />
-    <indexitem text="kasaysayang filter na diyalogo" target="ui.dialogs.historyfilter" />
-    <indexitem text="kasaysayan na tab" target="ui.tabs.history" />
-    <indexitem text="ang http na mga sesyon na tab" target="ui.tabs.httpsessions" />
-    <indexitem text="ang http na mga sesyon" target="start.concepts.httpsessions" />
-    <indexitem text="ang man-in-the-middle na proxy" target="start.concepts.intercept"/>
-    <indexitem text="panimula" target="zap.intro" />
-    <indexitem text="pamamahala ng mga tab na diyalogo" target="ui.dialogs.managetags" />
-    <indexitem text="manu-manong tugon na diyologo" target="ui.dialogs.manreq" />
-    <indexitem text="mga mode" target="start.concepts.modes" />
-    <indexitem text="mga paalala" target="start.concepts.notes" />
-    <indexitem text="mga opsyon na diyalogo" target="ui.dialogs.options" />
-    <indexitem text="ang output na tab" target="ui.tabs.output" />
-    <indexitem text="ang mga param na tab" target="ui.tabs.params" />
-    <indexitem text="ang paros na proxy" target="zap.paros" />
-    <indexitem text="ang passive scan" target="start.concepts.pscan" />
-    <indexitem text="ang passive scanner na mga opsyon" target="ui.dialogs.options.pscan.main" />
-    <indexitem text="ang persist sesyon na diyalogo" target="ui.dialogs.persistsession" />
-    <indexitem text="ang proxy configuration" target="start.proxy" />
+    <indexitem text="mga alerto" target="start.features.alerts" />
+    <indexitem text="ang api" target="start.features.api" />
+    <indexitem text="ang pagpapatunay auto form-batay sa manwal login" target="start.features.auth" />
+    <indexitem text="authentication methods" target="start.features.authmethods" />
+    <indexitem text="authentication verification strategies" target="start.features.authstrategies" />
+    <indexitem text="basic penetration test" target="start.pentest" />
+    <indexitem text="breakpoints tab" target="ui.tabs.breakpoints" />
+    <indexitem text="breakpoints" target="start.features.breakpoints" /> 
+    <indexitem text="break tab" target="ui.tabs.break" />
+    <indexitem text="callbacks tab" target="ui.tabs.callbacks" />
+    <indexitem text="command line" target="cmdline" />
+    <indexitem text="contexts" target="start.features.contexts" />
+    <indexitem text="credits" target="zap.credits" />
+    <indexitem text="custompages" target="start.features.custompages" /> 
+    <indexitem text="data driven content" target="start.features.ddc" />
+    <indexitem text="dialogs" target="ui.dialogs" />
+    <indexitem text="features" target="start.features" />
+    <indexitem text="find dialog" target="ui.dialogs.find" />
+    <indexitem text="footer" target="ui.footer" />
+    <indexitem text="getting started" target="start.start" />
+    <indexitem text="history filter dialog" target="ui.dialogs.historyfilter" />
+    <indexitem text="history tab" target="ui.tabs.history" />
+    <indexitem text="http sessions tab" target="ui.tabs.httpsessions" />
+    <indexitem text="http sessions" target="start.features.httpsessions" />
+    <indexitem text="manipulator-in-the-middle proxy" target="start.features.intercept"/>
+    <indexitem text="introduction" target="zap.intro" />
+    <indexitem text="manage tabs dialog" target="ui.dialogs.managetags" />
+    <indexitem text="manual request dialog" target="ui.dialogs.manreq" />
+    <indexitem text="marketplace" target="start.features.marketplace" />
+    <indexitem text="modes" target="start.features.modes" />
+    <indexitem text="notes" target="start.features.notes" />
+    <indexitem text="options dialog" target="ui.dialogs.options" />
+    <indexitem text="output tab" target="ui.tabs.output" />
+    <indexitem text="params tab" target="ui.tabs.params" />
+    <indexitem text="paros proxy" target="zap.paros" />
+    <indexitem text="passive scan" target="start.features.pscan" />
+    <indexitem text="passive scanner options" target="ui.dialogs.options.pscan.main" />
+    <indexitem text="persist session dialog" target="ui.dialogs.persistsession" />
+    <indexitem text="proxy configuration" target="start.proxy" />
     <indexitem text="release 1.0.0" target="zap.releases.1.0.0" />
     <indexitem text="release 1.1.0" target="zap.releases.1.1.0" />
     <indexitem text="release 1.2.0" target="zap.releases.1.2.0" />
@@ -79,31 +81,35 @@
     <indexitem text="release 2.5.0" target="zap.releases.2.5.0" />
     <indexitem text="release 2.6.0" target="zap.releases.2.6.0" />
     <indexitem text="release 2.7.0" target="zap.releases.2.7.0" />
-    <indexitem text="mga release" target="zap.releases" />
-    <indexitem text="kahilingan na tab" target="ui.tabs.request" />
-    <indexitem text="i-resend na diyalogo" target="ui.dialogs.resend" />
-    <indexitem text="tugon na tab" target="ui.tabs.response" />
-    <indexitem text="scanner na mga patakaran" target="start.check" />
-    <indexitem text="scan na policy" target="start.concepts.scanpolicy" />
-    <indexitem text="ang scan policy na diyalogo" target="ui.dialogs.scanpolicy" />
-    <indexitem text="ang scan policy na namamahala ng diyalogo" target="ui.dialogs.scanpolicymgr" />
-    <indexitem text="ang scan na nagsasagawa ng diyalogo" target="ui.dialogs.scanprogress" />
-    <indexitem text="paghahanap na tab" target="ui.tabs.search" />
-    <indexitem text="sesyong konteksto na mga screen" target="ui.dialogs.contexts" />
-    <indexitem text="sesyong konteksto na nagpapatunay na screen" target="ui.dialogs.context-auth" />
-    <indexitem text="sesyong konteksto na istraktura na screen" target="ui.dialogs.context-struct" />
-    <indexitem text="sesyon na mga katangian na diyalogo" target="ui.dialogs.sessprop" />
-    <indexitem text="tab ng mga site" target="ui.tabs.sites" />
-    <indexitem text="ang spider" target="start.concepts.spider" />
-    <indexitem text="ang spider na diyalogo" target="ui.dialogs.spider" />
-    <indexitem text="ang spider na tab" target="ui.tabs.spider" />
-    <indexitem text="mga istatistika" target="start.concepts.stats" />
-    <indexitem text="mga istraktural na mga modifier" target="start.concepts.structmods" />
-    <indexitem text="istraktural na mga parameter" target="start.concepts.structparams" />
-    <indexitem text="mga tag" target="start.concepts.tags" />
-    <indexitem text="ibabaw na antas na menu" target="ui.topmenu" />
-    <indexitem text="ibabaw na antas na toolbar" target="ui.toptoolbar" />
-    <indexitem text="kabuuang ui" target="ui.overview" />
-    <indexitem text="mga tanaw" target="ui.views" />
+    <indexitem text="release 2.8.0" target="zap.releases.2.8.0" />
+    <indexitem text="release 2.9.0" target="zap.releases.2.9.0" />
+    <indexitem text="release 2.10.0" target="zap.releases.2.10.0" />
+    <indexitem text="releases" target="zap.releases" />
+    <indexitem text="request tab" target="ui.tabs.request" />
+    <indexitem text="response tab" target="ui.tabs.response" />
+    <indexitem text="scanner rules" target="start.check" />
+    <indexitem text="scan policy" target="start.features.scanpolicy" />
+    <indexitem text="scan policy dialog" target="ui.dialogs.scanpolicy" />
+    <indexitem text="scan policy manager dialog" target="ui.dialogs.scanpolicymgr" />
+    <indexitem text="scan progress dialog" target="ui.dialogs.scanprogress" />
+    <indexitem text="scripts" target="start.features.scripts" />
+    <indexitem text="search tab" target="ui.tabs.search" />
+    <indexitem text="session context screens" target="ui.dialogs.contexts" />
+    <indexitem text="session context authentication screen" target="ui.dialogs.context-auth" />
+    <indexitem text="session context structure screen" target="ui.dialogs.context-struct" />
+    <indexitem text="session properties dialog" target="ui.dialogs.sessprop" />
+    <indexitem text="sites tab" target="ui.tabs.sites" />
+    <indexitem text="sites tree" target="start.features.sitestree" />
+    <indexitem text="spider" target="start.features.spider" />
+    <indexitem text="spider dialog" target="ui.dialogs.spider" />
+    <indexitem text="spider tab" target="ui.tabs.spider" />
+    <indexitem text="statistics" target="start.features.stats" />
+    <indexitem text="structural modifiers" target="start.features.structmods" />
+    <indexitem text="structural parameters" target="start.features.structparams" />
+    <indexitem text="tags" target="start.features.tags" />
+    <indexitem text="top level menu" target="ui.topmenu" />
+    <indexitem text="top level toolbar" target="ui.toptoolbar" />
+    <indexitem text="ui overview" target="ui.overview" />
+    <indexitem text="views" target="ui.views" />
 
 </index>

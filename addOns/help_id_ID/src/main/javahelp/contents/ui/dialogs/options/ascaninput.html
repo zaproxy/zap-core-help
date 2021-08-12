@@ -6,10 +6,10 @@
 Pilihan layar masukan Vektor aktif
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Pilihan layar masukan Vektor aktif</h1>
 <p>
-Layar ini memungkinkan anda untuk mengkonfigurasi <a href="../../../start/concepts/ascan.html">aktif scan</a> masukan vektor.<br>
+Layar ini memungkinkan anda untuk mengkonfigurasi <a href="../../../start/features/ascan.html">aktif scan</a> masukan vektor.<br>
 Ini adalah elemen pemindai aktif yang akan menyerang.<br>
 Memindai semua elemen yang didukung akan menghabiskan waktu yang lebih lama, namun tidak dapat memindai beberapa elemen bisa menyebabkan beberapa kelemahan yang dilewatkan.
 
@@ -18,25 +18,29 @@ Elemen permintaan yang ditargetkan untuk pemindai akan aktif:
 
 <h4>String Permintaan URL & Data Didorong Node</h4>
 Pasangan nilai kunci dalam kueri URL permintaan, yaitu setelah <code>?</code>.<br>
-Jika tidak ada parameter kueri maka yang sewaktu-waktu akan diuji.
-Jika <a href="../../../start/concepts/ddc.html">Data Didorong Node</a> didefinisikan dalam konteks mereka akan diuji.
+If <a href="../../../start/features/ddc.html">Data Didorong Node</a> didefinisikan dalam konteks mereka akan diuji.
+
+<h5>Add URL Query Parameter?</h5>
+When selected ZAP will add a query parameter to GET requests which did not originally have one. 
+This may increase scan time, however, it may also reveal issues that would otherwise go un-noticed.
+
 <h4>Data POST</h4>
-Pasangan nilai kunci dalam permintaan data POST.
+Key value pairs in the request POST data.
 
 <h4>Jalur url</h4>
-Elemen jalur dalam URL permintaan, yaitu elemen yang dipisahkan oleh <code>/</code>.
+Path elements in the request URL, ie the elements separated by <code>/</code>.
 
 <h4>Header HTTP</h4>
-Permintaan HTTP Header.
+Request HTTP Headers.
 
-<h5>Semua permintaan</h5>
-Memungkinkan untuk memindai Header HTTP dari semua permintaan. Tidak hanya permintaan yang mengirimkan parameter, melalui query atau permintaan body.
+<h5>All Requests</h5>
+Allows to scan the HTTP Headers of all requests. Not just requests that send parameters, through the query or request body.
 
 <h4>Data cookie</h4>
-Permintaan cookie.
+Request cookies.
 
 <h3>Membangun masukan menangani Vektor</h3>
-Format data yang dipindai aktif akan menargetkan:
+The data formats that the active scanner will target:
 
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Data Formulir Multipart</td><td></td></tr>
@@ -48,11 +52,15 @@ Format data yang dipindai aktif akan menargetkan:
 
 
 <h3>Mengaktifkan Skrip masukan vektor</h3>
-Jika pilihan ini dipilih maka pemindai aktif akan menggunakan vektor masukan skrip yang diaktifkan.<br>
-Vektor masukan skrip adalah skrip yang telah anda tulis atau impor ke ZAP dan memungkinkan anda untuk menargetkan elemen yang tidak didukung secara default.
+If this option is selected then the active scanner will use any enabled script input vectors.<br>
+Script input vectors are scripts which you have written or imported into ZAP and allow you to target elements 
+which are not supported by default.
 
 <p>
 Layar ini juga memungkinkan anda untuk mengkonfigurasi parameter yang akan diabaikan oleh pemindai yang aktif.
+<br />
+Refer to <code>Parameter</code> section in <a href="../addalert.html">Add Alert</a> dialogue for more details about the
+parameter names.
 
 <h2>Lihat juga</h2>
 <table>

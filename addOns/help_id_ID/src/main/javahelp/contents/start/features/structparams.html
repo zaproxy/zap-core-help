@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Parameter Struktural
+</title>
+</head>
+<body>
+<h1>Parameter Struktural</h1>
+<p>
+Parameter struktural adalah jenis dari <a href="structmods.html">Struktural Pengubah</a> yang mengidentifikasi parameter yang mewakili struktur aplikasi ketimbang data pengguna.<br>
+<p>
+Dalam aplikasi web 'tradisional', struktur aplikasi didefinisikan secara khusus oleh jalur URL dan datanya ada dalam parameter URL serta data POST.<br>
+URL seperti:
+<ul>
+<li>https://www.example.com/app/aaa?ddd=eee
+<li>https://www.example.com/app/aaa?ddd=fff
+<li>https://www.example.com/app/aaa?ddd=ggg
+</ul>
+diwakili di dalam <a href="sitestree.html">Sites Tree</a> sebagai satu 'simpul' di pohon:
+<ul>
+<li>Situs
+	<ul>
+	<li>https://www.example.com
+		<ul>
+		<li>aplikasi
+			<ul>
+			<li>GET:aaa(ddd)
+			</ul>
+		</ul>
+	</ul>
+</ul>
+Pohon Situs sangat penting sebagai cerminan pemahaman ZAP tentang struktur aplikasi.<br>
+Jika bukan sebuah representasi dari struktur yang bagus maka ZAP tidak dapat menyerang aplikasi secara efektif.<br>
+<br>
+Pada halaman aplikasi 'tunggal' sebuah parameter digunakan untuk menandakan 'halaman' logis:
+<ul>
+<li>https://www.example.com/app/aaa?page=p1&amp;ddd=eee
+<li>https://www.example.com/app/aaa?page=p2&amp;ddd=fff
+<li>https://www.example.com/app/aaa?page=p3&amp;ddd=ggg
+</ul>
+3 URL ini mewakili halaman logis yang berbeda, namun secara default ZAP masih akan mewakili mereka sebagai satu node:
+<ul>
+<li>Situs
+	<ul>
+	<li>https://www.example.com
+		<ul>
+		<li>aplikasi
+			<ul>
+			<li>MENDAPATKAN:aaa(ddd,halaman)
+			</ul>
+		</ul>
+	</ul>
+</ul>
+Ini adalah sebuah masalah karena ZAP sekarang tidak akan menyerang semua fungsionalitas aplikasi.<br>
+<br>
+Dalam istilah ZAP, 'halaman' parameter URL adalah sebuah 'parameter struktural' - sebuah parameter yang mendefinisikan bagian-bagian dari struktur aplikasi.<br>
+Anda dapat menentukan parameter struktural dengan menambahkan aplikasi ke <a href="contexts.html">Konteks</a>
+dan kemudian mengkonfigurasi mereka melalui <a href="../../ui/dialogs/session/context-struct.html">Sesi Konteks Struktur layar</a>.<br>
+Setelah anda melakukan ini halaman akan benar digambarkan sebagai 3 node:
+<ul>
+<li>Situs
+	<ul>
+	<li>https://www.example.com
+		<ul>
+		<li>aplikasi
+			<ul>
+			<li>aaa
+				<ul>
+				<li>MENDAPATKAN:p1(ddd,halaman)
+				<li>MENDAPATKAN:p2(ddd,halaman)
+				<li>MENDAPATKAN:p3(ddd,halaman)
+				</ul>
+			</ul>
+		</ul>
+	</ul>
+</ul>
+
+<h2>Diakses via</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/dialogs/session/context-struct.html">Sesi Konteks Struktur layar</a></td></tr>
+</table>
+
+<h2>Lihat juga</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">Ikhtisar UI</a></td><td>untuk gambaran dari antarmuka pengguna</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="features.html">fitur</a></td><td>disediakan oleh ZAp</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="structmods.html">Struktural Pengubah</a></td><td>kontrol yang mengubah cara ZAP merupakan struktur aplikasi</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="ddc.html">Konten Didorong Data</a></td><td>yang mengidentifikasi URL jalur yang mewakili data</td></tr>
+</table>
+
+</body>
+</html>

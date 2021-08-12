@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+الإصدار 1.0.0
+</title>
+</head>
+<body>
+<h1>الإصدار 1.0.0</h1>
+<p>
+تم إجراء التغييرات التالية في هذا الإصدار:
+</p>
+<h2>التغييرات الهامة:</h2>
+
+<h3>شاشات مساعدة</h3>
+مساعدة تم إضافة شاشات لجميع الوظائف التي تتيحها الآن انطلق.<br/>
+كما نفذت تعليمات حساسة للسياق حيث أنه سيتم عرض عند الضغط على المفتاح F1 ثم شاشة التعليمات المقترنة بعلامة التبويب التي قمت بتحديدها.
+
+<h3>Breakpoints</h3>
+تنفيذ <a href="../start/features/breakpoints.html">Breakpoints</a> تم تغيير لتكون أقرب إلى تلك التي تقدمها 
+برنامج بيئات التطوير المتكاملة.<br/>
+The breakpoint controls have been moved to the new <a href="../ui/tltoolbar.html">مستوى أعلى شريط الأدوات</a>.<br/>
+Breakpoints can now also be set by right clicking nodes in the 
+<a href="../ui/tabs/sites.html">المواقع</a> و <a href="../ui/tabs/history.html">التاريخ علامات التبويب</a>.
+
+<h3>تقرير القائمة</h3>
+على <a href="../ui/tlmenu/report.html">تقرير القائمة</a> تم تغير كبير و يشمل الآن
+القائمة التالية عناصر:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>إنشاء تقرير Xml...</td><td>نص الترجمة
+الذي يولد الآن تقارير عن الطلب</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>تصدير الرسائل إلى ملف.</td><td>انتقلت من <a href="../ui/tlmenu/file.html">القائمة ملف</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>تصدير الرسائل إلى ملف.</td><td>انتقلت من <a href="../ui/tlmenu/file.html">القائمة ملف</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>تصدير الرسائل إلى ملف.</td><td>وظائف جديدة</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>مقارنة مع آخر جلسة...</td><td>وظائف جديدة</td></tr>
+</table>
+
+<h3>تحسن تاريخ البحث</h3>
+الجديد <a href="../ui/tabs/search.html">ألسنة البحث</a> يسمح لك للبحث عن التعبيرات العادية 
+في جميع عناوين url الطلبات والاستجابات. <br/>
+أزرار التالي والسابق تسمح لك لعرض وجدت مصطلحات البحث في
+
+ 
+<a href="../ui/tabs/request.html">طلب</a> و <a href="../ui/tabs/response.html">رد علامات التبويب</a>. <br/>
+
+<h3>السجل لـ</h3>
+<a href="../ui/tabs/history.html">نص الترجمة
+تاريخ تصفية شريط الأدوات</a> وقد أضاف والذي يسمح لك لتقييد
+ما هي الطلبات التي يتم عرضها.<br/>
+الطلبات يمكن تصفيتها استنادا إلى أساليب HTTP, HTTP نتيجة رموز ، 
+و أي <a href="../start/features/tags.html">وسوم</a>, <a href="../start/features/alerts.html">تنبيهات</a>، أو 
+<a href="../start/features/notes.html">ملاحظات</a> التي تم تطبيقها.    
+
+<h3>مُلاحظات</h3>
+يمكنك الآن مشارك <a href="../start/features/notes.html">ملاحظات</a> مع أي طلب.    
+
+<h3>مصابيح LED متعددة</h3>
+يمكنك الآن مشارك <a href="../start/features/tags.html">وسوم</a> مع أي طلب.    
+
+<h3>More control over the alerts</h3>
+على <a href="../ui/dialogs/addalert.html">Add Alert dialog</a> allows you to manually add or change an
+alert. 
+
+<h3>New encoder/decoder</h3>
+A new Encode/Decode/Hash dialog has replaced the previous 
+Encoder/Decoder. 
+
+<h3>المسح السلبي</h3>
+<a href="../start/features/pscan.html">Passive scanning</a> has been added.<br/>
+In this release ZAP will only use passive scanning for automatically adding <a href="../start/features/tags.html">tags</a>.<br/>
+In future releases it may also raise <a href="../start/features/alerts.html">alerts</a> for potential issues. 
+    
+<h2>Minor changes:</h2>
+
+<h3>مستوى أعلى شريط الأدوات</h3>
+<a href="../ui/tltoolbar.html">The Top Level Toolbar</a> has been added which
+provides a set up buttons for commonly used functionality. 
+
+<h3>Alert footer summaries</h3>
+Counts of the High, Medium, Low and Informational <a href="../start/features/alerts.html">alerts</a>
+are now displayed in the <a href="../ui/footer.html">footer</a>.
+
+<h3>New look and feel</h3>
+A new look and feel 'Nimbus' is used.
+
+<h3>Proxy password handling</h3>
+<a href="../ui/dialogs/options/connection.html">The Options Connection screen</a> has a new option to 
+'Prompt for proxy credentials on start up'.<br/>
+If this option is selected then your proxy password will not be stored on the hard disk.  
+
+<h3>Resend from the Sites tab</h3>
+The <a href="../ui/tabs/sites.html">Sites tab</a> has a new right click menu item that allows
+you to resend the request after making any changes to it that you want to.  
+
+<h3>User directory maintained between sessions</h3>
+The last directory used by the user is now stored in the config file so that it is
+maintained between sessions.
+
+<h2>أنظر أيضاً</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">مقدّمة</a></td><td>مقدمة زاب</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">الإصدارات</a></td><td>the full set of releases</td></tr>
+</table>
+</body>
+</html>

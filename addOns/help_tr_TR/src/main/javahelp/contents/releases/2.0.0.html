@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  Sürüm 2.0.0
+</title>
+</head>
+<body>
+<h1>Sürüm 2.0.0</h1>
+<p>
+Bu sürümde aşağıdaki değişiklikler yapıldı:
+</p>
+
+<h2>Önemli değişiklikler:</h2>
+
+
+<h3>Entegre eklentiler piyasası</h3>
+
+ZAP, tüm ZAP içeriklerine tam erişime sahip eklentilerle genişletilebilir. Herkes eklenti yazabilir ve bunları ZAP Eklenti Marketplace'e yükleyebilir (tamam, zap-uzantıları adı verilen bir Google kod projesi, ancak fikri anladınız).
+<br/>
+Daha da önemlisi, artık bu eklentileri ZAP içinden tarayabilir, indirebilir ve yükleyebilirsiniz. Çoğu eklenti dinamik olarak yüklenebilir (ve kaldırılabilir), böylece yeniden başlatmanız gerekmez.
+<br/>
+Güncellemelerden haberdar edilmeyi seçebilirsiniz, hatta otomatik olarak güncelleme de yapılabilir. Tarama kuralları şimdi eklenti olarak uygulandığından, en son çıkan kuralları yayınlandıkları anda alabilirsiniz.
+
+<h3>'standart' örümcek için bir yedek</h3>
+
+'Eski' Örümcek yaşını gösteriyordu, bu yüzden tamamen yeniden yazıldı ve şimdi eskisinden çok daha hızlı ve daha kapsamlı. Bu, halen bulabileceği herhangi bir bağlantı için HTML kodunu analiz eden 'geleneksel' bir örümcek.
+
+<h3>Yeni bir 'Ajax' örümceği</h3>
+
+'Geleneksel' tarama örümceğine ek olarak, JavaScript'i yoğun şekilde kullanan uygulamalarda daha etkili olan bir Ajax tarama örümceği ekledik. Bu, bir tarayıcıyı (Selenyum kullanarak) yönlendiren Crawljax projesini kullanır ve böylece, bir uygulamanın ürettiği, hatta istemci tarafında üretilen tüm bağlantıları yakalayabilir.
+
+<h3>Web Soketi desteği</h3>
+
+ZAP şimdi WebSocket'i destekliyor, bu nedenle ZAP, tarayıcınıza gelen ve gönderen tüm WebSocket iletilerini görebiliyor. HTTP tabanlı mesajlarda olduğu gibi, ZAP da WebSocket mesajlarını engelleyebilir ve onları anında değiştirmenize izin verir.
+<br/>
+Ayrıca, ZAP'a dahil olan projelerden JBroFuzz ve fuzzdb'de olduğu gibi tüm bulanık yükleri, WebSocket mesajları olarak kullanabilirsiniz. Ve elbette kendi bulanık dosyalarınızı kolayca ekleyebilirsiniz.
+
+<h3>Hızlı Başlangıç sekmesi</h3>
+
+Şimdi göreceğiniz ilk ana sekme, bir URL yazmak ve tek bir tıklamayla taramanıza izin veren bir 'Hızlı Başlangıç' sekmesidir.
+<br/>
+Bu, uygulama güvenliği konusunda yeni kişiler için ideal bir başlangıç noktasıdır, ancak uzmanlar bunu dikkat dağıtıcı buluyorsa kolayca kaldırabilir.
+
+<h3>Oturum bilinci</h3>
+
+ZAP şimdi oturum bilinci oluşturuyor, böylece ZAP birden fazla oturumu tanıyor ve takip edebiliyor. Bu, Yeni oturumlar oluşturmanıza, aralarında geçiş yapmanıza ve Örümcek ve Aktif Tarayıcı gibi diğer tüm bileşenler için geçerli olmasına olanak tanır.
+
+<h3>Kullanıcı tanımlı içerikler</h3>
+
+Artık, bir uygulamayı oluşturan 'bağlamlar' ile ilişkili URL setlerini istediğiniz sayıda tanımlayabilirsiniz. Daha sonra, örneğin Örümcek veya Aktif Tarayıcıyı kullanarak tüm URL'leri bir bağlamda hedefleyebilirsiniz. Bağlamları alanınıza ekleyebilir ve kimlik doğrulama gibi diğer bilgileri ilişkilendirebilirsiniz.
+
+<h3>Oturum kapsamı</h3>
+
+Oturum kapsamı hangi bağlamlarla ilgilendiğinizi istediğiniz zaman belirlemenizi sağlar. Çeşitli sekmelerde gördüklerinizi yalnızca kapsamdaki URL'lerle sınırlayabilirsiniz ve Korumalı modu kullanarak rasgele olmayan URL'lere yanlışlıkla saldırıya mani olabilirsiniz.
+
+<h3>Farklı modlar</h3>
+
+ZAP'ın şimdi desteklediği 3 mod:
+<ul>
+<li>Güvenli, tehlike potansiyeli olan hiçbir işleme izin verilmez</li>
+<li>Koruma altında, URL'lerin alanında gerçekleştirebileceğiniz herhangi bir işlem</li>
+<li>Standart, herhangi bir URL'ye herşeyi yapabilirsiniz</li>
+</ul>
+<h3>Kimlik doğrulama işlemi</h3>
+
+Artık, kimlik doğrulama ayrıntılarını herhangi bir bağlamla ilişkilendirebilirsiniz; bu, ZAP'ın, oturumunuzdan çıkıp çıkmadığınızı ve ne zaman otomatik olarak tekrar oturum açtığınızı algılama gibi işlemleri yapmasına izin verir. Bu özellikle güvenlik regresyon testlerinde API aracılığıyla kullanıldığında yararlıdır.
+
+<h3>Daha fazla API desteği</h3>
+
+REST API, ZAP'ın sağladığı işlevselliğe çok daha fazla erişmenizi sağlayacak şekilde önemli ölçüde genişletildi.
+
+<h3>İnce taneli tarama kontrolleri</h3>
+
+Aktif tarama kuralları artık güçlerini (gerçekleştirdikleri saldırıların sayısı) ve potansiyel sorunları bildirdikleri eşiğin ayarlanması için ayarlanabilir.
+
+<h3>Yeni ve gelişmiş aktif ve pasif tarama kuralları</h3>
+
+
+ZAP 2.0.0'ı çalıştıran sonuçlarımızı wavsep'e (bildiğimiz en kapsamlı açık kaynak değerlendirme projesi) karşı ZAP wiki'ye yükledik: https://github.com/zaproxy/zaproxy/wiki/Testing TODO ;)
+
+
+
+<h2>Değişikliklerin tam listesi:</h2>
+
+<h3>Sorun 43: Filtreleme için kapsam seçeneği</h3>
+<h3>Sorun 163: Aktif tarayıcı DVWA'ya karşı başarısız [yüksek; yanlış pozitifler/doğru negatifler, oranı]</h3>
+<h3>Sorun 175: Daha iyi kabakuvvet sözlüğü</h3>
+<h3>Sorun 240: Bulanıklaştırma işlemi doğru şekilde gerçekleşmediği halde SocketException.</h3>
+<h3>Sorun 278: Bazı platformlarda ExtendeKeyUsage uzantısı nedeniyle Dinamik SSL için Kök CA Sertifikası geçersiz oluyor</h3>
+<h3>Sayı 281: Uyarı sınıfındaki JSON bağlılığı</h3>
+<h3>Sorun 299: Özellik isteği: Örümcek çalışırken bulunan URI sayısını göster</h3>
+<h3>Sorun 305: TODO ve FIXME gibi şüpheli yorumlar için pasif tarayıcı kuralı</h3>
+<h3>Sayı 326: Manuel isteğin yanıt süresi ve toplamdaki uzunluğu</h3>
+<h3>Sorun 330: robots.txt ayrıştırma</h3>
+<h3>Sorun 332: Modlar için destek</h3>
+<h3>Sayı 333: Her şeyi tarayabilmek için örümcek - ekle seçeneği</h3>
+<h3>Sayı 335: Web Yuvaları - Modlar ve Kapsam için destek ekleyin</h3>
+<h3>Sayı 342: HttpSenderListener eklemek</h3>
+<h3>Sorun 350: Kimlik doğrulama yönetimi</h3>
+<h3>Sorun 354: Gösterilmeyen Fuzzer saldırı dizeleri</h3>
+<h3>Sayı 356: CSRF test formu yaratma</h3>
+<h3>Sorun 358: "XFO Başlığı Kurulmadı" çözümündeki yazı tipi</h3>
+<h3>Sayı 360: kaba kuvvet uygulayan alt dizinler</h3>
+<h3>Sorun 361: HttpRequestHeader üzerindeki getHostPort, HTTPS CONNECT istekleri için yanlış bağlantı noktasını döndürüyor</h3>
+<h3>Sayı 370: API - daha iyi hata işlemek için oturum kaydını kaydetme</h3>
+<h3>Sayı 374: API - oturum senkronizasyonunu kaydet yada durumu destekle</h3>
+<h3>Sayı 376: Kimlik doğrulaması için sağlanan şifrelerin maskelenmesi</h3>
+<h3>Sorun 385: İçerik desteği</h3>
+<h3>Sayı 386: API Web UI - izlemelerle birlikteki destek parametreleri</h3>
+<h3>Sorun 388: Kullanıcıya, hangi teknolojilerin bir bağlam için geçerli olduğunu belirtmesine izin ver</h3>
+<h3>Sorun 390: Tarama-Ekle seçeneği tüm tarama içeriği içinde</h3>
+<h3>Sorun 391: ZAP Performans iyileştirmeleri</h3>
+<h3>Sorun 393: Menüden daha fazla online bağlantı</h3>
+<h3>Sayı 397: Haftalık yapıları destekleyin</h3>
+<h3>Sorun 400: Yeni bir CA sertifikası üretmek, her zaman aynı seri numarasıyla sertifika üretiyor</h3>
+<h3>Sorun 401: (yeni) Örümcek, API aracılığıyla başlatıldığında, hariç tutma</h3>
+<h3>Sorun 402: GUI/Grafik Ara Yüzü etiketleri Linux'ta düzgün görüntülenmiyor (dil Polonya dili olarak ayarlandığında)</h3>
+<h3>Sayı 403: API aracılığıyla yansımaları kullanarak seçenekleri ayarlama</h3>
+<h3>Sorun 404: Dil Farsça seçildiğinde etiketler düzgün görüntülenmiyor</h3>
+<h3>Sorun 406: Parametrelerin ziyaret edilen URL'ler üzerindeki etkisini kontrol etmek için Örümceğe seçenek ekle</h3>
+<h3>Sayı 410: tırnak işaretleriyle çevrelenmiş karakter seti</h3>
+<h3>Sorun 411: Proxy bağlantı noktasının komut satırında belirtilmesine izin ver</h3>
+<h3>Sorun 417: Daemon modunda ExtensionHttpSessions'da IndexOutOfBoundsException</h3>
+<h3>Sayı 419: Kavanoz yükleme kodunu tekrardan yapılandırma</h3>
+<h3>Sayı 420: API - kesin oturum imkanlarını destekleme</h3>
+<h3>Sorun 421: Kapatma sırasında etkin tarama iş parçalarını temizce kapatma</h3>
+<h3>Sorun 422: zap.sh'de exec kullanın, bu sayede yeni bir işlem dağılmaz</h3>
+<h3>Sorun 423: Aktif tarayıcı ve örümcek çalışırken ZAP kapanırsa, kilitlenebilirler</h3>
+<h3>Sorun 424: Oturum açıldığı sıradaki Web yuvalarındaki istisnalar</h3>
+<h3>Sorun 425: Hızlı başlama sekmesi ekle</h3>
+<h3>Sayı 428: ZAP piyasa desteği</h3>
+<h3>Sorun 429: API üzerinden Aktif Tarama URL'si sadece belirtilen URL'den daha fazlasını tarıyor</h3>
+<h3>Sorun 433: API: zorunlu parametreleri ve isteğe bağlı açıklamaları tanıtım</h3>
+<h3>Sorun 435: Aktif tarama uyarıları, oturumu kaydettikten sonra "kaybolabilir"</h3>
+<h3>Sayı 436: API üzerinden oturum kaydetme veya kapatmanın kilitlenmesi</h3>
+<h3>Sayı 438: API geliştirmeleri</h3>
+<h3>Sorun 441: Daemon modunda iken birçok yerde yanlışlıkla başlatılmış görünümü</h3>
+<h3>Sayı 443: "Hiçbiri. Yalnızca Uyarı" olarak listelenen, "HTML gönderme formunda Anti-CSRF belirteci bulunamadı"</h3>
+<h3>Sorun 446: Bir PKCS # 11 sağlayıcı zaten kayıtlıysa, kayıtlı bir PKCS # 11 sağlayıcısının KeyStore'u alınmıyor</h3>
+<h3>Sayı 447: Uyarılar görüntülenirken gerçekleşen vurgulama saldırısı</h3>
+<h3>Sorun 448: Brute Force ext'i Zorunlu olarak yeniden adlandırın Gözatın ve URL'leri ağaca ekleyin</h3>
+<h3>Sorun 449: "Seçenekler" diyalogundaki "Uzantılar" paneli için yardım sayfası eksik</h3>
+<h3>Sorun 451: Güncellemelerin elle denetlenmesi en yeni haftalık güncellemelerde düzgün çalışmıyor</h3>
+<h3>Sayı 453: Eklentilerin dinamik olarak yüklenmesi ve boşaltılması</h3>
+<h3>Sorun 455: fuzzbd' yi yeni bir eklentiye bölme</h3>
+<h3>Sorun 456: Sistemin kasıtlı bozulmalarını idare eden ağ oturumu </h3>
+<h3>Sorun 457: Arama Sekmesi ok tuşu yardımı</h3>
+<h3>Sayı 459: Aktif tarayıcı kilitlemesi</h3>
+<h3>Sayı 460: Tarama ilerleme durumu için iletişim kutusu ekleme</h3>
+<h3>Sayı 461: Hızlı Başlangıç eklentisi için yardım dosyası ekleme</h3>
+<h3>Sorun 462: Gözden Geçirme: Yama / Gözden Geçirme: TLS etkin SSLSocketFactory ve varsayılan Cipher seçenekleri</h3>
+<h3>Sayı 466: Bağlantı Noktası Tarama uzantısını ZAP uzantıları projesine taşıma</h3>
+<h3>Sayı 468: SQL Enjeksiyon kuralını 'serbest' durumuna yükselt</h3>
+<h3>Sorun 469: API aracılığıyla anti csrf belirtecinin eklenmesine ve kaldırılmasına izin ver</h3>
+<h3>Sayı 471: BeanSell uzantısını ZAP uzantıları projesine doğru taşıma</h3>
+<h3>Sayı 472: Örümcek, hayalet modundayken kullanıcı arayüzüne erişiyor</h3>
+<h3>Sorun 473: Eklentilerin mesaj panellerine eklenen görünümleri/bileşenleri kaldırmasına izin ver</h3>
+<h3>Sorun 474: Sürüm durumu için hızlı başlangıcı teşvik edin</h3>
+<h3>Sorun 478: ZAP'ın yönettiği çerezleri tek bir Çerez isteği başlığında göndermeyi ve bunu varsayılan olarak ayarlamaya izin ver</h3>
+
+
+
+<h2>Ayrıca bakını</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Giriş</a></td><td>ZAP tanıtımı</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Sürümler</a></td><td>sürümlerin tam listesi</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Katkıda bulunanlar</a></td><td>bu sürümü mümkün kılan insanlar ve gruplar</td></tr>
+</table>
+</body>
+</html>

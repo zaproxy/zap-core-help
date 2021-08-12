@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Rilis 1.3.0
+</title>
+</head>
+<body>
+<h1>Rilis 1.3.0</h1>
+<p>
+Berikut perubahan yang dilakukan dalam rilis ini:
+</p>
+<h2>Perubahan yang signifikan:</h2>
+
+<h3>Fuzzing</h3>
+String dalam tanggapan sekarang dapat fuzzed untuk mencoba menemukan kerentanan.<br>
+Token Anti CSRF dapat terdeteksi dan diregenerasikan secara otomatis ketika fuzzing.<br/>
+Fungsi ini didasarkan pada kode dari OWASP proyek JBroFuzz.
+
+<h3>Sertifikat SSL dinamis</h3>
+Dukungan untuk SSL ditingkatkan dan disederhanakan.<br>
+Pengguna sekarang dapat membuat sertifikat sumber mereka sendiri dan mendistribusikan ke klien HTTP.<br>
+Lihat <a href="../ui/dialogs/options/dynsslcert.html">Opsi: Sertifikat SSL dinamis</a> untuk lebih jelasnya.  
+
+<h3>Daemon mode dan API</h3>
+Memulai ZAP dengan opsi baris perintah "-daemon" akan menyebabkan untuk berjalan di latar belakang 'tanpa' mode, yang berarti bahwa tidak ada UI yang ditampilkan.<br>
+API awal ini telah diterapkan dalam XML, JSON dan HTML.<br>
+Jika ZAP berjalan sebagai daemon maka API secara otomatis diaktifkan, jika tidak, API harus diaktifkan melalui Opsi API layar.<br>
+API dapat navigasikan dengan membuka http://zap/ di browser Anda ketika proxying melalui ZAP. 
+
+<h3>Beanshell integrasi</h3>
+The <a href="http://www.beanshell.org/">BeanShell</a> interaktif Java shell yang dapat digunakan untuk mengeksekusi skrip BeanShell.<br> 
+Script ini adalah bentuk sederhana dari Java yang menggunakan banyak unsur dari Java sintaks, tetapi dalam format scripting yang lebih sederhana. <br>
+Semua kode Java adalah juga berlaku kode BeanShell.<br>
+Integrasi Beanshell di OWASP ZAP memungkinkan anda untuk menulis skrip menggunakan fungsi ZAP dan kumpulan data.<br> 
+Ini bisa menjadi fitur yang sangat kuat untuk menganalisis aplikasi web.<br>
+
+
+<h3>Internasionalisasi penuh</h3>
+Menampilkan semua string yang sekarang sepenuhnya diinternasionalkan.
+
+<h3>Lokalisasi</h3>
+Dari dukungan untuk bahasa-bahasa berikut:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Bahasa Inggris</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Bahasa Portugis Brazil</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Cina</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Prancis</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Jerman</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Yunani</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Indonesia</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Jepang</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Polandia</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Spanyol</td></tr>
+</table>
+
+
+<h2>Perubahan kecil:</h2>
+
+<h3>Tampilan Hex</h3>
+The <a href="../ui/tabs/request.html">Permintaan</a>, <a href="../ui/tabs/response.html">Respon</a> tab sekarang menyediakan
+'Hex' Melihat opsi yang akan menampilkan permintaan dan tanggapan pokol dalam format hex. 
+
+<h3>Hasil pencarian</h3>
+The <a href="../ui/tabs/search.html">Tab Pencarian </a> sekarang menampilkan semua contoh dari string yang ditemukan daripada hanya contoh pertama di setiap permintaan atau tanggapan. 
+
+<h3>Mengecualikan URL</h3>
+URL dapat secara eksplisit dikecualikan dari scanner aktif, laba-laba dan dari proxy.
+
+<h3>Salinan dukungan</h3>
+Sebagian besar panel sekarang menyediakan pilihan menu 'klik kanan' 'Salinan' termasuk pemindai Port dan panel kekerasan.
+
+<h3>Dukungan Urungkan/Ulangi</h3>
+Semua bidang masukan sekarang mendukung Membuka/Mengulangi tindakan menggunakan sistem operasi default Membuka/Mengulangi akselerator:
+<ul>
+<li>Windows/Linux: Ctrl + Z / Ctrl + Y
+<li>Mac OS X: Cmd + Z / Cmd + Shift + Z
+</ul>
+
+<h3>Port scanner proxy dukungan dan timeout pilihan</h3>
+Port Pemindai sekarang bisa menggunakan proxy keluar (jika dikonfigurasikan) dan batas waktu dalam mili detik juga dapat diatur.
+
+<h3>Tombol istirahat permintaan dan respon</h3>
+Sekarang ada 2 tombol 'Set Break' untuk memungkinkan istirahat harus ditetapkan pada semua permintaan dan semua tanggapan secara mandiri. 
+
+<h3>Memperluas situs dan informasi tab tombol</h3>
+Sekarang ada 2 tombol yang memungkinkan anda untuk beralih antara memiliki Situs dan tab informasi yang diperluas.
+
+<h3>Break tab icon changes colour when breakpoint hit</h3>
+Sementara tab istirahat ini tidak digunakan ikon adalah salib abu-abu: &nbsp;
+<img src="../images/16/101grey.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
+Ketika <a href="../start/features/breakpoints.html">breakpoint</a> terkena tab ikon akan berubah ke Palang Merah; &nbsp;
+<img src="../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
+
+<h3>Penyesuaian batas waktu</h3>
+The <a href="../ui/dialogs/options/connection.html">Opsi: koneksi</a> layar memungkinkan anda untuk mengatur batas waktu dalam hitungan detik agar memudahkan dalam menguji aplikasi yang lambat.
+
+<h3>Pembaruan perpustakaan</h3>
+Sebagian besar perpustakaan yang digunakan oleh ZAP telah diperbarui ke versi yang terbaru.
+
+<h3>Ikon baru :)</h3>
+Terima kasih kepada Simon Egli dan semuanya yang telah mengirimkan saran ikon yang keren.
+
+<h2>Masalah yang diketahui:</h2>
+<h3>Mac OS X: SSL dinamis dan Google Chrome</h3>
+Saat ini SSL dinamis tidak bekerja ketika menggunakan Google Chrome. Hal ni karena ada masalah yang belum terselesaikan dengan Google Chrome dan Mac OS X Keychain. Ketika mengimpor OWASP ZAP Root CA ke dalam keychain dan meminta SSL situs web, pesan galat "sertifikat tidak Valid" yang ditampilkan.
+
+<h2>Lihat juga</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Pengenalan</a></td><td>pengantar ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Rilis</a></td><td>set lengkap rilis</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Kredit</a></td><td>orang-orang dan kelompok-kelompok yang telah membuat rilis ini mungkin</td></tr>
+</table>
+</body>
+</html>

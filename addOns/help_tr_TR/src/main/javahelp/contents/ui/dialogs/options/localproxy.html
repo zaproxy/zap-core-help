@@ -6,14 +6,14 @@
 Yerel Proxy'ler Ayarları Ekranı
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Yerel Proxy'ler Ayarlar Ekranı</h1>
 <p>
-Bağlantı Ayarları ekranı, adresleri ve bağlantı noktalarını yapılandırmanıza imkan verir; 
-ZAP'ın gelen bağlantıları kabul ettiklerini.<br/>
+This screen allows you to configure the addresses and ports 
+on which ZAP accepts incoming connections.<br/>
 
-<h2>Yerel Proxy</h2>
-Varsayılan olarak, ZAP bir yerel adres ve bağlantı noktasını dinleyecektir ve bu adres ve bağlantı noktaları tarayıcınızı proxy olarak kullanmak üzere yapılandırmanız gereken adres ve bağlantı noktalarıdır.
+<h2>Local Proxy</h2>
+By default ZAP will listen on one local address and port, and these are the address and port that you must configure your browser to use as a proxy.
 </p>
 <h3>Adres</h3>
 ZAP'in kullanacağı yerel adres. Geçerli adreslerin tümü otomatik olarak tespit edilir.
@@ -50,12 +50,23 @@ Güvenlik ayarları ana ve ilave proxy'lerin tamamına uygulanır.
 ZAP'ın dinlemesi için dilediğiniz gibi bağlantı noktaları ve ek adresler ekleyebilirsiniz.<br>
 Bu, mobil uygulamarı test ederken yararlı olabilir - örneğin bir mobil uygulamayı, bir mobil kullanıcı aracısını taklit eden ZAP üzerinden, proxy sunucu tarayıcısı kullanarak, direkt olarak, arka uç sitesini kullanırken bir Wi-Fi arabirimi vasıtasıyla proxy haline getirebilirsiniz.
 
-<h2>Ayrıca Bakınız</h2>
+<h2>Intercepting/Transparent Proxy</h2>
+The local proxies can be used as intercepting/transparent proxies for both HTTP and HTTPS. For HTTPS the client applications
+(e.g. browser) need to use the TLS extension <a href="https://tools.ietf.org/html/rfc6066#section-3">Server Name Indication</a>.
+This allows you to set up a testing LANs (or VMs) where all HTTP and HTTPS traffic is proxied regardless of software settings.
+<p>
+For example, if you have a Linux machine you use for testing, you can do something like the following to forward all HTTP and
+HTTPS traffic to a local proxy listening on <code>192.168.0.14:8080</code>:
+<pre><code>iptables -t nat -A OUTPUT -p tcp --dport 443 -j DNAT --to-destination 192.168.0.14:8080
+iptables -t nat -A OUTPUT -p tcp --dport 80 -j DNAT --to-destination 192.168.0.14:8080
+</code></pre>
+
+<h2>See also</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Genel bakış</a></td><td>kullanıcı arayüzüne genel bir bakış için</td></tr>
+<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Seçenekler diyalogları</a></td><td>diğer Seçenekler diyalog ekranlarının detayları için</td></tr>
+<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
 </table>
 
 </body>

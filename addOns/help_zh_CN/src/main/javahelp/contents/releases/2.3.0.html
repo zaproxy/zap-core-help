@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  2.3.0版本
+</title>
+</head>
+<body>
+<h1>2.3.0版本</h1>
+<p>
+此版本中进行了以下更改：
+</p>
+
+<h2>重大变化：</h2>
+
+<h3>ZAP ‘lite’ 版本</h3>
+在这个版本中，我们提供了一个叫做 <i>‘lite’</i> 的版本，该版本不同于 <i>‘full’</i> 版本。 
+这个‘lite’版本包含与‘full’版本完全相同的核心代码，但只包含了更少的默认附加组件。
+当然，您可以从ZAP市场下载所有“缺失”的附加组件，将‘lite’版本‘升级’到完整版本。<br>
+这个 <i>‘lite’</i> 版本的目标人群是刚刚接触网络安全问题的用户，他们需要较少的初始功能，希望能够更容易地开始使用ZAP。 它也适用于寻找较小下载包的用户，或者那些希望自定义安装附加组件的用户。
+
+<h3>支持客户端（浏览器）事件</h3>
+您现在可以查看，截取，操纵，重新发送和模糊化 <b>客户端事件</b>。 这包括postMessages（Windows API 中的一个常用函数），所以您现在可以在postMessages中检测到基于DOM的XSS漏洞。 这是一系列计划变更中的第一阶段，以便更有效地支持AJAX和HTML5应用程序的测试。 
+
+<h3>增强的身份验证支持</h3>
+ZAP对身份验证的支持已经完全修改，以便可以轻松地处理复杂类型的 <b>身份验证方法和方案</b>。还为用户自定义的脚本添加了支持，以便允许您处理自定义身份验证方案。 另外，现在ZAP明白并允许您配置 <b>web应用程序的用户</b> 所以整个ZAP的各种操作可以从定义的用户的角度来执行。请检查新的 <i>身份验证</i> 和 <i>用户</i> 面板（在每个定义的上下文的会话属性中）。
+
+<h3>支持非标准应用程序</h3>
+这个版本包括支持 <b>‘单页’应用程序</b> 和 <b>非标准键值分隔符</b>。您现在可以控制这些设置通过新的 <i>结构</i> 面板（在会话属性中）。
+
+<h3>新的输入向量包括用户定义的脚本</h3>
+ZAP支持新的选项来定义 <b>输入向量</b> 例如，ZAP将要攻击的请求的元素。新选项在 <i>主动扫描输入向量</i> 选项面板中。还增加了对定义新输入向量的自定义脚本的支持。
+
+<h3>扫描策略 - 细粒度（fine grained）控住</h3>
+扫描策略现在有一个 <b>细粒度（fine grained）控制</b>, 允许您调整单个扫描器的规则。您还可以定义，加载和保存扫描策略，使您能够维护一套在不同情况下都能运行良好的策略。<br>
+另外，在默认情况下，ZAP将不会扫描众所周知的服务参数（例如，_VIEWSTATE），从而加速整个扫描过程。 这完全是用户可配置的，允许您指定ZAP应该忽略的参数。  
+
+<h3>高级主动扫描对话框</h3>
+一个新的 <i>高级主动扫描</i> 对话框允许您指定您希望主动扫描器的功能。 它允许您指定 <b>‘自定义向量’</b> （明确定义您想要攻击的字符串）。它还支持您为被测试的应用程序定义的任何用户的扫描选项。 <i>高级主动扫描</i> 通过该 <i>工具</i> 菜单或通过 <i>攻击</i> （右键单击弹出菜单的部分）。 
+
+<h3>扩展命令行选项</h3>
+您现在可以运行ZAP的‘inline’模式，例如， <b>不启动ZAP用户界面或守护进程</b>. 在这种模式下，您可以运行简单的攻击或运行可以访问所有ZAP功能的脚本。 现在您也可以通过命令行参数覆盖配置文件中已经定义的任何选项。
+
+<h3>更多API的支持</h3>
+API已经扩展到支持更多的ZAP功能。
+
+<h3>国际化的帮助文档</h3>
+该帮助文档已被国际化，而且它正在被翻译成许多其他语言的过程中： <a href="https://crowdin.com/project/owasp-zap-help">https://crowdin.com/project/owasp-zap-help</a>。 如果您使用我们支持的多种语言之一的ZAP，那么帮助文档将包含该语言的所有可用翻译，而对于尚未翻译的短语则默认为英语显示。<br>
+具有大量已经翻译的帮助页面的语言包括：
+<ul>
+<li>波斯尼亚语</li>
+<li>法语</li>
+<li>日语</li>
+<li>西班牙语</li>
+</ul>
+
+<h3>键盘快捷键</h3>
+所有菜单项现在可以通过键盘快捷键调用。 默认的是所有情形都是被定义的，但您可以配置自己的首选项通过 <i>键盘</i> 选项面板。
+
+<h3>新的UI选项</h3>
+有一个新的选项来更改显示，以便选中的选项卡占用 <b>全屏模式</b>。这在小屏幕上使用ZAP时很有用。还有一个选项可以选择 <b>切换选项卡名称的可见性</b> 以便进一步节省空间。
+
+<p>大多数UI列表也被转换为表格，这些表格允许您更改每一列的宽度并准确定义要显示的列以及表格的排序方式。</p>
+
+<h3>更多的功能移动到附加组件</h3>
+更多的核心功能已经被转移到附加组件中，允许我们通过ZAP 市场动态地提供更新，而不需要新的完整版本。<br>
+This includes the language packs, so translations made to the ZAP UI via https://crowdin.com/project/owasp-zap can be downloaded within ZAP or even automatically installed.
+
+<h3>新的和改进的主动和被动扫描规则</h3>
+许多版本中的高质量主动和被动扫描规则得到了改善。 有新的alpha和beta版本的质量规则，许多规则已经从alpha版本升级到beta版本，从beta版本升级到到发布版本。
+
+<h3>其他各种变化和添加</h3>
+<ul>
+<li>在不停止整个扫描的情况下停止单个扫描规则的新选项</li>
+<li>一个新的工具栏按钮，使您可以快速，方便地记录Zest脚本。</li>
+<li>已创建一个用于共享 ZAP 脚本 (<a href="https://groups.google.com/group/zaproxy-scripts"> https://groups.google.com/group/zaproxy-scripts </a>) 的新组。</li>
+<li>基于通过Web服务器公开的源代码管理元数据（SVN和Git）的Spider应用程序的能力</li>
+<li>从代理脚本中强制中断的能力</li>
+</ul>
+
+<h2>完整的更改列表：</h2>
+<ul>
+<li>问题122：ProxyThread记录超时读数与不正确的消息（URL） </li>
+<li>问题207：增强功能：热键 </li>
+<li>问题362：允许通过网站面板中的选择项筛选警报列表 </li>
+<li>问题399：zap.sh目录处理 </li>
+<li>问题412：启用不安全的SSL/TLS重新协商选项不保存 </li>
+<li>问题416：规范如何在整个ZAP中管理多个相关选项，并提高某些选项的可用性。 </li>
+<li>问题485：使语言包成为附加组件 </li>
+<li>问题503：更改页脚选项卡，用表格而不是列表来显示数据。 </li>
+<li>问题572：将generate_root_ca属性更改为Python API中的函数 </li>
+<li>问题575：在Python API中返回警报列表，而不是返回一个条目的字典  </li>
+<li>问题585：代理 - “502错误的网关”错误响应为“504网关超时” </li>
+<li>问题589：移动显示扩展到ZAP扩展项目 </li>
+<li>问题590：强制浏览在非默认端口上“攻击”通过安全连接（HTTPS）访问的站点时使用错误的方案 </li>
+<li>问题591：当模式更改为“安全”时，可用站点/主机（在页脚面板中）消失 </li>
+<li>问题595：通过非默认端口上的安全连接（HTTPS）访问站点时Spider无法启动（页脚面板）。 </li>
+<li>问题606：选择“ -- 选择站点 -- ”选项时禁用“开始”扫描按钮 </li>
+<li>问题607：在“站点”选项卡中选择时，手动请求的站点在页脚面板中显示为已扫描 </li>
+<li>问题609：提供一个通用接口来查询状态并访问在选项卡中显示的数据（HttpMessage和HistoryReference） </li>
+<li>问题613：将原始HttpMessage扩展保存到ZAP扩展项目中 </li>
+<li>问题619：将强制浏览扩展转移到ZAP扩展项目中 </li>
+<li>问题620：将强制浏览文件转移到ZAP扩展项目中 </li>
+<li>问题783：关机应该是在Python zap.core api中的一种方法 </li>
+<li>问题788：更新Java以用于Mac版本 </li>
+<li>问题793：Authentication /SessionManagement，这两个方法在API中的动态加载不可靠 </li>
+<li>问题799: 将HttpAuthentication添加为身份验证方法 </li>
+<li>问题803：关于/trunk/src/help/zaphelp/zaphelp/credits.html的补丁 </li>
+<li>问题804：为上下文添加对各种类型的身份验证的支持 </li>
+<li>问题805：为上下文添加对各种类型的会话管理的支持 </li>
+<li>问题806：添加对web应用程序的用户的支持 </li>
+<li>问题807：快速启动选项卡关闭时加载ZAP时出错 </li>
+<li>问题816: 在 "编码/解码/哈希" 对话框中添加右键单击复制/粘贴 &amp; 查找选项 </li>
+<li>问题817：Python API不能正确处理“其它”操作 </li>
+<li>问题822：Java API：ApiResponseSet.getAttributes( ) 不起作用 </li>
+<li>问题825：包含在lib目录中的旧版本的Rhino </li>
+<li>问题827：默认会话令牌通过选项对话框添加时不会降低 </li>
+<li>问题828：当站点不存在或不具有令牌时，访问HttpSession API视图“会话令牌”时，产生NullPointerException异常 </li>
+<li>问题829：在不需要参数的情况下调用API 视图时，产生JSONException异常 </li>
+<li>问题830：在向ZAP API发送请求时，Java客户端API不编码查询参数 </li>
+<li>问题832：创建新会话时应清除Http会话选项卡 </li>
+<li>问题837：始终更新由ZAP的代理发送/转发的HTTP请求 </li>
+<li>问题838：搜索API - 添加返回HTTP消息的搜索视图 </li>
+<li>问题839：搜索API - 添加以HTTP存档格式返回的消息的搜索视图 </li>
+<li>问题840：核心API - 允许以HTTP存档格式获取消息 </li>
+<li>问题841：发送禁用了ExtensionHistory的手动HTTP请求后产生NullPointerException异常 </li>
+<li>问题842：在禁用ExtensionAntiCSRF的情况下进行主动扫描时产生NullPointerException异常 </li>
+<li>问题843：在发送/代理禁用了ExtensionAntiCSRF的HTTP请求后产生NullPointerException异常 </li>
+<li>问题844：在禁用ExtensionPassiveScan的情况下调用“扫描策略”对话框时产生NullPointerException异常 </li>
+<li>问题845：AbstractPanel在ExtensionLoader中被添加到TabbedPanel2两次 </li>
+<li>问题846：在禁用ExtensionScript的情况下进行主动扫描时产生NullPointerException异常 </li>
+<li>问题849：在禁用ExtensionHistory进行身份验证时产生NullPointerException异常 </li>
+<li>问题852：搜索API - URL视图多次返回相同的URL </li>
+<li>问题853：核心API - 允许获取警报的数量 </li>
+<li>问题854：核心API - 允许获取消息的数量 </li>
+<li>问题855：核心API - 允许通过ID获取消息 </li>
+<li>问题856：核心API - 允许通过ID获取警报 </li>
+<li>问题857：核心API - 在使用分页时，“警报”视图可能会返回意外的警报 </li>
+<li>问题858：核心API - 在使用分页时，“消息”视图可能会返回意外的消息 </li>
+<li>问题859：被动扫描 API - 允许启用/禁用被动扫描 </li>
+<li>问题860：被动扫描 API - 允许列出/获取被动扫描器 </li>
+<li>问题861：被动扫描 API - 允许启用/禁用所有被动扫描器 </li>
+<li>问题862：被动扫描 API - 允许启用/禁用给定的被动扫描器 </li>
+<li>问题863：主动扫描 API - 允许列出/获取主动扫描器 </li>
+<li>问题864：主动扫描 API - 允许启用/禁用所有主动扫描器 </li>
+<li>问题865：主动扫描 API - 允许启用/禁用给定的主动扫描器 </li>
+<li>问题866：当HistoryReference已经被设置或可用时，警报会使HttpMessage保持更长的时间 </li>
+<li>Issue 867 : HttpMessage#getFormParams should return an empty TreeSet if the request body is not "x-www-form-urlencoded" </li>
+<li>问题868：核心API - “消息”视图不应该返回内部/临时的消息 </li>
+<li>问题869：区分来自（ZAP）用户请求的代理请求 </li>
+<li>问题870：更改MainToolbarPanel的展开按钮以使用ButtonGroup和Action </li>
+<li>问题871：通过主工具栏按钮的“会话属性......”选项更改会话名称时标题未被更新 </li>
+<li>问题872：核心API - 允许发送手动请求 </li>
+<li>问题873：核心API - 允许以HAR格式发送手动请求 </li>
+<li>问题874：更改BreakPanelToolbarFactory以使用操作（Actions） </li>
+<li>问题875：删除国际化目录 </li>
+<li>问题876：弃用FuzzerPanel#PANEL_NAME </li>
+<li>Issue 877 : ExtensionPopupMenuItem#isEnableForComponent called twice on some pop up menus each time is shown using the MainPopupMenu </li>
+<li>Issue 878 : ExtensionPopupMenuItem#getMenuIndex() as no effect in MainPopupMenu </li>
+<li>问题879：即使ExtensionSpider被禁用，弹出式菜单“Spider Context ......”也被启用 </li>
+<li>问题880：添加自定义模糊文件时记住上次选择的目录 </li>
+<li>问题881：如果没有找到zapdb.script文件则立即失败 </li>
+<li>问题882：删除“强制浏览”选项卡中显示的“复制”弹出菜单项 </li>
+<li>问题884：Plug-n-Hack协议第二阶段 </li>
+<li>问题885：API - 使用HTML格式时不显示操作的响应 </li>
+<li>问题886：主弹出菜单在某些组件上被调用两次 </li>
+<li>问题887：扫描器暂停按钮的选择/启用状态不一致 </li>
+<li>问题888：搜索API - 使用分页时，URL视图可能会返回意外的URLs </li>
+<li>问题889：调用一个API没有所需的参数时产生JSONException异常 </li>
+<li>问题890：允许清除“输出”选项卡 </li>
+<li>问题891：构建目标“generate-javadocs”应该将SVN mime类型的属性应用于所有生成的文件 </li>
+<li>问题892：HistoryReference中响应正文长度的缓存可能不正确 </li>
+<li>Issue 896 : PnH: Flag any fuzz attacks that hit the DOM XSS oracle </li>
+<li>问题897：添加JToggleButton以允许根据按钮的状态设置工具提示文本 </li>
+<li>问题898：将所有根据按钮状态设置工具提示文本的切换按钮替换为ZapTogglButton </li>
+<li>问题899：根据按钮的状态删除“手动”切换按钮的图标更新 </li>
+<li>问题900：在调用具有主弹出菜单的菜单或带有高级菜单索引的超级菜单时产生IllegalArgumentException异常 </li>
+<li>问题901：在MainPopupMenu中使用子菜单时不会添加弹出菜单的“成功”分隔符 </li>
+<li>Issue 902 : Change all ExtensionAdaptor#hook(ExtensionHook) overriding methods to call the base implementation </li>
+<li>问题903：更改选项的线程滑块以使用相同的组件 </li>
+<li>问题904：添加一个允许取消选择已选定的按钮的按钮组 </li>
+<li>问题905：“中断选项卡”帮助页面中的链接不正确 </li>
+<li>问题910：强制用户（Forced User）不能更改 </li>
+<li>问题911：主动扫描 API - 更改“扫描器”视图以包括主动扫描器的状态 </li>
+<li>问题912：被动扫描 API - 更改“扫描器”视图以包含被动扫描器的状态 </li>
+<li>问题913：主动 API - 允许列出/获取主动扫描器策略 </li>
+<li>问题914：主动扫描 API - 允许设置启用的主动扫描器策略 </li>
+<li>问题915：根据站点窗口中的选择动态筛选历史记录 </li>
+<li>问题919：允许将漏洞定位到IdealFirstBug </li>
+<li>问题920：将包含/排除URL的格式添加到历史记录过滤器 </li>
+<li>问题921：PnH2：打开为受监视的URL </li>
+<li>问题923：允许通过GUI设置单独的规则阈值和强度 </li>
+<li>问题925：HTML报告问题 </li>
+<li>问题929：主动扫描 API - 允许设置主动扫描器和主动扫描器策略的攻击强度和警报阈值 </li>
+<li>问题930：主动扫描 API - 允许按策略ID列出/获取主动扫描器 </li>
+<li>问题931：允许扩展在GUI模式下获取命令行参数 </li>
+<li>问题932：允许在命令行上指定脚本 </li>
+<li>问题933：自动确定安装目录 </li>
+<li>问题934：通过扩展处理在命令行上的文件 </li>
+<li>问题935：改进Java版本的标识 </li>
+<li>问题939：ZAP应自动接受非标准端口上的SSL连接 </li>
+<li>问题947：Spider会失败如果URLs中包括非法字符 </li>
+<li>问题950：处理包含直接复制到插件目录中的文件的附加组件 </li>
+<li>问题951：默认情况下，TLS 1.1和1.2版本未启用 </li>
+<li>问题954：单击确定或继续后，不会保存GUI中某些字段的更改 </li>
+<li>问题955：当大块内容被发现时，键盘焦点丢失 </li>
+<li>问题956：复制URLs不会复制多个 </li>
+<li>问题957 : 警报“X-Content-Type-Options 标题丢失”的参考 </li>
+<li>问题963：如果不能在更新时被删除，则把插件添加到阻止列表（blocklist） </li>
+<li>问题965：支持'单页'应用程序和'非标准'参数分隔符 </li>
+<li>问题966：快速启动命令行选项 </li>
+<li>问题967：更新“脚本控制台”加载项时产生InvalidParameterException异常 </li>
+<li>问题968：允许选择已启用的SSL/TLS协议 </li>
+<li>问题969：代理 - 在回答不成功的HEAD请求时不要包含响应主体 </li>
+<li>问题970：DELETE请求的正文应该被发送/转发 </li>
+<li>问题974：扫描URL路径元素 </li>
+<li>问题975：反向搜索模糊结果Buggy </li>
+<li>问题976：Spider上下文攻击导致Spider出现在上下文之外 </li>
+<li>问题979：站点和警报树可能会损坏 </li>
+<li>问题981：国际化帮助文档 </li>
+<li>问题982：API密钥 </li>
+<li>问题986：新的ScanProgress对话框的实现和插件跳过功能 </li>
+<li>问题987：允许通过命令行设置任意配置文件值 </li>
+<li>问题988：ZAP帮助文档在开始之前崩溃 </li>
+<li>问题989：在HTTP会话上添加一个右键单击“添加用户”的选项 </li>
+<li>问题991：加载/扫描规则审查请求 - 持续的XSS </li>
+<li>问题996：按下退出键时确保所有对话框关闭 </li>
+<li>问题997：Session.open不正确地使用addPath功能 </li>
+<li>问题998：愚蠢的正则表达式搜索会杀死ZAP </li>
+<li>问题999：以错误的顺序加载历史记录 </li>
+<li>问题1002：添加对通过脚本进行身份验证的支持 </li>
+<li>问题1003：XXE漏洞测试插件 </li>
+<li>问题1004：使用Git元数据进行源代码公开 </li>
+<li>问题1005：使用Subversion元数据进行源代码公开 </li>
+<li>问题1006：使用Git元数据捕获Web应用程序 </li>
+<li>问题1007：使用Subversion（SVN）元数据捕获Web应用程序 </li>
+<li>问题1010：允许对模糊结果进行排序 </li>
+<li>问题1012：编码/解码对话框 - 支持HTML和JavaScript编码 </li>
+<li>问题1016：在credits.html中的HTML编码显示问题 </li>
+<li>问题1017：代理设置为0.0.0.0导致生成不正确的PAC文件 </li>
+<li>问题1018：给AbstractAppParamPlugin实现访问参数类型 </li>
+<li>问题1019：在错误的JAVA_HOME设置下，ZAP启动显示混淆错误消息 </li>
+<li>问题1020：在请求/中断选项卡上重复“正文：表格”的可插入视图 </li>
+<li>问题1021：运行主动扫描器时产生OutOutOfMemoryError错误 </li>
+<li>问题1022：代理 - 允许覆盖代理的消息 </li>
+<li>问题1023：脚本控制台 - 状态不一致的运行/停止按钮 </li>
+<li>问题1024：即使响应正文不存在，也会显示大的响应视图 </li>
+<li>问题1025：选中“脚本控制台”文本区域时按下按键会产生NullPointerException异常 </li>
+<li>问题1030：加载并保存扫描策略 </li>
+<li>问题1031：向主动扫描器中添加参数排除功能 </li>
+<li>问题1032：为基于脚本的身份验证添加API支持 </li>
+<li>问题1033：org.zaproxy.clientapi.core.Alert不覆盖equals( )方法 </li>
+<li>问题1037：JSON RPC参数设置不正确 </li>
+<li>问题1039：提高外部重定向插件的准确性 </li>
+<li>问题1041：如果站点是本地地址127.0.0.1，主动扫描插件不会启动 </li>
+<li>问题1042：当打开前一次会话时有重大问题</li>
+<li>问题1043：自定义主动扫描对话框 </li>
+<li>问题1044：强制用户模式在会话中不被保存/加载 </li>
+<li>问题1046：HttpResponseHeader中的getHttpCookies( ) 方法未正确设置域 </li>
+<li>问题1047：备份文件没有被Zap检测到 </li>
+<li>问题1049：快速多模式搜索组件 </li>
+<li>问题1050：基于脚本的输入向量 </li>
+<li>问题1051：Zap可以将服务绑定到所有网络接口 </li>
+<li>问题1052：主动扫描插件的回调API </li>
+<li>问题1053：字符串相似性和LCS算法组件 </li>
+<li>问题1055：在插件启动之前加载扩展 </li>
+<li>问题1057：为安装后操作添加Extension.postInstall( )方法 </li>
+<li>问题1059：添加对基于脚本的身份验证的Jython支持 </li>
+<li>问题1060：添加对基于脚本的身份验证的JRuby支持 </li>
+<li>问题1061：创建新脚本时选择适当的脚本类型，引擎和模板 </li>
+<li>问题1063：解码添加压缩内容的选项（处理压缩脚本） </li>
+<li>问题1065：将ExtensionScripts重命名为ExtensionScriptsConsole </li>
+<li>问题1066：添加支持以快速从脚本UI设置基于脚本的身份验证 </li>
+<li>问题1068：Zap在响应中没有检测到源代码 </li>
+<li>问题1069：支持.-：在Zest变量名称中 </li>
+<li>Issue 1071 : Using Zest-Script "Replace in response-body" delivers wrong Content-Length header. </li>
+<li>问题1072：SQLDataException：数据异常：字符串数据，右截断 </li>
+<li>问题1074：添加选项以仅显示来自所显示脚本的输出 </li>
+<li>问题1075：更改TableHistory批次删除记录 </li>
+<li>问题1076：更改主动扫描器使之不删除生成的临时消息 </li>
+<li>问题1077：更改（HTTP）模糊器使之不删除生成的临时消息 </li>
+<li>问题1078：更改ExtensionBreak回退到基本消息类型断点管理器实现 </li>
+<li>问题1079：删除错位的主弹出式菜单分隔符 </li>
+<li>问题1080：用户指南HTML页面错误地依赖于平台默认编码 </li>
+<li>问题1081：当调用弹出时，ExtensionPopupMenu应当”通知”子ExtensionPopupMenu（和 ExtensionPopupMenuItem） </li>
+<li>问题1082：搜索URL匹配在不正确的位置突出显示 </li>
+<li>问题1083：弃用ExtensionPopupMenuItem方法 </li>
+<li>问题1084：在“站点”选项卡中选择一个节点时产生NullPointerException异常 </li>
+<li>问题1085：不要通过方法视图添加/删除弹出式菜单项 </li>
+<li>问题1086：允许动态添加/删除被动扫描器 </li>
+<li>问题1087：更改扩展以动态添加被动扫描器 </li>
+<li>问题1088：弃用方法ExtensionPopupMenu </li>
+<li>问题1089：更改ExtensionPopupMenu以遵守扩展弹出方法 </li>
+<li>问题1090：如果目标扩展未启用，请不要添加弹出式菜单 </li>
+<li>问题1091：核心API - 不要获取临时历史记录的ID </li>
+<li>问题1092：搜索线程- 不要获取丢弃的消息的IDs </li>
+<li>问题1093：添加警告大型主体的HTTP请求正文视图 </li>
+<li>问题1094：将ExtensionManualRequestEditor更改为仅在GUI模式下添加视图组件 </li>
+<li>问题1095：适当时使用ExtensionPopupMenu替换主弹出子菜单 </li>
+<li>问题1096：卸载加载项文件后，AddOnLoader调用不正确的通知方法 </li>
+<li>问题1097：将“运行应用程序”（调用）扩展名移动到zap-extensions项目 </li>
+<li>问题1098：将AJAX Spider帮助页面移动到“Ajax Spider”附加组件中（并更新它们） </li>
+<li>问题1099：允许为ZAPAPI注释忽略的选项方法 </li>
+<li>问题1100：注释不应在ZAP API中公开的选项方法 </li>
+<li>问题1101：更改被动扫描器以显示其IDs </li>
+<li>问题1102：Ajax Spider - 用核心代理替换ajax spider代理 </li>
+<li>问题1103：脚本控制台 - 即使启用“运行时清除”，也允许清除输出 </li>
+<li>问题1104：将所有根据按钮状态设置工具提示文本的切换按钮替换为ZapTogglButton（附加组件） </li>
+<li>问题1105：根据按钮的状态（附加组件）删除“手动”切换按钮的图标更新 </li>
+<li>问题1106：当历史记录条目被删除时，历史列表的历史ID到列表索引的映射未被更新 </li>
+<li>问题1110：Spider API - 无法设置如何使用API处理参数 </li>
+<li>问题1111：在访问“选项”对话时，检查启动的更新获取（自动地）被禁用 </li>
+<li>问题1112：更改ZAP（核心）以支持新的附加目录结构 </li>
+<li>问题1113：更改附加目录结构（帮助和资源） </li>
+<li>问题1118：警报标签可能会不同步</li>
+<li>问题1119：Spider没有检测到同一个URL上的多个表单</li>
+<li>问题1120：如果规则规定在卸载中使用消息包，则卸载加载项失败 </li>
+<li>问题1121：扫描进度对话框可能导致UI冻结 </li>
+<li>问题1122：附加组件的附加信息 </li>
+<li>问题1125：无法重新导入作为代理脚本的jython脚本 </li>
+<li>问题1126：在断点过滤器中存在Bugs </li>
+<li>问题1127：功能请求：允许脚本生成截断 </li>
+<li>问题1131：在附加组建中支持Zest拦截行动 </li>
+<li>问题1132：HttpSender忽略“发送单个Cookie请求标头”的选项 </li>
+<li>问题1134：被动扫描规则正则表达式未经验证 </li>
+<li>问题1135：如果cfu开始运行，Marketplace选项卡不能更新</li>
+<li>问题1137：删除节点时ZAP锁定</li>
+<li>问题1138：未保存被动扫描规则的更改</li>
+<li>问题1145：如果使用逗号，Cookie会分析出错</li>
+</ul>
+
+<h2>请参阅</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">简介</a></td><td>ZAP简介</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">版本发布</a></td><td>所有版本</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">版权</a></td><td>所有参与这次版本更新的人和组织</td></tr>
+</table>
+</body>
+</html>

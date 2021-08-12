@@ -6,12 +6,12 @@
 Options Callback Address screen
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Options Callback Address screen</h1>
 <p>
-A Visszahívási Cím képernyőn beállíthatja, hogy a cím kimutatására használt biztonsági rések, amelyek lehetővé teszik, hogy a támadó hívás távoli Url-eket.<br>
-A korábbi verziókban a ZAP API-t használták erre a célra, de a 2.6.0-től külön végpont úgy alkalmazzák, hogy a cél rendszerek
-többé nem kell a hozzáférést az API.
+The Callback Address screen allows you to configure the address used to detect vulnerabilities that allow an attacker to call remote URLs.<br>
+In previous versions the ZAP API was used for this purpose, but from 2.6.0 onwards a separate endpoint is used so that target systems
+no longer need access to the API.
 </p>
 
 <h3>Local Address (e.g. 0.0.0.0)</h3>
@@ -32,17 +32,19 @@ If you need to use the same port (for example to allow access through firewalls)
 
 <h3>Specify Port</h3>
 
-Ha a Véletlenszerű Port opció nincs bejelölve, akkor ez a port, hogy ZAP hallgat. 
-Lehet más a más portok ZAP használ, például a portot használja a proxy kapcsolat.
+If the Random Port option is unchecked then this is the port that ZAP will listen on. 
+It must be different to the other ports ZAP uses, for example the port it uses for proxying connections.
 
 <h3>Test URL</h3>
 
-Ez a teszt URL-t, hogy próbálja meg elérni a távoli rendszerek. 
+This is the test URL that you can try to access from remote systems. 
 All accesses to the Test URL will be recorded in the ZAP log file at INFO level. 
-If you are using the ZAP UI then accesses will also be shown in the <a href="../../tabs/output.html">Output tab</a>.
+If you are using the ZAP UI then accesses will also be shown in the <a href="../../tabs/output.html">Output tab</a>, as well as the <a href="../../tabs/callbacks.html">Callbacks tab</a>.
 
 <h2>See also</h2>
 <table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../tabs/callbacks.html">Callbacks tab</a></td><td>&nbsp;</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>

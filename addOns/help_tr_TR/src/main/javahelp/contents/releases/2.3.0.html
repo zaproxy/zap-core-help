@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  Sürüm 2.3.0
+</title>
+</head>
+<body>
+<h1>Sürüm 2.3.0</h1>
+<p>
+Bu sürümde aşağıdaki değişiklikler yapılmıştır:
+</p>
+
+<h2>Önemli değişiklikler:</h2>
+
+<h3>ZAP 'lite' sürümü</h3>
+Bu sürüm için bir <i>'hafif'</i> Zap sürümüne ek olarak <i>'tam'</i> sürüm. 
+Bu, tam olarak aynı çekirdek kodunu içerir, ancak yalnızca varsayılan eklentileri daha az içerir.
+Tabii ki, lite sürümünü tam sürümüne yükseltmek için eksik olan tüm eklentileri ZAP pazarından indirebilirsiniz.<br>
+- <i>'hafif'</i> sürümü, başlangıçtaki işlevselliği daha az olan ve yeni başlamak daha kolay olacak güvenlik konusundaki yeni insanlara yöneliktir. Ayrıca, daha küçük bir indirme arayan veya tam olarak hangi eklentilerin yüklendiğini ayarlamak isteyenler için de geçerli olacaktır.
+
+<h3>İstemci tarafında (tarayıcı) etkinlikler için destek</h3>
+Artık, etkinliklerini görüntüleyebilir, onları izleyebilir, değiştirebilir, olayları yeniden gönderebilir <b>müşteri tarafından</b>. Bu, post mesajlar içerir, böylece postMessages'da DOM tabanlı XSS güvenlik açıklarını tespit edebilirsiniz. Bu, AJAX ve HTML5 uygulamalarının testlerini daha etkili bir şekilde desteklemek için planlanan değişiklikler dizisinin ilk aşamasıdır.
+
+<h3>Geliştirilmiş kimlik doğrulama desteği</h3>
+ZAP'ın kimlik doğrulama desteği, karmaşık türdeki öğeleri kolayca yönetmek için tamamen modernize edilerek yenilenmiştir <b>kimlik doğrulama yöntemleri ve senaryoları</b>. Özel kimlik doğrulama şemalarını işleme imkânı tanıyan, kullanıcı tanımlı komut dosyaları için destek de eklenmiştir. Buna ek olarak, ZAP şimdi sizi anlar ve yapılandırmanıza izin verir <b>web uygulamaları' Kullanıcılar</b> dolayısıyla tanımlı kullanıcılar açısından ZAP boyunca çeşitli eylemler yapılabilir. Başlamak için, yenilikleri kontrol edin <i>Doğrulama</i> ve <i>Kullanıcılar</i> tanımlı Bağlamların her biri için Oturum Özellikleri'ndeki paneller.
+
+<h3>Standart olmayan uygulamalar için destek</h3>
+Bu sürümde destek dahil edilir <b>'single page' uygulamaları</b> ve <b>Standart olmayan key-value ayırıcıları</b>Şimdi bu ayarları yeni kaynaktan kontrol edebilirsiniz <i>Yapı</i> Oturum Özelliklerindeki panel.
+
+<h3>Kullanıcı tanımlı komut dosyalarına yeni giriş vektörleri dahil edilir</h3>
+Yeni destek seçenekleri için ZAP tanımlanır <b>giriş vektörleri</b> Elementlerin istekleri Zapı atağa geçirecektir. Yeni seçenekler uygundur <i>Aktif Tarama Girdi Vektörleri</i> seçenekler paneli. Yeni girdi vektörlerini tanımlayan özel komut dosyalarını tanımlamak için destek de eklendi.
+
+<h3>Tarama tedbiri - ince taneli kontrol</h3>
+Şimdi tarama güvenliğine sahiptir <b>ince taneli kontrol
+</b>Bireysel tarayıcı kurallarını değiştirmenize izin verir. Tarama politikalarını tanımlayabilir, yükleyebilir ve kaydedebilir, farklı koşullarda iyi çalışan bir dizi politikayı korumanıza izin verebilirsiniz.<br>
+Buna ek olarak, varsayılan olarak ZAP, artık bilinen tarama parametrelerini (ör. __VIEWSTATE) taramayacak ve böylece tarama sürecinin tamamı hızlanacaktır. Bu tamamen kullanıcı tarafından yapılandırılabilir, bu şekilde ZAP'ın hangi parametreleri yok sayması gerektiğini belirtebilirsiniz.  
+
+<h3>Gelişimiş Aktif Tarama dialogu</h3>
+Yeni bir <i>'Advanced Active Scan'</i> iletişim kutusu, etkin tarayıcının tam olarak nasıl çalışacağını belirlemenizi sağlar. Belirtmenizi sağlar <b>‘custom vectors’</b> bunlar saldırı için açıkça tanımladığını dizelerdir. Ayrıca, test edilen uygulama için tanımladığınız Kullanıcılardan herhangi biri gibi tarama seçeneğini de destekler. Başlatın <i>Gelişmiş Aktif Tarama</i> kaynak <i>Araçlar</i> menu ya da kaynak <i>Saldırı</i> sağ bölümde  popup menusune tıklayın. 
+
+<h3>Genişletilmiş komut satırı seçenekleri</h3>
+Zap 'inline' şu an çalıştırabilirsin. <b>Bununla beraber ZAP UI ya da deamon başlatınız</b>. Bu modda basit saldırılar çalıştırabilir veya tüm ZAP fonksiyonlarına erişebilen komut dosyalarını çalıştırabilirsiniz. Ayrıca, komut satırı parametreleri aracılığıyla yapılandırma dosyasında tanımlanan seçeneklerin herhangi birini geçersiz kılabilirsiniz.
+
+<h3>Daha fazla API desteği</h3>
+ZAP işlevselliğini daha fazla desteklemek için API genişletildi.
+
+<h3>Uluslararası yardım dosyası</h3>
+Yardım dosyası uluslararası bir üründü ve şu yoluyla birçok başka dile tercüme edildi <a href="https://crowdin.com/project/owasp-zap-help">https://crowdin.com/project/owasp-zap-help</a>. ZAP'ı desteklediğimiz birçok dilden birinde kullanırsanız, yardım dosyaları o dile ait tüm çevirileri içerecek ve henüz çevrilmemiş cümleler için İngilizce'ye geri dönülmesini sağlayacaktır.<br>
+Dillerle beraber önemli çeviri miktarı yardımcı sayfalarda dahil edilir:
+<ul>
+<li>Boşnakça</li>
+<li>Fransızca</li>
+<li>Japonca</li>
+<li>İspanyolca</li>
+</ul>
+
+<h3>Klavye kısayolları</h3>
+Tüm menü öğeleri artık klavye kısayolları kullanılarak çağrılabilir. Varsayılanlar neredeyse tüm durumlarda tanımlanır, ancak kendi tercihlerinizi <i>Klavye</i> Seçenekler paneli.
+
+<h3>Yeni arayüz seçenekleri</h3>
+Yeni seçenekleri değiştirmek için görüntüle böylece seçtiğimiz sekme açılır <b>tam ekran</b>ZAP küçük ekranlarda kullanışlıdır.
+Ayrıca seçenekler <b>sekme adları görünürülüğü  geçişi </b> daha çok yerden tasarruf eder.
+
+<p>Çoğu UI listesi, sütun genişliklerini değiştirmenize ve tam olarak hangi sütunların görüntüleneceğini ve tabloların nasıl sıralanacağını belirlemenize izin veren tablolara dönüştürülmüştür.</p>
+
+<h3>Daha işlevsel değişim ekle</h3>
+Temel işlevlerin daha fazlası eklentilere taşındı, bu da yeni tam sürüm gerektirmeden ZAP Pazaryeri yoluyla dinamik olarak güncelleme sunmamızı sağlar.<br>
+This includes the language packs, so translations made to the ZAP UI via https://crowdin.com/project/owasp-zap can be downloaded within ZAP or even automatically installed.
+
+<h3>Yeni ve gelişmiş aktif ve pasif tarama kuralları</h3>
+Çoğu aktif ve pasif kuralları nitelikli serbest bırakılması geliştirildi. Yeni alfa ve beta nitelik kuralları ve çoğu kurallar alfa ve beta tarafından yükseltidi ve serbest bırakıldı.
+
+<h3>Dİğer çeşitli değişimler ve ekler</h3>
+<ul>
+<li>Tüm taramayı durdurmadan tek tek tarama kurallarını durdurmak için yeni bir seçenek</li>
+<li>Zest komut dizilerini çabuk ve kolayca kaydetmeyi sağlayan yeni araç çubuğu düğmesi.</li>
+<li>ZAP komut dizilerini paylaşmak için yeni grup kuruldu. (<a href="https://groups.google.com/group/zaproxy-scripts">https://groups.google.com/group/zaproxy-scripts</a>).</li>
+<li>Bir web sunucusu aracılığıyla yayınlanan kaynak denetim meta verilerine (SVN ve Git) dayalı örümcek uygulamaları yapma olanağı</li>
+<li>Proxy komut dosyaları ile beraber kuvvet yeteneği sonlandırıldı</li>
+</ul>
+
+<h2>Değişikliklerin tam listesi:</h2>
+<ul>
+<li>Sorun 122 : ProxyThread oturumu zaman aşımı hatalı kaynaklarla beraber  </li>
+<li>Konu 207 : Geliştirme: Kısayol tuşları </li>
+<li>Sorun 362 : İzin verilen Uyarı siteleri bölmesine seçim tarafından filtreleme uygulanır </li>
+<li>Sorun 399 : zap.sh rehber kullanımı </li>
+<li>Sorun 412: Güvensiz SSL / TLS yeniden müzakere seçeneğinin etkinleştirilmemesini sağlayın </li>
+<li>Sorun 416: ZAP boyunca birden fazla ilgili seçeneğin nasıl yönetildiğini normalleştirin ve bazı seçeneklerin kullanılabilirliğini artırın Kullanılabilirlik </li>
+<li>Sorun 485 : Dil paketleri yapmak eklentilerin yakınında </li>
+<li>Sorun 503: Verileri listeler yerine tablolarla görüntülemek için altbilgi sekmelerini değiştirin Kullanılabilirlik </li>
+<li>Sorun 572 :  Python API' deki generate_root_ca property özelliğini değiştirin </li>
+<li>Sayı 575: Bir girdili bir sözlük yerine Python API'teki uyarıların listesini döndürüyor </li>
+<li>Sorun 585 : Proxy - "502 Bad Gateway" hatalarını çözmek için  "504 Gateway Timeout" </li>
+<li>Sorun 589 : Değişim Reveal uzantısını ZAP uzantısı projesi </li>
+<li>Sorun 590: Varsayılan olmayan port kullanan güvenli (HTTPS) bağlantısı üzerinden bir siteye "saldırıda", Forced Browse, yanlış şema kullanıyor </li>
+<li>Sorun 591: Kullanılabilir siteler/sunucular (altbilgi panellerinde) mod "Güvenli" olarak değiştirildiğinde kayboluyor </li>
+<li>Sorun 595: Spider, varsayılan olmayan bağlantı noktasından işlemeyen güvenli bir bağlantı (HTTPS) üzerinden erişilen bir sitede başlatılamıyor (altbilgi paneli) </li>
+<li>Konu 606 : "--Site Seç--" seçeneği seçildiğinde taramayı "Başlat" butonunu devre dışı bırak </li>
+<li>Sorun 607: Manuel olarak istenen siteler, alt panelde "Siteler" sekmesinde seçili olduğunda tarandığı gibi görünüyor </li>
+<li>Sorun 609: Durumu sorgulamak ve sekmelerde görüntülenen verilere (HttpMessage ve HistoryReference) erişmek için ortak bir arabirim sağlayın </li>
+<li>Sorun 613 : Değişim Kayıt Etme Raw  HttpMessage uzatma ZAP  uzantısı projesi </li>
+<li>Sorun 619 : Değişim Kuvvet Araştırma uzantısı ZAP projesine taşıma </li>
+<li>Sorun 620 : Değişim Kuvvet Araştırma dosyaları  ZAP projesine taşıma </li>
+<li>Sorun 783 :  python zap.core api metoduyla kapatmalıdır </li>
+<li>Sorun 788 : Mac için Java sürümünü bırakın </li>
+<li>Sorun 793: Kimlik Doğrulama / Oturum Yönetimi Yöntemleri, API'lerde dinamik yüklemede güvenilir değil </li>
+<li>Sorun 799 : HttpAuthentication gibi Kimlik Doğrulama Yöntemi ekle </li>
+<li>Konu 803 : /trunk/src/help/zaphelp/zaphelp/credits.html için yol </li>
+<li>Konu 804 : Bir bağlam için Doğrulamanın çeşitli türleri için Destek Ekle </li>
+<li>Konu 805 : Bir bağlam için Oturum Yönetiminin çeşitli türleri için Destek Ekle </li>
+<li>Sorun 806 : Webapp kullanıcıları için Destek Ekle </li>
+<li>Sorun 807 : ZAP yüklenirken Hızlı Başlat Sekmesi kapatıldığında hata oluştu </li>
+<li>Sorun 816: Sağ tıklamayla Kopyala/Yapıştır &amp; iletişim kutusunda Kodlama/Kod Çözme/Karma seçeneklerini bulun </li>
+<li>Konu 817 : Python API "diğer" işlemleri doğru şekilde ele almıyor </li>
+<li>Konu 822 :Java API: ApiResponseSet.getAttributes() çalışmıyor </li>
+<li>Konu 825 : Kütüphane dizinine dahil edilen Rhino'nun eski sürümü </li>
+<li>Konu 827 : Varsayılan oturum tokenları seçenekler diyaloğu vasıtasıyla eklendiğinde küçük harfli olmaz </li>
+<li>Sorun 828: HttpSessions API görünümüne erişirken NullPointerException, site yoksa veya belirteç yoksa "sessionTokens" </li>
+<li>Sayı 829: JSON İstisnası, bir API görünümü gerekli parametre(ler) olmadan çağırılırken </li>
+<li>Sorun 830: ZAP API'ye istek gönderirken, Java İstemci API'sı sorgu parametrelerini kodlamıyor </li>
+<li>Sorun 832: Yeni bir oturum oluşturulduğunda, Http Oturumu sekmesi silinmelidir </li>
+<li>Güncelleştirme, her zaman  HTTP  talep edildi sent / foward  ZAP tarafından istenildi </li>
+<li>Sorun 837 :  HTTP mesajlarını döndüren arama API ekleyin </li>
+<li>Konu 839 : Arama API'si - Mesajları HTTP Arşiv formatında getiren arama görünümleri ekleyin </li>
+<li>Sorun 840 : Çekirdek API- İletileri HTTP Arşiv biçiminde almaya izin verin </li>
+<li>Sorun 841: ExtensionHistory devre dışı bırakılmışken, manuel olarak HTTP isteği gönderdikten sonra NullPointerException </li>
+<li>Sorun 842 : Aktif ExtensionAntiCSRF devre dışı bırakıldığında etkin tarama yapmak NullPointerException  </li>
+<li>Sorun 843: ExtensionAntiCSRF devre dışı bırakıldığında, bir HTTP isteği gönderim/proxy'lik sonrası NullPointerException </li>
+<li>Sorun 844: ExtensionPassiveScan devre dışı bırakılmışken "Tarama ilkesi" diyalogu çağırılırken NullPointerException oluşuyor </li>
+<li>Sorun 845 : AbstractPanel iki kere ekledi : TabbedPanel2 içinde ExtensionLoader#addTabPanel </li>
+<li>Sorun 846 : ExtensionScript ile etkin tarama devre dışı bırakılırken NullPointerException oluştu </li>
+<li>Sorun 849 : ExtensionHistory devre dışı bırakılırken kimlik doğrulaması yapılır NullPointerException </li>
+<li>Sorun 852 : Arama API - URL' nin görünümleri aynı URL'yi birkaç kez döndürür </li>
+<li>Sorun 853: Core API - Bir çok uyarı vermesi için izin ver </li>
+<li>Sorun 854: Core API - ileti sayısını almak için izin ver </li>
+<li>Sorun 855: Core API - Kimlik ile mesaj almak için izin ver </li>
+<li>Sorun 856: Core API - Kimlik ile uyarı almak için izin ver </li>
+<li>Sorun 857: Core API - Sayfa numaralandırma kullanıldığında "Uyarılar" beklenmedik uyarıları geri getirebilir </li>
+<li>Sorun 858: Core API - Sayfa numaralandırma kullanıldığında "İletiler" beklenmedik iletilerle geri dönebilir </li>
+<li>Sorun 859: PScan API - Pasif taramayı aktif/deaktif hale getirmeye izin ver </li>
+<li>Sorun 860: PScan API - Pasif tarayıcıları listeleme/getirme için izin ver </li>
+<li>Sorun 861: PScan API - Bütün pasif tarayıcılar için aktif/deaktif etmeye izin ver </li>
+<li>Sorun 862 : PScan API - Verilen bir pasif tarayıcıyı etkinleştirmeye / devre dışı bırakmaya izin ver </li>
+<li>Sorun 863: AScan API - Aktif tarayıcıları listelemeye/getirmeye izin ver </li>
+<li>Sorun 864 : AScan API - Bütün aktif tarayıcıları aktif/deaktif etmek için izin ver </li>
+<li>Sorun 865 : AScan API -Verilen bir etkin tarayıcıyı etkinleştirmeye / devre dışı bırakmaya izin ver </li>
+<li>Sorun 866: HistoryReference ayarı yapıldığında / kullanılabilir olduğunda HttpMessage'ı alarmı istenenden uzun sürebilir </li>
+<li>Sorun 867: İstek gövdesi "x-www-form-urlencoded" değilse HttpMessage#getFormParams boş bir TreeSet döndürmelidir </li>
+<li>Konu 868 : Çekirdek API - "mesajlar" görünümü dahili/geçici mesajları getirmemeli </li>
+<li>Konu 869 : Proxylenmiş istekleri (ZAP) kullanıcı isteklerinden ayırt et </li>
+<li>Sorun 870: MainToolbarPanel'in genişleyen butonlarını ButtonGroup ve Action'i kullanarak değiştir </li>
+<li>Sorun 871: Ana araç çubuğundaki "Oturum Özellikleri ..." düğmesi üzerinden oturum adı değiştirildiğinde başlık güncellenmiyor </li>
+<li>Sorun 872: Core API - Manuel talep göndermeye izin ver </li>
+<li>Sorun 873: Core API - HAR formatinda manuel sorgu göndermeye izin ver </li>
+<li>Sorun 874: BreakPanelToolbarFactory'yi Actions kullanarak değiştir </li>
+<li>Sorun 875 : i18n dizinini kaldır </li>
+<li>Konu 876 : FuzzerPanel#PANEL_NAME'e karşı çık </li>
+<li>Sorun 877: ExtensionPopupMenuItem#isEnableForComponent, her seferinde bazı açılır menülerde iki kez çağrılırken MainPopupMenu kullanılarak gösterilir </li>
+<li>Konu 878 : MainPopupMenu içinde etkisiz olarak ExtensionPopupMenuItem#getMenuIndex() </li>
+<li>Sorun 879: ExtensionSpider devre dışı olsa bile "Spider Context ..." açılır menüsü kullanılabilir durumda </li>
+<li>Sorun 880: Özel fuzz dosyaları eklerken son seçilen dizini hatırla </li>
+<li>Sorun 881: zapdb.script dosyası bulunamazsa hemen hata ver </li>
+<li>Sorun 882: "Forced Browse" kısmında gösterilen "Copy" açılır kapanır menüsünü kaldır </li>
+<li>Sorun 884 : Aşama 2  Plug-n-Hack </li>
+<li>Konu 885 : API - Eylemlerin yanıtları HTML formatı kullanırken gösterilmez </li>
+<li>Sorun 886: Ana açılır kapanır menü aynı birleşenlerle iki kez çağırıldı </li>
+<li>Sorun 887 : seçme/etkinleştirme durumu ile tarayıcı durdurma butonu tutarsız </li>
+<li>Konu 888 : Arama API'si - URL görünümleri sayfa numarası koyma kullanılırken beklenmedik URL'leri getirebilir </li>
+<li>Sorun 889 : Gerekli parametre(ler) olmadan bir "diğer" API çağrılırken JSONException </li>
+<li>Sorun 890 : "Çıktı" sekmesinin temizlenmesine izin ver </li>
+<li>Sorun 891: Hedef oluşturma "generate-javadocs", SVN mime-type özelliğiyle oluşturulan tüm dosyalara uygulanmalıdır </li>
+<li>Konu 892 : HistoryReference içindeki yanıt gövde uzunluğunun ön belleği doğru olmayabilir </li>
+<li>Sorun 896 : PnH: DOM XSS oracle'a vuran fuzz saldırılarını bayrak altına al </li>
+<li>Sorun 897: Düğmenin durumuna dayalı bir araç ipucu metni belirlemenize izin veren bir JToggleButton ekleme </li>
+<li>Sorun 898: ZapToggleButton'la düğmenin durumuna dayalı bir araç ipucu metni belirleyen tüm geçiş düğmelerini değiştir </li>
+<li>Sorun 899 :Düğme durumu temelinde geçiş düğmelerinin simgesinin "manuel" güncellemesini kaldır </li>
+<li>Sorun 900: Yüksek menü indeksli süper menüler ve ya ana açılı menü çağrıldığında, IllegalArgumentException </li>
+<li>Sorun 901: MainPopupMenu'de alt menü kullanılırken, açılan menü "başarılı" ayracı eklenmiyor </li>
+<li>Sorun 902: Temel uygulamayı çağırmak için tüm ExtensionAdaptor#hook (ExtensionHook) geçersiz kılma yöntemlerini değiştirin </li>
+<li>Sorun 903 : Seçenekleri değiştirerek 'dış kaydırıcıları   aynı bileşeni kullanmak için değiştirin  </li>
+<li>Konu 904 : Seçilen butonu geri almayı sağlayan bir buton grubu ekle </li>
+<li>Sorun 905 : Hatalı link içinde "Break tab" yardım sayfaları </li>
+<li>Sorun 910 : Zorunlu Kullanıcı değiştirilemez </li>
+<li>Sorun 911: AScan API - "tarayıcılar" görünümünü, aktif tarayıcının durumunu içerecek şekilde değiştirin </li>
+<li>Sorun 912: PScan API - "tarayıcılar" görünümünü, pasif tarayıcı durumunu içerecek şekilde değiştirin </li>
+<li>Konu 913 : AScan API - Aktif tarayıcı politikalarının listelenmesine/alınmasına izin ver </li>
+<li>Konu 914 : AScan API - Aktif tarayıcı politikalarının etkinleştirilmesinin ayarlanmasına izin ver </li>
+<li>Sorun 915 : Dinamik olarak geçmiş siteler penceresindek filtre seçimine dayalı </li>
+<li>Sorun 919 :  vulnerabilities.xml  izin verilip yerelleştirilmesi  IdealFirstBug </li>
+<li>Sorun 920 : Geçmişe filtre modelleri eklemek / hariç tutmak url kalıpları ekleyin </li>
+<li>Sorun 921 : PnH2: izlenen url olarak aç </li>
+<li>Sorun 923 : bireysel kurallar eşikleri ve güçlü yönlerle GUI aracılığıyla ayarlanabilmesine izin verir </li>
+<li>Sorun 925: HTML rapor sorunları </li>
+<li>Sorun 929: AScan API - Aktif tarayıcı ilkelerinin ve aktif tarayıcıların alarm seviyesini ve saldırı gücünü ayarlamanıza izin verir </li>
+<li>Konu 930 : AScan API - Aktif tarayıcıların politika kimliği tarafından listelenmesine/alınmasına izin ver </li>
+<li>Konu 931 : Uzantıların GUI modunda komut satırı argümanlarını toplamasına izin ver </li>
+<li>Konu 932 : Scriptlerin komut satırında belirtilmesine izin ver </li>
+<li>Konu 933 : Kurulum dizinini otomatik olarak belirle </li>
+<li>Konu 934 : Komut satırındaki dosyaları uzantı üzerinden ele al </li>
+<li>Konu 935 : Java sürümün kimlik tespitini iyileştir </li>
+<li>Konu 939 - ZAP standart olmayan portlardaki SSL bağlantılarını otomatik olarak kabul etmeli </li>
+<li>Konu 947 : Usulsuz karakterlerle URL'lerdeki spider başarısızlıkları </li>
+<li>Sorun 950 : Doğrudan eklentiler dizinine kopyalanan dosyaları içeren eklentilerle mücadele edin </li>
+<li>Konu 951 : TLS'nin sürümleri 1.1 ve 1.2 varsayılan olarak etkinleşmedi </li>
+<li>Sorun 954 :Tamam / Devam tıklatıldıktan sonra GUI'deki belirli alanlardaki değişiklikler kaydedilmez </li>
+<li>Sorun 955 : büyük gövde bulunduğunda klavye odağı kaybolur </li>
+<li>Sorun 956 : Kopya URLler birden çok kopyalanmaz </li>
+<li>Sorun 957: Uyarı "X içeriği türü seçenekleri üstbilgi eksik" için başvuru </li>
+<li>Sorun 963: Eğer eklenti güncelleme sırasında silinemezse engellenen listesine eklenir </li>
+<li>Sorun 965 : Destek 'tek sayfa' appi ve 'standart olmayan 'parametre ayırıcıları </li>
+<li>Konu 966 : Hızlı başlangıç komut satırı seçeneği </li>
+<li>Sorun 967 : "Komut Dosyası Konsolu" eklentisini güncellerken InvalidParameterException oluşur </li>
+<li>Sorun 968 :etkin SSL / TLS protokolleri seçmek için izin verin </li>
+<li>Sorun 969: Proxy - Başarısız HEAD isteklerine cevap verdiğiniz zaman yanıt gövdesini dahil etmeyin </li>
+<li>Sorun 970 : Gövdeyi SİLMEK için talepler gönderilmeli / iletilmelidir </li>
+<li>Konu 974 : Tarama URL'si yolu öğeleri </li>
+<li>Sorun 975: Fuzz Results Buggy Ters arama </li>
+<li>Sorun 976 : Örümcek içerik saldırısı, içeriğin dışında taramaya sebep oluyor </li>
+<li>Konu 979 : Siteler ve Uyarılar ağaçları bozulabilir </li>
+<li>Sorun 981: Yardım dosyasını uluslararsı hale getirme </li>
+<li>Sorun 982: API anahtarı </li>
+<li>Sorun 986 : Yeni ScanProgress iletişim uygulaması ve eklenti atlama işlevselliği </li>
+<li>Konu 987 : Komut satırı üzerinden keyfi yapılandırma dosya değerlerinin ayarlanmasına izin ver </li>
+<li>Konu 988 : ZAP Help başlangıçtan önce çöküyor </li>
+<li>Konu 989 : Bir HTTP oturumuna bir sağ tık seçeneği "Kullanıcı ekle" ekle </li>
+<li>Sorun 991: Eklenti/Tarama kuralı gözden geçirme isteği - Kalıcı XSS </li>
+<li>Konu 996 : ESC tuşuna basıldığında tüm diyalogların kapanmasını sağla </li>
+<li>Sorun 997: Session.open addPath'in hatalı kullanımını bildiriyor </li>
+<li>Sorun 998: Gereksiz regexp arama ZAP'i durdurur </li>
+<li>Sorun 999 : Geçmiş yanlış sırada yüklendi </li>
+<li>Sorun 1002: Betikler aracılığıyla Kimlik doğrulama için destek ekleme </li>
+<li>Konu 1003 : XXE Güvenlik Açığı Test Eklentisi </li>
+<li>Sorun 1004 : Git meta-datasını kullanarak kaynak kod açığa çıkartılır </li>
+<li>Sorun 1005: Subversion meta verisini kullanarak Kaynak Kodu açığa çıkarma </li>
+<li>Sorun 1006: Git meta verisini kullanarak web uygulamalarını tarama </li>
+<li>Sorun 1007 : Subversion (SUV) meta-verisini kullanarak web uygulamalarını tarama </li>
+<li>Konu 1010 : Fuzz sonuçlarının sınıflandırılmasına izin ver </li>
+<li>Sorun 1012 : Kodlama / Kod çözme diyaloğu - HTML ve JavaScript kodlamayı destekler IdealFirstBug </li>
+<li>Sorun 1016 : Credits.html'de HTML kodlama görüntüleme sorunu </li>
+<li>Sorun 1017: 0.0.0.0'a ayarlanmış proxy yanlış PAC dosyası oluşturulmasına neden olur </li>
+<li>Sayı 1018: AbstractAppParamPlugin uygulamalarının parametre türüne erişmesine izin verir </li>
+<li>Sorun 1019: Kötü JAVA_HOME ile ZAP'in başlatılması karışık bir hata mesajı gösterir </li>
+<li>Sorun 1020 : Request/Break sekmelerinde eklenti yapabilme görünümü için tekrarlı "Gövde: Tablo" </li>
+<li>Sorun 1021: Aktif Tarayıcı çalışırken OutOutOfMemoryError hatası </li>
+<li>Sayı 1022: Proxy - Proxy işlemi görmüş bir mesajı geçersiz kılmayı sağlar </li>
+<li>Sorun 1023: Komut Dosyası Konsolu sekmesi - Tutarsız durumdaki Çalıştır/Durdur butonları </li>
+<li>Sayı 1024: Büyük Yanıt görünümü, yanıt gövdesi olmasa bile gösterilecektir. </li>
+<li>Sorun 1025 : "Script Console" seçilen metin alanlarıyla bir anahtar girerken NullPointerException </li>
+<li>Sorun 1030 : Yükleme ve kaydetme tarama politikaları </li>
+<li>Sorun 1031 : Aktif Tarayıcıya Parametre Hariç Tutma özelliklerini ekleme </li>
+<li>Sorun 1032 : Komut Dosyası Tabanlı Kimlik Doğrulaması için API desteği ekleyin </li>
+<li>Sorun 1033 : org.zaproxy.clientapi.core.Alert equals() metod geçersiz kılmaz </li>
+<li>Sorun 1037 : JSON RPC parametreleri doğru ayarlanmaz </li>
+<li>Sorun 1039 : Dış Yönlendirme eklentisi Doğruluğunu geliştirin </li>
+<li>Sorun 1041 :127.0.0.1 Site, yerel olarak çalışıyorsa Etkin Tarama eklentileri başlatılmaz </li>
+<li>Sorun 1042 : Önemli olan sorunlar bir önceki oturum açılacak</li>
+<li>Sorun 1043 : Özel etkin tarama iletişim kutusu </li>
+<li>Sorun 1044 : Zorunlu kullanıcı modu oturum boyunca kaydedilmez / yükler </li>
+<li>Sorun 1046: HttpResponseHeader'daki getHttpCookies () yöntemi, alan adını doğru bir şekilde ayarlamıyor </li>
+<li>Sorun 1047: Yedek dosyalar Zap tarafından tespit edilemedi </li>
+<li>Sorun 1049 :Hızlı çoklu model arama bileşeni </li>
+<li>Sorun 1050 : Komut Dosyası tabanlı Giriş Vektörleri </li>
+<li>Sorun 1051 : Zap tüm ağ arayüzlerine  hizmetlerine bağlayabilir </li>
+<li>Sorun 1052 :Etkin tarama eklentileri için Geri Arama API'sı </li>
+<li>Sorun 1053 : Bağ benzerliği ve LCS algoritması bileşeni </li>
+<li>Sorun 1055 : Eklentilerden önce uzantıları yükle </li>
+<li>Sorun 1057 :Yükleme sonrası işlemleri için bir Extension.postInstall () yöntemi ekleyin </li>
+<li>Sorun 1059 : Komut Dosyası Tabanlı Kimlik Doğrulaması için Jython desteğini ekleyin </li>
+<li>Sorun 1060 :Komut Dosyası Tabanlı Kimlik Doğrulaması için JRuby desteğini ekleyin </li>
+<li>Sorun 1061 :Yeni komut dosyası oluştururken uygun Komut Türü, Motor ve Şablon seçin </li>
+<li>Sorun 1603 : Gzipped içerik ekleme kodunu çözme seçeneği (komut dosyaları için işleme sıkıştırma yöntemi) </li>
+<li>Sorun 1065 : ExtensionScript'leri ExtensionScriptsConsole'e yeniden adlandırın  </li>
+<li>Sorun 1066 : Komut dizileri kullanıcı arayüzünden Komut Tabanlı Kimlik Doğrulamasını hızlı bir şekilde ayarlamak için destek ekleyin </li>
+<li>Sorun 1068 : Zap yanıtlarda kaynak kodu algılamaz </li>
+<li>Sorun 1069 : Destek .-: Zest değişken adlarında </li>
+<li>Sorun 1071: Zest komut dosyasını kullanırken, "Yanıt gövdesinde değiştir" yanlış İçerik-Uzunluk başlığını gönderiyor. </li>
+<li>Sorun 1072 :SQLDataException:veri istisnası: dize verileri, sağ kesme </li>
+<li>Sorun 1074 : Eklenen seçenekler sadece gösterilen komut dosyasından çıktı </li>
+<li>Sorun 1075 : Değişken TableHistory için toplu kayıtlar Performans silinir </li>
+<li>Sorun 1076: Oluşturulan geçici iletileri silmek için etkin tarayıcı değiştirin. Performans </li>
+<li>Sorun 1077: Oluşturulan geçici iletileri silmek için (HTTP) bulanıklaştırıcıyı değiştir Performans </li>
+<li>Sorun: 1078: Temel ileti türü kesme noktası yöneticisi uygulamasına geçmek için ExtensionBreak'i değiştirin </li>
+<li>Sorun 1079 : Yanlış yerleştirilen ana açılan menü ayırıcılarını kaldırın </li>
+<li>Sorun 1080 : Kullanıcı Kılavuzu HTML sayfaları yanlışlıkla platform varsayılan kodlamasına dayanıyor </li>
+<li>Sorun 1081: Açılır pencere çağırdığında ExtensionPopupMenu, ExtensionPopupMenu (ve ExtensionPopupMenuItem) alt öğesini "bildirmelidir" </li>
+<li>Sorun 1082 : Arama URL'si yanlış konumda vurgulanıp eşleşir </li>
+<li>Sorun 1083 : Karşı çıkma methodu
+ExtensionPopupMenuItem#isSuperMenu() </li>
+<li>Sorun 1084 : "Siteler" sekmesinde bir düğüm seçilirken NullPointerException oluştu </li>
+<li>Sorun 1085 : Ekleme/Kaldırma pop up menu yöntemle öğeler açılır
+View#getPopupMenu() </li>
+<li>Sorun 1086 : Dinamik olarak ekleme/değiştirme pasif tarayıcıları kaldırmak için izin ver </li>
+<li>Sorun 1087 : Pasif tarayıcıları dinamik olarak eklemek için uzantıları değiştirin </li>
+<li>Sorun 1088 : ExtensionPopupMenu#prepareShow Yöntemi elden çıkarın </li>
+<li>Sorun 1089 : Değişim ExtensionPopupMenu uzantıyı onurlandırmak için yöntemler açılır </li>
+<li>Sorun 1090 : Hedef uzantı etkin değilse, açılır menüler eklemeyin </li>
+<li>Sorun 1091 :CoreAPI- Geçici tarih kayıtlarının kimliklerini alamayınız </li>
+<li>Sorun 1092 :  SearchThread - Silinmiş iletilerin IDs almazsın </li>
+<li>Sorun 1093 : Büyük gövde uyarısı yapan bir HTTP isteği gövde görünümü ekleyin </li>
+<li>Sorun 1094: ExtensionManualRequestEditor'u yalnızca GUI modunda ise görüntüleme bileşenlerini eklemek için değiştirin </li>
+<li>Sorun 1095 : ExtensionPopupMenu uygunken  Ana pop up sub menü beraberinde değiştirilir  </li>
+<li>Sorun 1096 : AddOnLoader hatalı isimlendirilir yöntemi bildirildikten sonra  eklenti dosyalarını kaldırır  </li>
+<li>Sorun 1097 : Değiştirmek "Run applications" (çağırmak) zap-uzantılar projesi </li>
+<li>Sorun 1098 : Değiştirmek AJAX Spider yardımcı sayfalarda " Ajax Spider" eklemek ( ve onları güncelemek) </li>
+<li>Sorun 1099 : ZAP API için görmezden gelmek  seçenek metodları açıklama ekle </li>
+<li>Sorun 1100 : ZAP API'sinde açıklanmaması gereken seçenek yöntemlerine açıklama yapın. </li>
+<li>Sorun 1101 : Pasif tarayıcıları değiştirmek için IDs ortaya koy </li>
+<li>Sorun 1102 : Ajax Spider - Değiştirir ajax spider proxy beraber çekirdek proxy </li>
+<li>Sorun 1103 : Komut Konsol - "Çalıştırmada temizle" etkinleştirildiyse bile çıktıyı temizlemeye izin ver </li>
+<li>Sorun 1104: Zip ToggleButton (eklenti) ile düğme durumuna dayalı bir araç ipucu metni belirleyen tüm geçiş düğmelerini değiştirin </li>
+<li>Sorun 1105: Düğmenin durumu (eklenti) temel alınarak geçiş düğmelerinin 'manuel' güncellemesini kaldır </li>
+<li>Sorun 1106: Geçmiş kaydı silindiğinde, HistoryList'in geçmiş ID indeksiyle eşleştirilirken güncellenemiyor </li>
+<li>Sorun 1110 : : Spider API'yı kullanarak parametrelerin nasıl işlendiğini API- ayarlanamıyor </li>
+<li>Sorun 1111: "Seçenekler" diyaloguna erişirken, başlangıçta (otomatik olarak) Güncellemeleri Al opsiyonunun devre dışı bırakılıp bırakılmadığını kontrol et </li>
+<li>Sorun 1112 : Değişken ZAP ( core ) yeni ekleri  yapısı üzerinde desteklemektedir </li>
+<li>Sorun 1113 : Değişken yapı eklenti dir ( yardım ve kaynaklar) </li>
+<li>Sorun 1118 : Uyarı Sekmesi senkronize etmemezsiniz</li>
+<li>Sorun 1119 :Spider Benzer URL'den birden fazla form algılamaz</li>
+<li>Sorun 1120 : Kurallar kaldırmada ileti paketi kullanıyorsa kaldırma eklentisi başarısızdır </li>
+<li>Sorun 1121: Tarama süreci penceresi Arayüz donmalarına sebep olabiliyor </li>
+<li>Sorun 1122: Eklenti ek bilgileri </li>
+<li>Sorun 1125: Jython betiki Proxy betiki olarak tekrar alınamadı </li>
+<li>Sorun 1126: Kırılma noktaları filtrelerindeki hatalar </li>
+<li>Sorun 1127 : Özellik isteği: Komut dosyalarının ara çalıştırmasına izin verir </li>
+<li>Sorun 1131 :  Eklenti içerisindeki Zest Intercept eylemlerini destekleyin </li>
+<li>Sorun 1132 : HttpSender '' Bir çerez bağlantısı isteği gönderilir'' seçeneği yok sayar </li>
+<li>Sorun 1134 : Pasif Tarama Kuralı regexes onaylanmaz </li>
+<li>Sorun 1135 : Eğer cfu başlatmak için çalıştırsanız Marketplace sekmesi kendini yükseltemez</li>
+<li>Sorun 1137 : Ağları sildiğin zaman ZAP kilitler</li>
+<li>Sorun 1138 : Pasif Tarama Kuralı değişiklikleri kaydedilemedi</li>
+<li>Sorun 1145 : Eğer virgül kulanırsanız çerez ayrıştırması hata verir.</li>
+</ul>
+
+<h2>Ayrıca bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Tanıtım</a></td><td>ZAP'a giriş</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Sürümler</a></td><td>sürümlerin tam seti</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Katkıda bulunanlar</a></td><td>bu sürümü mümkün kılan insanlar ve gruplar</td></tr>
+</table>
+</body>
+</html>

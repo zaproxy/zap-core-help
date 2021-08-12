@@ -6,22 +6,22 @@
 Activar Diálogos de Escaneos
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Activar Diálogos de Escaneos</h1>
 <p>
-Este cuadro de diálogo presenta la <a href="../../start/concepts/ascan.html">active scanner</a>.<br>
+Este cuadro de diálogo presenta la <a href="../../start/features/ascan.html">active scanner</a>.<br>
   
 <h3>Scope</h3>
 La primera pestaña le permite seleccionar o cambiar el punto de partida.<br>
-Si usted tiene más que una <a href="../../start/concepts/scanpolicy.html">scan policies</a> entonces, usted podrá seleccionar para utilizarlo.<br>
-Si el punto de partida es de uno o más <a href="../../start/concepts/contexts.html">Contexts</a> Luego podrás elegir uno de ellos.<br>
-Si ese contexto tiene alguna <a href="../../start/concepts/users.html">Users</a> definirá a continuación. Usted podrá seleccionar uno de ellos.<br>
+Si usted tiene más que una <a href="../../start/features/scanpolicy.html">scan policies</a> entonces, usted podrá seleccionar para utilizarlo.<br>
+Si el punto de partida es de uno o más <a href="../../start/features/contexts.html">Contexts</a> Luego podrás elegir uno de ellos.<br>
+Si ese contexto tiene alguna <a href="../../start/features/users.html">Users</a> definirá a continuación. Usted podrá seleccionar uno de ellos.<br>
 Si selecciona uno de los usuarios la exploración activa se realizará como ese usuario, con ZAP (re) autenticar como usuario siempre que sea necesario.
 <br><br>
-Si selecciona 'recurse', todos los nodos debajo de un seleccionado también se explorará.<br>
+If you select 'Recurse' then all of the nodes underneath the one selected will also be scanned.<br>
 Vectores de entrada personalizados sólo se admiten si esta opción no está seleccionada.
 <br><br>
-Si selecciona "Show advanced options" luego las siguientes fichas se mostrará que proporcionan control de grano fino sobre el proceso de escaneo activo.
+If you select 'Show Advanced Options' then the following tabs will be shown which provide fine grain control over the active scanning process.
 <br><br>
 Haciendo clic en el botón 'Reset' se restablecerán todas las opciones a sus valores predeterminados. 
 
@@ -32,7 +32,7 @@ Haciendo click en el botón 'Reset', usted reinicia los input vectores que esté
 
 <h3>Custom Vectors</h3>
 La pestaña Custom Vectors  permite especificar ubicaciones definidas en la solicitud de ataque.<br> 
-Los Custom Vectors solo están disponibles si no se selecciona la opción 'recurse' en la primera pestaña.<br>
+Custom Vectors are only available if the 'Recurse' option on the first tab is not selected.<br>
 Para agregar input vectors, resalte los caracteres que desea atacar en la solicitud y haga clic en el botón 'Add'.<br>
 Puede agregar tantos vectores de entrada personalizados como quieras.<br>
 Para eliminar los custom input vectors destacan cualquiera de los caracteres seleccionados y haga clic en el botón 'Remove'.<br>
@@ -44,7 +44,20 @@ Las tecnologías sin selección que usted sabe que no están presentes en el des
 
 <h3>Policy</h3>
 La ficha Policy permite reemplazar cualquiera de la configuración especificada en la 
-<a href="../../start/concepts/scanpolicy.html">scan policy</a>. 
+<a href="../../start/features/scanpolicy.html">scan policy</a>. 
+
+<h3>Filter</h3>
+The Filter tab allows you to specify filter criteria and active scan will filter requests based on these criteria's.
+<br/> 
+There are four filter criteria's available in the filter tab <br/>
+<ul>
+<li>HTTP method</li>
+<li>Status code</li>
+<li>Tags</li>
+<li>URL pattern</li>
+</ul>
+HTTP method and Status code filter criteria are only applied to check if a request can be included in active scan or not,<br/> where as
+Tags and URL pattern filter criteria can be applied to include or exclude a request.
 
 <br><br>
 

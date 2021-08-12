@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+1.0.0版本
+</title>
+</head>
+<body>
+<h1>1.0.0版本</h1>
+<p>
+本版本进行了以下更改：
+</p>
+<h2>重大变化：</h2>
+
+<h3>帮助界面</h3>
+为ZAP现在提供的所有功能添加了帮助面板。<br/>
+上下文相关的帮助也已经实现，所以当您按F1键时，将显示与所选标签关联的帮助面板。
+
+<h3>Breakpoints</h3>
+断点的 <a href="../start/features/breakpoints.html">Breakpoints</a> 已经变得更接近软件集成开发环境所提供的。<br/>
+The breakpoint controls have been moved to the new <a href="../ui/tltoolbar.html">顶级工具栏</a>.<br/>
+Breakpoints can now also be set by right clicking nodes in the 
+<a href="../ui/tabs/sites.html">站点</a> 和 <a href="../ui/tabs/history.html">历史记录选项卡</a>.
+
+<h3>报告菜单</h3>
+报告 <a href="../ui/tlmenu/report.html">菜单</a> 已经发生了重大的变化，现在包括了以下菜单项：
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>生成报告</td><td>现在按需生成报告</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>将信息导出到文件中...</td><td>从<a href="../ui/tlmenu/file.html">文件菜单</a>移入</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>导出响应信息到文件中...</td><td>从<a href="../ui/tlmenu/file.html">文件菜单</a>移入</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>将所有的URL导出到文件</td><td>新功能</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>与另一个会话进行比较</td><td>新功能</td></tr>
+</table>
+
+<h3>改进的历史搜索</h3>
+新的 <a href="../ui/tabs/search.html">搜索标签</a> 允许您在所有的URL，请求和响应中搜索正则表达式。 <br/>
+下一个和上一个按钮允许您查看找到的搜索项 
+<a href="../ui/tabs/request.html">请求</a> 和 <a href="../ui/tabs/response.html">响应选项卡</a>. <br/>
+
+<h3>历史过滤器</h3>
+<a href="../ui/tabs/history.html">历史过滤器工具栏</a> 已被添加，这可以让您限制显示哪些请求。<br/>
+请求可以基于HTTP方法，HTTP结果代码，和任何 <a href="../start/features/tags.html">标签</a>, <a href="../start/features/alerts.html">警报</a>或者
+<a href="../start/features/notes.html">备注</a> （之前已被应用的）    
+
+<h3>备注</h3>
+您现在可以将 <a href="../start/features/notes.html">备注</a> 和任何请求相关联。    
+
+<h3>多重标签</h3>
+您现在可以将多个 <a href="../start/features/tags.html">标签</a> 与任何请求相关联。    
+
+<h3>更好的控制警报</h3>
+添加 <a href="../ui/dialogs/addalert.html">警报对话框</a> 使您可以手动添加或更改警报。 
+
+<h3>新的编码器/解码器</h3>
+A new Encode/Decode/Hash dialog has replaced the previous 
+Encoder/Decoder. 
+
+<h3>被动扫描</h3>
+<a href="../start/features/pscan.html">Passive scanning</a> has been added.<br/>
+In this release ZAP will only use passive scanning for automatically adding <a href="../start/features/tags.html">tags</a>.<br/>
+In future releases it may also raise <a href="../start/features/alerts.html">alerts</a> for potential issues. 
+    
+<h2>小更改：</h2>
+
+<h3>顶级工具栏</h3>
+<a href="../ui/tltoolbar.html">The Top Level Toolbar</a> has been added which
+provides a set up buttons for commonly used functionality. 
+
+<h3>警报页脚摘要</h3>
+Counts of the High, Medium, Low and Informational <a href="../start/features/alerts.html">alerts</a>
+are now displayed in the <a href="../ui/footer.html">footer</a>.
+
+<h3>新的外观和体验</h3>
+A new look and feel 'Nimbus' is used.
+
+<h3>代理密码处理</h3>
+<a href="../ui/dialogs/options/connection.html">The Options Connection screen</a> has a new option to 
+'Prompt for proxy credentials on start up'.<br/>
+If this option is selected then your proxy password will not be stored on the hard disk.  
+
+<h3>从站点选项卡重新发送</h3>
+The <a href="../ui/tabs/sites.html">Sites tab</a> has a new right click menu item that allows
+you to resend the request after making any changes to it that you want to.  
+
+<h3>会话之间维护的用户目录</h3>
+The last directory used by the user is now stored in the config file so that it is
+maintained between sessions.
+
+<h2>请参阅</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">简介</a></td><td>ZAP简介</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">版本</a></td><td>版本发布</td></tr>
+</table>
+</body>
+</html>

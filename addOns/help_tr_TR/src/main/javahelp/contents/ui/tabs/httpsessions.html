@@ -4,10 +4,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>HTTP Oturumları sekmesi</title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 	<h1>HTTP Oturumları sekmesi</h1>
 	<p>
-		Bu sekme size,<a href="../../start/concepts/httpsessions.html">HTTP Sessions eklentisi</a>tarafından tespit edilen, her Site için tanımlanmış HTTP oturumlarını gösterir.
+		This tab shows you the set of identified HTTP sessions for each Site,
+		as detected by the <a href="../../start/features/httpsessions.html">HTTP
+			Sessions extension</a>.
 	</p>
 
 	<p>
@@ -29,18 +31,26 @@
 	<p>Oturumlar masasındaki girilerin her biri sağ tıklanabilir,
               böylece şu seçeneklerle birlikte açılır menü aktifleşir:</p>
 	<ul>
-		<li>Oturumu Kaldır - oturumu siler</li>
-		<li>Etkin olarak ayarla (sadece etkin olmayan oturumlar üzerinde kullanılabilir) - bu oturumu
-			aktif olarak işaretler. Eğer herhangi bir oturum önceden aktif olarak ayarlanmışsa
-                     bu aktif olarak ayalanmayacak ve eğer bu herhangi bir belirteç
-                     değeri belirlemezse silinir.</li>
-		<li>Aktif olarak ayarlamama (ancak aktif bir oturum üzerinde mümkün) -
-                      bu oturumu bundan sonra aktif olmayan olarak işaretler. Eğer 
-                      oturum herhangi bir belirteç değeri belirlemezse silinir.</li>
+		<li>Copy Session Token Value to Clipboard - copies the value of the
+		selected session to the clipboard.</li>
+		<li>Remove Session - deletes the session</li>
+		<li>Find Related Messages - Will cause the <a href="search.html">Search tab</a> 
+		to become active, displaying results based on a search with the string displayed 
+		in the "Session Tokens' Values" column for the session which was 
+		right clicked.</li> 
+		<li>Set as active (available only on non-active sessions) - marks
+			this session as active. If any session was previously set as active,
+			it will be unset as active and, if it doesn't specify any token
+			values, it is deleted.</li>
+		<li>Unset as active (available only on the active session) -
+			marks this session as not being active anymore. If the session
+			doesn't specify any token values, it is deleted.</li>
 	</ul>
 
-	<i>Etkin oturumla ilgili olarak, <a
-		href="../../start/concepts/httpsessions.html">HTTP Oturum Genişletmesi</a>, genel kavramlar yardım sayfasında daha fazla ayrıntı okunabilir
+	<i>Regarding the active session, more details can be read on the
+		general features help page of the <a
+		href="../../start/features/httpsessions.html">HTTP Sessions
+			extension</a>
 	</i>
 	<br />
 
@@ -63,7 +73,7 @@
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../start/concepts/httpsessions.html">HTTP
+			<td><a href="../../start/features/httpsessions.html">HTTP
 					Oturumları Uzantısı</a></td>
 			<td>uzantılara genel bir bakış için</td>
 		</tr>

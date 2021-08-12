@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  Inilabas 2.4.0
+</title>
+</head>
+<body>
+<h1>Inilabas 2.4.0</h1>
+<p>
+Ang mga sumusunod na pagbabago sa inilabas na ito:
+</p>
+
+<h2>Ang mga mahahalagang pagbabago:</h2>
+
+<h3>Ang pag-atake ng moda</h3>
+
+Ang bagong 'Pag-Atake' <a href="../start/features/modes.html">Na moda</a> ay idinagdag - sa bagong mga node na nasa <a href="../start/features/scope.html">Saklaw</a> ay 
+<a href="../start/features/ascan.html">aktibong mag-i-iskan</a> bilang sa susunod ng kanilang pagdidiskubre.
+
+<h3>Ang pagsulong ng fuzzing</h3>
+
+Ang isang kumpletong bagong diyalogo ng fuzzing ay ipinakilala na pinahihintulutan ang maraming mga punto ng iniksyon na atakihin sa parehong oras.<br> 
+Ang mga pagsuporta na ito ng mga bagong pag atake ng mga payloads na isinama ang opsyon upang gamitin ang mga iskrip para sa binubuo ng mga payload pati na ang pre at post na pag atake ng pag mamanipula at pagsusuri.
+
+<h3>Ang pag-iskan ng mga diyalogo sa pamamagitan ng pagsulong nga mga opsyon</h3>
+
+Ang bagong <a href="../ui/dialogs/advascan.html">Aktibong Pag-iskan</a>, <a href="../ui/dialogs/spider.html">Ng Ispayder</a> at AJAX na Ispayder ng mga diyalogo ay napalitan ng pagtataas ng bilang na tamang pindot ng 'pag atake' ng mga opsyon.<br>
+Ito ay nagbibigay ng madaliang pagpapatakbo sa lahat ng mga pinaka karaniwang mga opsyon at isang malawak na opsyonal na sakop ng pagsulong ng mga opsyon. 
+
+<h3>Ang mga patakaran ng pag-iskan</h3>
+
+Ang bagong <a href="../ui/dialogs/scanpolicymgr.html">Pag-iskan ng patakaran ng namamahala ng diyalogo</a> ay pinahihintulutan ka na bumuo ng maraming 
+<a href="../start/features/scanpolicy.html">Mga patakaran ng pag-iskan</a> hangga't kinakailngan mo.<br>
+Ang mga patakaran ng pag-iskan ay tumutukoy eksaktokung aling mga patakaran ang papatakbuhin bilang parte ng isang <a href="../start/features/ascan.html">Aktibong Pag-iskan</a>.<br>
+Tinukoy din nila kung paano itong mga patakaran ay tumakbo ng paano nakakaimpluwensya sa karamihan ng mga kahilingan na ginawa at paano ginustong i-flag ang mga postensyal na mga isyu.<br>
+
+<h3>Ang mga nakatagong tab na hindi nagamit</h3>
+
+Sa pamamagitan lamang ng default ang mahalaga sa mga tab ay ngayon ay ipinakita habang ang ZAP ay nagsisimula.<br>
+Ang mga tab na natitira ay ibinubunyag habang sila ay ginagamit (e.g. para sa mga ispayder at aktibong pag-iskan) o habang ipinapakita mo sila sa pamamagitan
+ng espesyal na tab na nasa malayong kanan ng bawat window na mayroong berdeng '+' icon. Itong espesyal na tab ay mawawala kung walang nakatagong mga tab.<br>
+Ang mga Tab na ito ay maaaring magsarado sa pamamagitan ng isang maliit na 'x' na icon kapag ang tab ay napili.<br>
+Ang mga tab ay maaari ring 'ma-pinned' gamit ang isang maliit 'pin' na icon na makikita lamang habang ang tab ay napili - ang pinned na mga tab ay ipapakita 
+kapag ang ZAP ang sususnod na magsisimula. 
+
+<h3>Ang pagpapagana para sa pagkakasunod-sunod ng pag-iskan ng add-on</h3>
+
+Ang bagong opsyonal na 'alpha' na may kalidad na add-on ay nagdagdag ng kakayahan upang mag-iskan ng 'pagkakasunod-sunod' ng mga pahina ng web, sa ibang mga salita ang mga pahina na nabisita sa isang istriktong pagkakaayos sa pagpapatakbo ng tamang ayos. 
+
+<h3>Ang pagpapagana para sa pagpapatakbo ng pagkontrol ng pagsubok ng add-on</h3>
+
+Ang bagong opsyonal na 'alpha' sa kalidad ng add-on na nagdadagdag ng abilidad na gawing awtomatiko ang karamihan sa mga aspeto ng pagpapatakbo sa pagkontrol ng pagsubok. 
+
+<h3>Paalala para sa mga gumagamit API</h3>
+Mangyaring magkaroon ng kaalaman na ang ID ng Plugin para sa Panlabas na pag direktang muli ng pag-iskan ay nagbago mula sa 30000 hanggang 20019.
+
+<h2>Ang kabuuang listahan ng mga pagbabago:</h2>
+<ul>
+<li>Isyu 117 : ang pagpapaganda: pagkukumpara ng paggapang ng mga sesyon para sa mga isyu ng pagpapatunay</li>
+<li>Isyu 234 : ang pagsuporta para sa ibat-ibang parte ng fuzzing</li>
+<li>Isyu 329 : ang pagpapaganda : pagdadagdag ng suporta ng sitemap.xml</li>
+<li>Isyu 389 : pagpapagana ng teknolohiya ng pagsaklaw para sa mga pag-iskan</li>
+<li>Isyu 414 : ang API: ang pagsuporta ng mga iskrip</li>
+<li>Isyu 445 : ang SSLContextManager.isProviderAvailable() ay totoong nagbabalik bilang isang default</li>
+<li>Isyu 557 : ang SQL ng mga negatibong maling iniksyon</li>
+<li>Isyu 642 : Ang Output na tab na nangangailangan ng mga timestamp</li>
+<li>Isyu 653 : ang paghawak ng mga mahusay na pag-update sa Kali Linux</li>
+<li>Isyu 704 : ang mali ng ZAP: ang pakikipagkamay ng alerto: hindi matandaan_pangalan</li>
+<li>Isyu 722 : ang ZAP UI ay hindi mahawakan ng maramihang pag-iskan ng mahusay</li>
+<li>Isyu 883 : ang pagsuporta ng maramihang mga pag-iskan sa mga API</li>
+<li>Isyu 949 : ang Ispayder (sayt) na hindi sumusunod sa mga hyperlink sa mga dokumento ng JSON</li>
+<li>Isyu 959 : ang add-on ng pag-update na maaaring hindi pansinin ang papalabas na mga pagbabago ng proxy</li>
+<li>Isyu 984 : pagpapaganda ng ascan ng API ng pagpapahintulot sa paraang na natukoy</li>
+<li>Isyu 990 : ang pagpapahintulot na alisin ang mga alerto sa pamamagitan ng API</li>
+<li>Isyu 1151 : Ang Aktibong pag-iskan na Saklaw na tinapos bago i-iskan ang lahat ng mga mensahe na saklaw kung maraming mga domain ang magagamit</li>
+<li>Isyu 1154 : ang kasangkapan ng tip ng teksto "ang pagpapakita ng mga pangalan ng tab sa mga icon" ng IdealFirstBug</li>
+<li>Isyu 1175 : ang pagsuporta ng isang puno ng konteksto</li>
+<li>Isyu 1176 : ang pagsulong ng ispayder ng pag-iskan ng diyalogo</li>
+<li>Isyu 1180 : ang proxy ay sinisira ang URL kapag ang mga maramihang mga katanungan ay mga nag marka</li>
+<li>Isyu 1184 : pagpapabuti ng pagsuporta para sa IBM JDK</li>
+<li>Isyu 1207 : ang Ascan ng API - ang pagbabago ng mga " iskaner" na naipakita upang maisama ang mga dependensya</li>
+<li>Isyu 1208 : ang paghahanap ng mga klase/mga yaman sa mga add-on na idiniklara bilang mga dependensya</li>
+<li>Isyu 1209 : ang mga karagdagang kaayusan ng kahalagahan/mga opsyon &amp; ang karagdagang pagpapangalang muli sa pagtitiwala sa UI</li>
+<li>Isyu 1214 : ang paghihiwalay sa pag-iskan  ng Patakaran ng Pag-gamit ng mga Diyalogo</li>
+<li>Isyu 1215 : ang alerto ng puno ng pagsasaayos/paghihiwalay ng paggamit ng isyu</li>
+<li>Isyu 1216 : ang typo sa mga iskrip ng tab</li>
+<li>Isyu 1217 : ang ayos ng talahanayan ay hindi nagpapakita ng impormasyon habang ang charset ay kasalukuyang nasa nilalaman-klase ng header</li>
+<li>Isyu 1224 : ang p-agpapakita ng kalidad/kalagayan sa pag-iskan ng pag-gamit ng mga patakaran ng diyalogo</li>
+<li>Isyu 1226 : Ang aktibong pag-iskan ay hindi kasama sa mga parametrong regexes na hindi nabigyang bisa</li>
+<li>Isyu 1227 : ang aktibong pag-iskan ng mga pagpapadala ng GET na mga kahilingan sa nilalaman sa katawan ng kahilingan</li>
+<li>Isyu 1238 : ang NullPointerException kung ang isang aktibong pag-iskan ay itinaas ang alerto kasama ang walang halaga na pag-atake</li>
+<li>Isyu 1239 : ang pagpapahintulot na palawakin ang ispayder mula sa mga ekstensyon</li>
+<li>Isyu 1241 : ang aktibong iskaner na maaaring hindi naiulat sa estado ng tapos habang gamit ang karamihan sa mga iskaner</li>
+<li>Isyu 1242 : ang aktibong iskaner na maaaring magamit ng walang bisa na patakaran ng setting</li>
+<li>Isyu 1243 : ang nullpointerexception kung ang isang klase ng iskrip na walang kalagitnaang pagbalot ng iskrip ng mga template</li>
+<li>Isyu 1244 : ang aktibong mga iskrip ng iskaner ay dapat na maging katergorya ng misc na hindi ginagamit na iniksyon</li>
+<li>Isyu 1252 : ang koneksyon ng eksepsyon sa panahon ng pagssara habang tumatakbo ang mga iskan sa pamamagitan ng API</li>
+<li>Isyu 1256 : muling bisitahin ang nawawalang x-frame-na mga opsyon ng lebel ng iskaner</li>
+<li>Isyu 1257 : ang paglikha ng isang pasibong patakaran kung alinman sa mga tumutukoy ang malaking muling pag-redirect</li>
+<li>Isyu 1261 : ang NPE sa "Plag-n-Hack na Konpigurasyon" ng pag-update mula sa lugar ng pamilihan</li>
+<li>Isyu 1262 : ang Adress ng "Pasibong mga Patakaran - Peligro - Mapagkakatiwalaan" [Ang kumukontrol na gumagamit ng HTML ng katangian ng elemento ( potensyal XSS), at Timestamp ng paghahayag - Unix]</li>
+<li>Isyu 1263 : ang paglikha ng ulat ng mga clobber na umiiral na mga payl ng walang pahiwatig</li>
+<li>Isyu 1264 : ang manwal na pagpapatunay - ang mismatch ng cookie dahil sa maling paghahawak ng domain at daan</li>
+<li>Isyu 1265 : ang konteksto ng pag-angkat at pag-alis</li>
+<li>Isyu 1272 : ang ZAP API: ang kalagitnaang.MensaheHAR() na mga mali kapag ang HTTP na kahilingan ay naglalaman ng imbalidong Cookie ng mga header(s)</li>
+<li>Isyu 1274 : ang mali ng ZAP [javax.net.ssl.SSLException]: na hindi suportadong naitala ng bersyon na SSLv2Hello</li>
+<li>Isyu 1275 : ang SpiderODataAtomParser ay kailangang maibalik sa totoo mula sa "parseResource"</li>
+<li>Isyu 1278 : ang siguradong menu ng mga aytem na hindi ginagamit sa protektado at siguradong mga moda</li>
+<li>Isyu 1279 : Ang aktibong pag-iskan ay isinama ang mga parametrong hindi gumagana habang ang "Saan" ay "alin man"</li>
+<li>Isyu 1280 : ang mga shortcut ng API na hindi tinanggal kapag ang Apilmplementor ay tinanggal</li>
+<li>Isyu 1281 : ang QuickStart - ay pinahihintulutan na lumikha ng ulat kapag nakikita ang inisyal</li>
+<li>Isyu 1282 : ang Ektensyon#hinto() ay hindi kailanman tinatawag bago masira()</li>
+<li>Isyu 1283 : ang SQLDataException: na datos ng eksepsyon : hanay ng datos, ang tamang trungkasyon habang nagsusulat ng isang alerto sa DB</li>
+<li>Isyu 1286 : ang fuzzer ay tila nagiging mabagal</li>
+<li>Isyu 1290 : ang "Port Scan host" ng menu aytem na magagamit kahit na kung ang isang pag-iskan ay kasalukuyang nasa progreso</li>
+<li>Isyu 1291 : ang 407 na proxy ng pagpapatunay na kinakailangan habang aktibo ang pag-iskan</li>
+<li>Isyu 1292 : ang NullPointerException habang nagbabakasakali na tanggalin ang isang hindi nakarehistrong ManualRequestEditorDialog</li>
+<li>Isyu 1294 : ang Trivial_UI_Isyu: na salita - ay 'mag' papakita ng dalawang beses sa ilalim ng 'Mga pag-aari ng Sesyon' na nadiktahan.</li>
+<li>Isyu 1295 : ang pagpapaganda ng kahilingan - Ang bagong patakaran ng aktibong pag-iskan para siyasatin ang HTTP na daan sa nilalaman HTTPS</li>
+<li>Isyu 1300 : ang mga add-on na nagpapakita ng hindi tamang lengguwahe habang ang english ay pinili sa hindi lokal na english</li>
+<li>Isyu 1301 : ang AbstractPanel ay naihayag sa pamamagitan ng TabbedPanel2</li>
+<li>Isyu 1302 : ang konteksto ng menu ng aytem ng aksyon na maaaring hindi nakuhang magsagawa</li>
+<li>Isyu 1303 :ang httppanel[SyntaxHighlight]textarea na naihayag sa pamamagitan ng HighlighterManager</li>
+<li>Isyu 1304 : ang ZapMenuItem ay naihayag sa pamamagitan ng ExtensionKeyboard</li>
+<li>Isyu 1305 : ang paparating na proxy ay hindi pinagana habang nag-update mula sa lumang mga bersyon</li>
+<li>Isyu 1307 : ang Ant OS X ay ginawa ng zip na kumuha ng mga espasyo sa pangalan ng payl ng naguguluhan</li>
+<li>Isyu 1308 : ang ZAP icns na resolusyon ay masyadong mababa</li>
+<li>Isyu 1309 : ang NullPointerExceptions sa panahon ng nabigong pag-unistall sa isang add-on</li>
+<li>Isyu 1310 : ang pagpapahintulot na itakda ang mga klase ng kasaysayan bilang pansamantala</li>
+<li>Isyu 1311 : Iba't ibang pansamantalang panloob na mga mensahe mula sa pansamantalang pag-iskan ng mga mensahe</li>
+<li>Isyu 1312 : ang nakakalinlang na maling mensahe kapag hindi gumagana na matiyak ang lokal na proxy na siyasatin ang adress</li>
+<li>Isyu 1319 : ang pagdadagdag ng API ng pagsuporta para sa pagkukumpigura ng mga konteksto na pagtuklas ng awtorisasyon</li>
+<li>Isyu 1322 : ang pagtatanggal ng itinakwil na awtentik na API</li>
+<li>Isyu 1324 : ang pagsasama ng add-on ng tawag ng Api sa mga binubuong apis</li>
+<li>Isyu 1325 : ang opsyon para tanggalin ang mga konteksto</li>
+<li>Isyu 1326 : ang paglipat ng Ajax ng ispayder ng ekstensyon mula sa beta para ang katayuan ay mailabas</li>
+<li>Isyu 1333 : ang ExtensionAntiCSRF ConcurrentModificationException</li>
+<li>Issue 1334 : ZAP does not handle API requests on reused connections leading to <code>UnknownHostException: www.zap.com</code></li>
+<li>Isyu 1335 : ang NullPointerException habang pinipili ang nod sa mga "alerto" ng tab na hindi isinama sa mga sayt mula sa proxy</li>
+<li>Isyu 1339 : ang pagpapakilala ng isang simpleng pangyayari ng bus</li>
+<li>Isyu 1343 : ang XContentTypeOptionsScanner Internationalization na pagkakagamit</li>
+<li>Isyu 1345 : ang pagsuporta ng pag atake ng moda</li>
+<li>Isyu 1346 : ang paglabag ng gziped sa mga tugon na mga mali sa mga browser</li>
+<li>Isyu 1348 : Ang kliyente ng Java ng api ant na mga gawain ay huwag antayin</li>
+<li>Isyu 1353 : ang simpleng paghinto ng opsyon</li>
+<li>Isyu 1355 : ang html na ulat ng henerasyon sa pamamagitan ng API</li>
+<li>Isyu 1356 : ang pag aayos ng CacheControlScanner na Taypos</li>
+<li>Isyu 1357 : ang pagtago ng mga tab na hindi ginagamit</li>
+<li>Isyu 1359 : ilagay sa dating isplash na iskrin</li>
+<li>Isyu 1360 : Ang bagong add-on - ng mga Tips at Triks</li>
+<li>Isyu 1361 : walang datos na ipinakita sa 'ispayder' at 'aktibong pag-iskan' na panel habang ang pag-ispayder o pag-i-iskan sa pamamagitan ng API</li>
+<li>Isyu 1362 : ang pagpapahintulot na magdagdag ng dobleng Anti-CSRF na mga token lamang sa pamamagitan ng API</li>
+<li>Isyu 1363 : ang nawawalang API sa pagkuha ng contextld</li>
+<li>Isyu 1367 : hindi matuklasan ang "Xpath na iniksyon" sa isang tiak na kapaligiran.</li>
+<li>Isyu 1377 : Ang "Pinagmumulan ng Code na nabubunyag - SVN" ay nawawala sa nakatakas na regex</li>
+<li>Isyu 1378 : kumpunihin ang ang aktibong pag-iskan ng panel</li>
+<li>Isyu 1379 : hindi lahat ng mga ekstensyon na mga nakikinig ay naikabit sa panahon ng pag-install ng add-on</li>
+<li>Isyu 1381 : ang malinis na pagsasara ng breakpoint ng pagdagdag/pagbago ng diyalogo sa pagkansela</li>
+<li>Isyu 1383 : ang NullPointerException kung ang isang anti CSRF token ay hindi magkakaroon ng isang halaga</li>
+<li>Isyu 1384 : ang HttpSessons API ay hindi tinatanggap ang mga URI kasama ang nilalaman ng daan</li>
+<li>Isyu 1385 : Ang ulat ng XML ay hindi nabubuo sa pamamagitan ng API kung ang ZAP ay hindi tumatakbo mula sa default ng pag-iinstall ng dir</li>
+<li>Isyu 1386 : ang PScan API - pagpapahintulot na mabago at makita ang alerto ng mga threshold</li>
+<li>Isyu 1387 : hindi kaya na baguhin ang mga proxy na port/address kung ang port/address ay natukoy sa pamamagitan ng command line</li>
+<li>Isyu 1388 : Hindi lahat ng naisalin sa mga payl ay na-update habang ang "zaplang" na pakete ay maiaangkat</li>
+<li>Isyu 1389 : ang NullPointerException sa panahong ng pagsisimula kung ang kalagitnaan ng jar ng pagtulong ay hindi natatagpuan</li>
+<li>Isyu 1390 : pilitin ang htpps sa pagtawag ng cfu</li>
+<li>Isyu 1391 : Ang aktibong pag-iskan ay nagpadala ng maling payload sa multipart/form-na klase ng datos</li>
+<li>Isyu 1394 : Mag-angkat ng mga vulnerabilities.xml sa mga payl habang na-update ng naisalin sa mga pinagkukunan</li>
+<li>Isyu 1395 : Ang mga kahinaan' ng datos ay itinago sa memorya kahit na hindi ito nagagamit</li>
+<li>Isyu 1397 : Maglipat ng mga payl ng pagtulong sa mga add-on</li>
+<li>Isyu 1399 : Paghusayin ang pantulong sa pagbubukas na 'panlabas' na mga link sa mga gumagamit ng default na browser</li>
+<li>Isyu 1404 : ang SpiderODataAtomParser ay dapat ibalik lamang ng tunay kung ang mga link ay natuklasan</li>
+<li>Isyu 1406 : paglipat ng online na menu ng mga aytems sa isang add-on</li>
+<li>Isyu 1409 : ang pagpapabilis ng panimula ng ZAP</li>
+<li>Isyu 1415 : ang pag-aayos ng payl na mga na-upload > 128k</li>
+<li>Isyu 1412 : ang pamamahala ng mga patakaran ng pag-iskan</li>
+<li>Isyu 1416 : ang pagpapahintulot upang maging limitado sa pamamagitan ng bilang ng kabataan</li>
+<li>Isyu 1418 : Ang opsyon para sa ZAP upang manatili sa taas habang ang breakpoint ay tamaan</li>
+<li>Isyu 1419 : ang pagsasama ng ebidensya ng mga alerto sa ulat ng HTML</li>
+<li>Isyu 1420 : ang pagbago ng mga ispayder ng URLCanonicalizer sa paglaktaw ng mga URI ng walang awtoridad</li>
+<li>Isyu 1427 : ang pamantayan sa [Cancel] [OK] na ayos ng buton</li>
+<li>Isyu 1433 : ang pagpili sa ispayder na tinamaan huwag ang awtomatikong napili</li>
+<li>Isyu 1439 : ang buton na nagpapakita/nagtatago lamang sa konteksto/scoped na mga sayt sa tab ng sayt</li>
+<li>Isyu 1445 : ang katangian ng sesyon na nagpapakita ng ID ng konteksto na hindi pangalan ng konteksto</li>
+<li>Isyu 1446 : ang pag-download ng mga add-on na nabigo na hindi nahawakan ng tama.</li>
+<li>Isyu 1447 : ang pag-update ng RSyntaxTextArea na librerya</li>
+<li>Isyu 1449 : ang pagpapadala muli / Manwal na kahilingan ng pagtulong ay wala na sa panahon</li>
+<li>Isyu 1458 : ang pagbago ng home/pag-install ng dir ng mga daan na maging laging lubos</li>
+<li>Isyu 1460 : Ang mga klase ng Iskrip ay hindi nagpapakita sa puno ng "Iskrip" habang ang klase ng iskrip ay naidagdag sa panahon ng pag-iinstall sa isang add-on</li>
+<li>Isyu 1461 : Ang kalagitnaan ng API - pinahihintulutan na makakuha ng isang mensahe sa pamamagitan ng ID sa HTTP ng ayos ng Archive</li>
+<li>Isyu 1462 : ang pagpapahintulot na tanggalin ang mga klase ng iskrip</li>
+<li>Isyu 1463 : ang pagpapahintulot sa mga iskrip na paganahin ang mga klase ng mga add-on</li>
+<li>Isyu 1464 : ang pagpapahintulot na ipadala ang "Referer" ng header sa ispayder ng mga kahilingan</li>
+<li>Isyu 1465 : ang pagsalin ng mga payl na hindi nakopya s tamang direktoryo kung ang ZAP ay hindi tumatakbo mula sa default ng pag-iinstall ng dir</li>
+<li>Isyu 1466 : ang pagkumpigura ng opsyon para sa 'malawakang pagpapakita' ng sukat</li>
+<li>Isyu 1467 : ang AuthenticationApiExample ay hindi gumagana</li>
+<li>Isyu 1468 : ang mga template ng iskrip na hindi pwedeng gamitin kapag ang bagong mga klaw ng iskrip ay naidagdag sa panahon ng isang pag-iinstall ng isang add-on</li>
+<li>Isyu 1469 : ang awtomatikong pagdadagdag ng isang gumagamit kung ang anyo ng base na nagpapatunay sa tinukoy na base sa isang kahilingan</li>
+<li>Isyu 1472 : ang pagpapahintulot ng mga ekstensyon na tukuyin ang isang pangalan para sa mga nilalaman ng UI</li>
+<li>Isyu 1475 : ang mga alerto ng magkakaibang pangalan mula sa parehong iskaner ay dapat na makita sa iniulat</li>
+<li>Isyu 1476 : ang pagpapakita ng mga konteksto sa mga puno ng mga sayt</li>
+<li>Isyu 1483 : ang MissingResourceException matapos ang pag-unistall ng add-on sa pamamagitan ng pasibong pag-i-iskan</li>
+<li>Isyu 1484 : ang NullPointerException sa panahon ng pag-unisntall ng isang add-on sa pamamagitan ng aktibong mga pag-iskan</li>
+<li>Isyu 1485 : huwag pahintulutan na piliin ang pinili na na isang add-on kung ang pag-unisntall ay hindi nagtagumpay</li>
+<li>Isyu 1486 : ang mga nilalaman ng add-on na nabunyag</li>
+<li>Isyu 1489 : ang bilang ng bersyon na nasa pamagat ng window</li>
+<li>Isyu 1490 : Ang pag-update ng harlib ng librerya</li>
+<li>Isyu 1491 : ang pagdadagdag na bersyon ng AbstractParam</li>
+<li>Isyu 1492 : ang pag-update ng commons-csv na librerya</li>
+<li>Isyu 1493 : ang pagtanggal ng mga klase ng itinakwi na pagpapatunay</li>
+<li>Isyu 1494 : ang pagsuporta ng mga direktoryo ng iskrip</li>
+<li>Isyu 1502 : ang pagpapahintulot na tanggalin ang iskrip sa makina ng mga pambalot</li>
+<li>Isyu 1503 : Hindi lahat ng mga makina ay nakikita habang gumagawa ng isang iskrip mula sa klase</li>
+<li>Isyu 1504 : ang paghihiwalay habang ang isang iskrip ng makina ay hindi na-install/nakita</li>
+<li>Isyu 1505 : Hindi lahat ng "Sapilitang pag-Browse' ay mga bahagi ng diskargado sa panahon ng pag-unistall</li>
+<li>Isyu 1507 : Hindi lahat ng "Pagkonswelo ng Iskrip" ay bahagi ng diskargado sa panahon ng pag-unistall</li>
+<li>Isyu 1508 : ang mga alerto na naidagdag na naipakita sa moda ng daemon</li>
+<li>Isyu 1510 : ang bagong ekstensyon.postlnit() na paraan na tinatawag ng minsan sa lahat ng mga ekstensyon na naikaraga</li>
+<li>Isyu 1511 : ang pagdadagdag ng opsyon sa pagpapahintulot lamang sa siguradong mga koneksyon sa mga API</li>
+<li>Isyu 1514 : ang ugat ng CA ng certna hindi nabuo sa moda ng daemon</li>
+<li>Isyu 1515 : Hindi lahat ng "Zest" ay mga bahagi ng pagdiskarga sa panahon ng pag-uninstall</li>
+<li>Isyu 1520 : ang pagdadagdag ng lock ng icon sa mga http ng mga sayt sa puno ng mga sayt</li>
+<li>Isyu 1521 : Patapon na mga kamalian tulad ng StackOverFlowError na hindi nahuli ng pasibong iskaner</li>
+<li>Isyu 1524 : ang bagong Persist ng diyalogong sesyon</li> 
+<li>Isyu 1525 : ang pagpapakilala ng isang database ng interface na layer para sa pagpapahintulot sa alternatibong implementasyon</li> 
+<li>Isyu 1528 : ang pagsuporta ng paggamit ng natukoy na sukat ng laki</li>
+<li>Isyu 1530 : ang default ng lakas ng pag-atake at alerto ng threshold, na itinakda sa 'pag-iskan ng patakaran', na hindi ginamit ng mga iskaner</li>
+<li>Isyu 1534 : ang pagbago ng "ajax ng ispayder" ng add-on upang dumepende sa "selenium" ng add-on</li>
+<li>Isyu 1535 : ang pag-update ng Crawljax na librarya at mga dependencies ng ("Ajax na Ispayder" ng add-on)</li>
+<li>Isyu 1536 : ang pagbago ng "Zest" ng add-on depende sa "Siliniyum" ng add-on</li>
+<li>Isyu 1537 : Ang ZAP ay pinahihintulutan na iangkat ang mga sertipiko ng CA</li>
+<li>Isyu 1540 : ang pagpapahintulot sa proxy ng mga isktip sa pekeng mga tugon</li>
+<li>Isyu 1541 : ang pagpapagana ng aktibong pag-iskan ng mga iskrip sa pag-iskan lamang ng isang URL sa halip na palagiang parametro</li>
+<li>Isyu 1544 : ang pagsuporta ng patuloy na pabago-bagong iskrip</li>
+<li>Isyu 1551 : ang zap ay hindi mapansin na kaugnay ng pagkakagulo ng daan ng ( alyas " kaugnayan ng daan na nasusulat " / "daan na kaugnayan ng Stylesheet Import")</li>
+<li>Isyu 1552 : Ang ZAP ay hindi matuklasan ang Pasulong / Pagbaliktad ng mga proxy</li>
+<li>Isyu 1553 : Ang ZAP ay hindi matuklasan ang Pagtatatag / Cacheability ng isang tugon</li>
+<li>Isyu 1557 : ang deadlock sa paggawa ng manu-manong kahilingan</li>
+
+</ul>
+
+<h2>Tingnan din sa</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Ang panimula</a></td><td>ang panimula sa ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Ang mga Inilabas</a></td><td>ang kabuuang ayos ng mga inilabas</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Ang mga kredito</a></td><td>ang mga tao at ang mga grupo na gumawa sa inilabas na ito na ginawang posible</td></tr>
+</table>
+</body>
+</html>

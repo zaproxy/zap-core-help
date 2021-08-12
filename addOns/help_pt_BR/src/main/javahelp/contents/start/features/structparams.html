@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Parâmetros estruturais
+</title>
+</head>
+<body>
+<h1>Parâmetros estruturais</h1>
+<p>
+Parâmetros estruturais são um tipo de <a href="structmods.html">Modificador estrutural</a> que identifica parâmetros representando a estrutura do aplicativo em vez de dados do usuário.<br>
+<p>
+Em aplicativos 'tradicionais' web, a estrutura do aplicativo normalmente é definida pelos caminhos de URL e os dados estão contidos nos parâmetros de URL e dados de POST.<br>
+URLs como:
+<ul>
+<li>https://www.example.com/app/aaa?ddd=eee
+<li>https://www.example.com/app/aaa?ddd=fff
+<li>https://www.example.com/app/aaa?ddd=ggg
+</ul>
+são representadas na <a href="sitestree.html">Sites Tree</a> como um 'nó' da árvore:
+<ul>
+<li>Sites
+	<ul>
+	<li>https://www.example.com
+		<ul>
+		<li>app
+			<ul>
+			<li>GET:aaa(ddd)
+			</ul>
+		</ul>
+	</ul>
+</ul>
+A árvore de Sites é muito importante, pois ela reflete o entendimento do ZAP sobre a estrutura do aplicativo.<br>
+Se não for uma boa representação da estrutura, o ZAP não será capaz de atacar o aplicativo eficazmente.<br>
+<br>
+Em aplicações de uma só página, um parâmetro é usado para indicar a página' lógica':
+<ul>
+<li>https://www.example.com/app/aaa?page=p1&amp;ddd=eee
+<li>https://www.example.com/app/aaa?page=p2&amp;ddd=fff
+<li>https://www.example.com/app/aaa?page=p3&amp;ddd=ggg
+</ul>
+Estas 3 URLs representam páginas lógicas diferentes, mas por padrão o ZAP ainda as representará como apenas um nó:
+<ul>
+<li>Sites
+	<ul>
+	<li>https://www.example.com
+		<ul>
+		<li>app
+			<ul>
+			<li>GET:aaa(ddd,page)
+			</ul>
+		</ul>
+	</ul>
+</ul>
+Isto é um problema porque o ZAP agora não atacará toda a funcionalidade do aplicativo.<br>
+<br>
+Em termos de ZAP, o parâmetro URL de 'página' é um 'parâmetro estrutural' - um parâmetro que define parte da estrutura do aplicativo.<br>
+Você pode definir parâmetros estruturais adicionando o aplicativo num <a href="contexts.html">Contexto</a>
+e, em seguida, configurando-os através da <a href="../../ui/dialogs/session/context-struct.html">Tela de estrutura do contexto de sessão</a>.<br>
+Depois de ter feito isto, as páginas serão representadas corretamente como 3 nós:
+<ul>
+<li>Sites
+	<ul>
+	<li>https://www.example.com
+		<ul>
+		<li>app
+			<ul>
+			<li>aaa
+				<ul>
+				<li>GET:p1(ddd,page)
+				<li>GET:p2(ddd,page)
+				<li>GET:p3(ddd,page)
+				</ul>
+			</ul>
+		</ul>
+	</ul>
+</ul>
+
+<h2>Acessado via</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/dialogs/session/context-struct.html">Tela de estrutura do contexto de sessão</a></td></tr>
+</table>
+
+<h2>Veja também</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">Visão geral da IU</a></td><td>para uma visão geral da interface do usuário</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="features.html">Destaques</a></td><td>fornecidos pelo ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="structmods.html">Modificadores estruturais</a></td><td>controles que mudam como ZAP representa a estrutura do aplicativo</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="ddc.html">Conteúdo Orientado a dados</a></td><td>que identifica caminhos de URL representando dados</td></tr>
+</table>
+
+</body>
+</html>

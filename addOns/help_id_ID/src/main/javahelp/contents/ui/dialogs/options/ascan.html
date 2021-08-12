@@ -6,57 +6,57 @@
 Pilihan layar pindai aktif
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Pilihan layar pindai aktif</h1>
 <p>
-Layar ini memungkinkan anda untuk mengkonfigurasi <a href="../../../start/concepts/ascan.html">aktif scan</a> pilihan:
+Layar ini memungkinkan anda untuk mengkonfigurasi <a href="../../../start/features/ascan.html">aktif scan</a> pilihan:
 
-<h3>Jumlah host yang dipindai secara bersamaan</h3>
+<h3>Number of Hosts Scanned Concurrently</h3>
 Jumlah maksimum host yang akan dipindai pada waktu yang bersamaan.
 Peningkatan ini dapat menambah tekanan pada komputer ZAP yang sedang berjalan.
 
-<h3>Pemindaian bersamaan benang per host</h3>
+<h3>Concurrent Scanning Threads per Host</h3>
 Jumlah benang yang akan digunakan untuk pemindaian per host.<br>
 Meningkatkan jumlah benang dapat mempercepat pemindaian namun akan memberi tekanan ekstra pada komputer ZAP yang sedang berjalan dan host target.
 
-<h3>Max hasil ke daftar</h3>
+<h3>Max Results to List</h3>
 Jumlah hasil yang akan ditampilkan pada tab Scan aktif.<br>
 Menampilkan sejumlah besar hasil yang dapat meningkatkan pada waktu pemindaian secara signifikan.
 
-<h3>Durasi aturan maksimum (menit, 0 tidak terbatas)</h3>
+<h3>Maximum Rule Duration (minutes; 0 is unlimited)</h3>
 Waktu maksimum setiap aturan individu dapat berjalan dalam beberapa menit. Nol berarti tidak ada batas. Ini bisa digunakan untuk mencegah aturan yang menghabiskan banyak waktu. 
 
-<h3>Durasi pemindaian maksimum (menit, 0 tidak terbatas)</h3>
+<h3>Maximum Scan Duration (minutes; 0 is unlimited)</h3>
 Waktu maksimum yang bisa dipindai secara keseluruhan dalam hitungan menit. Nol berarti tidak ada batas. Ini bisa digunakan untuk memastikan pemindaian selesai sekitar waktu yang ditentukan. 
 
-<h3>Tunda saat memindai dalam milidetik</h3>
+<h3>Delay When Scanning (In Milliseconds)</h3>
 Penundaan pada mili detik antara setiap permintaan.<br>
 Menetapkan ini menjadi nilai nol tidak akan meningkatkan waktu pemindaian aktif yang berlangsung, namun akan mengurangi ketegangan pada host target.
 
-<h3>Inject plugin ID di header untuk semua permintaan pemindaian aktif</h3>
+<h3>Inject plugin ID in header for all active scan requests.</h3>
 Jika pilihan ini dipilih maka pemindai aktif ini akan menyuntikkan permintaan header <code>X-ZAP-Scan-ID</code> dengan ID dari pemindai yang mengirimkan permintaan HTTP.
 
-<h3>Menangani bukti anti CSRF</h3>
+<h3>Handle anti-CSRF tokens (experimental functionality).</h3>
 Jika pilihan ini dipilih maka pemindai yang aktif akan secara otomatis mencoba untuk meminta 
-<a href="../../../start/concepts/anticsrf.html">anti CSRF</a> token bila diperlukan.<br>
+<a href="../../../start/features/anticsrf.html">anti CSRF</a> token bila diperlukan.<br>
 Perhatikan bahwa ini adalah fungsi yang eksperimental dan akan memperlambat proses pemindaian karena hanya satu benang yang akan digunakan untuk memastikannya agar
 permintaan token anti CSRF tidak keluar dari langkah. 
 
-<h3>Dalam mode serangan cepat untuk mencari kembali node ketika cakupan berubah</h3>
-Jika pilihan ini dipilih maka saat anda memilih menyerang <a href="../../../start/concepts/modes.html">mode</a> anda akan diminta untuk memilih apakah akan mencari kembali node dalam cakupannya.<br>
+<h3>In Attack Mode prompt to rescan nodes when scope changed.</h3>
+Jika pilihan ini dipilih maka saat anda memilih menyerang <a href="../../../start/features/modes.html">mode</a> anda akan diminta untuk memilih apakah akan mencari kembali node dalam cakupannya.<br>
 Jika pilihan ini tidak dipilih maka pilihan berikut akan mengontrol apakah node tersebut akan kembali dipindai.
 
-<h3>Dalam mode serangan selalu memindai node saat cakupan berubah</h3>
-Jika pilihan ini dipilih maka saat berjalan pada serangan <a href="../../../start/concepts/modes.html">mode</a> semua node dalam cakupan akan kembali dipindai jika cakupan berubah.<br>
+<h3>In Attack Mode always rescan nodes when scope changed.</h3>
+Jika pilihan ini dipilih maka saat berjalan pada serangan <a href="../../../start/features/modes.html">mode</a> semua node dalam cakupan akan kembali dipindai jika cakupan berubah.<br>
 Ini tidak direkomendasikan untuk situs besar karena dapat menghabiskan waktu yang lama.
 
-<h3>Kebijakan pemindaian aktif default</h3>
-Itu <a href="../../../start/concepts/scanpolicy.html">Kebijakan Pindai</a> yang digunakan secara default ketika anda memulai pemindaian yang aktif.
+<h3>Default Active Scan Policy</h3>
+Itu <a href="../../../start/features/scanpolicy.html">Kebijakan Pindai</a> yang digunakan secara default ketika anda memulai pemindaian yang aktif.
 
-<h3>Strategi pemindaian mode pemindaian</h3>
-Itu <a href="../../../start/concepts/scanpolicy.html">Kebijakan Pindai</a> yang digunakan untuk pemindaian dalam menyerang <a href="../../../start/concepts/modes.html">mode</a>.
+<h3>Attack Mode Scan Policy</h3>
+Itu <a href="../../../start/features/scanpolicy.html">Kebijakan Pindai</a> yang digunakan untuk pemindaian dalam menyerang <a href="../../../start/features/modes.html">mode</a>.
 
-<h3>Bagan kemajuan Maks dalam menit</h3>
+<h3>Max Progress Chart in Mins</h3>
 Waktu maksimum dalam menit dimana kode menanggapi akan memetakan di
 <a href="../scanprogress.html">Pemindaian kemajuan dialog</a>.<br>
 Untuk menonaktifkan grafik pilihan harus diatur ke nol menit.

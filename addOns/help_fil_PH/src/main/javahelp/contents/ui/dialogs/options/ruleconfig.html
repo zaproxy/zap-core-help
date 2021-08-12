@@ -6,7 +6,7 @@
 Mga opsyon sa Pagsasaayos ng Rule screen
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Mga opsyon sa Pagsasaayos ng Rule screen</h1>
 <p>
 Pinapayagan ka ng screen na ito na i-configure ang pag-uugali ng mga tukoy na aktibo at passive na mga panuntunan sa pag-scan.
@@ -24,6 +24,12 @@ Ang mga cookie na kasama sa listahan na ito ay hindi papansinin kapag nag-scan p
 <tr><td>rules.csrf.ignorelist</td><td></td><td>Isang pinaghiwalay na kuwit ng listahan ng mga identifier.
 Ang anumang FORM na may pangalan o ID na tumutugma sa isa sa mga tagatukoy na ito ay hindi papansinin kapag nag-scan para sa mga nawawalang mga token ng Anti-CSRF.
 Gamitin lamang ang feature na ito para huwag pansinin ang FORMs na malalaman mo na ligtas, halimbawa pagsusuri ng mga anyo.</td></tr>
+<tr><td>rules.csrf.ignore.attname</td><td></td><td>The name of an HTML attribute that can be used to indicate that a form does
+not need an anti-CSRF Token. If <code>rules.csrf.ignore.attvalue</code> is specified then this must also match the attribute's value. If
+found any related alerts will be raised at INFO level.</td></tr>
+<tr><td>rules.csrf.ignore.attvalue</td><td></td><td>The value of an HTML attribute named by <code>rules.csrf.ignore.attname</code>
+that can be used to indicate that a form does not need an anti-CSRF Token. If found any related alerts will be raised at INFO level.</td></tr>
+<tr><td>rules.domains.trusted</td><td></td><td>A comma separated list of URL regex patterns. Any URLs that match the patterns will be considered trusted domains and the issues ignored.</td></tr>
 </table>
 
 

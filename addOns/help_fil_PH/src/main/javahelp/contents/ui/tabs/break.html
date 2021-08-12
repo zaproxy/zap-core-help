@@ -6,11 +6,11 @@
 Pangbreak na tab
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Pangbreak na tab</h1>
 <p>
 Ang Pangbreak na tab ay magpapahintulot sa iyo na baguhin ang hiling o tugon kapag ito ay mahuli ng ZAP gamit
-ang <a href="../../start/concepts/breakpoints.html">punto ng pagbreak</a>.<br/>
+ang <a href="../../start/features/breakpoints.html">breakpoint</a>.<br/>
 Ito ay magpapahintulot sa iyo na baguhin ang mga elemento na hindi mo mababago sa normal na paraan gamit ang iyong
 browser, kasali ang:
 <table>
@@ -32,23 +32,40 @@ Maari mong baguhin ang kahit ano sa dalawang mga panel at i-forward ang hiling o
 Ang paghila pababa ay magpapahintulot sa iyo na pumili ng ibang <a href="../views.html">Mga View</a> para sa hiling o tugon na header at katawan.
 </p>
 <p>
-Habang ang Pangbreak na tab ay hindi magagamit ang icon na ito ay naka-grey na krus: &nbsp;
-<img src="../../images/16/101grey.png" align="bottom" width="16" height="16" />&nbsp;<br/>
-Kapag ang <a href="../../start/concepts/breakpoints.html">punto ng pagbreak</a> ay natamaan ang pangtab na icon ay magiging 
-pulang krus: &nbsp;
+While the Break tab is not in use its icon is a grey cross: &nbsp;
+<img src="../../images/16/101grey.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
+When a <a href="../../start/features/breakpoints.html">breakpoint</a> is hit the tab icon is changed 
+to a red cross: &nbsp;
 <img src="../../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
 
 </p>
 
+<p>
+    If you have selected "Show buttons to select the requests you don't want ZAP to break on" in the
+    <a href="../dialogs/options/breakpoints.html">options menu</a> you will be able to select if you just want to break
+    on requests that are in scope and you will be able to select the file extensions you don't want to break on:<br>
+<table>
+    <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td><img src="../../images/javascript.png" align="bottom" width="16" height="16" />&nbsp; Javascript Files</td></tr>
+    <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td><img src="../../images/cssAndFonts.png" align="bottom" width="16" height="16"/>&nbsp; CSS and Fonts Files </td></tr>
+    <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td><img src="../../images/multimedia.png" align="bottom" width="16" height="16" />&nbsp; Multimedia Files</td></tr>
+    <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td><img src="../../images/fugue/target.png" align="bottom" width="16" height="16" />&nbsp; Only in scope</td></tr>
+</table>
+</p>
+
+<h3><img src="../../images/fugue/application-resize.png" align="bottom" width="16" height="16" />&nbsp; Update Content Length</h3>
+By default ZAP will automatically update (or add) the HTTP(S) Content-Length header to match the size of the data submitted. 
+If this option is unselected then ZAP will not update the header allowing you to specify any value you like.<br>
+This button will only be shown for HTTP(S) messages.
+
 <h2>Kanang pagclick ng menu</h2>
-Ang kanang pagclick sa isang noda ay magdadala pataas ng menu na magpapahintulot sa iyo na:
+Right clicking on a node will bring up a menu which will allow you to:
 
-<h3>Hanapin...</h3>
-Ito ay magdadala pataas ng <a href="../dialogs/find.html">Hanapin ang dialogo</a>.
-
-<h3>Pagencode/Pagdecode/Paghash...</h3>
-Ito ay magdadala pataas ng <a href="../dialogs/enc_dec.html">Pagencode/Pagdecode/Paghash ng dialogo</a>.<br/>
-Kung na-highlight mo na ang kahit anong teksto ay ito ay automatikong masasali sa loob ng dialogo.
+<h3>Find...</h3>
+This will bring up the <a href="../dialogs/find.html">Hanapin ang dialogo</a>.
 
 <h3>Kopya</h3>
 Ito ay magkokopya ng napiling string sa klipboard.
@@ -58,7 +75,7 @@ Ito ay magkokopya ng napiling string sa klipboard.
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../overview.html">Ang Kabuuan ng UI</a></td><td>para sa kabuuan ng interface sa gagamit</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="breakpoints.html">Mga pangbreak point na tab</a></td><td>para sa mga detalye kung paano baguhin o burahin ang mga break point</td></tr>
+<a href="breakpoints.html">Breakpoints tab</a></td><td>for details of how to change or delete breakpoints</td></tr>
 </table>
 
 </body>

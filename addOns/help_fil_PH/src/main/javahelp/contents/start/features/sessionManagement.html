@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Ang Pamamahala ng Sesyon</title>
+</head>
+<body>
+	<h1>Pamamahala ng Sesyon</h1>
+	<p>
+		Ang ZAP ay naghahawak ng maramihang mga tipo ng pamamahala ng sesyon (tinatawag na <b>Mga Pamamaraan ng Pamamahala ng Sesyon</b>) na maaari mong gamitin sa mga website / mga webapp. Bawat <b><a
+			href="contexts.html">Konteksto</a></b> ay may isang Pamamaraan na Namamahala ng Sesyon na tumutukoy kung saan mga nakadikta kung paano ang mga sesyon ay iniingatan.
+	</p>
+
+	<h3>
+		<a name="cbsm">Cookie-Base sa Pamamahala ng Sesyon</a>
+	</h3>
+	<p>
+		In the case of this method the session is being tracked through
+		cookies. Currently, the session tokens that are used are imported from
+		the <a href="httpsessions.html">HTTP Sessions</a> Extension.
+	</p>
+
+	<h3>
+		<a name="hasm">Ang Awtentikasyon ng HTTP na Pamamahal ng Sesyon</a>
+	</h3>
+	<p>
+		In the case of this method the session is managed with HTTP request header <code>Authorization</code>.
+	</p>
+
+	<h3>
+		<a name="sbsm">Script-Based Session Management</a>
+	</h3>
+	<p>
+		This method is useful for websites / webapps where the session management is a more complex one and some custom
+		scripts that handle the process are beneficial. To use this method, you must first define a Session Management script
+		which analyses messages or performs other actions as needed by your web-application. This script is then selected for use for a given Context
+		and it is called whenever session management actions are performed. 
+		Configuration can be done using the <a href="../../ui/dialogs/session/contexts.html#sm">Session
+			Contexts Dialog</a> and requires you to have the Scripts Console ZAP Addon installed from the Marketplace.
+	</p>
+
+	<h2>Kinumpigura sa pamamagitan ng</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/session/contexts.html#sm">Sesyon</a></td>
+			<td></td>
+		</tr>
+	</table>
+
+	<h2>Maaari ring tingnan sa</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="https://youtu.be/cR4gw-cPZOA">Pagtuturo sa YouTube</a></td>
+			<td>ng Awtentikasyon, Pamamahala ng Sesyon at Ang mga pag-gamit ng pamamahala na mga tampok sa ZAP [external link to https://youtu.be/cR4gw-cPZOA].</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/overview.html">Ang pangkalahatng ideya ng UI</a></td>
+			<td>para sa pangkalahatang ideya ng mga gumagamit ng interface</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="features.html">Mga tampok</a></td>
+			<td>ibinigay ni ZAP</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/session/contexts.html">Session mga konteksto ng diyalogo</a></td>
+			<td>para sa pangkalahatang mga pag-aari ng sesyon</td>
+		</tr>
+
+	</table>
+
+</body>
+</html>

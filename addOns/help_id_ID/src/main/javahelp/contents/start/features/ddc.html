@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Konten Didorong Data
+</title>
+</head>
+<body>
+<h1>Konten Didorong Data</h1>
+<p>
+Data driven konten jenis <a href="structmods.html">Struktural Pengubah</a>
+yang mengidentifikasi URL jalur yang mewakili data.<br>
+<p>
+Dalam aplikasi web 'tradisional', struktur aplikasi biasanya didefinisikan oleh jalur URL
+dan data terkandung dalam parameter URL dan data POST.<br>
+URL seperti:
+<ul>
+<li>https://www.example.com/app/aaa?ddd=eee
+<li>https://www.example.com/app/aaa?ddd=fff
+<li>https://www.example.com/app/bbb?ddd=eee
+</ul>
+diwakili dalam <a href="sitestree.html">Sites Tree</a> sebagai dua 'node' di pohon:
+<ul>
+<li>Situs
+	<ul>
+	<li>https://www.example.com
+		<ul>
+		<li>aplikasi
+			<ul>
+			<li>MENDAPATKAN:aaa(ddd)
+			<li>MENDAPATKAN:bbb(ddd)
+			</ul>
+		</ul>
+	</ul>
+</ul>
+Pohon Situs sangat penting karena mencerminkan pemahaman ZAP tentang struktur aplikasi.<br>
+Jika bukan representasi struktur yang bagus maka ZAP tidak akan bisa menyerang aplikasi secara efektif.<br>
+<br>
+Beberapa aplikasi menyertakan data di jalur URL.<br>
+Sebagai contoh: 
+<ul>
+<li>https://www.example.com/app/company1/aaa?ddd=eee
+<li>https://www.example.com/app/company2/aaa?ddd=fff
+<li>https://www.example.com/app/company3/aaa?ddd=ggg
+</ul>
+Ketiga URL ini mewakili halaman yang sama namun dengan data yang berbeda, namun secara default ZAP akan mewakili mereka sebagai tiga node terpisah:
+<ul>
+<li>Situs
+	<ul>
+	<li>https://www.example.com
+		<ul>
+		<li>aplikasi
+			<ul>
+			<li>perusahaan1
+				<ul>
+				<li>MENDAPATKAN:aaa(ddd)
+				</ul>
+			<li>perusahaan 2
+				<ul>
+				<li>MENDAPATKAN:aaa(ddd)
+				</ul>
+			<li>company3
+				<ul>
+				<li>GET:aaa(ddd)
+				</ul>
+			</ul>
+		</ul>
+	</ul>
+</ul>
+Ini adalah sebuah masalah karena sekarang ZAP akan menyerang ke 3 halaman ketika hanya perlu menyerang salah satu saja dari mereka.<br>
+Dalam hal menyerang halaman yang sama sebanyak 3 kali bukanlah sebuah masalah besar, namun jika anda memiliki ratusan atau ribuan halaman seperti ini, maka secara signifikan meningkatkan waktu yang dibutuhkan untuk memindai aplikasi.<br>
+<br>
+Dalam istilah ZAP, simpul 'perusahaan' adalah 'konten berbasis data' - elemen jalur URL yang berisi
+data bukan mewakili bagian dari struktur aplikasi.<br>
+Anda dapat menentukan konten yang digerakkan data dengan menambahkan aplikasi ke a <a href="contexts.html">Konteks</a>
+dan kemudian mengkonfigurasi mereka melalui <a href="../../ui/tabs/sites.html">Tab situs</a> 'Bendera sebagai konteks -&gt; <i>Nama Konteks</i> Data driven node 'klik kanan item menu<br>
+Setelah Anda melakukan ini, halaman akan diwakili dengan benar sebagai 1 node:
+<ul>
+<li>Situs
+	<ul>
+	<li>https://www.example.com
+		<ul>
+		<li>aplikasi
+			<ul>
+			<li>&#x00AB;perusahaan&#x00BB;
+				<ul>
+				<li>GET:aaa(ddd)
+				</ul>
+			</ul>
+		</ul>
+	</ul>
+</ul>
+Karakter &#x00AB; dan &#x00BB; digunakan untuk menandakan bahwa ini adalah sebuah node 'khusus' dan 
+nama node (dalam hal ini 'perusahaan') bisa diatur oleh anda untuk menandakan apa yang mewakili node itu.
+
+<h2>Diakses melalui</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/sites.html">Tab situs</a></td><td>'Bendera sebagai Konteks -&gt; <i>Konteks Nama</i> Data driven node' klik kanan item menu</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/history.html">Tab riwayat</a></td><td>'Bendera sebagai Konteks -&gt; <i>Konteks Nama</i> Data driven node' klik kanan item menu</td></tr>
+</table>
+
+<h2>Lihat juga</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">Ikhtisar UI</a></td><td>sebagai ikhtisar dari antarmuka pengguna</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="features.html">Fitur</a></td><td>disediakan oleh ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="structparams.html">Parameter Struktural</a></td><td>yang mengidentifikasi parameter-parameter yang mewakili struktur aplikasi bukan data pengguna</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/dialogs/session/context-struct.html">Sesi Konteks Struktur layar</a></td></tr>
+</table>
+
+</body>
+</html>

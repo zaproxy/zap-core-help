@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Ang mga alerto
+</title>
+</head>
+<body>
+<h1>Ang mga alerto</h1>
+<p>
+Ang isang alerto ay isang potential na kahinaan at ay nag-uugnay sa isang tiyak na kahilingan.<br/>
+Ang isang kahilingan ay maaring magkaroon ng higit sa isang alerto.<br/>
+</p>
+<p>
+Ipinapakita ng mga alerto sa mga UI kasama ang isang bandila na nagsasaad ng panganib:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/071.png" align="bottom" width="16" height="16" />&nbsp; Ang mataas</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/076.png" align="bottom" width="16" height="16" />&nbsp; Ang katamtaman</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/074.png" align="bottom" width="16" height="16" />&nbsp; Ang mababa</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/073.png" align="bottom" width="16" height="16" />&nbsp; Ang pagbibigay ng impormasyon</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/072.png" align="bottom" width="16" height="16" />&nbsp; Hindi tunay na positibo</td><td></td></tr>
+</table>
+
+<p>
+Ang mga alerto ay maaaring tumaas sa pamamagitan ng ibat ibang klase na mga bahagi ng ZAP, kasama pero hindi limitado sa: <a href="ascan.html">Aktibong pag-iskan</a>,
+<a href="pscan.html">pasibong pag-iskan</a>, 
+ng mga iskrip, sa pamamagitan ng mga add-on mga (ekstensiyon), o manu-manong gamitin ang <a href="../../ui/dialogs/addalert.html">pagdagdag ng alerto ng diyalogo</a>
+(kung saan ay pinahihintulutan karin para i-update o palitan ang alerto ng mga detalye/impormasyon).
+</p>
+<p>
+Ang mga alerto ay naka-flag sa mga <a href="../../ui/tabs/history.html">kasaysayan ng tab</a> na mayroong isang flag nakung saan ipinapahiwatig ang pinakamataas na panganib ng alerto.<br/>
+ang lahat ng mga alerto ay nakatala sa mga <a href="../../ui/tabs/alerts.html">mga alerto ng tab</a>
+at ang isang bilang ng mga kabuuang numero ng mga alerto sa pamamagitan ng panganib ay ipinakita sa mga <a href="../../ui/footer.html">footer</a>.
+</p>
+
+<a name="alertoverrides"></a><h2>Ang mga pag-override</h2> 
+
+Ang mga alerto na tumaas sa pamamagitan ng ZAP na kasama sa kapwa generic at partikular na impormasyon tungkol sa pagtataas ng mga alerto.
+Ang tinukoy na impormasyon na nauugnay ng direkta sa mga potensyal na isyu na nakita, gayon gaya ng URL at ng parametro na apektado.
+Ang impormasyon na generic ay kinabibilangan ng mga bagay tulad ng isang deskripsyon at mga link na may kaugnayan sa sanggunian ng online.
+<p>
+Maaari mong palitan o dagdagan ang mga generic na impormasyon gamit ang isang 'alerto ng pag-override' ng pagkukumpigura ng payl.
+Ito ay nagpapahintulot sa iyo na isama ang impormasyon na iyan ay partikular sa iyong kumpanya tulad ng iniutos na mga patakaran, ang mga panloob na link
+o 
+payo para sa partikular na mga teknolohiya na iyong ginamit.
+<p>
+Ang isang alerto ng pag-override na kinumpigura ng payl ay isang UTF-8 na katangian ng payl na naglalaman lamang ng impormasyon na ninais mong palitan.
+ang guhit na nagsisimula sa '#' ay tumalakay bilang mga komento at hindi pagpansin.
+<p>
+Ang format ay:
+<pre>
+&lt;alertid&gt;.&lt;property&gt; = [ + | - ] &lt;your information&gt;
+</pre>
+Ang mga sumusunod na mga katangian ay suportado:
+<ul>
+<li>ang pangalan</li>
+<li>ang paglalarawan</li>
+<li>ang solusyon</li>
+<li>ang otherInfo</li>
+<li>ang reperensiya</li>
+</ul>  
+
+Para sa halimbawa
+<pre>
+# 40012 = ipinapakita ng XSS
+40012.solusyon= Sundin ang ating kumpanya sa mga partikular na mga patnubay sa http://internet.example.com/xss.html
+</pre>
+Kung ang value ay nagsisimula sa isang '+' pagkatapos nito ay isama sa mga umiiral na impormasyon.
+<br>
+Kung ito ay nagsisimula sa isang '-' pagkatapos nito ay isinama sa mga umiiral na impormasyon.
+<br>
+Kung ito ay hindi nagsimula sa pamamgitan ng isang '+' o '-' pagkatapos ito ay pinapalitan ang umiiral na impormasyon.
+<p>
+Ang pag-override ng alerto ng pagkukumpigura ng payl ay maaaring tiniyak sa pamamagitan ng <a href="api.html">API</a>,
+<a href="../../ui/dialogs/options/alert.html">Ang mga opsyon ng alerto ng iskrin</a>
+o paggamit ng <a href="../../cmdline.html">command line</a> na opsyon:  
+<pre>-config alert.overridesFilename=&lt;filename&gt;</pre>
+
+<h2>Tingnan din sa</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/overview.html">Ang pangkalahatang ideya ng UI</a></td><td>para sa isang pangkalahatang ideya ng mga gumamit ng interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="features.html">Ang mga tampok</a></td><td>ibinigay sa pamamagitan ng ZAP</td></tr>
+</table>
+
+</body>
+</html>

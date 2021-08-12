@@ -6,7 +6,7 @@
 Options Rule Configuration screen
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Options Rule Configuration screen</h1>
 <p>
 This screen allows you to configure the behaviour of specific active and passive scan rules.
@@ -24,10 +24,16 @@ Cookies included in this list will be ignored when scanning for cookie related i
 <tr><td>rules.csrf.ignorelist</td><td></td><td>A comma separated list of identifiers.
 Any FORMs with a name or ID that matches one of these identifiers will be ignored when scanning for missing Anti-CSRF tokens.
 Only use this feature to ignore FORMs that you know are safe, for example search forms.</td></tr>
+<tr><td>rules.csrf.ignore.attname</td><td></td><td>The name of an HTML attribute that can be used to indicate that a form does
+not need an anti-CSRF Token. If <code>rules.csrf.ignore.attvalue</code> is specified then this must also match the attribute's value. If
+found any related alerts will be raised at INFO level.</td></tr>
+<tr><td>rules.csrf.ignore.attvalue</td><td></td><td>The value of an HTML attribute named by <code>rules.csrf.ignore.attname</code>
+that can be used to indicate that a form does not need an anti-CSRF Token. If found any related alerts will be raised at INFO level.</td></tr>
+<tr><td>rules.domains.trusted</td><td></td><td>A comma separated list of URL regex patterns. Any URLs that match the patterns will be considered trusted domains and the issues ignored.</td></tr>
 </table>
 
 
-<h2>See also</h2>
+<h2>Zobacz także</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>

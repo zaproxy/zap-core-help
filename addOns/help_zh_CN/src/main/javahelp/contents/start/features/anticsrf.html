@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+反CSRF处理
+</title>
+</head>
+<body>
+<h1>反CSRF令牌</h1>
+<p>
+反 CSRF 令牌是 (伪) 随机参数, 用于防止跨站点请求伪造 (CSRF) 攻击。<br> 但是, 它们也使渗透测试人员的工作更加困难, 尤其是在每次请求表单时重新生成令牌。<br>
+</p>
+<p>
+ZAP纯粹通过属性名称来检测反CSRF令牌 - 被认为是反CSRF令牌的属性名称列表是使用 <a href="../../ui/dialogs/options/anticsrf.html">选项反CSRF屏幕</a>配置的。<br/>当ZAP检测到这些令牌时，它将记录令牌值和生成令牌的URL。<br/> 其他扫描仪，如 <a href="ascan.html">主动扫描仪</a>，具有可以使ZAP在需要时自动重新生成令牌的选项。
+</p>
+
+<h2>请参阅</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/overview.html">UI综览</a></td><td>关于用户界面的概述</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="features.html">特性</a></td><td>由ZAP提供</td></tr>
+</table>
+
+</body>
+</html>

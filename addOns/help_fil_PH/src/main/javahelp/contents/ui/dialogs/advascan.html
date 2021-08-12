@@ -3,65 +3,78 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Aktibong Scan diyalogo
+Ang aktibong pag-iskan ng diyalogo
 </title>
 </head>
-<body bgcolor="#ffffff">
-<h1>Aktibong Pagscan ng tab</h1>
+<body>
+<h1>Ang aktibong pag-iskan ng diyalogo</h1>
 <p>
-Inilunsad ang mga diyalogong ito ang <a href="../../start/concepts/ascan.html">aktibong scanner</a>.<br>
+Ang diyalogong ito ay inilunsad ang <a href="../../start/features/ascan.html">aktibong iskaner</a>.<br>
   
-<h3>Saklaw</h3>
-Ang unang tab na ito ay nagbibigay-daan sa iyo upang pumili o baguhin ang panimula.<br>
-Kung mayroon kang higit na isa <a href="../../start/concepts/scanpolicy.html">mga patakaran ng scan</a> pagkatapos ay mo magagawang upang piliin ang gamitin.<br>
-Kung ang panimulang punto sa isa o higit pa <a href="../../start/concepts/contexts.html">Konteksto</a> pagkatapos ay mo magagawang upang piliin ang isa sa kanila.<br>
-Kung may anumang ng konteksto <a href="../../start/concepts/users.html">Mga gumagamit</a> nilinaw na noon ay mo magagawang upang piliin ang isa sa kanila.<br>
-Kung pumili ka ng isa sa mga gumagamit noon ang aktibong scan ay ginanap bilang ang user na ito, may ZAP (re) pamamagitan ng mga mahimalang bilang na gumagamit kung kinakailangan.
+<h3>Ang saklaw</h3>
+Ang unang tab ay pinahihintulutan ka na piliin o baguhin ang mga panimulang punto.<br>
+Kung mayroon ka ng higit sa isa <a href="../../start/features/scanpolicy.html">na mga patakaran ng pag-iskan</a> kapag ikaw ay mayroong kakayahan na pumili ng isa na gagamitin.<br>
+Kung ang panimulang punto ay nasa isa o higit pa <a href="../../start/features/contexts.html">Na mga konteksto</a> pagkatapos ay magagawa mo na piliin ang is sa kanila.<br>
+Kung ang kontekstong yun ay mayroong anuman <a href="../../start/features/users.html">Na mga gumagamit</a> na tinukoy pagkatapos ay magagawa mo na piliin ang isa sa kanila.<br>
+Kung iyong napili ang isa sa mga gumagamit pagkatapos ang aktibong pag-iskan ay gaganap bilang gumagamit na iyon, kasama ang ZAP ng (re)pagpapataunay bilang iyon na gumagamit kapag kinakailangan.
 <br><br>
-Kung pumili ka ng 'recurse' saka lahat ng mga nodes ilalim ang isa na pinili ay din ay nagsuri.<br>
-Pasadyang input vectors ay suportado lamang kapag hindi pipiliin ang opsyon na ito.
+If you select 'Recurse' then all of the nodes underneath the one selected will also be scanned.<br>
+Ang kostumbre ng input ng mga vector ay suportado lamang kung itong opsyon ay hindi napili.
 <br><br>
-Kung piliin mo ang 'Ipakita ang mga advanced na mga pagpipilian' pagkatapos ay ang mga sumusunod na tab ay ipapakita na kung saan ay nagbibigay ng pinong butil na kontrol sa mga aktibong proseso ng pag-scan.
+If you select 'Show Advanced Options' then the following tabs will be shown which provide fine grain control over the active scanning process.
 <br><br>
-Pag-click sa pindutan ng 'I-reset' ay magreset ng lahat ng mga pagpipilian sa kanilang mga pinahahalagahan sa default. 
+Ang pagpindot sa mga 'reset' na buton ay ang pag-reset sa lahat ng mga opsyon sa kanilang default na mga halaga. 
 
-<h3>Mga Input Vector</h3>
-Nagbibigay-daan ang Input Vectors tab mo pawalang-bisa ang default input vectors na ang ibig sabihin sa ang 
-<a href="../../ui/dialogs/options/ascaninput.html">Screen ng aktibong I-scan sa mga Input Vectors ng opsyon</a>.<br>
-Pag-click sa pindutan ng 'I-reset' ay i-reset ang input na vectors sa mga opsiyon sa default. 
+<h3>Ang mga Input Vector</h3>
+Ang input ng mga vector ng tab ay nagpapahintulot sayo na i-overrride ang ingput ng mga vector kung saan ay natukoy sa mga 
+<a href="../../ui/dialogs/options/ascaninput.html">Aktibong pag-iskan ng mga opsyon sa input ng mga vector ng iskrin</a>.<br>
+Ang pagpindot sa mga 'reset'na buton ay ang ang mag rereset sa input ng mga vector sa default ng mga opsyon. 
 
-<h3>Pasadyang mga Vector</h3>
-Ang Custom Vectors tab ay nagbibigay-daan sa mong tukuyin ang tiyak na lokasyon sa kahilingan na atake.<br> 
-Custom Vectors ay lamang makukuha kung hindi napili ang opsyon na 'recurse' sa unang tab.<br>
-Magdagdag ng input ng custom vectors i-highlight ang mga character na gusto mong atake sa kahilingan at i-click ang pindutan ng 'Add'.<br>
-Maaari kang magdagdag ng maraming pasadyang input vectors hangga 't gusto mo.<br>
-Upang alisin ang mga input ng pasadyang i-highlight ang alinman sa mga napiling karakter ang vectors at i-click ang pindutan ng 'Tanggalin'.<br>
-Check ang box na 'Huwag paganahin ang di-pasadyang input vectors' ay nagpabaldado sa lahat ng mga input na vectors maliban sa mga nang manu-mano mong tukuyin sa tab na ito.
+<h3>Ang kustom na mga vector</h3>
+Ang gawi ng mga vector ng tab na napagpapahintulot sa iyo na matukoy ang tiyak na mga lokasyon sa mga kahilingan upang umatake.<br> 
+Custom Vectors are only available if the 'Recurse' option on the first tab is not selected.<br>
+Upang madagdagan ang gawi ng input ng mga vector i-highlight ang mga katangian na nais mong salakayin sa mga kahilingan at pagpindot ng 'karagdagang'buton.<br>
+Maaari mong dagdagan hanggang ilan ang gawi ng input ng mga vector hanggat gusto mo.<br>
+Para tanggalin ang gawi ng input ng mga vector i-highlight ang ilan sa mga napiling mga katangian at pindutin ang 'natanggal' na buton.<br>
+Ang pagsisiyasat sa 'hindi pinagananag di-gawi ng input ng mga vector' ng kahon na mga hindi pinagana ng lahat ng mga input ng vector maliban sa mga iyon na manu-mano mong natukoy sa tab na ito.
 
-<h3>Teknolohiya</h3>
-Ang teknolohiya na tab ay nagpapahintulot sa iyo na tukuyin kung aling mga uri ng teknolohiya na i-scan.<br>
-Hindi piliin ng teknolohiya sa alam mo ay hindi naroroon sa target na mga application na maaaring pabilisin ang ang scan gaya ng patakaran na target ang mga teknolohiya na maaaring laktawan ang mga pagsusulit.
+<h3>Ang teknolohiya</h3>
+Ang teknolohiya ng tab na nagpapahintulot sa iyo na tukuyin kung aling mga klase ng mga teknolohiya na mai-iskan.<br>
+Ang mga di-napiling mga teknolohiya na alam mo na wala sa mga pinupuntirayang aplikasyon na maaaring pabilisin ang pag-iskan bilang mga patakaran ang alinman na pinupuntirya ng teknolohiya na maaaring laktawan ang mga pagsubok na iyon.
 
-<h3>Patakaran</h3>
-Ang patakaran ng tab ay nagpapahintulot sa iyo na pawalang-bisa ang alinman sa mga setting na tinukoy sa mga piling 
-<a href="../../start/concepts/scanpolicy.html">mag-scan ng mga patakaran</a>. 
+<h3>Ang patakaran</h3>
+Ang patakaran ng tab na nagpapahintulot sa iyo na i-override ang alinman sa mga setting na natukoy sa mga napili 
+<a href="../../start/features/scanpolicy.html">ng patakaran ng pag-iskan</a>. 
+
+<h3>Filter</h3>
+The Filter tab allows you to specify filter criteria and active scan will filter requests based on these criteria's.
+<br/> 
+There are four filter criteria's available in the filter tab <br/>
+<ul>
+<li>HTTP method</li>
+<li>Status code</li>
+<li>Tags</li>
+<li>URL pattern</li>
+</ul>
+HTTP method and Status code filter criteria are only applied to check if a request can be included in active scan or not,<br/> where as
+Tags and URL pattern filter criteria can be applied to include or exclude a request.
 
 <br><br>
 
-<h2>Ma-access sa pamamagitan ng</h2>
+<h2>Ang pagpapagana sa pamamagitan ng</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/ascan.html">Aktibong Scan tab</a></td><td>'Bagong magsuri' na pindutan</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tlmenu/tools.html">Itaas ang antas ng menu ng Tools</a></td><td>'Aktibo Scan...' menu item</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/sites.html">Ang Sites tab</a></td><td>' Atake / aktibong magsuri... right-click na aytem sa menu</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/history.html">Pangkasaysayan na tab</a></td><td>' Atake / aktibong magsuri...' right-click na aytem sa menu</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/ascan.html">Ang aktibong pag-iskan ng tab</a></td><td>ang 'bagong pag-iskan' ng buton</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tlmenu/tools.html">Ang mataas na lebel ng kasangkapan ng menu</a></td><td>ang 'aktibong pag-iskan...' ng menu aytem</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/sites.html">Ang mga sayt ng tab</a></td><td>ang 'pag-atake / aktibong pag-iskan... tamang pagpindot ng menu aytem</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/history.html">Ang kasaysayan ng tab</a></td><td>ang 'pagatake / aktibong pag-iskan...' tamang pagpindot ng menu aytem</td></tr>
 </table>
 
-<h2>Tignan din</h2>
+<h2>Tingnan din sa</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">Kabuuan ng UI</a></td><td>para sa kabuoang gumagamit ng interface</td></tr>
+<a href="../overview.html">Ang pangkalahatang ideya ng UI</a></td><td>para sa isang pangkalahatang ideya ng mga gumagamit ng interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="dialogs.html">Diyalogo ng</a></td><td>para sa mga detalye ng diyalogo o mga popup </td></tr>
+<a href="dialogs.html">Ang mga diyalogo</a></td><td>para sa mga detalye ng mga diyalogo o mga popup </td></tr>
 </table>
 
 </body>

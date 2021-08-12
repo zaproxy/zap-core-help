@@ -3,56 +3,57 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Ang mga katangian ng sesyon sa dayalogo
+Ang mga katangian ng diyalogo sa sesyon
 </title>
 </head>
-<body bgcolor="#ffffff">
-<h1>Ang mga katangian ng sesyon sa dayalugo</h1>
+<body>
+<h1>Ang mga katangian ng sesyon sa diyalogo</h1>
 <p>
-Ito ang nagpapahintulot sayo na maset ang katangian ng sesyon na binubuo ng mga sumusunod na iskren:
+Ito ay nagpapahintulot sayo na ayusin ang mga katangian ng sesyon at ito ay ginawa ng mga sumusunod na mga iskrin:
 
-<h3>Pangkalahatan</h3>
-Ito ay nagpapahintulot sa iyo na lagyan ng pangalan ang sesyon at ilarawan.
+<h3>Ang pangkalahatan</h3>
+Ito ay nagpapahintulot sayo na ayusin ang pangaln ng sesyon at deskripsyon.
 
-<h3>Ibukod mula sa proxy</h3>
-Ito ay nagpapahintulot sayo na pamahalaan ang mga URL na hindi pinansin ng lokal na mga proxie.
+<h3>Huwag isama mula sa proxy</h3>
+Ito ay nagpapahintulot sayo na pamahalaan ang mga URL nahindi pinansin ng lokal na mga proxie.
 
-<h3>Ibukod mula sa scanner</h3>
-Ito ay nag papahintulot sa iyo na pamahalaan ang mga URL na hindi pinansin ng scanner.
+<h3>Huwag isama mula sa scanner</h3>
+Ito ay nagpapahintulot sayo na pangasiwaan ang mga url na hindi pinansin sa pamamagitan ng scanner.
 
-<h3>Ibukod mula sa spider</h3>
-Ito ay nagpapahintulot sa iyo na pamahalaan ang mga URL na hindi pinansin ng spider (standard and AJAX).
+<h3>Huwag isama mula sa ispayder</h3>
+Ito ay nagpapahintulot sayo na pangasiwaan ang mga URL na hindki pinansin sa pamamagitan ng ispayder (pamantayan at AJAX).
 
-<h3>Konteksto</h3>
-Isang set ng mga screen para sa namamahala <a href="../../../start/concepts/contexts.html">konteksto</a>
+<h3>Ang konteksto</h3>
+Ang isang ayos ng mga iskrin para sa pangangasiwa <a href="../../../start/features/contexts.html">ang mga konteksto</a>
 
-<h2>Mga regex ng URL</h2>
-Sa mga <i>Hiniwalay mula *</i> ang mga dialog na naipasok mo ng regular sa expresyon upang matukoy ang mga URL habang ikaw ay umaalis sa nagiisang meta-karakter kasama ang backslash, maari murin gamitin ang <b>\Q...\E</b> alisin ang pagkakasunod-sunod. ang lahat ng mga karakter sa pagitan ng <b>\Q</b> at ng <b>\E</b> ang interpreted ay literal na karakter ng. E.g. \Q*\d+*\E katugma ng literal natekstong *\d+* ang pag kakaalis ng pag kakasunod-sunod ay magagamit sa ZAP kung hindi ka kasama sa mga URL sapamamagitan ng mga menu.
+<h2>Ang mga regex ng URL</h2>
+Sa mga <i>Hindi isinama mula *</i> sa mga diyalogo, maaaring kang pumasok na regular ng mga ekspresyon upang matukoy ang hindi isinama na maga URL. habang maaari kang makatakas sa isang solong meta-karakter sa isang backslash, maaari moring gamitin ang <b>\Q...\E</b> ang pag-alis ng pagkakasunod-sunod. Ang lahat ng mga karakter sa pagitan ng <b>\Q</b> at ng <b>\E</b> ang mga interpreted ay bilang mga literal na karakter. E.g.\Q*\d+*\E matches the literal text *\d+*.
+aang pag-alis naito ng pagkakasunod-sunod ay ginamit sa ZAP habang hinihiwalay mo ang mga URL sa pamamagitan ng ilang mga konteksto ng mga menu.
 <br>
-<b>Tandaan:</b> Kung ang iyong URL ay naglalaman ng "\E", at kaylangan mong sundin ang mga step. kung gagamit ka ng <b>\Q...\E</b> alisin ang pagkakasunod-sunod:
+<b>Mga paalala:</b> Kung ang URL mo ay naglalaman ng isang "\E", pagkatapos kailangan mong gawin ang mga sumusunod na mga hakbang kapag gagamitin ang <b>\Q...\E</b> ang pagkakasunod-sunod ng escape:
 <ul>
-	<li>Buksan ang nasirang pagkakasunod-sunod</li>
-	<li>Isarado ang nasirang pagkakasunod-sunod bago ang karakter na"\E</li>
-	<li>Alisin ang backslash</li>
-	<li>Buksan pagkatapos ng "\E" ang iba pang nasirang pagkakasunod-sunod;</li>
-	<li>Isarado ang nasirang pagkakasunod-sunod tulad ng karaniwan.</li>
+	<li>Buksan ang escape na pagkakasunod-sunod</li>
+	<li>Isarado ang pagkakasunod-sunod ng escape bago ang "character" \E</li>
+	<li>Ang escape ng backlash</li>
+	<li>Buksan pagkatapos ang "\E" ang iba pang escape ng pagkakasunod-sunod;</li>
+	<li>Isarado ang escape ng pagkakasunod-sunod tulad ng pang karaniwang nais.</li>
 </ul>
 <br>
-Halibawa: subdomain.example.com/path?a=<b>\E</b>&amp;moredata=2 ay dapat lumitaw bilang
+Ang Halibawa ng: subdomain.example.com/path?a=<b>\E</b>&amp;moredata=2 ay nararapat na lumitaw bilang
 <i>\Qsubdomain.example.com/path?a=\E</i><b>\\E</b><i>\Q&amp;moredata=2\E</i>
   
-<h2>Sa pamamagitan ng akses</h2>
+<h2>Sa pamamagitan ng pag-access</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../tlmenu/file.html">Itaas ang antas ng payl ng menu</a></td><td>ang mga propertie...' menu item</td></tr>
+<a href="../../tlmenu/file.html">Ang mataas na antas ng payl na menu</a></td><td>'Session Properties...' menu item</td></tr>
 </table>
 
-<h2>Tignan din</h2>
+<h2>Tingnan din sa</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">Kabuoan ng UI</a></td><td>para sa kabuoang gumagamit ng interface</td></tr>
+<a href="../../overview.html">Ang pangkalahatang-idea ng UI</a></td><td>para sa isang pangkalahatang gumamit ng interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../dialogs.html">Mga dayalogo</a></td><td>para sa mga detalye ng mga dayalogo o mga popup </td></tr>
+<a href="../dialogs.html">Ang mga diyalogo</a></td><td>para sa mga detalye ng mga diyalogo o ng mga popup </td></tr>
 </table>
 
 </body>

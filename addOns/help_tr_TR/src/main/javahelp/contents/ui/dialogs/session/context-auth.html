@@ -6,42 +6,124 @@
 Oturum İçerik Doğrulama ekranı
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Oturum İçerik Doğrulama ekranı</h1>
 <p>
-Bu şunlardan biridir <a href="contexts.html">Oturum Bağlam Ekranları</a>
-içinde yolu takip etmenizi sağlayan <a href="../../../start/concepts/authentication.html">Doğrulama</a> içerik için yapılıyor. Kullanıcılar belirlendikten sonra doğrulama metotlarını değiştirmek metotların silinmesine neden olacağını unutmayın, çünkü kullanıcı bilgileri türlerinin doğrulama şemasıyla eşleşmesi gerekmektedir. 
-Doğrulama metodunu seçtikten sonra Doğrulama metoduna göre ayarlar düzenlenmelidir.
+This is one of the <a href="contexts.html">Session Context screens</a>
+which allows you to manage the way in which <a href="../../../start/features/authentication.html">Authentication</a> is being done for the Context.
 
-<h4>Manuel kimlik doğrulama</h4>
-Bu doğrulama metodu için düzenleme gerekmemektedir. <small><a href="../../../start/concepts/authentication.html#manual">daha çok</a> oku...</small>
+<h2>Authentication Method</h2>
 
-<h4>Form-Tabanlı Doğrulama</h4>
-Bu doğrulama metodunu yapılandırmak için şunu sağlamanız gereklidir <b>giriş url'si</b>, oturum açma isteği yapıldığı için, <b>istek gövdesi</b> (POST verisi), gerekli ise, ve tanımlayın <b>parametreler</b> öncesinde 'kullanıcı adı' ve 'şifre' sağlardı. Eğer istek gövdesi sağlanmadıysa giriş isteği bir HTTP GET olarak yapılır, aksi taktirde bir HTTP POST kullanılır. Kimlik bilgileri kendi kendilerine şunun içinde yapılandırılırlar <a href="contexts.html#users">Kullanıcılar</a> sekme. <small><a href="../../../start/concepts/authentication.html#formBased">daha çok</a> Oku...</small> 
+After selecting the <a href="../../../start/features/authmethods.html">Authentication Method</a> type, the options that need to be configured depend on the Authentication Method.
+<p>
+<strong>Note:</strong> Changing the authentication method after Users have been defined might cause its credentials to be reset,
+as the type of user credentials need to match the authentication scheme. A confirmation dialogue will be shown when that happens.
 
-<h4>HTTP/NTLM Doğrulama</h4>
-Bu doğrulama metodunu yapılandırmak için şunu sağlamanız gereklidir <b>sunucu adı</b> ve <b>port</b> sunucu kimlik doğrulaması yapılır ve <b>erişim Alanı</b> kimlik bilgileri uygulanır. Kimlik bilgileri kendilerini şunu içinde yapılandırır <a href="contexts.html#users">Kullanıcılar</a> sekme. <small><a href="../../../start/concepts/authentication.html#httpAuth">Daha çok</a> Oku...</small> 
+<h3>Manual Authentication</h3>
+No configuration is needed for this authentication method. <small>Read  
+<a href="../../../start/features/authmethods.html#manual">more</a>...</small>
 
-<h4>Komut Dosyası Tabanlı Doğrulama</h4>
-Bu doğrulamayı kullanmanız için <b>ilk</b> bir adet yazmanız (kaydetmeniz) gerekiyor <b>Doğrulama komut dosyası</b> 
-kullanarak <b>Komutlar</b> sekme(Komutlar sekmesinde bu komut tipi için sağlanan örnekleri ve şablonlara bakınız).
-Sonra açılan listedeki komutun adını sağlamanız gerekir. Komutu seçtikten sonra şu tuşa basmanız gerekir <b>Yükle</b> buton, komut dosyasının tüm gereksinimleri yükleyerek, şu şekilde belirttiğiniz tüm parametreleri <i>gerekli</i> veya <i>opsiyonel</i> komut dosyası içinde arayüzde tanımlı olarak gösterilecek. Doğrulama Komutları için sağlanan örneklerde de görüldüğü üzere, doğrulama sırasında, değerleri komut dosyasının içinde kullanmak mümkündür. Doğrulama komut dosyası için gereken parametrelerde herhangi bir değişiklik yaptıktan sonra komut dosyasını yeniden yüklediğinizden emin olun. Aksi halde arayüzde görülen parametreler kimlik doğrulama sırasında kullanılanlardan olmayabilir ve hata meydana gelebilir. , <i>kimlik bilgileri</i> doğrulama işlemi sırasında her bir Kullanıcı için kullanılan dosya, aynı zamanda Doğrulama Komut Dosyasında özelleştirilebilir ve şurada yapılandırılabilir 
-<a href="contexts.html#users">Kullanıcılar</a> sekme.
-<small><a href="../../../start/concepts/authentication.html#scriptBased">Daha çok</a> Oku...</small> 
+<h3>Form-Based Authentication</h3>
+To configure this authentication method, you need to supply the <b>login url</b>, to which the login
+request is performed, the <b>request body</b> (POST data), if needed, and identify the <b>parameters</b> used to supply
+the 'username' and 'password'. If no request body is supplied, the login request is performed as 
+a HTTP GET, otherwise an HTTP POST is used. The credentials themselves
+are configured in the <a href="contexts.html#users">Users</a> tab.
+The <b>login page</b> can also be supplied to indicate from where to obtain a new session (e.g. cookies)
+and regenerate <a href="../../../start/features/anticsrf.html">Anti CSRF tokens</a> present in the <b>request body</b>.
+If the <b>login page</b> is not supplied it is used the <b>login url</b>.
+<br><small>Read <a href="../../../start/features/authmethods.html#formBased">more</a>...</small>
 
+<h3>JSON-Based Authentication</h3>
+To configure this authentication method, you need to supply the <b>login url</b>, to which the login
+request is performed, the <b>JSON object</b> (POST data, <code>application/json</code>), and identify
+the <b>parameters</b> used to supply the 'username' and 'password'.  The credentials themselves
+are configured in the <a href="contexts.html#users">Users</a> tab.
+The <b>login page</b> can also be supplied to indicate from where to obtain a new session (e.g. cookies).
+If the <b>login page</b> is not supplied it is used the <b>login url</b>.
+<br><small>Read <a href="../../../start/features/authmethods.html#jsonBased">more</a>...</small>
+
+<br>Examples of POST data:
+<ul>
+	<li><code>{"username":"{%username%}","password":"{%password%}"}</code></li>
+	<li><code>{"user":{"mail":"{%username%}","password":"{%password%}"}}</code></li>
+</ul>
+where <code>{%username%}</code> and <code>{%password%}</code> indicate where the authentication credentials are set.
+
+<h3>HTTP/NTLM Authentication</h3>
+To configure this authentication method, you need to supply the <b>hostname</b> and the <b>port</b> of the server
+the authentication is done with and the <b>realm</b> the credentials apply to. The credentials themselves
+are configured in the <a href="contexts.html#users">Users</a> tab. <small>Read  
+<a href="../../../start/features/authmethods.html#httpAuth">more</a>...</small> 
+
+<h3>Script-Based Authentication</h3>
+To use this authentication method, you <b>first</b> need to write (and save) an <b>Authentication Script</b> 
+using the <b>Scripts</b> tab (see the provided examples and templates for this script type in the Scripts tab).
+Then you need to supply the name of the script in the dropdown list. After selecting the script, you need to press 
+the <b>Load</b> button, loading all the requirements of the script.
+Any parameters that you have specified as <i>required</i> or <i>optional</i> in the script will
+be shown in the interface to be defined. Their values are available to be used in the script, during the authentication, as seen
+in the provided examples for Authentication Scripts. Make sure that after doing any changes to the parameters 
+required by the Authentication script you re-load the script. Otherwise, the parameters shown in the interface might
+not be the ones used during the authentication and errors might occur. The <i>credentials</i> used for each User 
+during the authentication processed can be also specified in the Authentication Script and are configured in the 
+<a href="contexts.html#users">Users</a> tab.
+<small>Read <a href="../../../start/features/authmethods.html#scriptBased">more</a>...</small> 
+
+<h2>Authentication Verification</h2>
+
+<h3>Verification Strategy</h3>
+
+Select the <a href="../../../start/features/authstrategies.html">Authentication Verification Strategy</a> required.
+
+<h3><a name="regexloggedin">Regex pattern used to identify Logged in messages</a></h3>
+
+If this regex pattern is specified and matches any string in the specified message then ZAP will treat this message as logged in.
+For example the pattern could be used to match a http://example.com/logout link or the presence of a 'Welcome, User X' message.
+
+<h3><a name="regexloggedout">Regex pattern used to identify Logged out messages</a></h3>
+
+If this regex pattern is specified and matches any string in the specified message then ZAP will treat this message as logged out.
+For example the pattern could be used to match a http://example.com/login link or the presence of a 'Welcome, Guest' message.
+
+<h3><a name="pollfreq">Poll Frequency</a></h3>
+
+This controls how frequently ZAP will poll to see if a user is still authenticated. 
+The integer will either represent the number of Requests that will be made before ZAP will poll again or the number of Seconds before
+it will poll again, depending on pulldown selected.<br/>
+The option is only relevant if the "Poll the Specified URL" Verification Strategy has been selected.
   
-<h2>Üzerinden erişildi</h2>
+<h3><a name="pollurl">URL to Poll for Verification</a></h3>
+
+This is the URL that ZAP will poll to see if a user is still authenticated.<br/>
+The option is only relevant if the "Poll the Specified URL" Verification Strategy has been selected.
+ 
+<h3><a name="polldata">Poll Request POST Data</a></h3>
+
+If supplied then this will be sent as a POST in the poll request. If it is empty then ZAP will make a GET request<br/>
+The option is only relevant if the "Poll the Specified URL" Verification Strategy has been selected.
+  
+<h3><a name="pollheaders">Additional Poll Request Headers</a></h3>
+
+An optional set of headers that will be sent with the poll request. Each line should be one header and value separated by a colon e.g<br/>
+<pre>
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+</pre>
+The option is only relevant if the "Poll the Specified URL" Verification Strategy has been selected.
+  
+<h2>Accessed via</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../tlmenu/file.html">Üst Seviye Dosya menüsü</a></td><td>'Özellikler...' menü öğesi</td></tr>
+<a href="../../tabs/sites.html">Sites tab</a></td><td>Double click a Context</td></tr>
 </table>
 
-<h2>Ayrıca bakınız</h2>
+<h2>See also</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">UI Genel Bakış</a></td><td>kullanıcı arayüzüne genel bakış için</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../dialogs.html">Diyaloglar</a></td><td>diyalogların ve açılır pencerelerin detayları için </td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="contexts.html">Oturum İçerik Ekranları</a></td><td>diğer İçerik Ekranlarının detayları için</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../../start/concepts/authentication.html">Doğrulama</a></td><td>doğrulamaya genel bakış için </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="contexts.html">Session Context screens</a></td><td>for details of the other Context screens</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../../start/features/authentication.html">Authentication</a></td><td>for an overview of Authentication </td></tr>
 </table>
 
 

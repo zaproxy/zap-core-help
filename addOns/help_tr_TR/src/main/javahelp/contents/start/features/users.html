@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Kullanıcılar</title>
+</head>
+<body>
+	<h1>Kullanıcılar</h1>
+	<p>
+		Kullanıcılar websitelerinin/webapps kullanıcılarının ZAP temsilcisidir. Belirlı eylemlerin, web uygulamalarının bir kullanıcı açısından bakılmasına izin veriyorlar. Her bir <b><a href="contexts.html">Bağlam</a></b>,
+		daha sonra bağlamla ilişkili eylemlerde kullanılabilen bir 
+		Kullanıcılar grubu tanımlayabilir. Çoğu zaman, çeşitli taramalar sırasında istek mesajları bir kullanıcının bakış açısından gönderilebilir.
+	</p>
+
+	<p>
+		Kullanıcı kavramı, <a
+			href="sessionManagement.html">Oturum Yönetimi</a> ve <a
+			href="authentication.html"> Kimlik Doğrulama </a> kavramlarıyla sıkı sıkıya bağlıdır. Bir Kullanıcı ilk olduğunda
+		ZAP'ın herhangi bir yerinde kullanılan bir kimlik doğrulama gerçekleştirilir (buna göre
+		Bağlam için tanımlanan Kimlik Doğrulama Yöntemi) ve bir Oturumu
+		oluşturulan ve bu kullanıcı için yapılandırılır (oturuma göre
+		Bağlam için tanımlanan yönetim). Bundan sonra bir Kullanıcı görüşlerini oluşturan istekler değiştirilir (gerekirse) ve web sunucusu tarafından kimliği doğrulanmış bir web uygulaması/web sitesi kullanıcısı tarafından gönderilmiş olarak tanımlanacak şekilde gönderilir. If anytime a User appears to
+		be unauthenticated (as determined by the 
+		<a href="authstrategies.html">Authentication Verification Strategy</a>), a new
+		authentication is performed and the Session is updated accordingly.
+	</p>
+
+	<p>Bir web sitesindeki / web uygulamasındaki kullanıcının kimlik doğrulamasını gerçekleştirmek için Kimlik Doğrulama Yöntemi, gerekli olan kimlik bilgileri (tam tanımlayıcılar) kullanıcıya bağlı iken kimlik doğrulama işleminin nasıl yapılacağını (işlem) tanımlar; dolayısıyla ZAP, kullanıcılar içinde yapılandırılır.</p>
+
+	<h2>Via Yapılandırması</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/session/contexts.html#users">Oturum
+					Bağlam Diyaloğu</a></td>
+			<td></td>
+		</tr>
+	</table>
+
+	<h2>Ayrıca bakınız</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="https://youtu.be/cR4gw-cPZOA">Youtube öğretici</a></td>
+			<td>ZAP Kimlik Doğrulama, Oturum Yönetimi ve Kullanıcı Yönetimi özellikleri 
+[https://youtu.be/cR4gw-cPZOA için harici link].</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="authentication.html">Kimlik Doğrulama Genel Bakış</a></td>
+			<td>ZAP içerisindeki bir Kimlik Doğrulamaya genel bakış için</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/overview.html">Kullanıcı Arayüzüne Genel Bakış</a></td>
+			<td>bir kullanıcı arayüzüne genel bakış için</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="features.html">Özellikler</a></td>
+			<td>ZAP tarafından sağlandı</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/session/contexts.html">Oturum
+					Bağlam Diyaloğu</a></td>
+			<td>Oturum Özelliklerinin bir genel görünümü için</td>
+		</tr>
+
+	</table>
+
+</body>
+</html>

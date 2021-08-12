@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Estadísticas
+</title>
+</head>
+<body>
+<h1>Estadísticas</h1>
+<p>
+ZAP mantiene estadísticas que pueden ayudarlo a comprender lo que realmente está sucediendo al interactuar con aplicaciones grandes.
+</p>
+<p>
+Las estadísticas están disponibles a través de <a href="api.html">API</a> y también se puede enviar a un servidor de Statsd cuando
+configurado a través de <a href="../../ui/dialogs/options/stats.html">Options Statistics screen</a>.
+</p>
+
+<h3>Estadísticas basadas en el sitio</h3>
+Estadísticas en base al sitio incluyen:
+<ul>
+<li>códigos de respuesta, ej:
+	<ul>
+	<li>stats.code.200</li>
+	<li>stats.code.302</li>
+	</ul></li>
+<li>tiempos de respuesta en ms (usando una escala logarítmica), ej:
+	<ul>
+	<li>stats.responseTime.1</li>
+	<li>stats.responseTime.2</li>
+	<li>stats.responseTime.4</li>
+	<li>stats.responseTime.8</li>
+	<li>stats.responseTime.16</li>
+	</ul></li>
+<li>tipos de contenido, ej:
+	<ul>
+	<li>stats.contentType.text/css</li>
+	<li>stats.contentType.text/html;charset=utf-8</li>
+	</ul></li>
+<li><a href="tags.html">etiquetas</a>, ej:
+	<ul>
+	<li>stats.tag.Password</li>
+	<li>stats.tag.Hidden</li>
+	</ul></li>
+<li>piezas anticsrf generadas:
+	<ul>
+	<li>stats.acsrf.anticsrf</li>
+	</ul></li>
+<li>información de autenticación:
+	<ul>
+	<li>stats.auth.success (number of authentication successes)</li>
+	<li>stats.auth.failure (number of authentication failures)</li>
+	<li>stats.auth.state.assumedin (number of messages between successful polls that are assumed to be logged in)</li>
+	<li>stats.auth.state.loggedin (number of messages that appear to be logged in)
+	<li>stats.auth.state.loggedout (number of messages that appear to be logged out)
+	<li>stats.auth.state.noindicator (number of messages where no logged in or out indicators have been set)
+	<li>stats.auth.state.unknown (number of messages which don't contain either logged in or out indicators)
+	</ul></li>
+</ul>
+
+<h2>Véase también</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">Resumen del UI</a></td><td>Para una vista general sobre la interfaz de usuario</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="features.html">Caracteristicas</a></td><td>proporcionado por ZAP</td></tr>
+</table>
+
+</body>
+</html>

@@ -4,12 +4,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Tab ng mga Sesyon ng HTTP</title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 	<h1>Ang mga Sesyon ng HTTP na tab</h1>
 	<p>
-		Ang tab na ito ay nagpapakita sa iyo ng mga set ng mga natukoy na mga sesyon ng HTTP para sa bawat Site,
-		sa pagkatukoy ng <a href="../../start/concepts/httpsessions.html">Extensyon
-			sa mga Sesyon ng HTTP</a>.
+		This tab shows you the set of identified HTTP sessions for each Site,
+		as detected by the <a href="../../start/features/httpsessions.html">HTTP
+			Sessions extension</a>.
 	</p>
 
 	<p>
@@ -27,18 +27,26 @@
 	<p>Bawat entry ng Sesyon na table ay maaring makaliwang pindot,
 		na magpapagana ng Popup na Menu, na may sumusunod na mga pagpipilian:</p>
 	<ul>
-		<li>Alisin ang Sesyon - magbubura ng sesyon</li>
-		<li>Itakda bilang aktibo (puwedeng gamitin lamang sa hindi-aktibong mga sesyon) - nagmamarka ng sesyong ito bilang aktibo. Kung kahit anong sesyon ang bagong natakda bilang aktibo,
-			ito ay mawawalan ng pagtakda ng pagka-aktibo at, kung ito ay hindi nagtutukoy ng kahit anong mga balyu ng token, ito ay mabubura.</li>
-		<li>Ang pagpapawala ng pagkatakda bilang aktibo (magagamit lamang sa aktibong sesyon) - 
-			nagmamarka ng sesyong ito bilang hindi na ngayon aktibo. Kung ang sesyon
-			ay hindi nagtutukoy ng kahit anong mga balyu ng token, ito ay mabubura.</li>
+		<li>Copy Session Token Value to Clipboard - copies the value of the
+		selected session to the clipboard.</li>
+		<li>Remove Session - deletes the session</li>
+		<li>Find Related Messages - Will cause the <a href="search.html">Search tab</a> 
+		to become active, displaying results based on a search with the string displayed 
+		in the "Session Tokens' Values" column for the session which was 
+		right clicked.</li> 
+		<li>Set as active (available only on non-active sessions) - marks
+			this session as active. If any session was previously set as active,
+			it will be unset as active and, if it doesn't specify any token
+			values, it is deleted.</li>
+		<li>Unset as active (available only on the active session) -
+			marks this session as not being active anymore. If the session
+			doesn't specify any token values, it is deleted.</li>
 	</ul>
 
-	<i>Tungkol sa aktibong sesyon, marami pang mga detalye ang maaring mabasa sa
-		pangkalahatang mga konsepto na pahina ng <a
-		href="../../start/concepts/httpsessions.html">Extension ng mga Sesyon ng 
-			HTTP</a>
+	<i>Regarding the active session, more details can be read on the
+		general features help page of the <a
+		href="../../start/features/httpsessions.html">HTTP Sessions
+			extension</a>
 	</i>
 	<br />
 
@@ -63,7 +71,7 @@
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../start/concepts/httpsessions.html">HTTP
+			<td><a href="../../start/features/httpsessions.html">HTTP
 					Extensyon ng mga Sesyon</a></td>
 			<td>para sa kabuuan ng extensyon</td>
 		</tr>

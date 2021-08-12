@@ -3,47 +3,47 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Views
+Mga View
 </title>
 </head>
-<body bgcolor="#ffffff">
-<h1>Views</h1>
+<body>
+<h1>Mga View</h1>
 <p>
-ZAP provides a set of plugable views which allows you to display the requests and responses in different ways.<br/>
-The following views are included by default:
+Ang ZAP ay nagbibigay ng isang hanay ng mga plugable na view na nagpapahintulot sa iyo na ipakita ang mga kahilingan at mga tugon sa iba't-ibang paraan.<br/>
+Ang mga sumusunod na mga view ay kabilang bilang default:
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Text</td><td>The data in text format</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Hex</td><td>A table showing the hex representation of all of the characters in the header and body. <br>
-	For editable screens this allows you to add control characters via their hex codes.<br>
-	You cannot add or delete characters in this view - to do that switch to one of the other views and then back to carry on in hex view.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Image</td><td>The image - only available for bodys containing images</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Table</td><td>A table with one row per attribute and value.<br>
-	For editable screens all values will automatically be URL encoded when they are submitted. </td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Table (adv)</td><td>A table with one row per attribute and value plus additional functions.<br>
-	For editable screens values will not be automatically be URL encoded when they are submitted, but this can be done 'manually' via 'URLEncode' function. </td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Large Request</td><td>A placeholder view used to prevent the UI trying to load a very large request body.<br>
-	You will need to switch to a different view to display the actual contents.<br>
-	The threshold for the view can be changed via the <a href="dialogs/options/view.html">Display Options screen</a></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Large Response</td><td>A placeholder view used to prevent the UI trying to load a very large response body.<br>
-	You will need to switch to a different view to display the actual contents.<br>
-	The threshold for the view can be changed via the <a href="dialogs/options/view.html">Display Options screen</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Teksto</td><td>Ang mga datos sa format na teksto</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Hex</td><td>Isang talahanayan na nagpapakita ng hex na representasyon ng lahat ng mga karakter sa header at nilalaman. <br>
+	Para sa mga maaari ma-edit na mga screen, ito ay nagpapahintulot sa iyo na magdagdag ng mga karakter na kontrol sa pamamagitan ng mga hext code.
+<br>
+	Hindi ka maaaring magdagdag o magtanggal ng mga karakter sa view na ito - upang magawa ito lumipat sa isang mga ibang mga view at pagkatapos bumalik para ipagpatuloy sa hex view.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Larawan</td><td>Ang larawan - na magagamit lamang sa nilalaman na naglalaman ng mga larawan</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Table</td><td>Ang table na may isang hilera bawat katangian at halaga.<br>
+	Para sa mga maaaring ma-edit na mga screen lahat ng mga halaga ay awtomatikong maging URL na naka-encode kapag ang mga ito ay isinumite. </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Table (adv)</td><td>Ang table na may isang hilera bawat katangian at halaga gayon din ang mga karagdagang paggamit.<br>
+	Para sa maaaring ma-edit na mga screen ay hindi awtomatikong maging URL na naka-encode kapag ang mga ito ay isinumite, ngunit ito ay maaaring magawa ng 'mano-mano' sa pamamagitan ng pamamaraan na 'URLEncode'. </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Malaking Kahilingan</td><td>Isang placeholder view na ginamit upang pigilan ang UI sa pagsusubok na i-load ang isang napakalaking nilalaman ng kahilingan.<br>
+	Kakailanganin mong magpalit sa isang naiibang view upang ipakita ang mga aktwal na nilalaman.<br>
+	Ang threshold para sa view ay maaari baguhin sa pamamagitan ng <a href="dialogs/options/view.html">Screen ng mga Opsyon ng Display</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Malaking Tugon</td><td>Isang placeholder view na ginamit upang pigilan ang pagsusubok ng UI na i-load ang isang napakalaking nilalaman ng tugon.<br>
+	Kakailanganin mong magpalit sa isang naiibang view upang ipakita ang mga aktwal na nilalaman.<br>
+	Ang threshold para sa view ay maaari bahugin sa pamamagitaan ng <a href="dialogs/options/view.html">Screen ng mga Opsyon ng Display</a></td></tr>
 </table>
 <p>
-Note that <a href="../start/concepts/addons.html">add-ons</a> can add additional views.
+Note that <a href="../start/features/addons.html">add-ons</a> can add additional views.
 </p>
 
-<h2>Used in</h2>
+<h2>Ginamit sa</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="tabs/break.html">Break tab</a></td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="tabs/request.html">Request tab</a></td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="tabs/response.html">Response tab</a></td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="dialogs/man_req.html">Manual Request dialog</a></td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="dialogs/resend.html">Resend dialog</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="tabs/break.html">Tab ng Break</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="tabs/request.html">Tab ng Kahilingan</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="tabs/response.html">Tab ng Tugon</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="dialogs/man_req.html">Diyalogo ng Manu-manong Kahilingan</a></td><td></td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Tingnan din</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="overview.html">Pangkalahatang Ideya ng UI</a></td><td>para sa pangkalahatang ideya ng interface ng gumagamit</td></tr>
 </table>
 
 </body>

@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Usuarios</title>
+</head>
+<body>
+	<h1>Usuarios</h1>
+	<p>
+		Los usuarios son las representaciones de ZAP de los usuarios de sitios web/webapps. Permiten ciertas acciones a realizar desde el punto de vista de un usuario de las webapps. Para cada <b><a href="contexts.html">contexto</a></b>, un conjunto de usuarios puede ser definido, que luego puede ser utilizado en acciones relacionadas con el contexto. Por lo general, durante diversas exploraciones pueden enviarse los mensajes de solicitud desde el punto de vista de un usuario.
+	</p>
+
+	<p>
+		El concepto de usuarios está firmemente ligado a los conceptos de <a
+			href="sessionManagement.html">Administración de sesiones</a> y <a
+			href="authentication.html">autenticación</a>. Cuando un usuario primero se utiliza en algún lugar en ZAP, se realiza una autenticación (según el método de autenticación definido para el contexto) y una sesión es creada y configurada para este usuario (según la sesión de gestión definidos para el contexto). Después de eso, se modifican las solicitudes enviadas desde el punto de vista de un usuario (si es necesario) y de tal manera que el servidor web identifica como enviados por un usuario de la aplicación o sitio web autenticado. If anytime a User appears to
+		be unauthenticated (as determined by the 
+		<a href="authstrategies.html">Authentication Verification Strategy</a>), a new
+		authentication is performed and the Session is updated accordingly.
+	</p>
+
+	<p>Para realizar la autenticación de un usuario de un sitio web o en una aplicación Web, el método de autenticación define cómo realiza la autentificación (el proceso), mientras que las credenciales necesarias (los identificadores exactas) dependen del usuario, así, en ZAP, que son el config medido en los usuarios.</p>
+
+	<h2>Configura a través</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/session/contexts.html#users">Session
+					Contexts Dialog</a></td>
+			<td></td>
+		</tr>
+	</table>
+
+	<h2>Vease también</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="https://youtu.be/cR4gw-cPZOA">Tutorial de YouTube</a></td>
+			<td>de las características de autenticación, manejo de sesiones y de gestión de usuarios de ZAP [enlace externo a https://youtu.be/cR4gw-cPZOA].</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="authentication.html">Servicio de Autenticación</a></td>
+			<td>para un resumen de la autenticación en ZAP</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/overview.html">UI Overview</a></td>
+			<td>Para una vista general sobre la interfaz de usuario</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="features.html">Caracteristicas</a></td>
+			<td>proporcionado por ZAP</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/session/contexts.html">Session
+					Contexts Dialog</a></td>
+			<td>para una descripción general de las Propiedades de Sesión</td>
+		</tr>
+
+	</table>
+
+</body>
+</html>

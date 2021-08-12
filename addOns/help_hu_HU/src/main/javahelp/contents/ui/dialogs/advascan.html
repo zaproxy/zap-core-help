@@ -6,22 +6,22 @@
 Active Scan dialog
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Active Scan dialog</h1>
 <p>
-This dialog launches the <a href="../../start/concepts/ascan.html">active scanner</a>.<br>
+This dialog launches the <a href="../../start/features/ascan.html">active scanner</a>.<br>
   
 <h3>Hatókör</h3>
 The first tab allows you to select or change the starting point.<br>
-If you have more that one <a href="../../start/concepts/scanpolicy.html">scan policies</a> then you will be able to select the one to use.<br>
-If the starting point is in one or more <a href="../../start/concepts/contexts.html">Contexts</a> then you will be able to choose one of them.<br>
-If that context has any <a href="../../start/concepts/users.html">Felhasználók</a> defined then you will be able to select one of them.<br>
+If you have more that one <a href="../../start/features/scanpolicy.html">scan policies</a> then you will be able to select the one to use.<br>
+If the starting point is in one or more <a href="../../start/features/contexts.html">Contexts</a> then you will be able to choose one of them.<br>
+If that context has any <a href="../../start/features/users.html">Felhasználók</a> defined then you will be able to select one of them.<br>
 If you select one of the users then the active scan will be performed as that user, with ZAP (re)authenticating as that user whenever necessary.
 <br><br>
-If you select 'recurse' then all of the nodes underneath the one selected will also be scanned.<br>
+If you select 'Recurse' then all of the nodes underneath the one selected will also be scanned.<br>
 Custom input vectors are only supported if this option is not selected.
 <br><br>
-If you select 'Show advanced options' then the following tabs will be shown which provide fine grain control over the active scanning process.
+If you select 'Show Advanced Options' then the following tabs will be shown which provide fine grain control over the active scanning process.
 <br><br>
 Clicking on the 'Reset' button will reset all of the options to their default values. 
 
@@ -32,7 +32,7 @@ Clicking on the 'Reset' button will reset the input vectors to the default optio
 
 <h3>Custom Vectors</h3>
 The Custom Vectors tab allows you specify specific locations in the request to attack.<br> 
-Custom Vectors are only available if the 'recurse' option on the first tab is not selected.<br>
+Custom Vectors are only available if the 'Recurse' option on the first tab is not selected.<br>
 To add custom input vectors highlight the characters you want to attack in the request and click the 'Add' button.<br>
 You can add as many custom input vectors as you want.<br>
 To remove custom input vectors highlight any of the selected characters and click the 'Remove' button.<br>
@@ -44,7 +44,20 @@ Un-selecting technologies that you know are not present in the target applicatio
 
 <h3>Házirend</h3>
 The Policy tab allows you to override any of the settings specified in the selected 
-<a href="../../start/concepts/scanpolicy.html">scan policy</a>. 
+<a href="../../start/features/scanpolicy.html">scan policy</a>. 
+
+<h3>Filter</h3>
+The Filter tab allows you to specify filter criteria and active scan will filter requests based on these criteria's.
+<br/> 
+There are four filter criteria's available in the filter tab <br/>
+<ul>
+<li>HTTP method</li>
+<li>Status code</li>
+<li>Tags</li>
+<li>URL pattern</li>
+</ul>
+HTTP method and Status code filter criteria are only applied to check if a request can be included in active scan or not,<br/> where as
+Tags and URL pattern filter criteria can be applied to include or exclude a request.
 
 <br><br>
 

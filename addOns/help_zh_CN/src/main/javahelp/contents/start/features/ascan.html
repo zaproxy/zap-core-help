@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+主动扫描
+</title>
+</head>
+<body>
+<h1>主动扫描</h1>
+<p>
+主动扫描试图通过对已知目标的已知攻击来发现潜在的漏洞。
+</p>
+<p>
+主动扫描是对这些目标的攻击。<br/>
+您不应该在您不拥有的Web应用程序上使用它。
+</p>
+<p>
+In order to facilitate identifying ZAP traffic and Web Application Firewall exceptions, ZAP is accompanied 
+by a script "AddZapHeader.js" which can be used to add a specific header to all traffic that passes through 
+or originates from ZAP. eg: <tt>X-ZAP-Initiator: 3</tt>
+</p>
+<p>
+It should be noted that active scanning can only find certain types of vulnerabilities.<br/>
+Logical vulnerabilities, such as broken access control, will not be found by
+any active or automated vulnerability scanning.<br/>
+Manual penetration testing should always be performed in addition to active
+scanning to find all types of vulnerabilities. 
+</p>
+
+<p>
+Active scanning is configured using the 
+<a href="../../ui/dialogs/options/ascan.html">Options Active Scan screen</a>.<br>
+The rules that run are configured via <a href="scanpolicy.html">Scan Policies</a> - you can have as many of these as you like. 
+
+</p>
+
+<h2>Accessed via</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/ascan.html">主动扫描选项卡</a></td><td>“新扫描”按钮</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/sites.html">站点选项卡</a></td><td>“攻击/主动扫描......”右键单击菜单项</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/history.html">历史记录选项卡</a></td><td>“攻击/主动扫描......”右键单击菜单项</td></tr>
+</table>
+
+<h2>请参阅</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/overview.html">UI综览</a></td><td>关于用户界面的概述</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="features.html">功能</a></td><td>由ZAP提供</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="pscan.html">被动扫描</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/dialogs/scanpolicymgr.html">扫描策略管理器对话框</a></td><td>它允许您管理扫描策略。</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../checks.html">扫描规则</a></td><td>默认支持 </td></tr>
+</table>
+
+<h2>Official Videos</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><a href="https://play.sonatype.com/watch/ZcEfSihgQSzuthJi4qEeW3">ZAP In Ten: Active Scanning</a> (9:47)</td></tr>
+</table>
+
+</body>
+</html>

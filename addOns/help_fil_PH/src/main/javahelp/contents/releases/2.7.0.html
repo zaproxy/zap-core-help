@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  Inilabas 2.7.0
+</title>
+</head>
+<body>
+<h1>Ang Inilabas na 2.7.0</h1>
+
+Ito ay pagsasaayos ng isang bug at mas papagandahin ang inilabs nito, kung saan ang Java 8 ay nangangailangan ng minimum.<br><br>
+Ilan sa mga lalo pang mga mahahalagang pagsasaayos kasama ang:
+<ul>
+<li>Ang browser ay inilunsad kasama ng default -pinahihintulutan ka nito na ilunsad ang mga browser mula sa ZAP na naka preconfigured sa proxy sa pamamagitan ng ZAP at hindi pansinin ang sertipiko ng mga babala dahil sa ugat ng ZAP ng sertipiko.</li>
+<li>Ang pag papahintulot ng zap na pakinggan ang maraming mga address/port</li>
+<li>Ang pag suporta ng pangalan ng server ng indikasyon</li>
+<li>Ang pag-updated ng NTLM na makina ng pagpapatupad - ang mga kasong isinasaayos nito kung saan ang dominyo ay napatunayan at pinagbubuti ang interoperability kasama ang ibang mga (server) ng NTLM ng mga pagpapatupad</li>
+<li>Karamihan sa mga bagong endpoin ng APi - tingnan sa ibaba ang mga detalye</li>
+</ul>
+Paalala na kung meron kang naging mga problema sa mga inilabas na ito pagkatapos ay mayroon ring isang bagong Tulong/Suporta na impormasyon...' ang aytem ng menu na nagbibigay ng mga mahahalagang impormasyon tungkol sa pag-install mo ng ZAP kung saan kailangan mo dapat na isama ang kahit anung mga isyu na iyong pinalaki.
+
+<h2>Ang mga pagpapaganda:</h2>
+<ul>
+<li>Isyu 1015 : Ang pag suporta ng pangalan ng server ng indikasyon</li>
+<li>Isyu 1313 : Ang ispayder - Ang pagpapahintulot na ikumpigura ang linitadong sukat ng mga tugon na parseable</li>
+<li>Isyu 1604 : Ang pag-import ng patakaran ng payl sa pamamagitan ng API</li>
+<li>Isyu 1620 : Ang pagdadagdag ng endpoint para makakuha ng bilang ng mga alerto na nakagrupo ayon sa lebel ng peligro</li>
+<li>Isyu 1681 : Ang pagbago ng 'Aktibong pag-iskan' para makita ang huling n na mga kahilingan sa halip na ang isang nauna</li>
+<li>Isyu 2411 : Bigyang babala kung ang dinamiko ng SSL na ugat ng sertipiko ng CA ay lumipas na</li>
+<li>Isyu 2615 : Pag sala ng mga ulat ng ZAP para makita ang taas ng peligro ng mga aytem</li>
+<li>Isyu 3040 : Ang paglabas ng mga nilalaman ng tab ng param</li>
+<li>Isyu 3101 : Ang pagpapahintulot ng mga add-on na gamitin ang Semantic Versioning</li>
+<li>Isyu 3156 : Ang paggamit ng G1 bilang default na taga kolekta ng basura</li>
+<li>Isyu 3253 : ang pag-export ng mga URL kada konteksto</li>
+<li>Isyu 3365 : Ang pagpapaganda: ang pagdadagdag ng Global Exclude na default na mga tularan</li>
+<li>Isyu 3367 : ang paghahayag ng mga home ng ZAP na daan ng dir sa pamamagitan ng ZAP API</li>
+<li>Isyu 3374 : isaayos ang paboritong hanay ng mga width para mas marami ang gumamit</li>
+<li>Isyu 3381 : Ang i18n na pusod ng ekstensyon ng mga pangalan</li>
+<li>Issu 3387 : Ang pagpayag ng esc na isarado ang AbstractFormDialog</li>
+<li>Isyu 3392 : ang pag pagpapakita ng lahat ng mga mensahe na ipinadala sa pamamagitan ng Ispayder</li>
+<li>Isyu 3395 : Ang pagdadagdag ng pagpipilian sa ispayder ng anonymously kasama ang isang sesyon</li>
+<li>Isyu 3398 : Ang pagdadagdag ng limitasyon ng mga pabago-bagong global na halaga ng iskrip</li>
+<li>Isyu 3404 : Ang pagdadagdag ng bagong Default CSRF Token para sa OWASP CSRF Guard</li>
+<li>Isyu 3408 : Ang pagpapabuti ng paghawak ng mali kapag nire-reset ang mga opsyon</li>
+<li>Isyu 3443 : Ang paglantad ng mga alerto ng mga opsyon sa pamamagitan ng ZAP API</li>
+<li>Isyu 3446 : Ang pagpapaganda: Ang pagdadagdag ng abilidad para sa paglabas ng isang sayt ng Map sa pamamagitan ng menu ng konteksto</li>
+<li>Isyu 3457 : ang pagpapahintulot na salain ang core view ng mga "url" sa pamamagitan ng pagbase ng URL</li>
+<li>Isyu 3460 : Ang pagpapaganda : Ang pagbibigay ng tulong upang hanapin ang Log na direktoryo sa mga UI</li>
+<li>Isyu 3461: Ang pagpapaganda : Ang Browse ng API ay hindi gumagana habang ang browser ay hindi nagagamit ng ZAP bilang proxy</li>
+<li>Isyu 3476 : Ang pagpapahintulot ng mga pasibong mga patakaran na pumili ng klase ng mga mensahe</li>
+<li>Isyu 3481 : Ang pag export ng mga table sa pamamagitan ng UI</li>
+<li>Isyu 3498 : Ang menor na pagpapaganda: ang pagsuporta ng parehong mga hanay sa paghahanap ng mga resulta bilang Tab ng kasaysayan</li>
+<li>Isyu 3500 : Ang pagpapahintulot na pamahalaan ang mga mensahe ng mga tag sa maramihang mga tab</li>
+<li>Isyu 3508 : Ang paggamit ng mas bagong ECMAScript engine kung magagamit</li>
+<li>Isyu 3514 : Ang pagpapahintulot na makamit ang maraming mga mensahe sa pamamagitan ng ID</li>
+<li>Isyu 3521 : ang kahilingan nag pagpapaganda : ang pagdadagdag ng pangsala sa Pasibong Pag-iskan ng mga Pagpipilian ng mga 0psyon ng Panel</li>
+<li>Isyu 3527 : Ang pag-update ng iskrip ng baseline na suportahan ang payton 3</li>
+<li>Isyu 3529 : ang pagpapahintulot na magdagdag ng mga tag kasama ang pasibong mga patakaran</li>
+<li>Isyu 3533 : Ang karagdagan na Table export ng mga buton</li>
+<li>Isyu 3539 : Ang pagpapaganda : ang pagkolekta ng mga mensahe sa pag-iskan bago ang aktibong pag-i-iskan</li>
+<li>Isyu 3552 : Ang paghahayag ng mga mensahe ng mga tag sa pamamagitan ng ZAP API</li>
+<li>Isyu 3559 : Ang opsyon ng ZAP API sa output ng ulat ng ayos ng JSON</li>
+<li>Isyu 3574 : Ipakita ang add-on na pangalan sa mga Ekstensyon ng panel</li>
+<li>Isyu 3587 : Ang pagpapahintulot na gumamit ng mga sistema ng lokal para sa pag-format</li>
+<li>Issue 3595 : Print args and error msg when failed to parse args</li>
+<li>Issue 3599 : Always attack Data Driven Nodes </li>
+<li>Issue 3619 : Show plugin as OFF, in policy panels, if disabled</li>
+<li>Issue 3626 : Allow to delete messages with keyboard shortcut</li>
+<li>Issue 3676 : Enhancement: Delete single Alert using the api</li>
+<li>Issue 3681 : Use number spinner for connection timeout</li>
+<li>Issue 3686 : Allow to select alert's CWE/WASC IDs and Source</li>
+<li>Issue 3688 : Show scanner's ID/name in Alert tab</li>
+<li>Issue 3691 : Modernized and refined HTML reports</li>
+<li>Issue 3700 : Ensure panel with validation errors is visible</li>
+<li>Issue 3714 : Spider - report # of new endpoints discovered</li>
+<li>Issue 3727 : Sites Tree Alpha Sort should ignore HTTP Method</li>
+<li>Issue 3733 : Ascan API - Return alert count for each scanner</li>
+<li>Issue 3739 : Allow to skip pending scanners</li>
+<li>Issue 3765 : Show alert count in Scan Progress dialogue</li>
+<li>Issue 3769 : Add Check for Updates toolbar button</li>
+<li>Issue 3770 : Clear dockerfiles</li>
+<li>Issue 3782 : Add msg and alert count to active scans API view</li>
+<li>Issue 3787 : Added passive scan timeout</li>
+<li>Issue 3793 : Allow to filter Keyboard options panel</li>
+<li>Issue 3808 : added bare docker image file</li>
+<li>Issue 3810 : Add JSON output support to zap-full-scan.py</li>
+<li>Issue 3818 : Change right-click "Resend..." to "Send to Manual Request Editor"</li>
+<li>Issue 3836 : Allow IPv6 loopback address to access the API by default</li>
+<li>Issue 3837 : Add anoncsrf as anticsrf token name</li>
+<li>Issue 3851 : Spider New Scan UI Consistency</li>
+<li>Issue 3871 : Default to checking for updates on start</li>
+<li>Issue 3878 : Support persistent connections in the API</li>
+<li>Issue 3910 : Allow to skip scanners through the API</li>
+<li>Issue 3918 : improved docker file</li>
+<li>Issue 3922 : Refactor target access in docker scripts</li>
+<li>Issue 3931 : Minor Enhancement to Very large response body message</li>
+<li>Issue 3977 : Include spider messages when comparing sessions</li>
+<li>Issue 3983 : Allow ZAP to listen on multiple addresses/ports</li>
+<li>Issue 3992 : Allow to enable code folding in body text views</li>
+<li>Issue 3993 : Added checkbox secure to callback option dialog. </li>
+<li>Issue 4001 : Allow to delete a Context with keyboard shortcut</li>
+<li>Issue 4049 : Allow to delete alerts with keyboard shortcut</li>
+<li>Issue 4053 : AlertViewPanel line wrapping</li>
+<li>Issue 4055 : New splash screen</li>
+<li>Issue 4061 : Update NTLM engine implementation</li>
+<li>Issue 4063 : Validate that -cmd and -daemon are not both set</li>
+<li>Issue 4066 : Improve error message in script API</li>
+</ul>
+
+<h2>Ang mga pagsasaayos ng Bug:</h2>
+<ul>
+<li>Isyu 765 : Ang Ctrl-F key ay hindi gumagana sa muling pagpapadala / mano-mano na kahilingan ng mga editor ng diyalogo</li>
+<li>Isyu 1222 : Ang hindi tunay na positibo: ang XSS ng pagi-iskan</li>
+<li>Isyu 1984 : Ang Api ng mga alerto ay dapat na laging bumabalik sa 'katunayan' (at sa lahat ng ibang mga key)</li>
+<li>Isyu 2375 : Hindi kaya na palitan ang Mode ng walang pangunahing tool bar</li>
+<li>Isyu 2496 : ang ulat lang ng ZAP ang unang alerto sa array</li>
+<li>Isyu 2744 : hindi kaya na paganahin/hindi paganahin ang sapilitang paggamit ng moda ng walang pangunahing tool bar</li>
+<li>Isyu 2756 : Ang uri ng paglo-load ng deadlock habang naglo-load ang httpsender na iskrip mula sa tawag ng API at pag-i-ispayder</li>
+<li>Isyu 2989 : Ang muling pagdirekta ng kasaysayan ay hindi marerekord habang muling pinapadala ang kahilingan</li>
+<li>Isyu 3154 : Ang pagsasagawa ng ayos ng mga Plugin na ipinapakita sa pag-iskan ng detalye ng mga progreso, ang progreso ng tab</li>
+<li>Isyu 3207 : Ang tab ng kasaysayan ay maliwanag na habang ang sesyon ay ayaw tumigil</li>
+<li>Isyu 3284 : Ang pagtanggap ng mga underscore sa mga hostname</li>
+<li>Isyu 3289 : Ang proxy ay hindi kasama ng mga URL kahit pa nagproproseso sa pamamagitan ng ZAP</li>
+<li>Isyu 3350 : Ang maling pagkumpara sa mga mensahe sa mga queryEqual() na pamamaraan sa klase ng HttpMessage</li>
+<li>Isyu 3351 : nawawala ang url habang ito ay pinipindot ko</li>
+<li>Isyu 3353 : Ang ZAP API VIEW:contextList na pamamaraan ay ibinabalik ang isang string maliban sa listhan ng JSON</li>
+<li>Isyu 3359 : Ang tulong ng mga detalye ay nawawala sa mga pagpipilian sa Koneksyon ng iskrin</li>
+<li>Isyu 3363 : Ang mga mensahe ng ispayder na makikita na kabilang sa Underused na mga tag ng hanay</li>
+<li>Isyu 3377 : Ang ZAP ay hindi na nalo-load ang hindi UTF8 ng mga iskrip</li>
+<li>Isyu 3382 : Ang pag-aayos ng "kamalian sa loob" ng ScriptAPI</li>
+<li>Isyu 3394 : Ang pagpapagana ng sesyon ng pagsubaybay sa (Cookie) na hindi nagpapatuloy na opsyon</li>
+<li>Isyu 3397 : Huwag mag-unistall ng isang payl kung ito ay hindi na umiiral</li>
+<li>Isyu 3411 : linisin ang cached na mga cert habang isinasaayos ang ugat ng CA cert</li>
+<li>Isyu 3440 : Ang eksepyon ng log habang ang pagbibigay ng kinumpigura na payl ay hindi maaaring suriin</li>
+<li>Isyu 3456 : Ang bug: ang paghinto ng mga pag-iscan ng Wiped Out habang nananatili ang isang sesyon</li>
+<li>Issue 3459 : Prescan Output is Confusing. Please Clarify.</li>
+<li>Isyu 3490 : Ang masamang font ng pagsasalin sa linux</li>
+<li>Isyu 3531 : Ang docker ng mga iskrip ay maaaring huminto sa "Mga talaan sa pasibong pag-iskan" sa wari ay walang katiyakan</li>
+<li>Isyu 3555 : Ang pagbabago ng pangalan ng sesyon, hindi na-update ang pangalan ng window</li>
+<li>Isyu 3571 : kinakailangan ng mga ekstensiyon ng mga dependencies sa panahon ng paglo-load ng ekstensiyon</li>
+<li>Isyu 3590 : Ang pagtatakda ng katayuan ng instilasyon sa pamilihan ng mga add-on</li>
+<li>Isyu 3591 : Suriin ng tama para sa pag-update ng add-on sa dep calc</li>
+<li>Isyu 3620 : Ang pagbalik ng tama sa mali sa nawawalang auth na mga parametro</li>
+<li>Isyu 3621 : Ang pag-sink ng HistoryReference cache sa ExtensionHistory</li>
+<li>Isyu 3632 : Huwag isarado ang sesyon kapag nagpapapilt ng mga katangian nito</li>
+<li>Isyu 3633 : Ang "bumubuo ng Anti-CSRF Test Form" ay hindi umaandar</li>
+<li>Isyu 3648 : Ang tamang estado ng adv ng opsyon sa Ispayder ng diyalogo</li>
+<li>Isyu 3667 : Ang pag-markdown ng ulat sa titulo na ayos ng isyu</li>
+<li>Isyu 3673 : Ang API: senHarRequest na mga resulta sa mali kung ang mga pag-redirect ay totoo</li>
+<li>Isyu 3675 : Ang mga puno ng sayt ng opsyon ay pinapakita lamang ang mga URL sa saklaw na hindi gumagana</li>
+<li>Isyu 3692 : Ang zap-api-scan.py ng tamang daan ng paghawak</li>
+<li>Isyu 3696 : Ang tamang API ng pagtugon sa paglabas ng mga pagbabago ng proxy</li>
+<li>Isyu 3703 : Ang org.parosproxy.pros.paros.db.DatabaseException: java.sql.SQLException: na hindi inilabas sa executeLargeUpdate() o ang executeLargeUpdate() para sa mga SELECT</li>
+<li>Isyu 3711 : Ang mga snapshot ng sesyon na maaaring "masira" ng mga pag-iskan na tumatakbo</li>
+<li>Isyu 3723 : Ang maayos na pag-reset ng Database ng mga opsyon ng panel</li>
+<li>Isyu 3748 : Ang Awtomitakong paglaktaw ng dependeng mga scanner</li>
+<li>Isyu 3759 : Ang pagbago ng bersyon ng check sa zap.sh iskrip para sa Java 9</li>
+<li>Isyu 3771 Ang mga payl ng add-on ay hindi na-update habang tumatakbo ang bagong ZAP/core na bersyon</li>
+<li>Isyu 3779 : Ang ipinapadalang muli na window ay hindi mabuksan dahil sa nawawalang font</li>
+<li>Isyu 3799 : Ang ExtensionDynSSL ay ipahayag bilang pagsuporta sa mababang mem</li>
+<li>Isyu 3825 : Ang pagpapakita ng kamalian kung nabigo sa pag-aktibo ng sertipiko</li>
+<li>Isyu 3827 : Ang halaga ng mysql NULL sa kung saan sa CLAUSE</li>
+<li>Isyu 3832 : Ang mga mali sa Input Vector na mga template</li>
+<li>Isyu 3849 : Ang klase ng nilalaman ng nawawalang pscanrule ay hindi gumagana kasama ang mga mensahe ng ispayder</li>
+<li>Isyu 3854 : Ang maling whilst na gamit ang API - ang maling ExtensionManagement - Hindi maaari na ang mga gumagamit ay magpumilit</li>
+<li>Isyu 3889 : Ang pag Initialise ng pinagmulan ng alerto parati</li>
+<li>Isyu 3895 : Ang JSON Input Vector ay nabigo kung ang hanay ay may umulit na mga char</li>
+<li>Isyu 3907 : ang pagnormalise ng form-based ng pag-loin ng URL ng validation/pag-gamit</li>
+<li>Isyu 3912 : Ang VariantDirectWebRemotingQuery ay maaaring ibitin sa walang katapusang loop</li>
+<li>Isyu 3914 : Ang paggamit ng ZapVersions.xml na payl sa mga larawan ng docker</li>
+<li>Isyu 3927 : Ang zap-full-scan sa docker ay sumusubok na maabot ang panlabas na network</li>
+<li>Isyu 3955 : Ang Database ay masyadong maliit upang hawakan ang malawak na pag-log ng kahilingan ng mga katawan</li>
+<li>Isyu 3965 : Ang cookie header ay dahilan ng mga kamalian</li>
+<li>Isyu 3969 : Ang pag-log in/out ay mga tagapagbatid ng hindi pag persisted habang maliwanag</li>
+<li>Isyu 4004 : Ang zap.bat ay dapat na gamitin ng %USERPROFILE% maliban sa %HOMEDRIVE%%HOMEPATH%</li>
+<li>Isyu 4013 : Ang pagpapadala sa mga Callback ng Endpoint habang pinoproxy sa pamamagitan ng ZAp ng mga log sa isang mali</li>
+<li>Isyu 4014 : Ang isyu habang sinusubukan na huwag pansinin ang lahat ng mga patakaran para sa isang URL</li>
+<li>Isyu 4028 : Bigyan babala habang siniyasat para sa lahat ng mga nabigong mga update</li>
+<li>Isyu 4056 : Ang paggamit ng lupain bilang dominyon para sa pagpapatunay ng NTLM</li>
+<li>Isyu 4065 : Ang pagbura ng isang pinagmulan ng URL sa Kasaysayan ng tab ay dapat na mabura sa lahat ng mga bagong mga URL</li>
+<li>Issue 4079 : Cookie with unknown path is falsely rejected by ZAP</li>
+</ul>
+
+<h2>Ang mga pagbabgo ng mga sirang ZAP API:</h2>
+
+<h3>Ang AKSYON ng pagpapatunay / setAuthenticationMethod</h3>
+Ang klase ng pagpapatunay "formBasedAuthentication" ngayon ay kinikilala ang pag-login sa URL sa naka-encode na form. Ang pagbabago ay tinitiyak ang pag- login sa URL ay ginamit/pinadala bilang ito ay tinukoy. Noong nakaraan ito ay tintanggap ng bahagyang pag-encode ng mga URL pero muli nilang ini-encode habang ginagamit, potensyal na patungo sa isang magkakaibang URL na ginamit/pinadala.
+
+<h3>Ang konteksto ng VIEW / contextList</h3>
+
+Ang pagbabago na ito ay makakasira sa mga mamimili na mano-mano na pag-parse/extracting ng mga pangalan mula sa hanay. ang istruktura ng mga datos
+na ibinabalik ay binago sa wastong paghihiwalay ng bawat pangalan:
+<blockquote><pre><code>
+{"contextList":["Context 1","Context 2"]}
+</code></pre></blockquote>
+at:
+<blockquote><pre><code>
+&lt;contextList type="list"&gt;
+    &lt;contextName&gt;Context 1&lt;/contextName&gt;
+    &lt;contextName&gt;Context 2&lt;/contextName&gt;
+&lt;/contextList&gt;
+</code></pre></blockquote>
+
+maliban sa:
+<blockquote><pre><code>
+{"contextList":"[Context 1, Context 2]"}
+</code></pre></blockquote>
+at:
+<blockquote><pre><code>
+&lt;contextList&gt;[Context 1, Context 2]&lt;/contextList&gt;
+</code></pre></blockquote>
+
+<h3>Ang core ng VIEW / setOptionUseProxyChain</h3>
+Ang pagbabago sa pagbabalik <code>Nabigo</code> kapag ang paparating na provy ay hindi pinagana (Dahil ang kailangan na adress/hostname ay hindi naka set dati), bago ito palaging bumalik <code>Okay</code>.
+
+<h2>Ang pagbabago ng mga Endpoint ng ZAP API:</h2>
+
+<h3>Ang core ng VIEW / mga alerto</h3>
+Ang pagdadagdag ng opyonal na riskld ng parametro na pagaanin ang pagsala ng peligro. Kung saan ang riskld ay nasa 0 para sa pagbibigay kaalaman at tatlo para sa mataas. 
+
+<h3>Ang core ng VIEW /BilangNgMgaAlerto</h3>
+Ang pagdadagdag ng opsyonal na riskld ng parametro na pagaanin ang pagsala ng peligro. Kung saan ang riskld ay nasa 0 para sa pagbibigay kaalaman at tatlo para sa mataas. 
+
+<h3>Ang core ng VIEW / mga url</h3>
+Ang pagdadagdag ng opsyonal <code>ang baseurl</code> ang parametro, sa pagsala ng mga URL namga bumalik.
+
+<h3>Ang ascan ng VIEW / mga pag-iskan</h3>
+Ang pagbabgo para bumalik din ang kabuuang bilang ng mga alerto na itinaas at mga mensahe na pinadala sa panahon ng bawat pag-iskan.
+
+<h3>Ang ascan ng VIEW / scanProgress</h3>
+Ang pagbabago para bumalik din ang kabuuang bilang ng mga alerto na itinaas sa pamamagitan ng bawat pag-i-iskan.
+
+<h2>Ang mga bagong Endpoint ng ZAP API:</h2>
+
+<h3>Ang core ng VIEW / alertsSummary</h3>
+Ang isang bagong buod ay makikita para sa mga alerto kung saan ipinapakita ang mga bilang ng mga alerto kada lebel ng peligro. opsyonal, na sinasala sa pamamagitan ng halaga ng isang baseurl. 
+
+<blockquote><pre><code>
+{"High":0,"Low":132,"Medium":39,"Informational":153}
+</code></pre></blockquote>
+
+<h3>Ang core ng VIEW / messagesByld</h3>
+Nakukuha ang mga mensahe ng HTTP sa pamamagitan ng ibinigay na mga id.
+
+<h3>Ang core ng VIEW / messagesHarByld</h3>
+Nakukuha ang mga mensahe ng HTTP sa pamamagitan na ibinigay na mga ID, sa ayos ng HAR.
+
+<h3>Ang core ng VIEW /optionAlertOverridesFilePath</h3>
+Ang daan ng mga payl ay nakukuha sa pamamagitan ng mga override na alerto. 
+
+<h3>Ang core ng VIEW / optionMaximumAlertInstances</h3>
+Nakukuha ang pinamataas na bilang ng alerto ng mga instance para isama sa isang ulat. 
+
+<h3>Ang core ng VIEW / optionMergeRelatedAlerts</h3>
+Nakukuha kahit o hindi na kaugnayan sa mga alerto na maaaring ipagsama sa kahit na anung mga ulat na binubuo. 
+
+<h3>Ang core ng VIEW / zapHomePath</h3>
+Nakukuha ang daan ng mga ZAP sa tahanan ng direktoryo.
+
+<h3>Ang localproxies ng VIEW / mga additionalProxy</h3>
+Nakukuha ang lahat ng mga karagdagang mga proxy na nakumpigura na.
+
+<h3>Ang ispayder ng VIEW / optionAcceptCookies</h3>
+Nakukuha kahit o hindi na ang pagproseso ng isang ispayder ay dapat na tanggapin ng mga cookie habang nag-ispayder.
+
+<h3>Ang aksyon ng core /deleteAlert</h3>
+Tanggalin ang mga alerto sa pamamagitan ng ibinigay na ID.
+
+<h3>Ang AKSYON ng core / setOptionAlertOverridesFilePath</h3>
+Ang mga pagtatakda (o mga pagliliwanag, kung wala ng laman) ang daan sa mga payl sa pamamagitan ng alerto ng mga overrdrive. 
+
+<h3>Ang AKSYON ng core / setOptionMaximumAlertInstances</h3>
+Ang mga pagtatakda ng pinakamataas na bilang ng alerto ng mga pagkakataon na ipagsama sa isang ulat. Ang halaga ng sero ay itinuturing na walang limitasyon. 
+
+<h3>Ang AKSYON ng core / setOptionMergeRelatedAlerts</h3>
+Ang mga pagtatakda kahit o hindi kaugnay sa mga alerto ay maisama sa kahit na anung ulat na binubuo. 
+
+<h3>Ang AKYON ng ascan / importScanPolicy</h3>
+Ang pag-angkat ng isang patakaran ng pag-iskan gamit ang ibinigay na daan ng payl ng sistema.
+
+<h3>Ang AKSYON ng ascan / skipscanner</h3>
+Ang paglalaktaw sa pag-iskan gamit ang mga ID ng mga pag-iskan at ng pag-i-iskan.
+
+<h3>Ang localProxies ng VIEW / addAdditionalProxy</h3>
+Ang pagdadagdag ng isang bagong proxy gamit ang mga ibinigay na detalye tingnan ang <a href="../ui/dialogs/options/localproxy.html">Mga opsyon ng lokal na mga proxy ng iskrin</a> para sa mga detalye ng mga parametro.
+
+<h3>Ang mga localproxy ng VIEW / removedAdditionalProxy</h3>
+Tanggalin ang mga naidagdag na proxy sa pamamagitan ng tinutukoy na adress at port.
+
+<h3>Ang AKSYON ng ispayder /mga setOptionAcceptCookie</h3>
+Ang pagtatakda o hindi ang isang pagproseso ng ispayder na dapat na tanggapin ng mga cookie habang nag-ispayder.
+
+<h2>Ang mga detalye ng mga kahinaan</h2>
+
+Ang mga kahinaan na mga sumusunod ay inuulat sa isang dating bersyon ng ZAP.<br>
+Maraming salamat sa lahat ng mga mananaliksik na sinong mayroong etikal na ulat na mga isyu para sa atin sa pamamagitan ng ating <a href="https://bugcrowd.com/owaspzap">masaganang programa ng bug</a>.<br> 
+Kung kailangan mo ng mga detalye tungkol dito sa kahinaan pagkatapos ay mangyaring makipag-ugnayan po kayo sa amin.
+
+<h3>Ang mga uninstaller ng mga window ng kahinaan sa Hijacking ng DLL</h3>
+
+Ang mga wingdow ng uninstaller ng ZAP para sa 2.6.0 ay mahina sa Hijacking ng DLL ng mga window. Ito ay kahinaan sa pangatlong partido ng pag-install ng install4j kung saan ngayon na naisaayos na.<br>
+Paalala na ito ay mangyayari lamang kung ang isang malisyosong DLL ay nasa daraanan na.
+<br><br>
+<b>Kredito: Sajeeb Lohani (sml555) ng Bulletproof ZDS</b>
+
+
+<h2>Tingnan din sa</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Ang panimula</a></td><td>ang panimula sa ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Mga inilbas</a></td><td>ang kabuuang ayos ng mga inilabas</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Ang mga kredito</a></td><td>ang mga tao at mga grupo na ginawang posible ang mga inilabas na ito</td></tr>
+</table>
+</body>
+</html>

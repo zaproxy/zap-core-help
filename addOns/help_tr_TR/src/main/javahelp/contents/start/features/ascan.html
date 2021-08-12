@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Aktif Tarama
+</title>
+</head>
+<body>
+<h1>Aktif Tarama</h1>
+<p>
+Aktif tarama, seçilen hedeflere yönelik bilinen saldırıları kullanarak potansiyel güvenlik açıklarını bulmaya çalışır.
+</p>
+<p>
+Aktif tarama, bu hedeflere yönelik bir saldırıdır.<br/>
+Sahip olmadığınız web uygulamalarında kullanmayın.
+</p>
+<p>
+In order to facilitate identifying ZAP traffic and Web Application Firewall exceptions, ZAP is accompanied 
+by a script "AddZapHeader.js" which can be used to add a specific header to all traffic that passes through 
+or originates from ZAP. eg: <tt>X-ZAP-Initiator: 3</tt>
+</p>
+<p>
+It should be noted that active scanning can only find certain types of vulnerabilities.<br/>
+Logical vulnerabilities, such as broken access control, will not be found by
+any active or automated vulnerability scanning.<br/>
+Manual penetration testing should always be performed in addition to active
+scanning to find all types of vulnerabilities. 
+</p>
+
+<p>
+Active scanning is configured using the 
+<a href="../../ui/dialogs/options/ascan.html">Options Active Scan screen</a>.<br>
+The rules that run are configured via <a href="scanpolicy.html">Scan Policies</a> - you can have as many of these as you like. 
+
+</p>
+
+<h2>Yolu ile erişildi</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/ascan.html">Aktif Tarama sekmesi</a></td><td>'Yeni Tarama' düğmesi</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/sites.html">Siteler sekmesi</a></td><td>'Saldır/Aktif Tarama...' sağ tık menüsü ögesi</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/history.html">Geçmiş sekmesi</a></td><td>'Attack/Active Scan...' sağ tuş menü maddesi</td></tr>
+</table>
+
+<h2>Ayrıca bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/overview.html">UI'ya genel bir bakış</a></td><td>kullanıcı arayüzüne genel bir bakış için</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="features.html">Özellikler</a></td><td>ZAP tarafından sağlanmaktadır</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="pscan.html">Pasif tarama</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/dialogs/scanpolicymgr.html">Tarama Politikası Yönetici Diyaloğu</a></td><td>tarama ilkelerini yönetmenizi sağlar</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../checks.html">Tarayıcı Kuralları</a></td><td>varsayılan olarak destekleniyor</td></tr>
+</table>
+
+<h2>Official Videos</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><a href="https://play.sonatype.com/watch/ZcEfSihgQSzuthJi4qEeW3">ZAP In Ten: Active Scanning</a> (9:47)</td></tr>
+</table>
+
+</body>
+</html>

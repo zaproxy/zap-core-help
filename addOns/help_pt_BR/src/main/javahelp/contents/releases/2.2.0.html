@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  Versão  2.2.0
+</title>
+</head>
+<body>
+<h1>Versão 2.2.0</h1>
+<p>
+As seguintes alterações foram feitas nesta versão:
+</p>
+
+<h2>Principais mudanças:</h2>
+
+<h3>Problema 717: Scripts: suporte a vários scripts e incorporação em componentes ZAP</h3>
+<h3>Suporte para Mozilla Zest: https://developer.mozilla.org/en-US/docs/Zest</h3>
+<h3>Suporte para Mozilla Plug-n-Hack: https://developer.mozilla.org/en-US/docs/Plug-n-Hack</h3>
+<h3>Suporte para digitalização de cabeçalhos, bem como formatos JSON e XML</h3>
+
+<h2>Pequenas alterações:</h2>
+
+<h3>Problema 711: verificação de suporte de solicitações XML</h3>
+<h3>Problema 711: verificação de suporte de demanda XML</h3>
+<h3>Issue 719 : Custom http breakpoints with more options</h3>
+<h3>Problema 738: Opções para ocultar guias / janelas</h3>
+<h3>Problema 750: atualizar o console de script para oferecer suporte a linguagens de script não baseadas em texto</h3>
+<h3>Problema 752: criar uma nova CA raiz na primeira execução</h3>
+<h3>Problema 775: permitir que o host seja definido por meio da linha de comando</h3>
+
+
+<h2>Correções de bugs:</h2>
+
+<h3>Problema 555: painéis Http padrão para exibição hexadecimal</h3>
+<h3>Problema 599: a API de salvamento da sessão não permite sobrescrever a sessão que já tem o mesmo nome</h3>
+<h3>Problema 630: URLCanonicalizer.getCanonicalURL produz URIs "metade" decodificados</h3>
+<h3>Problema 631: URLCanonicalizer.buildCleanedParametersURIRepresentation retorna URIs na forma codificada por cento e decodificada</h3>
+<h3>Problema 652: Desligamento após uma grande varredura demorar muito (excluindo registros do Ascan)</h3>
+<h3>Problema 655: problemas de codificação de API</h3>
+<h3>Problema 665: exceção de ponteiro nulo ao fazer proxy com um URI com um componente de caminho vazio</h3>
+<h3>Problema 666: exceção JSON ao chamar uma ação da API sem os parâmetros necessários</h3>
+<h3>Problema 669: restrições de algoritmo de certificado em Java 1.7</h3>
+<h3>Problema 674: Adicionar API de Sessão Http ao ApiGeneratorUtils</h3>
+<h3>Problema 685: adicionar arquivo fictício ao diretório "fuzzers"</h3>
+<h3>Problema 686: Log Http Exception (como erro) no Proxy Thread</h3>
+<h3>Problema 687: altere o analisador de cabeçalho de resposta HTTP para ser menos estrito</h3>
+<h3>Problema 690: URLs de autenticação de contexto não falham na substituição manual.</h3>
+<h3>Problema 691: lidar com plug-ins antigos</h3>
+<h3>Problema 692: relatar a versão do java encontrada por zap.sh</h3>
+<h3>Problema 693: a linha de comando deve mostrar todas as opções</h3>
+<h3>Problema 694: API UI falha no IE</h3>
+<h3>Problema 695: a árvore de sites não é limpa em uma nova sessão criada pela API</h3>
+<h3>Problema 696: Altere as opções do complemento "Ajax Spider" para usar o Zap Number Spinner</h3>
+<h3>Problema 697: a ação da API "proxy.pac" pode retornar domínio / porta incorretos</h3>
+<h3>Problema 698: a exibição da API do scanner passivo "recordsToScan" retorna -1 após concluir a varredura das mensagens</h3>
+<h3>Problema 699: corrigir erros de HTML nas páginas de ajuda</h3>
+<h3>Problema 702: não carregue versões de complemento mais recentes se elas não forem destinadas à versão ZAP em execução</h3>
+<h3>Problema 703: as restrições da versão ZAP do complemento "não antes da versão" e "não da versão" não são respeitadas para complementos já "instalados"</h3>
+<h3>Problema 706: a API ZAP não analisa corretamente os parâmetros de consulta com caracteres "&"</h3>
+<h3>Problema 710: URLCanonicalizer.getCanonicalURL não consegue analisar corretamente os parâmetros de consulta com os caracteres "&" e "="</h3>
+<h3>Problema 712: a ação da API de sessões Http "definir o valor do token de sessão" deve adicionar o nome do token de sessão aos tokens de sessão do site</h3>
+<h3>Problema 720: não é possível enviar métodos http não padrão</h3>
+<h3>Problema 721: solicitações não POST e PUT recebem um 504 quando o servidor espera um corpo de solicitação</h3>
+<h3>Problema 724: não clone a mensagem de alerta que será exibida nos painéis de mensagens</h3>
+<h3>Problema 725: Limpar os campos do painel de alerta</h3>
+<h3>Problema 726: Capture exceções de variantes de scanner ativas</h3>
+<h3>Problema 727: o nome das sessões HTTP criadas automaticamente está sempre em inglês</h3>
+<h3>Problema 728: permitir a criação de uma sessão com um determinado nome por meio da API de sessões Http</h3>
+<h3>Problema 729: Atualizar o código de autenticação NTLM</h3>
+<h3>Problema 730: exceção de recurso ausente ao selecionar uma extensão desabilitada (de um complemento) no painel de opções "Extensões"</h3>
+<h3>Problema 731: exceção de recurso ausente com difusão de extensão ativada e força bruta de extensão desativada</h3>
+<h3>Problema 736: Altere a estratégia de carregamento da classe complementar para pai-último</h3>
+<h3>Problema 737: restaurar dependências do complemento "Ajax spider"</h3>
+<h3>Problema 756: Permitir a intercomunicação dos painéis de contexto</h3>
+<h3>Problema 763: relatório XML vazio quando usado no modo daemon</h3>
+<h3>Problema 764: os resultados do fuzz HTTP não são compatíveis com menus de clique com o botão direito</h3>
+<h3>Problema 766: a pesquisa de resultados de fuzz não inclui o cabeçalho</h3>
+<h3>Problema 767: a API de sessão HTTP poderia ser menos rígida</h3>
+<h3>Problema 772: Reestruturação de salvar / carregar dados de contexto</h3>
+<h3>Problema 774: a compilação não inclui o diretório de scripts</h3>
+<h3>Problema 776: permitir que complementos avisem o usuário se ele estiver fechando o ZAP com recursos não salvos abertos</h3>
+<h3>Problema 777: Não é possível cancelar as alterações ao usar Incluir / Excluir do Contexto</h3>
+<h3>Problema 782: Nenhum erro de método ao excluir um URL de canal WebSocket do contexto</h3>
+<h3>Problema 785: altere zap.sh para lidar com Java 1.8</h3>
+<h3>Problema 786: o item de menu da sessão de instantâneo não funciona</h3>
+
+<h2>Veja também</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Introdução</a></td><td>a introdução ao ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Versões</a></td><td>o conjunto completo de lançamentos</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Créditos</a></td><td>as pessoas e grupos que tornaram este lançamento possível</td></tr>
+</table>
+</body>
+</html>

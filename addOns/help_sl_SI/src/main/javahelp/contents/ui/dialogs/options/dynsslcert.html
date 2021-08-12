@@ -6,7 +6,7 @@
 Dynamic SSL Certificates
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Option Dynamic SSL Certificates</h1>
 	<p>
 	OWASP ZAP allows you to transparently decrypt SSL connections.
@@ -14,13 +14,13 @@ Dynamic SSL Certificates
 	to the server and decrypt each response, which comes back.
 	But, this is already done by the browser.
 	That's why, the only way to decrypt or intercept the transmission,
-	is to do a 'man in the middle' approach.
+	is to do a 'manipulator in the middle' approach.
 	</p>
 
 
 <h2>Overview</h2>
 <p>
-	<img alt="man in the middle" src="../../../images/maninthemiddle.png">
+	<img alt="manipulator in the middle" src="../../../images/manipulatorinthemiddle.png">
 </p>
 <p>
 	In short words, every data send to and received from the server
@@ -30,7 +30,7 @@ Dynamic SSL Certificates
 	ZAP is using it's own certificate. This is the one you can create.
 	Every certificate created by ZAP will be signed for the same
 	server name. In the example above, ZAP will create a certificate
-	for the server's name "www.example.com". This way, your browser
+	for the server's name <code>www.example.com</code>. This way, your browser
 	will do regular SSL encryption.
 </p>
 
@@ -53,11 +53,18 @@ Dynamic SSL Certificates
 	once you've added the ZAP Root CA certificate to your list of trusted
 	Root CAs, your browser doesn't recognize the man in the middle. 
 </p>
+<p>
+	<strong>Note:</strong>
+	<blockquote>On iOS 10.3 and onwards, you also need to enable full trust for the root certificate:
+	
+	Go to Settings > General > About > Certificate Trust Settings.
+	Under “Enable full trust for root certificates”, turn on trust for the certificate.</blockquote>
+</p>
 
 <h3>Generate</h3>
 <p>
-	If you're running ZAP the first time, you should generate a Root CA certificate first.
-	Once you've generated one, you have to install it within your browser 
+	When you are running ZAP for the first time then it will generate a Root CA certificate just for you.
+	If you do not use the 'browser launch' feature then you have to install it within your browser 
 	or HTTP client application. See section <a href="#install">installation</a> 
 	for more details.
 </p>
@@ -91,6 +98,13 @@ Dynamic SSL Certificates
 	to generate one Root CA certificate.<br>
 	Copy the file 'OWASP ZAP/config.xml' from your users home directory to 
 	the PC, where you want to use the same certificate and press 'import' to import it.
+</p>
+<p>
+	Alternatively you can use the <a href="../../../cmdline.html">command line</a> options:
+	<ul>
+	<li>-certfulldump &lt;path&gt; to dump the certificate from one ZAP instance
+	<li>-certload &lt;path&gt; to load the certificate into another ZAP instance
+	</ul>
 </p>
 <p>
 	You can also import certificates stored in pem files as long as they include both
@@ -182,7 +196,7 @@ And yes, that example will work - its the Superfish certificate!
 		serial number 2314, the second one 2315, the third one 2316 and so on.
 		The reason for this is simple: browsers are also caching certificates.
 		When you restart ZAP but don't restart your browser, it could happen,
-		the the browser sees the same certificate but with different serial number.
+		that the browser sees the same certificate but with different serial number.
 		In the end, the browser would complain about and reject the certificate.
 		By using the random offset (internally 48bit random number), the chances
 		are 1 to 281.474.976.710.656 that when restarting ZAP, the serial number

@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Yapısal Parametreler
+</title>
+</head>
+<body>
+<h1>Yapısal Parametreler</h1>
+<p>
+Yapısal parametreler, kullanıcı verilerinin yerine uygulama yapısını temsil eden parametreleri tanımlayan bir <a href="structmods.html">Yapısal Değiştirici</a> türüdür.<br>
+<p>
+'Geleneksel' web uygulamalarında, uygulamanın yapısı genellikle URL yolları ile tanımlanır ve veriler URL parametrelerinde ve POST verisi içinde yer alır.<br>
+URL 'ler gibi:
+<ul>
+<li>https://www.example.com/app/aaa?ddd=eee
+<li>https://www.example.com/app/aaa?ddd=fff
+<li>https://www.example.com/app/aaa?ddd=ggg
+</ul>
+içinde sunulur <a href="sitestree.html">Sites Tree</a> ağaçtaki tek 'ağ' olarak:
+<ul>
+<li>Siteler
+	<ul>
+	<li>https://www.example.com
+		<ul>
+		<li>uygulama
+			<ul>
+			<li>GET:aaa(ddd)
+			</ul>
+		</ul>
+	</ul>
+</ul>
+ZAP'ın uygulama yapısının anlamını siteler ağacı yansıttığı için önemlidir.<br>
+Eğer yapının iyi bir temsili yoksa ZAP uygulamaya etkin bir biçimde saldırması mümkün değildir.<br>
+<br>
+Mantıksal 'sayfa' gösterimi için 'tekli' sayfa uygulamalarında bir parametre kullanılır:
+<ul>
+<li>https://www.example.com/app/aaa?page=p1&amp;ddd=eee
+<li>https://www.example.com/app/aaa?page=p2&amp;ddd=fff
+<li>https://www.example.com/app/aaa?page=p3&amp;ddd=ggg
+</ul>
+bu 3 URL farklı mantıksal sayfaları temsil eder, ancak varsayılan olarak ZAP onları bir düğüm olarak temsil edecektir:
+<ul>
+<li>Siteler
+	<ul>
+	<li>https://www.example.com
+		<ul>
+		<li>uygulama
+			<ul>
+			<li>GET:aaa(ddd,page)
+			</ul>
+		</ul>
+	</ul>
+</ul>
+Bu bir problem çünkü artık ZAP tüm uygulama işlevlerine saldırmayacak.<br>
+<br>
+ZAP terimleri içinde 'sayfa' URL parametresi 'yapısal bir parametre' - uygulama yapısının bir bölümünü tanımlayan bir parametredir.<br>
+Yapısal parametreleri, uygulamayı ekleyerek tanımlayabilirsiniz <a href="contexts.html">İçerik</a>
+ve sonra onları yapılandırmayla <a href="../../ui/dialogs/session/context-struct.html">Oturum Bağlam Yapısı ekranı</a>.<br>
+Bunu tamamladığınız anda, sayfa düğümleri 3 olarak doğru bir şekilde gösterilecektir:
+<ul>
+<li>Siteler
+	<ul>
+	<li>https://www.örneğin.com
+		<ul>
+		<li>uygulama
+			<ul>
+			<li>aaa
+				<ul>
+				<li>GET:p1(ddd,page)
+				<li>GET:p2(ddd,page)
+				<li>GET:p3(ddd,page)
+				</ul>
+			</ul>
+		</ul>
+	</ul>
+</ul>
+
+<h2>Üzerinden erişildi</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/dialogs/session/context-struct.html">İçerik Yapısı Oturumu ekranı</a></td></tr>
+</table>
+
+<h2>Ayrıca bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">Kullanıcı Arayüzüne Genel Bakış</a></td><td>kullanıcı arayüzü için genel bir bakış</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="features.html">Özellikler</a></td><td>ZAP tarafından sağlanmıştır</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="structmods.html">Yapısal Düzenleyiciler</a></td><td>ZAP'ın uygulamanın yapısını nasıl temsil ettiğini ayarlayan kontroller</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="ddc.html">Veri Güdümlü İçerik</a></td><td>veriyi temsil eden URL yollarını belirleyen</td></tr>
+</table>
+
+</body>
+</html>

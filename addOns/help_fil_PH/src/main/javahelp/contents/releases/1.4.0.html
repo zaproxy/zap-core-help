@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  Ang ika 1.4.0 paglabas
+</title>
+</head>
+<body>
+<h1>Release 1.4.0</h1>
+<p>
+Ang mga sumusunod na pagbabago ay ginawa sa paglabas na ito:
+</p>
+
+<h2>Mga Makabuluhang pagbabago:</h2>
+
+<h3>Isyu 133: Magdagdag ng Syntax na maghighlight sa Panel ng Pagtugon</h3>
+
+Ang mga Panel ng HTML ngayon ay sumusuporta sa paglipat ng paghighlight sa syntax.
+
+<h3>Isyu 153: pagsasama ng fuzzdb</h3>
+
+Ang fuzzer kasama ang mga fuzzdb (https://github.com/fuzzdb-project/fuzzdb) fuzzing file.<br/>
+Tandaan na ang ibang mga fuzzdb file ay naiwan bilang ito ay naging sanhi ng pangkaraniwang anti virus ng mga iskaner upang hudyatan sila kung sila ay mayroong mga virus.<br/>
+Maaari mong palitan ito (at i-upgrade ang fuzzdb) sa pamamagitan ng pagdownload ng pinakabagong bersyon ng fuzzdb at palawakin ito sa librerya ng mga 'fuzzer'.
+
+<h3>Isyu 212: Pagsusuri sa Parameter</h3>
+
+Ang isang bagong tab ng Params ay nagpapakita ng buod ng lahat ng mga parameter na ginamit ng isang site.  
+
+<h3>Isyu 228: Pinahusay na XSS iskaner</h3>
+
+Ang Cross Site Scripting na muling isinulat ng aktibong iskaner mula sa scratch upang makahanap pa ng mas malaking potensyal sa mga isyu ng XSS at ulat ng mas kaunting positibong mali. 
+
+<h3>Isyu 244: I-Port ang walang pasubali na pagsisiyasat ng mga tagamasid</h3>
+
+Ang mga sumusunod na pagsisiyasat ay nai-port mula sa tagamasid (salamat kay Chris Weber sa pag-oking dito):
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.CrossDomain.ScriptReference.cs</td><td>nagsusuri para sa nakalakip na cross-domain javascript file.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.CacheControl.cs</td><td>nagsusuri ng HTTP cache-control header sa mga pahina ng SSL.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.ContentTypeMissing.cs</td><td>nagsusuri na ang Content-Type-HTTP header ay hindi nawawala.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.FrameOptions.cs</td><td>nagsusuri na ang X-FRAME-OPTIONS ay hindi nawawala o walang kasiguraduhang nai-set.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.IeXssProtection.cs</td><td>nagsusuri na ang X-XSS-Protection ay hindi pa nai-set upang hindi paganahin ang IE's XSS protection.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.MimeSniff.cs</td><td>nagsusuri na ang X-CONTENT-TYPE-OPTIONS ay nai-set.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.DatabaseErrors.cs</td><td>nagsusuri para sa mga maling mensahe ng database.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.DebugErrors.cs</td><td>nagsusuri para sa maling mensahe ng debugging.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.InUrl.cs</td><td>nagsusuri para sa pagsisiwalat ng impormasyon sa mga parameter ng URL.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.ReferrerLeak.cs</td><td>nagsusuri ng HTTP Referer header para sa pagsisiwalat ng impormasyon.</td></tr>
+</table>
+
+
+<h3>Isyu 253: Mga ekstensyong Plugable</h3>
+
+Ang kabuuang ekstensyon ay maaari mo nang ngayon i-plug sa ZAP na matroong ganap na access sa lahat ng tampok ng ZAP.
+
+<h2>Maliit na mga pagbabago:</h2>
+
+<h3>Isyu 54: Malinis na shutdown</h3>
+
+<h3>Isyu 90: Magdagdag ng suporta sa GUI upang masigurado ang muling pagsasaayos ng SSL/TLS</h3>
+
+<h3>Isyu 102: i-Save ang bagong tugon at kahilingan, at i-save ang katawan ng tugon at kahilingan</h3>
+
+<h3>Isyu 126: Pahintulutan ang direktoryong pagtatrabaho at i-config ang file na aayusin sa pamamagitan ng cmd line</h3>
+
+<h3>Isyu 154: Isama ang param id sa mga ulat</h3>
+
+<h3>Isyu 164: Buton para sa config Toolbar</h3>
+
+<h3>Isyu 168: Ipakita ang mga nakatagong field sa mga page ng web</h3>
+
+<h3>Isyu 192: Paganahin/hindi paganahin ang mga breakpoint</h3>
+
+<h3>Isyu 193: Tuklasin ang mga kahinaan ng traversal na direktaryo</h3>
+
+<h3>Isyu 194: Pagpapahusay: ipakita ang pane para sa paghahanap ng mga ipinakitang kahilingan ng ID</h3>
+
+<h3>Isyu 200: Tuklasin ang mga kahinaan ng CSRF</h3>
+
+<h3>Isyu 230: Palakihin ang zap.sh upang makayanan ang makahulogang mga link</h3>
+
+<h3>Isyu 236: opsyon upang i-toggle ang URLencoding</h3>
+
+<h3>Isyu 242: I-export ang node / reg/resp sa pamamagitang ng pag right click</h3>
+
+<h3>Isyu 248: Burahin ang mga alerto / muling subuking ang tampok na kahilingan</h3>
+
+<h3>Isyu 251: Muling ayusin ang code ng mga alerto</h3>
+
+<h3>Isyu 253: Pahintulutan ang mga ekstensyon na tukuyin ang mga dependensya</h3>
+
+<h3>Isyu 270: Mga pagbabago sa Icon</h3>
+
+<h3>Isyu 277: Isakatwiran ang mga aytem menu ng right click</h3>
+
+<h3>Isyu 279: Mga ekstensyon ng core</h3>
+
+<h3>Isyu 282: Magdagdag ng deskripsyon, ng may-akda at URL sa mga ekstensyon</h3>
+
+<h2>Mga pagsasayos sa bug:</h2>
+
+<h3>Isyu 42: Hindi makatwirang pag-redirect</h3>
+
+<h3>Isyu 94: PKCS#11 driver</h3>
+
+<h3>Isyu 107: Ang huling naharang na kahilingan/tugon ay nanatili sa Break window</h3>
+
+<h3>Isyu 135: Mga sirang URL sa mga panel ng site</h3>
+
+<h3>Isyu 148: Ang bagong HTTP panel ay nasira sa Undo/Redo Manager</h3>
+
+<h3>Isyu 180: Ipakita ang hugis ng mga talaan para sa kahilingan ng GET</h3>
+
+<h3>Isyu 187: Mga isyu sa pag-encode</h3>
+
+<h3>Isyu 197: Hindi maproseso ng decoder ang base64 input ng walang mga line break</h3>
+
+<h3>Isyu 198: Ang ulat ay hindi mabuo kapag ang mga alerto ng isang "Parameter tampering" sa "NULL" karakter ay umiiral</h3>
+
+<h3>Isyu 210: Ang paghihiwalay ay itinatapon kapag ginagamit ang "Path Traversal" na opsyon sa aktibong pag-scan</h3>
+
+<h3>Isyu 223: Ang paghihiwalay sa tab ng "mga site" kapag pumipili ng opsyon ng isang popup, "Burahin (mula sa pag-view)" o linisin (mula sa DB)", kapag walang node tree ang napili</h3>
+
+<h3>Isyu 224: Masyadong mahabang oras ang nauubos para mabawi mula sa labas ng tunay na range ng isang proxy port number</h3>
+
+<h3>Isyu 225: Lumalabas ang ZAP sa pagsisimula kapag ang mahahalagang mga nilalaman ng isang opsyon ay pinalawig ang mga karakter tulad ng å,ä,ö</h3>
+
+<h3>Isyu 226: Ang edit box ng proxy port number ay hindi dapat pahintulutan ang milyon-milyong mga karakter</h3>
+
+<h3>Isyu 227: Ang mga opsyon, ng mga tool ay dapat mapunta sa parehong tab gaya nung huling beses</h3>
+
+<h3>Isyu 237: Mga problema ng Bug: sa mga panel ng HTTP</h3>
+
+<h3>Isyu 238: Paghihiwalay kapag ginagamit ang file ng isang custom fuzz</h3>
+
+<h3>Isyu 241: Ang halaga ng zap.sh Xmx para sa matatag na pagganap</h3>
+
+<h3>Isyu 243: Kapag ang DynamicLoader ay nag-loload mula sa local na jar, hindi nito kinukuha sa loob ng account ang pangalan ng pakete</h3>
+
+<h3>Isyu 246: Ang Pragma Header ay nangangailangan ng Cache-Control Header para sa HTTP/1.1 na mga kahilingan</h3>
+
+<h3>Isyu 255: Ang Paghihiwalay sa API kapag dahil sa iligal na karakter sa konteksto ng XML</h3>
+
+<h3>Isyu 256: Ang Pagtawag sa HttpMessage.setGetParams ay nakawawala ng port</h3>
+
+<h3>Isyu 260: Ang Paghihiwalay kapag binubura ang ("Purge (mula sa DB)") na entry tab ng "kasaysayan"</h3>
+
+<h3>Isyu 261: Ang bahagyang tugmang wika ay hindi gumagana</h3>
+
+<h3>Isyu 262: Ang "Mahinang pagpapatotoo" ay hindi nagpapakita ng mga alerto sa ispayder</h3>
+
+<h3>Isyu 263: Ang "Cookie na walang secure flag" na mga alerto ay hindi ipinapakita sa ispayder</h3>
+
+<h3>Isyu 264: Ang Paghihiwalay sa "Editor ng Manwal na Kahilingan"/"Muling ipadala" ang mga dyalogo</h3>
+
+<h3>Isyu 268: Baguhin ang ZAP Report XML</h3>
+
+<h3>Isyu 269: Ang Ispayder depth parameter</h3>
+
+<h3>Isyu 274: Linisin tanggalin / paglilinis sa mga opsyon</h3>
+
+<h3>Isyu 280: Hindi makita ang mga URL sa mga site tree</h3>
+
+<h3>Isyu 283: RFE: Ang Fort anti-aliasing ay hindi mabagana sa kakulangan sa kahilingan/tugon</h3>
+
+<h3>Isyu 284: Ang mga kahilingan/tugon at iba pang header panel ay masyadong maliit</h3>
+
+<h3>Isyu 286: Ang String sa paghahanap ay hindi naka-highlight para sa mga resulta ng fuzz</h3>
+
+<h3>Isyu 287: Ang Passive scanner ay hindi kumukuha ng mga bagong token ng anticsrf</h3>
+
+<h3>Isyu 289: Ang mga file ng fuzzdb ay nagdudulot ng virus sa mga alerto</h3>
+
+<h3>Isyu 291: Ang Path Traversal ay may 'param' na walang laman ngunit ang pangalan ng param ay inilagay sa 'atake'</h3>
+
+<h2>Tignan din</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Pagpapakilala</a></td><td>ang pagpapakilala sa ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Ang mga paglabas</a></td><td>ang kabuuang set ng paglabas</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Mga kredito</a></td><td>ang mga tao at grupo na ginawang posible ang paglabas na ito</td></tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Pemindai Aktif
+</title>
+</head>
+<body>
+<h1>Pemindai Aktif</h1>
+<p>
+Pemindaian aktif mencoba untuk menemukan potensi kerentanan dengan menggunakan serangan yang diketahui terhadap target terpilih.
+</p>
+<p>
+Pemindaian aktif merupakan serangan terhadap target tersebut. <br/> Anda TIDAK harus menggunakannya pada aplikasi web yang tidak anda miliki.
+</p>
+<p>
+In order to facilitate identifying ZAP traffic and Web Application Firewall exceptions, ZAP is accompanied 
+by a script "AddZapHeader.js" which can be used to add a specific header to all traffic that passes through 
+or originates from ZAP. eg: <tt>X-ZAP-Initiator: 3</tt>
+</p>
+<p>
+It should be noted that active scanning can only find certain types of vulnerabilities.<br/>
+Logical vulnerabilities, such as broken access control, will not be found by
+any active or automated vulnerability scanning.<br/>
+Manual penetration testing should always be performed in addition to active
+scanning to find all types of vulnerabilities. 
+</p>
+
+<p>
+Active scanning is configured using the 
+<a href="../../ui/dialogs/options/ascan.html">Options Active Scan screen</a>.<br>
+The rules that run are configured via <a href="scanpolicy.html">Scan Policies</a> - you can have as many of these as you like. 
+
+</p>
+
+<h2>Diakses melaui</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/ascan.html">Tab pemindai aktif</a></td><td>Tombol 'Pemindai Baru'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/sites.html">Tab situs</a></td><td>'Serangan/Pemindai Aktif...' klik kanan menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/history.html">Riwayat tab</a></td><td>Serangan scan aktif klik kanan di menu item</td></tr>
+</table>
+
+<h2>Lihat juga</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/overview.html">Ikhtisar UI</a></td><td>untuk ikhtisar antarmuka pengguna</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="features.html">Gambaran</a></td><td>Di keluarkan oleh ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="pscan.html">Pembersihan pasif</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/dialogs/scanpolicymgr.html">Kebijakan memindai dialog manajer</a></td><td>yang memungkinkan anda untuk mengelola kebijakan pindaian</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../checks.html">Aturan Pemindai</a></td><td>didukung oleh bawaan</td></tr>
+</table>
+
+<h2>Official Videos</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><a href="https://play.sonatype.com/watch/ZcEfSihgQSzuthJi4qEeW3">ZAP In Ten: Active Scanning</a> (9:47)</td></tr>
+</table>
+
+</body>
+</html>

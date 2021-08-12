@@ -4,11 +4,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Aba Spider</title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 	<h1>Aba Spider</h1>
 	<p>
-		A aba Spider mostra o conjunto de URIs únicas encontradas pelo <a
-			href="../../start/concepts/spider.html">Spider</a> durante as varreduras.
+		The Spider tab shows you the set of unique URIs found by the <a
+			href="../../start/features/spider.html">Spider</a> during the scans.
 	</p>
 
 	<p>
@@ -23,10 +23,8 @@
 		<li><img align="bottom" alt="botão de parada/Stop" src="../../images/16/142.png"> Interromper a varredura de spider selecionada;</li>
 		<li><img align="bottom" alt="botão 'limpar varreduras'" src="../../images/fugue/broom.png">
 			Limpar varreduras concluídas;</li>
-		<li><img align="bottom" alt=" botão 'mostrar mensagens'" src="../../images/16/178.png">
-			Mostrar/ocultar mensagens - Mostra/oculta uma aba (Mensagens chamadas) que exibe todas as mensagens HTTP enviadas pela varredura de spider selecionada;</li>
-		<li><img align="bottom" alt="botão 'opções de spider'" src="../../images/16/041.png">
-			Abrir a <a href="../../ui/dialogs/options/spider.html">Tela de Opções de Spider</a>.</li>
+		<li><img align="bottom" alt="spider options button" src="../../images/16/041.png">
+			Open the <a href="../../ui/dialogs/options/spider.html">Spider Options screen</a>.</li>
 	</ul>
 	A barra de progresso mostra o quanto progrediu a varredura de spider selecionada. Também é mostrado o número de varreduras de spider ativas e o número de URIs encontrado para a varredura selecionada.
 	<p>Para cada URI encontrada você pode ver:
@@ -38,26 +36,43 @@
 	</ul>
 
 	<p>For each spider message, shown under the Messages tab, you can see details of the request sent and response
-		received, moreover it's indicated, in the column <code>Processed</code>, whether or not the message was processed
-		(that is, the response was successfully received and parsed).
+		received. The <code>Processado</code> column, indicates whether:
+	<ul>
+		<li><img align="bottom" alt="successful parse" src="../../images/16/152.png">Successfully
+			- the response was successfully received and parsed</li>
+		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Empty
+			Message - the response was not parsed because it was empty</li>
+		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">I/O
+			Error - an input/output error occurred while fetching the response</li>
+		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Max
+			Children - the response was not parsed because the corresponding parent Sites node
+			already has more child nodes than the maximum allowed</li>
+		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Max
+			Depth - the response was not parsed because it passed the maximum depth allowed</li>
+		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Max
+			Size - the response was not parsed because its size is not under the maximum allowed</li>
+		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Not
+			Text - the response was not parsed because it's not text, for example, an image</li>
+		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Spider
+			Stopped - the response was not fetched or parsed because the spider was already stopped</li>
+	</ul>
 
-	<h2>See also</h2>
+	<h2>Veja também</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../overview.html">UI Overview</a></td>
-			<td>for an overview of the user interface</td>
+			<td><a href="../overview.html">Visão geral da IU</a></td>
+			<td>para uma visão geral da interface do usuário.</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../start/concepts/spider.html">Spider</a></td>
-			<td>for an overview of the Spider</td>
+			<td><a href="../../start/features/spider.html">Spider</a></td>
+			<td>para uma visão geral do spider</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/options/spider.html">Spider
-					Options screen</a></td>
-			<td>for an overview of the Spider Options</td>
+			<td><a href="../../ui/dialogs/options/spider.html">Tela de opções do Spider</a></td>
+			<td>para uma visão geral das opções do Spider</td>
 		</tr>
 	</table>
 

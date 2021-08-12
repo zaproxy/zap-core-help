@@ -3,51 +3,69 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Screen ng lokal na proxy ng opsyon
+Ang mga opsyon ng lokal na mga proxy ng iskrin
 </title>
 </head>
-<body bgcolor="#ffffff">
-<h1>Screen ng lokal na proxy ng opsyon</h1>
+<body>
+<h1>Ang mga opsyon ng lokal na mga proxy ng iskrin</h1>
 <p>
-Screen ng koneksyon sa mga pagpipilian ay nagpapahintulot sa iyo na magkumpigura ng mga address at port kung saan ang ZAP ay tumatanggap ng papasok na mga koneksiyon. <br/> <h2>Lokal na Proxy</h2> Sa pamamagitan ng default ZAP ay nakikinig sa isang lokal na tirahan at port, at ang mga ito ay mga address at port na dapat mong i-configure ang iyong browser upang gamitin bilang proxy.
+This screen allows you to configure the addresses and ports 
+on which ZAP accepts incoming connections.<br/>
+
+<h2>Local Proxy</h2>
+By default ZAP will listen on one local address and port, and these are the address and port that you must configure your browser to use as a proxy.
 </p>
-<h3>Address</h3>
-Ang lokal na address na gagamitin ang ZAP. Lahat ng mga magagamit na mga mensahe ay awtomatikong natukoy.
+<h3>Ang Address</h3>
+Ang lokal na address kung saan ang ZAP ay magagamit. Ang lahat ng mga magagamit na mga address ay awtomatikong kikilalanin.
 
-<h3>Porto</h3>
-Ang port na kung saan ang ZAP ay makinig.
+<h3>Ang Port</h3>
+Ang port na kung saan ang ZAP ay makikinig.
 
-<h3>Likod NAT</h3>
-Ay nagpapahiwatig na ang mga lokal na mga Proxy (ZAP) ay likod ng metro. Kapag ang napiling ZAP ay pagtatangka upang matukoy ang pampublikong IP address, na maayos na tiktikan at hawakan ang mga hiling sa pampublikong IP address (halimbawa, na naglingkod sa mga ZAP API).
+<h3>Ang likod ng NAT</h3>
+Ay magpapakita na ang lokal na proxy ng (ZAP) ay nasa likod ng NAT. Kapag napili ang ZAP ay magtatangka upang alamin ang IP address ng publiko, sa maayos na pagsisiyasat at pamamahala ng mga kahilingan sa mga publiko ng IP address (para sa halimbawa, upang maglingkod sa pamamagitan ng ZAP ng API).
 <p>
-<strong>Tandaan:</strong> Ang opsyon na ito ay suportado lamang kapag ZAP ay tumatakbo sa isang AWS EC2 pagkakataon. ZAP ay magkakamit ng public IP address mula sa
-<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html#working-with-ip-addresses">AWS EC2 pagkakataon Metadatos</a>.<br>
-ZAP dapat nagsimula sa opsyon na ito pinagana kung access sa API, sa pamamagitan ng public IP address, ay kinakailangan:
-<blockquote>zap.sh-daemon-port 8080 - host 0.0.0.0 - kumpig proxy.behindnat=true</blockquote>
-Gayundin, ang <a href="api.html">API</a> pangangailangan upang maisaayos na tanggapin ng mga panlabas ng mga IP address (i.e. ang IP address mula sa kung saan ang ZAP ay pagiging na-access).
+<strong>Paalala:</strong> Ang opsyon na ito ay suportado lamang kapag ang ZAP sy tumatakbo sa isang AWS EC@ ng pagkakataon.
+ang ZAP ay magtatamo sa IP address ng publiko mula sa
+<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html#working-with-ip-addresses">AWS EC2 ng mga pagkakataon ng Metadata</a>.<br>
+Ang ZAP ay dapat na maging simula sa pagpapagana ng opsyon na ito kung pinatakbo sa mga API, sa pamamagitan ng IP address ng publiko, ay kinakailngan:
+<blockquote>ang zap.sh-daemon-port 8080 - host 0.0.0.0 - kumpig proxy.behindnat=true</blockquote>
+Ganundin, ang <a href="api.html">API</a> na nangangailngan na maikumpigura upang matanggap ang panlabas na mga IP address (i.e. ang IP adress mula sa kung saan ang ZAP ay lubusang mapapatakbo).
 
-<h3>Alisin ang mga di-suportadong pagsasakodigo</h3>
-Nagbibigay-daan ang proxy upang alisin ang mga di-suportadong pag-encode Batac "Tanggapin-Encoding" ulunan ng kahilingan, kaya walang (unsupported) encoding pagbabago ay ginawa upang ang tugon.<br/>
-Ang opsyon na dapat maging palaging pinagana maliban kung nang pagsusuri ang encoding na pagbabago.<br/>
-Ang mga mensahe na na-encode nang may di-suportadong pagsasakodigo ay hindi maging tama Nakilatis (alinman ng pasibo at aktibo scanner).
+<h3>Ang pagtanggal ng hindi suportadong mga pag-encode</h3>
+Pinahihintulutan ang proxy na tanggalin ang hindi suportadong mga pag-encode mula sa "Accept-Encoding" ng request-header ng field, kaya walang (hindi suportadong) pag-encode na mga pagbabago na nagawa sa mga tugon.<br/>
+Ang opsyon na ito ay dapat na laging gumagana maliban kung ang pagsubok ng pag-encode ng mga pagbabago.<br/>
+Ang mga mensahe na na-encode sa hindi suporatdong pag-eencode ay hindi magiging tama sa pag-iskan (sinuman sa pasibo at aktibong mga iskaner).
 
-<h3>Security protocol</h3>
-Ay nagbibigay-daan upang piliin ang mga bersyon ng SSL/TLS na pinagana para sa mga papasok na mga koneksiyon (halimbawa, mula sa browser). Kailangang magpagana ng hindi bababa sa isang version, hindi suportadong sa pamamagitan ng JRE mga bersyon ay napili at may kapansanan.
+<h3>Ang seguridad ng mga protokol</h3>
+Ang pagpapahintulot na piliin ang SSL/TLS na mga bersyon na gumagana para sa paparating na mga koneksyon (para sa halimbawa, mula sa mga browser). Kahit na 
+isang bersyon ang dapat na patakbuhin, ang mga hindi suportadong mga bersyon sa pamamagitan ng JRE ay hindi mapipili at hindi papaganahin.
 <br>
-Dapat piliin ang mga opsyon na SSLv2Hello kaugnay ng hindi bababa sa isang bersyon ng SSL/TLS.
+Ang opsyon ng SSLv2Hello ay dapat mapili sa kaugnay ng kahit na isang SSL/TLS na bersyon.
 <br>
-Ang mga opsyon sa seguridad ay tumutukoy sa parehong ang pangunahing at ang lahat ng mga karagdagang proxy.
+Ang seguridad ng mga opsyon na ilalapat sa parehong mga pangunahin at ang lahat ng mga nadagdag na mga proxy.
 
-<h2>Karagdagang proxy</h2>
-Maaari kang magdagdag ng maraming karagdagang mga address at port para sa ZAP makinig sa 't gusto mo.<br>
-Ito ay maaaring maging kapaki-pakinabang kapag ang pagsusuri ng mga mobile application - maaari mong proxy ang mobile application gamit ang isang Wi-Fi interface sa parehong oras bilang gamit sa backend site na direktang gamit ang isang browser nagsisilbing proxy para sa pamamagitan ng ZAP pagtulad ng mga mobile na gumagamit ng isang agent.
+<h2>Ang karagdagang mga proxy</h2>
+Maaari mong idagdag tulad ng maraming nadagdag na mga address at mga port para s ZAp upang pakinggan sa kahit anung gusto mo.<br>
+Ito ay maaaring maging kapakipakinabang habang sinusubukan ang mga aplikasyon ng mobile - maaari mong i-proxy ang mobile na aplikasyon sa pamamagitan ng isang Wi-Fi na interface sa magkaparehong oras
+bilang paggamit ng backend na sayt na direkta gamit ang isang browser na na-proxy sa pamamagitan ng ZAP na tularan ang isang gumagamit na ahente ng mobile.
 
-<h2>Tingnan din sa</h2>
+<h2>Intercepting/Transparent Proxy</h2>
+The local proxies can be used as intercepting/transparent proxies for both HTTP and HTTPS. For HTTPS the client applications
+(e.g. browser) need to use the TLS extension <a href="https://tools.ietf.org/html/rfc6066#section-3">Server Name Indication</a>.
+This allows you to set up a testing LANs (or VMs) where all HTTP and HTTPS traffic is proxied regardless of software settings.
+<p>
+For example, if you have a Linux machine you use for testing, you can do something like the following to forward all HTTP and
+HTTPS traffic to a local proxy listening on <code>192.168.0.14:8080</code>:
+<pre><code>iptables -t nat -A OUTPUT -p tcp --dport 443 -j DNAT --to-destination 192.168.0.14:8080
+iptables -t nat -A OUTPUT -p tcp --dport 80 -j DNAT --to-destination 192.168.0.14:8080
+</code></pre>
+
+<h2>See also</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI buod</a></td><td>para sa buod ng user interface</td></tr>
+<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Mga diyalogo ng mga opsiyon</a></td><td>para sa mga detalye ng mga iba pang Options Ang mga diyalogo screen</td></tr>
+<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
 </table>
 
 </body>

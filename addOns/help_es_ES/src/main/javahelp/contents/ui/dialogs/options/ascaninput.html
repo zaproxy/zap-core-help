@@ -6,10 +6,10 @@
 Pantalla de opciones de vectores de entrada de escaneo activo
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Pantalla de opciones de vectores de entrada de escaneo activo</h1>
 <p>
-Esta pantalla permite configurar las <a href="../../../start/concepts/ascan.html">escaneo activo</a> vectores de entrada.<br>
+Esta pantalla permite configurar las <a href="../../../start/features/ascan.html">escaneo activo</a> vectores de entrada.<br>
 Estos son los elementos que el escaner activo atacará.<br>
 Escanear todos los elementos soportados tomará más tiempo, pero no escanear alguno de los elementos puede ocasionar que se ignoren algunas vulnerabilidades.
 
@@ -18,21 +18,26 @@ Estos son los elementos que el escaner activo atacará.
 
 <h4>Secuencia de Consulta URL y Data Driven Nodes</h4>
 Claves pares de valor de la consulta de la URL de petición, es decir después de la <code>?</code>.<br>
-Si no hay parámetros de consulta se probarán una arbitraria.   If <a href="../../../start/concepts/ddc.html">Data Driven Nodes</a> se definen dentro de un contexto que se probará.
+If <a href="../../../start/features/ddc.html">Data Driven Nodes</a> se definen dentro de un contexto que se probará.
+
+<h5>Add URL Query Parameter?</h5>
+When selected ZAP will add a query parameter to GET requests which did not originally have one. 
+This may increase scan time, however, it may also reveal issues that would otherwise go un-noticed.
+
 <h4>Datos POST</h4>
-Key de valores clave en la solicitud de datos POST.
+Key value pairs in the request POST data.
 
 <h4>Ruta de URL</h4>
-Elementos de la ruta en la URL de petición, es decir los elementos separados por <code>/</code>.
+Path elements in the request URL, ie the elements separated by <code>/</code>.
 
 <h4>Encabezados de HTTP</h4>
-Solicitar encabezados de HTTP.
+Request HTTP Headers.
 
-<h5>Todas las Solicitudes</h5>
-Permite escanear las Cabeceras HTTP de todas las solicitudes. No solo las solicitudes que envíen parámetros, a través de la consulta o el cuerpo de la solicitud.
+<h5>All Requests</h5>
+Allows to scan the HTTP Headers of all requests. Not just requests that send parameters, through the query or request body.
 
 <h4>Datos de Cookie</h4>
-Solicitar cookies.
+Request cookies.
 
 <h3>Build-in Input Vector Handlers</h3>
 The data formats that the active scanner will target:
@@ -47,11 +52,15 @@ The data formats that the active scanner will target:
 
 
 <h3>Actirvar Script Input Vectors</h3>
-Si se selecciona esta opción el explorador activo utilizará cualquier vectores de entrada de escritura habilitada.<br>
-Vectores de entrada de secuencia de comandos son scripts que han escrito o importados en ZAP y permiten a los elementos objetivos que no son compatibles por defecto.
+If this option is selected then the active scanner will use any enabled script input vectors.<br>
+Script input vectors are scripts which you have written or imported into ZAP and allow you to target elements 
+which are not supported by default.
 
 <p>
 Esta pantalla también te permite configurar los parámetros que serán ignorados por el escaner activo.
+<br />
+Refer to <code>Parameter</code> section in <a href="../addalert.html">Add Alert</a> dialogue for more details about the
+parameter names.
 
 <h2>Vease también</h2>
 <table>

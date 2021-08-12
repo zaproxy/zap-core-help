@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Sürüm 1.0.0
+</title>
+</head>
+<body>
+<h1>Sürüm 1.0.0</h1>
+<p>
+Bu sürümde aşağıdaki değişiklikler yapılmıştır:
+</p>
+<h2>Önemli değişiklikler:</h2>
+
+<h3>Yardım ekranları</h3>
+Yardım ekranları şimdi ZAP tarafından sağlanan işlevlerin tümü için eklendi.<br/>
+Böylece F1 tuşuna ardından seçtiğiniz sekme ile ilişkili yardım ekranı bastığınızda görüntülenecek içerik duyarlı yardım de uygulamaya konmuştur.
+
+<h3>Breakpoints</h3>
+Uygulanması <a href="../start/features/breakpoints.html">Breakpoints</a> tarafından sağlanana daha yakın olacak şekilde değiştirildi.
+yazılım Entegre Geliştirme Ortamları.<br/>
+The breakpoint controls have been moved to the new <a href="../ui/tltoolbar.html">Üst Düzey Araç Çubuğu</a>.<br/>
+Breakpoints can now also be set by right clicking nodes in the 
+<a href="../ui/tabs/sites.html">Siteler</a> ve <a href="../ui/tabs/history.html">Geçmiş sekmeleri</a>.
+
+<h3>Rapor menüsü</h3>
+, <a href="../ui/tlmenu/report.html">Rapor menüsü</a> önemli ölçüde değişti ve şimdi
+aşağıdaki menü öğeleri:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Rapor oluştur...</td><td>Şu anda talep üzerine raporlar üreten</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>İletileri Dosyaya Ver ...</td><td><a href="../ui/tlmenu/file.html"> Dosya Menüsünden </> taşındı</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tepki Dosyaya Ver...</td><td>Taşındı <a href="../ui/tlmenu/file.html">Dosya menüsü</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>TÜM URL'leri Dosyaya Ver...</td><td>Yeni işlevsellik</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Başka bir oturumla karşılaştırın...</td><td>Yeni işlevsellik</td></tr>
+</table>
+
+<h3>Geliştirilmiş geçmiş araştırması</h3>
+Yeni <a href="../ui/tabs/search.html">Arama sekmesi</a> düzenli ifadeleri aramanıza izin verir
+tüm URL'lerde, isteklerde ve yanıtlarda. <br/>
+Sonraki ve önceki düğmeler, bulunan arama terimlerini 
+<a href="../ui/tabs/request.html">Talep</a> ve <a href="../ui/tabs/response.html">Yanıt sekmeleri</a>. <br/>
+
+<h3>Geçmiş filtresi</h3>
+<a href="../ui/tabs/history.html">Geçmiş Filtresi Araç Çubuğu</a> eklemişsiniz ki
+hangi istekler görüntülenir.<br/>
+İstekler, HTTP yöntemlerine, HTTP sonuç kodlarına,
+Ve herhangi biri <a href="../start/features/tags.html">etiketler</a>, <a href="../start/features/alerts.html">uyarılar</a>veya
+<a href="../start/features/notes.html">notlar</a> uygulanmış.    
+
+<h3>Notlar</h3>
+Şimdi ilişkilendirebilirsiniz <a href="../start/features/notes.html">notlar</a> herhangi bir istekle.    
+
+<h3>Birden Fazla Etiket</h3>
+Artık birden çok kişiyi ilişkilendirebilirsiniz <a href="../start/features/tags.html">etiketler</a> herhangi bir istekle.    
+
+<h3>Uyarılar üzerinde daha fazla kontrol</h3>
+, <a href="../ui/dialogs/addalert.html">Uyarı iletişim Ekle</a> el ile eklemek veya bir uyarı değiştirmek sağlar. 
+
+<h3>Yeni kodlayıcı/çözücü</h3>
+A new Encode/Decode/Hash dialog has replaced the previous 
+Encoder/Decoder. 
+
+<h3>Pasif tarayıcı</h3>
+<a href="../start/features/pscan.html">Passive scanning</a> has been added.<br/>
+In this release ZAP will only use passive scanning for automatically adding <a href="../start/features/tags.html">tags</a>.<br/>
+In future releases it may also raise <a href="../start/features/alerts.html">alerts</a> for potential issues. 
+    
+<h2>Küçük değişiklikler:</h2>
+
+<h3>Üst Düzey Araç Çubuğu</h3>
+<a href="../ui/tltoolbar.html">The Top Level Toolbar</a> has been added which
+provides a set up buttons for commonly used functionality. 
+
+<h3>Uyarı altbilgi özetleri</h3>
+Counts of the High, Medium, Low and Informational <a href="../start/features/alerts.html">alerts</a>
+are now displayed in the <a href="../ui/footer.html">footer</a>.
+
+<h3>Yeni görünüm</h3>
+A new look and feel 'Nimbus' is used.
+
+<h3>Proxy parolası işleme</h3>
+<a href="../ui/dialogs/options/connection.html">The Options Connection screen</a> has a new option to 
+'Prompt for proxy credentials on start up'.<br/>
+If this option is selected then your proxy password will not be stored on the hard disk.  
+
+<h3>Siteleri sekmesinden yeniden gönderin</h3>
+The <a href="../ui/tabs/sites.html">Sites tab</a> has a new right click menu item that allows
+you to resend the request after making any changes to it that you want to.  
+
+<h3>Oturumlar arasında tutulan kullanıcı dizini</h3>
+The last directory used by the user is now stored in the config file so that it is
+maintained between sessions.
+
+<h2>Ayrıca bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Başlatma</a></td><td>zAP'a giriş</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Sürüm bültenleri</a></td><td>bültenleri tam set</td></tr>
+</table>
+</body>
+</html>

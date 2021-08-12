@@ -4,11 +4,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Spider tab</title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 	<h1>Spider tab</h1>
 	<p>
-		La Araña ficha muestra el conjunto de la única Uri encontrado por la <a
-			href="../../start/concepts/spider.html">Araña</a> durante el análisis.
+		The Spider tab shows you the set of unique URIs found by the <a
+			href="../../start/features/spider.html">Spider</a> during the scans.
 	</p>
 
 	<p>
@@ -30,10 +30,7 @@ seleccionado araña de exploración;</li>
 el seleccionado de la araña de exploración;</li>
 		<li><img align="bottom" alt="borrar botón de escaneo" src="../../images/fugue/broom.png">
 			Borrar escaneos completados;</li>
-		<li><img align="bottom" alt="mostrar mensajes de botón" src="../../images/16/178.png">
-			Mostrar/Ocultar Mensajes - muestra/oculta una ficha (llamados Mensajes) que muestra todos los HTTP
-los mensajes enviados por el seleccionado de la araña de exploración;</li>
-		<li><img align="bottom" alt="araña botón de opciones" src="../../images/16/041.png">
+		<li><img align="bottom" alt="spider options button" src="../../images/16/041.png">
 			Open the <a href="../../ui/dialogs/options/spider.html">Spider Options screen</a>.</li>
 	</ul>
 	La barra de progreso muestra el seleccionado de araña de escaneo ha progresado. También se muestra
@@ -49,9 +46,27 @@ se ha omitido de recuperación debido a una regla (por ejemplo, estaba fuera de
 por qué no fue procesado)</li>
 	</ul>
 
-	<p>Para cada araña mensaje, que se muestra en la ficha Mensajes, usted puede ver los detalles de la solicitud y de respuesta
-recibió, además, es el indicado, en la columna <code>Procesado</code>, ya sea o no que el mensaje fue procesado
-(es decir, la respuesta fue recibida con éxito y se analiza).
+	<p>For each spider message, shown under the Messages tab, you can see details of the request sent and response
+		received. The <code>Procesado</code> column, indicates whether:
+	<ul>
+		<li><img align="bottom" alt="successful parse" src="../../images/16/152.png">Successfully
+			- the response was successfully received and parsed</li>
+		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Empty
+			Message - the response was not parsed because it was empty</li>
+		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">I/O
+			Error - an input/output error occurred while fetching the response</li>
+		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Max
+			Children - the response was not parsed because the corresponding parent Sites node
+			already has more child nodes than the maximum allowed</li>
+		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Max
+			Depth - the response was not parsed because it passed the maximum depth allowed</li>
+		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Max
+			Size - the response was not parsed because its size is not under the maximum allowed</li>
+		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Not
+			Text - the response was not parsed because it's not text, for example, an image</li>
+		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Spider
+			Stopped - the response was not fetched or parsed because the spider was already stopped</li>
+	</ul>
 
 	<h2>Véase también</h2>
 	<table>
@@ -62,7 +77,7 @@ recibió, además, es el indicado, en la columna <code>Procesado</code>, ya sea 
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../start/concepts/spider.html">Spider</a></td>
+			<td><a href="../../start/features/spider.html">Spider</a></td>
 			<td>para una visión general de la Araña</td>
 		</tr>
 		<tr>

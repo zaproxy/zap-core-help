@@ -9,49 +9,51 @@
 
 <index version="2.0">
 
-    <indexitem text="active scan" target="start.concepts.ascan" />
+    <indexitem text="active scan" target="start.features.ascan" />
     <indexitem text="active scan dialog" target="ui.dialogs.advascan" />
     <indexitem text="active scan tab" target="ui.tabs.ascan"/>
-    <indexitem text="add-ons" target="start.concepts.addons"/>
-    <indexitem text="add-ons" target="addon.introduction"/>
+    <indexitem text="add-ons" target="start.features.addons"/>
+    <indexitem text="add-ons" target="addons.introduction"/>
     <indexitem text="add alert dialog" target="ui.dialogs.addalert" />
-    <indexitem text="add break point dialog" target="ui.dialogs.addbreak" />
+    <indexitem text="add/edit breakpoint dialog" target="ui.dialogs.addbreak" />
     <indexitem text="add note dialog" target="ui.dialogs.addnote" />
     <indexitem text="alerts tab" target="ui.tabs.alerts" />
-    <indexitem text="alerts" target="start.concepts.alerts" />
-    <indexitem text="api" target="start.concepts.api" />
-    <indexitem text="authentication auth form-based manual login" target="start.concepts.auth" />
+    <indexitem text="alerts" target="start.features.alerts" />
+    <indexitem text="api" target="start.features.api" />
+    <indexitem text="authentication auth form-based manual login" target="start.features.auth" />
+    <indexitem text="authentication methods" target="start.features.authmethods" />
+    <indexitem text="authentication verification strategies" target="start.features.authstrategies" />
     <indexitem text="basic penetration test" target="start.pentest" />
-    <indexitem text="break points tab" target="ui.tabs.breakpoints" />
-    <indexitem text="break points" target="start.concepts.breakpoints" /> 
+    <indexitem text="breakpoints tab" target="ui.tabs.breakpoints" />
+    <indexitem text="breakpoints" target="start.features.breakpoints" /> 
     <indexitem text="break tab" target="ui.tabs.break" />
+    <indexitem text="callbacks tab" target="ui.tabs.callbacks" />
     <indexitem text="command line" target="cmdline" />
-    <indexitem text="contexts" target="start.concepts.contexts" />
+    <indexitem text="contexts" target="start.features.contexts" />
     <indexitem text="credits" target="zap.credits" />
-    <indexitem text="data driven content" target="start.concepts.ddc" />
+    <indexitem text="custompages" target="start.features.custompages" /> 
+    <indexitem text="data driven content" target="start.features.ddc" />
     <indexitem text="dialogs" target="ui.dialogs" />
-    <indexitem text="encode / decode / hash dialog" target="ui.dialogs.enc_dec" />
-    <indexitem text="features" target="start.concepts" />
-    <indexitem text="filter dialog" target="ui.dialogs.filter" />
-    <indexitem text="filters" target="start.concepts.filters" />
+    <indexitem text="features" target="start.features" />
     <indexitem text="find dialog" target="ui.dialogs.find" />
     <indexitem text="footer" target="ui.footer" />
     <indexitem text="getting started" target="start.start" />
     <indexitem text="history filter dialog" target="ui.dialogs.historyfilter" />
     <indexitem text="history tab" target="ui.tabs.history" />
     <indexitem text="http sessions tab" target="ui.tabs.httpsessions" />
-    <indexitem text="http sessions" target="start.concepts.httpsessions" />
-    <indexitem text="man-in-the-middle proxy" target="start.concepts.intercept"/>
+    <indexitem text="http sessions" target="start.features.httpsessions" />
+    <indexitem text="manipulator-in-the-middle proxy" target="start.features.intercept"/>
     <indexitem text="introduction" target="zap.intro" />
     <indexitem text="manage tabs dialog" target="ui.dialogs.managetags" />
     <indexitem text="manual request dialog" target="ui.dialogs.manreq" />
-    <indexitem text="modes" target="start.concepts.modes" />
-    <indexitem text="notes" target="start.concepts.notes" />
+    <indexitem text="marketplace" target="start.features.marketplace" />
+    <indexitem text="modes" target="start.features.modes" />
+    <indexitem text="notes" target="start.features.notes" />
     <indexitem text="options dialog" target="ui.dialogs.options" />
     <indexitem text="output tab" target="ui.tabs.output" />
     <indexitem text="params tab" target="ui.tabs.params" />
     <indexitem text="paros proxy" target="zap.paros" />
-    <indexitem text="passive scan" target="start.concepts.pscan" />
+    <indexitem text="passive scan" target="start.features.pscan" />
     <indexitem text="passive scanner options" target="ui.dialogs.options.pscan.main" />
     <indexitem text="persist session dialog" target="ui.dialogs.persistsession" />
     <indexitem text="proxy configuration" target="start.proxy" />
@@ -79,28 +81,32 @@
     <indexitem text="release 2.5.0" target="zap.releases.2.5.0" />
     <indexitem text="release 2.6.0" target="zap.releases.2.6.0" />
     <indexitem text="release 2.7.0" target="zap.releases.2.7.0" />
+    <indexitem text="release 2.8.0" target="zap.releases.2.8.0" />
+    <indexitem text="release 2.9.0" target="zap.releases.2.9.0" />
+    <indexitem text="release 2.10.0" target="zap.releases.2.10.0" />
     <indexitem text="releases" target="zap.releases" />
     <indexitem text="request tab" target="ui.tabs.request" />
-    <indexitem text="resend dialog" target="ui.dialogs.resend" />
     <indexitem text="response tab" target="ui.tabs.response" />
     <indexitem text="scanner rules" target="start.check" />
-    <indexitem text="scan policy" target="start.concepts.scanpolicy" />
+    <indexitem text="scan policy" target="start.features.scanpolicy" />
     <indexitem text="scan policy dialog" target="ui.dialogs.scanpolicy" />
     <indexitem text="scan policy manager dialog" target="ui.dialogs.scanpolicymgr" />
     <indexitem text="scan progress dialog" target="ui.dialogs.scanprogress" />
+    <indexitem text="scripts" target="start.features.scripts" />
     <indexitem text="search tab" target="ui.tabs.search" />
     <indexitem text="session context screens" target="ui.dialogs.contexts" />
     <indexitem text="session context authentication screen" target="ui.dialogs.context-auth" />
     <indexitem text="session context structure screen" target="ui.dialogs.context-struct" />
     <indexitem text="session properties dialog" target="ui.dialogs.sessprop" />
     <indexitem text="sites tab" target="ui.tabs.sites" />
-    <indexitem text="spider" target="start.concepts.spider" />
+    <indexitem text="sites tree" target="start.features.sitestree" />
+    <indexitem text="spider" target="start.features.spider" />
     <indexitem text="spider dialog" target="ui.dialogs.spider" />
     <indexitem text="spider tab" target="ui.tabs.spider" />
-    <indexitem text="statistics" target="start.concepts.stats" />
-    <indexitem text="structural modifiers" target="start.concepts.structmods" />
-    <indexitem text="structural parameters" target="start.concepts.structparams" />
-    <indexitem text="tags" target="start.concepts.tags" />
+    <indexitem text="statistics" target="start.features.stats" />
+    <indexitem text="structural modifiers" target="start.features.structmods" />
+    <indexitem text="structural parameters" target="start.features.structparams" />
+    <indexitem text="tags" target="start.features.tags" />
     <indexitem text="top level menu" target="ui.topmenu" />
     <indexitem text="top level toolbar" target="ui.toptoolbar" />
     <indexitem text="ui overview" target="ui.overview" />

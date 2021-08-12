@@ -6,10 +6,10 @@
 Ang mga opsyon ng aktibong iskan input sa mga vector screen
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Opsyon ng aktibong iskan input ng mga vector screen</h1>
 <p>
-Ang screen na ito ay pinapayagan ka na i-configure ang <a href="../../../start/concepts/ascan.html">aktibong iskan</a> ng input ng mga vector.<br>
+Ang screen na ito ay pinapayagan ka na i-configure ang <a href="../../../start/features/ascan.html">aktibong iskan</a> ng input ng mga vector.<br>
 Ito ang mga elemento na ang aktibong iskaner ay umaatake.<br>
 Ang pag-iskan ng lahat ng nagsusuportang mga elemento ay may katagalan, pero ang hindi pagiskan ng ibang elemento ay magiging dahilan ng mga kahinaan ay maaaring pumalya.
 
@@ -18,24 +18,29 @@ Ang mga kahilingan ng mga elemento na ang aktibong iskaner ay ang target:
 
 <h4>Ang URL ng Query String & Data Driven ng mga Node</h4>
 Ang halaga ng mga paris na key sa aplikasyon na URL ng query, ang ie pagkatapos <code>?</code>.<br>
-Kung walang query ng mga parameter kung magkagayon ang isa sa arbitaryo ay maaaring nasubukan na. kung <a href="../../../start/concepts/ddc.html">Ang data ng mga driven node</a> ay liwanagin sa loob ng isang context ito ay maaaring nasubukan na.
+If <a href="../../../start/features/ddc.html">Ang data ng mga driven node</a> ay liwanagin sa loob ng isang context ito ay maaaring nasubukan na.
+
+<h5>Add URL Query Parameter?</h5>
+When selected ZAP will add a query parameter to GET requests which did not originally have one. 
+This may increase scan time, however, it may also reveal issues that would otherwise go un-noticed.
+
 <h4>POST ng data</h4>
-Ang halaga ng mga pares na key sa aplikasyon ng post data.
+Key value pairs in the request POST data.
 
 <h4>Daanan ng URL</h4>
-Ang daanan ng mga elemento sa aplikasyon ng URL, ang ie ng mga elemento ay nakahiwalay sa pamamagitan ng <code>/</code>.
+Path elements in the request URL, ie the elements separated by <code>/</code>.
 
 <h4>Mga header ng HTTP</h4>
-Aplikasyon ng mga Header ng HTTP.
+Request HTTP Headers.
 
-<h5>Lahat ng Aplikasyon</h5>
-Pahintulutan para maiskan ang mga Header ng HTTP para sa lahat ng aplikasyon. Hindi lang mga aplikasyon na ipinadala sa mga parameter. kundi sa pamamagitan ng query o katawan ng aplikasyon.
+<h5>All Requests</h5>
+Allows to scan the HTTP Headers of all requests. Not just requests that send parameters, through the query or request body.
 
 <h4>Cookie ng Data</h4>
-Aplikasyon ng mga cookie.
+Request cookies.
 
 <h3>Build-in Input mga Handler ng Vector</h3>
-Ang mga format ng data na target ng aktibong iskaner:
+The data formats that the active scanner will target:
 
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ang multipart na paraan ng data</td><td></td></tr>
@@ -47,12 +52,15 @@ Ang mga format ng data na target ng aktibong iskaner:
 
 
 <h3>Paganahin ang iskrip input ng mga vector</h3>
-Kung ang opsyon na ito ay napili na kung magkagayon ang aktibong iskaner ay maaaring gamitin ang kahit anong iskrip input ng mga vector.<br>
-Ang iskrip input ng mga vector ay mga iskrip na kung saan mayroon o importante sa ZAP at pinapahintulutan kang i-target ang mga elemento 
-na kung saan ay hindi suportado ng default.
+If this option is selected then the active scanner will use any enabled script input vectors.<br>
+Script input vectors are scripts which you have written or imported into ZAP and allow you to target elements 
+which are not supported by default.
 
 <p>
 Ganoon din ang screen ay pinapahintulutan ka para i-configure ang mga parameter na kung saan ay maaaring baliwalain ng aktibong iskaner.
+<br />
+Refer to <code>Parameter</code> section in <a href="../addalert.html">Add Alert</a> dialogue for more details about the
+parameter names.
 
 <h2>Tignan din</h2>
 <table>

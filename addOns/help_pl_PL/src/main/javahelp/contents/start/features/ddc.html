@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Data Driven Content
+</title>
+</head>
+<body>
+<h1>Data Driven Content</h1>
+<p>
+Data driven content is type of <a href="structmods.html">Structural Modifier</a>
+which identifies URL paths that represent data.<br>
+<p>
+In 'traditional' web applications the structure of the application is typically defined by the URL paths
+and the data is contained in the URL parameters and POST data.<br>
+Adresy URL, takie jak:
+<ul>
+<li>https://www.example.com/app/aaa?ddd=eee
+<li>https://www.example.com/app/aaa?ddd=fff
+<li>https://www.example.com/app/bbb?ddd=eee
+</ul>
+are represented in the <a href="sitestree.html">Sites Tree</a> as two 'nodes' in the tree:
+<ul>
+<li>Strony
+	<ul>
+	<li>https://www.example.com
+		<ul>
+		<li>app
+			<ul>
+			<li>GET:aaa(ddd)
+			<li>GET:bbb(ddd)
+			</ul>
+		</ul>
+	</ul>
+</ul>
+The Sites tree is very important as it reflects ZAP's understanding of the application structure.<br>
+If it is not a good representation of the structure then ZAP will not be able to attack the application effectively.<br>
+<br>
+Some applications include data in URL paths.<br>
+Na przykład: 
+<ul>
+<li>https://www.example.com/app/company1/aaa?ddd=eee
+<li>https://www.example.com/app/company2/aaa?ddd=fff
+<li>https://www.example.com/app/company3/aaa?ddd=ggg
+</ul>
+These 3 URLs represent the same page but with different data, but by default ZAP will represent them as three separate nodes:
+<ul>
+<li>Strony
+	<ul>
+	<li>https://www.example.com
+		<ul>
+		<li>app
+			<ul>
+			<li>company1
+				<ul>
+				<li>GET:aaa(ddd)
+				</ul>
+			<li>company2
+				<ul>
+				<li>GET:aaa(ddd)
+				</ul>
+			<li>company3
+				<ul>
+				<li>GET:aaa(ddd)
+				</ul>
+			</ul>
+		</ul>
+	</ul>
+</ul>
+This is a problem because ZAP will now attack all 3 pages when it only needs to attack one of them.<br>
+In this case attacking the same page 3 times is not a big problem, but if you have hundreds or thousands 
+of pages like this will significantly increase the time it takes to scan the application.<br>
+<br>
+In ZAP terms the 'company' nodes are 'data driven content' - URL path elements that contain
+data instead of representing part of the application structure.<br>
+You can define data driven content by adding the application to a <a href="contexts.html">Context</a>
+and then configuring them via the <a href="../../ui/tabs/sites.html">Sites tab</a> 'Flag as Context -&gt; <i>Context Name</i> Data driven node' right click menu item<br>
+Once you have done this the pages will be correctly represented as 1 node:
+<ul>
+<li>Strony
+	<ul>
+	<li>https://www.example.com
+		<ul>
+		<li>app
+			<ul>
+			<li>&#x00AB;company&#x00BB;
+				<ul>
+				<li>GET:aaa(ddd)
+				</ul>
+			</ul>
+		</ul>
+	</ul>
+</ul>
+The characters &#x00AB; and &#x00BB; are used to indicate that this is a 'special' node and the 
+node name (in this case 'company') can be set by you to indicate what that node represents.
+
+<h2>Accessed via</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/sites.html">Sites tab</a></td><td>'Flag as Context -&gt; <i>Context Name</i> Data driven node' right click menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/history.html">History tab</a></td><td>'Flag as Context -&gt; <i>Context Name</i> Data driven node' right click menu item</td></tr>
+</table>
+
+<h2>Zobacz również</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="features.html">Features</a></td><td>provided by ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="structparams.html">Structural Parameters</a></td><td>which identify parameters that represent application structure instead of user data</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/dialogs/session/context-struct.html">Session Context Structure screen</a></td></tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Versiunea 1.3.0
+</title>
+</head>
+<body>
+<h1>Versiunea 1.3.0</h1>
+<p>
+Următoarele modificări au fost aduse acestei versiuni:
+</p>
+<h2>Schimbări importante:</h2>
+
+<h3>Testarea Fuzz</h3>
+Șiruri dintr-un răspuns pot fi acum testate Fuzz pentru a se încerca descoperirea de vulnerabilități.<br>
+Token-uri anti CRSF pot fi acum detectate și regenerate automat în timpul testării FUZZ.<br/>
+Această funcționalitate este bazată pe cod din proiectul OWASP JBroFuzz.
+
+<h3>Certificatele SSL dinamic</h3>
+Suportul pentru conexiuni SSL a fost îmbunătățit și simplificat.<br>
+Utilizatorii pot acum crea propriu certificat rădăcină iar apoi să-l distribuie în HTTP-ul clienților.<br>
+Vezi <a href="../ui/dialogs/options/dynsslcert.html">Opțiuni: Certificate SSL dinamic</a> pentru mai multe detalii.  
+
+<h3>Modul Daemon și API</h3>
+Lansarea ZAP cu comanda "-daemon" din opțiunea liniei de comenzi va determina rularea în fundal în modul 'headless', însemând că nici o interfață de utilizator nu va fi afișată.<br>
+Un API inițial a fost implementat in XML, JSON și HTML.<br>
+Dacă ZAP rulează ca daemon atunci API-ul va fi activat automat, în caz contrar API-ul trebuie activat din ecranul de Opțiuni API.<br>
+API-ul poate fi navigat prin a deschide http://zap/ în browser cand se face proxy prin intermediul ZAP. 
+
+<h3>Integrarea Beanshell</h3>
+  <a href="http://www.beanshell.org/">BeanShell</a> este un shell Java interactiv care poat fi folosit pentru a executa scripturi BeanShell.<br> 
+Aceste scripturi sunt o formă simplificată de Java care folosește multe elemente din sintaxa Java, dar într-un format mai simplu de scriptare. <br>
+Tot codul Java este, de asemenea, cod valid BeanShell.<br>
+Integrarea BeanShell în OWASP ZAP permite scrierea de script-uri folosind funcțiile și setul de date ZAP.<br> 
+Aceasta poate fi o caracteristică foarte puternică în analiza aplicațiilor web.<br>
+
+
+<h3>Internaționalizare completă</h3>
+Toate șirurile de afișare sunt acum internaționalizate complet.
+
+<h3>Localizare</h3>
+Suport imediat pentru următoarele limbi:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Engleză</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Portugheză Braziliană</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Chineză</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Franceză</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Germană</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Greacă</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Indoneziană</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Japoneză</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Poloneză</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Spaniolă</td></tr>
+</table>
+
+
+<h2>Schimbări minore:</h2>
+
+<h3>Afișare hexagonală</h3>
+Tab-urile pentru <a href="../ui/tabs/request.html">Cereri</a>, <a href="../ui/tabs/response.html">și Răspunsuri</a> oferă acum opțiunea de afișare hexagonală, ce va afișa corpurile cererilor și răspunsurilor în format hexagonal.  
+
+<h3>Rezultatele căutării</h3>
+Tab-ul de <a href="../ui/tabs/search.html">Căutare </a> acum afișează toate instanțele de șiruri găsite, mai degrabă decât doar prima instanță a fiecărei cereri sau fiecărui răspuns. 
+
+<h3>Excludearea URL-urilor</h3>
+URL-uri pot fi acum excluse explicit din scanarea activă, din indexare și din proxy.
+
+<h3>Suport pentru copiere</h3>
+Cele mai multe panouri acum oferă opțiunea de meniu 'copiere' prin click dreapta, incluzând panourile de Portare a Scanării și de Forțare Brută.
+
+<h3>Suport Anulează/Reface</h3>
+Toate câmpurile de introducere oferă acum sprijin prin acțiuni de Anulează/Reface folosind acceleratoarele implicite Anulează/Reface a sistemului de operare:
+<ul>
+<li>Windows/Linux: Ctrl+Z / Ctrl+Y
+<li>Mac OS X: Cmd+Z / Cmd+Shift+Z
+</ul>
+
+<h3>Suportul pentru proxy-ul portării de scanare și opțiunea de pauză</h3>
+Scanerul de portare poate să folosească acum proxy-ul de ieșire( în cazul în care acesta este configurat) și pauză în milisecunde poate fi acum configurată.
+
+<h3>Butoanele pentru cerere și rupere a răspunsului</h3>
+Acum există două butoane de 'Setare a Ruperii' care permit stabilirea de pauze pentru toate cererile și răspunsurile în mod independent. 
+
+<h3>Butoanele pentru a extinde tab-urile site-uri și informație</h3>
+Acum există două butoane care permit comutarea între a extinde tab-urile de Site-uri sau Informație.
+
+<h3>Break tab icon changes colour when breakpoint hit</h3>
+În timp ce tab-ul de Rupere nu este folosit, pictograma acestuia este o cruce gri &nbsp;
+<img src="../images/16/101grey.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
+Când un <a href="../start/features/breakpoints.html">breakpoint</a> este atins, pictograma își schimă culoarea într-o cruce roșie: &nbsp;
+<img src="../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
+
+<h3>Pauză reglabilă</h3>
+Ecranul <a href="../ui/dialogs/options/connection.html">Opțiuni: Conexiuni</a> permite setarea de pauze în secunde pentru a simplifica testarea de aplicații încete.
+
+<h3>Update-uri ale librariei</h3>
+Cele mai multe librării folosite de ZAP au fost updatate la cele mai noi versiuni.
+
+<h3>O pictogramă nouă :)</h3>
+Mulțumiri către Simon Egli și toți ceilalți pentru sugestiile de pictograme minunate.
+
+<h2>Probleme cunoscute:</h2>
+<h3>Mac OS X: SSL dinamic și Google Chrome</h3>
+SSL-ul dinamic curent nu merge când este folosit Google Chrome. Acest lucru este din cauza unei probleme știute și nerezolvată a Google Chrome și Keychain-urilor Mac OS X. În momentul importării Rădăcinii CA a OWASP ZAP în keychain și cererea unui website SSL, un mesaj de eroare este afișat "Certificat invalid”.
+
+<h2>Consultă și</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Introducere</a></td><td>introducerea in ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Lansări</a></td><td>setul complet de lansări</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Contribuții</a></td><td>oamenii și grupurile care au făcut posibilă această lansare</td></tr>
+</table>
+</body>
+</html>

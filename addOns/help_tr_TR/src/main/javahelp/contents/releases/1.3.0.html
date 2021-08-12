@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Sürüm 1.3.0
+</title>
+</head>
+<body>
+<h1>Sürüm 1.3.0</h1>
+<p>
+Bu sürümde aşağıdaki değişiklikler yapılmıştır:
+</p>
+<h2>Önemli değişiklikler:</h2>
+
+<h3>Bulandırmak</h3>
+Güvenlik açıklarını bulmak için dizeler cevap olarak şimdi sıkıştırılabilir.<br>
+Anti CSRF belirteçleri, fuzzing sırasında algılanabilir ve otomatik olarak yeniden oluşturulabilir.<br/>
+Bu işlevsellik OWASP JBroFuzz projesinin koduna dayanır.
+
+<h3>Dinamik SSL sertifikaları</h3>
+SSL bağlantıları için destek geliştirildi ve basitleştirildi.<br>
+Kullanıcılar artık kendi kök sertifikasını oluşturabilir ve bunu HTTP istemcilerine dağıtabilir.<br>
+Bak <a href="../ui/dialogs/options/dynsslcert.html">Seçenekler: Dinamik SSL Sertifikaları</a> daha fazla ayrıntı için.  
+
+<h3>Daemon modu ve API</h3>
+ZAP'yi "-daemon" komut satırı seçeneğiyle başlatmak, arka planda 'headless' modunda çalışmasına neden olur,
+yani herhangi bir kullanıcı arayüzü görüntülenmez.<br>
+Başlangıç API'si, XML, JSON ve HTML üzerinde uygulanmıştır.<br>
+ZAP bir daemon olarak çalışıyorsa, API otomatik olarak etkinleştirilir, aksi takdirde API, hiçbir Seçenek Ekranı görüntülenmediğini belirten Seçenekler API'sı ekranı aracılığıyla etkinleştirilmelidir.<br>
+API, ZAP üzerinden proxy yaparken tarayıcınızda http: // zap / 'ı açarak gezinebilirsiniz. 
+
+<h3>Beanshell entegrasyonu</h3>
+The <a href="http://www.beanshell.org/">BeanShell</a> beanShell komut dosyalarını yürütmek için kullanılabilen interaktif bir Java kabuğu.<br> 
+Bu komut dosyaları Java dilinden birçok öğe kullanan basitleştirilmiş bir Java formudur, ama daha basit bir komut dosyası biçimindedir. <br>
+Tüm Java kodlarında geçerli BeanShell kodudur.<br>
+OWASP ZAP BeanShell uyumu, ZAP fonksiyonlarını ve veri setini kullanarak komut yazabilmenizi sağlar.<br> 
+Web uygulamaları analizi için çok güçlü bir özellik olabilir.<br>
+
+
+<h3>Tamamen uluslararası hale gelme</h3>
+Tüm görüntü dizisi şimdi tamamen uluslararası halde.
+
+<h3>Yerelleştirme</h3>
+Aşağıdaki diller paket desteği dışında:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>İngilizce</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Brezilya Portekizcesi</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Çince</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Fransızca</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Almanca</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Yunanca</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Endonezya dili</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Japonca</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Polonya dili</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>İspanyolca</td></tr>
+</table>
+
+
+<h2>Küçük değişiklikler:</h2>
+
+<h3>Altı köşeli görüntü</h3>
+The <a href="../ui/tabs/request.html">Talep</a>, <a href="../ui/tabs/response.html">Yanıt</a> sekmeler şimdi istek ve cevap gövdelerini hex formatında görüntülemeye olanak sağlayan bir 'Hex View' seçeneği sağlarlar. 
+
+<h3>Arama sonuçları</h3>
+The <a href="../ui/tabs/search.html">Arama sekmesi </a> şimdi tüm isteklerde veya cevaplarda sadece ilk örneği değil, bulunan dizenin tüm örneklerini görüntüler. 
+
+<h3>URL'ler Dahil değil</h3>
+URL'ler aktif tarayıcı, örümcek ve proxy'den açıkça hariç tutulabilir.
+
+<h3>Kopya desteği</h3>
+Panellerin çoğu artık Port Scan ve Brute Force panelleri de dahil olmak üzere bir 'sağ tıklama' 'Kopyala' menü seçeneğini sunuyor.
+
+<h3>Geri alma/Tekrarlama destek</h3>
+Tüm giriş alanları işletim sistemindeki varsayılan Geri alma/Tekrarlama hızlandırıcılarını kullanarak Geri alma/Tekrarklama eylemlerini desteklemektedir:
+<ul>
+<li>Windows/Linux: Ctrl+Z / Ctrl+Y
+<li>Mac OS X: Cmd+Z / Cmd+Shift+Z
+</ul>
+
+<h3>Veri kanalı tarayıcı proxy desteği ve zaman aşımı seçeneği</h3>
+Artık Veri kanalı Tarayıcı giden proxy'yi (yapılandırılmışsa) kullanabilir ve milisaniye cinsinden zaman aşımı da ayarlanabilir.
+
+<h3>İstek ve cevap durdurma düğmeleri</h3>
+Artık tüm taleplerde ve tüm cevaplarda bağımsız olarak izin verilmesi için 2 'Set Break' tuşu var. 
+
+<h3>Siteler ve bilgileri genişletmek için sekme butonları</h3>
+Artık Siteler ve Bilgi sekmelerinin genişletilmesi arasında geçiş yapmanıza izin veren 2 düğme var.
+
+<h3>Break tab icon changes colour when breakpoint hit</h3>
+Break sekmesi kullanılmıyorken, simgesi gri bir çizgi şeklindedir: &nbsp;
+<img src="../images/16/101grey.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
+Ne zaman bir <a href="../start/features/breakpoints.html">breakpoint</a> vurulduğunda sekme simgesi kırmızı çarpıya dönüşür: & nbsp;
+<img src="../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
+
+<h3>Ayarlanabilen zaman aşımı</h3>
+The <a href="../ui/dialogs/options/connection.html">Seçenek: Bağlantı</a> yavaş uygulamaların testini kolaylayştırmak için ekranda saniye cinsinden zaman aşımını ayarlamanıza olanak verir.
+
+<h3>Kütüphane güncellemeleri</h3>
+ZAP tarafından kullanılan kitaplıkların çoğu son sürümlerine güncellendi.
+
+<h3>Yeni bir simge :)</h3>
+Simon Egli ve tüm kullanıcılara havalı ikon önerileri için teşekkürler.
+
+<h2>Bilinen hatalar:</h2>
+<h3>Mac OS X: Dinamik SSL ve Google Chrome</h3>
+Google Chrome kullanırken şuan Dinamik SSL çalışmıyor. Sebebi Google Chrome ve Mac OSX anahtar zincirinde çözümlenmemiş bir hata olmasıdır. OWASP ZAP'ın Kök CA'sını anahtarlığa içe aktarırken ve bir SSL web sitesi talep ederken, "Geçersiz sertifika" hata iletisi gösterilir.
+
+<h2>Ayrıca bakınız</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Tanıtım</a></td><td>ZAP'e giriş</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Sürümler</a></td><td>sürümlerin tam seti</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Jenerik</a></td><td>bu serbest bırakmayı meydana getiren insanlar ve gruplar</td></tr>
+</table>
+</body>
+</html>

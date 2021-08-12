@@ -3,19 +3,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Options API screen
+API选项屏幕
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>API选项屏幕</h1>
 <p>
-此屏幕允许您配置 <a href="../../../start/concepts/api.html">API</a> 选项：
+此屏幕允许您配置 <a href="../../../start/features/api.html">API</a> 选项：
 
 <h3>启用</h3>
 
 如果启用，则API可用于所有能够使用ZAP作为代理的计算机。<br/>
 
-<h3>启用的UI</h3>
+<h3>Web UI Enabled</h3>
 
 如果启用，则API Web UI可用于所有能够使用ZAP作为代理的计算机。
 要访问API Web UI，请将浏览器指向ZAP正在监听的主机和端口。<br/>
@@ -48,34 +48,34 @@ API密钥用于防止恶意网站访问ZAP API。<br/>
 但是这样的操作可以访问ZAP数据，如警报，消息和文件系统路径。  
 Web应用程序也可以使用它们来检测ZAP的存在。
 
-<h3>Report permission errors via API</h3>
+<h3>通过API报告权限错误</h3>
 
-If enabled then ZAP will report permission errors via the API, which can be used by web applications to detect the presence of ZAP.
-This is not a serious problem in a safe environment but if you are using ZAP against potentially malicious sites then you should not enable it.
+如果启用，则ZAP将通过API报告权限错误，Web应用程序可以使用该API来检测ZAP的存在。
+这在安全的环境中并不是一个严重的问题，但是如果您使用ZAP来对付潜在的恶意网站，那么您不应该启用它。
 
-<h3>Report error details via API</h3>
+<h3>通过API报告错误详情</h3>
 
-If this option is selected then more error details are returned via the API.<br/>
-This is not recommended except for debugging purposes as these error messages can leak information to malicious sites.<br/>
-Note that the full error details are always written to the ZAP log file. 
+如果选择此选项，则可以通过API返回更多错误详细信息。<br/>
+除了调试目的外，建议不要这样做，因为这些错误详细信息可能会将信息泄露给恶意网站。<br/>
+请注意，完整的错误详细信息总是被写入ZAP日志文件中。 
 
-<h3>Autofill API key in the API UI</h3>
+<h3>在API UI中的自动填充API密钥</h3>
 
-If this option is selected then the API key is automatically included in the API UI.<br/>
-This is not recommended unless you are using ZAP in a completely isolated environment, as it allows malicious sites to access the ZAP API Key.<br/>
+如果选择此选项，则API密钥将自动包含在API UI中。<br/>
+除非您在完全隔离的环境中使用ZAP，否则不建议这样做，因为它允许恶意网站访问ZAP API的密钥。<br/>
 
-<h3>Enable JSONP</h3>
+<h3>启用 JSONP</h3>
 
-Selecting this option enables the JSONP format.<br/>
-This can be useful for some applications, but it is generally not recommended as it increases the ZAP attack surface area, ie the features that a malicious site can abuse.<br/>
-If JSONP is enabled then all API operations using JSONP (including views) will require the API key to prevent malicious sites from accessing sensitive information maintained by ZAP, such as session keys. 
+选择此选项将启用JSONP格式。<br/>
+这对于某些应用程序非常有用，但通常不推荐使用它，因为它会增加ZAP攻击面的区域，这是恶意网站可能会滥用的功能。<br/>
+如果启用了JSONP，那么使用JSONP（包括视图）的所有API操作都需要API密钥来防止恶意网站访问通过ZAP维护的敏感信息，例如会话密钥。 
 
-<h2>See also</h2>
+<h2>另请参阅</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../overview.html">UI综览</a></td><td>有关用户界面的概述</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+<a href="options.html">选项对话框</a></td><td>有关其他选项对话框屏幕的详细信息</td></tr>
 </table>
 
 </body>

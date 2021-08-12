@@ -6,16 +6,16 @@
 Pilihan layar apl
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Pilihan layar API</h1>
 <p>
-Layar ini memungkinkan anda untuk mengkonfigurasi <a href="../../../start/concepts/api.html">API</a> pilihan:
+Layar ini memungkinkan anda untuk mengkonfigurasi <a href="../../../start/features/api.html">API</a> pilihan:
 
 <h3>Aktifkan</h3>
 
 Jika itu diaktifkan maka API tersedia untuk semua mesin yang dapat menggunakan ZAP sebagai proxy.<br/>
 
-<h3>UI diaktifkan</h3>
+<h3>Web UI Enabled</h3>
 
 Jika diaktifkan maka UI Web API tersedia untuk semua mesin yang mampu menggunakan ZAP sebagai proxy. Untuk mengakses UI Web API arahkan browser anda ke host dan port yang sedang didengarkan ZAP.<br/>
 
@@ -33,7 +33,7 @@ Sangat disarankan agar anda menetapkan kunci kecuali jika anda menggunakan ZAP d
 
 Secara default hanya mesin ZAP yang sedang berjalan yang mampu mengakses API ZAP.<br/>
 Anda dapat mengizinkan mesin lain untuk mengakses API dengan menambahkan pola regex yang sesuai.<br/>
-Anda hanya perlu menambahkan alamat ip yang anda percaya.<br/>
+Anda hanya perlu menambahkan alamat IP yang anda percayai.<br/>
 Perhatikan bahwa API ZAP juga sekarang memeriksa header host, jadi itu juga harus menjadi salah satu alamat yang diizinkan.
 
 <h3>Nonaktifkan Kunci API</h3>
@@ -65,7 +65,7 @@ Ini tidak direkomendasikan kecuali jika anda menggunakan ZAP di lingkungan yang 
 
 <h3>Aktifkan JSONP</h3>
 
-Memilih pilihan ini memungkinkan format JSONP.<br/>
+Memilih pilihan ini mengaktifkan format JSONP.<br/>
 Ini dapat berguna untuk beberapa aplikasi, tapi secara umum tidak disarankan karena akan meningkatkan daerah permukaan serangan ZAP, yaitu fitur yang dapat disalahgunakan oleh situs yang jahat.<br/>
 Jika JSONP itu diaktifkan maka semua operasi API yang menggunakan JSONP (termasuk tampilan) akan membutuhkan kunci API untuk mencegah situs berbahaya yang mengakses informasi sensitif yang dikelola oleh ZAP, seperti kunci sesi. 
 

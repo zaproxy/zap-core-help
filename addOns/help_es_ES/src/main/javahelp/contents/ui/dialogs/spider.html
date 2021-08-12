@@ -6,23 +6,23 @@
 Spider dialog
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Cuadro de diálogo Rastreador</h1>
 <p>
-Este cuadro de diálogo abre el <a href="../../start/concepts/spider.html">rastreador</a>.<br>
+Este cuadro de diálogo abre el <a href="../../start/features/spider.html">rastreador</a>.<br>
   
 <h2>Ámbito</h2>
 La primera pestaña permite seleccionar o cambiar el punto de partida.<br>
-Si el punto de partida está es uno o mas <a href="../../start/concepts/contexts.html">Contextos</a> será capaz de seleccionar uno de ellos.<br>
-Si el contexto tiene cualquier <a href="../../start/concepts/users.html">Usuario</a> definido será capaz de seleccionar uno de ellos.<br>
+Si el punto de partida está es uno o mas <a href="../../start/features/contexts.html">Contextos</a> será capaz de seleccionar uno de ellos.<br>
+Si el contexto tiene cualquier <a href="../../start/features/users.html">Usuario</a> definido será capaz de seleccionar uno de ellos.<br>
 Si se selecciona uno de los usuarios, el rastreador se realizará como ese usuario, con ZAP reautenticando como ese usuario siempre que sea necesario.
 <br><br>
-Si se selecciona "recurse" todos los nodos debajo del seleccionado serán también utilizados para esparcir el rastreador.
+If you select 'Recurse' then all of the nodes underneath the one selected will also be used to seed the spider.
 <br><br>
 Si se selecciona "Solo subárbol del Rastreador" el rastreador solo accederá a los recursos que estén bajo el punto de partida (URI).
 Cuando se evalúa si un recurso se encuentra dentro del subárbol, el rastreador considera solo los componentes esquema, host, port y ruta del URI.
 <br><br>
-Si se selecciona "Mostrar opciones avanzadas" la siguiente pestaña se mostrará, la cual proporciona un control detallado sobre el proceso del rastreador.
+If you select 'Show Advanced Options' then the following tab will be shown which provide fine grain control over the spider process.
 <br><br>
 Al hacer clic en el botón "Reiniciar" se reiniciarán todas las opciones a su valor por defecto. 
 

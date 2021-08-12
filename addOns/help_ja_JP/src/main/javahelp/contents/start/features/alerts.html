@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+アラート
+</title>
+</head>
+<body>
+<h1>アラート</h1>
+<p>
+アラートは、潜在的な脆弱性と、特定のリクエストに関連付けられています。 <br/>リクエストは1 つ以上のアラートを持つことができます。<br/>
+</p>
+<p>
+アラートはリスクを示すフラグを UI 上に表示します:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/071.png" align="bottom" width="16" height="16" />&nbsp; High</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/076.png" align="bottom" width="16" height="16" />&nbsp; Medium</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/074.png" align="bottom" width="16" height="16" />&nbsp; Low</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/073.png" align="bottom" width="16" height="16" />&nbsp; Informational</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/072.png" align="bottom" width="16" height="16" />&nbsp; False Positive（誤った警告）</td><td></td></tr>
+</table>
+
+<p>
+アラートは、<a href="ascan.html">アクティブスキャン</a>、<a href="pscan.html">パッシブスキャン</a>、スクリプト、拡張アドオン、または<a href="../../ui/dialogs/addalert.html">「アラートの追加」ダイアログ</a>を使用して手動で作成するなど、さまざまなZAPコンポーネントによって生成されます。
+「アラートの追加」ダイアログを使用して、アラートの詳細/情報を更新または変更することもできます。
+</p>
+<p>
+アラートは<a href="../../ui/tabs/history.html">履歴タブ</a>の中に最もリスクとなるアラートを示します。<br/>全てのアラートは<a href="../../ui/tabs/alerts.html">アラートタブ</a>に列挙され、そのリスクの総数は<a href="../../ui/footer.html">フッター</a>にカウントされます。.
+</p>
+
+<a name="alertoverrides"></a><h2>アラートの上書き</h2> 
+
+ZAPによって生成されたアラートには、発生したアラートに関する一般的な情報と特定の情報の両方が含まれます。
+特定の情報は、URLや影響を受けるパラメータなど、潜在的に見つかった問題に直接関連しています。
+一般的な情報には、説明や関連するオンラインリソースへのリンクなどが含まれます。
+<p>
+「alert override 構成ファイル」を使用して、一般的な情報を置換または追加することができます。
+これにより、義務付けられたポリシー、内部リンク、または使用する特定のテクノロジのアドバイスなど、会社固有の情報を含めることができます。
+<p>
+「alert override」設定ファイルは、変更したい情報だけを含むUTF-8形式のファイルです。
+'#'で始まる行はコメントとして扱われ、無視されます。
+<p>
+フォーマットは以下要領です。
+<pre>
+&lt;alertid&gt;.&lt;property&gt; = [ + | - ] &lt;your information&gt;
+</pre>
+以下プロパティーがあります。
+<ul>
+<li>name</li>
+<li>description</li>
+<li>solution</li>
+<li>otherInfo</li>
+<li>reference</li>
+</ul>  
+
+例
+<pre>
+# 40012 = Reflected XSS
+40012.solution = Follow our company specific guidelines at http://internet.example.com/xss.html
+</pre>
+値が「+」で始まる場合は、既存の情報に追加されます。
+<br>
+' - 'で始まる場合は、既存の情報の前に付加されます。
+<br>
+'+'または ' - 'で始まらなければ、既存の情報を置き換えます。
+<p>
+アラートオーバーライド設定ファイルは、APIで指定できます。 <a href="api.html">　指定方法は次の通り、</a>,
+<a href="../../ui/dialogs/options/alert.html">アラート画面のオプション</a>
+または <a href="../../cmdline.html">コマンドライン</a> オプション  
+<pre>-config alert.overridesFilename=&lt;filename&gt;</pre>
+
+<h2>関連情報</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/overview.html">UIの概要</a></td><td>ユーザーインターフェイスの概要について</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="features.html">特徴</a></td><td>ZAPで提供されるもの</td></tr>
+</table>
+
+</body>
+</html>

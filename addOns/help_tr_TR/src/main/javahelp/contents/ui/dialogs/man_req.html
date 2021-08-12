@@ -6,10 +6,11 @@
 Manuel İstek Düzenleyici iletişim kutusu
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Manuel İstek Düzenleyici iletişim kutusu</h1>
 
-Bu iletişim kutusu, belirtilen hedefe gönderilecek bir sıfırdan istek oluşturmanıza olanak tanır.
+This dialog allows you to create a request from scratch which will be submitted to the specified target,
+or resend an existing request after making any changes to it that you want to.
 
 <h2>Sekmesini isteyin</h2>
 
@@ -28,45 +29,57 @@ Bu, ekranı, başlık ve gövde için ayrı bölmeler kullanılacak şekilde de�
 <h3><img src="../../images/view_all.png" align="bottom" width="16" height="16" />&nbsp; Başlık ve gövde için kombine ekran</h3>
 Bu, ekranı değiştirerek başlık ve gövde bir bölmede gösterilir.<br> 
 
-<h3><img src="../../images/fugue/cookie.png" align="bottom" width="16" height="16" />&nbsp; Geçerli izleme oturumunu kullan</h3>
-Bkz. 'Oturum izlemeyi etkinleştir (Çerez)' menü öğesi <a href="../tlmenu/edit.html">Düzen menüsü</a>.<br>  
+<h3><img src="../../images/fugue/globe-green.png" align="bottom" width="16" height="16" />&nbsp; Geçerli izleme oturumunu kullan</h3>
+See the 'Enable (Global) HTTP State' option in the <a href="./options/connection.html">Options Connection screen</a>.<br>
 
-<h3><img src="../../images/16/118.png" align="bottom" width="16" height="16" />&nbsp; Yönlendirmeyi izle</h3>
-Seçilirse, tarayıcıya gönderilen yönlendirmeleri otomatik olarak takip eder.<br> 
+<h3><img src="../../images/fugue/cookie.png" align="bottom" width="16" height="16" />&nbsp; Accept cookies</h3>
+This option controls whether encountered cookies should be added to subsequent requests. 
+For example if a request is sent that results in a response with Set-Cookie header(s) should those cookies values be added to subsequent 
+send attempts from the Manual Request dialog?<br>
 
-<h3><img src="../../images/layout_tabbed.png" align="bottom" width="16" height="16" />&nbsp; İstek ve Yanıt sekmeleri yan yana</h3>
-Bu, isteği ve yanıt sekmelerinin yan yana olmasını sağlamak için ekranı değiştirir.<br> 
-Bu, görüntülenebilen bilgileri artırır, ancak aynı anda hem talebi hem de yanıtı görememeniz anlamına gelir.
+<h3><img src="../../images/16/118.png" align="bottom" width="16" height="16" />&nbsp; Follow redirect</h3>
+If selected automatically follows any redirects sent to the browser.<br>
 
-<h3><img src="../../images/layout_vertical_split.png" align="bottom" width="16" height="16" />&nbsp; Yukarıdaki istek yanıt</h3>
-Bu, talep paneli yanıt panelinin üstünde gösterilecek şekilde ekranı değiştirir.<br> 
-Bu, görüntülenecek bilgileri azaltır, ancak hem istek hem de yanıtı aynı anda görebilirsiniz.
+<h3><img src="../../images/fugue/application-resize.png" align="bottom" width="16" height="16" />&nbsp; Update Content Length</h3>
+By default ZAP will automatically update (or add) the Content-Length header to match the size of the data submitted. 
+If this option is unselected then ZAP will not update the header allowing you to specify any value you like.<br>
 
-<h3><img src="../../images/layout_horizontal_split.png" align="bottom" width="16" height="16" />&nbsp; İstek ve Yanıt bölgeleri yan yana</h3>
-Bu, talep panelinin yanıt panelinin solunda gösterileceği şekilde ekranı değiştirir.<br> 
-Bu, görüntülenecek bilgileri azaltır, ancak hem istek hem de yanıtı aynı anda görebilirsiniz.
+<h3><img src="../../images/csrf-button.png" align="bottom" width="16" height="16" />&nbsp; Regenerate Anti-CSRF</h3>
+If selected automatically regenerates Anti-CSRF tokens if any exist.
+Currently only supported in the message body and requires that the Anti-CSRF extension is enabled.<br>
+
+<h3><img src="../../images/layout_tabbed.png" align="bottom" width="16" height="16" />&nbsp; Request and Response tabs side by side</h3>
+This changes the display so that the request and response tabs are side by side.<br> 
+This increases the information that can be displayed but means you cannot see both the request and response at the same time.
+
+<h3><img src="../../images/layout_vertical_split.png" align="bottom" width="16" height="16" />&nbsp; Request shown above Response</h3>
+This changes the display so that the request panel is shown above the response panel.<br> 
+This decreases the information that can be displayed but means you can see both the request and response at the same time.
+
+<h3><img src="../../images/layout_horizontal_split.png" align="bottom" width="16" height="16" />&nbsp; Request and Response panels side by side</h3>
+This changes the display so that the request panel is shown to the left of the response panel.<br> 
+This decreases the information that can be displayed but means you can see both the request and response at the same time.
 
 <h2>Yanıt sekmesi</h2>
 
-Bu, seçtiğiniz seçeneklere bağlı olarak bir veya iki panoda gönderdiğiniz isteğine yanıt olarak tarayıcınıza gönderilen verileri gösterir.<br/><br/>
+This shows the data sent to your browser in response to the request that you submitted, either in one or two panels depending on the options chosen.<br/><br/>
 
-Çekme işlemleri farklı seçim yapmanızı sağlar <a href="../views.html">Görünümler</a> yanıt başlığı ve gövdesi için.
+Pull downs allow you to select different <a href="../views.html">Görünümler</a> for the Response header and body.
 
 <h2>Sağ tıklama menüsü</h2>
-Sağ tıklatarak aşağıdakileri yapmanızı sağlayacak bir menü getirir:
+Right clicking will bring up a menu which will allow you to:
 
-<h3>Bul...</h3>
-Bu yükseltecek <a href="../dialogs/find.html">Diyaloğu Bul</a>.
+<h3>Find...</h3>
+This will bring up the <a href="../dialogs/find.html">Diyaloğu Bul</a>.
 
-<h3>Şifre/Deşifre...
-</h3>
-Bu şunu öne çıkarır <a href="../dialogs/enc_dec.html">Kodlama/Kod Çözme iletişim kutusu</a>.<br/>
-Metni vurguladıysanız, bu otomatik olarak iletişim kutusuna eklenecektir.
- 
 <h2>Üzerinden erişildi</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../tlmenu/tools.html">Yukarı seviye Araçlar menüsü</a></td><td>'Elle İstem Düzenleyici ...' menü öğesi</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../tabs/sites.html">Sites tab</a></td><td>'Open/Resend with Request Editor...' right click menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../tabs/history.html">History tab</a></td><td>'Open/Resend with Request Editor...' right click menu item</td></tr>
 </table>
 
 <h2>Ayrıca bakınız</h2>

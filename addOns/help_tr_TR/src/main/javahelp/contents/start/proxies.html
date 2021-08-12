@@ -6,7 +6,7 @@
 Proxy Yapılandırma
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Proxy'leri yapılandırma</h1>
 <p>
 Tarayıcınızı, ZAP sunucusu olarak kullanacak şekilde yapılandırmanız gerekecektir.<br> Varsayılan olarak ZAP, Port of '8080' ve 'localhost' adresini kullanır, bunlar <a href="../ui/dialogs/options/localproxy.html">Seçenekler Yerel Sunucular ekranı</a> aracılığıyla değiştirilebilir. 
@@ -23,36 +23,37 @@ En sık kullanılan tarayıcıların en son sürümleri için talimatlar:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tuşuna basın</td><td> 'LAN Ayarları' tuşu</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Takip et</td><td> 'Windows LAN Ayarları' aşağıdaki bölüm</td></tr>
 </table>
+<strong>Note:</strong> To proxy <code>localhost</code> (and related addresses) with newer Chrome versions (>= 72) the command line argument <code>--proxy-bypass-list=&lt;-loopback&gt;</code> must be provided.
 
 <h3>Firefox (Windows'ta)</h3>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seçin</td><td> 'Araçlar' menüsü </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seçin</td><td> 'Seçenekler..' menüsü öğesi</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tuşuna basın</td><td> 'Gelişmiş' tuşu</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seçin</td><td> 'Ağ' sekmesi</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select the</td><td> 'General' panel</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Scroll to</td><td> 'Network Settings' section</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tuşuna basın</td><td> 'Ayarlar...' düğmesi</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seçin</td><td> 'Manuel proxy yapılandırması' radyo düğmesi</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Girin</td><td> Yapılandırdığınız 'Adres' adresinin 'HTTP Proxy:' alanına girin.
 <a href="../ui/dialogs/options/localproxy.html">Seçenekler Yerel Proksiler ekranı</a></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Girin</td><td> 'HTTP Proxy' alanının sağındaki 'Port' alanı, yapılandırdığınız 'Port'
-<a href="../ui/dialogs/options/localproxy.html">Seçenekler Yerel Proksiler ekranı</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Girin</td><td> 'Port' field to the right of the 'HTTP Proxy' field the 'Port' you configured in the 
+<a href="../ui/dialogs/options/localproxy.html">Options Local Proxies screen</a>. Ensure 'SSL Proxy' is also configured, either by selecting 'Use this proxy server for all protocols' or by setting the corresponding values.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tuşa basın</td><td> Bağlantı Ayarı 'OK' düğmesi</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tuşa basın</td><td> Seçenekler 'Tamam' düğmesi</td></tr>
 </table>
+<strong>Note:</strong> To proxy <code>localhost</code> (and related addresses) with newer Firefox versions (>= 67) the preference <code>network.proxy.allow_hijacking_localhost</code> (accessible through the <code>about:config</code> page) must be set to <code>true</code>.
 
 <h3>Firefox (Linux'ta)</h3>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seçin</td><td>'Düzenle' menüsü</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seçin</td><td>'Tercihler' menü öğesi</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Takip et</td><td>yukarıdaki talimatlar 'Gelişmiş' düğmesinden</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Takip et</td><td>instructions above from the 'General' panel</td></tr>
 </table>
 
 <h3>Firefox (OS X'de)</h3>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seçin</td><td> 'Firefox' menüsü </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seçin</td><td> 'Tercihler...' menü öğesi</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tuşa basın</td><td> 'Gelişmiş' düğmesi</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Takip et</td><td> yukarıdaki talimatlar 'Gelişmiş' düğmesinden</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Follow the</td><td> instructions above from the 'General' panel</td></tr>
 </table>
 
 <h3>Internet Explorer 7 ve 8</h3>

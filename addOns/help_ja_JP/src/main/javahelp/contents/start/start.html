@@ -6,14 +6,17 @@
 はじめに
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>はじめに</h1>
 <p>
-ZAPを始めるのに一番手っ取り早い方法は最初からインストール済みのクイックスタートアドオンを使う事です。<br/>  これはURLを入力する事で初めに<a href="concepts/spider.html">スパイダー検索</a>をしてから<a href="concepts/ascan.html">動的スキャン</a>をする事が出来ます。<br/>  さらに深いテストしたい場合は、ZAP経由でプロキシした状態で、ブラウザもしくは、自動化されたリグレッションテストを用いてアプリケーションを調べた方が良いでしょう。
+The quickest way to get going with ZAP is to use the Quick Start add-on, which is installed by default.<br/>
+This allows you to enter a URL which ZAP will first <a href="features/spider.html">spider</a>
+and then <a href="features/ascan.html">active scan</a>.<br/>
+For a more in depth test you should explore your application using your browser or automated regression tests while proxying through ZAP.
 </p>
 
 <p>
-At its heart ZAP is a <a href="concepts/intercept.html">man-in-the-middle proxy</a>.<br/>
+At its heart ZAP is a <a href="features/intercept.html">manipulator-in-the-middle proxy</a>.<br/>
 To get the most out of ZAP you need to configure your browser or functional tests to connect to the web application you wish to test through ZAP.<br/> 
 If required you can also configure ZAP to connect through another proxy - this is often 
 necessary in a corporate environment.<br/>
@@ -35,7 +38,8 @@ section.
 お使いのブラウザを通して、アプリケーションに正常に接続がされていたら、ZAPをもう一度確認してください。 <a href="../ui/tabs/sites.html">サイト</a> と <a href="../ui/tabs/history.html">履歴</a> タブで 1 つまたは複数の行が表示されるでしょう。<br/>。そうならば、実行されています。 そうでない場合は、プロキシの設定をもう一度確認する必要があります。
 </p>
 <p>
-次に行うことは、<a href="../pentest/pentest.html">基本的なペネトレーションテスト</a>を開始する事です。.<br/>
+The next thing to do is to start a 
+<a href="pentest.html">basic penetration test</a>.<br/>
 </p>
 
 <h2>関連情報</h2>
@@ -45,7 +49,7 @@ section.
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../intro.html">導入</a></td><td>ZAPのご紹介</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="concepts/concepts.html">特徴：</a></td><td>ZAPによって提供されます。</td></tr>
+<a href="features/features.html">特徴：</a></td><td>ZAPによって提供されます。</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="checks.html">スキャナーのルール</a></td><td>既定でサポートされています。</td></tr>
 </table>

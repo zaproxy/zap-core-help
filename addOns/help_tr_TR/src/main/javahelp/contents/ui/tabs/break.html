@@ -6,10 +6,10 @@
 Break sekmesi
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Break sekmesi</h1>
 <p>
-Break sekmesi, bir istek cevabı ZAP break point tarafından yakalandığı zaman <a href="../../start/concepts/breakpoints.html">onun değiştirilmesini sağlar</a>.<br/>
+Break sekmesi, bir istek cevabı ZAP break point tarafından yakalandığı zaman <a href="../../start/features/breakpoints.html">breakpoint</a>.<br/>
 Bu normalde tarayıcınız aracılığıyla değiştiremeyeceğiniz elementleri değiştirmenize izin 
 verir, şunlar buna dahildir:
 <table>
@@ -30,23 +30,40 @@ Bu özellik, uygulamanızı pen testing yapmak için anahtar bir özelliktir.
 Pull down'lar istek veya header, body cevabı için farklı <a href="../views.html">Views</a> seçmenize izin verir.
 </p>
 <p>
-Kesme sekmesi kullanılmadığı halde simgesi gri bir çizgidir: &nbsp;
+While the Break tab is not in use its icon is a grey cross: &nbsp;
 <img src="../../images/16/101grey.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
-Bir <a href="../../start/concepts/breakpoints.html">kırılma noktası</a> olduğunda sekme simgesi değişir 
-kırmızı bir işaretçiye:&nbsp;
+When a <a href="../../start/features/breakpoints.html">breakpoint</a> is hit the tab icon is changed 
+to a red cross: &nbsp;
 <img src="../../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
 
 </p>
 
+<p>
+    If you have selected "Show buttons to select the requests you don't want ZAP to break on" in the
+    <a href="../dialogs/options/breakpoints.html">options menu</a> you will be able to select if you just want to break
+    on requests that are in scope and you will be able to select the file extensions you don't want to break on:<br>
+<table>
+    <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td><img src="../../images/javascript.png" align="bottom" width="16" height="16" />&nbsp; Javascript Files</td></tr>
+    <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td><img src="../../images/cssAndFonts.png" align="bottom" width="16" height="16"/>&nbsp; CSS and Fonts Files </td></tr>
+    <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td><img src="../../images/multimedia.png" align="bottom" width="16" height="16" />&nbsp; Multimedia Files</td></tr>
+    <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td><img src="../../images/fugue/target.png" align="bottom" width="16" height="16" />&nbsp; Only in scope</td></tr>
+</table>
+</p>
+
+<h3><img src="../../images/fugue/application-resize.png" align="bottom" width="16" height="16" />&nbsp; Update Content Length</h3>
+By default ZAP will automatically update (or add) the HTTP(S) Content-Length header to match the size of the data submitted. 
+If this option is unselected then ZAP will not update the header allowing you to specify any value you like.<br>
+This button will only be shown for HTTP(S) messages.
+
 <h2>Sağ tık menüsü</h2>
-Bir node'a sağ tıklamak size şunları yapmanıza izin veren bir menü getirecek:
+Right clicking on a node will bring up a menu which will allow you to:
 
-<h3>Bul...</h3>
-Bu size, şunu getirecek <a href="../dialogs/find.html">Diyalog bul</a>.
-
-<h3>Encode/Decode/Hash...</h3>
-Bu, Encode/Decode/Hash dialog'u <a href="../dialogs/enc_dec.html">Getirecektir</a>.<br/>
-Eğer herhangi bir metni vurguladıysanız, bu otomatik olarak iletişim kutusuna eklenecektir.
+<h3>Find...</h3>
+This will bring up the <a href="../dialogs/find.html">Diyalog bul</a>.
 
 <h3>Kopyala</h3>
 Bu, seçilen stringleri, clipboard'a kopyalamanızı sağlar.
@@ -56,7 +73,7 @@ Bu, seçilen stringleri, clipboard'a kopyalamanızı sağlar.
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../overview.html">UI Genel Bakış</a></td><td>kullanıcı arayüzünün genel bir görünümü için</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="breakpoints.html">Break Points sekmesi</a></td><td>break pointlerin nasıl silineceği ve değiştileceği ile ilgili detaylı bilgi içerir</td></tr>
+<a href="breakpoints.html">Breakpoints tab</a></td><td>for details of how to change or delete breakpoints</td></tr>
 </table>
 
 </body>

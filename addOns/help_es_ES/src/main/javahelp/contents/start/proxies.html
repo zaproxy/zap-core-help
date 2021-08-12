@@ -6,7 +6,7 @@
 Configurando proxies
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Configurando proxies</h1>
 <p>
 Usted necesitará configurar su navegador para usar ZAP como proxy. <br>Por defecto ZAP utiliza una dirección de 'localhost' y un puerto '8080', pero estos se pueden modificar en la <a href="../ui/dialogs/options/localproxy.html">pantalla de opciones de proxy Local</a>. 
@@ -23,35 +23,37 @@ Las instrucciones para las últimas versiones de los navegadores más utilizados
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'Configuración de LAN'</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Siga</td><td> la sección 'Configuración LAN de Windows'</td></tr>
 </table>
+<strong>Note:</strong> To proxy <code>localhost</code> (and related addresses) with newer Chrome versions (>= 72) the command line argument <code>--proxy-bypass-list=&lt;-loopback&gt;</code> must be provided.
 
 <h3>Firefox (en Windows)</h3>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> el menú 'Herramientas' </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> el elemento de menú 'Opciones...'</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'Avanzado'</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> la pestaña 'Red'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select the</td><td> 'General' panel</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Scroll to</td><td> 'Network Settings' section</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'Configuración...'</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> la opción 'Configuración manual del proxy'</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ingrese</td><td> 'HTTP Proxy:' campo de la "Dirección" que se configuró en
 <a href="../ui/dialogs/options/localproxy.html">Options Local Proxies screen</a></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ingrese en la</td><td> en el campo 'Puerto' a la derecha de 'Proxy HTTP' el número de puerto configurado en <a href="../ui/dialogs/options/localproxy.html">Options Local Proxies screen</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ingrese en la</td><td> 'Port' field to the right of the 'HTTP Proxy' field the 'Port' you configured in the 
+<a href="../ui/dialogs/options/localproxy.html">Options Local Proxies screen</a>. Ensure 'SSL Proxy' is also configured, either by selecting 'Use this proxy server for all protocols' or by setting the corresponding values.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'OK'</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'OK'</td></tr>
 </table>
+<strong>Note:</strong> To proxy <code>localhost</code> (and related addresses) with newer Firefox versions (>= 67) the preference <code>network.proxy.allow_hijacking_localhost</code> (accessible through the <code>about:config</code> page) must be set to <code>true</code>.
 
 <h3>Firefox (en Linux)</h3>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td>Menú de 'Editar'</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td>Objeto del menu de 'Preferencias'</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Sigue las</td><td>instrucciones en la parte superior del botón de 'Avanzado'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Sigue las</td><td>instructions above from the 'General' panel</td></tr>
 </table>
 
 <h3>Firefox (en OS X)</h3>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> Menú 'Firefox' </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> el elemento de menú "Preferencias..."</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón "Avanzado"</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Siga las</td><td> instrucciones en la parte superior del botón "Avanzado"</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Follow the</td><td> instructions above from the 'General' panel</td></tr>
 </table>
 
 <h3>Internet Explorer 7 y 8</h3>

@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+動的スキャン
+</title>
+</head>
+<body>
+<h1>動的スキャン</h1>
+<p>
+動的スキャンは選択されたターゲットに対して既知の攻撃を使い、潜在的な脆弱性を検出しようとします。
+</p>
+<p>
+動的スキャンはこれらのターゲットへの攻撃です。<br/>
+あなた自身のものでないWEBアプリケーションに対して使用しないでください。
+</p>
+<p>
+In order to facilitate identifying ZAP traffic and Web Application Firewall exceptions, ZAP is accompanied 
+by a script "AddZapHeader.js" which can be used to add a specific header to all traffic that passes through 
+or originates from ZAP. eg: <tt>X-ZAP-Initiator: 3</tt>
+</p>
+<p>
+It should be noted that active scanning can only find certain types of vulnerabilities.<br/>
+Logical vulnerabilities, such as broken access control, will not be found by
+any active or automated vulnerability scanning.<br/>
+Manual penetration testing should always be performed in addition to active
+scanning to find all types of vulnerabilities. 
+</p>
+
+<p>
+Active scanning is configured using the 
+<a href="../../ui/dialogs/options/ascan.html">Options Active Scan screen</a>.<br>
+The rules that run are configured via <a href="scanpolicy.html">Scan Policies</a> - you can have as many of these as you like. 
+
+</p>
+
+<h2>ここから参照されています</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/ascan.html">動的スキャンタブ</a></td><td>’新しいスキャン' ボタン</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/sites.html">サイトタブ</a></td><td>'攻撃/アクティブスキャン...' 右クリックメニュー</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/history.html">履歴タブ</a></td><td>'攻撃/アクティブスキャン...' 右クリックメニュー</td></tr>
+</table>
+
+<h2>関連情報</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/overview.html">UIの概要</a></td><td>ユーザー インターフェイスの概要について</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="features.html">特徴：</a></td><td>ZAPによって提供されます。</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="pscan.html">静的スキャン</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/dialogs/scanpolicymgr.html">スキャンポリシー管理画面</a></td><td>スキャンポリシーの管理ができます。</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../checks.html">スキャナーのルール</a></td><td>既定でサポートされています。</td></tr>
+</table>
+
+<h2>Official Videos</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><a href="https://play.sonatype.com/watch/ZcEfSihgQSzuthJi4qEeW3">ZAP In Ten: Active Scanning</a> (9:47)</td></tr>
+</table>
+
+</body>
+</html>

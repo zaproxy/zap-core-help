@@ -6,10 +6,10 @@
 Pilihan layar JVM
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Pilihan layar JVM</h1>
 <p>
-Layar ini memungkinkan Anda untuk mengkonfigurasi opsi JVM yang digunakan saat memulai ZAP.
+Layar ini memungkinkan anda untuk mengkonfigurasi pilihan JVM yang digunakan ketika memulai ZAP.
 </p>
 
 <h3>Pilihan JVM</h3>
@@ -26,30 +26,46 @@ Nilai-nilai yang bagus untuk bidang ini bisa jadi:
 <li>-Xmx1024m</li>
 </ul>
 <p>
-Berbeda dengan opsi ZAP lainnya yang tersimpan dalam file ".ZAP_JVM.properties" di direktori ZAP default pengguna,
-yang tergantung pada OS yang digunakan:
+Unlike the other ZAP options these are held in the file <code>.ZAP_JVM.properties</code> in the user's default ZAP directory,
+which depends on the OS being used, for example:
 <ul>
 <li>Windows 7/8: C:\Users\<i>&lt;username&gt;</i>\OWASP ZAP</li>
 <li>Windows XP: C:\Documents and Settings\<i>&lt;username&gt;</i>\OWASP ZAP</li>
 <li>Linux: ~/.ZAP</li>
 <li>Mac OS: ~/Library/Application Support/ZAP</li>
 </ul>
-Jika Anda membuat kesalahan saat mengatur opsi ini maka ZAP mungkin gagal untuk memulai.<br>
-Jika itu terjadi maka menghapus file ini harus memperbaiki masalah.
-</p>
+If you make a mistake when setting these options then ZAP may fail to start.<br>
+If that happens then deleting this file should fix the problem.
 <p>
-Perhatikan bahwa opsi ini tidak digunakan saat memulai ZAP via Windows exe.
-</p>
+<strong>Windows Notes:</strong> These options are not used when starting ZAP via the executable. The directory where the file <code>.ZAP_JVM.properties</code> is located depends on the environment variable <code>%USERPROFILE%</code>.
 
-<h2>Lihat juga</h2>
+<h3>JVM Memory Details</h3>
+The lower portion of the dialog displays details of the current JVM memory configuration. Including: 
+  <ul>
+    <li>Size - the amount of memory currently allocated to the JVM.</li> 
+    <li>Used - the amount of currently allocated memory used (not free).</li>
+    <li>Max - the amount of memory that the JVM could grow to occupy.</li>
+  </ul>
+The values are displayed in human readable IEC units based on base 2 calculation (for example: 1024Bytes equals 1KiB, etc).
+<p>
+Generally max should be close to -Xmx (if specified). However, the following behavior was observed during testing under Java 8 on Windows OS.
+<p>
+-Xmx512m was specified (which should calculate out to ~488MiB), however, 455.5MiB was displayed.<br>
+-Xms512m -Xmx512m was specified, however, 475MiB was displayed.<br>
+-XX:+AlwaysPreTouch -Xms512m -Xmx512m, and 474.5MiB was displayed.
+<p>
+So it seems the JVM does some calculation/manipulation at execution which may mean that the results may not align as expected for the 
+options the user inputs (this is a JVM issue, not a ZAP issue).
+
+<h2>See also</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">Ikhtisar UI</a></td><td>untuk ikhtisar antarmuka pengguna</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="options.html">Dialog pilihan</a></td><td>untuk rincian layar dialog Opsi lainnya</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
 </table>
 
-<h2>Tautan eksternal</h2>
+<h2>External links</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html#BABDJJFI">Pilihan java 8</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html#BABDJJFI">Java 8 options</a></td></tr>
 </table>
 
 </body>

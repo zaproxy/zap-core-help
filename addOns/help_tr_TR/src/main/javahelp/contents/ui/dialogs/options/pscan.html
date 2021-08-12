@@ -6,19 +6,42 @@
 Pasif Tarama Etiketleri Ayarları Ekranı
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Pasif Tarama Etiketleri Ayarları Ekranı</h1>
 <p>
-Bu ekran size <a href="../../../start/concepts/pscan.html">pasif tarayıcı</a> tarafından eklenmiş <a href="../../../start/concepts/tags.html">etiketleri</a> yapılandırma imkanı verir.
+This screen allows you to configure the <a href="../../../start/features/tags.html">tags</a> 
+that are added by the <a href="../../../start/features/pscan.html">passive scanner</a>.
 </p>
 Etiketleri, uygun düğmelerden ekleyebilir, değiştirebilir ve kaldırabilirsiniz.
 
-<h2>Ayrıca bakınız</h2>
+<h2>Tag Interpolation</h2>
+In order to allow some flexibility in Tag creation and content it is possible for the user to specify a regular expression with capturing groups
+which will be used to replace the group identifiers (ex: $1) in the resulting tag.
+<p>
+For example, a tag could be defined as follows:
+<table border=1>
+  <tr>
+    <th>Field</th><th>Value</th><th>Note</th>
+  </tr>
+  <tr>
+    <td>Name:</td><td>Test</td><td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Tag:</td><td>$1-SOMETAG</td><td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Response Body Regex:</td><td>(\d{3})</td><td>Find strings of 3 numbers, using a capturing group (round brackets).</td>
+  </tr>
+</table>
+<b>Result:</b> When 3 digit strings are passively identified in response body content (the regex matches) the messages will be 
+tagged such as "123-SOMETAG", "345-SOMETAG", etc.
+
+<h2>See also</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Genel Bakış</a></td><td>kullanıcı arayüzüne genel bir bakış için</td></tr>
+<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Diyaloglar Seçenekleri</a></td><td>diğer diyalog seçenekleri ekranlarının detayları için</td></tr>
+<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
 </table>
 
 </body>

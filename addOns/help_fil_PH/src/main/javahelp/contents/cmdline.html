@@ -6,24 +6,25 @@
 Linya ng Utos
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Linya ng Utos</h1>
 
 Para patakbuhin ang ZAP sa pamamagitan ng linya ng utos, kailangan mong mahanap ang panimulang script ng ZAP.<br/>
 <strong>Mga Bintana:</strong><br/>
 <pre>C:\Program Files (x86)\OWASP\Zed Attack Proxy\zap.bat</pre>
+<strong>Note:</strong> The command line options are not used by the executable (<code>zap.exe</code>) only the bat file.<br/><br/>
 <strong>Mac:</strong><br/>
 <pre>/Applications/OWASP\Zap.app/Contents/Java/zap.sh</pre>
 <strong>Linux:</strong><br/>
-<code>zap.sh</code> ay mapupunta sa ibaba ng directory kung saan ang ZAP ay naka-install.
+<code>zap.sh</code> will be below the directory where ZAP was installed.
 <br/><br/>
-Bilang panghalili, pwede mong patakbuhin ang JAR file nang direkta:<br/>
+Alternatively, you can run the JAR file directly:<br/>
 <pre>java -jar zap.jar</pre>
-Lahat ng mga opsyon sa ibaba ay maaring mapasa sa kahit alinman sa mga ito.
+All options below can be passed to any of these.
 
 <h2>Mga Opsyon</h2>
 
-Ang ZAP ay sumusuporta sa mga sumusunod na mga opsyon ng linya ng utos:
+ZAP supports the following command line options:
 
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-bersyon</td><td>Nag-uulat sa bersyon ng ZAP</td></tr>
@@ -31,7 +32,7 @@ Ang ZAP ay sumusuporta sa mga sumusunod na mga opsyon ng linya ng utos:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-daemon</td><td>Sinisimulan ang ZAP na naka-daemon mode, ie walang UI</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-config &lt;kvpair&gt;</td><td>Pinapawalang-bisa ang espesipikong susi=pares ng halaga sa kumpigurasyon na file.<code>-kumpig</code>ang mga opsyon ng linya ng utos ay aplikado sa order na naka-espisipiko sa kanila.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-configfile&lt;path&gt;</td><td>Pinapawalang-bisa ang susi=pares ng halaga kasama ang espesipikong katangian ng file</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-dir &lt;dir&gt;</td><td>Ginagamit ang espesipikong directory sa halip na ang default nito</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-dir &lt;dir&gt;</td><td>Uses the specified directory as home directory, instead of the default one. To prevent add-ons (inadvertently) use/override core files ZAP will not start (and show an error) if the home and the installation directories are the same.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-installdir &lt;dir&gt;</td><td>Pinapawalang-bisa ang code na tumutuklas kung saan ang ZAP ay naka-install kasama ang espesipikong directory</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-h</td><td>Nagpapakita sa lahat ng opsyon ng linya ng utos na magagamit, kasama na rin yung idinagdag ng add-ons</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-help</td><td>Katulad ng -h</td></tr>
@@ -41,24 +42,29 @@ Ang ZAP ay sumusuporta sa mga sumusunod na mga opsyon ng linya ng utos:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-port &lt;port&gt;</td><td>Pinapawalang-bisa ang port na ginagamit sa proxying na naka-espesipiko sa kumpigurasyon na file</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-lowmem</td><td>Gamitin ang database sa halip na ang memorya kung maari, ito ay eskperimental pa rin</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-experimentaldb</td><td>Gamitin ang eksperimental na code ng generik na database, kung saan hindi rin nakakagulat na ito ay eksperimental pa rin</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstall &lt;addon&gt;</td><td>I-install ang espesipikong add-on mula sa Marketplace ng ZAP</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstallall</td><td>I-install lahat ang pwedeng magamit na mga add-on mula sa Marketplace ng ZAP</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonuninstall &lt;addon&gt;</td><td>I-uninstall ang espesipikong add-on</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonupdate</td><td>I-update lahat ng nabagong add-on mula sa Marketplace ng ZAP</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonlist</td><td>Ilista ang lahat ng mga naka-install na mga add-on</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-script &lt;script&gt;</td><td>Patakbuhin ang espesipikong script (daanan ng sistema ng file) kung ang linya ng utos/daemon, o i-load lang kung ito ay GUI</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-last_scan_report &lt;path&gt;</td><td>Likhain ang 'Huling Report ng Pagsusuri' papunta sa espisipikong landas</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-suppinfo</td><td>Nagpapalabas ng nauugnay na mga detalye bilang suporta at pag-troubleshoot (papunta sa console/labas na pamantayan). Tulad ng: bersyon ng ZAP, bersyon ng java, naka-install na mga add-on at bersyon, lokal na impormasyon, gumaganang sistema, at iba pa.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-nostdout</td><td>Disables the default logging through standard output</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-silent</td><td>Ensures ZAP does not make any unsolicited requests, including check for updates</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstall &lt;addOnId&gt;</td><td>Installs the add-on with specified ID from the ZAP Marketplace. The IDs of the add-ons available in the marketplace can be consulted in the Marketplace tab of <a href="ui/dialogs/manageaddons.html">Manage Add-ons dialogue</a>.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstallall</td><td>Install all available add-ons from the ZAP Marketplace</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonuninstall &lt;addOnId&gt;</td><td>Uninstalls the add-on with specified ID. Use <code>-addonlist</code> or check the Installed tab of <a href="ui/dialogs/manageaddons.html">Manage Add-ons dialogue</a> to know the IDs of the installed add-ons.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonupdate</td><td>Update all changed add-ons from the ZAP Marketplace</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonlist</td><td>List all of the installed add-ons</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-script &lt;script&gt;</td><td>Run the specified script (file system path) if command line/daemon, or just load it if GUI</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-last_scan_report &lt;path&gt;</td><td>Generate the 'Last Scan Report' into the specified path</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-suppinfo</td><td>Outputs details relevant for support and troubleshooting (to the console/standard out). Such as: ZAP version, java version, installed add-ons and version, locale info, operating system, etc.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-certload &lt;path&gt;</td><td>Loads the Root CA certificate from the specified file name</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-certpubdump &lt;path&gt;</td><td>Dumps the Root CA public certificate into the specified file name, this is suitable for importing into browsers</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-certfulldump &lt;path&gt;</td><td>Dumps the Root CA full certificate (including the private key) into the specified file name, this is suitable for importing into ZAP</td></tr>
+
 </table>
 <br>
-Ang mga opsyon <code>-session</code> at <code>-newsession</code> ay kapwa eksklusibo. Ang isang error ay ipapalabas at lalabas ang ZAP (kung wala sa GUI) kung naka-set ang parehong mga opsyon.
+The options <code>-session</code> and <code>-newsession</code> are mutually exclusive. An error will be shown and ZAP exit (if not in GUI) when both options are set.
 <br>
-Mga relatibong landas papunta sa file ng sesyon ay nalutas laban sa "sesyon" directory na matatagpuan sa home directory ng ZAP
-(default or naka-espesipiko sa <code>-dir</code> opsyon).
+Relative paths to session file are resolved against the "session" directory located in ZAP's home directory (default or specified with <code>-dir</code> option).
 <br/>
-Mga susi ng kumpigurasyon ay dapat naka-espesipiko gamit ang notasyon na dot na naka-base ang kanilang lokasyon sa XML ng kumpigurasyon, eg:<br/>
+Configuration keys should be specified using the dot notation based their location in the XML of the configuration file, eg:<br/>
 <pre>&lt;zap-script&gt; -config api.key=12345 -config connection.timeoutInSecs=60</pre>
-Tandaan na ang mga add-on ay maaring magdagdag ng extrang mga opsyon sa linya ng utos.
+Note that add-ons can add extra command line options.
 
 <p>
 Mga Halimbawa:
@@ -76,7 +82,7 @@ Mga Halimbawa:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="intro.html">Panimula</a></td><td>ang panimula ng ZAP</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="start/concepts/api.html">API</a></td><td>para kontrolin ang ZAP nang naka-program</td></tr>
+<a href="start/features/api.html">API</a></td><td>para kontrolin ang ZAP nang naka-program</td></tr>
 </table>
 
 </body>

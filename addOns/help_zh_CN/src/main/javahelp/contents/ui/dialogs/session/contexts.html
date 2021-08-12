@@ -6,10 +6,10 @@
 会话上下文屏幕
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>会话上下文屏幕</h1>
 <p>
-这些屏幕允许您管理<a href="../../../start/concepts/contexts.html">上下文</a>.
+These screens allows you manage <a href="../../../start/features/contexts.html">contexts</a>.
 </p>
 <p>
 您定义的每一个上下文都有一组屏幕。
@@ -18,49 +18,74 @@
 <h3>顶部屏幕</h3>
 这允许您设置上下文名称和描述。
 
-<h3>包含在上下文中</h3>
+<h3>Include in Context</h3>
 这允许您管理将包含在上下文中的URL。<br/>
 不匹配任何正则表达式的URL将不包含在上下文中。
+<br><strong>Note:</strong> The regular expressions must match the whole URL.
 
-<h3>从上下文中排除</h3>
-这允许您将管理从上下文中排除的URL。<br/>
+<h3>Exclude from Context</h3>
+This allows you to manage the URLs which will be excluded from the context.<br/>
 You only need to specify regexs for URLs that you do not want to include but which match one or more
 of the 'include' regexes.
+<br><strong>Note:</strong> The regular expressions must match the whole URL.
 
 <h3><a name="struct">结构</a></h3>
-参阅 <a href="context-struct.html">会话上下文结构屏幕</a>.
+See the <a href="context-struct.html">会话上下文结构屏幕</a>.
 
 <h3>技术</h3>
-这允许您指定上下文中使用的技术（如果已知）。<br/>
-默认情况下，所有技术都包含在内。<br/>
+This allows you to specify the technologies used in the context, if known.<br/>
+By default all technologies are included.<br/>
 If you exclude technologies that you know are not used then this may speed up 
-<a href="../../../start/concepts/ascan.html">自动扫描</a> as rules specific to the excluded
+<a href="../../../start/features/ascan.html">自动扫描</a> as rules specific to the excluded
 technologies can be skipped.
 
 <h3><a name="auth">身份验证</a></h3>
-参阅 <a href="context-auth.html">会话上下文身份验证屏幕</a>.
+See the <a href="context-auth.html">会话上下文身份验证屏幕</a>.
 
 <h3><a name="sm">会话管理</a></h3>
 This allows you to manage the way in which Session Management is being done for the Context. 
-在选择了会话管理方法类型之后，需要配置的选项 取决于会话管理方法。
+After selecting the Session Management Method type, the options that need to be configured 
+depend on the Session Management Method.
 
 <h4>基于Cookie的会话管理</h4>
-此会话管理方法不需要配置。 <small>读取  
-<a href="../../../start/concepts/sessionManagement.html#cbsm">更多</a>...</small>
+此会话管理方法不需要配置。 <small>Read  
+<a href="../../../start/features/sessionManagement.html#cbsm">more</a>...</small>
 
 <h4>HTTP身份验证会话管理</h4>
-此会话管理方法不需要配置。 <small>读取
-<a href="../../../start/concepts/sessionManagement.html#hasm">更多</a>...</small>
+No configuration is needed for this session management method. <small>Read
+<a href="../../../start/features/sessionManagement.html#hasm">more</a>...</small>
+
+<h4>Script-Based Session Management</h4>
+
+To use this session management method, you <b>first</b> need to write (and save) a <b>Session Management Script</b> 
+using the <b>Scripts</b> tab (see the provided examples and templates for this script type in the Scripts tab).
+Then you need to supply the name of the script in the dropdown list. After selecting the script, you need to press 
+the <b>Load</b> button, loading all the requirements of the script.
+Any parameters that you have specified as <i>required</i> or <i>optional</i> in the script will
+be shown in the interface to be defined. Their values are available to be used in the script, during the session management process, as seen
+in the provided examples for Session Management Scripts. Make sure that after doing any changes to the parameters 
+required by the Session Management script you re-load the script. Otherwise, the parameters shown in the interface might
+not be the ones used during the session management process and errors might occur. 
+<small>Read <a href="../../../start/features/sessionManagement.html#sbsm">more</a>...</small>
 
 
 <h3><a name="users">用户</a></h3>
-这允许您配置一组用户，它们可以用于整个应用程序的各种其他操作。
+This allows you to configure a set of Users that may be used for various other actions
+throughout the application.
 <p>用户的凭据部分取决于上下文中配置的身份验证方法。</p>
 
-<h2>URL正则表达式</h2>
-在 <i>包括在*</i>, <i>从*中排除</i> 面板和 <i>已登录/注销指示器</i> of the <i>身份验证</i> 面板，您可以输入正则表达式来定义排除的URL。虽然您可以反斜线转义单个元字符，您也可以使用 <b>\Q...\E</b> 转义序列。中所有字符 <b>\Q</b> 和 <b>\E</b> 被解释为原义字符。例如：\Q*\d+*\E匹配文本*\d+*。当您通过一些上下文菜单排除URL时，此转义序列用于ZAP。
+<h2><a name="custompages">Custom Page</a></h2>
+This functionality allows you to handle situations in which the target does not return a RFC compliant or expected error response when for conditions such as 
+404 - Not Found, 500 - Internal Server Error, etc. Often developers implement custom 404 or 500 handling but do not actually return an appropriate status code.
+Leveraging Custom Page definitions you can define URLs or response content which identify error responses regardless of the status code associated with the response.
+<small>Read <a href="../../../start/features/custompages.html">more</a>...</small>
+
+<h2>URL regexs</h2>
+In the <i>Include in *</i>, <i>Exclude from *</i> panels and the <i>Logged in/out indicators</i> of the <i>Authentication</i> panel, etc. you can enter regular expressions to define excluded URLs.
+While you can escape a single meta-character with a backslash, you can also use the <b>\Q...\E</b> escape sequence. All the characters between the <b>\Q</b> and the <b>\E</b> are interpreted as literal characters. E.g. \Q*\d+*\E matches the literal text *\d+*.
+This escape sequence is used in ZAP when you exclude URLs via some context menus.
 <br>
-<b>备注：</b> 如果您的URL包含一个＂\E"，那么当使用时您必须按照以下步骤做 <b>\Q...\E</b> 转义序列：
+<b>Note:</b> If your URL contains a "\E", then you have to do the following steps when using the <b>\Q...\E</b> escape sequence:
 <ul>
 	<li>打开转义序列</li>
 	<li>在"字符"\E之前关闭转义序列</li>
@@ -72,22 +97,24 @@ This allows you to manage the way in which Session Management is being done for 
 Example: subdomain.example.com/path?a=<b>\E</b>&amp;moredata=2 should appear as
 <i>\Qsubdomain.example.com/path?a=\E</i><b>\\E</b><i>\Q&amp;moredata=2\E</i>
   
-<h2>通过访问</h2>
+<h2>Accessed via</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../tlmenu/file.html">顶层文件菜单</a></td><td>"属性..."菜单项</td></tr>
+<a href="../../tabs/sites.html">Sites tab</a></td><td>Double click a Context</td></tr>
 </table>
 
-<h2>另请参阅</h2>
+<h2>See also</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../../overview.html">UI综述</a></td><td>关于用户界面的概述</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../dialogs.html">对话框</a></td><td>有关对话框或弹出窗口的详情 </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../../start/concepts/authentication.html">身份验证</a></td><td>有关身份验证的概述 </td></tr>
+<a href="../../../start/features/authentication.html">身份验证</a></td><td>有关身份验证的概述 </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../../start/concepts/sessionManagement.html">会话管理</a></td><td>有关会话管理的概述 </td></tr>
+<a href="../../../start/features/sessionManagement.html">会话管理</a></td><td>有关会话管理的概述 </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../../start/features/custompages.html">Custom Page</a></td><td>for an overview of Custom Page details </td></tr>
 </table>
 
 

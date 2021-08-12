@@ -4,18 +4,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Örümcek Seçenekleri Ekranı</title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 	<h1>Örümcek Seçenekleri Ekranı</h1>
 	<p>
-		Bu ekran size <a
-			href="../../../start/concepts/spider.html">örümcek</a> seçeneklerini yapılandırma imkanı verir.</p> 
+		This screen allows you to configure the <a
+			href="../../../start/features/spider.html">spider</a> options.</p> 
 	<p>Bu seçenekleri değiştirme ve özelleştirmenin çalışan Örümceği de etkileyeceği unutulmamalıdır.
 	</p>
 
 	<h3>Taranacak maksimum derinlik</h3>
-	Parametre, bir sayfanın işlenebilmesi için bulunması gereken tarama işlemindeki maksimum derinliği tanımlar. Bu seviyeden daha derinlerde bulunan kaynaklar örümcek tarafından alınmaz ve ayrıştırılmaz.
+	Parametre, bir sayfanın işlenebilmesi için bulunması gereken tarama işlemindeki maksimum derinliği tanımlar. Bu seviyeden daha derinlerde bulunan kaynaklar örümcek tarafından alınmaz ve ayrıştırılmaz. The value
+	zero means unlimited depth.
 	<p>
-		Derinlik, kaynaklardan başlayarak hesaplanır; örümceğin taraması yalnızca tek bir URL ile başlarsa (örneğin. Örümcek URL'si) derinlik bundan itibaren hesaplanır. Ancak tarama birden fazla kaynakla başlarsa (örneğin. Örümcek Sitesi), kaynak, kaynakların <i>herhangi birine</i> göre derinliği tanımlananlardan daha düşükse işlenir.
+		Derinlik, kaynaklardan başlayarak hesaplanır; örümceğin taraması yalnızca tek bir URL ile başlarsa (örneğin. URL manually specified), the depth is
+		calculated from this one. Ancak tarama birden fazla kaynakla başlarsa (örneğin. recurse and Sites tree node with children), a resource is processed if it's depth
+		relative to <i>any</i> of the seeds is less than the defined one.
 	</p>
 
 	<h3>Kullanılan iplik sayısı</h3>
@@ -53,8 +56,8 @@ Sıfır (varsayılan) örümceğin bulabileceği bütün bağlantıları bulana 
 	Seçenek devre dışı bırakılırsa, Örümcek istekleri içerisinde çerez göndermez. Örneğin Örümcek, örümcekleme taraması boyunca ayni oturumu kullanıp kullanmayacağını kontrol edebilir.
 	<br>Çerezleri kabul ederken çerezler örümcek taramaları arasında paylaşılmaz, her taramanın kendi çerez kavanozu vardır.
 	<br>Bu seçeneğin önceliği düşüktür, Örümcek HTTP durumuyla ilgili diğer (genel) seçeneklere saygı gösterir. Bu seçenek görmezden gelinir, eğer, örneğin seçenek
-	<a href="../../tlmenu/edit.html">Oturum takibini Etkinleştir (Çerez)</a> etkinse, örümcekleme yapan bir <a href="../../../start/concepts/users.html">Kullanıcı</a> ya da
-	<a href="../../../start/concepts/httpsessions.html">HTTP oturumu</a> etkin durumda ise.
+	<a href="connection.html">Enable (Global) HTTP State</a> etkinse, örümcekleme yapan bir <a href="../../../start/features/users.html">Kullanıcı</a> ya da
+	<a href="../../../start/features/httpsessions.html">HTTP oturumu</a> etkin durumda ise.
 
 	<h3>Süreç formları</h3>
 	Tarama işlemi sırasında, örümcek HTML formlarıyla karşılaştığında sergileyeceği tavrı bu seçenek tanımlar. Devre dışı bırakılırsa, HTML formları hiç işlenmeyecektir. Eğer etkinleştirilirse, HTTP GET olarak tanımlanan yöntemle HTML formları bazı oluşturulan değerlerle birlikte gönderilir. HTTP POST olarak tanımlanan yöntemle formlarla karşılaşırken davranış, bir sonraki seçenek tarafından yapılandırılır.
@@ -82,7 +85,7 @@ Sıfır (varsayılan) örümceğin bulabileceği bütün bağlantıları bulana 
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../../start/concepts/spider.html">Örümcek</a></td>
+			<td><a href="../../../start/features/spider.html">Örümcek</a></td>
 			<td>örümceğe genel bir bakış için</td>
 		</tr>
 		<tr>

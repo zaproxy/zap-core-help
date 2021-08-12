@@ -6,7 +6,7 @@
 Options Display screen
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Options Display screen</h1>
 <p>
 The Display screen allows you to configure:
@@ -41,6 +41,9 @@ The following options are available:
     <li>Tabs Side by Side - The Request and Response tabs are side by side. This
         increases the information that can be displayed but means you cannot see both the
         request and response at the same time.</li>
+    <li>Side by Side in Tab - The Request and Response panels are shown side by side in
+        the same tab. This decreases the information that can be displayed but means you can
+        see both the request and response at the same time.</li>
     <li>Panels Side by Side - The Request panel is shown to the left of the Response
         panel. This decreases the information that can be displayed but means you can see both
         the request and response at the same time.</li>
@@ -76,10 +79,17 @@ on the Default format.
 <tr> <td> Time Only </td> <td> GG:mm:ss </td> </tr>
 </table>
 
-<h3>Rozmiar czcionki</h3>
-The default text size used for the ZAP display. If you set this to -1 then the system default size will be used.<br>
+<h3>Font Controls</h3>
+The General Font section controls default text font and size used for the ZAP display, while the Work Panels Font section 
+controls the font used for the top right section of ZAP's main window (Ex: Request/Response, Edit and Resend tool, etc.).
+If you set this to -1 then the system default size will be used.<br>
 The 'Font Example' field will show you how large the default text will appear.<br>
-This setting will only take effect when ZAP is restarted.
+<strong>Note:</strong> This setting will only take effect when ZAP is restarted.
+
+<h3>Look and Feel</h3>
+Allows to choose the look and feel of ZAP. If empty the default is used, <code>Nimbus</code> in Windows and Linux, the native
+system look and feel in macOS.<br />
+The system property <code>swing.defaultlaf</code> takes precedence over this option.
 
 <h2>Zobacz również</h2>
 <table>

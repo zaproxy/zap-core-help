@@ -6,7 +6,7 @@
 Yapılandırma Kural Seçenekleri ekranı
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Yapılandırma Kural Seçenekleri ekranı</h1>
 <p>
 Bu ekran belirli bir aktif ve pasif tarama kurallarının davranışlarını yapılandırmanıza olanak sağlar.
@@ -23,6 +23,12 @@ Yerleşik kurallar şunları içerir:<br><br>
 <tr><td>rules.csrf.ignorelist</td><td></td><td>Tanımlayıcıların virgülle ayrılmış listesi.
 Kayıp Anti-CSRF belirteçleri taranırken, bu tanımlayıcılardan biriyle eşleşen isim veya kimliğe sahip herhangi bir FORM yoksayılır.
 Güvenli olduğunu bildiğiniz FORM'ları yok saymak için yalnızca bu özelliği kullanın, örnek olarak arama formları.</td></tr>
+<tr><td>rules.csrf.ignore.attname</td><td></td><td>The name of an HTML attribute that can be used to indicate that a form does
+not need an anti-CSRF Token. If <code>rules.csrf.ignore.attvalue</code> is specified then this must also match the attribute's value. If
+found any related alerts will be raised at INFO level.</td></tr>
+<tr><td>rules.csrf.ignore.attvalue</td><td></td><td>The value of an HTML attribute named by <code>rules.csrf.ignore.attname</code>
+that can be used to indicate that a form does not need an anti-CSRF Token. If found any related alerts will be raised at INFO level.</td></tr>
+<tr><td>rules.domains.trusted</td><td></td><td>A comma separated list of URL regex patterns. Any URLs that match the patterns will be considered trusted domains and the issues ignored.</td></tr>
 </table>
 
 

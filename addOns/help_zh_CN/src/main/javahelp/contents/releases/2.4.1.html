@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  2.4.1版本
+</title>
+</head>
+<body>
+<h1>2.4.1版本</h1>
+<p>
+此版本包括重要的安全修补程序-要求用户尽快升级。
+</p>
+<p>
+其中一个改变意味着API密钥是默认创建的，这也意味着任何使用ZAP API的应用程序都将失败，除非他们被更新为了使用该密钥。<br>
+API密钥可以在 <a href="../ui/dialogs/options/api.html">API选项面板找到</a><br>
+从命令行中，你还可以通过使用下列选项来设置它： 
+<pre>-config api.key=change-me-9203935709</pre><br>
+以获取更多详情 <a href="https://www.zaproxy.org/faq/why-is-an-api-key-required-by-default/">https://www.zaproxy.org/faq/why-is-an-api-key-required-by-default/</a><br>
+ 
+</p>
+
+<p>
+此版本中进行了以下更改：
+</p>
+
+<h2>增强：</h2>
+<ul>
+<li>问题321：支持多个数据库</li>
+<li>问题1459：添加一个HTTP发件人侦听器脚本</li>
+<li>问题1500：更新Bouncy Castle库</li>
+<li>问题1566：改进主动扫描报告进度</li>
+<li>问题1573：添加选项以在所有主动扫描请求的页眉中插入插件ID</li>
+<li>问题1607：无法通过API保存测试会话</li>
+<li>问题1621：AScan API-允许以用户的身份进行扫描</li>
+<li>问题1625：支持多个结构参数和顶层节点上的参数</li> 
+<li>问题1653：支持树的上下文菜单键</li>
+<li>问题1655：将会话令牌（Session Token）从HTTP Sesions选项卡复制到剪贴板</li>
+<li>问题1662：添加默认的Rails anti-CSRFl令牌参数</li>
+<li>问题1664：客户端选项卡自动滚动</li>
+<li>问题1684：无法通过API设置技术</li>
+<li>问题1688：使用Python Client API更新owasp/zap2docker图像</li>
+<li>Issue 1690 : Bump key pair size to 2048 for all certs in the (proxy's) chain of trust</li>
+<li>问题1695：将SSL证书签名算法更改为“使用RSA加密的SHA-256”</li>
+<li>问题1699：允许Apilmplementor's添加自定义标题</li>
+<li>问题1715：从Mac OS X的命令行上启动ZAP时，无法传递参数</li>
+<li>问题1728：将JRE更新为MacOS的1.7u79（CPU）</li>
+
+</ul>
+
+<h2>问题（Bug）修复：</h2>
+<ul>
+<li>问题444：如果getCN()==null，则在AliasCertificate.getName()上保证NPE</li>
+<li>问题1442：如果被“反映（reflected）”，则结果中的向上/向下箭头键停止工作</li>
+<li>问题1473：Spider无法正确地处理从元标记中提取的url</li>
+<li>问题1497：当指示不能这样做时，spider正在从评论-事件中提取和报告链接</li>
+<li>问题1598：启动脚本缺少对FreeBSD的支持</li>
+<li>问题1615：搜索"全部"选项不起作用</li>
+<li>问题1617：ZAP2.4.0在无头计算机上以守护进程模式运行时抛出HeadlessException</li>
+<li>问题1618：目标技术未获殊荣</li>
+<li>问题1619：搜索正则表达式可能未被验证</li>
+<li>问题1624：加载ZAP 2.4.0时出错</li>
+<li>问题1626：上下文导出时不保存结构参数，并且通过API不可用</li>
+<li>问题1636：用户（用于身份验证）& 强制用户无法从会话中加载</li>
+<li>问题1647：Zest结果中的错误引用</li>
+<li>问题1674：Ajax spider没有考虑获取参数</li>
+<li>问题1677：Fuzzers不能在OS X上扩展</li>
+<li>问题1694："错误：设置文件丢失。程序将退出。"即使文件存在</li>
+<li>问题1698：跳出API异常</li>
+<li>问题1700：强制浏览器列表从2.4.0下拉菜单中丢失</li>
+<li>问题1706：添加API安全选项</li>
+<li>问题1708：上下文的技术树可能无法同步</li>
+<li>问题1709：应用程序在启动后没有（立即）显示</li>
+<li>问题1714：除非用户提供它，否则PNH不应显示API密钥</li>
+<li>问题1716：在pnh中限制使用CORS标题</li>
+<li>问题1720：为JSONP API添加更多安全选项</li>
+<li>问题1724：确保API组件名称在HTML输出中转义</li>
+<li>问题1735：上下文的技术不用于自动扫描，除非被覆盖</li>
+</ul>
+
+<h2>另请参阅</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">简介</a></td><td>ZAP简介</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">版本</a></td><td>所有版本</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">版权</a></td><td>所有参与这次版本更新的人和组织</td></tr>
+</table>
+</body>
+</html>

@@ -6,7 +6,7 @@
 Options Display screen
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Pantalla de monitor de opciones</h1>
 <p>
 El la pantalla de monitor te permite configurar:
@@ -32,8 +32,14 @@ Permite configurar la posición de la pestaña de respuesta con respecto a la pe
 Las siguientes opciones se encuentran disponibles:
 <ul>
     <li>Pestañas lado a lado - Las pestañas de solicitud y respuesta se encuentran una al lado de la otra. Esto incrementa la información que puede ser mostrada, pero significa que no podrás ver las pantallas de solicitud y de respuesta al mismo tiempo.</li>
-    <li>Paneles lado a lado - El panel de solicitud es mostrado a la izquierda del panel de respuesta. Esto decrece la información que puede ser mostrada, pero significa que puedes ver a la vez las pestañas de solicitud y respuesta.</li>
-    <li>Solicitud mostrada arriba de la respuesta - El panel de solicitud es mostrado arriba del panel de respuesta. Esto decrece la información que puede ser mostrada, pero significa que puedes ver ambas, la respuesta y solicitud a la vez.</li>
+    <li>Side by Side in Tab - The Request and Response panels are shown side by side in
+        the same tab. This decreases the information that can be displayed but means you can
+        see both the request and response at the same time.</li>
+    <li>Panels Side by Side - The Request panel is shown to the left of the Response
+        panel. Esto decrece la información que puede ser mostrada, pero significa que puedes ver ambas, la respuesta y solicitud a la vez.</li>
+    <li>Request Shown Above Response - The Request panel is shown above the Response
+        panel. This decreases the information that can be displayed but means you can see both
+        the request and response at the same time.</li>
 </ul>
 La opción de posición del panel de respuesta no se aplica cuando la opción de visualización se establece para pantalla completa.
 
@@ -60,10 +66,17 @@ Selecciona o bien un formato pre-definido de la lista desplegable o ingresa uno 
 <tr> <td> Solo Tiempo </td> <td> HH:mm:ss </td> </tr>
 </table>
 
-<h3>Tamaño de Fuente</h3>
-El tamaño de fuente predeterminado utilizado para visualizar ZAP. Si fijas esto en -1 entonces se utilizará el tamaño predeterminado del sistema.<br>
+<h3>Font Controls</h3>
+The General Font section controls default text font and size used for the ZAP display, while the Work Panels Font section 
+controls the font used for the top right section of ZAP's main window (Ex: Request/Response, Edit and Resend tool, etc.).
+If you set this to -1 then the system default size will be used.<br>
 El campo 'Ejemplo de fuente' te mostrará qué tan grande se mostrará el texto por defecto.<br>
-La configuración solo tomará efecto cuando ZAP se reinicie.
+<strong>Note:</strong> This setting will only take effect when ZAP is restarted.
+
+<h3>Look and Feel</h3>
+Allows to choose the look and feel of ZAP. If empty the default is used, <code>Nimbus</code> in Windows and Linux, the native
+system look and feel in macOS.<br />
+The system property <code>swing.defaultlaf</code> takes precedence over this option.
 
 <h2>Véase también</h2>
 <table>

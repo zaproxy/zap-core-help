@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Aktywne Skanowanie
+</title>
+</head>
+<body>
+<h1>Aktywne Skanowanie</h1>
+<p>
+Active scanning attempts to find potential vulnerabilities by using
+known attacks against the selected targets.
+</p>
+<p>
+Active scanning is an attack on those targets. <br/>
+You should NOT use it on web applications that you do not own.
+</p>
+<p>
+In order to facilitate identifying ZAP traffic and Web Application Firewall exceptions, ZAP is accompanied 
+by a script "AddZapHeader.js" which can be used to add a specific header to all traffic that passes through 
+or originates from ZAP. eg: <tt>X-ZAP-Initiator: 3</tt>
+</p>
+<p>
+It should be noted that active scanning can only find certain types of vulnerabilities.<br/>
+Logical vulnerabilities, such as broken access control, will not be found by
+any active or automated vulnerability scanning.<br/>
+Manual penetration testing should always be performed in addition to active
+scanning to find all types of vulnerabilities. 
+</p>
+
+<p>
+Active scanning is configured using the 
+<a href="../../ui/dialogs/options/ascan.html">Options Active Scan screen</a>.<br>
+The rules that run are configured via <a href="scanpolicy.html">Scan Policies</a> - you can have as many of these as you like. 
+
+</p>
+
+<h2>Accessed via</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/ascan.html">Active Scan tab</a></td><td>'New Scan' button</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/sites.html">Sites tab</a></td><td>'Attack/Active Scan...' right click menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/history.html">History tab</a></td><td>'Attack/Active Scan...' right click menu item</td></tr>
+</table>
+
+<h2>Zobacz również</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="features.html">Features</a></td><td>provided by ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="pscan.html">Passive scanning</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/dialogs/scanpolicymgr.html">Scan Policy Manager Dialog</a></td><td>which allows you to manage the scan policies</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../checks.html">Scanner Rules</a></td><td>supported by default</td></tr>
+</table>
+
+<h2>Official Videos</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><a href="https://play.sonatype.com/watch/ZcEfSihgQSzuthJi4qEeW3">ZAP In Ten: Active Scanning</a> (9:47)</td></tr>
+</table>
+
+</body>
+</html>

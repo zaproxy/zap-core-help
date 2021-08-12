@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  Release 2.4.2
+</title>
+</head>
+<body>
+<h1>Release 2.4.2</h1>
+
+<p>
+The following changes were made in this release:
+</p>
+
+<h2>Enhancements:</h2>
+<ul>
+<li>Issue 1306 : Java PermSize command line flag removed in Java 8</li>
+<li>Issue 1593 : Auto-scroll in Spider tab</li>
+<li>Issue 1600 : Dont report X-Frame-Options alert on 403 and 404 pages</li>
+<li>Issue 1654 : httpSessions/createEmptySession should initialize a site that was not previously visited</li>
+<li>Issue 1702 : Add "recurse" option to the spider API</li>
+<li>Issue 1715 : Unable to pass arguments when launching ZAP from the command line on Mac OS X</li>
+<li>Issue 1766 : Remove context via the API</li>
+<li>Issue 1768 : Update to use a more recent user-agent</li>
+<li>Issue 1778 : Passive scan AJAX spider requests</li>
+<li>Issue 1790 : Move Buffer Overflow Scanner from Beta to Release</li>
+<li>Issue 1793 : Allow active scan scripts to check if the scan was stopped</li>
+<li>Issue 1795 : Allow JVM options to be configured via GUI</li>
+<li>Issue 1799 : Minor Feature Request: Allow URL to be pasted into start Spider dialog.</li>
+<li>Issue 1802 : Minor Enhancement: Change active Pause Button to a Play button</li>
+<li>Issue 1849 : Option to merge related issues in reports</li>
+<li>Issue 1857 : Libraries that were updated</li>
+<li>Issue 1865 : Increase maximum db size</li>
+</ul>
+
+<h2>Bug fixes:</h2>
+<ul>
+<li>Issue 1760 : Unable to initialize home directory! xml/config.xml (No such file or directory)</li>
+<li>Issue 1763 : Automatic check for updates fails to report new versions</li>
+<li>Issue 1770 : Exceptions when calling (some) context API actions in daemon mode</li>
+<li>Issue 1771 : For OSX the zap.sh in the core download hard-codes the relative java location</li>
+<li>Issue 1772 : On OS X, Found Java version lies</li>
+<li>Issue 1777 : "Cannot locate configuration source null.policy" after opening "Active Scan" dialogue</li>
+<li>Issue 1781 : ZAP errors with "Unsupported option '-psn_x_xxxxxxx'" on OS X</li>
+<li>Issue 1784 : NullPointerException when active scanning through the API with a target without scheme</li>
+<li>Issue 1785 : Plugin enabled even if dependencies are not, "hangs" active scan</li>
+<li>Issue 1787 : Context not used by the Spider even if selected</li>
+<li>Issue 1788 : Scan Progress Pane Needs Sorting Change</li>
+<li>Issue 1789 : Forced Browse/AJAX Spider messages not restored to Sites tab</li>
+<li>Issue 1792 : Report not generated in daemon mode</li>
+<li>Issue 1798 : Stop Attack Feature Locks up ZAP?</li>
+<li>Issue 1804 : Disable processing of XML external entities by default</li>
+<li>Issue 1805 : ZAP API might not return the response in requested format on errors</li>
+<li>Issue 1858 : Spider might report wrong progress after finishing</li>
+<li>Issue 1872 : EDT accessed in daemon mode</li>
+</ul>
+
+<h2>See also</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+</table>
+</body>
+</html>

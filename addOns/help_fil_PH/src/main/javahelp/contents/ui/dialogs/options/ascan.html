@@ -3,67 +3,69 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Opsyon ng aktibong iskan screen
+Ang mga opsyon ng aktibong pag-iskan ng iskrin
 </title>
 </head>
-<body bgcolor="#ffffff">
-<h1>Aktibong Opsyon ng Scan screen</h1>
+<body>
+<h1>Ang mga opsyon ng aktibong pag-iskan ng iskrin</h1>
 <p>
-Ang screen na ito ay pinahihintulutan ka s configure <a href="../../../start/concepts/ascan.html">ang aktibong scan ng</a> opsyon:
+Ang iskrin na ito ay nagpapahintulot sa iyo na ikumpigura ang <a href="../../../start/features/ascan.html">ang aktibong pag-iskan ng</a> mga opsyon:
 
-<h3>Bilang ng sabay sabay na mga host na na-scan</h3>
-Ang pinakamataas na numero ng mga host na nascan na sa parehong oras. Ang pagtaas na ito ay maaaring maglagay ng karagdagang strain sa computer na ZAP ay tumatakbo.
+<h3>Number of Hosts Scanned Concurrently</h3>
+Ang ang pinakamataas na bilang ng mga host na na-iskan sa magkaparehong oras.
+ang pagdami nito ay maaaring maglagay ng karagdagang hirap sa mga ZAP ng computer na tumatakbo.
 
-<h3>Sabay sabay na pagiskan sa mga thread kada host</h3>
-Ang bilang ng mga thread ay iiskanin ang gumagamit kada host.<br>
-Ang pagdagdag ng bilang ng mga thread ay mas mapapabilis ang iskan pero ito ay maglalagay ng karagdagang hirap sa kompyuter ng ZAP ay tumatakbo at ang mga tinutukoy na host.
+<h3>Concurrent Scanning Threads per Host</h3>
+Ang bilang ng mga hibla ng iskaner na ginamit kada host.<br>
+Ang pagdadagdag ng bilang ng mga hibla na pinabilis ng pag-iskan subalit maaaring maglagay ng karagdagang hirap sa mga ZAP ng computer na tumatakbo at ang puntirya ng host.
 
-<h3>Mataas na mga resulta para sa listahan</h3>
-Ang bilang ng resulta na makikita sa aktibong Scan tab.<br>
-Ang pagpapakita ng malaking bilang ng resulta ay maaaring higit na mapataas ang oras ng pagtagal sa pagiskan.
+<h3>Max Results to List</h3>
+Ang bilang ng mga resulta na ipapakita sa mga aktibong pag-iskan ng tab.<br>
+Ang pagpapakita ng isang malaking bilang ng mga resulta na maaaring lubhang pagtataas ng oras na tagal ng isang pag-iskan.
 
-<h3>Pinakamataas na tagal ng patakaran (minuto, 0 ay walang limitado)</h3>
-Ang pinakamataas na oras ay pwedeng indibidwal na patakaran ay maaaring paganahin ng ilang minuto. Zero ibigsabihin ay walang limit. Ito ay maaaring gamitin para maiwasan ang mga patakaran na kumukuha ng malaking halaga ng oras. 
+<h3>Maximum Rule Duration (minutes; 0 is unlimited)</h3>
+Ang pinakamataas na oras ng sinumang indibidwal na patakaran na maaaring tumakbo para sa ilang mga minuto. ibig sabihin ng sero ay walang limit. ito ay maaaring magamit para maiwasan ng mga patakaran na makakuha ng isang malaking halaga ng oras. 
 
-<h3>Pinakamataas na tagal ng pagiskan (minuto, 0 ay walang limitado)</h3>
-Ang pinakamataas na oras na ang buong iskan ay maaaring paganahin ng ilang minuto. Zero ibig sabihin ay walang limit. Ito ay maaaring gamitin para matiyak na ang isang iskan ay kompleto na sa loob ng itinakdang oras. 
+<h3>Maximum Scan Duration (minutes; 0 is unlimited)</h3>
+Ang pinakamataas na oras na ang buong pag-iskan ay maaring tumakbo para sa ilang minuto. ibig sabihin ng sero ay walang limit. ito ay maaring magamit para masiguro na ang isang pag-iskan ay nakumpleto sa loob ng itinakdang oras. 
 
-<h3>Ang pagkaantala kapay nagiiskan sa milliseconds</h3>
-Ang pagkaantala sa mga millisecond sa pagitan ng bawat aplikasyon.<br>
-Ang pagtatakda nito sa hindi serong halaga ay makadaragdag sa oras na pagkuwa sa Aktibong iskan, pero ito ay may mas mababang pwersa sa pinupuntong host.
+<h3>Delay When Scanning (In Milliseconds)</h3>
+Ang pagkaantala sa mga millisecond sa pagitan ng bawat kahilingan.<br>
+Ang pagtatakda nito sa isang hindi serong halaga ay maidadagdag sa oras na nakuha sa isang aktibong pag-iskan, subalit ito ay maglalagay sa mababang hirap sa mga pinuntirya ng host.
 
-<h3>Iniksyon ng plugin ID sa uluhan para sa lahat ng mga kahilingan sa aktibong scan</h3>
-Kung ang opsyon na ito ay napili ang aktibong iskaner ay iinhiksyon ang aplikasyon sa ulohan <code>X-ZAP-Scan-ID</code> kasama ang ID ng iskaner na magpapadala ng mga kahilingang HTTP.
+<h3>Inject plugin ID in header for all active scan requests.</h3>
+Kung ang opsyon na ito ay napili ng aktibong iskaner na ma-iniksyon sa kahilingan ng header na <code>X-ZAP-Scan-ID</code> sa pamamagitan ng ID ng mga iskaner na nagpapadala ng mga kahilingan ng HTTP.
 
-<h3>Hawakan ang anti CSRF ng mga token</h3>
-Kung ang opsyon na ito ay napili kung magkagayon ang aktibong iskaner ay mapipilitan na maging awtomatikong kahilingan 
-<a href="../../../start/concepts/anticsrf.html">anti CSRF</a> kailan kailangan ang mga token.<br>
-Paalala na ang ekspirementong ito ay pagpapagana at pag bagal ng proseso sa iskaning bilang isang thread ay maaaring gamitin para masigurado na ang anti CSRF token request ay hindi mawawala sa paghakbang. 
+<h3>Handle anti-CSRF tokens (experimental functionality).</h3>
+Kung ang opssyon na ito ay napili habang ang aktibong iskaner ay sinusubukan sa awtomatikong kahilingan 
+<a href="../../../start/features/anticsrf.html">ng anti CSRF</a> ng mga token kung kinakailngan.<br>
+Paalala na ito ay eksperimento ng pagpapagana at ang pagbagal ng proseso ng pag-iskan bilang isa lamang na hibla ang siguradong magagamit
+na anti CSRF na mga kahilingan na hindi nakuha ng hakbang. 
 
-<h3>Sa mode ng attack prompt muling i-iiskan ang mga node pagka ang saklaw ay nagbago</h3>
-Kung ang opsyon na ito ay napili kung magkagayon ikaw ay pumili ng attack <a href="../../../start/concepts/modes.html">mode</a> ikaw ay maaaring magprompt para pumili kung muling i-iskan ang mga node sa scope.<br>
-Kung ang opsyon ay hindi napili kung magkagayon ang mga sumusunod na opsyon ay makokontrol kung ang mga node ay muling iiiskan.
+<h3>In Attack Mode prompt to rescan nodes when scope changed.</h3>
+Kung ang opsyon na ito ay napili pagkatapos kung ang iyong napili ay ang pag-atake ng <a href="../../../start/features/modes.html">moda</a> na maaari mong madiktahan na pumili kung ang mga saklaw ng node ay i-rerescan.<br>
+Kung ang opsyon ay hindi napili pagkatapos ang sumusunod na opsyon ay na kontrol kapag ang mga node ay na-rescan.
 
-<h3>Sa attack mode laging muling iiskan ang mga node kung ang scope ay nagiba</h3>
-Kung ang opsyon na ito ay napili kung magkagayon kung gagana sa attack <a href="../../../start/concepts/modes.html">mode</a> ang lahat ng mga node sa scope ay maaaring iiskan muli kung ang scope ay nagpalit.<br>
-Ito ay hindi nirerekomenda para sa malaking mga site bilang ito ay pwedeng sumakop ng mahabang oras.
+<h3>In Attack Mode always rescan nodes when scope changed.</h3>
+Kung ang opsyon na ito ay napili pagkatapos habang tumatakbo sa pag-atake ng <a href="../../../start/features/modes.html">moda</a> ng lahat ng mga node sa saklaw na na-rescan kung ang saklaw ay binago.<br>
+Ito ay hindi rekomendado para sa malaking mga sayt bilang ito ay maaaring kunin sa mahabang oras.
 
-<h3>I-default ang patakaran sa aktibong iskan</h3>
-Ang <a href="../../../start/concepts/scanpolicy.html">Patakaran ng iskan</a> na ginamit sa pamamagitan ng default kung ikaw ay magsisimula sa aktibong iskan.
+<h3>Default Active Scan Policy</h3>
+Ang <a href="../../../start/features/scanpolicy.html">Patakaran ng pag-iskan</a> na ginamit sa pamamagitan ng default kung ikaw ay magsisimula sa isang aktibong pag-iskan.
 
-<h3>Ang patakaran sa attack mode</h3>
-Ang <a href="../../../start/concepts/scanpolicy.html">Patakaran ng Iskan</a> na ito ay ginamit para sa pagiskan sa attack <a href="../../../start/concepts/modes.html">mode</a>.
+<h3>Attack Mode Scan Policy</h3>
+Ang <a href="../../../start/features/scanpolicy.html">Patakaran ng pag-Iskan</a> na ito ay ginamit para sa pag-iskan sa pag-atake <a href="../../../start/features/modes.html">ng moda</a>.
 
-<h3>Mataas na progresong tsart sa mga minuto</h3>
-Ang pinakamataas na oras sa minuto na kung saan ay para sa tugon ng mga code ay maaaring maitsart sa
-<a href="../scanprogress.html">Isinasagawa dialog ng scan</a>.<br>
-Para wag paganahin ang tsart ang opsyon ay dapat itakda sa serong minuto.
+<h3>Max Progress Chart in Mins</h3>
+Ang pinakamataas na oras sa mga minuto para sa kung aling tugon ng mga code ay mapipirmi sa mga
+<a href="../scanprogress.html">Progreso ng pag-iskan ng diyalogo</a>.<br>
+Sa di pagpapagana ng tsart ng opsyon na dapat na maitakda sa sero ng mga minuto.
 
-<h2>Tignan din</h2>
+<h2>Tignan din sa</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">Tignan ang kabuoang UI</a></td><td>para sa kabuoang pagmamasid ng gumagamit ng interface</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="options.html">Opsyon ng mga dayalog</a></td><td>para sa mga detalye ng ibang Opsyon sa dayalog screen</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="ascan.html">Akitbong opsyon sa scan</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">Ang pangkalahatang ideya ng UI</a></td><td>para sa pangkalahatang ideya ng mga gumamit ng interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="options.html">Ang mga opsyon ng mga diyalogo</a></td><td>para sa mga detalye ng mga ibang mga opsyon ng diyalogo ng mga iskrin</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="ascan.html">Ang aktibong pag-iskan ng mga opsyon</a></td><td></td></tr>
 </table>
 
 </body>

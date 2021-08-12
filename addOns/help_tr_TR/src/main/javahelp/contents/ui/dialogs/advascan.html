@@ -6,22 +6,22 @@
 Aktif Tarama iletişim kutusu
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Aktif Tarama iletişim kutusu</h1>
 <p>
-Bu iletişim kutusu aşağıdakileri başlatır <a href="../../start/concepts/ascan.html">aktif tarayıcı</a>.<br>
+Bu iletişim kutusu aşağıdakileri başlatır <a href="../../start/features/ascan.html">aktif tarayıcı</a>.<br>
   
 <h3>Kapsam</h3>
 İlk sekme, başlangıç noktasını seçmenize veya değiştirmenize izin verir.<br>
-Eğer daha fazlasına sahipseniz <a href="../../start/concepts/scanpolicy.html">tarama ilkeleri</a> o zaman kullanılacak olanı seçebileceksiniz.<br>
-Eğer başlangıç noktası bir veya birden fazla ise <a href="../../start/concepts/contexts.html">İçerikler</a> o zaman içlerinden birini seçebilirsiniz.<br>
-Eğer bağlam hiçbirini içermiyorsa <a href="../../start/concepts/users.html">Kullanıcılar</a> tanımladığınızda bunlardan birini seçebilirsiniz.<br>
+Eğer daha fazlasına sahipseniz <a href="../../start/features/scanpolicy.html">tarama ilkeleri</a> o zaman kullanılacak olanı seçebileceksiniz.<br>
+Eğer başlangıç noktası bir veya birden fazla ise <a href="../../start/features/contexts.html">İçerikler</a> o zaman içlerinden birini seçebilirsiniz.<br>
+Eğer bağlam hiçbirini içermiyorsa <a href="../../start/features/users.html">Kullanıcılar</a> tanımladığınızda bunlardan birini seçebilirsiniz.<br>
 Kullanıcılardan birini seçerseniz, o zaman aktif tarama o kullanıcı olarak gerçekleştirilir ve ZAP (tekrar) bu kullanıcı olarak gerektiğinde kimlik doğrulaması yapar.
 <br><br>
-'Tekrarlamalı'yı seçerseniz, seçilen grubun altındaki tüm düğümler de taranır.<br>
+If you select 'Recurse' then all of the nodes underneath the one selected will also be scanned.<br>
 Özel giriş vektörleri yalnızca bu seçenek seçili değilse desteklenir.
 <br><br>
-'Gelişmiş seçenekleri göster'i seçerseniz, etkin tarama işlemi üzerinde ince tanecik kontrolü sağlayan aşağıdaki sekmeler gösterilir.
+If you select 'Show Advanced Options' then the following tabs will be shown which provide fine grain control over the active scanning process.
 <br><br>
 'Sıfırla' düğmesine tıklamak, tüm seçenekleri varsayılana sıfırlar. 
 
@@ -32,7 +32,7 @@ Giriş Vektörleri sekmesi, varsayılan giriş vektörlerini geçersiz kılmanı
 
 <h3>Özel Vektörler</h3>
 Özel Vektörler sekmesi saldırı talebine karşı belirli bölgeleri belirtmenize olanak tanır.<br> 
-Özel Vektörler yalnızca ilk sekmedeki 'recurse' seçeneği seçilmezse kullanılabilir.<br>
+Custom Vectors are only available if the 'Recurse' option on the first tab is not selected.<br>
 Özel giriş vektörleri eklemek için, isteğinize saldırmak istediğiniz karakterleri vurgulayın ve 'Ekle' düğmesini tıklayın.<br>
 İstediğiniz kadar çok sayıda özel giriş vektörü ekleyebilirsiniz.<br>
 Özel giriş vektörlerini kaldırmak için seçili karakterlerden herhangi birini vurgulayın ve 'Kaldır' düğmesini tıklayın.<br>
@@ -44,7 +44,20 @@ Hedef uygulamada bulunmayan tanıdığınız teknolojileri seçmemek, taramayı,
 
 <h3>İlke</h3>
 İlke sekmesi seçilen ayarlarda belirtilen ayarların tümünü geçersiz kılmanızı sağlar 
-<a href="../../start/concepts/scanpolicy.html">tarama ilkesi</a>. 
+<a href="../../start/features/scanpolicy.html">tarama ilkesi</a>. 
+
+<h3>Filter</h3>
+The Filter tab allows you to specify filter criteria and active scan will filter requests based on these criteria's.
+<br/> 
+There are four filter criteria's available in the filter tab <br/>
+<ul>
+<li>HTTP method</li>
+<li>Status code</li>
+<li>Tags</li>
+<li>URL pattern</li>
+</ul>
+HTTP method and Status code filter criteria are only applied to check if a request can be included in active scan or not,<br/> where as
+Tags and URL pattern filter criteria can be applied to include or exclude a request.
 
 <br><br>
 

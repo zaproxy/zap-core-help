@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Release 1.1.0
+</title>
+</head>
+<body>
+<h1>Release 1.1.0</h1>
+<p>
+The following changes were made in this release:
+</p>
+<h2>Significant changes:</h2>
+
+<h3>OWASP rebranding</h3>
+ZAP has been accepted as an OWASP project.<br>
+Its homepage is now: https://owasp.org/www-project-zap/
+
+<h3>Brute Force</h3>
+The ability to brute force files and directories based on code from the OWASP DirBuster project. <br>
+The new Brute Force tab shows the files and directories found.
+
+<h3>Σάρωση θύρας</h3>
+The ability to port scan sites. <br>
+The new Port Scan tab shows the ports found.
+
+<h3>Active Scan tab</h3>
+The new <a href="../ui/tabs/ascan.html">Active Scan tab</a> shows the requests and responses as a result of actively scanning a site.
+
+<h3>Spider tab</h3>
+The <a href="../ui/tabs/spider.html">Spider tab</a> now allows you to continue using ZAP while spidering a site.<br>
+You can also pause and resume the spider.    
+
+<h3>Smartcard support</h3>
+Smart card support has been added c/o the Andiparos project.<br>
+The following smartcard devices have been tested on Windows:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Safeguard</td><td>Aladdin eToken</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td></td><td>Aladdin eToken Pro</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Omnikey</td><td>Omnikey 3121</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td></td><td>CardMan 6121</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Gemalto</td><td>Reflex 20 V2</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td></td><td>Swiss Stick</td></tr>
+</table>
+The following smartcard devices are reported to work:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Omnikey</td><td>CardMan 4040</td></tr>
+</table>
+
+<h3>Attack menu</h3>
+The new <a href="../ui/tabs/sites.html">Sites tab</a> right click 'Attack' menu allows you to start various scans.
+
+<h3>More internationalisation</h3>
+All of the main tabs and menu items have now been internationalised.
+
+<h3>Localisation</h3>
+Support for the following languages are built into this version:
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>English</td><td>The default language</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Brazilian Portuguese</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>German</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Polish</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Spanish</td><td></td></tr>
+</table>
+    
+<h3>Language selection</h3>
+On start up you will be prompted to choose the language to use.<br>
+New languages are automatically detected by the presence of files with names of the form Messages_&lt;locale&gt;.properties in the ZAP directory. 
+
+<h2>Minor changes:</h2>
+
+<h3>Disabled 'default file' plugins</h3>
+The plugins which detect default files are effectively made redundant by the new 
+brute force scanner.<br>
+These have therefore been disabled.
+
+<h3>Scanner summaries</h3>
+Counts of the number and types of the current scans are now displayed in the <a href="../ui/footer.html">footer</a>.
+
+
+<h2>See also</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+</table>
+</body>
+</html>

@@ -6,25 +6,27 @@
 Dinamik SSL Sertifikaları
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Seçenek Dinamik SSL Sertifikaları</h1>
 	<p>
 	OWASP ZAP, SSL bağlantılarını şeffaf bir şekilde çözmenizi sağlar.
 	Bunu yapmak için, ZAP, sunucuya göndermeden önce her isteği şifrelemek ve geri gelen her yanıtın şifresini çözmek zorundadır.
 	Fakat bu zaman tarayıcı tarafından yapıldı.
-	Bu nedenle iletimin şifresini çözmek ya da müdahale etmenin tek yolu, 'adam ortada' yaklaşımı yapmaktır.
+	That's why, the only way to decrypt or intercept the transmission,
+	is to do a 'manipulator in the middle' approach.
 	</p>
 
 
 <h2>Genel Bakış</h2>
 <p>
-	<img alt="ortadaki adam" src="../../../images/maninthemiddle.png">
+	<img alt="manipulator in the middle" src="../../../images/manipulatorinthemiddle.png">
 </p>
 <p>
 	Kısa kelimeyle, sunucuya gönderilen ve alınan tüm veriler, ZAP içindeki orijinal sunucunun sertifikasını kullanarak şifrelenir / şifrelerin çözülür. Bu yolla, ZAP düz metni bilir.
 	Siz (sizin tarayıcınız) SSL korumalı bir oturum kurmak için,
 ZAP kendi sertifikasını kullanıyor. Sizin yaratabileceğiniz bu.
-	ZAP tarafından oluşturulan her sertifika aynı sunucu adı için imzalanacaktır. Üstteki örnekte, ZAP sunucu adı "www.example.com" için bir sertifika oluşturacaktır. Buyolla, tarayıcınız düzenli SSL şifrelemesi yapacak.
+	ZAP tarafından oluşturulan her sertifika aynı sunucu adı için imzalanacaktır. In the example above, ZAP will create a certificate
+	for the server's name <code>www.example.com</code>. Buyolla, tarayıcınız düzenli SSL şifrelemesi yapacak.
 </p>
 
 
@@ -43,47 +45,64 @@ ZAP kendi sertifikasını kullanıyor. Sizin yaratabileceğiniz bu.
 	ZAP Kökü CA sertifikasını güvenilir Kök CA 'lar listenize ekledikten sonra,
 	tarayıcınız anonim vekil sunucuyu tanımaz. 
 </p>
+<p>
+	<strong>Note:</strong>
+	<blockquote>On iOS 10.3 and onwards, you also need to enable full trust for the root certificate:
+	
+	Go to Settings > General > About > Certificate Trust Settings.
+	Under “Enable full trust for root certificates”, turn on trust for the certificate.</blockquote>
+</p>
 
 <h3>Oluşturmak</h3>
 <p>
-	Eğer ZAP'ı ilk kez çalıştırıyorsanız, öncelikle bir Root CA sertifikası oluşturmalısınız.
-	Bir tane oluşturduktan sonra onu kendi tarayıcınıza ya da HTTP istemci uygulamasına yüklemelisiniz. Daha fazla ayrıntı için bkz. bölüm<a href="#install"> yükleme</a>.
+	When you are running ZAP for the first time then it will generate a Root CA certificate just for you.
+	If you do not use the 'browser launch' feature then you have to install it within your browser 
+	or HTTP client application. See section <a href="#install">installation</a> 
+	for more details.
 </p>
 <p>
-	Üretilen her Root CA sertifikası bir yıl için geçerlidir. Bu dönemden sonra
-yeni bir tane oluşturmak için.<br>
-Üretilen her Root CA sertifikası 2048 bit gücündedir(RSA ile SHA1).<br>
-Üretilen her Root CA sertifikası "1" seri numarası ile başlar. 
-	Üretilen her Root CA sertifikası aşağıdaki tanımlayıcılardan meydana gelir:
+	Every generated Root CA certificate is valid for one year. After that period you have
+	to create a new one.<br>
+	Every generated Root CA certificate is 2048 bit strong (RSA with SHA1).<br>
+	Every generated Root CA certificate starts with serial number "1". 
+	Every generated Root CA certificate consists of the following identifiers:
 </p>
 <p style="padding-left: 20pt;">
 	<code>
-	CN = OWASP Zed Attack Vekil Sunucu Kökü CA<br>
+	CN = OWASP Zed Attack Proxy Root CA<br>
 	L = 87b77fe834b0a301<br>
-	O = OWASP Kök CA<br>
-	OU = OWASP ZAP Kök CA<br>
+	O = OWASP Root CA<br>
+	OU = OWASP ZAP Root CA<br>
 	C = XX<br>
 	</code>
 </p>
 <p>
-	Görüldüğü gibi, sadece on altılık bir sayıyla olan konum tanımlayıcısı (L) var.
-	Bu sayı iki 32 bit karma koddan inşa edilmiştir: kullanıcının adı ve kullanıcının giriş dizini.
-	Bu yolla kendi sertifikanızı, bir çok kurulum kullanırken belirleyebilirsiniz.
-	Fakat hiçbir şekilde, hiç kimse bu koddan adınızı anlayamaz.
+	As you can see, there's a Location identifier (L) which is only a hexadecimal number.
+	This number is constructed out of two 32bit hash codes: user's name and user's home directory.
+	This way you can identify your own certificate when using multiple installations.
+	But there's no way, that anyone can figure out your name from this hash code.
 </p>
 
 <h3>İçe aktar</h3>
 <p>
-	Çoklu ZAP kurulumu kullandığınız zaman ve aynı Root CA sertifikasını 
-        kullanmak istediğinizde, bunu alabilirsiniz. Tek bir Kök CA sertifikası oluşturmak için
-	sadece bir OWASP ZAP kurulumu kullanın.<br>
-	'OWASP ZAP / config.xml' dosyasını kullanıcılarınız ana dizininden 
-	benzer sertifikayı kullanmak istediğiniz PC 'ye kopyalayın ve içe aktarmak için 'içe aktar' a basın.
+	When you're using multiple ZAP installation and you want to use the same
+	Root CA certificate, so you can import it. Simply use one installation of OWASP ZAP
+	to generate one Root CA certificate.<br>
+	Copy the file 'OWASP ZAP/config.xml' from your users home directory to 
+	the PC, where you want to use the same certificate and press 'import' to import it.
 </p>
 <p>
-	Hem sertifikayı hem de şifrelenmemiş gizli anahtarı aşağıdaki biçimde içerdikleri sürece
-pem dosyalarında saklanan sertifikaları içe aktarabilirsiniz:<br><code><br>
------SERTİFİKAYA BAŞLAYIN-----<br>
+	Alternatively you can use the <a href="../../../cmdline.html">command line</a> options:
+	<ul>
+	<li>-certfulldump &lt;path&gt; to dump the certificate from one ZAP instance
+	<li>-certload &lt;path&gt; to load the certificate into another ZAP instance
+	</ul>
+</p>
+<p>
+	You can also import certificates stored in pem files as long as they include both
+	the certificate and the unencrypted private key in the following format:<br>
+	<code><br>
+-----BEGIN CERTIFICATE-----<br>
 MIIC9TCCAl6gAwIBAgIJANL8E4epRNznMA0GCSqGSIb3DQEBBQUAMFsxGDAWBgNV<br>
 BAoTD1N1cGVyZmlzaCwgSW5jLjELMAkGA1UEBxMCU0YxCzAJBgNVBAgTAkNBMQsw<br>
 CQYDVQQGEwJVUzEYMBYGA1UEAxMPU3VwZXJmaXNoLCBJbmMuMB4XDTE0MDUxMjE2<br>
@@ -100,8 +119,8 @@ UzEYMBYGA1UEAxMPU3VwZXJmaXNoLCBJbmMuggkA0vwTh6lE3OcwDQYJKoZIhvcN<br>
 AQEFBQADgYEApHyg7ApKx3DEcWjzOyLi3JyN0JL+c35yK1VEmxu0Qusfr76645Oj<br>
 1IsYwpTws6a9ZTRMzST4GQvFFQra81eLqYbPbMPuhC+FCxkUF5i0DNSWi+kczJXJ<br>
 TtCqSwGl9t9JEoFqvtW+znZ9TqyLiOMw7TGEUI+88VAqW0qmXnwPcfo=<br>
------SERTİFİKA SONU-----<br>
------ÖZEL ANAHTARIN BAŞLATILMASI-----<br>
+-----END CERTIFICATE-----<br>
+-----BEGIN PRIVATE KEY-----<br>
 MIICXgIBAAKBgQDo80oYdl8ZP7HPWOl/QwcJlYA1xQ/+cTEngZkSJiCl349q/EJV<br>
 Oe4JOInZ4DbErAGCW9U55vmPB4jf/u72oRTOqXRF2P3wF1cqguF6LhKTWqyK1xVj<br>
 0bebVYAPWLwcSe0gYt22TKU66xw9oP96cabTEHgzrkvCHP2SSqHD50GkLQIDAQAB<br>
@@ -115,70 +134,89 @@ vlwz69jdFpQqrFRBjVlf4/FDx3IfjpxHj0RgiEUUxcnoXmh/8qwh1fdzCrbjAkB4<br>
 afg/chTLQUrKw5ecvW2p9+Blu20Fsv1kcDHLb/0LjU4XNrhbuz+8TlmqstOMCrPZ<br>
 j48o5+RLKvqrpxNlMeS5AkEA6qIdW/yp5N8b1j2OxYZ9u5O//BvspwRITGM60Cps<br>
 yemZE/ua8wm34SKvDHf5uxcmofShW17PLICrsLJ7P35y/A== <br>
------ÖZEL ANAHTARIN SONU-----<br>
+-----END PRIVATE KEY-----<br>
   	</code><br>
-ve evet, bu örnek çalışacak- Karşınızda Superfish sertifikası!
+And yes, that example will work - its the Superfish certificate!
 </p>
 
 <h3><a name="view">Görünüm</a></h3>
 <p>
-	ZAP'ın seçenekler penceresinde sertifikanın ham bytelarını(on altılı olarak kodlanmış)
-         görüyorsunuz "Görüntü" seçeneği ".CER" dosyaları için olan sisteminizin varsayılan
-	görüntüleme aracını kullanmaya çalışır. Windows'da, bu genel olarak aynıdır,
-        sertifikayı dışarı alırken ve üstüne çift tıklarken.
+	In the options dialog of ZAP you're seeing the raw bytes (hexa-decimal encoded)
+	of the certificate. The option "view" tries to use your system's default
+	viewing tool for ".CER" files. On Windows, this is typically the same,
+	when exporting the certificate and double clicking on it.
 </p>
 
 <h3>Kaydet/Dışa aktar</h3>
 <p>
-	ZAP'ın seçenekler bölümünde, sertifikanın ham haldeki baytlarını (on altıya onlu şifrelenmiş şekilde) görüyorsunuz. Pek çok program, içe / dışa aktarma işlevleri için, bu basit biçimi kullanmaktadır. Dışa aktarmaya tıklayınca bu byte lar disk e kaydedilir.
-	Hepsini seçme, CTRL+C (Panoya Kopyalama) yapma ve yeni bir .CER dosyasına kaydetmeye eşittir (ki diyalogda gördüğünüz gibi basit bir metin).
+	In the options dialog of ZAP you're seeing the raw bytes (hexa-decimal encoded)
+	of the certificate. Many programs are using this simple format for import/export
+	functions. When clicking 'export', these bytes are saved to disk.
+	This is equal to selecting all and doing CTRL+C (copy to clipboard) and
+	save it into a new .CER file (which is simple text as you see in the dialog).
 </p>
 
 <h2><a name="dynamic_certificates">Dinamik sertifikalar</a></h2>
 <p>
-	Her ZAP örneği kendi kök sertifikasını kullanır. Tabii ki, onları çoklu
-	makinelerde kullanmak için kök sertifikalarını içe aktarabilirsin.
-	Çalışırken, bir HTTPS kaynağı istendiği her seferde alt sertifikalar oluşturulacaktır.
-	Bu, Root CA sertifikasının kullanıldığı anlamına gelir.
+	Each ZAP instance is using it's own root certificate. Of course, you can
+	import root certificates, to use them on multiple machines.
+	When running, there will be sub-certificated created, each time a HTTPS 
+	resource is requested.
+	That means, the Root CA certificate is used as an issuer.
 </p>
 <p>
-	Dinamik olarak üretilen her sertifika 1000 gün için geçerlidir.<br>
-Dinamik olarak üretilen her sertifika 2048 bit gücündedir( RSA ile SHA1).<br>
-Dinamik olarak üretilen her sertifika rastgele bir seri numarasına sahiptir. 
-	Dinamik olarak üretilen her sertifika aşağıdaki tanımlayıcılardan meydana gelir:
+	Every dynamically generated certificate is valid for 1000 days.<br>
+	Every dynamically generated certificate is 2048 bit strong (RSA with SHA1).<br>
+	Every dynamically generated certificate has a random serial number. 
+	Every dynamically generated certificate consists of the following identifiers:
 </p>
 <p style="padding-left: 20pt;">
 	<code>
-	CN = www.örnek.com<br>
-       E = owasp-zed-attack-proxy@lists.owasp.org<br>
-       C = XX<br>
-       O = OWASP<br>
-       OU = Zed Attack Proxy Projesi<br>
+	CN = www.example.com<br>
+	E = owasp-zed-attack-proxy@lists.owasp.org<br>
+	C = XX<br>
+	O = OWASP<br>
+	OU = Zed Attack Proxy Project<br>
 	</code>
 </p>
 <p>
-	Yan not: 
-ZAP' ı her başlattığınızda, dahili olarak rastgele seri numarası ofseti oluşturulur.
-		Her dinamik olarak oluşturulan sertifika, bu ofseti ayrıca artan bir sayaç kullanacaktır. Örneğin, ilk başta dinamik olan sertifikaya sahip seri numarası 2314, ikincisi 2315, üçüncüsü 2316 ve bunun gibi.
-		Bunun nedeni basit: tarayıcılar da sertifikaları önbelleğe alıyor.
-		ZAP'ı yeniden başlattığınızda ama tarayıcınızı yeniden başlatmadığınızda, tarayıcı aynı sertifikayı ama farklı seri numarası ile görür olabilir.
-		Sonuç olarak, tarayıcı sertifikayı şikayet eder ve reddeder.
-		Rasgele ofset (dahili 48bit rastgele sayı) kullanarak, 1 ila 281.474.976.710.656 arasında bir olasılık vardır ZAP yeniden başlatıldığında, seri numara ofseti farklı olur.<br> Nadir durumlarda, tarayıcının, sertifika içindeki bozuk bir seri numarasıyla ilgili olarak şikayetçi olduğunu keşfediyorsunuz; sadece tarayıcınızı yeniden başlatın ;-) </i>.
+	<i>
+		Side note:
+		Each time you start ZAP, internally a random serial number offset is generated.
+		Every dynamically generated certificate will use this offset plus an
+		increasing counter. For example, first dynamically certificate has 
+		serial number 2314, the second one 2315, the third one 2316 and so on.
+		The reason for this is simple: browsers are also caching certificates.
+		When you restart ZAP but don't restart your browser, it could happen,
+		that the browser sees the same certificate but with different serial number.
+		In the end, the browser would complain about and reject the certificate.
+		By using the random offset (internally 48bit random number), the chances
+		are 1 to 281.474.976.710.656 that when restarting ZAP, the serial number
+		offset is a different one.<br>
+		So in the rare case, you are discovering that you browser complains about
+		a broken serial number within the certificate, just restart your browser ;-)
+	</i>.
 </p>
 
 <h2><a name="install">ZAP Kök CA sertifikası kurulumu</a></h2>
 <p>
-	Kullanmak istediğiniz herhangi bir HTTPS istemcisi, OWASP Kök CA sertifikasını 'güvenilir kök sertifika' olarak tanımalıdır. Genellikle tarayıcınızın güvenilen kök sertifikalar listesine ZAP sertifikasını el ile yüklemelisiniz.
+	Any HTTPS client you want to use, has to know the OWASP Root CA certificate
+	as 'trusted root certificate'. Typically you have to install manually the
+	ZAP certificate into your browser's list of trusted root certificates.
 </p>
 <h3>Windows / Internet Explorer</h3>
 <p>
-	En kolay yol <a href="#view">görünümü</a> tıklamak ve 'sertifika yükle' yi seçmektir. Alternatif olarak, oluşturulan sertifikanızı kaydedebilir/dışa aktarabilirsiniz (hedef bilgisayara kopyalayın) ve .CER dosyasına çift tıklayın. 
-	Bunu yaparken, sertifika yükleme yardımı için normal Windows sihirbazı açılır.
-	Bu sihirbazda manuel olarak sertifika deposu seçin. Windows'un otomatik olarak sertifika deposunu seçmesine izin vermeyin.
-	Mağazadan "güvenilir root sertifikaları" nı seçin ve sihirbazı sonlandırın.
+	The easiest way is to click on <a href="#view">view</a> and choose
+	'Install certificate'. Alternatively, you can save/export your generated
+	certificate (copy it to you target computer) and double click the .CER file. 
+	When doing so, the regular Windows wizard for certificate installation
+	assistance is poping up.
+	In this wizard manually choose the certificate store. Do NOT let
+	Windows choose automatically the certificate store.
+	Choose 'trusted root certificates' as store and finalize the wizard.
 </p>
 <p>
-	Başarılı kurulumdan sonra, sertifikayı kontrol edebilirsin.
+	After successfully installation, you can check the certificate.
 </p>
 	<ol>
 	<li>İnternet seçeneklerine gidin</li>
@@ -190,8 +228,9 @@ ZAP' ı her başlattığınızda, dahili olarak rastgele seri numarası ofseti o
 
 <h3>Mozilla Firefox</h3>
 <p>
-	Firefox kendi sertifika deposunu kullanıyor. Bu yüzden, windowsta her iki tarayıcıyı da kullanırken iki kez içe aktarmalısınız.
-	Kurulum ve geç onaylama, aynı tercihler iletişim kutusunda yapılır:
+	Firefox is using it's own certificate store. Thats why you have to
+	import it twice, when you're using both browser on windows.
+	Installation and late on validation is done in the same preferences dialog:
 </p>
 	<ol>
 	<li>Tercihlere git</li>
@@ -206,13 +245,13 @@ ZAP' ı her başlattığınızda, dahili olarak rastgele seri numarası ofseti o
 
 <h2 style="color: red; font-weight: bold; text-decoration: underline;">Riskler</h2>
 <p>
-	<b>Dikkat, mevcut riskler vardır!</b><br>
-Kullanıcı tarafından üretilmis Root CA sertifikasını güvenilenler
-listesine alarak, root sertifikasına sahip bütün kullanıcıların sisteme(tarayıcıya) 
-veri sokmasına olanak sağlar.
-	Başka bir deyişle verimli makinalarla güvenli bir çevrede test etmiyorsanız, 
-sisteminize yapılacak fazladan
- saldırılara karşı dikkatli olun.  
+	<b>Attention, there are risks!</b><br>
+	When adding self generated Root CA certificates to your list of trusted 
+	root certificates, everyone with the root certificate can smuggle data
+	into your system (browser).
+	In other words when you're not testing in a safe environment, but on
+	productive machines, be aware that you're opening an additional attack
+	vector to your system.  
 </p>
 
 <h2>Ayrıca Bakınız</h2>

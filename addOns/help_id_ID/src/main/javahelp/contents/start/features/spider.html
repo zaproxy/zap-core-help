@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Laba - laba</title>
+</head>
+<body>
+	<h1>Laba - laba</h1>
+	<p>Laba -laba adalah alat yang di gunakan untuk menemukan sumber - sumber baru (URL) pada situs tertentu secara otomatis. Ini dimulai dengan sebuah daftar dari URL
+		untuk dikunjungi, yang disebut biji, yang tergantung tentang bagaimana Laba-laba tersebut
+		dimulai. Laba-laba menambahkan mereka ke daftar URL untuk mengunjungi dan proses terus secara rekursif sebagai sumber daya baru yang ditemukan. mengunjungi URL tersebut, mengidentifikasi semua hyperlink di halaman dan.
+	</p>
+
+	<p>Laba-laba dapat digunakan dan dijalankan menggunakan <a href="../../ui/dialogs/spider.html">Spider dialogue</a>.</p>
+
+	<p>Selama pemrosesan URL, Laba-laba membuat permintaan untuk mengambil sumberdaya dan memparsing respon, identifikasi hyperlink. Saat ini memiliki perilaku berikut ketika pengolahan
+jenis tanggapan:</p>
+
+	<h4>HTML</h4>
+	Memproses label spesifik, identifikasi link ke sumberdaya baru:
+	<ul>
+		<li>Dasar - Penanganan yang tepat</li>
+		<li>A, Link, Area - 'href' atribut</li>
+		<li>Frame, IFrame, Script, Img - 'src' atribut</li>
+		<li>Meta - 'http-equiv' untuk 'lokasi' dan 'refresh'</li>
+		<li>Formulir - menangani dengan tepat dari Formulir dengan metode GET dan POST. Nilai field dihasilkan secara valid, termasuk <a
+			href="http://www.w3schools.com/html5/html5_form_input_types.asp">Tipe masukan
+				HTML 5.0</a>.
+		</li>
+		<li>Komentar - Tag yang valid ditemukan pada komentar juga dianalisis, jika
+			ditetapkan pada <a href="../../ui/dialogs/options/spider.html">Pilihannya
+				Laba-laba layar</a>
+		</li>
+	</ul>
+
+	<h4>Berkas Robots.txt</h4>
+	Jika diatur pada
+	<a href="../../ui/dialogs/options/spider.html">Pilihan Spider
+layar</a>juga mengkaji file 'Robots.txt' dan mencoba untuk mengidentifikasi sumber baru yang menerapkan peraturan yang ditetapkan. Itu harus disebutkan bahwa
+laba-Laba tidak mengikuti aturan yang ditentukan dalam 'Robots.txt'
+file.
+
+	<h4>Bentuk DataO Atom</h4>
+	Konten Odata yang menggunakan format Atom yang saat ini didukung. Semua mencakup link (relatif atau absolut) yang diproses.
+
+	<h4>Non-HTML Respon Teks</h4>
+	Teks tanggapan diurai memindai URL pola
+
+	<h4>Non-teks tanggapan</h4>
+	Saat ini, laba-Laba tidak proses ini jenis sumber daya.
+
+	<h2>Aspek-aspek lain</h2>
+	<ul>
+	<li> Ketika memeriksa jika sebuah URL yang telah dikunjungi, perilaku mengenai cara
+parameter yang ditangani dapat dikonfigurasi pada laba-Laba Pilihan layar.
+	</li>
+	<li> Ketika memeriksa apakah URL telah dikunjungi, terdapat beberapa parameter umum yang diabaikan: jsessionid, phpsessid, aspsessionid, utm_*
+	</li>
+	<li> Laba-Laba perilaku mengenai cookie tergantung pada bagaimana laba-laba mulai dan pilihan yang diaktifkan. Untuk lebih
+rincian mengacu pada laba-Laba Pilihan layar.
+	</li>
+	</ul>
+	<p>
+		Laba-laba dikonfigurasi menggunakan <a
+			href="../../ui/dialogs/options/spider.html">Spider Option screen</a>.
+	</p>
+
+	<h2>Lihat juga</h2>
+	<table>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/overview.html">UI Gambaran</a></td>
+			<td>petunjuk untuk pengguna antar muka</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="features.html">Gambaran</a></td>
+			<td>di terbitkan oleh ZAP</td>
+		</tr>
+		<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td><a href="../../ui/dialogs/options/spider.html">Pilihan layar laba - laba</a></td>
+			<td>pilih pintasan untuk laba - laba</td>
+		</tr>
+	</table>
+
+<h2>Official Videos</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><a href="https://play.sonatype.com/watch/rLq2nvgbuGwVn2BX9gA8r2">ZAP In Ten: Explore Your Applications</a> (10:36)</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><a href="https://youtu.be/mz2nhYpU-sw">ZAP Deep Dive: Exploring Applications: Standard Spider</a> (34:35)</td></tr>
+</table>
+
+</body>
+</html>

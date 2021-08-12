@@ -6,7 +6,7 @@
 History tab
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>History tab</h1>
 <p>
 The History tab shows a list of all of the requests in the order in which they were made.<br/>
@@ -26,11 +26,11 @@ For each request you can see:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 <td>The length of time the whole request took</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td>Any <a href="../../start/concepts/alerts.html">Alerts</a> on the request</td></tr>
+<td>Any <a href="../../start/features/alerts.html">Alerts</a> on the request</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td>Any <a href="../../start/concepts/notes.html">Notes</a> you have added to request</td></tr>
+<td>Any <a href="../../start/features/notes.html">Notes</a> you have added to request</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td>Any <a href="../../start/concepts/tags.html">Tags</a> on the request</td></tr>
+<td>Any <a href="../../start/features/tags.html">Tags</a> on the request</td></tr>
 </table>
 
 Selecting a requests will display it in the <a href="request.html">Request tab</a> and 
@@ -52,28 +52,28 @@ The Attack menu has the following submenus:
 
 <h4>Active Scan...</h4>
 This will launch the <a href="../dialogs/advascan.html">Active Scan</a> dialog which allows you to initiate an 
-<a href="../../start/concepts/ascan.html">active scan</a> with the starting point set to the request you selected.<br/>
+<a href="../../start/features/ascan.html">active scan</a> with the starting point set to the request you selected.<br/>
 
 <h4>Spider...</h4>
 This will launch the <a href="../dialogs/spider.html">Spider</a> dialog which allows you to initiate the 
-<a href="../../start/concepts/spider.html">spider</a> with the starting point set to the request you selected.<br/>
+<a href="../../start/features/spider.html">spider</a> with the starting point set to the request you selected.<br/>
 
 <h3>Include in Context</h3>
 This menu allows you to include the selected nodes and all of their subordinates in the specified
-<a href="../../start/concepts/contexts.html">context</a>.<br/>
+<a href="../../start/features/contexts.html">context</a>.<br/>
 You also have the option to create a new context.<br/>
 The <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
 allow you to make any additional changes.
 
 <h3>Exclude from Context</h3>
 This menu allows you to exclude the selected nodes and all of their subordinates from the specified
-<a href="../../start/concepts/contexts.html">context</a>.<br/>
+<a href="../../start/features/contexts.html">context</a>.<br/>
 The <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
 allow you to make any additional changes.
 
 <h3>Flag as context</h3>
 This menu has the following submenus for each of the 
-<a href="../../start/concepts/contexts.html">contexts</a> you have defined:
+<a href="../../start/features/contexts.html">contexts</a> you have defined:
 
 <h4><i>Context name</i> Form-based Auth Login request</h4>
 This identifies the specified node as a login request for the specified context.<br/>
@@ -81,8 +81,14 @@ You may only have one node identified as such in any one context.<br/>
 The <a href="../dialogs/session/context-auth.html">Session Context Authentication</a> screen will be displayed to
 allow you to make any additional changes.
 
+<h4><i>Context name</i> JSON-based Auth Login request</h4>
+This identifies the specified node as a login request for the specified context.<br/>
+You may only have one node identified as such in any one context.<br/> 
+The <a href="../dialogs/session/context-auth.html">Session Context Authentication</a> screen will be displayed to
+allow you to make any additional changes.
+
 <h4><i>Context name</i> Data driven node</h4>
-This identifies the specified node as <a href="../../start/concepts/ddc.html">Data driven content</a> for the specified context.<br/>
+This identifies the specified node as <a href="../../start/features/ddc.html">Data driven content</a> for the specified context.<br/>
 The <a href="../dialogs/session/context-struct.html">Session Context Structure</a> screen will be displayed to
 allow you to make any additional changes.
 
@@ -106,13 +112,13 @@ The nodes can be included again via the <a href="../dialogs/session/sessprop.htm
 <h3>Manage Tags...</h3>
 This will bring up the
 <a href="../dialogs/managetags.html">Manage Tags dialog</a> which allows you to change 
-the <a href="../../start/concepts/tags.html">tags</a> associated with the
+the <a href="../../start/features/tags.html">tags</a> associated with the
 request.
 
 <h3>Note...</h3>
 This will bring up the
 <a href="../dialogs/addnote.html">Add Note dialog</a> which allows you to record 
-<a href="../../start/concepts/notes.html">notes</a> related to the
+<a href="../../start/features/notes.html">notes</a> related to the
 request.
 
 <h3>Elimina</h3>
@@ -121,23 +127,23 @@ However they can be added back in, to prevent this use the 'Exclude from' menus.
 
 <h3>Pausa...</h3>
 This will bring up the
-<a href="../dialogs/addbreak.html">Add Break Point dialog</a> which allows 
-you to set a break point on that URL.<br/>
+<a href="../dialogs/addbreak.html">Add Breakpoint dialog</a> which allows 
+you to set a breakpoint on that URL.<br/>
 
 <h3>Alerts for this node</h3>
-If the URL selected has <a href="../../start/concepts/alerts.html">alerts</a> associated with it then 
+If the URL selected has <a href="../../start/features/alerts.html">alerts</a> associated with it then 
 they will be listed under this menu.<br>
 Selecting one of the alerts will cause it to be displayed.
 
-<h3>Resend...</h3>
+<h3>Open/Resend with Request Editor...</h3>
 This will bring up the
-<a href="../dialogs/resend.html">Resend dialog</a> which allows you to  
+<a href="../dialogs/man_req.html">Manual Request Editor dialog</a> which allows you to  
 resend the request after making any changes to it that you want to.
 
 <h3>New Alert...</h3>
 This will bring up the
 <a href="../dialogs/addalert.html">Add Alert dialog</a> which allows you to manually record a new  
-<a href="../../start/concepts/alerts.html">alert</a> against this request.
+<a href="../../start/features/alerts.html">alert</a> against this request.
 
 <h3>Show in Sites tab</h3>
 This will show the selected message in the <a href="sites.html">Sites tab</a>.

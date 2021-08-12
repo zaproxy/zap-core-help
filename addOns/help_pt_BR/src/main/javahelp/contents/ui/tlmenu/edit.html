@@ -6,40 +6,44 @@
 Menu Editar
 </title>
 </head>
-<body bgcolor="#ffffff">
+<body>
 <h1>Menu Editar</h1>
-Este menu serve para encontrar seqüências de caracteres (strings) em abas específicas, e também em todas as solicitações e respostas e faz gerenciamento do acompanhamento de sessão.
+This menu handles finding strings in specific tabs, searching for strings across all 
+requests and responses, changing ZAP's mode, and managing forced user mode.
 
-<h3>Procurar...</h3>
-Isso abre o <a href="../dialogs/find.html">diálogo de Localizar</a> que lhe permite encontrar uma seqüência de caracteres na janela em uso.<br/>
+<h3>ZAP Mode</h3>
+This allows you to change the current <a href="../../start/features/modes.html">mode</a>.
 
-<h3>Habilitiar o Rastreamento da Sessão (Cookie)</h3>
-Isso permite que detalhes de sessão armazenados em cookies a sejam localizados.<br/>
-Esta opção deve ser selecionada para ativar a caixa de seleção "Usar a atual sessão de rastreamento" nos diálogos <a href="../dialogs/resend.html">Reenviar</a> e 
-<a href="../dialogs/man_req.html">Editor de Request Manual</a>. <br/>
-O rastreamento de Sessão garante que quaisquer pedidos sejam enviados com os mais recentes detalhes da sessão.<br/>
-Por exemplo, você pode gravar uma sessão quando estiver logado como um usuário e, em seguida, fazer logout e então logon como outro usuário.<br/>
-Se você reenviar um request durante a primeira sessão sem o rastreamento, então usará os cookies da primeira sessão.<br/>
-Se você reenviar o mesmo pedido rastreamento  de sessão, então irá utilizar os cookies da segunda sessão.
+<h3>Find...</h3>
+This opens the <a href="../dialogs/find.html">Find dialog</a> which allows you to find a string in the currently selected window.<br/>
 
-<h3>Resetar o Estado da Sessão</h3>
-Isso limpará o rastreamento de sessão.<br/>
+<h3>Search...</h3>
+This sub-menu facilitates access to the following items:
 
-<h3>Procurar...</h3>
-Seleciona a <a href="../tabs/search.html">Aba de Busca</a> que permite a busca de expressões regulares em todas as URLs, solicitações e respostas...
+<h4>Search...</h4>
+This selects the <a href="../tabs/search.html">Search tab</a> which allows you to search for regular expressions
+in all URLs, requests, and responses.
 
-<h3>Próximo</h3>
-Seleciona a próxima ocorrência da última seqüência de caracteres buscada.<br/>
-O texto de interesse será selecionado na guia Buscar, e a seqüência de caracteres será mostrada e destacada nas abas de <a href="../tabs/request.html">Requisição</a> ou
-<a href="../tabs/response.html">Resposta</a> conforme o caso.
+<h4>Next Result</h4>
+This selects the next occurrence of the last string searched for.<br/>
+The relevant message will be selected in the Search tab and the string will be displayed
+and highlighted in the <a href="../tabs/request.html">Request</a> or
+<a href="../tabs/response.html">Response</a> tab as appropriate.
 
-<h3>Anterior</h3>
-Seleciona a ocorrência anterior da última cadeia de caracteres procurada.<br/>
-O texto de interesse será selecionado na guia Buscar, e a seqüência de caracteres será mostrada e destacada nas abas de <a href="../tabs/request.html">Requisição</a> ou
-<a href="../tabs/response.html">Resposta</a> conforme o caso.
+<h4>Previous Result</h4>
+This selects the previous occurrence of the last string searched for.<br/>
+The relevant message will be selected in the Search tab and the string will be displayed
+and highlighted in the <a href="../tabs/request.html">Request</a> or
+<a href="../tabs/response.html">Response</a> tab as appropriate.
+
+<h3>Enable / Disable Forced User Mode</h3>
+This switches forced user mode on and off.<br/>
+The menu item is only enabled when you have defined a forced user for at least one 
+<a href="../../start/features/contexts.html">context</a>, which can be done via the 
+<a href="../dialogs/session/contexts.html">Session Contexts</a> dialog.
 
 <p>
-Observe que <a href="../../start/concepts/addons.html">Complementos</a> podem acrescentar outros itens de menu.
+Note that <a href="../../start/features/addons.html">add-ons</a> can add additional menu items.
 </p>
 
 <h2>Leia também</h2>

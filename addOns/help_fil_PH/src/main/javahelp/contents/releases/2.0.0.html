@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+  Mga pagpapakawala 2.0.0
+</title>
+</head>
+<body>
+<h1>Mga Pagpapakawala 2.0.0</h1>
+<p>
+Ang mga sumusunod na pagbabago ay ginawa para sa release na ito:
+</p>
+
+<h2>Makabuluhang pagbabago:</h2>
+
+
+<h3>Ang pagsasaayos ng add-ons marketplace</h3>
+
+Ang ZAP ay maaaring mapalawak sa pamamagitan ng mga add-ons na may kakayahang gamitin ang nilalaman ng ZAP. Kahit sino ay maaring lumikha ng add-ons at ipadala ito sa ZAP add-on marketplace ( OK, kaya isa itong Google code project na tinatawag na zap-extensions, subalit ang ideya na ito ay nalaman mo).
+<br/>
+Ang mas mahalaga ay maaari ka ng mag-browse, mag-download at mag-install sa mga add-on na iyon sa loob ng ZAP. Karamihan sa mga add-on ay maaari i-install nang dinamiko (at pagtanggal) kaya hindi mo na kailangan ng isang restart.
+<br/>
+Ikaw ang mamimili kung gusto mong ma notified sa updates, at maari ding automatikong mag updates. At habang ang mga patakaran sa pag scan ay ipinatutupad bilang add-ons ikaw ay makakakuha ng bagong patakaran sa oras na mailathala ito.
+
+<h3>Isang kapalit para sa 'standard' Spider</h3>
+
+Nakikita ang katandaan ng lumang Spider, kaya ito binago at mas mabilis at mas komprehensibo ito kesa sa luma. Ito parin ang 'tradisyonal' na spider na pinag-aaralan ang HTML code ng kahit anong links na mahanap nito.
+
+<h3>Isang bagong 'Ajax' spider</h3>
+
+Para sa karagdagan sa 'tradisyonal' na spider idinagdag namin ang Ajax spider na mas epektibo kasama ang mga application na gumagamit ng mabigat na antas javaScript. Itoy gumagamit ng proyektong Crawjax na nag papagana ng isang browser (gamit ang Siliniyum) at sa gayon ay matutuklasan nito ang anumang mga link na bumubuo ng isang application, kahit na ito ay nakabuo ng client side.
+
+<h3>Suporta sa Web Socket</h3>
+
+Ngayon ang ZAP ay sumusuporta sa WebSockets, kaya ang ZAP ay nakikita na ang mga mensahe ng WebSocket na ipinadala at nagmumula sa iyong browser. Tulad ng mga mensaheng base sa HTTP, maaaring mahadlangan ng ZAP mga mensaheng nagmumula sa WebSocket at pinahihintulutan kang baguhin to ng mabilis.
+<br/>
+Maari mo ding palabuin ang mensahe na nanggagaling sa WebSocket gamit ang mga fuzzing payloads na kasama sa mga proyekto ng ZAP tulad ng JBrofuzz at fuzzdb. at syempre maari mo ding idagdag ang iyong sariling fuzzing files.
+
+<h3>Ang Tab para sa mabilis na pagsisimula</h3>
+
+Ang pangunahing tab na una mong makikita ay ang 'Quick Start' tab na nagpapahintulot sayo na mag type ng URL at i-scan sa isang pindot lang.
+<br/>
+Ito ang perpektong panimula para sa mga taong bago sa application security, ngunit ang mga eksperto ay madaling maaalis ito kung ito'y nakakagambala.
+
+<h3>Kaalaman sa sesyon</h3>
+
+Ang ZAP sa ngayon ay may kaalaman na sa session, upang ang ZAP ay makilala at masubaybayan ng iba't ibang session. Ito'y nag papahintulot sa iyo na gumawa ng mga bagong session, na may kakayahang mag palipat lipat sa pagitan nila at naaangkop sa iba pang mga components, tulad ng Spider at active Scanner.
+
+<h3>User defined Contexts</h3>
+
+Maari mo ng tukuyin ang kahit anong bilang ng 'context' - na may kaugnayan sa URLs na gumagawa ng application. Pagkatapos ay maari mo na ring piliin ang kahit anong URLs ng isang context, halimbawa gamit ang Spider o Active Scanner. Maari mong idadagdag ang context sa scope, at iugnay sa iba pang impormasyon, tulad ng authentication details.
+
+<h3>Session scope</h3>
+
+Ang session scope ay pinahihintulutan kang tukuyin kung anong mga context mo gusto sa kahit na anong oras. Maaari mong limitahan ang mga nakikita mo sa iba't ibang tab at tanging ang URLs na saklaw lamang ang maiiwan, upang maiwasan ang aksidenteng pag sira sa URLs na hindi saklaw ng scope gamit ang protected mode.
+
+<h3>Iba't ibang mga mowd</h3>
+
+Ang ZAP ay sumusuporta sa tatlong uri ng mga mowd:
+<ul>
+<li>Safe, kung saan walang posibleng mapanganip na operasyon ang pinahihintulutan</li>
+<li>Protected, kung saan maari kang gumawa ng kahit anong URLs in scope</li>
+<li>Standard, kung saan maaari mong gawin ang kahit ano sa kahit anong URLs</li>
+</ul>
+<h3>Authentication handling</h3>
+
+Ngayon ikaw ay pinahihintulutan na iugnay ang authentication details sa kahit anong context, na nagpapahintulot sa ZAP na madetect kung ikaw ay naka-log out at ikaw ay automatikong maibalik uli sa pag log. Ito ay lubos na kapaki-pakinabang kung gagamit ng API sa security regression test.
+
+<h3>Mas marami pang API support</h3>
+
+Ang lalong pag laki ng REST API ay nagbibigay sayo ng mas marami pang access sa functionality ZAP provider.
+
+<h3>Mayos na scanning controls para sa grained</h3>
+
+Sa ngayon ang active scan rules ay mamarinang ayusin upang ma i adjust ang lakas (ang bilang ng mga pag-atake na kanilang ginagawa) at ang threshold nila kung saan inuulat ang mga potensyal na isyu.
+
+<h3>Bago at mas pinabuting active at passive scanning rules</h3>
+
+
+Aming ini upload ang mga resulta na magpapagana sa ZAP 2.0.0 laban sa wavsep (ang pinaka-komprehensibong open source evaluation project na aming nalaman) sa ZAP wiki: https://github.com/zaproxy/zaproxy/wiki/Testing TODO ;)
+
+
+
+<h2>Kumpletong listahan ng mga pagbabago:</h2>
+
+<h3>Isyu 43: mga pagpipilian para sa Scope filtering</h3>
+<h3>Isyu 163: Pagkasira ng active scanner laban sa DVWA [ high false positives/true negatives rate]</h3>
+<h3>Isyu 175: Mas mahusay na bruteforce wordlist</h3>
+<h3>Isyu 240: Ang SocketException habang fuzzing dahil hindi ito napapamahalaan na ng maayos.</h3>
+<h3>Isyu 278: Ang Root CA Certificate para sa Dynamic SSl ay hindi tama sa ibang mga platform dahil sa ExtendeKeyUsage extension</h3>
+<h3>Isyu 281: Alertong uri ng JSON dependency</h3>
+<h3>Isyu 299: Feature request: Nagpapakita ng bilang ng mga nahanap na URIs sa panahon Spider</h3>
+<h3>Isyu 305: Panuntunan sa Passive scanner para sa mga kahina-hinalang komento gaya ng TODO at FIXME</h3>
+<h3>Issue 326: Oras ng pagtugang sa kabuuang haba ng manual request</h3>
+<h3>Isyu 330: pag aralan ang robots.txt</h3>
+<h3>Isyu 332: Suporta para sa mga mode</h3>
+<h3>Isyu 333: Spider - add option para mapabagal ang lahat sa scope</h3>
+<h3>Isyu 335: Web Sockets - add support para sa mga mode at Scope</h3>
+<h3>Isyu 342: Magdagdag ng HttpSenderListener</h3>
+<h3>Isyu 350: Matatag na pamamahala</h3>
+<h3>Isyu 354: Ang mga string ng Fuzzer attack ay hindi ipinapakita</h3>
+<h3>Isyu 356: Gumawa ng test form para sa CSRF</h3>
+<h3>Isyu 358: Typo in "XFO Header Not Set" Solution</h3>
+<h3>Isyu 360: Walang kabuluhang powersa sa sub directories</h3>
+<h3>Isyu 361: getHostPort sa HttpRequestHeader para sa kahilingan ng HTTPS CONNECT na maibalik ang maling port</h3>
+<h3>Isyu 370: API - save session better error handling</h3>
+<h3>Isyu 374: API - save session synchronous or provide status</h3>
+<h3>Isyu 376: Pag-back up sa mga password na ibinigay para sa Authentication</h3>
+<h3>Isyu 385: Suporta sa mga konteksto</h3>
+<h3>Isyu 386: API Web UI - mga parameter ng suporta na may mga view</h3>
+<h3>Isyu 388: Pinahihintulutan ang user na tukuyin kung anong mga technologie ang nalalapat sa isang konteksto</h3>
+<h3>Isyu 390: Spider - magdagdag ng opsyon sa spider para sa lahat ng konteksto</h3>
+<h3>Isyu 391: Pagpapahusay sa pagganap ng ZAP</h3>
+<h3>Isyu 393: Mas maraming online link mula sa menu</h3>
+<h3>Isyu 397: Suporta para sa weekly builds</h3>
+<h3>Isyu 400: Ang paggawa ng mga bagong CA certificate ay laging magbubunga ng certificate na may parehong serial number</h3>
+<h3>Isyu 401: Exception kapag ang (bagong) Spider ay nagsimula sa pamamagitan ng API</h3>
+<h3>Isyu 402: Ang mga label ng GUI ay hindi nakadispley ng maayos sa Linux (kapag ang lenguwahe ay naka-set na para sa polish)</h3>
+<h3>Isyu 403: Magtakda ng mga option sa pamamagitan ng API gamit ang reflection</h3>
+<h3>Isyu 404: Ang mga Label ay hindi nakadispley ng maayos kapag wikang persian ang napili</h3>
+<h3>Isyu 406: Spider - Magdagdag ng pagpipilian upang makontrol ang epekto ng mga parameter sa visited URLs</h3>
+<h3>Isyu 410: Ang pag balot ng quotation marks sa charset</h3>
+<h3>Isyu 411: Payagan ang proxy port na tinukoy sa command line</h3>
+<h3>Isyu 417: IndexOutOfBoundsException in ExtensionHttpSessions in daemon mode</h3>
+<h3>Isyu 419: Ibalik sa dati ang jar loading code</h3>
+<h3>Isyu 420: API - Suportahan ang absolute session paths</h3>
+<h3>Isyu 421: Malinis na maisara ang anomang scan threads sa pagsasara</h3>
+<h3>Isyu 422: Gamitin ang exec sa zap.sh para ang mga bagong proseso ay hindi makuha</h3>
+<h3>Isyu 423: Ang Active scanner at spider ay maaaring mahinto kapag ang ZAP ay namatay habang tumatakbo ang mga ito</h3>
+<h3>Isyu 424: Pag hiwalay sa Web Socket kapag binuksan na ang session</h3>
+<h3>Isyu 425: Magdagdag ng quick start tab</h3>
+<h3>Isyu 428: Suporta sa ZAP Marketplace</h3>
+<h3>Isyu 429: Ang Aktibong pag Scan sa URL gamit ang API scans ay mas higit pa sa tukoy na URL</h3>
+<h3>Isyu 433: API: Pagpapakilala sa mga iniuutos ng parameter at opsyonal na paglalarawan</h3>
+<h3>Isyu 435: Ang mga Aktibong scan alert ay maaaring "mawala" matapos na ma i-save ang session</h3>
+<h3>Isyu 436: Pag-lock sa session save o pag shutdown sa pamamagitan ng API</h3>
+<h3>Isyu 438: Pagpapahusay sa API</h3>
+<h3>Isyu 441: Tignan ang hindi tamang initialised sa maraming lugar kapag nasa daemon mode</h3>
+<h3>Isyu 443: "Walang mga token ng Anti-CSRF ang makikita sa form na isinumite ng HTML" na nakalista bilang " wala. Babala lamang."</h3>
+<h3>Isyu 446: Ang KeyStore ng isang rehistradong PKCS#11provider ay hindi makukuha kung ang PKCS#11 provider ay naka rehistro na</h3>
+<h3>Isyu 447: I-highlight ang pag-atake kapag ang alerto ay ipinakita</h3>
+<h3>Isyu 448: Palitan ang pangalan ng Brute Force ext sa Forced Browse at idagdag ang URLs sa puno</h3>
+<h3>Isyu 449: Nawawalang Help page para sa " Extension" panel na nasa "Options" dialogue</h3>
+<h3>Isyu 451: Ang manu-manong pag check ng mga update ay hindi gumagana ng wasto sa pinakabagong weekly release</h3>
+<h3>Isyu 453: Dynamic loading at unloading ng mga add-on</h3>
+<h3>Isyu 455: Ihiwalay ang fuzzdb sa bagong addon</h3>
+<h3>Isyu 456: Spider session handling tweeks</h3>
+<h3>Isyu 457: Suporta para sa Search Tab arrow Key</h3>
+<h3>Isyu 459: Aktibong pag-lock ng scanner</h3>
+<h3>Isyu 460: Magdagdag ng scan progress dialog</h3>
+<h3>Isyu 461: Magdagdag ng help file para sa mabilis na pag Start ng addon</h3>
+<h3>Isyu 462: Pagsusuri: Patch/Pagsusuri: SSLSocketFactory na mayroong mga TLS enabled and default Cipher option</h3>
+<h3>Isyu 466: Ilipat ang Port Scan extension sa ZAP extensions project</h3>
+<h3>Isyu 468: Mag- upgrade ng SQL Injection rule sa 'release'</h3>
+<h3>Isyu 469: Pahintulutan ang anti csrf token na maidagdag at tanggalin sa pamamagitan ng API</h3>
+<h3>Isyu 471: Ilipat ang BeanSell extension sa mga ZAP extensions project</h3>
+<h3>Isyu 472: ang Spider ay pinahihintulutan ang UI panel sa daemon mode</h3>
+<h3>Isyu 473: Pahintulutan ang add-ons sa pagtanggal ng mga view/component na idinagdag sa mga message panel</h3>
+<h3>Isyu 474: Itaguyod ang quick start sa pag alis ng status</h3>
+<h3>Isyu 478: Payagan na piliin na magpadala ng mga pinamamahalaang cookies ng ZAP sa isang header ng kahilingan ng Cookie at itakda ito bilang default</h3>
+
+
+
+<h2>Tignan din</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../intro.html">Panimula</a></td><td>ang panimula sa ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="releases.html">Mga pagpapakawala</a></td><td>ang kabuuang hanay ng mga pagpapakawala</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../credits.html">Mga kredito</a></td><td>ang mga tao at mga grupo na ginawang posible ang release na ito</td></tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Modos
+</title>
+</head>
+<body>
+<h1>Modos</h1>
+<p>
+ZAP tiene un 'modo' que puede ser:
+<ul>
+<li>Caja de seguridad - no operaciones potencialmente peligrosas permitidas</li>
+<li>Protegido - sólo puede realizar acciones peligrosas (potencialmente) las URL en el <a href="scope.html">ámbito</a></li>
+<li>Estándar - al igual que en versiones anteriores, se puede hacer nada</li>
+<li>ATTACK - nuevos nodos que se encuentran en el <a href="scope.html">ámbito de aplicación</a> son <a href="ascan.html">activamente explorado</a> tan pronto como son descubiertos</li>
+</ul>
+Se recomienda que utilice el modo protegido para asegurar que sólo atacar sitios que usted quiere.<br/><br/>
+
+Puede cambiar el modo de la <a href="../../ui/tltoolbar.html">barra de herramientas</a>
+(o la API de ZAP) y persiste entre sesiones.<br/><br/>
+
+Ejemplos de lo que no será posible en cualquier modo seguro o en modo protegido cuando no actúa en las URLs en el ámbito de aplicación:
+
+<ul>
+<li>Indizado de web</li>
+<li>Escaneo activo</li>
+<li>Fuzzing</li>
+<li>Forzar navegación</li>
+<li>Romper (interceptar)</li>
+<li>Reenviar solicitudes</li>
+</ul>
+
+Se puede definir la <a href="scanpolicy.html">Política de escaneo</a> para el modo de ataque la <a href="../../ui/dialogs/options/ascan.html">Pantalla de opciones de escaneo activo</a>.<br>
+
+<h2>Vease también</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="../../ui/overview.html">UI Overview</a></td><td>Para una vista general sobre la interfaz de usuario</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+<a href="features.html">Caracteristicas</a></td><td>proporcionado por ZAP</td></tr>
+</table>
+
+</body>
+</html>
