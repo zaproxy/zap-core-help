@@ -15,39 +15,38 @@ TODO - highlight the most significant changes.
 <H2>Add-Ons</H2>
 <H3>New Add-Ons</H3>
 The following add-ons are included by default in this release for the first time:
-
-TODO
+<ul>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/automation-framework/">Automation Framework</a> - a simple, flexible and powerful way to automate ZAP</li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/oast-support/">OAST Support</a> - allows you to exploit out-of-band vulnerabilities</li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/report-generation/">Report Generation</a> - new and highly customisable reports</li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/retest/">Retest</a> - retest for presence/absence of previously generated alerts</li>
+</ul>
 
 <H3>Updated Add-Ons</H3>
 The following add-ons have been updated since the last full release:
 
-TODO
+<ul>
+  <li>TODO</li>
+</ul>
 
 <H2>Docker Updates</H2>
 The following changes are included in the latest Stable Docker image:
 
-TODO
+<ul>
+  <li>TODO</li>
+</ul>
 
 For full list of changes made to the docker images see the docker <a href="https://github.com/zaproxy/zaproxy/blob/main/docker/CHANGELOG.md">CHANGELOG.md</a>.
 
 <H2>Changes in Bundled Libraries</H2>
 The following libraries were updated:
 
-TODO
+<ul>
+  <li>TODO</li>
+</ul>
 
 <H2>Enhancements</H2>
 <ul>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/1318">Issue 1318</a> : Allow to override the target host of an HTTP request</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/1926">Issue 1926</a> : Remove Alerts for defined Context through ZAP API</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/3563">Issue 3563</a> : Enhancement: Add New Abstract Plugin Type</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/3594">Issue 3594</a> : ZAP API Ability to specify domains/addresses that API will be served from</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/3813">Issue 3813</a> : Timeout or Termination functionality for Passive Scanning</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/4002">Issue 4002</a> : Ability to track HTTP requests based on client IP address</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/4388">Issue 4388</a> : Allow to configure the irrelevant parameters for the Spider</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/4527">Issue 4527</a> : Allow to ignore parameters by value when active scanning</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/4673">Issue 4673</a> : Allow to configure validity period of generated certificates</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/4788">Issue 4788</a> : Persist column configuration in History tab</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/5945">Issue 5945</a> : Remember last directory used in open file dialog.</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/6023">Issue 6023</a> : Quick add site in Context from History panel</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/6098">Issue 6098</a> : Allow custom request headers to be set by spider parser</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/6413">Issue 6413</a> : Allow to export regular expressions</li>
@@ -74,15 +73,8 @@ TODO
 <H2>Bug fixes</H2>
 <ul>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/3988">Issue 3988</a> : Selected checkbox tree nodes not correctly highlighted in macOS</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/4505">Issue 4505</a> : Not all data is persisted for manual authentication method</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/4631">Issue 4631</a> : Enhancement - Colorblind mode</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/4671">Issue 4671</a> : Tag changes in Search tab not reflected in History tab</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/5165">Issue 5165</a> : Not found response tab on options (keyboard shortcut setting)</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/5223">Issue 5223</a> : Missing parts on Transfer-Encoding: chunked</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/5308">Issue 5308</a> : Prevent Outbound Proxy from being a local proxy</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/5791">Issue 5791</a> : Big messages cause GUI to freeze</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/5935">Issue 5935</a> : ZAP cannot detect SQL injections through path parameters</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6025">Issue 6025</a> : JSON variant implementation of 'setParameter()' does not replace the names</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/6370">Issue 6370</a> : Fix exception when checking for breakpoints</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/6381">Issue 6381</a> : Proxy script return value misinterpreted in 2.10.0</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/6421">Issue 6421</a> : Alerts related API enpoints might return malformed JSON</li>
@@ -90,13 +82,12 @@ TODO
 <li><a href="https://github.com/zaproxy/zaproxy/issues/6437">Issue 6437</a> : Unable to set only breaks on message in scope</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/6508">Issue 6508</a> : Detect WebSocket upgrade messages having multiple Connection directives</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/6512">Issue 6512</a> : Buttons of Manage Tags dialog are too small</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6520">Issue 6520</a> : Can not scroll past 'contexts' in 'sites' tab with FlatLaf L&F</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6520">Issue 6520</a> : Can not scroll past 'contexts' in 'sites' tab with FlatLaf L&amp;F</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/6536">Issue 6536</a> : Extensions not stopped nor destroyed when add-on is uninstalled</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/6537">Issue 6537</a> : CONNECT requests not shown in History tab</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/6557">Issue 6557</a> : fix: HTTP Panels Font setting for dark LaFs (Theme)</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/6562">Issue 6562</a> : Fixed regex generation for host site URLs included in context</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/6652">Issue 6652</a> : Install missing libraries beforehand</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6656">Issue 6656</a> : Content-Type charset is not always considered</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/6689">Issue 6689</a> : X-ZAP-Scan-ID HTTP header is missing from some of the active scan requests</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/6691">Issue 6691</a> : Do not add zero Content-Length by default in GET requests</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/6720">Issue 6720</a> : Encode parameters when replacing in form auth data</li>
