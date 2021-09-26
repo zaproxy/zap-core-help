@@ -27,7 +27,6 @@
     <indexitem text="breakpoints tab" target="ui.tabs.breakpoints" />
     <indexitem text="breakpoints" target="start.features.breakpoints" /> 
     <indexitem text="break tab" target="ui.tabs.break" />
-    <indexitem text="callbacks tab" target="ui.tabs.callbacks" />
     <indexitem text="command line" target="cmdline" />
     <indexitem text="contexts" target="start.features.contexts" />
     <indexitem text="credits" target="zap.credits" />
