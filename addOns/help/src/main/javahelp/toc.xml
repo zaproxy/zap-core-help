@@ -79,7 +79,7 @@
          <tocitem text="History Filter" target="ui.dialogs.historyfilter"/>
          <tocitem text="Manual Request Editor" target="ui.dialogs.manreq"/>
          <tocitem text="Manage Add-ons" target="ui.dialogs.manageaddons"/>
-         <tocitem text="Manage Tags" target="ui.dialogs.managetags"/>
+         <tocitem text="Manage History Tags" target="ui.dialogs.managetags"/>
          <tocitem text="Options" target="ui.dialogs.options">
          	<tocitem text="Active Scan" target="ui.dialogs.options.ascan"/>
          	<tocitem text="Active Scan Input Vectors" target="ui.dialogs.options.ascaninput"/>
