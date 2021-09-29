@@ -9,8 +9,35 @@
 <BODY>
 <H1>Release 2.11.0</H1>
 
-TODO - highlight the most significant changes.
+<H3>Alert Tags</H3>
+Alerts can now be tagged with arbitrary keys or key=value pairs.<br>
+The release quality active and passive scan rules have been updated to include tags for the OWASP Top 10 2021 and 2017, 
+the beta and alpha scan rules will also be updated asap.
 
+<H3>Automation Framework</H3>
+The Automation Framework is a new way to automate ZAP and is expected to become the default option for most use cases.
+For more details see the <a href="https://www.zaproxy.org/docs/automate/automation-framework/">Automation Framework</a> page on the website.
+
+<H3>Report Generation</H3>
+The new <a href="https://www.zaproxy.org/docs/desktop/addons/report-generation/">Report Generation</a> add-on allows you to generate much
+more flexible reports with access to much more data. 
+The previous reporting add-ons have been removed from the marketplace as they provide less functionality and are no longer maintained.
+
+<H3>OAST Support</H3>
+
+The new <a href="https://www.zaproxy.org/docs/desktop/addons/oast-support/">OAST Support</a> add-on allows you to find and exploit out-of-band vulnerabilities.
+This add-on is alpha at the time of the 2.11.0 release but is expected to be updated soon, so check the help pages for the latest features.
+
+<H3>Retest</H3>
+
+The new <a href="https://www.zaproxy.org/docs/desktop/addons/retest/">Retest</a> add-on allows you to retest for presence/absence of previously generated alerts.
+This add-on is alpha at the time of the 2.11.0 release but is expected to be updated soon, so check the help pages for the latest features.
+
+<H3>Docker</H3>
+The Docker stable and bare images will now be updated monthly, typically around the start of the month.<br>
+The updates will include any updated add-ons and any changes to the packaged scans. No core changes will be included in these updates.<br>
+The images will be tagged by date in case you wish to stay on a specific version.<br>
+The packaged scans are being migrated to use the Automation Framework - this migration will continue over the life of 2.11.0.
 
 <H2>Add-Ons</H2>
 <H3>New Add-Ons</H3>
