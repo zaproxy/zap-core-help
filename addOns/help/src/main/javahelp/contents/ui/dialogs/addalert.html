@@ -48,6 +48,21 @@ Array parameters (in URL query component and <code>x-www-form-urlencoded</code> 
 example, for a request containing <code>choices[]=ChoiceA&amp;choices[]=ChoiceB</code> the first parameter would be identified
 as <code>choices[0]</code> and the second as <code>choices[1]</code>.
 
+<H3>Attack</H3>
+The payload that was supplied to the <em>Parameter</em>. This is expected to be set only by active scan rules
+which are the ones that send payloads/attacks.
+
+<H3>Evidence</H3>
+The available information in the message request or response (header or body) that indicates that the issue is present.
+
+<H3>CWE ID</H3>
+The relevant Common Weakness Enumeration (CWE) ID associated with the flagged vulnerability. This field 
+can only be an integer.
+
+<H3>WASC ID</H3>
+The relevant Web Application Security Consortium (WASC) ID associated with the flagged vulnerability. This field
+can only be an integer.
+
 <H3>Description</H3>
 A general description of the type of issue found.<br/>
 This is populated when you select one of the predefined types, but you can also change it as required.<br/>
