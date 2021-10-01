@@ -124,7 +124,26 @@ The following libraries were updated:
 
 <H2>ZAP API New Endpoints:</H2>
 
-TODO
+<H3>ACTION ascan / setOptionScanNullJsonValues</H3>
+Sets whether or not the active scanner should scan null JSON values.
+
+<H3>VIEW ascan / optionScanNullJsonValues</H3>
+Tells whether or not the active scanner should scan null JSON values.
+
+<H2>ZAP API Deprecated Endpoints:</H2>
+
+The following endpoints have been superseded by the <a href="https://www.zaproxy.org/docs/desktop/addons/report-generation/">Report Generation</a> add-on:
+<ul>
+<li>OTHER core / htmlreport</li>
+<li>OTHER core / jsonreport</li>
+<li>OTHER core / mdreport</li>
+<li>OTHER core / xmlreport</li>
+</ul>
+<p>
+The following endpoint has been deprecated without replacement, it is an internal GUI property:
+<ul>
+<li>VIEW core / homeDirectory</li>
+</ul>
 
 <H2>See Also</H2>
 <table>
