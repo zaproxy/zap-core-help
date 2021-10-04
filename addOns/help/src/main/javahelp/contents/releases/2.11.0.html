@@ -9,6 +9,13 @@
 <BODY>
 <H1>Release 2.11.0</H1>
 
+This is the OWASP 20th anniversary bug fix and enhancement release, which requires a minimum of Java 8. 
+Note that a minimum of Java 11 is recommended, especially for high DPI displays.
+<br><br>
+These release notes do not include all of the changes included in add-ons updated since 2.10.0.
+<br><br>
+Some of the more significant enhancements include:
+
 <H3>Alert Tags</H3>
 Alerts can now be tagged with arbitrary keys or key=value pairs.<br>
 The release quality active and passive scan rules have been updated to include tags for the OWASP Top 10 2021 and 2017, 
@@ -21,7 +28,13 @@ For more details see the <a href="https://www.zaproxy.org/docs/automate/automati
 <H3>Report Generation</H3>
 The new <a href="https://www.zaproxy.org/docs/desktop/addons/report-generation/">Report Generation</a> add-on allows you to generate much
 more flexible reports with access to much more data. 
-The previous reporting add-ons have been removed from the marketplace as they provide less functionality and are no longer maintained.
+The previous reporting add-ons have been removed from the marketplace as they provide less functionality and are no longer maintained.<br>
+New report templates include:
+<ul>
+  <li>Modern HTML Report with themes and options</li>
+  <li>High Level Report Sample</li>
+  <li>Traditional HTML Report with requests and responses</li>
+</ul>
 
 <H3>OAST Support</H3>
 
@@ -60,7 +73,16 @@ The following add-ons have been updated since the last full release:
 The following changes are included in the latest Stable Docker image:
 
 <ul>
-  <li>TODO</li>
+  <li>Updated to use Webswing 21.1.5</li>
+  <li>Added /zap/container file to make it easier to detect if we are running in a container like docker.</li>
+  <li>Changed to enable integration tests, inc enabling the AF for the baseline <code>-c</code> option if the <code>--auto</code> flag is used before it.</li>
+  <li>Changed to use user's home directory for the Automation Framework files so it will work for any user</li>
+  <li>Updated the baseline to use the Automation Framework by default for common options including the config file/URL.</li>
+  <li>Alert_on_Unexpected_Content_Types.js &gt; Added Content-Type text/yaml to the list of expected types.</li>
+  <li>Check if messages being analyzed by API scan scripts are globally excluded or not.</li>
+  <li>Allow more flexibility to specify ZAP command line options when using Webswing</li>
+  <li>Python 3.5 is no longer supported.</li>
+  <li>Update Webswing to download prod version if valid key supplied.</li>
 </ul>
 
 For full list of changes made to the docker images see the docker <a href="https://github.com/zaproxy/zaproxy/blob/main/docker/CHANGELOG.md">CHANGELOG.md</a>.
