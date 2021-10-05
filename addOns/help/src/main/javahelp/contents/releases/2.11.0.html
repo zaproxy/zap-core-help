@@ -52,6 +52,39 @@ The updates will include any updated add-ons and any changes to the packaged sca
 The images will be tagged by date in case you wish to stay on a specific version.<br>
 The packaged scans are being migrated to use the Automation Framework - this migration will continue over the life of 2.11.0.
 
+<H3>Statistics</H3>
+A significant number of statistics have been added to the core, and are being added to add-ons.
+In part this is driven by the Automation Framework which can make direct use of statistics for sanity checks.<br>
+New core statistics include:
+<ul>
+  <li>stats.api.call.&lt;format&gt;.&lt;component&gt;.&lt;request-type&gt;.&lt;name&gt; : The number of times the given API endpoint has been called</li>
+  <li>stats.api.error.&lt;format&gt;.&lt;component&gt;.&lt;request-type&gt;.&lt;name&gt; : The number of times the given API endpoint has returned an error</li>
+  <li>stats.ascan.&lt;rule-id&gt;.alerts : The number of alerts the given active scan rule has raised</li>
+  <li>stats.ascan.&lt;rule-id&gt;.skipped : The number of alerts the given active scan rule has been skipped</li>
+  <li>stats.ascan.&lt;rule-id&gt;.started : The number of alerts the given active scan rule has been started</li>
+  <li>stats.ascan.&lt;rule-id&gt;.time : The cumulative number of milliseconds that the given active scan rule has run for</li>
+  <li>stats.ascan.&lt;rule-id&gt;.urls : The number of URLs that the given active scan rule has requested</li>
+  <li>stats.ascan.started : The number of times the active scanner has been started</li>
+  <li>stats.ascan.stopped : The number of times the active scanner has been stopped (as opposed to finishing)</li>
+  <li>stats.ascan.time : The cumulative number of milliseconds that active scanner has run for</li>
+  <li>stats.ascan.urls : The number of URLs the active scanner has requested</li>
+  <li>stats.break.drop : The number of times a request or response has been dropped via a break point</li>
+  <li>stats.break.hit : The number of times a break point has been hit</li>
+  <li>stats.break.step : The number of times a break point has been stepped through</li>
+  <li>stats.pscan.&lt;rule-id&gt;.alerts : The number of alerts raised by the given scan rule</li>
+  <li>stats.pscan.&lt;rule-id&gt;.time : The cumulative number of milliseconds taken to run the given scan rule</li>
+  <li>stats.script.call.&lt;engine-name&gt;.&lt;type&gt; : The number of times the given type of script has been called</li>
+  <li>stats.script.error.&lt;engine-name&gt;.&lt;type&gt; : The number of times the given type of script has been returned an error</li>
+  <li>stats.spider.started : The number of times the spider has been started</li>
+  <li>stats.spider.stopped : The number of times the spider has been stopped (as opposed to completing)</li>
+  <li>stats.spider.time : The total number of milliseconds the spider has run for across all scans</li>
+  <li>stats.spider.url.error : The number of URLs the spider has found but failed to access</li>
+  <li>stats.spider.url.found : The number of URLs the spider has found and accessed </li>
+</ul>
+For details of the latest statistics including all of the ones also maintained by add-ons and links to the code see the 
+website <a href="https://www.zaproxy.org/docs/internal-statistics/">ZAP Internal Statistics</a> pages.
+
+
 <H2>Add-Ons</H2>
 <H3>New Add-Ons</H3>
 The following add-ons are included by default in this release for the first time:
