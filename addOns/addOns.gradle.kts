@@ -124,12 +124,13 @@ subprojects {
             tagMessage.set(message)
             title.set(message)
         }
+        val zapAddOnExt = project.zapAddOn
         releaseAddOn {
             dependsOn(createReleaseAddOn)
 
             dependsOn(handleRelease)
             dependsOn(createPullRequestNextDevIter)
-            if (project.zapAddOn.addOnId.get() == "help") {
+            if (zapAddOnExt.addOnId.get() == "help") {
                 dependsOn(":addOns:crowdinUploadSourceFiles")
             }
         }
