@@ -3,7 +3,7 @@ All notable changes to this add-on will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## Unreleased
+## [12] - 2021-10-06
 ### Changed
 - Remove extra column in a videos table.
 - Update link to zaproxy and community-scripts repo.
@@ -49,6 +49,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - First version.
 
+[12]: https://github.com/zaproxy/zap-core-help/releases/help-v12
 [11]: https://github.com/zaproxy/zap-core-help/releases/help-v11
 [10]: https://github.com/zaproxy/zap-core-help/releases/help-v10
 [9]: https://github.com/zaproxy/zap-core-help/releases/help-v9
