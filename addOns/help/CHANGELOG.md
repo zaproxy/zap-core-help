@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [12] - 2021-10-06
 ### Changed
+- Updated for 2.11.0.
 - Remove extra column in a videos table.
 - Update link to zaproxy and community-scripts repo.
 
