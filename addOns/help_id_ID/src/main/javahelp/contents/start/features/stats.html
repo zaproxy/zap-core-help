@@ -14,53 +14,15 @@ ZAP mempertahankan statistik yang bisa membantu anda untuk memahami apa yang seb
 <p>
 Statistik tersedia melalui <a href="api.html">API</a> dan juga dapat dikirim ke server Statsd ketika dikonfigurasi melalui <a href="../../ui/dialogs/options/stats.html">Layar Statistik Pilihan</a>.
 </p>
+<p>
 
-<h3>Situs berdasarkan statistik</h3>
-Statistik pemeliharaan pada setiap situs meliputi:
-<ul>
-<li>kode respon, misalnya:
-	<ul>
-	<li>200 kode statistik</li>
-	<li>302 kode statistik</li>
-	</ul></li>
-<li>waktu balasan dalam ms (menggunakan skala logaritmik), misal nya:
-	<ul>
-	<li>1 waktu balasan statistik</li>
-	<li>waktu ke 2 balasan statistik</li>
-	<li>waktu ke 4 balasan statistik</li>
-	<li>waktu ke 8 balasan statistik</li>
-	<li>waktu ke 16 balasan statistik</li>
-	</ul></li>
-<li>jenis muatan, misalnya:
-	<ul>
-	<li>statistik.Jeniskonten.text/css</li>
-	<li>statistik.Jeniskonten.text/html;charset =utf-8</li>
-	</ul></li>
-<li><a href="tags.html">label</a>, misal:
-	<ul>
-	<li>statistik.tag.Password</li>
-	<li>statistik.tag.Tersembunyi</li>
-	</ul></li>
-<li>anticsrf token yang dihasilkan:
-	<ul>
-	<li>statistik.acsrf.anticsrf</li>
-	</ul></li>
-<li>info otentikasi:
-	<ul>
-	<li>statistik.auth.sukses (jumlah otentikasi keberhasilan)</li>
-	<li>statistik.auth.kegagalan (jumlah kegagalan otentikasi)</li>
-	<li>stats.auth.state.assumedin (number of messages between successful polls that are assumed to be logged in)</li>
-	<li>stats.auth.state.loggedin (number of messages that appear to be logged in)
-	<li>stats.auth.state.loggedout (number of messages that appear to be logged out)
-	<li>stats.auth.state.noindicator (number of messages where no logged in or out indicators have been set)
-	<li>stats.auth.state.unknown (number of messages which don't contain either logged in or out indicators)
-	</ul></li>
-</ul>
+The full set of statistics maintained by the ZAP core and add-ons are maintained on the ZAP website: 
+<a href="https://www.zaproxy.org/docs/internal-statistics/">Internal Statistics</a>.
 
-<h2>Lihat juga</h2>
+<h2>See also</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">Ikhtisar UI</a></td><td>sebagai ikhtisar dari antarmuka pengguna</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="features.html">Fitur</a></td><td>disediakan oleh ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="features.html">Features</a></td><td>provided by ZAP</td></tr>
 </table>
 
 </body>

@@ -60,18 +60,29 @@
 <li>الحل</li>
 <li>معلومات أخرى</li>
 <li>إشارة</li>
-</ul>  
+</ul>
 
-على سبيل المثال
+The format for alert tags is:
 <pre>
-# 40012 = ينعكس XSS
-40012.الحل = تتبع شركتنا مبادئ توجيهية محددة في http://internet.example.com/xss.html
+&lt;alertid&gt;.tag.&lt;key&gt; = [ + | - ] [ &lt;value&gt; ]
 </pre>
-إذا كانت قيمة تبدأ مع '+' ثم هو إلحاق المعلومات الحالية.
+Note that:
+<ul>
+<li>Spaces in the tag key must be escaped with a backslash.</li>
+<li>The tag value is optional.</li>
+</ul>
+
+For example
+<pre>
+# 40012 = Reflected XSS
+40012.solution = Follow our company specific guidelines at http://internet.example.com/xss.html
+40012.tag.Bug\ Tracker\ URL = https://example.com/issues/1234
+</pre>
+If the value starts with a '+' then it is appended to the existing information.
 <br>
-إذا كان يبدأ مع '-' ثم يتم إرفاق مسبقا إلى المعلومات الموجودة.
+If it starts with a '-' then it is prepended to the existing information.
 <br>
-إذا لم تبدأ مع '+' أو '-' ثم فإنه يستبدل المعلومات الحالية.
+If it does not start with a '+' or '-' then it replaces the existing information.
 <p>
 تنبيه تجاوز ملف التكوين يمكن تحديد طريق <a href="api.html">API</a>,
 <a href="../../ui/dialogs/options/alert.html">خيارات التنبيه الشاشة</a>

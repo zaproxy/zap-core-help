@@ -25,7 +25,6 @@
          <tocitem text="Authentication Methods" target="start.features.authmethods"/>
          <tocitem text="Authentication Verification Strategies" target="start.features.authstrategies"/>
          <tocitem text="Breakpoints" target="start.features.breakpoints"/>
-         <tocitem text="Callbacks" target="start.features.callbacks"/>
          <tocitem text="Contexts" target="start.features.contexts"/>
          <tocitem text="Custom Page" target="start.features.custompages"/>
          <tocitem text="Data Driven Content" target="start.features.ddc"/>
@@ -70,7 +69,6 @@
          <tocitem text="Fuzzer" target="ui.tabs.params"/>
          <tocitem text="Παράμετροι" target="ui.tabs.httpsessions"/>
          <tocitem text="Συνεδρίες http" target="ui.tabs.output"/>
-         <tocitem text="Callbacks" target="ui.tabs.callbacks"/>
       </tocitem>
       <tocitem text="The Dialogs" target="ui.dialogs">
          <tocitem text="Ενεργή Σάρωση" target="ui.dialogs.advascan"/>
@@ -81,7 +79,7 @@
          <tocitem text="History Filter" target="ui.dialogs.historyfilter"/>
          <tocitem text="Manual Request Editor" target="ui.dialogs.manreq"/>
          <tocitem text="Manage Add-ons" target="ui.dialogs.manageaddons"/>
-         <tocitem text="Manage Tags" target="ui.dialogs.managetags"/>
+         <tocitem text="Manage History Tags" target="ui.dialogs.managetags"/>
          <tocitem text="Options" target="ui.dialogs.options">
          	<tocitem text="Active Scan" target="ui.dialogs.options.ascan"/>
          	<tocitem text="Active Scan Input Vectors" target="ui.dialogs.options.ascaninput"/>
@@ -89,7 +87,6 @@
          	<tocitem text="Anti CSRF Tokens" target="ui.dialogs.options.anticsrf"/>
          	<tocitem text="API" target="ui.dialogs.options.api"/>
             <tocitem text="Breakpoints" target="ui.dialogs.options.breakpoints"/>
-            <tocitem text="Callback Address" target="ui.dialogs.options.callback"/>
          	<tocitem text="Certificate" target="ui.dialogs.options.certificate"/>
          	<tocitem text="Check for Updates" target="ui.dialogs.options.checkforupdates"/>
 			<tocitem text="Connection" target="ui.dialogs.options.connection"/>
@@ -133,6 +130,7 @@
    <tocitem text="Add-ons" target="addons.introduction" tocid="addons" image="addons.icon" />
    
    <tocitem text="Releases" target="zap.releases">
+      <tocitem text="2.11.0" target="zap.releases.2.11.0"/>
       <tocitem text="2.10.0" target="zap.releases.2.10.0"/>
       <tocitem text="2.9.0" target="zap.releases.2.9.0"/>
       <tocitem text="2.8.0" target="zap.releases.2.8.0"/>

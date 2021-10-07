@@ -54,12 +54,23 @@ The following properties are supported:
 <li>solution</li>
 <li>otherInfo</li>
 <li>reference</li>
-</ul>  
+</ul>
+
+The format for alert tags is:
+<pre>
+&lt;alertid&gt;.tag.&lt;key&gt; = [ + | - ] [ &lt;value&gt; ]
+</pre>
+Note that:
+<ul>
+<li>Spaces in the tag key must be escaped with a backslash.</li>
+<li>The tag value is optional.</li>
+</ul>
 
 For example
 <pre>
 # 40012 = Reflected XSS
 40012.solution = Follow our company specific guidelines at http://internet.example.com/xss.html
+40012.tag.Bug\ Tracker\ URL = https://example.com/issues/1234
 </pre>
 If the value starts with a '+' then it is appended to the existing information.
 <br>

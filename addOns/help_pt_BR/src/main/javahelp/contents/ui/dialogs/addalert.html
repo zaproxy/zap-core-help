@@ -45,25 +45,48 @@ Um campo pull down que permite a você especificar a que parâmetro o problema e
 O campo é previamente preenchido com quaisquer parâmetros encontrados de URL ou formulário, mas você também pode inserir seu próprio nome de parâmetro.<br />
 A matriz de parâmetros (no componente de query da URL <code>x-www-form-urlencoded</code> no corpo da requisição) é identificada com o seu índice. Por exemplo, para uma requisição contendo <code>escolhas[]=EscolhaA&amp;escolhas[]=EscolhaB</code> o primeiro parâmetro será identificado como <code>escolhas[0]</code> e o segundo como <code>escolhas[1]</code>.
 
-<h3>Descrição</h3>
-Uma descrição geral do tipo de problema encontrado.<br/>
-Isto é preenchido quando você seleciona um dos tipos predefinidos, mas você também pode alterá-lo conforme necessário.<br/>
-Observe que as alterações feitas serão perdidas se você selecionar outro tipo.
- 
-<h3>Outras informações</h3>
-Informações específicas para o problema que você encontrou.<br/>
-Isto não é previamente preenchido.
+<h3>Attack</h3>
+The payload that was supplied to the <em>Parameter</em>. This is expected to be set only by active scan rules
+which are the ones that send payloads/attacks.
 
-<h3>Solução</h3>
-Recomendações sobre como corrigir o problema.<br/>
+<h3>Evidence</h3>
+The available information in the message request or response (header or body) that indicates that the issue is present.
+
+<h3>CWE ID</h3>
+The relevant Common Weakness Enumeration (CWE) ID associated with the flagged vulnerability. This field 
+can only be an integer.
+
+<h3>WASC ID</h3>
+The relevant Web Application Security Consortium (WASC) ID associated with the flagged vulnerability. This field
+can only be an integer.
+
+<h3>Description</h3>
+A general description of the type of issue found.<br/>
 Isto é preenchido quando você seleciona um dos tipos predefinidos, mas você também pode alterá-lo conforme necessário.<br/>
 Observe que as alterações feitas serão perdidas se você selecionar outro tipo.
  
-<h3>Referência</h3>
-Uma ou mais URLs apontando para mais informações na internet sobre o tipo de alerta selecionado.<br/>
-Isto é preenchido quando você seleciona um dos tipos predefinidos, mas você também pode alterá-lo conforme necessário.<br/>
-Observe que as alterações feitas serão perdidas se você selecionar outro tipo.
+<h3>Other Info</h3>
+Information specific to the particular issue you have found.<br/>
+This is not prepopulated.
+
+<h3>Solution</h3>
+Recommendations about how to fix the issue.<br/>
+This is populated when you select one of the predefined types, but you can also change it as required.<br/>
+Note that any changes you make will be lost if you select another type.
  
+<h3>Reference</h3>
+One or more URLs pointing to more information on the internet about the selected type of alert.<br/>
+This is populated when you select one of the predefined types, but you can also change it as required.<br/>
+Note that any changes you make will be lost if you select another type.
+ 
+<h3>Alert Tags</h3>
+Alerts can be tagged with arbitrary keys or key=value pairs.<br/>
+You can add as many tags as you want to each alert. However,
+<ul>
+<li>You cannot have two tags with the same key.</li>
+<li>The key must be limited to 1024 characters and the value must be limited to 4000 characters for each tag.</li>
+</ul>
+
 <h2>Acessado via</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>

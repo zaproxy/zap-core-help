@@ -10,39 +10,39 @@ Rapor Menüsü
 <h1>Rapor Menüsü</h1>
 Bu menü raporları ele alır.
 
-<h3>HTML Raporu Oluştur...</h3>
-Bu, ortaya çıkan uyarıları içeren yeni bir HTML raporu oluşturur.
+<h3>Export Messages to File...</h3>
+This allows you to save requests and responses to a text file. <br/>
+Select the messages to save in the History tab - use the shift key to select multiple messages.
 
-<h3>XML Raporu Oluştur...</h3>
-Bu, ortaya çıkan uyarıları içeren yeni bir XML raporu oluşturur.
+<h3>Export Response to File...</h3>
+This allows you to save a specific response to a file. <br/>
+Select the relevant message in the History tab - 
+note that binary responses (such as images) can be saved as well as test responses.
 
-<h3>Markdown Rapor'u Oluştur...</h3>
-Bu, ortaya çıkan uyarıları içeren yeni bir Markdown raporu oluşturur.
+<h3>Export All URLs to File...</h3>
+This allows you to save all of the URLs accessed to a text or HTML file. <br/>
+This can be used, amongst other things, to compare the URLs available to users with 
+different roles or permissions on the same system.
 
-<h3>Mesajları Dosyaya Aktar...</h3>
-Bu, istekleri ve yanıtları bir metin dosyasına kaydetmenizi sağlar. <br/>
-Geçmiş sekmesinde kaydedilecek mesajları seçin - birden fazla mesaj seçmek için shift tuşunu kullanın.
+<h3>Export Selected URLs to File...</h3>
+Based on the selection (including multi-select) in the Sites tree all URLs and child URLs of selected
+nodes are exported.
 
-<h3>Yanıtı Dosyaya Aktar...</h3>
-Bu, belirli bir yanıtı bir dosyaya kaydetmenizi sağlar. <br/>
-Geçmiş sekmesinde ilgili mesajı, ikili yanıtların (resim yanıtları gibi) yanı sıra test yanıtlarını da kaydedebileceği şekilde seçin.
+<h3>Export URLs for Context</h3>
+All URLs in the Sites tree that fall within the selected context are exported. This functionality is 
+also available from the right-click menu when used on a Context node in the Sites tree panel.
 
-<h3>Tüm URL'leri Dosyaya Aktar...</h3>
-Bu, erişilen tüm URL'leri bir metin veya HTML dosyasına kaydetmenizi sağlar. <br/>
-Bu, diğer şeylerin yanı sıra, aynı sistem üzerinde farklı roller veya izinlere sahip kullanıcılar tarafından kullanılabilir URL'leri karşılaştırmak için kullanılabilir.
-
-<h3>Seçili Olan URL'leri Dosyaya Aktar...</h3>
-Siteler ağacındaki seçime (çoklu seçim dahil) göre seçilen düğümlerin tüm URL'leri ve çocuk URL'leri dışa aktarılır.
-
-<h3>URL'leri Bağlam için Dışa Aktar</h3>
-Siteler ağacındaki seçilen bağlamın içine giren tüm URL'ler dışa aktarılır. Bu işlevsellik, Siteler ağacı panelindeki Bağlam düğümünde kullanıldığında sağ tıklama menüsünden de edinilebilir.
-
-<h3>Başka bir Oturumla karşılaştır...</h3>
-Bu, daha önce kaydettiğiniz bir ZAP oturumuna yönlendirir. <br/>
-Ardından, geçerli oturum tarafından erişilen tüm URL'lerin ve bunları karşılaştırmak için seçtiğiniz oturumun yazıldığı bir çıktı dosyası isteyecektir.<br/>
-Dosya, URL'leri ve 2 oturumdaki URL'lerin HTTP yanıtlarını listeleyen bir tablo içerecektir.<br/>
-JavaScript butonu sadece; ilk oturumda, ikinci oturumda ve iki oturumda da erişilen URL'lerin hepsine erişmenizi sağlar.<br/>
-Bu, özellikle farklı kullanıcıları kullanarak aynı uygulamaya erişen 2 oturumu karşılaştırmak için kullanışlıdır. Kullanıcıların hangi URL'lerin görüntülendiğini görebileceksiniz ve kullanıcılardan herhangi biri olarak giriş yaptığınızda tüm URL'lere erişmeyi deneyebileceksiniz.
+<h3>Compare with another Session...</h3>
+This prompts you for a ZAP session that you have previously saved. <br/>
+It then prompts you for an output file into which is written all of the URLs accessed
+by the current session and the session you have selected to compare it with.<br/>
+The file will contain a table listing the URLs and the HTTP responses for the URLs in the
+2 sessions.<br/>
+JavaScript buttons allow you to display all of the URLs, just those accessed in the first session,
+the second session and those accessed by both sessions.<br/>
+This is particularly useful for comparing 2 sessions which access the same application using
+different users. You will be able to see which URLs are visible to the users and will be able to
+try to access all of the URLs when logged in as either of the users.
 
 <p>
 Note that <a href="../../start/features/addons.html">add-ons</a> can add additional menu items.

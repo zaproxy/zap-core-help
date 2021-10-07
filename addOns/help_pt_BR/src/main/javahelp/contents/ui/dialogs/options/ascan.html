@@ -35,29 +35,32 @@ Deixar esta variável com um valor diferente de zero vai elevar o tempo da varre
 <h3>Inject plugin ID in header for all active scan requests.</h3>
 Se esta opção for selecionada o scanner ativo vai injetar o cabeçalho de solicitação <code>X-ZAP-Scan-ID</code> com o ID do scanner que está enviando as solicitações HTTP.
 
-<h3>Handle anti-CSRF tokens (experimental functionality).</h3>
+<h3>Handle anti-CSRF tokens.</h3>
 Se esta opção estiver selecionada, a varredura ativa tentará automaticamente solicitar tokens 
 <a href="../../../start/features/anticsrf.html">anti CSRF</a> .<br>
-Observe que isto é uma funcionalidade experimental  e vai desacelerar o processo de varredura porque ele não será subdividido em threads para garantir que os tokens anti CSRF não se percam. 
+Previously this would have forced the scanner to only use one thread, but that is no longer the case.
+You are strongly recommended to check that the anti CSRF tokens are being correctly generated if more than one thread is being used,
+for example using custom <a href="../../../start/features/tags.html">tags</a> to check for success / failure patterns in the response.
 
 <h3>In Attack Mode prompt to rescan nodes when scope changed.</h3>
-Se esta opção estiver selecionada, quando você utilizar o <a href="../../../start/features/modes.html">modo</a> de ataque você será convidado a decidir se vai reescanear nós no nesse escopo.<br>
-Se a opção não estiver selecionada então essa decisão (se os nós serão reescaneados) fica para a próxima opção.
+If this option is selected then when you select Attack <a href="../../../start/features/modes.html">modo</a> you will be prompted to choose whether to rescan nodes in scope.<br>
+If the option is not selected then the following option will control whether the nodes are rescanned.
 
 <h3>In Attack Mode always rescan nodes when scope changed.</h3>
-Se esta opção estiver selecionada, então quando for selecionado o <a href="../../../start/features/modes.html">modo</a> de ataque todos os nós no escopo serão reescaneados se o escopo mudar.<br>
-Isso não é recomendável para  sites grandes porque pode tomar muito tempo.
+If this option is selected then when running in Attack <a href="../../../start/features/modes.html">mode</a> all nodes in scope will be rescanned if the scope changes.<br>
+This is not recommended for large sites as it could take a long time.
 
 <h3>Default Active Scan Policy</h3>
-A <a href="../../../start/features/scanpolicy.html">política de varredura</a> utilizada por padrão quando você inicia uma varredura ativa.
+The <a href="../../../start/features/scanpolicy.html">Política de Varredura</a> that is used by default when you start an active scan.
 
 <h3>Attack Mode Scan Policy</h3>
-A <a href="../../../start/features/scanpolicy.html">Política de Varredura</a> utilizada para escaneamento no modo de <a href="../../../start/features/modes.html">Ataque</a>.
+The <a href="../../../start/features/scanpolicy.html">Scan Policy</a> that is used for scanning in 
+Attack <a href="../../../start/features/modes.html">mode</a>.
 
 <h3>Max Progress Chart in Mins</h3>
-O tempo máximo em minutos, para o qual os códigos de resposta vão ser grafados no
-<a href="../scanprogress.html">Diálogo de progresso da Varredura</a>.<br>
-Para desabilitar o gráfico a opção deve ser definida como zero minutos.
+The maximum time in minutes for which response codes will be charted in the
+<a href="../scanprogress.html">Scan Progress dialog</a>.<br>
+To disable the chart the option should be set to zero minutes.
 
 <h2>Leia também</h2>
 <table>

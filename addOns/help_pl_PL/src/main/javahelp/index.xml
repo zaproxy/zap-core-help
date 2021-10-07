@@ -27,7 +27,6 @@
     <indexitem text="breakpoints tab" target="ui.tabs.breakpoints" />
     <indexitem text="breakpoints" target="start.features.breakpoints" /> 
     <indexitem text="break tab" target="ui.tabs.break" />
-    <indexitem text="callbacks tab" target="ui.tabs.callbacks" />
     <indexitem text="command line" target="cmdline" />
     <indexitem text="contexts" target="start.features.contexts" />
     <indexitem text="credits" target="zap.credits" />
@@ -84,6 +83,7 @@
     <indexitem text="release 2.8.0" target="zap.releases.2.8.0" />
     <indexitem text="release 2.9.0" target="zap.releases.2.9.0" />
     <indexitem text="release 2.10.0" target="zap.releases.2.10.0" />
+    <indexitem text="release 2.11.0" target="zap.releases.2.11.0" />
     <indexitem text="releases" target="zap.releases" />
     <indexitem text="request tab" target="ui.tabs.request" />
     <indexitem text="response tab" target="ui.tabs.response" />

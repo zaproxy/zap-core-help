@@ -50,7 +50,6 @@ ZAP supports the following command line options:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonupdate</td><td>Update all changed add-ons from the ZAP Marketplace</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonlist</td><td>List all of the installed add-ons</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-script &lt;script&gt;</td><td>Run the specified script (file system path) if command line/daemon, or just load it if GUI</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-last_scan_report &lt;path&gt;</td><td>Generate the 'Last Scan Report' into the specified path</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-suppinfo</td><td>Outputs details relevant for support and troubleshooting (to the console/standard out). Such as: ZAP version, java version, installed add-ons and version, locale info, operating system, etc.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-certload &lt;path&gt;</td><td>Loads the Root CA certificate from the specified file name</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-certpubdump &lt;path&gt;</td><td>Dumps the Root CA public certificate into the specified file name, this is suitable for importing into browsers</td></tr>
@@ -72,8 +71,8 @@ Przykłady:
 		<li>Start ZAP in 'daemon' mode with a new session created at a given path:
 			<pre>&lt;zap-script&gt; -daemon -newsession session</pre>
 		</li>
-		<li>Create a report of the last scan of an existing session and exit ZAP once finished:
-			<pre>&lt;zap-script&gt; -last_scan_report /full/path/to/save/report.xml -session /full/path/to/existing/session -cmd</pre>
+		<li>Run a script against an existing session and exit ZAP once finished:
+			<pre>&lt;zap-script&gt; -session /full/path/to/existing/session -script /full/path/to/script.js -cmd</pre>
 		</li>
 	</ul>
 

@@ -48,25 +48,48 @@ Parameter Array (pada komponen kueri URL dan <code>x-www-form-urlencoded</code> 
 contoh, untuk permintaan yang mengandung <code>pilihan[]=ilihanA&amp;pilihan[]=ChoiceB</code> parameter pertamanya itu akan diidentifikasi
 sebagai <code>pilihan[0]</code> dan yang kedua sebagai <code>pilihan[1]</code>.
 
-<h3>Deskripsi</h3>
-Deskripsi umum dari jenis masalah yang ditemukan.<br/>
-Ini diisi ketika anda memilih salah satu jenis yang telah ditentukan, namun anda juga bisa mengubahnya sesuai dengan kebutuhan.<br/>
-Catat bahwa setiap perubahan yang anda buat akan hilang jika anda memilih tipe yang lainnya.
- 
-<h3>Info Lainnya</h3>
-Informasi khusus untuk masalah tertentu yang anda temukan.<br/>
-Ini belum terisi.
+<h3>Attack</h3>
+The payload that was supplied to the <em>Parameter</em>. This is expected to be set only by active scan rules
+which are the ones that send payloads/attacks.
 
-<h3>Solusi</h3>
-Rekomendasi mengenai bagaimana untuk memperbaiki suatu masalah.<br/>
+<h3>Evidence</h3>
+The available information in the message request or response (header or body) that indicates that the issue is present.
+
+<h3>CWE ID</h3>
+The relevant Common Weakness Enumeration (CWE) ID associated with the flagged vulnerability. This field 
+can only be an integer.
+
+<h3>WASC ID</h3>
+The relevant Web Application Security Consortium (WASC) ID associated with the flagged vulnerability. This field
+can only be an integer.
+
+<h3>Description</h3>
+A general description of the type of issue found.<br/>
 Ini akan ditempatkan ketika anda memilih salah satu dari tipe yang telah ditetapkan sebelumnya, tetapi anda juga bisa mengubahnya seperti yang dibutuhkan.<br/>
 Perhatikan bahwa perubahan apapun yang anda lakukan akan bisa hilang jika anda memilih tipe yang lain.
  
-<h3>Referensi</h3>
-Satu atau beberapa URL yang mengarah kepada informasi lebih lanjut pada internet tentang tipe peringatan yang terpilih.<br/>
-Ini diisi ketika anda memilih salah satu dari tipe yang telah ditentukan, namun anda juga dapat mengubahnya sesuai kebutuhan.<br/>
-Perhatikan bahwa setiap perubahan yang anda lakukan akan hilang jika anda memilih jenis lain.
+<h3>Other Info</h3>
+Information specific to the particular issue you have found.<br/>
+This is not prepopulated.
+
+<h3>Solution</h3>
+Recommendations about how to fix the issue.<br/>
+This is populated when you select one of the predefined types, but you can also change it as required.<br/>
+Note that any changes you make will be lost if you select another type.
  
+<h3>Reference</h3>
+One or more URLs pointing to more information on the internet about the selected type of alert.<br/>
+This is populated when you select one of the predefined types, but you can also change it as required.<br/>
+Note that any changes you make will be lost if you select another type.
+ 
+<h3>Alert Tags</h3>
+Alerts can be tagged with arbitrary keys or key=value pairs.<br/>
+You can add as many tags as you want to each alert. However,
+<ul>
+<li>You cannot have two tags with the same key.</li>
+<li>The key must be limited to 1024 characters and the value must be limited to 4000 characters for each tag.</li>
+</ul>
+
 <h2>Diakses melalui</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>

@@ -52,18 +52,29 @@ ZAPによって生成されたアラートには、発生したアラートに�
 <li>solution</li>
 <li>otherInfo</li>
 <li>reference</li>
-</ul>  
+</ul>
 
-例
+The format for alert tags is:
+<pre>
+&lt;alertid&gt;.tag.&lt;key&gt; = [ + | - ] [ &lt;value&gt; ]
+</pre>
+Note that:
+<ul>
+<li>Spaces in the tag key must be escaped with a backslash.</li>
+<li>The tag value is optional.</li>
+</ul>
+
+For example
 <pre>
 # 40012 = Reflected XSS
 40012.solution = Follow our company specific guidelines at http://internet.example.com/xss.html
+40012.tag.Bug\ Tracker\ URL = https://example.com/issues/1234
 </pre>
-値が「+」で始まる場合は、既存の情報に追加されます。
+If the value starts with a '+' then it is appended to the existing information.
 <br>
-' - 'で始まる場合は、既存の情報の前に付加されます。
+If it starts with a '-' then it is prepended to the existing information.
 <br>
-'+'または ' - 'で始まらなければ、既存の情報を置き換えます。
+If it does not start with a '+' or '-' then it replaces the existing information.
 <p>
 アラートオーバーライド設定ファイルは、APIで指定できます。 <a href="api.html">　指定方法は次の通り、</a>,
 <a href="../../ui/dialogs/options/alert.html">アラート画面のオプション</a>

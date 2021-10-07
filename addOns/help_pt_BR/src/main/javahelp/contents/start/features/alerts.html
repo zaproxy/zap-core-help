@@ -57,17 +57,29 @@ As propriedades a seguir são suportadas:
 <li>solution</li>
 <li>otherInfo</li>
 <li>reference</li>
-</ul>  
+</ul>
 
-Por exemplo
+The format for alert tags is:
 <pre>
-# 40012 = XSS refletido 40012.solution = siga nossas orientações específicas da empresa em http://internet.example.com/xss.html
+&lt;alertid&gt;.tag.&lt;key&gt; = [ + | - ] [ &lt;value&gt; ]
 </pre>
-Se o valor começa com um '+', então ele é acrescentado à informação existente.
+Note that:
+<ul>
+<li>Spaces in the tag key must be escaped with a backslash.</li>
+<li>The tag value is optional.</li>
+</ul>
+
+For example
+<pre>
+# 40012 = Reflected XSS
+40012.solution = Follow our company specific guidelines at http://internet.example.com/xss.html
+40012.tag.Bug\ Tracker\ URL = https://example.com/issues/1234
+</pre>
+If the value starts with a '+' then it is appended to the existing information.
 <br>
-Se começa com um '-' Então é anexado para as informações existentes.
+If it starts with a '-' then it is prepended to the existing information.
 <br>
-Se não começa com um '+' ou '-' Então ele substitui a informação existente.
+If it does not start with a '+' or '-' then it replaces the existing information.
 <p>
 Arquivo de configuração substituir alerta pode ser especificado por meio do <a href="api.html">API</a>,
 <a href="../../ui/dialogs/options/alert.html">Tela de opções de alertas</a>

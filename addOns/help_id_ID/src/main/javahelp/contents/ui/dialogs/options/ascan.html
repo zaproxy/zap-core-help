@@ -36,30 +36,32 @@ Menetapkan ini menjadi nilai nol tidak akan meningkatkan waktu pemindaian aktif 
 <h3>Inject plugin ID in header for all active scan requests.</h3>
 Jika pilihan ini dipilih maka pemindai aktif ini akan menyuntikkan permintaan header <code>X-ZAP-Scan-ID</code> dengan ID dari pemindai yang mengirimkan permintaan HTTP.
 
-<h3>Handle anti-CSRF tokens (experimental functionality).</h3>
+<h3>Handle anti-CSRF tokens.</h3>
 Jika pilihan ini dipilih maka pemindai yang aktif akan secara otomatis mencoba untuk meminta 
 <a href="../../../start/features/anticsrf.html">anti CSRF</a> token bila diperlukan.<br>
-Perhatikan bahwa ini adalah fungsi yang eksperimental dan akan memperlambat proses pemindaian karena hanya satu benang yang akan digunakan untuk memastikannya agar
-permintaan token anti CSRF tidak keluar dari langkah. 
+Previously this would have forced the scanner to only use one thread, but that is no longer the case.
+You are strongly recommended to check that the anti CSRF tokens are being correctly generated if more than one thread is being used,
+for example using custom <a href="../../../start/features/tags.html">tags</a> to check for success / failure patterns in the response.
 
 <h3>In Attack Mode prompt to rescan nodes when scope changed.</h3>
-Jika pilihan ini dipilih maka saat anda memilih menyerang <a href="../../../start/features/modes.html">mode</a> anda akan diminta untuk memilih apakah akan mencari kembali node dalam cakupannya.<br>
-Jika pilihan ini tidak dipilih maka pilihan berikut akan mengontrol apakah node tersebut akan kembali dipindai.
+If this option is selected then when you select Attack <a href="../../../start/features/modes.html">mode</a> you will be prompted to choose whether to rescan nodes in scope.<br>
+If the option is not selected then the following option will control whether the nodes are rescanned.
 
 <h3>In Attack Mode always rescan nodes when scope changed.</h3>
-Jika pilihan ini dipilih maka saat berjalan pada serangan <a href="../../../start/features/modes.html">mode</a> semua node dalam cakupan akan kembali dipindai jika cakupan berubah.<br>
-Ini tidak direkomendasikan untuk situs besar karena dapat menghabiskan waktu yang lama.
+If this option is selected then when running in Attack <a href="../../../start/features/modes.html">mode</a> all nodes in scope will be rescanned if the scope changes.<br>
+This is not recommended for large sites as it could take a long time.
 
 <h3>Default Active Scan Policy</h3>
-Itu <a href="../../../start/features/scanpolicy.html">Kebijakan Pindai</a> yang digunakan secara default ketika anda memulai pemindaian yang aktif.
+The <a href="../../../start/features/scanpolicy.html">Kebijakan Pindai</a> that is used by default when you start an active scan.
 
 <h3>Attack Mode Scan Policy</h3>
-Itu <a href="../../../start/features/scanpolicy.html">Kebijakan Pindai</a> yang digunakan untuk pemindaian dalam menyerang <a href="../../../start/features/modes.html">mode</a>.
+The <a href="../../../start/features/scanpolicy.html">Scan Policy</a> that is used for scanning in 
+Attack <a href="../../../start/features/modes.html">mode</a>.
 
 <h3>Max Progress Chart in Mins</h3>
-Waktu maksimum dalam menit dimana kode menanggapi akan memetakan di
-<a href="../scanprogress.html">Pemindaian kemajuan dialog</a>.<br>
-Untuk menonaktifkan grafik pilihan harus diatur ke nol menit.
+The maximum time in minutes for which response codes will be charted in the
+<a href="../scanprogress.html">Scan Progress dialog</a>.<br>
+To disable the chart the option should be set to zero minutes.
 
 <h2>Lihat juga</h2>
 <table>
