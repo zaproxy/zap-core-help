@@ -14,53 +14,15 @@ Ang ZAP ay nagpapanatili ng mga istatistika na kung saan ay makakatulong sa iyo 
 <p>
 Ang estadistika ay magagamit sa pamamagitan ng API at maari itong ipadala sa isang Statsd server kapag naka-ayos gamit ang screen ng opsyon ng Istatistika.
 </p>
+<p>
 
-<h3>Mga Istatistika na nakabatay sa Site</h3>
-Ang mga istatistika na pinapanatili sa bawat batayan ng site ay kinabibilangan ng:
-<ul>
-<li>mga code ng tugon, halimbawa:
-	<ul>
-	<li>stats.cod.200</li>
-	<li>stats.code.302</li>
-	</ul></li>
-<li>oras ng tugon sa ms (gamit ang logarithmic na sukatan), halimbawa:
-	<ul>
-	<li>stats.responseTime.1</li>
-	<li>stats.responseTime.2</li>
-	<li>stats.responseTime.4</li>
-	<li>stat.responseTime.8</li>
-	<li>stats.responseTime.16</li>
-	</ul></li>
-<li>mga uri ng nilalaman, halimbawa:
-	<ul>
-	<li>stats.contentType.text/css</li>
-	<li>stats.contentType.text/html;charset=utf-8</li>
-	</ul></li>
-<li><a href="tags.html">mga tag</a>, halimbawa:
-	<ul>
-	<li>stats.tag.Password</li>
-	<li>stats.tag.Hidden</li>
-	</ul></li>
-<li>nabuong mga token ng anticsrf:
-	<ul>
-	<li>stats.acsrf.anticsrf</li>
-	</ul></li>
-<li>impormasyon ng pagpapatunay:
-	<ul>
-	<li>stats.auth.success (bilang ng mga tagumpay ng pagpapatunay)</li>
-	<li>stats.auth.failure (bilang ng mga bigong pagpapatunay)</li>
-	<li>stats.auth.state.assumedin (number of messages between successful polls that are assumed to be logged in)</li>
-	<li>stats.auth.state.loggedin (number of messages that appear to be logged in)
-	<li>stats.auth.state.loggedout (number of messages that appear to be logged out)
-	<li>stats.auth.state.noindicator (number of messages where no logged in or out indicators have been set)
-	<li>stats.auth.state.unknown (number of messages which don't contain either logged in or out indicators)
-	</ul></li>
-</ul>
+The full set of statistics maintained by the ZAP core and add-ons are maintained on the ZAP website: 
+<a href="https://www.zaproxy.org/docs/internal-statistics/">Internal Statistics</a>.
 
-<h2>Tingnan din</h2>
+<h2>See also</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">Pangkalahatang Ideya ng UI</a></td><td>para sa pangkalahatang ideya ng interface ng gumagamit</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="features.html">Mga Tampok</a></td><td>na ibinigay ng ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="features.html">Features</a></td><td>provided by ZAP</td></tr>
 </table>
 
 </body>

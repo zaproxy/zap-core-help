@@ -36,30 +36,32 @@ Bunu sıfırdan farklı bir değere ayarlamak, etkin bir tarama süresini artır
 <h3>Inject plugin ID in header for all active scan requests.</h3>
 Bu seçimle aktif tarama istenilen başlığı ekler <code>X-ZAP-Tarama_ID</code> hTTP isteklerini gönderen tarayıcı kimliğiyle birlikte.
 
-<h3>Handle anti-CSRF tokens (experimental functionality).</h3>
+<h3>Handle anti-CSRF tokens.</h3>
 Bu seçenek seçilirse, etkin tarayıcı otomatik olarak istekte bulunmaya çalışacaktır 
 <a href="../../../start/features/anticsrf.html">anti CSRF</a> gerektiği zaman belirtir.<br>
-Bunun deneysel fonsiyon olduğunu ve tarama sürecini yavaşlatacağına dikkat edin, çünkü anti CSRF belirteci isteklerinin aşama aşama uygulanmaması için yalnızca bir iş bölümü kullanılacaktır. 
+Previously this would have forced the scanner to only use one thread, but that is no longer the case.
+You are strongly recommended to check that the anti CSRF tokens are being correctly generated if more than one thread is being used,
+for example using custom <a href="../../../start/features/tags.html">tags</a> to check for success / failure patterns in the response.
 
 <h3>In Attack Mode prompt to rescan nodes when scope changed.</h3>
-Saldırı'yı seçtiğinizde eğer bu seçenek seçilirse, <a href="../../../start/features/modes.html">mod</a> kapsamdaki düğümleri yeniden tarayıp taramayacağınızı seçmeniz istenir.<br>
-Seçenek seçilmemişse, aşağıdaki seçenekler düğümlerin yeniden taranıp taranmayacağını kontrol edecektir.
+If this option is selected then when you select Attack <a href="../../../start/features/modes.html">mod</a> you will be prompted to choose whether to rescan nodes in scope.<br>
+If the option is not selected then the following option will control whether the nodes are rescanned.
 
 <h3>In Attack Mode always rescan nodes when scope changed.</h3>
-Saldırı sırasında eğer bu seçenek seçilirse <a href="../../../start/features/modes.html">mod</a> kapsam değişirse kapsamdaki tüm düğümler yeniden taranır.<br>
-Büyük siteler için uzun sürebileceği için bu önerilmez.
+If this option is selected then when running in Attack <a href="../../../start/features/modes.html">mode</a> all nodes in scope will be rescanned if the scope changes.<br>
+This is not recommended for large sites as it could take a long time.
 
 <h3>Default Active Scan Policy</h3>
-O <a href="../../../start/features/scanpolicy.html">Tarama Yönetmeliği</a> bu, etkin bir tarama başlattığınızda varsayılan olarak kullanılır.
+The <a href="../../../start/features/scanpolicy.html">Tarama Yönetmeliği</a> that is used by default when you start an active scan.
 
 <h3>Attack Mode Scan Policy</h3>
-O <a href="../../../start/features/scanpolicy.html">Tarama Yönetmeliği</a> bu taramayı
-Saldırıda kullanır <a href="../../../start/features/modes.html">mod</a>.
+The <a href="../../../start/features/scanpolicy.html">Scan Policy</a> that is used for scanning in 
+Attack <a href="../../../start/features/modes.html">mode</a>.
 
 <h3>Max Progress Chart in Mins</h3>
-Tepki kodlarının dakika olarak maksimum listelenme zamanı
-<a href="../scanprogress.html">Tarama İlerlemesi diyaloğu</a>.<br>
-Grafiği devre dışı bırakmak için bu seçenek sıfır dakikaya ayarlanmalıdır.
+The maximum time in minutes for which response codes will be charted in the
+<a href="../scanprogress.html">Scan Progress dialog</a>.<br>
+To disable the chart the option should be set to zero minutes.
 
 <h2>Ayrıca bakınız</h2>
 <table>

@@ -10,44 +10,39 @@ El Menú Informe
 <h1>Menú de Reportes</h1>
 Este menú handles los informes.
 
-<h3>Generar Reporte HTML</h3>
-Esto genera un informe HTML que contiene las alertas levantadas.
+<h3>Export Messages to File...</h3>
+This allows you to save requests and responses to a text file. <br/>
+Select the messages to save in the History tab - use the shift key to select multiple messages.
 
-<h3>Generar Reporte XML</h3>
-Esto genera un nuevo informe XML que contiene las alertas levantadas.
+<h3>Export Response to File...</h3>
+This allows you to save a specific response to a file. <br/>
+Select the relevant message in the History tab - 
+note that binary responses (such as images) can be saved as well as test responses.
 
-<h3>Generar Reporte Markdown</h3>
-Esto genera un nuevo informe Markdown que contiene las alertas levantadas.
+<h3>Export All URLs to File...</h3>
+This allows you to save all of the URLs accessed to a text or HTML file. <br/>
+This can be used, amongst other things, to compare the URLs available to users with 
+different roles or permissions on the same system.
 
-<h3>Exportar mensajes a un archivo</h3>
-Esto le permite guardar las solicitudes y respuestas en un archivo de texto. <br/>
-Seleccione los mensajes de guardar en la ficha History. Utilice la tecla Mayús para seleccionar varios mensajes.
+<h3>Export Selected URLs to File...</h3>
+Based on the selection (including multi-select) in the Sites tree all URLs and child URLs of selected
+nodes are exported.
 
-<h3>Exportar respuesta al archivo</h3>
-Esto le permite guardar una respuesta específica en un archivo. <br/>
-Seleccionar el mensaje relevante en la pestaña de History- tenga en cuenta que las respuestas binarias (como imágenes) pueden guardarse como prueba respuestas.
+<h3>Export URLs for Context</h3>
+All URLs in the Sites tree that fall within the selected context are exported. This functionality is 
+also available from the right-click menu when used on a Context node in the Sites tree panel.
 
-<h3>Exportar todas las direcciones URL a un archivo</h3>
-Esto le permite guardar todas las URLs de acceso a un texto o archivo HTML. <br/>
-Esto puede usarse, entre otras cosas, comparar las URLs disponibles para usuarios con diferentes roles o permisos en el mismo sistema.
-
-<h3>Exportar las direcciones URL Seleccionadas a un archivo</h3>
-Según la selección (incluida la selección múltiple) en el Sites tree se exportan todas las URL y las URL secundarias de los nodos seleccionados.
-
-<h3>Exportar URL para el contexto</h3>
-Se exportan todas las URLs en el Sites tree dentro del contexto seleccionado. Esta funcionalidad también está disponible desde el menú contextual cuando se utiliza en un nodo de contexto en el panel del Sites tree.
-
-<h3>Comparar con otra sesión</h3>
-Esto le solicita una sesión de ZAP que haya guardado previamente <br/>
-A continuación, le solicita un archivo de salida en el que se escriben todas las URLs a las que se accedió
-por la sesión actual y la sesión que ha seleccionado para compararla.<br/>
-El archivo contendrá una tabla que enumera las URLs y las respuestas HTTP para las URLs en las
-2 sesiones<br/>
-Los botones de JavaScript le permiten mostrar todas las URLs, solo las que se accedieron en la primera sesión,
-la segunda sesión y las accedidas por ambas sesiones.<br/>
-Esto es particularmente útil para comparar 2 sesiones que acceden a la misma aplicación usando
-diferentes usuarios. Podrá ver qué URLs son visibles para los usuarios y podrá
-intentar acceder a todas las URLs cuando inicie sesión como cualquiera de los usuarios.
+<h3>Compare with another Session...</h3>
+This prompts you for a ZAP session that you have previously saved. <br/>
+It then prompts you for an output file into which is written all of the URLs accessed
+by the current session and the session you have selected to compare it with.<br/>
+The file will contain a table listing the URLs and the HTTP responses for the URLs in the
+2 sessions.<br/>
+JavaScript buttons allow you to display all of the URLs, just those accessed in the first session,
+the second session and those accessed by both sessions.<br/>
+This is particularly useful for comparing 2 sessions which access the same application using
+different users. You will be able to see which URLs are visible to the users and will be able to
+try to access all of the URLs when logged in as either of the users.
 
 <p>
 Note that <a href="../../start/features/addons.html">add-ons</a> can add additional menu items.

@@ -36,30 +36,32 @@ Ang pagtatakda nito sa isang hindi serong halaga ay maidadagdag sa oras na nakuh
 <h3>Inject plugin ID in header for all active scan requests.</h3>
 Kung ang opsyon na ito ay napili ng aktibong iskaner na ma-iniksyon sa kahilingan ng header na <code>X-ZAP-Scan-ID</code> sa pamamagitan ng ID ng mga iskaner na nagpapadala ng mga kahilingan ng HTTP.
 
-<h3>Handle anti-CSRF tokens (experimental functionality).</h3>
+<h3>Handle anti-CSRF tokens.</h3>
 Kung ang opssyon na ito ay napili habang ang aktibong iskaner ay sinusubukan sa awtomatikong kahilingan 
 <a href="../../../start/features/anticsrf.html">ng anti CSRF</a> ng mga token kung kinakailngan.<br>
-Paalala na ito ay eksperimento ng pagpapagana at ang pagbagal ng proseso ng pag-iskan bilang isa lamang na hibla ang siguradong magagamit
-na anti CSRF na mga kahilingan na hindi nakuha ng hakbang. 
+Previously this would have forced the scanner to only use one thread, but that is no longer the case.
+You are strongly recommended to check that the anti CSRF tokens are being correctly generated if more than one thread is being used,
+for example using custom <a href="../../../start/features/tags.html">tags</a> to check for success / failure patterns in the response.
 
 <h3>In Attack Mode prompt to rescan nodes when scope changed.</h3>
-Kung ang opsyon na ito ay napili pagkatapos kung ang iyong napili ay ang pag-atake ng <a href="../../../start/features/modes.html">moda</a> na maaari mong madiktahan na pumili kung ang mga saklaw ng node ay i-rerescan.<br>
-Kung ang opsyon ay hindi napili pagkatapos ang sumusunod na opsyon ay na kontrol kapag ang mga node ay na-rescan.
+If this option is selected then when you select Attack <a href="../../../start/features/modes.html">moda</a> you will be prompted to choose whether to rescan nodes in scope.<br>
+If the option is not selected then the following option will control whether the nodes are rescanned.
 
 <h3>In Attack Mode always rescan nodes when scope changed.</h3>
-Kung ang opsyon na ito ay napili pagkatapos habang tumatakbo sa pag-atake ng <a href="../../../start/features/modes.html">moda</a> ng lahat ng mga node sa saklaw na na-rescan kung ang saklaw ay binago.<br>
-Ito ay hindi rekomendado para sa malaking mga sayt bilang ito ay maaaring kunin sa mahabang oras.
+If this option is selected then when running in Attack <a href="../../../start/features/modes.html">mode</a> all nodes in scope will be rescanned if the scope changes.<br>
+This is not recommended for large sites as it could take a long time.
 
 <h3>Default Active Scan Policy</h3>
-Ang <a href="../../../start/features/scanpolicy.html">Patakaran ng pag-iskan</a> na ginamit sa pamamagitan ng default kung ikaw ay magsisimula sa isang aktibong pag-iskan.
+The <a href="../../../start/features/scanpolicy.html">Patakaran ng pag-Iskan</a> that is used by default when you start an active scan.
 
 <h3>Attack Mode Scan Policy</h3>
-Ang <a href="../../../start/features/scanpolicy.html">Patakaran ng pag-Iskan</a> na ito ay ginamit para sa pag-iskan sa pag-atake <a href="../../../start/features/modes.html">ng moda</a>.
+The <a href="../../../start/features/scanpolicy.html">Scan Policy</a> that is used for scanning in 
+Attack <a href="../../../start/features/modes.html">mode</a>.
 
 <h3>Max Progress Chart in Mins</h3>
-Ang pinakamataas na oras sa mga minuto para sa kung aling tugon ng mga code ay mapipirmi sa mga
-<a href="../scanprogress.html">Progreso ng pag-iskan ng diyalogo</a>.<br>
-Sa di pagpapagana ng tsart ng opsyon na dapat na maitakda sa sero ng mga minuto.
+The maximum time in minutes for which response codes will be charted in the
+<a href="../scanprogress.html">Scan Progress dialog</a>.<br>
+To disable the chart the option should be set to zero minutes.
 
 <h2>Tignan din sa</h2>
 <table>

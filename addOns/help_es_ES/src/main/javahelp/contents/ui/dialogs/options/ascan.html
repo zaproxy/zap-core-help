@@ -35,30 +35,32 @@ El parámetro a un valor cero será aumentar el tiempo de una exploración activ
 <h3>Inject plugin ID in header for all active scan requests.</h3>
 Si se selecciona esta opción el lector activo inyectará el encabezado de solicitud <code>X-ZAP-Scan-ID</code> con el identificador del explorador que está enviando el HTTP solicita.
 
-<h3>Handle anti-CSRF tokens (experimental functionality).</h3>
+<h3>Handle anti-CSRF tokens.</h3>
 Si se selecciona esta opción entonces el explorador activo intentará solicitar automáticamente 
 <a href="../../../start/features/anticsrf.html">anti CSRF</a> fichas cuando sea necesario.<br>
-Tenga en cuenta que esto es una funcionalidad experimental y ralentizará el proceso de digitalización como sólo un subproceso se utilizará para asegurar que anti CSRF token pide no salir de paso. 
+Previously this would have forced the scanner to only use one thread, but that is no longer the case.
+You are strongly recommended to check that the anti CSRF tokens are being correctly generated if more than one thread is being used,
+for example using custom <a href="../../../start/features/tags.html">tags</a> to check for success / failure patterns in the response.
 
 <h3>In Attack Mode prompt to rescan nodes when scope changed.</h3>
-Si se selecciona esta opción entonces al seleccionar ataque <a href="../../../start/features/modes.html">modo</a> se le pedirá elegir entre volver a analizar los nodos de ámbito.<br>
-Si la opción no está seleccionada la opción siguiente se controla si los nodos se volverán a explorar.
+If this option is selected then when you select Attack <a href="../../../start/features/modes.html">modo</a> you will be prompted to choose whether to rescan nodes in scope.<br>
+If the option is not selected then the following option will control whether the nodes are rescanned.
 
 <h3>In Attack Mode always rescan nodes when scope changed.</h3>
-Si esta opción está seleccionada entonces al ejecutarse en Ataque <a href="../../../start/features/modes.html">modo</a> todos los nodos en el ámbito serán examinados nuevamente si el ámbito cambia.<br>
-Esto no se recomienda para sitios grandes ya que podría tomar mucho tiempo.
+If this option is selected then when running in Attack <a href="../../../start/features/modes.html">mode</a> all nodes in scope will be rescanned if the scope changes.<br>
+This is not recommended for large sites as it could take a long time.
 
 <h3>Default Active Scan Policy</h3>
-El <a href="../../../start/features/scanpolicy.html">Política de escaneo</a> se utiliza de forma predeterminada al iniciar una exploración activa.
+The <a href="../../../start/features/scanpolicy.html">Política de Escaneo</a> that is used by default when you start an active scan.
 
 <h3>Attack Mode Scan Policy</h3>
-La <a href="../../../start/features/scanpolicy.html">Política de Escaneo</a> that is used for scanning in 
-Attack <a href="../../../start/features/modes.html">modo</a>.
+The <a href="../../../start/features/scanpolicy.html">Scan Policy</a> that is used for scanning in 
+Attack <a href="../../../start/features/modes.html">mode</a>.
 
 <h3>Max Progress Chart in Mins</h3>
-El tiempo máximo en minutos para el cual los códigos de respuesta serán diagramados en el
+The maximum time in minutes for which response codes will be charted in the
 <a href="../scanprogress.html">Scan Progress dialog</a>.<br>
-Para deshabilitar el gráfico la opción debe establecerse en cero minutos.
+To disable the chart the option should be set to zero minutes.
 
 <h2>Vease también</h2>
 <table>

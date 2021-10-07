@@ -36,18 +36,20 @@
 <h3>Inject plugin ID in header for all active scan requests.</h3>
 如果选择此选项，则主动扫描器将插入请求标头 <code>X-ZAP-Scan-ID</code> 和发送HTTP请求的扫描器的ID。
 
-<h3>Handle anti-CSRF tokens (experimental functionality).</h3>
+<h3>Handle anti-CSRF tokens.</h3>
 如果选择此选项，则主动扫描器将尝试自动请求 
 <a href="../../../start/features/anticsrf.html">反CSRF</a> 令牌（在需要的时候）。<br>
-请注意，这是实验性功能，并会减慢扫描过程，因为只有一个线程将用于确保反CSRF令牌请求不会脱离步骤。 
+Previously this would have forced the scanner to only use one thread, but that is no longer the case.
+You are strongly recommended to check that the anti CSRF tokens are being correctly generated if more than one thread is being used,
+for example using custom <a href="../../../start/features/tags.html">tags</a> to check for success / failure patterns in the response.
 
 <h3>In Attack Mode prompt to rescan nodes when scope changed.</h3>
-如果选择此选项，则当你选择攻击 <a href="../../../start/features/modes.html">模式时</a> 系统将提示您选择是否重新扫描范围中的节点。<br>
-如果未选择该选项，则下一选项将控制节点是否重新扫描。
+If this option is selected then when you select Attack <a href="../../../start/features/modes.html">模式时</a> you will be prompted to choose whether to rescan nodes in scope.<br>
+If the option is not selected then the following option will control whether the nodes are rescanned.
 
 <h3>In Attack Mode always rescan nodes when scope changed.</h3>
-如果选择此选项，则当你选择攻击 <a href="../../../start/features/modes.html">模式时</a> 如果范围发生更改, 范围内的所有节点都将扫描。<br>
-这不适用于大型网站，因为它可能需要很长时间。
+If this option is selected then when running in Attack <a href="../../../start/features/modes.html">mode</a> all nodes in scope will be rescanned if the scope changes.<br>
+This is not recommended for large sites as it could take a long time.
 
 <h3>Default Active Scan Policy</h3>
 The <a href="../../../start/features/scanpolicy.html">Scan Policy</a> that is used by default when you start an active scan.

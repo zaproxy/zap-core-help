@@ -14,53 +14,15 @@ ZAP mantém estatísticas que podem ajudá-lo a entender o que realmente está a
 <p>
 As estatísticas estão disponíveis através da <a href="api.html">API</a> e também podem ser enviadas para um servidor de Statsd quando configurado através da <a href="../../ui/dialogs/options/stats.html">tela de opções de estatísticas</a>.
 </p>
+<p>
 
-<h3>Estatísticas baseadas em site</h3>
-Estatísticas mantidas com base em sites incluem:
-<ul>
-<li>códigos de resposta, por exemplo:
-	<ul>
-	<li>stats.Code.200</li>
-	<li>stats.Code.200</li>
-	</ul></li>
-<li>tempos de resposta em ms (usar uma escala logarítmica), por exemplo:
-	<ul>
-	<li>stats.responseTime.1</li>
-	<li>stats.responseTime.2</li>
-	<li>stats.responseTime.4</li>
-	<li>stats.responseTime.8</li>
-	<li>stats.responseTime.16</li>
-	</ul></li>
-<li>tipos de conteúdo, por exemplo:
-	<ul>
-	<li>stats.contentType.text/css</li>
-	<li>stats.contentType.text/html;charset=utf-8</li>
-	</ul></li>
-<li><a href="tags.html">tags</a>, por exemplo:
-	<ul>
-	<li>stats.tag.Password</li>
-	<li>stats.tag.Hidden</li>
-	</ul></li>
-<li>anticsrf tokens gerados:
-	<ul>
-	<li>stats.acsrf.anticsrf</li>
-	</ul></li>
-<li>Informações de autenticação:
-	<ul>
-	<li>stats.auth.Success (número de sucessos de autenticação)</li>
-	<li>stats.auth.Failure (número de falhas de autenticação)</li>
-	<li>stats.auth.state.assumedin (number of messages between successful polls that are assumed to be logged in)</li>
-	<li>stats.auth.state.loggedin (number of messages that appear to be logged in)
-	<li>stats.auth.state.loggedout (number of messages that appear to be logged out)
-	<li>stats.auth.state.noindicator (number of messages where no logged in or out indicators have been set)
-	<li>stats.auth.state.unknown (number of messages which don't contain either logged in or out indicators)
-	</ul></li>
-</ul>
+The full set of statistics maintained by the ZAP core and add-ons are maintained on the ZAP website: 
+<a href="https://www.zaproxy.org/docs/internal-statistics/">Internal Statistics</a>.
 
-<h2>Ver também</h2>
+<h2>See also</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">Visão geral da interface do usuário</a></td><td>para uma visão geral a interface do usuário</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="features.html">Destaques</a></td><td>fornecidos pelo ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="features.html">Features</a></td><td>provided by ZAP</td></tr>
 </table>
 
 </body>

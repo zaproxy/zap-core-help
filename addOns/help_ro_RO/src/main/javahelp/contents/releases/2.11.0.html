@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<TITLE>
+  Release 2.11.0
+</TITLE>
+</HEAD>
+<BODY>
+<H1>Release 2.11.0</H1>
+
+This is the OWASP 20th anniversary bug fix and enhancement release, which requires a minimum of Java 8. 
+Note that a minimum of Java 11 is recommended, especially for high DPI displays.
+<br><br>
+These release notes do not include all of the changes included in add-ons updated since 2.10.0.
+<br><br>
+Some of the more significant enhancements include:
+
+<H3>Alert Tags</H3>
+Alerts can now be tagged with arbitrary keys or key=value pairs.<br>
+The active and passive scan rules have been updated to include tags for the OWASP Top 10 2021 and 2017 - these are also now 
+shown on the website <a href="https://www.zaproxy.org/docs/alerts/">Alert Details</a> pages.
+
+<H3>Automation Framework</H3>
+The Automation Framework is a new way to automate ZAP and is expected to become the default option for most use cases.
+For more details see the <a href="https://www.zaproxy.org/docs/automate/automation-framework/">Automation Framework</a> page on the website.
+
+<H3>Report Generation</H3>
+The new <a href="https://www.zaproxy.org/docs/desktop/addons/report-generation/">Report Generation</a> add-on allows you to generate much
+more flexible reports with access to much more data. 
+The previous reporting add-ons have been removed from the marketplace as they provide less functionality and are no longer maintained.<br>
+New report templates include:
+<ul>
+  <li>Risk and Confidence HTML - the new default report</li>
+  <li>Modern HTML Report with themes and options</li>
+  <li>High Level Report Sample</li>
+  <li>Traditional HTML Report with requests and responses</li>
+</ul>
+"Traditional" templates have been added which match the old reports for anyone who relies on their formats.
+
+<H3>OAST Support</H3>
+
+The new <a href="https://www.zaproxy.org/docs/desktop/addons/oast-support/">OAST Support</a> add-on allows you to find and exploit out-of-band vulnerabilities.
+This add-on is alpha at the time of the 2.11.0 release but is expected to be updated soon, so check the help pages for the latest features.
+
+<H3>Retest</H3>
+
+The new <a href="https://www.zaproxy.org/docs/desktop/addons/retest/">Retest</a> add-on allows you to retest for presence/absence of previously generated alerts.
+This add-on is alpha at the time of the 2.11.0 release but is expected to be updated soon, so check the help pages for the latest features.
+
+<H3>Docker</H3>
+The Docker stable and bare images will now be updated monthly, typically around the start of the month.<br>
+The updates will include any updated add-ons and any changes to the packaged scans. No core changes will be included in these updates.<br>
+The images will be tagged by date in case you wish to stay on a specific version.<br>
+The packaged scans are being migrated to use the Automation Framework - this migration will continue over the life of 2.11.0.
+
+<H3>Statistics</H3>
+A significant number of statistics have been added to the core, and are being added to add-ons.
+In part this is driven by the Automation Framework which can make direct use of statistics for sanity checks.<br>
+New core statistics include:
+<ul>
+  <li>stats.api.call.&lt;format&gt;.&lt;component&gt;.&lt;request-type&gt;.&lt;name&gt; : The number of times the given API endpoint has been called</li>
+  <li>stats.api.error.&lt;format&gt;.&lt;component&gt;.&lt;request-type&gt;.&lt;name&gt; : The number of times the given API endpoint has returned an error</li>
+  <li>stats.ascan.&lt;rule-id&gt;.alerts : The number of alerts the given active scan rule has raised</li>
+  <li>stats.ascan.&lt;rule-id&gt;.skipped : The number of alerts the given active scan rule has been skipped</li>
+  <li>stats.ascan.&lt;rule-id&gt;.started : The number of alerts the given active scan rule has been started</li>
+  <li>stats.ascan.&lt;rule-id&gt;.time : The cumulative number of milliseconds that the given active scan rule has run for</li>
+  <li>stats.ascan.&lt;rule-id&gt;.urls : The number of URLs that the given active scan rule has requested</li>
+  <li>stats.ascan.started : The number of times the active scanner has been started</li>
+  <li>stats.ascan.stopped : The number of times the active scanner has been stopped (as opposed to finishing)</li>
+  <li>stats.ascan.time : The cumulative number of milliseconds that active scanner has run for</li>
+  <li>stats.ascan.urls : The number of URLs the active scanner has requested</li>
+  <li>stats.break.drop : The number of times a request or response has been dropped via a break point</li>
+  <li>stats.break.hit : The number of times a break point has been hit</li>
+  <li>stats.break.step : The number of times a break point has been stepped through</li>
+  <li>stats.pscan.&lt;rule-id&gt;.alerts : The number of alerts raised by the given scan rule</li>
+  <li>stats.pscan.&lt;rule-id&gt;.time : The cumulative number of milliseconds taken to run the given scan rule</li>
+  <li>stats.script.call.&lt;engine-name&gt;.&lt;type&gt; : The number of times the given type of script has been called</li>
+  <li>stats.script.error.&lt;engine-name&gt;.&lt;type&gt; : The number of times the given type of script has been returned an error</li>
+  <li>stats.spider.started : The number of times the spider has been started</li>
+  <li>stats.spider.stopped : The number of times the spider has been stopped (as opposed to completing)</li>
+  <li>stats.spider.time : The total number of milliseconds the spider has run for across all scans</li>
+  <li>stats.spider.url.error : The number of URLs the spider has found but failed to access</li>
+  <li>stats.spider.url.found : The number of URLs the spider has found and accessed </li>
+</ul>
+For details of the latest statistics including all of the ones also maintained by add-ons and links to the code see the 
+website <a href="https://www.zaproxy.org/docs/internal-statistics/">ZAP Internal Statistics</a> pages.
+
+
+<H2>Add-Ons</H2>
+<H3>New Add-Ons</H3>
+The following add-ons are included by default in this release for the first time:
+<ul>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/automation-framework/">Automation Framework</a> - a simple, flexible and powerful way to automate ZAP</li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/oast-support/">OAST Support</a> - allows you to exploit out-of-band vulnerabilities</li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/report-generation/">Report Generation</a> - new and highly customisable reports</li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/retest/">Retest</a> - retest for presence/absence of previously generated alerts</li>
+</ul>
+
+<H3>Updated Add-Ons</H3>
+All of the add-ons included by default have been updated since the last full release.
+
+<H2>Docker Updates</H2>
+The following changes are included in the latest Stable Docker image:
+
+<ul>
+  <li>Updated to use Webswing 21.1.5</li>
+  <li>Added /zap/container file to make it easier to detect if we are running in a container like docker.</li>
+  <li>Changed to enable integration tests, inc enabling the AF for the baseline <code>-c</code> option if the <code>--auto</code> flag is used before it.</li>
+  <li>Changed to use user's home directory for the Automation Framework files so it will work for any user</li>
+  <li>Updated the baseline to use the Automation Framework by default for common options including the config file/URL.</li>
+  <li>Alert_on_Unexpected_Content_Types.js &gt; Added Content-Type text/yaml to the list of expected types.</li>
+  <li>Check if messages being analyzed by API scan scripts are globally excluded or not.</li>
+  <li>Allow more flexibility to specify ZAP command line options when using Webswing</li>
+  <li>Python 3.5 is no longer supported.</li>
+  <li>Update Webswing to download prod version if valid key supplied.</li>
+</ul>
+
+For full list of changes made to the docker images see the docker <a href="https://github.com/zaproxy/zaproxy/blob/main/docker/CHANGELOG.md">CHANGELOG.md</a>.
+
+<H2>Changes in Bundled Libraries</H2>
+The following libraries were updated:
+
+<ul>
+  <li>Bouncy Castle, 1.67 → 1.68</li>
+  <li>Commons IO, 2.8.0 → 2.11.0</li>
+  <li>Commons Lang3, 3.11 → 3.12</li>
+  <li>HarLib, 1.1.2 → 1.1.3</li>
+  <li>HSQLDB, 2.5.1 → 2.5.2</li>
+  <li>JFreeChart, 1.5.1 → 1.5.3</li>
+  <li>Log4j 2, 2.14.0 → 2.14.1</li>
+  <li>RSyntaxTextArea, 3.1.1 → 3.1.3</li>
+  <li>SQLite JDBC, 3.32.3.2 → 3.36.0.1</li>
+  <li>XOM, 1.2.10 → 1.3.7</li>
+</ul>
+
+<H2>Enhancements</H2>
+<ul>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6023">Issue 6023</a> : Quick add site in Context from History panel</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6098">Issue 6098</a> : Allow custom request headers to be set by spider parser</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6413">Issue 6413</a> : Allow to export regular expressions</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6428">Issue 6428</a> : Root Cert Download from Main API Page</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6448">Issue 6448</a> : Manual Request Editor: Send Hotkey</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6469">Issue 6469</a> : Cannot detect injection vulnerabilities on null value JSON objects</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6598">Issue 6598</a> : Do not require scan rules to implement setParent</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6614">Issue 6614</a> : Add AWP Identity manager PKCS11 cards (IDEMIA)</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6625">Issue 6625</a> : Deprecate core/view/homeDirectory API endpoint</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6628">Issue 6628</a> : Added `_token` to possible CSRF input names</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6658">Issue 6658</a> : Redirect core API reports to report add-on</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6661">Issue 6661</a> : Add "_csrf_token" accepted CSRF token names list</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6678">Issue 6678</a> : Make EventBus publishers easier to discover</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6705">Issue 6705</a> : Remove Paros Reports</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6712">Issue 6712</a> : Allow to regenerate expired certificate from warning dialogue</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6769">Issue 6769</a> : Support manual auth users with no session</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6801">Issue 6801</a> : Allow code to set the ZAP exit status</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6803">Issue 6803</a> : Enable anti csrf token handling in ascan by default</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6807">Issue 6807</a> : Add spider stats</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6808">Issue 6808</a> : Add container detection for Docker and Flatpak </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6811">Issue 6811</a> : Add option for allowing app integration in containers</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6824">Issue 6824</a> : Deprecate extension callback</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6827">Issue 6827</a> : Add support for controlling panel switching</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6829">Issue 6829</a> : Support Alert Tags</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6834">Issue 6834</a> : Adding Spring as a JAVA Technology</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6835">Issue 6835</a> : Active Scan stats</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6836">Issue 6836</a> : Passive Scan stats</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6837">Issue 6837</a> : API stats</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6838">Issue 6838</a> : Scripts stats</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6840">Issue 6840</a> : Break stats</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6844">Issue 6844</a> : Detect if running in WebSwing</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6854">Issue 6854</a> : Update user agents</li>
+</ul>
+
+<H2>Bug fixes</H2>
+<ul>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/3988">Issue 3988</a> : Selected checkbox tree nodes not correctly highlighted in macOS</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/4671">Issue 4671</a> : Tag changes in Search tab not reflected in History tab</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5165">Issue 5165</a> : Not found response tab on options (keyboard shortcut setting)</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6370">Issue 6370</a> : Fix exception when checking for breakpoints</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6381">Issue 6381</a> : Proxy script return value misinterpreted in 2.10.0</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6421">Issue 6421</a> : Alerts related API enpoints might return malformed JSON</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6427">Issue 6427</a> : Manual Request Editor CONNECT Http Method Broken</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6437">Issue 6437</a> : Unable to set only breaks on message in scope</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6508">Issue 6508</a> : Detect WebSocket upgrade messages having multiple Connection directives</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6512">Issue 6512</a> : Buttons of Manage Tags dialog are too small</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6520">Issue 6520</a> : Can not scroll past 'contexts' in 'sites' tab with FlatLaf L&amp;F</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6536">Issue 6536</a> : Extensions not stopped nor destroyed when add-on is uninstalled</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6537">Issue 6537</a> : CONNECT requests not shown in History tab</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6557">Issue 6557</a> : fix: HTTP Panels Font setting for dark LaFs (Theme)</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6562">Issue 6562</a> : Fixed regex generation for host site URLs included in context</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6652">Issue 6652</a> : Install missing libraries beforehand</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6689">Issue 6689</a> : X-ZAP-Scan-ID HTTP header is missing from some of the active scan requests</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6691">Issue 6691</a> : Do not add zero Content-Length by default in GET requests</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6720">Issue 6720</a> : Encode parameters when replacing in form auth data</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6753">Issue 6753</a> : Update Host header in place</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6755">Issue 6755</a> : Extension's errors during shutdown prevent ZAP to exit</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6828">Issue 6828</a> : Fix concurrency issue when downloading add-ons</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6843">Issue 6843</a> : Do not init extension's view if there's none</li>
+</ul>
+
+<H2>ZAP API New Endpoints:</H2>
+
+<H3>ACTION ascan / setOptionScanNullJsonValues</H3>
+Sets whether or not the active scanner should scan null JSON values.
+
+<H3>VIEW ascan / optionScanNullJsonValues</H3>
+Tells whether or not the active scanner should scan null JSON values.
+
+<H2>ZAP API Deprecated Endpoints:</H2>
+
+The following endpoints have been superseded by the <a href="https://www.zaproxy.org/docs/desktop/addons/report-generation/">Report Generation</a> add-on:
+<ul>
+<li>OTHER core / htmlreport</li>
+<li>OTHER core / jsonreport</li>
+<li>OTHER core / mdreport</li>
+<li>OTHER core / xmlreport</li>
+</ul>
+<p>
+The following endpoint has been deprecated without replacement, it is an internal GUI property:
+<ul>
+<li>VIEW core / homeDirectory</li>
+</ul>
+
+<H2>See Also</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+</table>
+</BODY>
+</HTML>

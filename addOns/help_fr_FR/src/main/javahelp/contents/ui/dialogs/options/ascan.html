@@ -38,11 +38,12 @@ on the target host.
 If this option is selected the active scanner will inject the request header <code>X-ZAP-Scan-ID</code> with the ID of
 the scanner that's sending the HTTP requests.
 
-<h3>Handle anti-CSRF tokens (experimental functionality).</h3>
+<h3>Handle anti-CSRF tokens.</h3>
 If this option is selected then the active scanner will attempt to automatically request 
 <a href="../../../start/features/anticsrf.html">anti CSRF</a> tokens when required.<br>
-Note that this is experimental functionality and will slow down the scanning process as only one thread will be used to ensure
-that anti CSRF token requests dont get out of step. 
+Previously this would have forced the scanner to only use one thread, but that is no longer the case.
+You are strongly recommended to check that the anti CSRF tokens are being correctly generated if more than one thread is being used,
+for example using custom <a href="../../../start/features/tags.html">tags</a> to check for success / failure patterns in the response.
 
 <h3>In Attack Mode prompt to rescan nodes when scope changed.</h3>
 If this option is selected then when you select Attack <a href="../../../start/features/modes.html">mode</a> you will be prompted to choose whether to rescan nodes in scope.<br>
@@ -56,7 +57,7 @@ This is not recommended for large sites as it could take a long time.
 The <a href="../../../start/features/scanpolicy.html">Stratégie de balayage</a> that is used by default when you start an active scan.
 
 <h3>Attack Mode Scan Policy</h3>
-The <a href="../../../start/features/scanpolicy.html">Stratégie de balayage</a> that is used for scanning in 
+The <a href="../../../start/features/scanpolicy.html">Scan Policy</a> that is used for scanning in 
 Attack <a href="../../../start/features/modes.html">mode</a>.
 
 <h3>Max Progress Chart in Mins</h3>
