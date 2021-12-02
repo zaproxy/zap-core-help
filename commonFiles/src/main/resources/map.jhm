@@ -116,6 +116,7 @@
         <mapID target="zap.releases.2.9.0" url="contents/releases/2.9.0.html"/>
         <mapID target="zap.releases.2.10.0" url="contents/releases/2.10.0.html"/>
         <mapID target="zap.releases.2.11.0" url="contents/releases/2.11.0.html"/>
+        <mapID target="zap.releases.2.12.0" url="contents/releases/2.12.0.html"/>
         <mapID target="zap.credits" url="contents/credits.html" />
      	<mapID target="ui.dialogs.options.ascan" url="contents/ui/dialogs/options/ascan.html"/>
      	<mapID target="ui.dialogs.options.ascaninput" url="contents/ui/dialogs/options/ascaninput.html"/>
@@ -130,7 +131,6 @@
    		<mapID target="ui.dialogs.options.connection" url="contents/ui/dialogs/options/connection.html"/>
      	<mapID target="ui.dialogs.options.database" url="contents/ui/dialogs/options/database.html"/>
      	<mapID target="ui.dialogs.options.view" url="contents/ui/dialogs/options/view.html"/>
-     	<mapID target="ui.dialogs.options.dynsslcert" url="contents/ui/dialogs/options/dynsslcert.html"/>
      	<mapID target="ui.dialogs.options.globalexcludeurl" url="contents/ui/dialogs/options/globalexcludeurl.html"/>
      	<mapID target="ui.dialogs.options.httpsessions" url="contents/ui/dialogs/options/httpsessions.html"/>
      	<mapID target="ui.dialogs.options.jvm" url="contents/ui/dialogs/options/jvm.html"/>
