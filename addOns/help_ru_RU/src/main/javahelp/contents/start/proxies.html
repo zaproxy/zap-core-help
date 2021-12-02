@@ -7,46 +7,46 @@ Configuring Proxies
 </title>
 </head>
 <body>
-<h1>Configuring Proxies</h1>
+<h1>Настройка прокси </h1>
 <p>
-You will need to configure your browser to use ZAP as a proxy.<br>
-By default ZAP uses an Address of 'localhost' and a Port of '8080', but these can be changed via the 
-<a href="../ui/dialogs/options/localproxy.html">Options Local Proxies screen</a>. 
+Вам нужно будет настроить свой браузер для использования ZAP в качестве прокси. <br>
+По умолчанию ZAP использует адрес localhost и порт 8080, но их можно изменить с помощью
+<a href="../ui/dialogs/options/localproxy.html"> Экран настроек локальных прокси </a>.  
 
-Instructions for the latest versions of the most commonly used browsers: 
+Инструкции для последних версий наиболее часто используемых браузеров:  
 </p>
 
 <h3>Chrome (on Windows)</h3>
 
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> 'Customise and control Google Chrome' button (top right)</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select the</td><td> 'Options..' menu item</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> 'Change proxy settings' button</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> 'LAN Settings' button</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Follow the</td><td> 'Windows LAN Settings' section below</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>нажмите</td><td> Кнопка "Настройка и управление Google Chrome" (вверху справа) </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Выберите </td><td> Пункт меню "Параметры .." </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>нажмите </td><td> Кнопка "Изменить настройки прокси" </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>нажмите</td><td> Кнопка "Настройки LAN" </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Следовать</td><td> Раздел "Настройки локальной сети Windows" ниже </td></tr>
 </table>
-<strong>Note:</strong> To proxy <code>localhost</code> (and related addresses) with newer Chrome versions (>= 72) the command line argument <code>--proxy-bypass-list=&lt;-loopback&gt;</code> must be provided.
+<strong>Примечание: </strong> Прокси  <code>localhost</code> (и связанные адреса) с более новыми версиями Chrome (> = 72) аргумент командной строки  <code>--proxy-bypass-list=&lt;-loopback&gt;</code> должно быть предоставлено. 
 
 <h3>Firefox (on Windows)</h3>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select the</td><td> 'Tools' menu </td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select the</td><td> 'Options..' menu item</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select the</td><td> 'General' panel</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Scroll to</td><td> 'Network Settings' section</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> 'Settings...' button</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select the</td><td> 'Manual proxy configuration' radio button</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Enter in the</td><td> 'HTTP Proxy:' field the 'Address' you configured in the 
-<a href="../ui/dialogs/options/localproxy.html">Options Local Proxies screen</a></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Enter in the</td><td> 'Port' field to the right of the 'HTTP Proxy' field the 'Port' you configured in the 
-<a href="../ui/dialogs/options/localproxy.html">Options Local Proxies screen</a>. Ensure 'SSL Proxy' is also configured, either by selecting 'Use this proxy server for all protocols' or by setting the corresponding values.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> Connection Setting 'OK' button</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> Options 'OK' button</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Выберите </td><td> Меню "Инструменты"  </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Выберите </td><td> Пункт меню "Параметры .." </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Выберите </td><td> Панель "Общие" </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Прокрутите до </td><td> Раздел "Сетевые настройки" </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>нажмите </td><td> Кнопка "Настройки ..." </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Выберите </td><td> Радиокнопка "Ручная настройка прокси" </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Войдите в </td><td> "HTTP Proxy:" поле "Адрес", который вы настроили в
+<a href="../ui/dialogs/options/localproxy.html"> Экран настроек локальных прокси </a> </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Войдите в </td><td> Поле «Порт» справа от поля «HTTP-прокси» - это «Порт», который вы настроили в
+<a href="../ui/dialogs/options/localproxy.html"> Экран настроек локальных прокси </a>.  Убедитесь, что «SSL-прокси» также настроен, выбрав «Использовать этот прокси-сервер для всех протоколов» или задав соответствующие значения. </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>нажмите</td><td> Кнопка «ОК» настройки подключения </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>нажмите </td><td> Опции кнопки "ОК" </td></tr>
 </table>
-<strong>Note:</strong> To proxy <code>localhost</code> (and related addresses) with newer Firefox versions (>= 67) the preference <code>network.proxy.allow_hijacking_localhost</code> (accessible through the <code>about:config</code> page) must be set to <code>true</code>.
+<strong>Примечание: </strong> Прокси  <code>localhost</code> (и связанные адреса) с более новыми версиями Firefox (> = 67) предпочтение  <code>network.proxy.allow_hijacking_localhost</code> (доступно через  <code>about:config</code> страницу) должен быть установлен на  <code>истина</code>.
 
 <h3>Firefox (on Linux)</h3>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select the</td><td>'Edit' menu</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Выберите </td><td>Меню "Правка" </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select the</td><td>'Preferences' menu item</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Follow the</td><td>instructions above from the 'General' panel</td></tr>
 </table>

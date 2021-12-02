@@ -2,7 +2,7 @@
 <helpset version="2.0" xml:lang="ru-RU">
 
   <!-- title -->
-  <title>ZAP - Desktop User Guide</title>
+  <title>ZAP - Руководство пользователя рабочего стола </title>
 
   <!-- maps -->
   <maps>
@@ -13,7 +13,7 @@
   <!-- views -->
   <view mergetype="org.zaproxy.zap.extension.help.ZapTocMerger">
     <name>TOC</name>
-    <label>Contents</label>
+    <label>СОДЕРЖАНИЕ </label>
     <type>org.zaproxy.zap.extension.help.ZapTocView</type>
     <data>toc.xml</data>
   </view>
@@ -44,7 +44,7 @@
      <name>main window</name>
      <size height="600" width="1000"/>
      <location x="200" y="200"/>
-     <title>ZAP - Desktop User Guide</title>
+     <title>ZAP - Руководство пользователя рабочего стола </title>
      <image>toplevelicon</image>
      <toolbar>
 	<helpaction>javax.help.BackAction</helpaction>
@@ -61,6 +61,6 @@
      <name>main</name>
      <size height="400" width="400"/>
      <location x="200" y="200"/>
-     <title>ZAP - Desktop User Guide</title>
+     <title>ZAP - Руководство пользователя рабочего стола </title>
   </presentation>
 </helpset>

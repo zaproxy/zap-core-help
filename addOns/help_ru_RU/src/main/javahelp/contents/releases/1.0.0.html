@@ -17,31 +17,31 @@
 Справка была добавлена для всех функциональных возможностей, предоставляемых в настоящее время в ZAP.<br/>
 Контекстно-зависимая справка также была выполнена так, что при нажатии клавиши F1, будет отображаться экран справки, связанный с вкладкой, которую вы выбрали.
 
-<h3>Breakpoints</h3>
-Использование <a href="../start/features/breakpoints.html">Breakpoints</a> было изменено, чтобы быть ближе к предоставляемым в IDE.<br/>
-The breakpoint controls have been moved to the new <a href="../ui/tltoolbar.html">Панель инструментов верхнего уровня</a>.<br/>
-Breakpoints can now also be set by right clicking nodes in the 
+<h3>Прерывания</h3>
+Использование <a href="../start/features/breakpoints.html">Контрольные точки</a> было изменено, чтобы быть ближе к предоставляемым в IDE.<br/>
+Элементы управления точкой останова были перенесены в новый  <a href="../ui/tltoolbar.html">Панель инструментов верхнего уровня</a>.<br/>
+Точки останова теперь также можно установить, щелкнув правой кнопкой мыши узлы в  
 <a href="../ui/tabs/sites.html">Сайты</a> и <a href="../ui/tabs/history.html">Истории вкладки</a>.
 
 <h3>Версия отчета</h3>
 В <a href="../ui/tlmenu/report.html">Версия отчета</a> значительный изменилось и теперь включает в себя следующие пункты меню:
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Создать отчет в формате XML...</td><td>Которая теперь генерирует отчеты по требованию</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Экспортировать сообщения в файл...</td><td>Переехал в <a href="../ui/tlmenu/file.html">меню файл</a></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Экспортировать ответ в файл...</td><td>Переехал в <a href="../ui/tlmenu/file.html">меню файл</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Экспортировать сообщения в файл...</td><td>Перемещен в <a href="../ui/tlmenu/file.html">меню файл</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Экспортировать ответ в файл...</td><td>Перемещен в <a href="../ui/tlmenu/file.html">меню файл</a></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Экспортировать все URL-адреса в файл...</td><td>Режим редактора</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Сравнить с другой сессией...</td><td>Режим редактора</td></tr>
 </table>
 
-<h3>Улучшенная истории поиска</h3>
-Новый <a href="../ui/tabs/search.html">Искать</a> позволяет вам искать для регулярных выражений во всех URL-адресов, запросов и ответов. <br/>
+<h3>Улучшенный поиск в истории </h3>
+Новая <a href="../ui/tabs/search.html">Искать</a> позволяет вам искать для регулярных выражений во всех URL-адресов, запросов и ответов. <br/>
 Следующей и предыдущей кнопки позволяют вам просматривать найденные Поиск терминов в 
-<a href="../ui/tabs/request.html">Запрос</a> и <a href="../ui/tabs/response.html">Ответ вкладки</a>. <br/>
+<a href="../ui/tabs/request.html">Запрос</a> и <a href="../ui/tabs/response.html">Вкладки ответов </a>. <br/>
 
-<h3>Истории фильтр</h3>
+<h3>Фильтр истории </h3>
 <a href="../ui/tabs/history.html">Панель инструментов фильтрации истории</a> была добавлена которая позволяет ограничить, какие запросы отображаются.<br/>
-Запросы могут быть отфильтрованы по HTTP-методы, результат коды HTTP и любой <a href="../start/features/tags.html">ярлыки</a>, <a href="../start/features/alerts.html">оповещения</a>, или
-<a href="../start/features/notes.html">заметки</a> это были применены.    
+Запросы могут быть отфильтрованы по HTTP методам, результат коды HTTP и любые <a href="../start/features/tags.html">ярлыки</a>, <a href="../start/features/alerts.html">оповещения</a>, или
+<a href="../start/features/notes.html">заметки</a> это было применено.    
 
 <h3>Заметки</h3>
 Теперь можно связать <a href="../start/features/notes.html">заметки</a> с любой просьбой.    
@@ -49,50 +49,50 @@ Breakpoints can now also be set by right clicking nodes in the
 <h3>В несколько страниц</h3>
 Теперь можно связать несколько <a href="../start/features/tags.html">ярлыки</a> с любой просьбой.    
 
-<h3>Больше контроля над оповещения</h3>
-В <a href="../ui/dialogs/addalert.html">Диалоговое окно «Добавить предупреждение»</a> позволяет добавить или изменить оповещение вручную. 
+<h3>Больше контроля над предупреждениями </h3>
+  <a href="../ui/dialogs/addalert.html">Диалоговое окно «Добавить предупреждение»</a> позволяет добавить или изменить оповещение вручную. 
 
 <h3>Новый кодер/декодер</h3>
-A new Encode/Decode/Hash dialog has replaced the previous 
-Encoder/Decoder. 
+Новое диалоговое окно «Кодирование / декодирование / хеширование» заменило предыдущее.
+Кодер / декодер.  
 
 <h3>Пассивный сканер</h3>
-<a href="../start/features/pscan.html">Passive scanning</a> has been added.<br/>
-In this release ZAP will only use passive scanning for automatically adding <a href="../start/features/tags.html">tags</a>.<br/>
-In future releases it may also raise <a href="../start/features/alerts.html">alerts</a> for potential issues. 
+<a href="../start/features/pscan.html">Пассивный сканер</a> был добавлен.<br/>
+В этом выпуске ZAP будет использовать только пассивное сканирование для автоматического добавления  <a href="../start/features/tags.html">теги </a>.<br/>
+В будущих выпусках это может также поднять  <a href="../start/features/alerts.html">предупреждения </a> для потенциальных проблем.  
     
 <h2>Незначительные изменения:</h2>
 
 <h3>Панель инструментов верхнего уровня</h3>
-<a href="../ui/tltoolbar.html">The Top Level Toolbar</a> has been added which
-provides a set up buttons for commonly used functionality. 
+<a href="../ui/tltoolbar.html">Панель инструментов верхнего уровня </a> была добавлена, которая
+предоставляет кнопки настройки для часто используемых функций.  
 
 <h3>Оповещения нижний колонтитул резюме</h3>
-Counts of the High, Medium, Low and Informational <a href="../start/features/alerts.html">alerts</a>
-are now displayed in the <a href="../ui/footer.html">footer</a>.
+Количество высоких, средних, низких и информационных  <a href="../start/features/alerts.html">предупреждений</a>
+теперь отображаются в  <a href="../ui/footer.html">нижний колонтитул </a>.
 
 <h3>Новый внешний вид и</h3>
-A new look and feel 'Nimbus' is used.
+Используется новый внешний вид 'Nimbus'.
 
-<h3>Пароль прокси обработка</h3>
-<a href="../ui/dialogs/options/connection.html">The Options Connection screen</a> has a new option to 
-'Prompt for proxy credentials on start up'.<br/>
-If this option is selected then your proxy password will not be stored on the hard disk.  
+<h3>Обработка паролей прокси </h3>
+<a href="../ui/dialogs/options/connection.html">Экран опций подключения </a> есть новая возможность
+«Запрашивать учетные данные прокси-сервера при запуске». <br/>
+Если выбран этот вариант, ваш пароль прокси не будет храниться на жестком диске.   
 
 <h3>Отправить на вкладке сайты</h3>
-The <a href="../ui/tabs/sites.html">Sites tab</a> has a new right click menu item that allows
-you to resend the request after making any changes to it that you want to.  
+  <a href="../ui/tabs/sites.html">Вкладка Сайты</a> есть новый пункт меню, вызываемый правой кнопкой мыши, который позволяет
+вам  повторно отправить запрос после внесения в него любых изменений.   
 
 <h3>Каталог пользователей между сессиями</h3>
-The last directory used by the user is now stored in the config file so that it is
-maintained between sessions.
+Последний каталог, используемый пользователем, теперь хранится в файле конфигурации, поэтому он
+поддерживается между сеансами. 
 
 <h2>Смотрите также</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../intro.html">Введение</a></td><td>введение в зап</td></tr>
+<a href="../intro.html">Введение</a></td><td>введение в ZAP</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="releases.html">Версии</a></td><td>полный набор релизы</td></tr>
+<a href="releases.html">Версии</a></td><td>полный набор релизов</td></tr>
 </table>
 </body>
 </html>
