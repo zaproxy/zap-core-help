@@ -9,107 +9,107 @@
 
 <index version="2.0">
 
-    <indexitem text="active scan" target="start.features.ascan" />
-    <indexitem text="active scan dialog" target="ui.dialogs.advascan" />
-    <indexitem text="active scan tab" target="ui.tabs.ascan"/>
-    <indexitem text="add-ons" target="start.features.addons"/>
-    <indexitem text="add-ons" target="addons.introduction"/>
-    <indexitem text="add alert dialog" target="ui.dialogs.addalert" />
-    <indexitem text="add/edit breakpoint dialog" target="ui.dialogs.addbreak" />
-    <indexitem text="add note dialog" target="ui.dialogs.addnote" />
-    <indexitem text="alerts tab" target="ui.tabs.alerts" />
-    <indexitem text="alerts" target="start.features.alerts" />
-    <indexitem text="api" target="start.features.api" />
-    <indexitem text="authentication auth form-based manual login" target="start.features.auth" />
-    <indexitem text="authentication methods" target="start.features.authmethods" />
-    <indexitem text="authentication verification strategies" target="start.features.authstrategies" />
-    <indexitem text="basic penetration test" target="start.pentest" />
-    <indexitem text="breakpoints tab" target="ui.tabs.breakpoints" />
-    <indexitem text="breakpoints" target="start.features.breakpoints" /> 
-    <indexitem text="break tab" target="ui.tabs.break" />
-    <indexitem text="command line" target="cmdline" />
-    <indexitem text="contexts" target="start.features.contexts" />
-    <indexitem text="credits" target="zap.credits" />
-    <indexitem text="custompages" target="start.features.custompages" /> 
-    <indexitem text="data driven content" target="start.features.ddc" />
-    <indexitem text="dialogs" target="ui.dialogs" />
-    <indexitem text="features" target="start.features" />
-    <indexitem text="find dialog" target="ui.dialogs.find" />
-    <indexitem text="footer" target="ui.footer" />
-    <indexitem text="getting started" target="start.start" />
-    <indexitem text="history filter dialog" target="ui.dialogs.historyfilter" />
-    <indexitem text="history tab" target="ui.tabs.history" />
-    <indexitem text="http sessions tab" target="ui.tabs.httpsessions" />
-    <indexitem text="http sessions" target="start.features.httpsessions" />
-    <indexitem text="manipulator-in-the-middle proxy" target="start.features.intercept"/>
-    <indexitem text="introduction" target="zap.intro" />
-    <indexitem text="manage tabs dialog" target="ui.dialogs.managetags" />
-    <indexitem text="manual request dialog" target="ui.dialogs.manreq" />
-    <indexitem text="marketplace" target="start.features.marketplace" />
-    <indexitem text="modes" target="start.features.modes" />
-    <indexitem text="notes" target="start.features.notes" />
-    <indexitem text="options dialog" target="ui.dialogs.options" />
-    <indexitem text="output tab" target="ui.tabs.output" />
-    <indexitem text="params tab" target="ui.tabs.params" />
-    <indexitem text="paros proxy" target="zap.paros" />
-    <indexitem text="passive scan" target="start.features.pscan" />
-    <indexitem text="passive scanner options" target="ui.dialogs.options.pscan.main" />
-    <indexitem text="persist session dialog" target="ui.dialogs.persistsession" />
-    <indexitem text="proxy configuration" target="start.proxy" />
-    <indexitem text="release 1.0.0" target="zap.releases.1.0.0" />
-    <indexitem text="release 1.1.0" target="zap.releases.1.1.0" />
-    <indexitem text="release 1.2.0" target="zap.releases.1.2.0" />
-    <indexitem text="release 1.3.0" target="zap.releases.1.3.0" />
-    <indexitem text="release 1.3.1" target="zap.releases.1.3.1" />
-    <indexitem text="release 1.3.2" target="zap.releases.1.3.2" />
-    <indexitem text="release 1.3.3" target="zap.releases.1.3.3" />
-    <indexitem text="release 1.3.4" target="zap.releases.1.3.4" />
-    <indexitem text="release 1.4.0" target="zap.releases.1.4.0" />
-    <indexitem text="release 1.4.1" target="zap.releases.1.4.1" />
-    <indexitem text="release 2.0.0" target="zap.releases.2.0.0" />
-    <indexitem text="release 2.1.0" target="zap.releases.2.1.0" />
-    <indexitem text="release 2.2.0" target="zap.releases.2.2.0" />
-    <indexitem text="release 2.2.1" target="zap.releases.2.2.1" />
-    <indexitem text="release 2.2.2" target="zap.releases.2.2.2" />
-    <indexitem text="release 2.3.0" target="zap.releases.2.3.0" />
-    <indexitem text="release 2.3.1" target="zap.releases.2.3.1" />
-    <indexitem text="release 2.4.0" target="zap.releases.2.4.0" />
-    <indexitem text="release 2.4.1" target="zap.releases.2.4.1" />
-    <indexitem text="release 2.4.2" target="zap.releases.2.4.2" />
-    <indexitem text="release 2.4.3" target="zap.releases.2.4.3" />
-    <indexitem text="release 2.5.0" target="zap.releases.2.5.0" />
-    <indexitem text="release 2.6.0" target="zap.releases.2.6.0" />
-    <indexitem text="release 2.7.0" target="zap.releases.2.7.0" />
-    <indexitem text="release 2.8.0" target="zap.releases.2.8.0" />
-    <indexitem text="release 2.9.0" target="zap.releases.2.9.0" />
-    <indexitem text="release 2.10.0" target="zap.releases.2.10.0" />
-    <indexitem text="release 2.11.0" target="zap.releases.2.11.0" />
-    <indexitem text="releases" target="zap.releases" />
-    <indexitem text="request tab" target="ui.tabs.request" />
-    <indexitem text="response tab" target="ui.tabs.response" />
-    <indexitem text="scanner rules" target="start.check" />
-    <indexitem text="scan policy" target="start.features.scanpolicy" />
-    <indexitem text="scan policy dialog" target="ui.dialogs.scanpolicy" />
-    <indexitem text="scan policy manager dialog" target="ui.dialogs.scanpolicymgr" />
-    <indexitem text="scan progress dialog" target="ui.dialogs.scanprogress" />
-    <indexitem text="scripts" target="start.features.scripts" />
-    <indexitem text="search tab" target="ui.tabs.search" />
-    <indexitem text="session context screens" target="ui.dialogs.contexts" />
-    <indexitem text="session context authentication screen" target="ui.dialogs.context-auth" />
-    <indexitem text="session context structure screen" target="ui.dialogs.context-struct" />
-    <indexitem text="session properties dialog" target="ui.dialogs.sessprop" />
-    <indexitem text="sites tab" target="ui.tabs.sites" />
-    <indexitem text="sites tree" target="start.features.sitestree" />
-    <indexitem text="spider" target="start.features.spider" />
-    <indexitem text="spider dialog" target="ui.dialogs.spider" />
-    <indexitem text="spider tab" target="ui.tabs.spider" />
-    <indexitem text="statistics" target="start.features.stats" />
-    <indexitem text="structural modifiers" target="start.features.structmods" />
-    <indexitem text="structural parameters" target="start.features.structparams" />
-    <indexitem text="tags" target="start.features.tags" />
-    <indexitem text="top level menu" target="ui.topmenu" />
-    <indexitem text="top level toolbar" target="ui.toptoolbar" />
-    <indexitem text="ui overview" target="ui.overview" />
-    <indexitem text="views" target="ui.views" />
+    <indexitem text="активное сканирование " target="start.features.ascan" />
+    <indexitem text="активное сканирование диалоговое" target="ui.dialogs.advascan" />
+    <indexitem text="вкладка активного сканирования " target="ui.tabs.ascan"/>
+    <indexitem text="дополнения " target="start.features.addons"/>
+    <indexitem text="дополнения " target="addons.introduction"/>
+    <indexitem text="добавить диалоговое окно предупреждения " target="ui.dialogs.addalert" />
+    <indexitem text="диалог добавления / редактирования точки останова " target="ui.dialogs.addbreak" />
+    <indexitem text="диалог добавления заметки " target="ui.dialogs.addnote" />
+    <indexitem text="вкладка предупреждений " target="ui.tabs.alerts" />
+    <indexitem text="предупреждения " target="start.features.alerts" />
+    <indexitem text="api -программный интерфейс приложения" target="start.features.api" />
+    <indexitem text="аутентификация авторизация на основе формы ручного входа в систему " target="start.features.auth" />
+    <indexitem text="методы аутентификации " target="start.features.authmethods" />
+    <indexitem text="стратегии проверки подлинности " target="start.features.authstrategies" />
+    <indexitem text="базовый тест на проникновение " target="start.pentest" />
+    <indexitem text="вкладка точек останова " target="ui.tabs.breakpoints" />
+    <indexitem text="контрольные точки " target="start.features.breakpoints" /> 
+    <indexitem text="перерыв вкладки" target="ui.tabs.break" />
+    <indexitem text="командная строка" target="cmdline" />
+    <indexitem text="Контексты" target="start.features.contexts" />
+    <indexitem text="Кредиты" target="zap.credits" />
+    <indexitem text="пользовательские страницы " target="start.features.custompages" /> 
+    <indexitem text="контент, управляемый данными " target="start.features.ddc" />
+    <indexitem text="диалоги " target="ui.dialogs" />
+    <indexitem text="Особенности " target="start.features" />
+    <indexitem text="диалог поиска " target="ui.dialogs.find" />
+    <indexitem text="нижний колонтитул " target="ui.footer" />
+    <indexitem text="начиная " target="start.start" />
+    <indexitem text="диалог фильтра истории " target="ui.dialogs.historyfilter" />
+    <indexitem text="вкладка истории " target="ui.tabs.history" />
+    <indexitem text="вкладка http-сессий " target="ui.tabs.httpsessions" />
+    <indexitem text="http-сессии " target="start.features.httpsessions" />
+    <indexitem text="манипулятор-посередине прокси" target="start.features.intercept"/>
+    <indexitem text="вступление" target="zap.intro" />
+    <indexitem text="диалог управления вкладками " target="ui.dialogs.managetags" />
+    <indexitem text="диалоговое окно ручного запроса " target="ui.dialogs.manreq" />
+    <indexitem text="Рынок дополнений" target="start.features.marketplace" />
+    <indexitem text="режимы" target="start.features.modes" />
+    <indexitem text="заметки" target="start.features.notes" />
+    <indexitem text="диалог опций " target="ui.dialogs.options" />
+    <indexitem text="вкладка вывода " target="ui.tabs.output" />
+    <indexitem text="вкладка params " target="ui.tabs.params" />
+    <indexitem text="paros прокси" target="zap.paros" />
+    <indexitem text="Пассивное сканирование" target="start.features.pscan" />
+    <indexitem text="опции пассивного сканера " target="ui.dialogs.options.pscan.main" />
+    <indexitem text="диалог сохранения сеанса " target="ui.dialogs.persistsession" />
+    <indexitem text="конфигурация прокси " target="start.proxy" />
+    <indexitem text="выпуск 1.0.0 " target="zap.releases.1.0.0" />
+    <indexitem text="выпуск 1.1.0 " target="zap.releases.1.1.0" />
+    <indexitem text="выпуск 1.2.0 " target="zap.releases.1.2.0" />
+    <indexitem text="Выпуск 1.3.0" target="zap.releases.1.3.0" />
+    <indexitem text="выпуск 1.3.1 " target="zap.releases.1.3.1" />
+    <indexitem text="выпуск 1.3.2 " target="zap.releases.1.3.2" />
+    <indexitem text="выпуск 1.3.3 " target="zap.releases.1.3.3" />
+    <indexitem text="выпуск 1.3.4 " target="zap.releases.1.3.4" />
+    <indexitem text="выпуск 1.4.0 " target="zap.releases.1.4.0" />
+    <indexitem text="выпуск 1.4.1 " target="zap.releases.1.4.1" />
+    <indexitem text="выпуск 2.0.0 " target="zap.releases.2.0.0" />
+    <indexitem text="выпуск 2.1.0 " target="zap.releases.2.1.0" />
+    <indexitem text="выпуск 2.2.0 " target="zap.releases.2.2.0" />
+    <indexitem text="выпуск 2.2.1 " target="zap.releases.2.2.1" />
+    <indexitem text="выпуск 2.2.2 " target="zap.releases.2.2.2" />
+    <indexitem text="выпуск 2.3.0 " target="zap.releases.2.3.0" />
+    <indexitem text="выпуск 2.3.1 " target="zap.releases.2.3.1" />
+    <indexitem text="выпуск 2.4.0 " target="zap.releases.2.4.0" />
+    <indexitem text="выпуск 2.4.1 " target="zap.releases.2.4.1" />
+    <indexitem text="выпуск 2.4.2 " target="zap.releases.2.4.2" />
+    <indexitem text="выпуск 2.4.3 " target="zap.releases.2.4.3" />
+    <indexitem text="выпуск 2.5.0 " target="zap.releases.2.5.0" />
+    <indexitem text="выпуск 2.6.0 " target="zap.releases.2.6.0" />
+    <indexitem text="выпуск 2.7.0 " target="zap.releases.2.7.0" />
+    <indexitem text="выпуск 2.8.0 " target="zap.releases.2.8.0" />
+    <indexitem text="выпуск 2.9.0 " target="zap.releases.2.9.0" />
+    <indexitem text="выпуск 2.10.0 " target="zap.releases.2.10.0" />
+    <indexitem text="выпуск 2.11.0 " target="zap.releases.2.11.0" />
+    <indexitem text="релизы " target="zap.releases" />
+    <indexitem text="вкладка запроса " target="ui.tabs.request" />
+    <indexitem text="вкладка ответа " target="ui.tabs.response" />
+    <indexitem text="правила сканера " target="start.check" />
+    <indexitem text="политика сканирования " target="start.features.scanpolicy" />
+    <indexitem text="диалог политики сканирования " target="ui.dialogs.scanpolicy" />
+    <indexitem text="диалог диспетчера политик сканирования " target="ui.dialogs.scanpolicymgr" />
+    <indexitem text="диалог прогресса сканирования " target="ui.dialogs.scanprogress" />
+    <indexitem text="Сценарии" target="start.features.scripts" />
+    <indexitem text="вкладка поиска " target="ui.tabs.search" />
+    <indexitem text="экраны контекста сеанса " target="ui.dialogs.contexts" />
+    <indexitem text="экран аутентификации контекста сеанса " target="ui.dialogs.context-auth" />
+    <indexitem text="экран структуры контекста сеанса" target="ui.dialogs.context-struct" />
+    <indexitem text="диалог свойств сеанса " target="ui.dialogs.sessprop" />
+    <indexitem text="вкладка сайты " target="ui.tabs.sites" />
+    <indexitem text="дерево сайтов " target="start.features.sitestree" />
+    <indexitem text="паук " target="start.features.spider" />
+    <indexitem text="диалог паука " target="ui.dialogs.spider" />
+    <indexitem text="вкладка паук " target="ui.tabs.spider" />
+    <indexitem text="статистика " target="start.features.stats" />
+    <indexitem text="структурные модификаторы " target="start.features.structmods" />
+    <indexitem text="структурные параметры " target="start.features.structparams" />
+    <indexitem text="теги " target="start.features.tags" />
+    <indexitem text="меню верхнего уровня " target="ui.topmenu" />
+    <indexitem text="панель инструментов верхнего уровня " target="ui.toptoolbar" />
+    <indexitem text="обзор пользовательского интерфейса " target="ui.overview" />
+    <indexitem text="Просмотры" target="ui.views" />
 
 </index>

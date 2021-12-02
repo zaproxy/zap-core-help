@@ -7,43 +7,43 @@ Command Line
 </title>
 </head>
 <body>
-<h1>Command Line</h1>
+<h1>командная строка</h1>
 
-To run ZAP via the command line, you will need to locate the ZAP startup script.<br/>
+Чтобы запустить ZAP через командную строку, вам нужно будет найти сценарий запуска ZAP. <br/>
 <strong>Windows:</strong><br/>
 <pre>C:\Program Files (x86)\OWASP\Zed Attack Proxy\zap.bat</pre>
-<strong>Note:</strong> The command line options are not used by the executable (<code>zap.exe</code>) only the bat file.<br/><br/>
+<strong>Примечание: </strong> Параметры командной строки не используются исполняемым файлом ( <code>zap.exe</code>) только bat файл. <br/><br/>
 <strong>Mac:</strong><br/>
 <pre>/Applications/OWASP\ ZAP.app/Contents/Java/zap.sh</pre>
 <strong>Linux:</strong><br/>
-<code>zap.sh</code> will be below the directory where ZAP was installed.
+<code>zap.sh</code> будет ниже каталога, в котором был установлен ZAP. 
 <br/><br/>
-Alternatively, you can run the JAR file directly:<br/>
+В качестве альтернативы вы можете запустить файл JAR напрямую: <br/>
 <pre>java -jar zap.jar</pre>
-All options below can be passed to any of these.
+Все параметры, указанные ниже, можно передать любому из них. 
 
-<h2>Options</h2>
+<h2>Параметры </h2>
 
-ZAP supports the following command line options:
+ZAP поддерживает следующие параметры командной строки: 
 
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-version</td><td>Reports the ZAP version</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-cmd</td><td>Run inline (exits when command line options complete)</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-daemon</td><td>Starts ZAP in daemon mode, ie without a UI</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-config &lt;kvpair&gt;</td><td>Overrides the specified key=value pair in the configuration file. <code>-config</code> command line options are applied in the order they are specified.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-configfile &lt;path&gt;</td><td>Overrides the key=value pairs with those in the specified properties file</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-dir &lt;dir&gt;</td><td>Uses the specified directory as home directory, instead of the default one. To prevent add-ons (inadvertently) use/override core files ZAP will not start (and show an error) if the home and the installation directories are the same.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-installdir &lt;dir&gt;</td><td>Overrides the code that detects where ZAP has been installed with the specified directory</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-h</td><td>Shows all of the command line options available, including those added by add-ons</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-help</td><td>The same as -h</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-newsession &lt;path&gt;</td><td>Creates a new session at the given location</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-session &lt;path&gt;</td><td>Opens the given session after starting ZAP</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-host &lt;host&gt;</td><td>Overrides the host used for proxying specified in the configuration file</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-port &lt;port&gt;</td><td>Overrides the port used for proxying specified in the configuration file</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-lowmem</td><td>Use the database instead of memory as much as possible - this is still experimental</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-experimentaldb</td><td>Use the experimental generic database code, which is not surprisingly also still experimental</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-nostdout</td><td>Disables the default logging through standard output</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-silent</td><td>Ensures ZAP does not make any unsolicited requests, including check for updates</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-версия</td><td>Сообщает о версии ZAP </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-cmd</td><td>Запустить встроенный (завершается, когда параметры командной строки завершены) </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-daemon</td><td>Запускает ZAP в режиме демона, т.е. без пользовательского интерфейса. </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-config &lt;kvpair&gt;</td><td>Переопределяет указанную пару ключ = значение в файле конфигурации. Параметры командной строки <code> -config </code> применяются в том порядке, в котором они указаны. </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-configfile &lt;path&gt;</td><td>Заменяет пары ключ = значение на пары в указанном файле свойств </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-dir &lt;dir&gt;</td><td>Использует указанный каталог в качестве домашнего каталога вместо каталога по умолчанию.  Чтобы предотвратить (непреднамеренное) использование надстроек / переопределение файлов ядра, ZAP не запустится (и покажет ошибку), если домашний каталог и каталог установки совпадают. </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-installdir &lt;dir&gt;</td><td>Переопределяет код, определяющий, где был установлен ZAP, в указанном каталоге. </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-h</td><td>Показывает все доступные параметры командной строки, в том числе добавленные надстройками. </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-help</td><td>То же, что и -h </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-newsession &lt;path&gt;</td><td>Создает новый сеанс в указанном месте </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-session &lt;path&gt;</td><td>Открывает данную сессию после запуска ZAP </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-host &lt;host&gt;</td><td>Переопределяет хост, используемый для проксирования, указанный в файле конфигурации </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-port &lt;port&gt;</td><td>Переопределяет порт, используемый для проксирования, указанный в файле конфигурации </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-lowmem</td><td>По возможности используйте базу данных вместо памяти - это все еще экспериментально </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-experimentaldb</td><td>Используйте экспериментальный общий код базы данных, который, что неудивительно, также все еще является экспериментальным. </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-nostdout</td><td>Отключает ведение журнала по умолчанию через стандартный вывод </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-silent</td><td>Гарантирует, что ZAP не отправляет нежелательные запросы, в том числе проверяет наличие обновлений. </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstall &lt;addOnId&gt;</td><td>Installs the add-on with specified ID from the ZAP Marketplace. The IDs of the add-ons available in the marketplace can be consulted in the Marketplace tab of <a href="ui/dialogs/manageaddons.html">Manage Add-ons dialogue</a>.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstallall</td><td>Install all available add-ons from the ZAP Marketplace</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonuninstall &lt;addOnId&gt;</td><td>Uninstalls the add-on with specified ID. Use <code>-addonlist</code> or check the Installed tab of <a href="ui/dialogs/manageaddons.html">Manage Add-ons dialogue</a> to know the IDs of the installed add-ons.</td></tr>

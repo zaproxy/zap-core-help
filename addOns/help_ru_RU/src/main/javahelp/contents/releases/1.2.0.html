@@ -13,62 +13,62 @@
 </p>
 <h2>Существенные изменения:</h2>
 
-<h3>Потеря памяти</h3>
-Утечки памяти были исправлены в <a href="../start/features/ascan.html">активным сканером</a> и
-<a href="../start/features/spider.html">паука</a>.
+<h3>Утечки памяти </h3>
+Утечки памяти были исправлены в <a href="../start/features/ascan.html">активном сканере</a> и
+<a href="../start/features/spider.html">пауке</a>.
 
-<h3>Управление приложениями</h3>
-Теперь внешние приложения можно активировать на вкладках Сайты и История.
+<h3>Вызов приложений </h3>
+Внешние приложения теперь можно вызывать из вкладок «Сайты» и «История». 
 
 <h3>Пассивный сканер</h3>
-В <a href="../start/features/pscan.html">пассивный сканер</a> теперь ищет уязвимости, такие как:
+  <a href="../start/features/pscan.html">пассивный сканер</a> теперь ищет уязвимости, такие как:
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Автозаполнение форм с поля пароля</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Печенье без флага «HttpOnly»</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>SSL печенье без «безопасной» флаг</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Локальная аутентификация</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Cookie без флага HttpOnly </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Cookie SSL без флага "безопасный" </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Слабая аутентификация </td></tr>
 </table>
 
 <h2>Незначительные изменения:</h2>
 
-<h3>Мои отчеты</h3>
-Новый пункт меню «Генерировать XML-отчет...» теперь входит в верхнем уровне <a href="../ui/tlmenu/report.html">Отчёты</a> 
+<h3>XML отчеты </h3>
+Новый пункт меню «Создать XML-отчет ...» теперь включен в верхний уровень.  <a href="../ui/tlmenu/report.html">Отчёты</a> 
 меню.
 
-<h3>Ручной запрос редактора и переслать диалоги</h3>
-Просьбы, представленные <a href="../ui/dialogs/man_req.html">Manual Request Editor and
-Resend dialogs</a> are now shown in the <a href="../ui/tabs/sites.html">Sites</a> and 
-<a href="../ui/tabs/history.html">History</a> tabs.<br>
-A new 'Method' pull down allows you to switch between the HTTP methods, this automatically moves parameters
-between the URL and the body when a POST method is selected or deselected.
+<h3>Редактор ручных запросов и диалоговые окна повторной отправки </h3>
+Запросы, представленные  <a href="../ui/dialogs/man_req.html">Редактор ручных запросов и
+Отправить диалоги повторно </a> теперь показаны в  <a href="../ui/tabs/sites.html">Сайты</a> и 
+<a href="../ui/tabs/history.html">История</a> вкладки.<br>
+Новое раскрывающееся меню «Метод» позволяет переключаться между методами HTTP, при этом параметры перемещаются автоматически.
+между URL-адресом и телом, когда выбран или не выбран метод POST. 
 
-<h3>Сигналы интерфейса</h3>
-The <a href="../ui/tabs/sites.html">Sites</a> tab now shows any alerts as flags to the right of any node names.<br>
-The alert counts in the <a href="../ui/footer.html">footer</a> now show the number of different types of alerts rather than
-the total number of instances. 
+<h3>Пользовательский интерфейс предупреждений</h3>
+  <a href="../ui/tabs/sites.html">Сайты</a> на вкладке теперь отображаются все предупреждения в виде флагов справа от имен узлов. <br>
+Предупреждение засчитывается в  <a href="../ui/footer.html">нижний колонтитул </a> теперь показывать количество различных типов предупреждений, 
+а не общее количество экземпляров.  
 
-<h3>Параметр задержки активные сканера</h3>
-The delay in milliseconds between each <a href="../start/features/ascan.html">active scanner</a> request can now be set via the  
-<a href="../ui/dialogs/options/ascan.html">Options Active Scan screen</a>. This will increase the time an active scan takes
-but will reduce the load on the target.
+<h3>Опция задержки активного сканера </h3>
+Задержка в миллисекундах между каждым  <a href="../start/features/ascan.html">активный сканер </a> запрос теперь можно задать через  
+<a href="../ui/dialogs/options/ascan.html">Параметры экрана активного сканирования </a>. Это увеличит время активного сканирования.
+но снизит нагрузку на цель. 
 
-<h3>Изменения</h3>
-The <a href="../ui/tabs/sites.html">Sites</a> tab now takes up all of the left hand side - this can be changed back 
-via the <a href="../ui/dialogs/options/ascan.html">Options Display screen</a> if required.<br>
+<h3>Изменения пользовательского интерфейса </h3>
+  <a href="../ui/tabs/sites.html">Сайты</a> вкладка теперь занимает всю левую часть - это можно изменить обратно
+через  <a href="../ui/dialogs/options/ascan.html">Экран параметров дисплея </a> если необходимо.<br>
 <br>
-The 'toolbar' on the <a href="../ui/tabs/request.html">Request</a>, <a href="../ui/tabs/response.html">Response</a> and
-<a href="../ui/tabs/break.html">Break</a> tabs and the <a href="../ui/dialogs/man_req.html">Manual Request Editor and
-Resend dialogs</a> is now at the top rather than the bottom.<br>
+"Панель инструментов" на  <a href="../ui/tabs/request.html">Запрос </a>, <a href="../ui/tabs/response.html">Ответ</a> и
+<a href="../ui/tabs/break.html">Прерывание</a> вкладки и  <a href="../ui/dialogs/man_req.html">Редактор ручных запросов и
+Отправить диалоги повторно </a> теперь вверху, а не внизу. <br>
 <br>
-The scanner counts in the <a href="../ui/footer.html">footer</a> are now displayed on the right hand side.<br>
+Сканер засчитывается в  <a href="../ui/footer.html">нижний колонтитул </a> теперь отображаются с правой стороны. <br>
 <br>
 
 <h2>Смотрите также</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../intro.html">Введение</a></td><td>введение в зап</td></tr>
+<a href="../intro.html">Введение</a></td><td>введение в ZAP</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="releases.html">Версии</a></td><td>полный набор релизы</td></tr>
+<a href="releases.html">Версии</a></td><td>полный набор релизов</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../credits.html">Кредиты</a></td><td>люди и группы, которые сделали возможным этот релиз</td></tr>
 </table>
