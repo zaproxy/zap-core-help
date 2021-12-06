@@ -3,70 +3,70 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-  Release 2.3.0
+  выпуск 2.3.0 
 </title>
 </head>
 <body>
-<h1>Release 2.3.0</h1>
+<h1>выпуск 2.3.0 </h1>
 <p>
-The following changes were made in this release:
+В этот выпуск внесены следующие изменения: 
 </p>
 
-<h2>Significant changes:</h2>
+<h2>Существенные изменения: </h2>
 
-<h3>ZAP ‘lite’ version</h3>
-For this release we are providing a <i>‘lite’</i> version of ZAP in addition to the <i>‘full’</i> version. 
-This contains exactly the same core code, but it just includes fewer default add-ons.
-Of course, you can download all of the ‘missing’ add-ons from the ZAP marketplace to ‘upgrade’ the lite version to a full one.<br>
-The <i>‘lite’</i> version is aimed at people new to security who need less initial functionality which will hopefully be easier to get started with. It will also be suitable for people looking for a smaller download or those wishing to customize exactly which add-ons they install.
+<h3>ZAP "облегченная" версия </h3>
+Для этого выпуска мы предоставляем  <i>«Облегченную» </i> версию ZAP в дополнение к  <i>'полной' ' </i> версии 
+Он содержит точно такой же основной код, но включает меньше надстроек по умолчанию. 
+Конечно, вы можете загрузить все «недостающие» надстройки с торговой площадки ZAP, чтобы «обновить» облегченную версию до полной. <br>
+  <i>«Облегченная» </i> версия предназначена для людей, плохо знакомых с безопасностью, которым требуется меньше начальных функций, с которыми, будем надеяться, будет проще начать работу.  Она также подойдет тем, кто хочет скачать меньший объем или желает точно настроить, какие надстройки они устанавливают. 
 
-<h3>Support for client-side (browser) events</h3>
-You can now view, intercept, manipulate, resend and fuzz <b>client-side events</b>. This includes postMessages, so you can now detect DOM based XSS vulnerabilities in postMessages. This is the first phase in a series of planned changes to support the testing of AJAX and HTML5 applications even more effectively.
+<h3>Поддержка клиентских (браузерных) событий </h3>
+Теперь вы можете просматривать, перехватывать, манипулировать, повторно отправлять и фаззинг <b>клиентские события </b>. Сюда входят сообщения postMessages, поэтому теперь вы можете обнаруживать уязвимости XSS на основе DOM в сообщениях postMessages.  Это первая фаза в серии запланированных изменений для еще более эффективной поддержки тестирования приложений AJAX и HTML5. 
 
-<h3>Enhanced authentication support</h3>
-ZAP's support for authentication has been completely revamped to easily handle complex types of <b>authentication methods and scenarios</b>. Support has also been added for user-defined scripts which allow you to handle custom authentication schemes. In addition, now ZAP understands and allows you to configure <b>web applications' Users</b> so various actions throughout ZAP can be performed from the point of view of defined users. To get started, check out the new <i>Аутентификация</i> and <i>Users</i> panels in the Session Properties for each of the defined Contexts.
+<h3>Поддержка расширенной аутентификации </h3>
+Поддержка аутентификации ZAP была полностью переработана, чтобы упростить обработку сложных типов  <b>методы и сценарии аутентификации </b>. Также была добавлена поддержка пользовательских сценариев, которые позволяют обрабатывать настраиваемые схемы аутентификации. Кроме того, теперь ZAP понимает и позволяет настраивать  <b>Пользователи веб-приложений </b> поэтому различные действия в ZAP могут выполняться с точки зрения определенных пользователей. Для начала ознакомьтесь с новым  <i>Аутентификация</i> и <i>Пользователи</i> панели в свойствах сеанса для каждого из определенных контекстов. 
 
-<h3>Support for non standard apps</h3>
-This release includes support for <b>‘single page’ applications</b> and <b>non standard key-value separators</b>. You can now control these settings via the new <i>Structure</i> panel in the Session Properties.
+<h3>Поддержка нестандартных приложений </h3>
+Этот выпуск включает поддержку  <b>"Одностраничные" приложения </b> и <b>нестандартные разделители "ключ-значение" </b>. Теперь вы можете управлять этими настройками с помощью нового  <i>Структура</i> панель в свойствах сеанса. 
 
-<h3>New Input Vectors including user-defined scripts</h3>
-ZAP supports new options for defining the <b>input vectors</b> i.e. the elements of a request that ZAP will attack. The new options are available in the <i>Active Scan Input Vectors</i> panel of the Options. Support has also been added for defining custom scripts that define new input vectors.
+<h3>Новые входные векторы, включая пользовательские скрипты </h3>
+ZAP поддерживает новые параметры для определения  <b>входные векторы </b> то есть элементы запроса, которые будет атаковать ZAP. Новые параметры доступны в  <i>Входные векторы активного сканирования </i> панель опций. Также была добавлена поддержка для определения пользовательских сценариев, которые определяют новые векторы ввода. 
 
-<h3>Scan policy - fine grained control</h3>
-The scan policy now has a <b>fine grained control</b>, allowing you to tweak individual scanner rules. You can also define, load and save scan policies, allowing you to maintain a set of policies that work well in different circumstances.<br>
-In addition, by default ZAP will not now scan well-known service parameters (e.g. __VIEWSTATE) speeding up the overall scanning process. Это полностью настраивается пользователем, что позволяет точно указать, какие параметры ZAP следует игнорировать.  
+<h3>Политика сканирования - детальный контроль </h3>
+Политика сканирования теперь имеет  <b>мелкозернистый контроль </b>, позволяя настраивать отдельные правила сканера. Вы также можете определять, загружать и сохранять политики сканирования, что позволяет поддерживать набор политик, которые хорошо работают в различных обстоятельствах. <br>
+Кроме того, по умолчанию ZAP теперь не будет сканировать известные параметры службы (например, __VIEWSTATE), что ускоряет общий процесс сканирования.  Это полностью настраивается пользователем, что позволяет вам точно указать, какие параметры ZAP должен игнорировать.   
 
-<h3>Расширенный диалог активного сканирования</h3>
-A new <i>'Advanced Active Scan'</i> диалоговое окно позволяет точно указать, как должен функционировать активный сканер. Это позволяет указать <b>‘custom vectors’</b> это явно определяет, какие строки вы хотите атаковать. Он также поддерживает возможность сканирования как любой из пользователей, определенных для тестируемого приложения. Начать <i>Advanced Active Scan</i> via the <i>Инструменты</i> menu or via the <i>Атака</i> section of the right click popup menu. 
+<h3>Диалог расширенного активного сканирования </h3>
+Новый <i>Диалог расширенного активного сканирования </i> диалоговое окно позволяет точно указать, как должен функционировать активный сканер. Это позволяет указать <b>"Пользовательские векторы" </b> это явно определяет, какие строки вы хотите атаковать. Он также поддерживает возможность сканирования как любой из пользователей, определенных для тестируемого приложения. Начать <i>Расширенное активное сканирование </i> через  <i>Инструменты</i> меню или через  <i>Атака</i> раздел контекстного меню, вызываемого щелчком правой кнопки мыши.  
 
-<h3>Extended command line options</h3>
-You can now run ZAP ‘inline’ i.e. <b>without starting the ZAP UI or a daemon</b>. В этом режиме вы можете запускать простые атаки или запускать скрипты, которые могут получить доступ ко всей функциональности ZAP. Теперь можно переопределить любой из параметров, определенных в файле конфигурации, с помощью параметров командной строки.
+<h3>Расширенные параметры командной строки </h3>
+Теперь вы можете запускать ZAP "inline", т.е.  <b>без запуска ZAP UI или демона </b>. В этом режиме вы можете запускать простые атаки или запускать сценарии, которые могут получить доступ ко всем функциям ZAP.  Теперь вы также можете переопределить любые параметры, определенные в файле конфигурации, с помощью параметров командной строки. 
 
-<h3>More API support</h3>
+<h3>Дополнительная поддержка API </h3>
 API был расширен для поддержки еще большей функциональности ZAP.
 
 <h3>Internationalized help file</h3>
 Файл справки был интернационализирован и находится в процессе перевода на многие другие языки через <a href="https://crowdin.com/project/owasp-zap-help">https://crowdin.com/project/owasp-zap-help</a>. Если вы используете ZAP на одном из многих языков, которые мы поддерживаем, то файлы справки будут включать все доступные переводы для этого языка, в то время как по умолчанию обратно на английский язык для фраз, которые еще не были переведены.<br>
 Языки со значительным количеством переведенных справочных страниц включают:
 <ul>
-<li>Bosnian</li>
-<li>French</li>
-<li>Japanese</li>
-<li>Spanish</li>
+<li>Боснийский</li>
+<li>Французский</li>
+<li>Японский</li>
+<li>Испанский</li>
 </ul>
 
-<h3>Keyboard shortcuts</h3>
-Все пункты меню теперь можно вызывать с помощью горячих клавиш. Значения по умолчанию определены практически для всех случаев, но вы можете настроить собственные <i>Keyboard</i> panel of the Options.
+<h3>Горячие клавиши </h3>
+Все пункты меню теперь можно вызывать с помощью горячих клавиш. Значения по умолчанию определены практически для всех случаев, но вы можете настроить собственную <i>Клавиатуры</i> панель опций. 
 
-<h3>New UI options</h3>
-Существует новая опция для изменения отображения, чтобы выбранная вкладка заняла <b>full screen</b>. This is useful when using ZAP on small screens.
-There is also an option to <b>toggle the visibility of the tab names</b> on an off to further conserve space.
+<h3>Новые параметры пользовательского интерфейса </h3>
+Есть новая опция для изменения отображения, чтобы выбранная вкладка занимала  <b>полный экран</b>. Это полезно при использовании ZAP на маленьких экранах.
+Также есть возможность  <b>переключить видимость названий вкладок </b> на выкл, чтобы еще больше сэкономить место. 
 
 <p>Большинство списков пользовательского интерфейса также были преобразованы в таблицы, что позволяет изменять ширину столбцов и точно определять, какие столбцы будут отображаться, а также порядок сортировки таблиц.</p>
 
-<h3>More functionality moved to add-ons</h3>
+<h3>Больше функций перенесено в дополнения </h3>
 Большая часть основной функциональности была перемещена в дополнения, которые позволяют нам динамически доставлять обновления через Zap Marketplace, а не требовать новых полных выпусков.<br>
-This includes the language packs, so translations made to the ZAP UI via https://crowdin.com/project/owasp-zap can be downloaded within ZAP or even automatically installed.
+Сюда входят языковые пакеты, поэтому переводы, сделанные в пользовательском интерфейсе ZAP через https://crowdin.com/project/owasp-zap, можно загрузить в ZAP или даже установить автоматически. 
 
 <h3>Новые и улучшенные правила активного и пассивного сканирования</h3>
 Многие из выпуск качество активных и пассивных сканирования правила были усовершенствованы. Есть новые альфа и бета правила качества и многие правила были повышены от Альфа до бета и от бета до качества выпуска.
@@ -75,270 +75,270 @@ This includes the language packs, so translations made to the ZAP UI via https:/
 <ul>
 <li>Новый параметр для остановки отдельных правил сканирования без остановки всего сканирования</li>
 <li>Новая кнопка панели инструментов, которая позволяет быстро и легко записывать Zest скрипты.</li>
-<li>A new group for sharing ZAP scripts (<a href="https://groups.google.com/group/zaproxy-scripts">https://groups.google.com/group/zaproxy-scripts</a>) has been created.</li>
-<li>The ability to spider applications based on source control metadata (SVN and Git) exposed via a web server</li>
-<li>The ability to force breaks from within Proxy scripts</li>
+<li>Создана новая группа для обмена сценариями ZAP (<a href="https://groups.google.com/group/zaproxy-scripts"> https://groups.google.com/group/zaproxy-scripts </a>). </li>
+<li>Возможность создавать приложения-пауки на основе метаданных системы управления версиями (SVN и Git), предоставляемых через веб-сервер. </li>
+<li>Возможность принудительного прерывания из прокси-скриптов. </li>
 </ul>
 
-<h2>Full list of changes:</h2>
+<h2>Полный список изменений: </h2>
 <ul>
-<li>Issue 122 : ProxyThread logging timeout readings with incorrect message (URL) </li>
-<li>Issue 207 : Enhancement: Hotkeys </li>
-<li>Issue 362 : Allow Alerts lists to be filtered by selection in Sites pane </li>
-<li>Issue 399 : zap.sh directory handling </li>
-<li>Issue 412 : Enable unsafe SSL/TLS renegotiation option not saved </li>
-<li>Issue 416 : Normalise how multiple related options are managed throughout ZAP and enhance the usability of some options  Usability </li>
-<li>Issue 485 : Make language packs into add-ons </li>
-<li>Issue 503 : Change the footer tabs to display the data with tables instead of lists  Usability </li>
-<li>Issue 572 : Change the generate_root_ca property to a function in the Python API </li>
-<li>Issue 575 : Return the list of alerts in the Python API instead of a dictionary with one entry </li>
-<li>Issue 585 : Proxy - "502 Bad Gateway" errors responded as "504 Gateway Timeout" </li>
-<li>Issue 589 : Move Reveal extension to ZAP extensions project </li>
-<li>Issue 590 : Forced Browse uses wrong scheme when "attacking" a site accessed over a secure connection (HTTPS) on a non-default port </li>
-<li>Issue 591 : Available sites/hosts (in the footer panels) disappear when mode changed to "Safe" </li>
-<li>Issue 595 : Spider fails to start (footer panel) with a site accessed over a secure connection (HTTPS) on a non-default port </li>
-<li>Issue 606 : Disable the "Start" scan button when the "--Select Site--" option is selected </li>
-<li>Issue 607 : Manual requested sites shown as scanned in the footer panels when selected in the "Sites" tab </li>
-<li>Issue 609 : Provide a common interface to query the state and access the data (HttpMessage and HistoryReference) displayed in the tabs </li>
-<li>Issue 613 : Move Save Raw HttpMessage extension to ZAP extensions project </li>
-<li>Issue 619 : Move Forced Browse extension to ZAP extensions project </li>
-<li>Issue 620 : Move Forced Browse files to ZAP extensions project </li>
-<li>Issue 783 : shutdown should be a method in the python zap.core api </li>
-<li>Issue 788 : Update Java for Mac release </li>
-<li>Issue 793 : Authentication / SessionManagement Methods dynamic loading in APIs not reliable </li>
-<li>Issue 799 : Add HttpAuthentication as an Authentication Method </li>
-<li>Issue 803 : Patch for /trunk/src/help/zaphelp/zaphelp/credits.html </li>
-<li>Issue 804 : Add Support for various types of Authentication for a Context </li>
-<li>Issue 805 : Add Support for various types of Session Management for a Context </li>
-<li>Issue 806 : Add Support for webapp Users </li>
-<li>Issue 807 : Error while loading ZAP when Quick Start Tab is closed </li>
-<li>Issue 816 : Add right-click Copy/Paste &amp; Find options in the Encode/Decode/Hash dialog </li>
-<li>Issue 817 : Python API doesn't handle "other" operations correctly </li>
-<li>Issue 822 : Java API: ApiResponseSet.getAttributes() not working </li>
-<li>Issue 825 : Old version of Rhino included in lib directory </li>
-<li>Issue 827 : Default session tokens are not lower cased when added through options dialogue </li>
-<li>Issue 828 : NullPointerException while accessing HttpSessions API view "sessionTokens" when a site doesn't exist or doesn't have tokens </li>
-<li>Issue 829 : JSONException while calling an API view without the required parameter(s) </li>
-<li>Issue 830 : Java Client API doesn't encode query parameters when sending requests to ZAP API </li>
-<li>Issue 832 : Http Sessions tab should be cleared when a new session is created </li>
-<li>Issue 837 : Update, always, the HTTP request sent/forward by ZAP's proxy </li>
-<li>Issue 838 : Search API - Add search views that return HTTP messages </li>
-<li>Issue 839 : Search API - Add search views that return messages in HTTP Archive format </li>
-<li>Issue 840 : Core API - Allow to get the messages in HTTP Archive format </li>
-<li>Issue 841 : NullPointerException after sending a manual HTTP request with ExtensionHistory disabled </li>
-<li>Issue 842 : NullPointerException while active scanning with ExtensionAntiCSRF disabled </li>
-<li>Issue 843 : NullPointerException after sending/proxying a HTTP request with ExtensionAntiCSRF disabled </li>
-<li>Issue 844 : NullPointerException while invoking the "Scan policy" dialogue with ExtensionPassiveScan disabled </li>
-<li>Issue 845 : AbstractPanel added twice to TabbedPanel2 in ExtensionLoader#addTabPanel </li>
-<li>Issue 846 : NullPointerException while active scanning with ExtensionScript disabled </li>
-<li>Issue 849 : NullPointerException while authenticating with ExtensionHistory disabled </li>
-<li>Issue 852 : Search API - URL views return the same URL several times </li>
-<li>Issue 853 : Core API - Allow to get the number of alerts </li>
-<li>Issue 854 : Core API - Allow to get the number of messages </li>
-<li>Issue 855 : Core API - Allow to get a message by ID </li>
-<li>Issue 856 : Core API - Allow to get an alert by ID </li>
-<li>Issue 857 : Core API - "alerts" view might return unexpected alerts when pagination is used </li>
-<li>Issue 858 : Core API - "messages" view might return unexpected messages when pagination is used </li>
-<li>Issue 859 : PScan API - Allow to enable/disable the passive scan </li>
-<li>Issue 860 : PScan API - Allow to list/get the passive scanners </li>
-<li>Issue 861 : PScan API - Allow to enable/disable all the passive scanners </li>
-<li>Issue 862 : PScan API - Allow to enable/disable a given passive scanner </li>
-<li>Issue 863 : AScan API - Allow to list/get the active scanners </li>
-<li>Issue 864 : AScan API - Allow to enable/disable all the active scanners </li>
-<li>Issue 865 : AScan API - Allow to enable/disable a given active scanner </li>
-<li>Issue 866 : Alert keeps HttpMessage longer than needed when HistoryReference is set/available </li>
-<li>Issue 867 : HttpMessage#getFormParams should return an empty TreeSet if the request body is not "x-www-form-urlencoded" </li>
-<li>Issue 868 : Core API - "messages" view shouldn't return internal/temporary messages </li>
-<li>Issue 869 : Differentiate proxied requests from (ZAP) user requests </li>
-<li>Issue 870 : Change the MainToolbarPanel's expand buttons to use ButtonGroup and Action </li>
-<li>Issue 871 : Title not updated when session name is changed through the main tool bar button "Session Properties..." </li>
-<li>Issue 872 : Core API - Allow to send a manual request </li>
-<li>Issue 873 : Core API - Allow to send a manual request in HAR format </li>
-<li>Issue 874 : Change BreakPanelToolbarFactory to use Actions </li>
-<li>Issue 875 : Remove i18n directory </li>
-<li>Issue 876 : Deprecate FuzzerPanel#PANEL_NAME </li>
-<li>Issue 877 : ExtensionPopupMenuItem#isEnableForComponent called twice on some pop up menus each time is shown using the MainPopupMenu </li>
-<li>Issue 878 : ExtensionPopupMenuItem#getMenuIndex() as no effect in MainPopupMenu </li>
-<li>Issue 879 : Pop up menu "Spider Context..." is enabled even if ExtensionSpider is disabled </li>
-<li>Issue 880 : Remember last selected directory when adding custom fuzz files </li>
-<li>Issue 881 : Fail immediately if zapdb.script file is not found </li>
-<li>Issue 882 : Remove "Copy" pop up menu item shown in the "Forced Browse" tab </li>
-<li>Issue 884 : Plug-n-Hack phase 2 </li>
-<li>Issue 885 : API - Actions' response not shown when using HTML format </li>
-<li>Issue 886 : Main pop up menu invoked twice on some components </li>
-<li>Issue 887 : Scanners' pause button with inconsistent selection/enabled state </li>
-<li>Issue 888 : Search API - URL views might return unexpected URLs when pagination is used </li>
-<li>Issue 889 : JSONException while calling an API "other" without the required parameter(s) </li>
-<li>Issue 890 : Allow to clear "Output" tab </li>
-<li>Issue 891 : Target build "generate-javadocs" should apply SVN mime-type property to all generated files </li>
-<li>Issue 892 : Cache of response body length in HistoryReference might not be correct </li>
-<li>Issue 896 : PnH: Flag any fuzz attacks that hit the DOM XSS oracle </li>
-<li>Issue 897 : Add a JToggleButton that allows to set a tool tip text based on button's state </li>
-<li>Issue 898 : Replace all toggle buttons that set a tool tip text based on button's state with ZapToggleButton </li>
-<li>Issue 899 : Remove "manual" update of toggle buttons' icon based on button's state </li>
-<li>Issue 900 : IllegalArgumentException when invoking the main pop up menu with menus or super menus with high menu index </li>
-<li>Issue 901 : Pop up menu "succeed" separator is not added when using sub-menu in MainPopupMenu </li>
-<li>Issue 902 : Change all ExtensionAdaptor#hook(ExtensionHook) overriding methods to call the base implementation </li>
-<li>Issue 903 : Change options' thread sliders to use the same component </li>
-<li>Issue 904 : Add a button group that allows to deselect the selected button </li>
-<li>Issue 905 : Incorrect link in "Break tab" help pages </li>
-<li>Issue 910 : Forced User cannot be changed </li>
-<li>Issue 911 : AScan API - Change the "scanners" view to include the state of the active scanner </li>
-<li>Issue 912 : PScan API - Change the "scanners" view to include the state of the passive scanner </li>
-<li>Issue 913 : AScan API - Allow to list/get the active scanner policies </li>
-<li>Issue 914 : AScan API - Allow to set the active scanner policies enabled </li>
-<li>Issue 915 : Dynamically filter history based on selection in the sites window </li>
-<li>Issue 919 : Allow vulnerabilities.xml to be localized  IdealFirstBug </li>
-<li>Issue 920 : Add include/exclude url patterns to history filter </li>
-<li>Issue 921 : PnH2: open as monitored url </li>
-<li>Issue 923 : Allow individual rule thresholds and strengths to be set via GUI </li>
-<li>Issue 925 : HTML report issues </li>
-<li>Issue 929 : AScan API - Allow to set the attack strength and alert threshold of active scanner policies and active scanners </li>
-<li>Issue 930 : AScan API - Allow to list/get the active scanners by policy ID </li>
-<li>Issue 931 : Allow extensions to pick up command line args in GUI mode </li>
-<li>Issue 932 : Allow scripts to be specified on the command line </li>
-<li>Issue 933 : Automatically determine install dir </li>
-<li>Issue 934 : Handle files on the command line via extension </li>
-<li>Issue 935 : Improve the identification of Java version </li>
-<li>Issue 939 : ZAP should accept SSL connections on non-standard ports automatically </li>
-<li>Issue 947 : Spider fails on URLs with illegal characters </li>
-<li>Issue 950 : Cope with add-ons containing files copied directly into the plugins directory </li>
-<li>Issue 951 : TLS' versions 1.1 and 1.2 not enabled by default </li>
-<li>Issue 954 : Changes to certain fields in the GUI are not saved after clicking OK/Proceed </li>
-<li>Issue 955 : keyboard focus lost when large body found </li>
-<li>Issue 956 : Copy URLs doesn't copy multiple </li>
-<li>Issue 957 : Reference for alert "X-Content-Type-Options header missing" </li>
-<li>Issue 963 : Add-on added to blocklist if it cant be deleted on update </li>
-<li>Issue 965 : Support 'single page' apps and 'non standard' parameter separators </li>
-<li>Issue 966 : Quickstart command line option </li>
-<li>Issue 967 : InvalidParameterException while updating the "Script Console" add-on </li>
-<li>Issue 968 : Allow to choose the enabled SSL/TLS protocols </li>
-<li>Issue 969 : Proxy - Do not include the response body when answering unsuccessful HEAD requests </li>
-<li>Issue 970 : Body of DELETE requests should be sent/forward </li>
-<li>Issue 974 : Scan URL path elements </li>
-<li>Issue 975 : Inverse Search Fuzz Results Buggy </li>
-<li>Issue 976 : Spider Context Attack causes spidering outside of context </li>
-<li>Issue 979 : Sites and Alerts trees can get corrupted </li>
-<li>Issue 981 : Internationalize help file </li>
-<li>Issue 982 : API key </li>
-<li>Issue 986 : New ScanProgress dialog implementation and plugin skipping functionality </li>
-<li>Issue 987 : Allow arbitrary config file values to be set via the command line </li>
-<li>Issue 988 : ZAP Help crashes before starting </li>
-<li>Issue 989 : Add a right click option "Add user" on an HTTP session </li>
-<li>Issue 991 : Add-on/Scan rule review request - Persistent XSS </li>
-<li>Issue 996 : Ensure all dialogs close when the escape key is pressed </li>
-<li>Issue 997 : Session.open complains about improper use of addPath </li>
-<li>Issue 998 : Silly regexp search kills ZAP </li>
-<li>Issue 999 : History loaded in wrong order </li>
-<li>Issue 1002 : Add support for Authentication via Scripts </li>
-<li>Issue 1003 : XXE Vulnerability Testing Plugin </li>
-<li>Issue 1004 : Source Code disclosure using Git meta-data </li>
-<li>Issue 1005 : Source Code disclosure using Subversion meta-data </li>
-<li>Issue 1006 : Spidering of web applications using using Git meta-data </li>
-<li>Issue 1007 : Spidering of web applications using using Subversion (SVN) meta-data </li>
-<li>Issue 1010 : Allow to sort fuzz results </li>
-<li>Issue 1012 : Encode / Decode dialog - support HTML and JavaScript encoding  IdealFirstBug </li>
-<li>Issue 1016 : HTML encoding display issue in credits.html </li>
-<li>Issue 1017 : Proxy set to 0.0.0.0 causes incorrect PAC file to be generated </li>
-<li>Issue 1018 : Give AbstractAppParamPlugin implementations access to the parameter type </li>
-<li>Issue 1019 : ZAP startup with bad JAVA_HOME shows confusing error message </li>
-<li>Issue 1020 : Duplicate "Body: Table" plug-able view on Request/Break tabs </li>
-<li>Issue 1021 : OutOutOfMemoryError while running the active scanner </li>
-<li>Issue 1022 : Proxy - Allow to override a proxied message </li>
-<li>Issue 1023 : Script Console - Run/Stop buttons with inconsistent state </li>
-<li>Issue 1024 : Large Response view is shown even if a response body is not present </li>
-<li>Issue 1025 : NullPointerException while pressing a key with "Script Console" text areas selected </li>
-<li>Issue 1030 : Load and save scan policies </li>
-<li>Issue 1031 : Adding Parameter Exclusion capabilities to the Active Scanner </li>
-<li>Issue 1032 : Add API support for Script Based Authentication </li>
-<li>Issue 1033 : org.zaproxy.clientapi.core.Alert does not override equals() method </li>
-<li>Issue 1037 : JSON RPC parameters are not set correctly </li>
-<li>Issue 1039 : Improve External Redirect plugin Accuracy </li>
-<li>Issue 1041 : Active Scan plugins don't start if the site is local to 127.0.0.1 </li>
-<li>Issue 1042 : Having significant issues opening a previous session</li>
-<li>Issue 1043 : Custom active scan dialog </li>
-<li>Issue 1044 : Forced User Mode is not persisted across Session saves/loads </li>
-<li>Issue 1046 : The getHttpCookies() method in the HttpResponseHeader does not properly set the domain </li>
-<li>Issue 1047 : Backup Files not detected by Zap </li>
-<li>Issue 1049 : Fast multiple pattern search component </li>
-<li>Issue 1050 : Scripting based Input Vectors </li>
-<li>Issue 1051 : Zap can bound services to all network interfaces </li>
-<li>Issue 1052 : Callback API for active scan plugins </li>
-<li>Issue 1053 : String similarity and LCS algorithm component </li>
-<li>Issue 1055 : Load extensions before plugins </li>
-<li>Issue 1057 : Add a Extension.postInstall() method for post install actions </li>
-<li>Issue 1059 : Add Jython support for Script-Based Authentication </li>
-<li>Issue 1060 : Add JRuby support for Script-Based Authentication </li>
-<li>Issue 1061 : Select proper Script Type, Engine and Template when creating new script </li>
-<li>Issue 1063 : Option to decode add gzipped content (was handle compression for scripts) </li>
-<li>Issue 1065 : Rename ExtensionScripts to ExtensionScriptsConsole  Maintainability </li>
-<li>Issue 1066 : Add support for quickly setting Script Based Authentication from scripts UI </li>
-<li>Issue 1068 : Zap does not detect source code in responses </li>
-<li>Issue 1069 : Support .-: in Zest variable names </li>
-<li>Issue 1071 : Using Zest-Script "Replace in response-body" delivers wrong Content-Length header. </li>
-<li>Issue 1072 : SQLDataException: data exception: string data, right truncation </li>
-<li>Issue 1074 : Add option to only display output from the displayed script </li>
-<li>Issue 1075 : Change TableHistory to delete records in batches  Performance </li>
-<li>Issue 1076 : Change active scanner to not delete the temporary messages generated  Performance </li>
-<li>Issue 1077 : Change (HTTP) fuzzer to not delete the temporary messages generated  Performance </li>
-<li>Issue 1078 : Change ExtensionBreak to fallback to base message type breakpoint manager implementation </li>
-<li>Issue 1079 : Remove misplaced main pop up menu separators </li>
-<li>Issue 1080 : User Guide HTML pages incorrectly relying on the platform default encoding </li>
-<li>Issue 1081 : ExtensionPopupMenu should "notify" child ExtensionPopupMenu (and ExtensionPopupMenuItem) when the pop up is invoked </li>
-<li>Issue 1082 : Search URL matches highlighted in incorrect position </li>
-<li>Issue 1083 : Deprecate the method ExtensionPopupMenuItem#isSuperMenu() </li>
-<li>Issue 1084 : NullPointerException while selecting a node in the "Sites" tab </li>
-<li>Issue 1085 : Do not add/remove pop up menu items through the method View#getPopupMenu() </li>
-<li>Issue 1086 : Allow to dynamically add/remove passive scanners </li>
-<li>Issue 1087 : Change extensions to dynamically add passive scanners </li>
-<li>Issue 1088 : Deprecate the method ExtensionPopupMenu#prepareShow </li>
-<li>Issue 1089 : Change ExtensionPopupMenu to honour the extension pop up methods </li>
-<li>Issue 1090 : Do not add pop up menus if target extension is not enabled </li>
-<li>Issue 1091 : CoreAPI - Do not get the IDs of temporary history records </li>
-<li>Issue 1092 : SearchThread - Do not get the IDs of discarded messages </li>
-<li>Issue 1093 : Add an HTTP request body view that warns of large body </li>
-<li>Issue 1094 : Change ExtensionManualRequestEditor to only add view components if in GUI mode </li>
-<li>Issue 1095 : Replace main pop up sub menus with ExtensionPopupMenu when appropriate </li>
-<li>Issue 1096 : AddOnLoader calls incorrect notify method after uninstalling add-on files </li>
-<li>Issue 1097 : Move "Run applications" (invoke) extension to zap-extensions project </li>
-<li>Issue 1098 : Move AJAX Spider help pages to "Ajax Spider" add-on (and update them) </li>
-<li>Issue 1099 : Allow to annotate option methods as ignored for ZAP API </li>
-<li>Issue 1100 : Annotate option methods that shouldn't be exposed in the ZAP API </li>
-<li>Issue 1101 : Change passive scanners to expose its IDs </li>
-<li>Issue 1102 : Ajax Spider - Replace ajax spider proxy with core proxy </li>
-<li>Issue 1103 : Script Console - Allow to clear output even if "clear on run" is enabled </li>
-<li>Issue 1104 : Replace all toggle buttons that set a tool tip text based on button's state with ZapToggleButton (add-ons) </li>
-<li>Issue 1105 : Remove "manual" update of toggle buttons' icon based on button's state (add-ons) </li>
-<li>Issue 1106 : HistoryList's mapping of history ID to list indexes not updated when history entry is deleted </li>
-<li>Issue 1110 : Spider API - Unable to set how parameters are handled using API </li>
-<li>Issue 1111 : Check for Updates on startup gets (automatically) disabled when accessing the "Options" dialogue </li>
-<li>Issue 1112 : Change ZAP (core) to support new add-on dir structure </li>
-<li>Issue 1113 : Change add-on dir structure (help and resources) </li>
-<li>Issue 1118 : Alerts Tab can get out of sync</li>
-<li>Issue 1119 : Spider doesn't detect multiple forms on the same URL</li>
-<li>Issue 1120 : Uninstall add-on fails if rules use message bundle in uninstall </li>
-<li>Issue 1121 : Scan progress dialog can cause UI freezes </li>
-<li>Issue 1122 : Add-on additional info </li>
-<li>Issue 1125 : Can't re-import jython script as a proxy script </li>
-<li>Issue 1126 : Bugs in breakpoint filters </li>
-<li>Issue 1127 : Feature request: Allow scripts to generate breaks </li>
-<li>Issue 1131 : Support Zest Intercept actions in add-on </li>
-<li>Issue 1132 : HttpSender ignores the "Send single cookie request header" option </li>
-<li>Issue 1134 : Passive Scan Rule regexes not validated </li>
-<li>Issue 1135 : Marketplace tab cant be updated if cfu runs on start</li>
-<li>Issue 1137 : ZAP locks up when deleting nodes</li>
-<li>Issue 1138 : Passive Scan Rule changes not saved</li>
-<li>Issue 1145 : Cookie parsing error if a comma is used</li>
+<li>Проблема 122: показания тайм-аута ведения журнала ProxyThread с неверным сообщением (URL-адрес)  </li>
+<li>Проблема 207: Улучшение:Горячие клавиши  </li>
+<li>Проблема 362: разрешить фильтрацию списков предупреждений путем выбора на панели сайтов  </li>
+<li>Проблема 399: обработка каталога zap.sh  </li>
+<li>Проблема 412: параметр включения небезопасного повторного согласования SSL / TLS не сохраняется.  </li>
+<li>Проблема 416: нормализовать управление несколькими связанными параметрами в ZAP и повысить удобство использования некоторых параметров.  </li>
+<li>Проблема 485: превращайте языковые пакеты в надстройки.  </li>
+<li>Проблема 503. Измените вкладки нижнего колонтитула, чтобы данные отображались в виде таблиц, а не списков. Удобство использования.  </li>
+<li>Проблема 572: измените свойство generate_root_ca на функцию в Python API.  </li>
+<li>Проблема 575: вернуть список предупреждений в API Python вместо словаря с одной записью.  </li>
+<li>Проблема 585: Прокси-сервер - на ошибку «502 Bad Gateway» ответили как «504 Gateway Timeout»  </li>
+<li>Ошибка 589: переместить расширение Reveal в проект расширений ZAP.  </li>
+<li>Проблема 590: При принудительном просмотре используется неправильная схема при «атаке» сайта, доступ к которому осуществляется через безопасное соединение (HTTPS) через порт, отличный от порта по умолчанию.  </li>
+<li>Проблема 591. Доступные сайты / хосты (на панелях нижнего колонтитула) исчезают при изменении режима на «Безопасный».  </li>
+<li>Проблема 595: Spider не запускается (панель нижнего колонтитула) с сайтом, доступ к которому осуществляется через безопасное соединение (HTTPS) через порт, отличный от порта по умолчанию.  </li>
+<li>Проблема 606. Отключите кнопку «Начать сканирование», когда выбран параметр «--Выбрать сайт--».  </li>
+<li>Проблема 607. Сайты, запрошенные вручную, отображаются как отсканированные на панелях нижнего колонтитула при выборе на вкладке «Сайты»  </li>
+<li>Проблема 609. Предоставьте общий интерфейс для запроса состояния и доступа к данным (HttpMessage и HistoryReference), отображаемым на вкладках  </li>
+<li>Проблема 613: перемещение расширения Save Raw HttpMessage в проект расширений ZAP  </li>
+<li>Ошибка 619: перемещение расширения принудительного просмотра в проект расширений ZAP  </li>
+<li>Ошибка 620: перемещение файлов принудительного просмотра в проект расширений ZAP  </li>
+<li>Проблема 783: выключение должно быть методом в api python zap.core  </li>
+<li>Проблема 788: обновление версии Java для Mac  </li>
+<li>Проблема 793: динамическая загрузка методов аутентификации / SessionManagement в API ненадежна  </li>
+<li>Проблема 799: добавление HttpAuthentication в качестве метода проверки подлинности  </li>
+<li>Проблема 803: исправление для /trunk/src/help/zaphelp/zaphelp/credits.html  </li>
+<li>Проблема 804: Добавить поддержку различных типов аутентификации для контекста.  </li>
+<li>Проблема 805: Добавить поддержку различных типов управления сеансом для контекста  </li>
+<li>Проблема 806: Добавить поддержку для пользователей веб-приложений  </li>
+<li>Проблема 807: ошибка при загрузке ZAP, когда вкладка быстрого запуска закрыта.  </li>
+<li>Проблема 816: Добавить щелкните правой кнопкой мыши Копировать / Вставить & amp; Найдите параметры в диалоговом окне «Кодирование / декодирование / хеширование».  </li>
+<li>Проблема 817: Python API некорректно обрабатывает «другие» операции.  </li>
+<li>Проблема 822: API Java: ApiResponseSet.getAttributes () не работает  </li>
+<li>Проблема 825: старая версия Rhino включена в каталог lib  </li>
+<li>Проблема 827: токены сеанса по умолчанию не имеют нижнего регистра при добавлении через диалоговое окно параметров.  </li>
+<li>Проблема 828: исключение NullPointerException при доступе к HttpSessions API представляет «sessionTokens», когда сайт не существует или не имеет токенов.  </li>
+<li>Проблема 829: исключение JSONException при вызове представления API без обязательных параметров  </li>
+<li>Проблема 830: API клиента Java не кодирует параметры запроса при отправке запросов в ZAP API.  </li>
+<li>Проблема 832: Вкладка Http Sessions должна быть очищена при создании нового сеанса.  </li>
+<li>Проблема 837: всегда обновлять HTTP-запрос, отправляемый / пересылаемый прокси-сервером ZAP.  </li>
+<li>Проблема 838: API поиска - добавление представлений поиска, возвращающих сообщения HTTP.  </li>
+<li>Проблема 839: API поиска - добавление представлений поиска, возвращающих сообщения в формате HTTP-архива.  </li>
+<li>Проблема 840: Core API - Разрешить получать сообщения в формате HTTP-архива.  </li>
+<li>Проблема 841: исключение NullPointerException после отправки HTTP-запроса вручную с отключенным ExtensionHistory  </li>
+<li>Проблема 842: исключение NullPointerException при активном сканировании с отключенным ExtensionAntiCSRF  </li>
+<li>Проблема 843: исключение NullPointerException после отправки / проксирования HTTP-запроса с отключенным ExtensionAntiCSRF  </li>
+<li>Ошибка 844: исключение NullPointerException при вызове диалогового окна «Политика сканирования» с отключенным ExtensionPassiveScan.  </li>
+<li>Проблема 845: AbstractPanel дважды добавлялся в TabbedPanel2 в ExtensionLoader # addTabPanel  </li>
+<li>Проблема 846: исключение NullPointerException при активном сканировании с отключенным ExtensionScript  </li>
+<li>Проблема 849: исключение NullPointerException при аутентификации с отключенным ExtensionHistory  </li>
+<li>Проблема 852: API поиска - просмотры URL-адресов возвращают один и тот же URL-адрес несколько раз.  </li>
+<li>Проблема 853: Core API - Разрешить получение количества предупреждений  </li>
+<li>Проблема 854: Core API - Разрешить получение количества сообщений.  </li>
+<li>Ошибка 855: Core API - разрешить получение сообщения по идентификатору.  </li>
+<li>Проблема 856: Core API - Разрешить получение предупреждений по идентификатору.  </li>
+<li>Проблема 857: Core API - представление «предупреждения» может возвращать неожиданные предупреждения при использовании разбивки на страницы.  </li>
+<li>Проблема 858. Core API - представление «сообщения» может возвращать неожиданные сообщения при использовании разбивки на страницы.  </li>
+<li>Ошибка 859: API PScan - разрешить включение / отключение пассивного сканирования.  </li>
+<li>Проблема 860: API-интерфейс PScan - разрешить отображение / получение пассивных сканеров </li>
+<li>Проблема 861: API PScan - разрешить включение / отключение всех пассивных сканеров.  </li>
+<li>Проблема 862: API PScan - разрешить включение / отключение данного пассивного сканера  </li>
+<li>Проблема 863: API AScan - разрешить список / получение активных сканеров  </li>
+<li>Проблема 864: AScan API - разрешить включение / отключение всех активных сканеров.  </li>
+<li>Проблема 865: AScan API - Разрешить включение / отключение данного активного сканера  </li>
+<li>Проблема 866: предупреждение сохраняет HttpMessage дольше, чем необходимо, если HistoryReference установлен / доступен  </li>
+<li>Проблема 867: HttpMessage # getFormParams должен возвращать пустой TreeSet, если тело запроса не является «x-www-form-urlencoded»  </li>
+<li>Проблема 868: Core API - представление «сообщения» не должно возвращать внутренние / временные сообщения.  </li>
+<li>Проблема 869: отличать прокси-запросы от запросов пользователей (ZAP)  </li>
+<li>Проблема 870: измените кнопки развертывания MainToolbarPanel для использования ButtonGroup и Action  </li>
+<li>Ошибка 871. Заголовок не обновляется при изменении имени сеанса с помощью кнопки «Свойства сеанса ...» на главной панели инструментов.  </li>
+<li>Проблема 872: Core API - Разрешить отправку запроса вручную  </li>
+<li>Проблема 873: Core API - разрешить отправку ручного запроса в формате HAR  </li>
+<li>Проблема 874: изменение BreakPanelToolbarFactory для использования действий  </li>
+<li>Проблема 875: удаление каталога i18n  </li>
+<li>Ошибка 876: устаревшая версия FuzzerPanel # PANEL_NAME  </li>
+<li>Проблема 877: ExtensionPopupMenuItem # isEnableForComponent вызывается дважды в некоторых всплывающих меню, каждый раз отображается с помощью MainPopupMenu  </li>
+<li>Проблема 878: ExtensionPopupMenuItem # getMenuIndex () не действует в MainPopupMenu  </li>
+<li>Ошибка 879: всплывающее меню «Контекст паука ...» доступно, даже если ExtensionSpider отключен.  </li>
+<li>Ошибка 880: запоминание последнего выбранного каталога при добавлении пользовательских файлов нечеткости  </li>
+<li>Ошибка 881. Немедленный сбой, если файл zapdb.script не найден.  </li>
+<li>Проблема 882: удалить элемент всплывающего меню «Копировать», отображаемый на вкладке «Принудительный обзор».  </li>
+<li>Проблема 884: Plug-n-Hack, этап 2.  </li>
+<li>Ошибка 885: API - ответ действий не отображается при использовании формата HTML.  </li>
+<li>Проблема 886. Главное всплывающее меню вызывается дважды для некоторых компонентов.  </li>
+<li>Проблема 887: кнопка паузы сканеров с несогласованным выбором / включенным состоянием.  </li>
+<li>Проблема 888: API поиска - просмотры URL-адресов могут возвращать неожиданные URL-адреса при использовании разбивки на страницы  </li>
+<li>Ошибка 889: исключение JSONException при вызове API "other" без обязательных параметров.  </li>
+<li>Проблема 890: Разрешить очистить вкладку «Вывод»  </li>
+<li>Ошибка 891. Целевая сборка "generate-javadocs" должна применять свойство mime-type SVN ко всем сгенерированным файлам.  </li>
+<li>Проблема 892: Кэш длины тела ответа в HistoryReference может быть неправильным  </li>
+<li>Проблема 896: PnH: помечайте любые атаки фаззинга, поражающие оракул DOM XSS  </li>
+<li>Проблема 897: добавьте JToggleButton, который позволяет установить текст всплывающей подсказки в зависимости от состояния кнопки.  </li>
+<li>Проблема 898: замена всех кнопок-переключателей, которые задают текст всплывающей подсказки на основе состояния кнопки, на ZapToggleButton  </li>
+<li>Проблема 899: удаление «ручного» обновления значка кнопок-переключателей в зависимости от состояния кнопки.  </li>
+<li>Проблема 900: исключение IllegalArgumentException при вызове главного всплывающего меню с меню или суперменю с высоким индексом меню  </li>
+<li>Проблема 901: разделитель всплывающего меню «успешно» не добавляется при использовании подменю в MainPopupMenu.  </li>
+<li>Проблема 902: Измените все методы переопределения ExtensionAdaptor # hook (ExtensionHook) для вызова базовой реализации.  </li>
+<li>Проблема 903. Изменение ползунков потоков в параметрах для использования одного и того же компонента.  </li>
+<li>Проблема 904: добавление группы кнопок, позволяющей отменить выбор выбранной кнопки.  </li>
+<li>Ошибка 905: неверная ссылка на страницах справки «Перерыв на вкладке»  </li>
+<li>Проблема 910: принудительное изменение пользователя невозможно.  </li>
+<li>Проблема 911: AScan API - измените представление «сканеры», чтобы включить состояние активного сканера.  </li>
+<li>Проблема 912: API PScan - измените представление «сканеры», чтобы включить состояние пассивного сканера.  </li>
+<li>Проблема 913: AScan API - Разрешить выводить / получать активные политики сканера  </li>
+<li>Проблема 914: AScan API - Разрешить установку активных политик сканера.  </li>
+<li>Проблема 915: динамическая фильтрация истории на основе выбора в окне сайтов  </li>
+<li>Проблема 919: разрешить локализацию уязвимости .xml IdealFirstBug  </li>
+<li>Проблема 920: Добавить / исключить шаблоны URL-адресов в фильтр истории  </li>
+<li>Проблема 921: PnH2: открывать как отслеживаемый URL  </li>
+<li>Проблема 923: Разрешить установку пороговых значений и силы отдельных правил через графический интерфейс.  </li>
+<li>Проблема 925: проблемы с отчетом в формате HTML  </li>
+<li>Проблема 929: AScan API - позволяет установить силу атаки и порог предупреждений для активных политик сканера и активных сканеров.  </li>
+<li>Проблема 930: AScan API - Разрешить список / получение активных сканеров по идентификатору политики  </li>
+<li>Проблема 931: Разрешить расширениям получать аргументы командной строки в режиме графического интерфейса.  </li>
+<li>Проблема 932: разрешить указание сценариев в командной строке.  </li>
+<li>Проблема 933: автоматическое определение каталога установки.  </li>
+<li>Проблема 934: обработка файлов в командной строке через расширение  </li>
+<li>Проблема 935: Улучшение идентификации версии Java.  </li>
+<li>Проблема 939: ZAP должен автоматически принимать SSL-соединения на нестандартных портах.  </li>
+<li>Проблема 947: Паук не работает с URL-адресами с недопустимыми символами.  </li>
+<li>Проблема 950: справиться с надстройками, содержащими файлы, скопированные непосредственно в каталог подключаемых модулей.  </li>
+<li>Проблема 951: версии 1.1 и 1.2 TLS не включены по умолчанию  </li>
+<li>Проблема 954: изменения в определенных полях в графическом интерфейсе пользователя не сохраняются после нажатия кнопки ОК / Продолжить.  </li>
+<li>Проблема 955: фокус клавиатуры теряется при обнаружении большого тела  </li>
+<li>Проблема 956. Копирование URL-адресов не копирует несколько  </li>
+<li>Ошибка 957: ссылка на предупреждение «Отсутствует заголовок X-Content-Type-Options»  </li>
+<li>Проблема 963: дополнение добавляется в черный список, если его нельзя удалить при обновлении.  </li>
+<li>Проблема 965: Поддержка одностраничных приложений и нестандартных разделителей параметров.  </li>
+<li>Проблема 966: параметр командной строки быстрого запуска  </li>
+<li>Проблема 967: исключение InvalidParameterException при обновлении надстройки «Консоль сценариев».  </li>
+<li>Проблема 968: Разрешить выбор включенных протоколов SSL / TLS.  </li>
+<li>Проблема 969: Прокси-сервер - не включать тело ответа при ответе на неудачные запросы HEAD.  </li>
+<li>Проблема 970: следует отправлять / пересылать тело запросов DELETE.  </li>
+<li>Проблема 974: сканировать элементы пути URL-адреса.  </li>
+<li>Ошибка 975: Ошибка с результатами нечеткого обратного поиска  </li>
+<li>Проблема 976: Атака из контекста "паук" вызывает работу пауков вне контекста.  </li>
+<li>Проблема 979: деревья сайтов и предупреждений могут быть повреждены.  </li>
+<li>Проблема 981: интернационализировать файл справки  </li>
+<li>Проблема 982: ключ API.  </li>
+<li>Ошибка 986. Новая реализация диалогового окна ScanProgress и функция пропуска подключаемых модулей.  </li>
+<li>Проблема 987. Разрешить установку произвольных значений файла конфигурации через командную строку.  </li>
+<li>Проблема 988: ZAP Help аварийно завершает работу перед запуском.  </li>
+<li>Проблема 989: добавление параметра "Добавить пользователя" при нажатии правой кнопкой мыши в сеансе HTTP.  </li>
+<li>Проблема 991: запрос проверки надстройки / правила сканирования - постоянный XSS  </li>
+<li>Проблема 996. Убедитесь, что все диалоговые окна закрываются при нажатии клавиши выхода.  </li>
+<li>Проблема 997: Session.open жалуется на неправильное использование addPath  </li>
+<li>Проблема 998: глупый поиск по регулярному выражению убивает ZAP  </li>
+<li>Проблема 999: история загружается в неправильном порядке.  </li>
+<li>Проблема 1002: добавлена поддержка аутентификации с помощью скриптов.  </li>
+<li>Проблема 1003: подключаемый модуль тестирования уязвимостей XXE  </li>
+<li>Проблема 1004: раскрытие исходного кода с использованием метаданных Git  </li>
+<li>Проблема 1005: раскрытие исходного кода с использованием метаданных Subversion  </li>
+<li>Проблема 1006. Распространение веб-приложений с использованием метаданных Git.  </li>
+<li>Проблема 1007. Распространение веб-приложений через пауки с использованием метаданных Subversion (SVN).  </li>
+<li>Проблема 1010: Разрешить сортировку результатов нечеткой записи  </li>
+<li>Проблема 1012: диалоговое окно «Кодирование / декодирование» - поддержка кодирования HTML и JavaScript IdealFirstBug  </li>
+<li>Проблема 1016: проблема отображения кодировки HTML в credits.html  </li>
+<li>Проблема 1017: для прокси-сервера, установленного на 0.0.0.0, создается неправильный файл PAC.  </li>
+<li>Проблема 1018: предоставить реализациям AbstractAppParamPlugin доступ к типу параметра  </li>
+<li>Проблема 1019: при запуске ZAP с неправильным JAVA_HOME отображается сбивающее с толку сообщение об ошибке  </li>
+<li>Проблема 1020: повторяющееся представление подключаемого модуля "Тело: таблица" на вкладках "Запрос / прерывание".  </li>
+<li>Проблема 1021: ошибка OutOutOfMemoryError при запуске активного сканера  </li>
+<li>Проблема 1022: Прокси-сервер - Разрешить переопределение проксированного сообщения  </li>
+<li>Проблема 1023: Консоль сценариев - кнопки Run / Stop с несогласованным состоянием  </li>
+<li>Проблема 1024: Большое представление ответа отображается, даже если тело ответа отсутствует  </li>
+<li>Проблема 1025: исключение NullPointerException при нажатии клавиши с выделенными текстовыми областями «Консоль сценариев»  </li>
+<li>Проблема 1030: загрузка и сохранение политик сканирования  </li>
+<li>Проблема 1031: Добавление возможностей исключения параметров в активный сканер  </li>
+<li>Проблема 1032: добавление поддержки API для аутентификации на основе сценария  </li>
+<li>Проблема 1033: org.zaproxy.clientapi.core.Alert не переопределяет метод equals ()  </li>
+<li>Проблема 1037: параметры JSON RPC заданы неправильно.  </li>
+<li>Проблема 1039: Повышение точности подключаемого модуля внешнего перенаправления  </li>
+<li>Проблема 1041: плагины активного сканирования не запускаются, если сайт является локальным для 127.0.0.1.  </li>
+<li>Проблема 1042: существенные проблемы при открытии предыдущего сеанса. </li>
+<li>Проблема 1043: настраиваемое диалоговое окно активного сканирования  </li>
+<li>Проблема 1044: принудительный режим пользователя не сохраняется при сохранении / загрузке сеанса  </li>
+<li>Проблема 1046: метод getHttpCookies () в HttpResponseHeader неправильно устанавливает домен  </li>
+<li>Проблема 1047: файлы резервных копий не обнаруживаются Zap  </li>
+<li>Проблема 1049: компонент быстрого поиска по нескольким шаблонам  </li>
+<li>Проблема 1050: входные векторы на основе сценариев  </li>
+<li>Проблема 1051: Zap может привязать службы ко всем сетевым интерфейсам.  </li>
+<li>Проблема 1052: API обратного вызова для активных подключаемых модулей сканирования  </li>
+<li>Проблема 1053: Сходство строк и компонент алгоритма LCS  </li>
+<li>Проблема 1055: загружать расширения перед подключаемыми модулями.  </li>
+<li>Проблема 1057: добавление метода Extension.postInstall () для действий после установки.  </li>
+<li>Проблема 1059: добавление поддержки Jython для аутентификации на основе сценария  </li>
+<li>Проблема 1060: добавление поддержки JRuby для аутентификации на основе сценария  </li>
+<li>Проблема 1061: выберите правильный тип сценария, механизм и шаблон при создании нового сценария. </li>
+<li>Проблема 1063: возможность декодировать добавленное содержимое, сжатое с помощью gzip (было обработано сжатие для сценариев).  </li>
+<li>Проблема 1065: переименовать сценарии расширения в сценарии расширения.  </li>
+<li>Проблема 1066: добавлена поддержка для быстрой настройки аутентификации на основе сценария из пользовательского интерфейса сценариев.  </li>
+<li>Проблема 1068: Zap не обнаруживает исходный код в ответах.  </li>
+<li>Проблема 1069: Поддержка .-: в именах переменных Zest  </li>
+<li>Проблема 1071: Использование Zest-Script «Заменить в теле ответа» дает неправильный заголовок Content-Length.  </li>
+<li>Проблема 1072: SQLDataException: исключение данных: строковые данные, усечение справа  </li>
+<li>Проблема 1074: Добавить параметр для отображения только вывода из отображаемого сценария.  </li>
+<li>Проблема 1075: изменение TableHistory для пакетного удаления записей Производительность  </li>
+<li>Проблема 1076: изменить активный сканер, чтобы не удалять сгенерированные временные сообщения. Производительность.  </li>
+<li>Проблема 1077: изменение (HTTP) фаззера, чтобы не удалять сгенерированные временные сообщения Производительность  </li>
+<li>Проблема 1078: изменение ExtensionBreak на возврат к реализации диспетчера точек останова базового типа сообщения.  </li>
+<li>Проблема 1079: удаление неуместных разделителей главного всплывающего меню.  </li>
+<li>Проблема 1080: HTML-страницы руководства пользователя неправильно полагаются на кодировку платформы по умолчанию.  </li>
+<li>Проблема 1081: ExtensionPopupMenu должен «уведомлять» дочерний ExtensionPopupMenu (и ExtensionPopupMenuItem) при вызове всплывающего окна.  </li>
+<li>Ошибка 1082: совпадения URL-адреса поиска выделены в неправильной позиции.  </li>
+<li>Проблема 1083: устарел метод ExtensionPopupMenuItem # isSuperMenu ()  </li>
+<li>Ошибка 1084: исключение NullPointerException при выборе узла на вкладке «Сайты».  </li>
+<li>Проблема 1085: не добавляйте и не удаляйте элементы всплывающего меню с помощью метода View # getPopupMenu ().  </li>
+<li>Проблема 1086: Разрешить динамическое добавление / удаление пассивных сканеров.  </li>
+<li>Проблема 1087: изменение расширений для динамического добавления пассивных сканеров.  </li>
+<li>Проблема 1088: исключен метод ExtensionPopupMenu # prepareShow.  </li>
+<li>Проблема 1089: измените ExtensionPopupMenu, чтобы использовать всплывающие методы расширения.  </li>
+<li>Проблема 1090: не добавляйте всплывающие меню, если целевое расширение не включено  </li>
+<li>Проблема 1091: CoreAPI - Не получать идентификаторы временных записей истории.  </li>
+<li>Проблема 1092: SearchThread - не получать идентификаторы отклоненных сообщений  </li>
+<li>Проблема 1093: добавление представления тела HTTP-запроса, предупреждающего о большом теле  </li>
+<li>Проблема 1094: измените ExtensionManualRequestEditor, чтобы добавлять компоненты представления только в режиме графического интерфейса.  </li>
+<li>Проблема 1095: при необходимости замените главное всплывающее подменю на ExtensionPopupMenu.  </li>
+<li>Проблема 1096: AddOnLoader вызывает неправильный метод уведомления после удаления файлов надстройки.  </li>
+<li>Проблема 1097: Переместите расширение «Запуск приложений» (вызов) в проект zap-extensions.  </li>
+<li>Проблема 1098: переместите страницы справки AJAX Spider в надстройку «Ajax Spider» (и обновите их)  </li>
+<li>Проблема 1099: Разрешить аннотировать методы параметров как игнорируемые для ZAP API  </li>
+<li>Проблема 1100: методы параметров аннотаций, которые не должны отображаться в ZAP API  </li>
+<li>Проблема 1101: измените пассивные сканеры, чтобы отображать их идентификаторы.  </li>
+<li>Проблема 1102: Ajax Spider - замена прокси-сервера ajax spider на основной прокси  </li>
+<li>Проблема 1103: Консоль сценариев - разрешить очистку вывода, даже если включена функция «Очистка при запуске».  </li>
+<li>Проблема 1104: замена всех кнопок-переключателей, которые задают текст всплывающей подсказки на основе состояния кнопки, на ZapToggleButton (надстройки).  </li>
+<li>Проблема 1105: удаление «ручного» обновления значка кнопок-переключателей в зависимости от состояния кнопки (надстройки).  </li>
+<li>Проблема 1106. Отображение HistoryList идентификатора истории в индексы списка не обновляется при удалении записи истории.  </li>
+<li>Проблема 1110: API-интерфейс Spider - невозможно указать, как параметры обрабатываются с помощью API.  </li>
+<li>Ошибка 1111: Проверка обновлений при запуске отключается (автоматически) при доступе к диалоговому окну «Параметры».  </li>
+<li>Проблема 1112: изменение ZAP (core) для поддержки новой структуры каталога надстроек.  </li>
+<li>Проблема 1113: изменение структуры каталога надстройки (справка и ресурсы)  </li>
+<li>Проблема 1118: вкладка предупреждений может не синхронизироваться </li>
+<li>Проблема 1119: Spider не обнаруживает несколько форм по одному и тому же URL-адресу. </li>
+<li>Проблема 1120: не удается удалить надстройку, если правила используют пакет сообщений при удалении.  </li>
+<li>Проблема 1121: диалоговое окно выполнения сканирования может вызывать зависание пользовательского интерфейса.  </li>
+<li>Проблема 1122: дополнительная информация о надстройке.  </li>
+<li>Проблема 1125: не удается повторно импортировать сценарий jython в качестве сценария прокси  </li>
+<li>Проблема 1126: ошибки в фильтрах точек останова.  </li>
+<li>Проблема 1127: Запрос функции: разрешить сценариям создавать перерывы  </li>
+<li>Проблема 1131: поддержка действий Zest Intercept в надстройке  </li>
+<li>Проблема 1132: HttpSender игнорирует параметр «Отправить единый заголовок запроса cookie».  </li>
+<li>Проблема 1134: регулярные выражения правила пассивного сканирования не проверяются.  </li>
+<li>Проблема 1135: вкладка Marketplace не может быть обновлена, если cfu запускается при запуске </li>
+<li>Проблема 1137: ZAP блокируется при удалении узлов. </li>
+<li>Проблема 1138: изменения правила пассивного сканирования не сохраняются. </li>
+<li>Проблема 1145: ошибка синтаксического анализа файлов cookie при использовании запятой. </li>
 </ul>
 
-<h2>See also</h2>
+<h2>Смотрите также</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<a href="../intro.html">Вступление </a></td><td>введение в ZAP</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<a href="releases.html">Релизы </a></td><td>полный набор релизов</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<a href="../credits.html">Кредиты</a></td><td>люди и группы, которые сделали этот релиз возможным</td></tr>
 </table>
 </body>
 </html>

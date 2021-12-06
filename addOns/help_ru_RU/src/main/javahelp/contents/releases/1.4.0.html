@@ -3,11 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-  Release 1.4.0
+  выпуск 1.4.0 
 </title>
 </head>
 <body>
-<h1>Release 1.4.0</h1>
+<h1>выпуск 1.4.0 </h1>
 <p>
 В этом выпуске были внесены следующие изменения:
 </p>
@@ -18,13 +18,13 @@
 
 Панели HTML теперь поддерживают переключаемую подсветку синтаксиса.
 
-<h3>Issue 153: fuzzdb integration</h3>
+<h3>Проблема 153: интеграция fuzzdb </h3>
 
-В fuzzer включает fuzzdb (https://github.com/fuzzdb-project/fuzzdb) фаззинг файлов.<br/>
+В фаззер включает fuzzdb (https://github.com/fuzzdb-project/fuzzdb) фаззинг файлов.<br/>
 Обратите внимание, что некоторые fuzzdb файлы были оставлены, поскольку они вызывают общие антивирусные сканеры, чтобы помечать их как содержащие вирусы.<br/>
 Вы можете заменить их (и обновить fuzzdb), загрузив последнюю версию fuzzdb и расширяя его в библиотеке fuzzers.
 
-<h3>Issue 212: Parameter analysis</h3>
+<h3>Проблема 212: Анализ параметров </h3>
 
 На новой вкладке Params отображается сводка всех параметров, используемых сайтом.  
 
@@ -36,151 +36,151 @@
 
 Следующие проверки были портированы от Watcher (благодаря Крису Веберу за это):
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.CrossDomain.ScriptReference.cs</td><td>checks for cross-domain javascript files inclusion.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.CacheControl.cs</td><td>checks HTTP cache-control header on SSL pages.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.ContentTypeMissing.cs</td><td>checks that the Content-Type HTTP header is not missing.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.FrameOptions.cs</td><td>checks that the X-FRAME-OPTIONS is not missing or insecurely set.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.IeXssProtection.cs</td><td>checks that the X-XSS-Protection has not been set to disable IE's XSS protection.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.MimeSniff.cs</td><td>checks that the X-CONTENT-TYPE-OPTIONS has been set.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.DatabaseErrors.cs</td><td>checks for database error messages.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.DebugErrors.cs</td><td>checks for debugging error messages.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.InUrl.cs</td><td>checks for information disclosure in URL parameters.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.ReferrerLeak.cs</td><td>checks HTTP Referer header for information disclosure.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.CrossDomain.ScriptReference.cs</td><td>проверяет наличие междоменных файлов javascript. </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.CacheControl.cs</td><td>проверяет HTTP-заголовок управления кешем на страницах SSL. </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.ContentTypeMissing.cs</td><td>проверяет наличие HTTP-заголовка Content-Type. </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.FrameOptions.cs</td><td>проверяет, что X-FRAME-OPTIONS не пропущены или установлены ненадежно. </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.IeXssProtection.cs</td><td>проверяет, не настроена ли X-XSS-Protection для отключения защиты IE от XSS. </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.Header.MimeSniff.cs </td><td>проверяет, установлены ли параметры X-CONTENT-TYPE-OPTIONS. </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.DatabaseErrors.cs</td><td>проверяет сообщения об ошибках базы данных. </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.DebugErrors.cs</td><td>проверяет сообщения об ошибках отладки. </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.InUrl.cs </td><td>проверяет раскрытие информации в параметрах URL. </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Check.Pasv.InformationDisclosure.ReferrerLeak.cs</td><td>проверяет заголовок HTTP Referer на предмет раскрытия информации. </td></tr>
 </table>
 
 
-<h3>Issue 253: Plugable extensions</h3>
+<h3>Проблема 253: Подключаемые расширения </h3>
 
-Full extensions can now be plugged into ZAP dynamically with full access to all of ZAPs features.
+Полные расширения теперь могут быть подключены к ZAP динамически с полным доступом ко всем функциям ZAP. 
 
-<h2>Minor changes:</h2>
+<h2>Незначительные изменения:</h2>
 
-<h3>Issue 54: Clean shutdown</h3>
+<h3>Проблема 54: Чистое выключение </h3>
 
-<h3>Issue 90: Add GUI support for unsecure SSL/TLS renegotiation</h3>
+<h3>Проблема 90: Добавить поддержку графического интерфейса для незащищенного повторного согласования SSL / TLS. </h3>
 
-<h3>Issue 102: Save raw response and request, and save body of response and request</h3>
+<h3>Проблема 102: сохранить необработанный ответ и запрос, а также текст ответа и запроса. </h3>
 
-<h3>Issue 126: Allow working directory and config file to be set via cmd line</h3>
+<h3>Проблема 126: разрешить установку рабочего каталога и файла конфигурации через строку cmd </h3>
 
-<h3>Issue 154: Include param id in reports</h3>
+<h3>Проблема 154: включение идентификатора параметра в отчеты </h3>
 
-<h3>Issue 164: Toolbar config button</h3>
+<h3>Проблема 164: кнопка конфигурации панели инструментов </h3>
 
-<h3>Issue 168: Reveal hidden fields in web pages</h3>
+<h3>Проблема 168: обнаружение скрытых полей на веб-страницах </h3>
 
-<h3>Issue 192: Enable/Disable breakpoints</h3>
+<h3>Проблема 192: Включение / отключение точек останова </h3>
 
-<h3>Issue 193: Detect directory traversal vulnerabilities</h3>
+<h3>Проблема 193: обнаружение уязвимостей, связанных с обходом каталогов. </h3>
 
-<h3>Issue 194: Enhancement: Show request ID on Search pane</h3>
+<h3>Проблема 194: Улучшение: отображение идентификатора запроса на панели поиска. </h3>
 
-<h3>Issue 200: Detect CSRF vulnerabilities</h3>
+<h3>Проблема 200: обнаружение уязвимостей CSRF </h3>
 
-<h3>Issue 230: Enhance zap.sh to cope with symbolic links</h3>
+<h3>Проблема 230: Улучшение zap.sh для работы с символическими ссылками </h3>
 
-<h3>Issue 236: Option to toggle URLencoding</h3>
+<h3>Проблема 236. Возможность переключения кодирования URL. </h3>
 
-<h3>Issue 242: Export node / req/resp via right click</h3>
+<h3>Проблема 242: экспорт node / req / resp с помощью правой кнопки мыши </h3>
 
-<h3>Issue 248: Delete alerts / retest feature request</h3>
+<h3>Проблема 248: удаление предупреждений / запрос функции повторного тестирования </h3>
 
-<h3>Issue 251: Restructure alerts code</h3>
+<h3>Проблема 251: код предупреждений о реструктуризации </h3>
 
-<h3>Issue 253: Allow extensions to define dependencies</h3>
+<h3>Проблема 253. Разрешить расширениям определять зависимости. </h3>
 
-<h3>Issue 270: Icon changes</h3>
+<h3>Проблема 270: Изменения значка </h3>
 
-<h3>Issue 277: Rationalize right click menu items</h3>
+<h3>Проблема 277: рационализировать пункты меню, вызываемые правой кнопкой мыши </h3>
 
-<h3>Issue 279: Core extensions</h3>
+<h3>Проблема 279: Расширения ядра </h3>
 
-<h3>Issue 282: Add author, description and URL to extensions</h3>
+<h3>Ошибка 282: добавление автора, описания и URL-адреса к расширениям. </h3>
 
-<h2>Bug fixes:</h2>
+<h2>Исправление ошибок: </h2>
 
-<h3>Issue 42: Arbitrary Redirection</h3>
+<h3>Проблема 42: Произвольное перенаправление</h3>
 
-<h3>Issue 94: PKCS#11 driver</h3>
+<h3>Проблема 94: драйвер PKCS # 11. </h3>
 
-<h3>Issue 107: The last intercepted request/response remains in the Break window</h3>
+<h3>Проблема 107: последний перехваченный запрос / ответ остается в окне Break. </h3>
 
-<h3>Issue 135: Broken URLs in Sites Panel</h3>
+<h3>Проблема 135: неработающие URL-адреса на панели сайтов </h3>
 
-<h3>Issue 148: New HTTP Panel broke the Undo/Redo Manager</h3>
+<h3>Проблема 148: новая панель HTTP нарушила работу диспетчера отмен / повторов. </h3>
 
-<h3>Issue 180: Tabular view for GET request</h3>
+<h3>Проблема 180: табличное представление для запроса GET </h3>
 
-<h3>Issue 187: Encoding issues</h3>
+<h3>Проблема 187: Проблемы с кодировкой </h3>
 
-<h3>Issue 197: Decoder cannot process base64 input without line breaks</h3>
+<h3>Проблема 197: декодер не может обрабатывать ввод в формате base64 без разрывов строки </h3>
 
-<h3>Issue 198: The report is not generated when a "Parameter tampering" alert with "NULL" character exists</h3>
+<h3>Проблема 198: отчет не создается, если существует предупреждение «Изменение параметра» с символом «NULL» </h3>
 
-<h3>Issue 210: Exception thrown when using the "Path Traversal" option in the active scan</h3>
+<h3>Проблема 210: исключение при использовании параметра «Обход пути» в активном сканировании. </h3>
 
-<h3>Issue 223: Exception in "Sites" tab when choosing a popup option, "Delete (from view)" or "Purge (from DB)", when no node tree is selected</h3>
+<h3>Проблема 223: исключение на вкладке «Сайты» при выборе всплывающего параметра «Удалить (из представления)» или «Очистить (из базы данных)», когда дерево узлов не выбрано </h3>
 
-<h3>Issue 224: takes too much time to recover from an proxy port number outside valid range</h3>
+<h3>Проблема 224: для восстановления номера порта прокси-сервера за пределами допустимого диапазона требуется слишком много времени. </h3>
 
-<h3>Issue 225: ZAP exits on startup if an option value contains extended characters like å,ä,ö</h3>
+<h3>Проблема 225: ZAP завершает работу при запуске, если значение параметра содержит расширенные символы, такие как å, ä, ö </h3>
 
-<h3>Issue 226: proxy port number edit box should not allow millions of characters</h3>
+<h3>Проблема 226. Поле редактирования номера порта прокси-сервера не должно содержать миллионы символов. </h3>
 
-<h3>Issue 227: Tools, Options should go to the same tab as last time</h3>
+<h3>Проблема 227. Инструменты и параметры должны переходить на ту же вкладку, что и в прошлый раз. </h3>
 
-<h3>Issue 237: Bug: Problems with HTTP Panels</h3>
+<h3>Проблема 237: Ошибка: проблемы с панелями HTTP </h3>
 
-<h3>Issue 238: Exception when using a custom fuzz file</h3>
+<h3>Проблема 238: исключение при использовании настраиваемого файла нечеткости </h3>
 
-<h3>Issue 241: zap.sh Xmx value for stable performance</h3>
+<h3>Проблема 241: значение Xmx zap.sh для стабильной работы </h3>
 
-<h3>Issue 243: When the DynamicLoader loads from local jar, doesn't take into account the package name</h3>
+<h3>Проблема 243. Когда DynamicLoader загружается из локального jar-файла, не учитывается имя пакета. </h3>
 
-<h3>Issue 246: Pragma Header requires Cache-Control Header for HTTP/1.1 requests</h3>
+<h3>Проблема 246. Pragma Header требует заголовка Cache-Control для запросов HTTP / 1.1. </h3>
 
-<h3>Issue 255: Exception in API when due to illegal character in XML context</h3>
+<h3>Проблема 255: исключение в API из-за недопустимого символа в контексте XML </h3>
 
-<h3>Issue 256: Calling HttpMessage.setGetParams looses the port</h3>
+<h3>Проблема 256: вызов HttpMessage.get Get Params приводит к потере порта </h3>
 
-<h3>Issue 260: Exception when deleting ("Purge (from DB)") "History" tab entries</h3>
+<h3>Проблема 260: Исключение при удалении («Очистить (из БД)») записей вкладки «История» </h3>
 
-<h3>Issue 261: Partial language match not working</h3>
+<h3>Проблема 261: частичное соответствие языка не работает </h3>
 
-<h3>Issue 262: "Weak authentication" alerts not showing with spider</h3>
+<h3>Проблема 262: предупреждения «Слабая аутентификация» не отображаются с пауком </h3>
 
-<h3>Issue 263: "Cookie without secure flag" alerts not showing with spider</h3>
+<h3>Проблема 263: предупреждения «Cookie без флажка безопасности» не отображаются с пауком </h3>
 
-<h3>Issue 264: Exception in "Manual Request Editor"/"Resend" dialogues</h3>
+<h3>Проблема 264: исключение в диалоговых окнах «Редактор ручного запроса» / «Повторная отправка» </h3>
 
-<h3>Issue 268: Change ZAP Report XML</h3>
+<h3>Проблема 268: изменение XML отчета ZAP </h3>
 
-<h3>Issue 269: Spider depth parameter</h3>
+<h3>Проблема 269: параметр глубины паука. </h3>
 
-<h3>Issue 274: Tidy up delete / purge options</h3>
+<h3>Проблема 274: приведение в порядок параметров удаления / очистки. </h3>
 
-<h3>Issue 280: Escape URLs in sites tree</h3>
+<h3>Проблема 280: экранирование URL-адресов в дереве сайтов </h3>
 
-<h3>Issue 283: RFE: Font anti-aliasing not enabled by default in request/response</h3>
+<h3>Проблема 283: RFE: сглаживание шрифтов не включено по умолчанию в запросе / ответе </h3>
 
-<h3>Issue 284: Request/response etc header panels too small</h3>
+<h3>Проблема 284: панели заголовков запросов / ответов и т. Д. Слишком малы </h3>
 
-<h3>Issue 286: Search string not highlighted for fuzz results</h3>
+<h3>Проблема 286. Строка поиска не выделяется для нечетких результатов. </h3>
 
-<h3>Issue 287: Passive scanner doesnt pick up new anticsrf tokens</h3>
+<h3>Проблема 287. Пассивный сканер не обнаруживает новые токены анти CSRF. </h3>
 
-<h3>Issue 289: fuzzdb files cause virus alerts</h3>
+<h3>Проблема 289: файлы fuzzdb вызывают предупреждения о вирусах </h3>
 
-<h3>Issue 291: Path Traversal has 'param' empty but put the param name in 'attack'</h3>
+<h3>Ошибка 291: в обходе пути параметр 'param' пуст, но имя параметра помещено в 'attack'. </h3>
 
-<h2>See also</h2>
+<h2>Смотрите также </h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<a href="../intro.html">Вступление</a></td><td>введение в ZAP</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<a href="releases.html">Релизы </a></td><td>полный набор релизов</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<a href="../credits.html">Кредиты</a></td><td>люди и группы, которые сделали этот релиз возможным</td></tr>
 </table>
 </body>
 </html>

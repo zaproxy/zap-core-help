@@ -7,83 +7,83 @@
 </TITLE>
 </HEAD>
 <BODY>
-<H1>Release 2.10.0</H1>
+<H1>выпуск 2.10.0 </H1>
 
-This is a 10 year anniversary bug fix and enhancement release, which requires a minimum of Java 8. 
-Note that a minimum of Java 11 is recommended, especially for high DPI displays.
-<br><br>
-These release notes do not include all of the changes included in add-ons updated since 2.9.0.
-<br><br>
-Some of the more significant enhancements include:
+Это 10-летний юбилейный выпуск с исправлением ошибок и улучшением, для которого требуется как минимум Java 8.  
+Обратите внимание, что рекомендуется как минимум Java 11, особенно для дисплеев с высоким разрешением. 
+<br> <br>
+Эти примечания к выпуску не включают все изменения, включенные в надстройки, обновленные с версии 2.9.0. 
+<br> <br>
+Некоторые из наиболее значительных улучшений включают: 
 
-<H3>Custom Pages</H3>
-<a href="../start/features/custompages.html">Custom Pages</a> can be defined on a per context basis - 
-these allow ZAP to identify various non-standard error handling conditions such as custom error pages and handle them more effectively.
+<H3>Пользовательские страницы </H3>
+<a href="../start/features/custompages.html"> Пользовательские страницы </a> могут быть определены для каждого контекста -
+они позволяют ZAP определять различные нестандартные условия обработки ошибок, такие как настраиваемые страницы ошибок, и обрабатывать их более эффективно. 
 
-<H3>Authentication Polling</H3>
-The concept of <a href="../start/features/authstrategies.html">Authentication Verification Strategies</a> has been introduced which allows ZAP to handle
-a wider range of authentication mechanisms including the option to poll a specified page for the authentication status of a user.
+<H3>Опрос проверки подлинности </H3>
+Была представлена концепция <a href="../start/features/authstrategies.html"> Стратегии проверки подлинности </a>, которая позволяет ZAP обрабатывать
+более широкий спектр механизмов аутентификации, включая возможность опроса указанной страницы на предмет статуса аутентификации пользователя. 
 
-<H3>Site Tree Control</H3>
-Scripts and add-ons now have full access to how nodes are represented in the <a href="../start/features/sitestree.html">Sites Tree</a>.
-Both <a href="https://github.com/zaproxy/community-scripts/tree/main/variant">Input Vector Scripts</a> and add-ons which include implementations of the 
-<a href="https://static.javadoc.io/org.zaproxy/zap/2.10.0/org/parosproxy/paros/core/scanner/Variant.html">Variant</a> class can change both the tree
-structure and names used for new nodes.
-<br><br>
-For more details see the <a href="https://www.zaproxy.org/blog/2020-09-22-sites-tree-modifiers/">Site Tree Modifiers</a> Blog post.
+<H3>Управление деревом сайта </H3>
+Сценарии и надстройки теперь имеют полный доступ к тому, как узлы представлены в <a href="../start/features/sitestree.html"> дереве сайтов </a>. 
+Как <a href="https://github.com/zaproxy/community-scripts/tree/main/variant"> Input Vector Scripts </a>, так и надстройки, которые включают реализации
+<a href="https://static.javadoc.io/org.zaproxy/zap/2.10.0/org/parosproxy/paros/core/scanner/Variant.html"> Variant </a> класс может изменять как дерево
+структура и имена, используемые для новых узлов. 
+<br> <br>
+Для получения дополнительных сведений см. Сообщение блога <a href="https://www.zaproxy.org/blog/2020-09-22-sites-tree-modifiers/"> Модификаторы дерева сайта </a>. 
 
-<H3>Dynamic Look and Feel including Dark Mode</H3>
-The Desktop UI includes a new set of open source Look and Feel's c/o <a href="https://github.com/JFormDesigner/FlatLaf">FlatLaf</a> including 2 Dark Mode options.<br>
-You can also dynamically switch the Look and Feel via a button on the <a href="../ui/tltoolbar.html">Top Level Toolbar</a>.
-<br><br>
-For more details of the dark mode see the <a href="https://www.zaproxy.org/blog/2020-03-04-dark-mode-in-the-weekly-release/">Dark Mode in the Weekly Release</a> Blog post.
+<H3>Dynamic Look and Feel, включая темный режим </H3>
+Пользовательский интерфейс рабочего стола включает новый набор внешнего вида Look and Feel с открытым исходным кодом <a href="https://github.com/JFormDesigner/FlatLaf"> FlatLaf </a>, включая 2 варианта темного режима. <br>
+Вы также можете динамически переключать внешний вид с помощью кнопки на <a href="../ui/tltoolbar.html"> панели инструментов верхнего уровня </a>. 
+<br> <br>
+Дополнительные сведения о темном режиме см. В записи блога <a href="https://www.zaproxy.org/blog/2020-03-04-dark-mode-in-the-weekly-release/"> Темный режим в еженедельном выпуске </a>. 
 
-<H3>Authentication Headers via Env Vars</H3>
-A new set of environmental variables are available which allow you to easily add an authentication header to all of the requests that are proxied through ZAP or initiated
-by the ZAP tools, including the spiders and active scanner.
-These are documented on the <a href="../start/features/authentication.html#envvars">Authentication</a> page.
+<H3>Заголовки аутентификации через Env Vars </H3>
+Доступен новый набор переменных среды, которые позволяют легко добавлять заголовок аутентификации ко всем запросам, которые передаются через ZAP или инициируются.
+инструментами ZAP, включая пауков и активный сканер. 
+Они задокументированы на странице <a href="../start/features/authentication.html#envvars"> Аутентификация </a>. 
 
-<H3>SOCKS Proxy Configuration</H3>
-It is now possible to dynamically configure the outgoing SOCKS proxy in the <a href="../ui/dialogs/options/connection.html">Options' Connection screen</a>.
-By default the SOCKS proxy configuration applies to all connections made by ZAP.
+<H3>Конфигурация прокси SOCKS </H3>
+Теперь можно динамически настраивать исходящий прокси-сервер SOCKS на экране <a href="../ui/dialogs/options/connection.html"> Параметры подключения </a>. 
+По умолчанию конфигурация прокси-сервера SOCKS применяется ко всем соединениям, выполненным ZAP. 
 
-<H3>Cached Scripts</H3>
-The following script types are now cached between invocations reducing the time it takes to reuse them:
+<H3>Кешированные скрипты </H3>
+Следующие типы скриптов теперь кэшируются между вызовами, что сокращает время, необходимое для их повторного использования: 
 <ul>
-<li>Active Rules</li>
-<li>HTTP Sender</li>
-<li>Input Vectors, when used for the Sites tree</li>
-<li>Passive Rules</li>
-<li>Proxy</li>
+<li>Действующие правила </li>
+<li>Действующие правила </li>
+<li>Входные векторы при использовании в дереве сайтов </li>
+<li>Пассивные правила </li>
+<li>Прокси-сервер</li>
 </ul>
 
-<H2>Add-Ons</H2>
-<H3>New Add-Ons</H3>
-The following add-ons are included by default in this release for the first time:
+<H2>Дополнения</H2>
+<H3>Новые дополнения</H3>
+Следующие надстройки включены по умолчанию в этот выпуск впервые: 
 <ul>
-  <li><a href="https://www.zaproxy.org/docs/desktop/addons/encode-decode-hash/">Advanced Encode / Decode / Hash dialog</a> - this replaces the old core encode/decode/hash dialog</li>
-  <li><a href="https://www.zaproxy.org/docs/desktop/addons/dom-xss-active-scan-rule/">DOM XSS Scan Rule</a> - an Active Scan rule for detecting DOM XSS vulnerabilities</li>
-  <li><a href="https://www.zaproxy.org/docs/desktop/addons/form-handler/">Form Handler</a> - allows for the custom configuration of values used in forms based on field names</li>
-  <li><a href="https://www.zaproxy.org/docs/desktop/addons/graalvm-javascript/">GraalVM JavaScript</a> - included as Java 15+ no longer includes the Oracle Nashorn JavaScript engine</li>
-  <li><a href="https://www.zaproxy.org/docs/desktop/addons/graphql-support/">GraphQL Support</a> - allows you to import and active scan GraphQL definitions</li>
-  <li><a href="https://www.zaproxy.org/docs/desktop/addons/retire.js/">Retire.js</a> - a Passive Scan rule which implements checks provided by <a href="https://retirejs.github.io/retire.js/">Retire.js</a> in order to identify vulnerable or out-dated JavaScript packages</li>
-  <li><a href="https://www.zaproxy.org/docs/desktop/addons/soap-support/">SOAP Support</a> - allows you to import and active scan WSDL files containing SOAP endpoints</li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/encode-decode-hash/"> Расширенное диалоговое окно кодирования / декодирования / хеширования </a> - заменяет старый основной диалог кодирования / декодирования / хеширования. </li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/dom-xss-active-scan-rule/"> Правило сканирования DOM XSS </a> - правило активного сканирования для обнаружения уязвимостей DOM XSS </li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/form-handler/"> Обработчик форм </a> - позволяет настраивать значения, используемые в формах, на основе имен полей. </li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/graalvm-javascript/"> GraalVM JavaScript </a> - включен, поскольку Java 15+ больше не включает движок Oracle Nashorn JavaScript </li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/graphql-support/"> Поддержка GraphQL </a> - позволяет импортировать и активировать определения GraphQL для сканирования. </li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/retire.js/"> Retire.js </a> - правило пассивного сканирования, которое реализует проверки, предоставляемые <a href="https://retirejs.github.io/retire.js/"> Retire.js </a>, для выявления уязвимых или устаревших пакетов JavaScript. </li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/soap-support/"> Поддержка SOAP </a> - позволяет импортировать и активно сканировать файлы WSDL, содержащие конечные точки SOAP. </li>
 </ul>
 
-<H3>Updated Add-Ons</H3>
-The following add-ons have been updated since the last full release:
+<H3>Обновить Дополнения (Add-Ons): </H3>
+Следующие надстройки были обновлены с момента последней полной версии: 
 <ul>
-  <li><a href="https://www.zaproxy.org/docs/desktop/addons/ajax-spider/">Ajax Spider</a></li>
-  <li><a href="https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/">Active Scan Rules</a></li>
-  <li><a href="https://www.zaproxy.org/docs/desktop/addons/forced-browse/">Forced Browse</a></li>
-  <li><a href="https://www.zaproxy.org/docs/desktop/addons/fuzzer/">Fuzzing</a></li>
-  <li><a href="https://www.zaproxy.org/docs/desktop/addons/getting-started-guide/">Getting Started Guide</a></li>
-  <li><a href="https://www.zaproxy.org/docs/desktop/addons/hud/">The HUD</a></li>
-  <li><a href="https://www.zaproxy.org/docs/desktop/addons/online-menu/">Online Menu</a></li>
-  <li><a href="https://www.zaproxy.org/docs/desktop/addons/openapi-support/">OpenAPI Support</a></li>
-  <li><a href="https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/">Passive Scan Rules</a></li>
-  <li><a href="https://www.zaproxy.org/docs/desktop/addons/quick-start/">Quick Start</a></li>
-  <li><a href="https://www.zaproxy.org/docs/desktop/addons/script-console/">Script Console</a></li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/ajax-spider/">AJAX-паук (spider)</a></li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/active-scan-rules/">Правила активного сканирования</a></li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/forced-browse/">Принудительный просмотр </a></li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/fuzzer/">Фаззинг</a></li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/getting-started-guide/">Руководство по началу работы </a></li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/hud/">HUD (часть визуального интерфейса)</a></li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/online-menu/">Онлайн-меню </a></li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/openapi-support/">Поддержка OpenAPI </a></li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/passive-scan-rules/">Правила пассивного сканирования </a></li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/quick-start/">Быстрый старт</a></li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/script-console/">Консоль запуска сценариев</a></li>
   <li><a href="https://www.zaproxy.org/docs/desktop/addons/selenium/">Selenium</a></li>
   <li><a href="https://www.zaproxy.org/docs/desktop/addons/linux-webdrivers/">Linux WebDrivers</a></li>
   <li><a href="https://www.zaproxy.org/docs/desktop/addons/macos-webdrivers/">MacOS WebDrivers</a></li>
@@ -92,27 +92,27 @@ The following add-ons have been updated since the last full release:
   <li><a href="https://www.zaproxy.org/docs/desktop/addons/zest/">Zest</a></li>
 </ul>
 
-<H2>Docker Updates</H2>
-The following changes are included in the latest Stable Docker image:
+<H2>Обновления Docker </H2>
+В последний образ стабильного Docker включены следующие изменения: 
 <ul>
-	<li>Update Webswing to latest version (20.2.1) to work with newer Java versions.</li>
-	<li>Update Java in stable image to version 11.</li>
-	<li>Add support for authenticated scans.</li>
-	<li>Add zap_tune function (disable all tags and limit pscan alerts to 10), zap_tuned hook and disable recovery log.</li>
-	<li>Update zap-api-scan.py to add support for GraphQL.</li>
-	<li>Fail immediately if the spider scans were not started to provide better error message.</li>
-	<li>Packaged scans will use the provided context when spidering and active scanning.</li>
-	<li>Add `IS_CONTAINERIZED` environment variable to the container image, used in the python script to check for containerized environments (e.g. containerd) without relying on container runtime specific files.</li>
-	<li>Make podman compatible</li>
-	<li>Make docker stable use ubuntu 20.04</li>
-	<li>Make `python` command use Python 3.</li>
-	<li>Removed python 2, only python 3 will be supported going forward.</li>
-	<li>Changed zap-full-scan.py and zap-api-scan.py to include the -I option to ignore only warning used by zap-baseline-scan.py</li>
+	<li>Обновите Webswing до последней версии (20.2.1) для работы с более новыми версиями Java. </li>
+	<li>Обновите Java в стабильном образе до версии 11. </li>
+	<li>Добавьте поддержку проверок с проверкой подлинности. </li>
+	<li>Добавьте функцию zap_tune (отключите все теги и ограничьте количество предупреждений pscan до 10), обработчик zap_tuned и отключите журнал восстановления. </li>
+	<li>Обновите zap-api-scan.py, чтобы добавить поддержку GraphQL. </li>
+	<li>Сбой немедленно, если сканирование пауком не было запущено, чтобы предоставить более точное сообщение об ошибке. </li>
+	<li>Пакетное сканирование будет использовать предоставленный контекст при сканировании и активном сканировании. </li>
+	<li>Добавьте в образ контейнера переменную среды IS_CONTAINERIZED, используемую в скрипте python для проверки контейнерных сред (например, containerd), не полагаясь на файлы, специфичные для среды выполнения контейнера. </li>
+	<li>Сделайте podman совместимым </li>
+	<li>Сделайте docker стабильным, используйте ubuntu 20.04 </li>
+	<li>Сделайте так, чтобы команда `python` использовала Python 3. </li>
+	<li>Удален python 2, в дальнейшем будет поддерживаться только python 3. </li>
+	<li>Изменены zap-full-scan.py и zap-api-scan.py, чтобы включить параметр -I для игнорирования только предупреждений, используемых zap-baseline-scan.py </li>
 </ul>
-For full list of changes made to the docker images see the docker <a href="https://github.com/zaproxy/zaproxy/blob/main/docker/CHANGELOG.md">CHANGELOG.md</a>.
+Полный список изменений, внесенных в образы докеров, см. В докере <a href="https://github.com/zaproxy/zaproxy/blob/main/docker/CHANGELOG.md"> CHANGELOG.md </a>. 
 
-<H2>Changes in Bundled Libraries</H2>
-The following libraries were updated:
+<H2>Изменения в связанных библиотеках </H2>
+Обновлены следующие библиотеки: 
 <ul>
   <li>Bouncy Castle, 1.61 → 1.67</li>
   <li>Commons Codec, 1.13 → 1.15</li>
@@ -126,130 +126,130 @@ The following libraries were updated:
   <li>SQLite JDBC, 3.28.0 → 3.32.3.2</li>
 </ul>
 
-<H3>Logging Library</H3>
-The logging library, Log4j, was updated to the new major version (2.x). The previous version is still included for compatibility with existing code, add-on and script authors are encouraged to migrate to the new API.
+<H3>Библиотека журналов </H3>
+Библиотека ведения журналов Log4j была обновлена до новой основной версии (2.x).  Предыдущая версия все еще включена для совместимости с существующим кодом, 
+авторам надстроек и скриптов рекомендуется перейти на новый API. 
 <br>
-For example, the logger can now be obtained with:
+Например, теперь логгер можно получить с помощью: 
 <pre><code class="language-java">import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-// ...
 
 Logger logger = LogManager.getLogger(MyClass.class);</pre></code>
 
-<H2>Enhancements</H2>
+<H2>Улучшения </H2>
 <ul>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/9">Issue 9</a> : No Way to Specify Custom 404</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/29">Issue 29</a> : SOCKS (outgoing) proxy support</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/78">Issue 78</a> : Show message type in History tab</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/111">Issue 111</a> : Provide a button on the resend screen to inject a CSRF token</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/408">Issue 408</a> : Add support to encoding transformations</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/560">Issue 560</a> : Content-Length header always updated on Send - cannot Resend some requests</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/1351">Issue 1351</a> : Decode gzip'ed content in Request tab</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/1701">Issue 1701</a> : Lack of Encoding Breaks Syntax Highlighting</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/3452">Issue 3452</a> : Add "Remove from site tree" in search</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/5542">Issue 5542</a> : Improve dark mode</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/5732">Issue 5732</a> : HTML Reports should offer a table based on alert names</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/5738">Issue 5738</a> : Improve version message in Manage Add-ons dialogue</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/5844">Issue 5844</a> : Add context menu item to mark false positives</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/5845">Issue 5845</a> : Alert API Additions</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/5864">Issue 5864</a> : Add buttons to select the file types ignored on Break</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/5873">Issue 5873</a> : Add FlatLaf L&amp;F, for dark mode</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/5874">Issue 5874</a> : Revise Site Certificates to Max 398d</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/5898">Issue 5898</a> : Allow to import from file into regular expression panels (e.g. Include in Context)</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/5923">Issue 5923</a> : Expose enable related state in scripts API</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/5934">Issue 5934</a> : Allow language to be specified on commandline</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/5963">Issue 5963</a> : Add host and path columns to the history table</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/5973">Issue 5973</a> : added known csrf token for pfsense</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6010">Issue 6010</a> : Do not recompile unchanged scripts</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6038">Issue 6038</a> : Allow Parsing of Some Non-text Messages by the Spider</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6068">Issue 6068</a> : On CSRF variable detection search for partial match instead of full</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6075">Issue 6075</a> : Allow to override ApiImplementor i18n key prefix</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6079">Issue 6079</a> : Allow to differentiate requests by body content in Sites tree</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6084">Issue 6084</a> : Add generation date to the HTML and MD reports</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6126">Issue 6126</a> : Add more control over the site tree</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6163">Issue 6163</a> : Support authentication polling</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6196">Issue 6196</a> : Upgrade the version of log4j</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6201">Issue 6201</a> : Support dynamic Look and Feel switching</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6226">Issue 6226</a> : Allow to define the maximum body size to passive scan</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6277">Issue 6277</a> : Add OneTouchExapandable control to Sites Tree/Request&Response panels</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6278">Issue 6278</a> : Add Alert reference field</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6295">Issue 6295</a> : Added support for dynamic technologies</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6296">Issue 6296</a> : Add auth header define in envvars</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6299">Issue 6299</a> : Tweak browser page for browser launch</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6313">Issue 6313</a> : Manual Request response send</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6333">Issue 6333</a> : Refactor SessionStructure and Session</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6353">Issue 6353</a> : Update default and common user agents</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6354">Issue 6354</a> : Update email used in certs</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/9"> Проблема 9 </a>: невозможно указать пользовательский 404 </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/29"> Проблема 29 </a>: поддержка SOCKS (исходящего) прокси </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/78"> Проблема 78 </a>: Показать тип сообщения на вкладке "История". </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/111"> Проблема 111 </a>. Добавьте кнопку на экране повторной отправки, чтобы ввести токен CSRF. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/408"> Проблема 408 </a>: добавлена поддержка преобразований кодирования. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/560"> Проблема 560 </a>: заголовок Content-Length всегда обновляется при отправке - невозможно повторно отправить некоторые запросы </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/1351"> Проблема 1351 </a>: декодирование содержимого, сжатого с помощью gzip, на вкладке "Запрос". </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/1701"> Проблема 1701 </a>: отсутствие выделения синтаксиса прерываний кодирования. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/3452"> Проблема 3452 </a>: добавить в поиск «Удалить из дерева сайтов». </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5542"> Ошибка 5542 </a>. Улучшение темного режима. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5732"> Ошибка 5732 </a>. В отчетах HTML должна быть таблица на основе названий предупреждений. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5738"> Ошибка 5738 </a>. Сообщение об улучшении версии в диалоговом окне "Управление надстройками". </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5844"> Ошибка 5844 </a>: добавить пункт контекстного меню для отметки ложных срабатываний. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5845"> Проблема 5845 </a>. Дополнения API предупреждений. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5864"> Ошибка 5864 </a>: добавлены кнопки для выбора типов файлов, игнорируемых при прерывании. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5873"> Ошибка 5873 </a>: добавление FlatLaf L & amp; F для темного режима. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5874"> Проблема 5874 </a>. Измените сертификаты сайтов на максимальное значение 398d. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5898"> Проблема 5898 </a>: разрешить импорт из файла в панели регулярных выражений (например, включить в контекст). </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5923"> Ошибка 5923 </a>. Отображение состояния включения в скриптах API. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5934"> Проблема 5934 </a>: разрешено указывать язык в командной строке. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5963"> Ошибка 5963 </a>: добавление столбцов хоста и пути в таблицу истории. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5973"> Проблема 5973 </a>: добавлен известный токен csrf для pfsense. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6010"> Проблема 6010 </a>: не перекомпилируйте неизмененные скрипты. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6038"> Проблема 6038 </a>. Разрешить паук анализировать некоторые нетекстовые сообщения. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6068"> Проблема 6068 </a>. При обнаружении переменной CSRF выполняется поиск частичного совпадения вместо полного. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6075"> Проблема 6075 </a>: разрешено переопределить префикс ключа ApiImplementor i18n. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6079"> Проблема 6079 </a>. Разрешить различать запросы по содержанию тела в дереве сайтов. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6084"> Проблема 6084 </a>: добавьте дату создания в отчеты HTML и MD. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6126"> Проблема 6126 </a>. Добавьте больше контроля над деревом сайтов. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6163"> Проблема 6163 </a>: поддержка опроса аутентификации. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6196"> Ошибка 6196 </a>. Обновите версию log4j. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6201"> Проблема 6201 </a>. Поддержка динамического переключения внешнего вида и ощущений. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6226"> Проблема 6226 </a>. Разрешить определять максимальный размер тела для пассивного сканирования. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6277"> Проблема 6277 </a>. Добавление элемента управления OneTouchExapandable в дерево сайтов / панели запросов и ответов. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6278"> Проблема 6278 </a>: Добавить поле ссылки на предупреждение. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6295"> Ошибка 6295 </a>: добавлена поддержка динамических технологий. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6296"> Проблема 6296 </a>: Добавить определение заголовка аутентификации в envvars. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6299"> Проблема 6299 </a>: настройка страницы браузера для запуска браузера. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6313"> Ошибка 6313 </a>: отправка ответа на запрос вручную. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6333"> Проблема 6333 </a>. Рефакторинг структуры и сеанса сеанса. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6353"> Проблема 6353 </a>: обновите стандартные и общие пользовательские агенты. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6354"> Проблема 6354 </a>: обновить адрес электронной почты, используемый в сертификатах. </li>
 </ul>
 
-<H2>Bug Fixes</H2>
+<H2>Исправление ошибок </H2>
 <ul>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/1584">Issue 1584</a> : GZip de-compression causes loss of newlines</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/4235">Issue 4235</a> : Warn when unable to save (malformed) HTTP message in Request/Response panels</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/5701">Issue 5701</a> : Fuzzer runs progressively slower</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/5899">Issue 5899</a> : Allows Regex duplication in the same Context through the UI</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/5902">Issue 5902</a> : Active scan script - JSON number values - Weird replaces</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/5952">Issue 5952</a> : Stats includes Content-Type byteranges limits</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/5991">Issue 5991</a> : Hook HttpSenderListener when installing add-ons</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6008">Issue 6008</a> : Initialization of scripts via ZAP API</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6037">Issue 6037</a> : Changing look and feel messes with macOS integrations</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6043">Issue 6043</a> : Active scanner tests the same request twice</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6102">Issue 6102</a> : Error starting Active Scan in "Everything in Scope" mode.</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6121">Issue 6121</a> : html encode in Generate anti-CSRF Test FORM</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6138">Issue 6138</a> : Persistent growing high CPU usage with proxy</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6206">Issue 6206</a> : Unable to import context without optional fields</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6223">Issue 6223</a> : Exception while authenticating with form-based and anti-csrf tokens</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6267">Issue 6267</a> : HTML / Markdown Report Generation Fails When Path Contains '#'</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6297">Issue 6297</a> : Site tree doesnt correctly represent URLs ending in a /</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/1584"> Ошибка 1584 </a>: распаковка GZip приводит к потере новых строк. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/4235"> Проблема 4235 </a>: предупреждать, когда невозможно сохранить (искаженное) сообщение HTTP на панелях запроса / ответа. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5701"> Проблема 5701 </a>: фаззер работает все медленнее. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5899"> Проблема 5899 </a>: разрешено дублирование регулярных выражений в том же контексте через пользовательский интерфейс. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5902"> Проблема 5902 </a>. Активный скрипт сканирования - числовые значения JSON - Странные замены </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5952"> Проблема 5952 </a>: статистика включает ограничения на количество байтов Content-Type. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5991"> Проблема 5991 </a>. Перехват HttpSenderListener при установке надстроек. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6008"> Проблема 6008 </a>. Инициализация скриптов через ZAP API. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6037"> Проблема 6037 </a>. Изменение внешнего вида мешает интеграции с macOS. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6043"> Проблема 6043 </a>. Активный сканер дважды проверяет один и тот же запрос. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6102"> Проблема 6102 </a>. Ошибка при запуске активного сканирования в режиме «Все в области действия». </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6121"> Проблема 6121 </a>: кодирование HTML в Форме создания теста для защиты от CSRF. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6138"> Проблема 6138 </a>. Постоянно растущая высокая загрузка ЦП с прокси-сервером. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6206"> Проблема 6206 </a>: невозможно импортировать контекст без дополнительных полей. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6223"> Ошибка 6223 </a>: исключение при аутентификации с использованием токенов на основе форм и токенов анти-csrf. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6267"> Ошибка 6267 </a>: создание отчета HTML / Markdown не выполняется, если путь содержит '#' </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6297"> Проблема 6297 </a>. В дереве сайта неправильно представлены URL-адреса, заканчивающиеся на /. </li>
 </ul>
 
-<H2>ZAP API New Endpoints:</H2>
+<H2>Новые конечные точки ZAP API: </H2>
 
-<H3>VIEW ascrf / optionPartialMatchingEnabled</H3>
-Define if ZAP should detect CSRF tokens by searching for partial matches
+<H3>ПРОСМОТРЕТЬ ascrf / optionPartialMatchingEnabled </H3>
+Определите, должен ли ZAP обнаруживать токены CSRF путем поиска частичных совпадений 
 
-<H3>ACTION ascrf / setOptionPartialMatchingEnabled</H3>
-Define if ZAP should detect CSRF tokens by searching for partial matches.
+<H3>ДЕЙСТВИЕ ascrf / setOptionPartialMatchingEnabled </H3>
+Определите, должен ли ZAP обнаруживать токены CSRF путем поиска частичных совпадений. 
 
-<H3>ACTION alert / updateAlertsConfidence</H3>
-Update the confidence of the alerts.
+<H3>ДЕЙСТВИЕ оповещение  / updateAlertsConfidence</H3>
+Обновите достоверность предупреждений. 
 
 <H3>ACTION alert / updateAlertsRisk</H3>
-Update the risk of the alerts.
+Обновите риск предупреждений. 
 
-<H3>ACTION context / setContextCheckingStrategy</H3>
-Set the checking strategy for a context - this defines how ZAP checks that a request is authenticated.
+<H3>ACTION контекст / setContextCheckingStrategy</H3>
+Установите стратегию проверки для контекста - это определяет, как ZAP проверяет аутентификацию запроса. 
 
-<H3>VIEW core / optionUseSocksProxy</H3>
-Gets whether or not the SOCKS proxy should be used.
+<H3>ПОСМОТРЕТЬ core / optionUseSocksProxy </H3>
+Получает, следует ли использовать прокси-сервер SOCKS. 
 
 <H3>ACTION core / setOptionUseSocksProxy</H3>
-Sets whether or not the SOCKS proxy should be used.
+Устанавливает, следует ли использовать прокси-сервер SOCKS. 
 
-<H3>VIEW users / getAuthenticationState</H3>
-Gets the authentication state information for the user identified by the Context and User Ids.
+<H3>ПРОСМОТР пользователей / setAuthenticationState </H3>
+Получает информацию о состоянии аутентификации для пользователя, определенного контекстом и идентификаторами пользователя. 
 
-<H3>VIEW users / getAuthenticationSession</H3>
-Gets the authentication session information for the user identified by the Context and User Ids, e.g. cookies and realm credentials.
+<H3>ПРОСМОТР пользователей / получение аутентифицированного сеанса </H3>
+Получает информацию о сеансе аутентификации для пользователя, определенного контекстом и идентификаторами пользователя, например файлы cookie и учетные данные области. 
 
-<H3>Action users / authenticateAsUser</H3>
-Tries to authenticate as the identified user, returning the authentication request and whether it appears to have succeeded.
+<H3>Действие пользователей / AuthenticateAsUser </H3>
+Пытается аутентифицироваться как идентифицированный пользователь, возвращая запрос аутентификации и выясняя, был ли он успешным. 
 
-<H3>Action users / pollAsUser</H3>
-Tries to poll as the identified user, returning the authentication request and whether it appears to have succeeded. This will only work if the polling verification strategy has been configured.
+<H3>Пользователи действий / pollAsUser </H3>
+Пытается выполнить опрос от имени идентифицированного пользователя, возвращая запрос аутентификации и выясняя, был ли он успешным.  Это будет работать, только если настроена стратегия проверки опроса. 
 
-<H3>Action users / setAuthenticationState</H3>
-Sets fields in the authentication state for the user identified by the Context and User Ids.
+<H3>Действие пользователей / setAuthenticationState </H3>
+Устанавливает поля в состоянии аутентификации для пользователя, идентифицированного контекстом и идентификаторами пользователя. 
 
-<H3>Action users / setCookie</H3>
-Sets the specified cookie for the user identified by the Context and User Ids.
+<H3>Действие пользователей / setCookie </H3>
+Устанавливает указанный файл cookie для пользователя, определенного контекстом и идентификаторами пользователя. 
 
-<H2>See Also</H2>
+<H2>Смотри также</H2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Вступление</a></td><td>введение в ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Релизы </a></td><td>полный набор релизов</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Кредиты</a></td><td>люди и группы, которые сделали возможным этот релиз</td></tr>
 </table>
 </BODY>
 </HTML>

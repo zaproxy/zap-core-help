@@ -7,119 +7,119 @@
 </TITLE>
 </HEAD>
 <BODY>
-<H1>Release 2.11.0</H1>
+<H1>выпуск 2.11.0 </H1>
 
-This is the OWASP 20th anniversary bug fix and enhancement release, which requires a minimum of Java 8. 
-Note that a minimum of Java 11 is recommended, especially for high DPI displays.
-<br><br>
-These release notes do not include all of the changes included in add-ons updated since 2.10.0.
-<br><br>
-Some of the more significant enhancements include:
+Это исправление ошибок и усовершенствованный выпуск, посвященный 20-летию OWASP, для которого требуется как минимум Java 8.  
+Обратите внимание, что рекомендуется как минимум Java 11, особенно для дисплеев с высоким разрешением. 
+<br> <br>
+Эти примечания к выпуску не включают все изменения, включенные в надстройки, обновленные с 2.10.0. 
+<br> <br>
+Некоторые из наиболее значительных улучшений включают: 
 
-<H3>Alert Tags</H3>
-Alerts can now be tagged with arbitrary keys or key=value pairs.<br>
-The active and passive scan rules have been updated to include tags for the OWASP Top 10 2021 and 2017 - these are also now 
-shown on the website <a href="https://www.zaproxy.org/docs/alerts/">Alert Details</a> pages.
+<H3>Теги предупреждений </H3>
+Оповещения теперь могут быть помечены произвольными ключами или парами ключ = значение. <br>
+Правила активного и пассивного сканирования были обновлены и теперь включают теги для OWASP Top 10 за 2021 и 2017 годы.
+показаны на страницах <a href="https://www.zaproxy.org/docs/alerts/"> с подробностями об оповещениях </a> веб-сайта. 
 
-<H3>Automation Framework</H3>
-The Automation Framework is a new way to automate ZAP and is expected to become the default option for most use cases.
-For more details see the <a href="https://www.zaproxy.org/docs/automate/automation-framework/">Automation Framework</a> page on the website.
+<H3>Платформа автоматизации </H3>
+Automation Framework - это новый способ автоматизации ZAP, который, как ожидается, станет вариантом по умолчанию для большинства случаев использования. 
+Для получения дополнительных сведений см. страницу <a href="https://www.zaproxy.org/docs/automate/automation-framework/"> Automation Framework </a> на веб-сайте. 
 
-<H3>Report Generation</H3>
-The new <a href="https://www.zaproxy.org/docs/desktop/addons/report-generation/">Report Generation</a> add-on allows you to generate much
-more flexible reports with access to much more data. 
-The previous reporting add-ons have been removed from the marketplace as they provide less functionality and are no longer maintained.<br>
-New report templates include:
+<H3>Генерация отчетов </H3>
+Новое дополнение <a href="https://www.zaproxy.org/docs/desktop/addons/report-generation/"> Report Generation </a> позволяет создавать много
+более гибкие отчеты с доступом к гораздо большему количеству данных.  
+Предыдущие надстройки отчетности были удалены с рынка, так как они предоставляют меньше функциональных возможностей и больше не поддерживаются. <br>
+Новые шаблоны отчетов включают: 
 <ul>
-  <li>Risk and Confidence HTML - the new default report</li>
-  <li>Modern HTML Report with themes and options</li>
-  <li>High Level Report Sample</li>
-  <li>Traditional HTML Report with requests and responses</li>
+  <li>HTML-код риска и уверенности - новый отчет по умолчанию </li>
+  <li>Современный HTML-отчет с темами и параметрами </li>
+  <li>Образец отчета высокого уровня </li>
+  <li>Традиционный HTML-отчет с запросами и ответами </li>
 </ul>
-"Traditional" templates have been added which match the old reports for anyone who relies on their formats.
+Добавлены «традиционные» шаблоны, которые соответствуют старым отчетам для всех, кто полагается на их форматы. 
 
-<H3>OAST Support</H3>
+<H3>Поддержка OAST </H3>
 
-The new <a href="https://www.zaproxy.org/docs/desktop/addons/oast-support/">OAST Support</a> add-on allows you to find and exploit out-of-band vulnerabilities.
-This add-on is alpha at the time of the 2.11.0 release but is expected to be updated soon, so check the help pages for the latest features.
+Новое дополнение <a href="https://www.zaproxy.org/docs/desktop/addons/oast-support/"> OAST Support </a> позволяет вам находить и использовать внеполосные уязвимости. 
+Это дополнение является альфа-версией на момент выпуска 2.11.0, но, как ожидается, скоро будет обновлено, поэтому проверьте страницы справки, чтобы узнать о последних функциях. 
 
-<H3>Retest</H3>
+<H3>Повторное тестирование </H3>
 
-The new <a href="https://www.zaproxy.org/docs/desktop/addons/retest/">Retest</a> add-on allows you to retest for presence/absence of previously generated alerts.
-This add-on is alpha at the time of the 2.11.0 release but is expected to be updated soon, so check the help pages for the latest features.
+Новое дополнение <a href="https://www.zaproxy.org/docs/desktop/addons/retest/"> Retest </a> позволяет повторно тестировать наличие / отсутствие ранее сгенерированных предупреждений. 
+Это дополнение является альфа-версией на момент выпуска 2.11.0, но, как ожидается, скоро будет обновлено, поэтому проверьте страницы справки, чтобы узнать о последних функциях. 
 
 <H3>Docker</H3>
-The Docker stable and bare images will now be updated monthly, typically around the start of the month.<br>
-The updates will include any updated add-ons and any changes to the packaged scans. No core changes will be included in these updates.<br>
-The images will be tagged by date in case you wish to stay on a specific version.<br>
-The packaged scans are being migrated to use the Automation Framework - this migration will continue over the life of 2.11.0.
+Стабильные и голые образы Docker теперь будут обновляться ежемесячно, обычно примерно в начале месяца. <br>
+Обновления будут включать все обновленные надстройки и любые изменения упакованных сканирований. В эти обновления не будут включены основные изменения. <br>
+Если вы хотите использовать определенную версию, изображения будут помечены по дате. <br>
+Пакетные отсканированные изображения переносятся для использования Automation Framework - эта миграция будет продолжаться в течение срока службы 2.11.0. 
 
-<H3>Statistics</H3>
-A significant number of statistics have been added to the core, and are being added to add-ons.
-In part this is driven by the Automation Framework which can make direct use of statistics for sanity checks.<br>
-New core statistics include:
+<H3>Статистика </H3>
+Значительное количество статистических данных было добавлено в ядро и добавлено в дополнения. 
+Частично это обеспечивается Automation Framework, который может напрямую использовать статистику для проверок работоспособности. <br>
+Новые основные статистические данные включают: 
 <ul>
-  <li>stats.api.call.&lt;format&gt;.&lt;component&gt;.&lt;request-type&gt;.&lt;name&gt; : The number of times the given API endpoint has been called</li>
-  <li>stats.api.error.&lt;format&gt;.&lt;component&gt;.&lt;request-type&gt;.&lt;name&gt; : The number of times the given API endpoint has returned an error</li>
-  <li>stats.ascan.&lt;rule-id&gt;.alerts : The number of alerts the given active scan rule has raised</li>
-  <li>stats.ascan.&lt;rule-id&gt;.skipped : The number of alerts the given active scan rule has been skipped</li>
-  <li>stats.ascan.&lt;rule-id&gt;.started : The number of alerts the given active scan rule has been started</li>
-  <li>stats.ascan.&lt;rule-id&gt;.time : The cumulative number of milliseconds that the given active scan rule has run for</li>
-  <li>stats.ascan.&lt;rule-id&gt;.urls : The number of URLs that the given active scan rule has requested</li>
-  <li>stats.ascan.started : The number of times the active scanner has been started</li>
-  <li>stats.ascan.stopped : The number of times the active scanner has been stopped (as opposed to finishing)</li>
-  <li>stats.ascan.time : The cumulative number of milliseconds that active scanner has run for</li>
-  <li>stats.ascan.urls : The number of URLs the active scanner has requested</li>
-  <li>stats.break.drop : The number of times a request or response has been dropped via a break point</li>
-  <li>stats.break.hit : The number of times a break point has been hit</li>
-  <li>stats.break.step : The number of times a break point has been stepped through</li>
-  <li>stats.pscan.&lt;rule-id&gt;.alerts : The number of alerts raised by the given scan rule</li>
-  <li>stats.pscan.&lt;rule-id&gt;.time : The cumulative number of milliseconds taken to run the given scan rule</li>
-  <li>stats.script.call.&lt;engine-name&gt;.&lt;type&gt; : The number of times the given type of script has been called</li>
-  <li>stats.script.error.&lt;engine-name&gt;.&lt;type&gt; : The number of times the given type of script has been returned an error</li>
-  <li>stats.spider.started : The number of times the spider has been started</li>
-  <li>stats.spider.stopped : The number of times the spider has been stopped (as opposed to completing)</li>
-  <li>stats.spider.time : The total number of milliseconds the spider has run for across all scans</li>
-  <li>stats.spider.url.error : The number of URLs the spider has found but failed to access</li>
-  <li>stats.spider.url.found : The number of URLs the spider has found and accessed </li>
+  <li>stats.api.call. &lt;format&gt;. &lt;component&gt;. &lt;request-type&gt;. &lt;name&gt;: количество вызовов данной конечной точки API </li>
+  <li>stats.api.error. &lt;format&gt;. &lt;component&gt;. &lt;request-type&gt;. &lt;name&gt;: сколько раз данная конечная точка API возвращала ошибку </li>
+  <li>stats.ascan. &lt;rule-id&gt; .alerts: количество предупреждений, сгенерированных данным активным правилом сканирования. </li>
+  <li>stats.ascan. &lt;rule-id&gt; .skipped: количество предупреждений, пропущенных для данного активного правила сканирования. </li>
+  <li>stats.ascan. &lt;rule-id&gt; .started: количество предупреждений, запущенных для данного активного правила сканирования. </li>
+  <li>stats.ascan. &lt;rule-id&gt; .time: совокупное количество миллисекунд, в течение которых выполнялось данное активное правило сканирования. </li>
+  <li>stats.ascan. &lt;rule-id&gt; .urls: количество URL-адресов, запрошенных данным активным правилом сканирования. </li>
+  <li>stats.ascan.started: количество запусков активного сканера. </li>
+  <li>stats.ascan.stopped: сколько раз активный сканер был остановлен (в отличие от завершения). </li>
+  <li>stats.ascan.time: общее количество миллисекунд, в течение которых активный сканер проработал. </li>
+  <li>stats.ascan.urls: количество URL-адресов, запрошенных активным сканером. </li>
+  <li>stats.break.drop: сколько раз запрос или ответ был отброшен через точку останова. </li>
+  <li>stats.break.hit: количество срабатываний точки останова. </li>
+  <li>stats.break.step: количество переходов через точку останова. </li>
+  <li>stats.pscan. &lt;rule-id&gt; .alerts: количество предупреждений, сгенерированных данным правилом сканирования. </li>
+  <li>stats.pscan. &lt;rule-id&gt; .time: совокупное количество миллисекунд, затраченных на выполнение данного правила сканирования. </li>
+  <li>stats.script.call. &lt;engine-name&gt;. &lt;type&gt;: количество вызовов данного типа скрипта. </li>
+  <li>stats.script.error. &lt;engine-name&gt;. &lt;type&gt;: сколько раз данный тип скрипта возвращал ошибку </li>
+  <li>stats.spider.started: количество запусков паука. </li>
+  <li>stats.spider.stopped: сколько раз паук был остановлен (в отличие от завершения) </li>
+  <li>stats.spider.time: общее количество миллисекунд, в течение которых паук пробежал все сканирование. </li>
+  <li>stats.spider.url.error: количество URL-адресов, которые паук нашел, но не смог получить доступ. </li>
+  <li>stats.spider.url.found: количество URL-адресов, которые паук нашел и к которым получил доступ.  </li>
 </ul>
-For details of the latest statistics including all of the ones also maintained by add-ons and links to the code see the 
-website <a href="https://www.zaproxy.org/docs/internal-statistics/">ZAP Internal Statistics</a> pages.
+Для получения подробной информации о последней статистике, включая все те, которые также поддерживаются надстройками, и ссылки на код см.
+страницы <a href="https://www.zaproxy.org/docs/internal-statistics/"> внутренней статистики ZAP </a> веб-сайта. 
 
 
-<H2>Add-Ons</H2>
-<H3>New Add-Ons</H3>
-The following add-ons are included by default in this release for the first time:
+<H2>Дополнения</H2>
+<H3>Новые дополнения</H3>
+Следующие надстройки включены по умолчанию в этот выпуск впервые: 
 <ul>
-  <li><a href="https://www.zaproxy.org/docs/desktop/addons/automation-framework/">Automation Framework</a> - a simple, flexible and powerful way to automate ZAP</li>
-  <li><a href="https://www.zaproxy.org/docs/desktop/addons/oast-support/">OAST Support</a> - allows you to exploit out-of-band vulnerabilities</li>
-  <li><a href="https://www.zaproxy.org/docs/desktop/addons/report-generation/">Report Generation</a> - new and highly customisable reports</li>
-  <li><a href="https://www.zaproxy.org/docs/desktop/addons/retest/">Retest</a> - retest for presence/absence of previously generated alerts</li>
-</ul>
-
-<H3>Updated Add-Ons</H3>
-All of the add-ons included by default have been updated since the last full release.
-
-<H2>Docker Updates</H2>
-The following changes are included in the latest Stable Docker image:
-
-<ul>
-  <li>Updated to use Webswing 21.1.5</li>
-  <li>Added /zap/container file to make it easier to detect if we are running in a container like docker.</li>
-  <li>Changed to enable integration tests, inc enabling the AF for the baseline <code>-c</code> option if the <code>--auto</code> flag is used before it.</li>
-  <li>Changed to use user's home directory for the Automation Framework files so it will work for any user</li>
-  <li>Updated the baseline to use the Automation Framework by default for common options including the config file/URL.</li>
-  <li>Alert_on_Unexpected_Content_Types.js &gt; Added Content-Type text/yaml to the list of expected types.</li>
-  <li>Check if messages being analyzed by API scan scripts are globally excluded or not.</li>
-  <li>Allow more flexibility to specify ZAP command line options when using Webswing</li>
-  <li>Python 3.5 is no longer supported.</li>
-  <li>Update Webswing to download prod version if valid key supplied.</li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/automation-framework/"> Automation Framework </a> - простой, гибкий и мощный способ автоматизации ZAP </li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/oast-support/"> Поддержка OAST </a> - позволяет использовать внеполосные уязвимости. </li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/report-generation/"> Создание отчетов </a> - новые настраиваемые отчеты </li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/retest/"> Retest </a> - повторный тест на наличие / отсутствие ранее сгенерированных предупреждений </li>
 </ul>
 
-For full list of changes made to the docker images see the docker <a href="https://github.com/zaproxy/zaproxy/blob/main/docker/CHANGELOG.md">CHANGELOG.md</a>.
+<H3>Обновить Дополнения (Add-Ons): </H3>
+Все дополнения, включенные по умолчанию, были обновлены с момента последней полной версии. 
 
-<H2>Changes in Bundled Libraries</H2>
-The following libraries were updated:
+<H2>Обновления Docker </H2>
+В последний образ стабильного Docker включены следующие изменения: 
+
+<ul>
+  <li>Обновлено для использования Webswing 21.1.5. </li>
+  <li>Добавлен файл / zap / container, чтобы упростить определение того, работаем ли мы в контейнере, таком как docker. </li>
+  <li>Изменено для включения интеграционных тестов, включая включение AF для базовой опции <code> -c </code>, если перед ней используется флаг <code> --auto </code>. </li>
+  <li>Изменено использование домашнего каталога пользователя для файлов Automation Framework, поэтому он будет работать для любого пользователя. </li>
+  <li>Обновлен базовый план для использования Automation Framework по умолчанию для общих параметров, включая файл конфигурации / URL-адрес. </li>
+  <li>Alert_on_Unexpected_Content_Types.js & gt; Добавлен Content-Type text / yaml в список ожидаемых типов. </li>
+  <li>Проверьте, исключаются ли сообщения, анализируемые скриптами сканирования API, глобально. </li>
+  <li>Обеспечение большей гибкости при указании параметров командной строки ZAP при использовании Webswing </li>
+  <li>Python 3.5 больше не поддерживается. </li>
+  <li>Обновите Webswing, чтобы загрузить версию продукта, если предоставлен действительный ключ. </li>
+</ul>
+
+Полный список изменений, внесенных в образы докеров, см. В докере <a href="https://github.com/zaproxy/zaproxy/blob/main/docker/CHANGELOG.md"> CHANGELOG.md </a>. 
+
+<H2>Изменения в связанных библиотеках </H2>
+Обновлены следующие библиотеки: 
 
 <ul>
   <li>Bouncy Castle, 1.67 → 1.68</li>
@@ -134,97 +134,97 @@ The following libraries were updated:
   <li>XOM, 1.2.10 → 1.3.7</li>
 </ul>
 
-<H2>Enhancements</H2>
+<H2>Улучшения </H2>
 <ul>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6023">Issue 6023</a> : Quick add site in Context from History panel</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6098">Issue 6098</a> : Allow custom request headers to be set by spider parser</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6413">Issue 6413</a> : Allow to export regular expressions</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6428">Issue 6428</a> : Root Cert Download from Main API Page</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6448">Issue 6448</a> : Manual Request Editor: Send Hotkey</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6469">Issue 6469</a> : Cannot detect injection vulnerabilities on null value JSON objects</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6598">Issue 6598</a> : Do not require scan rules to implement setParent</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6614">Issue 6614</a> : Add AWP Identity manager PKCS11 cards (IDEMIA)</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6625">Issue 6625</a> : Deprecate core/view/homeDirectory API endpoint</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6628">Issue 6628</a> : Added `_token` to possible CSRF input names</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6658">Issue 6658</a> : Redirect core API reports to report add-on</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6661">Issue 6661</a> : Add "_csrf_token" accepted CSRF token names list</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6678">Issue 6678</a> : Make EventBus publishers easier to discover</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6705">Issue 6705</a> : Remove Paros Reports</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6712">Issue 6712</a> : Allow to regenerate expired certificate from warning dialogue</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6769">Issue 6769</a> : Support manual auth users with no session</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6801">Issue 6801</a> : Allow code to set the ZAP exit status</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6803">Issue 6803</a> : Enable anti csrf token handling in ascan by default</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6807">Issue 6807</a> : Add spider stats</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6808">Issue 6808</a> : Add container detection for Docker and Flatpak </li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6811">Issue 6811</a> : Add option for allowing app integration in containers</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6824">Issue 6824</a> : Deprecate extension callback</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6827">Issue 6827</a> : Add support for controlling panel switching</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6829">Issue 6829</a> : Support Alert Tags</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6834">Issue 6834</a> : Adding Spring as a JAVA Technology</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6835">Issue 6835</a> : Active Scan stats</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6836">Issue 6836</a> : Passive Scan stats</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6837">Issue 6837</a> : API stats</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6838">Issue 6838</a> : Scripts stats</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6840">Issue 6840</a> : Break stats</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6844">Issue 6844</a> : Detect if running in WebSwing</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6854">Issue 6854</a> : Update user agents</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6023"> Проблема 6023 </a>: быстрое добавление сайта в контекст из панели истории. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6098"> Проблема 6098 </a>. Разрешить установку пользовательских заголовков запросов с помощью синтаксического анализатора пауков. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6413"> Проблема 6413 </a>: Разрешить экспорт регулярных выражений. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6428"> Проблема 6428 </a>: загрузка корневого сертификата с главной страницы API </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6448"> Проблема 6448 </a>. Редактор запросов вручную: отправить горячую клавишу. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6469"> Проблема 6469 </a>: не удается обнаружить уязвимости инъекций в объектах JSON с нулевым значением. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6598"> Проблема 6598 </a>: правила сканирования не требуются для реализации setParent. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6614"> Ошибка 6614 </a>. Добавление карт PKCS11 AWP Identity Manager (IDEMIA). </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6625"> Проблема 6625 </a>. Устарела конечная точка API core / view / homeDirectory. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6628"> Ошибка 6628 </a>: к возможным именам входных данных CSRF добавлен `_token`. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6658"> Проблема 6658 </a>. Перенаправьте основные отчеты API в надстройку отчетов. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6661"> Проблема 6661 </a>: добавлен список принятых имен токенов CSRF для "_csrf_token". </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6678"> Проблема 6678 </a>. Упростите обнаружение издателей EventBus. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6705"> Проблема 6705 </a>. Удаление отчетов Paros. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6712"> Проблема 6712 </a>: разрешено восстанавливать просроченный сертификат из диалогового окна с предупреждением. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6769"> Проблема 6769 </a>. Поддержка ручной аутентификации пользователей без сеанса. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6801"> Проблема 6801 </a>: разрешить код для установки статуса выхода ZAP. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6803"> Проблема 6803 </a>: по умолчанию включить обработку токена csrf в ascan. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6807"> Проблема 6807 </a>. Добавьте статистику по паукам. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6808"> Проблема 6808 </a>: добавлено обнаружение контейнера для Docker и Flatpak.  </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6811"> Проблема 6811 </a>: добавлена опция, разрешающая интеграцию приложений в контейнеры. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6824"> Проблема 6824 </a>: устаревший обратный вызов расширения. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6827"> Ошибка 6827 </a>: добавлена поддержка управления переключением панелей. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6829"> Проблема 6829 </a>: Теги предупреждений службы поддержки </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6834"> Проблема 6834 </a>: Добавление Spring как технологии JAVA </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6835"> Ошибка 6835 </a>: статистика активного сканирования. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6836"> Ошибка 6836 </a>: статистика пассивного сканирования. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6837"> Ошибка 6837 </a>: статистика API. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6838"> Ошибка 6838 </a>: статистика скриптов. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6840"> Ошибка 6840 </a>. Статистика перерывов. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6844"> Проблема 6844 </a>: определить, работает ли он в WebSwing. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6854"> Ошибка 6854 </a>: обновление пользовательских агентов. </li>
 </ul>
 
-<H2>Bug fixes</H2>
+<H2>Исправление ошибок</H2>
 <ul>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/3988">Issue 3988</a> : Selected checkbox tree nodes not correctly highlighted in macOS</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/4671">Issue 4671</a> : Tag changes in Search tab not reflected in History tab</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/5165">Issue 5165</a> : Not found response tab on options (keyboard shortcut setting)</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6370">Issue 6370</a> : Fix exception when checking for breakpoints</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6381">Issue 6381</a> : Proxy script return value misinterpreted in 2.10.0</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6421">Issue 6421</a> : Alerts related API enpoints might return malformed JSON</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6427">Issue 6427</a> : Manual Request Editor CONNECT Http Method Broken</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6437">Issue 6437</a> : Unable to set only breaks on message in scope</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6508">Issue 6508</a> : Detect WebSocket upgrade messages having multiple Connection directives</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6512">Issue 6512</a> : Buttons of Manage Tags dialog are too small</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6520">Issue 6520</a> : Can not scroll past 'contexts' in 'sites' tab with FlatLaf L&amp;F</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6536">Issue 6536</a> : Extensions not stopped nor destroyed when add-on is uninstalled</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6537">Issue 6537</a> : CONNECT requests not shown in History tab</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6557">Issue 6557</a> : fix: HTTP Panels Font setting for dark LaFs (Theme)</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6562">Issue 6562</a> : Fixed regex generation for host site URLs included in context</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6652">Issue 6652</a> : Install missing libraries beforehand</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6689">Issue 6689</a> : X-ZAP-Scan-ID HTTP header is missing from some of the active scan requests</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6691">Issue 6691</a> : Do not add zero Content-Length by default in GET requests</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6720">Issue 6720</a> : Encode parameters when replacing in form auth data</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6753">Issue 6753</a> : Update Host header in place</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6755">Issue 6755</a> : Extension's errors during shutdown prevent ZAP to exit</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6828">Issue 6828</a> : Fix concurrency issue when downloading add-ons</li>
-<li><a href="https://github.com/zaproxy/zaproxy/issues/6843">Issue 6843</a> : Do not init extension's view if there's none</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/3988"> Проблема 3988 </a>: выбранные узлы дерева флажков неправильно подсвечиваются в macOS. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/4671"> Проблема 4671 </a>: изменения тегов на вкладке "Поиск" не отражаются на вкладке "История". </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5165"> Проблема 5165 </a>. Не найдена вкладка ответа в параметрах (настройка сочетания клавиш). </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6370"> Ошибка 6370 </a>: исправлено исключение при проверке точек останова. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6381"> Ошибка 6381 </a>: возвращаемое значение прокси-скрипта неверно истолковано в 2.10.0. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6421"> Проблема 6421 </a>: конечные точки API, связанные с предупреждениями, могут возвращать искаженный JSON. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6427"> Проблема 6427 </a>: не удалось выполнить Http-метод CONNECT редактора запросов вручную. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6437"> Проблема 6437 </a>: невозможно установить только перерывы в сообщении в области действия. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6508"> Проблема 6508 </a>: обнаружение сообщений об обновлении WebSocket, содержащих несколько директив подключения. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6512"> Проблема 6512 </a>: кнопки диалогового окна управления тегами слишком маленькие. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6520"> Проблема 6520 </a>. Невозможно выполнить прокрутку мимо "контекстов" на вкладке "Сайты" с помощью FlatLaf L & amp; F. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6536"> Ошибка 6536 </a>: расширения не останавливались и не уничтожались при удалении надстройки. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6537"> Ошибка 6537 </a>: запросы CONNECT не отображаются на вкладке "История". </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6557"> Ошибка 6557 </a>: исправлено: настройка шрифта HTTP-панелей для темных LaFs (тема) </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6562"> Проблема 6562 </a>. Исправлено создание регулярного выражения для URL-адресов хост-сайтов, включенных в контекст. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6652"> Ошибка 6652 </a>: заранее установите недостающие библиотеки. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6689"> Проблема 6689 </a>: HTTP-заголовок X-ZAP-Scan-ID отсутствует в некоторых активных запросах сканирования. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6691"> Проблема 6691 </a>: не добавляйте нулевую длину содержимого по умолчанию в запросы GET. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6720"> Проблема 6720 </a>. Кодирование параметров при замене данных аутентификации в форме. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6753"> Проблема 6753 </a>: обновите заголовок хоста на месте. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6755"> Ошибка 6755 </a>: ошибки расширения во время завершения работы не позволяют ZAP выйти. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6828"> Ошибка 6828 </a>. Устранена проблема параллелизма при загрузке надстроек. </li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6843"> Ошибка 6843 </a>: не запускать представление расширения, если его нет. </li>
 </ul>
 
-<H2>ZAP API New Endpoints:</H2>
+<H2>Новые конечные точки ZAP API: </H2>
 
 <H3>ACTION ascan / setOptionScanNullJsonValues</H3>
-Sets whether or not the active scanner should scan null JSON values.
+Устанавливает, должен ли активный сканер сканировать нулевые значения JSON. 
 
-<H3>VIEW ascan / optionScanNullJsonValues</H3>
-Tells whether or not the active scanner should scan null JSON values.
+<H3>ПРОСМОТР ascan / optionScanNullJsonValues </H3>
+Сообщает, должен ли активный сканер сканировать нулевые значения JSON. 
 
-<H2>ZAP API Deprecated Endpoints:</H2>
+<H2>Устаревшие конечные точки ZAP API: </H2>
 
-The following endpoints have been superseded by the <a href="https://www.zaproxy.org/docs/desktop/addons/report-generation/">Report Generation</a> add-on:
+Следующие конечные точки были заменены надстройкой <a href="https://www.zaproxy.org/docs/desktop/addons/report-generation/"> Report Generation </a>: 
 <ul>
-<li>OTHER core / htmlreport</li>
-<li>OTHER core / jsonreport</li>
-<li>OTHER core / mdreport</li>
-<li>OTHER core / xmlreport</li>
+<li>ДРУГОЕ core / htmlreport </li>
+<li>ДРУГОЕ ядро / jsonreport </li>
+<li>ДРУГОЕ ядро / mdreport </li>
+<li>ДРУГОЕ core / xmlreport </li>
 </ul>
 <p>
-The following endpoint has been deprecated without replacement, it is an internal GUI property:
+Следующая конечная точка устарела без замены, это внутреннее свойство графического интерфейса пользователя: 
 <ul>
-<li>VIEW core / homeDirectory</li>
+<li>ПРОСМОТР core / homeDirectory </li>
 </ul>
 
-<H2>See Also</H2>
+<H2>Смотри также</H2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Вступление</a></td><td>введение в ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Релизы </a></td><td>полный набор релизов</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Кредиты</a></td><td>люди и группы, которые сделали возможным этот релиз</td></tr>
 </table>
 </BODY>
 </HTML>

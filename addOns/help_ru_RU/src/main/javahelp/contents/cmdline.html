@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Command Line
+командная строка
 </title>
 </head>
 <body>
@@ -44,44 +44,44 @@ ZAP поддерживает следующие параметры команд�
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-experimentaldb</td><td>Используйте экспериментальный общий код базы данных, который, что неудивительно, также все еще является экспериментальным. </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-nostdout</td><td>Отключает ведение журнала по умолчанию через стандартный вывод </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-silent</td><td>Гарантирует, что ZAP не отправляет нежелательные запросы, в том числе проверяет наличие обновлений. </td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstall &lt;addOnId&gt;</td><td>Installs the add-on with specified ID from the ZAP Marketplace. The IDs of the add-ons available in the marketplace can be consulted in the Marketplace tab of <a href="ui/dialogs/manageaddons.html">Manage Add-ons dialogue</a>.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstallall</td><td>Install all available add-ons from the ZAP Marketplace</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonuninstall &lt;addOnId&gt;</td><td>Uninstalls the add-on with specified ID. Use <code>-addonlist</code> or check the Installed tab of <a href="ui/dialogs/manageaddons.html">Manage Add-ons dialogue</a> to know the IDs of the installed add-ons.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonupdate</td><td>Update all changed add-ons from the ZAP Marketplace</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonlist</td><td>List all of the installed add-ons</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-script &lt;script&gt;</td><td>Run the specified script (file system path) if command line/daemon, or just load it if GUI</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-suppinfo</td><td>Outputs details relevant for support and troubleshooting (to the console/standard out). Such as: ZAP version, java version, installed add-ons and version, locale info, operating system, etc.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-certload &lt;path&gt;</td><td>Loads the Root CA certificate from the specified file name</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-certpubdump &lt;path&gt;</td><td>Dumps the Root CA public certificate into the specified file name, this is suitable for importing into browsers</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-certfulldump &lt;path&gt;</td><td>Dumps the Root CA full certificate (including the private key) into the specified file name, this is suitable for importing into ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstall &lt;addOnId&gt;</td><td>Устанавливает надстройку с указанным идентификатором из ZAP Marketplace.   С идентификаторами надстроек, доступных на торговой площадке, можно ознакомиться на вкладке Marketplace в <a href="ui/dialogs/manageaddons.html">Диалог управления надстройками </a>.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstallall</td><td>Установите все доступные дополнения из ZAP Marketplace </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonuninstall &lt;addOnId&gt;</td><td>Удаляет надстройку с указанным ID.  Использовать <code>-addonlist</code>  или проверьте вкладку "Установлено" в <a href="ui/dialogs/manageaddons.html">Диалог управления надстройками </a> чтобы узнать идентификаторы установленных надстроек. </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonupdate</td><td>Обновите все измененные дополнения из ZAP Marketplace </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonlist</td><td>Список всех установленных дополнений </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-script &lt;script&gt;</td><td>Запустите указанный сценарий (путь к файловой системе), если командная строка / демон, или просто загрузите его, если графический интерфейс </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-suppinfo</td><td>Выводит детали, относящиеся к поддержке и устранению неполадок (на консоль / стандартный выход). Например: версия ZAP, версия java, установленные надстройки и версия, информация о локали, операционная система и т. д. </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-certload &lt;path&gt;</td><td>Загружает сертификат корневого ЦС из указанного имени файла. </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-certpubdump &lt;path&gt;</td><td>Сбрасывает общедоступный сертификат корневого ЦС (Root CA) в указанное имя файла, это подходит для импорта в браузеры. </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-certfulldump &lt;path&gt;</td><td>Сбрасывает полный сертификат корневого ЦС (включая закрытый ключ) в указанное имя файла, это подходит для импорта в ZAP. </td></tr>
 
 </table>
 <br>
-The options <code>-session</code> and <code>-newsession</code> are mutually exclusive. An error will be shown and ZAP exit (if not in GUI) when both options are set.
+Опции <code>-session</code> и <code>-newsession</code> являются взаимоисключающими. Будет показано сообщение об ошибке и ZAP завершится (если не в графическом интерфейсе), когда установлены обе опции. 
 <br>
-Relative paths to session file are resolved against the "session" directory located in ZAP's home directory (default or specified with <code>-dir</code> option).
+Относительные пути к файлу сеанса разрешаются относительно каталога «сеанса», расположенного в домашнем каталоге ZAP (по умолчанию или указанного с помощью  <code>-dir</code> вариант). 
 <br/>
-Configuration keys should be specified using the dot notation based their location in the XML of the configuration file, eg:<br/>
+Ключи конфигурации следует указывать с использованием точечной нотации в зависимости от их расположения в XML файла конфигурации, например: <br/>
 <pre>&lt;zap-script&gt; -config api.key=12345 -config connection.timeoutInSecs=60</pre>
-Note that add-ons can add extra command line options.
+Обратите внимание, что надстройки могут добавлять дополнительные параметры командной строки. 
 
 <p>
-Examples:
+Примеры:
 	<ul>
-		<li>Start ZAP in 'daemon' mode with a new session created at a given path:
+		<li>Запустите ZAP в режиме демона с новым сеансом, созданным по заданному пути: 
 			<pre>&lt;zap-script&gt; -daemon -newsession session</pre>
 		</li>
-		<li>Run a script against an existing session and exit ZAP once finished:
+		<li>Запустите сценарий для существующего сеанса и выйдите из ZAP после завершения: 
 			<pre>&lt;zap-script&gt; -session /full/path/to/existing/session -script /full/path/to/script.js -cmd</pre>
 		</li>
 	</ul>
 
-<h2>See also</h2>
+<h2>Смотрите также </h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<a href="intro.html">Вступление</a></td><td>введение в ZAP</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="start/features/api.html">API</a></td><td>to control ZAP programmatically</td></tr>
+<a href="start/features/api.html">API</a></td><td>для программного управления ZAP </td></tr>
 </table>
 
 </body>
