@@ -3,181 +3,177 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-  Release 2.5.0
+  выпуск 2.5.0 
 </title>
 </head>
 <body>
-<h1>Release 2.5.0</h1>
+<h1>выпуск 2.5.0 </h1>
 
 <p>
-The following changes were made in this release:
+В этот выпуск внесены следующие изменения: 
 </p>
 
-<h2>ZAP API Changes:</h2>
+<h2>Изменения ZAP API: </h2>
 
-<h3>VIEW authorization / getAuthorizationDetectionMethod</h3>
+<h3>ПРОСМОТР авторизации / getAuthorizationDetectionMethod </h3>
 
-Now returns data wrapped in an object called authorizationDetectionMethod
-
-For example:
+Теперь возвращает данные, заключенные в объект с именем authorizationDetectionMethod. 
 <pre>{"authorizationDetectionMethod":{"statusCode":"-1"..."headerRegex":""}}</pre>
-instead of:
-<pre>{"statusCode":"-1"..."headerRegex":""}</pre>
+вместо того: 
+<pre>{"statusCode": "- 1" ... "headerRegex": ""} </pre>
 
-<h3>VIEW context / context + technologyList</h3>
-Both now return data wrapped in an object called "context"
-
-For example:
+<h3>ПРОСМОТР context / context + technologyList </h3>
+Оба теперь возвращают данные, заключенные в объект под названием «контекст». 
 <pre>{"context":{"id":"1", ..., "inScope":"true","loggedOutPattern":""}}</pre>
-instead of:
+вместо того: 
 <pre>{"id":"1", ..., "inScope":"true","loggedOutPattern":""}</pre>
 
-<h3>ACTION spider / scan + scanAsUser</h3>
+<h3>Паук ДЕЙСТВИЯ / сканирование + scanAsUser </h3>
 </ul>
-Both now support a new optional 'subtreeOnly' parameter which limits the spider to the specified subtree.
-The 'url' parameter is also now optional, as long as a valid 'context' parameter is supplied
+Оба теперь поддерживают новый необязательный параметр subtreeOnly, который ограничивает паука указанным поддеревом.
+Параметр url теперь также является необязательным, если указан допустимый параметр context. 
 
-<h3>New 'stats' component</h3>
-The new 'stats' API component provides access to the <a href="../start/features/stats.html">stats</a>
-now maintained by ZAP.<br><br>
+<h3>Новый компонент "статистика" </h3>
+Новый компонент API статистики предоставляет доступ к  <a href="../start/features/stats.html">Статистика</a>
+в настоящее время поддерживается ZAP.<br><br>
 
-Note that some existing components will also have new operations, see the 
-<a href="../start/features/api.html">API Web UI</a> for more details.
+Обратите внимание, что некоторые существующие компоненты также будут иметь новые операции, см.  
+<a href="../start/features/api.html">API Web UI (Веб-интерфейс API )</a> больше подробностей.
  
 
-<h2>Enhancements:</h2>
+<h2>Улучшения: </h2>
 <ul>
-<li>Issue 266 : Add auto tagging for setting cookies, json</li>
-<li>Issue 646 : Password outgoing proxy in plain text on screen</li>
-<li>Issue 1171 : Sites tree to raise 'new site / new node' events</li>
-<li>Issue 1229 : Update Extensions/Plugins to Take Advantage of New Confidence Scale</li>
-<li>Issue 1341 : Update alert XML schema to remove element-level name collision</li>
-<li>Issue 1590 : Mode to apply when running as a daemon</li>
-<li>Issue 1713 : Source Code Disclosure SVN Throws False Positive</li>
-<li>Issue 1864 : Copy scan progress as text to clipboard</li>
-<li>Issue 1958 : Allow to disable database (HSQLDB) log</li>
-<li>Issue 1959 : Allow to active scan headers of all requests</li>
-<li>Issue 1980 : Add ZAP CLI to Docker images</li>
-<li>Issue 2068 :  LoggedIn and LoggedOut indicators inside authentication scripts</li>
-<li>Issue 2070 : It should be possible for the authentication scripts to configure how the messages are sent</li>
-<li>Issue 2121 : Disable Req/Resp tabs position options when in "Expand Full" layout</li>
-<li>Issue 2127 : Warn if the report generation failed</li>
-<li>Issue 2162 : add-marketplace-sorting</li>
-<li>Issue 2171 : Add-ons managed via api, cli</li>
-<li>Issue 2174 : ExpressionLanguageInjectionPlugin - Needs logging fix </li>
-<li>Issue 2177 : SourceCodeDisclosureSVN - Can't write to temp DB</li>
-<li>Issue 2183 : API: Include quality in the ascan/progress response</li>
-<li>Issue 2237 : Allow java max mem to be overridden on the cmdline</li>
-<li>Issue 2238 : spider: fallback to parse HTML comments as plain text if no URL found</li>
-<li>Issue 2272 : SQLInjectionHypersonic (Beta) - Exceptions</li>
-<li>Issue 2273 : Support site level stats</li>
-<li>Issue 2274 : Allow to spider just a site's subtree</li>
-<li>Issue 2275 : spider: do not require a URL, through the API, if the context has seeds</li>
-<li>Issue 2277 : spider: preserve query parameters with same name when canonicalising URL</li>
-<li>Issue 2289 : Record site based response time stats</li>
-<li>Issue 2324 : Include scanners' quality in API scanners views</li>
-<li>Issue 2330 : Add authentication stats</li>
-<li>Issue 2335 : Add Outbound Proxy Password Peak</li>
-<li>Issue 2342 : Ability to manage Sites in ZAP via API</li>
-<li>Issue 2347 : Allow to remove context factories from View/Model</li>
-<li>Issue 2361 : Rename tool bar option Expand Full to Full Layout</li>
-<li>Issue 2362 : Allow to select all Spider results</li>
-<li>Issue 2367 : Change break buttons location without restarting ZAP</li>
-<li>Issue 2368 : Do not require a restart to show/hide the main tool bar</li>
-<li>Issue 2381 : Do not allow to save/write to read-only files</li>
-<li>Issue 2400 : Show a more informative message on read timeouts through the proxy</li>
-<li>Issue 2410 : Show HTTP messages in the Spider tab</li>
-<li>Issue 2413 : Disable "Show in History Tab" if message not valid</li>
-<li>Issue 2418 : Spider: support maximum duration in mins option</li>
-<li>Issue 2420 : Allow active scanners to notify that a message was sent</li>
-<li>Issue 2422 : Support Statsd and moved stats to new ext</li>
-<li>Issue 2465 : Allow to wait for ZAP to start with ClientApi</li>
-<li>Issue 2466 : Allow to access a URL through the ZAP API</li>
-<li>Issue 2479 : Show User Guide even if a search view has errors</li>
-<li>Issue 2481 : Set correct application name in Linux</li>
-<li>Issue 2482 : Normalise Session dialogue tables "Exclude from"</li>
-<li>Issue 2484 : Circular Redirects</li>
-<li>Issue 2486 : Clear ScriptVars on session change</li>
-<li>Issue 2494 : ZAP Proxy is not showing the HTTP CONNECT Request in history tab.</li>
-<li>Issue 2504 : Explicitly add manual HTTP requests to Sites tree</li>
-<li>Issue 2506 : Do not discard the session for file based database</li>
-<li>Issue 2512 : Update HSQLDB library to version 2.3.4</li>
-<li>Issue 2519 : Enable menu/button when help add-on is installed</li>
+<li>Проблема 266. Добавление автоматической пометки для настройки файлов cookie, json. </li>
+<li>Проблема 646. Пароль исходящего прокси-сервера в виде обычного текста на экране. </li>
+<li>Проблема 1171: дерево сайтов для создания событий «новый сайт / новый узел» </li>
+<li>Проблема 1229: Обновите расширения / подключаемые модули, чтобы воспользоваться преимуществами новой шкалы достоверности </li>
+<li>Проблема 1341: обновить схему XML предупреждений, чтобы устранить конфликт имен на уровне элементов. </li>
+<li>Проблема 1590: режим, применяемый при работе в качестве демона </li>
+<li>Проблема 1713: раскрытие исходного кода SVN выдает ложные срабатывания </li>
+<li>Проблема 1864: копирование хода сканирования в виде текста в буфер обмена. </li>
+<li>Проблема 1958: Разрешить отключение журнала базы данных (HSQLDB) </li>
+<li>Проблема 1959: разрешено активное сканирование заголовков всех запросов. </li>
+<li>Проблема 1980: добавление ZAP CLI в образы Docker </li>
+<li>Проблема 2068: индикаторы входа и выхода в скриптах аутентификации </li>
+<li>Проблема 2070: сценарии проверки подлинности должны иметь возможность настраивать способ отправки сообщений. </li>
+<li>Проблема 2121: отключение параметров положения вкладок Req / Resp в макете «Развернуть полностью» </li>
+<li>Проблема 2127: предупреждать, если создание отчета не удалось. </li>
+<li>Проблема 2162: добавление сортировки на торговой площадке. </li>
+<li>Проблема 2171: надстройки, управляемые через api, cli. </li>
+<li>Проблема 2174: ExpressionLanguageInjectionPlugin - требуется исправление ведения журнала.  </li>
+<li>Проблема 2177: раскрытие исходного кода SVN - Невозможно записать в tempDB </li>
+<li>Проблема 2183: API: включить качество в ответ ascan / progress </li>
+<li>Проблема 2237: разрешить переопределение java max mem в командной строке </li>
+<li>Проблема 2238: паук: откат для анализа HTML-комментариев как простого текста, если URL-адрес не найден. </li>
+<li>Проблема 2272: SQLInjectionHypersonic (бета) - исключения </li>
+<li>Проблема 2273: поддержка статистики на уровне сайта </li>
+<li>Проблема 2274: разрешено сканирование только поддерева сайта. </li>
+<li>Проблема 2275: паук: не требуется URL-адрес через API, если в контексте есть начальные числа. </li>
+<li>Проблема 2277: паук: сохранять параметры запроса с тем же именем при канонизации URL </li>
+<li>Проблема 2289: запись статистики времени ответа на основе сайта </li>
+<li>Проблема 2324: включение качества сканеров в представления сканеров API </li>
+<li>Проблема 2330: добавить статистику проверки подлинности. </li>
+<li>Проблема 2335: Добавление максимального пароля исходящего прокси </li>
+<li>Проблема 2342: возможность управлять сайтами в ZAP через API. </li>
+<li>Проблема 2347: разрешено удалять фабрики контекста из представления / модели. </li>
+<li>Проблема 2361: параметр панели инструментов "Переименовать" из полного в полный макет </li>
+<li>Проблема 2362: Разрешить выбор всех результатов Spider. </li>
+<li>Проблема 2367: изменение расположения кнопок прерывания без перезапуска ZAP. </li>
+<li>Проблема 2368: не требуется перезапуск, чтобы показать / скрыть главную панель инструментов. </li>
+<li>Проблема 2381: Не разрешать сохранение и запись в файлы, доступные только для чтения. </li>
+<li>Проблема 2400: отображение более информативного сообщения о тайм-аутах чтения через прокси </li>
+<li>Проблема 2410: отображение HTTP-сообщений на вкладке "Паук". </li>
+<li>Проблема 2413: отключите «Показывать на вкладке истории», если сообщение недействительно. </li>
+<li>Проблема 2418: Паук: поддержка максимальной продолжительности в минутах </li>
+<li>Проблема 2420: разрешить активным сканерам уведомлять об отправке сообщения. </li>
+<li>Проблема 2422: поддержка Statsd и перенесена статистика в новый ext. </li>
+<li>Проблема 2465: позволить дождаться запуска ZAP с ClientApi </li>
+<li>Проблема 2466: разрешить доступ к URL-адресу через ZAP API. </li>
+<li>Проблема 2479: показывать руководство пользователя, даже если в представлении поиска есть ошибки </li>
+<li>Проблема 2481: Установите правильное имя приложения в Linux. </li>
+<li>Проблема 2482: нормализовать диалоговые таблицы сеанса "Исключить из" </li>
+<li>Проблема 2484: Циклическое перенаправление </li>
+<li>Проблема 2486: очищать ScriptVars при изменении сеанса </li>
+<li>Проблема 2494: Прокси-сервер ZAP не отображает запрос HTTP CONNECT на вкладке истории. </li>
+<li>Проблема 2504: добавление HTTP-запросов вручную в дерево сайтов. </li>
+<li>Проблема 2506. Не отменяйте сеанс для файловой базы данных. </li>
+<li>Ошибка 2512: обновление библиотеки HSQLDB до версии 2.3.4. </li>
+<li>Проблема 2519: Включить меню / кнопку при установке надстройки справки </li>
 </ul>
 
-<h2>Bug fixes:</h2>
+<h2>Исправление ошибок: </h2>
 <ul>
-<li>Issue 1529 : TestExternalRedirect Missing Use Case plus Performance and FP Improvements</li>
-<li>Issue 1597 : Java 8 - Mac OS/X package</li>
-<li>Issue 1639 : XSS False Negative on script injections into the Referer HTTP header</li>
-<li>Issue 1786 : Activescan Scripts Silent Failure</li>
-<li>Issue 1801 : URL StandardParameterParser not working correctly with QueryString</li>
-<li>Issue 1848 : VariantURLQuery throwing exceptions on active scan</li>
-<li>Issue 1874 : Two Cookie line in the header when adding a cookie with an httpsender script and doing an active scan</li>
-<li>Issue 1875 : Scanner temp history not cleaned on close</li>
-<li>Issue 2090 : Context: Rename User, can't select in Forced User Panel</li>
-<li>Issue 2110 : SQL Injection gets skipped</li>
-<li>Issue 2112 : Wrong policy on active Scan</li>
-<li>Issue 2115 : Python API context.context("MyContext") is broken</li>
-<li>Issue 2119 : Context's description not imported</li>
-<li>Issue 2122 : Change SpiderAPI to ignore empty context names when handling scan action</li>
-<li>Issue 2125 : Log the exception when opening session file and internationalise message</li>
-<li>Issue 2126 : Fix NullPointerException on missing context's authentication script</li>
-<li>Issue 2132 : Zap Report Counting Bug</li>
-<li>Issue 2142 : Fuzzer throwing exceptions</li>
-<li>Issue 2144 : Java.lang.NullPointerException in "AWT-EventQueue-0" </li>
-<li>Issue 2151 : AJAX Spider does not click all elements set in the options</li>
-<li>Issue 2153 : 2.4.3 failed parse the POST Data containts bracket([]) </li>
-<li>Issue 2193 : Initialise Technology tab with selected context in Active Scan dialogue</li>
-<li>Issue 2197 : Install new versions of the add-ons after downloading with -addonupdate</li>
-<li>Issue 2199 : Disallow Spider scans when ZAP is in Safe (or Protected) mode</li>
-<li>Issue 2203 : Fix findbugs warnings</li>
-<li>Issue 2208 : Prevent the active scanner from reporting progress higher than 100%</li>
-<li>Issue 2226 : ZAP should handle HttpSessionsSite's cookie errors more gracefully</li>
-<li>Issue 2246 : Error in sessions view with tokens</li>
-<li>Issue 2259 : Fix NullPointerException in VariantCookie implementation</li>
-<li>Issue 2281 : Filter params for a specific site</li>
-<li>Issue 2282 : Spider a whole context at once</li>
-<li>Issue 2292 : Enhance alertFingerPrint</li>
-<li>Issue 2297 : AWT blocker activation interrupted - java.lang.InterruptedException </li>
-<li>Issue 2307 : Add missing optional parameter "scanPolicyName" to ascan API actions</li>
-<li>Issue 2312 : Give focus to "Edit Keyboard Shortcut" dialogue</li>
-<li>Issue 2313 : Properly convert (old) excluded proxy domains</li>
-<li>Issue 2314 : Cannot add several payloads to fuzzer (NullPointerException)</li>
-<li>Issue 2323 : Fix (secure) ZAP API request loop</li>
-<li>Issue 2328 : Fix issue during uninstallation of named extension</li>
-<li>Issue 2329 : Filter seeds immediately before running the spider</li>
-<li>Issue 2331 : Custom Context Panels not show in existing contexts after installation of add-on</li>
-<li>Issue 2336 : BadLocationException thrown when using Fuzzer</li>
-<li>Issue 2357 : Inconsistencies while changing between panel layouts</li>
-<li>Issue 2363 : Keep break buttons in sync when changing mode</li>
-<li>Issue 2366 : Inconsistencies in break buttons shown</li>
-<li>Issue 2373 : Show Tab not working correctly in Full Layout for non-information tabs</li>
-<li>Issue 2374 : Unable to change response tab position without main tool bar</li>
-<li>Issue 2390 : HeadlessException should be handled more gracefully & README needs Headless details</li>
-<li>Issue 2394 : Change API authorization view to wrap its object</li>
-<li>Issue 2399 : Timeout requests not shown in ZAP</li>
-<li>Issue 2421 : Active scanner request count mismatch</li>
-<li>Issue 2428 : Memory leak on session creation/loading</li>
-<li>Issue 2429 : InterruptedExceptions while stopping the spider with user authentication</li>
-<li>Issue 2435 : Clean up spider task resources, when not consumed</li>
-<li>Issue 2436 : Unable to dynamically uninstall WebSockets add-on</li>
-<li>Issue 2440 : Exception while opening the Active Scan dialogue</li>
-<li>Issue 2451 : Only a single Data Driven Node can be saved in a context</li>
-<li>Issue 2463 : Websocket not proxied when outgoing proxy is set</li>
-<li>Issue 2469 : Always return 100% when spider stopped</li>
-<li>Issue 2472 : Use file name case when loading policies from file</li>
-<li>Issue 2474 : Add multiple context URL in/exclusions at once</li>
-<li>Issue 2475 : Correct help page for Passive Scan Rules options</li>
-<li>Issue 2487 : Wrong charset used in HTTP body</li>
-<li>Issue 2516 : Add auth and spider task types to temporary types</li>
+<li>Проблема 1529: Отсутствует сценарий использования TestExternalRedirect, а также улучшения производительности и FP </li>
+<li>Проблема 1597: Java 8 - пакет Mac OS / X </li>
+<li>Проблема 1639: ложно отрицательный результат XSS при внедрении скрипта в HTTP-заголовок Referer </li>
+<li>Issue 1786: Activescan Scripts Silent Failure </li>
+<li>Issue 1801: URL StandardParameterParser not working correctly with QueryString </li>
+<li>Issue 1848: VariantURLQuery throwing exceptions on active scan </li>
+<li>Issue 1874: Two Cookie line in the header when adding a cookie with an httpsender script and doing an active scan </li>
+<li>Issue 1875: Scanner temp history not cleaned on close </li>
+<li>Проблема 2090: Контекст: переименование пользователя, невозможно выбрать на панели принудительного пользователя </li>
+<li>Проблема 2110: SQL-инъекция пропускается </li>
+<li>Проблема 2112: неправильная политика при активном сканировании. </li>
+<li>Проблема 2115: Python API context.context ("MyContext") не работает </li>
+<li>Проблема 2119: описание контекста не импортировано. </li>
+<li>Проблема 2122: измените SpiderAPI, чтобы игнорировать пустые имена контекста при обработке действия сканирования. </li>
+<li>Проблема 2125: регистрировать исключение при открытии файла сеанса и переводить сообщение на международный уровень. </li>
+<li>Проблема 2126: исправление исключения NullPointerException при отсутствии сценария проверки подлинности контекста </li>
+<li>Проблема 2132: Ошибка подсчета отчетов Zap </li>
+<li>Проблема 2142: фаззер выдает исключения. </li>
+<li>Проблема 2144: Java.lang.NullPointerException в «AWT-EventQueue-0»  </li>
+<li>Проблема 2151: AJAX Spider не щелкает все элементы, указанные в параметрах </li>
+<li>Проблема 2153: в 2.4.3 не удалось проанализировать данные POST, содержащие скобки ([]).  </li>
+<li>Проблема 2193: Инициализировать вкладку технологии с выбранным контекстом в диалоговом окне активного сканирования </li>
+<li>Проблема 2197: установите новые версии надстроек после загрузки с помощью -addonupdate. </li>
+<li>Проблема 2199: Запретить сканирование Spider, когда ZAP находится в безопасном (или защищенном) режиме </li>
+<li>Проблема 2203: исправление предупреждений, связанных с поисковыми ошибками. </li>
+<li>Проблема 2208. Запретить активному сканеру сообщать о прогрессе выше 100%. </li>
+<li>Проблема 2226: ZAP должен более корректно обрабатывать ошибки файлов cookie HttpSessionsSite </li>
+<li>Проблема 2246: ошибка в представлении сеансов с токенами. </li>
+<li>Проблема 2259: исправление исключения NullPointerException в реализации VariantCookie </li>
+<li>Проблема 2281: параметры фильтра для определенного сайта </li>
+<li>Проблема 2282: Паук сразу охватывает весь контекст. </li>
+<li>Проблема 2292: Улучшение alertFingerPrint </li>
+<li>Проблема 2297: активация блокировщика AWT прервана - java.lang.InterruptedException  </li>
+<li>Проблема 2307. Добавьте недостающий необязательный параметр scanPolicyName в действия API ascan. </li>
+<li>Проблема 2312: уделите внимание диалоговому окну «Изменить сочетание клавиш». </li>
+<li>Проблема 2313: правильное преобразование (старых) исключенных прокси-доменов. </li>
+<li>Проблема 2314: невозможно добавить несколько полезных данных в фаззер (NullPointerException). </li>
+<li>Проблема 2323: исправление (безопасного) цикла запроса ZAP API. </li>
+<li>Проблема 2328: устранение проблемы при удалении именованного расширения. </li>
+<li>Проблема 2329: фильтруйте семена непосредственно перед запуском паука. </li>
+<li>Проблема 2331: настраиваемые контекстные панели не отображаются в существующих контекстах после установки надстройки </li>
+<li>Проблема 2336: исключение BadLocationException при использовании фаззера. </li>
+<li>Проблема 2357: несоответствия при смене макетов панелей </li>
+<li>Проблема 2363: синхронизация кнопок прерывания при смене режима. </li>
+<li>Проблема 2366: отображаются несоответствия в кнопках прерывания. </li>
+<li>Проблема 2373: Показать вкладку некорректно работает в полном макете для вкладок без информации </li>
+<li>Проблема 2374: невозможно изменить положение вкладки ответа без основной панели инструментов </li>
+<li>Проблема 2390: HeadlessException следует обрабатывать более изящно, а README нуждается в деталях Headless </li>
+<li>Проблема 2394: измените представление авторизации API, чтобы обернуть его объект. </li>
+<li>Проблема 2399: запросы на тайм-аут не отображаются в ZAP. </li>
+<li>Проблема 2421: несоответствие количества запросов активного сканера </li>
+<li>Проблема 2428: утечка памяти при создании / загрузке сеанса </li>
+<li>Проблема 2429: InterruptedExceptions при остановке паука с аутентификацией пользователя. </li>
+<li>Проблема 2435: очистка ресурсов задачи паука, когда они не используются. </li>
+<li>Проблема 2436: невозможно динамически удалить надстройку WebSockets. </li>
+<li>Проблема 2440: исключение при открытии диалогового окна активного сканирования. </li>
+<li>Проблема 2451: в контексте можно сохранить только один управляемый данными узел. </li>
+<li>Проблема 2463: Websocket не проксируется, если установлен исходящий прокси. </li>
+<li>Проблема 2469: всегда возвращать 100%, когда паук остановился. </li>
+<li>Проблема 2472: используйте регистр имени файла при загрузке политик из файла. </li>
+<li>Ошибка 2474: одновременное добавление нескольких URL-адресов контекста в / exclusions. </li>
+<li>Проблема 2475: правильная страница справки для параметров правил пассивного сканирования </li>
+<li>Проблема 2487: в теле HTTP используется неправильная кодировка. </li>
+<li>Проблема 2516: добавление типов задач аутентификации и паука к временным типам. </li>
 </ul>
 
-<h2>See also</h2>
+<h2>Смотрите также </h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Вступление </a></td><td>введение в ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Релизы </a></td><td>полный набор релизов</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Кредиты</a></td><td>люди и группы, которые сделали этот релиз возможным</td></tr>
 </table>
 </body>
 </html>
