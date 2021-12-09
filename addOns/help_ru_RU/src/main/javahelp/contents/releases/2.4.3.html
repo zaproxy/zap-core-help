@@ -3,72 +3,72 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-  Release 2.4.3
+  выпуск 2.4.3 
 </title>
 </head>
 <body>
-<h1>Release 2.4.3</h1>
+<h1>выпуск 2.4.3 </h1>
 
 <p>
-The following changes were made in this release:
+В этот выпуск внесены следующие изменения: 
 </p>
 
-<h2>Enhancements:</h2>
+<h2>Улучшения: </h2>
 <ul>
-<li>Issue 1576 : Define URL path elements as 'non structural'</li>
-<li>Issue 1711 : Feature request: Option to specify number of token to be generated.</li>
-<li>Issue 1768 : Update to use a more recent user-agent</li>
-<li>Issue 1894 : ZAP only scans "User-Agent", "Referer", and "Host" request headers</li>
-<li>Issue 1911 : Search AJAX spider requests</li>
-<li>Issue 1913 : Pass all params across to zap.sh - debian package</li>
-<li>Issue 1914 : Multiple add-on directories</li>
-<li>Issue 1920 : Report the host:port ZAP is listening on in daemon mode, or exit if it cant</li>
-<li>Issue 1927 : Enhancement: Break only for in-scope URLs.</li>
-<li>Issue 1944 : Chart responses per second in ascan progress</li>
-<li>Issue 1953 : Allow to spider a context through the ZAP API</li>
-<li>Issue 1962 : Install and update add-ons from the command line</li>
-<li>Issue 1975 : RC4-SHA SSL cipher suite not supported</li>
-<li>Issue 1980 : Add ZAP CLI to Docker images</li>
-<li>Issue 1985 : Bring up the Modify dialog if the user doubles on a row in a AbstractMultipleOptionsBaseTablePanel</li>
-<li>Issue 2009 : Add Online links to the FAQ and Newsletter pages</li>
-<li>Issue 2084 : Warn users if they are probably using out of date versions</li>
-<li>Issue 2086 : Report request counts per plugin</li>
-<li>Issue 2088 : Support an 'update all' button for installing all updated add-ons</li>
-<li>Issue 2094 : Support a '-addoninstallall' command line option</li>
-<li>Issue 2102 : Allow ajax spider options to be set via the API</li>
+<li>Проблема 1576: Определите элементы пути URL как «неструктурные». </li>
+<li>Проблема 1711: Запрос функции: возможность указать количество генерируемых токенов. </li>
+<li>Проблема 1768: обновление для использования более свежего агента пользователя. </li>
+<li>Проблема 1894: ZAP сканирует только заголовки запросов «User-Agent», «Referer» и «Host». </li>
+<li>Проблема 1911: поиск запросов паука AJAX </li>
+<li>Проблема 1913: передать все параметры в zap.sh - пакет debian </li>
+<li>Проблема 1914: несколько каталогов надстроек.</li>
+<li>Проблема 1920: сообщить хосту: порт ZAP прослушивает в режиме демона или выйти, если не может </li>
+<li>Проблема 1927: Улучшение: Прерывание только для URL-адресов в области видимости. </li>
+<li>Проблема 1944: диаграмма ответов в секунду при выполнении сканирования. </li>
+<li>Проблема 1953: разрешить сканирование контекста через ZAP API. </li>
+<li>Проблема 1962: установка и обновление надстроек из командной строки. </li>
+<li>Проблема 1975: комплект шифров RC4-SHA SSL не поддерживается </li>
+<li>Проблема 1980: добавление ZAP CLI в образы Docker </li>
+<li>Проблема 1985: Вызов диалогового окна Modify, если пользователь удваивает строку в AbstractMultipleOptionsBaseTablePanel </li>
+<li>Выпуск 2009: добавление интерактивных ссылок на страницы часто задаваемых вопросов и информационных бюллетеней. </li>
+<li>Проблема 2084: предупреждать пользователей, если они, вероятно, используют устаревшие версии. </li>
+<li>Проблема 2086: количество запросов отчетов на подключаемый модуль </li>
+<li>Проблема 2088: Поддержка кнопки «обновить все» для установки всех обновленных надстроек. </li>
+<li>Проблема 2094: Поддержка параметра командной строки -addoninstallall </li>
+<li>Проблема 2102: разрешить установку параметров паука ajax через API </li>
 </ul>
 
-<h2>Bug fixes:</h2>
+<h2>Исправление ошибок: </h2>
 <ul>
-<li>Issue 1070 : Breaking on custom URL with query parameters does not work.</li>
-<li>Issue 1555 : SAXParseException while generating the report</li>
-<li>Issue 1617 : ZAP 2.4.0 throws HeadlessExceptions when running in daemon mode on headless machine</li>
-<li>Issue 1877 : fix path to .ZAP_JVM.properties in zap.sh</li>
-<li>Issue 1893 : Regression: Can't disable and enable specific scanners through the API</li>
-<li>Issue 1910 : API does not return content in the expected encoding, on errors</li>
-<li>Issue 1917 : Request and Response tabs dont scale the text</li>
-<li>Issue 1939 : Scripts - Save Button Enablement Issue</li>
-<li>Issue 1949 : Script with missing type prevents scripts and templates from being loaded</li>
-<li>Issue 1950 : Connection closed without response, with an Authentication script with errors</li>
-<li>Issue 1951 : Exception when trying to add users before loading an authentication script</li>
-<li>Issue 1960 : Active Scan dialogue might use outdated scan policy</li>
-<li>Issue 1969 : Issues with installation of scanners</li>
-<li>Issue 1970 : Installed add-on dependencies might not be taken into account when installing add-ons</li>
-<li>Issue 1973 : Returned HAR/list does not contain correct redirection messages</li>
-<li>Issue 1981 : Spider might not report the correct number of URIs found</li>
-<li>Issue 2005 : Active scanning incorrectly performed on sibling nodes</li>
-<li>Issue 2044 : Issues in Hirschberg's algorithm implementation</li>
-<li>Issue 2045 : Dont copy old configs if -dir option used</li>
-<li>Issue 2052 : Authentication changes done through the API not saved to session</li>
+<li>Проблема 1070: нарушение пользовательского URL-адреса с параметрами запроса не работает. </li>
+<li>Проблема 1555: исключение SAXParseException при создании отчета. </li>
+<li>Проблема 1617: ZAP 2.4.0 выдает исключения HeadlessExceptions при работе в режиме демона на автономном компьютере </li>
+<li>Проблема 1877: исправлен путь к .ZAP_JVM.properties в zap.sh </li>
+<li>Проблема 1893: регресс: невозможно отключить и включить определенные сканеры через API </li>
+<li>Проблема 1910: API не возвращает содержимое в ожидаемой кодировке при ошибках. </li>
+<li>Проблема 1917: на вкладках "Запрос" и "Ответ" текст не масштабируется. </li>
+<li>Проблема 1939: Сценарии - проблема включения кнопки сохранения </li>
+<li>Проблема 1949: сценарий с отсутствующим типом предотвращает загрузку сценариев и шаблонов. </li>
+<li>Проблема 1950: соединение закрыто без ответа, сценарий аутентификации с ошибками </li>
+<li>Проблема 1951: исключение при попытке добавить пользователей перед загрузкой сценария аутентификации </li>
+<li>Проблема 1960: в диалоговом окне активного сканирования может использоваться устаревшая политика сканирования. </li>
+<li>Проблема 1969: Проблемы с установкой сканеров. </li>
+<li>Проблема 1970: зависимости установленных надстроек могли не учитываться при установке надстроек. </li>
+<li>Проблема 1973: возвращенный HAR / список не содержит правильных сообщений перенаправления </li>
+<li>Проблема 1981: Паук мог не сообщать правильное количество найденных URI </li>
+<li>Проблема 2005: активное сканирование некорректно выполнялось на дочерних узлах </li>
+<li>Проблема 2044: Проблемы в реализации алгоритма Хиршберга </li>
+<li>Проблема 2045: не копируйте старые конфигурации, если использовалась опция -dir </li>
+<li>Проблема 2052: изменения аутентификации, выполненные через API, не сохраняются в сеансе. </li>
 </ul>
 
 
 
-<h2>See also</h2>
+<h2>Смотрите также</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Вступление </a></td><td>введение в ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Релизы </a></td><td>полный набор релизов</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Кредиты</a></td><td>люди и группы, которые сделали этот релиз возможным</td></tr>
 </table>
 </body>
 </html>
