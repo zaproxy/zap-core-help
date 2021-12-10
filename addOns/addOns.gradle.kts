@@ -95,7 +95,6 @@ subprojects {
     }
 
     dependencies {
-        "zap"("org.zaproxy:zap:2.11.0-20210929.165234-4")
         "implementation"(project(":commonFiles"))
     }
 
