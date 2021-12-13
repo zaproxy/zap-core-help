@@ -7,110 +7,110 @@
 </title>
 </head>
 <body>
-<h1>Release 2.7.0</h1>
+<h1>выпуск 2.7.0 </h1>
 
 Это исправление ошибок и усовершенствование выпуска, который требует минимум Java 8.<br><br>
 Некоторые из наиболее важных усовершенствований включают:
 <ul>
 <li>Запуск браузера включен по умолчанию - это позволяет запускать браузеры из ZAP, которые предварительно настроены на прокси 
 через zap и игнорировать предупреждения о сертификате из-за зап корневого сертификата.</li>
-<li>Allow ZAP to listen on multiple addresses/ports</li>
+<li>Разрешить ZAP прослушивать несколько адресов / портов </li>
 <li>Индикация Имени Сервера</li>
-<li>Updated NTLM engine implementation - this fixes the cases where the domain is being validated and improves interoperability with other (server) NTLM implementations</li>
-<li>Lots of new API endpoints - see below for details</li>
+<li>Обновленная реализация механизма NTLM - это устраняет случаи, когда домен проверяется, и улучшает взаимодействие с другими (серверными) реализациями NTLM. </li>
+<li>Множество новых конечных точек API - подробности см. Ниже </li>
 </ul>
-Note that if you do have any problems with this release then there is also a new 'Help/Support Info...' menu item 
-that provides essential information about your ZAP installation which you should include with any issues you raise.
+Обратите внимание: если у вас есть какие-либо проблемы с этим выпуском, есть также новый пункт меню «Справка / информация о поддержке ...».
+который предоставляет важную информацию об установке ZAP, которую вы должны включать в любые возникающие у вас проблемы. 
 
-<h2>Enhancements:</h2>
+<h2>Улучшения: </h2>
 <ul>
-<li>Issue 1015 : Support Server Name Indication</li>
-<li>Issue 1313 : Spider - Allow to configure the size limit of parseable responses</li>
-<li>Issue 1604 : Import policy file via API</li>
-<li>Issue 1620 : Add endpoint to get number of alerts grouped by risk level</li>
-<li>Issue 1681 : Change 'Active Scan' to show the last n requests instead of the first ones</li>
-<li>Issue 2411 : Warn if dynamic SSL root CA certificate is expired</li>
-<li>Issue 2615 : Filtering ZAP Reports to Show High Risk Items</li>
-<li>Issue 3040 : Export param tab contents</li>
-<li>Issue 3101 : Allow add-ons to use Semantic Versioning</li>
-<li>Issue 3156 : Use G1 as default garbage collector</li>
-<li>Issue 3253 : Export URLs Per Context</li>
-<li>Issue 3365 : Enhancement: Additional Global Exclude default patterns</li>
-<li>Issue 3367 : Expose ZAP's home dir path through the ZAP API</li>
-<li>Issue 3374 : Adjust to more user favorable column widths</li>
-<li>Issue 3381 : i18n Core Extension Names</li>
-<li>Issue 3387 : Allow esc to close AbstractFormDialog</li>
-<li>Issue 3392 : Show all messages sent by the Spider</li>
-<li>Issue 3395 : Add option to spider anonymously with a session</li>
-<li>Issue 3398 : Increase limit of global script variables' value</li>
-<li>Issue 3404 : Add new Default CSRF Token for OWASP CSRF Guard</li>
-<li>Issue 3408 : Improve error handling when resetting the options</li>
-<li>Issue 3443 : Expose Alerts options through the ZAP API</li>
-<li>Issue 3446 : Enhancement: Add ability to export a Site Map via Context Menu</li>
-<li>Issue 3457 : Allow to filter core view "urls" by base URL</li>
-<li>Issue 3460 : Enhancement: Provide help finding the Log directory in the UI</li>
-<li>Issue 3461 : Enhancement: Browse API Doesn't work when browser isn't using ZAP as proxy</li>
-<li>Issue 3476 : Allow passive rules to choose the type of msgs</li>
-<li>Issue 3481 : Export Tables via UI</li>
-<li>Issue 3498 : Minor Enhancement: Support Same Columns in Search Results as History Tab</li>
-<li>Issue 3500 : Allow to manage messages' tags in multiple tabs</li>
-<li>Issue 3508 : Use newer ECMAScript engine if available</li>
-<li>Issue 3514 : Allow to obtain multiple messages by ID</li>
-<li>Issue 3521 : Enhancement Request: Add Filter To Passive Scan Rules Options Panel</li>
-<li>Issue 3527 : Update baseline script to support python 3</li>
-<li>Issue 3529 : Allow to add tags with Passive Rules</li>
-<li>Issue 3533 : Additional Table Export Buttons</li>
-<li>Issue 3539 : Enhancement: Collect messages to scan before active scanning</li>
-<li>Issue 3552 : Expose message's tags through the ZAP API</li>
-<li>Issue 3559 : ZAP API option to output report in JSON format</li>
-<li>Issue 3574 : Show the add-on name in Extensions panel</li>
-<li>Issue 3587 : Allow to use system's locale for formatting</li>
-<li>Issue 3595 : Print args and error msg when failed to parse args</li>
-<li>Issue 3599 : Always attack Data Driven Nodes </li>
-<li>Issue 3619 : Show plugin as OFF, in policy panels, if disabled</li>
-<li>Issue 3626 : Allow to delete messages with keyboard shortcut</li>
-<li>Issue 3676 : Enhancement: Delete single Alert using the api</li>
-<li>Issue 3681 : Use number spinner for connection timeout</li>
-<li>Issue 3686 : Allow to select alert's CWE/WASC IDs and Source</li>
-<li>Issue 3688 : Show scanner's ID/name in Alert tab</li>
-<li>Issue 3691 : Modernized and refined HTML reports</li>
-<li>Issue 3700 : Ensure panel with validation errors is visible</li>
-<li>Issue 3714 : Spider - report # of new endpoints discovered</li>
-<li>Issue 3727 : Sites Tree Alpha Sort should ignore HTTP Method</li>
-<li>Issue 3733 : Ascan API - Return alert count for each scanner</li>
-<li>Issue 3739 : Allow to skip pending scanners</li>
-<li>Issue 3765 : Show alert count in Scan Progress dialogue</li>
-<li>Issue 3769 : Add Check for Updates toolbar button</li>
-<li>Issue 3770 : Clear dockerfiles</li>
-<li>Issue 3782 : Add msg and alert count to active scans API view</li>
-<li>Issue 3787 : Added passive scan timeout</li>
-<li>Issue 3793 : Allow to filter Keyboard options panel</li>
-<li>Issue 3808 : added bare docker image file</li>
-<li>Issue 3810 : Add JSON output support to zap-full-scan.py</li>
-<li>Issue 3818 : Change right-click "Resend..." to "Send to Manual Request Editor"</li>
-<li>Issue 3836 : Allow IPv6 loopback address to access the API by default</li>
-<li>Issue 3837 : Add anoncsrf as anticsrf token name</li>
-<li>Issue 3851 : Spider New Scan UI Consistency</li>
-<li>Issue 3871 : Default to checking for updates on start</li>
-<li>Issue 3878 : Support persistent connections in the API</li>
-<li>Issue 3910 : Allow to skip scanners through the API</li>
-<li>Issue 3918 : improved docker file</li>
-<li>Issue 3922 : Refactor target access in docker scripts</li>
-<li>Issue 3931 : Minor Enhancement to Very large response body message</li>
-<li>Issue 3977 : Include spider messages when comparing sessions</li>
-<li>Issue 3983 : Allow ZAP to listen on multiple addresses/ports</li>
-<li>Issue 3992 : Allow to enable code folding in body text views</li>
-<li>Issue 3993 : Added checkbox secure to callback option dialog. </li>
-<li>Issue 4001 : Allow to delete a Context with keyboard shortcut</li>
-<li>Issue 4049 : Allow to delete alerts with keyboard shortcut</li>
-<li>Issue 4053 : AlertViewPanel line wrapping</li>
-<li>Issue 4055 : New splash screen</li>
-<li>Issue 4061 : Update NTLM engine implementation</li>
-<li>Issue 4063 : Validate that -cmd and -daemon are not both set</li>
-<li>Issue 4066 : Improve error message in script API</li>
+<li>Проблема 1015: Указание имени сервера поддержки </li>
+<li>Проблема 1313: Паук - позволяет настроить ограничение размера анализируемых ответов </li>
+<li>Ошибка 1604: импорт файла политики через API. </li>
+<li>Проблема 1620: добавьте конечную точку, чтобы получить количество предупреждений, сгруппированных по уровню риска. </li>
+<li>Проблема 1681: измените «Активное сканирование», чтобы отображались последние n запросов вместо первых. </li>
+<li>Проблема 2411: предупреждать об истечении срока действия сертификата корневого центра сертификации динамического SSL </li>
+<li>Проблема 2615: Фильтрация отчетов ZAP для отображения элементов с высоким риском </li>
+<li>Проблема 3040: содержимое вкладки параметров экспорта </li>
+<li>Проблема 3101: Разрешить надстройкам использовать семантическое управление версиями </li>
+<li>Проблема 3156: использование G1 в качестве сборщика мусора по умолчанию </li>
+<li>Проблема 3253: экспорт URL-адресов для каждого контекста </li>
+<li>Проблема 3365: Улучшение: Дополнительные шаблоны глобального исключения по умолчанию </li>
+<li>Проблема 3367: Предоставление пути к домашнему каталогу ZAP через ZAP API. </li>
+<li>Проблема 3374: настройка ширины столбцов, удобная для пользователя. </li>
+<li>Проблема 3381: Имена расширений ядра i18n </li>
+<li>Проблема 3387: разрешить esc закрывать AbstractFormDialog </li>
+<li>Проблема 3392: Показать все сообщения, отправленные пауком. </li>
+<li>Проблема 3395: Добавить возможность паука анонимно с сеансом. </li>
+<li>Проблема 3398: увеличение предела значения глобальных переменных скрипта. </li>
+<li>Ошибка 3404: добавление нового токена CSRF по умолчанию для OWASP CSRF Guard. </li>
+<li>Проблема 3408: улучшена обработка ошибок при сбросе параметров. </li>
+<li>Проблема 3443: отображение параметров предупреждений через ZAP API. </li>
+<li>Проблема 3446: Улучшение: добавлена возможность экспорта карты сайта через контекстное меню. </li>
+<li>Проблема 3457: разрешена фильтрация "URL-адресов" основного представления по базовому URL-адресу. </li>
+<li>Проблема 3460: Улучшение: помощь в поиске каталога журналов в пользовательском интерфейсе. </li>
+<li>Проблема 3461: Улучшение: API просмотра не работает, если браузер не использует ZAP в качестве прокси-сервера. </li>
+<li>Проблема 3476: разрешить пассивным правилам выбирать тип сообщений. </li>
+<li>Проблема 3481: экспорт таблиц через пользовательский интерфейс. </li>
+<li>Проблема 3498: Незначительное улучшение: поддержка тех же столбцов в результатах поиска, что и на вкладке истории </li>
+<li>Проблема 3500: разрешено управлять тегами сообщений на нескольких вкладках. </li>
+<li>Проблема 3508. Используйте более новый движок ECMAScript, если он доступен. </li>
+<li>Проблема 3514: Разрешить получение нескольких сообщений по идентификатору. </li>
+<li>Проблема 3521: Запрос на расширение: добавление фильтра на панель параметров правил пассивного сканирования </li>
+<li>Проблема 3527: обновление базового сценария для поддержки Python 3 </li>
+<li>Проблема 3529: Разрешить добавление тегов с помощью пассивных правил. </li>
+<li>Проблема 3533: Дополнительные кнопки экспорта таблицы </li>
+<li>Проблема 3539: Улучшение: сбор сообщений для сканирования перед активным сканированием. </li>
+<li>Проблема 3552: отображение тегов сообщений через ZAP API. </li>
+<li>Проблема 3559: опция ZAP API для вывода отчета в формате JSON. </li>
+<li>Проблема 3574: отображение имени надстройки на панели расширений. </li>
+<li>Проблема 3587: разрешено использовать языковой стандарт системы для форматирования. </li>
+<li>Проблема 3595: печать аргументов и сообщение об ошибке при неудачном анализе аргументов </li>
+<li>Проблема 3599: всегда атаковать узлы, управляемые данными  </li>
+<li>Проблема 3619: отображать плагин как ВЫКЛЮЧЕННЫЙ на панелях политик, если он отключен. </li>
+<li>Проблема 3626: Разрешить удаление сообщений с помощью сочетания клавиш. </li>
+<li>Проблема 3676: Улучшение: удаление одного предупреждения с помощью API </li>
+<li>Проблема 3681: использование счетчика чисел для тайм-аута подключения. </li>
+<li>Проблема 3686: Разрешить выбор идентификаторов CWE / WASC для предупреждений и источника </li>
+<li>Проблема 3688: отображение идентификатора / имени сканера на вкладке предупреждений </li>
+<li>Проблема 3691: Модернизированные и уточненные отчеты в формате HTML. </li>
+<li>Ошибка 3700: убедитесь, что панель с ошибками проверки видна. </li>
+<li>Проблема 3714: Паук - отчет о количестве обнаруженных новых конечных точек </li>
+<li>Проблема 3727: при альфа-сортировке дерева сайтов следует игнорировать метод HTTP </li>
+<li>Проблема 3733: Ascan API - Возвращает счетчик предупреждений для каждого сканера. </li>
+<li>Проблема 3739: разрешить пропускать сканеры, ожидающие проверки. </li>
+<li>Ошибка 3765: отображение количества предупреждений в диалоговом окне хода сканирования. </li>
+<li>Проблема 3769: Добавить кнопку на панели инструментов "Проверка обновлений" </li>
+<li>Проблема 3770: очистить файлы докеров. </li>
+<li>Ошибка 3782: добавление сообщения и счетчика предупреждений в представление API активного сканирования </li>
+<li>Проблема 3787: добавлен тайм-аут пассивного сканирования. </li>
+<li>Проблема 3793: разрешить фильтрацию панели параметров клавиатуры </li>
+<li>Проблема 3808: добавлен пустой файл образа докера. </li>
+<li>Проблема 3810: добавление поддержки вывода JSON в zap-full-scan.py </li>
+<li>Проблема 3818: Измените щелчок правой кнопкой мыши «Отправить повторно ...» на «Отправить в редактор запросов вручную» </li>
+<li>Проблема 3836: разрешить IPv6-адресу обратной связи доступ к API по умолчанию </li>
+<li>Проблема 3837: добавьте anoncsrf в качестве имени токена anticsrf. </li>
+<li>Проблема 3851: согласованность пользовательского интерфейса нового сканирования Spider </li>
+<li>Проблема 3871: по умолчанию проверка обновлений при запуске </li>
+<li>Проблема 3878: поддержка постоянных подключений в API. </li>
+<li>Проблема 3910: разрешено пропускать сканеры через API. </li>
+<li>Проблема 3918: улучшенный файл докеров </li>
+<li>Проблема 3922: рефакторинг доступа к цели в сценариях докеров </li>
+<li>Проблема 3931: Незначительное улучшение для сообщения очень большого тела ответа </li>
+<li>Проблема 3977: включение сообщений пауков при сравнении сеансов. </li>
+<li>Проблема 3983: разрешить ZAP прослушивать несколько адресов / портов. </li>
+<li>Проблема 3992: разрешить включение сворачивания кода в представлениях основного текста </li>
+<li>Проблема 3993: добавлен флажок "Безопасность" в диалоговом окне параметров обратного вызова.  </li>
+<li>Проблема 4001: Разрешить удаление контекста с помощью сочетания клавиш </li>
+<li>Проблема 4049: Разрешить удаление предупреждений с помощью сочетания клавиш. </li>
+<li>Проблема 4053: перенос строки AlertViewPanel </li>
+<li>Проблема 4055: новый экран-заставка. </li>
+<li>Проблема 4061: обновление реализации механизма NTLM. </li>
+<li>Проблема 4063: убедитесь, что -cmd и -daemon не установлены одновременно. </li>
+<li>Проблема 4066: улучшенное сообщение об ошибке в API скриптов. </li>
 </ul>
 
-<h2>Bug fixes:</h2>
+<h2>Исправление ошибок: </h2>
 <ul>
 <li>Issue 765 : Ctrl-F key doesnt work on Resend / Manual Request Editor dialogs</li>
 <li>Issue 1222 : False positive: XSS scanning</li>
