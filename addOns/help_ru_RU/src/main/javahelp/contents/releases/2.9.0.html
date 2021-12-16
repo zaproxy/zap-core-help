@@ -9,72 +9,72 @@
 <BODY>
 <H1>Release 2.9.0</H1>
 
-This is a bug fix and enhancement release, which requires a minimum of Java 8. 
-Note that a minimum of Java 11 is recommended, especially for high DPI displays.
-<br><br>
-These release notes do not include all of the changes included in add-ons updated since 2.8.0.
-<br><br>
-Some of the more significant enhancements include:
+Это выпуск с исправлением ошибок и улучшением, для которого требуется как минимум Java 8.  
+Обратите внимание, что рекомендуется как минимум Java 11, особенно для дисплеев с высоким разрешением. 
+<br> <br>
+Эти примечания к выпуску не включают все изменения, включенные в надстройки, обновленные с версии 2.8.0. 
+<br> <br>
+Некоторые из наиболее значительных улучшений включают: 
 
-<H2>Session Management Scripts</H2>
-It's now possible to define scripts which handle non standard or more complex session management.<br>
-Session Management scripts have full access to the authentication request and response and can define custom
-mandatory and optional parameters.
-An example session management script for OWASP Juice shop is provided.
+<H2>Сценарии управления сеансом </H2>
+Теперь можно определять сценарии, которые обрабатывают нестандартное или более сложное управление сеансами. <br>
+Сценарии управления сеансом имеют полный доступ к запросу и ответу на аутентификацию и могут определять настраиваемые параметры.
+обязательные и необязательные параметры. 
+Предоставляется пример сценария управления сеансом для магазина OWASP Juice. 
 
-<H2>Active Scan Filter</H2>
-It's now possible to filter requests in Active Scan. Below are the supported criteria's:
+<H2>Фильтр активного сканирования </H2>
+Теперь можно фильтровать запросы в Active Scan.  Ниже приведены поддерживаемые критерии: 
 <ul>
-	<li>HTTP method</li>
-	<li>Status code</li>
-	<li>Tags</li>
-	<li>URL pattern</li>	
+	<li>HTTP метод </li>
+	<li>Код состояния </li>
+	<li>Теги</li>
+	<li>Шаблон URL </li>	
 </ul>
 
-<H2>Custom Global/Script Variables</H2>
-It's now possible for scripts to share custom global/script variables, which can be of any type not
-just strings, for example, lists, maps, GUI models.<br/>
-In JavaScript they are accessed/set as follows:
+<H2>Настраиваемые глобальные переменные / переменные сценария </H2>
+Теперь скрипты могут совместно использовать настраиваемые глобальные переменные / переменные скрипта, которые могут быть любого типа, кроме
+просто строки, например списки, карты, модели GUI. <0 />
+В JavaScript они доступны / устанавливаются следующим образом: 
 <blockquote><pre><code>
-var ScriptVars = Java.type("org.zaproxy.zap.extension.script.ScriptVars")
+var ScriptVars = Java.type ("org.zaproxy.zap.extension.script.ScriptVars")
 
-ScriptVars.setScriptCustomVar(this.context, "var.name", {x: 1, y: 3})
-print(ScriptVars.getScriptCustomVar(this.context, "var.name").y) // Prints 3
+ScriptVars.setScriptCustomVar (this.context, "var.name", {x: 1, y: 3})
+print (ScriptVars.getScriptCustomVar (this.context, "var.name"). y) // Выводит 3
 
-ScriptVars.setGlobalCustomVar("var.name", ["A", "B", "C", "D"])
-print(ScriptVars.getGlobalCustomVar("var.name")[2]) // Prints C
+ScriptVars.setGlobalCustomVar ("var.name", ["A", "B", "C", "D"])
+print (ScriptVars.getGlobalCustomVar ("var.name") [2]) // Выводит C 
 </code></pre></blockquote>
 
-<H2>Scan Rule Promotions</H2>
+<H2>Сканирование правил продвижения </H2>
 
-The following scan rules have been promoted:
+Были продвинуты следующие правила сканирования: 
 
-<h3>Passive Scan Rules - Release</h3>
+<h3>Правила пассивного сканирования - Выпуск </h3>
 <ul>
-<li>Cookie Without SameSite Attribute</li>
-<li>Cross Domain Misconfiguration</li>
-<li>Information Disclosure: In URL</li>
-<li>Information Disclosure: Referrer</li>
-<li>Information Disclosure: Suspicious Comments</li>
-<li>Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s)</li>
-<li>Timestamp Disclosure</li>
-<li>Username Hash Found</li>
-<li>X-AspNet-Version Response Header Scanner</li>
-<li>X-Debug-Token Information </li>
+<li>Cookie без атрибута SameSite </li>
+<li>Междоменная неправильная конфигурация </li>
+<li>Раскрытие информации: в URL </li>
+<li>Раскрытие информации: реферер </li>
+<li>Раскрытие информации: подозрительные комментарии </li>
+<li>Сервер утекает информацию через поля заголовка HTTP-ответа "X-Powered-By" </li>
+<li>Раскрытие отметки времени </li>
+<li>Обнаружен хеш имени пользователя </li>
+<li>Сканер заголовков ответов X-AspNet-Version </li>
+<li>Информация о X-Debug-Token  </li>
 </ul>
 
-<H2>Filters Classes Removal</H2>
-The classes/code for Filters functionality, deprecated since ZAP 2.4.0, has been removed. Add-ons that still use that will stop working.
+<H2>Удаление классов фильтров </H2>
+Классы / код для функций фильтров, устаревшие с ZAP 2.4.0, были удалены.  Дополнения, которые все еще используются, перестанут работать. 
 
-<H2>Changes in Bundled Libraries</H2>
-The following libraries were removed:
+<H2>Изменения в связанных библиотеках </H2>
+Были удалены следующие библиотеки: 
 <ul>
   <li>JDOM</li>
   <li>Diff Utils</li>
 </ul>
-no longer in use by core, add-ons should bundle the library, if needed.
+больше не используется ядром, при необходимости надстройки должны объединять библиотеку. 
 
-The following libraries were updated:
+Обновлены следующие библиотеки: 
 <ul>
   <li>Bouncy Castle, 1.61 → 1.64</li>
   <li>Commons BeanUtils, 1.9.3 → 1.9.4</li>
@@ -88,106 +88,106 @@ The following libraries were updated:
 </ul>
 
 
-<H2>Enhancements</H2>
+<H2>Улучшения </H2>
 <ul>
-<li>Issue 2016 : Choose a unique port in the GUI if theres a clash</li>
-<li>Issue 2619 : Allow add-ons to declare/bundle its dependencies</li>
-<li>Issue 3358 : Enhancement: Options Panel Filter</li>
-<li>Issue 3402 : Share custom variables between scripts</li>
-<li>Issue 3491 : Feature-Request: Select Multiple Contexts</li>
-<li>Issue 4963 : Allow to specify the URI of the login page</li>
-<li>Issue 5278 : Ability to filter what requests the Active Scans run against</li>
-<li>Issue 5303 : API calls for adding and changing alerts</li>
-<li>Issue 5436 : Add new languages to context tech</li>
-<li>Issue 5464 : Deprecate Context.getIndex and implement Context.getId</li>
-<li>Issue 5466 : Add utility methods to Alert class</li>
-<li>Issue 5550 : Load additional local proxies with defaults</li>
-<li>Issue 5563 : Include Import/Online menus in Options > Keyboard</li>
-<li>Issue 5598 : Revise site certificate validity period to 825d</li>
-<li>Issue 5614 : Manual Request Editor Icon</li>
-<li>Issue 5630 : Support session management scripts</li>
-<li>Issue 5656 : Add Base64url to Encoder/Decoder Tool</li>
-<li>Issue 5667 : Improve permissions and space handling when saving/exporting</li>
-<li>Issue 5671 : Check for updates in daemon mode</li>
-<li>Issue 5672 : Do not prompt to accept the license on first start</li>
-<li>Issue 5680 : Update dependencies</li>
-<li>Issue 5681 : Remove unused dependencies</li>
-<li>Issue 5691 : Expose Context details to passive scan rules</li>
-<li>Issue 5696 : Expose Context techset directly to passive scan rules</li>
-<li>Issue 5723 : AntiCSRF Tokens Add New Defaults</li>
-<li>Issue 5756 : HttpHeader provide List variant for getHeaders(String)</li>
-<li>Issue 5774 : Allow to enable/disable all passive tags through the API</li>
-<li>Issue 5779 : MacOS DMG - switch back to HFS+</li>
-<li>Issue 5782 : Update default user agent</li>
-<li>Issue 5785 : Add tooltip listing all proxies to the footer Primary Proxy label</li>
-<li>Issue 5795 : Handle quoted URL in meta refresh</li>
+<li>Проблема 2016: Выберите уникальный порт в графическом интерфейсе, если есть конфликт </li>
+<li>Проблема 2619: Разрешить надстройкам объявлять / связывать свои зависимости </li>
+<li>Проблема 3358: Улучшение: Фильтр панели параметров </li>
+<li>Проблема 3402: совместное использование пользовательских переменных между скриптами. </li>
+<li>Проблема 3491: Запрос функции: выбор нескольких контекстов </li>
+<li>Проблема 4963: разрешено указывать URI страницы входа. </li>
+<li>Проблема 5278: возможность фильтровать запросы, по которым выполняется активное сканирование. </li>
+<li>Проблема 5303: вызовы API для добавления и изменения предупреждений. </li>
+<li>Проблема 5436: добавление новых языков в контекстную технологию. </li>
+<li>Проблема 5464: исключить Context.getIndex и реализовать Context.getId </li>
+<li>Проблема 5466: добавление служебных методов в класс предупреждений. </li>
+<li>Проблема 5550: загрузка дополнительных локальных прокси-серверов со значениями по умолчанию. </li>
+<li>Проблема 5563: включить меню импорта / онлайн в Параметры> Клавиатура </li>
+<li>Проблема 5598: увеличьте срок действия сертификата сайта до 825 дней. </li>
+<li>Ошибка 5614: значок редактора ручного запроса </li>
+<li>Проблема 5630: поддержка сценариев управления сеансом. </li>
+<li>Проблема 5656: добавление Base64url в инструмент кодирования / декодирования </li>
+<li>Проблема 5667: Улучшение разрешений и обработки пространства при сохранении / экспорте. </li>
+<li>Проблема 5671: проверка обновлений в режиме демона. </li>
+<li>Ошибка 5672: не предлагать принять лицензию при первом запуске. </li>
+<li>Проблема 5680: Обновить зависимости. </li>
+<li>Проблема 5681: удаление неиспользуемых зависимостей. </li>
+<li>Проблема 5691: предоставление сведений о контексте для правил пассивного сканирования. </li>
+<li>Проблема 5696: Предоставление доступа технабору контекста напрямую к правилам пассивного сканирования </li>
+<li>Проблема 5723: токены AntiCSRF добавляют новые значения по умолчанию </li>
+<li>Проблема 5756: HttpHeader предоставляет вариант списка для getHeaders (String) </li>
+<li>Ошибка 5774: разрешено включать / отключать все пассивные теги через API. </li>
+<li>Ошибка 5779: MacOS DMG - вернуться к HFS + </li>
+<li>Проблема 5782: обновление пользовательского агента по умолчанию. </li>
+<li>Ошибка 5785: добавить всплывающую подсказку со списком всех прокси в нижний колонтитул основного прокси-сервера. </li>
+<li>Проблема 5795: обработка цитируемого URL-адреса при мета-обновлении </li>
 </ul>
 
-<H2>Bug fixes</H2>
+<H2>Исправление ошибок </H2>
 <ul>
-<li>Issue 1164 : Manual "Resend" sets cookies on response</li>
-<li>Issue 4003 : Issues when using 'low memory' mode.</li>
-<li>Issue 5427 : Update HTTP Protocol Version in Manual Request Editor</li>
-<li>Issue 5449 : API not responding  - Internal Error</li>
-<li>Issue 5452 : Do not remove resource bundle of other extensions</li>
-<li>Issue 5486 : Fix counting error in Statistics</li>
-<li>Issue 5487 : Add saved scripts of registered script type</li>
-<li>Issue 5490 : Anti-CSRF tokens not encoded in authentication requests</li>
-<li>Issue 5491 : Auth request without request-target from auth script causes exceptions</li>
-<li>Issue 5492 : Improve error handling when creating scan policies</li>
-<li>Issue 5518 : ZAP might not use outgoing proxy authentication credentials</li>
-<li>Issue 5585 : ZAP 2.8.1 hanging on kali</li>
-<li>Issue 5613 : Cope with missing token in auth POST data</li>
-<li>Issue 5619 : The -configfile option can fail with arrays</li>
-<li>Issue 5622 : Consistent SessionTracking Button Sync</li>
-<li>Issue 5624 : Alert parameter might not be properly loaded</li>
-<li>Issue 5636 : script.js never served on localhost </li>
-<li>Issue 5704 : Wait for add-ons to be installed</li>
-<li>Issue 5743 : Find + Cancel buttons are neither centered nor flush right</li>
-<li>Issue 5744 : Improve labels of Search menu items</li>
-<li>Issue 5780 : Don't display messages when deleting them</li>
-<li>Issue 5783 : Disable JAR caching by default</li>
-<li>Issue 5794 : Correct MailTo pattern for RegexAutoTagScanner</li>
-<li>Issue 5803 : Do not require the user password through the API</li>
+<li>Проблема 1164: ручная повторная отправка устанавливает файлы cookie при ответе. </li>
+<li>Проблема 4003: проблемы при использовании режима «мало памяти». </li>
+<li>Проблема 5427: обновление версии протокола HTTP в редакторе запросов вручную </li>
+<li>Проблема 5449: API не отвечает - внутренняя ошибка </li>
+<li>Проблема 5452: не удаляйте пакет ресурсов других расширений. </li>
+<li>Проблема 5486: исправление ошибки подсчета в статистике. </li>
+<li>Ошибка 5487: добавление сохраненных сценариев зарегистрированного типа сценария. </li>
+<li>Проблема 5490: токены Anti-CSRF не закодированы в запросах аутентификации. </li>
+<li>Проблема 5491: запрос аутентификации без цели запроса из сценария аутентификации вызывает исключения. </li>
+<li>Проблема 5492: улучшена обработка ошибок при создании политик сканирования. </li>
+<li>Проблема 5518: ZAP может не использовать учетные данные для аутентификации исходящего прокси-сервера </li>
+<li>Проблема 5585: ZAP 2.8.1 зависает на kali </li>
+<li>Проблема 5613: устранение неполадок с отсутствующим токеном в данных аутентификации POST </li>
+<li>Проблема 5619: параметр -configfile может не работать с массивами </li>
+<li>Проблема 5622: согласованная синхронизация кнопки отслеживания сеансов </li>
+<li>Проблема 5624: параметр предупреждения может быть загружен неправильно </li>
+<li>Проблема 5636: script.js никогда не обслуживалась на локальном хосте.  </li>
+<li>Проблема 5704: дождитесь установки надстроек. </li>
+<li>Проблема 5743: кнопки "Найти" + "Отмена" не расположены ни по центру, ни по правому краю. </li>
+<li>Проблема 5744: улучшение подписей элементов меню поиска. </li>
+<li>Проблема 5780: не отображать сообщения при их удалении. </li>
+<li>Проблема 5783: отключение кэширования JAR по умолчанию </li>
+<li>Проблема 5794: правильный шаблон MailTo для RegexAutoTagScanner </li>
+<li>Проблема 5803. Не запрашивать пароль пользователя через API. </li>
 </ul>
 
-<H2>ZAP API New Endpoints:</H2>
+<H2>Новые конечные точки ZAP API: </H2>
 
-<H3>VIEW script / globalCustomVar</H3>
-Gets the value (string representation) of a global custom variable. Returns an API error (DOES_NOT_EXIST) if no value was previously set.
+<H3>ПРОСМОТР скрипта / globalCustomVar </H3>
+Получает значение (строковое представление) глобальной пользовательской переменной.  Возвращает ошибку API (de_not_exist), если значение равно не было установлено ранее. 
 
-<H3>VIEW script / globalCustomVars</H3>
-Gets all the global custom variables (key/value pairs, the value is the string representation).
+<H3>Просмотр скрипта / GlobalCustomvars </H3>
+Получает все глобальные пользовательские переменные (пары ключа / значения, значение - это строковое представление). 
 
-<H3>VIEW script / scriptCustomVar</H3>
-Gets the value (string representation) of a custom variable. Returns an API error (DOES_NOT_EXIST) if no script with the given name exists or if no value was previously set.
+<H3>Просмотр скрипта / ScriptCustomvar </H3>
+Получает значение (строковое представление) пользовательской переменной.  Возвращает ошибку API (de_not_exist), если никакого скрипта с заданным именем не существует или если значение ранее не было установлено значение. 
 
-<H3>VIEW script / scriptCustomVars</H3>
-Gets all the custom variables (key/value pairs, the value is the string representation) of a script. Returns an API error (DOES_NOT_EXIST) if no script with the given name exists.
+<H3>Просмотр скрипта / ScriptCustomvars </H3>
+Получает все пользовательские переменные (пары ключа / значения, значение - это строковое представление) скрипта.  Возвращает ошибку API (DO_NOT_EXIST), если не существует сценария с указанным именем. 
 
-<H3>ACTION alert / addAlert</H3>
-Add an alert associated with the given message ID, with the provided details. (The ID of the created alert is returned.)
+<H3>Action Alert / Addalert </H3>
+Добавьте предупреждение, связанное с данным идентификатором сообщения, с предоставленными деталями.  (ID созданного оповещения возвращается.) 
 
-<H3> ACTION alert / updateAlert</H3>
-Update the alert with the given ID, with the provided details.
+<H3> Action Alert / UpdateRert </H3>
+Обновите оповещение с данным идентификатором с указанными деталями. 
 
-<H3>ACTION pscan / disableAllTags</H3>
-Disables all passive scan tags.
+<H3>Действие PSCAN / DisablealTags </H3>
+Отключает все теги пассивных сканирования. 
 
-<H3>ACTION pscan / enableAllTags</H3>
-Enables all passive scan tags.
+<H3>Действие PSCAN / ENALLEALTAGS </H3>
+Включает все теги пассивного сканирования. 
 
-<H3>ACTION script / clearGlobalCustomVar</H3>
-Clears a global custom variable.
+<H3>Сценарий действий / ClearGlobalcustomvar </H3>
+Очищает глобальную пользовательскую переменную. 
 
-<H3>ACTION script / clearScriptCustomVar</H3>
-Clears a script custom variable.
+<H3>Действие скрипт / clearscriptcustomvar </H3>
+Очищает настраиваемую переменную скрипт. 
 
-<H2>See also</H2>
+<H2>Смотрите также </H2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Вступление</a></td><td>введение в ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Релизы </a></td><td>полный набор релизов</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Кредиты</a></td><td>люди и группы, которые сделали возможным этот релиз</td></tr>
 </table>
 </BODY>
 </HTML>

@@ -7,72 +7,72 @@
 </TITLE>
 </HEAD>
 <BODY>
-<H1>Release 2.8.0</H1>
+<H1>выпуск 2.8.0 </H1>
 
-This is a bug fix and enhancement release, which requires a minimum of Java 8. 
-Note that a minimum of Java 11 is recommended, especially for high DPI displays.
-<br><br>
-These release notes do not include all of the changes included in add-ons updated since 2.7.0.
-<br><br>
-Some of the more significant enhancements include:
+Это выпуск с исправлением ошибок и улучшением, для которого требуется как минимум Java 8.  
+Обратите внимание, что рекомендуется как минимум Java 11, особенно для дисплеев с высоким разрешением. 
+<br> <br>
+Эти примечания к выпуску не включают все изменения, включенные в надстройки, обновленные с версии 2.7.0. 
+<br> <br>
+Некоторые из наиболее значительных улучшений включают: 
 
-<H2>Heads Up Display</H2>
+<H2>Heads Up Display </H2>
 
-The ZAP Heads Up Display (HUD) brings all of the essential ZAP functionality into your browser. 
-It is ideal for people new to web security and also allows experienced penetration testers to focus on an 
-application's features while providing key security information and functionality. <br>
-The HUD can be enabled when proxying a browser through ZAP via the new 'Manual Explore' screen and a top level toolbar button.
+Дисплей ZAP Heads Up Display (HUD) предоставляет все основные функции ZAP в вашем браузере.  
+Он идеально подходит для людей, плохо знакомых с веб-безопасностью, а также позволяет опытным тестерам на проникновение сосредоточиться на
+функции приложения, предоставляя при этом ключевую информацию о безопасности и функциональные возможности.  <br>
+HUD можно включить при проксировании браузера через ZAP с помощью нового экрана «Ручное исследование» и кнопки на панели инструментов верхнего уровня. 
 
-<H2>Quick Start Screens</H2>
+<H2>Экраны быстрого запуска </H2>
 
-The Quick Start tab has been reworked to provide 3 screens:
+Вкладка «Быстрый старт» была переработана и теперь содержит 3 экрана: 
 <ul>
-<li>Automated Scan: allows you to launch an automated scan against an application and the choice of traditional and/or ajax spider</li>
-<li>Manual Explore: allows you to launch browsers configured to proxy via ZAP with the option to enable the HUD</li>
-<li>Learn More: provides links to local and remote resources which you can use to learn more about ZAP</li>
+<li>Автоматическое сканирование: позволяет запускать автоматическое сканирование приложения и выбора традиционного и / или ajax-паука. </li>
+<li>Обзор вручную: позволяет запускать браузеры, настроенные на прокси через ZAP, с возможностью включения HUD. </li>
+<li>Узнать больше: содержит ссылки на локальные и удаленные ресурсы, которые вы можете использовать, чтобы узнать больше о ZAP. </li>
 </ul>
-The tab also provides a news panel that provides a summary of ZAP news along with a link for more details. 
-News items can be hidden when no longer needed.
+На вкладке также есть панель новостей, которая предоставляет сводку новостей ZAP вместе со ссылкой для получения более подробной информации.  
+Новости можно скрыть, когда они больше не нужны. 
 
-<H2>Scan Rule Promotions</H2>
+<H2>Сканирование правил продвижения </H2>
 
-The following scan rules have been promoted:
-<h3>Active Scan Rules - Release</h3>
+Были продвинуты следующие правила сканирования: 
+<h3>Правила активного сканирования - Выпуск </h3>
 <ul>
-<li>Promote Source Code Disclosure WEB-INF (Issue 4448).</li>
-</ul>
-
-<h3>Passive Scan Rules - Release</h3>
-<ul>
-<li>Promote Charset Mismatch Scanner to release (Issue 4460).</li>
-<li>Promote ViewState Scanner to release (Issue 4453).</li>
-<li>Promote Insecure JSF ViewState Scanner to release (Issue 4455).</li>
-<li>Promote Insecure Authentication Scanner to release (Issue 4456).</li>
-<li>Promote Information Disclosure Debug Errors Scanner to release (Issue 4457).</li>
-<li>Promote CSRF Countermeasures Scanner to release (Issue 4458).</li>
-<li>Promote Cookie Loosely Scoped Scanner to release (Issue 4459).</li>
+<li>Содействие раскрытию исходного кода WEB-INF (выпуск 4448). </li>
 </ul>
 
-<H2>Headless Browser Support</H2>
-Headless browsers are now supported by the Selenium add-on and the add-ons that use it. Both the Ajax Spider and the DOM XSS scan rule now default to headless Firefox.
+<h3>Правила пассивного сканирования - Выпуск </h3>
+<ul>
+<li>Продвигайте сканер несоответствия кодировки к выпуску (ошибка 4460). </li>
+<li>Продвигайте ViewState Scanner к выпуску (ошибка 4453). </li>
+<li>Продвигайте к выпуску небезопасный сканер ViewState JSF (ошибка 4455). </li>
+<li>Продвигайте сканер небезопасной аутентификации к выпуску (ошибка 4456). </li>
+<li>Продвигайте к выпуску сканер ошибок отладки для раскрытия информации (ошибка 4457). </li>
+<li>Продвигайте сканер контрмер CSRF к выпуску (ошибка 4458). </li>
+<li>Продвигайте к выпуску сканер файлов cookie с произвольным охватом (ошибка 4459). </li>
+</ul>
 
-<H2>Command Line Changes</H2>
+<H2>Поддержка безголового браузера </H2>
+Headless-браузеры теперь поддерживаются надстройкой Selenium и надстройками, которые ее используют.  И Ajax Spider, и правило сканирования DOM XSS теперь по умолчанию работают в Firefox без головы. 
+
+<H2>Изменения в командной строке </H2>
 <h3>-dir &lt;dir&gt;</h3>
-To prevent add-ons (inadvertently) use/override core files ZAP will no longer start (and show an error) if the home and the
-installation directories are the same.
+Для предотвращения (непреднамеренного) использования надстроек / переопределения основных файлов ZAP больше не будет запускаться (и показывать ошибку), если домашний и
+каталоги установки такие же. 
 
-<h3>CA Certificate Handling</h3>
-The following options allow the root CA certificate to be set and read:
+<h3>Обработка сертификатов ЦС </h3>
+Следующие параметры позволяют установить и прочитать сертификат корневого CA: 
 <pre>
--certload &lt;path&gt;      Loads the Root CA certificate from the specified file name
--certpubdump &lt;path&gt;   Dumps the Root CA public certificate into the specified file name, this is suitable for importing into browsers
--certfulldump &lt;path&gt;  Dumps the Root CA full certificate (including the private key) into the specified file name, this is suitable for importing into ZAP
+-certload &lt;path&gt;      Загружает сертификат корневого CA из указанного имени файла. 
+-certpubdump &lt;path&gt;   Сбрасывает публичный сертификат корневого центра сертификации в указанное имя файла, это подходит для импорта в браузеры. 
+-certfulldump &lt;path&gt;  Сбрасывает полный сертификат корневого ЦС (включая закрытый ключ) в указанное имя файла, это подходит для импорта в ZAP 
 </pre>
-These options are particularly useful when running ZAP headless in Docker, as they allow you to either specify the CA certificate to use or to access the one that 
-ZAP creates automatically for you.
+Эти параметры особенно полезны при автономном запуске ZAP в Docker, поскольку они позволяют либо указать сертификат CA для использования, либо получить доступ к тому, который
+ZAP создает автоматически для вас. 
 
-<h3>Client Certificate Handling</h3>
-It is now possible to set the Client Certificate from the command line with the following switches:
+<h3>Обработка клиентских сертификатов </h3>
+Теперь можно установить сертификат клиента из командной строки с помощью следующих переключателей: 
 <pre>
 -config certificate.use=true
 -config certificate.pkcs12.path=/path/to/file.p12
@@ -81,36 +81,36 @@ It is now possible to set the Client Certificate from the command line with the 
 -config certificate.persist=true
 </pre>
 <p>
-<code>-config certificate.pkcs12.index</code> is only necessary if the file contains multiple certificates 
-and you wish to use one other than the first. Index values start at zero (0) which is the first certificate
-in the file.<br><br>
-<code>-config certificate.persist=true</code> is only necessary if you would like the settings persisted in ZAP's regular 
-configuration file (so that they apply for subsequent ZAP use).
+<code> -config certificate.pkcs12.index </code> необходим, только если файл содержит несколько сертификатов
+и вы хотите использовать еще один, кроме первого.  Значения индекса начинаются с нуля (0), который является первым сертификатом.
+в файле. <br> <br>
+<code> -config certificate.persist = true </code> необходим только в том случае, если вы хотите, чтобы настройки сохранялись в обычном ZAP
+файл конфигурации (чтобы они применялись для последующего использования ZAP). 
 </p>
 
-<H2>Source Code Restructuring</H2>
-The ZAP repositories have all been migrated to use Gradle from Ant. Standard source code formatting is also now enforced for consistency.
+<H2>Реструктуризация исходного кода </H2>
+Все репозитории ZAP были переведены на Gradle из Ant.  Стандартное форматирование исходного кода теперь также применяется для единообразия. 
 
-<H2>Filters Removal</H2>
-Deprecated since ZAP 2.4.0 the Filters functionality, that allowed to change/access some HTTP messages sent/received through
-ZAP, has now been removed, the same and much more can be achieved with scripts and Replacer add-on.
+<H2>Удаление фильтров </H2>
+Не рекомендуется, начиная с ZAP 2.4.0, функциональность фильтров, которая позволяла изменять / получать доступ к некоторым HTTP-сообщениям, отправленным / полученным через
+ZAP, теперь удален, то же самое и многое другое можно достичь с помощью скриптов и надстройки Replacer. 
 
-<H2>Changes in Bundled Libraries</H2>
-The following libraries are no longer being bundled with ZAP (core):
+<H2>Изменения в связанных библиотеках </H2>
+Следующие библиотеки больше не входят в комплект ZAP (core): 
 <ul>
-  <li>BrowserLauncher2, it was replaced with the usage of JRE class <code>java.awt.Desktop</code>. Add-ons should use that class or bundle the library.</li>
-  <li>HttpComponents Client/Core, no longer in use by core, any add-ons that require them should bundle them.</li>
-  <li>JavaFX runtime, now relying on JRE (for example, OracleJDK, OpenJDK+OpenJFX).</li>
+  <li>BrowserLauncher2 был заменен использованием класса JRE <code> java.awt.Desktop </code>.  Надстройки должны использовать этот класс или связывать библиотеку. </li>
+  <li>HttpComponents Client / Core, больше не используется ядром, любые надстройки, которые требуют их, должны объединять их. </li>
+  <li>Среда выполнения JavaFX, теперь использующая JRE (например, OracleJDK, OpenJDK + OpenJFX). </li>
 </ul>
 
-The following libraries will be removed in a future release:
+Следующие библиотеки будут удалены в следующем выпуске: 
 <ul>
   <li>JDOM</li>
   <li>Diff Utils</li>
 </ul>
-no longer in use by core, add-ons should bundle the library, if needed.
+больше не используется ядром, при необходимости надстройки должны объединять библиотеку. 
 
-The following libraries were updated:
+Обновлены следующие библиотеки: 
 <ul>
   <li>Bouncy Castle, 1.52 → 1.61</li>
   <li>Commons BeanUtils, 1.8.3 → 1.9.3</li>
@@ -128,29 +128,29 @@ The following libraries were updated:
   <li>SwingX, 1.6.4 → 1.6.5-1</li>
 </ul>
 
-<H2>Active Scan Input Vectors Change</H2>
-Users now have the option of whether or not to add a query parameter to GET requests that did not have them to start with.
-In previous versions this behavior was not user controllable and was on by default. With the new user option the default has 
-been changed to off.
+<H2>Изменение входных векторов активного сканирования </H2>
+Теперь у пользователей есть возможность добавлять или не добавлять параметр запроса к запросам GET, для которых их не было. 
+В предыдущих версиях это поведение не контролировалось пользователем и было включено по умолчанию.  С опцией нового пользователя по умолчанию
+был изменен на выкл. 
 
 <H2>JSON Authentication Method</H2>
-An authentication method has been added which allows a JSON object to be sent in the request body.
+Добавлен метод аутентификации, который позволяет отправлять объект JSON в теле запроса. 
 
 <H2>JSON Report Change</H2>
-For consistency the <code>site</code> property will be always an array regardless of the number of sites that the report contains,
-previously it would be an object if only one site and an array if more than one.
+Для согласованности свойство <code> site </code> всегда будет массивом независимо от количества сайтов, содержащихся в отчете,
+раньше это был бы объект, если только один сайт, и массив, если бы более одного. 
 
-<H2>Display Options - Font Controls</H2>
-In the Options dialog Display panel it is now possible for the user to select a General font and size for ZAPs GUI, 
-as well as a Work Panel font and size used for the top right section of ZAP's main window (Ex: Request/Response, the 
-Edit and Resend tool, etc.).
+<H2>Параметры отображения - элементы управления шрифтом </H2>
+В диалоговом окне «Параметры» на панели «Отображение» теперь пользователь может выбрать общий шрифт и размер для графического интерфейса ZAPs,
+а также шрифт и размер рабочей панели, используемые для верхней правой части главного окна ZAP (например, запрос / ответ,
+Инструмент редактирования и повторной отправки и т. Д.). 
 
-<H2>Enhancements</H2>
+<H2>Улучшения </H2>
 <ul>
-<li>Issue 1067 : User conversion between changes of AuthenticationMethods</li>
-<li>Issue 1370 : Login HTTP requests without cookies with Form-based Authentication</li>
-<li>Issue 1429 : Option to add custom ZAP header</li>
-<li>Issue 2023 : Allow to set client certificate (PKCS#12) through the ZAP API</li>
+<li>Проблема 1067: преобразование пользователя между изменениями AuthenticationMethods. </li>
+<li>Проблема 1370: HTTP-запросы входа в систему без файлов cookie с проверкой подлинности на основе форм </li>
+<li>Проблема 1429: возможность добавления настраиваемого заголовка ZAP. </li>
+<li>Проблема 2023: Разрешить установку сертификата клиента (PKCS # 12) через ZAP API </li>
 <li>Issue 2182 : Add support for dynamic fields in Form-based authentication method</li>
 <li>Issue 2439 : Configure Authentication with Json object</li>
 <li>Issue 2528 : Feature request: Passive scanning during fuzzing</li>
