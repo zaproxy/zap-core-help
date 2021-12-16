@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-  Release 2.7.0
+  выпуск 2.7.0 
 </title>
 </head>
 <body>
@@ -112,93 +112,93 @@
 
 <h2>Исправление ошибок: </h2>
 <ul>
-<li>Issue 765 : Ctrl-F key doesnt work on Resend / Manual Request Editor dialogs</li>
-<li>Issue 1222 : False positive: XSS scanning</li>
-<li>Issue 1984 : Alerts API should always return 'evidence' (and all other keys)</li>
-<li>Issue 2375 : Unable to change Mode without main tool bar</li>
-<li>Issue 2496 : ZAP only report the first alert in array</li>
-<li>Issue 2744 : Unable to enable/disable Forced User mode without main tool bar</li>
-<li>Issue 2756 : Class loading deadlock when loading httpsender script from API call and spidering</li>
-<li>Issue 2989 : Redirect history not recorded when resend request</li>
-<li>Issue 3154 : Execution Order for Plugins Displayed in Scan Progress Details, Progress Tab</li>
-<li>Issue 3207 : History tab cleared when session persisted</li>
-<li>Issue 3284 : Accept underscores in hostnames</li>
-<li>Issue 3289 : Proxy excluded URLs still processed by ZAP</li>
-<li>Issue 3350 : wrong comparison of HTTP Messages in queryEquals() method of HttpMessage class</li>
-<li>Issue 3351 : the url disappear when i click it</li>
-<li>Issue 3353 : ZAP API View:contextList method returns a string instead of JSON list</li>
-<li>Issue 3359 : Missing Help details Options Connection screen</li>
-<li>Issue 3363 : Spider Messages View Includes Underused Tags Column</li>
-<li>Issue 3377 : ZAP can no longer load non UTF8 scripts</li>
-<li>Issue 3382 : Fix "internal error" in ScriptAPI</li>
-<li>Issue 3394 : Enable Session Tracking (Cookie) option not persisted</li>
-<li>Issue 3397 : Do not uninstall a file if it no longer exists</li>
-<li>Issue 3411 : Clear cached certs when setting Root CA cert</li>
-<li>Issue 3440 : Log Exception when the provided config file could not be parsed</li>
-<li>Issue 3456 : Bug: Paused Scans Wiped Out when Persisting a Session</li>
-<li>Issue 3459 : Prescan Output is Confusing. Please Clarify.</li>
-<li>Issue 3490 : Poor font rendering on linux</li>
-<li>Issue 3531 : Docker scripts might get stuck on "Records to passive scan" seemingly indefinitely</li>
-<li>Issue 3555 : Changing Session Name, doesn't Update the Window Name</li>
-<li>Issue 3571 : Require extension's dependencies during extension loading</li>
-<li>Issue 3590 : Set installation status to marketplace add-ons</li>
-<li>Issue 3591 : Correctly check for add-on updates on dep calc</li>
-<li>Issue 3620 : Return correct error on missing auth parameters</li>
-<li>Issue 3621 : Sync HistoryReference cache in ExtensionHistory</li>
-<li>Issue 3632 : Do not close session when changing its properties</li>
-<li>Issue 3633 : "Generate Anti-CSRF Test Form" not working</li>
-<li>Issue 3648 : Correct state of adv option in Spider dialogue</li>
-<li>Issue 3667 : Markdown report heading format issue</li>
-<li>Issue 3673 : API: sendHarRequest results in error if redirects are true</li>
-<li>Issue 3675 : Sites tree option Show only URLs in Scope not working</li>
-<li>Issue 3692 : zap-api-scan.py correct path handling</li>
-<li>Issue 3696 : Correct API response for outgoing proxy changes</li>
-<li>Issue 3703 : org.parosproxy.paros.db.DatabaseException: java.sql.SQLException: Can not issue executeUpdate() or executeLargeUpdate() for SELECTs</li>
-<li>Issue 3711 : Session snapshots might "break" running scans</li>
-<li>Issue 3723 : Properly reset Database options panel</li>
-<li>Issue 3748 : Automatically skip dependent scanners</li>
-<li>Issue 3759 : Update version check in zap.sh script for Java 9</li>
-<li>Issue 3771 : Add-on files not updated when running newer ZAP/core version</li>
-<li>Issue 3779 : Can't open the Resend window because of missing font</li>
-<li>Issue 3799 : Declare ExtensionDynSSL as supporting low mem</li>
-<li>Issue 3825 : Show error if failed to active the certificate</li>
-<li>Issue 3827 : mysql NULL value in where in CLAUSE</li>
-<li>Issue 3832 : Errors in Input Vector Templates</li>
-<li>Issue 3849 : Pscanrule Content Type Missing not working with Spider messages</li>
-<li>Issue 3854 : Error whilst using Api - ERROR ExtensionUserManagement - Unable to persist Users</li>
-<li>Issue 3889 : Initialise the source of the Alert always</li>
-<li>Issue 3895 : JSON Input Vector fails if string has quoted chars</li>
-<li>Issue 3907 : Normalise form-based login URL validation/usage</li>
-<li>Issue 3912 : VariantDirectWebRemotingQuery might hang in infinite loop</li>
-<li>Issue 3914 : Use ZapVersions.xml file in Docker images</li>
-<li>Issue 3927 : zap-full-scan on docker tries to reach out to external network</li>
-<li>Issue 3955 : Database too small to handle large login request bodies</li>
-<li>Issue 3965 : Empty Cookie header causes errors</li>
-<li>Issue 3969 : Logged in/out indicators not persisted when cleared</li>
-<li>Issue 4004 : zap.bat should use %USERPROFILE% instead of %HOMEDRIVE%%HOMEPATH%</li>
-<li>Issue 4013 : Sending to the Callback Endpoint while proxying through ZAP logs an error</li>
-<li>Issue 4014 : Issue when attempting to ignore all rules for a URL</li>
-<li>Issue 4028 : Warn when check for updates fails</li>
-<li>Issue 4056 : Use realm as domain for NTLM authentication</li>
-<li>Issue 4065 : Deleting a parent URL in History tab should not delete all child URLs</li>
-<li>Issue 4079 : Cookie with unknown path is falsely rejected by ZAP</li>
+<li>Проблема 765: клавиша Ctrl-F не работает в диалоговых окнах редактора отправки / запроса вручную </li>
+<li>Проблема 1222: ложное срабатывание: сканирование XSS </li>
+<li>Проблема 1984: API оповещений всегда должен возвращать «доказательства» (и все другие ключи) </li>
+<li>Проблема 2375: невозможно изменить режим без основной панели инструментов </li>
+<li>Проблема 2496: ZAP сообщает только о первом предупреждении в массиве. </li>
+<li>Проблема 2744: Невозможно включить / отключить принудительный пользовательский режим без главной панели инструментов </li>
+<li>Проблема 2756: тупиковая ситуация при загрузке класса при загрузке скрипта httpsender из вызова API и паука. </li>
+<li>Проблема 2989: история перенаправлений не записывается при повторной отправке запроса. </li>
+<li>Ошибка 3154: порядок выполнения для подключаемых модулей, отображаемый в сведениях о ходе сканирования, вкладка «Ход выполнения» </li>
+<li>Проблема 3207: вкладка "История" очищается при сохранении сеанса. </li>
+<li>Проблема 3284: принимать символы подчеркивания в именах хостов. </li>
+<li>Проблема 3289: URL-адреса, исключенные прокси, все еще обрабатываются ZAP. </li>
+<li>Проблема 3350: неправильное сравнение HTTP-сообщений в методе queryEquals () класса HttpMessage </li>
+<li>Проблема 3351: URL-адрес исчезает, когда я нажимаю на него </li>
+<li>Проблема 3353: представление ZAP API: метод contextList возвращает строку вместо списка JSON. </li>
+<li>Проблема 3359: Отсутствуют подробные сведения о справке Параметры Экран подключения </li>
+<li>Проблема 3363: Просмотр сообщений паука включает столбец недостаточно используемых тегов </li>
+<li>Проблема 3377: ZAP больше не может загружать сценарии, отличные от UTF8. </li>
+<li>Проблема 3382: исправление «внутренней ошибки» в ScriptAPI. </li>
+<li>Проблема 3394: параметр Включить отслеживание сеанса (cookie) не сохраняется. </li>
+<li>Проблема 3397: не удаляйте файл, если он больше не существует. </li>
+<li>Проблема 3411: очистить кэшированные сертификаты при установке сертификата корневого центра сертификации </li>
+<li>Проблема 3440: исключение журнала, когда предоставленный файл конфигурации не может быть проанализирован </li>
+<li>Проблема 3456: Ошибка: приостановленное сканирование стирается при сохранении сеанса </li>
+<li>Проблема 3459: Вывод предварительного сканирования сбивает с толку. Просьба уточнить. </li>
+<li>Проблема 3490: плохая отрисовка шрифтов в Linux. </li>
+<li>Проблема 3531: сценарии Docker могли застревать в «Записи для пассивного сканирования» на неопределенное время. </li>
+<li>Проблема 3555: изменение имени сеанса не приводит к обновлению имени окна </li>
+<li>Проблема 3571: Требовать зависимости расширения во время загрузки расширения. </li>
+<li>Проблема 3590: установка статуса установки надстроек торговой площадки. </li>
+<li>Ошибка 3591: правильно проверяйте наличие обновлений надстроек в dep calc. </li>
+<li>Проблема 3620: возвращать правильную ошибку при отсутствии параметров аутентификации </li>
+<li>Проблема 3621: синхронизация кеша HistoryReference в ExtensionHistory </li>
+<li>Проблема 3632: не закрывать сеанс при изменении его свойств. </li>
+<li>Проблема 3633: «Создать тестовую форму для защиты от CSRF» не работает. </li>
+<li>Проблема 3648: правильное состояние параметра adv в диалоговом окне Spider. </li>
+<li>Проблема 3667: проблема с форматом заголовка отчета Markdown </li>
+<li>Проблема 3673: API: sendHarRequest приводит к ошибке, если перенаправления верны. </li>
+<li>Проблема 3675: параметр дерева сайтов Показать только URL-адреса в области не работает </li>
+<li>Проблема 3692: zap-api-scan.py правильная обработка пути </li>
+<li>Проблема 3696: правильный ответ API на изменения исходящего прокси-сервера. </li>
+<li>Ошибка 3703: org.parosproxy.paros.db.DatabaseException: java.sql.SQLException: невозможно выполнить executeUpdate () или executeLargeUpdate () для SELECT </li>
+<li>Проблема 3711: моментальные снимки сеанса могут "мешать" запущенному сканированию. </li>
+<li>Проблема 3723: правильно сбросить панель параметров базы данных </li>
+<li>Ошибка 3748: автоматический пропуск зависимых сканеров. </li>
+<li>Ошибка 3759: проверка версии в скрипте zap.sh для Java 9. </li>
+<li>Проблема 3771: файлы надстроек не обновляются при запуске более новой версии ZAP / ядра. </li>
+<li>Проблема 3779: не удается открыть окно повторной отправки из-за отсутствия шрифта. </li>
+<li>Проблема 3799: объявить ExtensionDynSSL как поддерживающий low mem </li>
+<li>Проблема 3825: отображать ошибку, если не удалось активировать сертификат. </li>
+<li>Проблема 3827: значение MySQL NULL в том, где в CLAUSE </li>
+<li>Проблема 3832: Ошибки в шаблонах входных векторов </li>
+<li>Проблема 3849: Отсутствует тип содержимого Pscanrule, не работающий с сообщениями Spider </li>
+<li>Проблема 3854: Ошибка при использовании Api - ОШИБКА ExtensionUserManagement - Невозможно сохранить пользователей </li>
+<li>Проблема 3889: всегда инициализировать источник оповещения. </li>
+<li>Проблема 3895: входной вектор JSON не работает, если строка содержит символы в кавычках </li>
+<li>Проблема 3907: нормализовать проверку / использование URL-адреса входа на основе формы </li>
+<li>Проблема 3912: VariantDirectWebRemotingQuery мог зависать в бесконечном цикле. </li>
+<li>Проблема 3914: использование файла ZapVersions.xml в образах Docker </li>
+<li>Проблема 3927: zap-full-scan на докере пытается подключиться к внешней сети. </li>
+<li>Проблема 3955: база данных слишком мала для обработки больших тел запросов на вход </li>
+<li>Проблема 3965: пустой заголовок файла cookie вызывает ошибки. </li>
+<li>Проблема 3969: индикаторы входа / выхода не сохраняются после сброса </li>
+<li>Ошибка 4004: zap.bat должен использовать% USERPROFILE% вместо% HOMEDRIVE %% HOMEPATH%. </li>
+<li>Проблема 4013: отправка в конечную точку обратного вызова во время проксирования через ZAP регистрирует ошибку </li>
+<li>Проблема 4014: проблема при попытке игнорировать все правила для URL-адреса. </li>
+<li>Проблема 4028: предупреждать при сбое проверки обновлений </li>
+<li>Проблема 4056: использование области в качестве домена для проверки подлинности NTLM </li>
+<li>Проблема 4065: удаление родительского URL-адреса на вкладке "История" не должно удалять все дочерние URL-адреса. </li>
+<li>Ошибка 4079: файл cookie с неизвестным путем ошибочно отклонен ZAP. </li>
 </ul>
 
-<h2>ZAP API Breaking Changes:</h2>
+<h2>Критические изменения ZAP API: </h2>
 
-<h3>ACTION authentication / setAuthenticationMethod</h3>
-The authentication type "formBasedAuthentication" will now require the login URL always in encoded form. The change ensures the
-login URL is used/sent as it was specified. Previously it would accept partially encoded URLs but they would be re-encoded when
-used, potentially leading to a different URL being used/sent.
+<h3>ACTION аутентификация / setAuthenticationMethod </h3>
+Тип аутентификации «formBasedAuthentication» теперь требует, чтобы URL-адрес входа всегда был в закодированной форме.  Это изменение обеспечивает
+URL-адрес для входа используется / отправляется, как было указано.  Раньше он принимал частично закодированные URL-адреса, но они перекодировались, когда
+используется, что может привести к использованию / отправке другого URL-адреса. 
 
-<h3>VIEW context / contextList</h3>
+<h3>ПРОСМОТР context / contextList </h3>
 
 Это изменение сломает потребителей, которые вручную разбирали / извлекали имена из строки. Структура данных
 возвращенный был изменен, чтобы правильно отделить каждое имя:
 <blockquote><pre><code>
 {"contextList":["Context 1","Context 2"]}
 </code></pre></blockquote>
-and:
+и:
 <blockquote><pre><code>
 &lt;contextList type="list"&gt;
     &lt;contextName&gt;Context 1&lt;/contextName&gt;
@@ -206,99 +206,99 @@ and:
 &lt;/contextList&gt;
 </code></pre></blockquote>
 
-instead of:
+вместо того: 
 <blockquote><pre><code>
 {"contextList":"[Context 1, Context 2]"}
 </code></pre></blockquote>
-and:
+и:
 <blockquote><pre><code>
 &lt;contextList&gt;[Context 1, Context 2]&lt;/contextList&gt;
 </code></pre></blockquote>
 
-<h3>VIEW core / setOptionUseProxyChain</h3>
-Changed to return <code>FAIL</code> если исходящий прокси-сервер не был включен (так как требуемый адрес / имя хоста не был
+<h3>ПРОСМОТР ядра / setOptionUseProxyChain </h3>
+Изменено на возврат  <code>НЕУДАЧА</code> если исходящий прокси-сервер не был включен (так как требуемый адрес / имя хоста не был
 ранее установленный), прежде чем он возвратит всегда <code>OK</code>.
 
-<h2>ZAP API Changed Endpoints:</h2>
+<h2>Измененные конечные точки ZAP API: </h2>
 
-<h3>VIEW core / alerts</h3>
-Added optional riskId parameter to facilitate filtering the risk. Where riskId is in the range 0 for Informational 
-and 3 for High. 
+<h3>ПРОСМОТР ядра / предупреждений </h3>
+Добавлен необязательный параметр riskId для облегчения фильтрации риска. Если riskId находится в диапазоне 0 для информационных
+и 3 для High.  
 
-<h3>VIEW core / numberOfAlerts</h3>
-Added optional riskId parameter to facilitate filtering the risk. Where riskId is in the range 0 for Informational 
-and 3 for High. 
+<h3>ПОСМОТРЕТЬ core / numberOfAlerts </h3>
+Добавлен необязательный параметр riskId для облегчения фильтрации риска. Если riskId находится в диапазоне 0 для информационных
+и 3 для High.  
 
-<h3>VIEW core / urls</h3>
-Added optional <code>baseurl</code> parameter, to filter the URLs that are returned.
+<h3>ПОСМОТРЕТЬ ядро / URL </h3>
+Добавлен необязательный  <code>baseurl</code> параметр, чтобы отфильтровать возвращаемые URL-адреса. 
 
-<h3>VIEW ascan / scans</h3>
+<h3>ПРОСМОТР ascan / scans </h3>
 Изменено, чтобы также возвращать общее количество предупреждений и сообщений, отправленных во время каждой проверки.
 
-<h3>VIEW ascan / scanProgress</h3>
+<h3>ПРОСМОТР сканирования / выполнения сканирования </h3>
 Изменено, чтобы также возвращать количество предупреждений, вызванных каждым сканером.
 
-<h2>ZAP API New Endpoints:</h2>
+<h2>Новые конечные точки ZAP API: </h2>
 
-<h3>VIEW core / alertsSummary</h3>
+<h3>ПРОСМОТР ядра / предупреждений </h3>
 Новое сводное представление для оповещений, в котором отображаются счетчики оповещений на уровень риска. При необходимости, отфильтрованный по значению автоопределения. 
 
 <blockquote><pre><code>
 {"High":0,"Low":132,"Medium":39,"Informational":153}
 </code></pre></blockquote>
 
-<h3>VIEW core / messagesById</h3>
-Gets the HTTP messages with the given IDs.
+<h3>ПРОСМОТР core / messagesById </h3>
+Получает сообщения HTTP с заданными идентификаторами. 
 
-<h3>VIEW core / messagesHarById</h3>
-Gets the HTTP messages with the given IDs, in HAR format.
+<h3>ПРОСМОТР core / messagesHarById </h3>
+Получает сообщения HTTP с заданными идентификаторами в формате HAR. 
 
-<h3>VIEW core / optionAlertOverridesFilePath</h3>
-Gets the path to the file with alert overrides. 
+<h3>ПРОСМОТРЕТЬ core / optionAlertOverridesFilePath </h3>
+Получает путь к файлу с переопределением предупреждений.  
 
-<h3>VIEW core / optionMaximumAlertInstances</h3>
+<h3>ПРОСМОТР ядра / optionMaximumAlertInstances </h3>
 Возвращает Максимальное число экземпляров предупреждений для включения в отчет. 
 
-<h3>VIEW core / optionMergeRelatedAlerts</h3>
+<h3>ПРОСМОТР ядра / optionMergeRelatedAlerts </h3>
 Возвращает, будут ли связанные оповещения объединяться в создаваемых отчетах. 
 
-<h3>VIEW core / zapHomePath</h3>
-Gets the path to ZAP's home directory.
+<h3>ПОСМОТРЕТЬ core / zapHomePath </h3>
+Получает путь к домашнему каталогу ZAP. 
 
-<h3>VIEW localProxies / additionalProxies</h3>
-Возвращает все дополнительные прокси-серверы, которые были настроены.
+<h3>ПОСМОТРЕТЬ localProxies / additionalProxies </h3>
+Получает все дополнительные настроенные прокси. 
 
-<h3>VIEW spider / optionAcceptCookies</h3>
+<h3>ПОСМОТРЕТЬ паука / optionAcceptCookies </h3>
 Получает ли процесс Spider следует принимать куки, а пауки.
 
-<h3>ACTION core / deleteAlert</h3>
-Deletes the alert with the given ID.
+<h3>ДЕЙСТВИЕ core / deleteAlert </h3>
+Удаляет оповещение с заданным идентификатором. 
 
-<h3>ACTION core / setOptionAlertOverridesFilePath</h3>
+<h3>ДЕЙСТВИЕ core / setOptionAlertOverridesFilePath </h3>
 Задает (или очищает, если пусто) путь к файлу с переопределениями предупреждений. 
 
-<h3>ACTION core / setOptionMaximumAlertInstances</h3>
+<h3>Ядро ACTION / setOptionMaximumAlertInstances </h3>
 Задает Максимальное число экземпляров предупреждений для включения в отчет. Нулевое значение считается неограниченным. 
 
-<h3>ACTION core / setOptionMergeRelatedAlerts</h3>
+<h3>Ядро ACTION / setOptionMergeRelatedAlerts </h3>
 Указывает, будут ли объединены связанные предупреждения в создаваемых отчетах. 
 
-<h3>ACTION ascan / importScanPolicy</h3>
+<h3>ДЕЙСТВИЕ ascan / importScanPolicy </h3>
 Импортирует политику сканирования по заданному пути к файловой системе.
 
-<h3>ACTION ascan / skipScanner</h3>
+<h3>ДЕЙСТВИЕ ascan / skipScanner </h3>
 Пропускает сканер с помощью идентификаторов сканирования и сканера.
 
-<h3>VIEW localProxies / addAdditionalProxy</h3>
+<h3>ПРОСМОТРЕТЬ localProxies / addAdditionalProxy </h3>
 Добавляет новый прокси, используя предоставленные сведения. Увидеть <a href="../ui/dialogs/options/localproxy.html">Параметры экрана локальные прокси</a> для деталей параметров.
 
-<h3>VIEW localProxies / removeAdditionalProxy</h3>
+<h3>ПРОСМОТРЕТЬ localProxies / removeAdditionalProxy </h3>
 Удаляет дополнительный прокси с указанным адресом и портом.
 
-<h3>ACTION spider / setOptionAcceptCookies</h3>
+<h3>Паук ДЕЙСТВИЯ / setOptionAcceptCookies </h3>
 Устанавливает, будет ли процесс Спайдер должен принимать куки, а пауки.
 
-<h2>Vulnerability Details</h2>
+<h2>Подробная информация об уязвимости </h2>
 
 В предыдущей версии ZAP сообщалось о следующей уязвимости.<br>
 Большое спасибо всем исследователям которые этично сообщали вопросы к нам через наше <a href="https://bugcrowd.com/owaspzap">программа баг Баунти</a>.<br> 
@@ -310,14 +310,14 @@ Deletes the alert with the given ID.
 Это была Уязвимость в 3-м Install4j установки партии, которая теперь Исправлена.<br>
 Обратите внимание, что это может произойти только в том случае, если вредоносная библиотека DLL уже находится на пути.
 <br><br>
-<b>Credit: Sajeeb Lohani (sml555) of Bulletproof ZDS</b>
+<b>Предоставлено: Саджиб Лохани (sml555) из Bulletproof ZDS. </b>
 
 
-<h2>See also</h2>
+<h2>Смотрите также </h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>люди и группы, которые сделали этот релиз возможным</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Вступление </a></td><td>введение в ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Релизы </a></td><td>полный набор релизов</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Кредиты</a></td><td>люди и группы, которые сделали этот релиз возможным</td></tr>
 </table>
 </body>
 </html>
