@@ -6,137 +6,136 @@
 </head>
 <body>
 	<h1>Аутентификация</h1>
-	ZAP can handle a wide range of authentication mechanisms.<br>
-	Each <a href="contexts.html">Context</a> has:
+	ZAP может обрабатывать широкий спектр механизмов аутентификации. <br>
+	Каждый  <a href="contexts.html">Контекст</a> имеет: 
 	<ul>
-	<li>an <a href="authmethods.html">Authentication Method</a> which defines how authentication is handled. 
-	The authentication is used to create Web Sessions that correspond to authenticated webapp <a href="users.html">Users</a>.</li>
-	<li>an <a href="authstrategies.html">Authentication Verification Strategy</a>
-	which defines how ZAP should detect when messages correspond to authenticated requests.</li>
+	<li><a href="authmethods.html"> Метод аутентификации </a>, который определяет, как выполняется аутентификация.  
+	Аутентификация используется для создания веб-сеансов, которые соответствуют аутентифицированным пользователям webapp <a href="users.html"> Пользователи </a> .</li>
+	<li><a href="authstrategies.html"> Стратегия проверки аутентификации </a>
+который определяет, как ZAP должен определять, когда сообщения соответствуют аутентифицированным запросам. </li>
 	</ul>
-	You can use any combination of Authentication Method and Verification Strategy which works for your webapp.
+	Вы можете использовать любую комбинацию метода аутентификации и стратегии проверки, которая работает для вашего веб-приложения. 
 	<p>
-	In order to perform the authentication of a user on a website /
-	in a webapp, the Authentication Method and Verification Strategy define how the authentication
-	is done (the process), while the necessary credentials (the exact
-	identifiers) are dependent on the user, so, in ZAP, they are
-	configured in the Users.
+	Для аутентификации пользователя на сайте /
+в веб-приложении метод аутентификации и стратегия проверки определяют, как аутентификация
+выполнено (процесс), а необходимые учетные данные (точные
+идентификаторы) зависят от пользователя, поэтому в ZAP они
+настроен в Users. 
 	<p>
-	The generic <b>main steps</b> that are needed to configure authentication for a web application
-	are the following:
+	Общий  <b>основные шаги </b> которые необходимы для настройки аутентификации для веб-приложения
+следующие: 
 	<ol>
-		<li>Configure a ZAP <a href="contexts.html">Context</a> for the web application, ensuring that all required URLs are included</li>
-		<li>Set up the <a href="sessionManagement.html">Session Management Method</a> for the context to
-		the one that is used in your app</li>
-		<li>Configure the <a href="authmethods.html">Authentication Method</a> for your application, specifying all the requirements</li>
-		<li>Configure the <a href="authstrategies.html">Authentication Verification Strategy</a> for your application, specifying at least one
-			of the <i>Logged In Indicator</i> or the <i>Logged out indicator</i></li>
-		<li>Configure one or more <a href="users.html">Users</a> for the context that directly correspond to the
-		authentication method for the context</li>
+		<li>Настройте ZAP <a href="contexts.html"> Context </a> для веб-приложения, убедившись, что все необходимые URL-адреса включены </li>
+		<li>Настройте <a href="sessionManagement.html"> метод управления сеансом </a> для контекста, чтобы
+тот, который используется в вашем приложении </li>
+		<li>Настройте <a href="authmethods.html"> Метод аутентификации </a> для своего приложения, указав все требования. </li>
+		<li>Настройте <a href="authstrategies.html"> Стратегию проверки подлинности </a> для своего приложения, указав хотя бы один
+<i> индикатора входа в систему </i> или <i> индикатора выхода </i> </li>
+		<li>Настройте одного или нескольких <a href="users.html"> пользователей </a> для контекста, которые напрямую соответствуют
+метод аутентификации для контекста </li>
 	</ol>
 
-	<h2>Configuration example</h2>
-	<p>A configuration example showing how to fully configure a webapp that uses <i>form-based authentication</i>,
-	<i>cookie-based session management</i> and returns full HTML pages (including an indication of whether the user is logged in) is seen below:
+	<h2>Пример конфигурации </h2>
+	<p>Пример конфигурации, показывающий, как полностью настроить веб-приложение, использующее  <i>аутентификация на основе форм </i>,
+	<i>управление сеансом на основе файлов cookie </i> и возвращает полные HTML-страницы (включая указание на то, вошел ли пользователь в систему), как показано ниже: 
 	<ol>
-		<li>Set up a context for the web application</li>
-		<li>Set up the session management method to <i>Cookie-based Session Management</i></li>
-		<li>Make sure your browser proxies everything through ZAP and log into your application using the browser</li>
-		<li>Go to ZAP and identify the request that was done for the login (most usually it's a HTTP POST request 
-		containing the username and the password and possibly other elements)</li>
-		<li>If there is an anti-CSRF token in the login request, add the token name in 
-		<a href="../../ui/dialogs/options/anticsrf.html">Options Anti CSRF screen</a>, if not present.</li>
-		<li>Set up the authentication method:
+		<li>Настройте контекст для веб-приложения </li>
+		<li>Настройте метод управления сеансом на <i> Управление сеансом на основе файлов cookie </i> </li>
+		<li>Убедитесь, что ваш браузер все проксирует через ZAP, и войдите в свое приложение с помощью браузера. </li>
+		<li>Перейдите в ZAP и определите запрос, который был выполнен для входа в систему (чаще всего это запрос HTTP POST
+содержащие имя пользователя и пароль и, возможно, другие элементы) </li>
+		<li>Если в запросе на вход есть токен анти-CSRF, добавьте имя токена в
+<a href="../../ui/dialogs/options/anticsrf.html"> Параметры Anti CSRF screen </a>, если нет. </li>
+		<li>Настройте метод аутентификации: 
 			<ol>
-			<li>Right click on the authentication request and 'Flag as Context... Form-based Auth Login Request'</li>
-			<li>A window will be opened already containing the request URL and the parameters (if any). Use 
-			the dropdown options to select which of the parameters correspond to the username and to the password</li>
+			<li>Щелкните правой кнопкой мыши запрос аутентификации и выберите «Пометить как контекст ... Запрос авторизации на основе формы» </li>
+			<li>Откроется окно, уже содержащее URL-адрес запроса и параметры (если есть). Использовать
+раскрывающиеся параметры, чтобы выбрать, какой из параметров соответствует имени пользователя и паролю </li>
 			</ol>
 		</li>
-		<li>Set up the authentication verification strategy:
+		<li>Настройте стратегию проверки подлинности: 
 			<ol>
-			<li>Select a message which has a suitable logged in or logged out indicator e.g. a logout link or a welcome message</li>
-			<li>Select the relevant text, right click on it and select either 'Flag as Context... Authentication Logged-in Indicator' or
-			'Flag as Context... Authentication Logged-out Indicator' as appropriate
+			<li>Выберите сообщение с подходящим индикатором входа или выхода, например ссылка для выхода или приветственное сообщение </li>
+			<li>Выделите соответствующий текст, щелкните его правой кнопкой мыши и выберите «Пометить как контекст ... Индикатор входа в систему аутентификации» или
+«Пометить как контекст ... Индикатор выхода из системы аутентификации» в зависимости от ситуации 
 			</ol>
 		</li>
-    	<li>Define as many users as you need in the Session Properties -> Users section.</li>
+    	<li>Определите столько пользователей, сколько вам нужно, в разделе «Свойства сеанса» -> «Пользователи». </li>
 	</ol>
-   	After configuring authentication, various actions are available in ZAP. For example, you can now select the user in the 
-   	<a href="../../ui/dialogs/spider.html">Spider dialogue</a>. Or, using the Forced User Mode, 
-   	you can force all the interactions that go through ZAP for a given Context to be from the perspective of a User. 
-   	The Forced User Mode is enabled via a button in the toolbar (the one with the user and the lock) and 
-   	is configured via Session Properties -> Forced User Mode.
+   	После настройки аутентификации в ZAP становятся доступны различные действия. Например, теперь вы можете выбрать пользователя в  
+   	<a href="../../ui/dialogs/spider.html">Диалог паука </a>. Или, используя принудительный режим пользователя,
+    вы можете заставить все взаимодействия, которые проходят через ZAP для данного контекста, происходить с точки зрения пользователя.  
+   	Принудительный режим пользователя включается с помощью кнопки на панели инструментов (с пользователем и блокировкой) и
+    настраивается через Свойства сеанса -> Принудительный режим пользователя. 
 	<br>
-	Most of the steps above apply as well for other authentication methods. The only things that change when trying
-	to configure authentication using a different method is step 6. Instead of that, select the authentication
-	method required from the drop-down list and configure it as needed. More details about configuring each type 
-	of authentication can be found in the <a href="authmethods.html">Authentication Methods</a> page and in the 
-	<a href="../../ui/dialogs/session/contexts.html">Context Session screens</a>.
+	Большинство описанных выше шагов применимо и к другим методам аутентификации.  Единственное, что меняется при попытке
+для настройки аутентификации с использованием другого метода - шаг 6.  Вместо этого выберите аутентификацию
+требуемый метод из раскрывающегося списка и настройте его при необходимости.  Подробнее о настройке каждого типа
+аутентификации можно найти в  <a href="authmethods.html">Методы аутентификации </a> странице и в  
+	<a href="../../ui/dialogs/session/contexts.html">Экраны контекстной сессии </a>.
 
-	<h2><a name="envvars">Authentication Header Environmental Variables</a></h2>
-	A set of environmental variables are available which allow you to easily add an authentication header to all of the requests that are proxied through ZAP or initiated
-	by the ZAP tools, including the spiders and active scanner: 
+	<h2><a name="envvars">Переменные среды заголовка аутентификации </a></h2>
+	Доступен набор переменных среды, которые позволяют легко добавлять заголовок аутентификации ко всем запросам, которые передаются через ZAP или инициируются.
+инструментами ZAP, включая пауков и активный сканер:  
 	<ul>
-	<li>ZAP_AUTH_HEADER_VALUE - if this is defined then its value will be added as a header to all of the requests</li>
-	<li>ZAP_AUTH_HEADER - if this is defined then its value will be used as the header name - if it is not defined then the standard 
-	<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization">Authorization</a> header will be used</li>
-	<li>ZAP_AUTH_HEADER_SITE - if this is defined then header will only be included in sites who's name includes its value</li>
+	<li>ZAP_AUTH_HEADER_VALUE - если это определено, то его значение будет добавлено в качестве заголовка ко всем запросам </li>
+	<li>ZAP_AUTH_HEADER - если это определено, то его значение будет использоваться как имя заголовка - если оно не определено, то стандарт
+Будет использован заголовок <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization"> Authorization </a> </li>
+	<li>ZAP_AUTH_HEADER_SITE - если это определено, то заголовок будет включен только в те сайты, имя которых включает его значение </li>
 	</ul>
 
-	<h2>Configured via</h2>
+	<h2>Настроено через </h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/session/contexts.html#auth">Session Properties dialog</a></td>
+			<td><a href="../../ui/dialogs/session/contexts.html#auth">Диалог свойств сеанса </a></td>
 			<td></td>
 		</tr>
 	</table>
 
-	<h2>See also</h2>
+	<h2>Смотрите также </h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="https://youtu.be/cR4gw-cPZOA">Youtube tutorial</a></td>
-			<td>of the Authentication, Session Management and Users Management features of ZAP [external link to https://youtu.be/cR4gw-cPZOA].</td>
+			<td><a href="https://youtu.be/cR4gw-cPZOA">Youtube учебник </a></td>
+			<td>функций аутентификации, управления сеансом и пользователями ZAP [внешняя ссылка на https://youtu.be/cR4gw-cPZOA]. </td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/overview.html">UI Overview</a></td>
-			<td>for an overview of the user interface</td>
+			<td><a href="../../ui/overview.html">Обзор пользовательского интерфейса </a></td>
+			<td>обзор пользовательского интерфейса</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="features.html">Features</a></td>
-			<td>provided by ZAP</td>
+			<td><a href="features.html">Функции </a></td>
+			<td>предоставлено ZAP </td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/session/contexts.html">Session
-					Contexts Dialog</a></td>
-			<td>for an overview of the Session Properties</td>
+			<td><a href="../../ui/dialogs/session/contexts.html">Сессия </a></td>
+			<td>для обзора свойств сеанса </td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="users.html">Users</a></td>
-			<td>for an overview of Users</td>
+			<td><a href="users.html">Пользователи</a></td>
+			<td>для обзора пользователей </td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="anticsrf.html">Anti-CSRF tokens</a></td>
-			<td>for an overview of anti-CSRF tokens</td>
+			<td><a href="anticsrf.html">Анти-CSRF токены</a></td>
+			<td>для обзора токенов анти-CSRF </td>
 		</tr>
 
 	</table>
 
-<h2>Official Videos</h2>
+<h2>Официальные видео </h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td><a href="https://play.sonatype.com/watch/ttqKANDzJCAdBUkPrsz6Td">ZAP In Ten: Authentication: Basic and Digest</a> (9:57)</td></tr>
+<td><a href="https://play.sonatype.com/watch/ttqKANDzJCAdBUkPrsz6Td"> ZAP In Ten: аутентификация: базовая и дайджест </a> (9:57) </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td><a href="https://play.sonatype.com/watch/B1vhaLSUsme7eA5hU8WeGB">ZAP In Ten: Authentication: Form Based</a> (12:59)</td></tr>
+<td><a href="https://play.sonatype.com/watch/B1vhaLSUsme7eA5hU8WeGB"> ZAP In Ten: аутентификация: на основе формы </a> (12:59) </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td><a href="https://www.zaproxy.org/addo-auth-workshop/">ZAP In Ten: ADDO Automation and Authentication Workshop</a> (8 videos)</td></tr>
+<td><a href="https://www.zaproxy.org/addo-auth-workshop/"> ZAP In Ten: ADDO Automation and Authentication Workshop </a> (8 видео) </td></tr>
 </table>
 
 </body>

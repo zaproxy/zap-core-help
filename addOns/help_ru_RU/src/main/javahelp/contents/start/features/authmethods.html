@@ -2,158 +2,158 @@
 <html>
 <head>
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
-<title>Authentication Methods</title>
+<title>Методы аутентификации </title>
 </head>
 <body>
-	<h1>Authentication Methods</h1>
+	<h1>Методы аутентификации </h1>
 	<p>
-		ZAP handles multiple types of authentication (called <b>Authentication
-			Methods</b>) that can be used for websites / webapps. Each <b><a
-			href="contexts.html">Context</a></b> has an Authentication Method
-		defined which dictates how authentication is handled. The
-		authentication is used to create Web Sessions that correspond to
-		authenticated webapp <a href="users.html">Users</a>.
+		ZAP обрабатывает несколько типов аутентификации (называемых <b> аутентификацией).
+Методы </b>), которые можно использовать для веб-сайтов / веб-приложений.  Каждый <b><a
+			href="contexts.html"> Контекст </a></b> имеет метод аутентификации
+определено, что определяет способ обработки аутентификации.  В
+аутентификация используется для создания веб-сеансов, соответствующих
+аутентифицированное веб-приложение <a href="users.html"> Пользователи </a>. 
 	</p>
 
-	<p>Authentication methods can be used in multiple places around
-		ZAP. Some of the examples include:</p>
+	<p>Методы аутентификации можно использовать в разных местах.
+ZAP.  Некоторые из примеров включают: </p>
 	<ul>
-		<li>defining Users and automatic login</li>
-		<li>detection of authenticated/unauthenticated states</li>
-		<li>performing automatic re-authentication</li>
+		<li>определение пользователей и автоматический вход в систему </li>
+		<li>обнаружение аутентифицированных / неаутентифицированных состояний </li>
+		<li>выполнение автоматической повторной аутентификации </li>
 	</ul>
 
-	<p>Multiple authentication methods have been implemented and the
-		system supports easy addition of new methods, according to user needs.
-		They main ones are described below.</p>
+	<p>Было реализовано несколько методов аутентификации, и
+система поддерживает легкое добавление новых методов в соответствии с потребностями пользователя. 
+		Основные из них описаны ниже. </p>
 
 	<h2>
-		<a name="manual">Manual Authentication</a>
+		<a name="manual">Ручная аутентификация </a>
 	</h2>
-	<p>This method allows users to perform the authentication manually
-		(e.g. authenticate in the browser while proxy-ing through ZAP) and
-		then select the corresponding HTTP session. As the actual
-		authentication is being performed by you, this method does not support
-		re-authentication in case the webapp logs a user out.
-		However if you do define an <a href="authstrategies.html">Authentication Verification Strategy</a>
-		then ZAP will maintain the authentication <a href="stats.html">statistics</a>.
+	<p>Этот метод позволяет пользователям выполнять аутентификацию вручную.
+(например, аутентифицироваться в браузере во время прокси-сервера через ZAP) и
+затем выберите соответствующий сеанс HTTP.  В качестве фактического
+аутентификация выполняется вами, этот метод не поддерживает
+повторная аутентификация в случае выхода пользователя из системы. 
+		Однако, если вы все же определите <a href="authstrategies.html"> стратегию проверки аутентификации </a>
+тогда ZAP будет поддерживать <a href="stats.html"> статистику </a> аутентификации. 
 	</p>
 	
-	<p>When using this authentication method, configuring a User for the context 
-	require choosing an authenticated HTTP session.</p>
+	<p>При использовании этого метода аутентификации настройка пользователя для контекста
+требуют выбора аутентифицированного сеанса HTTP. </p>
 
 	<h2>
-		<a name="formBased">Form-Based Authentication</a>
+		<a name="formBased">Аутентификация на основе форм </a>
 	</h2>
 	<p>
-		This method is used for websites / webapps where authentication is
-		done by submitting a form or performing a GET request to a 'login url'
-		using a 'username/password' pair of authentication credentials.
-		Re-authentication is possible. Configuration can be done using the <a
-			href="../../ui/dialogs/session/context-auth.html">Session
-			Contexts Authentication screen</a> or using the contextual PopupMenu: <i>Flag as...
-			Form-Based Authentication Login Request</i>.
+		Этот метод используется для веб-сайтов / веб-приложений, где аутентификация
+выполняется путем отправки формы или выполнения запроса GET на «URL-адрес входа»
+с использованием пары учетных данных для аутентификации «имя пользователя / пароль». 
+		Возможна повторная аутентификация.  Конфигурация может быть выполнена с помощью сеанса <a
+			href="../../ui/dialogs/session/context-auth.html">.
+Экран проверки подлинности контекстов </a> или с помощью контекстного PopupMenu: <i> Пометить как ... 
+			Запрос на вход с аутентификацией на основе формы </i>. 
 	</p>
-	<p>When using this authentication method, configuring a User for the context requires
-	setting up the <i>username/password</i> pair of credentials that are used for the form based
-	authentication.</p>
+	<p>При использовании этого метода аутентификации для настройки пользователя в контексте требуется
+настройка пары учетных данных <i> имя пользователя / пароль </i>, которые используются для формы на основе
+аутентификация. </p>
 	<p>
-	If the application requires submitting the anti-CSRF token presented in the login page, ZAP will 
-	handle it automatically. Make sure the token
-	name is configured in <a href="../../ui/dialogs/options/anticsrf.html">Options Anti CSRF screen</a>.
+	Если приложение требует отправки токена анти-CSRF, представленного на странице входа, ZAP будет
+обрабатывать это автоматически.  Убедитесь, что токен
+имя настраивается на <a href="../../ui/dialogs/options/anticsrf.html"> экране "Параметры Anti CSRF" </a>. 
 	</p>
 	
 	<h2>
-		<a name="jsonBased">JSON-Based Authentication</a>
+		<a name="jsonBased">Аутентификация на основе JSON </a>
 	</h2>
 	<p>
-		This method is used for websites / webapps where authentication is
-		done by submitting a JSON object to a 'login url' using a 'username/password'
-		pair of authentication credentials.
-		Re-authentication is possible. Configuration can be done using the <a
-			href="../../ui/dialogs/session/context-auth.html">Session
-			Contexts Authentication screen</a> or using the contextual PopupMenu: <i>Flag as...
-			JSON-Based Authentication Login Request</i>.
+		Этот метод используется для веб-сайтов / веб-приложений, где аутентификация
+выполняется путем отправки объекта JSON на «URL-адрес входа» с использованием «имени пользователя / пароля»
+пара учетных данных для аутентификации. 
+		Возможна повторная аутентификация.  Конфигурация может быть выполнена с помощью сеанса <a
+			href="../../ui/dialogs/session/context-auth.html">.
+Экран проверки подлинности контекстов </a> или с помощью контекстного PopupMenu: <i> Пометить как ... 
+			Запрос на вход с аутентификацией на основе JSON </i>. 
 	</p>
-	<p>When using this authentication method, configuring a User for the context requires
-	setting up the <i>username/password</i> pair of credentials that are used for the
-	authentication.</p>
+	<p>При использовании этого метода аутентификации для настройки пользователя в контексте требуется
+настройка пары учетных данных <i> имя пользователя / пароль </i>, которые используются для
+аутентификация. </p>
 	
 	<h2>
-		<a name="httpAuth">HTTP/NTLM Authentication</a>
+		<a name="httpAuth">HTTP / NTLM аутентификация </a>
 	</h2>
 	<p>
-		This method is used for websites / webapps where authentication is
-		enforced using the HTTP or NTLM Authentication mechanisms employing HTTP message headers. 
-		Three authentication schemes are supported: Basic, Digest and NTLM.
-		Re-authentication is possible, as the authentication headers are sent with every authenticated
-		request. Configuration can be done using the <a
-			href="../../ui/dialogs/session/context-auth.html">Session
-			Contexts Authentication screen</a>.
+		Этот метод используется для веб-сайтов / веб-приложений, где аутентификация
+принудительно с использованием механизмов аутентификации HTTP или NTLM с использованием заголовков сообщений HTTP.  
+		Поддерживаются три схемы аутентификации: базовая, дайджест и NTLM. 
+		Возможна повторная аутентификация, поскольку заголовки аутентификации отправляются с каждым аутентифицированным
+запрос.  Конфигурация может быть выполнена с помощью сеанса <a
+			href="../../ui/dialogs/session/context-auth.html">.
+Экран аутентификации контекстов </a>. 
 	</p>
-	<p>When using this authentication method, configuring a User for the context requires
-	setting up the <i>username/password</i> pair of credentials that are used for the HTTP/NTLM authentication.</p>
+	<p>При использовании этого метода аутентификации для настройки пользователя в контексте требуется
+настройка пары учетных данных <i> имя пользователя / пароль </i>, которые используются для аутентификации HTTP / NTLM. </p>
 	
 	<h2>
-		<a name="scriptBased">Script-Based Authentication</a>
+		<a name="scriptBased">Аутентификация на основе сценария </a>
 	</h2>
 	<p>
-		This method is useful for websites / webapps where the authentication is a more complex one and some custom
-		scripts that handle the authentication process are beneficial. To use this method, you must first define an Authentication 
-		<a href="scripts.html">script</a> which sends messages or performs other actions as needed by your web-application. 
-		This script is then selected for use for a given Context
-		and it is called whenever an authentication is performed. Re-authentication is possible. 
-		Configuration can be done using the <a href="../../ui/dialogs/session/context-auth.html">Session Contexts Authentication screen</a>.
+		Этот метод полезен для веб-сайтов / веб-приложений, где аутентификация является более сложной и имеет некоторые индивидуальные
+сценарии, которые обрабатывают процесс аутентификации, полезны.  Чтобы использовать этот метод, вы должны сначала определить аутентификацию
+<a href="scripts.html"> скрипт </a>, который отправляет сообщения или выполняет другие действия, которые необходимы вашему веб-приложению.  
+		Затем этот сценарий выбирается для использования в данном контексте.
+и он вызывается всякий раз, когда выполняется аутентификация.  Возможна повторная аутентификация.  
+		Конфигурацию можно выполнить с помощью <a href="../../ui/dialogs/session/context-auth.html"> экрана аутентификации контекстов сеанса </a>. 
 	</p>
-	<p>When using this authentication method, configuring a User for the context requires
-	setting up the a set of parameters defined in the script. For more details, see the provided Authentication Script examples.</p>
+	<p>При использовании этого метода аутентификации для настройки пользователя в контексте требуется
+настройка набора параметров, определенных в скрипте.  Дополнительные сведения см. В предоставленных примерах сценария аутентификации. </p>
 	
-	<h2>Configured via</h2>
+	<h2>Настроено через </h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/session/context-auth.html">Session Contexts Authentication screen</a></td>
+			<td><a href="../../ui/dialogs/session/context-auth.html">Экран аутентификации контекстов сеанса </a></td>
 			<td></td>
 		</tr>
 	</table>
 
-	<h2>See also</h2>
+	<h2>Смотрите также </h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="authentication.html">Authentication</a></td>
-			<td>overview</td>
+			<td><a href="authentication.html">Аутентификация</a></td>
+			<td>Обзор</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="https://youtu.be/cR4gw-cPZOA">Youtube tutorial</a></td>
-			<td>of the Authentication, Session Management and Users Management features of ZAP [external link to https://youtu.be/cR4gw-cPZOA].</td>
+			<td><a href="https://youtu.be/cR4gw-cPZOA">Youtube учебник </a></td>
+			<td>функций аутентификации, управления сеансом и пользователями ZAP [внешняя ссылка на https://youtu.be/cR4gw-cPZOA]. </td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/overview.html">UI Overview</a></td>
-			<td>for an overview of the user interface</td>
+			<td><a href="../../ui/overview.html">Обзор пользовательского интерфейса </a></td>
+			<td>для обзора пользовательского интерфейса </td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="features.html">Features</a></td>
-			<td>provided by ZAP</td>
+			<td><a href="features.html">Функции </a></td>
+			<td>предоставлено ZAP </td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/session/contexts.html">Session
-					Contexts Dialog</a></td>
-			<td>for an overview of the Session Properties</td>
+			<td><a href="../../ui/dialogs/session/contexts.html">Сессия
+Диалог контекстов </a></td>
+			<td>для обзора свойств сеанса </td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="users.html">Users</a></td>
-			<td>for an overview of Users</td>
+			<td><a href="users.html">Пользователи</a></td>
+			<td>для обзора пользователей </td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="anticsrf.html">Anti-CSRF tokens</a></td>
-			<td>for an overview of anti-CSRF tokens</td>
+			<td><a href="anticsrf.html">Анти-CSRF токены</a></td>
+			<td>для обзора токенов анти-CSRF </td>
 		</tr>
 
 	</table>
