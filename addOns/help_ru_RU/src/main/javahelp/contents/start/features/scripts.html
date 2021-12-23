@@ -7,68 +7,68 @@ Scripts
 </TITLE>
 </HEAD>
 <BODY>
-<H1>Scripts</H1>
+<H1>Сценарии</H1>
 <p>
-ZAP supports scripts that can be embedded within ZAP and can access internal ZAP data structures and classes.
-These scripts allow you to dynamically enhance ZAP from within ZAP.
+ZAP поддерживает сценарии, которые могут быть встроены в ZAP и могут обращаться к внутренним структурам данных и классам ZAP. 
+Эти сценарии позволяют динамически улучшать ZAP из ZAP. 
 <p>
-ZAP supports any scripting language that supports JSR 223 (http://www.jcp.org/en/jsr/detail?id=223) , including:
+ZAP поддерживает любой язык сценариев, поддерживающий JSR 223 (http://www.jcp.org/en/jsr/detail?id=223), включая: 
 <ul>
-<li>ECMAScript / JavaScript (using <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/scripting/nashorn/">Nashorn engine</a>, included by default)</li>
-<li>Zest <a href="https://developer.mozilla.org/en-US/docs/zest">https://developer.mozilla.org/en-US/docs/zest</a> (included by default)</li>
+<li>ECMAScript / JavaScript (с использованием <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/scripting/nashorn/"> движка Nashorn </a>, включен по умолчанию) </li>
+<li>Zest <a href="https://developer.mozilla.org/en-US/docs/zest"> https://developer.mozilla.org/en-US/docs/zest </a> (включен по умолчанию) </li>
 <li>Groovy <a href="https://groovy-lang.org/">https://groovy-lang.org/</a></li>
 <li>Kotlin <a href="https://kotlinlang.org/">https://kotlinlang.org/</a></li>
 <li>Python <a href="https://www.jython.org">https://www.jython.org</a></li>
 <li>Ruby - <a href="https://jruby.org/">https://jruby.org/</a></li>
-<li>and many more...</li> 
+<li>и многое другое ... </li> 
 </ul>
 
-<strong>WARNING - scripts run with the same permissions as ZAP, so do not run any scripts that you do not trust!</strong>
+<strong>ВНИМАНИЕ - сценарии запускаются с теми же разрешениями, что и ZAP, поэтому не запускайте сценарии, которым вы не доверяете! </strong>
 
-<H2>Script Types</H2>
-Different types of scripts are supported:
+<H2>Тип сценария</H2>
+Поддерживаются разные типы скриптов: 
 <ul>
-<li>Active Rules - these run as part of the Active Scanner and can be individually enabled</li>
-<li>Authentication - scripts that are invoked when authentication is performed for a Context. 
-To be used, they need to be selected when configuring the Script-Based Authentication Method for a Context. </li> 
-<li>Extender - scripts which can add new functionality, including graphical elements and new API end points</li>
-<li>HTTP Sender - scripts that run against every request/response sent/received by ZAP. This includes the proxied messages, messages sent during active scanner, fuzzer, ...</li>
-<li>Input Vector - scripts for defining exactly what ZAP should attack. They can also change how any URL is represented in the Sites Tree</li>
-<li>Passive Rules - these run as part of the Passive Scanner and can be individually enabled</li> 
-<li>Proxy - these run 'inline', can change every request and response and can be individually enabled. They can also trigger break points</li> 
-<li>Session Management - scripts that define how an application manages sessions</li>
-<li>Stand Alone - scripts that are self contained and are only run when your start them manually</li>
-<li>Targeted - scripts that are invoked with a target URL and are only run when your start them manually</li>
+<li>Активные правила - они запускаются как часть активного сканера и могут быть включены индивидуально. </li>
+<li>Аутентификация - скрипты, которые вызываются, когда аутентификация выполняется для контекста.  
+Чтобы их можно было использовать, их необходимо выбрать при настройке метода аутентификации на основе сценария для контекста.  </li> 
+<li>Extender - скрипты, которые могут добавлять новые функции, включая графические элементы и новые конечные точки API. </li>
+<li>HTTP Sender - скрипты, которые запускаются для каждого запроса / ответа, отправленного / полученного ZAP.  Сюда входят проксированные сообщения, сообщения, отправленные во время активного сканирования, фаззера и т. д. </li>
+<li>Входной вектор - скрипты для определения того, что именно ZAP должен атаковать.  Они также могут изменить способ представления любого URL-адреса в дереве сайтов. </li>
+<li>Пассивные правила - они работают как часть пассивного сканера и могут быть включены индивидуально. </li> 
+<li>Прокси-сервер - они запускаются «встроенными», могут изменять каждый запрос и ответ и могут быть включены индивидуально.  Они также могут вызывать точки останова </li> 
+<li>Управление сеансом - скрипты, определяющие, как приложение управляет сеансами. </li>
+<li>Stand Alone - автономные скрипты, которые запускаются только тогда, когда вы запускаете их вручную. </li>
+<li>Целевые - скрипты, которые вызываются с целевым URL-адресом и запускаются только тогда, когда вы запускаете их вручную. </li>
 </ul>
-<strong>Note:</strong> Add-ons can add additional types of scripts, which should be described in the help of the corresponding add-on.
+<strong> Примечание: </strong> Дополнения могут добавлять дополнительные типы скриптов, которые должны быть описаны в справке соответствующего дополнения. 
 <p>
-For more details on how to run ZAP scripts see the Script Console add-on help pages.
+Для получения дополнительных сведений о том, как запускать сценарии ZAP, см. Страницы справки надстройки Script Console. 
 
-<H2>See also</H2>
+<H2>Смотрите также </H2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../ui/overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../ui/overview.html">Обзор пользовательского интерфейса </a></td><td>обзор пользовательского интерфейса</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="features.html">Features</a></td><td>provided by ZAP</td></tr>
+<a href="features.html">Функции </a></td><td>предоставлено ZAP </td></tr>
 </table>
 
-<H2>External links</H2>
+<H2>внешняя ссылка </H2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="https://github.com/zaproxy/community-scripts">ZAP Community Scripts repo</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="https://github.com/zaproxy/community-scripts">Репозиторий скриптов сообщества ZAP </a></td></tr>
 </table>
 
-<H2>Official Videos</H2>
+<H2>Официальные видео </H2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td><a href="https://play.sonatype.com/watch/7gR4qYzUZ686wEDMBfxGdf">ZAP In Ten: ZAP Scripting - An Introduction</a> (9:33)</td></tr>
+<td><a href="https://play.sonatype.com/watch/7gR4qYzUZ686wEDMBfxGdf"> ZAP In Ten: Создание сценариев ZAP - Введение </a> (9:33) </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td><a href="https://play.sonatype.com/watch/JzX1YkJqdk7BYTMHikh433">ZAP In Ten: ZAP Scripting - Targeted Scripts</a> (10:01)</td></tr>
+<td><a href="https://play.sonatype.com/watch/JzX1YkJqdk7BYTMHikh433"> ZAP In Ten: сценарии ZAP - целевые сценарии </a> (10:01) </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td><a href="https://play.sonatype.com/watch/4no8EY1iB8RdnQLPFpYi2a">ZAP In Ten: ZAP Scripting - Proxy and HttpSender Scripts</a> (10:14)</td></tr>
+<td><a href="https://play.sonatype.com/watch/4no8EY1iB8RdnQLPFpYi2a"> ZAP In Ten: сценарии ZAP - сценарии прокси и HttpSender </a> (10:14) </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td><a href="https://play.sonatype.com/watch/HfENJ3GJB3zbD6sMscDrjD">ZAP In Ten: ZAP Scripting - Passive Scan Scripts</a> (11:55)</td></tr>
+<td><a href="https://play.sonatype.com/watch/HfENJ3GJB3zbD6sMscDrjD"> ZAP In Ten: Скрипты ZAP - Скрипты пассивного сканирования </a> (11:55) </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td><a href="https://play.sonatype.com/watch/aEwqErXFMTYdDDQbTgnJeA">ZAP In Ten: ZAP Scripting - Active Scan Scripts</a> (11:38)</td></tr>
+<td><a href="https://play.sonatype.com/watch/aEwqErXFMTYdDDQbTgnJeA"> ZAP In Ten: скрипты ZAP - активные скрипты сканирования </a> (11:38) </td></tr>
 </table>
 
 </BODY>

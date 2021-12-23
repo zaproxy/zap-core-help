@@ -2,96 +2,96 @@
 <html>
 <head>
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
-<title>Authentication Verification Strategies</title>
+<title>Стратегии проверки подлинности </title>
 </head>
 <body>
-	<h1>Authentication Verification Strategies</h1>
+	<h1>Стратегии проверки подлинности </h1>
 
-	<h2><a name="response">Verification Strategies</a></h2>
+	<h2><a name="response">Стратегии проверки </a></h2>
 	
-	ZAP supports multiple <b>Verification Strategies</b> in order to detect when messages correspond to authenticated requests.
+	ZAP поддерживает несколько <b> стратегий проверки </b>, чтобы определять, соответствуют ли сообщения аутентифицированным запросам. 
 
-	<h3><a name="response">Check every Response</a></h3>
+	<h3><a name="response">Проверить каждый ответ </a></h3>
 	
-	When this strategy is used then ZAP will use the specified Regex Patterns on every response.
-	This is typically useful for traditional webapps which return full HTML pages.
+	Когда используется эта стратегия, ZAP будет использовать указанные шаблоны регулярных выражений при каждом ответе. 
+	Обычно это полезно для традиционных веб-приложений, которые возвращают полные HTML-страницы. 
 
-	<h3><a name="response">Check every Request</a></h3>
+	<h3><a name="response">Проверить каждый запрос </a></h3>
 	
-	When this strategy is used then ZAP will use the specified Regex Patterns on every request.
-	This is typically useful for modern webapps which maintain some session state client side, such as a JWT, which is submitted with every request.
+	Когда используется эта стратегия, ZAP будет использовать указанные шаблоны регулярных выражений при каждом запросе. 
+	Это обычно полезно для современных веб-приложений, которые поддерживают некоторую часть состояния сеанса на стороне клиента, например JWT, который отправляется с каждым запросом. 
 
-	<h3><a name="response">Check every Request or Response</a></h3>
+	<h3><a name="response">Проверяйте каждый запрос или ответ </a></h3>
 	
-	When this strategy is used then ZAP will use the specified Regex Patterns on both the request and response of every message.
+	Когда используется эта стратегия, ZAP будет использовать указанные шаблоны регулярных выражений как в запросе, так и в ответе на каждое сообщение. 
 
-	<h3><a name="response">Poll the Specified URL</a></h3>
+	<h3><a name="response">Опрос указанного URL </a></h3>
 	
-	When this strategy is used then ZAP will poll the specified URL at the given frequency. 
-	Messages will be treated as logged in or logged out based on the last poll request.
-	The specified Regex Patterns will only be used on the response to the poll request.
-	This strategy is typically useful for any application for which there is at least one URL 
-	that can reliably be used to detect if a user is logged in or out.
+	Когда используется эта стратегия, ZAP будет опрашивать указанный URL с заданной частотой.  
+	Сообщения будут обрабатываться как зарегистрированные или вышедшие из системы в зависимости от последнего запроса опроса. 
+	Указанные шаблоны регулярных выражений будут использоваться только в ответе на запрос опроса. 
+	Эта стратегия обычно полезна для любого приложения, для которого есть хотя бы один URL-адрес.
+которые можно надежно использовать для определения того, вошел ли пользователь в систему или нет. 
 	
-	<h2><a name="regex">Regex Patterns</a></h2>
+	<h2><a name="regex">Шаблоны регулярных выражений </a></h2>
 	
-	All of the strategies use 2 Regex Patterns to tell if a specified message is logged in or not.
-	You can supply one or both regexes - if you do not supply either then the Authentication Strategy will not be used.
+	Все стратегии используют 2 шаблона регулярных выражений, чтобы определить, зарегистрировано ли указанное сообщение или нет. 
+	Вы можете указать одно или оба регулярных выражения - если вы не укажете ни одно из них, стратегия аутентификации использоваться не будет. 
 
 	<p>
-	To set one of the <b>Logged in/out Indicators</b>, either type the regex 
-	directly in the <i><a href="../../ui/dialogs/session/context-auth.html">Session
-	Context Authentication screen</a> dialog -> Authentication panel -> Logged In/Out Indicator field</i>,
-	or find an authenticated message in the Sites Tree or History tab, select it, open the
-	Response View and select the text you wish to define as the indicator using the
-	mouse and select the <i>Flag as Context... Logged in/out indicator</i> right-click menu option.
+	Чтобы установить один из <b> индикаторов входа / выхода </b>, введите либо регулярное выражение
+непосредственно в сеансе <i> <a href="../../ui/dialogs/session/context-auth.html">
+Экран контекстной аутентификации </a> диалоговое окно -> панель аутентификации -> поле индикатора входа / выхода </i>,
+или найдите аутентифицированное сообщение в дереве сайтов или на вкладке «История», выберите его, откройте
+Просмотр отклика и выберите текст, который вы хотите определить как индикатор, с помощью
+мышью и выберите <i> Флаг как контекст ...  Индикатор входа / выхода </i>, вызываемый правой кнопкой мыши. 
 
-	<h2>Configured via</h2>
+	<h2>Настроено через </h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/session/contexts.html#auth">Session Properties dialog</a></td>
+			<td><a href="../../ui/dialogs/session/contexts.html#auth">Диалог свойств сеанса </a></td>
 			<td></td>
 		</tr>
 	</table>
 
-	<h2>See also</h2>
+	<h2>Смотрите также </h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="authentication.html">Authentication</a></td>
-			<td>overview</td>
+			<td><a href="authentication.html">Аутентификация</a></td>
+			<td>Обзор</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="https://youtu.be/cR4gw-cPZOA">Youtube tutorial</a></td>
-			<td>of the Authentication, Session Management and Users Management features of ZAP [external link to https://youtu.be/cR4gw-cPZOA].</td>
+			<td><a href="https://youtu.be/cR4gw-cPZOA">Youtube учебник </a></td>
+			<td>функций аутентификации, управления сеансом и пользователями ZAP [внешняя ссылка на https://youtu.be/cR4gw-cPZOA]. </td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/overview.html">UI Overview</a></td>
-			<td>for an overview of the user interface</td>
+			<td><a href="../../ui/overview.html">Обзор пользовательского интерфейса </a></td>
+			<td>обзор пользовательского интерфейса</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="features.html">Features</a></td>
-			<td>provided by ZAP</td>
+			<td><a href="features.html">Функции </a></td>
+			<td>предоставлено ZAP </td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/session/contexts.html">Session
-					Contexts Dialog</a></td>
-			<td>for an overview of the Session Properties</td>
+			<td><a href="../../ui/dialogs/session/contexts.html">Сессия
+Диалог контекстов </a></td>
+			<td>для обзора свойств сеанса </td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="users.html">Users</a></td>
-			<td>for an overview of Users</td>
+			<td><a href="users.html">Пользователи</a></td>
+			<td>для обзора пользователей </td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="anticsrf.html">Anti-CSRF tokens</a></td>
-			<td>for an overview of anti-CSRF tokens</td>
+			<td><a href="anticsrf.html">Анти-CSRF токены</a></td>
+			<td>для обзора токенов анти-CSRF </td>
 		</tr>
 
 	</table>

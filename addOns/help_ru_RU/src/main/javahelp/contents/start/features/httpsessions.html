@@ -2,87 +2,87 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>HTTP Sessions</title>
+<title>HTTP-сессии</title>
 </head>
 <body>
-	<h1>HTTP Sessions</h1>
-	<p>This tool keeps track of the existing HTTP Sessions on a
-		particular Site and allows the Zaproxy user to force all requests to
-		be on a particular session. Basically, it allows the user to easily
-		switch between user sessions on a Site and to create a new Session
-		without "destroying" the existing ones.</p>
+	<h1>HTTP-сессии</h1>
+	<p>Этот инструмент отслеживает существующие HTTP-сеансы на
+конкретный сайт и позволяет пользователю Zaproxy принудительно отправлять все запросы на
+быть на конкретном сеансе.  По сути, это позволяет пользователю легко
+переключаться между пользовательскими сеансами на сайте и создавать новый сеанс
+без «разрушения» существующих. </p>
 
 	<p>
-		It is based on the concept of Session Tokens, which are HTTP message
-		parameters (for now only Cookies) which allow an HTTP server to
-		connect a request message with any previous requests or data stored.
-		In the case of Zaproxy, conceptually, session tokens have been
-		classified into 2 categories: default session tokens and site session
-		tokens. The default session tokens are the ones that the user can set
-		in the <a href="../../ui/dialogs/options/httpsessions.html">Options
-			screen</a> and are tokens that are, by default, automatically considered
-		session tokens for any site (eg. phpsessid, jsessionid, etc). The site
-		session tokens are a set of tokens for a particular site and are
-		usually set up using the popup menus available in the <a
-			href="../../ui/tabs/params.html">Params Tab</a>.
+		Он основан на концепции токенов сеанса, которые представляют собой сообщение HTTP.
+параметры (пока только файлы cookie), которые позволяют HTTP-серверу
+соединить сообщение запроса с любыми предыдущими запросами или сохраненными данными. 
+		В случае Zaproxy, концептуально, токены сеанса
+делится на 2 категории: токены сеанса по умолчанию и сеанс сайта
+жетоны.  Токены сеанса по умолчанию - это те, которые пользователь может установить.
+в <a href="../../ui/dialogs/options/httpsessions.html"> Параметры
+screen </a> и являются токенами, которые по умолчанию автоматически считаются
+токены сеанса для любого сайта (например,  phpsessid, jsessionid, etc). Сайт
+токены сеанса - это набор токенов для определенного сайта,
+обычно настраивается с помощью всплывающих меню, доступных на вкладке <a
+			href="../../ui/tabs/params.html"> Параметры </a> .
 	</p>
 
 	<p>
-		This tool automatically detects, using the defined session tokens or
-		the automatically detected default session tokens, any HTTP session
-		which exists in the communication. The detected sessions are shown in
-		the <a href="../../ui/tabs/httpsessions.html">HTTP Sessions Tab</a>.
+		Этот инструмент автоматически обнаруживает, используя определенные токены сеанса или
+автоматически обнаруженные токены сеанса по умолчанию, любой сеанс HTTP
+который существует в сообщении.  Обнаруженные сеансы показаны в
+вкладка <a href="../../ui/tabs/httpsessions.html"> HTTP-сеансы </a> .
 	</p>
 
 	<p>
-		The user can, using the button available on the <a
-			href="../../ui/tabs/httpsessions.html">HTTP Sessions Tab</a>, create
-		a new session without destroying the existing one, or can force one of
-		the sessions as 'active'. When a session is 'active', all the outbound
-		requests sent to the corresponding Site are modified, the session
-		tokens being set up to match the active session. In this way, the user
-		can easily force some messages to be 'part of' a particular session
-		and then switch and send messages on another session.
+		Пользователь может, используя кнопку, доступную на вкладке <a
+			href="../../ui/tabs/httpsessions.html"> HTTP-сеансы </a>, создавать
+новый сеанс, не разрушая существующий, или может заставить один из
+сеансы как «активные».  Когда сеанс «активен», все исходящие
+запросы, отправленные на соответствующий Сайт, изменяются, сеанс
+токены настраиваются в соответствии с активным сеансом.  Таким образом, пользователь
+может легко заставить некоторые сообщения быть "частью" определенного сеанса
+а затем переключить и отправить сообщения в другом сеансе. 
 	</p>
 
 	<p>
-		The HTTP Sessions tool is configured using the <a
-			href="../../ui/dialogs/options/httpsessions.html">HTTP Sessions
-			Options screen</a>.
+		Инструмент HTTP-сеансов настраивается с использованием <a
+			href="../../ui/dialogs/options/httpsessions.html"> HTTP-сеансов.
+Экран параметров </a> .
 	</p>
 
-	<h2>Accessed via</h2>
+	<h2>Доступ через </h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/tabs/httpsessions.html">HTTP Sessions
-					tab</a></td>
+			<td><a href="../../ui/tabs/httpsessions.html">HTTP-сессии
+вкладка </a></td>
 			<td></td>
 		</tr>
 	</table>
 
-	<h2>See also</h2>
+	<h2>Смотрите также </h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/overview.html">UI Overview</a></td>
-			<td>for an overview of the user interface</td>
+			<td><a href="../../ui/overview.html">Обзор пользовательского интерфейса </a></td>
+			<td>для обзора пользовательского интерфейса </td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="features.html">Features</a></td>
-			<td>provided by ZAP</td>
+			<td><a href="features.html">Функции </a></td>
+			<td>предоставлено ZAP </td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			<td><a href="../../ui/dialogs/options/httpsessions.html">HTTP
 					Sessions Options screen</a></td>
-			<td>for an overview of the tool's Options</td>
+			<td>для обзора опций инструмента </td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/tabs/params.html">Params Tab</a></td>
-			<td>for an overview of Params Tab</td>
+			<td><a href="../../ui/tabs/params.html">вкладка params </a></td>
+			<td>для обзора вкладки Params </td>
 		</tr>
 
 	</table>

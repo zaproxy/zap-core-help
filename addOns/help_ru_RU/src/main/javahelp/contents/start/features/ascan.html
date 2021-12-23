@@ -13,54 +13,55 @@
 известные атаки на выбранные цели.
 </p>
 <p>
-Active scanning is an attack on those targets. <br/>
-You should NOT use it on web applications that you do not own.
+Активное сканирование - это атака на эти цели. <0 />
+Вы НЕ должны использовать его в веб-приложениях, которыми вы не владеете. 
 </p>
 <p>
-In order to facilitate identifying ZAP traffic and Web Application Firewall exceptions, ZAP is accompanied 
-by a script "AddZapHeader.js" which can be used to add a specific header to all traffic that passes through 
-or originates from ZAP. eg: <tt>X-ZAP-Initiator: 3</tt>
+Чтобы облегчить идентификацию ZAP-трафика и исключений брандмауэра веб-приложений, ZAP сопровождается
+скриптом "AddZapHeader.js", который можно использовать для добавления определенного заголовка ко всему проходящему через него трафику.
+или происходит из ZAP.  например: <tt> Инициатор X-ZAP: 3 </tt> 
 </p>
 <p>
-It should be noted that active scanning can only find certain types of vulnerabilities.<br/>
-Logical vulnerabilities, such as broken access control, will not be found by
-any active or automated vulnerability scanning.<br/>
-Manual penetration testing should always be performed in addition to active
-scanning to find all types of vulnerabilities. 
+Следует отметить, что активное сканирование позволяет находить только определенные типы уязвимостей. <0 />
+Логические уязвимости, такие как нарушение контроля доступа, не будут обнаружены
+любое активное или автоматическое сканирование уязвимостей. <0 />
+В дополнение к активному тестированию на проникновение всегда следует проводить ручное тестирование на проникновение.
+сканирование для поиска всех типов уязвимостей.  
 </p>
 
 <p>
-Active scanning is configured using the 
-<a href="../../ui/dialogs/options/ascan.html">Options Active Scan screen</a>.<br>
-The rules that run are configured via <a href="scanpolicy.html">Scan Policies</a> - you can have as many of these as you like. 
+Активное сканирование настраивается с помощью
+<a href="../../ui/dialogs/options/ascan.html"> Параметры экрана активного сканирования </a>. <br>
+Выполняемые правила настраиваются с помощью <a href="scanpolicy.html"> политик сканирования </a> - их можно сколько угодно.  
 
 </p>
 
-<h2>Accessed via</h2>
+<h2>Доступ через </h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/ascan.html">Active Scan tab</a></td><td>'New Scan' button</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/sites.html">Sites tab</a></td><td>'Attack/Active Scan...' right click menu item</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/history.html">History tab</a></td><td>"Атака / Активное Сканирование...'правой кнопкой мыши пункт меню</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/ascan.html">Вкладка "Активное сканирование" </a></td><td>Кнопка "Новое сканирование"</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/sites.html">Вкладка "Сайты" </a></td><td>Пункт меню "Атака / Активное сканирование ..." </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/history.html">Вкладка История </a></td><td>'Атака / Активное сканирование ...'
+пункт меню, щелкнув правой кнопкой мыши </td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Смотрите также </h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../ui/overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../ui/overview.html">Обзор пользовательского интерфейса </a></td><td>обзор пользовательского интерфейса</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="features.html">Features</a></td><td>provided by ZAP</td></tr>
+<a href="features.html">Функции </a></td><td>предоставлено ZAP </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="pscan.html">Passive scanning</a></td><td></td></tr>
+<a href="pscan.html">Пассивный сканер</a></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../ui/dialogs/scanpolicymgr.html">Scan Policy Manager Dialog</a></td><td>which allows you to manage the scan policies</td></tr>
+<a href="../../ui/dialogs/scanpolicymgr.html">Диалоговое окно диспетчера политик сканирования </a></td><td>что позволяет вам управлять политиками сканирования </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../checks.html">Scanner Rules</a></td><td>supported by default</td></tr>
+<a href="../checks.html">Правила сканера </a></td><td>поддерживается по умолчанию </td></tr>
 </table>
 
-<h2>Official Videos</h2>
+<h2>Официальные видео </h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td><a href="https://play.sonatype.com/watch/ZcEfSihgQSzuthJi4qEeW3">ZAP In Ten: Active Scanning</a> (9:47)</td></tr>
+<td><a href="https://play.sonatype.com/watch/ZcEfSihgQSzuthJi4qEeW3"> ZAP In Ten: активное сканирование </a> (9:47) </td></tr>
 </table>
 
 </body>

@@ -2,77 +2,77 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Session Management</title>
+<title>Управление сессией </title>
 </head>
 <body>
-	<h1>Session Management</h1>
+	<h1>Управление сессией </h1>
 	<p>
-		ZAP handles multiple types of session management (called <b>Session
-			Management Methods</b>) that can be used for websites / webapps. Each <b><a
-			href="contexts.html">Context</a></b> has a Session Management
-		Method defined which dictates how sessions are kept.
+		ZAP обрабатывает несколько типов управления сеансом (так называемый <b> сеанс
+Методы управления </b>), которые можно использовать для веб-сайтов / веб-приложений.  Каждый <b><a
+			href="contexts.html"> Context </a></b> имеет управление сеансом
+Определен метод, который определяет, как хранятся сеансы. 
 	</p>
 
 	<h3>
-		<a name="cbsm">Cookie-Based Session Management</a>
+		<a name="cbsm">Управление сеансом на основе файлов cookie </a>
 	</h3>
 	<p>
-		In the case of this method the session is being tracked through
-		cookies. Currently, the session tokens that are used are imported from
-		the <a href="httpsessions.html">HTTP Sessions</a> Extension.
+		В случае этого метода сеанс отслеживается через
+печенье. В настоящее время используемые токены сеанса импортируются из
+расширение <a href="httpsessions.html"> HTTP-сессий </a>. 
 	</p>
 
 	<h3>
-		<a name="hasm">HTTP Authentication Session Management</a>
+		<a name="hasm">Управление сеансом HTTP-аутентификации </a>
 	</h3>
 	<p>
-		In the case of this method the session is managed with HTTP request header <code>Authorization</code>.
+		В случае этого метода сеанс управляется заголовком HTTP-запроса <code> Авторизация </code> .
 	</p>
 
 	<h3>
-		<a name="sbsm">Script-Based Session Management</a>
+		<a name="sbsm">Управление сеансом на основе сценария </a>
 	</h3>
 	<p>
-		This method is useful for websites / webapps where the session management is a more complex one and some custom
-		scripts that handle the process are beneficial. To use this method, you must first define a Session Management script
-		which analyses messages or performs other actions as needed by your web-application. This script is then selected for use for a given Context
-		and it is called whenever session management actions are performed. 
-		Configuration can be done using the <a href="../../ui/dialogs/session/contexts.html#sm">Session
-			Contexts Dialog</a> and requires you to have the Scripts Console ZAP Addon installed from the Marketplace.
+		Этот метод полезен для веб-сайтов / веб-приложений, где управление сеансом является более сложным и некоторые индивидуальные
+сценарии, управляющие процессом, полезны.  Чтобы использовать этот метод, вы должны сначала определить сценарий управления сеансом.
+который анализирует сообщения или выполняет другие действия, необходимые вашему веб-приложению.  Затем этот сценарий выбирается для использования в данном контексте.
+и он вызывается всякий раз, когда выполняются действия по управлению сеансом.  
+		Конфигурация может быть выполнена с помощью сеанса <a href="../../ui/dialogs/session/contexts.html#sm">.
+Диалог контекстов </a> и требует, чтобы вы установили надстройку ZAP Scripts Console из Marketplace. 
 	</p>
 
-	<h2>Configured via</h2>
+	<h2>Настроено через </h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/session/contexts.html#sm">Session
-					Contexts Dialog</a></td>
+			<td><a href="../../ui/dialogs/session/contexts.html#sm">Сессия
+Диалог контекстов </a></td>
 			<td></td>
 		</tr>
 	</table>
 
-	<h2>See also</h2>
+	<h2>Смотрите также </h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="https://youtu.be/cR4gw-cPZOA">Youtube tutorial</a></td>
-			<td>of the Authentication, Session Management and Users Management features of ZAP [external link to https://youtu.be/cR4gw-cPZOA].</td>
+			<td><a href="https://youtu.be/cR4gw-cPZOA">Youtube учебник </a></td>
+			<td>функций аутентификации, управления сеансом и пользователями ZAP [внешняя ссылка на https://youtu.be/cR4gw-cPZOA]. </td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/overview.html">UI Overview</a></td>
-			<td>for an overview of the user interface</td>
+			<td><a href="../../ui/overview.html">Обзор пользовательского интерфейса </a></td>
+			<td>для обзора пользовательского интерфейса </td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="features.html">Features</a></td>
-			<td>provided by ZAP</td>
+			<td><a href="features.html">Функции </a></td>
+			<td>предоставлено ZAP </td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/session/contexts.html">Session
-					Contexts Dialog</a></td>
-			<td>for an overview of the Session Properties</td>
+			<td><a href="../../ui/dialogs/session/contexts.html">Сессия
+Диалог контекстов </a></td>
+			<td>для обзора свойств сеанса </td>
 		</tr>
 
 	</table>

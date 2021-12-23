@@ -3,30 +3,30 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Data Driven Content
+Контент, управляемый данными 
 </title>
 </head>
 <body>
-<h1>Data Driven Content</h1>
+<h1>Контент, управляемый данными </h1>
 <p>
-Data driven content is type of <a href="structmods.html">Structural Modifier</a>
-which identifies URL paths that represent data.<br>
+Контент, управляемый данными, является типом <a href="structmods.html"> структурного модификатора </a>
+который определяет пути URL, представляющие данные. <br>
 <p>
 В "традиционных" веб-приложения структура приложения, как правило, определяется URL-адреса 
 и данные содержатся в параметрах URL и данных POST.<br>
-URLs like:
+URL-адреса вроде: 
 <ul>
 <li>https://www.example.com/app/aaa?ddd=eee
 <li>https://www.example.com/app/aaa?ddd=fff
 <li>https://www.example.com/app/bbb?ddd=eee
 </ul>
-are represented in the <a href="sitestree.html">Sites Tree</a> as two 'nodes' in the tree:
+представлены в  <a href="sitestree.html">Дерево сайтов </a> как два «узла» в дереве: 
 <ul>
-<li>Sites
+<li>Сайты
 	<ul>
 	<li>https://www.example.com
 		<ul>
-		<li>app
+		<li>Приложение
 			<ul>
 			<li>GET:aaa(ddd)
 			<li>GET:bbb(ddd)
@@ -38,19 +38,19 @@ are represented in the <a href="sitestree.html">Sites Tree</a> as two 'nodes' in
 Если это не хорошее представление структуры, то ZAP не сможет эффективно атаковать приложение.<br>
 <br>
 Некоторые приложения включают данные в URL-пути.<br>
-For example: 
+Например: 
 <ul>
 <li>https://www.example.com/app/company1/aaa?ddd=eee
 <li>https://www.example.com/app/company2/aaa?ddd=fff
 <li>https://www.example.com/app/company3/aaa?ddd=ggg
 </ul>
-These 3 URLs represent the same page but with different data, but by default ZAP will represent them as three separate nodes:
+Эти 3 URL-адреса представляют одну и ту же страницу, но с разными данными, но по умолчанию ZAP будет представлять их как три отдельных узла: 
 <ul>
-<li>Sites
+<li>Сайты
 	<ul>
 	<li>https://www.example.com
 		<ul>
-		<li>app
+		<li>Приложение
 			<ul>
 			<li>company1
 				<ul>
@@ -68,21 +68,21 @@ These 3 URLs represent the same page but with different data, but by default ZAP
 		</ul>
 	</ul>
 </ul>
-Это проблема, потому что ZAP теперь будет атаковать все 3 страницы, когда он только должен атаковать один из них.<br>
-In this case attacking the same page 3 times is not a big problem, but if you have hundreds or thousands 
-of pages like this will significantly increase the time it takes to scan the application.<br>
+Это проблема, потому что ZAP теперь будет атаковать все 3 страницы, когда ему нужно атаковать только одну из них. <br>
+В этом случае трехкратная атака одной и той же страницы - не большая проблема, но если у вас их сотни или тысячи
+таких страниц значительно увеличит время, необходимое для сканирования приложения. <br>
 <br>
-In ZAP terms the 'company' nodes are 'data driven content' - URL path elements that contain
-data instead of representing part of the application structure.<br>
-You can define data driven content by adding the application to a <a href="contexts.html">Context</a>
-and then configuring them via the <a href="../../ui/tabs/sites.html">Sites tab</a> 'Flag as Context -&gt; <i>Context Name</i> Data driven node' right click menu item<br>
-После этого страницы будут правильно представлены как 1 узел:
+В терминах ZAP узлы «компания» - это «контент, управляемый данными» - элементы пути URL, которые содержат
+данные вместо того, чтобы представлять часть структуры приложения. <br>
+Вы можете определить контент, управляемый данными, добавив приложение в  <a href="contexts.html">Контекст</a>
+а затем настраивая их через  <a href="../../ui/tabs/sites.html">Вкладка "Сайты" </a> 'Пометить как контекст - & gt;  <i>Имя контекста</i> Пункт контекстного меню узла, управляемого данными <br>
+Как только вы это сделаете, страницы будут правильно представлены как 1 узел: 
 <ul>
-<li>Sites
+<li>Сайты
 	<ul>
 	<li>https://www.example.com
 		<ul>
-		<li>app
+		<li>Приложение
 			<ul>
 			<li>&#x00AB;company&#x00BB;
 				<ul>
@@ -92,21 +92,21 @@ and then configuring them via the <a href="../../ui/tabs/sites.html">Sites tab</
 		</ul>
 	</ul>
 </ul>
-The characters &#x00AB; and &#x00BB; are used to indicate that this is a 'special' node and the 
-node name (in this case 'company') can be set by you to indicate what that node represents.
+Персонажи & # x00AB; и & # x00BB; используются, чтобы указать, что это «особый» узел, а
+имя узла (в данном случае «компания») может быть установлено вами, чтобы указать, что этот узел представляет. 
 
-<h2>Accessed via</h2>
+<h2>Доступ через </h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/sites.html">Sites tab</a></td><td>'Flag as Context -&gt; <i>Context Name</i> Data driven node' right click menu item</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/history.html">History tab</a></td><td>'Flag as Context -&gt; <i>Context Name</i> Data driven node' right click menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/sites.html">Вкладка "Сайты" </a></td><td>'Пометить как контекст - & gt; <i> Имя контекста </i> Узел, управляемый данными, 'элемент меню, вызываемый правой кнопкой мыши </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/history.html">Вкладка История </a></td><td>'Пометить как контекст - & gt; <i> Имя контекста </i> Узел, управляемый данными, 'элемент меню, вызываемый правой кнопкой мыши </td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Смотрите также </h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">UI Overview</a></td><td>обзор пользовательского интерфейса</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="features.html">Features</a></td><td>provided by ZAP</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="structparams.html">Structural Parameters</a></td><td>которые идентифицируют параметры, представляющие структуру приложения, а не пользовательские данные</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/dialogs/session/context-struct.html">Session Context Structure screen</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">Обзор пользовательского интерфейса </a></td><td>обзор пользовательского интерфейса</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="features.html">Функции </a></td><td>предоставлено ZAP </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="structparams.html">Структурные параметры </a></td><td>которые определяют параметры, которые представляют структуру приложения вместо пользовательских данных </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/dialogs/session/context-struct.html">Экран структуры контекста сеанса </a></td></tr>
 </table>
 
 </body>

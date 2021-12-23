@@ -3,70 +3,70 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Structural Parameters
+Структурные параметры 
 </title>
 </head>
 <body>
-<h1>Structural Parameters</h1>
+<h1>Структурные параметры </h1>
 <p>
-Structural parameters are a type of <a href="structmods.html">Structural Modifier</a>
-which identify parameters that represent application structure instead of user data.<br>
+Структурные параметры - это разновидность <a href="structmods.html"> Структурного модификатора </a>
+которые определяют параметры, которые представляют структуру приложения, а не данные пользователя. <br>
 <p>
-In 'traditional' web applications the structure of the application is typically defined by the URL paths
-and the data is contained in the URL parameters and POST data.<br>
-URLs like:
+В «традиционных» веб-приложениях структура приложения обычно определяется путями URL.
+и данные содержатся в параметрах URL и данных POST. <br>
+URL-адреса вроде: 
 <ul>
 <li>https://www.example.com/app/aaa?ddd=eee
 <li>https://www.example.com/app/aaa?ddd=fff
 <li>https://www.example.com/app/aaa?ddd=ggg
 </ul>
-are represented in the <a href="sitestree.html">Sites Tree</a> as one 'node' in the tree:
+представлены в  <a href="sitestree.html">Дерево сайтов </a> как один «узел» в дереве: 
 <ul>
-<li>Sites
+<li>Сайты
 	<ul>
 	<li>https://www.example.com
 		<ul>
-		<li>app
+		<li>приложение 
 			<ul>
 			<li>GET:aaa(ddd)
 			</ul>
 		</ul>
 	</ul>
 </ul>
-The Sites tree is very important as it reflects ZAP's understanding of the application structure.<br>
-If it is not a good representation of the structure then ZAP will not be able to attack the application effectively.<br>
+Дерево сайтов очень важно, поскольку оно отражает понимание ZAP структуры приложения. <br>
+Если это не очень хорошее представление структуры, ZAP не сможет эффективно атаковать приложение. <br>
 <br>
-In 'single' page applications a parameter is used to indicate the logical 'page':
+В одностраничных приложениях параметр используется для обозначения логической «страницы»: 
 <ul>
 <li>https://www.example.com/app/aaa?page=p1&amp;ddd=eee
 <li>https://www.example.com/app/aaa?page=p2&amp;ddd=fff
 <li>https://www.example.com/app/aaa?page=p3&amp;ddd=ggg
 </ul>
-these 3 URLs represent different logical pages, but by default ZAP will still represent them as one node:
+эти 3 URL-адреса представляют разные логические страницы, но по умолчанию ZAP по-прежнему будет представлять их как один узел: 
 <ul>
-<li>Sites
+<li>Сайты
 	<ul>
 	<li>https://www.example.com
 		<ul>
-		<li>app
+		<li>Приложение
 			<ul>
 			<li>GET:aaa(ddd,page)
 			</ul>
 		</ul>
 	</ul>
 </ul>
-This is a problem because ZAP will now not attack all of the application's functionality.<br>
+Это проблема, потому что теперь ZAP не атакует все функции приложения. <br>
 <br>
-In ZAP terms the 'page' URL parameter is a 'structural parameter' - a parameter that defines part of the application structure.<br>
-You can define structural parameters by adding the application to a <a href="contexts.html">Context</a>
-and then configuring them via the <a href="../../ui/dialogs/session/context-struct.html">Session Context Structure screen</a>.<br>
-Once you have done this the pages will be correctly represented as 3 nodes:
+В терминах ZAP параметр URL «страницы» является «структурным параметром» - параметром, который определяет часть структуры приложения. <br>
+Вы можете определить структурные параметры, добавив приложение в  <a href="contexts.html">Контекст</a>
+а затем настраивая их через  <a href="../../ui/dialogs/session/context-struct.html">Экран структуры контекста сеанса </a>.<br>
+Как только вы это сделаете, страницы будут правильно представлены как 3 узла: 
 <ul>
-<li>Sites
+<li>Сайты
 	<ul>
 	<li>https://www.example.com
 		<ul>
-		<li>app
+		<li>Приложение
 			<ul>
 			<li>aaa
 				<ul>
@@ -79,17 +79,17 @@ Once you have done this the pages will be correctly represented as 3 nodes:
 	</ul>
 </ul>
 
-<h2>Accessed via</h2>
+<h2>Доступ через </h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/dialogs/session/context-struct.html">Session Context Structure screen</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/dialogs/session/context-struct.html">Экран структуры контекста сеанса </a></td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Смотрите также </h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="features.html">Features</a></td><td>provided by ZAP</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="structmods.html">Structural Modifiers</a></td><td>controls which change how ZAP represents the structure of the application</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="ddc.html">Data Driven Content</a></td><td>which identify URL paths that represent data</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">Обзор пользовательского интерфейса </a></td><td>для обзора пользовательского интерфейса </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="features.html">Функции </a></td><td>предоставлено ZAP </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="structmods.html">Структурные модификаторы </a></td><td>элементы управления, которые изменяют то, как ZAP представляет структуру приложения </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="ddc.html">Контент, управляемый данными </a></td><td>которые определяют пути URL, которые представляют данные </td></tr>
 </table>
 
 </body>

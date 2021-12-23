@@ -7,86 +7,86 @@ Sites Tree
 </TITLE>
 </HEAD>
 <BODY>
-<H1>Sites Tree</H1>
+<H1>дерево сайтов </H1>
 <p>
-The Sites Tree is ZAP's internal representation of the sites that you access and is displayed in the <a href="../../ui/tabs/sites.html">Sites tab</a>.
-If it does not accurately reflect the sites then ZAP will not be able to attack them effectively.
-Each node in the tree represents a different piece of functionality in a site. 
-By default ZAP will create unique nodes in the tree based on the HTTP method and the parameter names.
+Дерево сайтов - это внутреннее представление ZAP сайтов, к которым вы получаете доступ, оно отображается на вкладке <a href="../../ui/tabs/sites.html"> Сайты </a>. 
+Если он неточно отражает сайты, ZAP не сможет эффективно атаковать их. 
+Каждый узел в дереве представляет отдельную функциональность на сайте.  
+По умолчанию ZAP создает уникальные узлы в дереве на основе метода HTTP и имен параметров. 
 </p>
 <p>
-This means that the following requests will all end up having different tree nodes:
+Это означает, что все следующие запросы будут иметь разные узлы дерева: 
 <ul>
 <li>GET https://www.example.com/ex1?a=b&amp;c=d</li>
 <li>GET https://www.example.com/ex1?a=b&amp;d=c</li>
 <li>POST https://www.example.com/ex1?a=b&amp;c=d</li>
 </ul>
 
-And the following requests will end up having the same node:
+И следующие запросы будут иметь один и тот же узел: 
 <ul>
 <li>GET https://www.example.com?a=b&amp;c=d</li>
 <li>GET https://www.example.com?a=c&amp;c=c</li>
 <li>GET https://www.example.com?a=e&amp;c=f</li>
 </ul>
 
-This works pretty well in lots of cases - different HTTP methods and parameter names typically mean different actions while the parameter values usually don’t change the outcome.
+Это работает очень хорошо во многих случаях - разные методы HTTP и имена параметров обычно означают разные действия, в то время как значения параметров обычно не меняют результат. 
 
-<H2>Exceptions</H2>
+<H2>Исключения</H2>
 
-There are always exceptions.
+Всегда есть исключения. 
 
-<H3>Structural Parameters</H3>
+<H3>Структурные параметры </H3>
 
-Take the case where the action to be taken is actually defined in a parameter value:
+Возьмем случай, когда действие, которое нужно предпринять, фактически определено в значении параметра: 
 <ul>
 <li>GET https://www.example.com?a=b&amp;action=add</li>
 <li>GET https://www.example.com?a=b&amp;action=delete</li>
 </ul>
 
-In this case both URLs will end up in the same Sites Tree node, which means that in practice only one of them will be attacked. 
-The other URL will not be attacked and so any vulnerabilities specific to that action will not be found.
+В этом случае оба URL-адреса попадут в один и тот же узел дерева сайтов, что означает, что на практике будет атакован только один из них.  
+Другой URL-адрес не будет атакован, и поэтому никакие уязвимости, относящиеся к этому действию, не будут обнаружены. 
 <p>
-In ZAP the solution to this is to define the ‘action’ parameter as a <a href="structparams.html">Structural Parameter</a>, 
-in other words a parameter whose value actually affects the structure of a site. 
-Once you have done that (and revisited the URLs) then they will appear as 2 different nodes and ZAP will attack them separately.
+В ZAP решение этой проблемы состоит в том, чтобы определить параметр «действие» как <a href="structparams.html"> структурный параметр </a>,
+другими словами, параметр, значение которого фактически влияет на структуру сайта.  
+Как только вы это сделаете (и повторно посетите URL-адреса), они появятся как 2 разных узла, и ZAP будет атаковать их по отдельности. 
 
-<H3>Data Driven Nodes</H3>
+<H3>Узлы, управляемые данными </H3>
 
-Conversely we have the case where a URL path element is actually part of the data and not part of the structure of the site. 
-For example the following URLs could all represent the same functionality if the second path element (companyX) is actually data:
+И наоборот, у нас есть случай, когда элемент пути URL фактически является частью данных, а не частью структуры сайта.  
+Например, следующие URL-адреса могут представлять одну и ту же функциональность, если второй элемент пути (companyX) на самом деле является данными: 
 
 <ul>
-<li>https://www.example.com/app/company1/aaa?ddd=eee</li>
+<li>ttps://www.example.com/app/company1/aaa?ddd=eee</li>
 <li>https://www.example.com/app/company2/aaa?ddd=fff</li>
 <li>https://www.example.com/app/company3/aaa?ddd=ggg</li>
 </ul>
 
-In this case all 3 URLs will end up in unique nodes and ZAP will attack each of them even though it doesn't really need to. 
-This probably is not a big problem if there are just 3 instances, but in most cases this data will be coming from a database so there could be a huge number of such nodes.
+В этом случае все 3 URL-адреса окажутся в уникальных узлах, и ZAP атакует каждый из них, даже если в этом нет необходимости.  
+Вероятно, это не большая проблема, если имеется всего 3 экземпляра, но в большинстве случаев эти данные будут поступать из базы данных, поэтому таких узлов может быть огромное количество. 
 <p>
-The solution to this is to define the relevant path element as <a href="ddc.html">Data Driven Content</a> which means path elements that really contain data rather than represent part of the site structure.
-Once you have done that (and revisited the URLs) then they will all be represented as just 1 node and ZAP will only attack them once.
+Решением для этого является определение соответствующего элемента пути как <a href="ddc.html"> Содержимое, управляемое данными </a>, что означает элементы пути, которые действительно содержат данные, а не представляют часть структуры сайта. 
+После того, как вы это сделаете (и повторно посетите URL-адреса), все они будут представлены как всего лишь 1 узел, и ZAP атакует их только один раз. 
 <p>
-You will need to define both Structural Parameters and Data Driven Nodes manually - ZAP does not currently have the capability to automatically detect these situations.
+Вам нужно будет определить как структурные параметры, так и узлы, управляемые данными вручную - ZAP в настоящее время не имеет возможности автоматически обнаруживать такие ситуации. 
 
-<H3>Custom Parameters</H3>
+<H3>Настраиваемые параметры </H3>
 
-Finally there are cases where sites define custom parameters which ZAP does not natively understand. 
-As a result ZAP may not be able to correctly split requests into suitable nodes.
+Наконец, есть случаи, когда сайты определяют специальные параметры, которые ZAP изначально не понимает.  
+В результате ZAP может быть не в состоянии правильно разделить запросы на подходящие узлы. 
 <p>
-In these cases you can use Input Vector <a href="scripts.html">Scripts</a> which can represent request in the Sites Tree in any way you want.
+В этих случаях вы можете использовать Input Vector <a href="scripts.html"> Scripts </a>, который может представлять запрос в дереве сайтов любым удобным для вас способом. 
 
-<H2>See also</H2>
+<H2>Смотрите также</H2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../ui/overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../ui/overview.html">Обзор пользовательского интерфейса </a></td><td>обзор пользовательского интерфейса</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="features.html">Features</a></td><td>provided by ZAP</td></tr>
+<a href="features.html">Функции </a></td><td>предоставлено ZAP </td></tr>
 </table>
 
-<H2>External links</H2>
+<H2>внешняя ссылка </H2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="https://www.zaproxy.org/blog/2020-09-22-sites-tree-modifiers/">ZAP Blog: Sites Tree Modifiers</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="https://www.zaproxy.org/blog/2020-09-22-sites-tree-modifiers/">Блог ZAP: модификаторы дерева сайтов </a></td></tr>
 </table>
 
 </BODY>

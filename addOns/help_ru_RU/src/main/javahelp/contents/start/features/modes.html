@@ -3,43 +3,44 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Modes
+режимы
 </title>
 </head>
 <body>
-<h1>Modes</h1>
+<h1>режимы</h1>
 <p>
-ZAP has a 'mode' which can be:
+ZAP имеет «режим», который может быть: 
 <ul>
-<li>Safe - no potentially dangerous operations permitted</li>
-<li>Protected - you can only perform (potentially) dangerous actions on URLs in the <a href="scope.html">Scope</a></li>
-<li>Standard - as in previous releases, you can do anything</li>
-<li>ATTACK - new nodes that are in <a href="scope.html">Scope</a> are <a href="ascan.html">actively scanned</a> as soon as they are discovered</li>
+<li>Безопасность - запрещение потенциально опасных операций </li>
+<li>Защищено - вы можете выполнять (потенциально) опасные действия только с URL-адресами в <a href="scope.html"> Области действия </a> </li>
+<li>Стандарт - как и в предыдущих выпусках, можно все </li>
+<li>ATTACK - новые узлы, которые находятся в <a href="scope.html"> Scope </a>, <a href="ascan.html"> активно сканируются </a>, как только они обнаруживаются </li>
 </ul>
-It is recommended that you use the Protected mode to ensure that you only attack sites that you mean to.<br/><br/>
+Рекомендуется использовать защищенный режим, чтобы гарантировать, что вы атакуете только те сайты, которые намереваетесь. <br/><br/>
 
-The mode can be changed via the <a href="../../ui/tltoolbar.html">toolbar</a>
-(or the ZAP API) and is persisted between sessions.<br/><br/>
+Режим можно изменить с помощью  <a href="../../ui/tltoolbar.html">панель инструментов</a>
+(или ZAP API) и сохраняется между сеансами. <br/><br/>
 
-Examples of the things that will not be possible in either Safe mode or in Protected mode when not acting on URLs in the Scope:
+Примеры того, что будет невозможно ни в безопасном, ни в защищенном режиме, если не действовать на URL-адреса в области действия: 
 
 <ul>
-<li>Spidering</li>
-<li>Active Scanning</li>
-<li>Fuzzing</li>
-<li>Force Browsing</li>
-<li>Breaking (intercepting)</li>
-<li>Resending requests</li>
+<li>Spidering ( просмотре)</li>
+<li>Активное сканирование</li>
+<li>Фаззинг</li>
+<li>Принудительный просмотр 
+</li>
+<li>Взлом (перехват) </li>
+<li>Повторная отправка запросов </li>
 </ul>
 
-You can define the <a href="scanpolicy.html">Scan Policy</a> to be used for the Attack mode the <a href="../../ui/dialogs/options/ascan.html">Options Active Scan screen</a>.<br>
+Вы можете определить  <a href="scanpolicy.html">Политика сканирования </a> для использования в режиме атаки  <a href="../../ui/dialogs/options/ascan.html">Параметры экрана активного сканирования </a>.<br>
 
-<h2>See also</h2>
+<h2>Смотрите также </h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../ui/overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../ui/overview.html">Обзор пользовательского интерфейса </a></td><td>для обзора пользовательского интерфейса </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="features.html">Features</a></td><td>provided by ZAP</td></tr>
+<a href="features.html">Функции </a></td><td>предоставлено ZAP </td></tr>
 </table>
 
 </body>
