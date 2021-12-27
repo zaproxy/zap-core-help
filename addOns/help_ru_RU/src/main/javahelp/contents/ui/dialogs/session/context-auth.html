@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Session Context Authentication screen
+Экран аутентификации контекста сеанса 
 </title>
 </head>
 <body>
@@ -34,95 +34,94 @@ HTTP GET, в противном случае используется HTTP POST.
 <br><small>Читать <a href="../../../start/features/authmethods.html#formBased"> подробнее </a> ...</small>
 
 <h3>Аутентификация на основе JSON </h3>
-To configure this authentication method, you need to supply the <b>login url</b>, to which the login
-request is performed, the <b>JSON object</b> (POST data, <code>application/json</code>), and identify
-the <b>parameters</b> used to supply the 'username' and 'password'.  The credentials themselves
-are configured in the <a href="contexts.html#users">Users</a> tab.
-The <b>login page</b> can also be supplied to indicate from where to obtain a new session (e.g. cookies).
-If the <b>login page</b> is not supplied it is used the <b>login url</b>.
-<br><small>Read <a href="../../../start/features/authmethods.html#jsonBased">more</a>...</small>
+Чтобы настроить этот метод аутентификации, вам необходимо предоставить  <b>URL входа в систему (login url)</b>, к которому логин
+запрос выполняется,  <b>Объект JSON (JSON object)</b> (Данные POST,  <code>приложение / json </code>) и идентифицировать
+в  <b>Параметры</b> используется для предоставления «имени пользователя» и «пароля». Сами верительные грамоты
+настроены в  <a href="contexts.html#users">Пользователи</a> таб. <b>страница авторизации (login page)</b> также могут быть предоставлены, чтобы указать, откуда получить новый сеанс (например, файлы cookie).
+Если  <b>страница авторизации ( login page )</b> не поставляется, используется  <b>URL входа в систему ( login url )</b>.
+<br><small>Читать <a href="../../../start/features/authmethods.html#jsonBased"> подробнее </a> ...</small>
 
-<br>Examples of POST data:
+<br>Примеры данных POST: 
 <ul>
 	<li><code>{"username":"{%username%}","password":"{%password%}"}</code></li>
 	<li><code>{"user":{"mail":"{%username%}","password":"{%password%}"}}</code></li>
 </ul>
-where <code>{%username%}</code> and <code>{%password%}</code> indicate where the authentication credentials are set.
+где <code>{%username%}</code> и <code>{%password%}</code> укажите, где установлены учетные данные для аутентификации. 
 
-<h3>HTTP/NTLM Authentication</h3>
-To configure this authentication method, you need to supply the <b>hostname</b> and the <b>port</b> of the server
-the authentication is done with and the <b>realm</b> the credentials apply to. The credentials themselves
-are configured in the <a href="contexts.html#users">Users</a> tab. <small>Read  
-<a href="../../../start/features/authmethods.html#httpAuth">more</a>...</small> 
+<h3>HTTP / NTLM аутентификация </h3>
+Чтобы настроить этот метод аутентификации, вам необходимо предоставить  <b>имя хоста </b> и <b>Порт</b> сервера
+аутентификация выполняется с помощью  <b>область </b> учетные данные относятся к. Сами верительные грамоты
+настроены в  <a href="contexts.html#users">Пользователи</a> вкладки. <small>Читать
+<a href="../../../start/features/authmethods.html#httpAuth"> подробнее </a> ...</small> 
 
-<h3>Script-Based Authentication</h3>
-To use this authentication method, you <b>first</b> need to write (and save) an <b>Authentication Script</b> 
-using the <b>Scripts</b> tab (see the provided examples and templates for this script type in the Scripts tab).
-Then you need to supply the name of the script in the dropdown list. After selecting the script, you need to press 
-the <b>Load</b> button, loading all the requirements of the script.
-Any parameters that you have specified as <i>required</i> or <i>optional</i> in the script will
-be shown in the interface to be defined. Their values are available to be used in the script, during the authentication, as seen
-in the provided examples for Authentication Scripts. Make sure that after doing any changes to the parameters 
-required by the Authentication script you re-load the script. Otherwise, the parameters shown in the interface might
-not be the ones used during the authentication and errors might occur. The <i>credentials</i> used for each User 
-during the authentication processed can be also specified in the Authentication Script and are configured in the 
-<a href="contexts.html#users">Users</a> tab.
-<small>Read <a href="../../../start/features/authmethods.html#scriptBased">more</a>...</small> 
+<h3>Аутентификация на основе сценария </h3>
+Чтобы использовать этот метод аутентификации, вы  <b>первый (first)</b> нужно написать (и сохранить)  <b>Скрипт аутентификации  (Authentication Script)</b> 
+с помощью  <b>Сценарии</b> вкладка (см. предоставленные примеры и шаблоны для этого типа сценария на вкладке "Сценарии"). 
+Затем вам нужно указать имя скрипта в раскрывающемся списке.  После выбора скрипта нужно нажать
+в  <b>Нагрузка</b> кнопка, загружающая все требования скрипта.
+Любые параметры, которые вы указали как  <i>обязательный </i> или <i>по желанию </i> в сценарии будет
+отображаться в интерфейсе, который будет определен.  Их значения доступны для использования в скрипте во время аутентификации, как показано
+в предоставленных примерах сценариев аутентификации.  Убедитесь, что после внесения любых изменений в параметры
+требуется для сценария аутентификации, вы повторно загружаете сценарий.  В противном случае параметры, отображаемые в интерфейсе, могут
+не быть теми, которые использовались во время аутентификации, в противном случае могут возникнуть ошибки.    <i>Учетные данные</i> используется для каждого пользователя
+во время аутентификации обрабатываемая, также может быть указана в сценарии аутентификации и настроена в  
+<a href="contexts.html#users">Пользователи</a> вкладки.
+<small>Читать <a href="../../../start/features/authmethods.html#scriptBased"> подробнее </a> ...</small> 
 
-<h2>Authentication Verification</h2>
+<h2>Проверка подлинности </h2>
 
-<h3>Verification Strategy</h3>
+<h3>Стратегия проверки </h3>
 
-Select the <a href="../../../start/features/authstrategies.html">Authentication Verification Strategy</a> required.
+Выберите  <a href="../../../start/features/authstrategies.html">Стратегия проверки подлинности </a> обязательный. 
 
-<h3><a name="regexloggedin">Regex pattern used to identify Logged in messages</a></h3>
+<h3><a name="regexloggedin">Шаблон регулярного выражения, используемый для идентификации сообщений, вошедших в систему </a></h3>
 
-If this regex pattern is specified and matches any string in the specified message then ZAP will treat this message as logged in.
-For example the pattern could be used to match a http://example.com/logout link or the presence of a 'Welcome, User X' message.
+Если этот шаблон регулярного выражения указан и соответствует любой строке в указанном сообщении, ZAP будет рассматривать это сообщение как зарегистрированное. 
+Например, шаблон может использоваться для сопоставления ссылки http://example.com/logout или наличия сообщения «Добро пожаловать, пользователь X». 
 
-<h3><a name="regexloggedout">Regex pattern used to identify Logged out messages</a></h3>
+<h3><a name="regexloggedout">Шаблон регулярного выражения, используемый для идентификации сообщений, вышедших из системы </a></h3>
 
-If this regex pattern is specified and matches any string in the specified message then ZAP will treat this message as logged out.
-For example the pattern could be used to match a http://example.com/login link or the presence of a 'Welcome, Guest' message.
+Если этот шаблон регулярного выражения указан и соответствует любой строке в указанном сообщении, ZAP будет рассматривать это сообщение как вышедшее из системы. 
+Например, шаблон может использоваться для сопоставления ссылки http://example.com/login или наличия сообщения «Добро пожаловать, Гость». 
 
-<h3><a name="pollfreq">Poll Frequency</a></h3>
+<h3><a name="pollfreq">Частота опроса </a></h3>
 
-This controls how frequently ZAP will poll to see if a user is still authenticated. 
-The integer will either represent the number of Requests that will be made before ZAP will poll again or the number of Seconds before
-it will poll again, depending on pulldown selected.<br/>
-The option is only relevant if the "Poll the Specified URL" Verification Strategy has been selected.
+Это контролирует, как часто ZAP будет опрашивать, аутентифицирован ли пользователь.  
+Целое число будет представлять либо количество запросов, которые будут сделаны до того, как ZAP выполнит повторный опрос, либо количество секунд до этого.
+он будет опрашивать снова, в зависимости от выбранного раскрывающегося списка. <br/>
+Опция актуальна только в том случае, если была выбрана стратегия проверки «Опрос указанного URL». 
   
-<h3><a name="pollurl">URL to Poll for Verification</a></h3>
+<h3><a name="pollurl">URL для опроса для проверки </a></h3>
 
-This is the URL that ZAP will poll to see if a user is still authenticated.<br/>
-The option is only relevant if the "Poll the Specified URL" Verification Strategy has been selected.
+Это URL-адрес, который ZAP будет опрашивать, чтобы узнать, аутентифицирован ли пользователь. <br/>
+Опция актуальна только в том случае, если была выбрана стратегия проверки «Опрос указанного URL». 
  
-<h3><a name="polldata">Poll Request POST Data</a></h3>
+<h3><a name="polldata">Данные POST запроса опроса </a></h3>
 
-If supplied then this will be sent as a POST in the poll request. If it is empty then ZAP will make a GET request<br/>
-The option is only relevant if the "Poll the Specified URL" Verification Strategy has been selected.
+Если предоставлено, то оно будет отправлено как POST в запросе на опрос. Если он пуст, ZAP сделает запрос GET. <br/>
+Опция актуальна только в том случае, если была выбрана стратегия проверки «Опрос указанного URL». 
   
-<h3><a name="pollheaders">Additional Poll Request Headers</a></h3>
+<h3><a name="pollheaders">Дополнительные заголовки запроса на опрос </a></h3>
 
-An optional set of headers that will be sent with the poll request. Each line should be one header and value separated by a colon e.g<br/>
+Необязательный набор заголовков, который будет отправлен с запросом на опрос. Каждая строка должна состоять из одного заголовка и значения, разделенного двоеточием, например <br/>
 <pre>
-Content-Type: application/json
-X-Requested-With: XMLHttpRequest
+Тип содержимого: приложение / json
+X-Requested-с: XMLHttpRequest
 </pre>
-The option is only relevant if the "Poll the Specified URL" Verification Strategy has been selected.
+The option is only relevant if the "Poll the Specified URL" Verification Strategy has been selected. 
   
-<h2>Accessed via</h2>
+<h2>Доступ через </h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../tabs/sites.html">Sites tab</a></td><td>Double click a Context</td></tr>
+<a href="../../tabs/sites.html">Вкладка "Сайты" </a></td><td>Дважды щелкните контекст </td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Смотрите также</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="contexts.html">Session Context screens</a></td><td>for details of the other Context screens</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../../start/features/authentication.html">Authentication</a></td><td>for an overview of Authentication </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">Обзор пользовательского интерфейса </a></td><td>для обзора пользовательского интерфейса </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../dialogs.html">диалоги </a></td><td>для получения подробной информации о диалоговых окнах или всплывающих окнах  </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="contexts.html">экраны контекста сеанса </a></td><td>для получения подробной информации о других диалоговых окнах параметров </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../../start/features/authentication.html">Аутентификация</a></td><td>для обзора аутентификации в ZAP  </td></tr>
 </table>
 
 

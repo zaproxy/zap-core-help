@@ -3,119 +3,119 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Session Context screens
+Экраны контекста сеанса 
 </title>
 </head>
 <body>
-<h1>Session Context screens</h1>
+<h1>Экраны контекста сеанса </h1>
 <p>
-These screens allows you manage <a href="../../../start/features/contexts.html">contexts</a>.
+Эти экраны позволяют управлять <a href="../../../start/features/contexts.html"> контекстами </a> .
 </p>
 <p>
-There is a set of screens for each context you define.
+Для каждого определяемого вами контекста есть набор экранов. 
 </p>
 
-<h3>Top screen</h3>
-This allows you to set the context name and description.
+<h3>Верхний экран </h3>
+Это позволяет вам установить имя и описание контекста. 
 
-<h3>Include in Context</h3>
-This allows you to manage the URLs which will be included in the context.<br/>
-URLs which dont match any of the regexs will not be included in the context.
-<br><strong>Note:</strong> The regular expressions must match the whole URL.
+<h3>Включить в контекст </h3>
+Это позволяет вам управлять URL-адресами, которые будут включены в контекст. <br/>
+URL-адреса, которые не соответствуют ни одному из регулярных выражений, не будут включены в контекст. 
+<br><strong>Примечание: </strong> Регулярные выражения должны соответствовать всему URL-адресу. 
 
-<h3>Exclude from Context</h3>
-This allows you to manage the URLs which will be excluded from the context.<br/>
-You only need to specify regexs for URLs that you do not want to include but which match one or more
-of the 'include' regexes.
-<br><strong>Note:</strong> The regular expressions must match the whole URL.
+<h3>Исключить из контекста </h3>
+Это позволяет вам управлять URL-адресами, которые будут исключены из контекста. <br/>
+Вам нужно только указать регулярное выражение для URL-адресов, которые вы не хотите включать, но которые соответствуют одному или нескольким
+регулярных выражений 'include'. 
+<br><strong>Примечание: </strong> Регулярные выражения должны соответствовать всему URL-адресу. 
 
-<h3><a name="struct">Structure</a></h3>
-See the <a href="context-struct.html">Session Context Structure screen</a>.
+<h3><a name="struct">Структура</a></h3>
+Увидеть  <a href="context-struct.html">Экран структуры контекста сеанса </a>.
 
-<h3>Technology</h3>
-This allows you to specify the technologies used in the context, if known.<br/>
-By default all technologies are included.<br/>
-If you exclude technologies that you know are not used then this may speed up 
-<a href="../../../start/features/ascan.html">active scanning</a> as rules specific to the excluded
-technologies can be skipped.
+<h3>Технология</h3>
+Это позволяет вам указать технологии, используемые в контексте, если они известны. <br/>
+По умолчанию включены все технологии. <br/>
+Если вы исключите технологии, которые, как вы знаете, не используются, это может ускорить  
+<a href="../../../start/features/ascan.html">активное сканирование </a> как правила, относящиеся к исключенным
+технологии можно пропустить. 
 
-<h3><a name="auth">Authentication</a></h3>
-See the <a href="context-auth.html">Session Context Authentication screen</a>.
+<h3><a name="auth">Аутентификация</a></h3>
+Увидеть  <a href="context-auth.html">Экран аутентификации контекста сеанса </a>.
 
-<h3><a name="sm">Session Management</a></h3>
-This allows you to manage the way in which Session Management is being done for the Context. 
-After selecting the Session Management Method type, the options that need to be configured 
-depend on the Session Management Method.
+<h3><a name="sm">Управление сессией </a></h3>
+Это позволяет вам управлять способом управления сеансом для контекста.  
+После выбора типа метода управления сеансом параметры, которые необходимо настроить
+зависят от метода управления сеансом. 
 
-<h4>Cookie-Based Session Management</h4>
-No configuration is needed for this session management method. <small>Read  
-<a href="../../../start/features/sessionManagement.html#cbsm">more</a>...</small>
+<h4>Управление сеансом на основе файлов cookie </h4>
+Для этого метода управления сеансом настройка не требуется.  <small>Читать
+<a href="../../../start/features/sessionManagement.html#cbsm"> подробнее </a> ...</small>
 
-<h4>HTTP Authentication Session Management</h4>
-No configuration is needed for this session management method. <small>Read
-<a href="../../../start/features/sessionManagement.html#hasm">more</a>...</small>
+<h4>Управление сеансом HTTP-аутентификации </h4>
+Для этого метода управления сеансом настройка не требуется.  <small>Читать
+<a href="../../../start/features/sessionManagement.html#hasm"> подробнее </a> ...</small>
 
-<h4>Script-Based Session Management</h4>
+<h4>Управление сеансом на основе сценария </h4>
 
-To use this session management method, you <b>first</b> need to write (and save) a <b>Session Management Script</b> 
-using the <b>Scripts</b> tab (see the provided examples and templates for this script type in the Scripts tab).
-Then you need to supply the name of the script in the dropdown list. After selecting the script, you need to press 
-the <b>Load</b> button, loading all the requirements of the script.
-Any parameters that you have specified as <i>required</i> or <i>optional</i> in the script will
-be shown in the interface to be defined. Their values are available to be used in the script, during the session management process, as seen
-in the provided examples for Session Management Scripts. Make sure that after doing any changes to the parameters 
-required by the Session Management script you re-load the script. Otherwise, the parameters shown in the interface might
-not be the ones used during the session management process and errors might occur. 
-<small>Read <a href="../../../start/features/sessionManagement.html#sbsm">more</a>...</small>
+Чтобы использовать этот метод управления сеансом, вы  <b>первый (first)</b> нужно написать (и сохранить)  <b>Сценарий управления сеансом </b> 
+с помощью  <b>Сценарии (Scripts)</b> вкладка (см. предоставленные примеры и шаблоны для этого типа сценария на вкладке "Сценарии"). 
+Затем вам нужно указать имя скрипта в раскрывающемся списке.  После выбора скрипта нужно нажать
+в  <b>Нагрузка</b> кнопка, загружающая все требования скрипта.
+Любые параметры, которые вы указали как  <i>обязательный </i> или <i>по желанию </i> в сценарии будет
+отображаться в интерфейсе, который будет определен.  Их значения доступны для использования в сценарии во время процесса управления сеансом, как показано.
+в предоставленных примерах для сценариев управления сеансом.  Убедитесь, что после внесения любых изменений в параметры
+требуется для сценария управления сеансом, вы повторно загрузите сценарий.  В противном случае параметры, отображаемые в интерфейсе, могут
+не быть теми, которые используются в процессе управления сеансом, и могут возникнуть ошибки.  
+<small>Читать <a href="../../../start/features/sessionManagement.html#sbsm"> подробнее </a> ...</small>
 
 
-<h3><a name="users">Users</a></h3>
-This allows you to configure a set of Users that may be used for various other actions
-throughout the application.
-<p>The credentials section of the Users depends on the Authentication Method configured
-for the Context.</p>
+<h3><a name="users">Пользователи</a></h3>
+Это позволяет вам настроить набор пользователей, которые могут использоваться для различных других действий.
+во всем приложении. 
+<p>Раздел учетных данных пользователей зависит от настроенного метода аутентификации.
+для контекста. </p>
 
-<h2><a name="custompages">Custom Page</a></h2>
-This functionality allows you to handle situations in which the target does not return a RFC compliant or expected error response when for conditions such as 
-404 - Not Found, 500 - Internal Server Error, etc. Often developers implement custom 404 or 500 handling but do not actually return an appropriate status code.
-Leveraging Custom Page definitions you can define URLs or response content which identify error responses regardless of the status code associated with the response.
-<small>Read <a href="../../../start/features/custompages.html">more</a>...</small>
+<h2><a name="custompages">Пользовательская страница </a></h2>
+Эта функция позволяет обрабатывать ситуации, в которых целевой объект не возвращает ответ об ошибке, соответствующий RFC или ожидаемый при таких условиях, как
+404 - не найдено, 500 - внутренняя ошибка сервера и т. д.  Часто разработчики реализуют настраиваемую обработку 404 или 500, но на самом деле не возвращают соответствующий код состояния. 
+Используя определения настраиваемых страниц, вы можете определять URL-адреса или содержимое ответа, которые идентифицируют ответы об ошибках, независимо от кода состояния, связанного с ответом. 
+<small>Читать <a href="../../../start/features/custompages.html"> подробнее </a> ...</small>
 
-<h2>URL regexs</h2>
-In the <i>Include in *</i>, <i>Exclude from *</i> panels and the <i>Logged in/out indicators</i> of the <i>Authentication</i> panel, etc. you can enter regular expressions to define excluded URLs.
-While you can escape a single meta-character with a backslash, you can also use the <b>\Q...\E</b> escape sequence. All the characters between the <b>\Q</b> and the <b>\E</b> are interpreted as literal characters. E.g. \Q*\d+*\E matches the literal text *\d+*.
-This escape sequence is used in ZAP when you exclude URLs via some context menus.
+<h2>Регулярное выражение URL </h2>
+в <i>Include in * (включить в)</i>, <i>Exclude from * (исключить из)</i> панели и  <i>Logged in/out indicators (Индикаторы входа / выхода )</i> принадлежащий  <i>Аутентификация</i> панель и т. д. вы можете вводить регулярные выражения для определения исключенных URL-адресов.
+Хотя вы можете экранировать одиночный метасимвол с помощью обратной косой черты, вы также можете использовать  <b>\Q...\E</b> escape-последовательность. Все символы между  <b>\Q</b> и <b>\E</b> интерпретируются как буквальные символы. Например. \ Q * \ d + * \ E соответствует буквальному тексту * \ d + *.
+Эта escape-последовательность используется в ZAP, когда вы исключаете URL-адреса через некоторые контекстные меню. 
 <br>
-<b>Note:</b> If your URL contains a "\E", then you have to do the following steps when using the <b>\Q...\E</b> escape sequence:
+<b>Примечание: </b> Если ваш URL-адрес содержит "\ E", вам необходимо выполнить следующие шаги при использовании  <b>\Q...\E</b> escape-последовательность: 
 <ul>
-	<li>Open the escape sequence</li>
-	<li>Close the escape sequence before the "character" \E</li>
-	<li>Escape the backslash</li>
-	<li>Open after the "\E" another escape sequence;</li>
-	<li>Close the escape sequence as normally would.</li>
+	<li>Откройте escape-последовательность </li>
+	<li>Закройте escape-последовательность перед "символом" \ E </li>
+	<li>Избегайте обратной косой черты </li>
+	<li>Открыть после "\ E" другую escape-последовательность; </li>
+	<li>Закройте escape-последовательность, как обычно. </li>
 </ul>
 <br>
-Example: subdomain.example.com/path?a=<b>\E</b>&amp;moredata=2 should appear as
+Пример: subdomain.example.com/path?a= <b>\E</b>&amp;moredata=2 should appear as
 <i>\Qsubdomain.example.com/path?a=\E</i><b>\\E</b><i>\Q&amp;moredata=2\E</i>
   
-<h2>Accessed via</h2>
+<h2>Доступ через </h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../tabs/sites.html">Sites tab</a></td><td>Double click a Context</td></tr>
+<a href="../../tabs/sites.html">Вкладка "Сайты" </a></td><td>Дважды щелкните контекст </td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Смотрите также </h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../overview.html">Обзор пользовательского интерфейса </a></td><td>для обзора пользовательского интерфейса </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+<a href="../dialogs.html">диалоги </a></td><td>для получения подробной информации о диалоговых окнах или всплывающих окнах  </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../../start/features/authentication.html">Аутентификация</a></td><td>for an overview of Authentication </td></tr>
+<a href="../../../start/features/authentication.html">Аутентификация</a></td><td>для обзора аутентификации  </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../../start/features/sessionManagement.html">Session Management</a></td><td>for an overview of Session Management </td></tr>
+<a href="../../../start/features/sessionManagement.html">Управление сессией </a></td><td>для обзора управления сеансом  </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../../start/features/custompages.html">Custom Page</a></td><td>for an overview of Custom Page details </td></tr>
+<a href="../../../start/features/custompages.html">Пользовательская страница </a></td><td>для обзора деталей настраиваемой страницы  </td></tr>
 </table>
 
 

@@ -3,58 +3,58 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Session Properties dialog
+Диалог свойств сеанса 
 </title>
 </head>
 <body>
-<h1>Session Properties dialog</h1>
+<h1>Диалог свойств сеанса </h1>
 <p>
-This allows you to set the session properties and is made up of the following screens:
+Это позволяет вам установить свойства сеанса и состоит из следующих экранов: 
 
-<h3>General</h3>
-This allows you to set the session name and description.
+<h3>Общий </h3>
+Это позволяет вам установить имя и описание сеанса. 
 
-<h3>Exclude from Proxy</h3>
-This allows you to manage the URLs which will be ignored by the local proxies.
+<h3>Исключить из прокси </h3>
+Это позволяет вам управлять URL-адресами, которые будут игнорироваться локальными прокси. 
 
-<h3>Exclude from Scanner</h3>
-This allows you to manage the URLs which will be ignored by the scanner.
+<h3>Исключить из сканера </h3>
+Это позволяет вам управлять URL-адресами, которые будут игнорироваться сканером. 
 
-<h3>Exclude from Spider</h3>
-This allows you to manage the URLs which will be ignored by the spiders (standard and AJAX).
+<h3>Исключить из паука </h3>
+Это позволяет вам управлять URL-адресами, которые будут игнорироваться пауками (стандартными и AJAX). 
 
 <h3>Контексты</h3>
-A set of screens for managing <a href="../../../start/features/contexts.html">contexts</a>
+Набор экранов для управления  <a href="../../../start/features/contexts.html">Контексты</a>
 
 <h2>Регулярные выражения для URL-адресов</h2>
-In the <i>Exclude from *</i> dialogs, you can enter regular expressions to define excluded URLs.
-While you can escape a single meta-character with a backslash, you can also use the <b>\Q...\E</b> escape sequence. All the characters between the <b>\Q</b> and the <b>\E</b> are interpreted as literal characters. E.g. \Q*\d+*\E matches the literal text *\d+*.
-This escape sequence is used in ZAP when you exclude URLs via some context menus.
+В <i>Exclude from *  (Исключить из * )</i> диалоговых окнах вы можете вводить регулярные выражения для определения исключенных URL-адресов.
+Хотя вы можете экранировать одиночный метасимвол с помощью обратной косой черты, вы также можете использовать  <b>\Q...\E</b> escape-последовательность. Все символы между  <b>\Q</b> и <b>\E</b> интерпретируются как буквальные символы. Например. \ Q * \ d + * \ E соответствует буквальному тексту * \ d + *.
+Эта escape-последовательность используется в ZAP, когда вы исключаете URL-адреса через некоторые контекстные меню. 
 <br>
-<b>Note:</b> If your URL contains a "\E", then you have to do the following steps when using the <b>\Q...\E</b> escape sequence:
+<b>Примечание: </b> Если ваш URL-адрес содержит "\ E", вам необходимо выполнить следующие шаги при использовании  <b>\Q...\E</b> escape-последовательность: 
 <ul>
-	<li>Open the escape sequence</li>
-	<li>Close the escape sequence before the "character" \E</li>
+	<li>Откройте escape-последовательность </li>
+	<li>Закройте escape-последовательность перед "символом" \ E </li>
 	<li>Escape the backslash</li>
-	<li>Open after the "\E" another escape sequence;</li>
-	<li>Close the escape sequence as normally would.</li>
+	<li>Открыть после "\ E" другую escape-последовательность; </li>
+	<li>Закройте escape-последовательность, как обычно. </li>
 </ul>
 <br>
-Example: subdomain.example.com/path?a=<b>\E</b>&amp;moredata=2 should appear as
+Пример: subdomain.example.com/path?a= <b>\E</b>&amp;moredata=2 should appear as
 <i>\Qsubdomain.example.com/path?a=\E</i><b>\\E</b><i>\Q&amp;moredata=2\E</i>
   
-<h2>Accessed via</h2>
+<h2>Доступ через </h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../tlmenu/file.html">Top level File menu</a></td><td>'Session Properties...' menu item</td></tr>
+<a href="../../tlmenu/file.html">Меню файла верхнего уровня </a></td><td>Пункт меню "Свойства сеанса ..." </td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Смотрите также </h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../overview.html">Обзор пользовательского интерфейса </a></td><td>для обзора пользовательского интерфейса </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+<a href="../dialogs.html">диалоги </a></td><td>для получения подробной информации о диалоговых окнах или всплывающих окнах  </td></tr>
 </table>
 
 </body>
