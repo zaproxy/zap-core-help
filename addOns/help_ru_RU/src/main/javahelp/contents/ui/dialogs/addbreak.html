@@ -3,53 +3,53 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Add/Edit Breakpoint dialog
+Диалог добавления / редактирования точки останова 
 </title>
 </head>
 <body>
-<h1>Add/Edit Breakpoint dialog</h1>
+<h1>Диалог добавления / редактирования точки останова </h1>
 <p>
-This dialogue allows you to add and edit <a href="../../start/features/breakpoints.html">HTTP breakpoints</a>.
+Этот диалог позволяет вам добавлять и редактировать <a href="../../start/features/breakpoints.html"> точки останова HTTP </a> .
 
 <p>
-A breakpoint is defined by the following fields:
+Точка останова определяется следующими полями: 
 
 <ul>
-	<li><strong>Location</strong> - where the <code>String</code> is checked in the
-		HTTP message: <code>URL</code>, <code>Request Header</code>, <code>Request Body</code>,
+	<li><strong>Location</strong> -  где <code>String</code> проверяется в
+HTTP-сообщение: <code>URL</code>, <code>Request Header</code>, <code>Request Body</code>,
 		<code>Response Header</code>, or <code>Response Body</code>.</li>
-	<li><strong>Match</strong> - how the <code>String</code> is interpreted, <code>Regex</code>
-		or <code>Contains</code>, for regular expression or exact match, respectively, in the <code>Location</code>.
-		The regular expression does not need to match the whole content of the <code>Location</code>.</li>
-	<li><strong>String</strong> - the string that triggers the breakpoint.</li>
-	<li><strong>Inverse</strong> - if the result of the <code>Match</code> should be
-		the inverse.</li>
-	<li><strong>Ignore case</strong> - if the case of the <code>String</code> should be
-		ignored.</li>
+	<li><strong> Match </strong> - как интерпретируется <code> String </code>, <code> Regex </code>
+или <code> Содержит </code> для регулярного выражения или точного совпадения, соответственно, в <code> Location </code>. 
+		Регулярное выражение не обязательно должно соответствовать всему содержимому <code> Location </code> .</li>
+	<li><strong> String </strong> - строка, запускающая точку останова. </li>
+	<li><strong> Inverse </strong> - если результат <code> Match </code> должен быть
+обратное. </li>
+	<li><strong> Игнорировать регистр </strong> - если регистр <code> String </code> должен быть
+игнорируется. </li>
 </ul>
 
-If you proxy a HTTP message that matches a breakpoint then ZAP will intercept it and allow you to change either the request
-and/or the response.
+Если вы проксируете HTTP-сообщение, которое соответствует точке останова, ZAP перехватит его и позволит вам изменить запрос
+и / или ответ. 
 
 <p>
-<strong>Note:</strong> ZAP will warn and prevent adding breakpoints with a fragment identifier component (<code>#</code>), if
-the breakpoint has match <code>Contains</code> and location <code>URL</code>. Such breakpoint would not work because the 
-fragment identifier is not sent to the server.
+<strong>Примечание: </strong> ZAP предупредит и предотвратит добавление точек останова с помощью компонента идентификатора фрагмента ( <code>#</code>), если
+точка останова соответствует  <code>Содержит</code> и расположение  <code>URL-адрес</code>. Такая точка останова не будет работать, потому что
+идентификатор фрагмента не отправляется на сервер. 
 
-<h2>Accessed via</h2>
+<h2>Доступ через </h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../tabs/history.html">History tab</a></td><td>'Break...' right click menu item</td></tr>
+<a href="../tabs/history.html">Вкладка История </a></td><td>Пункт контекстного меню "Разрыв ..." </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../tabs/sites.html">Sites tab</a></td><td>'Break...' right click menu item</td></tr>
+<a href="../tabs/sites.html">Вкладка "Сайты" </a></td><td>Пункт контекстного меню "Разрыв ..." </td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Смотрите также</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../overview.html">Обзор пользовательского интерфейса </a></td><td>для обзора пользовательского интерфейса </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+<a href="dialogs.html">диалоги </a></td><td>для получения подробной информации о диалоговых окнах или всплывающих окнах  </td></tr>
 </table>
 
 </body>

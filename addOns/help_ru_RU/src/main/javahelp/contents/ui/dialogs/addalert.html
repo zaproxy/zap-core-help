@@ -3,107 +3,107 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Add Alert dialog
+Диалог добавления предупреждения 
 </title>
 </head>
 <body>
-<h1>Add Alert dialog</h1>
+<h1>Диалог добавления предупреждения </h1>
 <p>
-This dialog allows you to manually add or change an <a href="../../start/features/alerts.html">Alert</a> associated
-with a specific request.<br/>
+Этот диалог позволяет вам вручную добавлять или изменять <a href="../../start/features/alerts.html"> оповещение </a>, связанное с
+с конкретным запросом. <br/>
 </p>
 
-<h2>Fields</h2>
-The dialog has the following fields:
+<h2>Поля</h2>
+Диалог имеет следующие поля: 
 
 <h3>Тип</h3>
-The type of the alert is a pull down field which allows you to select one of a prepopulated set of issue types.<br/>
-You can also enter your own text or change the text of one of the items you selected.<br/>
-If you select one of the existing types then the Description, Solution and Other Info fields
-will be populated with text associated with the item you chose. 
+Тип предупреждения - это раскрывающееся поле, в котором можно выбрать один из предварительно заданного набора типов проблем. <br/>
+Вы также можете ввести свой собственный текст или изменить текст одного из выбранных вами элементов. <br/>
+Если вы выберете один из существующих типов, то поля «Описание», «Решение» и «Другая информация»
+будет заполнен текстом, связанным с выбранным вами элементом.  
 
 <h3>Риск</h3>
-A pull down field which allows you to specify how serious you think the risk is:
+Выпадающее поле, в котором можно указать, насколько серьезен, по вашему мнению, риск: 
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Informational</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Информационный</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Низкий</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Средний</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Высокий</td><td></td></tr>
 </table>
 
-<h3>Confidence</h3>
-A pull down field which allows you to specify how confident you are in the validity of the finding:
+<h3>Уверенность </h3>
+Выпадающее поле, в котором вы можете указать, насколько вы уверены в достоверности вывода: 
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>False Positive</td><td>for potential issues that you later find are not exploitable</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Низкий</td><td>for unconfirmed issues</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Средний</td><td>for issues you are somewhat confident of</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Высокий</td><td>for findings you are highly confident in</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Confirmed</td><td>for confirmed issues</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ложный положительный результат</td><td>для потенциальных проблем, которые вы позже обнаружите, не могут быть использованы </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Низкий</td><td>по неподтвержденным вопросам </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Средний</td><td>по вопросам, в которых вы несколько уверены </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Высокий</td><td>за находки, в которых вы очень уверены </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Подтвержденный </td><td>для подтвержденных вопросов </td></tr>
 </table>
 
-<h3>Parameter</h3>
-A pull down field which allows you to specify which parameter the issue is associated with.<br/>
-The field is prepopulated with any URL and FORM parameters found, but you can also enter your own parameter name.<br />
-Array parameters (in URL query component and <code>x-www-form-urlencoded</code> request body) are identified with its index. For
-example, for a request containing <code>choices[]=ChoiceA&amp;choices[]=ChoiceB</code> the first parameter would be identified
-as <code>choices[0]</code> and the second as <code>choices[1]</code>.
+<h3>Параметр </h3>
+Выпадающее поле, в котором можно указать, с каким параметром связана проблема. <br/>
+Поле предварительно заполняется любыми найденными параметрами URL и FORM, но вы также можете ввести собственное имя параметра. <br />
+Параметры массива (в компоненте запроса URL и  <code>x-www-form-urlencoded</code> тело запроса) идентифицируются по его индексу. За
+например, для запроса, содержащего  <code>choices[]=ChoiceA&amp;choices[]=ChoiceB</code> будет идентифицирован первый параметр
+в виде  <code>choices[0]</code> а второй как  <code>choices[1]</code>.
 
-<h3>Attack</h3>
-The payload that was supplied to the <em>Parameter</em>. This is expected to be set only by active scan rules
-which are the ones that send payloads/attacks.
+<h3>Атака</h3>
+Полезная нагрузка, которая была доставлена на  <em>Параметр </em>. Ожидается, что это будет установлено только активными правилами сканирования.
+которые отправляют полезные нагрузки / атаки. 
 
-<h3>Evidence</h3>
-The available information in the message request or response (header or body) that indicates that the issue is present.
+<h3>Свидетельство </h3>
+Доступная информация в запросе или ответе сообщения (заголовок или тело), указывающая на наличие проблемы. 
 
-<h3>CWE ID</h3>
-The relevant Common Weakness Enumeration (CWE) ID associated with the flagged vulnerability. This field 
-can only be an integer.
+<h3>CWE Идентификатор</h3>
+Соответствующий идентификатор Common Weakness Enumeration (CWE), связанный с отмеченной уязвимостью. Это поле
+может быть только целым числом. 
 
 <h3>WASC ID</h3>
-The relevant Web Application Security Consortium (WASC) ID associated with the flagged vulnerability. This field
-can only be an integer.
+Соответствующий идентификатор Консорциума безопасности веб-приложений (WASC), связанный с отмеченной уязвимостью. Это поле
+может быть только целым числом. 
 
-<h3>Description</h3>
-A general description of the type of issue found.<br/>
-This is populated when you select one of the predefined types, but you can also change it as required.<br/>
-Note that any changes you make will be lost if you select another type.
+<h3>Описание</h3>
+Общее описание типа обнаруженной проблемы. <br/>
+Он заполняется, когда вы выбираете один из предопределенных типов, но вы также можете изменить его при необходимости. <br/>
+Обратите внимание, что любые внесенные вами изменения будут потеряны, если вы выберете другой тип. 
  
-<h3>Other Info</h3>
-Information specific to the particular issue you have found.<br/>
-This is not prepopulated.
+<h3>Другая информация </h3>
+Информация, относящаяся к конкретной проблеме, которую вы нашли. <br/>
+Это не предусмотрено заранее. 
 
-<h3>Solution</h3>
-Recommendations about how to fix the issue.<br/>
-This is populated when you select one of the predefined types, but you can also change it as required.<br/>
-Note that any changes you make will be lost if you select another type.
+<h3>Решение</h3>
+Рекомендации по устранению проблемы. <br/>
+Он заполняется, когда вы выбираете один из предопределенных типов, но вы также можете изменить его при необходимости. <br/>
+Обратите внимание, что любые внесенные вами изменения будут потеряны, если вы выберете другой тип. 
  
-<h3>Reference</h3>
-One or more URLs pointing to more information on the internet about the selected type of alert.<br/>
-This is populated when you select one of the predefined types, but you can also change it as required.<br/>
-Note that any changes you make will be lost if you select another type.
+<h3>Ссылка </h3>
+Один или несколько URL-адресов, указывающих на дополнительную информацию в Интернете о выбранном типе предупреждения. <br/>
+Он заполняется, когда вы выбираете один из предопределенных типов, но вы также можете изменить его при необходимости. <br/>
+Обратите внимание, что любые внесенные вами изменения будут потеряны, если вы выберете другой тип. 
  
-<h3>Alert Tags</h3>
-Alerts can be tagged with arbitrary keys or key=value pairs.<br/>
-You can add as many tags as you want to each alert. However,
+<h3>Теги предупреждений </h3>
+Оповещения могут быть помечены произвольными ключами или парами ключ = значение. <br/>
+Вы можете добавить любое количество тегов к каждому предупреждению. Тем не мение, 
 <ul>
-<li>You cannot have two tags with the same key.</li>
-<li>The key must be limited to 1024 characters and the value must be limited to 4000 characters for each tag.</li>
+<li>У вас не может быть двух тегов с одним и тем же ключом. </li>
+<li>Ключ должен быть ограничен 1024 символами, а значение должно быть ограничено до 4000 символов для каждого тега. </li>
 </ul>
 
-<h2>Accessed via</h2>
+<h2>Доступ через </h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../tabs/history.html">History tab</a></td><td>'New Alert...' right click menu item</td></tr>
+<a href="../tabs/history.html">Вкладка История </a></td><td>"Новое предупреждение ...", пункт меню, вызываемый правой кнопкой мыши. </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../tabs/alerts.html">Alerts tab</a></td><td>double clicking on an existing alert</td></tr>
+<a href="../tabs/alerts.html">Вкладка "Оповещения" </a></td><td>двойной щелчок по существующему предупреждению </td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Смотрите также</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../overview.html">Обзор пользовательского интерфейса </a></td><td>для обзора пользовательского интерфейса </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+<a href="dialogs.html">диалоги </a></td><td>для получения подробной информации о диалоговых окнах или всплывающих окнах  </td></tr>
 </table>
 
 </body>

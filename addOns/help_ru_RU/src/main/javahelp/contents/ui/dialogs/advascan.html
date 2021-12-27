@@ -3,78 +3,78 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Active Scan dialog
+Диалог активного сканирования 
 </title>
 </head>
 <body>
-<h1>Active Scan dialog</h1>
+<h1>Диалог активного сканирования </h1>
 <p>
-This dialog launches the <a href="../../start/features/ascan.html">active scanner</a>.<br>
+Этот диалог запускает  <a href="../../start/features/ascan.html">активный сканер </a>.<br>
   
-<h3>Scope</h3>
-The first tab allows you to select or change the starting point.<br>
-If you have more that one <a href="../../start/features/scanpolicy.html">scan policies</a> then you will be able to select the one to use.<br>
-If the starting point is in one or more <a href="../../start/features/contexts.html">Contexts</a> then you will be able to choose one of them.<br>
-If that context has any <a href="../../start/features/users.html">Users</a> defined then you will be able to select one of them.<br>
-If you select one of the users then the active scan will be performed as that user, with ZAP (re)authenticating as that user whenever necessary.
+<h3>Область</h3>
+Первая вкладка позволяет выбрать или изменить начальную точку. <br>
+Если у вас есть еще один <a href="../../start/features/scanpolicy.html">политики сканирования </a> тогда вы сможете выбрать тот, который хотите использовать. <br>
+Если отправная точка находится в одном или нескольких  <a href="../../start/features/contexts.html">Контексты</a> тогда вы сможете выбрать один из них. <br>
+Если в этом контексте есть  <a href="../../start/features/users.html">Пользователи</a> После этого вы сможете выбрать один из них. <br>
+Если вы выберете одного из пользователей, то активное сканирование будет выполняться от имени этого пользователя с (повторной) аутентификацией ZAP от имени этого пользователя, когда это необходимо. 
 <br><br>
-If you select 'Recurse' then all of the nodes underneath the one selected will also be scanned.<br>
-Custom input vectors are only supported if this option is not selected.
+Если вы выберете «Recurse», то все узлы, расположенные ниже выбранного, также будут просканированы. <br>
+Пользовательские входные векторы поддерживаются только в том случае, если этот параметр не выбран. 
 <br><br>
-If you select 'Show Advanced Options' then the following tabs will be shown which provide fine grain control over the active scanning process.
+Если вы выберете «Показать дополнительные параметры», то будут показаны следующие вкладки, которые обеспечивают точный контроль над активным процессом сканирования. 
 <br><br>
-Clicking on the 'Reset' button will reset all of the options to their default values. 
+При нажатии кнопки «Сброс» все параметры сбрасываются до значений по умолчанию.  
 
-<h3>Input Vectors</h3>
-The Input Vectors tab allows you override the default input vectors which are defined in the 
-<a href="../../ui/dialogs/options/ascaninput.html">Options Active Scan Input Vectors screen</a>.<br>
-Clicking on the 'Reset' button will reset the input vectors to the default options. 
+<h3>Входные векторы </h3>
+Вкладка Входные векторы позволяет вам переопределить входные векторы по умолчанию, которые определены в  
+<a href="../../ui/dialogs/options/ascaninput.html">Опции Экран входных векторов активного сканирования </a>.<br>
+Нажатие на кнопку «Сброс» сбрасывает входные векторы до значений по умолчанию.  
 
-<h3>Custom Vectors</h3>
-The Custom Vectors tab allows you specify specific locations in the request to attack.<br> 
-Custom Vectors are only available if the 'Recurse' option on the first tab is not selected.<br>
-To add custom input vectors highlight the characters you want to attack in the request and click the 'Add' button.<br>
-You can add as many custom input vectors as you want.<br>
-To remove custom input vectors highlight any of the selected characters and click the 'Remove' button.<br>
-Checking the 'Disable non custom input vectors' box disables all of the input vectors except those you manually define on this tab.
+<h3>Пользовательские векторы</h3>
+Вкладка Custom Vectors позволяет вам указать определенные места в запросе для атаки. <br> 
+Пользовательские векторы доступны только в том случае, если на первой вкладке не выбран параметр «Повторять». <br>
+Чтобы добавить собственные входные векторы, выделите в запросе персонажей, которых вы хотите атаковать, и нажмите кнопку «Добавить». <br>
+Вы можете добавить столько пользовательских векторов ввода, сколько захотите. <br>
+Чтобы удалить пользовательские векторы ввода, выделите любой из выбранных символов и нажмите кнопку «Удалить». <br>
+Установка флажка «Отключить нестандартные входные векторы» отключает все входные векторы, кроме тех, которые вы вручную определяете на этой вкладке. 
 
-<h3>Technology</h3>
-The Technology tab allows you to specify which types of technologies to scan.<br>
-Un-selecting technologies that you know are not present in the target application may speed up the scan as rules which target that technology can skip those tests.
+<h3>Технология</h3>
+На вкладке «Технология» вы можете указать, какие типы технологий нужно сканировать. <br>
+Отмена выбора технологий, которые, как вы знаете, отсутствуют в целевом приложении, может ускорить сканирование, поскольку правила, нацеленные на эту технологию, могут пропускать эти тесты. 
 
-<h3>Policy</h3>
-The Policy tab allows you to override any of the settings specified in the selected 
-<a href="../../start/features/scanpolicy.html">scan policy</a>. 
+<h3>Политика</h3>
+Вкладка Политика позволяет переопределить любые параметры, указанные в выбранном  
+<a href="../../start/features/scanpolicy.html">политика сканирования </a>. 
 
-<h3>Filter</h3>
-The Filter tab allows you to specify filter criteria and active scan will filter requests based on these criteria's.
+<h3>Фильтр</h3>
+Вкладка «Фильтр» позволяет указать критерии фильтрации, и активное сканирование будет фильтровать запросы на основе этих критериев. 
 <br/> 
-There are four filter criteria's available in the filter tab <br/>
+На вкладке фильтра доступны четыре критерия фильтрации.  <br/>
 <ul>
-<li>HTTP method</li>
-<li>Status code</li>
-<li>Tags</li>
-<li>URL pattern</li>
+<li>HTTP метод </li>
+<li>Код состояния </li>
+<li>Теги</li>
+<li>Шаблон URL </li>
 </ul>
-HTTP method and Status code filter criteria are only applied to check if a request can be included in active scan or not,<br/> where as
-Tags and URL pattern filter criteria can be applied to include or exclude a request.
+Метод HTTP и критерии фильтрации кода состояния применяются только для проверки того, может ли запрос быть включен в активное сканирование или нет, <br/> в то время как
+Теги и критерии фильтрации шаблона URL-адреса могут применяться для включения или исключения запроса. 
 
 <br><br>
 
-<h2>Accessed via</h2>
+<h2>Доступ через </h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/ascan.html">Active Scan tab</a></td><td>'New Scan' button</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tlmenu/tools.html">Top level Tools menu</a></td><td>'Active Scan...' menu item</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/sites.html">Sites tab</a></td><td>'Attack / Active Scan... right click menu item</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/history.html">History tab</a></td><td>'Attack / Active Scan...' right click menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/ascan.html">Вкладка "Активное сканирование" </a></td><td>Кнопка "Новое сканирование" </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tlmenu/tools.html">Меню инструментов верхнего уровня </a></td><td>Пункт меню «Активное сканирование ...» </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/sites.html">Вкладка "Сайты" </a></td><td>'Атака / Активное сканирование ... пункт меню правой кнопкой мыши </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/history.html">Вкладка История </a></td><td>Пункт меню "Атака / Активное сканирование ..." </td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Смотрите также </h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../overview.html">Обзор пользовательского интерфейса </a></td><td>для обзора пользовательского интерфейса </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+<a href="dialogs.html">диалоги </a></td><td>для получения подробной информации о диалоговых окнах или всплывающих окнах  </td></tr>
 </table>
 
 </body>

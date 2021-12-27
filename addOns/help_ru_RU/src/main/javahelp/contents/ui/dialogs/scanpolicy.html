@@ -3,52 +3,52 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Scan Policy Dialog
+диалог политики сканирования 
 </title>
 </head>
 <body>
-<h1>Scan Policy Dialog</h1>
+<h1>диалог политики сканирования </h1>
 <p>
-This allows you to enable and disable the rules that are run when performing an <a href="../../start/features/ascan.html">active scan</a>.<br>
-The first screen allows you to define the default levels as well as the levels for all of the rules in a specific category.<br>
+Это позволяет вам включать и отключать правила, которые запускаются при выполнении <a href="../../start/features/ascan.html"> активного сканирования </a>. <br>
+Первый экран позволяет вам определять уровни по умолчанию, а также уровни для всех правил в определенной категории. <br>
 <br>
-The category screens allow you to define the levels for every individual rule.<br>
+Экраны категорий позволяют определять уровни для каждого отдельного правила. <br>
 <br>
 <br>
-Note that <a href="../../start/features/pscan.html">passive scan</a> rules are no longer managed via this dialog but are instead 
-managed via the <a href="../../ui/dialogs/options/pscanrules.html">Options Passive Scan Rules</a>.
+Обратите внимание, что правила <a href="../../start/features/pscan.html"> пассивного сканирования </a> больше не управляются через это диалоговое окно, а вместо этого
+управляется с помощью <a href="../../ui/dialogs/options/pscanrules.html"> правил пассивного сканирования параметров </a> .
 </p>
 
-<h3>Threshold</h3>
-This controls how likely ZAP is to report potential vulnerabilities.<br>
+<h3>Порог</h3>
+Это контролирует, насколько вероятно, что ZAP сообщит о потенциальных уязвимостях. <br>
 <ul>
-	<li>If you select Off then the scanner won't run.</li>
-	<li>If you select Low then more potential issues will be raised which may increase the number of false positives.</li>
-	<li>If you select High then fewer potential issues will be raised which may mean that some real issues are missed (false negatives).</li>
+	<li>Если вы выберете «Выкл.», Сканер не будет работать. </li>
+	<li>Если вы выберете «Низкий», возникнет больше потенциальных проблем, которые могут увеличить количество ложных срабатываний. </li>
+	<li>Если вы выберете «Высокий», возникнет меньше потенциальных проблем, что может означать, что некоторые реальные проблемы будут упущены (ложноотрицательные результаты). </li>
 </ul>  
 
-<h3>Strength</h3>
-This controls the number of attacks that ZAP will perform.<br>
-If you select Low then fewer attacks will be used which will be quicker but may miss some issues.<br>
-If you select High then more attacks will be used which may find more issues but will take longer.<br>
-The Insane level should typically only be used for small parts of an application as it can result in a very large number of 
-attacks being used, which can take a considerable length of time.
+<h3>Сила</h3>
+Это контролирует количество атак, которые будет выполнять ZAP. <br>
+Если вы выберете «Низкий», будет использоваться меньше атак, что будет быстрее, но при этом могут быть пропущены некоторые проблемы. <br>
+Если вы выберете «Высокий», будет использоваться больше атак, которые могут выявить больше проблем, но займут больше времени. <br>
+Уровень Insane обычно следует использовать только для небольших частей приложения, так как это может привести к очень большому количеству ошибок.
+используются атаки, которые могут занять значительное время. 
 <p>
-<strong>Note:</strong> Please be aware that use of the moniker "Insane" with regard to scan 
-strength is simply a name chosen to represent the most extreme strength of scanning, it is not a 
-commentary or reference to mental health or personal stability.
+<strong>Примечание: </strong> Имейте в виду, что использование прозвища "Безумие" в отношении сканирования
+сила - это просто имя, выбранное для обозначения максимальной силы сканирования, это не
+комментарий или ссылка на психическое здоровье или личную стабильность. 
 
-<h2>Accessed via</h2>
+<h2>Доступ через </h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="scanpolicymgr.html">Scan Policy Manager dialog</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="scanpolicymgr.html">Диалоговое окно диспетчера политик сканирования </a></td><td></td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>Смотрите также </h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../overview.html">Обзор пользовательского интерфейса </a></td><td>для обзора пользовательского интерфейса </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+<a href="dialogs.html">диалоги </a></td><td>для получения подробной информации о диалоговых окнах или всплывающих окнах  </td></tr>
 </table>
 
 </body>
