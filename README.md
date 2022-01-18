@@ -8,14 +8,6 @@ The English help files are under the [/addOns/help](https://github.com/zaproxy/z
 
 This User Guide has been translated into many languages, all of which are available via the [ZAP Marketplace](https://www.zaproxy.org/addons/).
 
-The most completely translated guides are also available online in the wiki:
-
-* [Filipino](https://github.com/zaproxy/zap-core-help-fil_PH/wiki/HelpIntro)
-* [Indonesian](https://github.com/zaproxy/zap-core-help-id_ID/wiki/HelpIntro)
-* [Portuguese, Brazilian](https://github.com/zaproxy/zap-core-help-pt_BR/wiki/HelpIntro)
-* [Spanish](https://github.com/zaproxy/zap-core-help-es_ES/wiki/HelpIntro)
-* [Turkish](https://github.com/zaproxy/zap-core-help-tr_TR/wiki/HelpIntro)
-
 You can help translate those pages into other languages via the [OWASP ZAP Help Crowdin project](https://crowdin.com/project/owasp-zap-help).
 
 ## Building
