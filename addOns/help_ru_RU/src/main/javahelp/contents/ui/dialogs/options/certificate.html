@@ -3,18 +3,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Options Client Certificate screen
+Окно «Сертификат клиента» параметров 
 </title>
 </head>
 <body>
-<h1>Options Client Certificate screen</h1>
+<h1>Окно «Сертификат клиента» параметров </h1>
 <p>
-The Client Certificate screen allows you to add a client certificate for ZAP to use when testing applications
-protected using mutual SSL. Currently supported ways to utilize certificates are PKCS12 and PKCS11.
+Экран «Сертификат клиента» позволяет добавить сертификат клиента для использования ZAP при тестировании приложений.
+защищены с помощью взаимного SSL.  В настоящее время поддерживаются следующие способы использования сертификатов: PKCS12 и PKCS11. 
 </p>
-<h2>Using PKCS12</h2>
+<h2>Использование PKCS12 </h2>
 <p>
-It is possible to set the Client Certificate from the command line with the following switches:
+Сертификат клиента можно установить из командной строки с помощью следующих переключателей: 
 </p>
 <pre>
 -config certificate.use=true
@@ -24,35 +24,35 @@ It is possible to set the Client Certificate from the command line with the foll
 -config certificate.persist=true
 </pre>
 <p>
-<code>-config certificate.pkcs12.index</code> is only necessary if the file contains multiple certificates 
-and you wish to use one other than the first. Index values start at zero (0) which is the first certificate
-in the file.<br><br>
-<code>-config certificate.persist=true</code> is only necessary if you would like the settings persisted in ZAP's regular 
-configuration file (so that they apply for subsequent ZAP use).
+<code>-config certificate.pkcs12.index</code> необходим только в том случае, если файл содержит несколько сертификатов.
+и вы хотите использовать один, отличный от первого.  Значения индекса начинаются с нуля (0), что является первым сертификатом.
+в файле.<br><br>
+<code>-config certificate.persist=true</code> необходим только в том случае, если вы хотите, чтобы настройки сохранялись в обычном
+файл конфигурации (чтобы они применялись для последующего использования ZAP). 
 </p>
-<h2>Using PKCS11</h2>
-<p>PKCS11 is one of the Public-Key Cryptography Standards. Usually PKCS11 is used with Hardware Tokens (mostly USB style) 
-that store the cryptographic material in a secure way. Thus usually a driver is needed. The drivers are most commonly provided 
-by the Issuer of the Certificate stored on the token or the provider of the token. Certain tokens (especially if running 
-under Linux) are supported by opensc/libccid combination.</p>
+<h2>Использование PKCS11 </h2>
+<p>PKCS11 — это один из стандартов криптографии с открытым ключом.  Обычно PKCS11 используется с аппаратными токенами (в основном в стиле USB)
+которые хранят криптографический материал безопасным способом.  Таким образом, обычно требуется драйвер.  Драйвера чаще всего предоставляются
+эмитентом сертификата, хранящегося на токене, или поставщиком токена.  Некоторые токены (особенно при запуске
+под Linux) поддерживаются комбинацией opensc/libccid. </p>
 <p>
-It is possible to set the Client Certificate from the command line with the following switches:
+Сертификат клиента можно установить из командной строки с помощью следующих переключателей: 
 </p>
 <pre>
 -config certificate.use=true
 -config certificate.experimentalSlotListIndex=true
 </pre>
-</p>Setting PKCS11 Driver, Pin, and active certificate is not possible from the command line for the moment.
-Using <code>certificate.experimentalSlotListIndex=true</code> is only required for some cards. If without does not 
-work try adding it.</p>
-<h2>See also</h2>
+</p>На данный момент установка драйвера PKCS11, PIN-кода и активного сертификата из командной строки невозможна.
+С использованием  <code>certificate.experimentalSlotListIndex=true</code> требуется только для некоторых карт. Если без не
+работает  попробуйте добавить его. </p>
+<h2>Смотрите также</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../overview.html">Обзор пользовательского интерфейса </a></td><td>для обзора пользовательского интерфейса </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+<a href="options.html">Диалоги опций </a></td><td>для получения подробной информации о других диалоговых окнах параметров </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../../cmdline.html">Command Line</a></td><td>for details of the Command Line</td></tr>
+<a href="../../../cmdline.html">командная строка</a></td><td>для получения подробной информации о командной строке </td></tr>
 </table>
 
 </body>
