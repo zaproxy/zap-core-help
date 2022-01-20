@@ -3,41 +3,41 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Options Database screen
+Экран базы данных параметров 
 </title>
 </head>
 <body>
-<h1>Options Database screen</h1>
+<h1>Экран базы данных параметров </h1>
 <p>
-This screen allows you to configure the database options:
+Этот экран позволяет настроить параметры базы данных: 
 
-<h3>Компрессия (при выходе)</h3>
-Allows to compact the database when ZAP is closed, compacting the database 
-ensures a minimal space disk usage but it will also take longer to exit ZAP.
+<h3>Компактный (на выходе) </h3>
+Позволяет сжимать базу данных при закрытии ZAP, сжимая базу данных
+обеспечивает минимальное использование дискового пространства, но также потребуется больше времени для выхода из ZAP. 
 
-<h3>Recovery Log</h3>
-Controls whether or not database's recovery log is enabled.<br>Improves the performance of the database when disabled but might lead to data loss if ZAP is exited abruptly.<br>
-Note: current session will be unaffected, changes take effect on new and opened sessions.
+<h3>Журнал восстановления </h3>
+Определяет, включен ли журнал восстановления базы данных. <br>Улучшает производительность базы данных при отключении, но может привести к потере данных при резком выходе из ZAP. <br>
+Примечание: текущий сеанс не изменится, изменения вступят в силу для новых и открытых сеансов. 
 
-<h3>Maximum Request Body Size</h3>
-The largest request body size in bytes that ZAP will allow.
+<h3>Максимальный размер тела запроса </h3>
+Максимальный размер тела запроса в байтах, который разрешен ZAP. 
 
-<h3>Maximum Response Body Size</h3>
-The largest response body size in bytes that ZAP will allow.
+<h3>Максимальный размер тела отклика </h3>
+Максимальный размер тела ответа в байтах, допустимый ZAP. 
 
-<h3>Prompt for persistence options on new session</h3>
-If checked then the <a href="../persistsession.html">Persist Session dialog</a> will be shown when a new session is created.
+<h3>Запрашивать параметры сохранения в новом сеансе </h3>
+Если отмечено, то  <a href="../persistsession.html">Диалоговое окно сохранения сеанса </a> будет отображаться при создании нового сеанса. 
 
-<h3>Default option</h3>
-The default option for new sessions - if the above prompt is enabled then the default option will be selected.<br>
-If the prompt is not enabled then this is the action that will be taken.
+<h3>Вариант по умолчанию </h3>
+Параметр по умолчанию для новых сеансов — если указанный выше запрос включен, будет выбран параметр по умолчанию. <br>
+Если подсказка не включена, то будет предпринято это действие. 
 
-<h2>See also</h2>
+<h2>Смотрите также </h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../overview.html">Обзор пользовательского интерфейса </a></td><td>для обзора пользовательского интерфейса </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+<a href="options.html">Диалоги опций </a></td><td>для получения подробной информации о других диалоговых окнах параметров </td></tr>
 </table>
 
 </body>
