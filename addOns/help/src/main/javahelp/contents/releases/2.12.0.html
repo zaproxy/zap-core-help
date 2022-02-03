@@ -75,26 +75,39 @@ The following classes (all of which were deprecated more than 5 years ago) have 
 The following methods (all of which were deprecated more than 5 years ago) have been removed:
 
 <ul>
-<li><code>org.parosproxy.paros.core.scanner.Alert.setDetail(String, String, String, String, String, String, String, HttpMessage) </code></li>
-<li><code>org.parosproxy.paros.db.paros.ParosTableHistory.getHistoryList(long)</code></li>
-<li><code>org.parosproxy.paros.db.paros.ParosTableHistory.getHistoryList(long, int)</code></li>
-<li><code>org.parosproxy.paros.extension.ExtensionPopupMenuItem.isSuperMenu()</code></li>
-<li><code>org.parosproxy.paros.network.ConnectionParam.getProxyChainSkipName()</code></li>
-<li><code>org.parosproxy.paros.network.ConnectionParam.setProxyChainSkipName(String)</code></li>
-<li><code>org.zaproxy.zap.extension.ExtensionPopupMenu.prepareShow()</code></li>
-<li><code>org.zaproxy.zap.spider.SpiderParam.getScope()</code></li>
-<li><code>org.zaproxy.zap.spider.SpiderParam.setScopeString(String)</code></li>
-<li><code>org.zaproxy.zap.spider.SpiderParam.getScopeText()</code></li>
-<li><code>org.zaproxy.zap.view.ContextExcludePanel.getPanelName(Context)</code></li>
-<li><code>org.zaproxy.zap.view.ContextIncludePanel.getPanelName(Context)</code></li>
+<li><code>org.parosproxy.paros.core.scanner.Alert#getReliability()</code></li>
+<li><code>org.parosproxy.paros.core.scanner.Alert#setDetail(String, String, String, String, String, String, String, HttpMessage) </code></li>
+<li><code>org.parosproxy.paros.core.scanner.Alert#setRiskReliability(int, int)</code></li>
+<li><code>org.parosproxy.paros.core.scanner.PluginFactory#loadedPlugin(String)</code></li>
+<li><code>org.parosproxy.paros.core.scanner.PluginFactory#unloadedPlugin(String)</code></li>
+<li><code>org.parosproxy.paros.db.paros.ParosTableHistory#getHistoryList(long)</code></li>
+<li><code>org.parosproxy.paros.db.paros.ParosTableHistory#getHistoryList(long, int)</code></li>
+<li><code>org.parosproxy.paros.db.RecordAlert#getReliability()</code></li>
+<li><code>org.parosproxy.paros.db.RecordAlert#setReliability(int)</code></li>
+<li><code>org.parosproxy.paros.extension.ExtensionPopupMenuItem#isSuperMenu()</code></li>
+<li><code>org.parosproxy.paros.network.ConnectionParam#getProxyChainSkipName()</code></li>
+<li><code>org.parosproxy.paros.network.ConnectionParam#setProxyChainSkipName(String)</code></li>
+<li><code>org.parosproxy.paros.view.AbstractFrame#loadIconImages()</code></li>
+<li><code>org.zaproxy.zap.control.AddOn#canLoad()</code></li>
+<li><code>org.zaproxy.zap.extension.ExtensionPopupMenu#prepareShow()</code></li>
+<li><code>org.zaproxy.zap.extension.pscan.ExtensionPassiveScan#addPassiveScanner(String)</code></li>
+<li><code>org.zaproxy.zap.spider.SpiderParam#getScope()</code></li>
+<li><code>org.zaproxy.zap.spider.SpiderParam#setScopeString(String)</code></li>
+<li><code>org.zaproxy.zap.spider.SpiderParam#getScopeText()</code></li>
+<li><code>org.zaproxy.zap.view.ContextExcludePanel#getPanelName(Context)</code></li>
+<li><code>org.zaproxy.zap.view.ContextIncludePanel#getPanelName(Context)</code></li>
 </ul>
-
 
 The following fields (all of which were deprecated more than 5 years ago) have been removed:
 
 <ul>
-<li><code>org.zaproxy.zap.extension.ascan.ActiveScanPanel.PANEL_NAME</code></li>
-<li><code>org.zaproxy.zap.extension.search.SearchPanel.PANEL_NAME</code></li>
+<li><code>org.parosproxy.paros.Constant#FILE_CONFIG_DEFAULT</code></li>
+<li><code>org.parosproxy.paros.Constant#VULNS_BASE</code></li>
+<li><code>org.parosproxy.paros.core.scanner.Alert#MSG_RELIABILITY</code></li>
+<li><code>org.parosproxy.paros.core.scanner.Alert#SUSPICIOUS</code></li>
+<li><code>org.parosproxy.paros.core.scanner.Alert#WARNING</code></li>
+<li><code>org.zaproxy.zap.extension.ascan.ActiveScanPanel#PANEL_NAME</code></li>
+<li><code>org.zaproxy.zap.extension.search.SearchPanel#PANEL_NAME</code></li>
 </ul>
 
 <H2>See Also</H2>
