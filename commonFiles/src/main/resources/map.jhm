@@ -137,7 +137,6 @@
      	<mapID target="ui.dialogs.options.jvm" url="contents/ui/dialogs/options/jvm.html"/>
      	<mapID target="ui.dialogs.options.keyboard" url="contents/ui/dialogs/options/keyboard.html"/>
      	<mapID target="ui.dialogs.options.language" url="contents/ui/dialogs/options/language.html"/>
-     	<mapID target="ui.dialogs.options.localproxy" url="contents/ui/dialogs/options/localproxy.html"/>
      	<mapID target="ui.dialogs.options.pscan" url="contents/ui/dialogs/options/pscan.html"/>
      	<mapID target="ui.dialogs.options.pscanrules" url="contents/ui/dialogs/options/pscanrules.html"/>
      	<mapID target="ui.dialogs.options.pscan.main" url="contents/ui/dialogs/options/pscanner.html"/>
