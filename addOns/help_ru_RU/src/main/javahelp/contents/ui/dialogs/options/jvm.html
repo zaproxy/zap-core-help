@@ -3,69 +3,69 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Options JVM screen
+Окно параметров JVM 
 </title>
 </head>
 <body>
-<h1>Options JVM screen</h1>
+<h1>Окно параметров JVM </h1>
 <p>
-This screen allows you to configure the JVM options used when starting ZAP.
+Этот экран позволяет настроить параметры JVM, используемые при запуске ZAP. 
 </p>
 
-<h3>JVM Options</h3>
-A free format text field which will be added to the Java command line call
-when invoking ZAP via either zap.sh or zap.bat.
+<h3>Параметры JVM </h3>
+Текстовое поле произвольного формата, которое будет добавлено к вызову командной строки Java.
+при вызове ZAP через zap.sh или zap.bat. 
 </p>
 <p>
-The option was added so that the Java maximum memory allocation pool size can be set, 
-which is of the form: -Xmx<i>n</i> where <i>n</i> is the size in bytes.<br>
-Good values for this field could be:
+Опция была добавлена, чтобы можно было установить максимальный размер пула выделения памяти Java,
+который имеет форму: -Xmx <i>n</i> где <i>n</i> это размер в байтах. <br>
+Хорошими значениями для этого поля могут быть: 
 <ul>
 <li>-Xmx256m</li>
 <li>-Xmx512m</li>
 <li>-Xmx1024m</li>
 </ul>
 <p>
-Unlike the other ZAP options these are held in the file <code>.ZAP_JVM.properties</code> in the user's default ZAP directory,
-which depends on the OS being used, for example:
+В отличие от других параметров ZAP, они хранятся в файле.  <code>.ZAP_JVM.properties</code> в каталоге ZAP пользователя по умолчанию,
+что зависит от используемой ОС, например: 
 <ul>
 <li>Windows 7/8: C:\Users\<i>&lt;username&gt;</i>\OWASP ZAP</li>
 <li>Windows XP: C:\Documents and Settings\<i>&lt;username&gt;</i>\OWASP ZAP</li>
 <li>Linux: ~/.ZAP</li>
 <li>Mac OS: ~/Library/Application Support/ZAP</li>
 </ul>
-If you make a mistake when setting these options then ZAP may fail to start.<br>
-If that happens then deleting this file should fix the problem.
+Если вы допустили ошибку при установке этих параметров, ZAP может не запуститься. <br>
+Если это произойдет, удаление этого файла должно решить проблему. 
 <p>
-<strong>Windows Notes:</strong> These options are not used when starting ZAP via the executable. The directory where the file <code>.ZAP_JVM.properties</code> is located depends on the environment variable <code>%USERPROFILE%</code>.
+<strong>Примечания для Windows: </strong> Эти параметры не используются при запуске ZAP через исполняемый файл. Каталог, в котором находится файл  <code>.ZAP_JVM.properties</code> находится в зависимости от переменной окружения  <code>%USERPROFILE%</code>.
 
-<h3>JVM Memory Details</h3>
-The lower portion of the dialog displays details of the current JVM memory configuration. Including: 
+<h3>Сведения о памяти JVM </h3>
+В нижней части диалогового окна отображаются сведения о текущей конфигурации памяти JVM. В том числе:  
   <ul>
-    <li>Size - the amount of memory currently allocated to the JVM.</li> 
-    <li>Used - the amount of currently allocated memory used (not free).</li>
-    <li>Max - the amount of memory that the JVM could grow to occupy.</li>
+    <li>Размер (Size) — объем памяти, выделенный в данный момент для JVM. </li> 
+    <li>Используемый - объем используемой в данный момент выделенной памяти (не свободной). </li>
+    <li>Max — объем памяти, который может занимать JVM. </li>
   </ul>
-The values are displayed in human readable IEC units based on base 2 calculation (for example: 1024Bytes equals 1KiB, etc).
+Значения отображаются в удобочитаемых единицах IEC на основе расчета по основанию 2 (например: 1024 байта равны 1 КБ и т. д.). 
 <p>
-Generally max should be close to -Xmx (if specified). However, the following behavior was observed during testing under Java 8 on Windows OS.
+Обычно значение max должно быть близко к -Xmx (если указано). Однако при тестировании под Java 8 в ОС Windows наблюдалось следующее поведение. 
 <p>
--Xmx512m was specified (which should calculate out to ~488MiB), however, 455.5MiB was displayed.<br>
--Xms512m -Xmx512m was specified, however, 475MiB was displayed.<br>
--XX:+AlwaysPreTouch -Xms512m -Xmx512m, and 474.5MiB was displayed.
+Было указано -Xmx512m (которое должно быть рассчитано примерно до 488 МиБ), однако отображалось 455,5 МиБ.<br>
+-Xms512m -Xmx512m был указан, однако отображалось 475МиБ.<br>
+-XX:+AlwaysPreTouch -Xms512m -Xmx512m и отображалось 474,5 МБ. 
 <p>
-So it seems the JVM does some calculation/manipulation at execution which may mean that the results may not align as expected for the 
-options the user inputs (this is a JVM issue, not a ZAP issue).
+Таким образом, кажется, что JVM выполняет некоторые вычисления/манипуляции при выполнении, что может означать, что результаты могут не соответствовать ожидаемому для
+варианты ввода пользователя (это проблема JVM, а не проблема ZAP). 
 
-<h2>See also</h2>
+<h2>Смотрите также </h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">Обзор пользовательского интерфейса </a></td><td>для обзора пользовательского интерфейса </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="options.html">Диалоговые окна параметров </a></td><td>для получения подробной информации о других диалоговых экранах параметров </td></tr>
 </table>
 
-<h2>External links</h2>
+<h2>внешние ссылки</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html#BABDJJFI">Java 8 options</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html#BABDJJFI">Варианты Java 8 </a></td></tr>
 </table>
 
 </body>
