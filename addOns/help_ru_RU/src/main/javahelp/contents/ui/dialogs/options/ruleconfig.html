@@ -3,42 +3,42 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Options Rule Configuration screen
+Экран настройки правил параметров 
 </title>
 </head>
 <body>
-<h1>Options Rule Configuration screen</h1>
+<h1>Экран настройки правил параметров </h1>
 <p>
-This screen allows you to configure the behaviour of specific active and passive scan rules.
+Этот экран позволяет настроить поведение определенных активных и пассивных правил сканирования. 
 <p>
 
-Select any of the listed rows to see details of the specific configuration and to change the associated value.
-Both individual and all rules can be reset.  
+Выберите любую из перечисленных строк, чтобы просмотреть сведения о конкретной конфигурации и изменить связанное значение.
+Можно сбросить как отдельные, так и все правила.   
 <p>
-The built-in rules include:<br><br>
+К встроенным правилам относятся: <br><br>
 <table>
-<tr><th>Name</th><th>Default</th><th>Description</th></tr>
-<tr><td>rules.common.sleep</td><td>15</td><td>The length of time in seconds used for timing attacks.</td></tr>
-<tr><td>rules.cookie.ignorelist</td><td></td><td>A comma separated list of cookie names.
-Cookies included in this list will be ignored when scanning for cookie related issues.</td></tr>
-<tr><td>rules.csrf.ignorelist</td><td></td><td>A comma separated list of identifiers.
-Any FORMs with a name or ID that matches one of these identifiers will be ignored when scanning for missing Anti-CSRF tokens.
-Only use this feature to ignore FORMs that you know are safe, for example search forms.</td></tr>
-<tr><td>rules.csrf.ignore.attname</td><td></td><td>The name of an HTML attribute that can be used to indicate that a form does
-not need an anti-CSRF Token. If <code>rules.csrf.ignore.attvalue</code> is specified then this must also match the attribute's value. If
-found any related alerts will be raised at INFO level.</td></tr>
-<tr><td>rules.csrf.ignore.attvalue</td><td></td><td>The value of an HTML attribute named by <code>rules.csrf.ignore.attname</code>
-that can be used to indicate that a form does not need an anti-CSRF Token. If found any related alerts will be raised at INFO level.</td></tr>
-<tr><td>rules.domains.trusted</td><td></td><td>A comma separated list of URL regex patterns. Any URLs that match the patterns will be considered trusted domains and the issues ignored.</td></tr>
+<tr><th>Имя:</th><th>По умолчанию</th><th>Описание</th></tr>
+<tr><td>rules.common.sleep</td><td>15</td><td> Продолжительность времени в секундах, используемого для тайминговых атак. </td></tr>
+<tr><td>rules.cookie.ignorelist</td><td></td><td>Список имен файлов cookie, разделенных запятыми.
+Файлы cookie, включенные в этот список, будут игнорироваться при сканировании на наличие проблем, связанных с файлами cookie. </td></tr>
+<tr><td>rules.csrf.ignorelist</td><td></td><td>Список идентификаторов, разделенных запятыми. 
+Любые FORM с именем или идентификатором, совпадающим с одним из этих идентификаторов, будут игнорироваться при сканировании отсутствующих токенов Anti-CSRF. 
+Используйте эту функцию только для игнорирования ФОРМ, которые, как вы знаете, безопасны, например формы поиска. </td></tr>
+<tr><td>rules.csrf.ignore.attname</td><td></td><td>Имя атрибута HTML, которое можно использовать для указания того, что форма
+не нужен токен против CSRF.  Если указано <code>rules.csrf.ignore.attvalue</code>, оно также должно соответствовать значению атрибута.  Если
+обнаружено, что любые связанные предупреждения будут подняты на уровне INFO. </td></tr>
+<tr><td>rules.csrf.ignore.attvalue</td><td></td><td>Значение атрибута HTML с именем <code>rules.csrf.ignore.attname</code>.
+который можно использовать, чтобы указать, что форма не нуждается в маркере защиты от CSRF.  Если будут найдены какие-либо связанные предупреждения, они будут подняты на уровне INFO. </td></tr>
+<tr><td>rules.domains.trusted</td><td></td><td>Разделенный запятыми список шаблонов регулярных выражений URL. Любые URL-адреса, соответствующие шаблонам, будут считаться доверенными доменами, а проблемы будут игнорироваться. </td></tr>
 </table>
 
 
-<h2>See also</h2>
+<h2>Смотрите также</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../overview.html">Обзор пользовательского интерфейса </a></td><td>для обзора пользовательского интерфейса </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+<a href="options.html">Диалоговые окна параметров </a></td><td>для получения подробной информации о других диалоговых экранах параметров </td></tr>
 </table>
 
 </body>
