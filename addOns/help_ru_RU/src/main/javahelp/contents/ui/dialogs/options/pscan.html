@@ -3,45 +3,45 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Options Passive Scan Tags screen
+Экран «Параметры пассивного сканирования» 
 </title>
 </head>
 <body>
-<h1>Options Passive Scan Tags screen</h1>
+<h1>Экран «Параметры пассивного сканирования» </h1>
 <p>
-This screen allows you to configure the <a href="../../../start/features/tags.html">tags</a> 
-that are added by the <a href="../../../start/features/pscan.html">passive scanner</a>.
+Этот экран позволяет настроить <a href="../../../start/features/tags.html">теги</a>
+добавленные <a href="../../../start/features/pscan.html">пассивным сканером</a> .
 </p>
-You can add, modify and remove the tags via the appropriate buttons.
+Вы можете добавлять, изменять и удалять теги с помощью соответствующих кнопок. 
 
-<h2>Tag Interpolation</h2>
-In order to allow some flexibility in Tag creation and content it is possible for the user to specify a regular expression with capturing groups
-which will be used to replace the group identifiers (ex: $1) in the resulting tag.
+<h2>Интерполяция тегов </h2>
+Чтобы обеспечить некоторую гибкость в создании тегов и содержании, пользователь может указать регулярное выражение с группами захвата.
+который будет использоваться для замены идентификаторов групп (например, $1) в результирующем теге. 
 <p>
-For example, a tag could be defined as follows:
+Например, тег можно определить следующим образом: 
 <table border=1>
   <tr>
-    <th>Field</th><th>Value</th><th>Note</th>
+    <th>Поле</th><th>Значение</th><th>Примечание</th>
   </tr>
   <tr>
-    <td>Name:</td><td>Test</td><td>&nbsp;</td>
+    <td>Имя:</td><td>Тест</td><td>&nbsp;</td>
   </tr>
   <tr>
-    <td>Tag:</td><td>$1-SOMETAG</td><td>&nbsp;</td>
+    <td>Тег:</td><td>$1-SOMETAG</td><td>&nbsp;</td>
   </tr>
   <tr>
-    <td>Response Body Regex:</td><td>(\d{3})</td><td>Find strings of 3 numbers, using a capturing group (round brackets).</td>
+    <td>Регулярное выражение тела ответа: </td><td>(\d{3})</td><td>Найдите строки из 3 чисел, используя группу захвата (круглые скобки). </td>
   </tr>
 </table>
-<b>Result:</b> When 3 digit strings are passively identified in response body content (the regex matches) the messages will be 
-tagged such as "123-SOMETAG", "345-SOMETAG", etc.
+<b>Результат:</b> Когда 3-значные строки пассивно идентифицируются в содержимом тела ответа (соответствует регулярному выражению), сообщения будут
+тегами, такими как «123-SOMETAG», «345-SOMETAG» и т. д. 
 
-<h2>See also</h2>
+<h2>Смотрите также </h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../overview.html">Обзор пользовательского интерфейса </a></td><td>для обзора пользовательского интерфейса </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+<a href="options.html">Диалоговые окна параметров </a></td><td>для получения подробной информации о других диалоговых экранах параметров </td></tr>
 </table>
 
 </body>

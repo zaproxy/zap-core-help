@@ -3,80 +3,80 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Break tab
+Вкладка "Разрыв"
 </title>
 </head>
 <body>
-<h1>Break tab</h1>
+<h1>Вкладка "Разрыв" </h1>
 <p>
-The Break tab allows you to change a request or response when it has been caught by ZAP via
-a <a href="../../start/features/breakpoints.html">breakpoint</a>.<br/>
-It allows you to change elements that you would not normally be able to change via your
-browser, including:
+Вкладка Break позволяет вам изменить запрос или ответ, когда он был перехвачен ZAP через
+а  <a href="../../start/features/breakpoints.html">точка останова </a>.<br/>
+Это позволяет вам изменять элементы, которые вы обычно не можете изменить с помощью вашего
+браузер, в том числе: 
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td>The header</td></tr>
+<td>Заголовок </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td>Hidden fields</td></tr>
+<td>Скрытые поля </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td>Disabled fields</td></tr>
+<td>Отключенные поля </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td>Fields that use javascript to filter out illegal characters</td></tr>
+<td>Поля, использующие javascript для фильтрации недопустимых символов </td></tr>
 </table>
-This functionality is key to effectively pen testing your application.
+Эта функциональность является ключом к эффективному пенному тестированию вашего приложения. 
 <p>
-The 2 panels will only contain anything if ZAP has caught a request or response.<br/>
-You can change anything in these 2 panels and then forward the request or response using
-the buttons on the <a href="../tltoolbar.html">Top Level Toolbar</a>.
+Две панели будут содержать что-либо только в том случае, если ZAP перехватил запрос или ответ.<br/>
+Вы можете изменить что-либо в этих двух панелях, а затем перенаправить запрос или ответ, используя
+кнопки на <a href="../tltoolbar.html">панели инструментов верхнего уровня</a> .
 </p>
 <p>
-Pull downs allow you to select different <a href="../views.html">Views</a> for the request or response header and body.
+Раскрывающиеся списки позволяют выбирать разные <a href="../views.html">представления</a> для заголовка и тела запроса или ответа. 
 </p>
 <p>
-While the Break tab is not in use its icon is a grey cross: &nbsp;
+Пока вкладка «Перерыв» не используется, ее значок представляет собой серый крестик: &nbsp;
 <img src="../../images/16/101grey.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
-When a <a href="../../start/features/breakpoints.html">breakpoint</a> is hit the tab icon is changed 
-to a red cross: &nbsp;
-<img src="../../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
+При достижении <a href="../../start/features/breakpoints.html">точки останова</a> значок вкладки меняется
+к красному кресту: &nbsp;
+<img src="../../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;. <br/>
 
 </p>
 
 <p>
-    If you have selected "Show buttons to select the requests you don't want ZAP to break on" in the
-    <a href="../dialogs/options/breakpoints.html">options menu</a> you will be able to select if you just want to break
-    on requests that are in scope and you will be able to select the file extensions you don't want to break on:<br>
+    Если вы выбрали «Показать кнопки для выбора запросов, которые вы не хотите прерывать ZAP» в 
+    <a href="../dialogs/options/breakpoints.html">меню опций </a> вы сможете выбрать, если вы просто хотите прерывание
+     для запросов, которые находятся в области действия, и вы сможете выбрать расширения файлов, которые вы не хотите прерывать: <br>
 <table>
     <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-        <td><img src="../../images/javascript.png" align="bottom" width="16" height="16" />&nbsp; Javascript Files</td></tr>
+        <td><img src="../../images/javascript.png" align="bottom" width="16" height="16" />&nbsp; Javascript-файлы </td></tr>
     <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-        <td><img src="../../images/cssAndFonts.png" align="bottom" width="16" height="16"/>&nbsp; CSS and Fonts Files </td></tr>
+        <td><img src="../../images/cssAndFonts.png" align="bottom" width="16" height="16"/>&nbsp; CSS и файлы шрифтов  </td></tr>
     <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-        <td><img src="../../images/multimedia.png" align="bottom" width="16" height="16" />&nbsp; Multimedia Files</td></tr>
+        <td><img src="../../images/multimedia.png" align="bottom" width="16" height="16" />&nbsp; Мультимедийные файлы </td></tr>
     <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-        <td><img src="../../images/fugue/target.png" align="bottom" width="16" height="16" />&nbsp; Only in scope</td></tr>
+        <td><img src="../../images/fugue/target.png" align="bottom" width="16" height="16" />&nbsp; только в сфере</td></tr>
 </table>
 </p>
 
-<h3><img src="../../images/fugue/application-resize.png" align="bottom" width="16" height="16" />&nbsp; Update Content Length</h3>
-By default ZAP will automatically update (or add) the HTTP(S) Content-Length header to match the size of the data submitted. 
-If this option is unselected then ZAP will not update the header allowing you to specify any value you like.<br>
-This button will only be shown for HTTP(S) messages.
+<h3><img src="../../images/fugue/application-resize.png" align="bottom" width="16" height="16" />&nbsp; Обновить длину содержимого </h3>
+По умолчанию ZAP автоматически обновляет (или добавляет) заголовок HTTP(S) Content-Length, чтобы он соответствовал размеру отправленных данных.  
+Если этот параметр не выбран, ZAP не будет обновлять заголовок, позволяя вам указать любое значение, которое вам нравится. <br>
+Эта кнопка будет отображаться только для сообщений HTTP(S). 
 
-<h2>Right click menu</h2>
-Right clicking on a node will bring up a menu which will allow you to:
+<h2>Меню правой кнопки мыши </h2>
+Щелкнув правой кнопкой мыши по узлу, вы откроете меню, которое позволит вам: 
 
-<h3>Find...</h3>
-This will bring up the <a href="../dialogs/find.html">Find dialog</a>.
+<h3>Найти...</h3>
+Это вызовет  <a href="../dialogs/find.html">Диалог поиска </a>.
 
 <h3>Копировать</h3>
-This will copy the selected string to the clipboard.
+Это скопирует выбранную строку в буфер обмена. 
 
-<h2>See also</h2>
+<h2>Смотрите также </h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../overview.html">Обзор пользовательского интерфейса </a></td><td>для обзора пользовательского интерфейса </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="breakpoints.html">Breakpoints tab</a></td><td>for details of how to change or delete breakpoints</td></tr>
+<a href="breakpoints.html">Контрольные точки вкладка </a></td><td>для получения подробной информации о том, как изменить или удалить точки останова </td></tr>
 </table>
 
 </body>

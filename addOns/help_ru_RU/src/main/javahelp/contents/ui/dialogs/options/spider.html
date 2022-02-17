@@ -2,136 +2,135 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Options Spider screen</title>
+<title>Опции Паук (Spider) экран </title>
 </head>
 <body>
-	<h1>Options Spider screen</h1>
+	<h1>Опции Паук (Spider) экран </h1>
 	<p>
-		This screen allows you to configure the <a
-			href="../../../start/features/spider.html">spider</a> options.</p> 
-	<p>It should be noted that modifying most of these options also affects
-	the running Spider.
+		На этом экране можно настроить параметры <a
+			href="../../../start/features/spider.html">паука</a>. </p> 
+	<p>Следует отметить, что изменение большинства этих параметров также влияет на
+бегущий Паук. 
 	</p>
 
-	<h3>Maximum depth to crawl</h3>
-	The parameter defines the maximum depth in the crawling process where a
-	page must be found in order for it to be processed. Resources found
-	deeper than this level are not fetched and parsed by the spider. The value
-	zero means unlimited depth.
+	<h3>Максимальная глубина ползания </h3>
+	Параметр определяет максимальную глубину в процессе сканирования, на которой
+страница должна быть найдена, чтобы ее можно было обработать.  Ресурсы найдены
+глубже этого уровня не извлекаются и не анализируются пауком.  Значение
+ноль означает неограниченную глубину. 
 	<p>
-		The depth is calculated starting from the seeds, so, if a Spider scan
-		starts with only a single URL (eg. URL manually specified), the depth is
-		calculated from this one. However, if the scan starts with multiple
-		seeds (eg. recurse and Sites tree node with children), a resource is processed if it's depth
-		relative to <i>any</i> of the seeds is less than the defined one.
+		Глубина рассчитывается, начиная с семян, поэтому, если сканирование паука
+начинается только с одного URL-адреса (например,  URL указан вручную), глубина
+рассчитывается из этого.  Однако, если сканирование начинается с нескольких начальных значений (например.  recurse (повторное просматривание) и узел дерева Sites с дочерними элементами), ресурс обрабатывается, если его глубина
+относительно <i>любого</i> начального числа меньше заданного. 
 	</p>
 
-	<h3>Number of threads used</h3>
-	The spider is multi-threaded and this is the number that defines the
-	maximum number of worker threads used in the crawling process. Changing this
-	parameter does not have any effect on any crawling is in progress. 
+	<h3>Количество используемых потоков </h3>
+	Паук (Spider) является многопоточным, и это число, которое определяет
+максимальное количество рабочих потоков, используемых в процессе сканирования.  Изменение этого
+параметр не оказывает никакого влияния на выполняемое сканирование.  
 
-	<h3>Maximum duration</h3>
-	The maximum length of time that the spider should run for, measured in minutes.
-	Zero (the default) means that the spider will run until it has found all of the links that it is able to. 
+	<h3>Максимальная продолжительность </h3>
+	Максимальное время, в течение которого паук должен работать, измеряется в минутах.
+Ноль (значение по умолчанию) означает, что паук будет работать до тех пор, пока не найдет все возможные ссылки.  
 
-	<h3>Maximum children to crawl</h3>
-	This parameter limits the number of children that will be crawled at every node in the tree.<br>
-	This is useful for data driven applications that have large numbers of 'pages' that are in fact exactly the same code but 
-	containing different data, for example from a database.<br>
-	By default this is set to zero which means there are no limits applied to the number of child nodes crawled.
+	<h3>Максимальное количество детей для ползания </h3>
+	Этот параметр ограничивает количество дочерних элементов, которые будут просматриваться в каждом узле дерева. <br>
+	Это полезно для приложений, управляемых данными, которые имеют большое количество «страниц», которые на самом деле являются одним и тем же кодом, но
+содержащие разные данные, например из базы данных. <br>
+	По умолчанию установлено нулевое значение, что означает отсутствие ограничений на количество просканированных дочерних узлов. 
 
-	<h3>Maximum parse size</h3>
-	Defines the maximum size, in bytes, that a response might have to be parsed. This allows
-	the spider to skip big responses/files.
+	<h3>Максимальный размер разбора </h3>
+	Определяет максимальный размер в байтах, который может потребоваться для анализа ответа. Это позволяет
+паук, чтобы пропустить большие ответы/файлы. 
 
-	<h3>Domains Always in Scope</h3>
-	Allows to manage the domains, string literals or regular expressions, that are in the
-	spider's scope. The normal behavior of the spider is to only follow links to resources
-	found on the same domain as the page where the scan started. However,
-	this option allows you to define additional domains that are considered
-	"in scope" during the crawling process. Pages on these domains are
-	processed during the scan.
+	<h3>Домены всегда в зоне действия </h3>
+	Позволяет управлять доменами, строковыми литералами или регулярными выражениями, находящимися в
+размах паука.  Нормальное поведение паука - переходить только по ссылкам на ресурсы
+находится в том же домене, что и страница, с которой началось сканирование.  Тем не мение,
+эта опция позволяет вам определить дополнительные домены, которые считаются
+"в рамках" в процессе сканирования.  Страницы на этих доменах
+обрабатывается во время сканирования. 
 		
-	<h3>Query parameters handling</h3>
-	When crawling, the Spider has an internal mechanism that marks which pages
-	were already visited, so they are not processed again. When this check is made,
-	the way the URIs parameters are handled is set using this option. There are
-	three available options:
+	<h3>Обработка параметров запроса </h3>
+	При сканировании Паук имеет внутренний механизм, который отмечает, какие страницы
+уже были посещены, поэтому повторно не обрабатываются.  Когда эта проверка сделана,
+способ обработки параметров URI задается с помощью этой опции.  Есть
+три доступных варианта: 
 	<ul>
-	<li><b>Ignore parameters completely</b> - if www.example.org/?bar=456 is visited,
-	then www.example.org/?foo=123 will not be visited</li>
-	<li><b>Consider only parameter's name</b> (ignore parameter's value) - if 
-	www.example.org/?foo=123 is visited, then www.example.org/?foo=456 will not be visited, 
-	but www.example.org/?bar=789 or www.example.org/?foo=456&amp;bar=123 will be visited</li>
-	<li><b>Consider both parameter's name and value</b> - if www.example.org/?123 is visited,
-	any other uri that is different (including, for example, www.example.org/?foo=456 or 
-	www.example.org/?bar=abc) will be visited</li>
+	<li><b>Полное игнорирование параметров</b> — при посещении www.example.org/?bar=456
+тогда www.example.org/?foo=123 не будет посещен </li>
+	<li><b>Учитывать только имя параметра</b> (игнорировать значение параметра) - если
+www.example.org/?foo=123 посещается, тогда www.example.org/?foo=456 не посещается,
+но www.example.org/?bar=789 или www.example.org/?foo=456&amp;bar=123 будут посещены </li>
+	<li><b>Учитывайте как имя параметра, так и значение</b> – если посещается www.example.org/?123,
+любой другой отличающийся uri (включая, например, www.example.org/?foo=456 или
+www.example.org/?bar=abc) будут посещены </li>
 	</ul>
 
-	<h3>Send "Referer" header</h3>
-	If the spider requests should be sent with the "Referer" header.
+	<h3>Отправить заголовок «Referer» </h3>
+	Если запросы паука должны быть отправлены с заголовком «Referer». 
 
-	<h3>Accept Cookies</h3>
-	If the spider scans should accept cookies while spidering. If enabled the Spider will
-	properly handle any cookies received from the server and will send them back accordingly.
-	If the option is disabled, the Spider will not send any cookies in its requests. For
-	example, this might control whether or not the Spider uses the same session throughout a
-	spidering scan.
-	<br>When accepting cookies the cookies are not shared between spider scans, each scan has
-	its own cookie jar.
-	<br>This option has low priority, the Spider will respect other (global) options related
-	to the HTTP state. This option is ignored if, for example, the option
-	<a href="connection.html">Enable (Global) HTTP State</a> is enabled, when
-	spidering as a <a href="../../../start/features/users.html">User</a> or when a
-	<a href="../../../start/features/httpsessions.html">HTTP Session</a> is active.
+	<h3>Принять файлы cookie </h3>
+	Если сканирование пауков должно принимать файлы cookie во время сканирования.  Если включено, Паук будет
+должным образом обрабатывать любые файлы cookie, полученные с сервера, и соответствующим образом отправлять их обратно. 
+	Если опция отключена, Паук не будет отправлять файлы cookie в своих запросах.  За
+Например, это может контролировать, использует ли Spider один и тот же сеанс на протяжении всего сеанса.
+спайдерное сканирование. 
+	<br>При принятии файлов cookie файлы cookie не передаются между сканированиями пауков, каждое сканирование
+своя баночка для печенья. 
+	<br>Эта опция имеет низкий приоритет, Паук будет уважать другие (глобальные) опции, связанные с
+в состояние HTTP. Эта опция игнорируется, если, например, опция 
+	<a href="connection.html">Включить (глобальное) состояние HTTP </a> включен, когда
+паук как  <a href="../../../start/features/users.html">Пользователь</a> или когда 
+	<a href="../../../start/features/httpsessions.html">HTTP-сессия</a> активна. 
 
-	<h3>Process forms</h3>
-	During the crawling process, the behaviour of the spider when it
-	encounters HTML forms is defined by this option. If disabled, the HTML
-	forms will not be processed at all. If enabled, the HTML forms with the
-	method defined as HTTP GET will be submitted with some generated
-	values. The behaviour when encountering forms with the method defined
-	as HTTP POST is configured by the next option.
+	<h3>Формы процесса: </h3>
+	В процессе обхода поведение паука, когда он
+встречается с HTML-формами, определяется этой опцией.  Если отключено, HTML
+формы не будут обрабатываться вообще.  Если включено, HTML формируется с
+метод, определенный как HTTP GET, будет отправлен с некоторыми сгенерированными
+ценности.  Поведение при встрече с формами с определенным методом
+поскольку HTTP POST настраивается следующей опцией. 
 
-	<h3>POST forms</h3>
-	As briefly described in the previous paragraph (Process Forms), this
-	option configures the behaviour of the spider when
-	<i>Process Forms</i> is enabled and when encountering HTML forms that
-	have to be POSTed.
+	<h3>POST-формы: </h3>
+	Как кратко описано в предыдущем абзаце (Формы процесса), это
+опция настраивает поведение паука, когда 
+	<i>Формы процесса: </i> включен, и при встрече с HTML-формами, которые
+должны быть размещены. 
 
-	<h3>Parse HTML Comments</h3>
-	This option defines whether the spider should also spider the HTML
-	comments searching for links to resources. Only the resources found in
-	commented valid HTML tags will be processed.
+	<h3>Разобрать HTML-комментарии </h3>
+	Этот параметр определяет, должен ли паук также сканировать HTML-код.
+комментарии ищут ссылки на ресурсы. Только ресурсы, найденные в
+закомментированные допустимые теги HTML будут обработаны. 
 
-	<h3>Parse 'robots.txt' files</h3>
-	This option defines whether the spider should also spider the
-	robots.txt files found on websites, searching for links to resources.
-	This option does not define whether the spider should follow the rules
-	imposed by the robots.txt file.
+	<h3>Разобрать файлы robots.txt </h3>
+	Эта опция определяет, должен ли паук также сканировать
+Файлы robots.txt найдены на сайтах, поиск ссылок на ресурсы. 
+	Эта опция не определяет, должен ли паук следовать правилам
+накладывается файлом robots.txt. 
 
-	<h3>Handle OData-specific parameters</h3>
-	This options defines whether the spider should try to detect OData-specific
-	parameters (i.e. resources identifiers) in order to properly process them 
-	according to the rule defined by the "Query parameters handling" option.
+	<h3>Обработка параметров OData </h3>
+	Этот параметр определяет, должен ли паук пытаться обнаруживать специфичные для OData
+параметры (т.е. идентификаторы ресурсов) для правильной их обработки
+по правилу, заданному опцией "Обработка параметров запроса". 
 
-	<h2>See also</h2>
+	<h2>Смотрите также </h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../overview.html">UI Overview</a></td>
-			<td>for an overview of the user interface</td>
+			<td><a href="../../overview.html">Обзор пользовательского интерфейса </a></td>
+			<td>для обзора пользовательского интерфейса </td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			<td><a href="../../../start/features/spider.html">Паук</a></td>
-			<td>for an overview of the Spider</td>
+			<td>для обзора Паука </td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../../ui/tabs/spider.html">Spider Tab</a></td>
-			<td>for an overview of the Spider tab</td>
+			<td><a href="../../../ui/tabs/spider.html">Вкладка паук </a></td>
+			<td>для обзора вкладки Паук </td>
 		</tr>
 	</table>
 

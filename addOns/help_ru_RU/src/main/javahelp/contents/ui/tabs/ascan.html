@@ -3,70 +3,70 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Active Scan tab
+Вкладка "Активное сканирование" 
 </title>
 </head>
 <body>
-<h1>Active Scan tab</h1>
+<h1>Вкладка «Активное сканирование» </h1>
 
-The Active Scan tab allows you to perform an <a href="../../start/features/ascan.html">active scan</a>.<br> 
+Вкладка «Активное сканирование» позволяет выполнить  <a href="../../start/features/ascan.html">активное сканирование </a>.<br> 
 <br>
-The 'Scan Policy Manager' button <img src="../../images/fugue/equalizer.png" align="bottom" width="16" height="16" /> shows the
-<a href="../dialogs/scanpolicymgr.html">Scan Policy Manager</a> dialog which allows configuration of <a href="../../start/features/scanpolicy.html">scan policies</a>.
+Кнопка «Диспетчер политик сканирования»  <img src="../../images/fugue/equalizer.png" align="bottom" width="16" height="16" /> показывает 
+<a href="../dialogs/scanpolicymgr.html">Диспетчер политики сканирования </a> диалоговое окно, позволяющее настроить  <a href="../../start/features/scanpolicy.html">политики сканирования </a>.
 <br><br>
-The 'New Scan' button launches the <a href="../dialogs/advascan.html">Active Scan dialog</a> which allows you
-to specify exactly what should be scanned.
+Кнопка «Новое сканирование» запускает  <a href="../dialogs/advascan.html">Диалоговое окно активного сканирования </a> что позволяет вам
+точно указать, что следует сканировать. 
 <br><br>
-The toolbar provides a set of buttons which allow you to start, stop, pause and resume the scan selected.<br>
-A progress bar shows how far the scan of the selected site has progressed.<br>
-The 'Current scans' value shows how many scans are currently active - 
-hovering over this value will show a list of the sites being scanned in a popup.<br>
-The 'Show scan progress details' button <img src="../../images/fugue/system-monitor.png" align="bottom" width="16" height="16" /> launches the <a href="../dialogs/scanprogress.html">Scan Progress dialog</a>
-which allows you to see details about which rules are running, skip individual rules and see a chart of the responses.
+Панель инструментов содержит набор кнопок, которые позволяют запускать, останавливать, приостанавливать и возобновлять выбранное сканирование. <br>
+Индикатор выполнения показывает, как далеко продвинулось сканирование выбранного сайта. <br>
+Значение «Текущие сканы» показывает, сколько сканирований в данный момент активно.
+при наведении курсора на это значение во всплывающем окне отобразится список сканируемых сайтов. <br>
+Кнопка «Показать сведения о ходе сканирования»  <img src="../../images/fugue/system-monitor.png" align="bottom" width="16" height="16" /> запускает  <a href="../dialogs/scanprogress.html">Диалоговое окно «Ход сканирования» </a>
+что позволяет вам увидеть подробности о том, какие правила работают, пропустить отдельные правила и увидеть диаграмму ответов. 
 
-<h2>Right click menu</h2>
-Right clicking on a node will bring up a menu which will allow you to:
+<h2>Меню правой кнопки мыши </h2>
+Щелкнув правой кнопкой мыши по узлу, вы откроете меню, которое позволит вам: 
 
 <h3>Исключить из</h3>
-This menu has the following submenus:
+Это меню имеет следующие подменю: 
 
 <h4>Прокси-сервер</h4>
-This will exclude the selected nodes from the proxy. They will still be proxied via ZAP but will not be shown 
-in any of the tabs.<br/>
-This can be used to ignore URLs that you know are not relevant to the system you are currently testing.<br/>
-The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
+Это исключит выбранные узлы из прокси. Они по-прежнему будут проксироваться через ZAP, но не будут отображаться
+в любой из вкладок. <br/>
+Это можно использовать для игнорирования URL-адресов, которые, как вы знаете, не имеют отношения к тестируемой системе. <br/>
+Узлы могут быть снова включены через  <a href="../dialogs/session/sessprop.html">Свойства сеанса </a> диалог   
 
 <h4>Сканер</h4>
-This will prevent the selected nodes from being actively scanned.<br/>
-The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
+Это предотвратит активное сканирование выбранных узлов. <br/>
+Узлы могут быть снова включены через  <a href="../dialogs/session/sessprop.html">Свойства сессии</a> диалог   
 
 <h4>Паук</h4>
-This will prevent the selected nodes from being spidered.<br/>
-The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
+Это предотвратит сканирование выбранных узлов. <br/>
+Узлы могут быть снова включены через  <a href="../dialogs/session/sessprop.html">Свойства сессии</a> диалог   
 
-<h3>Open/Resend with Request Editor...</h3>
-This will bring up the
-<a href="../dialogs/man_req.html">Manual Request Editor dialog</a> which allows you to  
-resend the request after making any changes to it that you want to.
+<h3>Открыть/повторно отправить с помощью редактора запросов... </h3>
+Это вызовет 
+<a href="../dialogs/man_req.html">Диалоговое окно редактора запросов вручную </a> что позволяет вам
+повторно отправьте запрос после внесения в него любых изменений, которые вы хотите. 
 
 <h3>Новое оповещение...</h3>
-This will bring up the
-<a href="../dialogs/addalert.html">Add Alert dialog</a> which allows you to manually record a new  
-<a href="../../start/features/alerts.html">alert</a> against this request.
+Это вызовет 
+<a href="../dialogs/addalert.html">Диалоговое окно «Добавить предупреждение» </a> который позволяет вручную записывать новый   
+<a href="../../start/features/alerts.html">оповещение</a> против этого запроса. 
 
 <h3>Показать во вкладке Сайтов</h3>
-This will show the selected message in the <a href="sites.html">Sites tab</a>.
+Это покажет выбранное сообщение в  <a href="sites.html">Вкладка "Сайты"</a>.
 
 <h3>Открыть URL в браузере</h3>
-This will open the URL of the selected node in your default browser.
+Это откроет URL-адрес выбранного узла в браузере по умолчанию. 
 
 
-<h2>See also</h2>
+<h2>Смотрите также </h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../overview.html">Обзор пользовательского интерфейса </a></td><td>для обзора пользовательского интерфейса </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../dialogs/options/ascan.html">Options Active Scan screen</a></td><td>for details of the active scan configuration</td></tr>
+<a href="../dialogs/options/ascan.html">Параметры экрана активного сканирования </a></td><td>для получения подробной информации о конфигурации активного сканирования </td></tr>
 
 </table>
 
