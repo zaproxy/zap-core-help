@@ -2,90 +2,90 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Spider tab</title>
+<title>Вкладка паук </title>
 </head>
 <body>
-	<h1>Spider tab</h1>
+	<h1>Вкладка паук </h1>
 	<p>
-		The Spider tab shows you the set of unique URIs found by the <a
-			href="../../start/features/spider.html">Spider</a> during the scans.
+		На вкладке Spider отображается набор уникальных URI, найденных <a
+			href="../../start/features/spider.html">Spider</a> во время сканирования. 
 	</p>
 
 	<p>
-		The 'New Scan' button launches the <a href="../dialogs/spider.html">Spider dialog</a> which allows you
-to specify exactly what should be scanned.<br>
-	
-		The Spider can be run on multiple Sites in parallel and the results for each scan are
-		shown by selecting the scan via the 'Progress' pull-down.
+		Кнопка "Новое сканирование" открывает <a href="../dialogs/spider.html">диалоговое окно паука</a>, которое позволяет
+чтобы точно указать, что следует сканировать.<br>
+
+Паук может работать на нескольких сайтах параллельно, и результаты каждого сканирования
+отображается при выборе сканирования в раскрывающемся списке «Ход выполнения». 
 	</p>
 
-	<p>The toolbar shows information about a scan and allows to control it. It provides a
-		set of buttons which allows to:
+	<p>Панель инструментов показывает информацию о сканировании и позволяет управлять им. Он обеспечивает
+набор кнопок, который позволяет: 
 	
 	<ul>
-		<li><img align="bottom" alt="pause button" src="../../images/16/141.png">
-			Pause (and <img alt="resume button" src="../../images/16/131.png"> resume) the
-			selected spider scan;</li>
-		<li><img align="bottom" alt="stop button" src="../../images/16/142.png"> Stop
-			the selected spider scan;</li>
-		<li><img align="bottom" alt="clean scans button" src="../../images/fugue/broom.png">
-			Clean completed scans;</li>
-		<li><img align="bottom" alt="spider options button" src="../../images/16/041.png">
-			Open the <a href="../../ui/dialogs/options/spider.html">Spider Options screen</a>.</li>
+		<li><img align="bottom" alt="кнопка паузы " src="../../images/16/141.png">
+			Пауза (и <img alt="кнопка возобновления " src="../../images/16/131.png"> возобновление)
+выбранное сканирование паука; </li>
+		<li><img align="bottom" alt="кнопка остановки " src="../../images/16/142.png"> Останавливаться
+выбранное сканирование паука; </li>
+		<li><img align="bottom" alt="кнопка остановки " src="../../images/fugue/broom.png">
+			Чистые завершенные сканы; </li>
+		<li><img align="bottom" alt="кнопка опций паука " src="../../images/16/041.png">
+			Откройте экран <a href="../../ui/dialogs/options/spider.html">Параметры паука</a>. .</li>
 	</ul>
-	The progress bar shows how far the selected spider scan has progressed. It is also shown
-	the number of active spider scans and the number of URIs found for the selected scan.
-	<p>For each URI found you can see:
+	Индикатор выполнения показывает, насколько далеко продвинулось выбранное сканирование паука. Это также показано
+количество активных сканирований паука и количество найденных URI для выбранного сканирования. 
+	<p>Для каждого найденного URI вы можете увидеть: 
 	<ul>
-		<li>Processed - Whether the URI was processed by the Spider or
-			was skipped from fetching because of a rule (e.g. it was out of
-			scope)</li>
-		<li>Method - The HTTP method, e.g. GET or POST, through which the
-			resource should be accessed</li>
-		<li>URI - the resource found</li>
-		<li>Flags - any information about the URI (e.g. if it's a seed or
-			why was it not processed)</li>
+		<li>Обработано — был ли URI обработан пауком или
+был пропущен из загрузки из-за правила (например, он был вне
+объем) </li>
+		<li>Метод — метод HTTP, например. GET или POST, через которые
+ресурс должен быть доступен </li>
+		<li>URI - найденный ресурс </li>
+		<li>Флаги (Flags)— любая информация об URI (например, если это начальное число или
+почему не обработали) </li>
 	</ul>
 
-	<p>For each spider message, shown under the Messages tab, you can see details of the request sent and response
-		received. The <code>Processed</code> column, indicates whether:
+	<p>Для каждого сообщения паука, показанного на вкладке «Сообщения», вы можете увидеть подробную информацию об отправленном запросе и ответе.
+получено. То  <code>Обработано</code> столбец, указывает: 
 	<ul>
-		<li><img align="bottom" alt="successful parse" src="../../images/16/152.png">Successfully
-			- the response was successfully received and parsed</li>
-		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Empty
-			Message - the response was not parsed because it was empty</li>
-		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">I/O
-			Error - an input/output error occurred while fetching the response</li>
-		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Max
-			Children - the response was not parsed because the corresponding parent Sites node
-			already has more child nodes than the maximum allowed</li>
-		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Max
-			Depth - the response was not parsed because it passed the maximum depth allowed</li>
-		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Max
-			Size - the response was not parsed because its size is not under the maximum allowed</li>
-		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Not
-			Text - the response was not parsed because it's not text, for example, an image</li>
-		<li><img align="bottom" alt="no parse" src="../../images/16/149.png">Spider
-			Stopped - the response was not fetched or parsed because the spider was already stopped</li>
+		<li><img align="bottom" alt="успешный разбор " src="../../images/16/152.png">Успешно
+- ответ успешно получен и проанализирован </li>
+		<li><img align="bottom" alt="нет разбора " src="../../images/16/149.png">Пустой
+Сообщение - ответ не был проанализирован, так как он был пуст </li>
+		<li><img align="bottom" alt="нет разбора " src="../../images/16/149.png">ввод/вывод (I/O)
+Ошибка - при получении ответа произошла ошибка ввода/вывода. </li>
+		<li><img align="bottom" alt="нет разбора " src="../../images/16/149.png">Максимум
+Дочерние элементы: ответ не был проанализирован, так как соответствующий родительский узел Sites
+уже имеет больше дочерних узлов, чем максимально допустимое </li>
+		<li><img align="bottom" alt="нет разбора " src="../../images/16/149.png">Максимум
+Глубина — ответ не был проанализирован, так как он превысил максимально допустимую глубину. </li>
+		<li><img align="bottom" alt="нет разбора " src="../../images/16/149.png">Максимум
+Размер — ответ не был проанализирован, так как его размер не меньше максимально допустимого. </li>
+		<li><img align="bottom" alt="нет разбора " src="../../images/16/149.png">Нет
+Текст — ответ не проанализирован, так как это не текст, например изображение </li>
+		<li><img align="bottom" alt="нет разбора " src="../../images/16/149.png">Паук
+Остановлено — ответ не был получен или проанализирован, поскольку поисковый робот уже был остановлен. </li>
 	</ul>
 
-	<h2>See also</h2>
+	<h2>Смотрите также </h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../overview.html">UI Overview</a></td>
-			<td>for an overview of the user interface</td>
+			<td><a href="../overview.html">Обзор пользовательского интерфейса </a></td>
+			<td>для обзора пользовательского интерфейса </td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../start/features/spider.html">Spider</a></td>
-			<td>for an overview of the Spider</td>
+			<td><a href="../../start/features/spider.html">Паук</a></td>
+			<td>для обзора Паука </td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/options/spider.html">Spider
-					Options screen</a></td>
-			<td>for an overview of the Spider Options</td>
+			<td><a href="../../ui/dialogs/options/spider.html">Паук
+Экран опций </a></td>
+			<td>для обзора опций Spider </td>
 		</tr>
 	</table>
 
