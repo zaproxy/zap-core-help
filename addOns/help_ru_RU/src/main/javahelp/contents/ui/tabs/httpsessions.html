@@ -2,87 +2,85 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>HTTP Sessions tab</title>
+<title>Вкладка HTTP-сеансы </title>
 </head>
 <body>
-	<h1>HTTP Sessions tab</h1>
+	<h1>Вкладка HTTP-сеансы </h1>
 	<p>
-		This tab shows you the set of identified HTTP sessions for each Site,
-		as detected by the <a href="../../start/features/httpsessions.html">HTTP
-			Sessions extension</a>.
+		На этой вкладке отображается набор идентифицированных сеансов HTTP для каждого сайта,
+как обнаружено <a href="../../start/features/httpsessions.html">HTTP
+Расширение сеансов</a> .
 	</p>
 
 	<p>
-		The current Site the information is referring to can be selected via
-		the toolbar or the <a href="sites.html">Sites tab</a>.
+		Текущий сайт, к которому относится информация, можно выбрать с помощью
+на панели инструментов или на вкладке <a href="sites.html">Сайты</a>. .
 	</p>
 
-	<p>The toolbar provides a button ("New Session") which allows you
-		to start a new session, forcing all outgoing request messages to be
-		without the session tokens set, so the server considers it's a new
-		session. This allows the creation of a new session, without destroying
-		the old one.</p>
+	<p>На панели инструментов есть кнопка («Новая сессия»), которая позволяет
+чтобы начать новую сессию, заставляя все исходящие сообщения запроса быть
+без набора токенов сеанса, поэтому сервер считает, что это новая
+сессия.  Это позволяет создать новый сеанс, не разрушая
+старый. </p>
 
-	<p>Each of the entries in the Sessions table (each session)
-		initially has a generated name, but it can be changed by selecting the
-		'Name' cell and editing it.</p>
+	<p>Каждая из записей в таблице сеансов (каждый сеанс)
+изначально имеет сгенерированное имя, но его можно изменить, выбрав ячейка «Имя» и ее редактирование. </p>
 
-	<p>Each of the entries in the Sessions table can be right clicked,
-		which activates the Popup Menu, with the following options:</p>
+	<p>Каждую из записей в таблице Sessions можно щелкнуть правой кнопкой мыши,
+который активирует всплывающее меню со следующими параметрами: </p>
 	<ul>
-		<li>Copy Session Token Value to Clipboard - copies the value of the
-		selected session to the clipboard.</li>
-		<li>Remove Session - deletes the session</li>
-		<li>Find Related Messages - Will cause the <a href="search.html">Search tab</a> 
-		to become active, displaying results based on a search with the string displayed 
-		in the "Session Tokens' Values" column for the session which was 
-		right clicked.</li> 
-		<li>Set as active (available only on non-active sessions) - marks
-			this session as active. If any session was previously set as active,
-			it will be unset as active and, if it doesn't specify any token
-			values, it is deleted.</li>
-		<li>Unset as active (available only on the active session) -
-			marks this session as not being active anymore. If the session
-			doesn't specify any token values, it is deleted.</li>
+		<li>Копировать значение маркера сеанса в буфер обмена — копирует значение
+выбранный сеанс в буфер обмена. </li>
+		<li>Удалить сессию - удаляет сессию </li>
+		<li>Найти похожие сообщения. Откроется <a href="search.html">вкладка "Поиск"</a>.
+чтобы стать активным, отображая результаты на основе поиска с отображаемой строкой
+в столбце «Значения токенов сеанса» для сеанса, который был
+щелкнул правой кнопкой мыши. </li> 
+		<li>Установить как активный (доступно только для неактивных сессий) - отметки
+этот сеанс как активный.  Если какая-либо сессия ранее была установлена как активная,
+он будет отключен как активный и, если в нем не указан какой-либо токен
+значения, он удаляется. </li>
+		<li>Снять как активный (доступно только в активном сеансе) -
+помечает этот сеанс как неактивный. Если сеанс
+не указывает никаких значений токена, он удаляется. </li>
 	</ul>
 
-	<i>Regarding the active session, more details can be read on the
-		general features help page of the <a
-		href="../../start/features/httpsessions.html">HTTP Sessions
-			extension</a>
+	<i>Что касается активного сеанса, более подробную информацию можно прочитать на
+справочная страница общих функций <a
+		href="../../start/features/httpsessions.html">HTTP-сеансов
+расширение</a> 
 	</i>
 	<br />
 
-	<br /> For each session you can see:
+	<br /> Для каждого сеанса вы можете увидеть: 
 	<ul>
-		<li>Active - Whether this is the active session or not</li>
-		<li>Name - The session name</li>
-		<li>Session Tokens' Values - the list of values associated to
-			each of the session tokens. The entries are separated by the ';'
-			symbol.</li>
-		<li>Messages Matched - the number of HTTP messages that have been
-			matched by the extension with this session</li>
+		<li>Активный — является ли это активным сеансом или нет. </li>
+		<li>Имя — имя сеанса. </li>
+		<li>Значения маркеров сеанса — список значений, связанных с
+каждый из токенов сеанса. Записи разделяются символом ';'
+символ. </li>
+		<li>Messages Matched — количество HTTP-сообщений, которые были
+соответствует расширению с этой сессией </li>
 	</ul>
 
 
-	<h2>See also</h2>
+	<h2>Смотрите также </h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../overview.html">UI Overview</a></td>
-			<td>for an overview of the user interface</td>
+			<td><a href="../overview.html">Обзор пользовательского интерфейса </a></td>
+			<td>для обзора пользовательского интерфейса </td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../start/features/httpsessions.html">HTTP
-					Sessions Extension</a></td>
-			<td>for an overview of the extension</td>
+			<td><a href="../../start/features/httpsessions.html">Расширение HTTP-сессий </a></td>
+			<td>для обзора расширения </td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			<td><a href="../../ui/dialogs/options/httpsessions.html">HTTP
-					Sessions Options screen</a></td>
-			<td>for an overview of the extension's Options</td>
+Экран параметров сеансов </a></td>
+			<td>для обзора параметров расширения </td>
 		</tr>
 	</table>
 
