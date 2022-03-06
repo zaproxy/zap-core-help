@@ -68,7 +68,16 @@ The following classes (all of which were deprecated more than 5 years ago) have 
 <li><code>org.parosproxy.paros.network.ByteVector</code></li>
 <li><code>org.parosproxy.paros.network.ProxyExcludedDomainMatcher</code></li>
 <li><code>org.zaproxy.zap.extension.brk.BreakpointMessageHandler</code></li>
+<li><code>org.zaproxy.zap.extension.brk.ExtensionBreak$DialogType</code></li>
 <li><code>org.zaproxy.zap.extension.history.PopupMenuShowInHistory</code></li>
+<li><code>org.zaproxy.zap.extension.stdmenus.PopupMenuSpiderContext</code></li>
+<li><code>org.zaproxy.zap.extension.stdmenus.PopupMenuSpiderContextAsUser</code></li>
+<li><code>org.zaproxy.zap.extension.stdmenus.PopupMenuSpiderDialog</code></li>
+<li><code>org.zaproxy.zap.extension.stdmenus.PopupMenuSpiderScope</code></li>
+<li><code>org.zaproxy.zap.extension.stdmenus.PopupMenuSpiderSite</code></li>
+<li><code>org.zaproxy.zap.extension.stdmenus.PopupMenuSpiderSubtree</code></li>
+<li><code>org.zaproxy.zap.extension.stdmenus.PopupMenuSpiderURL</code></li>
+<li><code>org.zaproxy.zap.extension.stdmenus.PopupMenuSpiderURLAsUser</code></li>
 <li><code>org.zaproxy.zap.httputils.RequestUtils</code></li>
 <li><code>org.zaproxy.zap.view.HistoryReferenceTableModel</code></li>
 <li><code>org.zaproxy.zap.view.MessagePanelsPositionController</code></li>
@@ -80,30 +89,37 @@ The following classes (all of which were deprecated more than 5 years ago) have 
 The following methods (all of which were deprecated more than 5 years ago) have been removed:
 
 <ul>
+<li><code>org.parosproxy.paros.CommandLine#getConfigs()</code></li>
 <li><code>org.parosproxy.paros.control.Control#createAndOpenUntitledDb()</code></li>
-<li><code>org.parosproxy.paros.core.scanner.Alert#getReliability()</code></li>
+<li><code>org.parosproxy.paros.core.proxy.ProxyParam#isModifyAcceptEncodingHeader()</code></li>
+<li><code>org.parosproxy.paros.core.proxy.ProxyParam#setModifyAcceptEncodingHeader(boolean)</code></li>
 <li><code>org.parosproxy.paros.core.scanner.Alert#getAlert()</code></li>
-<li><code>org.parosproxy.paros.core.scanner.Alert#setAlert(String)</code></li>
-<li><code>org.parosproxy.paros.core.scanner.Alert#setDetail(String, String, String, String, String, String, String, HttpMessage) </code></li>
-<li><code>org.parosproxy.paros.core.scanner.Alert#setRiskReliability(int, int)</code></li>
+<li><code>org.parosproxy.paros.core.scanner.Alert#getReliability()</code></li>
+<li><code>org.parosproxy.paros.core.scanner.Alert#setAlert(java.lang.String)</code></li>
+<li><code>org.parosproxy.paros.core.scanner.Alert#setDetail(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.parosproxy.paros.network.HttpMessage)</code></li>
+<li><code>org.parosproxy.paros.core.scanner.Alert#setRiskReliability(int,int)</code></li>
 <li><code>org.parosproxy.paros.core.scanner.HostProcess#setPluginRequestCount(int,int)</code></li>
 <li><code>org.parosproxy.paros.core.scanner.HostProcess#setTestCurrentCount(org.parosproxy.paros.core.scanner.Plugin,int)</code></li>
-<li><code>org.parosproxy.paros.core.scanner.PluginFactory#loadedPlugin(String)</code></li>
-<li><code>org.parosproxy.paros.core.scanner.PluginFactory#unloadedPlugin(String)</code></li>
-<li><code>org.parosproxy.paros.core.scanner.VariantAbstractQuery#setParams(int,java.util.map)</code></li>
+<li><code>org.parosproxy.paros.core.scanner.PluginFactory#loadedPlugin(java.lang.String)</code></li>
+<li><code>org.parosproxy.paros.core.scanner.PluginFactory#unloadedPlugin(java.lang.String)</code></li>
+<li><code>org.parosproxy.paros.core.scanner.VariantAbstractQuery#setParams(int,java.util.Map)</code></li>
 <li><code>org.parosproxy.paros.db.paros.ParosTableHistory#getHistoryList(long)</code></li>
-<li><code>org.parosproxy.paros.db.paros.ParosTableHistory#getHistoryList(long, int)</code></li>
+<li><code>org.parosproxy.paros.db.paros.ParosTableHistory#getHistoryList(long,int)</code></li>
 <li><code>org.parosproxy.paros.db.paros.ParosTableHistory#setHistoryTypeAsTemporary(int)</code></li>
 <li><code>org.parosproxy.paros.db.paros.ParosTableHistory#unsetHistoryTypeAsTemporary(int)</code></li>
 <li><code>org.parosproxy.paros.db.RecordAlert#getReliability()</code></li>
 <li><code>org.parosproxy.paros.db.RecordAlert#setReliability(int)</code></li>
 <li><code>org.parosproxy.paros.extension.ExtensionPopupMenuItem#isSuperMenu()</code></li>
+<li><code>org.parosproxy.paros.extension.history.ExtensionHistory#clearLogPanelDisplayQueue()</code></li>
+<li><code>org.parosproxy.paros.extension.history.LogPanel#clearDisplayQueue()</code></li>
 <li><code>org.parosproxy.paros.extension.history.LogPanel#LogPanel()</code></li>
 <li><code>org.parosproxy.paros.extension.history.LogPanel#setDisplayPanel(org.zaproxy.zap.extension.httppanel.HttpPanel,org.zaproxy.zap.extension.httppanel.HttpPanel)</code></li>
 <li><code>org.parosproxy.paros.extension.option.OptionsParamView#getShowMainToolbar()</code></li>
 <li><code>org.parosproxy.paros.extension.option.OptionsParamView#setShowMainToolbar(int)</code></li>
+<li><code>org.parosproxy.paros.model.Session#addGlobalExcludeURLRegexs(java.lang.String)</code></li>
+<li><code>org.parosproxy.paros.model.Session#setGlobalExcludeURLRegexs(java.util.List)</code></li>
 <li><code>org.parosproxy.paros.network.ConnectionParam#getProxyChainSkipName()</code></li>
-<li><code>org.parosproxy.paros.network.ConnectionParam#setProxyChainSkipName(String)</code></li>
+<li><code>org.parosproxy.paros.network.ConnectionParam#setProxyChainSkipName(java.lang.String)</code></li>
 <li><code>org.parosproxy.paros.view.AbstractFrame#loadIconImages()</code></li>
 <li><code>org.parosproxy.paros.view.MainFrame#changeDisplayOption(int)</code></li>
 <li><code>org.parosproxy.paros.view.MainFrame#MainFrame(int)</code></li>
@@ -120,22 +136,46 @@ The following methods (all of which were deprecated more than 5 years ago) have 
 <li><code>org.parosproxy.paros.view.WorkbenchPanel#setTabbedOldWork(org.zaproxy.zap.view.TabbedPanel2)</code></li>
 <li><code>org.parosproxy.paros.view.WorkbenchPanel#splitPaneWorkWithTabbedPanel(org.parosproxy.paros.view.TabbedPanel,int)</code></li>
 <li><code>org.parosproxy.paros.view.WorkbenchPanel#WorkbenchPanel(int)</code></li>
+<li><code>org.zaproxy.zap.control.AddOn#AddOn(java.io.File)</code></li>
+<li><code>org.zaproxy.zap.control.AddOn#AddOn(java.lang.String)</code></li>
 <li><code>org.zaproxy.zap.control.AddOn#canLoad()</code></li>
+<li><code>org.zaproxy.zap.control.AddOn#isAddOn(java.io.File)</code></li>
+<li><code>org.zaproxy.zap.control.AddOn#isAddOn(java.lang.String)</code></li>
+<li><code>org.zaproxy.zap.control.ControlOverrides#getConfigs()</code></li>
+<li><code>org.zaproxy.zap.control.ControlOverrides#setConfigs(java.util.Hashtable)</code></li>
 <li><code>org.zaproxy.zap.db.sql.SqlTableHistory#setHistoryTypeAsTemporary(int)</code></li>
 <li><code>org.zaproxy.zap.db.sql.SqlTableHistory#unsetHistoryTypeAsTemporary(int)</code></li>
+<li><code>org.zaproxy.zap.extension.api.DotNetAPIGenerator#generateCSharpFiles(java.util.List)</code></li>
+<li><code>org.zaproxy.zap.extension.api.GoAPIGenerator#generateGoFiles(java.util.List)</code></li>
+<li><code>org.zaproxy.zap.extension.api.JavaAPIGenerator#generateJavaFiles(java.util.List)</code></li>
+<li><code>org.zaproxy.zap.extension.api.NodeJSAPIGenerator#generateNodeJSFiles(java.util.List)</code></li>
+<li><code>org.zaproxy.zap.extension.api.PhpAPIGenerator#generatePhpFiles(java.util.List)</code></li>
+<li><code>org.zaproxy.zap.extension.api.PythonAPIGenerator#generatePythonFiles(java.util.List)</code></li>
+<li><code>org.zaproxy.zap.extension.api.WikiAPIGenerator#generateWikiFiles(java.util.List)</code></li>
 <li><code>org.zaproxy.zap.extension.ascan.ActiveScan#updatePluginRequestCounts()</code></li>
 <li><code>org.zaproxy.zap.extension.autoupdate.AddOnsTableModel#AddOnsTableModel(java.util.Comparator,org.zaproxy.zap.control.AddOnCollection,int)</code></li>
+<li><code>org.zaproxy.zap.extension.brk.ExtensionBreak#canAddBreakpoint()</code></li>
+<li><code>org.zaproxy.zap.extension.brk.ExtensionBreak#canEditBreakpoint()</code></li>
+<li><code>org.zaproxy.zap.extension.brk.ExtensionBreak#canRemoveBreakpoint()</code></li>
+<li><code>org.zaproxy.zap.extension.brk.ExtensionBreak#dialogClosed()</code></li>
+<li><code>org.zaproxy.zap.extension.brk.ExtensionBreak#dialogShown(org.zaproxy.zap.extension.brk.ExtensionBreak$DialogType)</code></li>
+<li><code>org.zaproxy.zap.extension.brk.ExtensionBreak#getBreakPanel()</code></li>
 <li><code>org.zaproxy.zap.extension.ExtensionPopupMenu#prepareShow()</code></li>
 <li><code>org.zaproxy.zap.extension.history.PopupMenuPurgeSites#purge(org.parosproxy.paros.model.SiteMap,org.parosproxy.paros.model.SiteNode)</code></li>
-<li><code>org.zaproxy.zap.extension.pscan.ExtensionPassiveScan#addPassiveScanner(String)</code></li>
+<li><code>org.zaproxy.zap.extension.pscan.ExtensionPassiveScan#addPassiveScanner(java.lang.String)</code></li>
+<li><code>org.zaproxy.zap.extension.pscan.PassiveScanThread#PassiveScanThread( org.zaproxy.zap.extension.pscan.PassiveScannerList, org.parosproxy.paros.extension.history.ExtensionHistory, org.zaproxy.zap.extension.alert.ExtensionAlert)</code></li>
 <li><code>org.zaproxy.zap.extension.search.SearchPanel#SearchPanel()</code></li>
 <li><code>org.zaproxy.zap.extension.search.SearchPanel#setDisplayPanel(org.zaproxy.zap.extension.httppanel.HttpPanelRequest,org.zaproxy.zap.extension.httppanel.HttpPanelResponse)</code></li>
+<li><code>org.zaproxy.zap.extension.spider.SpiderScan#SpiderScan( org.zaproxy.zap.extension.spider.ExtensionSpider, org.zaproxy.zap.spider.SpiderParam, org.zaproxy.zap.model.Target, org.apache.commons.httpclient.URI, org.zaproxy.zap.users.User, int)</code></li>
+<li><code>org.zaproxy.zap.extension.spider.SpiderThread#SpiderThread( org.zaproxy.zap.extension.spider.ExtensionSpider, org.zaproxy.zap.spider.SpiderParam, java.lang.String, org.zaproxy.zap.model.ScanListenner)</code></li>
+<li><code>org.zaproxy.zap.spider.Spider#Spider(org.zaproxy.zap.extension.spider.ExtensionSpider,org.zaproxy.zap.spider.SpiderParam,org.parosproxy.paros.network.ConnectionParam,org.parosproxy.paros.model.Model,org.zaproxy.zap.model.Context)</code></li>
 <li><code>org.zaproxy.zap.spider.SpiderParam#getScope()</code></li>
-<li><code>org.zaproxy.zap.spider.SpiderParam#setScopeString(String)</code></li>
 <li><code>org.zaproxy.zap.spider.SpiderParam#getScopeText()</code></li>
-<li><code>org.zaproxy.zap.view.ContextExcludePanel#getPanelName(Context)</code></li>
-<li><code>org.zaproxy.zap.view.ContextIncludePanel#getPanelName(Context)</code></li>
+<li><code>org.zaproxy.zap.spider.SpiderParam#setScopeString(java.lang.String)</code></li>
+<li><code>org.zaproxy.zap.view.ContextExcludePanel#getPanelName(org.zaproxy.zap.model.Context)</code></li>
+<li><code>org.zaproxy.zap.view.ContextIncludePanel#getPanelName(org.zaproxy.zap.model.Context)</code></li>
 <li><code>org.zaproxy.zap.view.MainToolbarPanel#setDisplayOption(int)</code></li>
+<li><code>org.zaproxy.zap.view.ScanPanel2#ScanPanel2(java.lang.String, javax.swing.ImageIcon, org.zaproxy.zap.model.ScanController, org.parosproxy.paros.common.AbstractParam)</code></li>
 <li><code>org.zaproxy.zap.view.TabbedPanel2#clone(org.zaproxy.zap.view.TabbedPanel2)</code></li>
 </ul>
 
@@ -147,6 +187,7 @@ The following fields (all of which were deprecated more than 5 years ago) have b
 <li><code>org.parosproxy.paros.core.scanner.Alert#MSG_RELIABILITY</code></li>
 <li><code>org.parosproxy.paros.core.scanner.Alert#SUSPICIOUS</code></li>
 <li><code>org.parosproxy.paros.core.scanner.Alert#WARNING</code></li>
+<li><code>org.parosproxy.paros.model.HistoryReference#TYPE_RESERVED_11</code></li>
 <li><code>org.parosproxy.paros.view.View#DISPLAY_OPTION_BOTTOM_FULL</code></li>
 <li><code>org.parosproxy.paros.view.View#DISPLAY_OPTION_LEFT_FULL</code></li>
 <li><code>org.parosproxy.paros.view.View#DISPLAY_OPTION_TOP_FULL</code></li>
