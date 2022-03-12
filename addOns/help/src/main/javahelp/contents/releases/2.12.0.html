@@ -37,6 +37,20 @@ TODO
 <H2>Bug fixes</H2>
 TODO
 
+<H2>ZAP API Breaking Changes:</H2>
+
+<H3>VIEW alert / alertCountsByRisk</H3>
+
+The returned data now includes the False Positive count. This change may break existing consumers as the number of expected alerts might no longer be the same.
+For example, if a Medium risk alert is marked as False Positive, the structure of returned data will be:
+<blockquote><pre><code>
+{"High":0,"Low":3,"Medium":0,"Informational":2,"False Positive":1}
+</code></pre></blockquote>
+instead of:
+<blockquote><pre><code>
+{"High":0,"Low":3,"Medium":1,"Informational":2}
+</code></pre></blockquote>
+
 <H2>ZAP API New Endpoints:</H2>
 TODO
 
