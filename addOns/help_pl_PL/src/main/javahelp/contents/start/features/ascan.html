@@ -9,58 +9,53 @@ Aktywne Skanowanie
 <body>
 <h1>Aktywne Skanowanie</h1>
 <p>
-Active scanning attempts to find potential vulnerabilities by using
-known attacks against the selected targets.
+Aktywne Skanowanie jest próbą znalezienia potencjalnych podatności na wybranym celu przy użyciu znanych ataków
 </p>
 <p>
-Active scanning is an attack on those targets. <br/>
-You should NOT use it on web applications that you do not own.
+Aktywny Skan jest atakiem na wybrany cel. <br/>
+NIE używaj na aplikacje, których nie jesteś właścicielem(lub nie posiadasz zgody).
 </p>
 <p>
-In order to facilitate identifying ZAP traffic and Web Application Firewall exceptions, ZAP is accompanied 
-by a script "AddZapHeader.js" which can be used to add a specific header to all traffic that passes through 
-or originates from ZAP. eg: <tt>X-ZAP-Initiator: 3</tt>
+W celu łatwiejszej identyfikacji 'ruchu' ZAP-a, co może być przydatne np. przy wykluczaniu ZAP-a z firewalla, ZAP posiada odpowiedni skrypt "AddZapHeader.js". Przy użyciu skryptu można dołączyć dowolne nagłówki do zapytań przechodzących(bądź wychodzących) przez ZAP-a. eg: <tt>X-ZAP-Initiator: 3</tt>
 </p>
 <p>
-It should be noted that active scanning can only find certain types of vulnerabilities.<br/>
-Logical vulnerabilities, such as broken access control, will not be found by
-any active or automated vulnerability scanning.<br/>
-Manual penetration testing should always be performed in addition to active
-scanning to find all types of vulnerabilities. 
+Warto zaznaczyć, że Aktywne Skanowanie potrafi zidentyfikować tylko pewne klasy podatności i błędów.<br/>
+Błędy logiczne czy problemy w kontroli dostępu aplikacji prawdopodobnie nie zostaną wykryte przy użyciu automatycznego skanowania.<br/>
+Zalecane jest wykonanie dodatkowych manualnych testów penetracyjnych, by wykryć wszystkie typy podatności. 
 </p>
 
 <p>
-Active scanning is configured using the 
-<a href="../../ui/dialogs/options/ascan.html">Options Active Scan screen</a>.<br>
-The rules that run are configured via <a href="scanpolicy.html">Scan Policies</a> - you can have as many of these as you like. 
+Aktywne Skanowanie można konfigurować używając: 
+<a href="../../ui/dialogs/options/ascan.html">Opcji Aktywnego Skanowania</a>.<br>
+Reguły skanowania można konfigurować w <a href="scanpolicy.html">Polityce Skanowania</a> - można stworzyć dowolną ilość reguł. 
 
 </p>
 
-<h2>Accessed via</h2>
+<h2>Dostępne poprzez</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/ascan.html">Active Scan tab</a></td><td>'New Scan' button</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/sites.html">Sites tab</a></td><td>'Attack/Active Scan...' right click menu item</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/history.html">History tab</a></td><td>'Attack/Active Scan...' right click menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/ascan.html">Zakładka Aktywnego Skanowania</a></td><td>Przycisk ''Nowy skan'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/sites.html">Zakładka Stron</a></td><td>'Atak/Aktywne Skanowanie...' prawy przycisk myszki</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/tabs/history.html">Zakładka Historii</a></td><td>'Atak/Aktywne Skanowanie...' prawy przycisk myszki</td></tr>
 </table>
 
 <h2>Zobacz również</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../ui/overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../ui/overview.html">Przegląd Interfejsu</a></td><td>zapoznaj się z interfejsem użytkownika</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="features.html">Features</a></td><td>provided by ZAP</td></tr>
+<a href="features.html">Funkcje</a></td><td>zapoznaj się z funkcjami ZAP-a</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="pscan.html">Passive scanning</a></td><td></td></tr>
+<a href="pscan.html">Pasywny Skan</a></td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../ui/dialogs/scanpolicymgr.html">Scan Policy Manager Dialog</a></td><td>which allows you to manage the scan policies</td></tr>
+<a href="../../ui/dialogs/scanpolicymgr.html">Okno polityki skanowania</a></td><td>pozwala zarządzać polityką skanowania</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../checks.html">Scanner Rules</a></td><td>supported by default</td></tr>
+<a href="../checks.html">Reguły Skanowania</a></td><td>domyślnie dostępne</td></tr>
 </table>
 
-<h2>Official Videos</h2>
+<h2>Oficjalne Filmy</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td><a href="https://play.sonatype.com/watch/ZcEfSihgQSzuthJi4qEeW3">ZAP In Ten: Active Scanning</a> (9:47)</td></tr>
+<td><a href="https://play.sonatype.com/watch/ZcEfSihgQSzuthJi4qEeW3">ZAP w 10min: Aktywne Skanowanie</a> (9:47)</td></tr>
 </table>
 
 </body>
