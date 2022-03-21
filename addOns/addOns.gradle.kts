@@ -13,7 +13,7 @@ import org.zaproxy.gradle.addon.misc.ConvertMarkdownToHtml
 
 plugins {
     eclipse
-    id("org.zaproxy.add-on") version "0.7.0" apply false
+    id("org.zaproxy.add-on") version "0.8.0" apply false
     id("org.zaproxy.crowdin") version "0.1.0"
 }
 
