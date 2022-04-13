@@ -51,6 +51,19 @@ instead of:
 {"High":0,"Low":3,"Medium":1,"Informational":2}
 </code></pre></blockquote>
 
+<H3>Endpoints With Response Changes</H3>
+
+The following endpoints used to return "OK" for all inputs.
+They now return suitable error messages (such as "does_not_exist" or "illegal_parameter") when the inputs are invalid.
+
+<ul>
+<li>ACTION ascan / enableScanners</li>
+<li>ACTION ascan / disableScanners</li>
+<li>ACTION ascan / setEnabledPolicies</li>
+<li>ACTION pscan / enableScanners</li>
+<li>ACTION pscan / disableScanners</li>
+</ul>
+
 <H2>ZAP API New Endpoints:</H2>
 TODO
 
