@@ -7,34 +7,34 @@
 </TITLE>
 </HEAD>
 <BODY>
-<H1>Release 2.9.0</H1>
+<H1>Versión 2.9.0</H1>
 
-This is a bug fix and enhancement release, which requires a minimum of Java 8. 
-Note that a minimum of Java 11 is recommended, especially for high DPI displays.
+Este es un lanzamiento de mejora y corrección de errores, la cual requiere como mínimo la versión 8 de Java. 
+Nótese que la versión 11 de Java es recomendable, especialmente para monitores con alto DPI.
 <br><br>
-These release notes do not include all of the changes included in add-ons updated since 2.8.0.
+Estas notas de la versión no incluyen todos los cambios incluidos en los complementos actualizados desde la versión 2.8.0.
 <br><br>
-Some of the more significant enhancements include:
+Algunas de las mejoras más significativas incluyen:
 
-<H2>Session Management Scripts</H2>
-It's now possible to define scripts which handle non standard or more complex session management.<br>
-Session Management scripts have full access to the authentication request and response and can define custom
-mandatory and optional parameters.
-An example session management script for OWASP Juice shop is provided.
+<H2>Scripts de Gestión de Sesiones</H2>
+Ahora es posible definir secuencias de comandos que manejen una gestión de sesión no estándar o más compleja.<br>
+Los scripts de administración de sesión tienen acceso completo a la petición y respuesta de autenticación y se pueden definir
+parámetros obligatorios y opcionales.
+Se proporciona un script de gestión de sesión de ejemplo para OWASP Juice shop.
 
-<H2>Active Scan Filter</H2>
-It's now possible to filter requests in Active Scan. Below are the supported criteria's:
+<H2>Filtros de Escaneo Activo</H2>
+Ahora es posible filtrar peticiones en un Escaneo Activo A continuación se muestran los criterios admitidos:
 <ul>
-	<li>HTTP method</li>
-	<li>Status code</li>
-	<li>Tags</li>
-	<li>URL pattern</li>	
+	<li>Método HTTP</li>
+	<li>Código de estado</li>
+	<li>Etiquetas</li>
+	<li>Patrón URL</li>	
 </ul>
 
-<H2>Custom Global/Script Variables</H2>
-It's now possible for scripts to share custom global/script variables, which can be of any type not
-just strings, for example, lists, maps, GUI models.<br/>
-In JavaScript they are accessed/set as follows:
+<H2>Variables globales/de script  Personalizadas</H2>
+Ahora es posible que los scripts compartan variables de script/globales personalizadas, que pueden ser de cualquier tipo no
+solo cadenas, por ejemplo, listas, mapas, modelos GUI.<br/>
+En JavaScript se accede/establecen de la siguiente manera:
 <blockquote><pre><code>
 var ScriptVars = Java.type("org.zaproxy.zap.extension.script.ScriptVars")
 
@@ -45,36 +45,36 @@ ScriptVars.setGlobalCustomVar("var.name", ["A", "B", "C", "D"])
 print(ScriptVars.getGlobalCustomVar("var.name")[2]) // Prints C
 </code></pre></blockquote>
 
-<H2>Scan Rule Promotions</H2>
+<H2>Inclusión de Reglas de escaneo</H2>
 
-The following scan rules have been promoted:
+Las siguientes reglas han sido incluidas:
 
-<h3>Passive Scan Rules - Release</h3>
+<h3>Lanzamiento - Reglas de Escaneo Pasivo</h3>
 <ul>
-<li>Cookie Without SameSite Attribute</li>
-<li>Cross Domain Misconfiguration</li>
-<li>Information Disclosure: In URL</li>
-<li>Information Disclosure: Referrer</li>
-<li>Information Disclosure: Suspicious Comments</li>
-<li>Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s)</li>
-<li>Timestamp Disclosure</li>
-<li>Username Hash Found</li>
-<li>X-AspNet-Version Response Header Scanner</li>
-<li>X-Debug-Token Information </li>
+<li>Cookie sin atributo SameSite</li>
+<li>Configuración incorrecta de Dominios Cruzados</li>
+<li>Revelación de información: en URL</li>
+<li>Revelación de información: Cabecera Referer</li>
+<li>Revelación de información: Comentarios Sospechosos</li>
+<li>Exposición de Información por medio de Campo(s) de encabezado de respuesta HTTP "X-Powered-By" </li>
+<li>Divulgación de marca de tiempo</li>
+<li>Hash de nombre de usuario encontrado</li>
+<li>Escáner de encabezado de respuesta de la versión X-AspNet</li>
+<li>Información de X-Debug-Token </li>
 </ul>
 
-<H2>Filters Classes Removal</H2>
-The classes/code for Filters functionality, deprecated since ZAP 2.4.0, has been removed. Add-ons that still use that will stop working.
+<H2>Eliminación de clases de filtros</H2>
+Se han eliminado las clases/código para la funcionalidad de filtros, en desuso desde ZAP 2.4.0. Los complementos que aún las usen, dejarán de funcionar.
 
-<H2>Changes in Bundled Libraries</H2>
-The following libraries were removed:
+<H2>Cambios en conjuntos de Librerías</H2>
+Las siguientes librerías han sido eliminadas:
 <ul>
   <li>JDOM</li>
   <li>Diff Utils</li>
 </ul>
-no longer in use by core, add-ons should bundle the library, if needed.
+En desuso por el core, los complementos deberán incluirlas, si fueran necesarias
 
-The following libraries were updated:
+Las siguientes librerías han sido actualizadas:
 <ul>
   <li>Bouncy Castle, 1.61 → 1.64</li>
   <li>Commons BeanUtils, 1.9.3 → 1.9.4</li>
@@ -88,63 +88,63 @@ The following libraries were updated:
 </ul>
 
 
-<H2>Enhancements</H2>
+<H2>Mejoras:</H2>
 <ul>
-<li>Issue 2016 : Choose a unique port in the GUI if theres a clash</li>
-<li>Issue 2619 : Allow add-ons to declare/bundle its dependencies</li>
-<li>Issue 3358 : Enhancement: Options Panel Filter</li>
-<li>Issue 3402 : Share custom variables between scripts</li>
-<li>Issue 3491 : Feature-Request: Select Multiple Contexts</li>
-<li>Issue 4963 : Allow to specify the URI of the login page</li>
-<li>Issue 5278 : Ability to filter what requests the Active Scans run against</li>
-<li>Issue 5303 : API calls for adding and changing alerts</li>
-<li>Issue 5436 : Add new languages to context tech</li>
-<li>Issue 5464 : Deprecate Context.getIndex and implement Context.getId</li>
-<li>Issue 5466 : Add utility methods to Alert class</li>
-<li>Issue 5550 : Load additional local proxies with defaults</li>
-<li>Issue 5563 : Include Import/Online menus in Options > Keyboard</li>
-<li>Issue 5598 : Revise site certificate validity period to 825d</li>
-<li>Issue 5614 : Manual Request Editor Icon</li>
-<li>Issue 5630 : Support session management scripts</li>
-<li>Issue 5656 : Add Base64url to Encoder/Decoder Tool</li>
-<li>Issue 5667 : Improve permissions and space handling when saving/exporting</li>
-<li>Issue 5671 : Check for updates in daemon mode</li>
-<li>Issue 5672 : Do not prompt to accept the license on first start</li>
-<li>Issue 5680 : Update dependencies</li>
-<li>Issue 5681 : Remove unused dependencies</li>
-<li>Issue 5691 : Expose Context details to passive scan rules</li>
-<li>Issue 5696 : Expose Context techset directly to passive scan rules</li>
-<li>Issue 5723 : AntiCSRF Tokens Add New Defaults</li>
-<li>Issue 5756 : HttpHeader provide List variant for getHeaders(String)</li>
-<li>Issue 5774 : Allow to enable/disable all passive tags through the API</li>
-<li>Issue 5779 : MacOS DMG - switch back to HFS+</li>
-<li>Issue 5782 : Update default user agent</li>
-<li>Issue 5785 : Add tooltip listing all proxies to the footer Primary Proxy label</li>
-<li>Issue 5795 : Handle quoted URL in meta refresh</li>
+<li>Issue 2016: Elija un puerto único en la GUI si hay un conflicto</li>
+<li>Issue 2619 : Permitir complementos para que declaren/agrupen sus dependencias</li>
+<li>Issue 3358 : Mejora: panel del filtro de opciones.</li>
+<li>Issue 3402 : Compartir variables personalizadas entre scripts</li>
+<li>Issue 3491 : Solicitud de función: selección de varios contextos</li>
+<li>Issue 4963 : Permitir especificar la URI de inicio de sesión.</li>
+<li>Issue 5278 : Capacidad para filtrar las solicitudes contra las que se ejecutan los escaneos activos</li>
+<li>Issue 5303 : Llamadas API para agregar y cambiar alertas</li>
+<li>Issue 5436 : Agregar nuevos lenguajes a la tecnología en el contexto</li>
+<li>Issue 5464 : Deprecar Context.getIndex e implementar Context.getId</li>
+<li>Issue 5466 : Agregar métodos de utilidad a la clase Alert</li>
+<li>Issue 5550 : Carga de proxies locales adicionales con valores predeterminados</li>
+<li>Issue 5563 : Incluir menús Importar/En línea en Opciones > Teclado</li>
+<li>Issue 5598 : Revisar el período de validez del certificado del sitio a 825d</li>
+<li>Issue 5614 : Icono del editor de solicitudes manuales.</li>
+<li>Issue 5630 : Soporte de scripts de configuración de sesiones. </li>
+<li>Issue 5656 : Agregar Base64url a la herramienta codificación/descodificación</li>
+<li>Issue 5667 : Mejorar los permisos y el manejo del espacio al guardar/exportar</li>
+<li>Issue 5671 : Buscar actualizaciones en modo servicio</li>
+<li>Issue 5672 : No solicitar aceptar la licencia en el primer inicio</li>
+<li>Issue 5680 : Actualizar dependencias</li>
+<li>Issue 5681 : Eliminación de dependencias no utilizadas</li>
+<li>Issue 5691 : Exponer los detalles del contexto a las reglas de escaneo pasivo</li>
+<li>Issue 5691 : Exponer los detalles del contexto a las reglas de escaneo pasivo</li>
+<li>Issue 5723 : Tokens AntiCSRF Agregar nuevos valores predeterminados</li>
+<li>Issue 5756 : HttpHeader proporciona una variante de lista para getHeaders(String)</li>
+<li>Issue 5774 : Permitir habilitar/deshabilitar todas las etiquetas pasivas a través de la API</li>
+<li>Issue 5779 : MacOS DMG: volver a HFS+</li>
+<li>Issue 5782 :Actualización del User-agent predeterminado</li>
+<li>Issue 5785 : Agregar información sobre herramientas que enumera todos los proxies en la etiqueta principal de proxy al pie de página.</li>
+<li>Issue 5795 : Manejar la URL citada en meta actualización</li>
 </ul>
 
-<H2>Bug fixes</H2>
+<H2>Corrección de errores:</H2>
 <ul>
-<li>Issue 1164 : Manual "Resend" sets cookies on response</li>
-<li>Issue 4003 : Issues when using 'low memory' mode.</li>
-<li>Issue 5427 : Update HTTP Protocol Version in Manual Request Editor</li>
-<li>Issue 5449 : API not responding  - Internal Error</li>
-<li>Issue 5452 : Do not remove resource bundle of other extensions</li>
-<li>Issue 5486 : Fix counting error in Statistics</li>
-<li>Issue 5487 : Add saved scripts of registered script type</li>
-<li>Issue 5490 : Anti-CSRF tokens not encoded in authentication requests</li>
-<li>Issue 5491 : Auth request without request-target from auth script causes exceptions</li>
-<li>Issue 5492 : Improve error handling when creating scan policies</li>
-<li>Issue 5518 : ZAP might not use outgoing proxy authentication credentials</li>
-<li>Issue 5585 : ZAP 2.8.1 hanging on kali</li>
-<li>Issue 5613 : Cope with missing token in auth POST data</li>
-<li>Issue 5619 : The -configfile option can fail with arrays</li>
-<li>Issue 5622 : Consistent SessionTracking Button Sync</li>
-<li>Issue 5624 : Alert parameter might not be properly loaded</li>
-<li>Issue 5636 : script.js never served on localhost </li>
-<li>Issue 5704 : Wait for add-ons to be installed</li>
-<li>Issue 5743 : Find + Cancel buttons are neither centered nor flush right</li>
-<li>Issue 5744 : Improve labels of Search menu items</li>
+<li>Issue 1164 : Reenvio manual añade cookie en la respuesta</li>
+<li>Issue 4003 : Problemas al usar el modo de baja mememoria</li>
+<li>Issue 5427 : Actualizar la versión del protocolo HTTP en el Editor Manual de Peticiones.</li>
+<li>Issue 5449 : APIO no responde - Error interno.</li>
+<li>Issue 5452 : No eliminar el paquete de recursos de otras extensiones</li>
+<li>Issue 5486 : Solucionar error de conteo en Estadísticas</li>
+<li>Issue 5487 : Agregar scripts guardados del tipo de script registrado</li>
+<li>Issue 5490 : Tokens anti-CSRF no codificados en solicitudes de autenticación</li>
+<li>Issue 5491 : La petición de autenticación sin destino del script de autenticación provoca excepciones</li>
+<li>Issue 5492 : Mejorar el manejo de errores al crear políticas de escaneo</li>
+<li>Issue 5518 : ZAP podría no usar las credenciales de autenticación del proxy saliente</li>
+<li>Issue 5585 : ZAP 2.8.1 tostándose en Kali</li>
+<li>Issue 5613 : Hacer frente al token faltante en los datos POST de autenticación</li>
+<li>Issue 5619 : La opción -configfile puede fallar con arrais</li>
+<li>Issue 5622 : Sincronización consistente del botón SessionTracking</li>
+<li>Issue 5624 : Es posible que el parámetro de alerta no se haya cargado correctamente</li>
+<li>Issue 5636 : script.js nunca se sirvió en localhost </li>
+<li>Issue 5704 : Espere a que se instalen los complementos</li>
+<li>Issue 5743 : Los botones Buscar + Cancelar no están centrados ni alineados a la derecha</li>
+<li>Issue 5744 : Mejorar las etiquetas de los elementos del menú de búsqueda</li>
 <li>Issue 5780 : Don't display messages when deleting them</li>
 <li>Issue 5783 : Disable JAR caching by default</li>
 <li>Issue 5794 : Correct MailTo pattern for RegexAutoTagScanner</li>
