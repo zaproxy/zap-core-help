@@ -9,7 +9,7 @@
 	TOC merger is defined in org.zaproxy.zap.extension.help.ZapTocMerger.
 -->
 <toc version="2.0">
- <tocitem text="ZAP Desktop User Guide" image="toplevelfolder" tocid="toplevelitem">
+ <tocitem text="Manual do Usuário do ZAP Desktop" image="toplevelfolder" tocid="toplevelitem">
 
    <tocitem text="Introdução" target="zap.intro"/>
 
@@ -22,7 +22,7 @@
          <tocitem text="Tokens anti CSRF" target="start.features.anticsrf"/>
          <tocitem text="API" target="start.features.api"/>
          <tocitem text="Autenticação" target="start.features.auth"/>
-         <tocitem text="Authentication Methods" target="start.features.authmethods"/>
+         <tocitem text="Métodos de Autenticação" target="start.features.authmethods"/>
          <tocitem text="Authentication Verification Strategies" target="start.features.authstrategies"/>
          <tocitem text="Breakpoints" target="start.features.breakpoints"/>
          <tocitem text="Contexts" target="start.features.contexts"/>
@@ -127,7 +127,7 @@
 
    <tocitem text="Linha de comando" target="cmdline"/>
 
-   <tocitem text="Add-ons" target="addons.introduction" tocid="addons" image="addons.icon" />
+   <tocitem text="Complementos" target="addons.introduction" tocid="addons" image="addons.icon" />
    
    <tocitem text="Releases" target="zap.releases">
       <tocitem text="2.11.0" target="zap.releases.2.11.0"/>
