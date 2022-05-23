@@ -129,7 +129,6 @@
      	<mapID target="ui.dialogs.options.callback" url="contents/ui/dialogs/options/callback.html"/>
      	<mapID target="ui.dialogs.options.certificate" url="contents/ui/dialogs/options/certificate.html"/>
      	<mapID target="ui.dialogs.options.checkforupdates" url="contents/ui/dialogs/options/checkforupdates.html"/>
-   		<mapID target="ui.dialogs.options.connection" url="contents/ui/dialogs/options/connection.html"/>
      	<mapID target="ui.dialogs.options.database" url="contents/ui/dialogs/options/database.html"/>
      	<mapID target="ui.dialogs.options.view" url="contents/ui/dialogs/options/view.html"/>
      	<mapID target="ui.dialogs.options.globalexcludeurl" url="contents/ui/dialogs/options/globalexcludeurl.html"/>
