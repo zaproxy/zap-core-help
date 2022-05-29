@@ -87,7 +87,6 @@
          	<tocitem text="Anti CSRF Tokens" target="ui.dialogs.options.anticsrf"/>
          	<tocitem text="API" target="ui.dialogs.options.api"/>
             <tocitem text="Breakpoints" target="ui.dialogs.options.breakpoints"/>
-         	<tocitem text="Certificate" target="ui.dialogs.options.certificate"/>
          	<tocitem text="Check for Updates" target="ui.dialogs.options.checkforupdates"/>
 			<tocitem text="Database" target="ui.dialogs.options.database"/>
          	<tocitem text="Display" target="ui.dialogs.options.view"/>

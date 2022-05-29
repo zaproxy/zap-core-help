@@ -127,7 +127,6 @@
      	<mapID target="ui.dialogs.options.ext" url="contents/ui/dialogs/options/ext.html"/>
         <mapID target="ui.dialogs.options.breakpoints" url="contents/ui/dialogs/options/breakpoints.html"/>
      	<mapID target="ui.dialogs.options.callback" url="contents/ui/dialogs/options/callback.html"/>
-     	<mapID target="ui.dialogs.options.certificate" url="contents/ui/dialogs/options/certificate.html"/>
      	<mapID target="ui.dialogs.options.checkforupdates" url="contents/ui/dialogs/options/checkforupdates.html"/>
      	<mapID target="ui.dialogs.options.database" url="contents/ui/dialogs/options/database.html"/>
      	<mapID target="ui.dialogs.options.view" url="contents/ui/dialogs/options/view.html"/>
