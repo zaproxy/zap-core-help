@@ -102,9 +102,6 @@
     <indexitem text="session properties dialog" target="ui.dialogs.sessprop" />
     <indexitem text="sites tab" target="ui.tabs.sites" />
     <indexitem text="sites tree" target="start.features.sitestree" />
-    <indexitem text="spider" target="start.features.spider" />
-    <indexitem text="spider dialog" target="ui.dialogs.spider" />
-    <indexitem text="spider tab" target="ui.tabs.spider" />
     <indexitem text="statistics" target="start.features.stats" />
     <indexitem text="structural modifiers" target="start.features.structmods" />
     <indexitem text="structural parameters" target="start.features.structparams" />

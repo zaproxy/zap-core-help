@@ -40,7 +40,6 @@
          <tocitem text="Scripts" target="start.features.scripts"/>
          <tocitem text="Session Management" target="start.features.sessmanag"/>
          <tocitem text="Sites Tree" target="start.features.sitestree"/>
-         <tocitem text="Spider" target="start.features.spider"/>
          <tocitem text="Statistics" target="start.features.stats"/>
          <tocitem text="Structural Modifiers" target="start.features.structmods"/>
          <tocitem text="Structural Parameters" target="start.features.structparams"/>
@@ -65,7 +64,6 @@
          <tocitem text="Breakpoints" target="ui.tabs.breakpoints"/>
          <tocitem text="Alerts" target="ui.tabs.alerts"/>
          <tocitem text="Active Scan" target="ui.tabs.ascan"/>
-         <tocitem text="Spider" target="ui.tabs.spider"/>
          <tocitem text="Params" target="ui.tabs.params"/>
          <tocitem text="HTTP Sessions" target="ui.tabs.httpsessions"/>
          <tocitem text="Output" target="ui.tabs.output"/>
@@ -102,7 +100,6 @@
          	<tocitem text="Rule Configuration" target="ui.dialogs.options.ruleconfig"/>
          	<tocitem text="Scripts" target="ui.dialogs.options.script"/>
          	<tocitem text="Search" target="ui.dialogs.options.search"/>
-         	<tocitem text="Spider" target="ui.dialogs.options.spider"/>
          	<tocitem text="Statistics" target="ui.dialogs.options.stats"/>
          </tocitem>
          <tocitem text="Persist Session" target="ui.dialogs.persistsession"/>
@@ -116,7 +113,6 @@
 	         <tocitem text="Session Context Authentication" target="ui.dialogs.context-auth"/>
 	         <tocitem text="Session Context Structure" target="ui.dialogs.context-struct"/>
          </tocitem>
-         <tocitem text="Spider" target="ui.dialogs.spider"/>
       </tocitem>
       <tocitem text="The Footer" target="ui.footer"/>
    </tocitem>
