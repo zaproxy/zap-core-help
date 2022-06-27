@@ -9,8 +9,8 @@ Diálogo Acrescentar Alerta
 <body>
 <h1>Diálogo Acrescentar Alerta</h1>
 <p>
-This dialog allows you to manually add or change an <a href="../../start/features/alerts.html">Alert</a> associated
-with a specific request.<br/>
+Esta caixa de diálogo permite adicionar ou alterar manualmente um <a href="../../start/features/alerts.html">Alerta</a> associado
+com um pedido específico.<br/>
 </p>
 
 <h2>Campos</h2>
@@ -45,46 +45,43 @@ Um campo pull down que permite a você especificar a que parâmetro o problema e
 O campo é previamente preenchido com quaisquer parâmetros encontrados de URL ou formulário, mas você também pode inserir seu próprio nome de parâmetro.<br />
 A matriz de parâmetros (no componente de query da URL <code>x-www-form-urlencoded</code> no corpo da requisição) é identificada com o seu índice. Por exemplo, para uma requisição contendo <code>escolhas[]=EscolhaA&amp;escolhas[]=EscolhaB</code> o primeiro parâmetro será identificado como <code>escolhas[0]</code> e o segundo como <code>escolhas[1]</code>.
 
-<h3>Attack</h3>
-The payload that was supplied to the <em>Parameter</em>. This is expected to be set only by active scan rules
-which are the ones that send payloads/attacks.
+<h3>Ataque</h3>
+A carga útil fornecida ao <em>Parâmetro</em>. Espera-se que isso seja definido apenas por regras de varredura ativa, são elas que enviam as cargas úteis e os ataques.
 
-<h3>Evidence</h3>
-The available information in the message request or response (header or body) that indicates that the issue is present.
+<h3>Evidência</h3>
+As informações disponíveis na solicitação ou resposta da mensagem (cabeçalho ou corpo) que indicam que o problema está presente.
 
 <h3>CWE ID</h3>
-The relevant Common Weakness Enumeration (CWE) ID associated with the flagged vulnerability. This field 
-can only be an integer.
+Numero de identificação relevante do CWE (Common Weakness Enumeration), que identifica a fraqueza associada à vulnerabilidade sinalizada. Este campo só pode ser um número inteiro.
 
 <h3>WASC ID</h3>
-The relevant Web Application Security Consortium (WASC) ID associated with the flagged vulnerability. This field
-can only be an integer.
+Numero de identificação relevante do WASC (Web Application Security Consortium), associado à vulnerabilidade sinalizada. Este campo só pode ser um número inteiro.
 
-<h3>Description</h3>
-A general description of the type of issue found.<br/>
+<h3>Descrição</h3>
+Uma descrição geral do tipo de problema identificado.<br/>
 Isto é preenchido quando você seleciona um dos tipos predefinidos, mas você também pode alterá-lo conforme necessário.<br/>
 Observe que as alterações feitas serão perdidas se você selecionar outro tipo.
  
-<h3>Other Info</h3>
-Information specific to the particular issue you have found.<br/>
-This is not prepopulated.
+<h3>Outras informações</h3>
+Informações específicas para o problema em particular que você encontrou.<br/>
+Isso não é pré-preenchido.
 
-<h3>Solution</h3>
-Recommendations about how to fix the issue.<br/>
-This is populated when you select one of the predefined types, but you can also change it as required.<br/>
-Note that any changes you make will be lost if you select another type.
+<h3>Solução</h3>
+Recomendações sobre como corrigir o problema.<br/>
+Isso é preenchido quando você seleciona um dos tipos predefinidos, mas também pode alterá-lo conforme necessário.<br/>
+Observe que todas as alterações feitas serão perdidas se você selecionar outro tipo.
  
-<h3>Reference</h3>
-One or more URLs pointing to more information on the internet about the selected type of alert.<br/>
-This is populated when you select one of the predefined types, but you can also change it as required.<br/>
-Note that any changes you make will be lost if you select another type.
+<h3>Referência</h3>
+Uma ou mais URLs apontam para mais informações na internet sobre o tipo de alerta selecionado.<br/>
+Isso é preenchido quando você seleciona um dos tipos predefinidos, mas também pode alterá-lo conforme necessário.<br/>
+Observe que todas as alterações feitas serão perdidas se você selecionar outro tipo.
  
-<h3>Alert Tags</h3>
-Alerts can be tagged with arbitrary keys or key=value pairs.<br/>
-You can add as many tags as you want to each alert. However,
+<h3>Marcações (tags) de Alertas</h3>
+Os alertas podem ser marcados (tag) com chaves arbitrárias ou pares de chave=valor.<br/>
+Você pode adicionar quantas tags quiser a cada alerta. No entanto,
 <ul>
-<li>You cannot have two tags with the same key.</li>
-<li>The key must be limited to 1024 characters and the value must be limited to 4000 characters for each tag.</li>
+<li>Você não pode ter duas tags com a mesma chave.</li>
+<li>A chave deve ser limitada a 1024 caracteres e o valor deve ser limitado a 4000 caracteres para cada tag.</li>
 </ul>
 
 <h2>Acessado via</h2>
