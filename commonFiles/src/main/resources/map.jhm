@@ -69,7 +69,6 @@
         <mapID target="ui.dialogs.context-struct" url="contents/ui/dialogs/session/context-struct.html"/>
         <mapID target="ui.dialogs.find" url="contents/ui/dialogs/find.html"/>
         <mapID target="ui.dialogs.historyfilter" url="contents/ui/dialogs/hist_filter.html"/>
-        <mapID target="ui.dialogs.manreq" url="contents/ui/dialogs/man_req.html"/>
         <mapID target="ui.dialogs.manageaddons" url="contents/ui/dialogs/manageaddons.html"/>
         <mapID target="ui.dialogs.managetags" url="contents/ui/dialogs/managetags.html"/>
         <mapID target="ui.dialogs.options" url="contents/ui/dialogs/options/options.html"/>
