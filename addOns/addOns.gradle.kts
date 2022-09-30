@@ -1,4 +1,3 @@
-import java.util.regex.Pattern
 import org.zaproxy.gradle.addon.AddOnPluginExtension
 import org.zaproxy.gradle.addon.internal.GitHubReleaseExtension
 import org.zaproxy.gradle.addon.internal.model.AddOnRelease
@@ -10,6 +9,7 @@ import org.zaproxy.gradle.addon.internal.tasks.GenerateReleaseStateLastCommit
 import org.zaproxy.gradle.addon.internal.tasks.HandleRelease
 import org.zaproxy.gradle.addon.manifest.ManifestExtension
 import org.zaproxy.gradle.addon.misc.ConvertMarkdownToHtml
+import java.util.regex.Pattern
 
 plugins {
     eclipse
@@ -57,11 +57,13 @@ val createPullRequestNextDevIter by tasks.registering(CreatePullRequest::class) 
     branchName.set("bump-version")
 
     commitSummary.set("Prepare next dev iteration(s)")
-    commitDescription.set(provider {
-        "Update version and changelog for:\n" + releasedProjects.map {
-            " - ${it.zapAddOn.addOnName.get()}"
-        }.sorted().joinToString("\n")
-    })
+    commitDescription.set(
+        provider {
+            "Update version and changelog for:\n" + releasedProjects.map {
+                " - ${it.zapAddOn.addOnName.get()}"
+            }.sorted().joinToString("\n")
+        }
+    )
 
     dependsOn(prepareNextDevIter)
 }
@@ -78,8 +80,9 @@ subprojects {
     }
 
     java {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        val javaVersion = JavaVersion.VERSION_11
+        sourceCompatibility = javaVersion
+        targetCompatibility = javaVersion
     }
 
     zapAddOn {
@@ -136,9 +139,11 @@ subprojects {
         }
 
         val addOnRelease = AddOnRelease.from(project)
-        addOnRelease.downloadUrl.set(addOnRelease.addOn.map { it.asFile.name }.map {
-            "https://github.com/${ghReleaseDataProvider.get().repo.get()}/releases/download/${tagProvider.get()}/$it"
-        })
+        addOnRelease.downloadUrl.set(
+            addOnRelease.addOn.map { it.asFile.name }.map {
+                "https://github.com/${ghReleaseDataProvider.get().repo.get()}/releases/download/${tagProvider.get()}/$it"
+            }
+        )
 
         handleRelease {
             addOns.add(addOnRelease)
@@ -172,11 +177,13 @@ val createPullRequestRelease by tasks.registering(CreatePullRequest::class) {
         branchName.set("release")
 
         commitSummary.set("Release add-on(s)")
-        commitDescription.set(provider {
-            "Release the following add-ons:\n" + projects.map {
-                " - ${it.zapAddOn.addOnName.get()} version ${it.zapAddOn.addOnVersion.get()}"
-            }.sorted().joinToString("\n")
-        })
+        commitDescription.set(
+            provider {
+                "Release the following add-ons:\n" + projects.map {
+                    " - ${it.zapAddOn.addOnName.get()} version ${it.zapAddOn.addOnVersion.get()}"
+                }.sorted().joinToString("\n")
+            }
+        )
     }
 }
 
