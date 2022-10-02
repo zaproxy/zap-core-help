@@ -16,6 +16,7 @@ TODO
 The following add-ons are included by default in this release for the first time:
 <ul>
   <li><a href="https://www.zaproxy.org/docs/desktop/addons/network/">Network</a> - provides core networking capabilities.</li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/spider/">Spider</a> - provides traditional spider functionality.</li>
 </ul>
 
 <H3>Updated Add-Ons</H3>
@@ -33,6 +34,90 @@ The Bouncy Castle library will no longer be part of the API and will be removed 
 
 <H2>Enhancements</H2>
 TODO
+
+<H3>Spider Add-on</H3>
+
+To facilitate more frequent functional enhancements and bug fixes the core Spider has been moved to an add-on which means such changes are no longer bound to core/stable releases.
+Other add-ons which use Traditional Spider functionality have also been re-worked to support the Spider add-on, including: Quick Start, Form Handler, GraphQL, OpenAPI, SOAP, and the Automation Framework. 
+<p>
+The following table illustrates the differences/improvements versus the 2.11/2.11.1 release(s).
+</p>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Before</th>
+      <th>After</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Base - Proper handling</td>
+      <td>Base - Proper handling</td>
+    </tr>
+    <tr>
+      <td>A, Link, Area - ‘href’ attribute</td>
+      <td>A, Link, Area - ‘href’ attribute</td>
+    </tr>
+    <tr>
+      <td>Frame, IFrame, Script, Img - ‘src’ attribute</td>
+      <td>Applet, Audio, Embed, Frame, IFrame, Input, Script, Img, Video - ‘src’ attribute</td>
+    </tr>
+    <tr>
+      <td>Meta - ‘http-equiv’ for ’location’ and ‘refresh’</td>
+      <td>Meta - ‘http-equiv’ for ’location’, ‘refresh’ and ‘Content-Security-Policy’, ’name’ for ‘msapplication-config’</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Applet - ‘codebase’, ‘archive’ attributes</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Img - ’longdesc’, ’lowsrc’, ‘dynsrc’, ‘srcset’ attributes</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Isindex - ‘action’ attribute</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Object - ‘codebase’, ‘data’ attributes</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Svg - ‘href’ and ‘xlink:href’ attributes of ‘image’ and ‘script’ elements</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Table - ‘background’ attribute</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Video - ‘poster’ attribute</td>
+    </tr>
+    <tr>
+      <td>Form - proper handling of Forms with both GET and POST method. The fields values are generated validly, including HTML 5.0 input types.</td>
+      <td>Form - proper handling of Forms with both GET and POST method. The fields values are generated validly, including HTML 5.0 input types ‘form’, ‘formaction’, ‘formmethod’ attributes of buttons are also respected.</td>
+    </tr>
+    <tr>
+      <td>Comments - Valid tags found in comments are also analyzed, if specified in the Options Spider screen</td>
+      <td>Comments - Valid tags found in comments are also analyzed, if specified in the Options Spider screen</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Import - ‘implementation’ attribute</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Inline string - ‘p’, ’title’, ’li’, ‘h1’, ‘h2’, ‘h3’, ‘h4’, ‘h5’, ‘h6’, and ‘blockquote’ tags</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>SVG image files are parsed to identify HREF attributes and extract/resolve any contained links.</td>
+    </tr>
+  </tbody>
+</table>
+
 
 <H2>Bug fixes</H2>
 TODO
