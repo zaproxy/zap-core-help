@@ -75,7 +75,6 @@
          <tocitem text="Add Note" target="ui.dialogs.addnote"/>
          <tocitem text="Find" target="ui.dialogs.find"/>
          <tocitem text="History Filter" target="ui.dialogs.historyfilter"/>
-         <tocitem text="Manual Request Editor" target="ui.dialogs.manreq"/>
          <tocitem text="Manage Add-ons" target="ui.dialogs.manageaddons"/>
          <tocitem text="Manage History Tags" target="ui.dialogs.managetags"/>
          <tocitem text="Options" target="ui.dialogs.options">
