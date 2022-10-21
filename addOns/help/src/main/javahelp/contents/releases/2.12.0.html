@@ -43,6 +43,83 @@ From this release ZAP will no longer use bit.ly for any telemetry.
 Instead it uses our own services on the zaproxy.org domain.
 For full details see the FAQ: <a href="https://www.zaproxy.org/faq/what-calls-home-does-zap-make/">What 'calls home' does ZAP make?</a>.
 
+<h3>Scan Rule Promotions</h3>
+
+A significant number of scan rules have been promoted in this release.
+<p>
+The following <b>Active</b> scan rules have been promoted to <b>Release</b> status:
+
+<ul>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40034/">.env Information Leak</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/90034/">Cloud Metadata Attack</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40026/">Cross Site Scripting (DOM Based)</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10058/">GET for POST</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/20015/">Heartbleed OpenSSL Vulnerability</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40035/">Hidden File Finder</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/90024/">Padding Oracle</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/20018/">Remote Code Execution - CVE-2012-1823</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/20017/">Source Code Disclosure - CVE-2012-1823</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40020/">SQL Injection - Hypersonic (Time Based)</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40027/">SQL Injection - MsSQL (Time Based)</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40019/">SQL Injection - MySQL (Time Based)</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40021/">SQL Injection - Oracle (Time Based)</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40022/">SQL Injection - PostgreSQL (Time Based)</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40024/">SQL Injection - SQLite</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40029/">Trace.axd Information Leak</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10104/">User Agent Fuzzer</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/90017/">XSLT Injection</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/90023/">XXE</a>
+</ul>
+
+The following <b>Passive</b> scan rules have been promoted to <b>Release</b> status:
+
+<ul>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10044/">Big Redirects Detected</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10033/">Directory Browsing</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10097/">Hash Disclosure</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10034/">Heartbleed OpenSSL Vulnerability (Indicative)</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10041/">HTTP to HTTPS Insecure Transition in Form Post</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10042/">HTTPS to HTTP Insecure Transition in Form Post</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10108/">Reverse Tabnabbing</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10109/">Modern App Detection</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10062/">PII Disclosure</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10050/">Retrieved From Cache</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10036/">Server Header Info Leak</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10035/">Strict Transport Security</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10030/">User Controlled Charset</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10029/">User Controlled Cookie</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10031/">User Controlled HTML Attributes</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10043/">User Controlled Javascript Event</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10028/">User Controlled Open Redirect</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10039/">X-Backend-Server Information Leak</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10052/">X-ChromeLogger-Data Info Leak</a>
+</ul>
+
+The following <b>Active</b> scan rules have been promoted to <b>Beta</b> status (and will therefore now be included in the Packaged scans):
+
+<ul>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40040/">CORS</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40044/">Exponential Entity Expansion</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40038/">Forbidden Bypass</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40043/">Log4Shell</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40031/">Out-of-Band XSS</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40045/">Spring4Shell</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40042/">Spring Actuator</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/90036/">Server Side Template Injection (Blind)</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/90035/">Server Side Template Injection</a>
+</ul>
+
+The following <b>Passive</b> scan rules have been promoted to <b>Beta</b> status (and will therefore now be included in the Packaged scans):
+
+<ul>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10049/">Content Cacheable</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10009/">In Page Banner Info Leak</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10110/">Dangerous JS Functions</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/90002/">Java Serialization Object</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10063/">Permissions Policy Header Not Set</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/90003/">Sub-Resource Integrity Attribute Missing</a>
+</ul>
+
 <h3>Dependency Updates</h3>
 
 As usual the release includes dependency updates. 
@@ -53,7 +130,7 @@ The following libraries were updated:
 
 <ul>
   <li>Commons CSV, 1.8 → 1.9.0</li>
-  <li>Flatlaf 1.6 → 2.5</li>
+  <li>Flatlaf 1.6 → 2.6</li>
   <li>HSQLDB, 2.5.2 → 2.7.0</li>
   <li>Log4j 2, 2.15.0 → 2.19.0</li>
   <li>RSyntaxTextArea, 3.1.3 → 3.2.0</li>
@@ -73,6 +150,7 @@ The following libraries were moved out of the core and into add-ons:
 <H3>New Add-Ons</H3>
 The following add-ons are included by default in this release for the first time:
 <ul>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/database/">Database</a> - provides database engines and related infrastructure.</li>
   <li><a href="https://www.zaproxy.org/docs/desktop/addons/network/">Network</a> - provides core networking capabilities.</li>
   <li><a href="https://www.zaproxy.org/docs/desktop/addons/spider/">Spider</a> - provides traditional spider functionality.</li>
 </ul>
