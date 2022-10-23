@@ -22,6 +22,8 @@ This add-on uses a modern network stack which will make it much easier to suppor
 <br>
 In addition the following features have been added:
 <ul>
+  <li>Proxy/Local Server Aliases
+  <li>Proxy and ZAP API are no longer tied together.
   <li>HTTPS pass-through
   <li>Certificate validity period configuration 
 </ul>
@@ -31,6 +33,16 @@ In addition the following features have been added:
 To facilitate more frequent functional enhancements and bug fixes the core Spider has been moved to an add-on which means such changes are no longer bound to core/stable releases.
 Other add-ons which use Traditional Spider functionality have also been re-worked to support the Spider add-on, including: Quick Start, Form Handler, GraphQL, OpenAPI, SOAP, and the Automation Framework. 
 More details are given below.
+
+<H3>Import/Export Add-On</H3>
+
+The Import/Export add-on allows to import/export data (e.g. HTTP Messages, URLs) to/from ZAP, it supersedes core functionality and the following add-ons which will no longer be available in the marketplace:
+<ul>
+  <li>Import files containing URLs
+  <li>Log File Importer
+  <li>Save Raw Message
+  <li>Save XML Message
+</ul>
 
 <H3>Multi-threaded Passive Scanner</H3>
 
@@ -130,20 +142,27 @@ The following libraries were updated:
 
 <ul>
   <li>Commons CSV, 1.8 → 1.9.0</li>
+  <li>Commons Text, 1.9 → 1.10.0</li>
   <li>Flatlaf 1.6 → 2.6</li>
   <li>HSQLDB, 2.5.2 → 2.7.0</li>
   <li>Log4j 2, 2.15.0 → 2.19.0</li>
-  <li>RSyntaxTextArea, 3.1.3 → 3.2.0</li>
+  <li>RSyntaxTextArea, 3.1.3 → 3.3.0</li>
   <li>XOM, 1.3.7 → 1.3.8</li>
 </ul>
 
 The following libraries were moved out of the core and into add-ons:
 
 <ul>
-  <li>Bouncy Castle, 1.68</li>
-  <li>Commons Validator, 1.7</li>
-  <li>Ice4j, 3.0-24-g34c2ce5  </li>
-  <li>SQLite JDBC, 3.36.0.1</li>
+  <li>Bouncy Castle</li>
+  <li>Commons Validator</li>
+  <li>Ice4j</li>
+  <li>SQLite JDBC</li>
+</ul>
+
+The following libraries were removed:
+
+<ul>
+  <li>Commons XPath</li>
 </ul>
 
 <H2>Add-Ons</H2>
@@ -151,12 +170,21 @@ The following libraries were moved out of the core and into add-ons:
 The following add-ons are included by default in this release for the first time:
 <ul>
   <li><a href="https://www.zaproxy.org/docs/desktop/addons/database/">Database</a> - provides database engines and related infrastructure.</li>
-  <li><a href="https://www.zaproxy.org/docs/desktop/addons/network/">Network</a> - provides core networking capabilities.</li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/import-export/">Import/Export</a> - Import and Export functionality.</li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/requester/">Requester</a> - Allows to manually edit and send messages.</li>
   <li><a href="https://www.zaproxy.org/docs/desktop/addons/spider/">Spider</a> - provides traditional spider functionality.</li>
 </ul>
 
 <H3>Updated Add-Ons</H3>
 All of the add-ons included by default have been updated since the last full release.
+
+<H3>Removed Add-Ons</H3>
+The following add-ons are no longer included, having been superseded by the Import/Export add-on:
+<ul>
+  <li>Import files containing URLs
+  <li>Save Raw Message
+  <li>Save XML Message
+</ul>
 
 <H2>Enhancements</H2>
 <ul>
@@ -274,6 +302,11 @@ The following table illustrates the differences/improvements versus the 2.11/2.1
   </tbody>
 </table>
 
+<H3>Requester Add-On</H3>
+
+The Manual Request Editor and Resend dialogues were moved to the Requester add-on. This add-on will now provide the base infrastructure for add-ons to edit and send messages, the following add-ons
+are now using the Requester add-on: Plug-n-Hack Configuration (Client Messages) and WebSockets.
+<p>The Requester tab was also updated to provide the same functionalities that the dialogues provide.
 
 <H2>Bug fixes</H2>
 <ul>
