@@ -44,6 +44,16 @@ The Import/Export add-on allows to import/export data (e.g. HTTP Messages, URLs)
   <li>Save XML Message
 </ul>
 
+<H3>Database Add-On</H3>
+
+A new add-on was introduced for database related functionality in ZAP.
+This add-on provides the SQLite database engine for other add-ons to use.
+It also adds support for the ZAP permanent database.
+<p>
+The permanent database allows storing information that may be used across ZAP sessions.
+For example, it is used by the OAST add-on to persist BOAST payloads that can be polled
+in future ZAP sessions to list out-of-band interactions made to the service while ZAP wasn't running.
+
 <H3>Multi-threaded Passive Scanner</H3>
 
 The passive scanner has been updated to use a configurable number of threads, by default 4.
