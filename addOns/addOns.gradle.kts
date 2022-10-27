@@ -86,7 +86,7 @@ subprojects {
     }
 
     zapAddOn {
-        zapVersion.set("2.11.0")
+        zapVersion.set("2.12.0")
 
         releaseLink.set(project.provider { "https://github.com/zaproxy/zap-core-help/releases/${zapAddOn.addOnId.get()}-v@CURRENT_VERSION@" })
 
@@ -98,6 +98,7 @@ subprojects {
     }
 
     dependencies {
+        "zap"("org.zaproxy:zap:2.12.0-SNAPSHOT")
         "implementation"(project(":commonFiles"))
     }
 
