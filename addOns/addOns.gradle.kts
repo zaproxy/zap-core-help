@@ -98,7 +98,6 @@ subprojects {
     }
 
     dependencies {
-        "zap"("org.zaproxy:zap:2.12.0-SNAPSHOT")
         "implementation"(project(":commonFiles"))
     }
 
