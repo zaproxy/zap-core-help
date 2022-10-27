@@ -3,7 +3,7 @@ All notable changes to this add-on will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## Unreleased
+## [15] - 2022-10-27
 ### Changed
 - Updated for 2.12.0.
 
@@ -62,6 +62,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - First version.
 
+[15]: https://github.com/zaproxy/zap-core-help/releases/help-v15
 [14]: https://github.com/zaproxy/zap-core-help/releases/help-v14
 [13]: https://github.com/zaproxy/zap-core-help/releases/help-v13
 [12]: https://github.com/zaproxy/zap-core-help/releases/help-v12
