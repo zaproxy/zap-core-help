@@ -1,3 +1,11 @@
+
+pluginManagement {
+    repositories {
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
 rootProject.name = "zap-core-help"
 
 val addOnsProjectName = "addOns"
