@@ -23,28 +23,27 @@
 <h3>Динамические SSL-сертификаты</h3>
 Поддержка SSL-соединений была улучшена и упрощена.<br>
 Теперь пользователи могут создать свой собственный корневой сертификат и распространить его среди своих HTTP-клиентов. <br>
-Видеть  <a href="../ui/dialogs/options/dynsslcert.html">Вариант: динамические сертификаты SSL</a> больше подробностей.  
 
 <h3>Режим демона и API</h3>
-Запуск ZAP с параметром командной строки «-daemon» приведет к его запуску в фоновом режиме в 'headless' режиме,
-Это означает, что пользовательский интерфейс не отображается. <br>
-Начальный API был реализован в XML, JSON и HTML.<br>
-Если ZAP работает как демон, то API включается автоматически, в противном случае API должен быть включен через экран Options API. <br>
-По API можно перемещаться, открыв в браузере http: // zap / при проксировании через ZAP.  
+Starting ZAP with the "-daemon" command line option will cause it to run in the background in 'headless' mode, 
+meaning that no UI is displayed.<br>
+An initial API has been implemented in XML, JSON and HTML.<br>
+If ZAP is running as a daemon then the API is automatically enabled, otherwise the API must be enabled via the Options API screen.<br>
+The API can be navigated by opening http://zap/ in your browser when proxying via ZAP. 
 
 <h3>Интеграция с BeanShell</h3>
-  <a href="http://www.beanshell.org/">BeanShell</a> представляет собой интерактивную оболочку Java, которую можно использовать для выполнения сценариев BeanShell. <br> 
-Эти сценарии представляют собой упрощенную форму Java, в которой используются многие элементы синтаксиса Java, но в более простом формате сценариев.  <br>
-Весь код Java также является допустимым кодом BeanShell. <br>
-Интеграция BeanShell в OWASP ZAP позволяет писать сценарии с использованием функций ZAP и набора данных. <br> 
-Это может быть очень мощной функцией для анализа веб-приложений. <br>
+The <a href="http://www.beanshell.org/">BeanShell</a> is an interactive Java shell that can be used to execute BeanShell scripts.<br> 
+These scripts are a simplified form of Java that use many elements from Java syntax, but in a simpler scripting format. <br>
+All Java code is also valid BeanShell code.<br>
+BeanShell integration in OWASP ZAP enables you to write scripts using the ZAP functions and data set.<br> 
+This can be a very powerful feature for analyzing web applications.<br>
 
 
 <h3>Полная интернационализация</h3>
-Вся отображаемая строка теперь полностью интернационализирована. 
+All display string are now fully internationalised.
 
 <h3>Локализация</h3>
-Готовая поддержка следующих языков: 
+Out of the box support for the following languages:
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Английский</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Португальский (Бразилия)</td></tr>
@@ -62,53 +61,54 @@
 <h2>Незначительные изменения:</h2>
 
 <h3>hex (Шестнадцатеричный) вид </h3>
-  <a href="../ui/tabs/request.html">Запрос</a>, <a href="../ui/tabs/response.html">Ответ</a> вкладки теперь предоставляют опцию «Hex View», которая отображает тело запроса и ответа в шестнадцатеричном формате.  
+The <a href="../ui/tabs/request.html">Request</a>, <a href="../ui/tabs/response.html">Response</a> tabs now provide
+a 'Hex View' option which will display the request and response bodies in hex format. 
 
 <h3>Результаты поиска </h3>
-  <a href="../ui/tabs/search.html">Вкладка поиска  </a> теперь отображает все экземпляры найденной строки, а не только первый экземпляр в каждом запросе или ответе.  
+The <a href="../ui/tabs/search.html">Search tab </a> now displays all instances of a string found rather than just the first instance
+in each request or response. 
 
 <h3>Исключить URLы</h3>
-URL-адреса могут быть явно исключены из активного сканера, паука и прокси. 
+URLs can be explicitly excluded from the active scanner, spider and from the proxy.
 
 <h3>Поддержка копирования</h3>
-На большинстве панелей теперь есть опция меню «Копировать», которую можно щелкнуть правой кнопкой мыши, в том числе панели «Сканирование портов» и Грубая сила (Brute Force). 
+Most of the panels now provide a 'right click' 'Copy' menu option, including the Port Scan and Brute Force panels.
 
 <h3>Поддержка Undo / Redo </h3>
-Все поля ввода теперь поддерживают действия Undo / Redo с использованием ускорителей Undo / Redo по умолчанию операционной системы: 
+All of the input fields now support Undo/Redo actions using the operating systems default Undo/Redo accelerators:
 <ul>
 <li>Windows/Linux: Ctrl+Z / Ctrl+Y
 <li>Mac OS X: Cmd+Z / Cmd+Shift+Z
 </ul>
 
 <h3>Поддержка прокси-сервера сканера портов и возможность тайм-аута </h3>
-Сканер портов теперь может использовать исходящий прокси-сервер (если настроен), также теперь можно установить тайм-аут в миллисекундах. 
+The Port Scanner can now use the outgoing proxy (if configured) and the timeout in milliseconds can also now be set.
 
 <h3>Кнопки разрыва запроса и ответа </h3>
-Теперь есть 2 кнопки «Установить перерыв», позволяющие устанавливать перерывы для всех запросов и всех ответов независимо.  
+There are now 2 'Set Break' buttons to allow breaks to be set on all requests and all responses independently. 
 
 <h3>Разверните кнопки вкладок "Сайты" и "Информация" </h3>
-Теперь есть 2 кнопки, с помощью которых можно переключаться между развернутыми вкладками «Сайты» и «Информация». 
+There are now 2 buttons which allow you to switch between having the Sites and Information tabs expanded.
 
 <h3>Значок вкладки разрыва меняет цвет при достижении точки останова </h3>
-Пока вкладка "Перерыв" не используется, на ней отображается серый крестик: &nbsp;
+While the Break tab is not in use its icon is a grey cross: &nbsp;
 <img src="../images/16/101grey.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
-Когда <a href="../start/features/breakpoints.html">точка останова </a> при нажатии значок вкладки изменяется
-на красный крест: & nbsp; 
+When a <a href="../start/features/breakpoints.html">breakpoint</a> is hit the tab icon is changed 
+to a red cross: &nbsp;
 <img src="../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
 
 <h3>Регулируемый тайм-аут </h3>
-  <a href="../ui/dialogs/options/connection.html">Вариант: подключение </a> экран позволяет установить тайм-аут в секундах
-чтобы упростить тестирование медленных приложений. 
+The Option: Connection screen allows you to set the timeout in seconds to make it easier to test slow applications.
 
 <h3>Обновления библиотеки </h3>
-Большинство библиотек, используемых ZAP, обновлены до последних версий.
+Most of the libraries used by ZAP have been updated to the latest versions.
 
 <h3>Новая иконка :) </h3>
-Спасибо Саймону Эгли и всем остальным за то, что они прислали интересные предложения по иконкам. 
+Thanks to Simon Egli and all others for submitting cool icon suggestions.
 
 <h2>Известные вопросы: </h2>
 <h3>Mac OS X: динамический SSL и Google Chrome </h3>
-В настоящее время динамический SSL не работает при использовании Google Chrome.  Это связано с нерешенной известной проблемой с Google Chrome и связкой ключей Mac OS X.  При импорте корневого центра сертификации OWASP ZAP в связку ключей и запросе веб-сайта SSL отображается сообщение об ошибке «Недействительный сертификат». 
+Currently Dynamic SSL is not working when using Google Chrome. This is because of an unresolved known issue with Google Chrome and Mac OS X Keychain. When importing OWASP ZAP's Root CA into the keychain and requesting a SSL website, an "Invalid certificate" error message is shown.
 
 <h2>Смотрите также </h2>
 <table>

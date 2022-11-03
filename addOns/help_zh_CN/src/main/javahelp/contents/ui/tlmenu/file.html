@@ -19,6 +19,9 @@ Starting a new session without saving the current session will loose all of the 
 This opens a session that has been previously saved.<br/>
 Opening a session without saving the current session will loose all of the data in the current session.
 
+<h3>Open Recent</h3>
+A list of files that have been recently accessed.
+
 <h3>Persist Session...</h3>
 This persists the current session. <br/>
 While the session is always stored in a database on disk, it will be lost when ZAP is stopped unless it has been persisted.<br/>
@@ -28,23 +31,23 @@ You only need to persist it once - after that all changes will be saved.
 This saves a snapshot of a session that has already been persisted.<br/>
 It will suggest the same filename as the persisted session with a date-time string appended to it, and allow the user to set whatever name they choose.<br/>
 
-<h3>会话属性...</h3>
-这显示了 <a href="../dialogs/session/sessprop.html">会话属性</a> 对话框。<br/>
-这允许您设置会话名称和描述。
+<h3>Session Properties...</h3>
+This displays the <a href="../dialogs/session/sessprop.html">会话属性</a> dialog.<br/>
+This allows you to set the session name and description.
 
-<h3>导入上下文...</h3>
-允许导入... <a href="../../start/features/contexts.html">上下文</a>.
+<h3>Import Context...</h3>
+Allows to import a <a href="../../start/features/contexts.html">上下文</a>.
 
-<h3>导出上下文...</h3>
-允许导出上下文。
+<h3>Export Context...</h3>
+Allows to export a Context.
 
-<h3>加载附加文件...</h3>
-Load a local <a href="../../start/features/addons.html">附件</a> 文件。<br/>
+<h3>Load Add-on file...</h3>
+Load a local <a href="../../start/features/addons.html">附件</a> file.<br/>
 Add-ons are typically installed from via the <a href="../dialogs/manageaddons.html">管理加载项</a> dialog, but this
 option can be useful if you have downloaded an add-on manually or are testing one you have developed yourself.<br/>
 Add-ons remain installed until you manually uninstall them. 
 
-<h3>退出和删除会话...</h3>
+<h3>Exit and Delete Session...</h3>
 This will exit ZAP and delete the session, even if you have previously persisted it.<br/>
 The session will no longer be accessible when you restart ZAP, although any snapshots you took will still be available.<br/> 
 A warning dialog will be displayed to ensure you really meant to choose this option.

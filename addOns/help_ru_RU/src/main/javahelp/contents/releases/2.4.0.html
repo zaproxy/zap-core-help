@@ -26,37 +26,37 @@
 
 <h3>Диалоги сканирования с расширенными параметрами </h3>
 
-Новые <a href="../ui/dialogs/advascan.html">Активное Сканирование</a>, <a href="../ui/dialogs/spider.html">Паук</a> и диалоги AJAX Spider заменили
-увеличивающееся количество опций «Атака» правой кнопкой мыши. <br>
-Они обеспечивают легкий доступ ко всем наиболее распространенным параметрам и, при необходимости, к широкому спектру дополнительных параметров.  
+Новые <a href="../ui/dialogs/advascan.html">Активное Сканирование</a>, Spider and AJAX Spider dialogs have replaced
+the increasing number of right click 'Attack' options.<br>
+These provide easy access to all of the most common options and optionally a wide range of advanced options. 
 
 <h3>Политики сканирования </h3>
 
-Новый <a href="../ui/dialogs/scanpolicymgr.html">Диалоговое окно диспетчера политики сканирования </a> позволяет создавать как можно больше  
-<a href="../start/features/scanpolicy.html">Политики сканирования </a> как вам нужно. <br>
-Политики сканирования точно определяют, какие правила выполняются как часть  <a href="../start/features/ascan.html">Активное Сканирование</a>.<br>
-Они также определяют, как работают эти правила, влияя на количество сделанных запросов и на то, насколько вероятны потенциальные проблемы, которые должны быть отмечены. <br>
+A new <a href="../ui/dialogs/scanpolicymgr.html">Scan Policy Manager dialog</a> allows you to create as many 
+<a href="../start/features/scanpolicy.html">Scan Policies</a> as you need.<br>
+Scan policies define exactly which rules are run as part of an <a href="../start/features/ascan.html">Active Scan</a>.<br>
+They also define how these rules run influencing how many requests are made and how likely potential issues are to be flagged.<br>
 
 <h3>Неиспользуемые вкладки скрыты </h3>
 
-По умолчанию при запуске ZAP теперь отображаются только основные вкладки. <br>
-Остальные вкладки открываются, когда они используются (например, для паука и активного сканера) или когда вы открываете их через
-специальная вкладка в дальнем правом углу каждого окна с зеленым значком «+».  Эта специальная вкладка исчезает, если нет скрытых вкладок. <br>
-Вкладки можно закрыть с помощью небольшого значка «x», который отображается, когда вкладка выбрана. <br>
-Вкладки также можно «закрепить» с помощью небольшого значка «булавка», который также отображается, когда вкладка выбрана - будут отображаться закрепленные вкладки.
-при следующем запуске ZAP.  
+By default only the essential tabs are now shown when ZAP starts up.<br>
+The remaining tabs are revealed when they are used (e.g. for the spider and active scanner) or when you display them via the 
+special tab on the far right of each window with the green '+' icon. This special tab disappears if there are no hidden tabs.<br>
+Tabs can be closed via a small 'x' icon which is shown when the tab is selected.<br>
+Tabs can also be 'pinned' using a small 'pin' icon that is also shown when the tab is selected - pinned tabs will be shown
+when ZAP next starts up. 
 
 <h3>Активаторы для надстройки последовательного сканирования </h3>
 
-Новая дополнительная надстройка качества «альфа» добавляет возможность сканировать «последовательности» веб-страниц, другими словами, страницы, которые необходимо посетить.
-в строгом порядке для правильной работы.  
+A new optional 'alpha' status add-on adds the ability to scan 'sequences' of web pages, in other words pages that must be visited
+in a strict order in order to work correctly. 
 
 <h3>Активаторы для надстройки тестирования контроля доступа </h3>
 
-Новое необязательное дополнение качества «альфа» добавляет возможность автоматизировать многие аспекты тестирования контроля доступа.  
+A new optional 'alpha' status add-on adds the ability to automate many aspects of access control testing. 
 
 <h3>Примечание для пользователей API </h3>
-Имейте в виду, что идентификатор подключаемого модуля для сканера внешнего перенаправления изменился с 30000 на 20019. 
+Please be aware that the Plugin ID for the External Redirect scanner has changed from 30000 to 20019.
 
 <h2>Полный список изменений: </h2>
 <ul>
@@ -89,7 +89,7 @@
 <li>Проблема 1215: Упорядочивание дерева предупреждений / удобство сортировки </li>
 <li>Ошибка 1216: опечатка на вкладке скриптов. </li>
 <li>Проблема 1217: формат таблицы не отображает информацию, если кодировка присутствует в заголовке Content-Type. </li>
-<li>Ошибка 1224: качество / состояние отображения в диалоговых окнах политики сканирования. </li>
+<li>Issue 1224 : Display Status in Scan Policy Dialogs - Usability</li>
 <li>Проблема 1226: активный сканер исключил регулярные выражения параметра, не проверенные </li>
 <li>Проблема 1227: активный сканер отправляет GET-запросы с содержимым в теле запроса. </li>
 <li>Проблема 1238: исключение NullPointerException, если активный сканер выдает предупреждение с нулевой атакой </li>

@@ -13,11 +13,11 @@
 Однако они также усложняют работу тестерам на проникновение, особенно если токены регенерируются каждый раз, когда запрашивается форма. <br>
 </p>
 <p>
-ZAP обнаруживает анти-CSRF-токены исключительно по именам атрибутов - списку имен атрибутов, которые считаются анти-CSRF-токенами.
-настраивается с помощью <a href="../../ui/dialogs/options/anticsrf.html"> экрана параметров Anti CSRF </a>. <1 />
-Когда ZAP обнаруживает эти токены, он записывает значение токена и URL, сгенерировавший токен. <1 />
-Другие сканеры, такие как <a href="ascan.html"> активный сканер </a>, имеют параметры, которые
-заставить ZAP автоматически регенерировать жетоны при необходимости. 
+ZAP detects anti CSRF tokens purely by attribute names - the list of attribute names considered to be anti CSRF tokens
+is configured using the <a href="../../ui/dialogs/options/anticsrf.html">Options Anti CSRF screen</a>.<br/>
+When ZAP detects these tokens it records the token value and which URL generated the token.<br/>
+Other tools, like the <a href="ascan.html">active scanner</a>, have options which
+cause ZAP to automatically regenerate the tokens when required.
 </p>
 
 <h2>Смотрите также </h2>

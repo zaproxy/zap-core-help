@@ -21,28 +21,27 @@ Bu işlevsellik OWASP JBroFuzz projesinin koduna dayanır.
 <h3>Dinamik SSL sertifikaları</h3>
 SSL bağlantıları için destek geliştirildi ve basitleştirildi.<br>
 Kullanıcılar artık kendi kök sertifikasını oluşturabilir ve bunu HTTP istemcilerine dağıtabilir.<br>
-Bak <a href="../ui/dialogs/options/dynsslcert.html">Seçenekler: Dinamik SSL Sertifikaları</a> daha fazla ayrıntı için.  
 
 <h3>Daemon modu ve API</h3>
-ZAP'yi "-daemon" komut satırı seçeneğiyle başlatmak, arka planda 'headless' modunda çalışmasına neden olur,
-yani herhangi bir kullanıcı arayüzü görüntülenmez.<br>
-Başlangıç API'si, XML, JSON ve HTML üzerinde uygulanmıştır.<br>
-ZAP bir daemon olarak çalışıyorsa, API otomatik olarak etkinleştirilir, aksi takdirde API, hiçbir Seçenek Ekranı görüntülenmediğini belirten Seçenekler API'sı ekranı aracılığıyla etkinleştirilmelidir.<br>
-API, ZAP üzerinden proxy yaparken tarayıcınızda http: // zap / 'ı açarak gezinebilirsiniz. 
+Starting ZAP with the "-daemon" command line option will cause it to run in the background in 'headless' mode, 
+meaning that no UI is displayed.<br>
+An initial API has been implemented in XML, JSON and HTML.<br>
+If ZAP is running as a daemon then the API is automatically enabled, otherwise the API must be enabled via the Options API screen.<br>
+The API can be navigated by opening http://zap/ in your browser when proxying via ZAP. 
 
 <h3>Beanshell entegrasyonu</h3>
-The <a href="http://www.beanshell.org/">BeanShell</a> beanShell komut dosyalarını yürütmek için kullanılabilen interaktif bir Java kabuğu.<br> 
-Bu komut dosyaları Java dilinden birçok öğe kullanan basitleştirilmiş bir Java formudur, ama daha basit bir komut dosyası biçimindedir. <br>
-Tüm Java kodlarında geçerli BeanShell kodudur.<br>
-OWASP ZAP BeanShell uyumu, ZAP fonksiyonlarını ve veri setini kullanarak komut yazabilmenizi sağlar.<br> 
-Web uygulamaları analizi için çok güçlü bir özellik olabilir.<br>
+The <a href="http://www.beanshell.org/">BeanShell</a> is an interactive Java shell that can be used to execute BeanShell scripts.<br> 
+These scripts are a simplified form of Java that use many elements from Java syntax, but in a simpler scripting format. <br>
+All Java code is also valid BeanShell code.<br>
+BeanShell integration in OWASP ZAP enables you to write scripts using the ZAP functions and data set.<br> 
+This can be a very powerful feature for analyzing web applications.<br>
 
 
 <h3>Tamamen uluslararası hale gelme</h3>
-Tüm görüntü dizisi şimdi tamamen uluslararası halde.
+All display string are now fully internationalised.
 
 <h3>Yerelleştirme</h3>
-Aşağıdaki diller paket desteği dışında:
+Out of the box support for the following languages:
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>İngilizce</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Brezilya Portekizcesi</td></tr>
@@ -60,51 +59,54 @@ Aşağıdaki diller paket desteği dışında:
 <h2>Küçük değişiklikler:</h2>
 
 <h3>Altı köşeli görüntü</h3>
-The <a href="../ui/tabs/request.html">Talep</a>, <a href="../ui/tabs/response.html">Yanıt</a> sekmeler şimdi istek ve cevap gövdelerini hex formatında görüntülemeye olanak sağlayan bir 'Hex View' seçeneği sağlarlar. 
+The <a href="../ui/tabs/request.html">Request</a>, <a href="../ui/tabs/response.html">Response</a> tabs now provide
+a 'Hex View' option which will display the request and response bodies in hex format. 
 
 <h3>Arama sonuçları</h3>
-The <a href="../ui/tabs/search.html">Arama sekmesi </a> şimdi tüm isteklerde veya cevaplarda sadece ilk örneği değil, bulunan dizenin tüm örneklerini görüntüler. 
+The <a href="../ui/tabs/search.html">Search tab </a> now displays all instances of a string found rather than just the first instance
+in each request or response. 
 
 <h3>URL'ler Dahil değil</h3>
-URL'ler aktif tarayıcı, örümcek ve proxy'den açıkça hariç tutulabilir.
+URLs can be explicitly excluded from the active scanner, spider and from the proxy.
 
 <h3>Kopya desteği</h3>
-Panellerin çoğu artık Port Scan ve Brute Force panelleri de dahil olmak üzere bir 'sağ tıklama' 'Kopyala' menü seçeneğini sunuyor.
+Most of the panels now provide a 'right click' 'Copy' menu option, including the Port Scan and Brute Force panels.
 
 <h3>Geri alma/Tekrarlama destek</h3>
-Tüm giriş alanları işletim sistemindeki varsayılan Geri alma/Tekrarlama hızlandırıcılarını kullanarak Geri alma/Tekrarklama eylemlerini desteklemektedir:
+All of the input fields now support Undo/Redo actions using the operating systems default Undo/Redo accelerators:
 <ul>
 <li>Windows/Linux: Ctrl+Z / Ctrl+Y
 <li>Mac OS X: Cmd+Z / Cmd+Shift+Z
 </ul>
 
 <h3>Veri kanalı tarayıcı proxy desteği ve zaman aşımı seçeneği</h3>
-Artık Veri kanalı Tarayıcı giden proxy'yi (yapılandırılmışsa) kullanabilir ve milisaniye cinsinden zaman aşımı da ayarlanabilir.
+The Port Scanner can now use the outgoing proxy (if configured) and the timeout in milliseconds can also now be set.
 
 <h3>İstek ve cevap durdurma düğmeleri</h3>
-Artık tüm taleplerde ve tüm cevaplarda bağımsız olarak izin verilmesi için 2 'Set Break' tuşu var. 
+There are now 2 'Set Break' buttons to allow breaks to be set on all requests and all responses independently. 
 
 <h3>Siteler ve bilgileri genişletmek için sekme butonları</h3>
-Artık Siteler ve Bilgi sekmelerinin genişletilmesi arasında geçiş yapmanıza izin veren 2 düğme var.
+There are now 2 buttons which allow you to switch between having the Sites and Information tabs expanded.
 
 <h3>Break tab icon changes colour when breakpoint hit</h3>
-Break sekmesi kullanılmıyorken, simgesi gri bir çizgi şeklindedir: &nbsp;
+While the Break tab is not in use its icon is a grey cross: &nbsp;
 <img src="../images/16/101grey.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
-Ne zaman bir <a href="../start/features/breakpoints.html">breakpoint</a> vurulduğunda sekme simgesi kırmızı çarpıya dönüşür: & nbsp;
+When a <a href="../start/features/breakpoints.html">breakpoint</a> is hit the tab icon is changed 
+to a red cross: &nbsp;
 <img src="../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
 
 <h3>Ayarlanabilen zaman aşımı</h3>
-The <a href="../ui/dialogs/options/connection.html">Seçenek: Bağlantı</a> yavaş uygulamaların testini kolaylayştırmak için ekranda saniye cinsinden zaman aşımını ayarlamanıza olanak verir.
+The Option: Connection screen allows you to set the timeout in seconds to make it easier to test slow applications.
 
 <h3>Kütüphane güncellemeleri</h3>
-ZAP tarafından kullanılan kitaplıkların çoğu son sürümlerine güncellendi.
+Most of the libraries used by ZAP have been updated to the latest versions.
 
 <h3>Yeni bir simge :)</h3>
-Simon Egli ve tüm kullanıcılara havalı ikon önerileri için teşekkürler.
+Thanks to Simon Egli and all others for submitting cool icon suggestions.
 
 <h2>Bilinen hatalar:</h2>
 <h3>Mac OS X: Dinamik SSL ve Google Chrome</h3>
-Google Chrome kullanırken şuan Dinamik SSL çalışmıyor. Sebebi Google Chrome ve Mac OSX anahtar zincirinde çözümlenmemiş bir hata olmasıdır. OWASP ZAP'ın Kök CA'sını anahtarlığa içe aktarırken ve bir SSL web sitesi talep ederken, "Geçersiz sertifika" hata iletisi gösterilir.
+Currently Dynamic SSL is not working when using Google Chrome. This is because of an unresolved known issue with Google Chrome and Mac OS X Keychain. When importing OWASP ZAP's Root CA into the keychain and requesting a SSL website, an "Invalid certificate" error message is shown.
 
 <h2>Ayrıca bakınız</h2>
 <table>

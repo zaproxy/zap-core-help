@@ -29,12 +29,12 @@ The new Port Scan tab shows the ports found.
 The new <a href="../ui/tabs/ascan.html">Active Scan tab</a> ایک ویب سائٹ کو فعال طور پر سکیننگ کے نتیجے میں درخواستوں اور ردعمل کا استعمال کرتا ہے.
 
 <h3>Spider tab</h3>
-The <a href="../ui/tabs/spider.html">Spider tab</a> اب آپ سائٹ کو گھومنے کے دوران ZAP کا استعمال جاری رکھنے کی اجازت دیتا ہے.<br>
-آپ مکڑی کو روکنے اور دوبارہ شروع کر سکتے ہیں.    
+The Spider tab now allows you to continue using ZAP while spidering a site.<br>
+You can also pause and resume the spider.    
 
 <h3>Smartcard support</h3>
-اسمارٹ کارڈ کی حمایت کو اینڈپیروس منصوبے میں شامل کیا گیا ہے.<br>
-ونڈوز پر مندرجہ ذیل سمارٹ کارڈ آلات کا تجربہ کیا گیا ہے:
+Smart card support has been added c/o the Andiparos project.<br>
+The following smartcard devices have been tested on Windows:
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Safeguard</td><td>Aladdin eToken</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td></td><td>Aladdin eToken Pro</td></tr>
@@ -65,17 +65,18 @@ Support for the following languages are built into this version:
 </table>
     
 <h3>Language selection</h3>
-شروع کرنے پر آپ کو استعمال کرنے کے لئے زبان کو منتخب کرنے کے لئے حوصلہ افزائی کی جائے گی.<br>
-نئی زبانوں خود کار طریقے سے فائلوں کے نام کے ساتھ فائلوں کی موجودگی کی طرف سے پتہ چلا ہے کہ پیغامات <_>> ZAP ڈائرکٹری میں.properties. 
+On start up you will be prompted to choose the language to use.<br>
+New languages are automatically detected by the presence of files with names of the form Messages_&lt;locale&gt;.properties in the ZAP directory. 
 
 <h2>Minor changes:</h2>
 
 <h3>Disabled 'default file' plugins</h3>
-پلگ ان جو ڈیفالٹ فائلوں کا پتہ لگاتے ہیں وہ مؤثر طریقے سے نئے کی طرف سے بے ترتیب ہیں.<br>
+The plugins which detect default files are effectively made redundant by the new 
+brute force scanner.<br>
 These have therefore been disabled.
 
 <h3>Scanner summaries</h3>
-موجودہ سکینوں کی تعداد اور اقسام کی تعداد اب میں ظاہر کی گئی ہیں <a href="../ui/footer.html">footer</a>.
+Counts of the number and types of the current scans are now displayed in the <a href="../ui/footer.html">footer</a>.
 
 
 <h2>See also</h2>

@@ -40,12 +40,11 @@
          <tocitem text="Сценарии" target="start.features.scripts"/>
          <tocitem text="Управление сессией " target="start.features.sessmanag"/>
          <tocitem text="дерево сайтов " target="start.features.sitestree"/>
-         <tocitem text="Паук" target="start.features.spider"/>
-         <tocitem text="Статистика " target="start.features.stats"/>
-         <tocitem text="Структурные модификаторы " target="start.features.structmods"/>
-         <tocitem text="Структурные параметры " target="start.features.structparams"/>
-         <tocitem text="Теги " target="start.features.tags"/>
-         <tocitem text="Пользователи" target="start.features.users"/>
+         <tocitem text="Statistics" target="start.features.stats"/>
+         <tocitem text="Structural Modifiers" target="start.features.structmods"/>
+         <tocitem text="Structural Parameters" target="start.features.structparams"/>
+         <tocitem text="Tags" target="start.features.tags"/>
+         <tocitem text="Users" target="start.features.users"/>
       </tocitem>
       <tocitem text="правила сканера " target="start.check"/>
       <tocitem text="Простой тест на проникновение " target="start.pentest"/>
@@ -65,10 +64,9 @@
          <tocitem text="Контрольные точки" target="ui.tabs.breakpoints"/>
          <tocitem text="Оповещения" target="ui.tabs.alerts"/>
          <tocitem text="Активное Сканирование" target="ui.tabs.ascan"/>
-         <tocitem text="Паук" target="ui.tabs.spider"/>
-         <tocitem text="Фаззер" target="ui.tabs.params"/>
-         <tocitem text="Параметры" target="ui.tabs.httpsessions"/>
-         <tocitem text="HTTP-сессии" target="ui.tabs.output"/>
+         <tocitem text="Params" target="ui.tabs.params"/>
+         <tocitem text="HTTP Sessions" target="ui.tabs.httpsessions"/>
+         <tocitem text="Output" target="ui.tabs.output"/>
       </tocitem>
       <tocitem text="Диалоги " target="ui.dialogs">
          <tocitem text="Активное Сканирование" target="ui.dialogs.advascan"/>
@@ -77,50 +75,43 @@
          <tocitem text="Добавить заметку " target="ui.dialogs.addnote"/>
          <tocitem text="Находить " target="ui.dialogs.find"/>
          <tocitem text="Фильтр истории " target="ui.dialogs.historyfilter"/>
-         <tocitem text="Редактор ручных запросов " target="ui.dialogs.manreq"/>
-         <tocitem text="Управление дополнениями " target="ui.dialogs.manageaddons"/>
-         <tocitem text="Управление тегами истории " target="ui.dialogs.managetags"/>
-         <tocitem text="Параметры " target="ui.dialogs.options">
-         	<tocitem text="Активное Сканирование" target="ui.dialogs.options.ascan"/>
-         	<tocitem text="Входные векторы активного сканирования " target="ui.dialogs.options.ascaninput"/>
-         	<tocitem text="Оповещения " target="ui.dialogs.options.alert"/>
-         	<tocitem text="Токены против CSRF " target="ui.dialogs.options.anticsrf"/>
+         <tocitem text="Manage Add-ons" target="ui.dialogs.manageaddons"/>
+         <tocitem text="Manage History Tags" target="ui.dialogs.managetags"/>
+         <tocitem text="Options" target="ui.dialogs.options">
+         	<tocitem text="Active Scan" target="ui.dialogs.options.ascan"/>
+         	<tocitem text="Active Scan Input Vectors" target="ui.dialogs.options.ascaninput"/>
+         	<tocitem text="Alerts" target="ui.dialogs.options.alert"/>
+         	<tocitem text="Anti CSRF Tokens" target="ui.dialogs.options.anticsrf"/>
          	<tocitem text="API" target="ui.dialogs.options.api"/>
-            <tocitem text="Контрольные точки" target="ui.dialogs.options.breakpoints"/>
-         	<tocitem text="Сертификат" target="ui.dialogs.options.certificate"/>
-         	<tocitem text="Проверить обновления " target="ui.dialogs.options.checkforupdates"/>
-			<tocitem text="Соединение" target="ui.dialogs.options.connection"/>
-			<tocitem text="База данных" target="ui.dialogs.options.database"/>
-         	<tocitem text="Отображать " target="ui.dialogs.options.view"/>
-         	<tocitem text="Динамические SSL-сертификаты" target="ui.dialogs.options.dynsslcert"/>
-            <tocitem text="Расширения " target="ui.dialogs.options.ext"/>
-            <tocitem text="Глобальный URL исключения " target="ui.dialogs.options.globalexcludeurl"/>
-         	<tocitem text="HTTP-сеансы " target="ui.dialogs.options.httpsessions"/>
-         	<tocitem text="JVM (виртуальная машина Java)" target="ui.dialogs.options.jvm"/>
-         	<tocitem text="Клавиатура " target="ui.dialogs.options.keyboard"/>
-         	<tocitem text="Язык" target="ui.dialogs.options.language"/>
-         	<tocitem text="Локальные прокси " target="ui.dialogs.options.localproxy"/>
-         	<tocitem text="Правила пассивного сканирования " target="ui.dialogs.options.pscanrules"/>
-         	<tocitem text="Теги пассивного сканирования " target="ui.dialogs.options.pscan"/>
-         	<tocitem text="Пассивный сканер " target="ui.dialogs.options.pscan.main"/>
-         	<tocitem text="Конфигурация правила " target="ui.dialogs.options.ruleconfig"/>
-         	<tocitem text="Сценарии" target="ui.dialogs.options.script"/>
-         	<tocitem text="Поиск" target="ui.dialogs.options.search"/>
-         	<tocitem text="Паук" target="ui.dialogs.options.spider"/>
-         	<tocitem text="Статистика " target="ui.dialogs.options.stats"/>
+            <tocitem text="Breakpoints" target="ui.dialogs.options.breakpoints"/>
+         	<tocitem text="Check for Updates" target="ui.dialogs.options.checkforupdates"/>
+			<tocitem text="Database" target="ui.dialogs.options.database"/>
+         	<tocitem text="Display" target="ui.dialogs.options.view"/>
+            <tocitem text="Extensions" target="ui.dialogs.options.ext"/>
+            <tocitem text="Global Exclude URL" target="ui.dialogs.options.globalexcludeurl"/>
+         	<tocitem text="HTTP Sessions" target="ui.dialogs.options.httpsessions"/>
+         	<tocitem text="JVM" target="ui.dialogs.options.jvm"/>
+         	<tocitem text="Keyboard" target="ui.dialogs.options.keyboard"/>
+         	<tocitem text="Language" target="ui.dialogs.options.language"/>
+         	<tocitem text="Passive Scan Rules" target="ui.dialogs.options.pscanrules"/>
+         	<tocitem text="Passive Scan Tags" target="ui.dialogs.options.pscan"/>
+         	<tocitem text="Passive Scanner" target="ui.dialogs.options.pscan.main"/>
+         	<tocitem text="Rule Configuration" target="ui.dialogs.options.ruleconfig"/>
+         	<tocitem text="Scripts" target="ui.dialogs.options.script"/>
+         	<tocitem text="Search" target="ui.dialogs.options.search"/>
+         	<tocitem text="Statistics" target="ui.dialogs.options.stats"/>
          </tocitem>
-         <tocitem text="Сохранять сеанс " target="ui.dialogs.persistsession"/>
-         <tocitem text="Диспетчер политик сканирования " target="ui.dialogs.scanpolicymgr">
-	         <tocitem text="Политика сканирования " target="ui.dialogs.scanpolicy"/>
+         <tocitem text="Persist Session" target="ui.dialogs.persistsession"/>
+         <tocitem text="Scan Policy Manager" target="ui.dialogs.scanpolicymgr">
+	         <tocitem text="Scan Policy" target="ui.dialogs.scanpolicy"/>
          </tocitem>
-         <tocitem text="Прогресс сканирования " target="ui.dialogs.scanprogress"/>
-         <tocitem text="Сессия " target="ui.dialogs.sessprop">
-	         <tocitem text="Свойства сеанса " target="ui.dialogs.sessprop"/>
-	         <tocitem text="Контексты сеанса " target="ui.dialogs.contexts"/>
-	         <tocitem text="Аутентификация контекста сеанса " target="ui.dialogs.context-auth"/>
-	         <tocitem text="Структура контекста сеанса " target="ui.dialogs.context-struct"/>
+         <tocitem text="Scan Progress" target="ui.dialogs.scanprogress"/>
+         <tocitem text="Session" target="ui.dialogs.sessprop">
+	         <tocitem text="Session Properties" target="ui.dialogs.sessprop"/>
+	         <tocitem text="Session Contexts" target="ui.dialogs.contexts"/>
+	         <tocitem text="Session Context Authentication" target="ui.dialogs.context-auth"/>
+	         <tocitem text="Session Context Structure" target="ui.dialogs.context-struct"/>
          </tocitem>
-         <tocitem text="Паук " target="ui.dialogs.spider"/>
       </tocitem>
       <tocitem text="Нижний колонтитул " target="ui.footer"/>
    </tocitem>
@@ -130,6 +121,8 @@
    <tocitem text="Дополнения " target="addons.introduction" tocid="addons" image="addons.icon" />
    
    <tocitem text="Релизы " target="zap.releases">
+      <tocitem text="2.12.0" target="zap.releases.2.12.0"/>
+      <tocitem text="2.11.1" target="zap.releases.2.11.1"/>
       <tocitem text="2.11.0" target="zap.releases.2.11.0"/>
       <tocitem text="2.10.0" target="zap.releases.2.10.0"/>
       <tocitem text="2.9.0" target="zap.releases.2.9.0"/>

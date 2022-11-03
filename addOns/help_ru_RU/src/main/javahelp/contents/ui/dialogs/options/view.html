@@ -15,14 +15,14 @@
 Если ZAP обрабатывает изображения. 
 
 <h3>Показать (локальные) запросы CONNECT </h3>
-Если запросы HTTP CONNECT, полученные  <a href="localproxy.html">Локальные прокси </a> должны сохраняться в текущем 
-<a href="../../tlmenu/file.html">сеансе</a> и показано в  <a href="../../tabs/history.html">Вкладка История </a>. По умолчанию
-чтобы не показывать эти запросы, они происходят часто (при подготовке к TLS/SSL, WebSocket...  соединений) и, если не проверять
-поведение клиентского приложения, не представляют (обычно) большого интереса. 
+If the HTTP CONNECT requests received by ZAP's proxies should be persisted in the current
+<a href="../../tlmenu/file.html">session</a> and shown in the <a href="../../tabs/history.html">History tab</a>. The default is
+to not show those requests, they happen frequently (in preparation for TLS/SSL, WebSocket... connections) and, unless inspecting
+the behaviour of the client application, are not (usually) of much interest.
 
 <h3>Отображение</h3>
-Компоновка 3-х основных панелей. <br>
-Доступны следующие варианты: 
+The layout of the 3 main panels.<br>
+The following options are available:
 <ul>
     <li>Развернуть левую вкладку (Сайты) — панель «дерево», содержащая вкладку «Сайты», расширяется
          на всю длину левой стороны.  Это уменьшит количество
@@ -35,8 +35,8 @@
 </ul>
 
 <h3>Положение панели реагирования </h3>
-Позволяет настроить положение вкладки «Ответ» относительно вкладки «Запрос». <br>
-Доступны следующие варианты: 
+Allows to configure the position of the Response tab with respect to Request tab.<br>
+The following options are available:
 <ul>
     <li>Вкладки рядом — вкладки «Запрос» и «Ответ» расположены рядом.  Этот
          увеличивает информацию, которая может быть отображена, но означает, что вы не можете видеть как
@@ -51,27 +51,27 @@
          панель.  Это уменьшает информацию, которая может быть отображена, но означает, что вы можете видеть как
          запрос и ответ одновременно. </li>
 </ul>
-Параметр «Положение панели ответа» не применяется, если для параметра «Отображение» установлено значение «Полный макет». 
+The Response Panel Position option does not apply when the Display option is set to Full Layout.
 
 <h3>Показать кнопки перерыва </h3>
-Расположение кнопок прерывания. 
+The location of the break buttons.
 
 <h3>Минимальный размер просмотра большого запроса </h3>
-Минимальный размер тела запроса в байтах, при котором вместо фактического тела будет отображаться сообщение «большое тело запроса». <br>
-Это делается для того, чтобы очень большие тела не замедляли работу пользовательского интерфейса. <br>
-Установка этого значения на -1 приведет к тому, что запрос всегда будет отображаться, независимо от его размера. 
+The minimum size of a request body in bytes at which point a 'large request body' message will be shown instead of the actual body.<br>
+This is to prevent very large bodies from slowing down the UI.<br>
+Setting this value to -1 will result in request always being displayed no matter how large it is.
 
 <h3>Минимальный размер большого представления ответа </h3>
-Минимальный размер тела ответа в байтах, при котором вместо фактического тела будет отображаться сообщение «большое тело ответа». <br>
-Это делается для того, чтобы очень большие тела не замедляли работу пользовательского интерфейса. <br>
-Установка этого значения на -1 приведет к тому, что ответ всегда будет отображаться независимо от его размера. 
+The minimum size of a response body in bytes at which point a 'large response body' message will be shown instead of the actual body.<br>
+This is to prevent very large bodies from slowing down the UI.<br>
+Setting this value to -1 will result in response always being displayed no matter how large it is.
 
 <h3>Вкладки вывода Параметры штампа времени </h3>
-После того, как вы включили метки времени на вкладке вывода, вы можете настроить формат, в котором вы хотите, чтобы эти метки времени отображались.  
-Либо выберите предопределенный формат из раскрывающегося списка, либо введите свой собственный.  Формат основан на Java
-Простой формат даты.  После выбора или ввода формата метки времени, если вы нажмете ввод, пример справа будет обновлен.
-чтобы отразить ваш выбор.  Если ZAP не может использовать введенный вами формат, пример отображается на основе
-в формате по умолчанию. 
+Once you've enabled time stamps on the output tab you can configure the format you would like those time stamps to appear in. 
+Either select a pre-defined format from the drop-down list or enter one of your own choosing. The format is based on Java's
+SimpleDateFormat. After choosing or entering a time stamp format if you press enter the example on the right will be updated
+to reflect your choice. If ZAP is unable to use a format you've entered then the example is displayed based 
+on the Default format.
 
 <table border="1" cellpadding="5">
 <tr> <td> Long &amp; Default </td> <td> yyyy-MM-dd HH:mm:ss </td> </tr>
@@ -80,16 +80,16 @@
 </table>
 
 <h3>Элементы управления шрифтом </h3>
-Раздел «Общий шрифт» управляет шрифтом и размером текста по умолчанию, используемым для отображения ZAP, в то время как раздел «Шрифт рабочих панелей»
-управляет шрифтом, используемым для верхней правой части главного окна ZAP (например, инструмент «Запрос/ответ», «Редактировать и повторно отправить» и т. д.). 
-Если вы установите значение -1, будет использоваться системный размер по умолчанию. <br>
-Поле «Пример шрифта» покажет вам, насколько большим будет текст по умолчанию. <br>
-<strong>Примечание: </strong> Этот параметр вступит в силу только после перезапуска ZAP. 
+The General Font section controls default text font and size used for the ZAP display, while the Work Panels Font section 
+controls the font used for the top right section of ZAP's main window (Ex: Request/Response, Edit and Resend tool, etc.).
+If you set this to -1 then the system default size will be used.<br>
+The 'Font Example' field will show you how large the default text will appear.<br>
+<strong>Примечание: </strong> This setting will only take effect when ZAP is restarted.
 
 <h3>Смотреть и чувствовать</h3>
-Позволяет выбрать внешний вид ZAP. Если пусто, используется значение по умолчанию,  <code>Nimbus</code> в Windows и Linux родной
-внешний вид системы в macOS. <br />
-Системное свойство  <code>swing.defaultlaf</code> имеет приоритет над этой опцией. 
+Allows to choose the look and feel of ZAP. If empty the default is used, <code>Nimbus</code> in Windows and Linux, the native
+system look and feel in macOS.<br />
+The system property <code>swing.defaultlaf</code> takes precedence over this option.
 
 <h2>Смотрите также </h2>
 <table>

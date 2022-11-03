@@ -26,34 +26,37 @@ Bu, yükleri üretmek için komut dosyalarının yanı sıra ön ve direk saldı
 
 <h3>Gelişmiş seçeneklerle tarama pencereleri</h3>
 
-Yeni <a href="../ui/dialogs/advascan.html">Aktif Tarama</a>, <a href="../ui/dialogs/spider.html">Örümcek</a> ve AJAX Örümcek diyalogları 
-artan sağ tıklamanın sayısı 'Saldırı' seçeneklerine değiştirildi.<br>
-Bunlar, en yaygın seçeneklerin tümüne kolay erişim sağlar ve isteğe bağlı olarak geniş kapsamlı ileri düzey seçenekler sunar. 
+Yeni <a href="../ui/dialogs/advascan.html">Aktif Tarama</a>, Spider and AJAX Spider dialogs have replaced
+the increasing number of right click 'Attack' options.<br>
+These provide easy access to all of the most common options and optionally a wide range of advanced options. 
 
 <h3>Tarama İlkeleri</h3>
 
-Yeni <a href="../ui/dialogs/scanpolicymgr.html">Tarama İlkesi Yönetici penceresi</a> birden fazla oluşturmaya izin verir 
-<a href="../start/features/scanpolicy.html">Tarama İlkeleri</a> gerek duyduğunuz kadar.<br>
-Tarama politikaları tam olarak hangi kuralların bir parçası olarak çalıştığını tanımlar <a href="../start/features/ascan.html">Aktif Tarama</a>.<br>
-Ayrıca bu kuralların kaç tane istek yapılmasını etkilediğini ve olası sorunların bayrak üzerinde olma olasılığını da tanımlarlar.<br>
+A new <a href="../ui/dialogs/scanpolicymgr.html">Scan Policy Manager dialog</a> allows you to create as many 
+<a href="../start/features/scanpolicy.html">Scan Policies</a> as you need.<br>
+Scan policies define exactly which rules are run as part of an <a href="../start/features/ascan.html">Active Scan</a>.<br>
+They also define how these rules run influencing how many requests are made and how likely potential issues are to be flagged.<br>
 
 <h3>Kullanılmayan sekmeler gizlendi</h3>
 
-ZAP başlatıldığında varsayılan olarak sadece başlıca sekmeler gösterilir.<br>
-Kalan sekmeler kullanıldıklarında (örümcek ve etkin tarayıcı gibi) veya görüntülendiklerinde her bir pencerenin en sağındaki özel sekmeyi yeşil '+' simgesiyle işaretleyin. Eğer gizli sekmeler yoksa bu özel sekme kaybolur.<br>
-Sekmeler sekme seçildiğinde gösterilen küçük bir 'x' simgesi ile kapatılabilir.<br>
-Sekmeler aynı zamanda sekme seçildiğinde de gösterilen küçük bir 'iğne' simgesi kullanılarak sabitlenebilir - sonraki ZAP başlatıldığında sabitlenmiş sekmeler gösterilir. 
+By default only the essential tabs are now shown when ZAP starts up.<br>
+The remaining tabs are revealed when they are used (e.g. for the spider and active scanner) or when you display them via the 
+special tab on the far right of each window with the green '+' icon. This special tab disappears if there are no hidden tabs.<br>
+Tabs can be closed via a small 'x' icon which is shown when the tab is selected.<br>
+Tabs can also be 'pinned' using a small 'pin' icon that is also shown when the tab is selected - pinned tabs will be shown
+when ZAP next starts up. 
 
 <h3>Sıra tarama eklentisi için etkinleştiriciler</h3>
 
-Yeni bir isteğe bağlı 'alfa' kalite eklentisi, web sayfalarının 'dizileri' tarama yeteneğini, diğer bir deyişle ziyaret edilmesi gereken sayfaları doğru çalışması için uygun bir şekilde sıralar. 
+A new optional 'alpha' status add-on adds the ability to scan 'sequences' of web pages, in other words pages that must be visited
+in a strict order in order to work correctly. 
 
 <h3>Erişim noktası test eklentisi sağlayıcı</h3>
 
-Yeni isteğe bağlı 'alfa' kalite eklentisi erişim kontrolü testinin birçok yönünü otomatikleştirme yeteneği ekler. 
+A new optional 'alpha' status add-on adds the ability to automate many aspects of access control testing. 
 
 <h3>API kullanıcıları için not</h3>
-Harici Yönlendirme tarayıcı Eklenti Kimliğinin 30000'den 20019'a kadar değiştiğini unutmayın.
+Please be aware that the Plugin ID for the External Redirect scanner has changed from 30000 to 20019.
 
 <h2>Değişikliklerin tam listesi:</h2>
 <ul>
@@ -86,7 +89,7 @@ Harici Yönlendirme tarayıcı Eklenti Kimliğinin 30000'den 20019'a kadar deği
 <li>Sorun 1215 : Ağaç Sıralama/Ayrıştırma Sorunu Uyarısı Kullanılabilirlik</li>
 <li>Sorun 1216: Kod sekmesindeki yazım hatası</li>
 <li>Sorun 1217 : İçerik türü üst bilgisinde karakter seti kullanılabilir olduğunda tablo biçimi bilgi görüntülemez</li>
-<li>Sorun 1224 : Tarama Politikası İletişim Kutularındaki Kullanılabilirlik Durumunda Görüntülenen Kalite/Durum</li>
+<li>Issue 1224 : Display Status in Scan Policy Dialogs - Usability</li>
 <li>Sayı 1226: Etkin tarayıcı hariç tutulan parametrenin regexes'i doğrulanmadı</li>
 <li>Sorun 1227 : Aktif tarayıcı istek gövdesi içeriğiyle GET istekleri gönderir</li>
 <li>Sorun 1238 : NullPointerException aktif bir tarayıcı geçersiz saldırı ile uyarı verirse</li>

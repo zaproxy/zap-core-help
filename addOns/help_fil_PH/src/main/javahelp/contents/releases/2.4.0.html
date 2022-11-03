@@ -26,35 +26,37 @@ Ang mga pagsuporta na ito ng mga bagong pag atake ng mga payloads na isinama ang
 
 <h3>Ang pag-iskan ng mga diyalogo sa pamamagitan ng pagsulong nga mga opsyon</h3>
 
-Ang bagong <a href="../ui/dialogs/advascan.html">Aktibong Pag-iskan</a>, <a href="../ui/dialogs/spider.html">Ng Ispayder</a> at AJAX na Ispayder ng mga diyalogo ay napalitan ng pagtataas ng bilang na tamang pindot ng 'pag atake' ng mga opsyon.<br>
-Ito ay nagbibigay ng madaliang pagpapatakbo sa lahat ng mga pinaka karaniwang mga opsyon at isang malawak na opsyonal na sakop ng pagsulong ng mga opsyon. 
+Ang bagong <a href="../ui/dialogs/advascan.html">Aktibong Pag-iskan</a>, Spider and AJAX Spider dialogs have replaced
+the increasing number of right click 'Attack' options.<br>
+These provide easy access to all of the most common options and optionally a wide range of advanced options. 
 
 <h3>Ang mga patakaran ng pag-iskan</h3>
 
-Ang bagong <a href="../ui/dialogs/scanpolicymgr.html">Pag-iskan ng patakaran ng namamahala ng diyalogo</a> ay pinahihintulutan ka na bumuo ng maraming 
-<a href="../start/features/scanpolicy.html">Mga patakaran ng pag-iskan</a> hangga't kinakailngan mo.<br>
-Ang mga patakaran ng pag-iskan ay tumutukoy eksaktokung aling mga patakaran ang papatakbuhin bilang parte ng isang <a href="../start/features/ascan.html">Aktibong Pag-iskan</a>.<br>
-Tinukoy din nila kung paano itong mga patakaran ay tumakbo ng paano nakakaimpluwensya sa karamihan ng mga kahilingan na ginawa at paano ginustong i-flag ang mga postensyal na mga isyu.<br>
+A new <a href="../ui/dialogs/scanpolicymgr.html">Scan Policy Manager dialog</a> allows you to create as many 
+<a href="../start/features/scanpolicy.html">Scan Policies</a> as you need.<br>
+Scan policies define exactly which rules are run as part of an <a href="../start/features/ascan.html">Active Scan</a>.<br>
+They also define how these rules run influencing how many requests are made and how likely potential issues are to be flagged.<br>
 
 <h3>Ang mga nakatagong tab na hindi nagamit</h3>
 
-Sa pamamagitan lamang ng default ang mahalaga sa mga tab ay ngayon ay ipinakita habang ang ZAP ay nagsisimula.<br>
-Ang mga tab na natitira ay ibinubunyag habang sila ay ginagamit (e.g. para sa mga ispayder at aktibong pag-iskan) o habang ipinapakita mo sila sa pamamagitan
-ng espesyal na tab na nasa malayong kanan ng bawat window na mayroong berdeng '+' icon. Itong espesyal na tab ay mawawala kung walang nakatagong mga tab.<br>
-Ang mga Tab na ito ay maaaring magsarado sa pamamagitan ng isang maliit na 'x' na icon kapag ang tab ay napili.<br>
-Ang mga tab ay maaari ring 'ma-pinned' gamit ang isang maliit 'pin' na icon na makikita lamang habang ang tab ay napili - ang pinned na mga tab ay ipapakita 
-kapag ang ZAP ang sususnod na magsisimula. 
+By default only the essential tabs are now shown when ZAP starts up.<br>
+The remaining tabs are revealed when they are used (e.g. for the spider and active scanner) or when you display them via the 
+special tab on the far right of each window with the green '+' icon. This special tab disappears if there are no hidden tabs.<br>
+Tabs can be closed via a small 'x' icon which is shown when the tab is selected.<br>
+Tabs can also be 'pinned' using a small 'pin' icon that is also shown when the tab is selected - pinned tabs will be shown
+when ZAP next starts up. 
 
 <h3>Ang pagpapagana para sa pagkakasunod-sunod ng pag-iskan ng add-on</h3>
 
-Ang bagong opsyonal na 'alpha' na may kalidad na add-on ay nagdagdag ng kakayahan upang mag-iskan ng 'pagkakasunod-sunod' ng mga pahina ng web, sa ibang mga salita ang mga pahina na nabisita sa isang istriktong pagkakaayos sa pagpapatakbo ng tamang ayos. 
+A new optional 'alpha' status add-on adds the ability to scan 'sequences' of web pages, in other words pages that must be visited
+in a strict order in order to work correctly. 
 
 <h3>Ang pagpapagana para sa pagpapatakbo ng pagkontrol ng pagsubok ng add-on</h3>
 
-Ang bagong opsyonal na 'alpha' sa kalidad ng add-on na nagdadagdag ng abilidad na gawing awtomatiko ang karamihan sa mga aspeto ng pagpapatakbo sa pagkontrol ng pagsubok. 
+A new optional 'alpha' status add-on adds the ability to automate many aspects of access control testing. 
 
 <h3>Paalala para sa mga gumagamit API</h3>
-Mangyaring magkaroon ng kaalaman na ang ID ng Plugin para sa Panlabas na pag direktang muli ng pag-iskan ay nagbago mula sa 30000 hanggang 20019.
+Please be aware that the Plugin ID for the External Redirect scanner has changed from 30000 to 20019.
 
 <h2>Ang kabuuang listahan ng mga pagbabago:</h2>
 <ul>
@@ -87,7 +89,7 @@ Mangyaring magkaroon ng kaalaman na ang ID ng Plugin para sa Panlabas na pag dir
 <li>Isyu 1215 : ang alerto ng puno ng pagsasaayos/paghihiwalay ng paggamit ng isyu</li>
 <li>Isyu 1216 : ang typo sa mga iskrip ng tab</li>
 <li>Isyu 1217 : ang ayos ng talahanayan ay hindi nagpapakita ng impormasyon habang ang charset ay kasalukuyang nasa nilalaman-klase ng header</li>
-<li>Isyu 1224 : ang p-agpapakita ng kalidad/kalagayan sa pag-iskan ng pag-gamit ng mga patakaran ng diyalogo</li>
+<li>Issue 1224 : Display Status in Scan Policy Dialogs - Usability</li>
 <li>Isyu 1226 : Ang aktibong pag-iskan ay hindi kasama sa mga parametrong regexes na hindi nabigyang bisa</li>
 <li>Isyu 1227 : ang aktibong pag-iskan ng mga pagpapadala ng GET na mga kahilingan sa nilalaman sa katawan ng kahilingan</li>
 <li>Isyu 1238 : ang NullPointerException kung ang isang aktibong pag-iskan ay itinaas ang alerto kasama ang walang halaga na pag-atake</li>

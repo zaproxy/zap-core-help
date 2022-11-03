@@ -21,7 +21,6 @@ This functionality is based on code from the OWASP JBroFuzz project.
 <h3>Dynamic SSL certificates</h3>
 The support for SSL connections was improved and simplified.<br>
 User's can now create their own root certificate and distribute this into their HTTP clients.<br>
-Lásd <a href="../ui/dialogs/options/dynsslcert.html">Option: Dynamic SSL Certificates</a> for more details.  
 
 <h3>Daemon mode and API</h3>
 Starting ZAP with the "-daemon" command line option will cause it to run in the background in 'headless' mode, 
@@ -31,7 +30,7 @@ If ZAP is running as a daemon then the API is automatically enabled, otherwise t
 The API can be navigated by opening http://zap/ in your browser when proxying via ZAP. 
 
 <h3>Beanshell integration</h3>
-A <a href="http://www.beanshell.org/">BeanShell</a> is an interactive Java shell that can be used to execute BeanShell scripts.<br> 
+The <a href="http://www.beanshell.org/">BeanShell</a> is an interactive Java shell that can be used to execute BeanShell scripts.<br> 
 These scripts are a simplified form of Java that use many elements from Java syntax, but in a simpler scripting format. <br>
 All Java code is also valid BeanShell code.<br>
 BeanShell integration in OWASP ZAP enables you to write scripts using the ZAP functions and data set.<br> 
@@ -60,11 +59,11 @@ Out of the box support for the following languages:
 <h2>Minor changes:</h2>
 
 <h3>Hex view</h3>
-A <a href="../ui/tabs/request.html">Kérés</a>, <a href="../ui/tabs/response.html">Response</a> tabs now provide
+The <a href="../ui/tabs/request.html">Request</a>, <a href="../ui/tabs/response.html">Response</a> tabs now provide
 a 'Hex View' option which will display the request and response bodies in hex format. 
 
 <h3>Search results</h3>
-A <a href="../ui/tabs/search.html">Search tab </a> now displays all instances of a string found rather than just the first instance
+The <a href="../ui/tabs/search.html">Search tab </a> now displays all instances of a string found rather than just the first instance
 in each request or response. 
 
 <h3>Exclude URLs</h3>
@@ -92,13 +91,12 @@ There are now 2 buttons which allow you to switch between having the Sites and I
 <h3>Break tab icon changes colour when breakpoint hit</h3>
 While the Break tab is not in use its icon is a grey cross: &nbsp;
 <img src="../images/16/101grey.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
-Amikor egy <a href="../start/features/breakpoints.html">breakpoint</a> is hit the tab icon is changed 
+When a <a href="../start/features/breakpoints.html">breakpoint</a> is hit the tab icon is changed 
 to a red cross: &nbsp;
 <img src="../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
 
 <h3>Adjustable timeout</h3>
-A <a href="../ui/dialogs/options/connection.html">Option: Connection</a> screen allows you to set the timeout in seconds
-to make it easier to test slow applications.
+The Option: Connection screen allows you to set the timeout in seconds to make it easier to test slow applications.
 
 <h3>Library updates</h3>
 Most of the libraries used by ZAP have been updated to the latest versions.

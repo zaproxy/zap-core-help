@@ -40,7 +40,6 @@
          <tocitem text="Scripts" target="start.features.scripts"/>
          <tocitem text="Session Management" target="start.features.sessmanag"/>
          <tocitem text="Sites Tree" target="start.features.sitestree"/>
-         <tocitem text="Spider" target="start.features.spider"/>
          <tocitem text="Statistics" target="start.features.stats"/>
          <tocitem text="Structural Modifiers" target="start.features.structmods"/>
          <tocitem text="Structural Parameters" target="start.features.structparams"/>
@@ -65,10 +64,9 @@
          <tocitem text="Breakpoints" target="ui.tabs.breakpoints"/>
          <tocitem text="Alertes" target="ui.tabs.alerts"/>
          <tocitem text="Scan actif" target="ui.tabs.ascan"/>
-         <tocitem text="Robot" target="ui.tabs.spider"/>
-         <tocitem text="Générateur de bruit" target="ui.tabs.params"/>
-         <tocitem text="Params" target="ui.tabs.httpsessions"/>
-         <tocitem text="Sessions http" target="ui.tabs.output"/>
+         <tocitem text="Params" target="ui.tabs.params"/>
+         <tocitem text="HTTP Sessions" target="ui.tabs.httpsessions"/>
+         <tocitem text="Output" target="ui.tabs.output"/>
       </tocitem>
       <tocitem text="The Dialogs" target="ui.dialogs">
          <tocitem text="Scan actif" target="ui.dialogs.advascan"/>
@@ -77,7 +75,6 @@
          <tocitem text="Ajouter une note" target="ui.dialogs.addnote"/>
          <tocitem text="Find" target="ui.dialogs.find"/>
          <tocitem text="History Filter" target="ui.dialogs.historyfilter"/>
-         <tocitem text="Manual Request Editor" target="ui.dialogs.manreq"/>
          <tocitem text="Manage Add-ons" target="ui.dialogs.manageaddons"/>
          <tocitem text="Manage History Tags" target="ui.dialogs.managetags"/>
          <tocitem text="Options" target="ui.dialogs.options">
@@ -87,26 +84,21 @@
          	<tocitem text="Anti CSRF Tokens" target="ui.dialogs.options.anticsrf"/>
          	<tocitem text="API" target="ui.dialogs.options.api"/>
             <tocitem text="Breakpoints" target="ui.dialogs.options.breakpoints"/>
-         	<tocitem text="Certificate" target="ui.dialogs.options.certificate"/>
          	<tocitem text="Check for Updates" target="ui.dialogs.options.checkforupdates"/>
-			<tocitem text="Connection" target="ui.dialogs.options.connection"/>
 			<tocitem text="Database" target="ui.dialogs.options.database"/>
          	<tocitem text="Display" target="ui.dialogs.options.view"/>
-         	<tocitem text="Dynamic SSL Certificates" target="ui.dialogs.options.dynsslcert"/>
             <tocitem text="Extensions" target="ui.dialogs.options.ext"/>
             <tocitem text="Global Exclude URL" target="ui.dialogs.options.globalexcludeurl"/>
          	<tocitem text="HTTP Sessions" target="ui.dialogs.options.httpsessions"/>
          	<tocitem text="JVM" target="ui.dialogs.options.jvm"/>
          	<tocitem text="Keyboard" target="ui.dialogs.options.keyboard"/>
          	<tocitem text="Language" target="ui.dialogs.options.language"/>
-         	<tocitem text="Local Proxies" target="ui.dialogs.options.localproxy"/>
          	<tocitem text="Passive Scan Rules" target="ui.dialogs.options.pscanrules"/>
          	<tocitem text="Passive Scan Tags" target="ui.dialogs.options.pscan"/>
          	<tocitem text="Passive Scanner" target="ui.dialogs.options.pscan.main"/>
          	<tocitem text="Rule Configuration" target="ui.dialogs.options.ruleconfig"/>
          	<tocitem text="Scripts" target="ui.dialogs.options.script"/>
          	<tocitem text="Search" target="ui.dialogs.options.search"/>
-         	<tocitem text="Spider" target="ui.dialogs.options.spider"/>
          	<tocitem text="Statistics" target="ui.dialogs.options.stats"/>
          </tocitem>
          <tocitem text="Persist Session" target="ui.dialogs.persistsession"/>
@@ -120,7 +112,6 @@
 	         <tocitem text="Session Context Authentication" target="ui.dialogs.context-auth"/>
 	         <tocitem text="Session Context Structure" target="ui.dialogs.context-struct"/>
          </tocitem>
-         <tocitem text="Spider" target="ui.dialogs.spider"/>
       </tocitem>
       <tocitem text="The Footer" target="ui.footer"/>
    </tocitem>
@@ -130,6 +121,8 @@
    <tocitem text="Add-ons" target="addons.introduction" tocid="addons" image="addons.icon" />
    
    <tocitem text="Releases" target="zap.releases">
+      <tocitem text="2.12.0" target="zap.releases.2.12.0"/>
+      <tocitem text="2.11.1" target="zap.releases.2.11.1"/>
       <tocitem text="2.11.0" target="zap.releases.2.11.0"/>
       <tocitem text="2.10.0" target="zap.releases.2.10.0"/>
       <tocitem text="2.9.0" target="zap.releases.2.9.0"/>

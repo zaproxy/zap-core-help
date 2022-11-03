@@ -13,7 +13,11 @@ Ang Anti CSRF na mga token ay (pseudo) random na mga parameter na nagamit sa pag
 Gayunman sila din ay gumawa ng isang pagtagos na mga tagasubok na trabahong mahirap, lalo na kung ang mga token ay nabuo sa bawat oras na ang form ay hiniling.<br>
 </p>
 <p>
-Ang Zap ay tumutukoy sa anti CSRF token panay sa pamamagitan ng mga pangalan ng attribute - nakakumpigura ang listahan ng mga pangalan ng katangian ng itinuturing na anti CSRF token gamit ang <a href="../../ui/dialogs/options/anticsrf.html"> screen ng mga opsyon Anti CSRF </a>. <br/> Noong tumukoy ng Zap ang mga token ito ay nagtala ng mga token na halaga at kung aling mga URL ay nakabuo ng mga tanda. Iba pang scanner tulan ng iskaner ng aktibo, ay may opsyon na dahilan ng mga ZAP sa awtomatikong pagkuha ng token kapag kinakailangan.
+ZAP detects anti CSRF tokens purely by attribute names - the list of attribute names considered to be anti CSRF tokens
+is configured using the <a href="../../ui/dialogs/options/anticsrf.html">Options Anti CSRF screen</a>.<br/>
+When ZAP detects these tokens it records the token value and which URL generated the token.<br/>
+Other tools, like the <a href="ascan.html">active scanner</a>, have options which
+cause ZAP to automatically regenerate the tokens when required.
 </p>
 
 <h2>Tingnan din</h2>

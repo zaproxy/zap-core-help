@@ -21,27 +21,27 @@ Fungsi ini didasarkan pada kode dari OWASP proyek JBroFuzz.
 <h3>Sertifikat SSL dinamis</h3>
 Dukungan untuk SSL ditingkatkan dan disederhanakan.<br>
 Pengguna sekarang dapat membuat sertifikat sumber mereka sendiri dan mendistribusikan ke klien HTTP.<br>
-Lihat <a href="../ui/dialogs/options/dynsslcert.html">Opsi: Sertifikat SSL dinamis</a> untuk lebih jelasnya.  
 
 <h3>Daemon mode dan API</h3>
-Memulai ZAP dengan opsi baris perintah "-daemon" akan menyebabkan untuk berjalan di latar belakang 'tanpa' mode, yang berarti bahwa tidak ada UI yang ditampilkan.<br>
-API awal ini telah diterapkan dalam XML, JSON dan HTML.<br>
-Jika ZAP berjalan sebagai daemon maka API secara otomatis diaktifkan, jika tidak, API harus diaktifkan melalui Opsi API layar.<br>
-API dapat navigasikan dengan membuka http://zap/ di browser Anda ketika proxying melalui ZAP. 
+Starting ZAP with the "-daemon" command line option will cause it to run in the background in 'headless' mode, 
+meaning that no UI is displayed.<br>
+An initial API has been implemented in XML, JSON and HTML.<br>
+If ZAP is running as a daemon then the API is automatically enabled, otherwise the API must be enabled via the Options API screen.<br>
+The API can be navigated by opening http://zap/ in your browser when proxying via ZAP. 
 
 <h3>Beanshell integrasi</h3>
-The <a href="http://www.beanshell.org/">BeanShell</a> interaktif Java shell yang dapat digunakan untuk mengeksekusi skrip BeanShell.<br> 
-Script ini adalah bentuk sederhana dari Java yang menggunakan banyak unsur dari Java sintaks, tetapi dalam format scripting yang lebih sederhana. <br>
-Semua kode Java adalah juga berlaku kode BeanShell.<br>
-Integrasi Beanshell di OWASP ZAP memungkinkan anda untuk menulis skrip menggunakan fungsi ZAP dan kumpulan data.<br> 
-Ini bisa menjadi fitur yang sangat kuat untuk menganalisis aplikasi web.<br>
+The <a href="http://www.beanshell.org/">BeanShell</a> is an interactive Java shell that can be used to execute BeanShell scripts.<br> 
+These scripts are a simplified form of Java that use many elements from Java syntax, but in a simpler scripting format. <br>
+All Java code is also valid BeanShell code.<br>
+BeanShell integration in OWASP ZAP enables you to write scripts using the ZAP functions and data set.<br> 
+This can be a very powerful feature for analyzing web applications.<br>
 
 
 <h3>Internasionalisasi penuh</h3>
-Menampilkan semua string yang sekarang sepenuhnya diinternasionalkan.
+All display string are now fully internationalised.
 
 <h3>Lokalisasi</h3>
-Dari dukungan untuk bahasa-bahasa berikut:
+Out of the box support for the following languages:
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Bahasa Inggris</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Bahasa Portugis Brazil</td></tr>
@@ -59,52 +59,54 @@ Dari dukungan untuk bahasa-bahasa berikut:
 <h2>Perubahan kecil:</h2>
 
 <h3>Tampilan Hex</h3>
-The <a href="../ui/tabs/request.html">Permintaan</a>, <a href="../ui/tabs/response.html">Respon</a> tab sekarang menyediakan
-'Hex' Melihat opsi yang akan menampilkan permintaan dan tanggapan pokol dalam format hex. 
+The <a href="../ui/tabs/request.html">Request</a>, <a href="../ui/tabs/response.html">Response</a> tabs now provide
+a 'Hex View' option which will display the request and response bodies in hex format. 
 
 <h3>Hasil pencarian</h3>
-The <a href="../ui/tabs/search.html">Tab Pencarian </a> sekarang menampilkan semua contoh dari string yang ditemukan daripada hanya contoh pertama di setiap permintaan atau tanggapan. 
+The <a href="../ui/tabs/search.html">Search tab </a> now displays all instances of a string found rather than just the first instance
+in each request or response. 
 
 <h3>Mengecualikan URL</h3>
-URL dapat secara eksplisit dikecualikan dari scanner aktif, laba-laba dan dari proxy.
+URLs can be explicitly excluded from the active scanner, spider and from the proxy.
 
 <h3>Salinan dukungan</h3>
-Sebagian besar panel sekarang menyediakan pilihan menu 'klik kanan' 'Salinan' termasuk pemindai Port dan panel kekerasan.
+Most of the panels now provide a 'right click' 'Copy' menu option, including the Port Scan and Brute Force panels.
 
 <h3>Dukungan Urungkan/Ulangi</h3>
-Semua bidang masukan sekarang mendukung Membuka/Mengulangi tindakan menggunakan sistem operasi default Membuka/Mengulangi akselerator:
+All of the input fields now support Undo/Redo actions using the operating systems default Undo/Redo accelerators:
 <ul>
 <li>Windows/Linux: Ctrl + Z / Ctrl + Y
 <li>Mac OS X: Cmd + Z / Cmd + Shift + Z
 </ul>
 
 <h3>Port scanner proxy dukungan dan timeout pilihan</h3>
-Port Pemindai sekarang bisa menggunakan proxy keluar (jika dikonfigurasikan) dan batas waktu dalam mili detik juga dapat diatur.
+The Port Scanner can now use the outgoing proxy (if configured) and the timeout in milliseconds can also now be set.
 
 <h3>Tombol istirahat permintaan dan respon</h3>
-Sekarang ada 2 tombol 'Set Break' untuk memungkinkan istirahat harus ditetapkan pada semua permintaan dan semua tanggapan secara mandiri. 
+There are now 2 'Set Break' buttons to allow breaks to be set on all requests and all responses independently. 
 
 <h3>Memperluas situs dan informasi tab tombol</h3>
-Sekarang ada 2 tombol yang memungkinkan anda untuk beralih antara memiliki Situs dan tab informasi yang diperluas.
+There are now 2 buttons which allow you to switch between having the Sites and Information tabs expanded.
 
 <h3>Break tab icon changes colour when breakpoint hit</h3>
-Sementara tab istirahat ini tidak digunakan ikon adalah salib abu-abu: &nbsp;
+While the Break tab is not in use its icon is a grey cross: &nbsp;
 <img src="../images/16/101grey.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
-Ketika <a href="../start/features/breakpoints.html">breakpoint</a> terkena tab ikon akan berubah ke Palang Merah; &nbsp;
+When a <a href="../start/features/breakpoints.html">breakpoint</a> is hit the tab icon is changed 
+to a red cross: &nbsp;
 <img src="../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
 
 <h3>Penyesuaian batas waktu</h3>
-The <a href="../ui/dialogs/options/connection.html">Opsi: koneksi</a> layar memungkinkan anda untuk mengatur batas waktu dalam hitungan detik agar memudahkan dalam menguji aplikasi yang lambat.
+The Option: Connection screen allows you to set the timeout in seconds to make it easier to test slow applications.
 
 <h3>Pembaruan perpustakaan</h3>
-Sebagian besar perpustakaan yang digunakan oleh ZAP telah diperbarui ke versi yang terbaru.
+Most of the libraries used by ZAP have been updated to the latest versions.
 
 <h3>Ikon baru :)</h3>
-Terima kasih kepada Simon Egli dan semuanya yang telah mengirimkan saran ikon yang keren.
+Thanks to Simon Egli and all others for submitting cool icon suggestions.
 
 <h2>Masalah yang diketahui:</h2>
 <h3>Mac OS X: SSL dinamis dan Google Chrome</h3>
-Saat ini SSL dinamis tidak bekerja ketika menggunakan Google Chrome. Hal ni karena ada masalah yang belum terselesaikan dengan Google Chrome dan Mac OS X Keychain. Ketika mengimpor OWASP ZAP Root CA ke dalam keychain dan meminta SSL situs web, pesan galat "sertifikat tidak Valid" yang ditampilkan.
+Currently Dynamic SSL is not working when using Google Chrome. This is because of an unresolved known issue with Google Chrome and Mac OS X Keychain. When importing OWASP ZAP's Root CA into the keychain and requesting a SSL website, an "Invalid certificate" error message is shown.
 
 <h2>Lihat juga</h2>
 <table>

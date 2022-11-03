@@ -26,33 +26,37 @@ Esto admite nuevas cargas útiles de ataque, incluida la opción de utilizar scr
 
 <h3>Escanear diálogos con opciones avanzadas</h3>
 
-Nuevo <a href="../ui/dialogs/advascan.html">Escaneo Activo</a>, <a href="../ui/dialogs/spider.html">Spider(Araña)</a> y los diálogos AJAX Spider han reemplazado el creciente número de opciones de 'Ataque' con el botón derecho.<br>
-Estos proporcionan un acceso fácil a todas las opciones más comunes y, opcionalmente, a una amplia gama de opciones avanzadas. 
+Nuevo <a href="../ui/dialogs/advascan.html">Escaneo Activo</a>, Spider and AJAX Spider dialogs have replaced
+the increasing number of right click 'Attack' options.<br>
+These provide easy access to all of the most common options and optionally a wide range of advanced options. 
 
 <h3>Reglas de escaneo...</h3>
 
-Un nuevo <a href="../ui/dialogs/scanpolicymgr.html">Diálogo del administrador de política de escaneo</a> te permite crear tantos 
-<a href="../start/features/scanpolicy.html">Reglas de escaneo...</a> como necesites.<br>
-Las políticas de escaneo definen exactamente qué reglas se ejecutan como parte de un <a href="../start/features/ascan.html">Escaneo Activo</a>.<br>
-También definen cómo se ejecutan estas reglas, lo que influye en la cantidad de solicitudes que se realizan y en la probabilidad de que se marquen los posibles problemas.<br>
+A new <a href="../ui/dialogs/scanpolicymgr.html">Scan Policy Manager dialog</a> allows you to create as many 
+<a href="../start/features/scanpolicy.html">Scan Policies</a> as you need.<br>
+Scan policies define exactly which rules are run as part of an <a href="../start/features/ascan.html">Active Scan</a>.<br>
+They also define how these rules run influencing how many requests are made and how likely potential issues are to be flagged.<br>
 
 <h3>Pestañas no utilizadas ocultas</h3>
 
-De forma predeterminada, solo se muestran las pestañas esenciales cuando se inicia ZAP.<br>
-Las pestañas restantes se revelan cuando se usan (por ejemplo, para la araña y el escáner activo) o cuando las muestras a través de la pestaña especial en el extremo derecho de cada ventana con el ícono verde "+". Esta pestaña especial desaparece si no hay pestañas ocultas.<br>
-Las pestañas se pueden cerrar mediante un pequeño ícono 'x' que se muestra cuando se selecciona la pestaña.<br>
-Las pestañas también se pueden 'fijar' usando un pequeño ícono 'pin' que también se muestra cuando se selecciona la pestaña: se mostrarán pestañas fijas cuando se inicie ZAP. 
+By default only the essential tabs are now shown when ZAP starts up.<br>
+The remaining tabs are revealed when they are used (e.g. for the spider and active scanner) or when you display them via the 
+special tab on the far right of each window with the green '+' icon. This special tab disappears if there are no hidden tabs.<br>
+Tabs can be closed via a small 'x' icon which is shown when the tab is selected.<br>
+Tabs can also be 'pinned' using a small 'pin' icon that is also shown when the tab is selected - pinned tabs will be shown
+when ZAP next starts up. 
 
 <h3>Habilitadores para el complemento de escaneo de secuencia</h3>
 
-Un nuevo complemento opcional de calidad 'alfa' agrega la capacidad de escanear 'secuencias' de páginas web, en otras palabras, páginas que deben visitarse en un orden estricto para funcionar correctamente. 
+A new optional 'alpha' status add-on adds the ability to scan 'sequences' of web pages, in other words pages that must be visited
+in a strict order in order to work correctly. 
 
 <h3>Habilitadores para el complemento de prueba de control de acceso</h3>
 
-Un nuevo complemento opcional de calidad 'alpha' agrega la capacidad de automatizar muchos aspectos de las pruebas de control de acceso. 
+A new optional 'alpha' status add-on adds the ability to automate many aspects of access control testing. 
 
 <h3>Nota para los usuarios de la API</h3>
-Tenga en cuenta que el identificador del Plugin para el explorador redirección externa ha cambiado de 30000 a 20019.
+Please be aware that the Plugin ID for the External Redirect scanner has changed from 30000 to 20019.
 
 <h2>Lista completa de cambios:</h2>
 <ul>
@@ -85,7 +89,7 @@ Tenga en cuenta que el identificador del Plugin para el explorador redirección 
 <li>Número 1215: Árbol alerta ordenar/clasificar tema usabilidad</li>
 <li>Problema de 1216: Error en la ficha secuencias de comandos</li>
 <li>Número 1217: Formato de la tabla no muestra información al conjunto de caracteres está presente en el encabezado Content-Type</li>
-<li>Número 1224: Mostrar la calidad, estado en exploración usabilidad de diálogos de política</li>
+<li>Issue 1224 : Display Status in Scan Policy Dialogs - Usability</li>
 <li>Número 1226: Scanner activo excluidos regexes del parámetro no validado</li>
 <li>Número 1227: Scanner activo envía solicitudes GET con contenido en el cuerpo de la solicitud</li>
 <li>Número 1238: NullPointerException si un escáner activo plantea una alerta con ataque null</li>

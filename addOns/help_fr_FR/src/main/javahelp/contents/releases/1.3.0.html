@@ -21,7 +21,6 @@ Cette fonctionnalité est basée sur le code de l'OWASP JBroFuzz projet.
 <h3>Dynamique SSL certificats</h3>
 Le soutien pour SSL connexions a été amélioré et simplifié.<br>
 Les utilisateurs peuvent désormais créer leur propre certificat racine et de distribuer ce dans leur HTTP les clients.<br>
-Voir <a href="../ui/dialogs/options/dynsslcert.html">Option: Dynamic SSL Certificates</a> for more details.  
 
 <h3>Daemon mode and API</h3>
 Starting ZAP with the "-daemon" command line option will cause it to run in the background in 'headless' mode, 
@@ -33,16 +32,16 @@ The API can be navigated by opening http://zap/ in your browser when proxying vi
 <h3>Intégration BeanShell</h3>
 The <a href="http://www.beanshell.org/">BeanShell</a> is an interactive Java shell that can be used to execute BeanShell scripts.<br> 
 These scripts are a simplified form of Java that use many elements from Java syntax, but in a simpler scripting format. <br>
-Tous les code Java est également valable BeanShell code.<br>
-BeanShell intégration dans l'OWASP ZAP vous permet d'écrire des scripts à l'aide du ZAP de fonctions et de données.<br> 
-Cela peut être une fonctionnalité très puissante pour l'analyse des applications web.<br>
+All Java code is also valid BeanShell code.<br>
+BeanShell integration in OWASP ZAP enables you to write scripts using the ZAP functions and data set.<br> 
+This can be a very powerful feature for analyzing web applications.<br>
 
 
 <h3>Full internationalisation</h3>
-Toutes chaîne d'affichage sont maintenant entièrement internationalisé.
+All display string are now fully internationalised.
 
 <h3>Localisation</h3>
-Hors de la boîte en charge les langues suivantes:
+Out of the box support for the following languages:
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Anglais</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Portugais brésilien</td></tr>
@@ -60,18 +59,18 @@ Hors de la boîte en charge les langues suivantes:
 <h2>Changements mineurs :</h2>
 
 <h3>Hex view</h3>
-The <a href="../ui/tabs/request.html">Requête</a>, <a href="../ui/tabs/response.html">Réponse</a> tabs now provide
+The <a href="../ui/tabs/request.html">Request</a>, <a href="../ui/tabs/response.html">Response</a> tabs now provide
 a 'Hex View' option which will display the request and response bodies in hex format. 
 
 <h3>Search results</h3>
-The <a href="../ui/tabs/search.html">Search tab </a> maintenant affiche toutes les occurrences d'une chaîne est trouvée plutôt que de simplement la première instance
-dans chaque requête ou de la réponse. 
+The <a href="../ui/tabs/search.html">Search tab </a> now displays all instances of a string found rather than just the first instance
+in each request or response. 
 
 <h3>Exclude URLs</h3>
 URLs can be explicitly excluded from the active scanner, spider and from the proxy.
 
 <h3>Copy support</h3>
-La plupart des panneaux fournissent maintenant un 'clic droit' sur "Copier" du menu option, y compris l'Analyse du Port et de la Force Brute des panneaux.
+Most of the panels now provide a 'right click' 'Copy' menu option, including the Port Scan and Brute Force panels.
 
 <h3>Undo/Redo support</h3>
 All of the input fields now support Undo/Redo actions using the operating systems default Undo/Redo accelerators:
@@ -84,10 +83,10 @@ All of the input fields now support Undo/Redo actions using the operating system
 The Port Scanner can now use the outgoing proxy (if configured) and the timeout in milliseconds can also now be set.
 
 <h3>De demande et de réponse pause boutons</h3>
-Il y a maintenant 2 'Set Casser" des boutons pour permettre des pauses pour être fixé sur toutes les demandes et toutes les réponses de façon indépendante. 
+There are now 2 'Set Break' buttons to allow breaks to be set on all requests and all responses independently. 
 
 <h3>Développer des Sites et des Informations boutons de l'onglet</h3>
-Il y a maintenant 2 boutons qui vous permettent de basculer entre les Sites et les onglets d'Informations élargi.
+There are now 2 buttons which allow you to switch between having the Sites and Information tabs expanded.
 
 <h3>Break tab icon changes colour when breakpoint hit</h3>
 While the Break tab is not in use its icon is a grey cross: &nbsp;
@@ -97,18 +96,17 @@ to a red cross: &nbsp;
 <img src="../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
 
 <h3>Adjustable timeout</h3>
-The <a href="../ui/dialogs/options/connection.html">Option: Connection</a> l'écran vous permet de définir le délai d'attente en secondes
-pour le rendre plus facile pour tester des applications lentes.
+The Option: Connection screen allows you to set the timeout in seconds to make it easier to test slow applications.
 
 <h3>Library updates</h3>
-La plupart des bibliothèques utilisées par ZAP ont été mis à jour vers les dernières versions.
+Most of the libraries used by ZAP have been updated to the latest versions.
 
 <h3>A new icon :)</h3>
-Merci à Simon Egli et tous les autres pour la présentation cool icône suggestions.
+Thanks to Simon Egli and all others for submitting cool icon suggestions.
 
 <h2>Known issues:</h2>
 <h3>Mac OS X: Dynamic SSL and Google Chrome</h3>
-Actuellement Dynamique SSL ne fonctionne pas lors de l'utilisation de Google Chrome. C'est parce que de résoudre un problème connu avec Google Chrome et Mac OS X un Trousseau de clés. Lors de l'importation de l'OWASP ZAP de l'autorité de certification Racine dans le trousseau d'accès et de demander un SSL site web, un "certificat non Valide" message d'erreur est affiché.
+Currently Dynamic SSL is not working when using Google Chrome. This is because of an unresolved known issue with Google Chrome and Mac OS X Keychain. When importing OWASP ZAP's Root CA into the keychain and requesting a SSL website, an "Invalid certificate" error message is shown.
 
 <h2>Voir aussi</h2>
 <table>
