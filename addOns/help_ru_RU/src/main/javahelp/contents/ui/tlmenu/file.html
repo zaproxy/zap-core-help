@@ -19,39 +19,42 @@
 Это открывает сеанс, который был ранее сохранен. <br/>
 Открытие сеанса без сохранения текущего сеанса приведет к потере всех данных текущего сеанса. 
 
-<h3>Сохранить Сессию...</h3>
-Это сохраняет текущий сеанс.  <br/>
-Хотя сеанс всегда хранится в базе данных на диске, он будет потерян при остановке ZAP, если только он не был сохранен. <br/>
-Вам нужно сохранить его только один раз - после этого все изменения будут сохранены. 
+<h3>Open Recent</h3>
+A list of files that have been recently accessed.
 
-<h3>Снимок сеанса как... </h3>
-Это сохраняет моментальный снимок сеанса, который уже был сохранен. <br/>
-Он предложит то же имя файла, что и сохраненный сеанс, с добавленной к нему строкой даты и времени, и позволит пользователю установить любое имя по своему выбору. <br/>
+<h3>Persist Session...</h3>
+This persists the current session. <br/>
+While the session is always stored in a database on disk, it will be lost when ZAP is stopped unless it has been persisted.<br/>
+You only need to persist it once - after that all changes will be saved.
 
-<h3>Свойства сеанса... </h3>
-Это отображает  <a href="../dialogs/session/sessprop.html">Свойства сессии</a> диалог<br/>
-Это позволяет вам установить имя и описание сеанса. 
+<h3>Snapshot Session As...</h3>
+This saves a snapshot of a session that has already been persisted.<br/>
+It will suggest the same filename as the persisted session with a date-time string appended to it, and allow the user to set whatever name they choose.<br/>
 
-<h3>Импортировать Контекст... </h3>
-Позволяет импортировать  <a href="../../start/features/contexts.html">Контекст</a>.
+<h3>Session Properties...</h3>
+This displays the <a href="../dialogs/session/sessprop.html">Свойства сессии</a> dialog.<br/>
+This allows you to set the session name and description.
 
-<h3>Экспортировать Контекст</h3>
-Позволяет экспортировать контекст. 
+<h3>Import Context...</h3>
+Allows to import a <a href="../../start/features/contexts.html">Контекст</a>.
 
-<h3>Загрузить файл дополнения... </h3>
-Загрузите локальный  <a href="../../start/features/addons.html">дополнения </a> файл.<br/>
-Дополнения обычно устанавливаются через  <a href="../dialogs/manageaddons.html">Управление дополнениями</a> диалог, но это
-Опция может быть полезна, если вы загрузили надстройку вручную или тестируете надстройку, которую разработали сами. <br/>
-Надстройки остаются установленными до тех пор, пока вы не удалите их вручную.  
+<h3>Export Context...</h3>
+Allows to export a Context.
 
-<h3>Выйти и удалить сеанс... </h3>
-Это приведет к выходу из ZAP и удалению сеанса, даже если вы ранее сохраняли его. <br/>
-Сеанс больше не будет доступен после перезапуска ZAP, хотя все снимки, которые вы сделали, останутся доступными. <br/> 
-Появится диалоговое окно с предупреждением, чтобы убедиться, что вы действительно хотели выбрать эту опцию. 
+<h3>Load Add-on file...</h3>
+Load a local <a href="../../start/features/addons.html">дополнения </a> file.<br/>
+Add-ons are typically installed from via the <a href="../dialogs/manageaddons.html">Управление дополнениями</a> dialog, but this
+option can be useful if you have downloaded an add-on manually or are testing one you have developed yourself.<br/>
+Add-ons remain installed until you manually uninstall them. 
 
-<h3>Выход</h3>
-Это приведет к выходу из ZAP. <br/>
-Если вы не сохранили текущую сессию, вам будет предоставлена возможность сделать это. 
+<h3>Exit and Delete Session...</h3>
+This will exit ZAP and delete the session, even if you have previously persisted it.<br/>
+The session will no longer be accessible when you restart ZAP, although any snapshots you took will still be available.<br/> 
+A warning dialog will be displayed to ensure you really meant to choose this option.
+
+<h3>Exit</h3>
+This will exit ZAP.<br/>
+If you have not saved the current session then you will be given the option to do so.
 
 <p>
 Обратите внимание, что <a href="../../start/features/addons.html">надстройки</a> могут добавлять дополнительные пункты меню. 

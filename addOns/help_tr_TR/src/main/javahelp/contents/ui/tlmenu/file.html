@@ -19,38 +19,42 @@ Geçerli oturumu kaydetmeden yeni bir oturum başlatmak, bu oturumdaki tüm veri
 Önceden kaydedilen bir oturumu açar.<br/>
 Geçerli oturumu kaydetmeden yeni bir oturum başlatmak, bu oturumdaki tüm verileri kaybedecektir.
 
-<h3>Oturumu Sürdür...</h3>
-Şu anki oturumu sürdürür. <br/>
-Oturum her zaman bir veritabanında diskte saklanırken, ZAP devam ettirilmediği sürece ZAP durdurulduğunda kaybolur.<br/>
-Bütün değişiklikler kayıt edildikten sonra - sadece bir kez devam ettirmeniz gerek.
+<h3>Open Recent</h3>
+A list of files that have been recently accessed.
 
-<h3>Oturum Anlık Görünümü olarak...</h3>
-Bu, zaten devam eden bir oturumun anlık görüntüsünü kaydeder.<br/>
-Bir tarih-saat dizgesi eklenmiş devam eden oturum ile aynı dosya adını önerecek ve kullanıcının seçtiği adları ayarlamasına izin verecektir.<br/>
+<h3>Persist Session...</h3>
+This persists the current session. <br/>
+While the session is always stored in a database on disk, it will be lost when ZAP is stopped unless it has been persisted.<br/>
+You only need to persist it once - after that all changes will be saved.
 
-<h3>Oturum Özellikleri...</h3>
-Bu görüntüler <a href="../dialogs/session/sessprop.html">Oturum Özellikleri</a> diyalog.<br/>
-Bu oturum adını ve açıklamasını düzenlemenizi sağlar.
+<h3>Snapshot Session As...</h3>
+This saves a snapshot of a session that has already been persisted.<br/>
+It will suggest the same filename as the persisted session with a date-time string appended to it, and allow the user to set whatever name they choose.<br/>
 
-<h3>İçeriği içe aktar...</h3>
-İçe aktarmaya izin verir <a href="../../start/features/contexts.html">Bağlam</a>.
+<h3>Session Properties...</h3>
+This displays the <a href="../dialogs/session/sessprop.html">Oturum Özellikleri</a> dialog.<br/>
+This allows you to set the session name and description.
 
-<h3>Bağlamı dışa aktar...</h3>
-Bir Bağlamı dışa aktarmaya izin verir.
+<h3>Import Context...</h3>
+Allows to import a <a href="../../start/features/contexts.html">Bağlam</a>.
 
-<h3>Eklenti dosyası yükle...</h3>
-Bir yerel yükle <a href="../../start/features/addons.html">eklenti</a> dosya.<br/>
-Eklentiler genelde ... aracılığıyla yüklenir <a href="../dialogs/manageaddons.html">Eklentileri Yönet</a> diyaloğu, ancak bu seçenek eğer eklentiyi manuel olarak indirdiyseniz ya da kendi geliştirdiğiniz bir taneyi test ediyorsanız kullanışlı olabilir.<br/>
-Eklentiler kullanıcı tarafından kaldırılana kadar yüklü kalır. 
+<h3>Export Context...</h3>
+Allows to export a Context.
 
-<h3>Çıkış Yap ve Oturumu Sil...</h3>
-Bu, önceden devam ettirmiş olsanız bile oturumu siler ve ZAP'tan çıkış yapar.<br/>
-ZAP'ı tekrardan başlattığınızda aldığınız tüm snapshot'ların hala kullanılabilir olmasına rağmen, o oturuma tekrar ulaşmanız mümkün olmayacaktır.<br/> 
-Gerçekten bu seçeneği seçmek istediğinizden emin olmak için bir uyarı diyaloğu gösterilecektir.
+<h3>Load Add-on file...</h3>
+Load a local <a href="../../start/features/addons.html">eklenti</a> file.<br/>
+Add-ons are typically installed from via the <a href="../dialogs/manageaddons.html">Eklentileri Yönet</a> dialog, but this
+option can be useful if you have downloaded an add-on manually or are testing one you have developed yourself.<br/>
+Add-ons remain installed until you manually uninstall them. 
 
-<h3>Çıkış Yap</h3>
-ZAP'tan çıkacaktır.<br/>
-Eğer geçerli oturumu kaydetmediyseniz, kaydetmeniz için bir seçenek sunulacaktır.
+<h3>Exit and Delete Session...</h3>
+This will exit ZAP and delete the session, even if you have previously persisted it.<br/>
+The session will no longer be accessible when you restart ZAP, although any snapshots you took will still be available.<br/> 
+A warning dialog will be displayed to ensure you really meant to choose this option.
+
+<h3>Exit</h3>
+This will exit ZAP.<br/>
+If you have not saved the current session then you will be given the option to do so.
 
 <p>
 Note that <a href="../../start/features/addons.html">add-ons</a> can add additional menu items.

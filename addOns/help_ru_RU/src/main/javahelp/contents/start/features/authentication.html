@@ -62,21 +62,21 @@
 		</li>
     	<li>Определите столько пользователей, сколько вам нужно, в разделе «Свойства сеанса» -> «Пользователи». </li>
 	</ol>
-   	После настройки аутентификации в ZAP становятся доступны различные действия. Например, теперь вы можете выбрать пользователя в  
-   	<a href="../../ui/dialogs/spider.html">Диалог паука </a>. Или, используя принудительный режим пользователя,
-    вы можете заставить все взаимодействия, которые проходят через ZAP для данного контекста, происходить с точки зрения пользователя.  
-   	Принудительный режим пользователя включается с помощью кнопки на панели инструментов (с пользователем и блокировкой) и
-    настраивается через Свойства сеанса -> Принудительный режим пользователя. 
+   	After configuring authentication, various actions are available in ZAP. For example, you can now select the user in the 
+   	Spider dialogue. Or, using the Forced User Mode, 
+   	you can force all the interactions that go through ZAP for a given Context to be from the perspective of a User. 
+   	The Forced User Mode is enabled via a button in the toolbar (the one with the user and the lock) and 
+   	is configured via Session Properties -> Forced User Mode.
 	<br>
-	Большинство описанных выше шагов применимо и к другим методам аутентификации.  Единственное, что меняется при попытке
-для настройки аутентификации с использованием другого метода - шаг 6.  Вместо этого выберите аутентификацию
-требуемый метод из раскрывающегося списка и настройте его при необходимости.  Подробнее о настройке каждого типа
-аутентификации можно найти в  <a href="authmethods.html">Методы аутентификации </a> странице и в  
-	<a href="../../ui/dialogs/session/contexts.html">Экраны контекстной сессии </a>.
+	Most of the steps above apply as well for other authentication methods. The only things that change when trying
+	to configure authentication using a different method is step 6. Instead of that, select the authentication
+	method required from the drop-down list and configure it as needed. More details about configuring each type 
+	of authentication can be found in the <a href="authmethods.html">Authentication Methods</a> page and in the 
+	<a href="../../ui/dialogs/session/contexts.html">Context Session screens</a>.
 
 	<h2><a name="envvars">Переменные среды заголовка аутентификации </a></h2>
-	Доступен набор переменных среды, которые позволяют легко добавлять заголовок аутентификации ко всем запросам, которые передаются через ZAP или инициируются.
-инструментами ZAP, включая пауков и активный сканер:  
+	A set of environmental variables are available which allow you to easily add an authentication header to all of the requests that are proxied through ZAP or initiated
+	by the ZAP tools, including the spiders and active scanner: 
 	<ul>
 	<li>ZAP_AUTH_HEADER_VALUE - если это определено, то его значение будет добавлено в качестве заголовка ко всем запросам </li>
 	<li>ZAP_AUTH_HEADER - если это определено, то его значение будет использоваться как имя заголовка - если оно не определено, то стандарт

@@ -21,27 +21,27 @@
 <h3>动态SSL证书</h3>
 对SSL连接的支持得到了改进和简化。<br>
 用户现在可以创建自己的根证书并将其分发到他们的HTTP客户端。<br>
-请参阅 <a href="../ui/dialogs/options/dynsslcert.html">选项：动态SSL证书</a> 以获取更多信息。  
 
 <h3>守护进程模式和API</h3>
-使用“-daemon”命令行选项启动ZAP将使其在“无头”模式下在后台运行，这意味着没有UI显示。<br>
-最初版本的API已经在XML，JSON和HTML中实现。<br>
-如果ZAP作为守护程序运行，则API将自动启用，否则API必须通过选项 API屏幕启用。<br>
-在通过ZAP进行代理时，可以通过在浏览器中打开http://zap/ 来浏览API。 
+Starting ZAP with the "-daemon" command line option will cause it to run in the background in 'headless' mode, 
+meaning that no UI is displayed.<br>
+An initial API has been implemented in XML, JSON and HTML.<br>
+If ZAP is running as a daemon then the API is automatically enabled, otherwise the API must be enabled via the Options API screen.<br>
+The API can be navigated by opening http://zap/ in your browser when proxying via ZAP. 
 
 <h3>Beanshell集成</h3>
-The <a href="http://www.beanshell.org/">BeanShell</a> 是一个交互式的Java shell，可以用来执行BeanShell脚本。<br> 
-这些脚本是Java的一种简化形式，它使用Java语法中的许多元素，但采用更简单的脚本格式。 <br>
-所有的Java代码也是有效的BeanShell代码。<br>
-OWASP ZAP中的BeanShell集成使您能够使用ZAP函数和数据集编写脚本。<br> 
-这可以是分析Web应用程序的一个非常强大的功能。<br>
+The <a href="http://www.beanshell.org/">BeanShell</a> is an interactive Java shell that can be used to execute BeanShell scripts.<br> 
+These scripts are a simplified form of Java that use many elements from Java syntax, but in a simpler scripting format. <br>
+All Java code is also valid BeanShell code.<br>
+BeanShell integration in OWASP ZAP enables you to write scripts using the ZAP functions and data set.<br> 
+This can be a very powerful feature for analyzing web applications.<br>
 
 
 <h3>更国际化</h3>
-所有显示的字符串现在已经完全国际化。
+All display string are now fully internationalised.
 
 <h3>本地化</h3>
-对下列语言内置支持：
+Out of the box support for the following languages:
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>英文</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>巴西 葡萄牙语</td></tr>
@@ -59,7 +59,7 @@ OWASP ZAP中的BeanShell集成使您能够使用ZAP函数和数据集编写脚�
 <h2>小更改：</h2>
 
 <h3>十六进制视图</h3>
-一个 <a href="../ui/tabs/request.html">请求</a>, <a href="../ui/tabs/response.html">响应</a> tabs now provide
+The <a href="../ui/tabs/request.html">Request</a>, <a href="../ui/tabs/response.html">Response</a> tabs now provide
 a 'Hex View' option which will display the request and response bodies in hex format. 
 
 <h3>搜索结果</h3>
@@ -67,20 +67,20 @@ The <a href="../ui/tabs/search.html">Search tab </a> now displays all instances 
 in each request or response. 
 
 <h3>排除地址（URLs）</h3>
-URLs可以明确地从主动扫描器，Spider和代理中排除。
+URLs can be explicitly excluded from the active scanner, spider and from the proxy.
 
 <h3>提供复制功能</h3>
-大多数面板现在提供“右键单击”“复制”菜单选项，包括端口扫描面板和蛮力组件面板。
+Most of the panels now provide a 'right click' 'Copy' menu option, including the Port Scan and Brute Force panels.
 
 <h3>提供Undo/Redo功能</h3>
-所有输入字段区域现在都支持使用操作系统默认的撤销/重做加速器的撤消/重做操作：
+All of the input fields now support Undo/Redo actions using the operating systems default Undo/Redo accelerators:
 <ul>
 <li>Windows/Linux: Ctrl+Z / Ctrl+Y
 <li>Mac OS X: Cmd+Z / Cmd+Shift+Z
 </ul>
 
 <h3>端口扫描器代理支持和超时选项</h3>
-端口扫描器现在可以使用传出代理（如果已配置），现在也可以设置超时（以毫秒为单位）。
+The Port Scanner can now use the outgoing proxy (if configured) and the timeout in milliseconds can also now be set.
 
 <h3>请求和响应中断按钮</h3>
 There are now 2 'Set Break' buttons to allow breaks to be set on all requests and all responses independently. 
@@ -89,24 +89,24 @@ There are now 2 'Set Break' buttons to allow breaks to be set on all requests an
 There are now 2 buttons which allow you to switch between having the Sites and Information tabs expanded.
 
 <h3>Break tab icon changes colour when breakpoint hit</h3>
-当中断选项卡没有被使用时，它的图标是灰色的十字：
+While the Break tab is not in use its icon is a grey cross: &nbsp;
 <img src="../images/16/101grey.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
-当一个 <a href="../start/features/breakpoints.html">breakpoint</a> 被点击时，图标变为红色的十字：
+When a <a href="../start/features/breakpoints.html">breakpoint</a> is hit the tab icon is changed 
+to a red cross: &nbsp;
 <img src="../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
 
 <h3>可调整的超时设置</h3>
-一个 <a href="../ui/dialogs/options/connection.html">选项：连接</a> screen allows you to set the timeout in seconds
-to make it easier to test slow applications.
+The Option: Connection screen allows you to set the timeout in seconds to make it easier to test slow applications.
 
 <h3>库的更新</h3>
-ZAP使用的大多数库已经更新到最新版本。
+Most of the libraries used by ZAP have been updated to the latest versions.
 
 <h3>一个新的图标</h3>
-感谢Simon Egli和所有其他人提交的很酷的图标建议。
+Thanks to Simon Egli and all others for submitting cool icon suggestions.
 
 <h2>已知问题：</h2>
 <h3>Mac OS X：动态SSL和Google Chrome浏览器</h3>
-目前动态SSL在使用Google Chrome时无法使用。 这是因为Google Chrome和Mac OS X钥匙串尚未解决的已知问题。 将OWASP ZAP的根CA导入钥匙串并请求SSL网站时，会显示“无效证书”错误消息。
+Currently Dynamic SSL is not working when using Google Chrome. This is because of an unresolved known issue with Google Chrome and Mac OS X Keychain. When importing OWASP ZAP's Root CA into the keychain and requesting a SSL website, an "Invalid certificate" error message is shown.
 
 <h2>请参阅</h2>
 <table>

@@ -21,27 +21,27 @@ Ang pag-andar na ito ay batay sa code mula sa proyekto ng OWASP JBroFuzz.
 <h3>Mga Sertipiko ng Dynamic SSL</h3>
 Ang suporta para sa mga koneksyon sa SSL ay pinabuti at pinasimple.<br>
 Ang mga gumagamit ay maaarin nang gumawa ng sarili nilang root certificate at ipamahagi ito sa mga kliyente nila sa HTTP.<br>
-Tignan sa <a href="../ui/dialogs/options/dynsslcert.html">Opsyon: ng mga Sertipiko ng Dynamic SSL</a> para sa iba pang mga detalye.  
 
 <h3>Mode ng Daemon at API</h3>
-Ang pagsisimula ng ZAP gamit ang command line opsyon ng "-daemon" ay nagdudulot ng pagtakbo nito sa background ng 'headless' mode, nangangahulugan ito na walang UI na ipinapakita.<br>
-Ang unang API ay naipatupad sa XML, JSON at HTML.<br>
-Kung ang ZAP ay gumagana bilang isang daemon pagkatapos ang API ay awtomatikong pinagana, kung hindi man ang API ay dapat paganahin sa pamamagitan ng mga opsyon ng API screen.<br>
-Ang API ay maaaring ma-navigate sa pamamagitan ng pagbubukas sa http://zap/ sa iyong browser kapag proxying sa pamamagitan ng ZAP. 
+Starting ZAP with the "-daemon" command line option will cause it to run in the background in 'headless' mode, 
+meaning that no UI is displayed.<br>
+An initial API has been implemented in XML, JSON and HTML.<br>
+If ZAP is running as a daemon then the API is automatically enabled, otherwise the API must be enabled via the Options API screen.<br>
+The API can be navigated by opening http://zap/ in your browser when proxying via ZAP. 
 
 <h3>Pagbubuo ng Beanshell</h3>
-Ang <a href="http://www.beanshell.org/">BeanShell</a> ay isang interactive na Java shell na maaaring gamitin upang magsagawa ng mga BeanShell iskrip.<br> 
-Ang mga iskrip na ito ay pinasimpleng anyo ng Java na gumagamit ng mga elemento mula sa Java syntax, ngunit sa isang simpleng scripting format. <br>
-Ang lahat ng Java code ay mabisa din na BeanShell code.<br>
-Ang pagsasama-sama ng BeanShell sa OWASP ZAP ay nagbibigay-daan sa iyo na sumulat ng mga iskrip gamit ang mga ZAP function at data set.<br> 
-Ito ay maaaring maging isang napaka lakas na tampok para sa pag-aaral ng mga web application.<br>
+The <a href="http://www.beanshell.org/">BeanShell</a> is an interactive Java shell that can be used to execute BeanShell scripts.<br> 
+These scripts are a simplified form of Java that use many elements from Java syntax, but in a simpler scripting format. <br>
+All Java code is also valid BeanShell code.<br>
+BeanShell integration in OWASP ZAP enables you to write scripts using the ZAP functions and data set.<br> 
+This can be a very powerful feature for analyzing web applications.<br>
 
 
 <h3>Buong internationalisation</h3>
-Lahat ng ipinapakitang string ay ganap ng na-internationalised ngayon.
+All display string are now fully internationalised.
 
 <h3>Lokalisasyon</h3>
-Sa labas ng kahon suporta para sa mga sumusunod na wika:
+Out of the box support for the following languages:
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ingles</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Brazillian Portuguese</td></tr>
@@ -59,52 +59,54 @@ Sa labas ng kahon suporta para sa mga sumusunod na wika:
 <h2>Mga maliit na pagbabago:</h2>
 
 <h3>Tignan ang Hex</h3>
-Ang <a href="../ui/tabs/request.html">Paghiling</a>, <a href="../ui/tabs/response.html">Pagtugon</a> mga tab na nagbibigay ngayon sa isang 'Hex View' opsyon na nagpapakita ng mga kahilinga at pagtugon na mga katawan sa hex format. 
+The <a href="../ui/tabs/request.html">Request</a>, <a href="../ui/tabs/response.html">Response</a> tabs now provide
+a 'Hex View' option which will display the request and response bodies in hex format. 
 
 <h3>Mga resulta ng paghahanap</h3>
-Ang <a href="../ui/tabs/search.html">Tab ng paghahanap </a> ngayon sa lahat ng mga pagkakataon na nagpapakita ng isang string na natagpuan sa halip na ang unang pagkakataon lamang
-sa bawat kahilingan o pagtugon. 
+The <a href="../ui/tabs/search.html">Search tab </a> now displays all instances of a string found rather than just the first instance
+in each request or response. 
 
 <h3>Ibukod ang mga URL</h3>
-Ang mga URL ay maaaring ibukod mula sa aktibong scanner, ispayder at mula sa proxy.
+URLs can be explicitly excluded from the active scanner, spider and from the proxy.
 
 <h3>Suporta sa pagkopya</h3>
-Karamihan sa mga panel ngayon ay nagbibigay isang 'right click' 'Copy' menu opsyon kasama ang Port Scan at Brute Force na mga panel.
+Most of the panels now provide a 'right click' 'Copy' menu option, including the Port Scan and Brute Force panels.
 
 <h3>Suporta sa Undo/Redo</h3>
-Ang lahat ng inilagay ngayon na mga field support para sa Undo/Redo na mga aksyon gamit ang mga operating system kawalang ng mga Undo/Redo accelerator:
+All of the input fields now support Undo/Redo actions using the operating systems default Undo/Redo accelerators:
 <ul>
 <li>Mga Window/Linux: Ctrl+Z/ Ctrl+Y
 <li>Mac OS X: Cmd+Z / Cmd+Shift+Z
 </ul>
 
 <h3>Suporta para sa Port scanner proxy at timeout opsyon</h3>
-Ang Port Scanner ay maaari na ngayon gamitin ang papalabas ng proxy (kung isinaayos) at ang timeout sa mga milliseconds ay maaari na rin set ngayon.
+The Port Scanner can now use the outgoing proxy (if configured) and the timeout in milliseconds can also now be set.
 
 <h3>Mga buton para pag-break ng kahilingan at pagtugon</h3>
-Meron na ngayon 2 mga buton ng 'Set Break' upang pahintulutan ang mga beak na ma-set sa lahat ng mga kahilingan at lahat ng mga pagtugon nang malaya. 
+There are now 2 'Set Break' buttons to allow breaks to be set on all requests and all responses independently. 
 
 <h3>Palawakin ang mga buton sa mga Site at impormasyon sa tab</h3>
-Meron na ngayon 2 mga buton na nagpapahintulot sa iyo lumipat sa pagitang ng mga Site at mga para sa mga impormasyon na lumalawak.
+There are now 2 buttons which allow you to switch between having the Sites and Information tabs expanded.
 
 <h3>Break tab icon changes colour when breakpoint hit</h3>
-Habang ang Break tab ay hindi ginagamit ang icon ay isang abong krus: &nbsp;
+While the Break tab is not in use its icon is a grey cross: &nbsp;
 <img src="../images/16/101grey.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
-Kapag ang isang <a href="../start/features/breakpoints.html">breakpoint</a> ay napindot ang icon tab ay nagbabago sa isang pulang krus: &nbsp;
+When a <a href="../start/features/breakpoints.html">breakpoint</a> is hit the tab icon is changed 
+to a red cross: &nbsp;
 <img src="../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
 
 <h3>Madaling i-adjust na timeout</h3>
-Ang <a href="../ui/dialogs/options/connection.html">Koneksyon: ng opsyon</a> pinapayagan ka ng screen para itakda ang timeout sa mga segundo upang gawing mas madali ang pagsubok sa mga mabagal na aplikasyon.
+The Option: Connection screen allows you to set the timeout in seconds to make it easier to test slow applications.
 
 <h3>Mga update sa library</h3>
-Karamihan sa mga libraring ginamit ng ZAP ay na-update na sa mga bagong bersyon.
+Most of the libraries used by ZAP have been updated to the latest versions.
 
 <h3>Isang bagong icon :)</h3>
-Salamat kay Simon Egli at sa lahat ng iba pang sa pagsusumite ng mga cool na mga mungkahi sa icon.
+Thanks to Simon Egli and all others for submitting cool icon suggestions.
 
 <h2>Mga kilalang isyu:</h2>
 <h3>Mac OS X: Dynamic SSL at Google Chrome</h3>
-Kasalukuyang hindi gumagana ang Dynamic SSl kapag ginagamit ang Google Chrome. Ito ay dahil ang hindi na lutas ng isang kilalang isyu ng Google Chrome at Mac OS X Keychain. Kapag nag-import ang OWASP ZAP's Root CA sa Keychain at humiling ang isang SSL website, isang "Invalid certificate" error na mensahe ang ipapakita.
+Currently Dynamic SSL is not working when using Google Chrome. This is because of an unresolved known issue with Google Chrome and Mac OS X Keychain. When importing OWASP ZAP's Root CA into the keychain and requesting a SSL website, an "Invalid certificate" error message is shown.
 
 <h2>Tignan din</h2>
 <table>

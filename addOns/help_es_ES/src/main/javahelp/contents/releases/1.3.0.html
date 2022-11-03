@@ -21,27 +21,27 @@ Esta funcionalidad se basa en código del proyecto OWASP JBroFuzz.
 <h3>Certificados SSL Dinámicos</h3>
 El soporte para conexiones SSL fue mejorado y simplificado.<br>
 Usuario ahora puede crear su propio certificado raíz y distribuir esto en sus clientes HTTP.<br>
-Véase <a href="../ui/dialogs/options/dynsslcert.html">Opción: Certificados SSL Dinámicos</a> Mostrar más detalles  
 
 <h3>Modo daemon y API</h3>
-A partir de ZAP con el "-daemon" opción de línea de comando hará que se ejecute en segundo plano en el modo 'headless', lo que significa que no se muestra ninguna interfaz de usuario.<br>
-Una API inicial ha sido implementada en XML, JSON y HTML.<br>
-Si ZAP se ejecuta como un daemon entonces la API se activa automáticamente, de lo contrario la API debe habilitarse a través de la pantalla de opciones API.<br>
-La API se puede navegar con la apertura de http://zap/ en tu navegador cuando proxy vía ZAP. 
+Starting ZAP with the "-daemon" command line option will cause it to run in the background in 'headless' mode, 
+meaning that no UI is displayed.<br>
+An initial API has been implemented in XML, JSON and HTML.<br>
+If ZAP is running as a daemon then the API is automatically enabled, otherwise the API must be enabled via the Options API screen.<br>
+The API can be navigated by opening http://zap/ in your browser when proxying via ZAP. 
 
 <h3>Integración de BeanShell</h3>
-Se mostrará la <a href="http://www.beanshell.org/">BeanShell</a> es un shell interactivo de Java que se puede utilizar para ejecutar secuencias de comandos de BeanShell.<br> 
-Estos scripts son una forma simplificada de Java que utilizan muchos elementos de la sintaxis de Java, pero en un formato de secuencias de comandos más simple. <br>
-Todo el código Java también es código válido de BeanShell.<br>
-BeanShell integración en OWASP ZAP le permite escribir scripts utilizando las funciones ZAP y el conjunto de datos.<br> 
-Esto puede ser una característica muy potente para el análisis de aplicaciones web.<br>
+The <a href="http://www.beanshell.org/">BeanShell</a> is an interactive Java shell that can be used to execute BeanShell scripts.<br> 
+These scripts are a simplified form of Java that use many elements from Java syntax, but in a simpler scripting format. <br>
+All Java code is also valid BeanShell code.<br>
+BeanShell integration in OWASP ZAP enables you to write scripts using the ZAP functions and data set.<br> 
+This can be a very powerful feature for analyzing web applications.<br>
 
 
 <h3>Mas internacionalización </h3>
-Toda cadena de presentación ahora son plenamente internacionalizado.
+All display string are now fully internationalised.
 
 <h3>Localización</h3>
-Soporte de caja para los siguientes idiomas:
+Out of the box support for the following languages:
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Inglés</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Portugués Brasileño</td></tr>
@@ -59,51 +59,54 @@ Soporte de caja para los siguientes idiomas:
 <h2>Cambios menores:</h2>
 
 <h3>Ver hexagonal</h3>
-Se mostrará la <a href="../ui/tabs/request.html">Petición</a>, <a href="../ui/tabs/response.html">Respuesta</a> las pestañas ahora proporcionan una ' Hex Vew ' opción que muestra los cuerpos de respuesta y de solicitud en formato hexadecimal. 
+The <a href="../ui/tabs/request.html">Request</a>, <a href="../ui/tabs/response.html">Response</a> tabs now provide
+a 'Hex View' option which will display the request and response bodies in hex format. 
 
 <h3>Resultados de la búsqueda</h3>
-Se mostrará la <a href="../ui/tabs/search.html">Pestaña de búsquedas </a> ahora muestra todas las instancias de una cadena que se encuentra en lugar de sólo la primera instancia en cada petición o respuesta. 
+The <a href="../ui/tabs/search.html">Search tab </a> now displays all instances of a string found rather than just the first instance
+in each request or response. 
 
 <h3>Excluir direcciones URL</h3>
-Las direcciones URL pueden ser explícitamente excluidas del explorador activo, araña y desde el proxy.
+URLs can be explicitly excluded from the active scanner, spider and from the proxy.
 
 <h3>Soporte de copia</h3>
-La mayoría de los paneles proporciona ahora una 'clic derecho' 'Copiar' opción de menú, incluyendo los paneles de análisis de puertos y fuerza bruta.
+Most of the panels now provide a 'right click' 'Copy' menu option, including the Port Scan and Brute Force panels.
 
 <h3>Deshacer/rehacer apoyo</h3>
-Todos los campos de entrada ahora apoyan acciones de deshacer/rehacer usando los aceleradores de deshacer/rehacer de sistemas operativos por defecto:
+All of the input fields now support Undo/Redo actions using the operating systems default Undo/Redo accelerators:
 <ul>
 <li>Windows/Linux: Ctrl+Z / Ctrl+Y
 <li>Mac OS X: Cmd + Z / Cmd + Shift + Z
 </ul>
 
 <h3>Opción de apoyo y tiempo de espera de proxy scanner puerto</h3>
-El Port Scanner ahora puede utilizar al servidor proxy saliente (si está configurada) y también ahora se puede establecer el tiempo de espera en milisegundos.
+The Port Scanner can now use the outgoing proxy (if configured) and the timeout in milliseconds can also now be set.
 
 <h3>Botones de rotura de solicitud y respuesta</h3>
-Ahora hay 2 botones 'Set Break' para permitir descansos para establecerse independientemente en todas las solicitudes y todas las respuestas. 
+There are now 2 'Set Break' buttons to allow breaks to be set on all requests and all responses independently. 
 
 <h3>Ampliar información y sitios pestaña botones</h3>
-Ahora hay 2 botones que permiten cambiar entre tener la información y sitios de pestañas ampliadas.
+There are now 2 buttons which allow you to switch between having the Sites and Information tabs expanded.
 
 <h3>Break tab icon changes colour when breakpoint hit</h3>
-Si bien la pestaña Descanso no está en uso, su ícono es una cruz gris: & nbsp;
+While the Break tab is not in use its icon is a grey cross: &nbsp;
 <img src="../images/16/101grey.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
-Mientras un  <a href="../start/features/breakpoints.html">breakpoint</a> se presiona el ícono de la pestaña se cambia a una cruz roja: & nbsp;
+When a <a href="../start/features/breakpoints.html">breakpoint</a> is hit the tab icon is changed 
+to a red cross: &nbsp;
 <img src="../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
 
 <h3>Tiempo de espera ajustable</h3>
-Se mostrará la <a href="../ui/dialogs/options/connection.html">Opción: Conexión</a> pantalla le permite configurar el tiempo de espera en segundos para que sea más fácil probar aplicaciones lentas.
+The Option: Connection screen allows you to set the timeout in seconds to make it easier to test slow applications.
 
 <h3>Actualizaciones de la biblioteca</h3>
-La mayoría de las bibliotecas utilizadas por ZAP se han actualizado a las últimas versiones.
+Most of the libraries used by ZAP have been updated to the latest versions.
 
 <h3>Un nuevo icono :)</h3>
-Gracias a Simon Egli y a todos los demás por enviar interesantes sugerencias de iconos.
+Thanks to Simon Egli and all others for submitting cool icon suggestions.
 
 <h2>Problemas conocidos:</h2>
 <h3>Mac OS X: SSL dinámico y Google Chrome</h3>
-Actualmente Dynamic SSL no funciona cuando se usa Google Chrome. Esto se debe a un problema conocido no resuelto con Google Chrome y Mac OS X Keychain. Al importar la CA raíz de OWASP ZAP al llavero y solicitar un sitio web SSL, se muestra un mensaje de error de "Certificado no válido".
+Currently Dynamic SSL is not working when using Google Chrome. This is because of an unresolved known issue with Google Chrome and Mac OS X Keychain. When importing OWASP ZAP's Root CA into the keychain and requesting a SSL website, an "Invalid certificate" error message is shown.
 
 <h2>Vease también</h2>
 <table>

@@ -21,19 +21,18 @@ Questa funzionalità è basata sul codice dal progetto OWASP JBroFuzz.
 <h3>Certificati SSL dinamici</h3>
 Il supporto per le connessioni SSL è stato migliorato e semplificato.<br>
 Gli utenti possono ora creare il proprio certificato di root e distribuire ciò nei client HTTP.<br>
-Vedere <a href="../ui/dialogs/options/dynsslcert.html">Opzione: Certificati SSL dinamici</a> per ulteriori dettagli.  
 
 <h3>Modalità Daemon ed API</h3>
-Avviando ZAP con l'opzione linea di comando "-daemon" causerà la sua esecuzione in background nella modalità ''senza testa', 
-il che vuol dire che nessuna UI sarà mostrata.<br>
-Un API iniziale è stata implementata in XML, JSON ed HTML.<br>
-Se ZAP è in esecuzione come un daemon allora l'API è abilitata automaticamente, altrimenti l'API deve essere abilitata tramite la schermata Opzioni API.<br>
-L'API può essere navigata aprendo http://zap/ nel tuo browser quando si usa il proxy tramite ZAP. 
+Starting ZAP with the "-daemon" command line option will cause it to run in the background in 'headless' mode, 
+meaning that no UI is displayed.<br>
+An initial API has been implemented in XML, JSON and HTML.<br>
+If ZAP is running as a daemon then the API is automatically enabled, otherwise the API must be enabled via the Options API screen.<br>
+The API can be navigated by opening http://zap/ in your browser when proxying via ZAP. 
 
 <h3>Integrazione con BeanShell</h3>
-Il <a href="http://www.beanshell.org/">BeanShell</a> è una shell di Java interattiva che può essere usata per eseguire gli script di BeanShell.<br> 
-Questi script sono una forma semplificata di Java che usa alcuni elementi dalla sintassi Java, ma in un formato di scripting più semplice. <br>
-Tutto il codice di Java è anche un codice valido per BeanShell.<br>
+The <a href="http://www.beanshell.org/">BeanShell</a> is an interactive Java shell that can be used to execute BeanShell scripts.<br> 
+These scripts are a simplified form of Java that use many elements from Java syntax, but in a simpler scripting format. <br>
+All Java code is also valid BeanShell code.<br>
 BeanShell integration in OWASP ZAP enables you to write scripts using the ZAP functions and data set.<br> 
 This can be a very powerful feature for analyzing web applications.<br>
 
@@ -60,7 +59,7 @@ Out of the box support for the following languages:
 <h2>Cambiamenti minori:</h2>
 
 <h3>Hex view</h3>
-The <a href="../ui/tabs/request.html">Richiesta</a>, <a href="../ui/tabs/response.html">Risposta</a> tabs now provide
+The <a href="../ui/tabs/request.html">Request</a>, <a href="../ui/tabs/response.html">Response</a> tabs now provide
 a 'Hex View' option which will display the request and response bodies in hex format. 
 
 <h3>Search results</h3>
@@ -97,8 +96,7 @@ to a red cross: &nbsp;
 <img src="../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
 
 <h3>Adjustable timeout</h3>
-The <a href="../ui/dialogs/options/connection.html">Option: Connection</a> screen allows you to set the timeout in seconds
-to make it easier to test slow applications.
+The Option: Connection screen allows you to set the timeout in seconds to make it easier to test slow applications.
 
 <h3>Library updates</h3>
 Most of the libraries used by ZAP have been updated to the latest versions.

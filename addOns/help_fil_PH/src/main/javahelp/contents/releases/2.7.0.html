@@ -283,24 +283,25 @@ Ang pag-angkat ng isang patakaran ng pag-iskan gamit ang ibinigay na daan ng pay
 Ang paglalaktaw sa pag-iskan gamit ang mga ID ng mga pag-iskan at ng pag-i-iskan.
 
 <h3>Ang localProxies ng VIEW / addAdditionalProxy</h3>
-Ang pagdadagdag ng isang bagong proxy gamit ang mga ibinigay na detalye tingnan ang <a href="../ui/dialogs/options/localproxy.html">Mga opsyon ng lokal na mga proxy ng iskrin</a> para sa mga detalye ng mga parametro.
+Adds a new proxy using the details supplied.
 
 <h3>Ang mga localproxy ng VIEW / removedAdditionalProxy</h3>
-Tanggalin ang mga naidagdag na proxy sa pamamagitan ng tinutukoy na adress at port.
+Removes the additional proxy with the specified address and port.
 
 <h3>Ang AKSYON ng ispayder /mga setOptionAcceptCookie</h3>
-Ang pagtatakda o hindi ang isang pagproseso ng ispayder na dapat na tanggapin ng mga cookie habang nag-ispayder.
+Sets whether or not a spider process should accept cookies while spidering.
 
 <h2>Ang mga detalye ng mga kahinaan</h2>
 
-Ang mga kahinaan na mga sumusunod ay inuulat sa isang dating bersyon ng ZAP.<br>
-Maraming salamat sa lahat ng mga mananaliksik na sinong mayroong etikal na ulat na mga isyu para sa atin sa pamamagitan ng ating <a href="https://bugcrowd.com/owaspzap">masaganang programa ng bug</a>.<br> 
-Kung kailangan mo ng mga detalye tungkol dito sa kahinaan pagkatapos ay mangyaring makipag-ugnayan po kayo sa amin.
+The following vulnerability has been reported in a previous version of ZAP.<br>
+Many thanks to all of the researchers who have ethically reported issues to us via our <a href="https://bugcrowd.com/owaspzap">bug bounty program</a>.<br> 
+If you need more details about this vulnerability then please contact us.
 
 <h3>Ang mga uninstaller ng mga window ng kahinaan sa Hijacking ng DLL</h3>
 
-Ang mga wingdow ng uninstaller ng ZAP para sa 2.6.0 ay mahina sa Hijacking ng DLL ng mga window. Ito ay kahinaan sa pangatlong partido ng pag-install ng install4j kung saan ngayon na naisaayos na.<br>
-Paalala na ito ay mangyayari lamang kung ang isang malisyosong DLL ay nasa daraanan na.
+The ZAP Windows Uninstaller for 2.6.0 is vulnerable to DLL Hijacking on Windows.
+This was a vulnerability in the 3rd party installer Install4j which has now been fixed.<br>
+Note that this can only occur if a malicious DLL is already on the path.
 <br><br>
 <b>Kredito: Sajeeb Lohani (sml555) ng Bulletproof ZDS</b>
 

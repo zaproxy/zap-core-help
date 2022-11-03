@@ -26,37 +26,37 @@ Ini mendukung muatan serangan baru termasuk opsi untuk menggunakan skrip untuk m
 
 <h3>Pindai dialog dengan opsi lanjutan</h3>
 
-Baru <a href="../ui/dialogs/advascan.html">Scan Aktif</a>, <a href="../ui/dialogs/spider.html">Laba-laba</a> dan dialog AJAX Spider telah menggantikan
-meningkatnya jumlah klik kanan 'Attack' pilihan.<br>
-Ini memberikan akses mudah ke semua opsi yang paling umum dan secara opsional merupakan pilihan lanjutan yang beragam. 
+Baru <a href="../ui/dialogs/advascan.html">Scan Aktif</a>, Spider and AJAX Spider dialogs have replaced
+the increasing number of right click 'Attack' options.<br>
+These provide easy access to all of the most common options and optionally a wide range of advanced options. 
 
 <h3>Kebijakan memindai</h3>
 
-Baru <a href="../ui/dialogs/scanpolicymgr.html">Pindai Pengelola Kebijakan</a> memungkinkan Anda untuk membuat sebanyak mungkin 
-<a href="../start/features/scanpolicy.html">Kebijakan Scan</a> seperti yang Anda butuhkan<br>
-Kebijakan pemindaian menentukan aturan mana yang dijalankan sebagai bagian dari <a href="../start/features/ascan.html">Scan Aktif</a>.<br>
-Mereka juga menentukan bagaimana peraturan ini berjalan mempengaruhi berapa banyak permintaan dibuat dan seberapa besar kemungkinan potensi masalah akan ditandai.<br>
+A new <a href="../ui/dialogs/scanpolicymgr.html">Scan Policy Manager dialog</a> allows you to create as many 
+<a href="../start/features/scanpolicy.html">Scan Policies</a> as you need.<br>
+Scan policies define exactly which rules are run as part of an <a href="../start/features/ascan.html">Active Scan</a>.<br>
+They also define how these rules run influencing how many requests are made and how likely potential issues are to be flagged.<br>
 
 <h3>Tab tidak digunakan yang tersembunyi</h3>
 
-Secara default hanya tab esensial yang sekarang ditampilkan saat ZAP dinyalakan.<br>
-Sisa tab yang terungkap ketika mereka sedang digunakan (misalnya untuk laba-laba dan pemindai aktif) atau ketika anda memperlihatkannya melalui 
-tab khusus pada bagian paling kanan dari masing-masing jendela dengan ikon '+' hijau. Tab khusus ini hilang jika tidak ada tab tersembunyi.<br>
-Tab dapat ditutup melalui ikon 'x' kecil yang ditunjukkan saat tab dipilih.<br>
-Tab bisa juga 'ditempelkan' menggunakan sebuah ikon 'pin' kecil yang juga ditunjukkan ketika tabnya telah dipilih - tab yang ditempelkan akan ditunjukkan
-ketika ZAP berikutnya dimulai. 
+By default only the essential tabs are now shown when ZAP starts up.<br>
+The remaining tabs are revealed when they are used (e.g. for the spider and active scanner) or when you display them via the 
+special tab on the far right of each window with the green '+' icon. This special tab disappears if there are no hidden tabs.<br>
+Tabs can be closed via a small 'x' icon which is shown when the tab is selected.<br>
+Tabs can also be 'pinned' using a small 'pin' icon that is also shown when the tab is selected - pinned tabs will be shown
+when ZAP next starts up. 
 
 <h3>Enabler untuk urutan pemindai tambahan</h3>
 
-Sebuah kualitas add-on opsional terbaru 'alfa' menambahkan kemampuan untuk pemindaian 'rangkaian' dari halaman web, dengan kata lain halaman yang harus dikunjungi
-pada sebuah urutan yang ketat pada pesanan untuk bekerja dengan benar. 
+A new optional 'alpha' status add-on adds the ability to scan 'sequences' of web pages, in other words pages that must be visited
+in a strict order in order to work correctly. 
 
 <h3>Enabler untuk pengujian pengaya kontrol akses</h3>
 
-Tambahan kualitas 'alpha' opsional menambahkan kemampuan untuk mengotomatisasi banyak aspek pengujian kontrol akses. 
+A new optional 'alpha' status add-on adds the ability to automate many aspects of access control testing. 
 
 <h3>Catatan untuk Pengguna API</h3>
-Perlu diketahui bahwa ID Plugin untuk pemindai External Redirect telah berubah dari 30000 menjadi 20019.
+Please be aware that the Plugin ID for the External Redirect scanner has changed from 30000 to 20019.
 
 <h2>Daftar lengkap perubahan:</h2>
 <ul>
@@ -89,7 +89,7 @@ Perlu diketahui bahwa ID Plugin untuk pemindai External Redirect telah berubah d
 <li>Masalah 1215 : Pemberitahuan Kerangka Langsiran / Penyortiran Masalah Usability</li>
 <li>Masalah 1216 : Typo di tab tulisan</li>
 <li>Masalah 1217 : Tabel format tidak menampilkan informasi saat charset ada di Content-Type header</li>
-<li>Masalah 1224 : Kualitas / Status Tampilan dalam Kegunaan Dialog Kebijakan Pindai</li>
+<li>Issue 1224 : Display Status in Scan Policy Dialogs - Usability</li>
 <li>Masalah 1226 : Pemindai aktif meniadakan regex parameter yang tidak divalidasi</li>
 <li>Masalah 1227 : Pemindai aktif mengirimkan permintaan GET dengan konten di lembaga permintaan</li>
 <li>Masalah 1238 : NullPointerException jika pemindai aktif menimbulkan peringatan dengan serangan nol</li>

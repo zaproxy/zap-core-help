@@ -9,7 +9,8 @@ Proxy Yapılandırma
 <body>
 <h1>Proxy'leri yapılandırma</h1>
 <p>
-Tarayıcınızı, ZAP sunucusu olarak kullanacak şekilde yapılandırmanız gerekecektir.<br> Varsayılan olarak ZAP, Port of '8080' ve 'localhost' adresini kullanır, bunlar <a href="../ui/dialogs/options/localproxy.html">Seçenekler Yerel Sunucular ekranı</a> aracılığıyla değiştirilebilir. 
+You will need to configure your browser to use ZAP as a proxy.<br>
+By default, ZAP uses an Address of 'localhost' and a Port of '8080', but these can be changed via the Options > Network > Local Servers/Proxies screen.
 
 En sık kullanılan tarayıcıların en son sürümleri için talimatlar: 
 </p>
@@ -33,10 +34,9 @@ En sık kullanılan tarayıcıların en son sürümleri için talimatlar:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Scroll to</td><td> 'Network Settings' section</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tuşuna basın</td><td> 'Ayarlar...' düğmesi</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seçin</td><td> 'Manuel proxy yapılandırması' radyo düğmesi</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Girin</td><td> Yapılandırdığınız 'Adres' adresinin 'HTTP Proxy:' alanına girin.
-<a href="../ui/dialogs/options/localproxy.html">Seçenekler Yerel Proksiler ekranı</a></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Girin</td><td> 'Port' field to the right of the 'HTTP Proxy' field the 'Port' you configured in the 
-<a href="../ui/dialogs/options/localproxy.html">Options Local Proxies screen</a>. Ensure 'SSL Proxy' is also configured, either by selecting 'Use this proxy server for all protocols' or by setting the corresponding values.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Girin</td><td> 'HTTP Proxy:' field the 'Address' you configured in the options screen</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Girin</td><td> 'Port' field to the right of the 'HTTP Proxy' field the 'Port' you configured in the options screen.
+Ensure 'SSL Proxy' is also configured, either by selecting 'Use this proxy server for all protocols' or by setting the corresponding values.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tuşa basın</td><td> Bağlantı Ayarı 'OK' düğmesi</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tuşa basın</td><td> Seçenekler 'Tamam' düğmesi</td></tr>
 </table>
@@ -76,9 +76,8 @@ En sık kullanılan tarayıcıların en son sürümleri için talimatlar:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seçin</td><td> Sol listedeki 'Ağ' öğesi</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tuşuna basın</td><td> 'Vekil Sunucuları' tuşu</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seçin</td><td> 'HTTP' kontrol kutusu</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Girin</td><td> 'HTTP'nin 'adres' alanında yapılandırdığımız <a href="../ui/dialogs/options/localproxy.html">Options Local Proxies ekranı</a></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Girin</td><td> HTTP 'Port' alanında yapılandırdığınız 'Port'
-<a href="../ui/dialogs/options/localproxy.html">Seçenekler Yerel Proksiler ekranı</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Girin</td><td> field to the right of 'HTTP' the 'Address' you configured in the options screen</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Girin</td><td> HTTP 'Port' field the 'Port' you configured in the options screen</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tuşuna basın</td><td> Vekil sunucuları 'OK' tuşu</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tuşuna basın</td><td> Tercihler 'OK' tuşu</td></tr>
 </table>
@@ -108,10 +107,8 @@ En sık kullanılan tarayıcıların en son sürümleri için talimatlar:
 
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seçin</td><td> 'Web Proxy (HTTP)</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Girin</td><td> <a href="../ui/dialogs/options/localproxy.html">Seçenekler Yerel Vekil Sunucular ekranı</a> içindeki 
-'Adres:' alanında yapılandırdığınız 'Adres'</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Girin</td><td> 'Port' alanında yapılandırdığınız 'Port' 
-<a href="../ui/dialogs/options/localproxy.html">Seçenekler Yerel Proksiler ekranı</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Girin</td><td> 'Address:' field the 'Address' you configured in the options screen</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Girin</td><td> 'Port' field the 'Port' you configured in the options screen</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tuşuna basın</td><td> Vekil sunucular Ayarı 'OK' tuşu</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tuşuna basın</td><td> Ağ Seçenekleri 'Uygula' tuşu</td></tr>
 </table>
@@ -120,9 +117,8 @@ En sık kullanılan tarayıcıların en son sürümleri için talimatlar:
 
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seçin</td><td> 'LAN 'ınız için bir proxy sunucusunu kullanın' onay kutusu</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Girin</td><td> 'Adres:' alanını <a href="../ui/dialogs/options/localproxy.html">Options Local Proxies screen</a> ekranında yapılandırmış olduğunuz 'adres' alanına girin</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Girin</td><td> 'Port' kısmı sizin konfigüre ettiğiniz 'Port'
-<a href="../ui/dialogs/options/localproxy.html">Options Local Proxies screen</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Girin</td><td> 'Address:' field the 'Address' you configured in the options screen</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Girin</td><td> 'Port' field the 'Port' you configured in the options screen</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tuşuna basın</td><td> Yerel Bölge Ağı (LAN) Ayarı 'Tamam' butonu</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tuşuna basın</td><td> İnternet Seçenekleri 'OK' tuşu</td></tr>
 </table>

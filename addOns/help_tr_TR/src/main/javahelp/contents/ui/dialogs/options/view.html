@@ -15,13 +15,14 @@ Görüntü ekranı yapılandırmanızı sağlar:
 ZAP görüntülerini işleyecekse.
 
 <h3>(Yerel) BAĞLANTI isteklerini göster</h3>
-Tarafından gelen HTTP CONNECT istekleri <a href="localproxy.html">Yerel Proxyler</a> mevcut durumda devam etmelidir
-<a href="../../tlmenu/file.html">oturum</a> ve geçmiş sekmesinde <a href="../../tabs/history.html">gösterilen</a>. Varsayılan değer şudur:
-Bu istekleri göstermemek için sıkça gerçekleşir (TLS / SSL, WebSocket ... bağlantılarına hazırlık amacıyla) ve, teftiş edilmedikçe istemci uygulamanın davranışı, (genellikle) çok fazla ilgi çekici değildir.
+If the HTTP CONNECT requests received by ZAP's proxies should be persisted in the current
+<a href="../../tlmenu/file.html">session</a> and shown in the <a href="../../tabs/history.html">History tab</a>. The default is
+to not show those requests, they happen frequently (in preparation for TLS/SSL, WebSocket... connections) and, unless inspecting
+the behaviour of the client application, are not (usually) of much interest.
 
 <h3>Görünüm</h3>
-3 ana panelin yerleşimi.<br>
-Aşağıdaki seçenekler mevcuttur:
+The layout of the 3 main panels.<br>
+The following options are available:
 <ul>
     <li>Sola sığdır (Siteler) sekmesi - Siteler sekmesini içeren 'ağaç' paneli genişler        sol tarafın tam uzunluğu olması için. Bu, 'bilgi' panelinde kullanılabilen alan miktarını azaltacaktır.        </li>
     <li>Alt sekmeleri (Geçmiş vb.) maksimize et - 'Bilgi' paneli alt kısmın tam uzunluğu
@@ -32,8 +33,8 @@ Aşağıdaki seçenekler mevcuttur:
 </ul>
 
 <h3>Yanıt Kontrol Panosu Konumu</h3>
-İstek sekmesine göre cevap sekmesinin konumunun yapılandırılmasına izin ver.<br>
-Aşağıda ki seçenekler kullanılabilir:
+Allows to configure the position of the Response tab with respect to Request tab.<br>
+The following options are available:
 <ul>
     <li>Sekmeler yan yana - Talep ve yanıt sekmeleri yan yana. Bu
  görğntğlenen bilgiyi arttırır ama talep
@@ -48,25 +49,27 @@ Aşağıda ki seçenekler kullanılabilir:
         panel. This decreases the information that can be displayed but means you can see both
         the request and response at the same time.</li>
 </ul>
-Görüntüleme seçeneği Tam Düzen olarak ayarlandığı zaman Yanıt Paneli Konumu seçeneği geçerli olmaz.
+The Response Panel Position option does not apply when the Display option is set to Full Layout.
 
 <h3>Ara düğmelerini göster</h3>
-Ara düğmelerinin yerleri.
+The location of the break buttons.
 
 <h3>Büyük talep görüntüsü min boyutu</h3>
-Gerçek bütün yerine 'büyük bütün isteği' iletisi gösterildiği zaman byte cinsinden istek bütününün minimum boyutu.<br>
-Bu çok büyük bütünlerin kullanıcı arayüzünü yavaşlatmasını engellemek içindir.<br>
-Bu değeri -1 yapmak talebin boyutuna bakmaksızın gösterilmesini sağlar.
+The minimum size of a request body in bytes at which point a 'large request body' message will be shown instead of the actual body.<br>
+This is to prevent very large bodies from slowing down the UI.<br>
+Setting this value to -1 will result in request always being displayed no matter how large it is.
 
 <h3>Büyük cevap görünümü min boyut</h3>
-Gerçek bütün yerine 'büyük cevap bütünü' iletisi gösterildiği zaman byte cinsinden cevap bütününün minimum boyutu.<br>
-Bu, çok büyük gövdelerin UI'yı yavaşlatmasının önüne geçmek içindir.<br>
-Bu değeri -1 olarak ayarladığınız takdirde, yanıt ne kadar büyük olursa olsun, her zaman görüntülenecektir.
+The minimum size of a response body in bytes at which point a 'large response body' message will be shown instead of the actual body.<br>
+This is to prevent very large bodies from slowing down the UI.<br>
+Setting this value to -1 will result in response always being displayed no matter how large it is.
 
 <h3>Çıkış Sekmeleri Zaman Damgası Seçenekleri</h3>
-Çıktı sekmesi üzeride zaman damgalarını bir kez etkinleştirdiğiniz zaman artık içinde zaman damgalarının görünmesini istediğiniz formatı yapılandırabilirsiniz. 
-Ya aşağı açılır listeden önceden tanımlanmış bir format seçin ya da kendi seçtiklerinizden birini girin. Bu format, Java'nın SimpleDateFormat'ını temel alır. Zaman damgası formatını seçtikten ya da girdikten sonra girişe basarsanız sağdaki örnek sizin seçiminizi yansıtacak şekilde güncellenir. Eğer ZAP girmiş olduğunuz formatı kullanamazsa o zaman örnek Varsayılan format 
-şeklinde gösterilecek.
+Once you've enabled time stamps on the output tab you can configure the format you would like those time stamps to appear in. 
+Either select a pre-defined format from the drop-down list or enter one of your own choosing. The format is based on Java's
+SimpleDateFormat. After choosing or entering a time stamp format if you press enter the example on the right will be updated
+to reflect your choice. If ZAP is unable to use a format you've entered then the example is displayed based 
+on the Default format.
 
 <table border="1" cellpadding="5">
 <tr> <td> Uzun &amp; Varsayılan </td> <td> yyyy-AA-gg SS:dd-ss </td> </tr>
@@ -78,7 +81,7 @@ Ya aşağı açılır listeden önceden tanımlanmış bir format seçin ya da k
 The General Font section controls default text font and size used for the ZAP display, while the Work Panels Font section 
 controls the font used for the top right section of ZAP's main window (Ex: Request/Response, Edit and Resend tool, etc.).
 If you set this to -1 then the system default size will be used.<br>
-'Yazı Tipi Örneki' alanı varsayılan metnin ne kadar büyük görüntüleneceğini gösterir.<br>
+The 'Font Example' field will show you how large the default text will appear.<br>
 <strong>Note:</strong> This setting will only take effect when ZAP is restarted.
 
 <h3>Look and Feel</h3>

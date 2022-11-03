@@ -55,35 +55,37 @@ Ini akan meluncurkan <a href="../dialogs/advascan.html">Scan Aktif</a> dialog ya
 <a href="../../start/features/ascan.html">aktif scan</a> dengan titik awal sesuai dengan permintaan yang anda pilih.<br/>
 
 <h4>Laba-laba...</h4>
-Ini akan meluncurkan <a href="../dialogs/spider.html">Laba-laba</a> dialog yang memungkinkan anda untuk memulai 
-<a href="../../start/features/spider.html">laba laba</a> dengan titik awal sesuai dengan permintaan yang anda pilih.<br/>
+This will launch the Spider dialog which allows you to initiate the 
+spider with the starting point set to the request you selected.<br/>
 
 <h3>Sertakan dalam Konteks</h3>
-Dengan menu ini anda dapat memasukkan node yang dipilih dan semua bawahannya di tempat yang ditentukan
-<a href="../../start/features/contexts.html">konteks</a>.<br/>
-Anda juga memiliki pilihan untuk membuat sebuah konteks yang baru.<br/>
-Itu <a href="../dialogs/session/contexts.html">Konteks Sesi</a> dialog akan ditampilkan untuk
-memungkinkan anda untuk membuat perubahan tambahan.
+This menu allows you to include the selected nodes and all of their subordinates in the specified
+<a href="../../start/features/contexts.html">context</a>.<br/>
+You also have the option to create a new context.<br/>
+The <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
+allow you to make any additional changes.
 
 <h3>Kecualikan dari Konteks</h3>
-Dengan menu ini anda dapat mengecualikan node yang dipilih dan semua bawahan mereka dari yang ditentukan
+This menu allows you to exclude the selected nodes and all of their subordinates from the specified
 <a href="../../start/features/contexts.html">konteks</a>.<br/>
-Itu <a href="../dialogs/session/contexts.html">Konteks Sesi</a> dialog akan ditampilkan untuk
-memungkinkan anda untuk membuat perubahan tambahan.
+The <a href="../dialogs/session/contexts.html">Konteks Sesi</a> dialog will be displayed to
+allow you to make any additional changes.
 
 <h3>Tandai sebagai konteks</h3>
-Menu ini memiliki beberapa submenu untuk masing-masing 
-<a href="../../start/features/contexts.html">konteks</a> anda telah mendefinisikan:
+This menu has the following submenus for each of the 
+<a href="../../start/features/contexts.html">contexts</a> you have defined:
 
 <h4><i>Nama konteks</i> Permintaan Login Auth Form berbasis</h4>
-Ini mengidentifikasi simpul yang ditentukan sebagai permintaan masuk untuk konteks yang ditentukan.<br/>
-Anda mungkin hanya memiliki satu simpul yang diidentifikasi seperti itu dalam satu konteks.<br/> 
-Itu <a href="../dialogs/session/context-auth.html">Otentikasi Konteks Sesi</a> layar akan ditampilkan untuk memungkinkan anda untuk melakukan perubahan tambahan.
+This identifies the specified node as a login request for the specified context.<br/>
+You may only have one node identified as such in any one context.<br/> 
+The <a href="../dialogs/session/context-auth.html">Session Context Authentication</a> screen will be displayed to
+allow you to make any additional changes.
 
 <h4><i>Context name</i> JSON-based Auth Login request</h4>
 This identifies the specified node as a login request for the specified context.<br/>
 You may only have one node identified as such in any one context.<br/> 
-Itu <a href="../dialogs/session/context-auth.html">Session Context Authentication</a> layar akan ditampilkan untuk memungkinkan anda untuk membuat setiap perubahan tambahan.
+The <a href="../dialogs/session/context-auth.html">Session Context Authentication</a> screen will be displayed to
+allow you to make any additional changes.
 
 <h4><i>Context name</i> Data driven node</h4>
 This identifies the specified node as <a href="../../start/features/ddc.html">Data driven content</a> for the specified context.<br/>
@@ -97,15 +99,15 @@ This menu has the following submenus:
 This will exclude the selected nodes from the proxy. They will still be proxied via ZAP but will not be shown 
 in any of the tabs.<br/>
 This can be used to ignore URLs that you know are not relevant to the system you are currently testing.<br/>
-The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Properti Sesi</a> dialog   
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
 
 <h4>Scanner</h4>
 This will prevent the selected nodes from being actively scanned.<br/>
-The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Properti Sesi</a> dialog   
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
 
 <h4>Spider</h4>
 This will prevent the selected nodes from being spidered.<br/>
-The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Properti Sesi</a> dialog   
 
 <h3>Manage History Tags...</h3>
 This will bring up the
@@ -133,23 +135,18 @@ If the URL selected has <a href="../../start/features/alerts.html">alerts</a> as
 they will be listed under this menu.<br>
 Selecting one of the alerts will cause it to be displayed.
 
-<h3>Open/Resend with Request Editor...</h3>
-This will bring up the
-<a href="../dialogs/man_req.html">Manual Request Editor dialog</a> which allows you to  
-resend the request after making any changes to it that you want to.
-
-<h3>Peringatan Baru...</h3>
+<h3>New Alert...</h3>
 This will bring up the
 <a href="../dialogs/addalert.html">Add Alert dialog</a> which allows you to manually record a new  
 <a href="../../start/features/alerts.html">alert</a> against this request.
 
-<h3>Tampilkan di tab situs</h3>
+<h3>Show in Sites tab</h3>
 This will show the selected message in the <a href="sites.html">Sites tab</a>.
 
-<h3>Buka URL di Browser</h3>
+<h3>Open URL in Browser</h3>
 This will open the URL of the selected node in your default browser.
 
-<h3>Buat formulir tes anti CSRF</h3>
+<h3>Generate anti CSRF test form</h3>
 This will open a URL which will give you a generated form for testing for CSRF issues.<br>
 It will only be enabled for POST requests, if the API is enabled and if Java supports the opening of URLs 
 in a browser on your platform.

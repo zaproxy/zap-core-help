@@ -38,78 +38,73 @@ URL-адреса, запросы, ответы, заголовки и други
 <a href="../../start/features/ascan.html">активное сканирование </a> с отправной точкой, установленной в соответствии с выбранным вами запросом. <br/>
 
 <h4>Паук...</h4>
-Это запустит  <a href="../dialogs/spider.html">диалог паука </a> который позволяет инициировать 
-<a href="../../start/features/spider.html">паука</a> с отправной точкой, установленной в соответствии с выбранным вами запросом. <br/>
+This will launch the Spider dialog which allows you to initiate the 
+spider with the starting point set to the request you selected.<br/>
 
 <h3>Включить в контекст </h3>
-Это меню позволяет включить выбранные узлы и все их подчиненные узлы в указанный 
-<a href="../../start/features/contexts.html">Контекст</a>.<br/>
-У вас также есть возможность создать новый контекст. <br/>
-The <a href="../dialogs/session/contexts.html">Контексты сеанса </a> диалоговое окно будет отображаться для
-позволяют вносить любые дополнительные изменения. 
+This menu allows you to include the selected nodes and all of their subordinates in the specified
+<a href="../../start/features/contexts.html">context</a>.<br/>
+You also have the option to create a new context.<br/>
+The <a href="../dialogs/session/contexts.html">Session Contexts</a> dialog will be displayed to
+allow you to make any additional changes.
 
 <h3>Исключить из контекста</h3>
-Это меню позволяет исключить выбранные узлы и все их подчиненные узлы из указанного списка. 
+This menu allows you to exclude the selected nodes and all of their subordinates from the specified
 <a href="../../start/features/contexts.html">Контекст</a>.<br/>
-  <a href="../dialogs/session/contexts.html">Контексты сеанса </a> диалоговое окно будет отображаться для
-позволяют вносить любые дополнительные изменения. 
+The <a href="../dialogs/session/contexts.html">Контексты сеанса </a> dialog will be displayed to
+allow you to make any additional changes.
 
 <h3>Отметить как контекст </h3>
-Это меню имеет следующие подменю для каждого из  
-<a href="../../start/features/contexts.html">Контексты</a> вы определили: 
+This menu has the following submenus for each of the 
+<a href="../../start/features/contexts.html">contexts</a> you have defined:
 
 <h4><i>Имя контекста</i> Запрос авторизации на основе формы </h4>
-Это идентифицирует указанный узел как запрос входа в систему для указанного контекста. <br/>
-У вас может быть только один узел, идентифицированный как таковой в любом одном контексте. <br/> 
-  <a href="../dialogs/session/context-auth.html">Аутентификация контекста сеанса </a> экран будет отображаться на
-позволяют вносить любые дополнительные изменения. 
+This identifies the specified node as a login request for the specified context.<br/>
+You may only have one node identified as such in any one context.<br/> 
+The <a href="../dialogs/session/context-auth.html">Session Context Authentication</a> screen will be displayed to
+allow you to make any additional changes.
 
 <h4><i>Имя контекста</i> Запрос аутентификации на основе JSON </h4>
-Это идентифицирует указанный узел как запрос входа в систему для указанного контекста. <br/>
-У вас может быть только один узел, идентифицированный как таковой в любом одном контексте. <br/> 
-  <a href="../dialogs/session/context-auth.html">Аутентификация контекста сеанса </a> экран будет отображаться на
-позволяют вносить любые дополнительные изменения. 
+This identifies the specified node as a login request for the specified context.<br/>
+You may only have one node identified as such in any one context.<br/> 
+The <a href="../dialogs/session/context-auth.html">Session Context Authentication</a> screen will be displayed to
+allow you to make any additional changes.
 
 <h4><i>Имя контекста</i> Узел, управляемый данными </h4>
-Это идентифицирует указанный узел как  <a href="../../start/features/ddc.html">Контент, управляемый данными </a> для указанного контекста. <br/>
-  <a href="../dialogs/session/context-struct.html">Структура контекста сеанса </a> экран будет отображаться на
-позволяют вносить любые дополнительные изменения. 
+This identifies the specified node as <a href="../../start/features/ddc.html">Data driven content</a> for the specified context.<br/>
+The <a href="../dialogs/session/context-struct.html">Session Context Structure</a> screen will be displayed to
+allow you to make any additional changes.
 
 <h3>Исключить из</h3>
-Это меню имеет следующие подменю: 
+This menu has the following submenus:
 
 <h4>Прокси-сервер</h4>
-Это исключит выбранные узлы из прокси. Они по-прежнему будут проксироваться через ZAP, но не будут отображаться
-в любой из вкладок. <br/>
-Это можно использовать для игнорирования URL-адресов, которые, как вы знаете, не имеют отношения к тестируемой системе. <br/>
-Узлы могут быть снова включены через  <a href="../dialogs/session/sessprop.html">Свойства сеанса </a> диалог   
+This will exclude the selected nodes from the proxy. They will still be proxied via ZAP but will not be shown 
+in any of the tabs.<br/>
+This can be used to ignore URLs that you know are not relevant to the system you are currently testing.<br/>
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
 
 <h4>Сканер</h4>
-Это предотвратит активное сканирование выбранных узлов. <br/>
-Узлы могут быть снова включены через  <a href="../dialogs/session/sessprop.html">Свойства сессии</a> диалог   
+This will prevent the selected nodes from being actively scanned.<br/>
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Session Properties</a> dialog   
 
 <h4>Паук</h4>
-Это предотвратит сканирование выбранных узлов. <br/>
-Узлы могут быть снова включены через  <a href="../dialogs/session/sessprop.html">Свойства сеанса </a> диалог   
+This will prevent the selected nodes from being spidered.<br/>
+The nodes can be included again via the <a href="../dialogs/session/sessprop.html">Свойства сеанса </a> dialog   
 
-<h3>Открыть/повторно отправить с помощью редактора запросов... </h3>
-Это вызовет 
-<a href="../dialogs/man_req.html">Диалоговое окно редактора запросов вручную </a> что позволяет вам
-повторно отправьте запрос после внесения в него любых изменений, которые вы хотите. 
+<h3>New Alert...</h3>
+This will bring up the
+<a href="../dialogs/addalert.html">Add Alert dialog</a> which allows you to manually record a new  
+<a href="../../start/features/alerts.html">alert</a> against this request.
 
-<h3>Новое оповещение...</h3>
-Это вызовет 
-<a href="../dialogs/addalert.html">Диалоговое окно «Добавить предупреждение» </a> который позволяет вручную записывать новый   
-<a href="../../start/features/alerts.html">оповещение</a> против этого запроса. 
+<h3>Show in History tab</h3>
+This will show the selected node in the <a href="history.html">History tab</a>.
 
-<h3>Показать во вкладке Истории</h3>
-Это покажет выбранный узел в  <a href="history.html">Вкладка История </a>.
+<h3>Show in Sites tab</h3>
+This will show the selected message in the <a href="sites.html">Sites tab</a>.
 
-<h3>Показать во вкладке Сайтов</h3>
-Это покажет выбранное сообщение в  <a href="sites.html">Вкладка "Сайты" </a>.
-
-<h3>Открыть URL в браузере</h3>
-Это откроет URL-адрес выбранного узла в браузере по умолчанию. 
+<h3>Open URL in Browser</h3>
+This will open the URL of the selected node in your default browser.
 
 <h2>Смотрите также </h2>
 <table>

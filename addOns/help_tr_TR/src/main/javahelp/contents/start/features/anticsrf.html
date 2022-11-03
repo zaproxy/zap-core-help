@@ -13,10 +13,11 @@ Anti CSRF belirteçleri, Siteler Arası Talep Sahteciliği (CSRF) saldırıları
 Bununla birlikte, özellikle bir form talep edildiğinde simgeler yeniden oluşturulursa, penetrasyon testi görevlilerini daha zora sokuyorlar.<br>
 </p>
 <p>
-ZAP, anti CSRF belirteçlerini tamamen nitelik adlarıyla saptar - anti CSRF belirteçleri olarak düşünülen özellik adlarının listesi
-<a href="../../ui/dialogs/options/anticsrf.html">Seçenekler Anti CSRF ekranı</a> kullanılarak yapılandırılmıştır.<br/>
-ZAP bu tokenları algıladığında, token değerini ve hangi bağlantının tokenını oluşturduğunu kaydeder.<br/>
-<a href="ascan.html">aktif tarayıcı</a> gibi diğer tarayıcılarda, ZAP'ın gerekli olduğunda belirteçleri otomatik olarak yeniden oluşturmasına neden olan seçenekler bulunur.
+ZAP detects anti CSRF tokens purely by attribute names - the list of attribute names considered to be anti CSRF tokens
+is configured using the <a href="../../ui/dialogs/options/anticsrf.html">Options Anti CSRF screen</a>.<br/>
+When ZAP detects these tokens it records the token value and which URL generated the token.<br/>
+Other tools, like the <a href="ascan.html">active scanner</a>, have options which
+cause ZAP to automatically regenerate the tokens when required.
 </p>
 
 <h2>Ayrıca bakınız</h2>

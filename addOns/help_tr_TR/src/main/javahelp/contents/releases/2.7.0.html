@@ -282,25 +282,25 @@ Verilen, sistem dosya yolunu kullanarak bir Tarama İlkesi içeri alır.
 Tarama ve tarayıcının ID'lerini kullanarak tarayıcıyı atlar.
 
 <h3>localProxies'i GÖRÜNTÜLE / addAdditionalProxy</h3>
-Sağlanan bilgileri kullanarak yeni bir proxy ekler. Bakınız <a href="../ui/dialogs/options/localproxy.html">Seçenekler Yerel Proxy'ler ekranı</a> parametrelerin detayları için.
+Adds a new proxy using the details supplied.
 
 <h3>localProxies'i GÖRÜNTÜLE / removeAdditionalProxy</h3>
-Belirtilen adres ve port ile ek proxyi kaldırır.
+Removes the additional proxy with the specified address and port.
 
 <h3>EYLEM örümceği / setOptionAcceptCookies</h3>
-Örümcek işleminin internet taraması sırasında çerez kabul edip etmeyeceğini ayarlar.
+Sets whether or not a spider process should accept cookies while spidering.
 
 <h2>Açık Detayları</h2>
 
-Aşağıdaki güvenlik açığı ZAP'in önceki bir sürümünde bildirilmiştir.<br>
-aracılığı ile sorunları etik bir şekilde bize bildiren tüm araştırmacılara teşekkürler <a href="https://bugcrowd.com/owaspzap">bug ödül programı</a>.<br> 
-Bu açıkla ilgili daha fazla detaya ihtiyacınız varsa o zaman bizimle iletişime geç.
+The following vulnerability has been reported in a previous version of ZAP.<br>
+Many thanks to all of the researchers who have ethically reported issues to us via our <a href="https://bugcrowd.com/owaspzap">bug bounty program</a>.<br> 
+If you need more details about this vulnerability then please contact us.
 
 <h3>Windows Program Kaldırıcısı DLL Kaçırması'na karşı savunmasız</h3>
 
-2.6.0 için ZAP Windows Uninstaller, Windows'da DLL hırsızlığına özelliğine açıktır.
-Bu, şimdi düzeltilen 3. parti yükleyici Install4j'deki bir güvenlik açığıydı.<br>
-Not olarak bu durum sadece kötü niyetli DLL dosya yolunda ise meydana gelir.
+The ZAP Windows Uninstaller for 2.6.0 is vulnerable to DLL Hijacking on Windows.
+This was a vulnerability in the 3rd party installer Install4j which has now been fixed.<br>
+Note that this can only occur if a malicious DLL is already on the path.
 <br><br>
 <b>Emeği geçen: Sajeeb Lohani (sml555) of Bulletproof ZDS</b>
 

@@ -12,11 +12,11 @@
 مكافحة CSRF الرموز المميزة التي المعلمات عشوائية (الزائفة) المستخدمة لحماية ضد الهجمات التزوير طلب موقع عبور (CSRF). <br>ولكن كما أنها تجعل مهمة اختبار اختراق أكثر صعوبة، خاصة إذا كان يتم إعادة إنشاء الرموز المميزة في كل مرة يتم طلب نموذج.<br>
 </p>
 <p>
-انطلق بالكشف عن مكافحة CSRF الرموز بحتة من قبل أسماء السمة - قائمة أسماء السمة تعتبر مكافحة CSRF الرموز
-تم تكوينه باستخدام <a href="../../ui/dialogs/options/anticsrf.html">خيارات مكافحة CSRF الشاشة</a>.<br/>
-عندما انطلق بالكشف عن هذه الرموز يسجل قيمة رمزية والتي URL إنشاء الرمز المميز.<br/>
-الماسحات الضوئية الأخرى ، مثل <a href="ascan.html">النشطة الماسح الضوئي</a> ، الخيارات التي
-سبب انطلق تلقائيا تجديد الرموز عند الحاجة.
+ZAP detects anti CSRF tokens purely by attribute names - the list of attribute names considered to be anti CSRF tokens
+is configured using the <a href="../../ui/dialogs/options/anticsrf.html">Options Anti CSRF screen</a>.<br/>
+When ZAP detects these tokens it records the token value and which URL generated the token.<br/>
+Other tools, like the <a href="ascan.html">active scanner</a>, have options which
+cause ZAP to automatically regenerate the tokens when required.
 </p>
 
 <h2>أنظر أيضاً</h2>

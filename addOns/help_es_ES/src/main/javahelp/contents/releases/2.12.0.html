@@ -1,0 +1,631 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<TITLE>
+  Release 2.12.0
+</TITLE>
+</HEAD>
+<BODY>
+<H1>Release 2.12.0</H1>
+
+This is a bug fix and enhancement release, which now requires a minimum of Java 11. 
+<br>
+As the main <a href="https://github.com/zaproxy/zaproxy">zaproxy/zaproxy</a> repo has just reached 10k stars we're calling this the 'Ten Thousand Star' Release!
+
+<br><br>
+These release notes do not include all of the changes included in add-ons updated since 2.11.1.
+<br><br>
+Some of the more significant enhancements include:
+
+<H3>Network Add-On</H3>
+
+The core networking code has been replaced by a new add-on which means changes are no longer bound to core/stable releases.
+This add-on uses a modern network stack which will make it much easier to support modern protocols such as HTTP/2.
+<br>
+In addition the following features have been added:
+<ul>
+  <li>Proxy/Local Server Aliases
+  <li>Proxy and ZAP API are no longer tied together.
+  <li>HTTPS pass-through
+  <li>Certificate validity period configuration 
+</ul>
+
+<H3>Spider Add-On</H3>
+
+To facilitate more frequent functional enhancements and bug fixes the core Spider has been moved to an add-on which means such changes are no longer bound to core/stable releases.
+Other add-ons which use Traditional Spider functionality have also been re-worked to support the Spider add-on, including: Quick Start, Form Handler, GraphQL, OpenAPI, SOAP, and the Automation Framework. 
+More details are given below.
+
+<H3>Import/Export Add-On</H3>
+
+The Import/Export add-on allows to import/export data (e.g. HTTP Messages, URLs) to/from ZAP, it supersedes core functionality and the following add-ons which will no longer be available in the marketplace:
+<ul>
+  <li>Import files containing URLs
+  <li>Log File Importer
+  <li>Save Raw Message
+  <li>Save XML Message
+</ul>
+
+<H3>Database Add-On</H3>
+
+A new add-on was introduced for database related functionality in ZAP.
+This add-on provides the SQLite database engine for other add-ons to use.
+It also adds support for the ZAP permanent database.
+<p>
+The permanent database allows storing information that may be used across ZAP sessions.
+For example, it is used by the OAST add-on to persist BOAST payloads that can be polled
+in future ZAP sessions to list out-of-band interactions made to the service while ZAP wasn't running.
+
+<H3>Multi-threaded Passive Scanner</H3>
+
+The passive scanner has been updated to use a configurable number of threads, by default 4.
+This has been shown to significantly reduce the time spent processing the passive scan queue.
+
+<H3>Bit.ly Telemetry Removal</H3>
+
+From this release ZAP will no longer use bit.ly for any telemetry.
+Instead it uses our own services on the zaproxy.org domain.
+For full details see the FAQ: <a href="https://www.zaproxy.org/faq/what-calls-home-does-zap-make/">What 'calls home' does ZAP make?</a>.
+
+<h3>Scan Rule Promotions</h3>
+
+A significant number of scan rules have been promoted in this release.
+<p>
+The following <b>Active</b> scan rules have been promoted to <b>Release</b> status:
+
+<ul>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40034/">.env Information Leak</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/90034/">Cloud Metadata Attack</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40026/">Cross Site Scripting (DOM Based)</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10058/">GET for POST</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/20015/">Heartbleed OpenSSL Vulnerability</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40035/">Hidden File Finder</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/90024/">Padding Oracle</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/20018/">Remote Code Execution - CVE-2012-1823</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/20017/">Source Code Disclosure - CVE-2012-1823</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40020/">SQL Injection - Hypersonic (Time Based)</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40027/">SQL Injection - MsSQL (Time Based)</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40019/">SQL Injection - MySQL (Time Based)</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40021/">SQL Injection - Oracle (Time Based)</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40022/">SQL Injection - PostgreSQL (Time Based)</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40024/">SQL Injection - SQLite</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40029/">Trace.axd Information Leak</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10104/">User Agent Fuzzer</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/90017/">XSLT Injection</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/90023/">XXE</a>
+</ul>
+
+The following <b>Passive</b> scan rules have been promoted to <b>Release</b> status:
+
+<ul>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10044/">Big Redirects Detected</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10033/">Directory Browsing</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10097/">Hash Disclosure</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10034/">Heartbleed OpenSSL Vulnerability (Indicative)</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10041/">HTTP to HTTPS Insecure Transition in Form Post</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10042/">HTTPS to HTTP Insecure Transition in Form Post</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10108/">Reverse Tabnabbing</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10109/">Modern App Detection</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10062/">PII Disclosure</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10050/">Retrieved From Cache</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10036/">Server Header Info Leak</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10035/">Strict Transport Security</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10030/">User Controlled Charset</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10029/">User Controlled Cookie</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10031/">User Controlled HTML Attributes</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10043/">User Controlled Javascript Event</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10028/">User Controlled Open Redirect</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10039/">X-Backend-Server Information Leak</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10052/">X-ChromeLogger-Data Info Leak</a>
+</ul>
+
+The following <b>Active</b> scan rules have been promoted to <b>Beta</b> status (and will therefore now be included in the Packaged scans):
+
+<ul>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40040/">CORS</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40044/">Exponential Entity Expansion</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40038/">Forbidden Bypass</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40043/">Log4Shell</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40031/">Out-of-Band XSS</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40045/">Spring4Shell</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40042/">Spring Actuator</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/90036/">Server Side Template Injection (Blind)</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/90035/">Server Side Template Injection</a>
+</ul>
+
+The following <b>Passive</b> scan rules have been promoted to <b>Beta</b> status (and will therefore now be included in the Packaged scans):
+
+<ul>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10049/">Content Cacheable</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10009/">In Page Banner Info Leak</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10110/">Dangerous JS Functions</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/90002/">Java Serialization Object</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10063/">Permissions Policy Header Not Set</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/90003/">Sub-Resource Integrity Attribute Missing</a>
+</ul>
+
+<h3>Dependency Updates</h3>
+
+As usual the release includes dependency updates. 
+Of particular note is the updated Log4j library. 
+The previous stable release contained a Log4j library that was flagged as being vulnerable, although we believe it was not exploitable.
+<p>
+The following libraries were updated:
+
+<ul>
+  <li>Commons CSV, 1.8 → 1.9.0</li>
+  <li>Commons Text, 1.9 → 1.10.0</li>
+  <li>Flatlaf 1.6 → 2.6</li>
+  <li>HSQLDB, 2.5.2 → 2.7.1</li>
+  <li>Log4j 2, 2.15.0 → 2.19.0</li>
+  <li>RSyntaxTextArea, 3.1.3 → 3.3.0</li>
+  <li>XOM, 1.3.7 → 1.3.8</li>
+</ul>
+
+The following libraries were moved out of the core and into add-ons:
+
+<ul>
+  <li>Bouncy Castle</li>
+  <li>Commons Validator</li>
+  <li>Ice4j</li>
+  <li>SQLite JDBC</li>
+</ul>
+
+The following libraries were removed:
+
+<ul>
+  <li>Commons XPath</li>
+</ul>
+
+<H2>Add-Ons</H2>
+<H3>New Add-Ons</H3>
+The following add-ons are included by default in this release for the first time:
+<ul>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/database/">Database</a> - provides database engines and related infrastructure.</li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/import-export/">Import/Export</a> - Import and Export functionality.</li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/requester/">Requester</a> - Allows to manually edit and send messages.</li>
+  <li><a href="https://www.zaproxy.org/docs/desktop/addons/spider/">Spider</a> - provides traditional spider functionality.</li>
+</ul>
+
+<H3>Updated Add-Ons</H3>
+All of the add-ons included by default have been updated since the last full release.
+
+<H3>Removed Add-Ons</H3>
+The following add-ons are no longer included, having been superseded by the Import/Export add-on:
+<ul>
+  <li>Import files containing URLs
+  <li>Save Raw Message
+  <li>Save XML Message
+</ul>
+
+<H2>Enhancements</H2>
+<ul>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/1623">Issue 1623</a> : Provide better error message when cert path validation fails</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/2280">Issue 2280</a> : Import Root CA certificate via API</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/3113">Issue 3113</a> : Move Spider to an add-on</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/3594">Issue 3594</a> : ZAP API Ability to specify domains/addresses that API will be served from</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/4388">Issue 4388</a> : Allow to configure the irrelevant parameters for the Spider</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/4673">Issue 4673</a> : Allow to configure validity period of generated certificates</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/4788">Issue 4788</a> : Persist column configuration in History tab</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6001">Issue 6001</a> : Context endpoint on API does not output included and excluded technologies</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6577">Issue 6577</a> : Show input vector in the alerts</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6735">Issue 6735</a> : File&gt;Open Recent&gt;</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6832">Issue 6832</a> : Support HTTPS pass-through</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6916">Issue 6916</a> : Add support for mandatory add-ons</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6932">Issue 6932</a> : Use new callhome add-on for CFU requests</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6940">Issue 6940</a> : Report size for installed add-ons</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6942">Issue 6942</a> : Remove parent nodes in param container panel</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6949">Issue 6949</a> : Deprecate core endpoints related to root CA cert</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6950">Issue 6950</a> : Use Network add-on to manage server certificates</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7047">Issue 7047</a> : Show source of CONNECT requests as proxy</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7079">Issue 7079</a> : Get False Positive count using alertCountsByRisk  api</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7090">Issue 7090</a> : Support Info dialog user friendliness improvements (copy button)</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7110">Issue 7110</a> : Don't allow setting invalid scan policy params</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7135">Issue 7135</a> : Spider: find more URLs in headers</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7142">Issue 7142</a> : Spider: find more URLs in HTML</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7153">Issue 7153</a> : Spider: find img longdescs</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7159">Issue 7159</a> : Spider: find applet attrs, img dynsrc/lowsrc, and input src</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7160">Issue 7160</a> : Spider: find object attrs, isindex action, audio src, and process form buttons</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7169">Issue 7169</a> : Spider: Parse Links from embed src</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7174">Issue 7174</a> : Don't log parsing exception when request with json content type has empty body</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7177">Issue 7177</a> : Follow unencoded redirects</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7181">Issue 7181</a> : Active Scan Analyser will now be used more often</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7190">Issue 7190</a> : Populate Find dialog with selected text</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7206">Issue 7206</a> : ascan, pscan: Update enable/disable API actions</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7207">Issue 7207</a> : Add Auth. Issue Custom Page type and handling</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7229">Issue 7229</a> : Allow to generate CSRF form with custom action through the API</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7236">Issue 7236</a> : Notify listeners of all redirects followed</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7240">Issue 7240</a> : Deprecate proxy.pac core endpoint</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7249">Issue 7249</a> : Use latest proxy settings always</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7261">Issue 7261</a> : Allow to request shutdown when executing args</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7266">Issue 7266</a> : Remove single cookie request header option</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7267">Issue 7267</a> : Use latest user-agent and timeout always</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7270">Issue 7270</a> : Support passive scan threading</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7271">Issue 7271</a> : Index Alert ID in the Alert Tags Table</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7275">Issue 7275</a> : Enable reveal password functionality</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7279">Issue 7279</a> : Deprecate setproxy core endpoint</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7291">Issue 7291</a> : Use Network add-on to manage connection options</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7299">Issue 7299</a> : Spider: find table/td background, video src/poster, and img srcset</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7300">Issue 7300</a> : Confirm the deletion with the name of the context</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7302">Issue 7302</a> : Clarify History Tags vs Alert Tags</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7304">Issue 7304</a> : Use Network add-on to manage client certificates</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7310">Issue 7310</a> : Pass Control, Model, View singletons to scripts</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7342">Issue 7342</a> : Allow to hook history type info</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7352">Issue 7352</a> : Reduce passive scanner logging for messages that were deleted</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7433">Issue 7433</a> : deprecate: Core HAR API Endpoints</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7439">Issue 7439</a> : Change auth header env vars to use ScriptVars</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7441">Issue 7441</a> : Set the filename script attribute</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7443">Issue 7443</a> : Attempt to provide more script error details</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7456">Issue 7456</a> : Allow arbitrary HTTP versions</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7459">Issue 7459</a> : Disable/deprecate the Manual Request Editor</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7463">Issue 7463</a> : Add persistent callbacks</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7473">Issue 7473</a> : Remove SQLite dependency</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7475">Issue 7475</a> : Clear pscan queue option</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7488">Issue 7488</a> : L&amp;F which disables HTML JLabels by default</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7500">Issue 7500</a> : Exclude browser/OS updates by default</li>
+</ul>
+
+
+<H3>Spider Add-on</H3>
+
+The following table illustrates the differences/improvements versus the 2.11/2.11.1 release(s).
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Before</th>
+      <th>After</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Base - Proper handling</td>
+      <td>Base - Proper handling</td>
+    </tr>
+    <tr>
+      <td>A, Link, Area - ‘href’ attribute</td>
+      <td>A, Link, Area - ‘href’ attribute</td>
+    </tr>
+    <tr>
+      <td>Frame, IFrame, Script, Img - ‘src’ attribute</td>
+      <td>Applet, Audio, Embed, Frame, IFrame, Input, Script, Img, Video - ‘src’ attribute</td>
+    </tr>
+    <tr>
+      <td>Meta - ‘http-equiv’ for ’location’ and ‘refresh’</td>
+      <td>Meta - ‘http-equiv’ for ’location’, ‘refresh’ and ‘Content-Security-Policy’, ’name’ for ‘msapplication-config’</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Applet - ‘codebase’, ‘archive’ attributes</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Img - ’longdesc’, ’lowsrc’, ‘dynsrc’, ‘srcset’ attributes</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Isindex - ‘action’ attribute</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Object - ‘codebase’, ‘data’ attributes</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Svg - ‘href’ and ‘xlink:href’ attributes of ‘image’ and ‘script’ elements</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Table - ‘background’ attribute</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Video - ‘poster’ attribute</td>
+    </tr>
+    <tr>
+      <td>Form - proper handling of Forms with both GET and POST method. The fields values are generated validly, including HTML 5.0 input types.</td>
+      <td>Form - proper handling of Forms with both GET and POST method. The fields values are generated validly, including HTML 5.0 input types ‘form’, ‘formaction’, ‘formmethod’ attributes of buttons are also respected.</td>
+    </tr>
+    <tr>
+      <td>Comments - Valid tags found in comments are also analyzed, if specified in the Options Spider screen</td>
+      <td>Comments - Valid tags found in comments are also analyzed, if specified in the Options Spider screen</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Import - ‘implementation’ attribute</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Inline string - ‘p’, ’title’, ’li’, ‘h1’, ‘h2’, ‘h3’, ‘h4’, ‘h5’, ‘h6’, and ‘blockquote’ tags</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>SVG image files are parsed to identify HREF attributes and extract/resolve any contained links.</td>
+    </tr>
+  </tbody>
+</table>
+
+<H3>Requester Add-On</H3>
+
+The Manual Request Editor and Resend dialogues were moved to the Requester add-on. This add-on will now provide the base infrastructure for add-ons to edit and send messages, the following add-ons
+are now using the Requester add-on: Plug-n-Hack Configuration (Client Messages) and WebSockets.
+<p>The Requester tab was also updated to provide the same functionalities that the dialogues provide.
+
+<H2>Bug fixes</H2>
+<ul>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/541">Issue 541</a> : Break panel icons do not resize</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5223">Issue 5223</a> : Missing parts on Transfer-Encoding: chunked request</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5637">Issue 5637</a> : Unable to select options panel with duplicated name</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5791">Issue 5791</a> : Big messages cause GUI to freeze</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5815">Issue 5815</a> : Weird delay with chunked encoding and HTTPS status 401?</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/5935">Issue 5935</a> : Path input vector not properly encoding values</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6509">Issue 6509</a> : Passive Scan tag html_mailto performance issues</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6947">Issue 6947</a> : Fix webswing detection</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6992">Issue 6992</a> : Graal Engine Issue with Multi Threaded Access</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7059">Issue 7059</a> : Fix Stats Concurrent access bug</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7076">Issue 7076</a> : Set parent of warning messages in param dialogue</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7085">Issue 7085</a> : API - Do not require Authentication Realm and use default value</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7134">Issue 7134</a> : Scan Policy Manager Policy multiplies while modifying the name</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7171">Issue 7171</a> : Loss of new line chars for GZIP HTTP responses returned by the API</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7221">Issue 7221</a> : Default policy on start up not using edited policy rules</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7228">Issue 7228</a> : Scan Rule with empty name in the Scan Progress window and Scan Policy window</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7269">Issue 7269</a> : Fix get all alert tags</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7276">Issue 7276</a> : Correct Enable/Disable All buttons enabled state</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7280">Issue 7280</a> : Fix escaping on API param desc for setContextCheckingStrategy</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7286">Issue 7286</a> : Centre dialogue on screen if no owner</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7292">Issue 7292</a> : Client connection kept open longer than it should after forwarding response</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7332">Issue 7332</a> : Fix PatternSyntaxException in Analyser</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7423">Issue 7423</a> : `File`&gt;`Persist Session...` should be disabled with open session</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7424">Issue 7424</a> : Install/update add-ons first in automation</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7432">Issue 7432</a> : sites tree: Invalidate href cache on session open</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7436">Issue 7436</a> : Invalid session path causes ZAP to fail to start</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7464">Issue 7464</a> : Restore component/view on configuration load</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7471">Issue 7471</a> : site node: use contains check for DDN prefix</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7484">Issue 7484</a> : Using the Active Scan for GET targets sends a 'Content-Length' header</li>
+</ul>
+
+<H2>ZAP API Breaking Changes:</H2>
+
+<H3>VIEW alert / alertCountsByRisk</H3>
+
+The returned data now includes the False Positive count. This change may break existing consumers as the number of expected alerts might no longer be the same.
+For example, if a Medium risk alert is marked as False Positive, the structure of returned data will be:
+<blockquote><pre><code>
+{"High":0,"Low":3,"Medium":0,"Informational":2,"False Positive":1}
+</code></pre></blockquote>
+instead of:
+<blockquote><pre><code>
+{"High":0,"Low":3,"Medium":1,"Informational":2}
+</code></pre></blockquote>
+
+<H3>Endpoints With Response Changes</H3>
+
+The following endpoints used to return "OK" for all inputs.
+They now return suitable error messages (such as "does_not_exist" or "illegal_parameter") when the inputs are invalid.
+
+<ul>
+<li>ACTION ascan / enableScanners</li>
+<li>ACTION ascan / disableScanners</li>
+<li>ACTION ascan / setEnabledPolicies</li>
+<li>ACTION pscan / enableScanners</li>
+<li>ACTION pscan / disableScanners</li>
+</ul>
+
+<H2>ZAP API New Endpoints:</H2>
+
+<ul>
+<li>ACTION pscan / clearQueue</li>
+</ul>
+
+<H2>ZAP API Deprecated Endpoints:</H2>
+
+The following endpoints have been superseded by the <a href="https://www.zaproxy.org/docs/desktop/addons/import-export/">Import/Export</a> add-on:
+<ul>
+<li>OTHER core / messageHar</li>
+<li>OTHER core / messagesHar</li>
+<li>OTHER core / messagesHarById</li>
+<li>OTHER core / sendHarRequest</li>
+</ul>
+
+The following endpoints have been superseded by the <a href="https://www.zaproxy.org/docs/desktop/addons/network/">Network</a> add-on:
+<ul>
+<li>ACTION core / addProxyChainExcludedDomain</li>
+<li>ACTION core / disableAllProxyChainExcludedDomains</li>
+<li>ACTION core / enableAllProxyChainExcludedDomains</li>
+<li>ACTION core / enablePKCS12ClientCertificate</li>
+<li>ACTION core / disableClientCertificate</li>
+<li>ACTION core / generateRootCA</li>
+<li>ACTION core / modifyProxyChainExcludedDomain</li>
+<li>ACTION core / removeProxyChainExcludedDomain</li>
+<li>ACTION core / setOptionDefaultUserAgent</li>
+<li>ACTION core / setOptionDnsTtlSuccessfulQueries</li>
+<li>ACTION core / setOptionHttpStateEnabled</li>
+<li>ACTION core / setOptionProxyChainName</li>
+<li>ACTION core / setOptionProxyChainPassword</li>
+<li>ACTION core / setOptionProxyChainPort</li>
+<li>ACTION core / setOptionProxyChainPrompt</li>
+<li>ACTION core / setOptionProxyChainRealm</li>
+<li>ACTION core / setOptionProxyChainSkipName</li>
+<li>ACTION core / setOptionProxyChainUserName</li>
+<li>ACTION core / setOptionSingleCookieRequestHeader</li>
+<li>ACTION core / setOptionTimeoutInSecs</li>
+<li>ACTION core / setOptionUseProxyChain</li>
+<li>ACTION core / setOptionUseProxyChainAuth</li>
+<li>ACTION core / setOptionUseSocksProxy</li>
+<li>ACTION localProxies / addAdditionalProxy</li>
+<li>ACTION localProxies / removeAdditionalProxy</li>
+<li>OTHER core / proxy.pac</li>
+<li>OTHER core / rootCaCert</li>
+<li>OTHER core / setproxy</li>
+<li>VIEW core / optionDefaultUserAgent</li>
+<li>VIEW core / optionDnsTtlSuccessfulQueries</li>
+<li>VIEW core / optionHttpState</li>
+<li>VIEW core / optionHttpStateEnabled</li>
+<li>VIEW core / optionProxyChainName</li>
+<li>VIEW core / optionProxyChainPassword</li>
+<li>VIEW core / optionProxyChainPort</li>
+<li>VIEW core / optionProxyChainPrompt</li>
+<li>VIEW core / optionProxyChainRealm</li>
+<li>VIEW core / optionProxyChainUserName</li>
+<li>VIEW core / optionSingleCookieRequestHeader</li>
+<li>VIEW core / optionTimeoutInSecs</li>
+<li>VIEW core / optionUseProxyChain</li>
+<li>VIEW core / optionUseProxyChainAuth</li>
+<li>VIEW core / optionUseSocksProxy</li>
+<li>VIEW core / proxyChainExcludedDomains</li>
+<li>VIEW localProxies / additionalProxies</li>
+</ul>
+
+<H2>Binary Incompatible Changes</H2>
+
+The following classes (all of which were deprecated more than 5 years ago) have been removed:
+<ul>
+<li><code>org.parosproxy.paros.common.FileXML</code></li>
+<li><code>org.parosproxy.paros.core.proxy.SenderThread</code></li>
+<li><code>org.parosproxy.paros.core.proxy.SenderThreadListener</code></li>
+<li><code>org.parosproxy.paros.core.proxy.StreamForwarder</code></li>
+<li><code>org.parosproxy.paros.core.scanner.AbstractDefaultFilePlugin</code></li>
+<li><code>org.parosproxy.paros.extension.history.BrowserDialog</code></li>
+<li><code>org.parosproxy.paros.extension.history.PopupMenuResend</code></li>
+<li><code>org.parosproxy.paros.extension.history.PopupMenuResendSites</code></li>
+<li><code>org.parosproxy.paros.model.HistoryList</code></li>
+<li><code>org.parosproxy.paros.model.HttpMessageList</code></li>
+<li><code>org.parosproxy.paros.network.ByteVector</code></li>
+<li><code>org.parosproxy.paros.network.ProxyExcludedDomainMatcher</code></li>
+<li><code>org.zaproxy.zap.extension.brk.BreakpointMessageHandler</code></li>
+<li><code>org.zaproxy.zap.extension.brk.ExtensionBreak$DialogType</code></li>
+<li><code>org.zaproxy.zap.extension.history.PopupMenuShowInHistory</code></li>
+<li><code>org.zaproxy.zap.extension.stdmenus.PopupMenuSpiderContext</code></li>
+<li><code>org.zaproxy.zap.extension.stdmenus.PopupMenuSpiderContextAsUser</code></li>
+<li><code>org.zaproxy.zap.extension.stdmenus.PopupMenuSpiderDialog</code></li>
+<li><code>org.zaproxy.zap.extension.stdmenus.PopupMenuSpiderScope</code></li>
+<li><code>org.zaproxy.zap.extension.stdmenus.PopupMenuSpiderSite</code></li>
+<li><code>org.zaproxy.zap.extension.stdmenus.PopupMenuSpiderSubtree</code></li>
+<li><code>org.zaproxy.zap.extension.stdmenus.PopupMenuSpiderURL</code></li>
+<li><code>org.zaproxy.zap.extension.stdmenus.PopupMenuSpiderURLAsUser</code></li>
+<li><code>org.zaproxy.zap.httputils.RequestUtils</code></li>
+<li><code>org.zaproxy.zap.view.HistoryReferenceTableModel</code></li>
+<li><code>org.zaproxy.zap.view.MessagePanelsPositionController</code></li>
+<li><code>org.zaproxy.zap.view.PopupMenuHistoryReference</code></li>
+<li><code>org.zaproxy.zap.view.PopupMenuHttpMessage</code></li>
+<li><code>org.zaproxy.zap.view.PopupMenuSiteNode</code></li>
+</ul>
+
+The following methods (all of which were deprecated more than 5 years ago) have been removed:
+
+<ul>
+<li><code>org.parosproxy.paros.CommandLine#getConfigs()</code></li>
+<li><code>org.parosproxy.paros.control.Control#createAndOpenUntitledDb()</code></li>
+<li><code>org.parosproxy.paros.core.proxy.ProxyParam#isModifyAcceptEncodingHeader()</code></li>
+<li><code>org.parosproxy.paros.core.proxy.ProxyParam#setModifyAcceptEncodingHeader(boolean)</code></li>
+<li><code>org.parosproxy.paros.core.scanner.Alert#getAlert()</code></li>
+<li><code>org.parosproxy.paros.core.scanner.Alert#getReliability()</code></li>
+<li><code>org.parosproxy.paros.core.scanner.Alert#setAlert(java.lang.String)</code></li>
+<li><code>org.parosproxy.paros.core.scanner.Alert#setDetail(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.parosproxy.paros.network.HttpMessage)</code></li>
+<li><code>org.parosproxy.paros.core.scanner.Alert#setRiskReliability(int,int)</code></li>
+<li><code>org.parosproxy.paros.core.scanner.HostProcess#setPluginRequestCount(int,int)</code></li>
+<li><code>org.parosproxy.paros.core.scanner.HostProcess#setTestCurrentCount(org.parosproxy.paros.core.scanner.Plugin,int)</code></li>
+<li><code>org.parosproxy.paros.core.scanner.PluginFactory#loadedPlugin(java.lang.String)</code></li>
+<li><code>org.parosproxy.paros.core.scanner.PluginFactory#unloadedPlugin(java.lang.String)</code></li>
+<li><code>org.parosproxy.paros.core.scanner.VariantAbstractQuery#setParams(int,java.util.Map)</code></li>
+<li><code>org.parosproxy.paros.db.paros.ParosTableHistory#getHistoryList(long)</code></li>
+<li><code>org.parosproxy.paros.db.paros.ParosTableHistory#getHistoryList(long,int)</code></li>
+<li><code>org.parosproxy.paros.db.paros.ParosTableHistory#setHistoryTypeAsTemporary(int)</code></li>
+<li><code>org.parosproxy.paros.db.paros.ParosTableHistory#unsetHistoryTypeAsTemporary(int)</code></li>
+<li><code>org.parosproxy.paros.db.RecordAlert#getReliability()</code></li>
+<li><code>org.parosproxy.paros.db.RecordAlert#setReliability(int)</code></li>
+<li><code>org.parosproxy.paros.extension.ExtensionPopupMenuItem#isSuperMenu()</code></li>
+<li><code>org.parosproxy.paros.extension.history.ExtensionHistory#clearLogPanelDisplayQueue()</code></li>
+<li><code>org.parosproxy.paros.extension.history.LogPanel#clearDisplayQueue()</code></li>
+<li><code>org.parosproxy.paros.extension.history.LogPanel#LogPanel()</code></li>
+<li><code>org.parosproxy.paros.extension.history.LogPanel#setDisplayPanel(org.zaproxy.zap.extension.httppanel.HttpPanel,org.zaproxy.zap.extension.httppanel.HttpPanel)</code></li>
+<li><code>org.parosproxy.paros.extension.option.OptionsParamView#getShowMainToolbar()</code></li>
+<li><code>org.parosproxy.paros.extension.option.OptionsParamView#setShowMainToolbar(int)</code></li>
+<li><code>org.parosproxy.paros.model.Session#addGlobalExcludeURLRegexs(java.lang.String)</code></li>
+<li><code>org.parosproxy.paros.model.Session#setGlobalExcludeURLRegexs(java.util.List)</code></li>
+<li><code>org.parosproxy.paros.network.ConnectionParam#getProxyChainSkipName()</code></li>
+<li><code>org.parosproxy.paros.network.ConnectionParam#setProxyChainSkipName(java.lang.String)</code></li>
+<li><code>org.parosproxy.paros.view.AbstractFrame#loadIconImages()</code></li>
+<li><code>org.parosproxy.paros.view.MainFrame#changeDisplayOption(int)</code></li>
+<li><code>org.parosproxy.paros.view.MainFrame#MainFrame(int)</code></li>
+<li><code>org.parosproxy.paros.view.View#getDisplayOption()</code></li>
+<li><code>org.parosproxy.paros.view.View#getMessagePanelsPositionController()</code></li>
+<li><code>org.parosproxy.paros.view.View#setDisplayOption(int)</code></li>
+<li><code>org.parosproxy.paros.view.WorkbenchPanel#changeDisplayOption(int)</code></li>
+<li><code>org.parosproxy.paros.view.WorkbenchPanel#getTabbedOldSelect()</code></li>
+<li><code>org.parosproxy.paros.view.WorkbenchPanel#getTabbedOldStatus()</code></li>
+<li><code>org.parosproxy.paros.view.WorkbenchPanel#getTabbedOldWork()</code></li>
+<li><code>org.parosproxy.paros.view.WorkbenchPanel#removeSplitPaneWork()</code></li>
+<li><code>org.parosproxy.paros.view.WorkbenchPanel#setTabbedOldSelect(org.zaproxy.zap.view.TabbedPanel2)</code></li>
+<li><code>org.parosproxy.paros.view.WorkbenchPanel#setTabbedOldStatus(org.zaproxy.zap.view.TabbedPanel2)</code></li>
+<li><code>org.parosproxy.paros.view.WorkbenchPanel#setTabbedOldWork(org.zaproxy.zap.view.TabbedPanel2)</code></li>
+<li><code>org.parosproxy.paros.view.WorkbenchPanel#splitPaneWorkWithTabbedPanel(org.parosproxy.paros.view.TabbedPanel,int)</code></li>
+<li><code>org.parosproxy.paros.view.WorkbenchPanel#WorkbenchPanel(int)</code></li>
+<li><code>org.zaproxy.zap.control.AddOn#AddOn(java.io.File)</code></li>
+<li><code>org.zaproxy.zap.control.AddOn#AddOn(java.lang.String)</code></li>
+<li><code>org.zaproxy.zap.control.AddOn#canLoad()</code></li>
+<li><code>org.zaproxy.zap.control.AddOn#isAddOn(java.io.File)</code></li>
+<li><code>org.zaproxy.zap.control.AddOn#isAddOn(java.lang.String)</code></li>
+<li><code>org.zaproxy.zap.control.ControlOverrides#getConfigs()</code></li>
+<li><code>org.zaproxy.zap.control.ControlOverrides#setConfigs(java.util.Hashtable)</code></li>
+<li><code>org.zaproxy.zap.db.sql.SqlTableHistory#setHistoryTypeAsTemporary(int)</code></li>
+<li><code>org.zaproxy.zap.db.sql.SqlTableHistory#unsetHistoryTypeAsTemporary(int)</code></li>
+<li><code>org.zaproxy.zap.extension.api.DotNetAPIGenerator#generateCSharpFiles(java.util.List)</code></li>
+<li><code>org.zaproxy.zap.extension.api.GoAPIGenerator#generateGoFiles(java.util.List)</code></li>
+<li><code>org.zaproxy.zap.extension.api.JavaAPIGenerator#generateJavaFiles(java.util.List)</code></li>
+<li><code>org.zaproxy.zap.extension.api.NodeJSAPIGenerator#generateNodeJSFiles(java.util.List)</code></li>
+<li><code>org.zaproxy.zap.extension.api.PhpAPIGenerator#generatePhpFiles(java.util.List)</code></li>
+<li><code>org.zaproxy.zap.extension.api.PythonAPIGenerator#generatePythonFiles(java.util.List)</code></li>
+<li><code>org.zaproxy.zap.extension.api.WikiAPIGenerator#generateWikiFiles(java.util.List)</code></li>
+<li><code>org.zaproxy.zap.extension.ascan.ActiveScan#updatePluginRequestCounts()</code></li>
+<li><code>org.zaproxy.zap.extension.autoupdate.AddOnsTableModel#AddOnsTableModel(java.util.Comparator,org.zaproxy.zap.control.AddOnCollection,int)</code></li>
+<li><code>org.zaproxy.zap.extension.brk.ExtensionBreak#canAddBreakpoint()</code></li>
+<li><code>org.zaproxy.zap.extension.brk.ExtensionBreak#canEditBreakpoint()</code></li>
+<li><code>org.zaproxy.zap.extension.brk.ExtensionBreak#canRemoveBreakpoint()</code></li>
+<li><code>org.zaproxy.zap.extension.brk.ExtensionBreak#dialogClosed()</code></li>
+<li><code>org.zaproxy.zap.extension.brk.ExtensionBreak#dialogShown(org.zaproxy.zap.extension.brk.ExtensionBreak$DialogType)</code></li>
+<li><code>org.zaproxy.zap.extension.brk.ExtensionBreak#getBreakPanel()</code></li>
+<li><code>org.zaproxy.zap.extension.ExtensionPopupMenu#prepareShow()</code></li>
+<li><code>org.zaproxy.zap.extension.history.PopupMenuPurgeSites#purge(org.parosproxy.paros.model.SiteMap,org.parosproxy.paros.model.SiteNode)</code></li>
+<li><code>org.zaproxy.zap.extension.pscan.ExtensionPassiveScan#addPassiveScanner(java.lang.String)</code></li>
+<li><code>org.zaproxy.zap.extension.pscan.PassiveScanThread#PassiveScanThread( org.zaproxy.zap.extension.pscan.PassiveScannerList, org.parosproxy.paros.extension.history.ExtensionHistory, org.zaproxy.zap.extension.alert.ExtensionAlert)</code></li>
+<li><code>org.zaproxy.zap.extension.search.SearchPanel#SearchPanel()</code></li>
+<li><code>org.zaproxy.zap.extension.search.SearchPanel#setDisplayPanel(org.zaproxy.zap.extension.httppanel.HttpPanelRequest,org.zaproxy.zap.extension.httppanel.HttpPanelResponse)</code></li>
+<li><code>org.zaproxy.zap.extension.spider.SpiderScan#SpiderScan( org.zaproxy.zap.extension.spider.ExtensionSpider, org.zaproxy.zap.spider.SpiderParam, org.zaproxy.zap.model.Target, org.apache.commons.httpclient.URI, org.zaproxy.zap.users.User, int)</code></li>
+<li><code>org.zaproxy.zap.extension.spider.SpiderThread#SpiderThread( org.zaproxy.zap.extension.spider.ExtensionSpider, org.zaproxy.zap.spider.SpiderParam, java.lang.String, org.zaproxy.zap.model.ScanListenner)</code></li>
+<li><code>org.zaproxy.zap.spider.Spider#Spider(org.zaproxy.zap.extension.spider.ExtensionSpider,org.zaproxy.zap.spider.SpiderParam,org.parosproxy.paros.network.ConnectionParam,org.parosproxy.paros.model.Model,org.zaproxy.zap.model.Context)</code></li>
+<li><code>org.zaproxy.zap.spider.SpiderParam#getScope()</code></li>
+<li><code>org.zaproxy.zap.spider.SpiderParam#getScopeText()</code></li>
+<li><code>org.zaproxy.zap.spider.SpiderParam#setScopeString(java.lang.String)</code></li>
+<li><code>org.zaproxy.zap.view.ContextExcludePanel#getPanelName(org.zaproxy.zap.model.Context)</code></li>
+<li><code>org.zaproxy.zap.view.ContextIncludePanel#getPanelName(org.zaproxy.zap.model.Context)</code></li>
+<li><code>org.zaproxy.zap.view.MainToolbarPanel#setDisplayOption(int)</code></li>
+<li><code>org.zaproxy.zap.view.ScanPanel2#ScanPanel2(java.lang.String, javax.swing.ImageIcon, org.zaproxy.zap.model.ScanController, org.parosproxy.paros.common.AbstractParam)</code></li>
+<li><code>org.zaproxy.zap.view.TabbedPanel2#clone(org.zaproxy.zap.view.TabbedPanel2)</code></li>
+</ul>
+
+The following fields (all of which were deprecated more than 5 years ago) have been removed:
+
+<ul>
+<li><code>org.parosproxy.paros.Constant#FILE_CONFIG_DEFAULT</code></li>
+<li><code>org.parosproxy.paros.Constant#VULNS_BASE</code></li>
+<li><code>org.parosproxy.paros.core.scanner.Alert#MSG_RELIABILITY</code></li>
+<li><code>org.parosproxy.paros.core.scanner.Alert#SUSPICIOUS</code></li>
+<li><code>org.parosproxy.paros.core.scanner.Alert#WARNING</code></li>
+<li><code>org.parosproxy.paros.model.HistoryReference#TYPE_RESERVED_11</code></li>
+<li><code>org.parosproxy.paros.view.View#DISPLAY_OPTION_BOTTOM_FULL</code></li>
+<li><code>org.parosproxy.paros.view.View#DISPLAY_OPTION_LEFT_FULL</code></li>
+<li><code>org.parosproxy.paros.view.View#DISPLAY_OPTION_TOP_FULL</code></li>
+<li><code>org.zaproxy.zap.extension.ascan.ActiveScanPanel#PANEL_NAME</code></li>
+<li><code>org.zaproxy.zap.extension.search.SearchPanel#PANEL_NAME</code></li>
+</ul>
+
+<H2>See Also</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+</table>
+</BODY>
+</HTML>

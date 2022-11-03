@@ -21,27 +21,27 @@ Această funcționalitate este bazată pe cod din proiectul OWASP JBroFuzz.
 <h3>Certificatele SSL dinamic</h3>
 Suportul pentru conexiuni SSL a fost îmbunătățit și simplificat.<br>
 Utilizatorii pot acum crea propriu certificat rădăcină iar apoi să-l distribuie în HTTP-ul clienților.<br>
-Vezi <a href="../ui/dialogs/options/dynsslcert.html">Opțiuni: Certificate SSL dinamic</a> pentru mai multe detalii.  
 
 <h3>Modul Daemon și API</h3>
-Lansarea ZAP cu comanda "-daemon" din opțiunea liniei de comenzi va determina rularea în fundal în modul 'headless', însemând că nici o interfață de utilizator nu va fi afișată.<br>
-Un API inițial a fost implementat in XML, JSON și HTML.<br>
-Dacă ZAP rulează ca daemon atunci API-ul va fi activat automat, în caz contrar API-ul trebuie activat din ecranul de Opțiuni API.<br>
-API-ul poate fi navigat prin a deschide http://zap/ în browser cand se face proxy prin intermediul ZAP. 
+Starting ZAP with the "-daemon" command line option will cause it to run in the background in 'headless' mode, 
+meaning that no UI is displayed.<br>
+An initial API has been implemented in XML, JSON and HTML.<br>
+If ZAP is running as a daemon then the API is automatically enabled, otherwise the API must be enabled via the Options API screen.<br>
+The API can be navigated by opening http://zap/ in your browser when proxying via ZAP. 
 
 <h3>Integrarea Beanshell</h3>
-  <a href="http://www.beanshell.org/">BeanShell</a> este un shell Java interactiv care poat fi folosit pentru a executa scripturi BeanShell.<br> 
-Aceste scripturi sunt o formă simplificată de Java care folosește multe elemente din sintaxa Java, dar într-un format mai simplu de scriptare. <br>
-Tot codul Java este, de asemenea, cod valid BeanShell.<br>
-Integrarea BeanShell în OWASP ZAP permite scrierea de script-uri folosind funcțiile și setul de date ZAP.<br> 
-Aceasta poate fi o caracteristică foarte puternică în analiza aplicațiilor web.<br>
+The <a href="http://www.beanshell.org/">BeanShell</a> is an interactive Java shell that can be used to execute BeanShell scripts.<br> 
+These scripts are a simplified form of Java that use many elements from Java syntax, but in a simpler scripting format. <br>
+All Java code is also valid BeanShell code.<br>
+BeanShell integration in OWASP ZAP enables you to write scripts using the ZAP functions and data set.<br> 
+This can be a very powerful feature for analyzing web applications.<br>
 
 
 <h3>Internaționalizare completă</h3>
-Toate șirurile de afișare sunt acum internaționalizate complet.
+All display string are now fully internationalised.
 
 <h3>Localizare</h3>
-Suport imediat pentru următoarele limbi:
+Out of the box support for the following languages:
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Engleză</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Portugheză Braziliană</td></tr>
@@ -59,51 +59,54 @@ Suport imediat pentru următoarele limbi:
 <h2>Schimbări minore:</h2>
 
 <h3>Afișare hexagonală</h3>
-Tab-urile pentru <a href="../ui/tabs/request.html">Cereri</a>, <a href="../ui/tabs/response.html">și Răspunsuri</a> oferă acum opțiunea de afișare hexagonală, ce va afișa corpurile cererilor și răspunsurilor în format hexagonal.  
+The <a href="../ui/tabs/request.html">Request</a>, <a href="../ui/tabs/response.html">Response</a> tabs now provide
+a 'Hex View' option which will display the request and response bodies in hex format. 
 
 <h3>Rezultatele căutării</h3>
-Tab-ul de <a href="../ui/tabs/search.html">Căutare </a> acum afișează toate instanțele de șiruri găsite, mai degrabă decât doar prima instanță a fiecărei cereri sau fiecărui răspuns. 
+The <a href="../ui/tabs/search.html">Search tab </a> now displays all instances of a string found rather than just the first instance
+in each request or response. 
 
 <h3>Excludearea URL-urilor</h3>
-URL-uri pot fi acum excluse explicit din scanarea activă, din indexare și din proxy.
+URLs can be explicitly excluded from the active scanner, spider and from the proxy.
 
 <h3>Suport pentru copiere</h3>
-Cele mai multe panouri acum oferă opțiunea de meniu 'copiere' prin click dreapta, incluzând panourile de Portare a Scanării și de Forțare Brută.
+Most of the panels now provide a 'right click' 'Copy' menu option, including the Port Scan and Brute Force panels.
 
 <h3>Suport Anulează/Reface</h3>
-Toate câmpurile de introducere oferă acum sprijin prin acțiuni de Anulează/Reface folosind acceleratoarele implicite Anulează/Reface a sistemului de operare:
+All of the input fields now support Undo/Redo actions using the operating systems default Undo/Redo accelerators:
 <ul>
 <li>Windows/Linux: Ctrl+Z / Ctrl+Y
 <li>Mac OS X: Cmd+Z / Cmd+Shift+Z
 </ul>
 
 <h3>Suportul pentru proxy-ul portării de scanare și opțiunea de pauză</h3>
-Scanerul de portare poate să folosească acum proxy-ul de ieșire( în cazul în care acesta este configurat) și pauză în milisecunde poate fi acum configurată.
+The Port Scanner can now use the outgoing proxy (if configured) and the timeout in milliseconds can also now be set.
 
 <h3>Butoanele pentru cerere și rupere a răspunsului</h3>
-Acum există două butoane de 'Setare a Ruperii' care permit stabilirea de pauze pentru toate cererile și răspunsurile în mod independent. 
+There are now 2 'Set Break' buttons to allow breaks to be set on all requests and all responses independently. 
 
 <h3>Butoanele pentru a extinde tab-urile site-uri și informație</h3>
-Acum există două butoane care permit comutarea între a extinde tab-urile de Site-uri sau Informație.
+There are now 2 buttons which allow you to switch between having the Sites and Information tabs expanded.
 
 <h3>Break tab icon changes colour when breakpoint hit</h3>
-În timp ce tab-ul de Rupere nu este folosit, pictograma acestuia este o cruce gri &nbsp;
+While the Break tab is not in use its icon is a grey cross: &nbsp;
 <img src="../images/16/101grey.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
-Când un <a href="../start/features/breakpoints.html">breakpoint</a> este atins, pictograma își schimă culoarea într-o cruce roșie: &nbsp;
+When a <a href="../start/features/breakpoints.html">breakpoint</a> is hit the tab icon is changed 
+to a red cross: &nbsp;
 <img src="../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
 
 <h3>Pauză reglabilă</h3>
-Ecranul <a href="../ui/dialogs/options/connection.html">Opțiuni: Conexiuni</a> permite setarea de pauze în secunde pentru a simplifica testarea de aplicații încete.
+The Option: Connection screen allows you to set the timeout in seconds to make it easier to test slow applications.
 
 <h3>Update-uri ale librariei</h3>
-Cele mai multe librării folosite de ZAP au fost updatate la cele mai noi versiuni.
+Most of the libraries used by ZAP have been updated to the latest versions.
 
 <h3>O pictogramă nouă :)</h3>
-Mulțumiri către Simon Egli și toți ceilalți pentru sugestiile de pictograme minunate.
+Thanks to Simon Egli and all others for submitting cool icon suggestions.
 
 <h2>Probleme cunoscute:</h2>
 <h3>Mac OS X: SSL dinamic și Google Chrome</h3>
-SSL-ul dinamic curent nu merge când este folosit Google Chrome. Acest lucru este din cauza unei probleme știute și nerezolvată a Google Chrome și Keychain-urilor Mac OS X. În momentul importării Rădăcinii CA a OWASP ZAP în keychain și cererea unui website SSL, un mesaj de eroare este afișat "Certificat invalid”.
+Currently Dynamic SSL is not working when using Google Chrome. This is because of an unresolved known issue with Google Chrome and Mac OS X Keychain. When importing OWASP ZAP's Root CA into the keychain and requesting a SSL website, an "Invalid certificate" error message is shown.
 
 <h2>Consultă și</h2>
 <table>

@@ -15,12 +15,14 @@ Tampilan layar memungkinkan anda untuk menyusun:
 Jika ZAP memproses gambar.
 
 <h3>Tampilan permintaan MENGHUBUNGKAN (lokal)</h3>
-Jika permintaan MENGHUBUNGKAN HTTP diterima oleh <a href="localproxy.html">Proxy lokal</a> harus bertahan dalam arus
-<a href="../../tlmenu/file.html">sidang</a> dan ditampilkan dalam <a href="../../tabs/history.html">Tab riwayat</a>. Kesalahan-nya adalah tidak menunjukkan permintaan tersebut, mereka biasanya terjadi (dalam persiapan untuk TLS/SSL, WebSocket...  sambungan) dan, kecuali memeriksa perilaku aplikasi lanngganan, tidak banyak menarik (biasanya).
+If the HTTP CONNECT requests received by ZAP's proxies should be persisted in the current
+<a href="../../tlmenu/file.html">session</a> and shown in the <a href="../../tabs/history.html">History tab</a>. The default is
+to not show those requests, they happen frequently (in preparation for TLS/SSL, WebSocket... connections) and, unless inspecting
+the behaviour of the client application, are not (usually) of much interest.
 
 <h3>Tampilan</h3>
-Tata letak 3 panel utama.<br>
-Pilihan berikut tersedia:
+The layout of the 3 main panels.<br>
+The following options are available:
 <ul>
     <li>Maksimalkan tab kiri (situs) - panel 'pohon' yang berisi tab situs meluas
         untuk sepanjang sisi kiri. Ini akan mengurangi jumlah
@@ -31,8 +33,8 @@ Pilihan berikut tersedia:
 </ul>
 
 <h3>Posisi panel tanggapan</h3>
-Memungkinkan untuk mengkonfigurasi posisi tab tanggapan sehubungan dengan tab permintaan.<br>
-Pilihan tersebut tersedia:
+Allows to configure the position of the Response tab with respect to Request tab.<br>
+The following options are available:
 <ul>
     <li>Tab bedampingan - tab permintaan dan tanggapan yang berdampingan. Hal ini        meningkatkan informasi yang dapat ditampilkan tetapi berarti anda tidak dapat melihat tentang keduanya        permintaan dan tanggapan pada waktu yang sama.</li>
     <li>Side by Side in Tab - The Request and Response panels are shown side by side in
@@ -44,25 +46,27 @@ Pilihan tersebut tersedia:
         panel. This decreases the information that can be displayed but means you can see both
         the request and response at the same time.</li>
 </ul>
-Pilihan posisi panel tanggapan tidak berlaku bila pilihan tampilan diatur ke tata letak penuh.
+The Response Panel Position option does not apply when the Display option is set to Full Layout.
 
 <h3>Tampilkan tombol istirahat</h3>
-Lokasi tombol istirahat.
+The location of the break buttons.
 
 <h3>Permintaan besar melihat ukuran min</h3>
-Ukuran minimum dari permintaan badan dalam byte di mana sebuah titik 'besar permintaan badan' pesan akan ditampilkan bukan dari badan yang sebenarnya.<br>
-Hal ini untuk mencegah tubuh yang sangat besar agar tidak memperlambat UI.<br>
-Menetapkan nilai untuk -1 ini akan menghasilkan permintaan yang selalu ditampilkan tidak peduli seberapa besar itu.
+The minimum size of a request body in bytes at which point a 'large request body' message will be shown instead of the actual body.<br>
+This is to prevent very large bodies from slowing down the UI.<br>
+Setting this value to -1 will result in request always being displayed no matter how large it is.
 
 <h3>Tanggapan besar melihat ukuran min</h3>
-Ukuran minimum tubuh tanggapan dalam satuan byte di mana pesan 'respon tubuh besar' akan ditampilkan daripada tubuh yang sebenarnya.<br>
-Hal ini untuk mencegah tubuh yang sangat besar agar tidak memperlambat UI.<br>
-Menetapkan nilai untuk -1 ini akan menghasilkan tanggapan yang selalu ditampilkan tidak peduli seberapa besar itu.
+The minimum size of a response body in bytes at which point a 'large response body' message will be shown instead of the actual body.<br>
+This is to prevent very large bodies from slowing down the UI.<br>
+Setting this value to -1 will result in response always being displayed no matter how large it is.
 
 <h3>Pilihan tab hasil cap waktu</h3>
-Setelah anda telah diaktifkan cap waktu pada tab output anda dapat mengkonfigurasi format yang anda ingin agar cap waktu tersebut itu muncul. 
-Pilih format yang telah ditentukan sebelumnya dari daftar drop-down atau masukkan salah satu pilihan Anda sendiri. Format berbasis java FormatTanggalSederhana. Setelah memilih atau memasukkan format cap waktu jika Anda menekan enter contoh di sebelah kanan akan diperbarui
-untuk mencerminkan pilihan Anda. Jika ZAP tidak dapat menggunakan format yang telah Anda masukkan maka contoh ditampilkan berdasarkan pada format Default.
+Once you've enabled time stamps on the output tab you can configure the format you would like those time stamps to appear in. 
+Either select a pre-defined format from the drop-down list or enter one of your own choosing. The format is based on Java's
+SimpleDateFormat. After choosing or entering a time stamp format if you press enter the example on the right will be updated
+to reflect your choice. If ZAP is unable to use a format you've entered then the example is displayed based 
+on the Default format.
 
 <table border="1" cellpadding="5">
 <tr> <td> Panjang &amp; Default </td> <td> tttt-BB-hh JJ:mm:dd </td> </tr>
@@ -74,7 +78,7 @@ untuk mencerminkan pilihan Anda. Jika ZAP tidak dapat menggunakan format yang te
 The General Font section controls default text font and size used for the ZAP display, while the Work Panels Font section 
 controls the font used for the top right section of ZAP's main window (Ex: Request/Response, Edit and Resend tool, etc.).
 If you set this to -1 then the system default size will be used.<br>
-Bidang 'Contoh Font' akan menunjukkan seberapa besar teks default akan muncul.<br>
+The 'Font Example' field will show you how large the default text will appear.<br>
 <strong>Note:</strong> This setting will only take effect when ZAP is restarted.
 
 <h3>Look and Feel</h3>

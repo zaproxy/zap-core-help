@@ -21,28 +21,27 @@
 <h3>گواهینامه SSL پویا</h3>
 پشتیبانی از اتصالات SSL بهبود یافته و ساده شده است.<br>
 کاربران می توانند گواهینامه ریشه خود را ایجاد کنند و این را به مشتریان HTTP خود توزیع کنند.<br>
-دیدن <a href="../ui/dialogs/options/dynsslcert.html">گزینه: گواهی های SSL پویا</a> برای جزئیات بیشتر.  
 
 <h3>حالت اهریمن و API</h3>
-شروع ZAP با گزینه "-اهریمن" خط فرمان باعث می شود که در پسزمینه در حالت "بدون سر و صدا" اجرا شود
-به این معنی است که هیچ رابط کاربری نمایش داده نمی شود.<br>
-یک API اولیه در XML، JSON و HTML اجرا شده است.<br>
-اگر ZAP به عنوان یک اهریمن اجرا شود، API به طور خودکار فعال می شود، در غیر این صورت API باید از طریق صفحه گزینه های API فعال شود.<br>
-API را می توان با باز کردن http: //zap در مرورگر خود هنگام پروکسی از طریق ZAP هدایت کرد. 
+Starting ZAP with the "-daemon" command line option will cause it to run in the background in 'headless' mode, 
+meaning that no UI is displayed.<br>
+An initial API has been implemented in XML, JSON and HTML.<br>
+If ZAP is running as a daemon then the API is automatically enabled, otherwise the API must be enabled via the Options API screen.<br>
+The API can be navigated by opening http://zap/ in your browser when proxying via ZAP. 
 
 <h3>یکپارچه سازی محافظ هسته</h3>
-این <a href="http://www.beanshell.org/">محافظ هسته</a> پوسته جاوا تعاملی است که می تواند برای اجرای اسکریپت محفظ هسته استفاده شود.<br> 
-این اسکریپت ها یک شکل ساده از جاوا هستند که بسیاری از عناصر ، اما در فرمت اسکریپت ساده تر جاوا استفاده میشود. <br>
-تمام کد جاوا نیز کد محافظ هسته معتبر است.<br>
-ادغام محافظ هسته در OWASP ZAP شما را قادر به نوشتن اسکریپت ها با استفاده از توابع و مجموعه داده های ZAP می کند.<br> 
-این می تواند یک ویژگی بسیار قدرتمند برای تجزیه و تحلیل برنامه های وب باشد.<br>
+The <a href="http://www.beanshell.org/">BeanShell</a> is an interactive Java shell that can be used to execute BeanShell scripts.<br> 
+These scripts are a simplified form of Java that use many elements from Java syntax, but in a simpler scripting format. <br>
+All Java code is also valid BeanShell code.<br>
+BeanShell integration in OWASP ZAP enables you to write scripts using the ZAP functions and data set.<br> 
+This can be a very powerful feature for analyzing web applications.<br>
 
 
 <h3>کاملا بین المللی</h3>
-تمام رشته های نمایش در حال حاضر به طور کامل بین المللی است.
+All display string are now fully internationalised.
 
 <h3>بومی سازی</h3>
-از جعبه پشتیبانی برای زبان های زیر:
+Out of the box support for the following languages:
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>انگلیسی</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>پرتغالی برزیلی</td></tr>
@@ -60,55 +59,54 @@ API را می توان با باز کردن http: //zap در مرورگر خود
 <h2>تغییرات جزئی:</h2>
 
 <h3>مشاهده سحر و جادو</h3>
-این <a href="../ui/tabs/request.html">درخواست</a>, <a href="../ui/tabs/response.html">پاسخ</a> زبانه ها هم اکنون حاضر به ارائه میباشد
-گزینه "مشاهده کد هگزا" که درخواست و پاسخ را در قالب هگزا نمایش می دهد. 
+The <a href="../ui/tabs/request.html">Request</a>, <a href="../ui/tabs/response.html">Response</a> tabs now provide
+a 'Hex View' option which will display the request and response bodies in hex format. 
 
 <h3>نتایج جستجو</h3>
-این <a href="../ui/tabs/search.html">برگه ی جستجو </a> در حال حاضر تمام نمونه های یک رشته در بر داشت و نه تنها نمونه اول
-در هر درخواست یا پاسخ. 
+The <a href="../ui/tabs/search.html">Search tab </a> now displays all instances of a string found rather than just the first instance
+in each request or response. 
 
 <h3>جدا سازی آدرس های اینترنتی</h3>
-آدرس ها را می توان از صراحت اسکنر فعال و عنکبوتی از پروکسی جدا کرد.
+URLs can be explicitly excluded from the active scanner, spider and from the proxy.
 
 <h3>پشتیبانی کپی</h3>
-اکثر پانلها اکنون یک گزینه منو «کپی» راست کلیک، از جمله پانل اسکن و پورت نیروی مخلوق را فراهم می کنند.
+Most of the panels now provide a 'right click' 'Copy' menu option, including the Port Scan and Brute Force panels.
 
 <h3>بازگرداندن/ پشتیبانی مجدد</h3>
-تمام زمینه های ورودی در حال حاضر اقدامات باطل کردن / دوباره انجام دادن را با استفاده از سیستم عامل های پیش فرض پشتیبانی می کند واگر / شتاب دهنده های مجدد:
+All of the input fields now support Undo/Redo actions using the operating systems default Undo/Redo accelerators:
 <ul>
 <li>ویندوز/لینوکس: Ctrl+Z / Ctrl+Y
 <li>مکینتاژ: Cmd+Z / Cmd+Shift+Z
 </ul>
 
 <h3>پورت اسکنر پشتیبانی پروکسی و گزینه زمانبندی</h3>
-پورت اسکنر هم اکنون می تواند از پروکسی خروجی استفاده کند (اگر پیکربندی شده است) و همچنین می توان زمان بندی را در میلی ثانیه نیز تنظیم کرد.
+The Port Scanner can now use the outgoing proxy (if configured) and the timeout in milliseconds can also now be set.
 
 <h3>دکمه های قفل درخواست و پاسخ</h3>
-اکنون 2 دکمه نقض کردن وجود دارد که اجازه می دهد بر روی تمام درخواست ها و تمام پاسخ ها به صورت جداگانه تنظیم شود. 
+There are now 2 'Set Break' buttons to allow breaks to be set on all requests and all responses independently. 
 
 <h3>گسترش سایت ها و دکمه های تب اطلاعات</h3>
-در حال حاضر 2 دکمه وجود دارد که به شما امکان می دهد که بین صفحات وب و اطلاعات زبانه ها گسترش یابد.
+There are now 2 buttons which allow you to switch between having the Sites and Information tabs expanded.
 
 <h3>Break tab icon changes colour when breakpoint hit</h3>
-در حالی که زبانه نقض کردن در حال استفاده نیست، نماد آن صلیب خاکستری است: & nbsp؛;
+While the Break tab is not in use its icon is a grey cross: &nbsp;
 <img src="../images/16/101grey.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
-وقتی یک <a href="../start/features/breakpoints.html">breakpoint</a> آیکون ضربه زده شده تغییر کرده است
-به یک صلیب قرمز: & nbsp؛;
+When a <a href="../start/features/breakpoints.html">breakpoint</a> is hit the tab icon is changed 
+to a red cross: &nbsp;
 <img src="../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
 
 <h3>زمان وقوع قابل تنظیم</h3>
-این <a href="../ui/dialogs/options/connection.html">گزینه: اتصال</a> صفحه نمایش به شما اجازه می دهد تا زمان بندی را در ثانیه تنظیم کنید
-برای تست برنامه های آهسته تست کنید.
+The Option: Connection screen allows you to set the timeout in seconds to make it easier to test slow applications.
 
 <h3>به روزرسانی کتابخانه</h3>
-بیشتر کتابخانه های مورد استفاده ZAP به آخرین نسخه ها به روز شده اند.
+Most of the libraries used by ZAP have been updated to the latest versions.
 
 <h3>یک آیکون جدید :)</h3>
-با تشکر از سیمون Egli و دیگران برای ارائه آیکون های داغ پیشنهادات.
+Thanks to Simon Egli and all others for submitting cool icon suggestions.
 
 <h2>مسائل شناخته شده:</h2>
 <h3>مکینتاش: لایه سوکت های امن پویا و گوگل کروم</h3>
-در حال حاضر لایه سوکتهای امن دینامیک هنگام استفاده از گوگل کروم کار نمی کند. این به خاطر مسئله معروف حل نشده با گوگل کروم و کلید حلقه مکینتاش است. هنگام وارد کردن CA Root CA OWASP ZAP به کلید حلقه و درخواست یک وب سایت لایه سوکتهای امن، یک پیام خطا "سند نامعتبر" نمایش داده می شود.
+Currently Dynamic SSL is not working when using Google Chrome. This is because of an unresolved known issue with Google Chrome and Mac OS X Keychain. When importing OWASP ZAP's Root CA into the keychain and requesting a SSL website, an "Invalid certificate" error message is shown.
 
 <h2>همچنین نگاه کنید</h2>
 <table>
