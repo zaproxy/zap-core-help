@@ -9,29 +9,27 @@ Escaneo Activo
 <body>
 <h1>Escaneo Activo</h1>
 <p>
-El escaneo activo intenta encontrar potenciales vulnerabilidades usando ataques conocidos contra objetivos seleccionados.
+El escaneo activo intenta encontrar vulnerabilidades potenciales usando ataques conocidos contra objetivos seleccionados.
 </p>
 <p>
 El escaneo activo es una ataque a esos objetivos.<br/>
-No debería ser utilizado en aquellas aplicaciones webs que no son de su propiedad.
+No debería ser utilizado en aquellas aplicaciones web que no son de su propiedad o no tiene permiso explícito.
 </p>
 <p>
-In order to facilitate identifying ZAP traffic and Web Application Firewall exceptions, ZAP is accompanied 
-by a script "AddZapHeader.js" which can be used to add a specific header to all traffic that passes through 
-or originates from ZAP. eg: <tt>X-ZAP-Initiator: 3</tt>
+Para facilitar la identificación del tráfico ZAP y poder configurar las excepciones en las reglas de Firewall para aplicaciones web, ZAP incluye un script "AddZapHeader.js" que se puede usar para añadir un encabezado a todo el tráfico que pasa o se origina en ZAP. eg: <tt>X-ZAP-Initiator: 3</tt>
 </p>
 <p>
-It should be noted that active scanning can only find certain types of vulnerabilities.<br/>
-Logical vulnerabilities, such as broken access control, will not be found by
-any active or automated vulnerability scanning.<br/>
-Manual penetration testing should always be performed in addition to active
-scanning to find all types of vulnerabilities. 
+Señalar que el análisis activo solo puede encontrar ciertos tipos de vulnerabilidades.<br/>
+Las vulnerabilidades lógicas, como un control de acceso roto, no se detectaran por
+ningún análisis de vulnerabilidad activo o automatizado.<br/>
+Siempre se deben realizar pruebas de penetración manual además de las activas.
+Escanea para encontrar todo tipo de vulnerabilidades. 
 </p>
 
 <p>
-Active scanning is configured using the 
-<a href="../../ui/dialogs/options/ascan.html">Options Active Scan screen</a>.<br>
-The rules that run are configured via <a href="scanpolicy.html">Scan Policies</a> - you can have as many of these as you like. 
+El escaneo activo se configura usando la
+<a href="../../ui/dialogs/options/ascan.html">Pantalla Opciones Escaneo Activo</a>.<br>
+Las reglas que se ejecutan se configuran a través de <a href="scanpolicy.html">Políticas de análisis</a>; puedes usar tantas como quieras. 
 
 </p>
 
@@ -56,10 +54,10 @@ The rules that run are configured via <a href="scanpolicy.html">Scan Policies</a
 <a href="../checks.html">Reglas de escaneo</a></td><td>Soportadas por omisión</td></tr>
 </table>
 
-<h2>Official Videos</h2>
+<h2>Videos Oficiales</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td><a href="https://play.sonatype.com/watch/ZcEfSihgQSzuthJi4qEeW3">ZAP In Ten: Active Scanning</a> (9:47)</td></tr>
+<td><a href="https://play.sonatype.com/watch/ZcEfSihgQSzuthJi4qEeW3">ZAP en diez: escaneo activo</a> (9:47)</td></tr>
 </table>
 
 </body>
