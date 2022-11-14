@@ -7,96 +7,95 @@
 </TITLE>
 </HEAD>
 <BODY>
-<H1>Release 2.12.0</H1>
+<H1>Versión 2.12.0</H1>
 
-This is a bug fix and enhancement release, which now requires a minimum of Java 11. 
-<br>
-As the main <a href="https://github.com/zaproxy/zaproxy">zaproxy/zaproxy</a> repo has just reached 10k stars we're calling this the 'Ten Thousand Star' Release!
+Este es un lanzamiento de mejora y corrección de errores, ahora se requiere versión 11 de Java. 
+Como el repositorio principal de <a href="https://github.com/zaproxy/zaproxy">zaproxy/zaproxy</a> ha alcanzado 10 000 estrellas, lo llamamos el lanzamiento de las "Diez mil estrellas".
 
 <br><br>
-These release notes do not include all of the changes included in add-ons updated since 2.11.1.
+Estas notas de versión no incluyen todos los cambios incluidos en los complementos actualizados desde 2.11.1.
 <br><br>
-Some of the more significant enhancements include:
+Algunas de las mejoras más significativas:
 
-<H3>Network Add-On</H3>
+<H3>Complemento de red</H3>
 
-The core networking code has been replaced by a new add-on which means changes are no longer bound to core/stable releases.
-This add-on uses a modern network stack which will make it much easier to support modern protocols such as HTTP/2.
+Se ha cambiado el código de red principal por un nuevo complemento, lo que significa que los cambios ya no están vinculados a las versiones principales/estables.
+Este complemento utiliza una pila de red moderna que hará que sea mucho más fácil admitir protocolos modernos como HTTP/2
 <br>
-In addition the following features have been added:
+Además, se han añadido las siguientes funciones:
 <ul>
-  <li>Proxy/Local Server Aliases
-  <li>Proxy and ZAP API are no longer tied together.
+  <li>Alias de servidor proxy/local
+  <li>El Proxy y el API de ZAP ya no están vinculados.
   <li>HTTPS pass-through
-  <li>Certificate validity period configuration 
+  <li>Configuración del período de validez del certificado 
 </ul>
 
-<H3>Spider Add-On</H3>
+<H3>Complemento Spider</H3>
 
-To facilitate more frequent functional enhancements and bug fixes the core Spider has been moved to an add-on which means such changes are no longer bound to core/stable releases.
-Other add-ons which use Traditional Spider functionality have also been re-worked to support the Spider add-on, including: Quick Start, Form Handler, GraphQL, OpenAPI, SOAP, and the Automation Framework. 
-More details are given below.
+Para facilitar mejoras funcionales y correcciones de errores, el núcleo de Spider se ha movido a un complemento, lo que significa que dichos cambios ya no están vinculados a las versiones principales/estables.
+Otros complementos que utilizan las funciones de Spider tradicional también se han rediseñado para admitir el complemento Spider, incluidos: Quick Start, Form Handler, GraphQL, OpenAPI, SOAP y Automation Framework. 
+Más detalles a continuación.
 
-<H3>Import/Export Add-On</H3>
+<H3>Complemento para importar/exportar</H3>
 
-The Import/Export add-on allows to import/export data (e.g. HTTP Messages, URLs) to/from ZAP, it supersedes core functionality and the following add-ons which will no longer be available in the marketplace:
+El complemento Importar/Exportar permite importar/exportar datos (por ejemplo, mensajes HTTP, URL) a/desde ZAP, reemplaza la funcionalidad principal y los siguientes complementos que ya no estarán disponibles en el mercado:
 <ul>
-  <li>Import files containing URLs
-  <li>Log File Importer
-  <li>Save Raw Message
-  <li>Save XML Message
+  <li>Importar un archivo que contiene las URL
+  <li>Importar Archivo de Log
+  <li>Guardar Mensaje Raw
+  <li>Guardar Mensaje XML
 </ul>
 
-<H3>Database Add-On</H3>
+<H3>Complemento de Base de Datos</H3>
 
-A new add-on was introduced for database related functionality in ZAP.
-This add-on provides the SQLite database engine for other add-ons to use.
-It also adds support for the ZAP permanent database.
+Se introdujo un nuevo complemento para la funcionalidad relacionada con la base de datos en ZAP.
+Este complemento proporciona el motor de base de datos SQLite para que lo usen otros complementos.
+También agrega soporte para la base de datos permanente ZAP.
 <p>
-The permanent database allows storing information that may be used across ZAP sessions.
-For example, it is used by the OAST add-on to persist BOAST payloads that can be polled
-in future ZAP sessions to list out-of-band interactions made to the service while ZAP wasn't running.
+La base de datos permanente permite almacenar información que se puede utilizar en las sesiones de ZAP.
+Por ejemplo, el complemento OAST lo utiliza para conservar las cargas útiles de BOAST que se pueden sondear.
+en futuras sesiones de ZAP para enumerar las interacciones fuera de banda realizada en el servicio mientras ZAP no se estaba ejecutando.
 
-<H3>Multi-threaded Passive Scanner</H3>
+<H3>Escáner Pasivo Multi-Hilo</H3>
 
-The passive scanner has been updated to use a configurable number of threads, by default 4.
-This has been shown to significantly reduce the time spent processing the passive scan queue.
+El escáner pasivo se actualizó para usar una cantidad configurable de subprocesos, por defecto 4.
+Se ha demostrado que esto reduce significativamente el tiempo dedicado al procesamiento de la cola de exploración pasiva.
 
-<H3>Bit.ly Telemetry Removal</H3>
+<H3>Eliminada la Telemetría por Bit.ly</H3>
 
-From this release ZAP will no longer use bit.ly for any telemetry.
-Instead it uses our own services on the zaproxy.org domain.
-For full details see the FAQ: <a href="https://www.zaproxy.org/faq/what-calls-home-does-zap-make/">What 'calls home' does ZAP make?</a>.
+A partir de esta versión, ZAP ya no usará bit.ly para ninguna telemetría.
+En su lugar, utilizaremos nuestros propios servicios en el dominio zaproxy.org.
+Para obtener detalles completos, consulte las preguntas frecuentes: <a href="https://www.zaproxy.org/faq/what-calls-home-does-zap-make/">¿Qué 'llamadas a casa' hace ZAP?</a>.
 
-<h3>Scan Rule Promotions</h3>
+<h3>Promociones En las Reglas de Escaneo</h3>
 
-A significant number of scan rules have been promoted in this release.
+En esta versión, se ha promovido una cantidad significativa de reglas de exploración.
 <p>
-The following <b>Active</b> scan rules have been promoted to <b>Release</b> status:
+Las siguientes reglas de análisis <b>Activas</b> se han promovido al estado <b>Lanzamiento</b>:
 
 <ul>
-  <li><a href="https://www.zaproxy.org/docs/alerts/40034/">.env Information Leak</a>
-  <li><a href="https://www.zaproxy.org/docs/alerts/90034/">Cloud Metadata Attack</a>
-  <li><a href="https://www.zaproxy.org/docs/alerts/40026/">Cross Site Scripting (DOM Based)</a>
-  <li><a href="https://www.zaproxy.org/docs/alerts/10058/">GET for POST</a>
-  <li><a href="https://www.zaproxy.org/docs/alerts/20015/">Heartbleed OpenSSL Vulnerability</a>
-  <li><a href="https://www.zaproxy.org/docs/alerts/40035/">Hidden File Finder</a>
-  <li><a href="https://www.zaproxy.org/docs/alerts/90024/">Padding Oracle</a>
-  <li><a href="https://www.zaproxy.org/docs/alerts/20018/">Remote Code Execution - CVE-2012-1823</a>
-  <li><a href="https://www.zaproxy.org/docs/alerts/20017/">Source Code Disclosure - CVE-2012-1823</a>
-  <li><a href="https://www.zaproxy.org/docs/alerts/40020/">SQL Injection - Hypersonic (Time Based)</a>
-  <li><a href="https://www.zaproxy.org/docs/alerts/40027/">SQL Injection - MsSQL (Time Based)</a>
-  <li><a href="https://www.zaproxy.org/docs/alerts/40019/">SQL Injection - MySQL (Time Based)</a>
-  <li><a href="https://www.zaproxy.org/docs/alerts/40021/">SQL Injection - Oracle (Time Based)</a>
-  <li><a href="https://www.zaproxy.org/docs/alerts/40022/">SQL Injection - PostgreSQL (Time Based)</a>
-  <li><a href="https://www.zaproxy.org/docs/alerts/40024/">SQL Injection - SQLite</a>
-  <li><a href="https://www.zaproxy.org/docs/alerts/40029/">Trace.axd Information Leak</a>
-  <li><a href="https://www.zaproxy.org/docs/alerts/10104/">User Agent Fuzzer</a>
-  <li><a href="https://www.zaproxy.org/docs/alerts/90017/">XSLT Injection</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40034/">Fuga de información .env</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/90034/">Ataque a Metadatos en la Nube</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40026/">Cross Site Scripting (Basado en DOM)</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10058/">GET para POST</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/20015/">Vulnerabilidad OpenSSL Heartbleed</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40035/">Buscador de Archivos Ocultos</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/90024/">Padding Oracle (Validación de Relleno)</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/20018/">Ejecución remota de código - CVE-2012-1823</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/20017/">Divulgación del código fuente - CVE-2012-1823</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40020/">Injección SQL - Hipersonica (Basada En Tiempo)</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40027/">Inyección SQL - MsSQL (Basada en Tiempo)</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40019/">Inyección SQL - MySQL (Basada en Tiempo)</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40021/">Inyección SQL - Oracle (Basada en Tiempo)</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40022/">Inyección SQL - PostgreSQL (Basada en Tiempo)</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40024/">Inyección SQL - SQLite</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40029/">Filtrado de información en Trace.axd</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10104/">Fuzzer para User Agent</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/90017/">Inyección XSLT</a>
   <li><a href="https://www.zaproxy.org/docs/alerts/90023/">XXE</a>
 </ul>
 
-The following <b>Passive</b> scan rules have been promoted to <b>Release</b> status:
+Las siguientes reglas de análisis <b>Pasivo</b> se han movido a <b>Lanzamiento</b>:
 
 <ul>
   <li><a href="https://www.zaproxy.org/docs/alerts/10044/">Big Redirects Detected</a>
@@ -199,7 +198,7 @@ The following add-ons are no longer included, having been superseded by the Impo
   <li>Save XML Message
 </ul>
 
-<H2>Enhancements</H2>
+<H2>Mejoras:</H2>
 <ul>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/1623">Issue 1623</a> : Provide better error message when cert path validation fails</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/2280">Issue 2280</a> : Import Root CA certificate via API</li>
@@ -267,15 +266,15 @@ The following add-ons are no longer included, having been superseded by the Impo
 </ul>
 
 
-<H3>Spider Add-on</H3>
+<H3>Complemento Spider</H3>
 
-The following table illustrates the differences/improvements versus the 2.11/2.11.1 release(s).
+Las siguientes reglas de análisis <0>Pasivo</0> se han promovido al estado <0>Lanzamiento</0>:
 
 <table border="1">
   <thead>
     <tr>
-      <th>Before</th>
-      <th>After</th>
+      <th>Antes</th>
+      <th>Después</th>
     </tr>
   </thead>
   <tbody>
@@ -412,15 +411,15 @@ They now return suitable error messages (such as "does_not_exist" or "illegal_pa
 <li>ACTION pscan / disableScanners</li>
 </ul>
 
-<H2>ZAP API New Endpoints:</H2>
+<H2>Nuevos Endpoints API para ZAP:</H2>
 
 <ul>
 <li>ACTION pscan / clearQueue</li>
 </ul>
 
-<H2>ZAP API Deprecated Endpoints:</H2>
+<H2>Endpoints Obsoletos para API ZAP</H2>
 
-The following endpoints have been superseded by the <a href="https://www.zaproxy.org/docs/desktop/addons/import-export/">Import/Export</a> add-on:
+Los siguientes endpoints han sido reemplazados por el complemento <a href="https://www.zaproxy.org/docs/desktop/addons/import-export/">Importar/Exportar</a>:
 <ul>
 <li>OTHER core / messageHar</li>
 <li>OTHER core / messagesHar</li>
@@ -428,7 +427,7 @@ The following endpoints have been superseded by the <a href="https://www.zaproxy
 <li>OTHER core / sendHarRequest</li>
 </ul>
 
-The following endpoints have been superseded by the <a href="https://www.zaproxy.org/docs/desktop/addons/network/">Network</a> add-on:
+Los siguientes endpoints se han reemplazado por el complemento <a href="https://www.zaproxy.org/docs/desktop/addons/network/">Red</a>:
 <ul>
 <li>ACTION core / addProxyChainExcludedDomain</li>
 <li>ACTION core / disableAllProxyChainExcludedDomains</li>
@@ -477,9 +476,9 @@ The following endpoints have been superseded by the <a href="https://www.zaproxy
 <li>VIEW localProxies / additionalProxies</li>
 </ul>
 
-<H2>Binary Incompatible Changes</H2>
+<H2>Cambios de binarios incompatibles</H2>
 
-The following classes (all of which were deprecated more than 5 years ago) have been removed:
+Se han eliminado las siguientes clases (las cuales estaban obsoletas hace más de 5 años):
 <ul>
 <li><code>org.parosproxy.paros.common.FileXML</code></li>
 <li><code>org.parosproxy.paros.core.proxy.SenderThread</code></li>
@@ -512,7 +511,7 @@ The following classes (all of which were deprecated more than 5 years ago) have 
 <li><code>org.zaproxy.zap.view.PopupMenuSiteNode</code></li>
 </ul>
 
-The following methods (all of which were deprecated more than 5 years ago) have been removed:
+Se han eliminado los siguientes métodos (los cuales estaban en desuso hace más de 5 años):
 
 <ul>
 <li><code>org.parosproxy.paros.CommandLine#getConfigs()</code></li>
@@ -605,7 +604,7 @@ The following methods (all of which were deprecated more than 5 years ago) have 
 <li><code>org.zaproxy.zap.view.TabbedPanel2#clone(org.zaproxy.zap.view.TabbedPanel2)</code></li>
 </ul>
 
-The following fields (all of which were deprecated more than 5 years ago) have been removed:
+Se han eliminado los siguientes campos (todos los cuales estaban en desuso desde hace más de 5 años):
 
 <ul>
 <li><code>org.parosproxy.paros.Constant#FILE_CONFIG_DEFAULT</code></li>
@@ -621,11 +620,11 @@ The following fields (all of which were deprecated more than 5 years ago) have b
 <li><code>org.zaproxy.zap.extension.search.SearchPanel#PANEL_NAME</code></li>
 </ul>
 
-<H2>See Also</H2>
+<H2>Ver también</H2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introducción</a></td><td>Introducción a ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Lanzamientos</a></td><td>todos los lanzamientos</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Créditos</a></td><td>las personas y grupos que han hecho posible esta versión</td></tr>
 </table>
 </BODY>
 </HTML>
