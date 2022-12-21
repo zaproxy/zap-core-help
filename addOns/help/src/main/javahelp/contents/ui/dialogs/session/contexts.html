@@ -23,6 +23,14 @@ This allows you to manage the URLs which will be included in the context.<br/>
 URLs which dont match any of the regexs will not be included in the context.
 <br><strong>Note:</strong> The regular expressions must match the whole URL.
 
+<br><strong>Note</strong> When testing targets that operate on default ports (80
+for http, 443 for https), the colon port portion of the URL should not be 
+included. Including that portion (for example: http://example.com:80) may 
+result in an inability to crawl or test the target. If a 'default' port is 
+specified both browsers and ZAP treat it without the default port being 
+included then it doesn't match the expectation within the Context and there's 
+nothing to interact with as part of the Context.
+
 <H3>Exclude from Context</H3>
 This allows you to manage the URLs which will be excluded from the context.<br/>
 You only need to specify regexs for URLs that you do not want to include but which match one or more
