@@ -14,7 +14,7 @@ import java.util.regex.Pattern
 plugins {
     eclipse
     id("org.zaproxy.add-on") version "0.8.0" apply false
-    id("org.zaproxy.crowdin") version "0.1.0"
+    id("org.zaproxy.crowdin") version "0.3.1"
 }
 
 eclipse {
@@ -62,7 +62,7 @@ val createPullRequestNextDevIter by tasks.registering(CreatePullRequest::class) 
             "Update version and changelog for:\n" + releasedProjects.map {
                 " - ${it.zapAddOn.addOnName.get()}"
             }.sorted().joinToString("\n")
-        }
+        },
     )
 
     dependsOn(prepareNextDevIter)
@@ -142,7 +142,7 @@ subprojects {
         addOnRelease.downloadUrl.set(
             addOnRelease.addOn.map { it.asFile.name }.map {
                 "https://github.com/${ghReleaseDataProvider.get().repo.get()}/releases/download/${tagProvider.get()}/$it"
-            }
+            },
         )
 
         handleRelease {
@@ -182,7 +182,7 @@ val createPullRequestRelease by tasks.registering(CreatePullRequest::class) {
                 "Release the following add-ons:\n" + projects.map {
                     " - ${it.zapAddOn.addOnName.get()} version ${it.zapAddOn.addOnVersion.get()}"
                 }.sorted().joinToString("\n")
-            }
+            },
         )
     }
 }
