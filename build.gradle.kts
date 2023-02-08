@@ -1,5 +1,5 @@
 plugins {
-    id("com.diffplug.spotless") version "6.11.0"
+    id("com.diffplug.spotless") version "6.14.1"
 }
 
 allprojects {
