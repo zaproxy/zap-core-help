@@ -6,137 +6,133 @@
 </head>
 <body>
 	<h1>Autenticación</h1>
-	ZAP can handle a wide range of authentication mechanisms.<br>
-	Each <a href="contexts.html">Context</a> has:
+	ZAP puede manejar una amplia gama de mecanismos de autenticación.<br>
+	Cada <a href="contexts.html">Contexto</a> tiene:
 	<ul>
-	<li>an <a href="authmethods.html">Authentication Method</a> which defines how authentication is handled. 
-	The authentication is used to create Web Sessions that correspond to authenticated webapp <a href="users.html">Users</a>.</li>
-	<li>an <a href="authstrategies.html">Authentication Verification Strategy</a>
-	which defines how ZAP should detect when messages correspond to authenticated requests.</li>
+	<li>Un <a href="authmethods.html">método de autenticación</a> que define cómo se maneja la autenticación. 
+	La autenticación se utiliza para crear sesiones web que corresponden a <a href="users.html">usuarios</a> de aplicaciones web autenticadas.</li>
+	<li>Una <a href="authstrategies.html">estrategia de verificación de autenticación</a>
+que define cómo ZAP debe detectar los mensajes corresponden a solicitudes autenticadas.</li>
 	</ul>
-	You can use any combination of Authentication Method and Verification Strategy which works for your webapp.
+	Puede usar cualquier combinación de método de autenticación y estrategia de verificación que funcione para su aplicación web.
 	<p>
-	In order to perform the authentication of a user on a website /
-	in a webapp, the Authentication Method and Verification Strategy define how the authentication
-	is done (the process), while the necessary credentials (the exact
-	identifiers) are dependent on the user, so, in ZAP, they are
-	configured in the Users.
+	Para realizar la autenticación de un usuario en un sitio web/
+en una aplicación web, el método de autenticación y la estrategia de verificación definen cómo la autenticación
+es realizada (el proceso), mientras que las credenciales necesarias (los
+identificadores) dependen del usuario, por lo que, en ZAP, son
+configurados en los Usuarios.
 	<p>
-	The generic <b>main steps</b> that are needed to configure authentication for a web application
-	are the following:
+	  <b> </b> Los pasos genéricos principales que se necesitan para configurar la autenticación para una aplicación web son los siguientes:
 	<ol>
-		<li>Configure a ZAP <a href="contexts.html">Context</a> for the web application, ensuring that all required URLs are included</li>
-		<li>Set up the <a href="sessionManagement.html">Session Management Method</a> for the context to
-		the one that is used in your app</li>
-		<li>Configure the <a href="authmethods.html">Authentication Method</a> for your application, specifying all the requirements</li>
-		<li>Configure the <a href="authstrategies.html">Authentication Verification Strategy</a> for your application, specifying at least one
-			of the <i>Logged In Indicator</i> or the <i>Logged out indicator</i></li>
-		<li>Configure one or more <a href="users.html">Users</a> for the context that directly correspond to the
-		authentication method for the context</li>
+		<li>Configurar un <a href="contexts.html">Contexto</a> ZAP para la aplicación web, asegurándose de que se incluyan todas las URL requeridas.</li>
+		<li>Configurar el <a href="sessionManagement.html">Método de gestión de sesión</a> para que el contexto que se utiliza en su aplicación.</li>
+		<li>Configurar el <a href="authmethods.html">Método de autenticación</a> para su aplicación, especificando todos los requisitos.</li>
+		<li>Configurar la <a href="authstrategies.html">Estrategia de verificación de autenticación</a> para su aplicación, especificando al menos un <i>Indicador de inicio de sesión</i> o un <i>Indicador de cierre de sesión</i>.</li>
+		<li>Configurar uno o más <a href="users.html">Usuarios</a> para el contexto que corresponda directamente al
+método de autenticación para el contexto.</li>
 	</ol>
 
-	<h2>Configuration example</h2>
-	<p>A configuration example showing how to fully configure a webapp that uses <i>form-based authentication</i>,
-	<i>cookie-based session management</i> and returns full HTML pages (including an indication of whether the user is logged in) is seen below:
+	<h2>Ejemplo de configuración</h2>
+	<p>Un ejemplo de configuración que muestra cómo configurar completamente una aplicación web que utiliza <i>autenticación basada en formularios</i>,
+	<i>gestión de sesiones basada en cookies</i> y devuelve páginas HTML completas (incluida una indicación de si el usuario ha iniciado sesión) se muestra a continuación:
 	<ol>
-		<li>Set up a context for the web application</li>
-		<li>Set up the session management method to <i>Cookie-based Session Management</i></li>
-		<li>Make sure your browser proxies everything through ZAP and log into your application using the browser</li>
-		<li>Go to ZAP and identify the request that was done for the login (most usually it's a HTTP POST request 
-		containing the username and the password and possibly other elements)</li>
-		<li>If there is an anti-CSRF token in the login request, add the token name in 
-		<a href="../../ui/dialogs/options/anticsrf.html">Options Anti CSRF screen</a>, if not present.</li>
-		<li>Set up the authentication method:
+		<li>Configurar un contexto para la aplicación web.</li>
+		<li>Configure el método de gestión de sesiones en <i>Gestión de sesiones basada en cookies</i></li>
+		<li>Asegúrese de que su navegador proxifique todo a través de ZAP e inicie sesión en su aplicación usando el navegador</li>
+		<li>Vaya a ZAP e identifique la solicitud que se realizó para el inicio de sesión (por lo general, es una solicitud HTTP POST
+que contiene el nombre de usuario y la contraseña y posiblemente otros elementos)</li>
+		<li>Si hay un token anti-CSRF en la solicitud de inicio de sesión, agregue el nombre del token en
+<a href="../../ui/dialogs/options/anticsrf.html">Opciones Anti CSRF</a>, si no está presente.</li>
+		<li>Configure el método de autenticación:
 			<ol>
-			<li>Right click on the authentication request and 'Flag as Context... Form-based Auth Login Request'</li>
-			<li>A window will be opened already containing the request URL and the parameters (if any). Use 
-			the dropdown options to select which of the parameters correspond to the username and to the password</li>
+			<li>Haga clic derecho en la solicitud de autenticación y 'Marcar como contexto... Solicitud de inicio de sesión de autenticación basada en formulario'</li>
+			<li>Se abrirá una ventana que ya contiene la URL de solicitud y los parámetros (si corresponde). Usar
+las opciones desplegables para seleccionar cuál de los parámetros corresponde al nombre de usuario y a la contraseña</li>
 			</ol>
 		</li>
-		<li>Set up the authentication verification strategy:
+		<li>Configure la estrategia de verificación de autenticación:
 			<ol>
-			<li>Select a message which has a suitable logged in or logged out indicator e.g. a logout link or a welcome message</li>
-			<li>Select the relevant text, right click on it and select either 'Flag as Context... Authentication Logged-in Indicator' or
-			'Flag as Context... Authentication Logged-out Indicator' as appropriate
+			<li>Seleccione un mensaje que tenga un indicador adecuado de inicio de sesión o cierre de sesión, ej.: un enlace de cierre de sesión o un mensaje de bienvenida</li>
+			<li>Seleccione el texto relevante, haga clic derecho sobre él y seleccione 'Marcar como contexto... Indicador de inicio de sesión de autenticación' o
+'Marcar como contexto... Autenticación Indicador de cierre de sesión' según corresponda
 			</ol>
 		</li>
-    	<li>Define as many users as you need in the Session Properties -> Users section.</li>
+    	<li>Defina tantos usuarios como necesite en la sección Propiedades de sesión -> Usuarios.</li>
 	</ol>
-   	After configuring authentication, various actions are available in ZAP. For example, you can now select the user in the 
-   	Spider dialogue. Or, using the Forced User Mode, 
-   	you can force all the interactions that go through ZAP for a given Context to be from the perspective of a User. 
-   	The Forced User Mode is enabled via a button in the toolbar (the one with the user and the lock) and 
-   	is configured via Session Properties -> Forced User Mode.
+   	Después de configurar la autenticación, varias acciones están disponibles en ZAP. Por ejemplo, ahora puede seleccionar el usuario en el
+    Diálogo de la araña. O, utilizando el Modo de usuario forzado,
+    puede forzar que todas las interacciones que pasan por ZAP para un Contexto dado sean desde la perspectiva de un Usuario. 
+   	El Modo de Usuario Forzado se habilita a través de un botón en la barra de herramientas (el que tiene el usuario y el candado) y
+    se configura a través de Propiedades de sesión -> Modo de usuario forzado.
 	<br>
-	Most of the steps above apply as well for other authentication methods. The only things that change when trying
-	to configure authentication using a different method is step 6. Instead of that, select the authentication
-	method required from the drop-down list and configure it as needed. More details about configuring each type 
-	of authentication can be found in the <a href="authmethods.html">Authentication Methods</a> page and in the 
-	<a href="../../ui/dialogs/session/contexts.html">Context Session screens</a>.
+	La mayoría de los pasos anteriores también se aplican a otros métodos de autenticación. Las únicas cosas que cambian es al intentar
+configurar la autenticación usando un método diferente es el paso 6. En su lugar, seleccione la autenticación
+método requerido de la lista desplegable y configúrelo según sea necesario. Más detalles sobre la configuración de cada tipo
+de autenticación se puede encontrar en la página de <a href="authmethods.html">Métodos de autenticación</a> y en 
+	<a href="../../ui/dialogs/session/contexts.html">Pantallas de sesión de contexto</a>.
 
-	<h2><a name="envvars">Authentication Header Environmental Variables</a></h2>
-	A set of environmental variables are available which allow you to easily add an authentication header to all of the requests that are proxied through ZAP or initiated
-	by the ZAP tools, including the spiders and active scanner: 
+	<h2><a name="envvars">Cabeceras de Autenticación en Variables de Entorno</a></h2>
+	Hay disponible un conjunto de variables de entorno que le permiten añadir fácilmente cabeceras de autenticación para todas las solicitudes que se transmiten a través de ZAP o se inician
+por las herramientas ZAP, incluidas las arañas y el escáner activo: 
 	<ul>
-	<li>ZAP_AUTH_HEADER_VALUE - if this is defined then its value will be added as a header to all of the requests</li>
-	<li>ZAP_AUTH_HEADER - if this is defined then its value will be used as the header name - if it is not defined then the standard 
-	<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization">Authorization</a> header will be used</li>
-	<li>ZAP_AUTH_HEADER_SITE - if this is defined then header will only be included in sites who's name includes its value</li>
+	<li>ZAP_AUTH_HEADER_VALUE - si esto está definido, su valor se agregará como un encabezado a todas las solicitudes</li>
+	<li>ZAP_AUTH_HEADER - si esto está definido, entonces su valor se usará como el nombre del encabezado; si no está definido, entonces el valor 
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization">Authorization</a> se utilizará el encabezado</li>
+	<li>ZAP_AUTH_HEADER_SITE - si esto está definido, el encabezado sólo se incluirá en los sitios cuyo nombre incluya su valor</li>
 	</ul>
 
-	<h2>Configured via</h2>
+	<h2>Configurado a través de</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/session/contexts.html#auth">Session Properties dialog</a></td>
+			<td><a href="../../ui/dialogs/session/contexts.html#auth">Diálogo de propiedades de sesión</a></td>
 			<td></td>
 		</tr>
 	</table>
 
-	<h2>See also</h2>
+	<h2>Véase también</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="https://youtu.be/cR4gw-cPZOA">Youtube tutorial</a></td>
-			<td>of the Authentication, Session Management and Users Management features of ZAP [external link to https://youtu.be/cR4gw-cPZOA].</td>
+			<td><a href="https://youtu.be/cR4gw-cPZOA">Tutorial de Youtube (EN)</a></td>
+			<td>de las funciones de Autenticación, Gestión de sesiones y Gestión de usuarios de ZAP [enlace externo a https://youtu.be/cR4gw-cPZOA].</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/overview.html">UI Overview</a></td>
-			<td>for an overview of the user interface</td>
+			<td><a href="../../ui/overview.html">Descripción general de la interfaz de usuario</a></td>
+			<td>para obtener una descripción general de la interfaz de usuario</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="features.html">Features</a></td>
-			<td>provided by ZAP</td>
+			<td><a href="features.html">Características</a></td>
+			<td>Proporcionado por ZAP</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/session/contexts.html">Session
-					Contexts Dialog</a></td>
-			<td>for an overview of the Session Properties</td>
+			<td><a href="../../ui/dialogs/session/contexts.html">Diálogo de contextos de sesión</a></td>
+			<td>para una descripción general de las Propiedades de sesión</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="users.html">Users</a></td>
-			<td>for an overview of Users</td>
+			<td><a href="users.html">Usuarios</a></td>
+			<td>para una descripción general de los usuarios</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="anticsrf.html">Anti-CSRF tokens</a></td>
-			<td>for an overview of anti-CSRF tokens</td>
+			<td><a href="anticsrf.html">Tokens anti-CSRF</a></td>
+			<td>para obtener una descripción general de los tokens anti-CSRF</td>
 		</tr>
 
 	</table>
 
-<h2>Official Videos</h2>
+<h2>Videos Oficiales</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td><a href="https://play.sonatype.com/watch/ttqKANDzJCAdBUkPrsz6Td">ZAP In Ten: Authentication: Basic and Digest</a> (9:57)</td></tr>
+<td><a href="https://play.sonatype.com/watch/ttqKANDzJCAdBUkPrsz6Td">ZAP en  10: Autenticación: Básica y Digest (EN) </a> (9:57)</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td><a href="https://play.sonatype.com/watch/B1vhaLSUsme7eA5hU8WeGB">ZAP In Ten: Authentication: Form Based</a> (12:59)</td></tr>
+<td><a href="https://play.sonatype.com/watch/B1vhaLSUsme7eA5hU8WeGB">ZAP en 10: Autenticación: basada en formularios (EN) </a> (12:59)</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td><a href="https://www.zaproxy.org/addo-auth-workshop/">ZAP In Ten: ADDO Automation and Authentication Workshop</a> (8 videos)</td></tr>
+<td><a href="https://www.zaproxy.org/addo-auth-workshop/">ZAP en 10: Taller de Automatización y Autenticación ADDO (EN) </a> (8 vídeos)</td></tr>
 </table>
 
 </body>
