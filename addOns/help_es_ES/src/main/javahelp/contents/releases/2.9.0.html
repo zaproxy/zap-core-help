@@ -3,7 +3,7 @@
 <HEAD>
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
 <TITLE>
-  Release 2.9.0
+  Versión 2.9.0
 </TITLE>
 </HEAD>
 <BODY>
@@ -145,49 +145,49 @@ Las siguientes librerías han sido actualizadas:
 <li>Issue 5704 : Espere a que se instalen los complementos</li>
 <li>Issue 5743 : Los botones Buscar + Cancelar no están centrados ni alineados a la derecha</li>
 <li>Issue 5744 : Mejorar las etiquetas de los elementos del menú de búsqueda</li>
-<li>Issue 5780 : Don't display messages when deleting them</li>
-<li>Issue 5783 : Disable JAR caching by default</li>
-<li>Issue 5794 : Correct MailTo pattern for RegexAutoTagScanner</li>
-<li>Issue 5803 : Do not require the user password through the API</li>
+<li>Issue 5780: No mostrar mensajes al eliminarlos</li>
+<li>Issue 5783: Deshabilitar el almacenamiento en caché JAR de forma predeterminada</li>
+<li>Issue 5794: Patrón MailTo corregido para RegexAutoTagScanner</li>
+<li>Issue 5803: No solicitar la contraseña de usuario a través de la API</li>
 </ul>
 
-<H2>ZAP API New Endpoints:</H2>
+<H2>Nuevos Endpoints API para ZAP:</H2>
 
 <H3>VIEW script / globalCustomVar</H3>
-Gets the value (string representation) of a global custom variable. Returns an API error (DOES_NOT_EXIST) if no value was previously set.
+Obtiene el valor (representación de cadena) de una variable personalizada global. Devuelve un error de API (DOES_NOT_EXIST) si no se estableció ningún valor previamente.
 
 <H3>VIEW script / globalCustomVars</H3>
-Gets all the global custom variables (key/value pairs, the value is the string representation).
+Obtiene todas las variables personalizadas globales (pares clave/valor, el valor es la representación de cadena).
 
 <H3>VIEW script / scriptCustomVar</H3>
-Gets the value (string representation) of a custom variable. Returns an API error (DOES_NOT_EXIST) if no script with the given name exists or if no value was previously set.
+Obtiene el valor (representación de cadena) de una variable personalizada. Devuelve un error de API (DOES_NOT_EXIST) si no existe ningún script con el nombre dado o si no se estableció ningún valor previamente.
 
 <H3>VIEW script / scriptCustomVars</H3>
-Gets all the custom variables (key/value pairs, the value is the string representation) of a script. Returns an API error (DOES_NOT_EXIST) if no script with the given name exists.
+Obtiene todas las variables personalizadas (pares clave/valor, el valor es la representación de cadena) de un script. Devuelve un error de API (DOES_NOT_EXIST) si no existe ningún script con el nombre proporcionado.
 
 <H3>ACTION alert / addAlert</H3>
-Add an alert associated with the given message ID, with the provided details. (The ID of the created alert is returned.)
+Agrega una alerta asociada al ID del mensaje, con los detalles proporcionados. (Se devuelve el ID de la alerta creada).
 
 <H3> ACTION alert / updateAlert</H3>
-Update the alert with the given ID, with the provided details.
+Actualiza la alerta del ID proporcionado, con los detalles proporcionados.
 
 <H3>ACTION pscan / disableAllTags</H3>
-Disables all passive scan tags.
+Deshabilita todas las etiquetas del escaneo pasivo. 
 
 <H3>ACTION pscan / enableAllTags</H3>
-Enables all passive scan tags.
+Habilita todas las etiquetas del escáner pasivo.
 
 <H3>ACTION script / clearGlobalCustomVar</H3>
-Clears a global custom variable.
+Borra todas las variables globales personalizadas.
 
 <H3>ACTION script / clearScriptCustomVar</H3>
-Clears a script custom variable.
+Borra una variable personalizada de script.
 
-<H2>See also</H2>
+<H2>Véase También</H2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introducción</a></td><td>la introducción a ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Lanzamientos</a></td><td>el conjunto completo de lanzamientos</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Créditos</a></td><td>las personas y grupos que han hecho posible esta versión</td></tr>
 </table>
 </BODY>
 </HTML>

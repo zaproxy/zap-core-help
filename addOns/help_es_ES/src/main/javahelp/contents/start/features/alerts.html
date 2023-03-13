@@ -52,31 +52,31 @@ Están compatible con las siguientes propiedades:
 <li>Referencia</li>
 </ul>
 
-The format for alert tags is:
+El formato de las etiquetas de alerta es:
 <pre>
 &lt;alertid&gt;.tag.&lt;key&gt; = [ + | - ] [ &lt;value&gt; ]
 </pre>
-Note that:
+Tenga en cuenta que:
 <ul>
-<li>Spaces in the tag key must be escaped with a backslash.</li>
-<li>The tag value is optional.</li>
+<li>Los espacios en la etiqueta se deben escapar con una barra invertida.</li>
+<li>El valor de la etiqueta es opcional.</li>
 </ul>
 
-For example
+Por ejemplo
 <pre>
-# 40012 = Reflected XSS
-40012.solution = Follow our company specific guidelines at http://internet.example.com/xss.html
+# 40012 = XSS Reflejado
+40012.solution = Siga las pautas específicas de nuestra compañía en http://internet.example.com/xss.html
 40012.tag.Bug\ Tracker\ URL = https://example.com/issues/1234
 </pre>
-If the value starts with a '+' then it is appended to the existing information.
+Si el valor comienza con un '+' entonces se agrega a la información existente.
 <br>
-If it starts with a '-' then it is prepended to the existing information.
+Si comienza con un '-', se antepone a la información existente.
 <br>
-If it does not start with a '+' or '-' then it replaces the existing information.
+Si no comienza con un '+' o '-', reemplaza la información existente.
 <p>
-El archivo de configuración de alerta de anulación puede ser especificado a través de la <a href="api.html">API</a>,
+El archivo de configuración de sobreescritura de una alerta se puede especificar a través de la <a href="api.html">API</a>,
 <a href="../../ui/dialogs/options/alert.html">Pantalla de alerta de opciones</a>
-o el uso de la <a href="../../cmdline.html">línea de comando</a> opciones:  
+o usando la <a href="../../cmdline.html">línea de comando</a> opciones:  
 <pre>-config alert.overridesFilename=&lt;filename&gt;</pre>
 
 <h2>Véase también</h2>

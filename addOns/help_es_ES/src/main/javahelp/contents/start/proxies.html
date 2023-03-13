@@ -9,8 +9,8 @@ Configurando proxies
 <body>
 <h1>Configurando proxies</h1>
 <p>
-You will need to configure your browser to use ZAP as a proxy.<br>
-By default, ZAP uses an Address of 'localhost' and a Port of '8080', but these can be changed via the Options > Network > Local Servers/Proxies screen.
+Deberá configurar su navegador para usar ZAP como proxy.<br>
+De forma predeterminada, ZAP usa la dirección de 'localhost' y el pruerto '8080', pero estos se pueden cambiar a través de la pantalla Opciones > Red > Servidores locales/Proxies.
 
 Las instrucciones para las últimas versiones de los navegadores más utilizados son: 
 </p>
@@ -24,36 +24,36 @@ Las instrucciones para las últimas versiones de los navegadores más utilizados
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'Configuración de LAN'</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Siga</td><td> la sección 'Configuración LAN de Windows'</td></tr>
 </table>
-<strong>Note:</strong> To proxy <code>localhost</code> (and related addresses) with newer Chrome versions (>= 72) the command line argument <code>--proxy-bypass-list=&lt;-loopback&gt;</code> must be provided.
+<strong>Nota:</strong> Para proxificar <code>localhost</code> (y direcciones relacionadas) con versiones más nuevas de Chrome (>= 72) el parámetro en la línea de comandos  <code>--proxy-bypass-list=&lt;-loopback&gt;</code> deberá ser provisto.
 
 <h3>Firefox (en Windows)</h3>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> el menú 'Herramientas' </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> el elemento de menú 'Opciones...'</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select the</td><td> 'General' panel</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Scroll to</td><td> 'Network Settings' section</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> Panel 'General'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Desplácese hasta</td><td> Sección 'Configuración de red'</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'Configuración...'</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> la opción 'Configuración manual del proxy'</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ingrese</td><td> 'HTTP Proxy:' field the 'Address' you configured in the options screen</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ingrese en la</td><td> 'Port' field to the right of the 'HTTP Proxy' field the 'Port' you configured in the options screen.
-Ensure 'SSL Proxy' is also configured, either by selecting 'Use this proxy server for all protocols' or by setting the corresponding values.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ingrese</td><td> El 'Proxy HTTP:' el campo 'Dirección' que configuró en la pantalla de opciones</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ingrese</td><td> El campo 'Puerto' a la derecha del campo 'Proxy HTTP' el 'Puerto' que configuró en la pantalla de opciones.
+Asegúrese de que 'Proxy SSL' también esté configurado, ya sea seleccionando 'Usar este servidor proxy para todos los protocolos' o configurando los valores correspondientes.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'OK'</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'OK'</td></tr>
 </table>
-<strong>Note:</strong> To proxy <code>localhost</code> (and related addresses) with newer Firefox versions (>= 67) the preference <code>network.proxy.allow_hijacking_localhost</code> (accessible through the <code>about:config</code> page) must be set to <code>true</code>.
+<strong>Nota:</strong> Para proxificar <code>localhost</code> (y direcciones relacionadas) con versiones más nuevas de Firefox (>= 67) la preferencia <code>network.proxy.allow_hijacking_localhost</code> (accesible desde la página <code>about:config</code> debe establecerse a <code>true</code>.
 
 <h3>Firefox (en Linux)</h3>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td>Menú de 'Editar'</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td>Objeto del menu de 'Preferencias'</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Sigue las</td><td>instructions above from the 'General' panel</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Siga</td><td>Las instrucciones anteriores desde el panel 'General'</td></tr>
 </table>
 
 <h3>Firefox (en OS X)</h3>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> Menú 'Firefox' </td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> el elemento de menú "Preferencias..."</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Follow the</td><td> instructions above from the 'General' panel</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> El elemento de menú "Preferencias..."</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Siga</td><td> Las instrucciones anteriores desde el panel 'General'</td></tr>
 </table>
 
 <h3>Internet Explorer 7 y 8</h3>
@@ -63,52 +63,52 @@ Ensure 'SSL Proxy' is also configured, either by selecting 'Use this proxy serve
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> el elemento de menú "Opciones de Internet"</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione la</td><td> pestaña "Conexiones"</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón "Configuración de LAN"</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Siga la</td><td> sección "Configuración LAN de Windows"</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Siga</td><td> La sección "Configuración LAN de Windows" más abajo</td></tr>
 </table>
 
 <h3>Opera</h3>
 
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione la</td><td> "Menú" en la esquina superior izquierda</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> "Menú" en la esquina superior izquierda</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> Elemento de menú "Configuración"</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> Elemento de menú "preferencias"</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione el</td><td> Pestaña "avanzado"</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione el</td><td> Elemento "red" en la lista de la izquierda</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Presione el</td><td> Botón de "Servidores proxy"</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione el</td><td> 'HTTP' checkbox</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ingrese en el</td><td> field to the right of 'HTTP' the 'Address' you configured in the options screen</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ingrese en el</td><td> HTTP 'Port' field the 'Port' you configured in the options screen</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> Proxy servers 'OK' button</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> Preferences 'OK' button</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> Pestaña "avanzado"</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> Elemento "red" en la lista de la izquierda</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> Botón de "Servidores proxy"</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> La casilla  'HTTP'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ingrese</td><td> El campo a la derecha de 'HTTP' la 'Dirección' que configuró en la pantalla de opciones</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ingrese</td><td> El 'Puerto'  HTTP en el campo 'Puerto' que configuró en la pantalla de opciones</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> El botón 'OK' en Servidores Proxy</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> El botón 'OK' en Preferencias</td></tr>
 </table>
 
-<h3>Safari (on OS X)</h3>
+<h3>Safari (en OS X)</h3>
 
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> 'Safari settings' button in the top right hand corner</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> El botón 'Configuración de Safari' en la esquina superior derecha</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> el elemento de menú 'Preferencias'</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> la pestaña 'Avanzado'</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> el botón 'Cambiar configuraciones' a continuación de la etiqueta 'Proxies'</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Follow the</td><td> 'OS X System Proxy settings' section below</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Siga</td><td> La Sección 'Configuración de proxy del sistema OS X' a continuación</td></tr>
 </table>
 
-<h3>Safari (on Windows)</h3>
+<h3>Safari (en Windows)</h3>
 
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> 'Display a menu of general Safari settings' button in the top right hand corner</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select the</td><td> elemento de menú 'preferencias'</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione la</td><td> pestaña 'avanzado'</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> botón de 'cambiar configuraciónes' al lado de la etiqueta 'proxis'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> El botón 'Mostrar un menú de configuración general de Safari' en la esquina superior derecha</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> Elemento de menú 'preferencias'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> la pestaña 'avanzado'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> El botón de 'cambiar configuraciónes' al lado de la etiqueta 'proxis'</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> Botón "Configuración LAN"</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Sigua la</td><td> sesión "configuración de Windows" más abajo</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Sigua la</td><td> La sección "Configuración LAN de Windows" más abajo</td></tr>
 </table>
 
 <h3>Configuración de Proxy del sistema OS X</h3>
 
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> 'Proxy web (HTTP)</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ingrese</td><td> 'Address:' field the 'Address' you configured in the options screen</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ingrese</td><td> 'Port' field the 'Port' you configured in the options screen</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Introduzca</td><td> El campo 'Dirección:' la 'Dirección' que configuró en la pantalla de opciones</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Introduzca</td><td> El campo 'Puerto' el 'Puerto' que configuró en la pantalla de opciones</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> Botón 'OK' de la configuración de servidores proxy</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> Botón 'Aplicar' en opciones de red</td></tr>
 </table>
@@ -116,14 +116,14 @@ Ensure 'SSL Proxy' is also configured, either by selecting 'Use this proxy serve
 <h3>Configuración LAN de Windows</h3>
 
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione la</td><td> casilla de 'Usar un servidor Proxy para su servidor LAN'</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Ingrese en el</td><td> 'Address:' field the 'Address' you configured in the options screen</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Enter in the</td><td> 'Port' field the 'Port' you configured in the options screen</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> La casilla de 'Usar un servidor Proxy para su servidor LAN'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Introduzca en</td><td> El campo 'Dirección:' la 'Dirección' que configuró en la pantalla de opciones</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Introduzca en</td><td> El campo 'Puerto' el 'Puerto' que configuró en la pantalla de opciones</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Presione el</td><td> Botón 'OK' de la configuración de Red de Área Local (LAN)</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Presione el</td><td> Botón 'OK' de las Opciones de Internet</td></tr>
 </table>
 
-<h2>Vea también</h2>
+<h2>Véase También</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="start.html">Introducción</a></td><td>para más detalles de cómo comenzar a usar ZAP</td></tr>
