@@ -7,23 +7,21 @@
 </TITLE>
 </HEAD>
 <BODY>
-<H1>Release 2.9.0</H1>
+<H1>Versão 2.9.0</H1>
 
-This is a bug fix and enhancement release, which requires a minimum of Java 8. 
-Note that a minimum of Java 11 is recommended, especially for high DPI displays.
+Essa versão corrige bugs e aplica melhorias, requer no mínimo Java 8. 
+Note que no mínimo o Java 11 é recomendado, especialmente para displays com alto DPI.
 <br><br>
-These release notes do not include all of the changes included in add-ons updated since 2.8.0.
+Essas notas de versão não incluem todas as mudanças incluídas em add-ons atualizados desde a 2.8.0.
 <br><br>
-Some of the more significant enhancements include:
+Algumas das melhorias mais significantes inlcuem:
 
-<H2>Session Management Scripts</H2>
-It's now possible to define scripts which handle non standard or more complex session management.<br>
-Session Management scripts have full access to the authentication request and response and can define custom
-mandatory and optional parameters.
-An example session management script for OWASP Juice shop is provided.
+<H2>Scripts de Gerenciamento de Sessão</H2>
+Agora é possível definir scripts que tratem gerenciamentos de sessão fora do padrão ou mais complexos.<br> Scripts de Gerenciamento de Sessão possuem total acesso às requisições e respostas de autenticação e pode definir Parâmetros personalizados obrigatórios e opcionais.
+Um exemplo de script de Gerenciamento de sessão para OWASP Juice shop é dado.
 
 <H2>Active Scan Filter</H2>
-It's now possible to filter requests in Active Scan. Below are the supported criteria's:
+Agora é possivel filtrar requisições no Active Scan. Abaixo estão os modelos suportados:
 <ul>
 	<li>HTTP method</li>
 	<li>Status code</li>
@@ -32,9 +30,8 @@ It's now possible to filter requests in Active Scan. Below are the supported cri
 </ul>
 
 <H2>Custom Global/Script Variables</H2>
-It's now possible for scripts to share custom global/script variables, which can be of any type not
-just strings, for example, lists, maps, GUI models.<br/>
-In JavaScript they are accessed/set as follows:
+Agora é possível scripts compartilharem variáveis globais/scripts customizados, que podem ser de qualquer tipo, não somente strings, por exemplo, lists, maps, GUI models.<br>
+Em JavaScript são acessados/definidos da seguinte maneira:
 <blockquote><pre><code>
 var ScriptVars = Java.type("org.zaproxy.zap.extension.script.ScriptVars")
 
