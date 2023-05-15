@@ -44,34 +44,34 @@ print(ScriptVars.getGlobalCustomVar("var.name")[2]) // Prints C
 
 <H2>Scan Rule Promotions</H2>
 
-The following scan rules have been promoted:
+Os seguintes módulos foram instalados:
 
 <h3>Passive Scan Rules - Release</h3>
 <ul>
-<li>Cookie Without SameSite Attribute</li>
-<li>Cross Domain Misconfiguration</li>
-<li>Information Disclosure: In URL</li>
-<li>Information Disclosure: Referrer</li>
-<li>Information Disclosure: Suspicious Comments</li>
-<li>Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s)</li>
-<li>Timestamp Disclosure</li>
-<li>Username Hash Found</li>
-<li>X-AspNet-Version Response Header Scanner</li>
-<li>X-Debug-Token Information </li>
+<li>Cookie sem o atrivuto SameSite</li>
+<li>Configuração de Domínio Cruzado incorreta</li>
+<li>Divulgação de informações: No URL</li>
+<li>Divulgação de informações: Referente</li>
+<li>Divulgação de informações: Comentários Suspeitos</li>
+<li>Servidor vaza informações através do(s) campo(s) de cabeçalho de resposta HTTP "X-Powered-By".</li>
+<li>Divulgação de timestamp</li>
+<li>Hash do nome de usuário encontrado</li>
+<li>Scanner de cabeçalho de resposta X-AspNet-Version</li>
+<li>Informação do X-Debug-Token </li>
 </ul>
 
 <H2>Filters Classes Removal</H2>
-The classes/code for Filters functionality, deprecated since ZAP 2.4.0, has been removed. Add-ons that still use that will stop working.
+As classes/código para a funcionalidade de Filtros, estão obsoletas desde o ZAP 2.4.0, foi removido. Os Add-ons que ainda os utilizarem irão parar de funcionar.
 
 <H2>Changes in Bundled Libraries</H2>
-The following libraries were removed:
+As seguintes bibliotecas foram removidas:
 <ul>
   <li>JDOM</li>
   <li>Diff Utils</li>
 </ul>
-no longer in use by core, add-ons should bundle the library, if needed.
+Não estão mais em uso pelo núcleo. Os complementos devem incluir a biblioteca, se necessário.
 
-The following libraries were updated:
+As seguintes bibliotecas foram atualizadas:
 <ul>
   <li>Bouncy Castle, 1.61 → 1.64</li>
   <li>Commons BeanUtils, 1.9.3 → 1.9.4</li>
@@ -85,52 +85,53 @@ The following libraries were updated:
 </ul>
 
 
-<H2>Enhancements</H2>
+<H2>Aprimoramentos</H2>
 <ul>
-<li>Issue 2016 : Choose a unique port in the GUI if theres a clash</li>
-<li>Issue 2619 : Allow add-ons to declare/bundle its dependencies</li>
-<li>Issue 3358 : Enhancement: Options Panel Filter</li>
-<li>Issue 3402 : Share custom variables between scripts</li>
-<li>Issue 3491 : Feature-Request: Select Multiple Contexts</li>
-<li>Issue 4963 : Allow to specify the URI of the login page</li>
-<li>Issue 5278 : Ability to filter what requests the Active Scans run against</li>
-<li>Issue 5303 : API calls for adding and changing alerts</li>
-<li>Issue 5436 : Add new languages to context tech</li>
-<li>Issue 5464 : Deprecate Context.getIndex and implement Context.getId</li>
-<li>Issue 5466 : Add utility methods to Alert class</li>
-<li>Issue 5550 : Load additional local proxies with defaults</li>
-<li>Issue 5563 : Include Import/Online menus in Options > Keyboard</li>
-<li>Issue 5598 : Revise site certificate validity period to 825d</li>
-<li>Issue 5614 : Manual Request Editor Icon</li>
-<li>Issue 5630 : Support session management scripts</li>
-<li>Issue 5656 : Add Base64url to Encoder/Decoder Tool</li>
-<li>Issue 5667 : Improve permissions and space handling when saving/exporting</li>
-<li>Issue 5671 : Check for updates in daemon mode</li>
-<li>Issue 5672 : Do not prompt to accept the license on first start</li>
-<li>Issue 5680 : Update dependencies</li>
-<li>Issue 5681 : Remove unused dependencies</li>
-<li>Issue 5691 : Expose Context details to passive scan rules</li>
-<li>Issue 5696 : Expose Context techset directly to passive scan rules</li>
-<li>Issue 5723 : AntiCSRF Tokens Add New Defaults</li>
-<li>Issue 5756 : HttpHeader provide List variant for getHeaders(String)</li>
-<li>Issue 5774 : Allow to enable/disable all passive tags through the API</li>
-<li>Issue 5779 : MacOS DMG - switch back to HFS+</li>
-<li>Issue 5782 : Update default user agent</li>
-<li>Issue 5785 : Add tooltip listing all proxies to the footer Primary Proxy label</li>
-<li>Issue 5795 : Handle quoted URL in meta refresh</li>
+<li>Issue 2016 : Se houver conflito, escolha uma porta exclusiva na interface gráfica (GUI).</li>
+<li>Issue 2619 : Permitir que os complementos declarem/incluam suas dependências.</li>
+<li>Issue 3358 : Melhoria: Filtro do Painel de Opções</li>
+<li>Issue 3402 : Compartilhar variáveis personalizadas entre scripts.</li>
+<li>Issue 3491 : Solicitação de recurso: Selecionar Múltiplos Contextos.</li>
+<li>Issue 4963 : Permitir especificar a URI da página de login.</li>
+<li>Issue 5278 : Capacidade de filtrar quais solicitações o Active Scans executam.</li>
+<li>Issue 5303 : Chamadas de API para adicionar e modificar alertas.</li>
+<li>Issue 5436 : Adicionar novos idiomas ao contexto técnico.</li>
+<li>Issue 5464 : Descontinuar Context.getIndex e implementar Context.getId.</li>
+<li>Issue 5466 : Adicionar métodos utilitários à classe Alert.</li>
+<li>Issue 5550 : Carregar proxies locais adicionais com valores padrão.</li>
+<li>Issue 5563 : Incluir os menus Importar e Online em Opções > Teclado.</li>
+<li>Issue 5598 : Revisar período de validade do certificado do site para 825d</li>
+<li>Issue 5614 : Ícone do Editor de Solicitações Manual.</li>
+<li>Issue 5630 : Dar suporte a scripts de gerenciamento de sessão.</li>
+<li>Issue 5656 : Adicionar Base64url à Ferramenta de Codificação/Decodificação.</li>
+<li>Issue 5667 : Aprimorar as permissões e o tratamento de espaços ao salvar/exportar.</li>
+<li>Issue 5671 : Checar por update no modo daemon</li>
+<li>Issue 5672 : Não solicitar a aceitação da licença na primeira inicialização.</li>
+<li>Issue 5680 : Atualizar dependências</li>
+<li>Issue 5681 : Remover dependências não utilizadas</li>
+<li>Issue 5691 : Expor detalhes do Contexto para scan rules passivas.</li>
+<li>Issue 5696 : Expor o conjunto de tecnologias (techset) do Contexto diretamente para regras de varredura passiva.</li>
+<li>Issue 5723 : Adicionar novos valores padrão para Tokens AntiCSRF.</li>
+<li>Issue 5756 : Fornecer uma variante de Lista (List) para o método getHeaders(String) em HttpHeader.
+</li>
+<li>Issue 5774 : Permitir habilitar/desabilitar todas as tags passivas por meio da API.</li>
+<li>Issue 5779 : MacOS DMG - Voltar a utilizar HFS+</li>
+<li>Issue 5782 : Atualizar o agente de usuário padrão.</li>
+<li>Issue 5785 : Adicionar uma dica listando todos os proxies ao rótulo "Proxy Primário" no rodapé.</li>
+<li>Issue 5795 : Lidar com URLs entre aspas em meta refresh.</li>
 </ul>
 
 <H2>Bug fixes</H2>
 <ul>
-<li>Issue 1164 : Manual "Resend" sets cookies on response</li>
-<li>Issue 4003 : Issues when using 'low memory' mode.</li>
-<li>Issue 5427 : Update HTTP Protocol Version in Manual Request Editor</li>
-<li>Issue 5449 : API not responding  - Internal Error</li>
-<li>Issue 5452 : Do not remove resource bundle of other extensions</li>
-<li>Issue 5486 : Fix counting error in Statistics</li>
-<li>Issue 5487 : Add saved scripts of registered script type</li>
-<li>Issue 5490 : Anti-CSRF tokens not encoded in authentication requests</li>
-<li>Issue 5491 : Auth request without request-target from auth script causes exceptions</li>
+<li>Issue 1164: O "Reenvio" manual define cookies na resposta.</li>
+<li>Issue 4003: Problemas ao usar o modo de "baixa memória".</li>
+<li>Issue 5427: Atualizar a Versão do Protocolo HTTP no Editor de Requisições Manual.</li>
+<li>Issue 5449: API não responde - Erro interno.</li>
+<li>Issue 5452: Não remover o pacote de recursos de outras extensões.</li>
+<li>Issue 5486: Corrigir erro de contagem nas estatísticas.</li>
+<li>Issue 5487: Adicionar scripts salvos do tipo script registrado.</li>
+<li>Issue 5490: Tokens Anti-CSRF não estão codificados em requisições de autenticação.</li>
+<li>Issue 5491: Solicitação de autenticação sem "request-target" a partir de um script de autenticação causa exceções.</li>
 <li>Issue 5492 : Improve error handling when creating scan policies</li>
 <li>Issue 5518 : ZAP might not use outgoing proxy authentication credentials</li>
 <li>Issue 5585 : ZAP 2.8.1 hanging on kali</li>
