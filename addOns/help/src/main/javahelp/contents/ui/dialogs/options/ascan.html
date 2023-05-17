@@ -26,6 +26,10 @@ Displaying a large number of results can significantly increase the time a scan 
 <H3>Maximum Rule Duration (minutes; 0 is unlimited)</H3>
 The maximum time any individual rule can run for in minutes. Zero means no limit. This can be used to prevent rules that are taking an excessive amount of time. 
 
+<H3>Max alerts any rule can raise</H3>
+The maximum number of alerts any rule can raise during the active scan, scan rules that reach this value are skipped.<br>
+<strong>Note:</strong> The maximum might be exceed due to threading.
+
 <H3>Maximum Scan Duration (minutes; 0 is unlimited)</H3>
 The maximum time that the whole scan can run for in minutes. Zero means no limit. This can be used to ensure that a scan is completed around a set time. 
 
