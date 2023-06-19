@@ -24,7 +24,6 @@
         <mapID target="start.features.contexts" url="contents/start/features/contexts.html" />
         <mapID target="start.features.custompages" url="contents/start/features/custompages.html" />
         <mapID target="start.features.ddc" url="contents/start/features/ddc.html" />
-        <mapID target="start.features.globalexcludeurl" url="contents/start/features/globalexcludeurl.html" />
         <mapID target="start.features.httpsessions" url="contents/start/features/httpsessions.html" />
         <mapID target="start.features.intercept" url="contents/start/features/intercept.html" />
         <mapID target="start.features.marketplace" url="contents/start/features/marketplace.html" />
@@ -126,7 +125,6 @@
      	<mapID target="ui.dialogs.options.checkforupdates" url="contents/ui/dialogs/options/checkforupdates.html"/>
      	<mapID target="ui.dialogs.options.database" url="contents/ui/dialogs/options/database.html"/>
      	<mapID target="ui.dialogs.options.view" url="contents/ui/dialogs/options/view.html"/>
-     	<mapID target="ui.dialogs.options.globalexcludeurl" url="contents/ui/dialogs/options/globalexcludeurl.html"/>
      	<mapID target="ui.dialogs.options.httpsessions" url="contents/ui/dialogs/options/httpsessions.html"/>
      	<mapID target="ui.dialogs.options.jvm" url="contents/ui/dialogs/options/jvm.html"/>
      	<mapID target="ui.dialogs.options.keyboard" url="contents/ui/dialogs/options/keyboard.html"/>
