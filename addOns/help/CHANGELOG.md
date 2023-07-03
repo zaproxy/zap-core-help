@@ -8,6 +8,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Desktop HTML Injection Fix section.
 - Help details warning against specifying default ports (80/443) (Issue 7649).
 
+### Changed
+- Updated for 2.13.0.
+
 ## [15] - 2022-10-27
 ### Changed
 - Updated for 2.12.0.
