@@ -37,6 +37,8 @@ The maximum time that the whole scan can run for in minutes. Zero means no limit
 The delay in milliseconds between each request.<br>
 Setting this to a non zero value will increase the time an active scan takes, but will put less of a strain
 on the target host.
+<br><strong>Note:</strong> This option has been deprecated and it will be removed in a future release. Use the Network &gt; Rate Limit option instead. The latter option
+allows to enforce the rate at which the requests are sent while the Delay When Scanning doesn't.
 
 <H3>Inject plugin ID in header for all active scan requests.</H3>
 If this option is selected the active scanner will inject the request header <code>X-ZAP-Scan-ID</code> with the ID of
