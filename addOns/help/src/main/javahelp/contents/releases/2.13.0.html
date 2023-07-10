@@ -12,10 +12,85 @@
 This is a bug fix and enhancement release. 
 <br>
 These release notes do not include all of the changes included in add-ons updated since 2.12.0.
+<br><br>
+Some of the more significant enhancements include:
+
+<H3>HTTP/2 Support</H3>
+
+HTTP/2 is now supported, with no configuration changes required.
+<br><br>
+If you proxy HTTP/2 traffic through ZAP then ZAP will make the same HTTP/2 requests to the target.
+Any tools that work on proxied requests will also automatically use HTTP/2.
+
+<H3>Improved Authentication Handling</H3>
+
+ZAP authentication handling has been significantly overhauled, and ZAP can now auto-authenticate to many web apps by just supplying the URL of the login page along with the credentials.
+
+<H3>Mac Silicon Support</H3>
+
+Mac Silicon is now supported via a new <a href="https://www.zaproxy.org/download/#main">installer</a> 
+and in the <a href="https://www.zaproxy.org/download/#docker">Docker images</a>.
+
+<H3>GitHub Container Registry</H3>
+
+As explained in <a href="https://www.zaproxy.org/blog/2023-06-13-ghcr-docker-images/">this blog post</a>
+the ZAP Docker images are now also available in the GitHub Container Registry.
+<br><br>
+This may well be a better alternative for many users as, unlike Docker Hub, there is currently no rate limiting on pulls.
+
+<H3>Default Threads</H3>
+
+All of the "attack" tools which use threading, including both spiders and active scanner, have been changed to use 2x the number of processors as the default number of threads. Using more threads has been shown to significantly reduce the time the scanners take to run.
+
+<H3>Network Rate Limiting</H3>
+
+The Network add-on now supports a rate limiting feature which allows you to limit the request rate of HTTP/HTTPS (not web sockets) traffic to hosts or domains to prevent overloading the target or being blocked.
+For more details see the <a href="https://www.zaproxy.org/docs/desktop/addons/network/options/ratelimit/">Rate Limit</a> help page.
+<br><br>
+Note that the Active Scan <a href="https://www.zaproxy.org/docs/desktop/ui/dialogs/options/ascan/#delay-when-scanning-in-milliseconds">Delay When Scanning</a>
+feature has been deprecated and will be removed in a future release.
+
+<H3>Network Global Exclusions</H3>
+
+The Global Exclusions functionality has been moved to the Network add-on. This will allow us to update it more easily to keep
+up with browser changes.
+
+<h3>Scan Rule Promotions</h3>
+
+The following <b>Active</b> scan rules have been promoted to <b>Release</b> status:
+
+<ul>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40043/">Log4Shell</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40042/">Spring Actuator Information Leak</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40045/">Spring4Shell</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/90035/">Server Side Template Injection</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/90036/">Server Side Template Injection (Blind)</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/90021/">XPath Injection</a>
+</ul>
+
+The following <b>Active</b> scan rules have been promoted to <b>Beta</b> status (and will therefore now be included in the Packaged scans):
+
+<ul>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40046/">Server Side Request Forgery</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40047/">Text4shell (CVE-2022-42889)</a>
+</ul>
+
+The following <b>Passive</b> scan rules have been promoted to <b>Beta</b> status (and will therefore now be included in the Packaged scans):
+
+<ul>
+  <li><a href="https://www.zaproxy.org/docs/alerts/90004/">Insufficient Site Isolation Against Spectre Vulnerability</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10099/">Source Code Disclosure</a>
+</ul>
 
 <h3>Dependency Updates</h3>
 
 As usual the release includes dependency updates. 
+<p>
+The <a href="https://www.zaproxy.org/docs/desktop/addons/selenium/">Selenium</a> add-on has been updated to use the Selenium v4 library.
+One benefit this brings is that the output from browsers will no longer be shown in the ZAP output - this has been
+confusing to many people and has not provided any real benefit.
+<br><br>
+If you have any custom code that directly accesses Selenium classes then you may need to update it.
 <p>
 The following libraries were updated:
 
@@ -59,6 +134,9 @@ All of the add-ons included by default have been updated since the last full rel
 <li><a href="https://github.com/zaproxy/zaproxy/issues/7887">Issue 7887</a> : Show alert ref in the Alert panel</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/7888">Issue 7888</a> : Deprecate Global Exclude URLs</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/7918">Issue 7918</a> : Use Adoptium for Java download in the executable</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7933">Issue 7933</a> : Search auth messages</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7937">Issue 7937</a> : Deprecate Active Scan option Delay When Scanning</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7938">Issue 7938</a> : Allow to read enum values with `AbstractParam`</li>
 </ul>
 
 <H2>Bug fixes</H2>
@@ -87,6 +165,7 @@ All of the add-ons included by default have been updated since the last full rel
 <li><a href="https://github.com/zaproxy/zaproxy/issues/7844">Issue 7844</a> : Retain add-on's mandatory state</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/7873">Issue 7873</a> : Sort Sites nodes with different case consistently</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/7883">Issue 7883</a> : Stop Active Scan's Analyser</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7936">Issue 7936</a> : Update content-length in auth template scripts</li>
 </ul>
 
 
