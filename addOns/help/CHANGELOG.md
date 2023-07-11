@@ -3,7 +3,7 @@ All notable changes to this add-on will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## Unreleased
+## [16] - 2023-07-11
 ### Added
 - Desktop HTML Injection Fix section.
 - Help details warning against specifying default ports (80/443) (Issue 7649).
@@ -70,6 +70,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - First version.
 
+[16]: https://github.com/zaproxy/zap-core-help/releases/help-v16
 [15]: https://github.com/zaproxy/zap-core-help/releases/help-v15
 [14]: https://github.com/zaproxy/zap-core-help/releases/help-v14
 [13]: https://github.com/zaproxy/zap-core-help/releases/help-v13
