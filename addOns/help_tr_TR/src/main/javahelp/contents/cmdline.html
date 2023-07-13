@@ -24,7 +24,7 @@ All options below can be passed to any of these.
 
 <h2>Seçenekler</h2>
 
-ZAP supports the following command line options:
+ZAP (core) supports the following command line options:
 
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-versiyon</td><td>ZAP versiyonunu rapor et</td></tr>
@@ -38,10 +38,8 @@ ZAP supports the following command line options:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-yardım</td><td>-h ile aynı</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-newsession &lt;path&gt;</td><td>Belirtilen konumda yeni bir oturum oluşturur</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-session &lt;path&gt;</td><td>ZAP'ı başlattıktan sonra verilen oturumu açar</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-host &lt;host&gt;</td><td>Yapılandırılan dosya içinde belirtilen, proxy için kullanılan ana makinayı geçersiz kılar</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-port &lt;port&gt;</td><td>Yapılandırma dosyasında belirtilen proxy için kullanılan bağlantı noktasını geçersiz kılar</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-lowmem</td><td>Bellek yerine veritabanını mümkün olduğunca kullanın - bu hala deneyseldir</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-experimentaldb</td><td>Deneysel genel veritabanı kodunu kullanın, bu da beklendiği gibi hala deneyseldir</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-lowmem</td><td>Use the database instead of memory as much as possible - this is still experimental</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-experimentaldb</td><td>Use the experimental generic database code, which is not surprisingly also still experimental</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-nostdout</td><td>Disables the default logging through standard output</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-silent</td><td>Ensures ZAP does not make any unsolicited requests, including check for updates</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstall &lt;addOnId&gt;</td><td>Installs the add-on with specified ID from the ZAP Marketplace. The IDs of the add-ons available in the marketplace can be consulted in the Marketplace tab of <a href="ui/dialogs/manageaddons.html">Manage Add-ons dialogue</a>.</td></tr>
@@ -60,7 +58,6 @@ Relative paths to session file are resolved against the "session" directory loca
 <br/>
 Configuration keys should be specified using the dot notation based their location in the XML of the configuration file, eg:<br/>
 <pre>&lt;zap-script&gt; -config api.key=12345</pre>
-Note that add-ons can add extra command line options.
 
 <p>
 Örnekler:
@@ -73,12 +70,23 @@ Note that add-ons can add extra command line options.
 		</li>
 	</ul>
 
-<h2>Ayrıca bakınız</h2>
+<h2>Add-ons</h2>
+Add-ons can add extra command line options which are described in their own help pages.
+<p>
+For the command line options that allow to configure the main local proxy, refer to the <a href="https://www.zaproxy.org/docs/desktop/addons/network/cmdline/">Network Command Line</a> help page.
+
+<h2>See also</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="intro.html">Giriş</a></td><td>ZAP'e giriş</td></tr>
+<a href="intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="start/features/api.html">API</a></td><td>programlı olarak ZAP'ı denetleme</td></tr>
+<a href="start/features/api.html">API</a></td><td>to control ZAP programmatically</td></tr>
+</table>
+
+<h2>Official Videos</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><a href="https://play.vidyard.com/g97SccHH52RXnAcBYBmDGA">ADDO Automation: Automation Command Line</a> (14:03)</td></tr>
 </table>
 
 </body>

@@ -26,44 +26,50 @@
 <h3>Максимальная продолжительность правила (минуты; 0 - неограниченно) </h3>
 Максимальное время, в течение которого может работать любое отдельное правило, в минутах. Ноль означает отсутствие ограничений. Это можно использовать для предотвращения правил, на которые уходит слишком много времени.  
 
-<h3>Максимальная продолжительность сканирования (минут; 0 - неограниченно) </h3>
-Максимальное время, в течение которого может выполняться сканирование, в минутах. Ноль означает отсутствие ограничений. Это можно использовать, чтобы гарантировать, что сканирование будет завершено примерно в установленное время.  
+<h3>Max alerts any rule can raise</h3>
+The maximum number of alerts any rule can raise during the active scan, scan rules that reach this value are skipped.<br>
+<strong>Note:</strong> The maximum might be exceed due to threading.
 
-<h3>Задержка при сканировании (в миллисекундах) </h3>
-Задержка в миллисекундах между каждым запросом. <br>
-Установка ненулевого значения увеличит время активного сканирования, но вызовет меньшую нагрузку.
-на целевом хосте. 
+<h3>Maximum Scan Duration (minutes; 0 is unlimited)</h3>
+The maximum time that the whole scan can run for in minutes. Zero means no limit. This can be used to ensure that a scan is completed around a set time. 
 
-<h3>Вставить идентификатор плагина в заголовок для всех активных запросов сканирования. </h3>
-Если выбрана эта опция, активный сканер вставит заголовок запроса.  <code>X-ZAP-Scan-ID</code> с идентификатором
-сканер, отправляющий HTTP-запросы. 
+<h3>Delay When Scanning (In Milliseconds)</h3>
+The delay in milliseconds between each request.<br>
+Setting this to a non zero value will increase the time an active scan takes, but will put less of a strain
+on the target host.
+<br><strong>Note:</strong> This option has been deprecated and it will be removed in a future release. Use the Network &gt; Rate Limit option instead. The latter option
+allows to enforce the rate at which the requests are sent while the Delay When Scanning doesn't.
 
-<h3>Обработка токенов анти-CSRF. </h3>
-Если выбран этот параметр, активный сканер попытается автоматически запросить  
-<a href="../../../start/features/anticsrf.html">anti CSRF</a> токены при необходимости. <br>
-Раньше это заставляло бы сканер использовать только один поток, но теперь это не так. 
-Настоятельно рекомендуется проверить, правильно ли генерируются токены анти-CSRF, если используется более одного потока,
-например, используя индивидуальный  <a href="../../../start/features/tags.html">теги </a> для проверки шаблонов успеха / неудачи в ответе. 
+<h3>Inject plugin ID in header for all active scan requests.</h3>
+If this option is selected the active scanner will inject the request header <code>X-ZAP-Scan-ID</code> with the ID of
+the scan rule that's sending the HTTP requests.
 
-<h3>В режиме атаки запрашивать повторное сканирование узлов при изменении области видимости. </h3>
-Если выбрана эта опция, то при выборе Атака  <a href="../../../start/features/modes.html">режимы</a> Вам будет предложено выбрать, следует ли повторно сканировать узлы в области. <br>
-Если этот параметр не выбран, то следующий параметр будет определять, будут ли узлы сканироваться повторно. 
+<h3>Handle anti-CSRF tokens.</h3>
+If this option is selected then the active scanner will attempt to automatically request 
+<a href="../../../start/features/anticsrf.html">anti CSRF</a> tokens when required.<br>
+Previously this would have forced the scanner to only use one thread, but that is no longer the case.
+You are strongly recommended to check that the anti CSRF tokens are being correctly generated if more than one thread is being used,
+for example using custom <a href="../../../start/features/tags.html">теги </a> to check for success / failure patterns in the response.
 
-<h3>В режиме атаки всегда повторно проверяйте узлы при изменении области видимости. </h3>
-Если выбрана эта опция, то при запуске в Атаке  <a href="../../../start/features/modes.html">режимы</a> все узлы в области будут проверены повторно, если область изменится. <br>
-Это не рекомендуется для больших сайтов, так как это может занять много времени. 
+<h3>In Attack Mode prompt to rescan nodes when scope changed.</h3>
+If this option is selected then when you select Attack <a href="../../../start/features/modes.html">режимы</a> you will be prompted to choose whether to rescan nodes in scope.<br>
+If the option is not selected then the following option will control whether the nodes are rescanned.
 
-<h3>Политика активного сканирования по умолчанию </h3>
-  <a href="../../../start/features/scanpolicy.html">Политика сканирования</a> который используется по умолчанию при запуске активного сканирования. 
+<h3>In Attack Mode always rescan nodes when scope changed.</h3>
+If this option is selected then when running in Attack <a href="../../../start/features/modes.html">режимы</a> all nodes in scope will be rescanned if the scope changes.<br>
+This is not recommended for large sites as it could take a long time.
 
-<h3>Режим атаки Политика сканирования: </h3>
-    <a href="../../../start/features/scanpolicy.html">Политика сканирования </a> который используется для сканирования в
-Атака  <a href="../../../start/features/modes.html">режиме</a>.
+<h3>Default Active Scan Policy</h3>
+The <a href="../../../start/features/scanpolicy.html">Политика сканирования</a> that is used by default when you start an active scan.
 
-<h3>График максимального прогресса в минутах </h3>
-Максимальное время в минутах, в течение которого коды ответов будут отображаться в 
+<h3>Attack Mode Scan Policy</h3>
+The <a href="../../../start/features/scanpolicy.html">Политика сканирования </a> that is used for scanning in 
+Attack <a href="../../../start/features/modes.html">режиме</a>.
+
+<h3>Max Progress Chart in Mins</h3>
+The maximum time in minutes for which response codes will be charted in the
 <a href="../scanprogress.html">Диалог выполнения сканирования </a>.<br>
-Чтобы отключить график, необходимо установить опцию на ноль минут. 
+To disable the chart the option should be set to zero minutes.
 
 <h2>Смотрите также </h2>
 <table>

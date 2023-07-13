@@ -28,18 +28,17 @@
          <tocitem text="Контексты" target="start.features.contexts"/>
          <tocitem text="Пользовательская страница " target="start.features.custompages"/>
          <tocitem text="Контент, управляемый данными " target="start.features.ddc"/>
-         <tocitem text="Глобально исключенные URL " target="start.features.globalexcludeurl"/>
-         <tocitem text="HTTP-сеансы " target="start.features.httpsessions"/>
-         <tocitem text="Прокси-сервер манипулятора посередине " target="start.features.intercept"/>
-         <tocitem text="Рынок дополнений" target="start.features.marketplace"/>
-         <tocitem text="режимы" target="start.features.modes"/>
-         <tocitem text="Заметки" target="start.features.notes"/>
-         <tocitem text="Пассивное сканирование" target="start.features.pscan"/>
-         <tocitem text="Политика сканирования" target="start.features.scanpolicy"/>
-         <tocitem text="сфера действия" target="start.features.scope"/>
-         <tocitem text="Сценарии" target="start.features.scripts"/>
-         <tocitem text="Управление сессией " target="start.features.sessmanag"/>
-         <tocitem text="дерево сайтов " target="start.features.sitestree"/>
+         <tocitem text="HTTP Sessions" target="start.features.httpsessions"/>
+         <tocitem text="Manipulator-in-the-middle Proxy" target="start.features.intercept"/>
+         <tocitem text="Marketplace" target="start.features.marketplace"/>
+         <tocitem text="Modes" target="start.features.modes"/>
+         <tocitem text="Notes" target="start.features.notes"/>
+         <tocitem text="Passive Scan" target="start.features.pscan"/>
+         <tocitem text="Scan Policies" target="start.features.scanpolicy"/>
+         <tocitem text="Scope" target="start.features.scope"/>
+         <tocitem text="Scripts" target="start.features.scripts"/>
+         <tocitem text="Session Management" target="start.features.sessmanag"/>
+         <tocitem text="Sites Tree" target="start.features.sitestree"/>
          <tocitem text="Statistics" target="start.features.stats"/>
          <tocitem text="Structural Modifiers" target="start.features.structmods"/>
          <tocitem text="Structural Parameters" target="start.features.structparams"/>
@@ -88,7 +87,6 @@
 			<tocitem text="Database" target="ui.dialogs.options.database"/>
          	<tocitem text="Display" target="ui.dialogs.options.view"/>
             <tocitem text="Extensions" target="ui.dialogs.options.ext"/>
-            <tocitem text="Global Exclude URL" target="ui.dialogs.options.globalexcludeurl"/>
          	<tocitem text="HTTP Sessions" target="ui.dialogs.options.httpsessions"/>
          	<tocitem text="JVM" target="ui.dialogs.options.jvm"/>
          	<tocitem text="Keyboard" target="ui.dialogs.options.keyboard"/>

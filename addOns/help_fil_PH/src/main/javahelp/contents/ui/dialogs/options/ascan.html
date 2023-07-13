@@ -26,19 +26,27 @@ Ang pagpapakita ng isang malaking bilang ng mga resulta na maaaring lubhang pagt
 <h3>Maximum Rule Duration (minutes; 0 is unlimited)</h3>
 Ang pinakamataas na oras ng sinumang indibidwal na patakaran na maaaring tumakbo para sa ilang mga minuto. ibig sabihin ng sero ay walang limit. ito ay maaaring magamit para maiwasan ng mga patakaran na makakuha ng isang malaking halaga ng oras. 
 
+<h3>Max alerts any rule can raise</h3>
+The maximum number of alerts any rule can raise during the active scan, scan rules that reach this value are skipped.<br>
+<strong>Note:</strong> The maximum might be exceed due to threading.
+
 <h3>Maximum Scan Duration (minutes; 0 is unlimited)</h3>
-Ang pinakamataas na oras na ang buong pag-iskan ay maaring tumakbo para sa ilang minuto. ibig sabihin ng sero ay walang limit. ito ay maaring magamit para masiguro na ang isang pag-iskan ay nakumpleto sa loob ng itinakdang oras. 
+The maximum time that the whole scan can run for in minutes. Zero means no limit. This can be used to ensure that a scan is completed around a set time. 
 
 <h3>Delay When Scanning (In Milliseconds)</h3>
-Ang pagkaantala sa mga millisecond sa pagitan ng bawat kahilingan.<br>
-Ang pagtatakda nito sa isang hindi serong halaga ay maidadagdag sa oras na nakuha sa isang aktibong pag-iskan, subalit ito ay maglalagay sa mababang hirap sa mga pinuntirya ng host.
+The delay in milliseconds between each request.<br>
+Setting this to a non zero value will increase the time an active scan takes, but will put less of a strain
+on the target host.
+<br><strong>Note:</strong> This option has been deprecated and it will be removed in a future release. Use the Network &gt; Rate Limit option instead. The latter option
+allows to enforce the rate at which the requests are sent while the Delay When Scanning doesn't.
 
 <h3>Inject plugin ID in header for all active scan requests.</h3>
-Kung ang opsyon na ito ay napili ng aktibong iskaner na ma-iniksyon sa kahilingan ng header na <code>X-ZAP-Scan-ID</code> sa pamamagitan ng ID ng mga iskaner na nagpapadala ng mga kahilingan ng HTTP.
+If this option is selected the active scanner will inject the request header <code>X-ZAP-Scan-ID</code> with the ID of
+the scan rule that's sending the HTTP requests.
 
 <h3>Handle anti-CSRF tokens.</h3>
-Kung ang opssyon na ito ay napili habang ang aktibong iskaner ay sinusubukan sa awtomatikong kahilingan 
-<a href="../../../start/features/anticsrf.html">ng anti CSRF</a> ng mga token kung kinakailngan.<br>
+If this option is selected then the active scanner will attempt to automatically request 
+<a href="../../../start/features/anticsrf.html">ng anti CSRF</a> tokens when required.<br>
 Previously this would have forced the scanner to only use one thread, but that is no longer the case.
 You are strongly recommended to check that the anti CSRF tokens are being correctly generated if more than one thread is being used,
 for example using custom <a href="../../../start/features/tags.html">tags</a> to check for success / failure patterns in the response.

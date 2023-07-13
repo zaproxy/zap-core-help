@@ -12,7 +12,9 @@
 This is a bug fix and enhancement release, which now requires a minimum of Java 11. 
 <br>
 As the main <a href="https://github.com/zaproxy/zaproxy">zaproxy/zaproxy</a> repo has just reached 10k stars we're calling this the 'Ten Thousand Star' Release!
-
+<br><br>
+This release fixes an HTML Injection vulnerability in the ZAP Desktop which was rated a P3 / Medium level vulnerability. 
+While we do not think that it can be exploited in any meaningful way, desktop users are still recommended to update from older ZAP versions a.s.a.p.
 <br><br>
 These release notes do not include all of the changes included in add-ons updated since 2.11.1.
 <br><br>
@@ -198,6 +200,12 @@ The following add-ons are no longer included, having been superseded by the Impo
   <li>Save Raw Message
   <li>Save XML Message
 </ul>
+
+<H2>Desktop HTML Injection Fix</H2>
+
+This release includes a fix to prevent HTML Injection in the ZAP Desktop GUI. 
+Thank you to “issuefinder” for reporting this to us via our <a href="https://bugcrowd.com/owaspzap">bug bounty</a> program. 
+The vulnerability was rated as a P3 / Medium and desktop users are recommended to update from older ZAP versions a.s.a.p.
 
 <H2>Enhancements</H2>
 <ul>
