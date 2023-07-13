@@ -24,7 +24,7 @@ All options below can be passed to any of these.
 
 <h2>Options</h2>
 
-ZAP supports the following command line options:
+ZAP (core) supports the following command line options:
 
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-version</td><td>Reports the ZAP version</td></tr>
@@ -38,8 +38,6 @@ ZAP supports the following command line options:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-help</td><td>The same as -h</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-newsession &lt;path&gt;</td><td>Creates a new session at the given location</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-session &lt;path&gt;</td><td>Opens the given session after starting ZAP</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-host &lt;host&gt;</td><td>Overrides the host used for proxying specified in the configuration file</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-port &lt;port&gt;</td><td>Overrides the port used for proxying specified in the configuration file</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-lowmem</td><td>Use the database instead of memory as much as possible - this is still experimental</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-experimentaldb</td><td>Use the experimental generic database code, which is not surprisingly also still experimental</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-nostdout</td><td>Disables the default logging through standard output</td></tr>
@@ -60,7 +58,6 @@ Relative paths to session file are resolved against the "session" directory loca
 <br/>
 Configuration keys should be specified using the dot notation based their location in the XML of the configuration file, eg:<br/>
 <pre>&lt;zap-script&gt; -config api.key=12345</pre>
-Note that add-ons can add extra command line options.
 
 <p>
 Examples:
@@ -73,12 +70,23 @@ Examples:
 		</li>
 	</ul>
 
-<h2>Voir aussi</h2>
+<h2>Add-ons</h2>
+Add-ons can add extra command line options which are described in their own help pages.
+<p>
+For the command line options that allow to configure the main local proxy, refer to the <a href="https://www.zaproxy.org/docs/desktop/addons/network/cmdline/">Network Command Line</a> help page.
+
+<h2>See also</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="intro.html">Introduction</a></td><td>l'introduction de ZAP</td></tr>
+<a href="intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="start/features/api.html">API</a></td><td>to control ZAP programmatically</td></tr>
+</table>
+
+<h2>Official Videos</h2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td><a href="https://play.vidyard.com/g97SccHH52RXnAcBYBmDGA">ADDO Automation: Automation Command Line</a> (14:03)</td></tr>
 </table>
 
 </body>

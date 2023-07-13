@@ -23,6 +23,14 @@ These screens allows you manage <a href="../../../start/features/contexts.html">
 不匹配任何正则表达式的URL将不包含在上下文中。
 <br><strong>Note:</strong> The regular expressions must match the whole URL.
 
+<br><strong>Note</strong> When testing targets that operate on default ports (80
+for http, 443 for https), the colon port portion of the URL should not be 
+included. Including that portion (for example: http://example.com:80) may 
+result in an inability to crawl or test the target. If a 'default' port is 
+specified both browsers and ZAP treat it without the default port being 
+included then it doesn't match the expectation within the Context and there's 
+nothing to interact with as part of the Context.
+
 <h3>Exclude from Context</h3>
 This allows you to manage the URLs which will be excluded from the context.<br/>
 You only need to specify regexs for URLs that you do not want to include but which match one or more
@@ -48,7 +56,7 @@ After selecting the Session Management Method type, the options that need to be 
 depend on the Session Management Method.
 
 <h4>基于Cookie的会话管理</h4>
-此会话管理方法不需要配置。 <small>Read  
+No configuration is needed for this session management method. <small>Read  
 <a href="../../../start/features/sessionManagement.html#cbsm">more</a>...</small>
 
 <h4>HTTP身份验证会话管理</h4>

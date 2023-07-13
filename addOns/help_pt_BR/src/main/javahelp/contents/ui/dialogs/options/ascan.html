@@ -25,19 +25,27 @@ Exibir um grande número de resultados pode aumentar bastante o tempo que a varr
 <h3>Maximum Rule Duration (minutes; 0 is unlimited)</h3>
 O tempo máximo que qualquer regra individual pode rodar, em minutos. Zero significa sem limite. Isto pode ser usado para evitar as regras que estão tomando uma quantidade excessiva de tempo. 
 
+<h3>Max alerts any rule can raise</h3>
+The maximum number of alerts any rule can raise during the active scan, scan rules that reach this value are skipped.<br>
+<strong>Note:</strong> The maximum might be exceed due to threading.
+
 <h3>Maximum Scan Duration (minutes; 0 is unlimited)</h3>
-O tempo máximo que a varredura inteira pode rodar, em minutos. Zero significa sem limite. Isso pode ser usado para garantir que uma verificação seja concluída em torno de um tempo definido. 
+The maximum time that the whole scan can run for in minutes. Zero means no limit. This can be used to ensure that a scan is completed around a set time. 
 
 <h3>Delay When Scanning (In Milliseconds)</h3>
-O intervalo em milissegundos entre dois requests sucessivos.<br>
-Deixar esta variável com um valor diferente de zero vai elevar o tempo da varredura ativa mas aliviará a carga no host-alvo.
+The delay in milliseconds between each request.<br>
+Setting this to a non zero value will increase the time an active scan takes, but will put less of a strain
+on the target host.
+<br><strong>Note:</strong> This option has been deprecated and it will be removed in a future release. Use the Network &gt; Rate Limit option instead. The latter option
+allows to enforce the rate at which the requests are sent while the Delay When Scanning doesn't.
 
 <h3>Inject plugin ID in header for all active scan requests.</h3>
-Se esta opção for selecionada o scanner ativo vai injetar o cabeçalho de solicitação <code>X-ZAP-Scan-ID</code> com o ID do scanner que está enviando as solicitações HTTP.
+If this option is selected the active scanner will inject the request header <code>X-ZAP-Scan-ID</code> with the ID of
+the scan rule that's sending the HTTP requests.
 
 <h3>Handle anti-CSRF tokens.</h3>
-Se esta opção estiver selecionada, a varredura ativa tentará automaticamente solicitar tokens 
-<a href="../../../start/features/anticsrf.html">anti CSRF</a> .<br>
+If this option is selected then the active scanner will attempt to automatically request 
+<a href="../../../start/features/anticsrf.html">anti CSRF</a> tokens when required.<br>
 Previously this would have forced the scanner to only use one thread, but that is no longer the case.
 You are strongly recommended to check that the anti CSRF tokens are being correctly generated if more than one thread is being used,
 for example using custom <a href="../../../start/features/tags.html">tags</a> to check for success / failure patterns in the response.
