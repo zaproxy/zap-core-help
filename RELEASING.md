@@ -11,7 +11,7 @@ will create the tag(s), create the release(s), trigger the update of the marketp
 
 ## Localized Resources
 
-The resources that require localization (e.g. help pages) are uploaded to the OWASP ZAP project in [Crowdin](https://crowdin.com/) when the main add-on is released,
+The resources that require localization (e.g. help pages) are uploaded to the ZAP project in [Crowdin](https://crowdin.com/) when the main add-on is released,
 if required (for pre-translation) the resources can be uploaded manually at anytime by running the workflow
 [Crowdin Upload Files](https://github.com/zaproxy/zap-core-help/actions/workflows/crowdin-upload-files.yml).
 

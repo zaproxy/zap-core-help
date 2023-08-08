@@ -8,7 +8,7 @@ The English help files are under the [/addOns/help](https://github.com/zaproxy/z
 
 This User Guide has been translated into many languages, all of which are available via the [ZAP Marketplace](https://www.zaproxy.org/addons/).
 
-You can help translate those pages into other languages via the [ZAP Help Crowdin project](https://crowdin.com/project/owasp-zap-help).
+You can help translate those pages into other languages via the [ZAP Help Crowdin project](https://crowdin.com/project/zap-help).
 
 ## Building
 
