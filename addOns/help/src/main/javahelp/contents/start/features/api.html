@@ -38,10 +38,9 @@ ZAP and then run it. ZAP scripts run with the same permissions as ZAP and so thi
 <p>
 To enable file transfer you will need to have an API key set and to enable it via the 
 <a href="../../ui/dialogs/options/api.html#filexferenabled">Options API screen</a>.
+You can also enable file transfers via the command line as explained in the help for that screen.
 <p>
-You can also enable the option via the command line using the parameter: <code>-config api.filexfer=true</code>
-<p>
-With file transfer enabled you will be able to upload files to the 
+With file transfer enabled you will be able to upload text files to the 
 <a href="../../ui/dialogs/options/api.html#xferdir">Transfer Directory</a> using the 'fileUpload' 'other' endpoint
 and download them from there using the 'fileDownload' 'other' endpoint.
 You can specify subdirectories (e.g. "subdir/myfile") but any attempt to upload or download a file to or from another directory 
@@ -63,8 +62,7 @@ For example you could export a context to "${XFER}/contexts/my.context" and then
 <p>
 To upload a file to another API endpoint you need to do the reverse - first upload it, e.g. to "plans/myplan.yaml", and 
 then import it via the path "${XFER}/plans/myplan.yaml".
-<p>
-You can also set the Transfer Directory via the command line using: <code>-config api.xferdir=/full/path/to/dir</code>
+
 
 <H2>See also</H2>
 <table>
