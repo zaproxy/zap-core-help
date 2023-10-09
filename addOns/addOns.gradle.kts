@@ -94,6 +94,7 @@ subprojects {
             author.set("ZAP Crowdin Team")
             repo.set("https://github.com/zaproxy/zap-core-help/")
             changesFile.set(tasks.named<ConvertMarkdownToHtml>("generateManifestChanges").flatMap { it.html })
+            notBeforeVersion.set("2.14.0")
         }
     }
 
