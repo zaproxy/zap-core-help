@@ -30,6 +30,7 @@
         <mapID target="start.features.modes" url="contents/start/features/modes.html" />
         <mapID target="start.features.notes" url="contents/start/features/notes.html" />
         <mapID target="start.features.pscan" url="contents/start/features/pscan.html" />
+        <mapID target="start.features.sbom" url="contents/start/features/sbom.html" />
         <mapID target="start.features.scanpolicy" url="contents/start/features/scanpolicy.html" />
         <mapID target="start.features.scope" url="contents/start/features/scope.html" />
         <mapID target="start.features.scripts" url="contents/start/features/scripts.html" />
