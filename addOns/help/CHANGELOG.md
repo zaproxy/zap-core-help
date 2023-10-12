@@ -3,7 +3,7 @@ All notable changes to this add-on will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## Unreleased
+## [17] - 2023-10-12
 ### Added
 - SBOM help page.
 
@@ -80,6 +80,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - First version.
 
+[17]: https://github.com/zaproxy/zap-core-help/releases/help-v17
 [16]: https://github.com/zaproxy/zap-core-help/releases/help-v16
 [15]: https://github.com/zaproxy/zap-core-help/releases/help-v15
 [14]: https://github.com/zaproxy/zap-core-help/releases/help-v14
