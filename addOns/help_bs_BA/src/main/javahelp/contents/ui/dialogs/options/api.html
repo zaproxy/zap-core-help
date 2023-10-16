@@ -9,9 +9,9 @@ Ekran Opcije API-a
 <body>
 <h1>Ekran Opcije API-a</h1>
 <p>
-This screen allows you to configure the <a href="../../../start/features/api.html">API</a> opcije:
+This screen allows you to configure the <a href="../../../start/features/api.html">API</a> options:
 
-<h3>Omogućeno</h3>
+<h3>Enabled</h3>
 
 If enabled then the API is available to all machines that are able to access ZAP's proxies that expose the API.<br/>
 
@@ -23,6 +23,22 @@ To access the API Web UI point your browser to the host and port that ZAP is lis
 <h3>Secure Only</h3>
 
 If enabled then the API will only be available via HTTPS. Otherwise it will be available via both HTTP and HTTPS.<br/>
+
+<h3><a name="filexferenabled">File Transfer Enabled</a></h3>
+
+If enabled then files can be transfered to and from ZAP via the API.
+This option is only available if the API key is <i>not</i> disabled.
+For more details see <a href="../../../start/features/api.html#filexfer">File Transfer</a>.
+<p>
+You can also enable this option via the command line using the parameter: <code>-config api.filexfer=true</code>
+
+<h3><a name="xferdir">Transfer Directory</a></h3>
+
+The directory used to transfer files to and from ZAP via the API.
+This option is only available if the API key is <i>not</i> disabled.
+For more details see <a href="../../../start/features/api.html#filexfer">File Transfer</a>.
+<p>
+You can also set the Transfer Directory via the command line using: <code>-config api.xferdir=/full/path/to/dir</code>
 
 <h3>API Key</h3>
 
@@ -70,12 +86,12 @@ Selecting this option enables the JSONP format.<br/>
 This can be useful for some applications, but it is generally not recommended as it increases the ZAP attack surface area, ie the features that a malicious site can abuse.<br/>
 If JSONP is enabled then all API operations using JSONP (including views) will require the API key to prevent malicious sites from accessing sensitive information maintained by ZAP, such as session keys. 
 
-<h2>Još vidjeti</h2>
+<h2>See also</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Pregled</a></td><td>za pregled korisničkog interfejsa</td></tr>
+<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Opcije dijalozi</a></td><td>for details of the other Options dialog screens</td></tr>
+<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
 </table>
 
 </body>

@@ -9,9 +9,9 @@ Tela de opções da API
 <body>
 <h1>Tela de opções da API</h1>
 <p>
-Esta tela permite que você configure <a href="../../../start/features/api.html">as opções da</a> API:
+This screen allows you to configure the <a href="../../../start/features/api.html">API</a> options:
 
-<h3>Habilitado</h3>
+<h3>Enabled</h3>
 
 If enabled then the API is available to all machines that are able to access ZAP's proxies that expose the API.<br/>
 
@@ -20,63 +20,78 @@ If enabled then the API is available to all machines that are able to access ZAP
 If enabled then the API Web UI is available to all machines that are able to access ZAP's proxies that expose the API. 
 To access the API Web UI point your browser to the host and port that ZAP is listening on.<br/>
 
-<h3>Apenas em Segurança</h3>
+<h3>Secure Only</h3>
 
-Se ativado, a API só estará disponível via HTTPS. Caso contrário, ele estará disponível via HTTP e HTTPS.<br/>
+If enabled then the API will only be available via HTTPS. Otherwise it will be available via both HTTP and HTTPS.<br/>
 
-<h3>Chave API</h3>
+<h3><a name="filexferenabled">File Transfer Enabled</a></h3>
 
-Uma chave que deve ser especificada em todas as 'ações' da API e algumas 'outras' operações.
-<br/>
-A chave API é usada para evitar que sites maliciosos acessem a API ZAP.<br/>
-É altamente recomendável que você defina uma chave, a menos que esteja usando ZAP em um ambiente completamente isolado.<br/>
+If enabled then files can be transfered to and from ZAP via the API.
+This option is only available if the API key is <i>not</i> disabled.
+For more details see <a href="../../../start/features/api.html#filexfer">File Transfer</a>.
+<p>
+You can also enable this option via the command line using the parameter: <code>-config api.filexfer=true</code>
 
-<h3>Endereços permitidos para usar a API</h3>
+<h3><a name="xferdir">Transfer Directory</a></h3>
 
-Por padrão, apenas a máquina em que o ZAP está sendo executado é capaz de acessar a API ZAP.<br/>
-Você pode permitir que outras máquinas acessem a API adicionando padrões regex adequados.<br/>
-Você só deve adicionar endereços IP em que confia.<br/>
-Observe que a API ZAP agora também verifica o cabeçalho do hospedeiro(host), de modo que também deve ser um dos endereços permitidos.
+The directory used to transfer files to and from ZAP via the API.
+This option is only available if the API key is <i>not</i> disabled.
+For more details see <a href="../../../start/features/api.html#filexfer">File Transfer</a>.
+<p>
+You can also set the Transfer Directory via the command line using: <code>-config api.xferdir=/full/path/to/dir</code>
 
-<h3>Desative a chave de API</h3>
+<h3>API Key</h3>
 
-Selecionar esta opção desativa a chave API.<br/>
-Isso não é recomendado, a menos que você esteja usando ZAP em um ambiente completamente isolado, pois permite que sites maliciosos acessem a API ZAP.
+A key that must be specified on all API 'actions' and some 'other' operations.<br/>
+The API key is used to prevent malicious sites from accessing the ZAP API.<br/>
+It is strongly recommended that you set a key unless you are using ZAP in a completely isolated environment.<br/>
 
-<h3>Não requer uma chave de API para operações seguras</h3>
+<h3>Addresses permitted to use the API</h3>
 
-Se ativada, a chave API não é necessária para visualizações ou outras operações consideradas 'seguras', em outras palavras, operações que não fazem nenhuma alteração no ZAP. 
-No entanto, essas operações fornecem acesso aos dados ZAP, como alertas, mensagens e caminhos do sistema de arquivos.  
-Eles também podem ser usados por aplicativos da web para detectar a presença de ZAP.
+By default only the machine ZAP is running on is able to access the ZAP API.<br/>
+You can allow other machines access to the API by adding suitable regex patterns.<br/>
+You should only add IP addresses that you trust.<br/>
+Note that the ZAP API also now checks the host header, so that must also be one of the permitted addresses.
 
-<h3>Reportar erros de permissão via API</h3>
+<h3>Disable the API Key</h3>
 
-Se ativado, o ZAP relatará erros de permissão por meio da API, que pode ser usado por aplicativos da web para detectar a presença de ZAP.
-Este não é um problema sério em um ambiente seguro, mas se você estiver usando o ZAP contra sites potencialmente maliciosos, você não deve habilitá-lo.
+Selecting this option disables the API key.<br/>
+This is not recommended unless you are using ZAP in a completely isolated environment, as it allows malicious sites to access the ZAP API.
 
-<h3>Reportar detalhes do erro via API</h3>
+<h3>Do not require an API key for safe operations</h3>
 
-Se esta opção for selecionada, mais detalhes do erro serão retornados por meio da API.<br/>
-Isso não é recomendado, exceto para fins de depuração, pois essas mensagens de erro podem vazar informações para sites maliciosos.<br/>
-Observe que todos os detalhes do erro são sempre gravados no arquivo de log ZAP. 
+If enabled then the API key is not required for Views or Other operations that are considered 'safe', in other words operations that do not make any changes to ZAP. 
+Such operations do however give access to ZAP data such as alert, messages, and file system paths.  
+They can also be used by web applications to detect the presence of ZAP.
 
-<h3>Chave de API de preenchimento automático na IU da API</h3>
+<h3>Report permission errors via API</h3>
 
-Se esta opção for selecionada, a chave API será incluída automaticamente na IU da API.<br/>
-Isso não é recomendado, a menos que você esteja usando ZAP em um ambiente completamente isolado, pois permite que sites mal-intencionados acessem a chave ZAP API.<br/>
+If enabled then ZAP will report permission errors via the API, which can be used by web applications to detect the presence of ZAP.
+This is not a serious problem in a safe environment but if you are using ZAP against potentially malicious sites then you should not enable it.
 
-<h3>Ativar JSONP</h3>
+<h3>Report error details via API</h3>
 
-Selecionar esta opção ativa o formato JSONP.<br/>
-Isso pode ser útil para alguns aplicativos, mas geralmente não é recomendado, pois aumenta a área de superfície de ataque ZAP, ou seja, os recursos que um site malicioso pode abusar.<br/>
-Se JSONP estiver ativado, todas as operações de API usando JSONP (incluindo visualizações) exigirão a chave de API para evitar que sites maliciosos acessem informações confidenciais mantidas pelo ZAP, como chaves de sessão. 
+If this option is selected then more error details are returned via the API.<br/>
+This is not recommended except for debugging purposes as these error messages can leak information to malicious sites.<br/>
+Note that the full error details are always written to the ZAP log file. 
 
-<h2>Veja também</h2>
+<h3>Autofill API key in the API UI</h3>
+
+If this option is selected then the API key is automatically included in the API UI.<br/>
+This is not recommended unless you are using ZAP in a completely isolated environment, as it allows malicious sites to access the ZAP API Key.<br/>
+
+<h3>Enable JSONP</h3>
+
+Selecting this option enables the JSONP format.<br/>
+This can be useful for some applications, but it is generally not recommended as it increases the ZAP attack surface area, ie the features that a malicious site can abuse.<br/>
+If JSONP is enabled then all API operations using JSONP (including views) will require the API key to prevent malicious sites from accessing sensitive information maintained by ZAP, such as session keys. 
+
+<h2>See also</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">visão geral da UI</a></td><td>para uma visão geral da interface do usuário</td></tr>
+<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Diálogos de opções</a></td><td>para detalhes de outras telas de diálogo de Opções</td></tr>
+<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
 </table>
 
 </body>

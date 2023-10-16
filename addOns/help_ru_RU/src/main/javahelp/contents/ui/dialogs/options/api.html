@@ -9,73 +9,89 @@
 <body>
 <h1>Экран API опций </h1>
 <p>
-Этот экран позволяет вам настроить  <a href="../../../start/features/api.html">API</a> опции
+This screen allows you to configure the <a href="../../../start/features/api.html">API</a> options:
 
-<h3>Включено</h3>
+<h3>Enabled</h3>
 
 If enabled then the API is available to all machines that are able to access ZAP's proxies that expose the API.<br/>
 
-<h3>Веб-интерфейс включен </h3>
+<h3>Web UI Enabled</h3>
 
 If enabled then the API Web UI is available to all machines that are able to access ZAP's proxies that expose the API. 
 To access the API Web UI point your browser to the host and port that ZAP is listening on.<br/>
 
-<h3>Только безопасный</h3>
+<h3>Secure Only</h3>
 
-Если этот параметр включен, API будет доступен только через HTTPS. В противном случае он будет доступен как по HTTP, так и по HTTPS. <br/>
+If enabled then the API will only be available via HTTPS. Otherwise it will be available via both HTTP and HTTPS.<br/>
 
-<h3>Ключ API</h3>
+<h3><a name="filexferenabled">File Transfer Enabled</a></h3>
 
-Ключ, который необходимо указывать для всех «действий» API и некоторых «других» операций. <br/>
-Ключ API используется для предотвращения доступа вредоносных сайтов к ZAP API. <br/>
-Настоятельно рекомендуется установить ключ, если вы не используете ZAP в полностью изолированной среде. <br/>
+If enabled then files can be transfered to and from ZAP via the API.
+This option is only available if the API key is <i>not</i> disabled.
+For more details see <a href="../../../start/features/api.html#filexfer">File Transfer</a>.
+<p>
+You can also enable this option via the command line using the parameter: <code>-config api.filexfer=true</code>
 
-<h3>Адреса, которым разрешено использовать API </h3>
+<h3><a name="xferdir">Transfer Directory</a></h3>
 
-По умолчанию только компьютер, на котором запущен ZAP, может получить доступ к ZAP API. <br/>
-Вы можете разрешить другим машинам доступ к API, добавив подходящие шаблоны регулярных выражений. <br/>
-Вам следует добавлять только те IP-адреса, которым вы доверяете. <br/>
-Обратите внимание, что ZAP API теперь также проверяет заголовок хоста, поэтому он также должен быть одним из разрешенных адресов. 
+The directory used to transfer files to and from ZAP via the API.
+This option is only available if the API key is <i>not</i> disabled.
+For more details see <a href="../../../start/features/api.html#filexfer">File Transfer</a>.
+<p>
+You can also set the Transfer Directory via the command line using: <code>-config api.xferdir=/full/path/to/dir</code>
 
-<h3>Отключить ключ API </h3>
+<h3>API Key</h3>
 
-Выбор этого параметра отключает ключ API. <br/>
-Это не рекомендуется, если вы не используете ZAP в полностью изолированной среде, поскольку это позволяет вредоносным сайтам получать доступ к ZAP API. 
+A key that must be specified on all API 'actions' and some 'other' operations.<br/>
+The API key is used to prevent malicious sites from accessing the ZAP API.<br/>
+It is strongly recommended that you set a key unless you are using ZAP in a completely isolated environment.<br/>
 
-<h3>Не требуется ключ API для безопасной работы </h3>
+<h3>Addresses permitted to use the API</h3>
 
-Если этот параметр включен, ключ API не требуется для представлений или других операций, которые считаются «безопасными», другими словами, для операций, которые не вносят никаких изменений в ZAP.  
-Однако такие операции предоставляют доступ к данным ZAP, таким как предупреждения, сообщения и пути к файловой системе.   
-Они также могут использоваться веб-приложениями для обнаружения ZAP. 
+By default only the machine ZAP is running on is able to access the ZAP API.<br/>
+You can allow other machines access to the API by adding suitable regex patterns.<br/>
+You should only add IP addresses that you trust.<br/>
+Note that the ZAP API also now checks the host header, so that must also be one of the permitted addresses.
 
-<h3>Сообщать об ошибках разрешений через API </h3>
+<h3>Disable the API Key</h3>
 
-Если этот параметр включен, ZAP будет сообщать об ошибках разрешений через API, который может использоваться веб-приложениями для обнаружения присутствия ZAP. 
-Это не является серьезной проблемой в безопасной среде, но если вы используете ZAP против потенциально вредоносных сайтов, вам не следует включать его. 
+Selecting this option disables the API key.<br/>
+This is not recommended unless you are using ZAP in a completely isolated environment, as it allows malicious sites to access the ZAP API.
 
-<h3>Сообщать подробности об ошибках через API </h3>
+<h3>Do not require an API key for safe operations</h3>
 
-Если выбран этот параметр, через API возвращается более подробная информация об ошибке. <br/>
-Это не рекомендуется, за исключением целей отладки, поскольку эти сообщения об ошибках могут привести к утечке информации на вредоносные сайты. <br/>
-Обратите внимание, что полные сведения об ошибке всегда записываются в файл журнала ZAP.  
+If enabled then the API key is not required for Views or Other operations that are considered 'safe', in other words operations that do not make any changes to ZAP. 
+Such operations do however give access to ZAP data such as alert, messages, and file system paths.  
+They can also be used by web applications to detect the presence of ZAP.
 
-<h3>Ключ API автозаполнения в пользовательском интерфейсе API </h3>
+<h3>Report permission errors via API</h3>
 
-Если выбран этот параметр, ключ API автоматически включается в пользовательский интерфейс API. <br/>
-Это не рекомендуется, если вы не используете ZAP в полностью изолированной среде, поскольку это позволяет вредоносным сайтам получать доступ к ключу ZAP API. <br/>
+If enabled then ZAP will report permission errors via the API, which can be used by web applications to detect the presence of ZAP.
+This is not a serious problem in a safe environment but if you are using ZAP against potentially malicious sites then you should not enable it.
 
-<h3>Включить JSONP </h3>
+<h3>Report error details via API</h3>
 
-Выбор этого параметра включает формат JSONP. <br/>
-Это может быть полезно для некоторых приложений, но обычно не рекомендуется, поскольку увеличивает площадь атаки ZAP, то есть функции, которыми может злоупотреблять вредоносный сайт. <br/>
-Если JSONP включен, то для всех операций API с использованием JSONP (включая представления) потребуется ключ API, чтобы предотвратить доступ вредоносных сайтов к конфиденциальной информации, поддерживаемой ZAP, такой как ключи сеанса.  
+If this option is selected then more error details are returned via the API.<br/>
+This is not recommended except for debugging purposes as these error messages can leak information to malicious sites.<br/>
+Note that the full error details are always written to the ZAP log file. 
 
-<h2>Смотрите также </h2>
+<h3>Autofill API key in the API UI</h3>
+
+If this option is selected then the API key is automatically included in the API UI.<br/>
+This is not recommended unless you are using ZAP in a completely isolated environment, as it allows malicious sites to access the ZAP API Key.<br/>
+
+<h3>Enable JSONP</h3>
+
+Selecting this option enables the JSONP format.<br/>
+This can be useful for some applications, but it is generally not recommended as it increases the ZAP attack surface area, ie the features that a malicious site can abuse.<br/>
+If JSONP is enabled then all API operations using JSONP (including views) will require the API key to prevent malicious sites from accessing sensitive information maintained by ZAP, such as session keys. 
+
+<h2>See also</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">Обзор пользовательского интерфейса </a></td><td>для обзора пользовательского интерфейса </td></tr>
+<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Диалоги опций </a></td><td>для получения подробной информации о других диалоговых окнах параметров </td></tr>
+<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
 </table>
 
 </body>

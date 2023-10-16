@@ -9,9 +9,9 @@ Ang mga Opsyon ng API ng iskrin
 <body>
 <h1>Ang mga opsyon ng API sa iskrin</h1>
 <p>
-Ang iskrin na ito ay pinahihintulutan ka na makumpigura ang <a href="../../../start/features/api.html">API</a> na mga Opsyon:
+This screen allows you to configure the <a href="../../../start/features/api.html">API</a> options:
 
-<h3>Ang pagpapagana</h3>
+<h3>Enabled</h3>
 
 If enabled then the API is available to all machines that are able to access ZAP's proxies that expose the API.<br/>
 
@@ -20,62 +20,78 @@ If enabled then the API is available to all machines that are able to access ZAP
 If enabled then the API Web UI is available to all machines that are able to access ZAP's proxies that expose the API. 
 To access the API Web UI point your browser to the host and port that ZAP is listening on.<br/>
 
-<h3>Siguruhin lamang</h3>
+<h3>Secure Only</h3>
 
-Kung pinagana pagkatapos ang API ay magagamit lamang sa pamamagitan ng mga HTTPS. sakabialng bansa ito ay maaaring magamit sa pamamagitan ng parehong HTTP at HTTPS.<br/>
+If enabled then the API will only be available via HTTPS. Otherwise it will be available via both HTTP and HTTPS.<br/>
 
-<h3>Ang API key</h3>
+<h3><a name="filexferenabled">File Transfer Enabled</a></h3>
 
-Ang isang key na dapat ay matukoy sa lahat ng mga 'aksyon' ng API at sa 'ibang' mga operasyon.<br/>
-Ang key ng API ay ginagamit para maiwasan ang mga sayt na malisyoso mula sa pag-access ng ZAP ng API.<br/>
-Ito ay mahigpit na inirerekomenda na ikaw ay maglalagay ng isang key maliban ikaw ay gumagamit ng ZAP sa isang kuumpletong magkahiwalay na kapaligiran.<br/>
+If enabled then files can be transfered to and from ZAP via the API.
+This option is only available if the API key is <i>not</i> disabled.
+For more details see <a href="../../../start/features/api.html#filexfer">File Transfer</a>.
+<p>
+You can also enable this option via the command line using the parameter: <code>-config api.filexfer=true</code>
 
-<h3>Ang mga pinahihintukutang mga address sa paggamit ng API</h3>
+<h3><a name="xferdir">Transfer Directory</a></h3>
 
-Sa pamamagitan ng default ang makina ng ZAP ay tumatakbo na maaaring ma-access ang ZAP ng API.<br/>
-Pinahihintulutan ka na gamitin ang lahat ng makina sa pag-access ng API sa pamamagitan ng pagdagdag ng nababagay na mga huwaran ng regex.<br/>
-Dapat lamang na ikaw ay magdagdag ng kahit isang IP address na iyong pinagkakatiwalaan.<br/>
-Paalala na ang ZAP API na ngayon ay nagsisiyasat sa host ng header, Kaya ay dapat rin maging isa ang mga napahintulutang mga address.
+The directory used to transfer files to and from ZAP via the API.
+This option is only available if the API key is <i>not</i> disabled.
+For more details see <a href="../../../start/features/api.html#filexfer">File Transfer</a>.
+<p>
+You can also set the Transfer Directory via the command line using: <code>-config api.xferdir=/full/path/to/dir</code>
 
-<h3>Ang hindi pagpapagana sa API key</h3>
+<h3>API Key</h3>
 
-Ang pagpili sa opsyon na ito na na huwag gamitin ang key ng API.<br/>
-Ito ay hindi nirerekomenda maliban kung ikaw ay gumagamit ng ZAP sa isang kompletong hiwalay na kapaligiran, ay ito ay pinapayagan ng mga malisyosong sayt para ma-access ang ZAP ng API.
+A key that must be specified on all API 'actions' and some 'other' operations.<br/>
+The API key is used to prevent malicious sites from accessing the ZAP API.<br/>
+It is strongly recommended that you set a key unless you are using ZAP in a completely isolated environment.<br/>
 
-<h3>Ang isang ApI key ay hindi kinakailngan para sa mga operasyon na ligtas</h3>
+<h3>Addresses permitted to use the API</h3>
 
-Kung ang API ay pinagana pagkatapos ang key ng API ay hindi kinakailangan para makita o Iba pang mga operasyon na itinuturing na 'ligtas', sa ibang mga salita ng mga operasyon na walang gagawing mga pagbabago sa ZAP. 
-Gayon ang mga ginawa ng operasyon maliban sa ibinigay na pag-access ng ZAP ng datos bilang alerto, mga mensahe, at mga daan ng sistema ng payl.  
-Maaari rin nilang gamitin sa pamamagitan ng web na application upang makita ang presensya ng ZAP.
+By default only the machine ZAP is running on is able to access the ZAP API.<br/>
+You can allow other machines access to the API by adding suitable regex patterns.<br/>
+You should only add IP addresses that you trust.<br/>
+Note that the ZAP API also now checks the host header, so that must also be one of the permitted addresses.
 
-<h3>Pag-ulat ng mga permiso ng mga mali sa pamamagitan ng API</h3>
+<h3>Disable the API Key</h3>
 
-Kung pagaganahin pagkatapos ang ZAP ay mag-uulat ng permiso sa pamamagitn ng API, kung alin ang maaaring gamitin sa pamamagitan ng mga application ng web para matukoy ang presensya ng Zap.
-Ito ay hindi isang seryosong problema sa isang ligtas na kapaligiran pero kung ikaw ay gumagamit ng ZAP laban sa potensyal na malisyosong mga sayt pagkatapos dapat mong hindi paganahin ito.
+Selecting this option disables the API key.<br/>
+This is not recommended unless you are using ZAP in a completely isolated environment, as it allows malicious sites to access the ZAP API.
 
-<h3>Ang pag-ulat ng maling mga detalye sa pamamagitan ng API</h3>
+<h3>Do not require an API key for safe operations</h3>
 
-Kapag itong opsyon ay napinili pagkatapos ang mga detalye ng mali ay bumalik sa pamamagitan ng API.<br/>
-Ito ay hindi nirerekomenda maliban sa mga layunin ng pagde-debugg bilang ang maling mensahe na ito ay maaaring kumalat ang impormasyon sa mga sayt na malisyoso.<br/>
-Paalala na ang buong maling detalye ay laging nakasulat sa mga log na ZAP na payl. 
+If enabled then the API key is not required for Views or Other operations that are considered 'safe', in other words operations that do not make any changes to ZAP. 
+Such operations do however give access to ZAP data such as alert, messages, and file system paths.  
+They can also be used by web applications to detect the presence of ZAP.
 
-<h3>Ang autofill ng API key sa mga API UI</h3>
+<h3>Report permission errors via API</h3>
 
-Kung ang opsyon na ito ay pinili pagkatapos ang API key ay awtomatikong kasama sa mga API UI.<br/>
-Hindi ito inirerekomenda hanggat ikaw ay gumamit ng ZAP sa isang kompletong nakahiwalay na kapaligiran, bilang ito ay nagpapahintulot sa mga malisyosong mga sayt para makatakbo ang ZAP ng API key.<br/>
+If enabled then ZAP will report permission errors via the API, which can be used by web applications to detect the presence of ZAP.
+This is not a serious problem in a safe environment but if you are using ZAP against potentially malicious sites then you should not enable it.
 
-<h3>Ang JSONP ay paganahin</h3>
+<h3>Report error details via API</h3>
 
-Ang pagpili sa opsyon na ito ng pagpapatakbo ng JSONP na format.<br/>
-Ito ay magiging kapakipakinabang para sa ibang mga apilikasyon, subalit ito ay hindi inirerekomenda sa pangkalahatan bilang ito ay nagpapalaki sa ZAP attack ng ibabaw na lugar, ie ang mga tampok na iang isang malisyosong sayt ay inaabuso.<br/>
-Kung pinatakbo ang JASONP pagkatapos ang lahat ng mga operasyon ng API gamit ang JSONP (kasama ang mga view) agn API key ay kinakailngan upang ang mga malisyosong mga sayt ay maisawan mula sa pagpapatakbo ng sensitibong impormasyon na pinanatili sa pamamagitan ng ZAP, gayong bilang mga key ng sesyon. 
+If this option is selected then more error details are returned via the API.<br/>
+This is not recommended except for debugging purposes as these error messages can leak information to malicious sites.<br/>
+Note that the full error details are always written to the ZAP log file. 
 
-<h2>Tignan din sa</h2>
+<h3>Autofill API key in the API UI</h3>
+
+If this option is selected then the API key is automatically included in the API UI.<br/>
+This is not recommended unless you are using ZAP in a completely isolated environment, as it allows malicious sites to access the ZAP API Key.<br/>
+
+<h3>Enable JSONP</h3>
+
+Selecting this option enables the JSONP format.<br/>
+This can be useful for some applications, but it is generally not recommended as it increases the ZAP attack surface area, ie the features that a malicious site can abuse.<br/>
+If JSONP is enabled then all API operations using JSONP (including views) will require the API key to prevent malicious sites from accessing sensitive information maintained by ZAP, such as session keys. 
+
+<h2>See also</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">Ang pangkalahatang ideya sa UI</a></td><td>para sa isang pangkalahatang ideya ng mga gumagamit ng interface</td></tr>
+<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Ang mga diyalogo ng mga opsyon</a></td><td>para sa mga detalye ng ibang diyalogo ng mga opsyon ng mga iskrin</td></tr>
+<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
 </table>
 
 </body>
