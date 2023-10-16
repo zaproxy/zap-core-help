@@ -11,7 +11,7 @@ Options API screen
 <p>
 This screen allows you to configure the <a href="../../../start/features/api.html">API</a> options:
 
-<h3>فعال شده</h3>
+<h3>Enabled</h3>
 
 If enabled then the API is available to all machines that are able to access ZAP's proxies that expose the API.<br/>
 
@@ -23,6 +23,22 @@ To access the API Web UI point your browser to the host and port that ZAP is lis
 <h3>Secure Only</h3>
 
 If enabled then the API will only be available via HTTPS. Otherwise it will be available via both HTTP and HTTPS.<br/>
+
+<h3><a name="filexferenabled">File Transfer Enabled</a></h3>
+
+If enabled then files can be transfered to and from ZAP via the API.
+This option is only available if the API key is <i>not</i> disabled.
+For more details see <a href="../../../start/features/api.html#filexfer">File Transfer</a>.
+<p>
+You can also enable this option via the command line using the parameter: <code>-config api.filexfer=true</code>
+
+<h3><a name="xferdir">Transfer Directory</a></h3>
+
+The directory used to transfer files to and from ZAP via the API.
+This option is only available if the API key is <i>not</i> disabled.
+For more details see <a href="../../../start/features/api.html#filexfer">File Transfer</a>.
+<p>
+You can also set the Transfer Directory via the command line using: <code>-config api.xferdir=/full/path/to/dir</code>
 
 <h3>API Key</h3>
 

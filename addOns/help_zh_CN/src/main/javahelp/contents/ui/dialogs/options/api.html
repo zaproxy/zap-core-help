@@ -9,9 +9,9 @@ API选项屏幕
 <body>
 <h1>API选项屏幕</h1>
 <p>
-此屏幕允许您配置 <a href="../../../start/features/api.html">API</a> 选项：
+This screen allows you to configure the <a href="../../../start/features/api.html">API</a> options:
 
-<h3>启用</h3>
+<h3>Enabled</h3>
 
 If enabled then the API is available to all machines that are able to access ZAP's proxies that expose the API.<br/>
 
@@ -20,62 +20,78 @@ If enabled then the API is available to all machines that are able to access ZAP
 If enabled then the API Web UI is available to all machines that are able to access ZAP's proxies that expose the API. 
 To access the API Web UI point your browser to the host and port that ZAP is listening on.<br/>
 
-<h3>只允许安全模式</h3>
+<h3>Secure Only</h3>
 
-如果启用，那么API将只能通过HTTPS使用。 否则，它将通过HTTP和HTTPS提供。<br/>
+If enabled then the API will only be available via HTTPS. Otherwise it will be available via both HTTP and HTTPS.<br/>
 
-<h3>API密钥</h3>
+<h3><a name="filexferenabled">File Transfer Enabled</a></h3>
 
-必须在所有API操作和一些其它操作中指定密钥。<br/>
-API密钥用于防止恶意网站访问ZAP API。<br/>
-强烈建议您设置密钥，除非您在完全隔离的环境中使用ZAP。<br/>
+If enabled then files can be transfered to and from ZAP via the API.
+This option is only available if the API key is <i>not</i> disabled.
+For more details see <a href="../../../start/features/api.html#filexfer">File Transfer</a>.
+<p>
+You can also enable this option via the command line using the parameter: <code>-config api.filexfer=true</code>
 
-<h3>允许使用API的地址</h3>
+<h3><a name="xferdir">Transfer Directory</a></h3>
 
-默认情况下，只有运行ZAP的计算机才能访问ZAP API。<br/>
-您可以通过添加合适的正则表达式模式来允许其它计算机访问API。<br/>
-您应该只添加您信任的IP地址。<br/>
-请注意，ZAP API现在也检查主机头，因此它也必须是允许的地址之一。
+The directory used to transfer files to and from ZAP via the API.
+This option is only available if the API key is <i>not</i> disabled.
+For more details see <a href="../../../start/features/api.html#filexfer">File Transfer</a>.
+<p>
+You can also set the Transfer Directory via the command line using: <code>-config api.xferdir=/full/path/to/dir</code>
 
-<h3>禁用API密钥</h3>
+<h3>API Key</h3>
 
-选择此选项将禁用API密钥。<br/>
-除非您在完全隔离的环境中使用ZAP，否则不建议使用ZAP，因为它允许恶意站点访问ZAP API。
+A key that must be specified on all API 'actions' and some 'other' operations.<br/>
+The API key is used to prevent malicious sites from accessing the ZAP API.<br/>
+It is strongly recommended that you set a key unless you are using ZAP in a completely isolated environment.<br/>
 
-<h3>不需要用于安全操作的API密钥</h3>
+<h3>Addresses permitted to use the API</h3>
 
-如果启用，那么视图或其它被视为“安全”的操作不需要API密钥，换言之，不对ZAP进行任何更改的操作。 
-但是这样的操作可以访问ZAP数据，如警报，消息和文件系统路径。  
-Web应用程序也可以使用它们来检测ZAP的存在。
+By default only the machine ZAP is running on is able to access the ZAP API.<br/>
+You can allow other machines access to the API by adding suitable regex patterns.<br/>
+You should only add IP addresses that you trust.<br/>
+Note that the ZAP API also now checks the host header, so that must also be one of the permitted addresses.
 
-<h3>通过API报告权限错误</h3>
+<h3>Disable the API Key</h3>
 
-如果启用，则ZAP将通过API报告权限错误，Web应用程序可以使用该API来检测ZAP的存在。
-这在安全的环境中并不是一个严重的问题，但是如果您使用ZAP来对付潜在的恶意网站，那么您不应该启用它。
+Selecting this option disables the API key.<br/>
+This is not recommended unless you are using ZAP in a completely isolated environment, as it allows malicious sites to access the ZAP API.
 
-<h3>通过API报告错误详情</h3>
+<h3>Do not require an API key for safe operations</h3>
 
-如果选择此选项，则可以通过API返回更多错误详细信息。<br/>
-除了调试目的外，建议不要这样做，因为这些错误详细信息可能会将信息泄露给恶意网站。<br/>
-请注意，完整的错误详细信息总是被写入ZAP日志文件中。 
+If enabled then the API key is not required for Views or Other operations that are considered 'safe', in other words operations that do not make any changes to ZAP. 
+Such operations do however give access to ZAP data such as alert, messages, and file system paths.  
+They can also be used by web applications to detect the presence of ZAP.
 
-<h3>在API UI中的自动填充API密钥</h3>
+<h3>Report permission errors via API</h3>
 
-如果选择此选项，则API密钥将自动包含在API UI中。<br/>
-除非您在完全隔离的环境中使用ZAP，否则不建议这样做，因为它允许恶意网站访问ZAP API的密钥。<br/>
+If enabled then ZAP will report permission errors via the API, which can be used by web applications to detect the presence of ZAP.
+This is not a serious problem in a safe environment but if you are using ZAP against potentially malicious sites then you should not enable it.
 
-<h3>启用 JSONP</h3>
+<h3>Report error details via API</h3>
 
-选择此选项将启用JSONP格式。<br/>
-这对于某些应用程序非常有用，但通常不推荐使用它，因为它会增加ZAP攻击面的区域，这是恶意网站可能会滥用的功能。<br/>
-如果启用了JSONP，那么使用JSONP（包括视图）的所有API操作都需要API密钥来防止恶意网站访问通过ZAP维护的敏感信息，例如会话密钥。 
+If this option is selected then more error details are returned via the API.<br/>
+This is not recommended except for debugging purposes as these error messages can leak information to malicious sites.<br/>
+Note that the full error details are always written to the ZAP log file. 
 
-<h2>另请参阅</h2>
+<h3>Autofill API key in the API UI</h3>
+
+If this option is selected then the API key is automatically included in the API UI.<br/>
+This is not recommended unless you are using ZAP in a completely isolated environment, as it allows malicious sites to access the ZAP API Key.<br/>
+
+<h3>Enable JSONP</h3>
+
+Selecting this option enables the JSONP format.<br/>
+This can be useful for some applications, but it is generally not recommended as it increases the ZAP attack surface area, ie the features that a malicious site can abuse.<br/>
+If JSONP is enabled then all API operations using JSONP (including views) will require the API key to prevent malicious sites from accessing sensitive information maintained by ZAP, such as session keys. 
+
+<h2>See also</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI综览</a></td><td>有关用户界面的概述</td></tr>
+<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">选项对话框</a></td><td>有关其他选项对话框屏幕的详细信息</td></tr>
+<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
 </table>
 
 </body>

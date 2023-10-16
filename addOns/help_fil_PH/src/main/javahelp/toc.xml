@@ -34,6 +34,7 @@
          <tocitem text="Modes" target="start.features.modes"/>
          <tocitem text="Notes" target="start.features.notes"/>
          <tocitem text="Passive Scan" target="start.features.pscan"/>
+         <tocitem text="Software Bill of Materials" target="start.features.sbom"/>
          <tocitem text="Scan Policies" target="start.features.scanpolicy"/>
          <tocitem text="Scope" target="start.features.scope"/>
          <tocitem text="Scripts" target="start.features.scripts"/>
@@ -119,6 +120,8 @@
    <tocitem text="Add-ons" target="addons.introduction" tocid="addons" image="addons.icon" />
    
    <tocitem text="Mga Inilabas" target="zap.releases">
+      <tocitem text="2.14.0" target="zap.releases.2.14.0"/>
+      <tocitem text="2.13.0" target="zap.releases.2.13.0"/>
       <tocitem text="2.12.0" target="zap.releases.2.12.0"/>
       <tocitem text="2.11.1" target="zap.releases.2.11.1"/>
       <tocitem text="2.11.0" target="zap.releases.2.11.0"/>

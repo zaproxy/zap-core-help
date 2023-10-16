@@ -11,10 +11,10 @@ Command Line
 
 Para ejecutar Zap a través la línea de comando, se necesita ubicar el script de inicio de ZAP.<br/>
 <strong>Windows:</strong><br/>
-<pre>C:\Program Files (x86)\OWASP\Zed Attack Proxy\zap.bat</pre>
+<pre>C:\Program Files (x86)\ZAP\Zed Attack Proxy\zap.bat</pre>
 <strong>Note:</strong> The command line options are not used by the executable (<code>zap.exe</code>) only the bat file.<br/><br/>
 <strong>Mac:</strong><br/>
-<pre>/Applications/OWASP\ ZAP.app/Contents/Java/zap.sh</pre>
+<pre>/Applications/ZAP.app/Contents/Java/zap.sh</pre>
 <strong>Linux:</strong><br/>
 <code>zap.sh</code> will be below the directory where ZAP was installed.
 <br/><br/>
@@ -49,6 +49,7 @@ ZAP (core) supports the following command line options:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonlist</td><td>List all of the installed add-ons</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-script &lt;script&gt;</td><td>Run the specified script (file system path) if command line/daemon, or just load it if GUI</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-suppinfo</td><td>Outputs details relevant for support and troubleshooting (to the console/standard out). Such as: ZAP version, java version, installed add-ons and version, locale info, operating system, etc.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-sbomzip &lt;path&gt;</td><td>Creates a zip file containing all of the available <a href="start/features/sbom.html">SBOMs</a></td></tr>
 
 </table>
 <br>
