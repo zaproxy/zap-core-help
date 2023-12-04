@@ -13,7 +13,9 @@ import java.util.regex.Pattern
 
 plugins {
     eclipse
-    id("org.zaproxy.add-on") version "0.9.0" apply false
+    id("com.diffplug.spotless")
+    id("org.zaproxy.common")
+    id("org.zaproxy.add-on") version "0.10.0" apply false
     id("org.zaproxy.crowdin") version "0.3.1"
 }
 
@@ -72,12 +74,9 @@ val releaseAddOn by tasks.registering
 
 subprojects {
     apply(plugin = "java-library")
+    apply(plugin = "com.diffplug.spotless")
+    apply(plugin = "org.zaproxy.common")
     apply(plugin = "org.zaproxy.add-on")
-
-    tasks.withType<JavaCompile>().configureEach {
-        options.encoding = "utf-8"
-        options.compilerArgs = listOf("-Xlint:all", "-Werror")
-    }
 
     java {
         val javaVersion = JavaVersion.VERSION_11
@@ -86,7 +85,7 @@ subprojects {
     }
 
     zapAddOn {
-        zapVersion.set("2.13.0")
+        zapVersion.set("2.14.0")
 
         releaseLink.set(project.provider { "https://github.com/zaproxy/zap-core-help/releases/${zapAddOn.addOnId.get()}-v@CURRENT_VERSION@" })
 
@@ -94,7 +93,6 @@ subprojects {
             author.set("ZAP Crowdin Team")
             repo.set("https://github.com/zaproxy/zap-core-help/")
             changesFile.set(tasks.named<ConvertMarkdownToHtml>("generateManifestChanges").flatMap { it.html })
-            notBeforeVersion.set("2.14.0")
         }
     }
 
