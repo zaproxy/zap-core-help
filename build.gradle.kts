@@ -1,13 +1,10 @@
 plugins {
-    id("com.diffplug.spotless") version "6.20.0"
+    id("com.diffplug.spotless")
+    id("org.zaproxy.common")
 }
 
 allprojects {
     apply(plugin = "com.diffplug.spotless")
-
-    repositories {
-        mavenCentral()
-    }
 
     spotless {
         kotlinGradle {

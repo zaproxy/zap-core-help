@@ -1,9 +1,7 @@
+plugins {
+    id("org.zaproxy.common.settings") version "0.2.0"
 
-pluginManagement {
-    repositories {
-        mavenCentral()
-        gradlePluginPortal()
-    }
+    id("com.diffplug.spotless") version "6.20.0" apply false
 }
 
 rootProject.name = "zap-core-help"
