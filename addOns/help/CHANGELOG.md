@@ -4,6 +4,9 @@ All notable changes to this add-on will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## Unreleased
+### Added
+- `-loglevel` option to the command line help page.
+
 ### Changed
 - Update OWASP ZAP homepage link in 1.1.0 release notes.
 
