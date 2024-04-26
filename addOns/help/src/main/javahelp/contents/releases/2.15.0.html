@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<TITLE>
+  Release 2.15.0
+</TITLE>
+</HEAD>
+<BODY>
+<H1>Release 2.15.0</H1>
+
+This is a bug fix and enhancement release.
+<br>
+These release notes do not include all of the changes included in add-ons updated since 2.14.0.
+<p>
+This release was made possible thanks to our biggest supporter, the <a href="https://crashoverride.com/?zap=web">Crash Override</a>.
+<p>
+Some of the more significant enhancements include:
+
+<H3>Scripts as First Class Scan Rules</H3>
+
+TODO add more details...
+
+<H3>Menu Items Restructured</H3>
+
+TODO add more details...
+
+<H3>Automation Framework GitHub Action</H3>
+
+TODO add more details...
+
+<h3>Dependency Updates</h3>
+
+As usual the release includes dependency updates.
+<p>
+The following libraries were updated:
+
+TODO update...
+
+<ul>
+  <li>Commons Lang, 3.12.0 → 3.13.0</li>
+  <li>Flatlaf 3.1.1 → 3.2.1</li>
+  <li>RSyntaxTextArea, 3.3.3 → 3.3.4</li>
+</ul>
+
+The following library was added:
+<ul>
+  <li>Log4j JUL Adapter 2.20.0</li>
+</ul>
+
+<H2>Add-Ons</H2>
+
+<H3>Updated Add-Ons</H3>
+All of the add-ons included by default have been updated since the last full release.
+
+<H2>Enhancements</H2>
+<ul>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7105">Issue 7105</a> : Scripts as First Class Scan Rules</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7575">Issue 7575</a> : Add an &quot;Enable all scripts&quot; option to Options-&gt;Scripts screen</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8135">Issue 8135</a> : Guard against param panels' errors during init</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8136">Issue 8136</a> : Keep Import Menu Items Sorted Alphabetically</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8150">Issue 8150</a> : Increase search border highlights</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8162">Issue 8162</a> : Add stat for uncaught exceptions</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8179">Issue 8179</a> : Drop &quot;to Clipboard&quot; from ZAP copy menu items (etc)</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8188">Issue 8188</a> : Allow to hook param panels with parents</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8190">Issue 8190</a> : alert: Add CWE Alert Tag when building and CWE ID has been set</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8198">Issue 8198</a> : URL Path Input Vector - attack end path too</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8203">Issue 8203</a> : Option to encode cookie values</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8210">Issue 8210</a> : Warn of root user usage and report core count and max memory on start up</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8248">Issue 8248</a> : Include cores and max memory in Support Info</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8265">Issue 8265</a> : Deprecate Script Scan Rules and related classes</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8274">Issue 8274</a> : Improve logs related to loading of pscanrules</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8283">Issue 8283</a> : Anti-CSRF Handling should always account for partial matching</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8295">Issue 8295</a> : Allow setting the log level via a CLI argument</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8332">Issue 8332</a> : tech: Add MariaDB</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8369">Issue 8369</a> : Restructure the desktop menu item order</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8393">Issue 8393</a> : Allow to search HTTP messages by Tags</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8403">Issue 8403</a> : ZAP not printing script errors to console in cmdline mode with `-script`</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8452">Issue 8452</a> : Support decode response body through the `Variant`</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8454">Issue 8454</a> : Include pluginId in alert events</li>
+</ul>
+
+<H2>Bug fixes</H2>
+<ul>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6292">Issue 6292</a> : Including main technology through the API does not include their specific technologies</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8018">Issue 8018</a> : Some characters not displayed in the Language combo box</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8147">Issue 8147</a> : Multipart Form Params - Extract boundary from body if not in header</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8166">Issue 8166</a> : scripts: Synchronize contents and file methods</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8182">Issue 8182</a> : Fix zap.sh for macOS</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8252">Issue 8252</a> : Use name of enum as default value for configs</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8275">Issue 8275</a> : Button Text is not fully shown in Add Note Dialog</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8298">Issue 8298</a> : Prevent NPE if no user creds</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8302">Issue 8302</a> : Fix context inclusion issues</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8357">Issue 8357</a> : Correct name of hosts without children</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8395">Issue 8395</a> : Add missing API error message</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8419">Issue 8419</a> : Prevent raising alerts on temporary messages</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8429">Issue 8429</a> : Skip deleted msgs in the messages API endpoints</li>
+</ul>
+
+
+
+<H2>See Also</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+</table>
+</BODY>
+</HTML>

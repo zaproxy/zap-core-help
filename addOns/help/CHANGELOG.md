@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Changed
 - Update OWASP ZAP homepage link in 1.1.0 release notes.
+- Updated for 2.15.0.
 
 ## [17] - 2023-10-12
 ### Added
