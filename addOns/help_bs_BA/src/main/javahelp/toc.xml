@@ -120,6 +120,7 @@
    <tocitem text="Add-ons" target="addons.introduction" tocid="addons" image="addons.icon" />
    
    <tocitem text="Izdanja" target="zap.releases">
+      <tocitem text="2.15.0" target="zap.releases.2.15.0"/>
       <tocitem text="2.14.0" target="zap.releases.2.14.0"/>
       <tocitem text="2.13.0" target="zap.releases.2.13.0"/>
       <tocitem text="2.12.0" target="zap.releases.2.12.0"/>
