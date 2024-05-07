@@ -19,15 +19,45 @@ Some of the more significant enhancements include:
 
 <H3>Scripts as First Class Scan Rules</H3>
 
-TODO add more details...
+Active and passive scan script rules can now be treated as "first class" scan rules.
+This means that they can be individually referenced in an active scan policy, in the 
+passive scan rules options, and in Automation Framework plans.
+
+In addition directories of scripts can now be added with all of the scripts enabled -
+this will make it much more straightfoward to manage script rules in automation.
 
 <H3>Menu Items Restructured</H3>
 
-TODO add more details...
+The desktop context sensitive menu items have been reordered, and grouped in a more logical way.
+This should make it much easier to find the menu item you want, when you want it.
+
+<H3>Set Logging Levels</H3>
+
+A new <code>-loglevel</code> Command Line option allows you to set the log level, 
+overriding the values specified in the log4j2.properties file in the home directory.
+<p>
+New API calls also allow you to set and view the current logging levels:
+<ul>
+<li><code>Action / core / setLogLevel</code> : Sets the logging level for a given name
+<li><code>View / core / getLogLevel</code> : Gets the detailed logging config, optionally filtered by name
+</ul>
 
 <H3>Automation Framework GitHub Action</H3>
 
-TODO add more details...
+There is a new ZAP GitHub action - the 
+<a href="https://github.com/marketplace/actions/zap-automation-framework-scan">ZAP Automation Framework Scan</a>.
+
+The Automation Framework provides a great balance between ease of use and flexibility + functionality.
+If you want to perform any non-trivial automation with ZAP then the
+<a href="https://www.zaproxy.org/docs/automate/automation-framework/">Automation Framework</a> is probably your best bet.
+
+<H3>New Docker Hub Organisation</H3>
+
+We have a new DockerHub organisation for the ZAP Docker images: https://hub.docker.com/u/zaproxy
+
+We are still using the <a href="https://hub.docker.com/u/softwaresecurityproject">softwaresecurityproject</a> org for 2.15.0 but we will probably not use it for the following releases.
+
+We do recommend that you switch from `softwaresecurityproject` to <a href="https://hub.docker.com/u/zaproxy">zaproxy</a> sooner rather than later.
 
 <h3>Dependency Updates</h3>
 
@@ -35,17 +65,15 @@ As usual the release includes dependency updates.
 <p>
 The following libraries were updated:
 
-TODO update...
-
 <ul>
-  <li>Commons Lang, 3.12.0 → 3.13.0</li>
-  <li>Flatlaf 3.1.1 → 3.2.1</li>
-  <li>RSyntaxTextArea, 3.3.3 → 3.3.4</li>
-</ul>
-
-The following library was added:
-<ul>
-  <li>Log4j JUL Adapter 2.20.0</li>
+  <li>Commons Codex, 1.16.0 → 1.16.1</li>
+  <li>Commons IO, 2.13.0 → 2.16.1</li>
+  <li>Commons Lang3, 3.13.0 → 3.14.0</li>
+  <li>Commons Logging, 1.2 → 1.3.1</li>
+  <li>Commons Text, 1.10.0 → 1.12.0</li>
+  <li>Flatlaf, 3.2.1 → 3.4.1</li>
+  <li>Java Semver, 0.9.0 → 0.10.2</li>
+  <li>Rsyntaxtextarea, 3.3.4 → 3.4.0</li>
 </ul>
 
 <H2>Add-Ons</H2>
@@ -55,6 +83,7 @@ All of the add-ons included by default have been updated since the last full rel
 
 <H2>Enhancements</H2>
 <ul>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/4275">Issue 4275</a> : Allow to view/change logger levels through the API</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/7105">Issue 7105</a> : Scripts as First Class Scan Rules</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/7575">Issue 7575</a> : Add an &quot;Enable all scripts&quot; option to Options-&gt;Scripts screen</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/8135">Issue 8135</a> : Guard against param panels' errors during init</li>
@@ -76,6 +105,7 @@ All of the add-ons included by default have been updated since the last full rel
 <li><a href="https://github.com/zaproxy/zaproxy/issues/8369">Issue 8369</a> : Restructure the desktop menu item order</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/8393">Issue 8393</a> : Allow to search HTTP messages by Tags</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/8403">Issue 8403</a> : ZAP not printing script errors to console in cmdline mode with `-script`</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8423">Issue 8423</a> : Add TAGs for yaml, xml, extended json</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/8452">Issue 8452</a> : Support decode response body through the `Variant`</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/8454">Issue 8454</a> : Include pluginId in alert events</li>
 </ul>
@@ -95,9 +125,8 @@ All of the add-ons included by default have been updated since the last full rel
 <li><a href="https://github.com/zaproxy/zaproxy/issues/8395">Issue 8395</a> : Add missing API error message</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/8419">Issue 8419</a> : Prevent raising alerts on temporary messages</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/8429">Issue 8429</a> : Skip deleted msgs in the messages API endpoints</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8467">Issue 8467</a> : Get resources from add-ons</li>
 </ul>
-
-
 
 <H2>See Also</H2>
 <table>
