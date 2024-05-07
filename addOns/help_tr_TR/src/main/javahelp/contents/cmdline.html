@@ -41,6 +41,7 @@ ZAP (core) supports the following command line options:
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-lowmem</td><td>Use the database instead of memory as much as possible - this is still experimental</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-experimentaldb</td><td>Use the experimental generic database code, which is not surprisingly also still experimental</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-nostdout</td><td>Disables the default logging through standard output</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-loglevel &lt;level&gt;</td><td>Sets the log level, overriding the values specified in the log4j2.properties file in the home directory</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-silent</td><td>Ensures ZAP does not make any unsolicited requests, including check for updates</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstall &lt;addOnId&gt;</td><td>Installs the add-on with specified ID from the ZAP Marketplace. The IDs of the add-ons available in the marketplace can be consulted in the Marketplace tab of <a href="ui/dialogs/manageaddons.html">Manage Add-ons dialogue</a>.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstallall</td><td>Install all available add-ons from the ZAP Marketplace</td></tr>
@@ -59,6 +60,8 @@ Relative paths to session file are resolved against the "session" directory loca
 <br/>
 Configuration keys should be specified using the dot notation based their location in the XML of the configuration file, eg:<br/>
 <pre>&lt;zap-script&gt; -config api.key=12345</pre>
+
+The <code>-loglevel</code> option supports the following values: <code>OFF</code>, <code>FATAL</code>, <code>ERROR</code>, <code>WARN</code>, <code>INFO</code>, <code>DEBUG</code>, <code>TRACE</code>, and <code>ALL</code>, in order of increasing verbosity.
 
 <p>
 Örnekler:
