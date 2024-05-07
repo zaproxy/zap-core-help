@@ -16,7 +16,7 @@ plugins {
     id("com.diffplug.spotless")
     id("org.zaproxy.common")
     id("org.zaproxy.add-on") version "0.10.0" apply false
-    id("org.zaproxy.crowdin") version "0.3.1"
+    id("org.zaproxy.crowdin") version "0.4.0"
 }
 
 eclipse {
