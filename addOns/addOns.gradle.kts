@@ -15,7 +15,7 @@ plugins {
     eclipse
     id("com.diffplug.spotless")
     id("org.zaproxy.common")
-    id("org.zaproxy.add-on") version "0.10.0" apply false
+    id("org.zaproxy.add-on") version "0.11.0" apply false
     id("org.zaproxy.crowdin") version "0.4.0"
 }
 
@@ -38,9 +38,10 @@ crowdin {
 
 description = "Common configuration of the add-ons."
 
-val ghReleaseDataProvider = provider {
-    subprojects.first().zapAddOn.gitHubRelease
-}
+val ghReleaseDataProvider =
+    provider {
+        subprojects.first().zapAddOn.gitHubRelease
+    }
 val generateReleaseStateLastCommit by tasks.registering(GenerateReleaseStateLastCommit::class)
 
 val handleRelease by tasks.registering(HandleRelease::class) {
@@ -61,9 +62,10 @@ val createPullRequestNextDevIter by tasks.registering(CreatePullRequest::class) 
     commitSummary.set("Prepare next dev iteration(s)")
     commitDescription.set(
         provider {
-            "Update version and changelog for:\n" + releasedProjects.map {
-                " - ${it.zapAddOn.addOnName.get()}"
-            }.sorted().joinToString("\n")
+            "Update version and changelog for:\n" +
+                releasedProjects.map {
+                    " - ${it.zapAddOn.addOnName.get()}"
+                }.sorted().joinToString("\n")
         },
     )
 
@@ -85,9 +87,11 @@ subprojects {
     }
 
     zapAddOn {
-        zapVersion.set("2.14.0")
+        zapVersion.set("2.15.0")
 
-        releaseLink.set(project.provider { "https://github.com/zaproxy/zap-core-help/releases/${zapAddOn.addOnId.get()}-v@CURRENT_VERSION@" })
+        releaseLink.set(
+            project.provider { "https://github.com/zaproxy/zap-core-help/releases/${zapAddOn.addOnId.get()}-v@CURRENT_VERSION@" },
+        )
 
         manifest {
             author.set("ZAP Crowdin Team")
@@ -161,11 +165,12 @@ subprojects {
 
 val createPullRequestRelease by tasks.registering(CreatePullRequest::class) {
     System.getenv("ADD_ON_IDS")?.let {
-        val projects = it.split(Pattern.compile(" *, *")).map { name ->
-            val project = subprojects.find { it.name == name }
-            require(project != null) { "Add-on with project name $name not found." }
-            project
-        }
+        val projects =
+            it.split(Pattern.compile(" *, *")).map { name ->
+                val project = subprojects.find { it.name == name }
+                require(project != null) { "Add-on with project name $name not found." }
+                project
+            }
 
         projects.forEach {
             dependsOn(it.tasks.named("prepareRelease"))
@@ -178,16 +183,16 @@ val createPullRequestRelease by tasks.registering(CreatePullRequest::class) {
         commitSummary.set("Release add-on(s)")
         commitDescription.set(
             provider {
-                "Release the following add-ons:\n" + projects.map {
-                    " - ${it.zapAddOn.addOnName.get()} version ${it.zapAddOn.addOnVersion.get()}"
-                }.sorted().joinToString("\n")
+                "Release the following add-ons:\n" +
+                    projects.map {
+                        " - ${it.zapAddOn.addOnName.get()} version ${it.zapAddOn.addOnVersion.get()}"
+                    }.sorted().joinToString("\n")
             },
         )
     }
 }
 
-fun Project.java(configure: JavaPluginExtension.() -> Unit): Unit =
-    (this as ExtensionAware).extensions.configure("java", configure)
+fun Project.java(configure: JavaPluginExtension.() -> Unit): Unit = (this as ExtensionAware).extensions.configure("java", configure)
 
 fun Project.zapAddOn(configure: AddOnPluginExtension.() -> Unit): Unit =
     (this as ExtensionAware).extensions.configure("zapAddOn", configure)
