@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## Unreleased
 ### Added
-- Add Gnome proxy settings user guide
+- Details for setting Gnome proxy settings.
 
 ## [18] - 2024-05-07
 ### Added
