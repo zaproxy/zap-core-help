@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<TITLE>
+  Release 2.16.0
+</TITLE>
+</HEAD>
+<BODY>
+<H1>Release 2.16.0</H1>
+
+This is a bug fix and enhancement release.
+<br>
+These release notes do not include all of the changes included in add-ons updated since 2.15.0.
+<p>
+Some of the more significant enhancements include:
+
+<H3>Update to a Minimum of Java 17</H3>
+
+TODO add details.
+
+<H3>Menu Items Restructured</H3>
+
+The desktop context sensitive menu items have been reordered, and grouped in a more logical way.
+This should make it much easier to find the menu item you want, when you want it.
+
+<H3>Detachable Tabs</H3>
+
+TODO add details.
+
+<H3>TODO Add More Headline Features</H3>
+
+TODO add details.
+
+<H3>Docker Hub Organisation Deprecation</H3>
+
+We will not use the <a href="https://hub.docker.com/u/softwaresecurityproject">softwaresecurityproject</a> org for 2.16.0 or following releases.
+
+If you still use this org then please switch to <a href="https://hub.docker.com/u/zaproxy">zaproxy</a>.
+
+<h3>Dependency Updates</h3>
+
+As usual the release includes dependency updates.
+<p>
+The following libraries were updated:
+
+<ul>
+  <li>Flatlaf, 3.4.1 → 3.5.2</li>
+  <li>hsqldb, 2.7.2 → 2.7.3</li>
+  <li>jfreechart, 1.5.4 → 1.5.5</li>
+  <li>log4j-1.2-api, 2.20.0 → 2.23.1</li>
+  <li>log4j-api, 2.20.0 → 2.23.1</li>
+  <li>log4j-core, 2.20.0 → 2.23.1</li>
+  <li>log4j-jul, 2.20.0 → 2.23.1</li>
+  <li>Rsyntaxtextarea, 3.4.0 → 3.5.2</li>
+</ul>
+
+<H2>Add-Ons</H2>
+
+<H3>Updated Add-Ons</H3>
+All of the add-ons included by default have been updated since the last full release.
+
+<H2>Enhancements</H2>
+<ul>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/2109">Issue 2109</a> : Undock Tabs</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8016">Issue 8016</a> : Move `ValueGenerator` to an add-on</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8321">Issue 8321</a> : Update zap.sh script to get memory usage in containers</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8375">Issue 8375</a> : Add telemetry to toolbar buttons</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8518">Issue 8518</a> : Search in notes</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8554">Issue 8554</a> : Manage Add-ons table columns should all have names</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8602">Issue 8602</a> : Make some dialog messages copyable.</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8615">Issue 8615</a> : Remove &quot;Nashorn&quot; JavaScript templates</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8667">Issue 8667</a> : Retain and expose source message ID of alerts</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8673">Issue 8673</a> : Support history -&gt; alert tags</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8676">Issue 8676</a> : Fix FPs in isSuccess and isPage200</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8678">Issue 8678</a> : Std file chooser fixes</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8685">Issue 8685</a> : Add manual alert add/modify and vuln selection stats</li>
+</ul>
+
+<H2>Bug fixes</H2>
+<ul>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8496">Issue 8496</a> : Fix exceptions for no/empty path in path variant</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8498">Issue 8498</a> : Do not use null domain in auth credentials</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8533">Issue 8533</a> : Issue re-loading passive scan rules on add-on upgrade</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8546">Issue 8546</a> : Prevent adding same add-on's `ResourceBundle`</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8589">Issue 8589</a> : Correct label in a Structural Modifier dialogue</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8590">Issue 8590</a> : Correct `StructuralNodeModifier` key check</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8631">Issue 8631</a> : Concurrent access to Graal.js Proxy scripts with latest ZAP versions</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8632">Issue 8632</a> : Fix EDT access on script node changes</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8665">Issue 8665</a> : Correct data returned in poll headers field</li>
+</ul>
+
+<H2>See Also</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+</table>
+</BODY>
+</HTML>
