@@ -8,6 +8,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Details for setting Gnome proxy settings.
 - History -> Alert tag details.
 
+### Changed
+- Updated for 2.16.0.
+
 ## [18] - 2024-05-07
 ### Added
 - `-loglevel` option to the command line help page.
