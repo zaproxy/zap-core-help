@@ -9,7 +9,7 @@
 	TOC merger is defined in org.zaproxy.zap.extension.help.ZapTocMerger.
 -->
 <toc version="2.0">
- <tocitem text="ZAP Desktop User Guide" image="toplevelfolder" tocid="toplevelitem">
+ <tocitem text="ZAP by Checkmarx Desktop User Guide" image="toplevelfolder" tocid="toplevelitem">
 
    <tocitem text="Introduction" target="zap.intro"/>
 
