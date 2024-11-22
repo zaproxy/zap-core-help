@@ -9,33 +9,65 @@
 <BODY>
 <H1>Release 2.16.0</H1>
 
-This is a bug fix and enhancement release.
-<br>
+This is a bug fix and enhancement release. Look out for new 
+<a href="https://www.zaproxy.org/blog/">Blog Posts</a> and <a href="https://www.zaproxy.org/videos/">Videos</a> 
+which will cover some of these new features in much more depth in the coming days and weeks.
+<p>
+This release was made possible thanks to <a href="https://checkmarx.com/">Checkmarx</a> 
+who employ 3 of the <a href="https://www.zaproxy.org/docs/team/">Core Team</a> to work on ZAP.
+<p>
 These release notes do not include all of the changes included in add-ons updated since 2.15.0.
 <p>
 Some of the more significant enhancements include:
 
 <H3>Update to a Minimum of Java 17</H3>
 
-TODO add details.
-
-<H3>Menu Items Restructured</H3>
-
-The desktop context sensitive menu items have been reordered, and grouped in a more logical way.
-This should make it much easier to find the menu item you want, when you want it.
+ZAP now requires a minimum of Java 17 to run. This allows us to use more modern Java features in the ZAP codebase.
 
 <H3>Detachable Tabs</H3>
 
-TODO add details.
+You can now detach any of the ZAP desktop tabs so that they will appear in their own windows.
+This means that you can see more than one tab in the group at the same time, and allows you to distribute those windows
+across multiple monitors. 
+Just right click any tab to see the 'detach' option and close the tab window to return it to the main ZAP window.
 
-<H3>TODO Add More Headline Features</H3>
+<H3>Standard Policy Definitions</H3>
 
-TODO add details.
+We now have a standard set of active scan policy definitions which we recommend for use in specific situations.
+Using these definitions will just enable the most suitable active scan rules. This will speed up your active scans
+and will reduce noise. Some of the standard active scan rules are really targetted at pentesters, and these can waste 
+developers time.
+<p>
+For more details see the new <a href="https://www.zaproxy.org/docs/desktop/addons/scan-policies/">Scan Policies</a> add-on.
+
+<H3>Site Tree Export and Pruning</H3>
+
+We now have a standard format for representing the Sites Tree in a text file: 
+<a href="https://www.zaproxy.org/docs/desktop/addons/import-export/sites-tree-format/">Sites Tree Format</a>.
+This format uniquely identifies nodes in the Sites tree.
+While this might not sound particularly exciting, it does actually allow you to use ZAP to perform "differential" scans,
+i.e. only attacking endpoints that have changed. This means that ZAP can be used to perform really fast testing in CI/CD.
+
+<H3>Sequence Scanning Updates</H3>
+
+The <a href="https://www.zaproxy.org/docs/desktop/addons/sequence-scanner/">Sequence Scanner</a> add-on has received
+significant attention. It now runs much more quickly and has full Automation Framework support.
+As a result it has been promoted to Beta status.
+
+<H3>Passive Scanner Moved into an Add-On</H3>
+
+The passive scanner has now been moved into an add-on: <a href="https://www.zaproxy.org/docs/desktop/addons/passive-scanner/">Passive Scanner</a>.
+We have an ongoing plan to move as much functionality out of the core as possible, as this allows us to push out fixes and
+enhancements much more quickly.
+
+<H3>Checkmarx Rebranding</H3>
+
+This release is the first full release with the "ZAP by Checkmarx" branding.
 
 <H3>Docker Hub Organisation Deprecation</H3>
 
 We will not use the <a href="https://hub.docker.com/u/softwaresecurityproject">softwaresecurityproject</a> org for 2.16.0 or following releases.
-
+<p>
 If you still use this org then please switch to <a href="https://hub.docker.com/u/zaproxy">zaproxy</a>.
 
 <h3>Dependency Updates</h3>
