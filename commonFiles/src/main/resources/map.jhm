@@ -134,9 +134,6 @@
      	<mapID target="ui.dialogs.options.jvm" url="contents/ui/dialogs/options/jvm.html"/>
      	<mapID target="ui.dialogs.options.keyboard" url="contents/ui/dialogs/options/keyboard.html"/>
      	<mapID target="ui.dialogs.options.language" url="contents/ui/dialogs/options/language.html"/>
-     	<mapID target="ui.dialogs.options.pscan" url="contents/ui/dialogs/options/pscan.html"/>
-     	<mapID target="ui.dialogs.options.pscanrules" url="contents/ui/dialogs/options/pscanrules.html"/>
-     	<mapID target="ui.dialogs.options.pscan.main" url="contents/ui/dialogs/options/pscanner.html"/>
      	<mapID target="ui.dialogs.options.ruleconfig" url="contents/ui/dialogs/options/ruleconfig.html" />
      	<mapID target="ui.dialogs.options.script" url="contents/ui/dialogs/options/script.html" />
      	<mapID target="ui.dialogs.options.search" url="contents/ui/dialogs/options/search.html" />
