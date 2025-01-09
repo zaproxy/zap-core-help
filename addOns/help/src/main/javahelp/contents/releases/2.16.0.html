@@ -23,6 +23,23 @@ Some of the more significant enhancements include:
 <H3>Update to a Minimum of Java 17</H3>
 
 ZAP now requires a minimum of Java 17 to run. This allows us to use more modern Java features in the ZAP codebase.
+<p>
+As a result of this move scripts which use the Nashorn JavaScript engine may no longer work, 
+this is because the engine is no longer present in Java 17.
+Any scripts configured to use Nashorn will automatically be changed to use the 
+<a href="https://www.zaproxy.org/docs/desktop/addons/graalvm-javascript/">Graal.js</a> JavaScript engine.
+However you may still need to migrate these scripts, see the <a href="https://www.graalvm.org/latest/reference-manual/js/NashornMigrationGuide/">Migration Guide from Nashorn to GraalJS</a>.
+
+<H3>Client Spider</H3>
+
+The Client Integration add-on is now included as standard, and provides a new 
+<a href="https://www.zaproxy.org/docs/desktop/addons/client-side-integration/spider/">Client Spider</a>.
+The Client Spider works in a similar way to the AJAX Spider but it has access to the DOM via the ZAP Browser Extension
+which means that it can find content which the AJAX Spider cannot find.
+<p>
+While it is still at an early stage we believe it is a more effective approach than the AJAX Spider.
+We will be focussing on improving the Client Spider and the current plan is for it to supersede the AJAX Spider
+as the recommended way of crawling modern web apps.
 
 <H3>Detachable Tabs</H3>
 
@@ -66,6 +83,7 @@ The <a href="https://www.zaproxy.org/docs/automate/automation-framework/">Automa
 <ul>
 <li><a href="https://www.zaproxy.org/docs/desktop/addons/automation-framework/job-ascanconfig/">activeScan-config</a> This job configures the active scanner, for custom active scans (e.g. Sequence).
 <li><a href="https://www.zaproxy.org/docs/desktop/addons/automation-framework/job-ascanpolicy/">activeScan-policy</a> This job defines an active scan policy.
+<li><a href="https://www.zaproxy.org/docs/desktop/addons/client-side-integration/automation/">spiderClient</a> This job allows you to run the client spider.
 <li><a href="https://www.zaproxy.org/docs/desktop/addons/automation-framework/job-exitstatus/">exitStatus</a> This job sets ZAP's exit code based on scan results.
 <li><a href="https://www.zaproxy.org/docs/desktop/addons/sequence-scanner/automation/">sequence-import</a> This job allows you to create a sequence from an HAR file.
 <li><a href="https://www.zaproxy.org/docs/desktop/addons/sequence-scanner/automation/">sequence-activeScan</a> This job allows you to a ative scan sequences.
