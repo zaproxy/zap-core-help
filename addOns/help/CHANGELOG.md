@@ -3,7 +3,7 @@ All notable changes to this add-on will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## Unreleased
+## [19] - 2025-01-10
 ### Added
 - Details for setting Gnome proxy settings.
 - History -> Alert tag details.
@@ -96,6 +96,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - First version.
 
+[19]: https://github.com/zaproxy/zap-core-help/releases/help-v19
 [18]: https://github.com/zaproxy/zap-core-help/releases/help-v18
 [17]: https://github.com/zaproxy/zap-core-help/releases/help-v17
 [16]: https://github.com/zaproxy/zap-core-help/releases/help-v16
