@@ -9,46 +9,8 @@ Scan Pasif
 <body>
 <h1>Pemindai Pasif</h1>
 <p>
-ZAP secara bawaan melakukan pemindaian secara pasif pada pesan HTTP (permintaan dan respon) dikirim ke aplikasi web yang dilakukan tes.<br/>
-Pemindaian pasif tidak merubah permintaan atau respon dalam cara apapun dan karena itu aman untuk digunakan.<br/>
-Peninjauan dilakukan di thread latar belakang untuk memastikan hal tersebut tidak memperlambat eksplorasi dari aplikasi.
-</p>
-<p>
-Perilaku (utama) dari peninjauan pasif dapat dikonfigurasi menggunakan 
-<a href="../../ui/dialogs/options/pscanner.html">Option Passive Scanner Screen</a>.
-</p>
-<p>
-Peninjauan pasif dapat juga digunakan untuk menambahkan secara otomatis <a href="tags.html">tags</a>
-dan pemeliharaan <a href="alerts.html">alerts</a> untuk masalah potensial.<br>
-Seperangkat aturan untuk memberikan label secara otomatis disediakan secara bawaan. Hal ini dapat diubah, dihapus atau ditambahkan melalui <a href="../../ui/dialogs/options/pscan.html">Options Passive Scan Tags screen</a>.
-</p>
-
-<p>
-The alerts raised by passive scan rules can be configured using the 
-<a href="../../ui/dialogs/options/pscanrules.html">Options Passive Scan Rules screen</a>.<br/>
-</p>
-
-<h2>Lihat juga</h2>
-<table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../ui/overview.html">Ikhtisar UI</a></td><td>untuk Ikhtisar antarmuka pengguna</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="features.html">Fitur</a></td><td>disediakan oleh ZAP</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="ascan.html">Pemindaian aktif</a></td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../checks.html">Aturan Pemindaian</a></td><td>didukung oleh bawaan</td></tr>
-</table>
-
-<h2>Official Videos</h2>
-<table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td><a href="https://play.sonatype.com/watch/vDWpoYjHi7fSLYFDQPWgMF">ZAP In Ten: Passive Scanning</a> (10:27)</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td><a href="https://play.vidyard.com/HfENJ3GJB3zbD6sMscDrjD">ZAP In Ten: Passive Scan Scripts</a> (11:53)</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td><a href="https://www.youtube.com/watch?v=Rx42kyrB0nk">Deep Dive: Passive Scanning</a> (27:35)</td></tr>
-</table>
+The passive scanner is provided by the <a href="https://www.zaproxy.org/docs/desktop/addons/passive-scanner/">Passive Scanner add-on</a>,
+which allows to passively scan messages (e.g. HTTP, WebSocket) proxied/sent through/by ZAP.
 
 </body>
 </html>

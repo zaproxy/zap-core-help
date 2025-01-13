@@ -9,48 +9,8 @@
 <body>
 <h1>静的スキャン</h1>
 <p>
-ZAP by default passively scans all HTTP messages (requests and responses) sent to the web application being tested.<br/>
-Passive scanning does not change the requests nor the responses in any way and is therefore safe to use.<br/>
-Scanning is performed in a background thread to ensure that it does not slow down the exploration
-of an application.
-</p>
-<p>
-The (main) behaviour of the passive scanner can be configured using the 
-<a href="../../ui/dialogs/options/pscanner.html">Options Passive Scanner Screen</a>.
-</p>
-<p>
-Passive scanning can also be used for automatically adding <a href="tags.html">tags</a>
-and raising <a href="alerts.html">alerts</a> for potential issues.<br>
-A set of rules for automatic tagging are provided by default. These can be changed, deleted or
-added to via the <a href="../../ui/dialogs/options/pscan.html">Options Passive Scan Tags screen</a>.
-</p>
-
-<p>
-The alerts raised by passive scan rules can be configured using the 
-<a href="../../ui/dialogs/options/pscanrules.html">Options Passive Scan Rules screen</a>.<br/>
-</p>
-
-<h2>関連情報</h2>
-<table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../ui/overview.html">UIの概要</a></td><td>ユーザー インターフェイスの概要について</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="features.html">特徴：</a></td><td>ZAPによって提供されます。</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="ascan.html">動的スキャン</a></td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../checks.html">スキャナーのルール</a></td><td>既定でサポートされています。</td></tr>
-</table>
-
-<h2>Official Videos</h2>
-<table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td><a href="https://play.sonatype.com/watch/vDWpoYjHi7fSLYFDQPWgMF">ZAP In Ten: Passive Scanning</a> (10:27)</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td><a href="https://play.vidyard.com/HfENJ3GJB3zbD6sMscDrjD">ZAP In Ten: Passive Scan Scripts</a> (11:53)</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td><a href="https://www.youtube.com/watch?v=Rx42kyrB0nk">Deep Dive: Passive Scanning</a> (27:35)</td></tr>
-</table>
+The passive scanner is provided by the <a href="https://www.zaproxy.org/docs/desktop/addons/passive-scanner/">Passive Scanner add-on</a>,
+which allows to passively scan messages (e.g. HTTP, WebSocket) proxied/sent through/by ZAP.
 
 </body>
 </html>

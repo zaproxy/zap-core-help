@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<TITLE>
+  Release 2.16.0
+</TITLE>
+</HEAD>
+<BODY>
+<H1>Release 2.16.0</H1>
+
+This is a bug fix and enhancement release. Look out for new 
+<a href="https://www.zaproxy.org/blog/">Blog Posts</a> and <a href="https://www.zaproxy.org/videos/">Videos</a> 
+which will cover some of these new features in much more depth in the coming days and weeks.
+<p>
+This release was made possible thanks to <a href="https://checkmarx.com/">Checkmarx</a> 
+who employ 3 of the <a href="https://www.zaproxy.org/docs/team/">Core Team</a> to work on ZAP.
+<p>
+These release notes do not include all of the changes included in add-ons updated since 2.15.0.
+<p>
+Some of the more significant enhancements include:
+
+<H3>Update to a Minimum of Java 17</H3>
+
+ZAP now requires a minimum of Java 17 to run. This allows us to use more modern Java features in the ZAP codebase.
+<p>
+As a result of this move scripts which use the Nashorn JavaScript engine may no longer work, 
+this is because the engine is no longer present in Java 17.
+Any scripts configured to use Nashorn will automatically be changed to use the 
+<a href="https://www.zaproxy.org/docs/desktop/addons/graalvm-javascript/">Graal.js</a> JavaScript engine.
+However you may still need to migrate these scripts, see the <a href="https://www.graalvm.org/latest/reference-manual/js/NashornMigrationGuide/">Migration Guide from Nashorn to GraalJS</a>.
+
+<H3>Client Spider</H3>
+
+The Client Integration add-on is now included as standard, and provides a new 
+<a href="https://www.zaproxy.org/docs/desktop/addons/client-side-integration/spider/">Client Spider</a>.
+The Client Spider works in a similar way to the AJAX Spider but it has access to the DOM via the ZAP Browser Extension
+which means that it can find content which the AJAX Spider cannot find.
+<p>
+While it is still at an early stage we believe it is a more effective approach than the AJAX Spider.
+We will be focussing on improving the Client Spider and the current plan is for it to supersede the AJAX Spider
+as the recommended way of crawling modern web apps.
+
+<H3>Detachable Tabs</H3>
+
+You can now detach any of the ZAP desktop tabs so that they will appear in their own windows.
+This means that you can see more than one tab in the group at the same time, and allows you to distribute those windows
+across multiple monitors. 
+Just right click any tab to see the 'detach' option and close the tab window to return it to the main ZAP window.
+
+<H3>Standard Policy Definitions</H3>
+
+We now have a standard set of active scan policy definitions which we recommend for use in specific situations.
+Using these definitions will just enable the most suitable active scan rules. This will speed up your active scans
+and will reduce noise. Some of the standard active scan rules are really targetted at pentesters, and these can waste 
+developers time.
+<p>
+For more details see the new <a href="https://www.zaproxy.org/docs/desktop/addons/scan-policies/">Scan Policies</a> add-on.
+
+<H3>Site Tree Export and Pruning</H3>
+
+We now have a standard format for representing the Sites Tree in a text file: 
+<a href="https://www.zaproxy.org/docs/desktop/addons/import-export/sites-tree-format/">Sites Tree Format</a>.
+This format uniquely identifies nodes in the Sites tree.
+While this might not sound particularly exciting, it does actually allow you to use ZAP to perform "differential" scans,
+i.e. only attacking endpoints that have changed. This means that ZAP can be used to perform really fast testing in CI/CD.
+
+<H3>Sequence Scanning Updates</H3>
+
+The <a href="https://www.zaproxy.org/docs/desktop/addons/sequence-scanner/">Sequence Scanner</a> add-on has received
+significant attention. It now runs much more quickly and has full Automation Framework support.
+As a result it has been promoted to Beta status.
+
+<H3>Passive Scanner Moved into an Add-On</H3>
+
+The passive scanner has now been moved into an add-on: <a href="https://www.zaproxy.org/docs/desktop/addons/passive-scanner/">Passive Scanner</a>.
+We have an ongoing plan to move as much functionality out of the core as possible, as this allows us to push out fixes and
+enhancements much more quickly.
+
+<H3>Automation Framework Enhancements</H3>
+
+The <a href="https://www.zaproxy.org/docs/automate/automation-framework/">Automation Framework</a> has a set of new jobs:
+<ul>
+<li><a href="https://www.zaproxy.org/docs/desktop/addons/automation-framework/job-ascanconfig/">activeScan-config</a> This job configures the active scanner, for custom active scans (e.g. Sequence).
+<li><a href="https://www.zaproxy.org/docs/desktop/addons/automation-framework/job-ascanpolicy/">activeScan-policy</a> This job defines an active scan policy.
+<li><a href="https://www.zaproxy.org/docs/desktop/addons/client-side-integration/automation/">spiderClient</a> This job allows you to run the client spider.
+<li><a href="https://www.zaproxy.org/docs/desktop/addons/automation-framework/job-exitstatus/">exitStatus</a> This job sets ZAP's exit code based on scan results.
+<li><a href="https://www.zaproxy.org/docs/desktop/addons/import-export/automation/">export</a> This job allows you to export messages in HAR format or as URLs as well as exporting the Sites Tree.
+<li><a href="https://www.zaproxy.org/docs/desktop/addons/import-export/automation/">prune</a> This job allows you to remove nodes from the Sites Tree using data from a file in the Sites Tree format.
+<li><a href="https://www.zaproxy.org/docs/desktop/addons/sequence-scanner/automation/">sequence-import</a> This job allows you to create a sequence from an HAR file.
+<li><a href="https://www.zaproxy.org/docs/desktop/addons/sequence-scanner/automation/">sequence-activeScan</a> This job allows you to active scan sequences.
+</ul>
+
+<H3>Checkmarx Rebranding</H3>
+
+This release is the first full release with the "ZAP by Checkmarx" branding.
+
+<H3>Docker Hub Organisation Deprecation</H3>
+
+We will not use the <a href="https://hub.docker.com/u/softwaresecurityproject">softwaresecurityproject</a> org for 2.16.0 or following releases.
+<p>
+If you still use this org then please switch to <a href="https://hub.docker.com/u/zaproxy">zaproxy</a>.
+
+<h3>Dependency Updates</h3>
+
+As usual the release includes dependency updates.
+<p>
+The following libraries were updated:
+
+<ul>
+  <li>Commons Codec, 1.16.1 → 1.17.1</li>
+  <li>Commons CSV, 1.10.0 → 1.12.0</li>
+  <li>Commons IO, 2.16.1 → 2.18.0</li>
+  <li>Commons Lang3, 3.14.0 → 3.17.0</li>
+  <li>Commons Logging, 1.3.1 → 1.3.4</li>
+  <li>Flatlaf, 3.4.1 → 3.5.4</li>
+  <li>hsqldb, 2.7.2 → 2.7.4</li>
+  <li>jfreechart, 1.5.4 → 1.5.5</li>
+  <li>log4j-1.2-api, 2.20.0 → 2.24.2</li>
+  <li>log4j-api, 2.20.0 → 2.24</li>
+  <li>log4j-core, 2.20.0 → 2.24.2</li>
+  <li>log4j-jul, 2.20.0 → 2.24.1</li>
+  <li>Rsyntaxtextarea, 3.4.0 → 3.5.2</li>
+</ul>
+
+Also note that the harlib dependency is no longer part of the compile classpath and that its use is deprecated.
+
+<H2>Add-Ons</H2>
+
+<H3>Updated Add-Ons</H3>
+All of the add-ons included by default have been updated since the last full release.
+
+<H2>Enhancements</H2>
+<ul>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/2109">Issue 2109</a> : Undock Tabs</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/7959">Issue 7959</a> : Move Passive Scanner to an add-on</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8016">Issue 8016</a> : Move `ValueGenerator` to an add-on</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8321">Issue 8321</a> : Update zap.sh script to get memory usage in containers</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8375">Issue 8375</a> : Add telemetry to toolbar buttons</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8518">Issue 8518</a> : Search in notes</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8554">Issue 8554</a> : Manage Add-ons table columns should all have names</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8602">Issue 8602</a> : Make some dialog messages copyable.</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8615">Issue 8615</a> : Remove &quot;Nashorn&quot; JavaScript templates</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8667">Issue 8667</a> : Retain and expose source message ID of alerts</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8673">Issue 8673</a> : Support history -&gt; alert tags</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8676">Issue 8676</a> : Fix FPs in isSuccess and isPage200</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8678">Issue 8678</a> : Std file chooser fixes</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8685">Issue 8685</a> : Add manual alert add/modify and vuln selection stats</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8734">Issue 8734</a> : Log ID of the active scans</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8752">Issue 8752</a> : Make HarLib an implementation dependency</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8753">Issue 8753</a> : Deprecate `HarUtils`</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8759">Issue 8759</a> : Use always latest request sent if same status</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8763">Issue 8763</a> : Deprecate context menu method no longer needed</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8768">Issue 8768</a> : Include more info when logging DB max size limits</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8774">Issue 8774</a> : Add constants for Client Spider</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8778">Issue 8778</a> : Support swapping output panel implementation</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8785">Issue 8785</a> : Add local address to HTTP request header</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8787">Issue 8787</a> : Treat Nashorn scripts as Graaljs ones</li>
+</ul>
+
+<H2>Bug fixes</H2>
+<ul>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8496">Issue 8496</a> : Fix exceptions for no/empty path in path variant</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8498">Issue 8498</a> : Do not use null domain in auth credentials</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8533">Issue 8533</a> : Issue re-loading passive scan rules on add-on upgrade</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8546">Issue 8546</a> : Prevent adding same add-on's `ResourceBundle`</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8589">Issue 8589</a> : Correct label in a Structural Modifier dialogue</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8590">Issue 8590</a> : Correct `StructuralNodeModifier` key check</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8631">Issue 8631</a> : Concurrent access to Graal.js Proxy scripts with latest ZAP versions</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8632">Issue 8632</a> : Fix EDT access on script node changes</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8635">Issue 8635</a> : Concurrent access to Graal.js Input Vector scripts</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8665">Issue 8665</a> : Correct data returned in poll headers field</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8707">Issue 8707</a> : Fix exception when printing null to error stream</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8769">Issue 8769</a> : Notify script node changes in the correct thread</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8771">Issue 8771</a> : Fix OverlayIcon scaling</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8773">Issue 8773</a> : Add missing scaling to some icons</li>
+</ul>
+
+<H2>See Also</H2>
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="releases.html">Releases</a></td><td>the full set of releases</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../credits.html">Credits</a></td><td>the people and groups who have made this release possible</td></tr>
+</table>
+</BODY>
+</HTML>

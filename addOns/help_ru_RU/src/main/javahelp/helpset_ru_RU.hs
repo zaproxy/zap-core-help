@@ -2,7 +2,7 @@
 <helpset version="2.0" xml:lang="ru-RU">
 
   <!-- title -->
-  <title>ZAP - Руководство пользователя рабочего стола </title>
+  <title>ZAP by Checkmarx - Desktop User Guide</title>
 
   <!-- maps -->
   <maps>

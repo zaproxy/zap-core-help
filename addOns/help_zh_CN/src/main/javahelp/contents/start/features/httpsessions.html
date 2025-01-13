@@ -6,11 +6,21 @@
 </head>
 <body>
 	<h1>HTTP会话</h1>
-	<p>此工具可以跟踪特定站点上现有的HTTP会话，并允许Zaproxy用户强制所有请求处于特定会话中。 基本上，它允许用户在网站上的用户会话之间轻松切换，并创建一个新的会话而不会“销毁”现有会话。</p>
+	<p>This tool keeps track of the existing HTTP Sessions on a
+		particular Site and allows the ZAP user to force all requests to
+		be on a particular session. 基本上，它允许用户在网站上的用户会话之间轻松切换，并创建一个新的会话而不会“销毁”现有会话。</p>
+		
+	<p>
+		The tool is only intended for manual testing and should not be used in automation -
+		there are much better alternatives.
+		If you are new to ZAP automation then the best place to start is the ZAP 
+		<a href="https://www.zaproxy.org/docs/authentication/">Authentication Decision Tree</a> (external link).
 
 	<p>
 		它基于会话令牌的概念，它是HTTP消息参数（目前仅为cookie），允许HTTP服务器将请求消息与先前存储的任何请求或数据连接起来。
-		就Zaproxy而言，从概念上讲，会话令牌已被分为两类：默认会话令牌和站点会话令牌。 默认会话令牌是用户可以在<a href="../../ui/dialogs/options/httpsessions.html">选项屏幕</a>中设置的令牌，默认情况下会自动将会话令牌视为任何网站的会话令牌（例如， phpsessid，jsessionid等）。 站点会话令牌是特定站点的一组令牌，通常使用<a
+		In the case of ZAP, conceptually, session tokens have been
+		classified into 2 categories: default session tokens and site session
+		tokens. 默认会话令牌是用户可以在<a href="../../ui/dialogs/options/httpsessions.html">选项屏幕</a>中设置的令牌，默认情况下会自动将会话令牌视为任何网站的会话令牌（例如， phpsessid，jsessionid等）。 站点会话令牌是特定站点的一组令牌，通常使用<a
 			href="../../ui/tabs/params.html">参数选项卡</a>中提供的弹出式菜单进行设置.
 	</p>
 

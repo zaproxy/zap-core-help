@@ -9,7 +9,10 @@ Proxy Yapılandırma
 <body>
 <h1>Proxy'leri yapılandırma</h1>
 <p>
-You will need to configure your browser to use ZAP as a proxy.<br>
+The best way to use a browser with ZAP is to launch it from ZAP. 
+It will then be automatically configured to proxy through ZAP and to ignore certificate warnings.
+<p>
+If for any reason you are unable or unwilling to do that then you will need to configure your browser to use ZAP as a proxy.<br>
 By default, ZAP uses an Address of 'localhost' and a Port of '8080', but these can be changed via the Options > Network > Local Servers/Proxies screen.
 
 En sık kullanılan tarayıcıların en son sürümleri için talimatlar: 
@@ -113,14 +116,26 @@ Ensure 'SSL Proxy' is also configured, either by selecting 'Use this proxy serve
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tuşuna basın</td><td> Ağ Seçenekleri 'Uygula' tuşu</td></tr>
 </table>
 
+<h3>Linux Gnome Proxy settings</h3>
+
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tuşuna basın</td><td> 'Gnome Settings' in the top corner</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seçin</td><td> 'Network' item in the left</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Girin</td><td> 'Proxy' in the 'Proxy' section</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tuşuna basın</td><td> 'Network Proxy' toggle</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select</td><td> 'Manual' in the 'Configuration' dropdown</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Girin</td><td> HTTP (or HTTPs) Proxy 'URL' field the 'URL' you configured in the options screen</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Enter in the</td><td> HTTP (or HTTPs) Proxy 'Port' field the 'Port' you configured in the options screen</td></tr>
+</table>
+
 <h3>Windows LAN Ayarları</h3>
 
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seçin</td><td> 'LAN 'ınız için bir proxy sunucusunu kullanın' onay kutusu</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Girin</td><td> 'Address:' field the 'Address' you configured in the options screen</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Girin</td><td> 'Port' field the 'Port' you configured in the options screen</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tuşuna basın</td><td> Yerel Bölge Ağı (LAN) Ayarı 'Tamam' butonu</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Tuşuna basın</td><td> İnternet Seçenekleri 'OK' tuşu</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select the</td><td> 'LAN 'ınız için bir proxy sunucusunu kullanın' onay kutusu</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Enter in the</td><td> 'Address:' field the 'Address' you configured in the options screen</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Enter in the</td><td> 'Port' field the 'Port' you configured in the options screen</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> Yerel Bölge Ağı (LAN) Ayarı 'Tamam' butonu</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> İnternet Seçenekleri 'OK' tuşu</td></tr>
 </table>
 
 <h2>Ayrıca bakınız</h2>

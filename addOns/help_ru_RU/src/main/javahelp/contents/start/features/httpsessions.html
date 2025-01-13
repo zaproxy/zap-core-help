@@ -6,19 +6,25 @@
 </head>
 <body>
 	<h1>HTTP-сессии</h1>
-	<p>Этот инструмент отслеживает существующие HTTP-сеансы на
-конкретный сайт и позволяет пользователю Zaproxy принудительно отправлять все запросы на
-быть на конкретном сеансе.  По сути, это позволяет пользователю легко
+	<p>This tool keeps track of the existing HTTP Sessions on a
+		particular Site and allows the ZAP user to force all requests to
+		be on a particular session. По сути, это позволяет пользователю легко
 переключаться между пользовательскими сеансами на сайте и создавать новый сеанс
 без «разрушения» существующих. </p>
+		
+	<p>
+		The tool is only intended for manual testing and should not be used in automation -
+		there are much better alternatives.
+		If you are new to ZAP automation then the best place to start is the ZAP 
+		<a href="https://www.zaproxy.org/docs/authentication/">Authentication Decision Tree</a> (external link).
 
 	<p>
 		Он основан на концепции токенов сеанса, которые представляют собой сообщение HTTP.
 параметры (пока только файлы cookie), которые позволяют HTTP-серверу
 соединить сообщение запроса с любыми предыдущими запросами или сохраненными данными. 
-		В случае Zaproxy, концептуально, токены сеанса
-делится на 2 категории: токены сеанса по умолчанию и сеанс сайта
-жетоны.  Токены сеанса по умолчанию - это те, которые пользователь может установить.
+		In the case of ZAP, conceptually, session tokens have been
+		classified into 2 categories: default session tokens and site session
+		tokens. Токены сеанса по умолчанию - это те, которые пользователь может установить.
 в <a href="../../ui/dialogs/options/httpsessions.html"> Параметры
 screen </a> и являются токенами, которые по умолчанию автоматически считаются
 токены сеанса для любого сайта (например,  phpsessid, jsessionid, etc). Сайт

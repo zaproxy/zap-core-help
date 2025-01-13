@@ -9,8 +9,11 @@ Configurando proxies
 <body>
 <h1>Configurando proxies</h1>
 <p>
-Deberá configurar su navegador para usar ZAP como proxy.<br>
-De forma predeterminada, ZAP usa la dirección de 'localhost' y el pruerto '8080', pero estos se pueden cambiar a través de la pantalla Opciones > Red > Servidores locales/Proxies.
+The best way to use a browser with ZAP is to launch it from ZAP. 
+It will then be automatically configured to proxy through ZAP and to ignore certificate warnings.
+<p>
+If for any reason you are unable or unwilling to do that then you will need to configure your browser to use ZAP as a proxy.<br>
+By default, ZAP uses an Address of 'localhost' and a Port of '8080', but these can be changed via the Options > Network > Local Servers/Proxies screen.
 
 Las instrucciones para las últimas versiones de los navegadores más utilizados son: 
 </p>
@@ -113,14 +116,26 @@ Asegúrese de que 'Proxy SSL' también esté configurado, ya sea seleccionando '
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pulse</td><td> Botón 'Aplicar' en opciones de red</td></tr>
 </table>
 
+<h3>Linux Gnome Proxy settings</h3>
+
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Presione el</td><td> 'Gnome Settings' in the top corner</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> 'Network' item in the left</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Introduzca en</td><td> 'Proxy' in the 'Proxy' section</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Presione el</td><td> 'Network Proxy' toggle</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select</td><td> 'Manual' in the 'Configuration' dropdown</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Introduzca en</td><td> HTTP (or HTTPs) Proxy 'URL' field the 'URL' you configured in the options screen</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Enter in the</td><td> HTTP (or HTTPs) Proxy 'Port' field the 'Port' you configured in the options screen</td></tr>
+</table>
+
 <h3>Configuración LAN de Windows</h3>
 
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Seleccione</td><td> La casilla de 'Usar un servidor Proxy para su servidor LAN'</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Introduzca en</td><td> El campo 'Dirección:' la 'Dirección' que configuró en la pantalla de opciones</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Introduzca en</td><td> El campo 'Puerto' el 'Puerto' que configuró en la pantalla de opciones</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Presione el</td><td> Botón 'OK' de la configuración de Red de Área Local (LAN)</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Presione el</td><td> Botón 'OK' de las Opciones de Internet</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select the</td><td> La casilla de 'Usar un servidor Proxy para su servidor LAN'</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Enter in the</td><td> El campo 'Dirección:' la 'Dirección' que configuró en la pantalla de opciones</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Enter in the</td><td> El campo 'Puerto' el 'Puerto' que configuró en la pantalla de opciones</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> Botón 'OK' de la configuración de Red de Área Local (LAN)</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> Botón 'OK' de las Opciones de Internet</td></tr>
 </table>
 
 <h2>Véase También</h2>

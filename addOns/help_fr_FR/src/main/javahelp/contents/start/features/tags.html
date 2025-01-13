@@ -19,6 +19,15 @@ this allows you to automatically tag pages which match a particular regular expr
 Tags are shown in the <a href="../../ui/tabs/history.html">History tab</a> and can be filtered on using
 the <a href="../../ui/dialogs/hist_filter.html">History Filter dialog</a>.<br/>
 </p>
+<h3>Alert Tags</h3>
+If a History tag starts with <code>ALERT-TAG:</code> then the tag will also be associated
+with any alerts raised against that request. 
+The prefix will be dropped, and if the remaining string contains an <code>=</code> character then the alert tag key will
+be the string up to the first <code>=</code> and the value will be the rest of the string.
+If there is no <code>=</code> then the key will be the string after the prefix and the value will be blank.<br>
+A History tag of <code>ALERT-TAG:AAA=BBB</code> will result in an Alert tag with a key of <code>AAA</code> 
+and a value of <code>BBB</code>, while a History tag of <code>ALERT-TAG:CCC</code> will result in an 
+Alert tag with a key of <code>CCC</code> and a blank value.
 
 <h2>Voir aussi</h2>
 <table>
