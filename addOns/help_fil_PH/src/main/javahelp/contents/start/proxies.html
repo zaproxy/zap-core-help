@@ -9,7 +9,10 @@ Ang pagbabago sa mga Proxy
 <body>
 <h1>Ang Pagkumpigura sa mga Proxy</h1>
 <p>
-You will need to configure your browser to use ZAP as a proxy.<br>
+The best way to use a browser with ZAP is to launch it from ZAP. 
+It will then be automatically configured to proxy through ZAP and to ignore certificate warnings.
+<p>
+If for any reason you are unable or unwilling to do that then you will need to configure your browser to use ZAP as a proxy.<br>
 By default, ZAP uses an Address of 'localhost' and a Port of '8080', but these can be changed via the Options > Network > Local Servers/Proxies screen.
 
 Mga tagubilin para sa mga pinakabagong bersyon ng mga karaniwang ginagamit na browser: 
@@ -113,14 +116,26 @@ Ensure 'SSL Proxy' is also configured, either by selecting 'Use this proxy serve
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pindutin ang</td><td> Buton para sa 'I-aplay' ang mga Network Opsyon</td></tr>
 </table>
 
+<h3>Linux Gnome Proxy settings</h3>
+
+<table>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pindutin ang</td><td> 'Gnome Settings' in the top corner</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Piliin ang</td><td> 'Network' item in the left</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pumasok lang sa</td><td> 'Proxy' in the 'Proxy' section</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pindutin ang</td><td> 'Network Proxy' toggle</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select</td><td> 'Manual' in the 'Configuration' dropdown</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pumasok sa</td><td> HTTP (or HTTPs) Proxy 'URL' field the 'URL' you configured in the options screen</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Enter in the</td><td> HTTP (or HTTPs) Proxy 'Port' field the 'Port' you configured in the options screen</td></tr>
+</table>
+
 <h3>Mga Setting para sa Windows LAN</h3>
 
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Piliin ang</td><td> 'Gumamit ng proxy server para sa iyong LAN' checkbox</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pumasok lang sa</td><td> 'Address:' field the 'Address' you configured in the options screen</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pumasok sa</td><td> 'Port' field the 'Port' you configured in the options screen</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pindutin ang</td><td> 'OK' button na para sa mga Setting ng Local Area Network (LAN)</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Pindutin ang</td><td> 'OK' button na para sa mga Internet Option</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Select the</td><td> 'Gumamit ng proxy server para sa iyong LAN' checkbox</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Enter in the</td><td> 'Address:' field the 'Address' you configured in the options screen</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Enter in the</td><td> 'Port' field the 'Port' you configured in the options screen</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> 'OK' button na para sa mga Setting ng Local Area Network (LAN)</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> 'OK' button na para sa mga Internet Option</td></tr>
 </table>
 
 <h2>Tingnan din</h2>

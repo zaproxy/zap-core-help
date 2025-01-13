@@ -7,6 +7,9 @@
 <body>
 	<h1>Autenticazione</h1>
 	ZAP can handle a wide range of authentication mechanisms.<br>
+	If you are new to ZAP automation then the best place to start is the ZAP 
+	<a href="https://www.zaproxy.org/docs/authentication/">Authentication Decision Tree</a> (external link).
+	<p>
 	Each <a href="contexts.html">Context</a> has:
 	<ul>
 	<li>an <a href="authmethods.html">Authentication Method</a> which defines how authentication is handled. 
@@ -63,16 +66,21 @@
     	<li>Define as many users as you need in the Session Properties -> Users section.</li>
 	</ol>
    	After configuring authentication, various actions are available in ZAP. For example, you can now select the user in the 
-   	Spider dialogue. Or, using the Forced User Mode, 
-   	you can force all the interactions that go through ZAP for a given Context to be from the perspective of a User. 
-   	The Forced User Mode is enabled via a button in the toolbar (the one with the user and the lock) and 
-   	is configured via Session Properties -> Forced User Mode.
+   	Spider dialogue.
 	<br>
 	Most of the steps above apply as well for other authentication methods. The only things that change when trying
 	to configure authentication using a different method is step 6. Instead of that, select the authentication
 	method required from the drop-down list and configure it as needed. More details about configuring each type 
 	of authentication can be found in the <a href="authmethods.html">Authentication Methods</a> page and in the 
 	<a href="../../ui/dialogs/session/contexts.html">Context Session screens</a>.
+
+	<h2><a name="forceduser">Forced User Mode</a></h2>
+	When Forced User Mode is enabled then all interactions that go through ZAP for a given context will be 
+	updated to be from the perspective of the specified User.<br>
+   	The Forced User Mode is enabled via a button in the toolbar (the one with the user and the lock) and 
+   	is configured via Session Properties -> Forced User Mode.<br>
+   	<b>Important:</b> Forced User Mode is just intended for manual testing and should not be used in automation -
+   	there are much better alternatives.
 
 	<h2><a name="envvars">Authentication Header Environmental Variables</a></h2>
 	A set of environmental variables are available which allow you to easily add an authentication header to all of the requests that are proxied through ZAP or initiated

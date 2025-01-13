@@ -6,17 +6,25 @@
 </head>
 <body>
 	<h1>HTTP Oturumları</h1>
-	<p>Belirli bir oturumda olmak. Temel olarak, kullanıcının kolayca
+	<p>This tool keeps track of the existing HTTP Sessions on a
+		particular Site and allows the ZAP user to force all requests to
+		be on a particular session. Temel olarak, kullanıcının kolayca
 bir Sitedeki kullanıcı oturumları arasında geçiş yapmak ve yeni bir oturum oluşturmak
 mevcut olanları "yok etmeden".</p>
+		
+	<p>
+		The tool is only intended for manual testing and should not be used in automation -
+		there are much better alternatives.
+		If you are new to ZAP automation then the best place to start is the ZAP 
+		<a href="https://www.zaproxy.org/docs/authentication/">Authentication Decision Tree</a> (external link).
 
 	<p>
 		Bu, HTTP İletisi olan Oturum Tokenleri kavramına dayanır
 bir HTTP sunucusuna izin veren parametreler (yalnızca Çerezler için)
 depolanan önceki istekler veya verilerle bir istek mesajı bağlayın.
-		Zaproxy örneğinde kavramsal olarak oturum belirteci var
-2 kategoriye ayrılır: varsayılan oturum belirteçleri ve site oturumu
-belirteçleri. Varsayılan oturum belirteci, kullanıcının ayarlayabileceği simgelerdir.
+		In the case of ZAP, conceptually, session tokens have been
+		classified into 2 categories: default session tokens and site session
+		tokens. Varsayılan oturum belirteci, kullanıcının ayarlayabileceği simgelerdir.
 <a href="../../ui/dialogs/options/httpsessions.html"> Seçenekleri'nde
 ekran </> 'ı içerir ve varsayılan olarak otomatik olarak değerlendirilen belirteçlerdir
 herhangi bir site için oturum belirteci (ör. phpsessid, jsessionid, vb.). Site

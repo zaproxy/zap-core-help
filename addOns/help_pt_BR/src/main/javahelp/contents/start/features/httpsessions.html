@@ -6,11 +6,21 @@
 </head>
 <body>
 	<h1>Sessões Http</h1>
-	<p>Esta ferramenta acompanha as sessões Http existentes em um determinado Site e permite que o usuário ZAP force todas as solicitações para que fiquem em uma só sessão. Basicamente ela permite que se possa alternar facilmente entre as sessões de usuário em um Site e criar uma nova sessão sem "destruir" as já existentes.</p>
+	<p>This tool keeps track of the existing HTTP Sessions on a
+		particular Site and allows the ZAP user to force all requests to
+		be on a particular session. Basicamente ela permite que se possa alternar facilmente entre as sessões de usuário em um Site e criar uma nova sessão sem "destruir" as já existentes.</p>
+		
+	<p>
+		The tool is only intended for manual testing and should not be used in automation -
+		there are much better alternatives.
+		If you are new to ZAP automation then the best place to start is the ZAP 
+		<a href="https://www.zaproxy.org/docs/authentication/">Authentication Decision Tree</a> (external link).
 
 	<p>
 		É baseada no conceito de Tokens de sessão - parâmetros de mensagem HTTP (agora apenas Cookies), que permitem a um servidor HTTP conectar uma mensagem de request com quaisquer requests ou dados armazenados anteriormente.
-		No caso do Zaproxy, tokens de sessão foram classificados em 2 categorias: tokens de sessão default/padrão e tokens de sessão do site. Os tokens de sessão padrão são aquelas que o usuário pode definir na <a href="../../ui/dialogs/options/httpsessions.html">tela de opções</a> e que são automaticamente considerados tokens de sessão para qualquer site (por exemplo PHPSESSID, jsessionid, etc). Os tokens de sessão de sites são um conjunto de tokens para um determinado site e geralmente são criados usando-se os menus pop-up disponíveis na <a
+		In the case of ZAP, conceptually, session tokens have been
+		classified into 2 categories: default session tokens and site session
+		tokens. Os tokens de sessão padrão são aquelas que o usuário pode definir na <a href="../../ui/dialogs/options/httpsessions.html">tela de opções</a> e que são automaticamente considerados tokens de sessão para qualquer site (por exemplo PHPSESSID, jsessionid, etc). Os tokens de sessão de sites são um conjunto de tokens para um determinado site e geralmente são criados usando-se os menus pop-up disponíveis na <a
 			href="../../ui/tabs/params.html">Aba Params</a>.
 	</p>
 

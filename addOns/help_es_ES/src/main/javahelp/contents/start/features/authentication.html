@@ -7,6 +7,9 @@
 <body>
 	<h1>Autenticación</h1>
 	ZAP puede manejar una amplia gama de mecanismos de autenticación.<br>
+	If you are new to ZAP automation then the best place to start is the ZAP 
+	<a href="https://www.zaproxy.org/docs/authentication/">Authentication Decision Tree</a> (external link).
+	<p>
 	Cada <a href="contexts.html">Contexto</a> tiene:
 	<ul>
 	<li>Un <a href="authmethods.html">método de autenticación</a> que define cómo se maneja la autenticación. 
@@ -59,17 +62,22 @@ las opciones desplegables para seleccionar cuál de los parámetros corresponde 
 		</li>
     	<li>Defina tantos usuarios como necesite en la sección Propiedades de sesión -> Usuarios.</li>
 	</ol>
-   	Después de configurar la autenticación, varias acciones están disponibles en ZAP. Por ejemplo, ahora puede seleccionar el usuario en el
-    Diálogo de la araña. O, utilizando el Modo de usuario forzado,
-    puede forzar que todas las interacciones que pasan por ZAP para un Contexto dado sean desde la perspectiva de un Usuario. 
-   	El Modo de Usuario Forzado se habilita a través de un botón en la barra de herramientas (el que tiene el usuario y el candado) y
-    se configura a través de Propiedades de sesión -> Modo de usuario forzado.
+   	After configuring authentication, various actions are available in ZAP. For example, you can now select the user in the 
+   	Spider dialogue.
 	<br>
-	La mayoría de los pasos anteriores también se aplican a otros métodos de autenticación. Las únicas cosas que cambian es al intentar
-configurar la autenticación usando un método diferente es el paso 6. En su lugar, seleccione la autenticación
-método requerido de la lista desplegable y configúrelo según sea necesario. Más detalles sobre la configuración de cada tipo
-de autenticación se puede encontrar en la página de <a href="authmethods.html">Métodos de autenticación</a> y en 
-	<a href="../../ui/dialogs/session/contexts.html">Pantallas de sesión de contexto</a>.
+	Most of the steps above apply as well for other authentication methods. The only things that change when trying
+	to configure authentication using a different method is step 6. Instead of that, select the authentication
+	method required from the drop-down list and configure it as needed. More details about configuring each type 
+	of authentication can be found in the <a href="authmethods.html">Authentication Methods</a> page and in the 
+	<a href="../../ui/dialogs/session/contexts.html">Context Session screens</a>.
+
+	<h2><a name="forceduser">Forced User Mode</a></h2>
+	When Forced User Mode is enabled then all interactions that go through ZAP for a given context will be 
+	updated to be from the perspective of the specified User.<br>
+   	El Modo de Usuario Forzado se habilita a través de un botón en la barra de herramientas (el que tiene el usuario y el candado) y
+    se configura a través de Propiedades de sesión -> Modo de usuario forzado.<br>
+   	<b>Important:</b> Forced User Mode is just intended for manual testing and should not be used in automation -
+   	there are much better alternatives.
 
 	<h2><a name="envvars">Cabeceras de Autenticación en Variables de Entorno</a></h2>
 	Hay disponible un conjunto de variables de entorno que le permiten añadir fácilmente cabeceras de autenticación para todas las solicitudes que se transmiten a través de ZAP o se inician
