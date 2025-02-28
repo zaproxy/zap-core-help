@@ -15,8 +15,8 @@ plugins {
     eclipse
     id("com.diffplug.spotless")
     id("org.zaproxy.common")
-    id("org.zaproxy.add-on") version "0.11.0" apply false
-    id("org.zaproxy.crowdin") version "0.4.0"
+    id("org.zaproxy.add-on") version "0.13.1" apply false
+    id("org.zaproxy.crowdin") version "0.6.0"
 }
 
 eclipse {
@@ -81,13 +81,13 @@ subprojects {
     apply(plugin = "org.zaproxy.add-on")
 
     java {
-        val javaVersion = JavaVersion.VERSION_11
+        val javaVersion = JavaVersion.VERSION_17
         sourceCompatibility = javaVersion
         targetCompatibility = javaVersion
     }
 
     zapAddOn {
-        zapVersion.set("2.15.0")
+        zapVersion.set("2.16.0")
 
         releaseLink.set(
             project.provider { "https://github.com/zaproxy/zap-core-help/releases/${zapAddOn.addOnId.get()}-v@CURRENT_VERSION@" },
