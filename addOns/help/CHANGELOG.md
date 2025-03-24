@@ -7,6 +7,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Fixed
 - Remove TOC entries that no longer exist.
 
+### Changed
+- Updated for 2.16.1.
+
 ## [19] - 2025-01-10
 ### Added
 - Details for setting Gnome proxy settings.
