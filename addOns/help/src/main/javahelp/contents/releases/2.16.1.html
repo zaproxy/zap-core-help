@@ -17,6 +17,36 @@ who employ 3 of the <a href="https://www.zaproxy.org/docs/team/">Core Team</a> t
 These release notes do not include all of the changes included in add-ons updated since 2.16.0.
 <p>
 
+The enhancements include:
+
+<H3>Use Main Output Tab for Scripts</H3>
+
+The Script Console no longer includes its own "Script Output" panel.
+Instead it uses the main <a href="../ui/tabs/output.html">Output</a> tab.
+
+<H3>Support Sub-tabs in Output Tab</H3>
+
+The <a href="../ui/tabs/output.html">Output</a> tab now supports sub-tabs.
+The Script Console add-on will add one tab for each script that generates any output, making it much easier to see where output messages come from.
+
+<h3>API Support for Plugable Authentication and Session Management</h3>
+
+The API now supports plugable Authentication and Session Management methods, which means you can configure modern
+options like Browser Based Authentication.
+
+<h3>Authentication Enhancements</h3>
+
+Many enhancements have been made to ensure ZAP handles authentication more easily and effectively,
+including support for TOTP.
+
+<h3>Windows Native Decorations Support</h3>
+
+ZAP now supports Native Decorations on Windows systems, providing a more unified and visually pleasing experience.
+
+<h3>AJAX Spider URL Count</h3>
+
+The AJAX Spider no longer counts URLs that are out of scope. This may affect any tests you have in place.
+
 <h3>Dependency Updates</h3>
 
 As usual the release includes dependency updates.
@@ -35,21 +65,13 @@ The following libraries were updated:
   <li>Rsyntaxtextarea, 3.5.3 → 3.6.0</li>
 </ul>
 
-<H2>Add-Ons</H2>
-
-<H3>Updated Add-Ons</H3>
-
-The following add0ons were updated:
-
-<ul>
-  <li>TBA</li>
-</ul>
 
 <H2>Enhancements</H2>
 <ul>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/8843">Issue 8843</a> : Support CakePHP CSRF Token name</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/8868">Issue 8868</a> : Adjust Footer Status Icons Label</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/8872">Issue 8872</a> : Tag verification requests</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8879">Issue 8879</a> : Look and feel: Use native decorations on Windows</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/8885">Issue 8885</a> : Allow API access to dynamically added Authn &amp; Session Mgmt Method Types</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/8886">Issue 8886</a> : Provide DB details and notify close</li>
 <li><a href="https://github.com/zaproxy/zaproxy/issues/8892">Issue 8892</a> : Add TOTP to credentials</li>
