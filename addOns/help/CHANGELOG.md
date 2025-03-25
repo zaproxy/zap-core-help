@@ -3,7 +3,7 @@ All notable changes to this add-on will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## Unreleased
+## [20] - 2025-03-25
 ### Fixed
 - Remove TOC entries that no longer exist.
 
@@ -103,6 +103,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - First version.
 
+[20]: https://github.com/zaproxy/zap-core-help/releases/help-v20
 [19]: https://github.com/zaproxy/zap-core-help/releases/help-v19
 [18]: https://github.com/zaproxy/zap-core-help/releases/help-v18
 [17]: https://github.com/zaproxy/zap-core-help/releases/help-v17
