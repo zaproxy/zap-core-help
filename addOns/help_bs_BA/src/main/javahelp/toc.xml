@@ -92,9 +92,6 @@
          	<tocitem text="JVM" target="ui.dialogs.options.jvm"/>
          	<tocitem text="Keyboard" target="ui.dialogs.options.keyboard"/>
          	<tocitem text="Language" target="ui.dialogs.options.language"/>
-         	<tocitem text="Passive Scan Rules" target="ui.dialogs.options.pscanrules"/>
-         	<tocitem text="Passive Scan Tags" target="ui.dialogs.options.pscan"/>
-         	<tocitem text="Passive Scanner" target="ui.dialogs.options.pscan.main"/>
          	<tocitem text="Rule Configuration" target="ui.dialogs.options.ruleconfig"/>
          	<tocitem text="Scripts" target="ui.dialogs.options.script"/>
          	<tocitem text="Search" target="ui.dialogs.options.search"/>
@@ -120,6 +117,7 @@
    <tocitem text="Add-ons" target="addons.introduction" tocid="addons" image="addons.icon" />
    
    <tocitem text="Izdanja" target="zap.releases">
+      <tocitem text="2.16.1" target="zap.releases.2.16.1"/>
       <tocitem text="2.16.0" target="zap.releases.2.16.0"/>
       <tocitem text="2.15.0" target="zap.releases.2.15.0"/>
       <tocitem text="2.14.0" target="zap.releases.2.14.0"/>
