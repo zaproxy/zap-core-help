@@ -2,7 +2,7 @@
 <helpset version="2.0" xml:lang="ja-JP">
 
   <!-- title -->
-  <title>ZAP by Checkmarx - Desktop User Guide</title>
+  <title>ZAP by Checkmarx - デスクトップユーザーガイド</title>
 
   <!-- maps -->
   <maps>
@@ -44,7 +44,7 @@
      <name>main window</name>
      <size height="600" width="1000"/>
      <location x="200" y="200"/>
-     <title>ZAP - Desktop User Guide</title>
+     <title>ZAP - デスクトップユーザーガイド</title>
      <image>toplevelicon</image>
      <toolbar>
 	<helpaction>javax.help.BackAction</helpaction>
@@ -61,6 +61,6 @@
      <name>main</name>
      <size height="400" width="400"/>
      <location x="200" y="200"/>
-     <title>ZAP - Desktop User Guide</title>
+     <title>ZAP - デスクトップユーザーガイド</title>
   </presentation>
 </helpset>

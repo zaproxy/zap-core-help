@@ -15,20 +15,20 @@
     <indexitem text="アドオン" target="start.features.addons"/>
     <indexitem text="アドオン" target="addons.introduction"/>
     <indexitem text="アラートダイアログの追加" target="ui.dialogs.addalert" />
-    <indexitem text="add/edit breakpoint dialog" target="ui.dialogs.addbreak" />
-    <indexitem text="ノートダイアログの追加" target="ui.dialogs.addnote" />
+    <indexitem text="ブレークポイントの追加ダイアログ" target="ui.dialogs.addbreak" />
+    <indexitem text="ノートの追加ダイアログ" target="ui.dialogs.addnote" />
     <indexitem text="アラートタブ" target="ui.tabs.alerts" />
     <indexitem text="アラート" target="start.features.alerts" />
     <indexitem text="api" target="start.features.api" />
     <indexitem text="認証フォーム式手動ログイン認証" target="start.features.auth" />
-    <indexitem text="authentication methods" target="start.features.authmethods" />
+    <indexitem text="認証方法" target="start.features.authmethods" />
     <indexitem text="authentication verification strategies" target="start.features.authstrategies" />
     <indexitem text="basic penetration test" target="start.pentest" />
-    <indexitem text="breakpoints tab" target="ui.tabs.breakpoints" />
-    <indexitem text="breakpoints" target="start.features.breakpoints" /> 
-    <indexitem text="break tab" target="ui.tabs.break" />
-    <indexitem text="command line" target="cmdline" />
-    <indexitem text="contexts" target="start.features.contexts" />
+    <indexitem text="ブレークポイントタブ" target="ui.tabs.breakpoints" />
+    <indexitem text="ブレークポイント" target="start.features.breakpoints" /> 
+    <indexitem text="ブレークタブ" target="ui.tabs.break" />
+    <indexitem text="コマンドライン" target="cmdline" />
+    <indexitem text="コンテキスト" target="start.features.contexts" />
     <indexitem text="credits" target="zap.credits" />
     <indexitem text="custompages" target="start.features.custompages" /> 
     <indexitem text="data driven content" target="start.features.ddc" />
@@ -36,15 +36,15 @@
     <indexitem text="features" target="start.features" />
     <indexitem text="find dialog" target="ui.dialogs.find" />
     <indexitem text="footer" target="ui.footer" />
-    <indexitem text="getting started" target="start.start" />
+    <indexitem text="はじめに" target="start.start" />
     <indexitem text="history filter dialog" target="ui.dialogs.historyfilter" />
     <indexitem text="history tab" target="ui.tabs.history" />
     <indexitem text="http sessions tab" target="ui.tabs.httpsessions" />
-    <indexitem text="http sessions" target="start.features.httpsessions" />
-    <indexitem text="manipulator-in-the-middle proxy" target="start.features.intercept"/>
-    <indexitem text="introduction" target="zap.intro" />
+    <indexitem text="HTTP セッション" target="start.features.httpsessions" />
+    <indexitem text="中間者操作型プロキシ" target="start.features.intercept"/>
+    <indexitem text="導入" target="zap.intro" />
     <indexitem text="manage tabs dialog" target="ui.dialogs.managetags" />
-    <indexitem text="marketplace" target="start.features.marketplace" />
+    <indexitem text="マーケットプレイス" target="start.features.marketplace" />
     <indexitem text="modes" target="start.features.modes" />
     <indexitem text="notes" target="start.features.notes" />
     <indexitem text="options dialog" target="ui.dialogs.options" />
@@ -55,50 +55,50 @@
     <indexitem text="passive scanner options" target="ui.dialogs.options.pscan.main" />
     <indexitem text="persist session dialog" target="ui.dialogs.persistsession" />
     <indexitem text="proxy configuration" target="start.proxy" />
-    <indexitem text="release 1.0.0" target="zap.releases.1.0.0" />
-    <indexitem text="release 1.1.0" target="zap.releases.1.1.0" />
-    <indexitem text="release 1.2.0" target="zap.releases.1.2.0" />
-    <indexitem text="release 1.3.0" target="zap.releases.1.3.0" />
-    <indexitem text="release 1.3.1" target="zap.releases.1.3.1" />
-    <indexitem text="release 1.3.2" target="zap.releases.1.3.2" />
-    <indexitem text="release 1.3.3" target="zap.releases.1.3.3" />
-    <indexitem text="release 1.3.4" target="zap.releases.1.3.4" />
-    <indexitem text="release 1.4.0" target="zap.releases.1.4.0" />
-    <indexitem text="release 1.4.1" target="zap.releases.1.4.1" />
-    <indexitem text="release 2.0.0" target="zap.releases.2.0.0" />
-    <indexitem text="release 2.1.0" target="zap.releases.2.1.0" />
-    <indexitem text="release 2.2.0" target="zap.releases.2.2.0" />
-    <indexitem text="release 2.2.1" target="zap.releases.2.2.1" />
-    <indexitem text="release 2.2.2" target="zap.releases.2.2.2" />
-    <indexitem text="release 2.3.0" target="zap.releases.2.3.0" />
-    <indexitem text="release 2.3.1" target="zap.releases.2.3.1" />
-    <indexitem text="release 2.4.0" target="zap.releases.2.4.0" />
-    <indexitem text="release 2.4.1" target="zap.releases.2.4.1" />
-    <indexitem text="release 2.4.2" target="zap.releases.2.4.2" />
-    <indexitem text="release 2.4.3" target="zap.releases.2.4.3" />
-    <indexitem text="release 2.5.0" target="zap.releases.2.5.0" />
-    <indexitem text="release 2.6.0" target="zap.releases.2.6.0" />
-    <indexitem text="release 2.7.0" target="zap.releases.2.7.0" />
-    <indexitem text="release 2.8.0" target="zap.releases.2.8.0" />
-    <indexitem text="release 2.9.0" target="zap.releases.2.9.0" />
-    <indexitem text="release 2.10.0" target="zap.releases.2.10.0" />
-    <indexitem text="release 2.11.0" target="zap.releases.2.11.0" />
-    <indexitem text="release 2.11.1" target="zap.releases.2.11.1" />
-    <indexitem text="release 2.12.0" target="zap.releases.2.12.0" />
-    <indexitem text="release 2.13.0" target="zap.releases.2.13.0" />
-    <indexitem text="release 2.14.0" target="zap.releases.2.14.0" />
-    <indexitem text="release 2.15.0" target="zap.releases.2.15.0" />
-    <indexitem text="release 2.16.0" target="zap.releases.2.16.0" />
-    <indexitem text="release 2.16.1" target="zap.releases.2.16.1" />
-    <indexitem text="releases" target="zap.releases" />
-    <indexitem text="request tab" target="ui.tabs.request" />
-    <indexitem text="response tab" target="ui.tabs.response" />
-    <indexitem text="scanner rules" target="start.check" />
-    <indexitem text="scan policy" target="start.features.scanpolicy" />
-    <indexitem text="scan policy dialog" target="ui.dialogs.scanpolicy" />
-    <indexitem text="scan policy manager dialog" target="ui.dialogs.scanpolicymgr" />
-    <indexitem text="scan progress dialog" target="ui.dialogs.scanprogress" />
-    <indexitem text="scripts" target="start.features.scripts" />
+    <indexitem text="リリース 1.0.0" target="zap.releases.1.0.0" />
+    <indexitem text="リリース 1.1.0" target="zap.releases.1.1.0" />
+    <indexitem text="リリース 1.2.0" target="zap.releases.1.2.0" />
+    <indexitem text="リリース 1.3.0" target="zap.releases.1.3.0" />
+    <indexitem text="リリース 1.3.1" target="zap.releases.1.3.1" />
+    <indexitem text="リリース 1.3.2" target="zap.releases.1.3.2" />
+    <indexitem text="リリース 1.3.3" target="zap.releases.1.3.3" />
+    <indexitem text="リリース 1.3.4" target="zap.releases.1.3.4" />
+    <indexitem text="リリース 1.4.0" target="zap.releases.1.4.0" />
+    <indexitem text="リリース 1.4.1" target="zap.releases.1.4.1" />
+    <indexitem text="リリース 2.0.0" target="zap.releases.2.0.0" />
+    <indexitem text="リリース 2.1.0" target="zap.releases.2.1.0" />
+    <indexitem text="リリース 2.2.0" target="zap.releases.2.2.0" />
+    <indexitem text="リリース 2.2.1" target="zap.releases.2.2.1" />
+    <indexitem text="リリース 2.2.2" target="zap.releases.2.2.2" />
+    <indexitem text="リリース 2.3.0" target="zap.releases.2.3.0" />
+    <indexitem text="リリース 2.3.1" target="zap.releases.2.3.1" />
+    <indexitem text="リリース 2.4.0" target="zap.releases.2.4.0" />
+    <indexitem text="リリース 2.4.1" target="zap.releases.2.4.1" />
+    <indexitem text="リリース 2.4.2" target="zap.releases.2.4.2" />
+    <indexitem text="リリース 2.4.3" target="zap.releases.2.4.3" />
+    <indexitem text="リリース 2.5.0" target="zap.releases.2.5.0" />
+    <indexitem text="リリース 2.6.0" target="zap.releases.2.6.0" />
+    <indexitem text="リリース 2.7.0" target="zap.releases.2.7.0" />
+    <indexitem text="リリース 2.8.0" target="zap.releases.2.8.0" />
+    <indexitem text="リリース 2.9.0" target="zap.releases.2.9.0" />
+    <indexitem text="リリース 2.10.0" target="zap.releases.2.10.0" />
+    <indexitem text="リリース 2.11.0" target="zap.releases.2.11.0" />
+    <indexitem text="リリース 2.11.1" target="zap.releases.2.11.1" />
+    <indexitem text="リリース 2.12.0" target="zap.releases.2.12.0" />
+    <indexitem text="リリース 2.13.0" target="zap.releases.2.13.0" />
+    <indexitem text="リリース 2.14.0" target="zap.releases.2.14.0" />
+    <indexitem text="リリース 2.15.0" target="zap.releases.2.15.0" />
+    <indexitem text="リリース 2.16.0" target="zap.releases.2.16.0" />
+    <indexitem text="リリース 2.16.1" target="zap.releases.2.16.1" />
+    <indexitem text="リリース" target="zap.releases" />
+    <indexitem text="リクエストタブ" target="ui.tabs.request" />
+    <indexitem text="レスポンスタブ" target="ui.tabs.response" />
+    <indexitem text="スキャナールール" target="start.check" />
+    <indexitem text="スキャンポリシー" target="start.features.scanpolicy" />
+    <indexitem text="スキャンポリシーダイアログ" target="ui.dialogs.scanpolicy" />
+    <indexitem text="スキャンポリシーの管理ダイアログ" target="ui.dialogs.scanpolicymgr" />
+    <indexitem text="スキャンの進捗ダイアログ" target="ui.dialogs.scanprogress" />
+    <indexitem text="スクリプト" target="start.features.scripts" />
     <indexitem text="search tab" target="ui.tabs.search" />
     <indexitem text="session context screens" target="ui.dialogs.contexts" />
     <indexitem text="session context authentication screen" target="ui.dialogs.context-auth" />
@@ -106,7 +106,7 @@
     <indexitem text="session properties dialog" target="ui.dialogs.sessprop" />
     <indexitem text="sites tab" target="ui.tabs.sites" />
     <indexitem text="sites tree" target="start.features.sitestree" />
-    <indexitem text="statistics" target="start.features.stats" />
+    <indexitem text="統計" target="start.features.stats" />
     <indexitem text="structural modifiers" target="start.features.structmods" />
     <indexitem text="structural parameters" target="start.features.structparams" />
     <indexitem text="tags" target="start.features.tags" />
