@@ -9,7 +9,7 @@
 	TOC merger is defined in org.zaproxy.zap.extension.help.ZapTocMerger.
 -->
 <toc version="2.0">
- <tocitem text="ZAP by Checkmarx Desktop User Guide" image="toplevelfolder" tocid="toplevelitem">
+ <tocitem text="ZAP by Checkmarx デスクトップユーザーガイド" image="toplevelfolder" tocid="toplevelitem">
 
    <tocitem text="導入" target="zap.intro"/>
 
@@ -19,32 +19,32 @@
          <tocitem text="動的スキャン" target="start.features.ascan"/>
          <tocitem text="アドオン" target="start.features.addons"/>
          <tocitem text="アラート" target="start.features.alerts"/>
-         <tocitem text="Anti CSRF トークン" target="start.features.anticsrf"/>
+         <tocitem text="CSRF 対策トークン" target="start.features.anticsrf"/>
          <tocitem text="API" target="start.features.api"/>
          <tocitem text="認証" target="start.features.auth"/>
-         <tocitem text="Authentication Methods" target="start.features.authmethods"/>
+         <tocitem text="認証方法" target="start.features.authmethods"/>
          <tocitem text="Authentication Verification Strategies" target="start.features.authstrategies"/>
-         <tocitem text="Breakpoints" target="start.features.breakpoints"/>
-         <tocitem text="Contexts" target="start.features.contexts"/>
-         <tocitem text="Custom Page" target="start.features.custompages"/>
-         <tocitem text="Data Driven Content" target="start.features.ddc"/>
-         <tocitem text="HTTP Sessions" target="start.features.httpsessions"/>
-         <tocitem text="Manipulator-in-the-middle Proxy" target="start.features.intercept"/>
-         <tocitem text="Marketplace" target="start.features.marketplace"/>
-         <tocitem text="Modes" target="start.features.modes"/>
+         <tocitem text="ブレークポイント" target="start.features.breakpoints"/>
+         <tocitem text="コンテキスト" target="start.features.contexts"/>
+         <tocitem text="カスタム ページ" target="start.features.custompages"/>
+         <tocitem text="データ駆動型コンテンツ" target="start.features.ddc"/>
+         <tocitem text="HTTP セッション" target="start.features.httpsessions"/>
+         <tocitem text="中間者操作型プロキシ" target="start.features.intercept"/>
+         <tocitem text="マーケットプレイス" target="start.features.marketplace"/>
+         <tocitem text="モード" target="start.features.modes"/>
          <tocitem text="Notes" target="start.features.notes"/>
          <tocitem text="Passive Scan" target="start.features.pscan"/>
-         <tocitem text="Software Bill of Materials" target="start.features.sbom"/>
-         <tocitem text="Scan Policies" target="start.features.scanpolicy"/>
-         <tocitem text="Scope" target="start.features.scope"/>
-         <tocitem text="Scripts" target="start.features.scripts"/>
-         <tocitem text="Session Management" target="start.features.sessmanag"/>
+         <tocitem text="SBOM (Software Bill Of Materials: ソフトウェア部品表)" target="start.features.sbom"/>
+         <tocitem text="スキャンポリシー" target="start.features.scanpolicy"/>
+         <tocitem text="スコープ" target="start.features.scope"/>
+         <tocitem text="スクリプト" target="start.features.scripts"/>
+         <tocitem text="セッション管理" target="start.features.sessmanag"/>
          <tocitem text="Sites Tree" target="start.features.sitestree"/>
-         <tocitem text="Statistics" target="start.features.stats"/>
-         <tocitem text="Structural Modifiers" target="start.features.structmods"/>
-         <tocitem text="Structural Parameters" target="start.features.structparams"/>
-         <tocitem text="Tags" target="start.features.tags"/>
-         <tocitem text="Users" target="start.features.users"/>
+         <tocitem text="統計" target="start.features.stats"/>
+         <tocitem text="構造体修飾子" target="start.features.structmods"/>
+         <tocitem text="構造体パラメーター" target="start.features.structparams"/>
+         <tocitem text="タグ" target="start.features.tags"/>
+         <tocitem text="ユーザー" target="start.features.users"/>
       </tocitem>
       <tocitem text="スキャナーのルール" target="start.check"/>
       <tocitem text="簡単なペネトレーションテスト" target="start.pentest"/>
@@ -61,52 +61,52 @@
          <tocitem text="ブレーク" target="ui.tabs.break"/>
          <tocitem text="履歴" target="ui.tabs.history"/>
          <tocitem text="検索" target="ui.tabs.search"/>
-         <tocitem text="Breakpoints" target="ui.tabs.breakpoints"/>
+         <tocitem text="ブレークポイント" target="ui.tabs.breakpoints"/>
          <tocitem text="アラート" target="ui.tabs.alerts"/>
          <tocitem text="動的スキャン" target="ui.tabs.ascan"/>
-         <tocitem text="Params" target="ui.tabs.params"/>
-         <tocitem text="HTTP Sessions" target="ui.tabs.httpsessions"/>
-         <tocitem text="Output" target="ui.tabs.output"/>
+         <tocitem text="パラメーター" target="ui.tabs.params"/>
+         <tocitem text="HTTP セッション" target="ui.tabs.httpsessions"/>
+         <tocitem text="出力" target="ui.tabs.output"/>
       </tocitem>
       <tocitem text="ダイアログ" target="ui.dialogs">
          <tocitem text="動的スキャン" target="ui.dialogs.advascan"/>
          <tocitem text="アラート定義" target="ui.dialogs.addalert"/>
-         <tocitem text="Add/Edit Breakpoint" target="ui.dialogs.addbreak"/>
+         <tocitem text="ブレークポイントの追加/変更" target="ui.dialogs.addbreak"/>
          <tocitem text="ノート追加" target="ui.dialogs.addnote"/>
-         <tocitem text="Find" target="ui.dialogs.find"/>
-         <tocitem text="History Filter" target="ui.dialogs.historyfilter"/>
-         <tocitem text="Manage Add-ons" target="ui.dialogs.manageaddons"/>
+         <tocitem text="検索" target="ui.dialogs.find"/>
+         <tocitem text="履歴フィルタ" target="ui.dialogs.historyfilter"/>
+         <tocitem text="アドオンの管理" target="ui.dialogs.manageaddons"/>
          <tocitem text="Manage History Tags" target="ui.dialogs.managetags"/>
-         <tocitem text="Options" target="ui.dialogs.options">
-         	<tocitem text="Active Scan" target="ui.dialogs.options.ascan"/>
+         <tocitem text="オプション" target="ui.dialogs.options">
+         	<tocitem text="アクティブスキャン" target="ui.dialogs.options.ascan"/>
          	<tocitem text="Active Scan Input Vectors" target="ui.dialogs.options.ascaninput"/>
-         	<tocitem text="Alerts" target="ui.dialogs.options.alert"/>
-         	<tocitem text="Anti CSRF Tokens" target="ui.dialogs.options.anticsrf"/>
+         	<tocitem text="アラート" target="ui.dialogs.options.alert"/>
+         	<tocitem text="CSRF 対策トークン" target="ui.dialogs.options.anticsrf"/>
          	<tocitem text="API" target="ui.dialogs.options.api"/>
-            <tocitem text="Breakpoints" target="ui.dialogs.options.breakpoints"/>
-         	<tocitem text="Check for Updates" target="ui.dialogs.options.checkforupdates"/>
-			<tocitem text="Database" target="ui.dialogs.options.database"/>
+            <tocitem text="ブレークポイント" target="ui.dialogs.options.breakpoints"/>
+         	<tocitem text="アップデートのチェック" target="ui.dialogs.options.checkforupdates"/>
+			<tocitem text="データベース" target="ui.dialogs.options.database"/>
          	<tocitem text="Display" target="ui.dialogs.options.view"/>
-            <tocitem text="Extensions" target="ui.dialogs.options.ext"/>
-         	<tocitem text="HTTP Sessions" target="ui.dialogs.options.httpsessions"/>
+            <tocitem text="拡張機能" target="ui.dialogs.options.ext"/>
+         	<tocitem text="HTTP セッション" target="ui.dialogs.options.httpsessions"/>
          	<tocitem text="JVM" target="ui.dialogs.options.jvm"/>
-         	<tocitem text="Keyboard" target="ui.dialogs.options.keyboard"/>
-         	<tocitem text="Language" target="ui.dialogs.options.language"/>
-         	<tocitem text="Rule Configuration" target="ui.dialogs.options.ruleconfig"/>
-         	<tocitem text="Scripts" target="ui.dialogs.options.script"/>
-         	<tocitem text="Search" target="ui.dialogs.options.search"/>
-         	<tocitem text="Statistics" target="ui.dialogs.options.stats"/>
+         	<tocitem text="キーボード" target="ui.dialogs.options.keyboard"/>
+         	<tocitem text="言語" target="ui.dialogs.options.language"/>
+         	<tocitem text="ルール設定" target="ui.dialogs.options.ruleconfig"/>
+         	<tocitem text="スクリプト" target="ui.dialogs.options.script"/>
+         	<tocitem text="検索" target="ui.dialogs.options.search"/>
+         	<tocitem text="統計" target="ui.dialogs.options.stats"/>
          </tocitem>
-         <tocitem text="Persist Session" target="ui.dialogs.persistsession"/>
-         <tocitem text="Scan Policy Manager" target="ui.dialogs.scanpolicymgr">
-	         <tocitem text="Scan Policy" target="ui.dialogs.scanpolicy"/>
+         <tocitem text="永続化セッション" target="ui.dialogs.persistsession"/>
+         <tocitem text="スキャンポリシー管理" target="ui.dialogs.scanpolicymgr">
+	         <tocitem text="スキャンポリシー" target="ui.dialogs.scanpolicy"/>
          </tocitem>
-         <tocitem text="Scan Progress" target="ui.dialogs.scanprogress"/>
-         <tocitem text="Session" target="ui.dialogs.sessprop">
-	         <tocitem text="Session Properties" target="ui.dialogs.sessprop"/>
-	         <tocitem text="Session Contexts" target="ui.dialogs.contexts"/>
-	         <tocitem text="Session Context Authentication" target="ui.dialogs.context-auth"/>
-	         <tocitem text="Session Context Structure" target="ui.dialogs.context-struct"/>
+         <tocitem text="スキャン進捗" target="ui.dialogs.scanprogress"/>
+         <tocitem text="セッション" target="ui.dialogs.sessprop">
+	         <tocitem text="セッション・プロパティ" target="ui.dialogs.sessprop"/>
+	         <tocitem text="セッションコンテキスト" target="ui.dialogs.contexts"/>
+	         <tocitem text="セッションコンテキスト認証" target="ui.dialogs.context-auth"/>
+	         <tocitem text="セッションコンテキスト構造" target="ui.dialogs.context-struct"/>
          </tocitem>
       </tocitem>
       <tocitem text="フッター" target="ui.footer"/>
@@ -114,7 +114,7 @@
 
    <tocitem text="コマンドライン" target="cmdline"/>
 
-   <tocitem text="Add-ons" target="addons.introduction" tocid="addons" image="addons.icon" />
+   <tocitem text="アドオン" target="addons.introduction" tocid="addons" image="addons.icon" />
    
    <tocitem text="リリース" target="zap.releases">
       <tocitem text="2.16.1" target="zap.releases.2.16.1"/>
