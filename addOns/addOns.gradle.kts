@@ -111,6 +111,9 @@ subprojects {
 
         zapAddOn {
             addOnName.set("Help - $language")
+            manifest {
+                url.set(if (ext.has("url")) ext["url"] as String else "https://www.zaproxy.org/docs/contribute/translate/")
+            }
         }
     }
 
