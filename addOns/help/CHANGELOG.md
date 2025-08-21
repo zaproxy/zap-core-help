@@ -3,7 +3,7 @@ All notable changes to this add-on will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## Unreleased
+## [21] - 2025-08-21
 ### Changed
 - Update available JavaScript engine and links.
 
@@ -107,6 +107,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - First version.
 
+[21]: https://github.com/zaproxy/zap-core-help/releases/help-v21
 [20]: https://github.com/zaproxy/zap-core-help/releases/help-v20
 [19]: https://github.com/zaproxy/zap-core-help/releases/help-v19
 [18]: https://github.com/zaproxy/zap-core-help/releases/help-v18
