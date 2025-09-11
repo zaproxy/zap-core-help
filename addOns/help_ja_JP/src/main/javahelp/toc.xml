@@ -23,7 +23,7 @@
          <tocitem text="API" target="start.features.api"/>
          <tocitem text="認証" target="start.features.auth"/>
          <tocitem text="認証方法" target="start.features.authmethods"/>
-         <tocitem text="Authentication Verification Strategies" target="start.features.authstrategies"/>
+         <tocitem text="認証検証戦略" target="start.features.authstrategies"/>
          <tocitem text="ブレークポイント" target="start.features.breakpoints"/>
          <tocitem text="コンテキスト" target="start.features.contexts"/>
          <tocitem text="カスタム ページ" target="start.features.custompages"/>
@@ -32,25 +32,26 @@
          <tocitem text="中間者操作型プロキシ" target="start.features.intercept"/>
          <tocitem text="マーケットプレイス" target="start.features.marketplace"/>
          <tocitem text="モード" target="start.features.modes"/>
-         <tocitem text="Notes" target="start.features.notes"/>
-         <tocitem text="Passive Scan" target="start.features.pscan"/>
+         <tocitem text="ノート" target="start.features.notes"/>
+         <tocitem text="静的スキャン" target="start.features.pscan"/>
          <tocitem text="SBOM (Software Bill Of Materials: ソフトウェア部品表)" target="start.features.sbom"/>
          <tocitem text="スキャンポリシー" target="start.features.scanpolicy"/>
          <tocitem text="スコープ" target="start.features.scope"/>
          <tocitem text="スクリプト" target="start.features.scripts"/>
          <tocitem text="セッション管理" target="start.features.sessmanag"/>
-         <tocitem text="Sites Tree" target="start.features.sitestree"/>
+         <tocitem text="サイトツリー" target="start.features.sitestree"/>
          <tocitem text="統計" target="start.features.stats"/>
          <tocitem text="構造体修飾子" target="start.features.structmods"/>
          <tocitem text="構造体パラメーター" target="start.features.structparams"/>
          <tocitem text="タグ" target="start.features.tags"/>
          <tocitem text="ユーザー" target="start.features.users"/>
       </tocitem>
-      <tocitem text="スキャナーのルール" target="start.check"/>
+      <tocitem text="スキャナールール" target="start.check"/>
       <tocitem text="簡単なペネトレーションテスト" target="start.pentest"/>
    </tocitem>
 
-   <tocitem text="The Desktop User Interface" target="ui.overview">
+   <tocitem text="デスクトップユーザーインターフェース
+" target="ui.overview">
       <tocitem text="概要" target="ui.overview"/>
       <tocitem text="トップレベルメニュー" target="ui.topmenu"/>
       <tocitem text="トップレベルツールバー" target="ui.toptoolbar"/>
@@ -69,24 +70,24 @@
          <tocitem text="出力" target="ui.tabs.output"/>
       </tocitem>
       <tocitem text="ダイアログ" target="ui.dialogs">
-         <tocitem text="動的スキャン" target="ui.dialogs.advascan"/>
+         <tocitem text="アクティブスキャン" target="ui.dialogs.advascan"/>
          <tocitem text="アラート定義" target="ui.dialogs.addalert"/>
          <tocitem text="ブレークポイントの追加/変更" target="ui.dialogs.addbreak"/>
          <tocitem text="ノート追加" target="ui.dialogs.addnote"/>
          <tocitem text="検索" target="ui.dialogs.find"/>
          <tocitem text="履歴フィルタ" target="ui.dialogs.historyfilter"/>
          <tocitem text="アドオンの管理" target="ui.dialogs.manageaddons"/>
-         <tocitem text="Manage History Tags" target="ui.dialogs.managetags"/>
+         <tocitem text="履歴タグの管理" target="ui.dialogs.managetags"/>
          <tocitem text="オプション" target="ui.dialogs.options">
          	<tocitem text="アクティブスキャン" target="ui.dialogs.options.ascan"/>
-         	<tocitem text="Active Scan Input Vectors" target="ui.dialogs.options.ascaninput"/>
+         	<tocitem text="アクティブスキャンの入力ベクトル" target="ui.dialogs.options.ascaninput"/>
          	<tocitem text="アラート" target="ui.dialogs.options.alert"/>
          	<tocitem text="CSRF 対策トークン" target="ui.dialogs.options.anticsrf"/>
          	<tocitem text="API" target="ui.dialogs.options.api"/>
             <tocitem text="ブレークポイント" target="ui.dialogs.options.breakpoints"/>
          	<tocitem text="アップデートのチェック" target="ui.dialogs.options.checkforupdates"/>
 			<tocitem text="データベース" target="ui.dialogs.options.database"/>
-         	<tocitem text="Display" target="ui.dialogs.options.view"/>
+         	<tocitem text="表示" target="ui.dialogs.options.view"/>
             <tocitem text="拡張機能" target="ui.dialogs.options.ext"/>
          	<tocitem text="HTTP セッション" target="ui.dialogs.options.httpsessions"/>
          	<tocitem text="JVM" target="ui.dialogs.options.jvm"/>
