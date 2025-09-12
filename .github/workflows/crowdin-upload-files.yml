@@ -1,6 +1,11 @@
 name: Crowdin Upload Files
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - addOns/help/src/main/javahelp/**
   workflow_dispatch:
 
 jobs:
