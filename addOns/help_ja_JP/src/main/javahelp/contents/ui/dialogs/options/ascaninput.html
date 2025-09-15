@@ -3,77 +3,75 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Options Active Scan Input Vectors screen
+オプション アクティブスキャン入力ベクター画面
 </title>
 </head>
 <body>
-<h1>Options Active Scan Input Vectors screen</h1>
+<h1>オプション アクティブスキャン入力ベクター画面</h1>
 <p>
-この画面が設定できるのは <a href="../../../start/features/ascan.html">動的スキャン</a> input vectors.<br>
-These are the elements that the active scanner will attack.<br>
-Scanning all of the elements supported will take longer, but not scanning some elements may cause some vulnerabilities to be missed.
+この画面では <a href="../../../start/features/ascan.html">アクティブスキャン</a> の入力ベクターを設定できます。<br>
+これらは、アクティブスキャナーが攻撃する要素です。<br>
+サポートされているすべての要素をスキャンすると時間がかかりますが、一部の要素をスキャンしないと、いくつかの脆弱性が見逃される可能性があります。
 
-<h3>Injectable Targets</h3>
-The request elements that the active scanner will target:
+<h3>インジェクション可能なターゲット</h3>
+アクティブスキャナーがターゲットとするリクエスト要素：
 
-<h4>URL Query String & Data Driven Nodes</h4>
-Key value pairs in the request URL query, ie after the <code>?</code>.<br>
-If <a href="../../../start/features/ddc.html">Data Driven Nodes</a> are defined within a Context they will be tested.
+<h4>URLクエリ文字列とデータ駆動ノード</h4>
+リクエストURLのクエリにおける、キーと値のペア、すなわち次の部分:  <code>?</code>.<br>
+もし <a href="../../../start/features/ddc.html">データ駆動ノード</a> がコンテキスト内で定義されている場合、それらはテストされます。
 
-<h5>Add URL Query Parameter?</h5>
-When selected ZAP will add a query parameter to GET requests which did not originally have one. 
-This may increase scan time, however, it may also reveal issues that would otherwise go un-noticed.
+<h5>URLクエリパラメーターを追加しますか?</h5>
+ZAPは元々クエリパラメータを持たないGETリクエストに、クエリパラメータを追加します。これにより、スキャンに時間がかかる可能性がありますが、見過ごされる可能性のある脆弱性を発見できるかもしれません。
 
-<h4>POST Data</h4>
-Key value pairs in the request POST data.
+<h4>POSTデータ</h4>
+リクエストPOSTデータにおける、キーと値のペア。
 
-<h4>Plain Body Data</h4>
-When selected ZAP will process requests with body content and either no or text/plain content-type as a single input/parameter for testing purposes.
+<h4>プレーンボディデータ</h4>
+ZAPはこのオプションが選択されると、ボディコンテンツを持ち、Content-Type が設定されていないか、text/plain であるリクエストを、テスト目的で単一の入力/パラメータとして処理します。
 
-<h4>URL Path</h4>
-Path elements in the request URL, ie the elements separated by <code>/</code>.
+<h4>URLパス</h4>
+リクエストURLのパスにおける、次の文字で区切られた要素:  <code>/</code>.
 
-<h4>HTTP Headers</h4>
-Request HTTP Headers.
+<h4>HTTPヘッダー</h4>
+リクエストHTTPヘッダー
 
-<h5>All Requests</h5>
-Allows to scan the HTTP Headers of all requests. Not just requests that send parameters, through the query or request body.
+<h5>すべてのリクエスト</h5>
+クエリやリクエストボディを介してパラメータを送信するリクエストだけでなく、すべてのリクエストのHTTPヘッダーをスキャンすることを許可します。
 
-<h4>Cookie Data</h4>
-Request cookies.
+<h4>Cookieデータ</h4>
+リクエスト Cookie
 
-<h5>Encode Cookie Values</h5>
-If selected the cookie values will be URL encoded when attacked.
-By default they will not be encoded - this is new in ZAP 2.15.0, previously they were always encoded.
+<h5>Cookie値をエンコード</h5>
+このオプションを選択すると、Cookieの値は攻撃時にURLエンコードされます。デフォルトではエンコードされません。これはZAP 2.15.0からの新しい挙動で、以前は常にエンコードされていました。
 
-<h3>Build-in Input Vector Handlers</h3>
-The data formats that the active scanner will target:
+<h3>組み込み入力ベクターハンドラー</h3>
+アクティブスキャナーがターゲットとするデータ形式：
 
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Multipart Form Data</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>XML tag/attribute</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>マルチパートフォームデータ</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>XMLタグ/属性</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>JSON</td><td></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Google Web Toolkit</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>OData id/filter</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>OData ID/フィルター</td><td></td></tr>
 </table>
 
 
-<h3>Enable Script Input Vectors</h3>
-If this option is selected then the active scanner will use any enabled script input vectors.<br>
-Script input vectors are scripts which you have written or imported into ZAP and allow you to target elements 
-which are not supported by default.
+<h3>スクリプト入力ベクターを有効化</h3>
+このオプションを選択すると、アクティブスキャナーは有効になっているスクリプト入力ベクターを使用します。<br>
+スクリプト入力ベクターとは、ZAPにあなたが記述またはインポートしたスクリプトであり、デフォルトでサポートされていない要素をターゲットにすることができます。
 
 <p>
-This screen also allows you to configure the parameters which will be ignored by the active scanner.
+この画面では、アクティブスキャナーが無視するパラメーターを設定することもできます。
+
 <br />
-Refer to <code>Parameter</code> section in <a href="../addalert.html">Add Alert</a> dialogue for more details about the
-parameter names.
+パラメーター名に関する詳細は、「 <code>パラメーター</code> セクションの「 <a href="../addalert.html">アラートの追加</a> 」ダイアログを参照してください。
+
 
 <h2>関連情報</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">UIの概要</a></td><td>ユーザー インターフェイスの概要について</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="options.html">オプションダイアログ</a></td><td>その他のオプションダイアログの画面についての詳細</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="ascaninput.html">動的スキャンの入力ベクトル</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="ascaninput.html">アクティブスキャンの入力ベクトル</a></td><td></td></tr>
 </table>
 
 </body>
