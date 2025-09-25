@@ -3,42 +3,39 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Options Rule Configuration screen
+オプション ルール設定画面
 </title>
 </head>
 <body>
-<h1>Options Rule Configuration screen</h1>
+<h1>オプション ルール設定画面</h1>
 <p>
-This screen allows you to configure the behaviour of specific active and passive scan rules.
+この画面では、特定のアクティブスキャンルールおよびパッシブスキャンルールの挙動を設定できます。
 <p>
 
-Select any of the listed rows to see details of the specific configuration and to change the associated value.
-Both individual and all rules can be reset.  
+リストされたいずれかの行を選択すると、特定の設定の詳細が表示され、関連する値を変更できます。
+個々のルール、およびすべてのルールをリセットできます。  
 <p>
-The built-in rules include:<br><br>
+組み込みのルールには、以下のものがあります：<br><br>
 <table>
-<tr><th>Name</th><th>Default</th><th>Description</th></tr>
-<tr><td>rules.common.sleep</td><td>15</td><td>The length of time in seconds used for timing attacks.</td></tr>
-<tr><td>rules.cookie.ignorelist</td><td></td><td>A comma separated list of cookie names.
-Cookies included in this list will be ignored when scanning for cookie related issues.</td></tr>
-<tr><td>rules.csrf.ignorelist</td><td></td><td>A comma separated list of identifiers.
-Any FORMs with a name or ID that matches one of these identifiers will be ignored when scanning for missing Anti-CSRF tokens.
-Only use this feature to ignore FORMs that you know are safe, for example search forms.</td></tr>
-<tr><td>rules.csrf.ignore.attname</td><td></td><td>The name of an HTML attribute that can be used to indicate that a form does
-not need an anti-CSRF Token. If <code>rules.csrf.ignore.attvalue</code> is specified then this must also match the attribute's value. If
-found any related alerts will be raised at INFO level.</td></tr>
-<tr><td>rules.csrf.ignore.attvalue</td><td></td><td>The value of an HTML attribute named by <code>rules.csrf.ignore.attname</code>
-that can be used to indicate that a form does not need an anti-CSRF Token. If found any related alerts will be raised at INFO level.</td></tr>
-<tr><td>rules.domains.trusted</td><td></td><td>A comma separated list of URL regex patterns. Any URLs that match the patterns will be considered trusted domains and the issues ignored.</td></tr>
+<tr><th>名前</th><th>デフォルト値</th><th>説明</th></tr>
+<tr><td>rules.common.sleep</td><td>15</td><td>タイミング攻撃に使用される時間 (秒)</td></tr>
+<tr><td>rules.cookie.ignorelist</td><td></td><td>Cookie名のカンマ区切りリスト
+このリストに含まれるCookieは、Cookie関連の問題をスキャンする際に無視されます。</td></tr>
+<tr><td>rules.csrf.ignorelist</td><td></td><td>識別子のカンマ区切りリスト
+name または ID がこれらの識別子のいずれかに一致するFORMは、Anti-CSRFトークンの欠落をスキャンする際に無視されます。
+この機能は、検索フォームなど、安全であることが分かっているFORMを無視する場合にのみ使用してください。</td></tr>
+<tr><td>rules.csrf.ignore.attname</td><td></td><td>フォームにAnti-CSRFトークンが不要であることを示すために使用できるHTML属性の名前 <code>rules.csrf.ignore.attvalue</code> が指定されている場合、属性の値も一致する必要があります。 見つかった場合、関連するアラートは情報 (INFO) レベルで報告されます。</td></tr>
+<tr><td>rules.csrf.ignore.attvalue</td><td></td><td><code>rules.csrf.ignore.attname</code> で指定されたHTML属性の値で、フォームにAnti-CSRFトークンが不要であることを示すために使用できます。 見つかった場合、関連するアラートは情報 (INFO) レベルで報告されます。</td></tr>
+<tr><td>rules.domains.trusted</td><td></td><td>URLの正規表現パターンのカンマ区切りリスト。このパターンに一致するURLは信頼済みドメインと見なされ、関連する問題は無視されます。</td></tr>
 </table>
 
 
-<h2>See also</h2>
+<h2>関連情報</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../../overview.html">UIの概要</a></td><td>ユーザーインターフェースの概要について</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+<a href="options.html">オプションダイアログ</a></td><td>その他のオプションダイアログ画面の詳細</td></tr>
 </table>
 
 </body>

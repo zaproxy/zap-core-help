@@ -3,127 +3,101 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Session Context Authentication screen
+セッションコンテキスト認証画面
 </title>
 </head>
 <body>
-<h1>Session Context Authentication screen</h1>
+<h1>セッションコンテキスト認証画面</h1>
 <p>
-This is one of the <a href="contexts.html">Session Context screens</a>
-which allows you to manage the way in which <a href="../../../start/features/authentication.html">Authentication</a> is being done for the Context.
+これは<a href="contexts.html">セッションコンテキスト画面</a>の一つで、コンテキストの<a href="../../../start/features/authentication.html">認証</a>方式を管理できます。 
 
-<h2>Authentication Method</h2>
+<h2>認証方式</h2>
 
-After selecting the <a href="../../../start/features/authmethods.html">Authentication Method</a> type, the options that need to be configured depend on the Authentication Method.
+<a href="../../../start/features/authmethods.html">認証方式</a>の種類を選択後、設定が必要なオプションは認証方式によって異なります。 
 <p>
-<strong>Note:</strong> Changing the authentication method after Users have been defined might cause its credentials to be reset,
-as the type of user credentials need to match the authentication scheme. A confirmation dialogue will be shown when that happens.
+<strong>注意:</strong> ユーザーが定義された後に認証方式を変更すると、認証方式に一致するユーザー認証情報の種類が必要なため、認証情報がリセットされる場合があります。 この場合、確認ダイアログが表示されます。 
 
-<h3>Manual Authentication</h3>
-No configuration is needed for this authentication method. <small>Read  
-<a href="../../../start/features/authmethods.html#manual">more</a>...</small>
+<h3>手動認証</h3>
+この認証方式では設定は不要です。 <small><a href="../../../start/features/authmethods.html#manual">詳細</a>...</small>
 
-<h3>Form-Based Authentication</h3>
-To configure this authentication method, you need to supply the <b>login url</b>, to which the login
-request is performed, the <b>request body</b> (POST data), if needed, and identify the <b>parameters</b> used to supply
-the 'username' and 'password'. If no request body is supplied, the login request is performed as 
-a HTTP GET, otherwise an HTTP POST is used. The credentials themselves
-are configured in the <a href="contexts.html#users">Users</a> tab.
-The <b>login page</b> can also be supplied to indicate from where to obtain a new session (e.g. cookies)
-and regenerate <a href="../../../start/features/anticsrf.html">Anti CSRF tokens</a> present in the <b>request body</b>.
-If the <b>login page</b> is not supplied it is used the <b>login url</b>.
-<br><small>Read <a href="../../../start/features/authmethods.html#formBased">more</a>...</small>
+<h3>フォームベース認証</h3>
+この認証方式を設定するには、ログインリクエストが実行される <b>ログインURL</b>、必要に応じて <b>リクエストボディ</b> (POSTデータ)、および「ユーザー名」と「パスワード」を指定するために使用される <b>パラメーター</b> を入力する必要があります。 リクエストボディが提供されない場合、ログインリクエストはHTTP GETとして実行され、そうでない場合はHTTP POSTが使用されます。 認証情報自体は <a href="contexts.html#users">ユーザー</a> タブで設定します。  <b>ログインページ</b> を指定して、新しいセッション (例: Cookie) を取得し、<b>リクエストボディ</b>に含まれる <a href="../../../start/features/anticsrf.html">Anti-CSRFトークン</a> を再生成する元となる場所を示すこともできます。 <b></b> <b>ログインページ</b> が提供されない場合は、 <b>ログインURL</b>が使用されます<b></b>.
+<br><small><a href="../../../start/features/authmethods.html#formBased">詳細</a>...</small>
 
-<h3>JSON-Based Authentication</h3>
-To configure this authentication method, you need to supply the <b>login url</b>, to which the login
-request is performed, the <b>JSON object</b> (POST data, <code>application/json</code>), and identify
-the <b>parameters</b> used to supply the 'username' and 'password'.  The credentials themselves
-are configured in the <a href="contexts.html#users">Users</a> tab.
-The <b>login page</b> can also be supplied to indicate from where to obtain a new session (e.g. cookies).
-If the <b>login page</b> is not supplied it is used the <b>login url</b>.
-<br><small>Read <a href="../../../start/features/authmethods.html#jsonBased">more</a>...</small>
+<h3>JSONベース認証</h3>
+この認証方式を設定するには、ログインリクエストが実行される <b>ログインURL</b>、 <b>JSONオブジェクト</b> (POSTデータ、 <code>application/json</code>)、および「ユーザー名」と「パスワード」を指定するために使用される <b>パラメーター</b> を入力する必要があります。認証情報自体は <a href="contexts.html#users">ユーザー</a> タブで設定します。  <b>ログインページ</b> を指定して、新しいセッション (例: Cookie) を取得する元となる場所を示すこともできます。 <b>ログインページ</b> が提供されない場合は、 <b>ログインURL</b>が使用されます<b></b>.
+<br><small><a href="../../../start/features/authmethods.html#jsonBased">詳細</a>...</small>
 
-<br>Examples of POST data:
+<br>POSTデータの例： 
 <ul>
 	<li><code>{"username":"{%username%}","password":"{%password%}"}</code></li>
 	<li><code>{"user":{"mail":"{%username%}","password":"{%password%}"}}</code></li>
 </ul>
-where <code>{%username%}</code> and <code>{%password%}</code> indicate where the authentication credentials are set.
+ここで、 <code>{%username%}</code> と <code>{%password%}</code> は認証情報が設定される場所を示します。 
 
-<h3>HTTP/NTLM Authentication</h3>
-To configure this authentication method, you need to supply the <b>hostname</b> and the <b>port</b> of the server
-the authentication is done with and the <b>realm</b> the credentials apply to. The credentials themselves
-are configured in the <a href="contexts.html#users">Users</a> tab. <small>Read  
-<a href="../../../start/features/authmethods.html#httpAuth">more</a>...</small> 
+<h3>HTTP/NTLM認証</h3>
+この認証方式を設定するには、認証が行われるサーバーの <b>ホスト名</b> と <b>ポート</b> 、および認証情報が適用される <b>レルム</b> を指定する必要があります。認証情報自体は <a href="contexts.html#users">ユーザー</a> タブで設定します。 <small><a href="../../../start/features/authmethods.html#httpAuth">詳細</a>...</small> 
 
-<h3>Script-Based Authentication</h3>
-To use this authentication method, you <b>first</b> need to write (and save) an <b>Authentication Script</b> 
-using the <b>Scripts</b> tab (see the provided examples and templates for this script type in the Scripts tab).
-Then you need to supply the name of the script in the dropdown list. After selecting the script, you need to press 
-the <b>Load</b> button, loading all the requirements of the script.
-Any parameters that you have specified as <i>required</i> or <i>optional</i> in the script will
-be shown in the interface to be defined. Their values are available to be used in the script, during the authentication, as seen
-in the provided examples for Authentication Scripts. Make sure that after doing any changes to the parameters 
-required by the Authentication script you re-load the script. Otherwise, the parameters shown in the interface might
-not be the ones used during the authentication and errors might occur. The <i>credentials</i> used for each User 
-during the authentication processed can be also specified in the Authentication Script and are configured in the 
-<a href="contexts.html#users">Users</a> tab.
-<small>Read <a href="../../../start/features/authmethods.html#scriptBased">more</a>...</small> 
+<h3>スクリプトベース認証</h3>
+この認証方式を使用するには、 <b>まず</b>  <b>スクリプト</b> 
+タブを使用して <b>認証スクリプト</b> を作成 (および保存) する必要があります (スクリプトタブにはこのタイプのテンプレートや例が用意されています)。
+次に、ドロップダウンリストでスクリプト名を指定する必要があります。 スクリプトを選択した後、 <b>読み込み</b> ボタンを押して、スクリプトのすべての要件を読み込みます。スクリプトで <i>必須</i> または <i>オプション</i> として指定したパラメータは、定義するためのインターフェースに表示されます。 これらの値は、認証スクリプトの提供例で見られるように、認証中にスクリプト内で使用できます。 認証スクリプトで必要なパラメータを変更した後は、必ずスクリプトを再読み込みしてください。 そうしないと、インターフェースに表示されるパラメータが認証中に使用されるものと異なり、エラーが発生する可能性があります。 認証処理中に各ユーザーで使用される <i>認証情報</i> も認証スクリプトで指定でき、 
+<a href="contexts.html#users">ユーザー</a> タブで設定します。
+<small><a href="../../../start/features/authmethods.html#scriptBased">詳細</a>...</small> 
 
-<h2>Authentication Verification</h2>
+<h2>認証検証</h2>
 
-<h3>Verification Strategy</h3>
+<h3>検証戦略</h3>
 
-Select the <a href="../../../start/features/authstrategies.html">Authentication Verification Strategy</a> required.
+必要な <a href="../../../start/features/authstrategies.html">認証検証戦略</a> を選択してください。
 
-<h3><a name="regexloggedin">Regex pattern used to identify Logged in messages</a></h3>
+<h3><a name="regexloggedin">ログイン済みメッセージを識別する正規表現パターン</a></h3>
 
-If this regex pattern is specified and matches any string in the specified message then ZAP will treat this message as logged in.
-For example the pattern could be used to match a http://example.com/logout link or the presence of a 'Welcome, User X' message.
+この正規表現パターンが指定され、指定されたメッセージ内の任意の文字列と一致する場合、ZAPはこのメッセージをログイン済みとして扱います。
+例えば、このパターンは http://example.com/logout リンクや「ようこそ、ユーザーXさん」メッセージの存在と一致させるために使用できます。
 
-<h3><a name="regexloggedout">Regex pattern used to identify Logged out messages</a></h3>
+<h3><a name="regexloggedout">ログアウト済みメッセージを識別する正規表現パターン</a></h3>
 
-If this regex pattern is specified and matches any string in the specified message then ZAP will treat this message as logged out.
-For example the pattern could be used to match a http://example.com/login link or the presence of a 'Welcome, Guest' message.
+この正規表現パターンが指定され、指定されたメッセージ内の任意の文字列と一致する場合、ZAPはこのメッセージをログアウト済みとして扱います。
+例えば、このパターンは http://example.com/login リンクや「ようこそ、ゲストさん」メッセージの存在と一致させるために使用できます。 
 
-<h3><a name="pollfreq">Poll Frequency</a></h3>
+<h3><a name="pollfreq">ポーリング頻度</a></h3>
 
-This controls how frequently ZAP will poll to see if a user is still authenticated. 
-The integer will either represent the number of Requests that will be made before ZAP will poll again or the number of Seconds before
-it will poll again, depending on pulldown selected.<br/>
-The option is only relevant if the "Poll the Specified URL" Verification Strategy has been selected.
+これは、ZAPがユーザーがまだ認証されているかどうかを確認するためにポーリングする頻度を制御します。 
+この整数値は、選択したプルダウンに応じて、ZAPが再度ポーリングするまでに実行されるリクエスト数または秒数を表します。<br/>
+このオプションは「指定したURLをポーリングする」検証戦略が選択されている場合のみ関連します。
   
-<h3><a name="pollurl">URL to Poll for Verification</a></h3>
+<h3><a name="pollurl">検証用ポーリングURL</a></h3>
 
-This is the URL that ZAP will poll to see if a user is still authenticated.<br/>
-The option is only relevant if the "Poll the Specified URL" Verification Strategy has been selected.
+これは、ZAPがユーザーがまだ認証されているかどうかを確認するためにポーリングするURLです。<br/>
+このオプションは「指定したURLをポーリングする」検証戦略が選択されている場合のみ関連します。
  
-<h3><a name="polldata">Poll Request POST Data</a></h3>
+<h3><a name="polldata">ポーリングリクエストのPOSTデータ</a></h3>
 
-If supplied then this will be sent as a POST in the poll request. If it is empty then ZAP will make a GET request<br/>
-The option is only relevant if the "Poll the Specified URL" Verification Strategy has been selected.
+指定された場合、これはポーリングリクエストでPOSTとして送信されます。空の場合、ZAPはGETリクエストを実行します。<br/>
+このオプションは「指定したURLをポーリングする」検証戦略が選択されている場合のみ関連します。
   
-<h3><a name="pollheaders">Additional Poll Request Headers</a></h3>
+<h3><a name="pollheaders">追加のポーリングリクエストヘッダー</a></h3>
 
-An optional set of headers that will be sent with the poll request. Each line should be one header and value separated by a colon e.g<br/>
+ポーリングリクエストと一緒に送信されるオプションのヘッダーセットです。各行は、コロンで区切られた1つのヘッダーと値である必要があります。例：<br/>
 <pre>
 Content-Type: application/json
 X-Requested-With: XMLHttpRequest
 </pre>
-The option is only relevant if the "Poll the Specified URL" Verification Strategy has been selected.
+このオプションは「指定したURLをポーリングする」検証戦略が選択されている場合のみ関連します。
   
-<h2>Accessed via</h2>
+<h2>ここから参照されています</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../tabs/sites.html">Sites tab</a></td><td>Double click a Context</td></tr>
+<a href="../../tabs/sites.html">サイトタブ</a></td><td>コンテキストをダブルクリック</td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>関連情報</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="contexts.html">Session Context screens</a></td><td>for details of the other Context screens</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../../start/features/authentication.html">Authentication</a></td><td>for an overview of Authentication </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">UIの概要</a></td><td>ユーザーインターフェースの概要について</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../dialogs.html">ダイアログ</a></td><td>ダイアログやポップアップの詳細 </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="contexts.html">セッションコンテキスト画面</a></td><td>その他のコンテキスト画面の詳細</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../../start/features/authentication.html">認証</a></td><td>認証の概要について </td></tr>
 </table>
 
 

@@ -3,105 +3,99 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-アラートダイアログを追加
+アラートの追加 ダイアログ
 </title>
 </head>
 <body>
-<h1>アラートダイアログを追加</h1>
+<h1>アラートの追加 ダイアログ</h1>
 <p>
-This dialog allows you to manually add or change an <a href="../../start/features/alerts.html">Alert</a> associated
-with a specific request.<br/>
+このダイアログでは、特定のリクエストに関連する<a href="../../start/features/alerts.html">アラート</a>を手動で追加または変更できます。<br/>
 </p>
 
 <h2>フィールド</h2>
-The dialog has the following fields:
+このダイアログには以下のフィールドがあります：
 
 <h3>タイプ</h3>
-The type of the alert is a pull down field which allows you to select one of a prepopulated set of issue types.<br/>
-You can also enter your own text or change the text of one of the items you selected.<br/>
-If you select one of the existing types then the Description, Solution and Other Info fields
-will be populated with text associated with the item you chose. 
+アラートの種類は、事前定義された問題の種類のセットから選択できるプルダウンフィールドです。<br/>
+独自のテキストを入力したり、選択した項目のテキストを変更したりすることも可能です。<br/>
+既存の種類を選択すると、選択した項目に関連するテキストが「詳細」、「解決策」、「その他の情報」フィールドに自動入力されます。 
 
 <h3>リスク</h3>
-A pull down field which allows you to specify how serious you think the risk is:
+リスクの深刻度を指定できるプルダウンフィールドです：
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Informational</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Low</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Medium</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>High</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>情報</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>低</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>中</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>高</td><td></td></tr>
 </table>
 
 <h3>信頼性</h3>
-A pull down field which allows you to specify how confident you are in the validity of the finding:
+発見した脆弱性の有効性に対する信頼度を指定できるプルダウンフィールドです：
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>False Positive（誤った警告）</td><td>for potential issues that you later find are not exploitable</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Low</td><td>for unconfirmed issues</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Medium</td><td>for issues you are somewhat confident of</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>High</td><td>for findings you are highly confident in</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Confirmed</td><td>for confirmed issues</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>誤検知 (偽陽性)</td><td>後に悪用不可能と判明した潜在的な問題用</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>低</td><td>未確認の問題用</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>中</td><td>ある程度確信を持てる問題用</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>高</td><td>高い確信を持てる発見用</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>確認済み</td><td>確認済みの問題用</td></tr>
 </table>
 
-<h3>Parameter</h3>
-A pull down field which allows you to specify which parameter the issue is associated with.<br/>
-The field is prepopulated with any URL and FORM parameters found, but you can also enter your own parameter name.<br />
-Array parameters (in URL query component and <code>x-www-form-urlencoded</code> request body) are identified with its index. For
-example, for a request containing <code>choices[]=ChoiceA&amp;choices[]=ChoiceB</code> the first parameter would be identified
-as <code>choices[0]</code> and the second as <code>choices[1]</code>.
+<h3>パラメーター</h3>
+問題が関連付けられているパラメータを指定できるプルダウンフィールドです。<br/>
+このフィールドには検出されたURLおよびFORMパラメータが事前入力されますが、独自のパラメータ名を入力することも可能です。<br />
+配列パラメータ (URLクエリコンポーネントおよび <code>x-www-form-urlencoded</code> リクエストボディ内) はインデックスで識別されます。例えば、 <code>choices[]=ChoiceA&amp;choices[]=ChoiceB</code> を含むリクエストの場合、最初のパラメータは <code>choices[0]</code> 、2番目は <code>choices[1]</code> として識別されます<code></code>.
 
-<h3>Attack</h3>
-The payload that was supplied to the <em>Parameter</em>. This is expected to be set only by active scan rules
-which are the ones that send payloads/attacks.
+<h3>攻撃</h3>
+ <em>パラメータ</em>に供給されたペイロードです。これは、ペイロード/攻撃を送信するアクティブスキャンルールによってのみ設定されることが想定されています。
 
-<h3>Evidence</h3>
-The available information in the message request or response (header or body) that indicates that the issue is present.
+
+<h3>エビデンス</h3>
+問題の存在を示すメッセージリクエストまたはレスポンス (ヘッダまたはボディ) の利用可能な情報です。
 
 <h3>CWE ID</h3>
-The relevant Common Weakness Enumeration (CWE) ID associated with the flagged vulnerability. This field 
-can only be an integer.
+フラグが立てられた脆弱性に関連する共通脆弱性タイプ一覧 (CWE) IDです。このフィールドは整数のみ入力可能です。
 
 <h3>WASC ID</h3>
-The relevant Web Application Security Consortium (WASC) ID associated with the flagged vulnerability. This field
-can only be an integer.
+フラグが立てられた脆弱性に関連するWebアプリケーションセキュリティコンソーシアム (WASC) IDです。このフィールドは整数のみ入力可能です。
 
-<h3>Description</h3>
-A general description of the type of issue found.<br/>
-This is populated when you select one of the predefined types, but you can also change it as required.<br/>
-Note that any changes you make will be lost if you select another type.
+<h3>説明</h3>
+発見された問題の種類の一般的な説明です。<br/>
+事前定義された種類を選択すると自動入力されますが、必要に応じて変更することも可能です。<br/>
+注意: 別の種類を選択すると、変更内容は失われます。
  
-<h3>Other Info</h3>
-Information specific to the particular issue you have found.<br/>
-This is not prepopulated.
+<h3>その他の情報</h3>
+発見した特定の問題に固有の情報です。<br/>
+このフィールドは事前入力されません。
 
-<h3>Solution</h3>
-Recommendations about how to fix the issue.<br/>
-This is populated when you select one of the predefined types, but you can also change it as required.<br/>
-Note that any changes you make will be lost if you select another type.
+<h3>対策</h3>
+問題の修正方法に関する推奨事項です。<br/>
+事前定義された種類を選択すると自動入力されますが、必要に応じて変更することも可能です。<br/>
+注意: 別の種類を選択すると、変更内容は失われます。
  
-<h3>Reference</h3>
-One or more URLs pointing to more information on the internet about the selected type of alert.<br/>
-This is populated when you select one of the predefined types, but you can also change it as required.<br/>
-Note that any changes you make will be lost if you select another type.
+<h3>参考文献</h3>
+選択したアラートの種類に関するインターネット上の詳細情報を指すURLです。<br/>
+事前定義された種類を選択すると自動入力されますが、必要に応じて変更することも可能です。<br/>
+注意: 別の種類を選択すると、変更内容は失われます。
  
-<h3>Alert Tags</h3>
-Alerts can be tagged with arbitrary keys or key=value pairs.<br/>
-You can add as many tags as you want to each alert. However,
+<h3>アラートタグ</h3>
+アラートには任意のキーまたは キー=値 のペアでタグ付けできます。<br/>
+各アラートに任意の数のタグを追加できます。ただし、
 <ul>
-<li>You cannot have two tags with the same key.</li>
-<li>The key must be limited to 1024 characters and the value must be limited to 4000 characters for each tag.</li>
+<li>同じキーを持つ2つのタグは設定できません。</li>
+<li>各タグのキーは1024文字、値は4000文字に制限されています。</li>
 </ul>
 
 <h2>ここから参照されています</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../tabs/history.html">履歴タブ</a></td><td>'New Alert...' right click menu item</td></tr>
+<a href="../tabs/history.html">履歴タブ</a></td><td>右クリックメニュー項目「新しいアラート...」</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../tabs/alerts.html">アラートタブ</a></td><td>double clicking on an existing alert</td></tr>
+<a href="../tabs/alerts.html">アラートタブ</a></td><td>既存のアラートをダブルクリック</td></tr>
 </table>
 
 <h2>関連情報</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">UIの概要</a></td><td>ユーザー インターフェイスの概要について</td></tr>
+<a href="../overview.html">UIの概要</a></td><td>ユーザーインターフェースの概要について</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="dialogs.html">ダイアログ</a></td><td>ダイアログボックスやポップアップの詳細 </td></tr>
 </table>
