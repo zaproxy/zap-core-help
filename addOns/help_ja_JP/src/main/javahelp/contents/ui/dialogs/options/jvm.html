@@ -3,69 +3,65 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Options JVM screen
+オプション JVM画面
 </title>
 </head>
 <body>
-<h1>Options JVM screen</h1>
+<h1>オプション JVM画面</h1>
 <p>
-This screen allows you to configure the JVM options used when starting ZAP.
+この画面では、ZAP起動時に使用されるJVMオプションを設定できます。
 </p>
 
-<h3>JVM Options</h3>
-A free format text field which will be added to the Java command line call
-when invoking ZAP via either zap.sh or zap.bat.
+<h3>JVM オプション</h3>
+自由形式のテキストフィールドで、zap.sh または zap.bat を介してZAPを起動する際にJavaコマンドラインに追加されます。
 </p>
 <p>
-The option was added so that the Java maximum memory allocation pool size can be set, 
-which is of the form: -Xmx<i>n</i> where <i>n</i> is the size in bytes.<br>
-Good values for this field could be:
+このオプションは、Javaの最大メモリ割り当てプールサイズを設定するために追加されました。形式: -Xmx<i>n</i> ( <i>n</i> はバイト単位のサイズ) です。<br>
+このフィールドの適切な値の例：
 <ul>
 <li>-Xmx256m</li>
 <li>-Xmx512m</li>
 <li>-Xmx1024m</li>
 </ul>
 <p>
-Unlike the other ZAP options these are held in the file <code>.ZAP_JVM.properties</code> in the user's default ZAP directory,
-which depends on the OS being used, for example:
+他のZAPオプションとは異なり、これらの設定はユーザーのZAPデフォルトディレクトリ内の <code>.ZAP_JVM.properties</code> ファイルに保存されます。ディレクトリの場所はOSによって異なります：
 <ul>
 <li>Windows 7/8: C:\Users\<i>&lt;username&gt;</i>\ZAP</li>
 <li>Windows XP: C:\Documents and Settings\<i>&lt;username&gt;</i>\ZAP</li>
 <li>Linux: ~/.ZAP</li>
 <li>Mac OS: ~/Library/Application Support/ZAP</li>
 </ul>
-If you make a mistake when setting these options then ZAP may fail to start.<br>
-If that happens then deleting this file should fix the problem.
+これらのオプション設定を間違えると、ZAPの起動に失敗する場合があります。<br>
+その場合は、このファイルを削除することで問題が解決するはずです。
 <p>
-<strong>Windows Notes:</strong> These options are not used when starting ZAP via the executable. The directory where the file <code>.ZAP_JVM.properties</code> is located depends on the environment variable <code>%USERPROFILE%</code>.
+<strong>Windows注意事項:</strong> 実行ファイル (.exe) 経由でZAPを起動する場合、これらのオプションは適用されません。 <code>.ZAP_JVM.properties</code> ファイルの保存場所は環境変数 <code>%USERPROFILE%の値に依存します</code>.
 
-<h3>JVM Memory Details</h3>
-The lower portion of the dialog displays details of the current JVM memory configuration. Including: 
+<h3>JVMメモリ詳細</h3>
+ダイアログの下部には、現在のJVMメモリ構成の詳細が表示されます。内容： 
   <ul>
-    <li>Size - the amount of memory currently allocated to the JVM.</li> 
-    <li>Used - the amount of currently allocated memory used (not free).</li>
-    <li>Max - the amount of memory that the JVM could grow to occupy.</li>
+    <li>Size - 現在JVMに割り当てられているメモリ量</li> 
+    <li>Used - 割り当て済みメモリのうち使用中の容量</li>
+    <li>Max - JVMが使用可能な最大メモリ量</li>
   </ul>
-The values are displayed in human readable IEC units based on base 2 calculation (for example: 1024Bytes equals 1KiB, etc).
+値は、2進数計算による読みやすい単位 (IEC規格) で表示されます (例: 1024バイト = 1KiB)。
 <p>
-Generally max should be close to -Xmx (if specified). However, the following behavior was observed during testing under Java 8 on Windows OS.
+通常、Max は (指定されている場合) -Xmx に近い値になります。ただし、Windows OS上のJava 8でのテスト中に以下の動作が観察されました。
 <p>
--Xmx512m was specified (which should calculate out to ~488MiB), however, 455.5MiB was displayed.<br>
--Xms512m -Xmx512m was specified, however, 475MiB was displayed.<br>
--XX:+AlwaysPreTouch -Xms512m -Xmx512m, and 474.5MiB was displayed.
+-Xmx512m が指定された場合 (約488MiBになるはず)、455.5MiBが表示されました。<br>
+-Xms512m -Xmx512m が指定された場合、475MiBが表示されました。<br>
+-XX:+AlwaysPreTouch -Xms512m -Xmx512m の場合、474.5MiBが表示されました。
 <p>
-So it seems the JVM does some calculation/manipulation at execution which may mean that the results may not align as expected for the 
-options the user inputs (this is a JVM issue, not a ZAP issue).
+このため、JVMは実行時に何らかの計算/操作を行い、ユーザーが入力したオプションと結果が期待通りに一致しない場合があるようです (これはJVMの問題であり、ZAPの問題ではありません)。
 
-<h2>See also</h2>
+<h2>関連情報</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="options.html">Options dialogs</a></td><td>for details of the other Options dialog screens</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../overview.html">UIの概要</a></td><td>ユーザーインターフェースの概要について</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="options.html">オプションダイアログ</a></td><td>その他のオプションダイアログ画面の詳細</td></tr>
 </table>
 
-<h2>External links</h2>
+<h2>外部リンク</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html#BABDJJFI">Java 8 options</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html#BABDJJFI">Java 8オプション</a></td></tr>
 </table>
 
 </body>

@@ -2,36 +2,25 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Options Extensions screen</title>
+<title>オプション 拡張機能画面</title>
 </head>
 <body>
-	<h1>Options Extensions screen</h1>
-	<p>This screen allows you to enable/disable extensions that are
-		available to ZAP, either core or added by <a href="../../../start/features/addons.html">add-ons</a>.</p>
-	<h3>Enable/Disable Extensions</h3>
-	Enabled extensions will be loaded by ZAP, thus adding the
-	functionalities provided by those extensions. Disabled extensions will
-	not be loaded.
+	<h1>オプション 拡張機能画面</h1>
+	<p>この画面では、ZAPで利用可能な拡張機能の有効/無効を設定できます。対象となるのは、コア拡張機能と<a href="../../../start/features/addons.html">アドオン</a>で追加された拡張機能です.</p>
+	<h3>拡張機能の有効化/無効化</h3>
+	有効にした拡張機能はZAPに読み込まれ、その機能が利用できるようになります。無効にした拡張機能は読み込まれません。
 
-	<h3>Core Extensions</h3>
-	Core extensions are extensions that if disabled will impair ZAP's
-	minimal functionality. Extensions marked as core cannot be disabled.
+	<h3>コア拡張機能</h3>
+	コア拡張機能は、ZAPの基本動作に必要不可欠な拡張機能です。コアに指定された拡張機能は無効化できません。
 	<p>
-		<i>Note: Core extensions can be disabled through the configuration
-			file, although it's not recommend.</i>
+		<i>注意: コア拡張機能は設定ファイルで無効化できますが、推奨されません。</i>
 	</p>
 
-	<h3>Extensions' Dependencies</h3>
-	Extensions may depend on other extensions to work. When one of those
-	extensions (dependencies) is disabled it will make ZAP automatically
-	disable all the extensions that depend on them. So it may happen that
-	when disabling one extension other extensions (that depend on it) will
-	also be disabled. Automatically disabled extensions will not be allowed
-	to be enabled until all the dependencies are enabled.
+	<h3>拡張機能の依存関係</h3>
+	拡張機能には、動作に必要な他の拡張機能 (依存先) がある場合があります。 依存先の拡張機能を無効化すると、ZAPは自動的にそれに依存するすべての拡張機能も無効化します。 そのため、一つの拡張機能を無効化するとそれに依存する他の拡張機能も同時に無効化される場合があります。 自動無効化された拡張機能は、すべての依存先が有効になるまで再度有効化できません。
 
 	<p>
-		<i>Note: You will need to restart ZAP for the changes to take
-			effect.</i>
+		<i>注意: 変更を有効にするには、ZAPの再起動が必要です。</i>
 	</p>
 
 	<h2>関連情報</h2>
@@ -39,12 +28,12 @@
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			<td><a href="../../overview.html">UIの概要</a></td>
-			<td>ユーザー インターフェイスの概要について</td>
+			<td>ユーザーインターフェースの概要について</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			<td><a href="options.html">オプションダイアログ</a></td>
-			<td>その他のオプションダイアログの画面についての詳細</td>
+			<td>その他のオプションダイアログ画面の詳細</td>
 		</tr>
 	</table>
 

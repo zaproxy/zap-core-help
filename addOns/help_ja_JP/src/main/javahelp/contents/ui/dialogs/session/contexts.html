@@ -3,127 +3,105 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Session Context screens
+セッションコンテキスト画面
 </title>
 </head>
 <body>
-<h1>Session Context screens</h1>
+<h1>セッションコンテキスト画面</h1>
 <p>
-These screens allows you manage <a href="../../../start/features/contexts.html">contexts</a>.
+これらの画面では<a href="../../../start/features/contexts.html">コンテキスト</a>を管理できます。 .
 </p>
 <p>
-There is a set of screens for each context you define.
+定義したコンテキストごとに画面セットが存在します。 
 </p>
 
 <h3>トップ画面</h3>
-This allows you to set the context name and description.
+これによりコンテキスト名と説明を設定できます。 
 
-<h3>Include in Context</h3>
-This allows you to manage the URLs which will be included in the context.<br/>
-URLs which dont match any of the regexs will not be included in the context.
-<br><strong>Note:</strong> The regular expressions must match the whole URL.
+<h3>コンテキストに含める</h3>
+これによりコンテキストに含めるURLを管理できます。<br/>
+いずれの正規表現にも一致しないURLは、コンテキストに含まれません。 
+<br><strong>注意:</strong> 正規表現はURL全体と一致する必要があります。 
 
-<br><strong>Note</strong> When testing targets that operate on default ports (80
-for http, 443 for https), the colon port portion of the URL should not be 
-included. Including that portion (for example: http://example.com:80) may 
-result in an inability to crawl or test the target. If a 'default' port is 
-specified both browsers and ZAP treat it without the default port being 
-included then it doesn't match the expectation within the Context and there's 
-nothing to interact with as part of the Context.
+<br><strong>ノート</strong> デフォルトポート (httpの場合は80、httpsの場合は443) で動作するターゲットをテストする場合、URLのコロンポート部分を含めるべきではありません。 その部分 (例：http://example.com:80) を含めると、ターゲットのクロールやテストができなくなる可能性があります。 「デフォルト」ポートが指定された場合、ブラウザとZAPの両方がデフォルトポートを含まないものとして扱うため、コンテキスト内の期待値と一致せず、コンテキストの一部として対話するものがなくなります。
 
-<h3>Exclude from Context</h3>
-This allows you to manage the URLs which will be excluded from the context.<br/>
-You only need to specify regexs for URLs that you do not want to include but which match one or more
-of the 'include' regexes.
-<br><strong>Note:</strong> The regular expressions must match the whole URL.
+<h3>コンテキストから除外</h3>
+これによりコンテキストから除外するURLを管理できます。<br/>
+含めたくないが、1つ以上の「含める」正規表現に一致するURLについてのみ正規表現を指定する必要があります。 
+<br><strong>注意:</strong> 正規表現はURL全体と一致する必要があります。 
 
-<h3><a name="struct">Structure</a></h3>
-See the <a href="context-struct.html">Session Context Structure screen</a>.
+<h3><a name="struct">構造</a></h3>
+ <a href="context-struct.html">セッションコンテキスト構造画面</a>を参照してください<a href="#"></a>.
 
-<h3>Technology</h3>
-This allows you to specify the technologies used in the context, if known.<br/>
-By default all technologies are included.<br/>
-If you exclude technologies that you know are not used then this may speed up 
-<a href="../../../start/features/ascan.html">active scanning</a> as rules specific to the excluded
-technologies can be skipped.
+<h3>テクノロジー</h3>
+これにより、既知の場合、コンテキストで使用されるテクノロジーを指定できます。<br/>
+デフォルトでは、すべてのテクノロジーが含まれます。<br/>
+使用されていないことが分かっているテクノロジーを除外すると、除外されたテクノロジーに固有のルールをスキップできるため、 
+<a href="../../../start/features/ascan.html">アクティブスキャン</a> が高速化される可能性があります。
 
-<h3><a name="auth">Authentication</a></h3>
-See the <a href="context-auth.html">Session Context Authentication screen</a>.
+<h3><a name="auth">認証</a></h3>
+ <a href="context-auth.html">セッションコンテキスト認証画面</a>を参照してください<a href="#"></a>.
 
-<h3><a name="sm">Session Management</a></h3>
-This allows you to manage the way in which Session Management is being done for the Context. 
-After selecting the Session Management Method type, the options that need to be configured 
-depend on the Session Management Method.
+<h3><a name="sm">セッション管理</a></h3>
+これによりコンテキストのセッション管理方式を管理できます。  
+セッション管理方式の種類を選択した後、設定が必要なオプションはセッション管理方式によって異なります。
 
-<h4>Cookie-Based Session Management</h4>
-No configuration is needed for this session management method. <small>Read  
-<a href="../../../start/features/sessionManagement.html#cbsm">more</a>...</small>
+<h4>Cookieベースセッション管理</h4>
+このセッション管理方式では設定は不要です。 <small><a href="../../../start/features/sessionManagement.html#cbsm">詳細</a>...</small>
 
-<h4>HTTP Authentication Session Management</h4>
-No configuration is needed for this session management method. <small>Read
-<a href="../../../start/features/sessionManagement.html#hasm">more</a>...</small>
+<h4>HTTP認証セッション管理</h4>
+このセッション管理方式では設定は不要です。 <small><a href="../../../start/features/sessionManagement.html#hasm">詳細</a>...</small>
 
-<h4>Script-Based Session Management</h4>
+<h4>スクリプトベースセッション管理</h4>
 
-To use this session management method, you <b>first</b> need to write (and save) a <b>Session Management Script</b> 
-using the <b>Scripts</b> tab (see the provided examples and templates for this script type in the Scripts tab).
-Then you need to supply the name of the script in the dropdown list. After selecting the script, you need to press 
-the <b>Load</b> button, loading all the requirements of the script.
-Any parameters that you have specified as <i>required</i> or <i>optional</i> in the script will
-be shown in the interface to be defined. Their values are available to be used in the script, during the session management process, as seen
-in the provided examples for Session Management Scripts. Make sure that after doing any changes to the parameters 
-required by the Session Management script you re-load the script. Otherwise, the parameters shown in the interface might
-not be the ones used during the session management process and errors might occur. 
-<small>Read <a href="../../../start/features/sessionManagement.html#sbsm">more</a>...</small>
+このセッション管理方式を使用するには、 <b>まず</b>  <b>スクリプト</b> 
+タブを使用して <b>セッション管理スクリプト</b> を作成 (および保存) する必要があります (スクリプトタブにはこのタイプのテンプレートや例が用意されています)。
+次に、ドロップダウンリストでスクリプト名を指定する必要があります。 スクリプトを選択した後、 <b>読み込み</b> ボタンを押して、スクリプトのすべての要件を読み込みます。スクリプトで <i>必須</i> または <i>オプション</i> として指定したパラメーターは、定義するためのインターフェースに表示されます。 これらの値は、セッション管理スクリプトの提供例で見られるように、セッション管理処理中にスクリプト内で使用できます。 セッション管理スクリプトで必要なパラメーターを変更した後は、必ずスクリプトを再読み込みしてください。 そうしないと、インターフェースに表示されるパラメーターがセッション管理処理中に使用されるものと異なり、エラーが発生する可能性があります。 
+<small><a href="../../../start/features/sessionManagement.html#sbsm">詳細</a>...</small>
 
 
-<h3><a name="users">Users</a></h3>
-This allows you to configure a set of Users that may be used for various other actions
-throughout the application.
-<p>The credentials section of the Users depends on the Authentication Method configured
-for the Context.</p>
+<h3><a name="users">ユーザー</a></h3>
+これによりアプリケーション全体のさまざまなアクションで使用される可能性のあるユーザーセットを設定できます。
+<p>ユーザーの認証情報セクションは、コンテキスト用に設定された認証方式によって異なります。</p>
 
-<h2><a name="custompages">Custom Page</a></h2>
-This functionality allows you to handle situations in which the target does not return a RFC compliant or expected error response when for conditions such as 
-404 - Not Found, 500 - Internal Server Error, etc. Often developers implement custom 404 or 500 handling but do not actually return an appropriate status code.
-Leveraging Custom Page definitions you can define URLs or response content which identify error responses regardless of the status code associated with the response.
-<small>Read <a href="../../../start/features/custompages.html">more</a>...</small>
+<h2><a name="custompages">カスタムページ</a></h2>
+この機能により、404 - Not Found、500 - Internal Server Error などの条件において、ターゲットがRFC準拠または期待される誤りレスポンスを返さない状況を処理できます。 多くの場合、開発者はカスタム404または500処理を実装しますが、実際には適切なステータスコードを返しません。
+カスタムページ定義を活用することで、レスポンスに関連するステータスコードに関係なく、エラーレスポンスを識別するためのURLやレスポンスコンテンツを定義できます。
+<small><a href="../../../start/features/custompages.html">詳細</a>...</small>
 
-<h2>URL regexs</h2>
-In the <i>Include in *</i>, <i>Exclude from *</i> panels and the <i>Logged in/out indicators</i> of the <i>Authentication</i> panel, etc. you can enter regular expressions to define excluded URLs.
-While you can escape a single meta-character with a backslash, you can also use the <b>\Q...\E</b> escape sequence. All the characters between the <b>\Q</b> and the <b>\E</b> are interpreted as literal characters. E.g. \Q*\d+*\E matches the literal text *\d+*.
-This escape sequence is used in ZAP when you exclude URLs via some context menus.
+<h2>URL正規表現</h2>
+ <i>* に含める</i>, <i>* から除外</i> パネル、および認証パネルの <i>ログイン/アウト指標</i>  <i></i> などで、除外URLを定義するための正規表現を入力できます。 単一のメタ文字をバックスラッシュでエスケープできますが、 <b>\Q...\E</b> エスケープシーケンスも使用できます。 <b>\Q</b> と <b>\E</b> の間のすべての文字はリテラル文字として解釈されます。例えば、\Q*\d+*\Eはリテラルテキスト*\d+*と一致します。 このエスケープシーケンスは、一部のコンテキストメニューからURLを除外する際にZAPで使用されます。 
 <br>
-<b>Note:</b> If your URL contains a "\E", then you have to do the following steps when using the <b>\Q...\E</b> escape sequence:
+<b>注意:</b> URLに「\E」が含まれている場合、 <b>\Q...\E</b> エスケープシーケンスを使用する際は以下の手順に従ってください： 
 <ul>
-	<li>Open the escape sequence</li>
-	<li>Close the escape sequence before the "character" \E</li>
-	<li>Escape the backslash</li>
-	<li>Open after the "\E" another escape sequence;</li>
-	<li>Close the escape sequence as normally would.</li>
+	<li>エスケープシーケンスを開く</li>
+	<li>「文字」\Eの前でエスケープシーケンスを閉じる</li>
+	<li>バックスラッシュをエスケープする</li>
+	<li>「\E」の後で別のエスケープシーケンスを開く</li>
+	<li>通常通りエスケープシーケンスを閉じる</li>
 </ul>
 <br>
-Example: subdomain.example.com/path?a=<b>\E</b>&amp;moredata=2 should appear as
+例: subdomain.example.com/path?a=<b>\E</b>&amp;moredata=2 は次のように表記する必要があります 
 <i>\Qsubdomain.example.com/path?a=\E</i><b>\\E</b><i>\Q&amp;moredata=2\E</i>
   
-<h2>Accessed via</h2>
+<h2>ここから参照されています</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../tabs/sites.html">Sites tab</a></td><td>Double click a Context</td></tr>
+<a href="../../tabs/sites.html">サイトタブ</a></td><td>コンテキストをダブルクリック</td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>関連情報</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UIの概要</a></td><td>ユーザー インターフェイスの概要について</td></tr>
+<a href="../../overview.html">UIの概要</a></td><td>ユーザーインターフェースの概要について</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../dialogs.html">ダイアログ</a></td><td>ダイアログボックスやポップアップの詳細 </td></tr>
+<a href="../dialogs.html">ダイアログ</a></td><td>ダイアログやポップアップの詳細 </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../../../start/features/authentication.html">認証</a></td><td>認証の概要について </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../../../start/features/sessionManagement.html">セッション管理</a></td><td>セッション管理の概要について </td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../../start/features/custompages.html">Custom Page</a></td><td>for an overview of Custom Page details </td></tr>
+<a href="../../../start/features/custompages.html">カスタム ページ</a></td><td>カスタムページの詳細について </td></tr>
 </table>
 
 

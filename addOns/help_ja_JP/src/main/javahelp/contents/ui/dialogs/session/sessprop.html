@@ -7,54 +7,52 @@
 </title>
 </head>
 <body>
-<h1>セッション プロパティ ダイアログ ボックス</h1>
+<h1>セッション プロパティダイアログ</h1>
 <p>
-This allows you to set the session properties and is made up of the following screens:
+このダイアログでは、セッションのプロパティを設定します。以下の画面から構成されています：
 
-<h3>General</h3>
-This allows you to set the session name and description.
+<h3>全般</h3>
+セッションの名前と説明を設定します。
 
-<h3>Exclude from Proxy</h3>
-This allows you to manage the URLs which will be ignored by the local proxies.
+<h3>プロキシから除外</h3>
+ローカルプロキシで無視するURLを管理します。
 
-<h3>Exclude from Scanner</h3>
-This allows you to manage the URLs which will be ignored by the scanner.
+<h3>スキャナーから除外</h3>
+スキャナーで無視するURLを管理します。
 
-<h3>Exclude from Spider</h3>
-This allows you to manage the URLs which will be ignored by the spiders (standard and AJAX).
+<h3>スパイダーから除外</h3>
+スパイダー (標準およびAJAX) で無視するURLを管理します。
 
 <h3>コンテキスト</h3>
-A set of screens for managing <a href="../../../start/features/contexts.html">contexts</a>
+ <a href="../../../start/features/contexts.html">コンテキスト</a>を管理するための一連の画面です。<a</a>
 
 <h2>URL 正規表現</h2>
-In the <i>Exclude from *</i> dialogs, you can enter regular expressions to define excluded URLs.
-While you can escape a single meta-character with a backslash, you can also use the <b>\Q...\E</b> escape sequence. All the characters between the <b>\Q</b> and the <b>\E</b> are interpreted as literal characters. E.g. \Q*\d+*\E matches the literal text *\d+*.
-This escape sequence is used in ZAP when you exclude URLs via some context menus.
+ <i>〜から除外</i> ダイアログでは、正規表現を入力して除外対象のURLを定義できます。単一のメタ文字はバックスラッシュ (&#x005c;) でエスケープできますが、 <b>\Q...\E</b> エスケープシーケンスも使用できます。 <b>\Q</b> と <b>\E</b> の間のすべての文字はリテラル文字として解釈されます。例えば、\Q*\d+*\Eはリテラルテキスト*\d+*と一致します。 このエスケープシーケンスは、一部のコンテキストメニューからURLを除外する際にZAPで使用されます。 
 <br>
-<b>Note:</b> If your URL contains a "\E", then you have to do the following steps when using the <b>\Q...\E</b> escape sequence:
+<b>注意:</b> URLに「\E」が含まれている場合、 <b>\Q...\E</b> エスケープシーケンスを使用する際は以下の手順に従ってください： 
 <ul>
-	<li>Open the escape sequence</li>
-	<li>Close the escape sequence before the "character" \E</li>
-	<li>Escape the backslash</li>
-	<li>Open after the "\E" another escape sequence;</li>
-	<li>Close the escape sequence as normally would.</li>
+	<li>エスケープシーケンスを開く</li>
+	<li>「文字」\Eの前でエスケープシーケンスを閉じる</li>
+	<li>バックスラッシュをエスケープする</li>
+	<li>「\E」の後で別のエスケープシーケンスを開く</li>
+	<li>通常通りエスケープシーケンスを閉じる</li>
 </ul>
 <br>
-Example: subdomain.example.com/path?a=<b>\E</b>&amp;moredata=2 should appear as
+例: subdomain.example.com/path?a=<b>\E</b>&amp;moredata=2 は次のように表記する必要があります
 <i>\Qsubdomain.example.com/path?a=\E</i><b>\\E</b><i>\Q&amp;moredata=2\E</i>
   
 <h2>ここから参照されています</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../tlmenu/file.html">トップレベルファイル メニュー</a></td><td>'Session Properties...' menu item</td></tr>
+<a href="../../tlmenu/file.html">トップレベルのファイルメニュー</a></td><td>「セッションのプロパティ...」メニュー項目</td></tr>
 </table>
 
 <h2>関連情報</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UIの概要</a></td><td>ユーザー インターフェイスの概要について</td></tr>
+<a href="../../overview.html">UIの概要</a></td><td>ユーザーインターフェースの概要について</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../dialogs.html">ダイアログ</a></td><td>ダイアログボックスやポップアップの詳細 </td></tr>
+<a href="../dialogs.html">ダイアログ</a></td><td>ダイアログやポップアップの詳細 </td></tr>
 </table>
 
 </body>

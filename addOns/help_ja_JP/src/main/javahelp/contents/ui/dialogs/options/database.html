@@ -12,32 +12,32 @@
 この画面では、データベースのオプションを設定することができます。
 
 <h3>終了時にコンパクト化</h3>
-Allows to compact the database when ZAP is closed, compacting the database 
-ensures a minimal space disk usage but it will also take longer to exit ZAP.
+ZAP終了時にデータベースを圧縮します。圧縮により
+ディスク使用量を最小限に抑えられますが、ZAPの終了時間が長くなります。
 
-<h3>Recovery Log</h3>
-Controls whether or not database's recovery log is enabled.<br>Improves the performance of the database when disabled but might lead to data loss if ZAP is exited abruptly.<br>
-Note: current session will be unaffected, changes take effect on new and opened sessions.
+<h3>リカバリーログ</h3>
+データベースのリカバリーログを有効にするかどうかを制御します。<br>無効にするとデータベースのパフォーマンスは向上しますが、ZAPが予期せず終了した場合に未保存のデータが失われる可能性があります。<br>
+注意: 現在のセッションには影響せず、新規または再読み込みされたセッションに適用されます。
 
-<h3>Maximum Request Body Size</h3>
-The largest request body size in bytes that ZAP will allow.
+<h3>リクエストボディの最大サイズ</h3>
+ZAPが許容するリクエストボディの最大サイズ (バイト)。
 
-<h3>Maximum Response Body Size</h3>
-The largest response body size in bytes that ZAP will allow.
+<h3>レスポンスボディの最大サイズ</h3>
+ZAPが許容するレスポンスボディの最大サイズ (バイト)。
 
-<h3>Prompt for persistence options on new session</h3>
-If checked then the <a href="../persistsession.html">Persist Session dialog</a> will be shown when a new session is created.
+<h3>新規セッションの保存オプション</h3>
+有効にすると、新しいセッション作成時に <a href="../persistsession.html">セッション保存ダイアログ</a> が表示されます。
 
-<h3>Default option</h3>
-The default option for new sessions - if the above prompt is enabled then the default option will be selected.<br>
-If the prompt is not enabled then this is the action that will be taken.
+<h3>デフォルトオプション</h3>
+新しいセッションのデフォルトオプション。上記のプロンプトが有効な場合、このオプションが初期選択されます。<br>
+プロンプトが無効な場合は、このアクションが自動実行されます。
 
 <h2>関連情報</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../../overview.html">UIの概要</a></td><td>ユーザー インターフェイスの概要について</td></tr>
+<a href="../../overview.html">UIの概要</a></td><td>ユーザーインターフェースの概要について</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="options.html">オプションダイアログ</a></td><td>その他のオプションダイアログの画面についての詳細</td></tr>
+<a href="options.html">オプションダイアログ</a></td><td>その他のオプションダイアログ画面の詳細</td></tr>
 </table>
 
 </body>
