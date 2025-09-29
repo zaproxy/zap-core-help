@@ -9,43 +9,45 @@
 <body>
 <h1>アラート</h1>
 <p>
-アラートは、潜在的な脆弱性と、特定のリクエストに関連付けられています。 <br/>リクエストは1 つ以上のアラートを持つことができます。<br/>
+アラートは潜在的な脆弱性を示すもので、特定のリクエストに関連付けられています。<br/>
+1つのリクエストに複数のアラートが存在する場合もあります。<br/>
 </p>
 <p>
 アラートはリスクを示すフラグを UI 上に表示します:
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/071.png" align="bottom" width="16" height="16" />&nbsp; High</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/076.png" align="bottom" width="16" height="16" />&nbsp; Medium</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/074.png" align="bottom" width="16" height="16" />&nbsp; Low</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/073.png" align="bottom" width="16" height="16" />&nbsp; Informational</td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/072.png" align="bottom" width="16" height="16" />&nbsp; False Positive（誤った警告）</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/071.png" align="bottom" width="16" height="16" />&nbsp; 高</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/076.png" align="bottom" width="16" height="16" />&nbsp; 中</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/074.png" align="bottom" width="16" height="16" />&nbsp; 低</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/073.png" align="bottom" width="16" height="16" />&nbsp; 情報</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><img src="../../images/16/072.png" align="bottom" width="16" height="16" />&nbsp; 誤検知 (偽陽性)</td><td></td></tr>
 </table>
 
 <p>
-アラートは、<a href="ascan.html">アクティブスキャン</a>、<a href="pscan.html">パッシブスキャン</a>、スクリプト、拡張アドオン、または<a href="../../ui/dialogs/addalert.html">「アラートの追加」ダイアログ</a>を使用して手動で作成するなど、さまざまなZAPコンポーネントによって生成されます。
-「アラートの追加」ダイアログを使用して、アラートの詳細/情報を更新または変更することもできます。
+アラートは、<a href="ascan.html">アクティブスキャン</a>、<a href="pscan.html">パッシブスキャン</a>、スクリプト、アドオン (拡張機能)、または<a href="../../ui/dialogs/addalert.html">「アラートの追加」ダイアログ</a>を使用して手動で作成するなど、さまざまなZAPコンポーネントによって生成されます。
+「アラートの追加」ダイアログでは、アラートの詳細/情報を更新または変更することもできます。
 </p>
 <p>
-アラートは<a href="../../ui/tabs/history.html">履歴タブ</a>の中に最もリスクとなるアラートを示します。<br/>全てのアラートは<a href="../../ui/tabs/alerts.html">アラートタブ</a>に列挙され、そのリスクの総数は<a href="../../ui/footer.html">フッター</a>にカウントされます。.
+<a href="../../ui/tabs/history.html">履歴タブ</a>では、最も高いリスクのアラートにフラグが付けられます。<br/>
+すべてのアラートは<a href="../../ui/tabs/alerts.html">アラートタブ</a>に一覧表示され、リスクごとのアラート数は<a href="../../ui/footer.html">フッター</a>に表示されます。.
 </p>
 
-<a name="alertoverrides"></a><h2>アラートの上書き</h2> 
+<a name="alertoverrides"></a><h2>アラートのオーバーライド</h2> 
 
-ZAPによって生成されたアラートには、発生したアラートに関する一般的な情報と特定の情報の両方が含まれます。
-特定の情報は、URLや影響を受けるパラメータなど、潜在的に見つかった問題に直接関連しています。
+ZAPによって発行されるアラートには、発生したアラートに関する一般的な情報と固有の情報が含まれています。
+固有の情報は、対象のURLやパラメーターなど、発見された潜在的な問題に直接関連するものです。
 一般的な情報には、説明や関連するオンラインリソースへのリンクなどが含まれます。
 <p>
-「alert override 構成ファイル」を使用して、一般的な情報を置換または追加することができます。
-これにより、義務付けられたポリシー、内部リンク、または使用する特定のテクノロジのアドバイスなど、会社固有の情報を含めることができます。
+「アラートオーバーライド」構成ファイルを使用することで、一般的な情報を置換または追加できます。
+これにより、組織で規定されたポリシー、内部ドキュメントへのリンク、使用している特定のテクノロジーに関するアドバイスなど、独自の情報をアラートに含めることができます。
 <p>
-「alert override」設定ファイルは、変更したい情報だけを含むUTF-8形式のファイルです。
+アラートオーバーライド構成ファイルは、変更したい情報のみを記述したUTF-8エンコーディングのプロパティファイルです。
 '#'で始まる行はコメントとして扱われ、無視されます。
 <p>
-フォーマットは以下要領です。
+フォーマットは次の通りです。
 <pre>
 &lt;alertid&gt;.&lt;property&gt; = [ + | - ] &lt;your information&gt;
 </pre>
-以下プロパティーがあります。
+サポートされているプロパティは以下の通りです。
 <ul>
 <li>name</li>
 <li>description</li>
@@ -54,31 +56,31 @@ ZAPによって生成されたアラートには、発生したアラートに�
 <li>reference</li>
 </ul>
 
-The format for alert tags is:
+アラートタグのフォーマットは次の通りです。
 <pre>
 &lt;alertid&gt;.tag.&lt;key&gt; = [ + | - ] [ &lt;value&gt; ]
 </pre>
-Note that:
+注意点：
 <ul>
-<li>Spaces in the tag key must be escaped with a backslash.</li>
-<li>The tag value is optional.</li>
+<li>タグのキーに含まれるスペースは、バックスラッシュでエスケープする必要があります。</li>
+<li>タグの値は省略可能です。</li>
 </ul>
 
-For example
+例：
 <pre>
-# 40012 = Reflected XSS
-40012.solution = Follow our company specific guidelines at http://internet.example.com/xss.html
+# 40012 = 反射型XSS
+40012.solution = http://internet.example.com/xss.html にある当社のガイドラインに従ってください。
 40012.tag.Bug\ Tracker\ URL = https://example.com/issues/1234
 </pre>
-If the value starts with a '+' then it is appended to the existing information.
+値が '+' で始まる場合、既存の情報に追記されます。
 <br>
-If it starts with a '-' then it is prepended to the existing information.
+値が '-' で始まる場合、既存の情報の前に挿入されます。
 <br>
-If it does not start with a '+' or '-' then it replaces the existing information.
+値が '+' または '-' で始まらない場合、既存の情報を置き換えます。
 <p>
-アラートオーバーライド設定ファイルは、APIで指定できます。 <a href="api.html">　指定方法は次の通り、</a>,
-<a href="../../ui/dialogs/options/alert.html">アラート画面のオプション</a>
-または <a href="../../cmdline.html">コマンドライン</a> オプション  
+アラートオーバーライド設定ファイルは、 <a href="api.html">API</a>,
+<a href="../../ui/dialogs/options/alert.html">オプション アラート画面</a>
+または以下の <a href="../../cmdline.html">コマンドライン</a> オプションで指定できます。  
 <pre>-config alert.overridesFilename=&lt;filename&gt;</pre>
 
 <h2>関連情報</h2>
@@ -86,7 +88,7 @@ If it does not start with a '+' or '-' then it replaces the existing information
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../../ui/overview.html">UIの概要</a></td><td>ユーザーインターフェースの概要について</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="features.html">特徴</a></td><td>ZAPで提供されるもの</td></tr>
+<a href="features.html">機能</a></td><td>ZAPが提供する機能について</td></tr>
 </table>
 
 </body>

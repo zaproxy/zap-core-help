@@ -3,52 +3,50 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Scan Progress Dialog
+スキャン進捗ダイアログ
 </title>
 </head>
 <body>
-<h1>Scan Progress Dialog</h1>
+<h1>スキャン進捗ダイアログ</h1>
 <p>
-This shows you the status of an <a href="../../start/features/ascan.html">active scan</a>.<br>
+このダイアログは、 <a href="../../start/features/ascan.html">アクティブスキャン</a>のステータスを表示します<a href="#"></a>.<br>
 
-<h3>Progress tab</h3>
-This shows which scan rules are running for each host being scanned, as well as other details such as the 
-elapsed time they have been running and the number of requests made per rule.<br>
-It also allows you to skip the rule which is currently being run by clicking on the 
-'Skip current running active scan' button <img src="../../images/10/137.png" align="bottom" width="10" height="10" /> 
- in the Status column.
+<h3>進捗タブ</h3>
+このタブには、スキャン対象の各ホストに対してどのスキャンルールが実行されているか、また、ルールの実行経過時間やルールごとのリクエスト数といった詳細情報が表示されます。<br>
+「ステータス」列にある「現在実行中のアクティブスキャンをスキップ」ボタン <img src="../../images/10/137.png" align="bottom" width="10" height="10" /> 
+ をクリックすることで、現在実行中のルールをスキップすることも可能です。
 
-<h3>Response Chart tab</h3>
-This shows the number of responses per second received by ZAP while active scanning a site.<br>
-The responses are charted per 'HTTP response status code group':
+<h3>レスポンスチャートタブ</h3>
+このタブには、サイトのアクティブスキャン中にZAPが受信した1秒あたりのレスポンス数が表示されます。<br>
+レスポンスは、以下の「HTTPレスポンスステータスコードのグループ」ごとにグラフ化されます：
 <ul>
-<li>1xx Informational</li>
-<li>2xx Success</li>
-<li>3xx Redirection</li>
-<li>4xx Client Error</li>
-<li>5xx Server Error</li>
+<li>1xx 情報レスポンス</li>
+<li>2xx 成功レスポンス</li>
+<li>3xx リダイレクトメッセージ</li>
+<li>4xx クライアントエラーレスポンス</li>
+<li>5xx サーバーエラーレスポンス</li>
 </ul>
-You can zoom in by selecting an area of the chart using your mouse.<br>
-You can also right click the chart for more options.<br>
-Vertical bars indicate approximately when each scan rule starts (it is very difficult to be precise).<br>
-The chart will only be updated while open, if you close and then reopen the chart then the previous data will be lost.<br>
-By default the maximum time the chart will cover is 10 minutes, you can change that via the
-<a href="options/ascan.html">Options Active Scan screen</a>.
+マウスでグラフの領域を選択することで、拡大できます。<br>
+また、グラフを右クリックすると、さらに多くのオプションが表示されます。<br>
+グラフ内の垂直な棒は、各スキャンルールが開始されたおおよその時点を示します (正確に表示することは非常に困難です)。<br>
+このチャートは開いている間のみ更新されます。一度閉じてから再度開くと、以前のデータは失われます。<br>
+デフォルトでは、チャートが表示する最大時間は10分間です。この設定は
+<a href="options/ascan.html">オプション アクティブスキャン画面</a>で変更できます<a href="#"></a>.
 
-<h2>Accessed via</h2>
+<h2>ここから参照されています</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/ascan.html">Active Scan tab</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/ascan.html">アクティブスキャンタブ</a></td><td></td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>関連情報</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../overview.html">UIの概要</a></td><td>ユーザーインターフェースの概要について</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+<a href="dialogs.html">ダイアログ</a></td><td>ダイアログやポップアップの詳細 </td></tr>
 </table>
 
-<h2>External Links</h2>
+<h2>外部リンク</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">https://en.wikipedia.org/wiki/List_of_HTTP_status_codes</a></td><td></td></tr>
 </table>

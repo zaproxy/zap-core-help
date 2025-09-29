@@ -3,20 +3,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-CSRF 処理対策
+Anti-CSRF 処理
 </title>
 </head>
 <body>
-<h1>Anti CSRF トークン</h1>
+<h1>Anti-CSRF トークン</h1>
 <p>
-Anti CSRFトークンはクロスサイトリクエストフォージェリ(CSRF)攻撃を防ぐ為に使われている(疑似)ランダムのパラメータです。<br>しかしながら、これはペネトレーションテスターの仕事を困難なものにしてしまいます。特にトークンがフォームがリクエストされる度に毎回生成される場合です。<br>
+Anti-CSRFトークンは、クロスサイトリクエストフォージェリ (CSRF) 攻撃から保護するために使用される (擬似) ランダムパラメーターです。<br>
+しかし、このトークンはペネトレーションテスターの仕事を困難にします。特に、フォームがリクエストされるたびにトークンが再生成される場合はなおさらです。<br>
 </p>
 <p>
-ZAP detects anti CSRF tokens purely by attribute names - the list of attribute names considered to be anti CSRF tokens
-is configured using the <a href="../../ui/dialogs/options/anticsrf.html">Options Anti CSRF screen</a>.<br/>
-When ZAP detects these tokens it records the token value and which URL generated the token.<br/>
-Other tools, like the <a href="ascan.html">active scanner</a>, have options which
-cause ZAP to automatically regenerate the tokens when required.
+ZAPは、属性名のみによってAnti-CSRFトークンを検出します。Anti-CSRFトークンと見なされる属性名のリストは、<a href="../../ui/dialogs/options/anticsrf.html">オプション Anti-CSRF画面</a>で設定します。<br/>
+ZAPがこれらのトークンを検出すると、その値とトークンを生成したURLを記録します。<br/>
+<a href="ascan.html">アクティブスキャナー</a>などの他のツールには、必要に応じてZAPがトークンを自動的に再生成するためのオプションがあります。
 </p>
 
 <h2>関連情報</h2>
@@ -24,7 +23,7 @@ cause ZAP to automatically regenerate the tokens when required.
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../../ui/overview.html">UIの概要</a></td><td>ユーザーインターフェースの概要について</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="features.html">特徴：</a></td><td>ZAPによって提供されます。</td></tr>
+<a href="features.html">機能</a></td><td>ZAPが提供する機能について</td></tr>
 </table>
 
 </body>

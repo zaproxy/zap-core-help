@@ -15,8 +15,8 @@
 
    <tocitem text="はじめに" target="start.start">
       <tocitem text="プロキシの設定" target="start.proxy"/>
-      <tocitem text="特徴" target="start.features">
-         <tocitem text="動的スキャン" target="start.features.ascan"/>
+      <tocitem text="機能" target="start.features">
+         <tocitem text="アクティブスキャン" target="start.features.ascan"/>
          <tocitem text="アドオン" target="start.features.addons"/>
          <tocitem text="アラート" target="start.features.alerts"/>
          <tocitem text="CSRF 対策トークン" target="start.features.anticsrf"/>
@@ -64,7 +64,7 @@
          <tocitem text="検索" target="ui.tabs.search"/>
          <tocitem text="ブレークポイント" target="ui.tabs.breakpoints"/>
          <tocitem text="アラート" target="ui.tabs.alerts"/>
-         <tocitem text="動的スキャン" target="ui.tabs.ascan"/>
+         <tocitem text="アクティブスキャン" target="ui.tabs.ascan"/>
          <tocitem text="パラメーター" target="ui.tabs.params"/>
          <tocitem text="HTTP セッション" target="ui.tabs.httpsessions"/>
          <tocitem text="出力" target="ui.tabs.output"/>
@@ -75,7 +75,7 @@
          <tocitem text="ブレークポイントの追加/変更" target="ui.dialogs.addbreak"/>
          <tocitem text="ノート追加" target="ui.dialogs.addnote"/>
          <tocitem text="検索" target="ui.dialogs.find"/>
-         <tocitem text="履歴フィルタ" target="ui.dialogs.historyfilter"/>
+         <tocitem text="履歴フィルター" target="ui.dialogs.historyfilter"/>
          <tocitem text="アドオンの管理" target="ui.dialogs.manageaddons"/>
          <tocitem text="履歴タグの管理" target="ui.dialogs.managetags"/>
          <tocitem text="オプション" target="ui.dialogs.options">
@@ -104,7 +104,7 @@
          </tocitem>
          <tocitem text="スキャン進捗" target="ui.dialogs.scanprogress"/>
          <tocitem text="セッション" target="ui.dialogs.sessprop">
-	         <tocitem text="セッション・プロパティ" target="ui.dialogs.sessprop"/>
+	         <tocitem text="セッションプロパティ" target="ui.dialogs.sessprop"/>
 	         <tocitem text="セッションコンテキスト" target="ui.dialogs.contexts"/>
 	         <tocitem text="セッションコンテキスト認証" target="ui.dialogs.context-auth"/>
 	         <tocitem text="セッションコンテキスト構造" target="ui.dialogs.context-struct"/>

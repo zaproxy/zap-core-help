@@ -3,45 +3,45 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Views
+ビュー
 </title>
 </head>
 <body>
-<h1>Views</h1>
+<h1>ビュー</h1>
 <p>
-ZAP provides a set of plugable views which allows you to display the requests and responses in different ways.<br/>
-The following views are included by default:
+ZAPは、リクエストとレスポンスをさまざまな方法で表示できるプラグイン可能なビューを提供します。<br/>
+デフォルトでは以下のビューが含まれます：
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Text</td><td>The data in text format</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Hex</td><td>A table showing the hex representation of all of the characters in the header and body. <br>
-	For editable screens this allows you to add control characters via their hex codes.<br>
-	You cannot add or delete characters in this view - to do that switch to one of the other views and then back to carry on in hex view.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Image</td><td>The image - only available for bodys containing images</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Table</td><td>A table with one row per attribute and value.<br>
-	For editable screens all values will automatically be URL encoded when they are submitted. </td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Table (adv)</td><td>A table with one row per attribute and value plus additional functions.<br>
-	For editable screens values will not be automatically be URL encoded when they are submitted, but this can be done 'manually' via 'URLEncode' function. </td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Large Request</td><td>A placeholder view used to prevent the UI trying to load a very large request body.<br>
-	You will need to switch to a different view to display the actual contents.<br>
-	The threshold for the view can be changed via the <a href="dialogs/options/view.html">Display Options screen</a></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Large Response</td><td>A placeholder view used to prevent the UI trying to load a very large response body.<br>
-	You will need to switch to a different view to display the actual contents.<br>
-	The threshold for the view can be changed via the <a href="dialogs/options/view.html">Display Options screen</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>テキスト</td><td>テキスト形式のデータ</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>16進</td><td>ヘッダーとボディのすべての文字の16進数表現を示すテーブル。 <br>
+編集可能な画面では、16進コードを使用して制御文字を追加できます。
+このビューでは文字を追加または削除することはできません。これを行うには他のビューに切り替えてから戻り、16進ビューで続行してください。</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>画像</td><td>画像 - 画像を含むボディでのみ利用可能</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>テーブル</td><td>属性と値ごとに1行のテーブル<br>
+編集可能な画面では、送信時にすべての値が自動的にURLエンコードされます。 </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>テーブル (詳細)</td><td>属性と値ごとに1行のテーブルに追加機能を加えたもの。<br>
+編集可能な画面では、送信時に値は自動的にURLエンコードされませんが、「URLエンコード」機能を使用して「手動で」行うことができます。 </td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>大きなリクエスト</td><td>UIが非常に大きなリクエストボディを読み込もうとすることを防ぐために使用されるプレースホルダービュー<br>
+実際の内容を表示するには別のビューに切り替える必要があります。<br>
+このビューのしきい値は<a href="dialogs/options/view.html">表示オプション画面</a>で変更できます。</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>大きなレスポンス</td><td>UIが非常に大きなレスポンスボディを読み込もうとすることを防ぐために使用されるプレースホルダービュー<br>
+実際の内容を表示するには別のビューに切り替える必要があります。<br>
+このビューのしきい値は<a href="dialogs/options/view.html">表示オプション画面</a>で変更できます。</td></tr>
 </table>
 <p>
-Note that <a href="../start/features/addons.html">add-ons</a> can add additional views.
+<a href="../start/features/addons.html">アドオン</a>により追加のビューが追加される場合があります。
 </p>
 
-<h2>Used in</h2>
+<h2>使用場所</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="tabs/break.html">Break tab</a></td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="tabs/request.html">Request tab</a></td><td></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="tabs/response.html">Response tab</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="tabs/break.html">ブレークタブ</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="tabs/request.html">リクエストタブ</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="tabs/response.html">レスポンスタブ</a></td><td></td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>関連情報</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="overview.html">UIの概要</a></td><td>ユーザーインターフェースの概要について</td></tr>
 </table>
 
 </body>
