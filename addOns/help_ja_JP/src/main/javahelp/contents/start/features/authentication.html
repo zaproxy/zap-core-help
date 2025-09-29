@@ -6,75 +6,58 @@
 </head>
 <body>
 	<h1>認証</h1>
-	ZAP can handle a wide range of authentication mechanisms.<br>
-	If you are new to ZAP automation then the best place to start is the ZAP 
-	<a href="https://www.zaproxy.org/docs/authentication/">Authentication Decision Tree</a> (external link).
+	ZAPは幅広い認証メカニズムに対応できます。<br>
+	ZAP自動化が初めての場合は、ZAPの 
+	<a href="https://www.zaproxy.org/docs/authentication/">認証決定木</a> (外部リンク) から始めるのが最適です。
 	<p>
-	Each <a href="contexts.html">Context</a> has:
+	各 <a href="contexts.html">コンテキスト</a> には以下があります：
 	<ul>
-	<li>an <a href="authmethods.html">Authentication Method</a> which defines how authentication is handled. 
-	The authentication is used to create Web Sessions that correspond to authenticated webapp <a href="users.html">Users</a>.</li>
-	<li>an <a href="authstrategies.html">Authentication Verification Strategy</a>
-	which defines how ZAP should detect when messages correspond to authenticated requests.</li>
+	<li>認証の処理方法を定義する<a href="authmethods.html">認証方式</a>。 
+	認証は、認証されたWebアプリケーション<a href="users.html">ユーザー</a>に対応するWebセッションを作成するために使用されます.</li>
+	<li>ZAPがメッセージが認証済みリクエストに対応しているかを検出する方法を定義する<a href="authstrategies.html">認証検証戦略</a>。</li>
 	</ul>
-	You can use any combination of Authentication Method and Verification Strategy which works for your webapp.
+	Webアプリケーションで機能する認証方式と検証戦略の任意の組み合わせを使用できます。
 	<p>
-	In order to perform the authentication of a user on a website /
-	in a webapp, the Authentication Method and Verification Strategy define how the authentication
-	is done (the process), while the necessary credentials (the exact
-	identifiers) are dependent on the user, so, in ZAP, they are
-	configured in the Users.
+	Webサイト/Webアプリケーションでユーザーの認証を実行するために、認証方式と検証戦略は認証の実行方法 (プロセス) を定義しますが、必要な認証情報 (正確な識別子) はユーザーに依存するため、ZAPではユーザーで設定されます。
 	<p>
-	The generic <b>main steps</b> that are needed to configure authentication for a web application
-	are the following:
+	Webアプリケーションの認証を設定するために必要な一般的な <b>主要手順</b> は以下の通りです：
 	<ol>
-		<li>Configure a ZAP <a href="contexts.html">Context</a> for the web application, ensuring that all required URLs are included</li>
-		<li>Set up the <a href="sessionManagement.html">Session Management Method</a> for the context to
-		the one that is used in your app</li>
-		<li>Configure the <a href="authmethods.html">Authentication Method</a> for your application, specifying all the requirements</li>
-		<li>Configure the <a href="authstrategies.html">Authentication Verification Strategy</a> for your application, specifying at least one
-			of the <i>Logged In Indicator</i> or the <i>Logged out indicator</i></li>
-		<li>Configure one or more <a href="users.html">Users</a> for the context that directly correspond to the
-		authentication method for the context</li>
+		<li>Webアプリケーション用のZAP<a href="contexts.html">コンテキスト</a>を設定し、必要なすべてのURLが含まれていることを確認する</li>
+		<li>コンテキストの<a href="sessionManagement.html">セッション管理方式</a>をアプリケーションで使用されているものに設定する</li>
+		<li>アプリケーションの<a href="authmethods.html">認証方式</a>を設定し、すべての要件を指定する</li>
+		<li>アプリケーションの<a href="authstrategies.html">認証検証戦略</a>を設定し、<i>ログイン済み指標</i>または<i>ログアウト済み指標</i>の少なくとも1つを指定する</li>
+		<li>コンテキストの認証方式に直接対応する1つ以上の<a href="users.html">ユーザー</a>をコンテキスト用に設定する</li>
 	</ol>
 
-	<h2>Configuration example</h2>
-	<p>A configuration example showing how to fully configure a webapp that uses <i>form-based authentication</i>,
-	<i>cookie-based session management</i> and returns full HTML pages (including an indication of whether the user is logged in) is seen below:
+	<h2>設定例</h2>
+	<p> <i>フォームベース認証</i>,
+	<i>Cookieベースセッション管理</i> を使用し、完全なHTMLページ (ユーザーがログインしているかどうかの指標を含む) を返すWebアプリケーションを完全に設定する方法の例を以下に示します： 
 	<ol>
-		<li>Set up a context for the web application</li>
-		<li>Set up the session management method to <i>Cookie-based Session Management</i></li>
-		<li>Make sure your browser proxies everything through ZAP and log into your application using the browser</li>
-		<li>Go to ZAP and identify the request that was done for the login (most usually it's a HTTP POST request 
-		containing the username and the password and possibly other elements)</li>
-		<li>If there is an anti-CSRF token in the login request, add the token name in 
-		<a href="../../ui/dialogs/options/anticsrf.html">Options Anti CSRF screen</a>, if not present.</li>
-		<li>Set up the authentication method:
+		<li>Webアプリケーション用のコンテキストを設定する</li>
+		<li>セッション管理方式を<i>Cookieベースセッション管理</i>に設定する</li>
+		<li>ブラウザがZAPを経由してすべてをプロキシするようにし、ブラウザを使用してアプリケーションにログインする</li>
+		<li>ZAPに移動し、ログインのために実行されたリクエストを特定する (最も一般的には、ユーザー名とパスワード、および場合によっては他の要素を含むHTTP POSTリクエスト)</li>
+		<li>ログインリクエストにAnti-CSRFトークンがある場合、トークン名が存在しなければ<a href="../../ui/dialogs/options/anticsrf.html">オプション Anti-CSRF画面</a>に追加する</li>
+		<li>認証方式を設定する：
 			<ol>
-			<li>Right click on the authentication request and 'Flag as Context... Form-based Auth Login Request'</li>
-			<li>A window will be opened already containing the request URL and the parameters (if any). Use 
-			the dropdown options to select which of the parameters correspond to the username and to the password</li>
+			<li>認証リクエストを右クリックし、「コンテキストとしてフラグ付け...」> 「フォームベース認証ログインリクエスト」を選択する</li>
+			<li>リクエストURLとパラメーター (ある場合) が既に含まれているウィンドウが開く。ドロップダウンオプションを使用して、どのパラメーターがユーザー名とパスワードに対応するかを選択する</li>
 			</ol>
 		</li>
-		<li>Set up the authentication verification strategy:
+		<li>認証検証戦略を設定する：
 			<ol>
-			<li>Select a message which has a suitable logged in or logged out indicator e.g. a logout link or a welcome message</li>
-			<li>Select the relevant text, right click on it and select either 'Flag as Context... Authentication Logged-in Indicator' or
-			'Flag as Context... Authentication Logged-out Indicator' as appropriate
+			<li>適切なログイン済みまたはログアウト済み指標を持つメッセージを選択する (例: ログアウトリンクまたはようこそメッセージ)</li>
+			<li>関連するテキストを選択し、右クリックして「コンテキストとしてフラグ付け...」> 「認証ログイン済み指標」または「コンテキストとしてフラグ付け...」> 「認証ログアウト済み指標」を適切に選択する
 			</ol>
 		</li>
-    	<li>Define as many users as you need in the Session Properties -> Users section.</li>
+    	<li>「セッションプロパティ」 → 「ユーザーセクション」で必要な数のユーザーを定義する</li>
 	</ol>
-   	After configuring authentication, various actions are available in ZAP. For example, you can now select the user in the 
-   	Spider dialogue.
+   	認証を設定すると、ZAPでさまざまなアクションが利用可能になります。例えば、スパイダーダイアログでユーザーを選択できるようになります。
 	<br>
-	Most of the steps above apply as well for other authentication methods. The only things that change when trying
-	to configure authentication using a different method is step 6. Instead of that, select the authentication
-	method required from the drop-down list and configure it as needed. More details about configuring each type 
-	of authentication can be found in the <a href="authmethods.html">Authentication Methods</a> page and in the 
-	<a href="../../ui/dialogs/session/contexts.html">Context Session screens</a>.
+	上記のほとんどの手順は、他の認証方式にも適用されます。 異なる方式を使用して認証を設定しようとする場合に変更されるのは手順6のみです。 その代わりに、ドロップダウンリストから必要な認証方式を選択し、必要に応じて設定します。 各種類の認証の設定に関する詳細は、 <a href="authmethods.html">認証方式</a> ページおよび 
+	<a href="../../ui/dialogs/session/contexts.html">コンテキストセッション画面</a>にあります<a href="#"></a>.
 
-	<h2><a name="forceduser">Forced User Mode</a></h2>
+	<h2><a name="forceduser">強制ユーザーモード</a></h2>
 	When Forced User Mode is enabled then all interactions that go through ZAP for a given context will be 
 	updated to be from the perspective of the specified User.<br>
    	The Forced User Mode is enabled via a button in the toolbar (the one with the user and the lock) and 
@@ -92,52 +75,51 @@
 	<li>ZAP_AUTH_HEADER_SITE - if this is defined then header will only be included in sites who's name includes its value</li>
 	</ul>
 
-	<h2>Configured via</h2>
+	<h2>設定箇所</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/session/contexts.html#auth">Session Properties dialog</a></td>
+			<td><a href="../../ui/dialogs/session/contexts.html#auth">セッションプロパティダイアログ</a></td>
 			<td></td>
 		</tr>
 	</table>
 
-	<h2>See also</h2>
+	<h2>関連情報</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="https://youtu.be/cR4gw-cPZOA">Youtube tutorial</a></td>
-			<td>of the Authentication, Session Management and Users Management features of ZAP [external link to https://youtu.be/cR4gw-cPZOA].</td>
+			<td><a href="https://youtu.be/cR4gw-cPZOA">YouTube チュートリアル</a></td>
+			<td>認証、セッション管理、ユーザ管理などZAPの機能について [外部リンク: https://youtu.be/cR4gw-cPZOA]</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/overview.html">UI Overview</a></td>
-			<td>for an overview of the user interface</td>
+			<td><a href="../../ui/overview.html">UIの概要</a></td>
+			<td>ユーザーインターフェースの概要について</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="features.html">Features</a></td>
-			<td>provided by ZAP</td>
+			<td><a href="features.html">機能</a></td>
+			<td>ZAPが提供する機能について</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/session/contexts.html">Session
-					Contexts Dialog</a></td>
-			<td>for an overview of the Session Properties</td>
+			<td><a href="../../ui/dialogs/session/contexts.html">セッションコンテキスト ダイアログ</a></td>
+			<td>セッションプロパティの概要について</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="users.html">Users</a></td>
-			<td>for an overview of Users</td>
+			<td><a href="users.html">ユーザー</a></td>
+			<td>ユーザーの概要について</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="anticsrf.html">Anti-CSRF tokens</a></td>
+			<td><a href="anticsrf.html">Anti-CSRFトークン</a></td>
 			<td>for an overview of anti-CSRF tokens</td>
 		</tr>
 
 	</table>
 
-<h2>Official Videos</h2>
+<h2>公式ビデオ</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 <td><a href="https://play.sonatype.com/watch/ttqKANDzJCAdBUkPrsz6Td">ZAP In Ten: Authentication: Basic and Digest</a> (9:57)</td></tr>

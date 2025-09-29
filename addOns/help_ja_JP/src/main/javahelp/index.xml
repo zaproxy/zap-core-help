@@ -14,7 +14,7 @@
     <indexitem text="アクティブスキャンタブ" target="ui.tabs.ascan"/>
     <indexitem text="アドオン" target="start.features.addons"/>
     <indexitem text="アドオン" target="addons.introduction"/>
-    <indexitem text="アラートダイアログの追加" target="ui.dialogs.addalert" />
+    <indexitem text="アラートの追加ダイアログ" target="ui.dialogs.addalert" />
     <indexitem text="ブレークポイントの追加ダイアログ" target="ui.dialogs.addbreak" />
     <indexitem text="ノートの追加ダイアログ" target="ui.dialogs.addnote" />
     <indexitem text="アラートタブ" target="ui.tabs.alerts" />
@@ -33,7 +33,7 @@
     <indexitem text="カスタムページ" target="start.features.custompages" /> 
     <indexitem text="データ駆動型コンテンツ" target="start.features.ddc" />
     <indexitem text="ダイアログ" target="ui.dialogs" />
-    <indexitem text="特徴" target="start.features" />
+    <indexitem text="機能" target="start.features" />
     <indexitem text="検索ダイアログ" target="ui.dialogs.find" />
     <indexitem text="フッター" target="ui.footer" />
     <indexitem text="はじめに" target="start.start" />

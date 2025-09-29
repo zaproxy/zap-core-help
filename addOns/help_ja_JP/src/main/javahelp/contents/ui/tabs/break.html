@@ -9,74 +9,67 @@
 <body>
 <h1>ブレークタブ</h1>
 <p>
-The Break tab allows you to change a request or response when it has been caught by ZAP via
-a <a href="../../start/features/breakpoints.html">breakpoint</a>.<br/>
-It allows you to change elements that you would not normally be able to change via your
-browser, including:
+ブレークタブでは、 <a href="../../start/features/breakpoints.html">ブレークポイント</a>によってZAPがキャッチしたリクエストまたはレスポンスを変更できます<a href="#"></a>.<br/>
+通常ブラウザでは変更できない以下の要素を変更できます： 
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td>The header</td></tr>
+<td>ヘッダー</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td>Hidden fields</td></tr>
+<td>隠しフィールド</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td>Disabled fields</td></tr>
+<td>無効化されたフィールド</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td>Fields that use javascript to filter out illegal characters</td></tr>
+<td>JavaScriptで不正な文字をフィルタリングするフィールド</td></tr>
 </table>
-This functionality is key to effectively pen testing your application.
+この機能は、アプリケーションの効果的なペンテストに不可欠です。
 <p>
-The 2 panels will only contain anything if ZAP has caught a request or response.<br/>
-You can change anything in these 2 panels and then forward the request or response using
-the buttons on the <a href="../tltoolbar.html">Top Level Toolbar</a>.
+2つのパネルは、ZAPがリクエストまたはレスポンスをキャッチした場合にのみ内容が表示されます。<br/>
+これらの2つのパネル内で任意の内容を変更し、<a href="../tltoolbar.html">トップレベルツールバー</a>のボタンを使用してリクエストまたはレスポンスを転送できます.
 </p>
 <p>
-Pull downs allow you to select different <a href="../views.html">Views</a> for the request or response header and body.
+プルダウンにより、リクエストまたはレスポンスのヘッダーとボディに対して異なる<a href="../views.html">ビュー</a>を選択できます。
 </p>
 <p>
-While the Break tab is not in use its icon is a grey cross: &nbsp;
-<img src="../../images/16/101grey.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
-When a <a href="../../start/features/breakpoints.html">breakpoint</a> is hit the tab icon is changed 
-to a red cross: &nbsp;
-<img src="../../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;.<br/>
+ブレークタブが使用されていない時、そのアイコンはグレーの十字: &nbsp;<img src="../../images/16/101grey.png" align="bottom" width="16" height="16" />&nbsp;です。<br/>
+<a href="../../start/features/breakpoints.html">ブレークポイント</a>にヒットすると、タブアイコンは赤い十字: &nbsp;<img src="../../images/16/101.png" align="bottom" width="16" height="16" />&nbsp;に変わります。<br/>
 
 </p>
 
 <p>
-    If you have selected "Show buttons to select the requests you don't want ZAP to break on" in the
-    <a href="../dialogs/options/breakpoints.html">options menu</a> you will be able to select if you just want to break
-    on requests that are in scope and you will be able to select the file extensions you don't want to break on:<br>
+    
+    <a href="../dialogs/options/breakpoints.html">オプションメニュー</a> で「ZAPでブレークしないリクエストを選択するボタンを表示する」を選択している場合、スコープ内のリクエストのみでブレークするかどうかを選択でき、ブレークしたくないファイル拡張子を選択できます：<br>
 <table>
     <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-        <td><img src="../../images/javascript.png" align="bottom" width="16" height="16" />&nbsp; Javascript Files</td></tr>
+        <td><img src="../../images/javascript.png" align="bottom" width="16" height="16" />&nbsp; JavaScriptファイル</td></tr>
     <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-        <td><img src="../../images/cssAndFonts.png" align="bottom" width="16" height="16"/>&nbsp; CSS and Fonts Files </td></tr>
+        <td><img src="../../images/cssAndFonts.png" align="bottom" width="16" height="16"/>&nbsp; CSSおよびフォントファイル </td></tr>
     <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-        <td><img src="../../images/multimedia.png" align="bottom" width="16" height="16" />&nbsp; Multimedia Files</td></tr>
+        <td><img src="../../images/multimedia.png" align="bottom" width="16" height="16" />&nbsp; マルチメディアファイル</td></tr>
     <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-        <td><img src="../../images/fugue/target.png" align="bottom" width="16" height="16" />&nbsp; Only in scope</td></tr>
+        <td><img src="../../images/fugue/target.png" align="bottom" width="16" height="16" />&nbsp; スコープ内のみ</td></tr>
 </table>
 </p>
 
-<h3><img src="../../images/fugue/application-resize.png" align="bottom" width="16" height="16" />&nbsp; Update Content Length</h3>
-By default ZAP will automatically update (or add) the HTTP(S) Content-Length header to match the size of the data submitted. 
-If this option is unselected then ZAP will not update the header allowing you to specify any value you like.<br>
-This button will only be shown for HTTP(S) messages.
+<h3><img src="../../images/fugue/application-resize.png" align="bottom" width="16" height="16" />&nbsp; Content-Length を更新</h3>
+デフォルトでは、ZAPは送信されるデータのサイズに合わせてHTTP(S)のContent-Lengthヘッダーを自動的に更新 (または追加) します。  
+ このオプションの選択を解除すると、ZAPはヘッダーを更新せず、任意の値を指定できるようになります。<br>
+このボタンはHTTP(S)メッセージに対してのみ表示されます。
 
 <h2>右クリック メニュー</h2>
-Right clicking on a node will bring up a menu which will allow you to:
+ノードを右クリックすると、以下の操作を可能にするメニューが表示されます：
 
-<h3>Find...</h3>
-This will bring up the <a href="../dialogs/find.html">検索ダイアログ</a>.
+<h3>検索&mldr;</h3>
+これにより <a href="../dialogs/find.html">検索ダイアログ</a>が表示されます<a href="#"></a>.
 
 <h3>コピー</h3>
-This will copy the selected string to the clipboard.
+選択した文字列をクリップボードにコピーします。
 
 <h2>関連情報</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../overview.html">UIの概要</a></td><td>ユーザーインターフェースの概要について</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="breakpoints.html">Breakpoints tab</a></td><td>for details of how to change or delete breakpoints</td></tr>
+<a href="breakpoints.html">ブレークポイントタブ</a></td><td>ブレークポイントの変更や削除の詳細について</td></tr>
 </table>
 
 </body>

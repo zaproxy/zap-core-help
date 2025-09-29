@@ -9,66 +9,68 @@ Tela de Opções da Varredura Ativa
 <body>
 <h1>Opções, tela de Varredura Ativa</h1>
 <p>
-Esta tela permite a você configurar as opções de <a href="../../../start/features/ascan.html">Varredura Ativa</a> .
+This screen allows you to configure the <a href="../../../start/features/ascan.html">active scan</a> options:
+</p>
 
 <h3>Number of Hosts Scanned Concurrently</h3>
-É o número máximo de hosts que podem ser escaneados ao mesmo tempo. Aumentá-lo vai acrescentar carga ao computados onde o ZAP está rodando.
+<p>The maximum number of hosts that will be scanned at the same time.<br>
+Increasing this may put extra strain on the computer ZAP is running on.</p>
 
 <h3>Concurrent Scanning Threads per Host</h3>
-Número de subdivisões de varreduras (threads) que o ZAP vai fazer em cada host.<br>
-Aumentar o número de subdivisões vai acelerar o escaneamento mas pode sobrecarregar tanto o computador onde o ZAP está rodando quando o host alvo.
+<p>The number of threads the scanner will use per host.<br>
+Increasing the number of threads will speed up the scan but may put extra strain on the computer ZAP is running on and the target host.</p>
 
 <h3>Max Results to List</h3>
-Número de resultados que será exibido na aba Varredura Ativa.<br>
-Exibir um grande número de resultados pode aumentar bastante o tempo que a varredura vai levar.
+<p>The number of results that will be shown in the Active Scan tab.<br>
+Displaying a large number of results can significantly increase the time a scan takes.</p>
 
 <h3>Maximum Rule Duration (minutes; 0 is unlimited)</h3>
-O tempo máximo que qualquer regra individual pode rodar, em minutos. Zero significa sem limite. Isto pode ser usado para evitar as regras que estão tomando uma quantidade excessiva de tempo. 
+<p>O tempo máximo que qualquer regra individual pode rodar, em minutos. Zero significa sem limite. Isto pode ser usado para evitar as regras que estão tomando uma quantidade excessiva de tempo. </p>
 
 <h3>Max alerts any rule can raise</h3>
-The maximum number of alerts any rule can raise during the active scan, scan rules that reach this value are skipped.<br>
-<strong>Note:</strong> The maximum might be exceed due to threading.
+<p>The maximum number of alerts any rule can raise during the active scan, scan rules that reach this value are skipped.<br>
+<strong>Note:</strong> The maximum might be exceed due to threading.</p>
 
 <h3>Maximum Scan Duration (minutes; 0 is unlimited)</h3>
-The maximum time that the whole scan can run for in minutes. Zero means no limit. This can be used to ensure that a scan is completed around a set time. 
+<p>The maximum time that the whole scan can run for in minutes. Zero means no limit. This can be used to ensure that a scan is completed around a set time. </p>
 
 <h3>Delay When Scanning (In Milliseconds)</h3>
-The delay in milliseconds between each request.<br>
+<p>The delay in milliseconds between each request.<br>
 Setting this to a non zero value will increase the time an active scan takes, but will put less of a strain
 on the target host.
 <br><strong>Note:</strong> This option has been deprecated and it will be removed in a future release. Use the Network &gt; Rate Limit option instead. The latter option
-allows to enforce the rate at which the requests are sent while the Delay When Scanning doesn't.
+allows to enforce the rate at which the requests are sent while the Delay When Scanning doesn't.</p>
 
 <h3>Inject plugin ID in header for all active scan requests.</h3>
-If this option is selected the active scanner will inject the request header <code>X-ZAP-Scan-ID</code> with the ID of
-the scan rule that's sending the HTTP requests.
+<p>If this option is selected the active scanner will inject the request header <code>X-ZAP-Scan-ID</code> with the ID of
+the scan rule that's sending the HTTP requests.</p>
 
 <h3>Handle anti-CSRF tokens.</h3>
-If this option is selected then the active scanner will attempt to automatically request 
+<p>If this option is selected then the active scanner will attempt to automatically request 
 <a href="../../../start/features/anticsrf.html">anti CSRF</a> tokens when required.<br>
 Previously this would have forced the scanner to only use one thread, but that is no longer the case.
 You are strongly recommended to check that the anti CSRF tokens are being correctly generated if more than one thread is being used,
-for example using custom <a href="../../../start/features/tags.html">tags</a> to check for success / failure patterns in the response.
+for example using custom <a href="../../../start/features/tags.html">tags</a> to check for success / failure patterns in the response.</p>
 
 <h3>In Attack Mode prompt to rescan nodes when scope changed.</h3>
-If this option is selected then when you select Attack <a href="../../../start/features/modes.html">modo</a> you will be prompted to choose whether to rescan nodes in scope.<br>
-If the option is not selected then the following option will control whether the nodes are rescanned.
+<p>If this option is selected then when you select Attack <a href="../../../start/features/modes.html">mode</a> you will be prompted to choose whether to rescan nodes in scope.<br>
+If the option is not selected then the following option will control whether the nodes are rescanned.</p>
 
 <h3>In Attack Mode always rescan nodes when scope changed.</h3>
-If this option is selected then when running in Attack <a href="../../../start/features/modes.html">mode</a> all nodes in scope will be rescanned if the scope changes.<br>
-This is not recommended for large sites as it could take a long time.
+<p>If this option is selected then when running in Attack <a href="../../../start/features/modes.html">mode</a> all nodes in scope will be rescanned if the scope changes.<br>
+This is not recommended for large sites as it could take a long time.</p>
 
 <h3>Default Active Scan Policy</h3>
-The <a href="../../../start/features/scanpolicy.html">Política de Varredura</a> that is used by default when you start an active scan.
+<p>The <a href="../../../start/features/scanpolicy.html">Scan Policy</a> that is used by default when you start an active scan.</p>
 
 <h3>Attack Mode Scan Policy</h3>
-The <a href="../../../start/features/scanpolicy.html">Scan Policy</a> that is used for scanning in 
-Attack <a href="../../../start/features/modes.html">mode</a>.
+<p>The <a href="../../../start/features/scanpolicy.html">Scan Policy</a> that is used for scanning in 
+Attack <a href="../../../start/features/modes.html">mode</a>.</p>
 
 <h3>Max Progress Chart in Mins</h3>
-The maximum time in minutes for which response codes will be charted in the
+<p>The maximum time in minutes for which response codes will be charted in the
 <a href="../scanprogress.html">Scan Progress dialog</a>.<br>
-To disable the chart the option should be set to zero minutes.
+To disable the chart the option should be set to zero minutes.</p>
 
 <h2>Leia também</h2>
 <table>

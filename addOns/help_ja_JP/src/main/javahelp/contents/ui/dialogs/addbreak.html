@@ -9,45 +9,39 @@
 <body>
 <h1>ブレークポイント追加/編集ダイアログ</h1>
 <p>
-このダイアログでは<a href="../../start/features/breakpoints.html">HTTPブレークポイント</a>を追加および編集できます。 .
+このダイアログでは<a href="../../start/features/breakpoints.html">HTTPブレークポイント</a>を追加および編集できます.
 
 <p>
 ブレークポイントは以下のフィールドで定義されます： 
 
 <ul>
 	<li><strong>場所</strong> - HTTPメッセージ内で<code>文字列</code>がチェックされる場所: <code>URL</code>、<code>リクエストヘッダー</code>、<code>リクエストボディ</code>、<code>レスポンスヘッダー</code>、または<code>レスポンスボディ</code>.</li>
-	<li><strong>Match</strong> - how the <code>String</code> is interpreted, <code>Regex</code>
-		or <code>Contains</code>, for regular expression or exact match, respectively, in the <code>Location</code>.
-		The regular expression does not need to match the whole content of the <code>Location</code>.</li>
-	<li><strong>String</strong> - the string that triggers the breakpoint.</li>
-	<li><strong>Inverse</strong> - if the result of the <code>Match</code> should be
-		the inverse.</li>
-	<li><strong>Ignore case</strong> - if the case of the <code>String</code> should be
-		ignored.</li>
+	<li><strong>一致</strong> - <code>文字列</code>がどのように解釈されるか: <code>正規表現</code>または<code>含む</code>。それぞれ、<code>場所</code>内での正規表現または完全一致を表します。
+		正規表現は<code>場所</code>の内容全体と一致する必要はありません.</li>
+	<li><strong>文字列</strong> - ブレークポイントをトリガーする文字列</li>
+	<li><strong>反転</strong> - <code>一致</code>の結果を反転させるかどうか</li>
+	<li><strong>大文字小文字を無視</strong> - <code>文字列</code>の大文字小文字を無視するかどうか。</li>
 </ul>
 
-If you proxy a HTTP message that matches a breakpoint then ZAP will intercept it and allow you to change either the request
-or the response.
+ブレークポイントに一致するHTTPメッセージをプロキシした場合、ZAPはそれをインターセプトし、リクエストまたはレスポンスのいずれかを変更できるようにします。
 
 <p>
-<strong>Note:</strong> ZAP will warn and prevent adding breakpoints with a fragment identifier component (<code>#</code>), if
-the breakpoint has match <code>Contains</code> and location <code>URL</code>. Such breakpoint would not work because the 
-fragment identifier is not sent to the server.
+<strong>注意:</strong> ZAPは、一致が含むで場所が<code>URL</code>のブレークポイントにフラグメント識別子コンポーネント (<code>#</code>) が含まれている場合、警告を表示してブレークポイントの追加を防ぎます。 <code></code>  <code></code>このようなブレークポイントは、フラグメント識別子がサーバーに送信されないため機能しません。
 
-<h2>Accessed via</h2>
+<h2>ここから参照されています</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../tabs/history.html">History tab</a></td><td>'Break...' right click menu item</td></tr>
+<a href="../tabs/history.html">履歴タブ</a></td><td>右クリックメニュー項目「ブレーク...」</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../tabs/sites.html">Sites tab</a></td><td>'Break...' right click menu item</td></tr>
+<a href="../tabs/sites.html">サイトタブ</a></td><td>右クリックメニュー項目「ブレーク...」</td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>関連情報</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../overview.html">UIの概要</a></td><td>ユーザーインターフェースの概要について</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+<a href="dialogs.html">ダイアログ</a></td><td>ダイアログやポップアップの詳細 </td></tr>
 </table>
 
 </body>

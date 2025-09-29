@@ -3,48 +3,45 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Scan Policy Dialog
+スキャンポリシーダイアログ
 </title>
 </head>
 <body>
-<h1>Scan Policy Dialog</h1>
+<h1>スキャンポリシーダイアログ</h1>
 <p>
-This allows you to enable and disable the rules that are run when performing an <a href="../../start/features/ascan.html">active scan</a>.<br>
-The first screen allows you to define the default levels as well as the levels for all of the rules in a specific category.<br>
+このダイアログでは、<a href="../../start/features/ascan.html">アクティブスキャン</a>実行時に使用されるルールを有効または無効にできます。<br>
+最初の画面では、すべてのルールカテゴリに対するデフォルトのレベルと、特定のカテゴリ内のすべてのルールに対するレベルを定義できます。<br>
 <br>
-The category screens allow you to define the levels for every individual rule.<br>
+カテゴリごとの画面では、個々のルールごとにレベルを設定できます。<br>
 </p>
 
-<h3>Threshold</h3>
-This controls how likely ZAP is to report potential vulnerabilities.<br>
+<h3>しきい値</h3>
+この設定は、ZAPが潜在的な脆弱性を報告する可能性を制御します。<br>
 <ul>
-	<li>If you select Off then the scan rule won't run.</li>
-	<li>If you select Low then more potential issues will be raised which may increase the number of false positives.</li>
-	<li>If you select High then fewer potential issues will be raised which may mean that some real issues are missed (false negatives).</li>
+	<li>「オフ」を選択すると、そのスキャンルールは実行されません。</li>
+	<li>「低」を選択すると、より多くの潜在的な問題が報告されますが、誤検知の数が増える可能性があります。</li>
+	<li>「高」を選択すると、報告される潜在的な問題は少なくなりますが、いくつかの実際の問題が見逃される可能性があります (偽陰性)。</li>
 </ul>  
 
-<h3>Strength</h3>
-This controls the number of attacks that ZAP will perform.<br>
-If you select Low then fewer attacks will be used which will be quicker but may miss some issues.<br>
-If you select High then more attacks will be used which may find more issues but will take longer.<br>
-The Insane level should typically only be used for small parts of an application as it can result in a very large number of 
-attacks being used, which can take a considerable length of time.
+<h3>強度</h3>
+この設定は、ZAPが実行する攻撃の数を制御します。<br>
+「低」を選択すると、使用される攻撃が少なくなるためスキャンは速くなりますが、いくつかの問題を見逃す可能性があります。<br>
+「高」を選択すると、より多くの攻撃が使用されるため、より多くの問題を発見できる可能性がありますが、時間がかかります。<br>
+「過激」レベルは、非常に多数の攻撃が実行される可能性があり、完了までにかなりの時間を要するため、通常はアプリケーションの小規模な部分に対してのみ使用してください。
 <p>
-<strong>Note:</strong> Please be aware that use of the moniker "Insane" with regard to scan 
-strength is simply a name chosen to represent the most extreme strength of scanning, it is not a 
-commentary or reference to mental health or personal stability.
+<strong>注意:</strong> スキャン強度に関する「過激」という呼称の使用は、最も極端なスキャン強度を表すために選ばれた名称に過ぎず、精神的な健康や個人の安定性に関する言及や意見ではありません。
 
-<h2>Accessed via</h2>
+<h2>ここから参照されています</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="scanpolicymgr.html">Scan Policy Manager dialog</a></td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="scanpolicymgr.html">スキャンポリシー管理ダイアログ</a></td><td></td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>関連情報</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../overview.html">UIの概要</a></td><td>ユーザーインターフェースの概要について</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+<a href="dialogs.html">ダイアログ</a></td><td>ダイアログやポップアップの詳細 </td></tr>
 </table>
 
 </body>

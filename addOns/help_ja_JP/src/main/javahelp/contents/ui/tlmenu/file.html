@@ -8,56 +8,55 @@
 </head>
 <body>
 <h1>ファイルメニュー</h1>
-このメニューは、現在のセッションを処理します。既定では、次のメニュー項目が表示されます。<br/>
+このメニューは現在のセッションを処理します。デフォルトでは以下のメニュー項目が表示されます：<br/>
 
 <h3>新規セッション</h3>
 新しいセッションを作成します。<br>
-If you have not saved your current session then a warning will be displayed.<br/>
-Starting a new session without saving the current session will loose all of the data in the current session.
+現在のセッションを保存していない場合、警告が表示されます。<br/>
+現在のセッションを保存せずに新しいセッションを開始すると、現在のセッションのすべてのデータが失われます。
 
 <h3>セッションを開く...</h3>
 以前に保存されたセッションを開きます。<br/>
-Opening a session without saving the current session will loose all of the data in the current session.
+現在のセッションを保存せずにセッションを開くと、現在のセッションのすべてのデータが失われます。
 
-<h3>Open Recent</h3>
-A list of files that have been recently accessed.
+<h3>最近使用したファイルを開く</h3>
+最近アクセスしたファイルの一覧です。
 
-<h3>Persist Session...</h3>
-This persists the current session. <br/>
-While the session is always stored in a database on disk, it will be lost when ZAP is stopped unless it has been persisted.<br/>
-You only need to persist it once - after that all changes will be saved.
+<h3>セッションを保存…</h3>
+現在のセッションを永続化します。 <br/>
+セッションは常にディスク上のデータベースに保存されますが、永続化されていない場合、ZAP を終了すると失われます。<br/>
+永続化は一度だけ行えば十分です。それ以降の変更はすべて保存されます。
 
-<h3>Snapshot Session As...</h3>
-This saves a snapshot of a session that has already been persisted.<br/>
-It will suggest the same filename as the persisted session with a date-time string appended to it, and allow the user to set whatever name they choose.<br/>
+<h3>セッションのスナップショットを作成…</h3>
+既に永続化されているセッションのスナップショットを保存します。<br/>
+永続化されているセッションと同じファイル名に日時文字列を追加したファイル名が提案され、ユーザーが任意の名前を設定できます。<br/>
 
-<h3>Session Properties...</h3>
-This displays the <a href="../dialogs/session/sessprop.html">セッション・プロパティ</a> dialog.<br/>
-This allows you to set the session name and description.
+<h3>セッションプロパティ…</h3>
+ <a href="../dialogs/session/sessprop.html">セッションプロパティ</a> ダイアログを表示します。<br/>
+セッションの名前と説明を設定します。
 
-<h3>Import Context...</h3>
-Allows to import a <a href="../../start/features/contexts.html">Context</a>.
+<h3>コンテキストをインポート...</h3>
+ <a href="../../start/features/contexts.html">コンテキスト</a>をインポートできます<a href="#"></a>.
 
-<h3>Export Context...</h3>
-Allows to export a Context.
+<h3>コンテキストをエクスポート...</h3>
+コンテキストをエクスポートできます。
 
-<h3>Load Add-on file...</h3>
-Load a local <a href="../../start/features/addons.html">add-on</a> file.<br/>
-Add-ons are typically installed from via the <a href="../dialogs/manageaddons.html">Manage Add-ons</a> dialog, but this
-option can be useful if you have downloaded an add-on manually or are testing one you have developed yourself.<br/>
-Add-ons remain installed until you manually uninstall them. 
+<h3>アドオンファイルをロード…</h3>
+ローカルの <a href="../../start/features/addons.html">アドオン</a> ファイルを読み込みます。<br/>
+アドオンは通常 <a href="../dialogs/manageaddons.html">アドオンの管理</a> ダイアログからインストールされますが、このオプションはアドオンを手動でダウンロードした場合や、自分で開発したアドオンをテストする場合に便利です。<br/>
+アドオンは手動でアンインストールするまでインストールされたままになります。 
 
-<h3>Exit and Delete Session...</h3>
-This will exit ZAP and delete the session, even if you have previously persisted it.<br/>
-The session will no longer be accessible when you restart ZAP, although any snapshots you took will still be available.<br/> 
-A warning dialog will be displayed to ensure you really meant to choose this option.
+<h3>セッションを削除して終了…</h3>
+ZAPを終了し、以前に保持していたとしてもセッションを削除します。<br/>
+ZAPを再起動してもセッションにアクセスできなくなりますが、作成したスナップショットは引き続き利用できます。<br/> 
+このオプションを本当に選択するつもりだったかを確認する警告ダイアログが表示されます。
 
-<h3>Exit</h3>
-This will exit ZAP.<br/>
-If you have not saved the current session then you will be given the option to do so.
+<h3>終了</h3>
+ZAPを終了します。<br/>
+現在のセッションを保存していない場合、保存するオプションが提供されます。
 
 <p>
-Note that <a href="../../start/features/addons.html">add-ons</a> can add additional menu items.
+<a href="../../start/features/addons.html">アドオン</a>により追加のメニュー項目が追加される場合があります。
 </p>
 
 <h2>関連情報</h2>

@@ -3,78 +3,77 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Active Scan dialog
+アクティブスキャンダイアログ
 </title>
 </head>
 <body>
-<h1>Active Scan dialog</h1>
+<h1>アクティブスキャンダイアログ</h1>
 <p>
-This dialog launches the <a href="../../start/features/ascan.html">active scanner</a>.<br>
+このダイアログは <a href="../../start/features/ascan.html">アクティブスキャナー</a>を起動します<a href="#"></a>.<br>
   
-<h3>Scope</h3>
-The first tab allows you to select or change the starting point.<br>
-If you have more that one <a href="../../start/features/scanpolicy.html">scan policies</a> then you will be able to select the one to use.<br>
-If the starting point is in one or more <a href="../../start/features/contexts.html">Contexts</a> then you will be able to choose one of them.<br>
-If that context has any <a href="../../start/features/users.html">Users</a> defined then you will be able to select one of them.<br>
-If you select one of the users then the active scan will be performed as that user, with ZAP (re)authenticating as that user whenever necessary.
+<h3>スコープ</h3>
+最初のタブでは、開始点を選択または変更できます。<br>
+複数の <a href="../../start/features/scanpolicy.html">スキャンポリシー</a> がある場合は、使用するものを選択できます。<br>
+開始点が1つ以上の <a href="../../start/features/contexts.html">コンテキスト</a> に含まれている場合は、そのうちの1つを選択できます。<br>
+そのコンテキストに <a href="../../start/features/users.html">ユーザー</a> が定義されている場合は、そのうちの1つを選択できます。<br>
+ユーザーの1つを選択すると、ZAPが必要に応じてそのユーザーとして(再)認証を行い、そのユーザーとしてアクティブスキャンが実行されます。 
 <br><br>
-If you select 'Recurse' then all of the nodes underneath the one selected will also be scanned.<br>
-Custom input vectors are only supported if this option is not selected.
+「再帰」を選択すると、選択したノード下のすべてのノードもスキャンされます。<br>
+カスタム入力ベクトルは、このオプションが選択されていない場合のみサポートされます。 
 <br><br>
-If you select 'Show Advanced Options' then the following tabs will be shown which provide fine grain control over the active scanning process.
+「詳細オプションを表示」を選択すると、以下のタブが表示され、アクティブスキャン処理をきめ細かく制御できます。
 <br><br>
-Clicking on the 'Reset' button will reset all of the options to their default values. 
+「リセット」ボタンをクリックすると、すべてのオプションがデフォルト値にリセットされます。 
 
-<h3>Input Vectors</h3>
-The Input Vectors tab allows you override the default input vectors which are defined in the 
-<a href="../../ui/dialogs/options/ascaninput.html">Options Active Scan Input Vectors screen</a>.<br>
-Clicking on the 'Reset' button will reset the input vectors to the default options. 
+<h3>入力ベクトル</h3>
+入力ベクトルタブでは、 
+<a href="../../ui/dialogs/options/ascaninput.html">オプション アクティブスキャン入力ベクトル画面</a>で定義されているデフォルトの入力ベクトルをオーバーライドできます<a href="#"></a>.<br>
+「リセット」ボタンをクリックすると、入力ベクトルがデフォルトオプションにリセットされます。 
 
-<h3>Custom Vectors</h3>
-The Custom Vectors tab allows you specify specific locations in the request to attack.<br> 
-Custom Vectors are only available if the 'Recurse' option on the first tab is not selected.<br>
-To add custom input vectors highlight the characters you want to attack in the request and click the 'Add' button.<br>
-You can add as many custom input vectors as you want.<br>
-To remove custom input vectors highlight any of the selected characters and click the 'Remove' button.<br>
-Checking the 'Disable non custom input vectors' box disables all of the input vectors except those you manually define on this tab.
+<h3>カスタムベクトル</h3>
+カスタムベクトルタブでは、リクエスト内の特定の場所を攻撃対象として指定できます。<br> 
+カスタムベクトルは、最初のタブの「再帰」オプションが選択されていない場合のみ利用可能です。<br>
+カスタム入力ベクトルを追加するには、リクエスト内の攻撃したい文字をハイライトし、「追加」ボタンをクリックします。<br>
+任意の数のカスタム入力ベクトルを追加できます。<br>
+カスタム入力ベクトルを削除するには、選択した文字のいずれかをハイライトし、「削除」ボタンをクリックします。<br>
+「カスタム以外の入力ベクトルを無効にする」ボックスをチェックすると、このタブで手動定義したもの以外のすべての入力ベクトルが無効になります。
 
-<h3>Technology</h3>
-The Technology tab allows you to specify which types of technologies to scan.<br>
-Un-selecting technologies that you know are not present in the target application may speed up the scan as rules which target that technology can skip those tests.
+<h3>テクノロジー</h3>
+テクノロジータブでは、スキャンするテクノロジーの種類を指定できます。<br>
+対象アプリケーションに存在しないことが分かっているテクノロジーの選択を解除すると、そのテクノロジーを対象とするルールがそれらのテストをスキップできるため、スキャンが高速化される可能性があります。
 
-<h3>Policy</h3>
-The Policy tab allows you to override any of the settings specified in the selected 
-<a href="../../start/features/scanpolicy.html">scan policy</a>. 
+<h3>ポリシー</h3>
+ポリシータブでは、選択した 
+<a href="../../start/features/scanpolicy.html">スキャンポリシー</a>で指定された設定をオーバーライドできます<a href="#"></a>. 
 
-<h3>Filter</h3>
-The Filter tab allows you to specify filter criteria and active scan will filter requests based on these criteria's.
+<h3>フィルタ</h3>
+「フィルタ」タブでは、フィルタ条件を指定でき、アクティブスキャンはこれらの条件に基づいてリクエストをフィルタリングします。
 <br/> 
-There are four filter criteria's available in the filter tab <br/>
+「フィルタ」タブには4つのフィルタ条件があります <br/>
 <ul>
-<li>HTTP method</li>
-<li>Status code</li>
-<li>Tags</li>
-<li>URL pattern</li>
+<li>HTTPメソッド</li>
+<li>ステータスコード</li>
+<li>タグ</li>
+<li>URLパターン</li>
 </ul>
-HTTP method and Status code filter criteria are only applied to check if a request can be included in active scan or not,<br/> where as
-Tags and URL pattern filter criteria can be applied to include or exclude a request.
+HTTPメソッドとステータスコードのフィルタ条件は、リクエストがアクティブスキャンに含められるかどうかをチェックするためにのみ適用されます。<br/> 一方、タグとURLパターンのフィルタ条件は、リクエストを含めるまたは除外するために適用できます。
 
 <br><br>
 
-<h2>Accessed via</h2>
+<h2>ここから参照されています</h2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/ascan.html">Active Scan tab</a></td><td>'New Scan' button</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tlmenu/tools.html">Top level Tools menu</a></td><td>'Active Scan...' menu item</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/sites.html">Sites tab</a></td><td>'Attack / Active Scan... right click menu item</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/history.html">History tab</a></td><td>'Attack / Active Scan...' right click menu item</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/ascan.html">アクティブスキャンタブ</a></td><td>「新規スキャン」ボタン</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tlmenu/tools.html">トップレベルのツールメニュー</a></td><td>「アクティブスキャン&mldr;」メニュー項目</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/sites.html">サイトタブ</a></td><td>「攻撃 / アクティブスキャン&mldr;」右クリックメニュー項目</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../tabs/history.html">履歴タブ</a></td><td>「攻撃 / アクティブスキャン&mldr;」右クリックメニュー項目</td></tr>
 </table>
 
-<h2>See also</h2>
+<h2>関連情報</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../overview.html">UI Overview</a></td><td>for an overview of the user interface</td></tr>
+<a href="../overview.html">UIの概要</a></td><td>ユーザーインターフェースの概要について</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="dialogs.html">Dialogs</a></td><td>for details of the dialogs or popups </td></tr>
+<a href="dialogs.html">ダイアログ</a></td><td>ダイアログやポップアップの詳細 </td></tr>
 </table>
 
 </body>
