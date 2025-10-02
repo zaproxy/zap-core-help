@@ -3,46 +3,46 @@
 <HEAD>
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
 <TITLE>
-Scripts
+スクリプト
 </TITLE>
 </HEAD>
 <BODY>
-<H1>Scripts</H1>
+<H1>スクリプト</H1>
 <p>
-ZAP supports scripts that can be embedded within ZAP and can access internal ZAP data structures and classes.
-These scripts allow you to dynamically enhance ZAP from within ZAP.
+ZAPでは、ZAPに埋め込むことができ、内部のデータ構造やクラスにアクセス可能なスクリプトをサポートしています。
+これらのスクリプトにより、ZAP内からZAPを動的に拡張することができます。
 <p>
-ZAP supports any scripting language that supports <a href="https://www.jcp.org/en/jsr/detail?id=223">JSR 223</a>, including:
+ZAPは、<a href="https://www.jcp.org/en/jsr/detail?id=223">JSR 223</a>をサポートする任意のスクリプト言語をサポートしています。以下が含まれます：
 <ul>
-<li>ECMAScript / JavaScript (through the <a href="https://www.zaproxy.org/docs/desktop/addons/graalvm-javascript/">GraalVM JavaScript add-on</a>)</li>
+<li>ECMAScript / JavaScript (<a href="https://www.zaproxy.org/docs/desktop/addons/graalvm-javascript/">GraalVM JavaScriptアドオン</a>経由)</li>
 <li><a href="https://www.zaproxy.org/docs/desktop/addons/zest/">Zest</a></li>
 <li>Groovy <a href="https://groovy-lang.org/">https://groovy-lang.org/</a></li>
 <li>Kotlin <a href="https://kotlinlang.org/">https://kotlinlang.org/</a></li>
 <li>Python <a href="https://www.jython.org">https://www.jython.org</a></li>
 <li>Ruby - <a href="https://jruby.org/">https://jruby.org/</a></li>
-<li>and many more...</li> 
+<li>その他多数&mldr;</li> 
 </ul>
 
-<strong>WARNING - scripts run with the same permissions as ZAP, so do not run any scripts that you do not trust!</strong>
+<strong>&#x26a0;&#xfe0f; 警告 - スクリプトはZAPと同じ権限で実行されますので、信頼できないスクリプトは実行しないでください！</strong>
 
-<H2>Script Types</H2>
-Different types of scripts are supported:
+<H2>スクリプトタイプ</H2>
+さまざまな種類のスクリプトがサポートされています：
 <ul>
-<li>Active Rules - these run as part of the Active Scanner and can be individually enabled</li>
-<li>Authentication - scripts that are invoked when authentication is performed for a Context. 
-To be used, they need to be selected when configuring the Script-Based Authentication Method for a Context. </li> 
-<li>Extender - scripts which can add new functionality, including graphical elements and new API end points</li>
-<li>HTTP Sender - scripts that run against every request/response sent/received by ZAP. This includes the proxied messages, messages sent during active scan, fuzzer, ...</li>
-<li>Input Vector - scripts for defining exactly what ZAP should attack. They can also change how any URL is represented in the Sites Tree</li>
-<li>Passive Rules - these run as part of the Passive Scanner and can be individually enabled</li> 
-<li>Proxy - these run 'inline', can change every request and response and can be individually enabled. They can also trigger break points</li> 
-<li>Session Management - scripts that define how an application manages sessions</li>
-<li>Stand Alone - scripts that are self contained and are only run when your start them manually</li>
-<li>Targeted - scripts that are invoked with a target URL and are only run when your start them manually</li>
+<li>アクティブルール - これらはアクティブスキャナーの一部として実行され、個別に有効化できます</li>
+<li>認証 - コンテキストに対して認証が実行される際に呼び出されるスクリプト 
+使用するには、コンテキストのスクリプトベース認証方式を設定する際に選択する必要があります。 </li> 
+<li>エクステンダー - 新しい機能 (グラフィカル要素や新しいAPIエンドポイントを含む) を追加できるスクリプト</li>
+<li>HTTP Sender - ZAPが送信するすべてのリクエストと受信するすべてのレスポンスに対して実行されるスクリプト。 これには、プロキシされたメッセージ、アクティブスキャン中に送信されるメッセージ、ファザーなどが含まれます</li>
+<li>入力ベクトル - ZAPが正確に何を攻撃すべきかを定義するスクリプト。 また、サイトツリーでのURL表現方法を変更することもできます</li>
+<li>パッシブルール - これらはパッシブスキャナーの一部として実行され、個別に有効化できます</li> 
+<li>プロキシ - これらは「インライン」で実行され、すべてのリクエストとレスポンスを変更でき、個別に有効化できます。 ブレークポイントをトリガーすることもできます</li> 
+<li>セッション管理 - アプリケーションがセッションをどのように管理するかを定義するスクリプト</li>
+<li>スタンドアロン - 自己完結型のスクリプトで、手動で開始した場合にのみ実行されます</li>
+<li>ターゲット - ターゲットURLとともに呼び出され、手動で開始した場合にのみ実行されるスクリプト</li>
 </ul>
-<strong>Note:</strong> Add-ons can add additional types of scripts, which should be described in the help of the corresponding add-on.
+<strong>注:</strong> アドオンは追加のスクリプトタイプを追加できます。これらについては、対応するアドオンのヘルプで説明されています。
 <p>
-For more details on how to run ZAP scripts see the Script Console add-on help pages.
+ZAPスクリプトの実行方法の詳細については、スクリプトコンソールアドオンのヘルプページを参照してください。
 
 <H2>関連情報</H2>
 <table>
@@ -52,9 +52,9 @@ For more details on how to run ZAP scripts see the Script Console add-on help pa
 <a href="features.html">機能</a></td><td>ZAPが提供する機能について</td></tr>
 </table>
 
-<H2>External links</H2>
+<H2>外部リンク</H2>
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="https://github.com/zaproxy/community-scripts">ZAP Community Scripts repo</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="https://github.com/zaproxy/community-scripts">ZAPコミュニティスクリプトリポジトリ</a></td></tr>
 </table>
 
 <H2>公式ビデオ</H2>

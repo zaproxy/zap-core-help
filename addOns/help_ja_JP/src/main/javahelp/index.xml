@@ -21,7 +21,7 @@
     <indexitem text="アラート" target="start.features.alerts" />
     <indexitem text="API" target="start.features.api" />
     <indexitem text="認証 - 認証フォームを利用した手動ログイン" target="start.features.auth" />
-    <indexitem text="認証方法" target="start.features.authmethods" />
+    <indexitem text="認証方式" target="start.features.authmethods" />
     <indexitem text="認証検証戦略" target="start.features.authstrategies" />
     <indexitem text="基本的なペネトレーションテスト" target="start.pentest" />
     <indexitem text="ブレークポイントタブ" target="ui.tabs.breakpoints" />
@@ -41,7 +41,7 @@
     <indexitem text="履歴タブ" target="ui.tabs.history" />
     <indexitem text="HTTPセッションタブ" target="ui.tabs.httpsessions" />
     <indexitem text="HTTPセッション" target="start.features.httpsessions" />
-    <indexitem text="中間者プロキシ" target="start.features.intercept"/>
+    <indexitem text="中間者操作プロキシ" target="start.features.intercept"/>
     <indexitem text="導入" target="zap.intro" />
     <indexitem text="タブダイアログの管理" target="ui.dialogs.managetags" />
     <indexitem text="マーケットプレイス" target="start.features.marketplace" />
@@ -51,8 +51,8 @@
     <indexitem text="出力タブ" target="ui.tabs.output" />
     <indexitem text="パラメータータブ" target="ui.tabs.params" />
     <indexitem text="Parosプロキシ" target="zap.paros" />
-    <indexitem text="静的スキャン" target="start.features.pscan" />
-    <indexitem text="静的スキャナーオプション" target="ui.dialogs.options.pscan.main" />
+    <indexitem text="パッシブスキャン" target="start.features.pscan" />
+    <indexitem text="パッシブスキャナーオプション" target="ui.dialogs.options.pscan.main" />
     <indexitem text="セッション永続化ダイアログ" target="ui.dialogs.persistsession" />
     <indexitem text="プロキシ設定" target="start.proxy" />
     <indexitem text="リリース 1.0.0" target="zap.releases.1.0.0" />
@@ -96,7 +96,7 @@
     <indexitem text="スキャナールール" target="start.check" />
     <indexitem text="スキャンポリシー" target="start.features.scanpolicy" />
     <indexitem text="スキャンポリシーダイアログ" target="ui.dialogs.scanpolicy" />
-    <indexitem text="スキャンポリシーの管理ダイアログ" target="ui.dialogs.scanpolicymgr" />
+    <indexitem text="スキャンポリシー管理ダイアログ" target="ui.dialogs.scanpolicymgr" />
     <indexitem text="スキャンの進捗ダイアログ" target="ui.dialogs.scanprogress" />
     <indexitem text="スクリプト" target="start.features.scripts" />
     <indexitem text="検索タブ" target="ui.tabs.search" />

@@ -19,30 +19,30 @@
          <tocitem text="アクティブスキャン" target="start.features.ascan"/>
          <tocitem text="アドオン" target="start.features.addons"/>
          <tocitem text="アラート" target="start.features.alerts"/>
-         <tocitem text="CSRF 対策トークン" target="start.features.anticsrf"/>
+         <tocitem text="Anti-CSRFトークン" target="start.features.anticsrf"/>
          <tocitem text="API" target="start.features.api"/>
          <tocitem text="認証" target="start.features.auth"/>
-         <tocitem text="認証方法" target="start.features.authmethods"/>
+         <tocitem text="認証方式" target="start.features.authmethods"/>
          <tocitem text="認証検証戦略" target="start.features.authstrategies"/>
          <tocitem text="ブレークポイント" target="start.features.breakpoints"/>
          <tocitem text="コンテキスト" target="start.features.contexts"/>
          <tocitem text="カスタム ページ" target="start.features.custompages"/>
          <tocitem text="データ駆動型コンテンツ" target="start.features.ddc"/>
          <tocitem text="HTTP セッション" target="start.features.httpsessions"/>
-         <tocitem text="中間者操作型プロキシ" target="start.features.intercept"/>
+         <tocitem text="中間者操作プロキシ" target="start.features.intercept"/>
          <tocitem text="マーケットプレイス" target="start.features.marketplace"/>
          <tocitem text="モード" target="start.features.modes"/>
          <tocitem text="ノート" target="start.features.notes"/>
-         <tocitem text="静的スキャン" target="start.features.pscan"/>
-         <tocitem text="SBOM (Software Bill Of Materials: ソフトウェア部品表)" target="start.features.sbom"/>
+         <tocitem text="パッシブスキャン" target="start.features.pscan"/>
+         <tocitem text="ソフトウェア部品表 (SBOM)" target="start.features.sbom"/>
          <tocitem text="スキャンポリシー" target="start.features.scanpolicy"/>
          <tocitem text="スコープ" target="start.features.scope"/>
          <tocitem text="スクリプト" target="start.features.scripts"/>
          <tocitem text="セッション管理" target="start.features.sessmanag"/>
          <tocitem text="サイトツリー" target="start.features.sitestree"/>
          <tocitem text="統計" target="start.features.stats"/>
-         <tocitem text="構造体修飾子" target="start.features.structmods"/>
-         <tocitem text="構造体パラメーター" target="start.features.structparams"/>
+         <tocitem text="構造修飾子" target="start.features.structmods"/>
+         <tocitem text="構造パラメーター" target="start.features.structparams"/>
          <tocitem text="タグ" target="start.features.tags"/>
          <tocitem text="ユーザー" target="start.features.users"/>
       </tocitem>
@@ -82,7 +82,7 @@
          	<tocitem text="アクティブスキャン" target="ui.dialogs.options.ascan"/>
          	<tocitem text="アクティブスキャンの入力ベクトル" target="ui.dialogs.options.ascaninput"/>
          	<tocitem text="アラート" target="ui.dialogs.options.alert"/>
-         	<tocitem text="CSRF 対策トークン" target="ui.dialogs.options.anticsrf"/>
+         	<tocitem text="Anti-CSRFトークン" target="ui.dialogs.options.anticsrf"/>
          	<tocitem text="API" target="ui.dialogs.options.api"/>
             <tocitem text="ブレークポイント" target="ui.dialogs.options.breakpoints"/>
          	<tocitem text="アップデートのチェック" target="ui.dialogs.options.checkforupdates"/>

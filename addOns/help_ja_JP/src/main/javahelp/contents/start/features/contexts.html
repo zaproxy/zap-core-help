@@ -9,22 +9,19 @@
 <body>
 <h1>コンテキスト</h1>
 <p>
-Contexts are a way of relating a set of URLs together.<br/>
-You can define any contexts you like, but it is expected that a context will correspond to 
-a web application.<br/>
-It is recommended that you define a new contexts for each web application
-that makes up the system you are testing, and set them in scope as you test each one.
+コンテキストは、関連するURLをグループ化してまとめて管理する仕組みです。<br/>
+任意のコンテキストを定義できますが、コンテキストは通常、Webアプリケーションに対応することが想定されています。<br/>
+テストしているシステムを構成する各Webアプリケーションに対して新しいコンテキストを定義し、それぞれをテストする際にスコープに設定することを推奨します。
 
 </p>
 <p>
-Contexts are defined as a set of regular expressions (regexs) which are applied to all of the URLs in the
-<a href="sitestree.html">Sites Tree</a>.<br/>
-<strong>Note:</strong> The regular expressions must match the whole URL.
+コンテキストは、<a href="sitestree.html">サイトツリー</a>内のすべてのURLに適用される一連の正規表現 (RegEx) として定義されます。<br/>
+<strong>注:</strong> 正規表現はURL全体に一致する必要があります。 
 <p>
-You can configure contexts via:
+コンテキストは以下の方法で設定できます：
 <ul>
-<li>Right click menu items in the in the Sites or History tab</li>
-<li>The <a href="../../ui/dialogs/session/contexts.html">Session Contexts dialogs</a>. 
+<li>サイトタブまたは履歴タブの右クリックメニュー項目</li>
+<li><a href="../../ui/dialogs/session/contexts.html">セッションコンテキスト ダイアログ</a>. 
 </li>
 </ul>
 
@@ -34,7 +31,7 @@ You can configure contexts via:
 <a href="../../ui/overview.html">UIの概要</a></td><td>ユーザーインターフェースの概要について</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="features.html">機能</a></td><td>ZAPが提供する機能について</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="structmods.html">Structural Modifiers</a></td><td>controls which change how ZAP represents the structure of the application</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="structmods.html">構造修飾子</a></td><td>アプリケーションの構造をZAPが正しく認識するための設定</td></tr>
 </table>
 
 </body>
