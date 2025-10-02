@@ -9,30 +9,30 @@
 <body>
 <h1>モード</h1>
 <p>
-ZAP has a 'mode' which can be:
+ZAPには「モード」があり、以下のいずれかを設定できます：
 <ul>
-<li>Safe - no potentially dangerous operations permitted.</li>
-<li>Protected - you can only perform (potentially) dangerous actions on URLs in the <a href="scope.html">scope</a>.</li>
-<li>Standard - does not restrict anything.</li>
-<li>ATTACK - new nodes that are in <a href="scope.html">scope</a> are <a href="ascan.html">actively scanned</a> as soon as they are discovered.</li>
+<li>セーフ - 潜在的に危険な操作は許可されません。</li>
+<li>プロテクト - <a href="scope.html">スコープ</a>内のURLに対してのみ、（潜在的に）危険なアクションを実行できます.</li>
+<li>標準 - 何も制限しません</li>
+<li>攻撃 - <a href="scope.html">スコープ</a>内の新しいノードが発見されるとすぐに<a href="ascan.html">アクティブスキャン</a>が実行されます。</li>
 </ul>
-あなたが意図しているサイトだけを攻撃することを確実にするためにプロテクトモードを使用することをお勧めします。<br/><br/>
+意図したサイトのみを攻撃対象とすることを確実にするため、プロテクトモードを使用することが推奨されます。<br/><br/>
 
-The mode can be changed via the <a href="../../ui/tltoolbar.html">toolbar</a>
-(or the ZAP API) and is persisted between sessions.<br/><br/>
+モードは <a href="../../ui/tltoolbar.html">ツールバー</a>
+(またはZAP API) を介して変更でき、セッション間でその設定は維持されます。<br/><br/>
 
-Examples of the things that will not be possible in either Safe mode or in Protected mode when not acting on URLs in the Scope:
+セーフモードの場合、またはプロテクトモードでスコープ外のURLを操作している場合に不可能となる操作の例：
 
 <ul>
-<li>Spidering</li>
+<li>スパイダー</li>
 <li>アクティブスキャン</li>
 <li>ファジング</li>
 <li>強制ブラウジング</li>
-<li>Breaking (intercepting)</li>
+<li>ブレーク (インターセプト)</li>
 <li>リクエストの再送信</li>
 </ul>
 
-You can define the <a href="scanpolicy.html">スキャンポリシー</a> to be used for the Attack mode the <a href="../../ui/dialogs/options/ascan.html">オプション アクティブスキャン画面</a>.<br>
+攻撃モードで使用する <a href="scanpolicy.html">スキャンポリシー</a> は、 <a href="../../ui/dialogs/options/ascan.html">オプション アクティブスキャン画面</a>で定義できます<a href="#"></a>.<br>
 
 <h2>関連情報</h2>
 <table>

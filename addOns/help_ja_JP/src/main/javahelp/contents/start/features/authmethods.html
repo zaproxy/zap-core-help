@@ -2,117 +2,85 @@
 <html>
 <head>
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
-<title>Authentication Methods</title>
+<title>認証方式</title>
 </head>
 <body>
-	<h1>Authentication Methods</h1>
+	<h1>認証方式</h1>
 	<p>
-		ZAP handles multiple types of authentication (called <b>Authentication
-			Methods</b>) that can be used for websites / webapps. Each <b><a
-			href="contexts.html">Context</a></b> has an Authentication Method
-		defined which dictates how authentication is handled. The
-		authentication is used to create Web Sessions that correspond to
-		authenticated webapp <a href="users.html">Users</a>.
+		ZAPは、Webサイト/Webアプリに使用できる複数のタイプの認証 (<b>認証方式</b>と呼ばれます) を処理します。 各<b><a
+			href="contexts.html">コンテキスト</a></b>には、認証の処理方法を定める認証方式が定義されます。  認証は、認証されたWebアプリケーションの<a href="users.html">ユーザー</a>に対応するWebセッションを作成するために使用されます。
 	</p>
 
-	<p>Authentication methods can be used in multiple places around
-		ZAP. Some of the examples include:</p>
+	<p>認証方式は、ZAP内の複数の場所で使用されます。 主な用途は以下の通りです：</p>
 	<ul>
-		<li>defining Users and automatic login</li>
-		<li>detection of authenticated/unauthenticated states</li>
-		<li>performing automatic re-authentication</li>
+		<li>ユーザーの定義と自動ログイン</li>
+		<li>認証済み/未認証状態の検出</li>
+		<li>自動再認証の実行</li>
 	</ul>
 
-	<p>Multiple authentication methods have been implemented and the
-		system supports easy addition of new methods, according to user needs.
-		They main ones are described below.</p>
+	<p>複数の認証方式が実装されており、システムはユーザーのニーズに応じて新しい方式を簡単に追加できるようになっています。
+		主なものを以下に説明します。</p>
 
 	<h2>
-		<a name="manual">Manual Authentication</a>
+		<a name="manual">手動認証</a>
 	</h2>
-	<p>This method allows users to perform the authentication manually
-		(e.g. authenticate in the browser while proxy-ing through ZAP) and
-		then select the corresponding HTTP session. As the actual
-		authentication is being performed by you, this method does not support
-		re-authentication in case the webapp logs a user out.
-		However if you do define an <a href="authstrategies.html">Authentication Verification Strategy</a>
-		then ZAP will maintain the authentication <a href="stats.html">statistics</a>.
+	<p>この方式では、ユーザーが手動で認証を実行します (例えば、ZAPをプロキシとして経由させながらブラウザで認証する)。その後、対応するHTTPセッションを選択します。  注意: 実際の認証はユーザー自身が実行するため、この方式ではWebアプリケーションがユーザーをログアウトさせた場合の自動再認証には対応していません。
+		ただし、<a href="authstrategies.html">認証検証戦略</a>を定義している場合、ZAPは認証<a href="stats.html">統計情報</a>を維持します。 
 	</p>
 	
-	<p>When using this authentication method, configuring a User for the context 
-	require choosing an authenticated HTTP session.</p>
+	<p>この認証方式を使用する場合、コンテキストのユーザーを設定するには、認証済みHTTPセッションを選択する必要があります。</p>
 
 	<h2>
-		<a name="formBased">Form-Based Authentication</a>
+		<a name="formBased">フォームベース認証</a>
 	</h2>
 	<p>
-		This method is used for websites / webapps where authentication is
-		done by submitting a form or performing a GET request to a 'login url'
-		using a 'username/password' pair of authentication credentials.
-		Re-authentication is possible. Configuration can be done using the <a
-			href="../../ui/dialogs/session/context-auth.html">Session
-			Contexts Authentication screen</a> or using the contextual PopupMenu: <i>Flag as...
-			フォームベース認証ログインリクエスト</i>。
+		この方式は、フォームの送信またはGETリクエストを「ログインURL」に実行することによって認証が行われるWebサイト/Webアプリで使用されます。認証には「ユーザー名/パスワード」のペアが使用されます。 
+		再認証が可能です。 設定は、<a
+			href="../../ui/dialogs/session/context-auth.html">セッションコンテキスト認証画面</a>を使用して行うか、右クリックメニューの<i>フラグ設定...
+			フォームベース認証ログインリクエスト</i>を使用して行うことができます。
 	</p>
-	<p>When using this authentication method, configuring a User for the context requires
-	setting up the <i>username/password</i> pair of credentials that are used for the form based
-	authentication.</p>
+	<p>この認証方式を使用する場合、コンテキストのユーザーを設定するには、フォームベース認証に使用される<i>ユーザー名/パスワード</i>のペアを設定する必要があります。</p>
 	<p>
-	If the application requires submitting the anti-CSRF token presented in the login page, ZAP will 
-	handle it automatically. Make sure the token
-	name is configured in <a href="../../ui/dialogs/options/anticsrf.html">Options Anti CSRF screen</a>.
+	アプリケーションがログインページに提示されたAnti-CSRFトークンの送信を必要とする場合、ZAPは自動的に処理します。 トークン名が<a href="../../ui/dialogs/options/anticsrf.html">オプション Anti-CSRF画面</a>で設定されていることを確認してください。
 	</p>
 	
 	<h2>
-		<a name="jsonBased">JSON-Based Authentication</a>
+		<a name="jsonBased">JSONベース認証</a>
 	</h2>
 	<p>
-		This method is used for websites / webapps where authentication is
-		done by submitting a JSON object to a 'login url' using a 'username/password'
-		pair of authentication credentials.
-		Re-authentication is possible. Configuration can be done using the <a
-			href="../../ui/dialogs/session/context-auth.html">Session
-			Contexts Authentication screen</a> or using the contextual PopupMenu: <i>Flag as...
-			JSONベース認証ログインリクエスト</i>。
+		この方式は、「ログインURL」にJSONオブジェクトを送信することによって認証が行われるWebサイト/Webアプリで使用されます。認証には「ユーザー名/パスワード」のペアが使用されます。 
+		再認証が可能です。 設定は、<a
+			href="../../ui/dialogs/session/context-auth.html">セッションコンテキスト認証画面</a>を使用して行うか、右クリックメニューの<i>フラグ設定...
+			JSONベース認証ログインリクエスト</i>を使用して行うことができます。
 	</p>
-	<p>When using this authentication method, configuring a User for the context requires
-	setting up the <i>username/password</i> pair of credentials that are used for the
-	authentication.</p>
+	<p>この認証方式を使用する場合、コンテキストのユーザーを設定するには、認証に使用される<i>ユーザー名/パスワード</i>のペアを設定する必要があります。</p>
 	
 	<h2>
-		<a name="httpAuth">HTTP/NTLM Authentication</a>
+		<a name="httpAuth">HTTP/NTLM認証</a>
 	</h2>
 	<p>
-		This method is used for websites / webapps where authentication is
-		enforced using the HTTP or NTLM Authentication mechanisms employing HTTP message headers. 
-		Three authentication schemes are supported: Basic, Digest and NTLM.
-		Re-authentication is possible, as the authentication headers are sent with every authenticated
-		request. Configuration can be done using the <a
-			href="../../ui/dialogs/session/context-auth.html">Session
-			Contexts Authentication screen</a>.
+		この方式は、HTTPメッセージヘッダーを使用したHTTPまたはNTLM認証メカニズムで認証を行うWebサイト/Webアプリで使用されます。 
+		サポートされている認証スキームは、Basic、Digest、NTLMの3つです。
+		 認証ヘッダーは認証済みリクエストごとに送信されるため、再認証が可能です。 設定は<a
+			href="../../ui/dialogs/session/context-auth.html">セッションコンテキスト認証画面</a>を使用して行うことができます。
 	</p>
-	<p>When using this authentication method, configuring a User for the context requires
-	setting up the <i>username/password</i> pair of credentials that are used for the HTTP/NTLM authentication.</p>
+	<p>この認証方式を使用する場合、コンテキストのユーザーを設定するには、HTTP/NTLM認証に使用される<i>ユーザー名/パスワード</i>のペアを設定する必要があります。</p>
 	
 	<h2>
-		<a name="scriptBased">Script-Based Authentication</a>
+		<a name="scriptBased">スクリプトベース認証</a>
 	</h2>
 	<p>
-		This method is useful for websites / webapps where the authentication is a more complex one and some custom
-		scripts that handle the authentication process are beneficial. To use this method, you must first define an Authentication 
-		<a href="scripts.html">script</a> which sends messages or performs other actions as needed by your web-application. 
-		This script is then selected for use for a given Context
-		and it is called whenever an authentication is performed. Re-authentication is possible. 
-		Configuration can be done using the <a href="../../ui/dialogs/session/context-auth.html">Session Contexts Authentication screen</a>.
+		この方式は、認証がより複雑で、認証プロセスを処理するカスタムスクリプトが有益なWebサイト/Webアプリに役立ちます。 この方式を使用するには、まず、Webアプリケーションで必要に応じてメッセージを送信したり、他のアクションを実行したりする認証<a href="scripts.html">スクリプト</a>を定義する必要があります。 
+		このスクリプトは、特定のコンテキストで使用するために選択され、認証が実行されるたびに呼び出されます。 再認証が可能です。 
+		設定は<a href="../../ui/dialogs/session/context-auth.html">セッションコンテキスト ダイアログ</a>を使用して行うことができます。
 	</p>
-	<p>When using this authentication method, configuring a User for the context requires
-	setting up the a set of parameters defined in the script. For more details, see the provided Authentication Script examples.</p>
+	<p>この認証方式を使用する場合、コンテキストのユーザーを設定するには、スクリプトで定義されたパラメーターのセットを設定する必要があります。 詳細については、提供されている認証スクリプトの例を参照してください。</p>
 	
-	<h2>Configured via</h2>
+	<h2>設定方法</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/session/context-auth.html">Session Contexts Authentication screen</a></td>
+			<td><a href="../../ui/dialogs/session/context-auth.html">セッションコンテキスト認証画面</a></td>
 			<td></td>
 		</tr>
 	</table>
@@ -121,13 +89,13 @@
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="authentication.html">Authentication</a></td>
-			<td>overview</td>
+			<td><a href="authentication.html">認証</a></td>
+			<td>概要</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="https://youtu.be/cR4gw-cPZOA">Youtube tutorial</a></td>
-			<td>of the Authentication, Session Management and Users Management features of ZAP [external link to https://youtu.be/cR4gw-cPZOA].</td>
+			<td><a href="https://youtu.be/cR4gw-cPZOA">YouTube チュートリアル</a></td>
+			<td>ZAPの認証、セッション管理、ユーザー管理機能のチュートリアル [外部リンク: https://youtu.be/cR4gw-cPZOA]</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
@@ -141,19 +109,18 @@
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/session/contexts.html">Session
-					Contexts Dialog</a></td>
-			<td>for an overview of the Session Properties</td>
+			<td><a href="../../ui/dialogs/session/contexts.html">セッションコンテキスト ダイアログ</a></td>
+			<td>セッションのプロパティの概要について</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="users.html">Users</a></td>
-			<td>for an overview of Users</td>
+			<td><a href="users.html">ユーザー</a></td>
+			<td>ユーザーの概要について</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="anticsrf.html">Anti-CSRF tokens</a></td>
-			<td>for an overview of anti-CSRF tokens</td>
+			<td><a href="anticsrf.html">Anti-CSRFトークン</a></td>
+			<td>Anti-CSRFトークンの概要について</td>
 		</tr>
 
 	</table>

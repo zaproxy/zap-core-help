@@ -9,24 +9,18 @@
 <body>
 <h1>タグ</h1>
 <p>
-A tag is short piece of text that you wish to associate with a request.<br/>
-A request can have multiple tags associated with it.<br/>
-Tags can be added and changed using the <a href="../../ui/dialogs/managetags.html">Manage History Tags dialog</a>.<br/>
-They can also be automatically added via <a href="pscan.html">Passive scanning</a> - 
-this allows you to automatically tag pages which match a particular regular expression.<br/>
+タグとは、リクエストに関連付けたい短いテキストのことです。<br/>
+一つのリクエストには、複数のタグを関連付けることができます。<br/>
+タグの追加や変更は、<a href="../../ui/dialogs/managetags.html">履歴タグ管理ダイアログ</a>を使用して行えます。<br/>
+また、<a href="pscan.html">パッシブスキャン</a>を介して自動的に追加することもできます。これにより、特定の正規表現に一致するページに自動でタグ付けが可能です。<br/>
 </p>
 <p>
-タグは<a href="../../ui/tabs/history.html">履歴タブ</a>に表示され<a href="../../ui/dialogs/hist_filter.html">履歴フィルターダイアログ</a> を使用してフィルター処理することができます。.<br/>
+タグは<a href="../../ui/tabs/history.html">履歴タブ</a>に表示され、<a href="../../ui/dialogs/hist_filter.html">履歴フィルターダイアログ</a>を使用して絞り込むことができます。.<br/>
 </p>
-<h3>Alert Tags</h3>
-If a History tag starts with <code>ALERT-TAG:</code> then the tag will also be associated
-with any alerts raised against that request. 
-The prefix will be dropped, and if the remaining string contains an <code>=</code> character then the alert tag key will
-be the string up to the first <code>=</code> and the value will be the rest of the string.
-If there is no <code>=</code> then the key will be the string after the prefix and the value will be blank.<br>
-A History tag of <code>ALERT-TAG:AAA=BBB</code> will result in an Alert tag with a key of <code>AAA</code> 
-and a value of <code>BBB</code>, while a History tag of <code>ALERT-TAG:CCC</code> will result in an 
-Alert tag with a key of <code>CCC</code> and a blank value.
+<h3>アラートタグ</h3>
+履歴タグが <code>ALERT-TAG:</code> で始まる場合、そのタグは当該リクエストに対して発生したアラートにも関連付けられます。接頭辞は削除され、残りの文字列に <code>=</code> 文字が含まれる場合、アラートタグのキーは最初の <code>=</code> までの文字列となり、値は残りの文字列となります。 <code>=</code> がない場合、キーは接頭辞以降の文字列全体となり、値は空になります。<br>
+例えば、履歴タグが <code>ALERT-TAG:AAA=BBB</code> の場合、キーが <code>AAA</code> 
+で値が <code>BBB</code>のアラートタグが生成されます。一方、履歴タグが <code>ALERT-TAG:CCC</code> の場合は、キーが <code>CCC</code> で値が空のアラートタグが生成されます。 
 
 <h2>関連情報</h2>
 <table>

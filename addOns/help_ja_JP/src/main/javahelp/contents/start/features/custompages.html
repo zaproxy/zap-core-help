@@ -2,44 +2,43 @@
 <html>
 <head>
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
-<title>Custom Page</title>
+<title>カスタム ページ</title>
 </head>
 <body>
-	<h1>Custom Page</h1>
-	ZAP can accommodate the definition of various non-standard error handling conditions.<br>
-	Each <a href="contexts.html">Context</a> may include multiple Custom Page definitions, with the following elements:
+	<h1>カスタム ページ</h1>
+	ZAPは、様々な非標準のエラー処理条件の定義に対応しています。<br>
+各<a href="contexts.html">コンテキスト</a>には、以下の要素を持つ複数のカスタムページ定義を含めることができます：
 	<ul>
-	<li>Enabled > Whether the definition is enabled or not.</li>
-	<li>Content > The String or Regex which defines the URL or response content to be matched.</li>
-	<li>Content Location > Whether the "Content" should be matched against a URL or response "Content".</li>
-	<li>Is Regex? > Indicating whether or not "Content" is a regular expression or not.</li>
-	<li>Custom Page Type > Specifying what type of Custom Page is being defined:
+	<li>有効 > 定義が有効かどうか</li>
+	<li>コンテンツ > マッチさせるURLまたはレスポンスボディを定義する文字列または正規表現</li>
+	<li>コンテンツの場所 > 「コンテンツ」をURLに対してマッチさせるか、レスポンスボディに対してマッチさせるかを指定します。</li>
+	<li>RegExですか? > 「コンテンツ」が正規表現かどうかを示します。</li>
+	<li>カスタムページタイプ > 定義されるカスタムページの種類を指定します：
 		<ul>
-		<li>Error Page > For '500 - Internal Server Error' type pages.</li>
-		<li>Not Found > For '404 - Not Found' responses.</li>
-		<li>Ok > For '200 - Ok' definitions</li>
-		<li>Other > To facilitate use of Custom Pages in scripts or other usages that have not yet been foreseen.</li>
-		<li>Auth. Issue > For Authentication/Authorization related responses. For example: '401 - Unauthorized' or '403 - Forbidden' type conditions.</li>
+		<li>エラーページ > '500 - Internal Server Error' タイプのページ用</li>
+		<li>Not Found > '404 - Not Found' レスポンス用</li>
+		<li>Ok > '200 - Ok' 定義用</li>
+		<li>その他 > スクリプトや、まだ想定されていないその他の用途でのカスタムページの使用を可能にするため。</li>
+		<li>認証 問題 > 認証/認可に関連するレスポンス用<br> 例: '401 - Unauthorized' または '403 - Forbidden' タイプの条件</li>
 		</ul> 
 	</ul>
 
-	<h2>Configuration example</h2>
-	<p>A configuration example showing how to fully configure a webapp that returns a 200 - Ok response with the message 
-	"Sorry, we can't seem to find what you were looking for" is seen below:
+	<h2>設定例</h2>
+	<p>「Sorry, we can't seem to find what you were looking for」というメッセージとともに "200 - Ok" レスポンスを返すWebアプリを完全に設定する方法を示す設定例を以下に示します：
 	<ol>
-		<li>Set up a context for the web application</li>
-		<li>Make sure your browser proxies everything through ZAP and browse to a page or endpoint which doesn't exist</li>
-		<li>Go to ZAP and identify the request</li>
-		<li>Set up the Custom Page definition:
+		<li>Webアプリケーション用のコンテキストを設定します</li>
+		<li>ブラウザがZAPを経由してすべてをプロキシするようにし、存在しないページまたはエンドポイントにアクセスします</li>
+		<li>ZAPに移動してリクエストを特定します</li>
+		<li>カスタムページ定義を設定します：
 			<ol>
-			<li>Highlight "Sorry, we can't seem to find what you were looking for" in the response pane, Right click and 'Flag as Context... Custom Page Indicator'</li>
-			<li>A dialog will be opened already containing the highlighted response string.</li>
+			<li>レスポンスペインで「Sorry, we can't seem to find what you were looking for」をハイライトし、右クリックして「コンテキストとしてフラグ付け... カスタムページインジケーター」を選択します</li>
+			<li>ハイライトされたレスポンス文字列がすでに含まれた状態でダイアログが開きます。</li>
 			</ol>
 		</li>
-		<li>Accept the addition of the Custom Page definition.</li>
+		<li>カスタムページ定義の追加を承認します</li>
 	</ol>
 
-	<h2>Configured via</h2>
+	<h2>設定方法</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>

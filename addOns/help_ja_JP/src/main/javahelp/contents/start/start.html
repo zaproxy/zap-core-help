@@ -9,49 +9,46 @@
 <body>
 <h1>はじめに</h1>
 <p>
-The quickest way to get going with ZAP is to use the Quick Start add-on, which is installed by default.<br/>
-This allows you to enter a URL which ZAP will first spider
-and then <a href="features/ascan.html">active scan</a>.<br/>
-For a more in depth test you should explore your application using your browser or automated regression tests while proxying through ZAP.
+ZAPを使い始める最も簡単な方法は、デフォルトでインストールされているクイックスタートアドオンを使用することです。<br/>
+これにより、URLを入力するだけで、ZAPが最初にスパイダーを実行し、次に<a href="features/ascan.html">アクティブスキャン</a>を実行します。<br/>
+より詳細なテストを行うには、ZAPをプロキシとして経由させながら、ブラウザまたは自動回帰テストを使用してアプリケーションを探索する必要があります。
 </p>
 
 <p>
-At its heart ZAP is a <a href="features/intercept.html">manipulator-in-the-middle proxy</a>.<br/>
-To get the most out of ZAP you need to configure your browser or functional tests to connect to the web application you wish to test through ZAP.<br/> 
-If required you can also configure ZAP to connect through another proxy - this is often 
-necessary in a corporate environment.<br/>
+ZAPの本質は<a href="features/intercept.html">Manipulator-in-the-Middleプロキシ</a>です。<br/>
+ZAPを最大限に活用するには、テストしたいWebアプリケーションにZAP経由で接続するようにブラウザまたは機能テストを設定する必要があります。<br/>
+必要に応じて、別のプロキシ経由で接続するようにZAPを設定することもできます - これは企業環境でよく必要になります。<br/>
 </p>
 <p>
-You can quickly and easily launch browsers that are pre-configured to proxy through ZAP via the Quick Start tab.
-This can launch any of the most common browsers that you have installed with new profiles.<br>
-If you would like to use any of your browsers with an existing profile, for example with other browser add-ons installed, 
-then you will need to manually configure your browser to proxy via ZAP.<br>
-If you know how to set up proxies in your web browser then go ahead and give it a go!<br>
-If you are unsure then have a look at the <a href="proxies.html">Configuring proxies</a>
-section.
+クイックスタートタブから、ZAP経由でプロキシするように事前設定されたブラウザを迅速かつ簡単に起動できます。
+これにより、新しいプロファイルでインストールされている最も一般的なブラウザを起動できます。<br>
+他のブラウザアドオンがインストールされている既存のプロファイルなど、既存のプロファイルでブラウザを使用したい場合は、ZAP経由でプロキシするようにブラウザを手動で設定する必要があります。<br>
+Webブラウザでプロキシを設定する方法を知っている場合は、ぜひ試してみてください！<br>
+不明な場合は、<a href="proxies.html">プロキシの設定</a>セクションを参照してください。
 </p>
 <p>
-一度、ブラウザのプロキシとしてZAPを設定したら、テストする予定のWEBアプリケーションに接続してみます。<br/>
-もし、接続できなければ、プロキシの設定をもう一度チェックします。 お使いのブラウザのプロキシ設定とZAPのプロキシ設定をチェックする必要があるでしょう。 <br>テストしようとしているアプリケーションが実行されているかどうかチェックすることも欠かせません！
+ZAPをブラウザのプロキシとして設定したら、テストするWebアプリケーションに接続してみてください。<br/>
+接続できない場合は、プロキシ設定を再度確認してください。 ブラウザのプロキシ設定とZAPのプロキシ設定の両方を確認する必要があります。 <br>
+テストしようとしているアプリケーションが実行されているかどうかも確認する価値があります！ 
 </p>
 <p>
-お使いのブラウザを通して、アプリケーションに正常に接続がされていたら、ZAPをもう一度確認してください。 <a href="../ui/tabs/sites.html">サイト</a> と <a href="../ui/tabs/history.html">履歴</a> タブで 1 つまたは複数の行が表示されるでしょう。<br/>。そうならば、実行されています。 そうでない場合は、プロキシの設定をもう一度確認する必要があります。
+ブラウザ経由でアプリケーションに正常に接続できたら、ZAPをもう一度見てください。  <a href="../ui/tabs/sites.html">サイト</a>タブと<a href="../ui/tabs/history.html">履歴</a>タブに1つ以上の行が表示されているはずです。<br/>
+表示されていれば順調です。 表示されていない場合は、プロキシ設定を再度確認する必要があります。
 </p>
 <p>
-The next thing to do is to start a 
-<a href="pentest.html">basic penetration test</a>.<br/>
+次にすべきことは、<a href="pentest.html">基本的な侵入テスト</a>を開始することです。.<br/>
 </p>
 
 <h2>関連情報</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="proxies.html">プロキシの設定</a></td><td>webブラウザー内部のプロキシとしてZAPを設定する方法の詳細について</td></tr>
+<a href="proxies.html">プロキシの設定</a></td><td>Webブラウザー内部のプロキシとしてZAPを設定する方法の詳細について</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="../intro.html">導入</a></td><td>ZAPのご紹介</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 <a href="features/features.html">機能</a></td><td>ZAPが提供する機能について</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="checks.html">スキャナーのルール</a></td><td>既定でサポートされています。</td></tr>
+<a href="checks.html">スキャナールール</a></td><td>デフォルトでサポートされているルール</td></tr>
 </table>
 
 <h2>公式ビデオ</h2>

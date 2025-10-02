@@ -3,26 +3,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>
-Structural Parameters
+構造パラメーター
 </title>
 </head>
 <body>
-<h1>Structural Parameters</h1>
+<h1>構造パラメーター</h1>
 <p>
-Structural parameters are a type of <a href="structmods.html">Structural Modifier</a>
-which identify parameters that represent application structure instead of user data.<br>
+構造パラメーターは<a href="structmods.html">構造修飾子</a>の一種であり、ユーザーデータではなくアプリケーションの構造を表すパラメーターを識別します。<br>
 <p>
-In 'traditional' web applications the structure of the application is typically defined by the URL paths
-and the data is contained in the URL parameters and POST data.<br>
-URLs like:
+従来型のWebアプリケーションでは、アプリケーションの構造は通常、URLパスによって定義され、データはURLパラメータとPOSTデータに含まれます。<br>
+以下のようなURLがあるとします： 
 <ul>
 <li>https://www.example.com/app/aaa?ddd=eee
 <li>https://www.example.com/app/aaa?ddd=fff
 <li>https://www.example.com/app/aaa?ddd=ggg
 </ul>
-are represented in the <a href="sitestree.html">サイトツリー</a> as one 'node' in the tree:
+これらは <a href="sitestree.html">サイトツリー</a> において、ツリー内の一つの「ノード」として表現されます：
 <ul>
-<li>Sites
+<li>サイト
 	<ul>
 	<li>https://www.example.com
 		<ul>
@@ -33,18 +31,18 @@ are represented in the <a href="sitestree.html">サイトツリー</a> as one 'n
 		</ul>
 	</ul>
 </ul>
-The Sites tree is very important as it reflects ZAP's understanding of the application structure.<br>
-If it is not a good representation of the structure then ZAP will not be able to attack the application effectively.<br>
+サイトツリーは、ZAPがアプリケーション構造を理解するための非常に重要な要素です。<br>
+サイトツリーが構造を適切に表現していない場合、ZAPはアプリケーションを効果的に攻撃できません。<br>
 <br>
-In 'single' page applications a parameter is used to indicate the logical 'page':
+「シングルページ」アプリケーションでは、論理的な「ページ」を示すためにパラメータが使用されます：
 <ul>
 <li>https://www.example.com/app/aaa?page=p1&amp;ddd=eee
 <li>https://www.example.com/app/aaa?page=p2&amp;ddd=fff
 <li>https://www.example.com/app/aaa?page=p3&amp;ddd=ggg
 </ul>
-these 3 URLs represent different logical pages, but by default ZAP will still represent them as one node:
+これら3つのURLは異なる論理ページを表しますが、デフォルトではZAPはこれらを依然として一つのノードとして表現します：
 <ul>
-<li>Sites
+<li>サイト
 	<ul>
 	<li>https://www.example.com
 		<ul>
@@ -55,14 +53,14 @@ these 3 URLs represent different logical pages, but by default ZAP will still re
 		</ul>
 	</ul>
 </ul>
-This is a problem because ZAP will now not attack all of the application's functionality.<br>
+これは問題です。なぜなら、このままではZAPはアプリケーションの全ての機能を攻撃しないからです。<br>
 <br>
-In ZAP terms the 'page' URL parameter is a 'structural parameter' - a parameter that defines part of the application structure.<br>
-You can define structural parameters by adding the application to a <a href="contexts.html">コンテキスト</a>
-and then configuring them via the <a href="../../ui/dialogs/session/context-struct.html">Session Context Structure screen</a>.<br>
-Once you have done this the pages will be correctly represented as 3 nodes:
+ZAPの用語では、「page」URLパラメーターは「構造パラメーター」、つまりアプリケーション構造の一部を定義するパラメーターです。<br>
+構造的パラメータを定義するには、まずアプリケーションを <a href="contexts.html">コンテキスト</a>
+に追加し、次に <a href="../../ui/dialogs/session/context-struct.html">セッションコンテキスト構造画面</a>経由で設定します<a href="#"></a>.<br>
+この設定を行うと、ページは以下のように3つのノードとして正しく表現されるようになります：
 <ul>
-<li>Sites
+<li>サイト
 	<ul>
 	<li>https://www.example.com
 		<ul>
@@ -88,8 +86,8 @@ Once you have done this the pages will be correctly represented as 3 nodes:
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="../../ui/overview.html">UIの概要</a></td><td>ユーザーインターフェースの概要について</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="features.html">機能</a></td><td>ZAPが提供する機能について</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="structmods.html">Structural Modifiers</a></td><td>controls which change how ZAP represents the structure of the application</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="ddc.html">データ駆動型コンテンツ</a></td><td>which identify URL paths that represent data</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="structmods.html">構造修飾子</a></td><td>アプリケーションの構造をZAPが正しく認識するための設定</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="ddc.html">データ駆動型コンテンツ</a></td><td>データを表すURLパスを識別します</td></tr>
 </table>
 
 </body>

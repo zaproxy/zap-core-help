@@ -9,51 +9,50 @@
 <BODY>
 <H1>サイトツリー</H1>
 <p>
-The Sites Tree is ZAP's internal representation of the sites that you access and is displayed in the <a href="../../ui/tabs/sites.html">Sites tab</a>.
-If it does not accurately reflect the sites then ZAP will not be able to attack them effectively.
-Each node in the tree represents a different piece of functionality in a site. 
-By default ZAP will create unique nodes in the tree based on the HTTP method and the parameter names.
+サイトツリーは、アクセスしたサイトをZAPが内部的に表現したもので、<a href="../../ui/tabs/sites.html">サイトタブ</a>に表示されます。
+サイトを正確に反映していない場合、ZAPはそれらのサイトを効果的に攻撃できません。
+ツリー内の各ノードは、サイト内の異なる機能を表します。 
+デフォルトでは、ZAPはHTTPメソッドとパラメータ名に基づいて、ツリー内に一意のノードを作成します。
 </p>
 <p>
-This means that the following requests will all end up having different tree nodes:
+これは、以下のリクエストがすべて異なるツリーノードを持つことを意味します：
 <ul>
 <li>GET https://www.example.com/ex1?a=b&amp;c=d</li>
 <li>GET https://www.example.com/ex1?a=b&amp;d=c</li>
 <li>POST https://www.example.com/ex1?a=b&amp;c=d</li>
 </ul>
 
-And the following requests will end up having the same node:
+そして、以下のリクエストは同じノードを持つことになります：
 <ul>
 <li>GET https://www.example.com?a=b&amp;c=d</li>
 <li>GET https://www.example.com?a=c&amp;c=c</li>
 <li>GET https://www.example.com?a=e&amp;c=f</li>
 </ul>
 
-This works pretty well in lots of cases - different HTTP methods and parameter names typically mean different actions while the parameter values usually don’t change the outcome.
+これは多くの場合うまく機能します - 異なるHTTPメソッドとパラメーター名は通常異なるアクションを意味し、パラメーター値は通常結果を変更しません。
 
-<H2>Exceptions</H2>
+<H2>例外</H2>
 
-There are always exceptions.
+常に例外があります。
 
-<H3>Structural Parameters</H3>
+<H3>構造パラメーター</H3>
 
-Take the case where the action to be taken is actually defined in a parameter value:
+実行されるアクションがパラメーター値で実際に定義されているケースを考えてみましょう：
 <ul>
 <li>GET https://www.example.com?a=b&amp;action=add</li>
 <li>GET https://www.example.com?a=b&amp;action=delete</li>
 </ul>
 
-In this case both URLs will end up in the same Sites Tree node, which means that in practice only one of them will be attacked. 
-The other URL will not be attacked and so any vulnerabilities specific to that action will not be found.
+この場合、両方のURLは同じサイトツリーノードになり、実際にはそのうちの1つだけが攻撃されます。 
+もう一方のURLは攻撃されないため、そのアクションに特有の脆弱性は発見されません。
 <p>
-In ZAP the solution to this is to define the ‘action’ parameter as a <a href="structparams.html">Structural Parameter</a>, 
-in other words a parameter whose value actually affects the structure of a site. 
-Once you have done that (and revisited the URLs) then they will appear as 2 different nodes and ZAP will attack them separately.
+ZAPでは、'action' パラメーターを<a href="structparams.html">構造パラメーター</a>として定義することで、この問題を解決できます。構造パラメーターとは、その値がサイトの構造に実際に影響を与えるパラメーターのことです。 
+これを実行すると (そしてURLを再訪問すると)、2つの異なるノードとして表示され、ZAPはそれらを個別に攻撃します。
 
 <H3>データ駆動型ノード</H3>
 
-Conversely we have the case where a URL path element is actually part of the data and not part of the structure of the site. 
-For example the following URLs could all represent the same functionality if the second path element (companyX) is actually data:
+逆に、URLパス要素が実際にはデータの一部であり、サイトの構造の一部ではない場合があります。 
+例えば、2番目のパス要素 (companyX) が実際にはデータである場合、以下のURLはすべて同じ機能を表す可能性があります：
 
 <ul>
 <li>https://www.example.com/app/company1/aaa?ddd=eee</li>
@@ -61,20 +60,20 @@ For example the following URLs could all represent the same functionality if the
 <li>https://www.example.com/app/company3/aaa?ddd=ggg</li>
 </ul>
 
-In this case all 3 URLs will end up in unique nodes and ZAP will attack each of them even though it doesn't really need to. 
-This probably is not a big problem if there are just 3 instances, but in most cases this data will be coming from a database so there could be a huge number of such nodes.
+この場合、3つのURLすべてが一意のノードになり、ZAPはそれぞれを攻撃しますが、実際には攻撃する必要はありません。 
+インスタンスが3件程度であれば大きな問題にはなりませんが、ほとんどの場合このデータはデータベースから取得されるため、同様のノードが非常に多くなる可能性があります。
 <p>
-The solution to this is to define the relevant path element as <a href="ddc.html">Data Driven Content</a> which means path elements that really contain data rather than represent part of the site structure.
-Once you have done that (and revisited the URLs) then they will all be represented as just 1 node and ZAP will only attack them once.
+この解決策は、関連するパス要素を<a href="ddc.html">データ駆動型コンテンツ</a>として定義することです。これは、サイト構造の一部を表すのではなく、実際にデータを含むパス要素を意味します。 
+これを実行すると (そしてURLを再訪問すると)、すべてが1つのノードとして表現され、ZAPは1回だけ攻撃します。
 <p>
-You will need to define both Structural Parameters and Data Driven Nodes manually - ZAP does not currently have the capability to automatically detect these situations.
+構造パラメーターとデータ駆動型ノードの両方を手動で定義する必要があります - ZAPには現在、これらの状況を自動的に検出する機能はありません。
 
-<H3>Custom Parameters</H3>
+<H3>カスタムパラメーター</H3>
 
-Finally there are cases where sites define custom parameters which ZAP does not natively understand. 
-As a result ZAP may not be able to correctly split requests into suitable nodes.
+最後に、ZAPがネイティブに理解できないカスタムパラメーターをサイトが定義している場合があります。 
+その結果、ZAPはリクエストを適切なノードに正しく分割できない可能性があります。
 <p>
-In these cases you can use Input Vector <a href="scripts.html">Scripts</a> which can represent request in the Sites Tree in any way you want.
+これらの場合、入力ベクトル<a href="scripts.html">スクリプト</a>を使用できます。これにより、サイトツリー内のリクエストを任意の方法で表現できます。
 
 <H2>関連情報</H2>
 <table>
@@ -84,7 +83,7 @@ In these cases you can use Input Vector <a href="scripts.html">Scripts</a> which
 <a href="features.html">機能</a></td><td>ZAPが提供する機能について</td></tr>
 </table>
 
-<H2>External links</H2>
+<H2>外部リンク</H2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td><a href="https://www.zaproxy.org/blog/2020-09-22-sites-tree-modifiers/">ZAP Blog: Sites Tree Modifiers</a></td></tr>
 </table>

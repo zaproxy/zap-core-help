@@ -40,14 +40,14 @@
 		<li>ログインリクエストにAnti-CSRFトークンがある場合、トークン名が存在しなければ<a href="../../ui/dialogs/options/anticsrf.html">オプション Anti-CSRF画面</a>に追加する</li>
 		<li>認証方式を設定する：
 			<ol>
-			<li>認証リクエストを右クリックし、「コンテキストとしてフラグ付け...」> 「フォームベース認証ログインリクエスト」を選択する</li>
+			<li>認証リクエストを右クリックし、「コンテキストとしてフラグ付け... フォームベース認証ログインリクエスト」を選択する</li>
 			<li>リクエストURLとパラメーター (ある場合) が既に含まれているウィンドウが開く。ドロップダウンオプションを使用して、どのパラメーターがユーザー名とパスワードに対応するかを選択する</li>
 			</ol>
 		</li>
 		<li>認証検証戦略を設定する：
 			<ol>
 			<li>適切なログイン済みまたはログアウト済み指標を持つメッセージを選択する (例: ログアウトリンクまたはようこそメッセージ)</li>
-			<li>関連するテキストを選択し、右クリックして「コンテキストとしてフラグ付け...」> 「認証ログイン済み指標」または「コンテキストとしてフラグ付け...」> 「認証ログアウト済み指標」を適切に選択する
+			<li>関連するテキストを選択し、右クリックして「コンテキストとしてフラグ付け... 認証ログイン済み指標」または「コンテキストとしてフラグ付け... 認証ログアウト済み指標」を適切に選択する
 			</ol>
 		</li>
     	<li>「セッションプロパティ」 → 「ユーザーセクション」で必要な数のユーザーを定義する</li>
@@ -58,24 +58,19 @@
 	<a href="../../ui/dialogs/session/contexts.html">コンテキストセッション画面</a>にあります<a href="#"></a>.
 
 	<h2><a name="forceduser">強制ユーザーモード</a></h2>
-	When Forced User Mode is enabled then all interactions that go through ZAP for a given context will be 
-	updated to be from the perspective of the specified User.<br>
-   	The Forced User Mode is enabled via a button in the toolbar (the one with the user and the lock) and 
-   	is configured via Session Properties -> Forced User Mode.<br>
-   	<b>Important:</b> Forced User Mode is just intended for manual testing and should not be used in automation -
-   	there are much better alternatives.
+	強制ユーザーモードが有効になっている場合、特定のコンテキストに対してZAPを経由するすべてのインタラクションは、指定されたユーザーの視点から更新されます。<br>
+   	強制ユーザーモードは、ツールバーのボタン (ユーザーとロックのアイコン) で有効になり、セッションプロパティ → 強制ユーザーモードで設定されます。<br>
+   	<b>重要:</b> 強制ユーザーモードは手動テスト専用であり、自動化では使用すべきではありません。はるかに優れた代替手段があります。
 
-	<h2><a name="envvars">Authentication Header Environmental Variables</a></h2>
-	A set of environmental variables are available which allow you to easily add an authentication header to all of the requests that are proxied through ZAP or initiated
-	by the ZAP tools, including the spiders and active scanner: 
+	<h2><a name="envvars">認証ヘッダー環境変数</a></h2>
+	一連の環境変数が利用可能で、ZAPを経由してプロキシされるすべてのリクエストまたはスパイダーやアクティブスキャナーを含むZAPツールによって開始されるすべてのリクエストに認証ヘッダーを簡単に追加できます： 
 	<ul>
-	<li>ZAP_AUTH_HEADER_VALUE - if this is defined then its value will be added as a header to all of the requests</li>
-	<li>ZAP_AUTH_HEADER - if this is defined then its value will be used as the header name - if it is not defined then the standard 
-	<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization">Authorization</a> header will be used</li>
-	<li>ZAP_AUTH_HEADER_SITE - if this is defined then header will only be included in sites who's name includes its value</li>
+	<li>ZAP_AUTH_HEADER_VALUE - これが定義されている場合、その値がすべてのリクエストにヘッダーとして追加されます</li>
+	<li>ZAP_AUTH_HEADER - これが定義されている場合、その値がヘッダー名として使用されます。定義されていない場合は、標準の <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization">Authorization</a> ヘッダーが使用されます</li>
+	<li>ZAP_AUTH_HEADER_SITE - これが定義されている場合、ヘッダーはその値を名前に含むサイトにのみ含まれます</li>
 	</ul>
 
-	<h2>設定箇所</h2>
+	<h2>設定方法</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
@@ -89,7 +84,7 @@
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			<td><a href="https://youtu.be/cR4gw-cPZOA">YouTube チュートリアル</a></td>
-			<td>認証、セッション管理、ユーザ管理などZAPの機能について [外部リンク: https://youtu.be/cR4gw-cPZOA]</td>
+			<td>ZAPの認証、セッション管理、ユーザー管理機能のチュートリアル [外部リンク: https://youtu.be/cR4gw-cPZOA]</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
@@ -114,7 +109,7 @@
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			<td><a href="anticsrf.html">Anti-CSRFトークン</a></td>
-			<td>for an overview of anti-CSRF tokens</td>
+			<td>Anti-CSRFトークンの概要について</td>
 		</tr>
 
 	</table>

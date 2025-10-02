@@ -8,30 +8,21 @@
 </head>
 <body>
 <h1>ブレークポイント</h1>
-<p>A breakpoint allows you to intercept a request from your browser and to change it before
-is is submitted to the web application you are testing.<br/> 
-You can also change the responses received from the application<br/>
-The request or response will be displayed in the <a href="../../ui/tabs/break.html">Break tab</a>
-which allows you to change disabled or hidden fields, and will allow you to bypass 
-client side validation (often enforced using javascript).<br/>
-It is an essential penetration testing technique. 
+<p>ブレークポイントは、ブラウザからWebアプリケーションへのリクエスト、およびアプリケーションからブラウザへのレスポンスを途中で捕捉し、変更できる機能です。<br/>
+捕捉されたリクエストやレスポンスは<a href="../../ui/tabs/break.html">ブレークタブ</a>に表示され、そこで内容を編集できます。これにより、無効化されているフィールド (disabledフィールド) や非表示のフィールド (hiddenフィールド) を変更したり、JavaScriptなどで実装されるクライアント側の検証をバイパスしたりすることができます。<br/>
+ブレークポイントは、侵入テストにおいて不可欠な技術です。 
 </p>
 <p>
-You can set a 'global' breakpoint on requests or responses using the buttons on the
-<a href="../../ui/tltoolbar.html">top level toolbar</a>.<br/>
-All requests or responses will then be intercepted by ZAP allowing you to change anything before
-allowing the request or response to continue. 
+<a href="../../ui/tltoolbar.html">トップレベルツールバー</a>のボタンを使用して、リクエストまたはレスポンスに対する「グローバル」ブレークポイントを設定できます。<br/>
+グローバルブレークポイントを有効にすると、すべてのリクエスト (またはレスポンス) がZAPによって捕捉され、送信する前に任意の変更を加えることができます。  
 </p>
 <p>
-You can also set breakpoints on specific criteria using the "Break..." right click menu on the
-<a href="../../ui/tabs/sites.html">Sites</a> and <a href="../../ui/tabs/history.html">History tabs</a>
-and the 'Add a custom HTTP breakpoint' button on the <a href="../../ui/tltoolbar.html">top level toolbar</a>.<br/>
-Only requests and responses which match those criteria will be intercepted by ZAP.<br/>
-Custom breakpoints are shown in the <a href="../../ui/tabs/breakpoints.html">Breakpoints tab</a> 
+<a href="../../ui/tabs/sites.html">サイトタブ</a>および<a href="../../ui/tabs/history.html">履歴タブ</a>の「ブレーク…」右クリックメニューと、<a href="../../ui/tltoolbar.html">トップレベルツールバー</a>の「カスタムHTTPブレークポイントを追加」ボタンを使用して、特定の条件に基づくブレークポイントを設定することもできます。<br/>
+これらの条件に一致するリクエストとレスポンスのみがZAPによって捕捉されます。<br/>
+カスタムブレークポイントは<a href="../../ui/tabs/breakpoints.html">ブレークポイントタブ</a>に表示されます。  
 </p>
 <p>
-Breakpoint option are configured using the 
-<a href="../../ui/dialogs/options/breakpoints.html">Options Breakpoints screen</a>.<br>
+ブレークポイントのオプションは、<a href="../../ui/dialogs/options/breakpoints.html">オプション ブレークポイント画面</a>で設定します.<br>
 </p>
 
 <h2>関連情報</h2>

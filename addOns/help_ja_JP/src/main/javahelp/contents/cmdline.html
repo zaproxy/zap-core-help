@@ -9,82 +9,82 @@
 <body>
 <h1>コマンドライン</h1>
 
-To run ZAP via the command line, you will need to locate the ZAP startup script.<br/>
+コマンドラインからZAPを実行するには、使用しているオペレーティングシステムに応じてZAP起動スクリプトを実行します。<br/>
 <strong>Windows:</strong><br/>
 <pre>C:\Program Files (x86)\ZAP\Zed Attack Proxy\zap.bat</pre>
-<strong>Note:</strong> The command line options are not used by the executable (<code>zap.exe</code>) only the bat file.<br/><br/>
-<strong>Mac:</strong><br/>
+<strong>注:</strong> コマンドラインオプションは、実行ファイル (<code>zap.exe</code>) では使用できません。必ずbatファイルを使用してください。<br/><br/>
+<strong>macOS:</strong><br/>
 <pre>/Applications/ZAP.app/Contents/Java/zap.sh</pre>
 <strong>Linux:</strong><br/>
-<code>zap.sh</code> will be below the directory where ZAP was installed.
+<code>zap.sh</code> は、ZAPがインストールされたディレクトリの下にあります。
 <br/><br/>
-Alternatively, you can run the JAR file directly:<br/>
+または、JARファイルを直接実行することもできます：<br/>
 <pre>java -jar zap.jar</pre>
-All options below can be passed to any of these.
+以下のすべてのコマンドラインオプションは、これらのいずれの起動方法でも使用できます。
 
-<h2>Options</h2>
+<h2>オプション</h2>
 
-ZAP (core) supports the following command line options:
+ZAP (コア) は、以下のコマンドラインオプションをサポートしています：
 
 <table>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-version</td><td>Reports the ZAP version</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-cmd</td><td>Run inline (exits when command line options complete)</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-daemon</td><td>Starts ZAP in daemon mode, ie without a UI</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-config &lt;kvpair&gt;</td><td>Overrides the specified key=value pair in the configuration file. <code>-config</code> command line options are applied in the order they are specified.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-configfile &lt;path&gt;</td><td>Overrides the key=value pairs with those in the specified properties file</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-dir &lt;dir&gt;</td><td>Uses the specified directory as home directory, instead of the default one. To prevent add-ons (inadvertently) use/override core files ZAP will not start (and show an error) if the home and the installation directories are the same.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-installdir &lt;dir&gt;</td><td>Overrides the code that detects where ZAP has been installed with the specified directory</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-h</td><td>Shows all of the command line options available, including those added by add-ons</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-help</td><td>The same as -h</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-newsession &lt;path&gt;</td><td>Creates a new session at the given location</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-session &lt;path&gt;</td><td>Opens the given session after starting ZAP</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-lowmem</td><td>Use the database instead of memory as much as possible - this is still experimental</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-experimentaldb</td><td>Use the experimental generic database code, which is not surprisingly also still experimental</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-nostdout</td><td>Disables the default logging through standard output</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-loglevel &lt;level&gt;</td><td>Sets the log level, overriding the values specified in the log4j2.properties file in the home directory</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-silent</td><td>Ensures ZAP does not make any unsolicited requests, including check for updates</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstall &lt;addOnId&gt;</td><td>Installs the add-on with specified ID from the ZAP Marketplace. The IDs of the add-ons available in the marketplace can be consulted in the Marketplace tab of <a href="ui/dialogs/manageaddons.html">Manage Add-ons dialogue</a>.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstallall</td><td>Install all available add-ons from the ZAP Marketplace</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonuninstall &lt;addOnId&gt;</td><td>Uninstalls the add-on with specified ID. Use <code>-addonlist</code> or check the Installed tab of <a href="ui/dialogs/manageaddons.html">Manage Add-ons dialogue</a> to know the IDs of the installed add-ons.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonupdate</td><td>Update all changed add-ons from the ZAP Marketplace</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonlist</td><td>List all of the installed add-ons</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-script &lt;script&gt;</td><td>Run the specified script (file system path) if command line/daemon, or just load it if GUI</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-suppinfo</td><td>Outputs details relevant for support and troubleshooting (to the console/standard out). Such as: ZAP version, java version, installed add-ons and version, locale info, operating system, etc.</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-sbomzip &lt;path&gt;</td><td>Creates a zip file containing all of the available <a href="start/features/sbom.html">SBOMs</a></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-version</td><td>ZAPのバージョンを表示して終了します</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-cmd</td><td>コマンドラインモードで実行します（指定されたコマンドを実行後、自動的に終了します）</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-daemon</td><td>デーモンモード (UIなし) でZAPを起動します。バックグラウンドで実行し、APIからのみ制御します</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-config &lt;kvpair&gt;</td><td>設定ファイル内の指定されたキーと値を上書きします。複数指定可能で、指定された順序で適用されます</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-configfile &lt;path&gt;</td><td>指定されたプロパティファイルでキーと値を上書きします</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-dir &lt;dir&gt;</td><td>ホームディレクトリ (設定、セッション、ログなどが保存される場所) を指定します。 アドオンが (誤って) コアファイルを使用/上書きすることを防ぐため、ホームディレクトリとインストールディレクトリが同じ場合、ZAPは起動しません (エラーを表示します)。</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-installdir &lt;dir&gt;</td><td>ZAPのインストールディレクトリを明示的に指定します</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-h</td><td>利用可能なすべてのコマンドラインオプションを表示します (アドオンが追加したオプションを含む)</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-help</td><td>-hと同じです</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-newsession &lt;path&gt;</td><td>指定された場所に新しいセッションを作成します</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-session &lt;path&gt;</td><td>ZAP起動後に指定されたセッションファイルを開きます</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-lowmem</td><td>可能な限りメモリではなくデータベースを使用します（実験的）</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-experimentaldb</td><td>実験的な汎用データベースコードを使用します（実験的）</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-nostdout</td><td>標準出力へのログ出力を無効にします</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-loglevel &lt;level&gt;</td><td>ログレベルを設定し、ホームディレクトリの log4j2.properties ファイルで指定された値を上書きします</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-silent</td><td>ZAPが自動的に外部へのリクエスト (更新確認など) を行わないようにします</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstall &lt;addOnId&gt;</td><td>指定されたIDのアドオンをマーケットプレイスからインストールします。 マーケットプレイスで利用可能なアドオンのIDは、<a href="ui/dialogs/manageaddons.html">アドオンの管理ダイアログ</a>のマーケットプレイスタブで確認できます.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstallall</td><td>マーケットプレイスから利用可能なすべてのアドオンをインストールします</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonuninstall &lt;addOnId&gt;</td><td>指定されたIDのアドオンをアンインストールします。 インストールされているアドオンのIDを知るには、<code>-addonlist</code>を使用するか、<a href="ui/dialogs/manageaddons.html">アドオンの管理ダイアログ</a>のインストール済みタブを確認してください。</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonupdate</td><td>ZAP マーケットプレイスから変更されたすべてのアドオンを更新します</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonlist</td><td>インストール済みのすべてのアドオンを一覧表示します</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-script &lt;script&gt;</td><td>指定されたスクリプト (ファイルパス) を、コマンドライン/デーモンモードでは実行し、GUIモードでは読み込みます</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-suppinfo</td><td>サポートやトラブルシューティングに関連する詳細情報をコンソール (標準出力) に出力します。例: ZAPバージョン、Javaバージョン、インストール済みアドオンとそのバージョン、ロケール情報、オペレーティングシステムなど。</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-sbomzip &lt;path&gt;</td><td>すべての<a href="start/features/sbom.html">SBOM</a>を含むzipファイルを作成します</td></tr>
 
 </table>
 <br>
-The options <code>-session</code> and <code>-newsession</code> are mutually exclusive. An error will be shown and ZAP exit (if not in GUI) when both options are set.
+ <code>-session</code> と <code>-newsession</code> は同時に使用できません (相互排他的)。両方を指定するとエラーが表示されます。
 <br>
-Relative paths to session file are resolved against the "session" directory located in ZAP's home directory (default or specified with <code>-dir</code> option).
+相対パスは、ZAPのホームディレクトリ (デフォルトまたは <code>-dir</code> オプションで指定) 内の「session」ディレクトリを基準として解決されます。
 <br/>
-Configuration keys should be specified using the dot notation based their location in the XML of the configuration file, eg:<br/>
+設定キーは、設定ファイル内のXML階層に基づいてドット記法で指定する必要があります。例：<br/>
 <pre>&lt;zap-script&gt; -config api.key=12345</pre>
 
-The <code>-loglevel</code> option supports the following values: <code>OFF</code>, <code>FATAL</code>, <code>ERROR</code>, <code>WARN</code>, <code>INFO</code>, <code>DEBUG</code>, <code>TRACE</code>, and <code>ALL</code>, in order of increasing verbosity.
+ <code>-loglevel</code> オプションでは、次のログレベルを指定できます: <code>OFF</code>, <code>FATAL</code>, <code>ERROR</code>, <code>WARN</code>, <code>INFO</code>, <code>DEBUG</code>, <code>TRACE</code>, <code>ALL</code>（詳細度の低い順から高い順）
 
 <p>
 例:
 	<ul>
-		<li>指定したパスに作成された新しいセッションで ZAP 'daemon' モードを開始します。
+		<li>指定されたパスに新しいセッションを作成して、ZAPを「デーモン」モードで起動する：
 			<pre>&lt;zap-script&gt; -daemon -newsession session</pre>
 		</li>
-		<li>Run a script against an existing session and exit ZAP once finished:
+		<li>既存のセッションに対してスクリプトを実行し、完了後にZAPを終了する：
 			<pre>&lt;zap-script&gt; -session /full/path/to/existing/session -script /full/path/to/script.js -cmd</pre>
 		</li>
 	</ul>
 
-<h2>Add-ons</h2>
-Add-ons can add extra command line options which are described in their own help pages.
+<h2>アドオン</h2>
+アドオンは、追加のコマンドラインオプションを追加できます。これらは各アドオンのヘルプページで説明されています。
 <p>
-For the command line options that allow to configure the main local proxy, refer to the <a href="https://www.zaproxy.org/docs/desktop/addons/network/cmdline/">Network Command Line</a> help page.
+メインのローカルプロキシを設定するコマンドラインオプションについては、 <a href="https://www.zaproxy.org/docs/desktop/addons/network/cmdline/">ネットワークコマンドライン</a> ヘルプページを参照してください。
 
 <h2>関連情報</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<a href="intro.html">導入</a></td><td>ZAPのご紹介</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="start/features/api.html">API</a></td><td>to control ZAP programmatically</td></tr>
+<a href="start/features/api.html">API</a></td><td>ZAPをプログラムによって制御するには</td></tr>
 </table>
 
 <h2>公式ビデオ</h2>

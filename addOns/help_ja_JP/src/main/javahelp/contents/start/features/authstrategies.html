@@ -2,51 +2,45 @@
 <html>
 <head>
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
-<title>Authentication Verification Strategies</title>
+<title>認証検証戦略</title>
 </head>
 <body>
-	<h1>Authentication Verification Strategies</h1>
+	<h1>認証検証戦略</h1>
 
-	<h2><a name="response">Verification Strategies</a></h2>
+	<h2><a name="response">検証戦略</a></h2>
 	
-	ZAP supports multiple <b>Verification Strategies</b> in order to detect when messages correspond to authenticated requests.
+	認証検証戦略は、ZAPがユーザーが現在認証されているか (ログイン中か)、それとも未認証か (ログアウト中か) を判断する方法を定義します。ZAPは複数の<b>検証戦略</b>をサポートしており、アプリケーションの特性に応じて最適なものを選択できます。 
 
-	<h3><a name="response">Check every Response</a></h3>
+	<h3><a name="response">すべてのレスポンスを確認する</a></h3>
 	
-	When this strategy is used then ZAP will use the specified Regex Patterns on every response.
-	This is typically useful for traditional webapps which return full HTML pages.
+	この戦略を使用すると、ZAPはすべてのレスポンスに対して指定された正規表現パターンを適用し、認証状態を判断します。
+	これは通常、完全なHTMLページを返す従来型のWebアプリに役立ちます。
 
-	<h3><a name="response">Check every Request</a></h3>
+	<h3><a name="response">すべてのリクエストを確認する</a></h3>
 	
-	When this strategy is used then ZAP will use the specified Regex Patterns on every request.
-	This is typically useful for modern webapps which maintain some session state client side, such as a JWT, which is submitted with every request.
+	この戦略を使用すると、ZAPはすべてのリクエストに対して指定された正規表現パターンを適用し、認証状態を判断します。
+	これは通常、JWTなどのセッション状態をクライアント側で維持し、リクエストごとに送信するモダンなWebアプリ (クライアントサイドレンダリング、SPA) に役立ちます。
 
-	<h3><a name="response">Check every Request or Response</a></h3>
+	<h3><a name="response">すべてのリクエストまたはレスポンスを確認する</a></h3>
 	
-	When this strategy is used then ZAP will use the specified Regex Patterns on both the request and response of every message.
+	この戦略を使用すると、ZAPはすべてのメッセージのリクエストとレスポンスの両方に対して指定された正規表現パターンを使用します。
 
-	<h3><a name="response">Poll the Specified URL</a></h3>
+	<h3><a name="response">指定したURLをポーリングする</a></h3>
 	
-	When this strategy is used then ZAP will poll the specified URL at the given frequency. 
-	Messages will be treated as logged in or logged out based on the last poll request.
-	The specified Regex Patterns will only be used on the response to the poll request.
-	This strategy is typically useful for any application for which there is at least one URL 
-	that can reliably be used to detect if a user is logged in or out.
+	この戦略を使用すると、ZAPは指定されたURLを設定された頻度で定期的にポーリング (アクセス) します。 
+	すべてのメッセージの認証状態は、最後のポーリングリクエストの結果に基づいて判断されます。
+	指定された正規表現パターンは、ポーリングリクエストのレスポンスに対してのみ使用されます。
+	ユーザーがログインしているかログアウトしているかを確実に判断できるURLが存在するアプリケーションに適しています。
 	
-	<h2><a name="regex">Regex Patterns</a></h2>
+	<h2><a name="regex">正規表現パターン</a></h2>
 	
-	All of the strategies use 2 Regex Patterns to tell if a specified message is logged in or not.
-	You can supply one or both regexes - if you do not supply either then the Authentication Strategy will not be used.
+	すべての戦略は、指定されたメッセージがログインしているかどうかを判断するために2つの正規表現パターンを使用します。
+	いずれか一方または両方の正規表現を指定できます - どちらも指定しない場合、認証戦略は使用されません。
 
 	<p>
-	To set one of the <b>Logged in/out Indicators</b>, either type the regex 
-	directly in the <i><a href="../../ui/dialogs/session/context-auth.html">Session
-	Context Authentication screen</a> dialog -> Authentication panel -> Logged In/Out Indicator field</i>,
-	or find an authenticated message in the Sites Tree or History tab, select it, open the
-	Response View and select the text you wish to define as the indicator using the
-	mouse and select the <i>Flag as Context... Logged in/out indicator</i> right-click menu option.
+	<b>ログイン/ログアウト指標</b>のいずれかを設定するには、<i><a href="../../ui/dialogs/session/context-auth.html">セッションコンテキスト認証画面</a>ダイアログ -> 認証パネル -> ログイン/ログアウト指標フィールド</i>に正規表現を直接入力するか、サイトツリーまたは履歴タブで認証済みメッセージを見つけて選択し、レスポンスビューを開き、マウスを使用して指標として定義するテキストを選択し、「<i>コンテキストとしてフラグ付け... ログイン/ログアウト済み指標</i>」右クリックメニューオプションを選択します。
 
-	<h2>Configured via</h2>
+	<h2>設定方法</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
@@ -59,13 +53,13 @@
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="authentication.html">Authentication</a></td>
-			<td>overview</td>
+			<td><a href="authentication.html">認証</a></td>
+			<td>概要</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="https://youtu.be/cR4gw-cPZOA">Youtube tutorial</a></td>
-			<td>of the Authentication, Session Management and Users Management features of ZAP [external link to https://youtu.be/cR4gw-cPZOA].</td>
+			<td><a href="https://youtu.be/cR4gw-cPZOA">YouTube チュートリアル</a></td>
+			<td>ZAPの認証、セッション管理、ユーザー管理機能のチュートリアル [外部リンク: https://youtu.be/cR4gw-cPZOA]</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
@@ -79,19 +73,18 @@
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/session/contexts.html">Session
-					Contexts Dialog</a></td>
-			<td>for an overview of the Session Properties</td>
+			<td><a href="../../ui/dialogs/session/contexts.html">セッションコンテキスト ダイアログ</a></td>
+			<td>セッションのプロパティの概要について</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="users.html">Users</a></td>
-			<td>for an overview of Users</td>
+			<td><a href="users.html">ユーザー</a></td>
+			<td>ユーザーの概要について</td>
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="anticsrf.html">Anti-CSRF tokens</a></td>
-			<td>for an overview of anti-CSRF tokens</td>
+			<td><a href="anticsrf.html">Anti-CSRFトークン</a></td>
+			<td>Anti-CSRFトークンの概要について</td>
 		</tr>
 
 	</table>

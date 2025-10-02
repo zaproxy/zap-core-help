@@ -2,67 +2,41 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>HTTP Sessions</title>
+<title>HTTPセッション</title>
 </head>
 <body>
-	<h1>HTTP Sessions</h1>
-	<p>This tool keeps track of the existing HTTP Sessions on a
-		particular Site and allows the ZAP user to force all requests to
-		be on a particular session. Basically, it allows the user to easily
-		switch between user sessions on a Site and to create a new Session
-		without "destroying" the existing ones.</p>
+	<h1>HTTPセッション</h1>
+	<p>このツールは、特定のサイトに存在するHTTPセッションを追跡し、ZAPユーザーがすべてのリクエストで特定のセッションを強制的に使用できるようにします。 要するに、ユーザーは既存のセッションを「破棄」することなく、サイトのユーザーセッションを簡単に切り替えたり、新しいセッションを作成したりできます。 </p>
 		
 	<p>
-		The tool is only intended for manual testing and should not be used in automation -
-		there are much better alternatives.
-		If you are new to ZAP automation then the best place to start is the ZAP 
-		<a href="https://www.zaproxy.org/docs/authentication/">Authentication Decision Tree</a> (external link).
+		このツールは手動テストのみを対象としており、自動化で使用するべきではありません。自動化には、はるかに優れた代替手段が存在します。
+		ZAPの自動化を初めて使用する場合は、ZAPの <a href="https://www.zaproxy.org/docs/authentication/">認証ディシジョンツリー</a> (外部リンク) から始めるのが最適です。
 
 	<p>
-		It is based on the concept of Session Tokens, which are HTTP message
-		parameters (for now only Cookies) which allow an HTTP server to
-		connect a request message with any previous requests or data stored.
-		In the case of ZAP, conceptually, session tokens have been
-		classified into 2 categories: default session tokens and site session
-		tokens. The default session tokens are the ones that the user can set
-		in the <a href="../../ui/dialogs/options/httpsessions.html">Options
-			screen</a> and are tokens that are, by default, automatically considered
-		session tokens for any site (eg. phpsessid, jsessionid, etc). The site
-		session tokens are a set of tokens for a particular site and are
-		usually set up using the popup menus available in the <a
-			href="../../ui/tabs/params.html">Params Tab</a>.
+		このツールは、セッショントークンの概念に基づいています。セッショントークンとは、HTTPサーバーがリクエストメッセージを過去のリクエストや保存されたデータと関連付けることを可能にするHTTPメッセージパラメーター (現時点はCookieのみ) です。 
+		ZAPの概念では、セッショントークンは「デフォルトセッショントークン」と「サイトセッショントークン」の2つのカテゴリに分類されています。 デフォルトセッショントークンは、ユーザーが<a href="../../ui/dialogs/options/httpsessions.html">オプション画面</a>で設定できるトークンであり、デフォルトですべてのサイトのセッショントークンとして自動的にみなされるものです (例:  phpsessid, jsessionid など)。 サイトセッショントークンは、特定のサイト用の一連のトークンであり、通常は<a
+			href="../../ui/tabs/params.html">パラメータータブ</a>で利用可能なポップアップメニューを使用して設定されます.
 	</p>
 
 	<p>
-		This tool automatically detects, using the defined session tokens or
-		the automatically detected default session tokens, any HTTP session
-		which exists in the communication. The detected sessions are shown in
-		the <a href="../../ui/tabs/httpsessions.html">HTTP Sessions Tab</a>.
+		このツールは、定義済みのセッショントークン、または自動検出されたデフォルトセッショントークンを使用して、通信に存在するHTTPセッションを自動的に検出します。 検出されたセッションは<a href="../../ui/tabs/httpsessions.html">HTTPセッションタブ</a>に表示されます.
 	</p>
 
 	<p>
-		The user can, using the button available on the <a
-			href="../../ui/tabs/httpsessions.html">HTTP Sessions Tab</a>, create
-		a new session without destroying the existing one, or can force one of
-		the sessions as 'active'. When a session is 'active', all the outbound
-		requests sent to the corresponding Site are modified, the session
-		tokens being set up to match the active session. In this way, the user
-		can easily force some messages to be 'part of' a particular session
-		and then switch and send messages on another session.
+		ユーザーは、<a
+			href="../../ui/tabs/httpsessions.html">HTTPセッションタブ</a>にあるボタンを使用して、既存のセッションを破棄することなく新しいセッションを作成したり、いずれかのセッションを「アクティブ」として強制したりできます。 あるセッションが「アクティブ」になると、対応するサイトに送信されるすべてのリクエストが変更され、セッショントークンはアクティブなセッションに一致するように設定されます。 これにより、ユーザーは特定のメッセージをあるセッションの「一部」として強制的に送信し、その後別のセッションに切り替えてメッセージを送信することが容易になります。
 	</p>
 
 	<p>
-		The HTTP Sessions tool is configured using the <a
-			href="../../ui/dialogs/options/httpsessions.html">HTTP Sessions
-			Options screen</a>.
+		HTTPセッションツールは、<a
+			href="../../ui/dialogs/options/httpsessions.html">HTTPセッションオプション画面</a>で設定します.
 	</p>
 
 	<h2>ここから参照されています</h2>
 	<table>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/tabs/httpsessions.html">HTTP Sessions
-					tab</a></td>
+			<td><a href="../../ui/tabs/httpsessions.html">HTTPセッションタブ</a></td>
 			<td></td>
 		</tr>
 	</table>
@@ -81,8 +55,7 @@
 		</tr>
 		<tr>
 			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/dialogs/options/httpsessions.html">HTTP
-					Sessions Options screen</a></td>
+			<td><a href="../../ui/dialogs/options/httpsessions.html">HTTPセッションオプション画面</a></td>
 			<td>ツールのオプションの概要について</td>
 		</tr>
 		<tr>

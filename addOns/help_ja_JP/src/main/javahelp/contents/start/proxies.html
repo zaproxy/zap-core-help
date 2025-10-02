@@ -9,11 +9,10 @@
 <body>
 <h1>プロキシの設定</h1>
 <p>
-The best way to use a browser with ZAP is to launch it from ZAP. 
-It will then be automatically configured to proxy through ZAP and to ignore certificate warnings.
+ZAPでブラウザを使用する最良の方法は、ZAPからブラウザを起動することです。起動したブラウザは、ZAPを経由するプロキシとして自動的に設定され、証明書の警告を無視するように設定されます。
 <p>
-If for any reason you are unable or unwilling to do that then you will need to configure your browser to use ZAP as a proxy.<br>
-By default, ZAP uses an Address of 'localhost' and a Port of '8080', but these can be changed via the Options > Network > Local Servers/Proxies screen.
+何らかの理由でZAPからブラウザを起動できない、または既存のブラウザプロファイルを使用したい場合は、ZAPをプロキシとして使用するようブラウザを手動で設定する必要があります。<br>
+デフォルトでは、ZAPはアドレス 'localhost' とポート '8080' を使用しますが、これらは「オプション」>「ネットワーク」>「ローカルサーバー/プロキシ」画面で変更できます。 
 
 最も一般に利用されているブラウザの最新版に関する説明は次の通りです。 
 </p>
@@ -27,7 +26,7 @@ By default, ZAP uses an Address of 'localhost' and a Port of '8080', but these c
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> 'LAN Settings' button</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Follow the</td><td> 'Windows LAN Settings' section below</td></tr>
 </table>
-<strong>Note:</strong> To proxy <code>localhost</code> (and related addresses) with newer Chrome versions (>= 72) the command line argument <code>--proxy-bypass-list=&lt;-loopback&gt;</code> must be provided.
+<strong>注:</strong> To proxy <code>localhost</code> (and related addresses) with newer Chrome versions (>= 72) the command line argument <code>--proxy-bypass-list=&lt;-loopback&gt;</code> must be provided.
 
 <h3>Firefox (on Windows)</h3>
 <table>
@@ -43,7 +42,7 @@ Ensure 'SSL Proxy' is also configured, either by selecting 'Use this proxy serve
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> Connection Setting 'OK' button</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Press the</td><td> Options 'OK' button</td></tr>
 </table>
-<strong>Note:</strong> To proxy <code>localhost</code> (and related addresses) with newer Firefox versions (>= 67) the preference <code>network.proxy.allow_hijacking_localhost</code> (accessible through the <code>about:config</code> page) must be set to <code>true</code>.
+<strong>注:</strong> To proxy <code>localhost</code> (and related addresses) with newer Firefox versions (>= 67) the preference <code>network.proxy.allow_hijacking_localhost</code> (accessible through the <code>about:config</code> page) must be set to <code>true</code>.
 
 <h3>Firefox (on Linux)</h3>
 <table>
@@ -141,10 +140,9 @@ Ensure 'SSL Proxy' is also configured, either by selecting 'Use this proxy serve
 <h2>関連情報</h2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="start.html">Getting Started</a></td><td>for details of how to
-start using ZAP</td></tr>
+<a href="start.html">はじめに</a></td><td>ZAPの使用開始にあたっての詳細</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
-<a href="../intro.html">Introduction</a></td><td>the introduction to ZAP</td></tr>
+<a href="../intro.html">導入</a></td><td>ZAPのご紹介</td></tr>
 </table>
 
 </body>

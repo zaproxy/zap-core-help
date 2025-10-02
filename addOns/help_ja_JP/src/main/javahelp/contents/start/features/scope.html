@@ -9,20 +9,20 @@
 <body>
 <h1>スコープ</h1>
 <p>
-スコープはテスト対象のURLの集合であり、指定された<a href="contexts.html">コンテキスト</a>によって定義されます。<br/><br/> デフォルトではスコープには何もありません。
+スコープはテスト対象のURL範囲を定義し、指定した<a href="contexts.html">コンテキスト</a>によって定義されます。<br/><br/>
+デフォルトでは、何もスコープに含まれていません。
 </p>
 <p>
-次のような場合、スコープは変更される可能性があります。：
+スコープは以下に影響を与える可能性があります：
 <ul>
-<li>プロテクト <a href="modes.html">モード</a> にいるときに、あなたが出来る事</li>
+<li>プロテクト<a href="modes.html">モード</a>の場合、実行できること</li>
 <li><a href="../../ui/tabs/history.html">履歴タブ</a> に表示される内容</li>
-<li>Protected - スコープ内のURL上でのみ（潜在的に）危険な動作を行う事ができます。</li>
-<li>Standard - 以前のリリースのように、何でも出来ます。</li>
-<li>ATTACK - new nodes that are in Scope are <a href="ascan.html">actively scanned</a> as soon as they are discovered</li>
+<li>プロテクト - スコープ内のURLに対してのみ、危険な可能性のあるアクションを実行できます</li>
+<li>標準 - 以前のリリースのように、何でも出来ます</li>
+<li>攻撃 - スコープ内の新しいノードは、発見され次第<a href="ascan.html">アクティブスキャン</a>されます</li>
 </ul>
 
-It is recommended that you define a new <a href="contexts.html">コンテキスト</a> for each web application
-that makes up the system you are testing, and set them in scope as you test each one.
+テストしているシステムを構成する各Webアプリケーションに対して新しい <a href="contexts.html">コンテキスト</a> を定義し、それぞれをテストする際にスコープに含めることを推奨します。 
 
 <h2>関連情報</h2>
 <table>
