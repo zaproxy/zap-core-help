@@ -85,7 +85,7 @@
          	<tocitem text="Anti-CSRFトークン" target="ui.dialogs.options.anticsrf"/>
          	<tocitem text="API" target="ui.dialogs.options.api"/>
             <tocitem text="ブレークポイント" target="ui.dialogs.options.breakpoints"/>
-         	<tocitem text="アップデートのチェック" target="ui.dialogs.options.checkforupdates"/>
+         	<tocitem text="更新の確認" target="ui.dialogs.options.checkforupdates"/>
 			<tocitem text="データベース" target="ui.dialogs.options.database"/>
          	<tocitem text="表示" target="ui.dialogs.options.view"/>
             <tocitem text="拡張機能" target="ui.dialogs.options.ext"/>
