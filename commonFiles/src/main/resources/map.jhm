@@ -119,6 +119,7 @@
         <mapID target="zap.releases.2.15.0" url="contents/releases/2.15.0.html"/>
         <mapID target="zap.releases.2.16.0" url="contents/releases/2.16.0.html"/>
         <mapID target="zap.releases.2.16.1" url="contents/releases/2.16.1.html"/>
+        <mapID target="zap.releases.2.17.0" url="contents/releases/2.17.0.html"/>
         <mapID target="zap.credits" url="contents/credits.html" />
      	<mapID target="ui.dialogs.options.ascan" url="contents/ui/dialogs/options/ascan.html"/>
      	<mapID target="ui.dialogs.options.ascaninput" url="contents/ui/dialogs/options/ascaninput.html"/>
