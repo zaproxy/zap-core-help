@@ -7,6 +7,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Fixed
 - Fix a typo in Breakpoints features page.
 
+### Changed
+- Updated for 2.17.0.
+
 ## [21] - 2025-08-21
 ### Changed
 - Update available JavaScript engine and links.
