@@ -21,7 +21,7 @@ These release notes do not include all of the changes included in add-ons update
 <br><br>
 Some of the more significant enhancements include:
 
-<H3>Network Add-On</H3>
+<H3>ネットワークアドオン</H3>
 
 The core networking code has been replaced by a new add-on which means changes are no longer bound to core/stable releases.
 This add-on uses a modern network stack which will make it much easier to support modern protocols such as HTTP/2.
@@ -78,12 +78,12 @@ A significant number of scan rules have been promoted in this release.
 The following <b>Active</b> scan rules have been promoted to <b>Release</b> status:
 
 <ul>
-  <li><a href="https://www.zaproxy.org/docs/alerts/40034/">.env Information Leak</a>
-  <li><a href="https://www.zaproxy.org/docs/alerts/90034/">Cloud Metadata Attack</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40034/">.env からの情報漏洩</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/90034/">クラウドメタデータ攻撃</a>
   <li><a href="https://www.zaproxy.org/docs/alerts/40026/">Cross Site Scripting (DOM Based)</a>
   <li><a href="https://www.zaproxy.org/docs/alerts/10058/">GET for POST</a>
   <li><a href="https://www.zaproxy.org/docs/alerts/20015/">Heartbleed OpenSSL Vulnerability</a>
-  <li><a href="https://www.zaproxy.org/docs/alerts/40035/">Hidden File Finder</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/40035/">隠しファイルファインダー</a>
   <li><a href="https://www.zaproxy.org/docs/alerts/90024/">Padding Oracle</a>
   <li><a href="https://www.zaproxy.org/docs/alerts/20018/">Remote Code Execution - CVE-2012-1823</a>
   <li><a href="https://www.zaproxy.org/docs/alerts/20017/">Source Code Disclosure - CVE-2012-1823</a>
@@ -95,7 +95,7 @@ The following <b>Active</b> scan rules have been promoted to <b>Release</b> stat
   <li><a href="https://www.zaproxy.org/docs/alerts/40024/">SQL Injection - SQLite</a>
   <li><a href="https://www.zaproxy.org/docs/alerts/40029/">Trace.axd Information Leak</a>
   <li><a href="https://www.zaproxy.org/docs/alerts/10104/">User Agent Fuzzer</a>
-  <li><a href="https://www.zaproxy.org/docs/alerts/90017/">XSLT Injection</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/90017/">XSLTインジェクション</a>
   <li><a href="https://www.zaproxy.org/docs/alerts/90023/">XXE</a>
 </ul>
 
@@ -104,13 +104,13 @@ The following <b>Passive</b> scan rules have been promoted to <b>Release</b> sta
 <ul>
   <li><a href="https://www.zaproxy.org/docs/alerts/10044/">Big Redirects Detected</a>
   <li><a href="https://www.zaproxy.org/docs/alerts/10033/">Directory Browsing</a>
-  <li><a href="https://www.zaproxy.org/docs/alerts/10097/">Hash Disclosure</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10097/">ハッシュの露見</a>
   <li><a href="https://www.zaproxy.org/docs/alerts/10034/">Heartbleed OpenSSL Vulnerability (Indicative)</a>
   <li><a href="https://www.zaproxy.org/docs/alerts/10041/">HTTP to HTTPS Insecure Transition in Form Post</a>
   <li><a href="https://www.zaproxy.org/docs/alerts/10042/">HTTPS to HTTP Insecure Transition in Form Post</a>
   <li><a href="https://www.zaproxy.org/docs/alerts/10108/">Reverse Tabnabbing</a>
   <li><a href="https://www.zaproxy.org/docs/alerts/10109/">Modern App Detection</a>
-  <li><a href="https://www.zaproxy.org/docs/alerts/10062/">PII Disclosure</a>
+  <li><a href="https://www.zaproxy.org/docs/alerts/10062/">個人識別用情報の漏洩</a>
   <li><a href="https://www.zaproxy.org/docs/alerts/10050/">Retrieved From Cache</a>
   <li><a href="https://www.zaproxy.org/docs/alerts/10036/">Server Header Info Leak</a>
   <li><a href="https://www.zaproxy.org/docs/alerts/10035/">Strict Transport Security</a>
@@ -355,7 +355,7 @@ The following table illustrates the differences/improvements versus the 2.11/2.1
   </tbody>
 </table>
 
-<H3>Requester Add-On</H3>
+<H3>リクエスターアドオン</H3>
 
 The Manual Request Editor and Resend dialogues were moved to the Requester add-on. This add-on will now provide the base infrastructure for add-ons to edit and send messages, the following add-ons
 are now using the Requester add-on: Plug-n-Hack Configuration (Client Messages) and WebSockets.

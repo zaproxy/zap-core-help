@@ -22,8 +22,8 @@
 <tr><td>rules.cookie.ignorelist</td><td></td><td>Cookie名のカンマ区切りリスト
 このリストに含まれるCookieは、Cookie関連の問題をスキャンする際に無視されます。</td></tr>
 <tr><td>rules.csrf.ignorelist</td><td></td><td>識別子のカンマ区切りリスト
-name または ID がこれらの識別子のいずれかに一致するFORMは、Anti-CSRFトークンの欠落をスキャンする際に無視されます。
-この機能は、検索フォームなど、安全であることが分かっているFORMを無視する場合にのみ使用してください。</td></tr>
+これらの識別子のいずれかに一致する name または ID を持つFORMは、Anti-CSRFトークンの欠落をスキャンする際に無視されます。
+この機能は、検索フォームなど、安全であることが確認されているFORMを無視する場合にのみ使用してください。</td></tr>
 <tr><td>rules.csrf.ignore.attname</td><td></td><td>フォームにAnti-CSRFトークンが不要であることを示すために使用できるHTML属性の名前 <code>rules.csrf.ignore.attvalue</code> が指定されている場合、属性の値も一致する必要があります。 見つかった場合、関連するアラートは情報 (INFO) レベルで報告されます。</td></tr>
 <tr><td>rules.csrf.ignore.attvalue</td><td></td><td><code>rules.csrf.ignore.attname</code> で指定されたHTML属性の値で、フォームにAnti-CSRFトークンが不要であることを示すために使用できます。 見つかった場合、関連するアラートは情報 (INFO) レベルで報告されます。</td></tr>
 <tr><td>rules.domains.trusted</td><td></td><td>URLの正規表現パターンのカンマ区切りリスト。このパターンに一致するURLは信頼済みドメインと見なされ、関連する問題は無視されます。</td></tr>
