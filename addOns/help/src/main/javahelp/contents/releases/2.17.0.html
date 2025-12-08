@@ -11,24 +11,36 @@
 
 This is a bug fix and enhancement release.
 
-TBC
-
 <H3>Alert De-duplication</H3>
-Changes have been made in order to reduce the number of alerts which ZAP may raise that are duplicaes or highly similar, more closely being aligned with the Sites Tree representation.
+Changes have been made in order to reduce the number of alerts which ZAP may raise that are duplicates or highly similar, more closely being aligned with the Sites Tree representation.
 See the <a href="https://www.zaproxy.org/blog/2025-09-30-alert-de-duplication/">Alert De-duplication blog</a> for further details.
 
 <H3>Systemic Alerts</H3>
-TBC
+Alerts that are typically site-wide will now be flagged as being "Systemic" in both the ZAP Desktop UI and in reports.
+<p>
+This can also significantly reduce the number of "duplicate" alerts reported.
+
+<H3>Insights</H3>
+A new "Insights" tab shows key information which is not related to vulnerabilities, or potentially even related to the application in question.
+<p>
+Insights tell you more about your applications, about the effectiveness of a scan, and can even stop a scan early if significant problems are identified.
+<p>
+Insights are also available in all of the official ZAP reports.
+
+<H3>Improved Disk and Memory Space Error Handling</H3>
+ZAP will now detect disk and memory space issues and attempt to handle them more gracefully.
+<p>
+Any problems encountered will be reported via the Insights.
+
+<H3>Automation Disk Space Reduction</H3>
+Active Scan Temporary HTTP Messages are no longer persisted by default when ZAP is run headless.
+This can significantly reduce the amount of disk space needed.
+<p>
+The option is also available in the Desktop but is turned off be default, so that the user can inspect them.
 
 <H3>Structured Reports ISO 8601 Standard Date</H3>
 The structured reports (JSON and XML) now have an ISO 8601 standard date field/attribute (“created”); 
 the existing “generatedString” field will be removed in the future.
-
-<H3>Active Scan Temporary HTTP Messages</H3>
-If this option is selected the active scanner will persist all HTTP messages sent while active scanning, which allows to further inspect them (e.g. custom passive scanners, manually).
-They are temporary and removed once the session is closed, for cases where the HTTP messages are not necessary it is advised to disable this option for performance reasons (I/O, disk space).
-<p>
-By default the HTTP messages are persisted unless in command line mode, where sessions are usually discarded once ZAP finishes.
 
 <H3>Dependency Updates</H3>
 
@@ -37,7 +49,20 @@ As usual the release includes dependency updates.
 The following libraries were updated:
 
 <ul>
-  <li>TBC</li>
+  <li>Commons Beanutils, 1.10.1 → 1.11.0</li>
+  <li>Commons Codec, 1.18.0 → 1.20.0</li>
+  <li>Commons CSV, 1.12.0 → 1.14.1</li>
+  <li>Commons IO, 2.18.0 → 2.21.0</li>
+  <li>Commons Lang3, 2.17.0 → 3.19.0</li>
+  <li>Commons Text, 1.13.0 → 1.14.0</li>
+  <li>Flatlaf, 3.5.4 → 3.7</li>
+  <li>Flatlaf Swingx, 3.5.4 → 3.6.2</li>
+  <li>Jfreechart, 1.5.5 → 1.5.6</li>
+  <li>Jgrapht Core, 0.9.0 → 0.9.2</li>
+  <li>Log4j 1.2 API, 2.24.3 → 2.25.2</li>
+  <li>Log4j API, 2.24.3 → 2.25.2</li>
+  <li>Log4j Core, 2.24.3 → 2.25.2</li>
+  <li>Log4j Jul, 2.24.3 → 2.25.2</li>
 </ul>
 
 <H2>Add-Ons</H2>
@@ -45,14 +70,57 @@ The following libraries were updated:
 <H3>Updated Add-Ons</H3>
 All of the add-ons included by default have been updated since the last full release.
 
+<H3>New Add-Ons</H3>
+
+<ul>
+  <li>Insights - as detailed above</li>
+</ul>
+
 <H2>Enhancements</H2>
 <ul>
-<li>TBC</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/2382">Issue 2382</a> : IOException - data file enlarge failed</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/3486">Issue 3486</a> : Enhancement: ZAP GUI Warn User When its out of Memory</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8904">Issue 8904</a> : JSON Input Vector doesn't handle top level primitive types</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8910">Issue 8910</a> : Sync anti-csrf token regen/use in active scanner</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8911">Issue 8911</a> : New variant: Request body with no or plain text content type</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8919">Issue 8919</a> : Avoid concurrent scan of similar pages</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8920">Issue 8920</a> : Exclude anti-csrf tokens from the active scan</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8955">Issue 8955</a> : zap.sh does not respect $JAVA_HOME</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8982">Issue 8982</a> : Include rule name in Active Scan skip tooltip</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8992">Issue 8992</a> : Allow to copy rule config fields</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8997">Issue 8997</a> : Improve support for FreeBSD</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/9044">Issue 9044</a> : Implement DPI-aware divider sizing for WorkbenchPanel split panes</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/9067">Issue 9067</a> : Alert tree de-duplication</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/9072">Issue 9072</a> : Address log flooding when DB is full</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/9073">Issue 9073</a> : Reset search field on session changes</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/9074">Issue 9074</a> : Add option for temp active scan msgs persistence</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/9097">Issue 9097</a> : Systemic alert support</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/9108">Issue 9108</a> : Get false positive alerts from alert/view/alerts/ API endpoint</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/9113">Issue 9113</a> : Adjust Alert compareTo and equals for case sensitive URI comparison</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/9117">Issue 9117</a> : Record stats for authenticated ascans</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/9120">Issue 9120</a> : Change policies to support statsId and readonly</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/9123">Issue 9123</a> : Make script-based auth method easier to extend</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/9136">Issue 9136</a> : Suppress XML prolog errors</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/9138">Issue 9138</a> : Allow to lock scan policies</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/9153">Issue 9153</a> : Set systemic limit default</li>
 </ul>
 
 <H2>Bug fixes</H2>
 <ul>
-<li>TBC</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/4530">Issue 4530</a> : Site Tree XML POST Parameter Name Issue</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/6656">Issue 6656</a> : Default Content-Type charset is not always considered</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8327">Issue 8327</a> : Handle lack of disk space better</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8888">Issue 8888</a> : Alerts Summary reports on filtered alerts. Difference between 2.15.0 &amp; 2.16.0</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8909">Issue 8909</a> : User Defined Variant, correct bounds check</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8934">Issue 8934</a> : Error dialog re cannot snapshot session while actions running contains HTML tags</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/8969">Issue 8969</a> : Align combined fields in std dialog</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/9002">Issue 9002</a> : Fixed structured POST data node names</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/9003">Issue 9003</a> : Correct poll header validation/usage</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/9015">Issue 9015</a> : Do not warn on charset aliases</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/9075">Issue 9075</a> : Guard against multipart parsing errors</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/9085">Issue 9085</a> : Fix GUI exceptions while updating add-ons</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/9106">Issue 9106</a> : Fix error importing context with auth script</li>
+<li><a href="https://github.com/zaproxy/zaproxy/issues/9127">Issue 9127</a> : Do not warn on empty encoded HTTP bodies</li>
 </ul>
 
 <H2>See Also</H2>
