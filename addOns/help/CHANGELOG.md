@@ -3,7 +3,7 @@ All notable changes to this add-on will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## Unreleased
+## [22] - 2025-12-15
 ### Fixed
 - Fix a typo in Breakpoints features page.
 
@@ -114,6 +114,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - First version.
 
+[22]: https://github.com/zaproxy/zap-core-help/releases/help-v22
 [21]: https://github.com/zaproxy/zap-core-help/releases/help-v21
 [20]: https://github.com/zaproxy/zap-core-help/releases/help-v20
 [19]: https://github.com/zaproxy/zap-core-help/releases/help-v19
