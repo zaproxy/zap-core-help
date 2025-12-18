@@ -27,10 +27,125 @@ Alertas pueden ser levantados por varios componentes ZAP, incluyendo pero no lim
 <p>
 Alertas están marcados en la <a href="../../ui/tabs/history.html">ficha historial</a> con una bandera que indica que la alerta máxima de riesgo. <br/> Todas las alertas aparecen en la <a href="../../ui/tabs/alerts.html">pestaña de alertas</a> y en el <a href="../../ui/footer.html">pie de página</a> se muestra un recuento del número total de alertas por riesgo.
 </p>
+<p>
+The full set of alerts that ZAP can raise is available online at 
+<a href="https://www.zaproxy.org/docs/alerts/">https://www.zaproxy.org/docs/alerts/</a>
+</p>
 
-<a name="alertoverrides"></a><h2>Alerta de sobreescritura</h2> 
+<a name="alertfields"></a><h2>Alert Fields</h2> 
 
-Alertas por ZAP incluyen información genérica y específica sobre las alertas levantado.
+The following fields are supported.
+
+<a name="alert-name"></a><h3>Name</h3> 
+
+The name of the alert, for example "Cross Site Scripting (Reflected)"
+
+<a name="alert-url"></a><h3>URL</h3> 
+
+The URL related to the alert.
+
+<a name="alert-nodename"></a><h3>Node Name</h3> 
+
+A normalised version of the URL, which is also used in the <a href="sitestree.html">Sites Tree</a> 
+
+<a name="alert-risk"></a><h3>Risk</h3> 
+
+The relative severity of the alert.
+<p>
+One of:
+<ul>
+<li>Informational
+<li>Low
+<li>Medium
+<li>High
+</ul>
+
+The risk is automatically set for Alerts raised by ZAP.
+If you want to change the risk you can either do that manually for each alert or you can create an
+Alert Filter to do it automatically.
+
+<a name="alert-confidence"></a><h3>Confidence</h3> 
+
+The relative confidence in the alert.
+<p>
+One of:
+<ul>
+<li>False Positive
+<li>Low
+<li>Medium
+<li>High
+<li>Confirmed
+</ul>
+
+ZAP will not raise an alert with a confidence of either "False Positive" or "Confirmed".
+However you can set these levels either manually or via an Alert Filter.
+
+<a name="alert-param"></a><h3>Parameter</h3> 
+
+The name of the parameter that was attacked. 
+This will be empty if the alert is not associated with a specific parameter.
+
+<a name="alert-attack"></a><h3>Attack</h3>
+
+The payload used to find the alert.
+This will be empty for passive alerts.
+
+<a name="alert-evidence"></a><h3>Evidence</h3>
+
+A string that appears in the request or response which was used to help identify the alert.
+This will be empty if there is no relevant string, for example for missing security headers.
+ 
+<a name="alert-cweid"></a><h3>CWE ID</h3> 
+
+The <a href="https://cwe.mitre.org/">Common Weakness Enumeration</a> ID.
+
+<a name="alert-wascid"></a><h3>WASC ID</h3> 
+
+The <a href="http://projects.webappsec.org/w/page/13246978/Threat%20Classification">Web Application Security Consortium</a> ID.
+
+<a name="alert-source"></a><h3>Source</h3> 
+
+The component which raised the alert, and the ID of the rule.
+
+<a name="alert-alertref"></a><h3>Alert Reference</h3> 
+
+The ID of the rule which raised the alert, optionally followed by a dash and the alert type.
+<p>
+All of the alerts raised by ZAP are listed on
+<a href="https://www.zaproxy.org/docs/alerts/">https://www.zaproxy.org/docs/alerts/</a>,
+and they all have a static page with a URL based on the Alert Reference.
+
+<a name="alert-input"></a><h3>Input Vector</h3> 
+
+The <a href="../../ui/dialogs/options/ascaninput.html">Active Scan Input Vector</a> used to identify the element attacked.
+This will be empty for passive alerts or if the alert is not associated with a specific parameter.
+
+<a name="alert-desc"></a><h3>Description</h3> 
+
+A detailed description of the alert. This will be the same text for all alert instances with the same reference.
+
+<a name="alert-other"></a><h3>Other Info</h3> 
+
+Alert specific information, which is potentially different for each alert raised.
+
+<a name="alert-solution"></a><h3>Solution</h3> 
+
+Potential solutions to the underlying problem. 
+Note that these solutions will be generic as ZAP does not access any source code. 
+This will be the same text for all alert instances with the same reference.
+
+<a name="alert-ref"></a><h3>Reference</h3> 
+
+A set of links to more information about the alert online.
+
+<a name="alert-tags"></a><h3>Alert Tags</h3> 
+
+The tags associated with the alert.
+The full set of tags supported are listed on <a href="https://www.zaproxy.org/alerttags/">https://www.zaproxy.org/alerttags/</a>.
+
+<a name="alertoverrides"></a><h2>Alert Overrides</h2> 
+
+Alerts raised by ZAP include both generic and specific information about the alerts raised.
 La información específica se relaciona directamente con el posible problema encontrado, tal como el URL y el parámetro afectado.
 La información genérica incluye cosas como una descripción y vínculos a recursos en línea relacionados.
 <p>

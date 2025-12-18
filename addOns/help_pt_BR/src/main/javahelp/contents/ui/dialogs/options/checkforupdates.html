@@ -13,48 +13,52 @@ Esta tela permite que você configure se o ZAP verificará se você está execut
 </p>
 
 <h3>Verificar atualizações ao iniciar</h3>
-Se selecionado, então o ZAP irá automaticamente verificar se há atualizações para o aplicativo inteiro e para todos os add-ons quando iniciar.<br>
-É altamente recomendável que você ligue esta caixa.<br>
-Se por algum motivo que você escolher não, deverá verificar manualmente e com frequência as atualizações.<br>
-ZAP vai fazer apenas um pedido de atualização e a única informação incluída será a versão atual em que ele está.
+<p>If selected then ZAP will automatically check for updates to the whole application and all of the add-ons when it starts.<br>
+It is strongly recommended that you check this box.<br>
+If for any reason you choose not to then you should manually check for updates frequently.<br>
+ZAP will only make one request, and the only information included will be the current version you are on.</p>
 
 <h3>Automatically download new ZAP releases.</h3>
-Se selecionado, então o ZAP irá automaticamente baixar novos releases ZAP quando eles estiverem disponíveis e pedir para você instalá-los. 
+<p>Se selecionado, então o ZAP irá automaticamente baixar novos releases ZAP quando eles estiverem disponíveis e pedir para você instalá-los.</p>
 
 <h3>Automatically install updates to the add-ons you have installed.</h3>
-Se selecionado, o ZAP fará automaticamente o download e instalará quaisquer updates nos add-ons que você tiver no ZAP.
+<p>Se selecionado, o ZAP fará automaticamente o download e instalará quaisquer updates nos add-ons que você tiver no ZAP.</p>
 
 <h3>Automatically install updates to the scan rules you have installed.</h3>
-If selected then ZAP will automatically download and install any updates to the scan rules you have installed.<br>
-Estes são um subset do conjunto completo de Add-ons instalados.
+<p>If selected then ZAP will automatically download and install any updates to the scan rules you have installed.<br>
+These are a subset of the full set of add-ons installed.</p>
 
 <h3>Report new Release status add-ons.</h3>
-If selected then ZAP will inform you if and when any add-ons are promoted to 'release' status.<br>
-These add-ons will have been thoroughly tested and reviewed, and you can be sure they are of the highest status.
+<p>If selected then ZAP will inform you if and when any add-ons are promoted to 'release' status.<br>
+These add-ons will have been thoroughly tested and reviewed, and you can be sure they are of the highest status.</p>
 
 <h3>Report new Beta status add-ons.</h3>
-If selected then ZAP will inform you if and when any add-ons are promoted to 'beta' status.<br>
+<p>If selected then ZAP will inform you if and when any add-ons are promoted to 'beta' status.<br>
 These add-ons will have been tested and reviewed, and are considered to be of a reasonable status 
 and mostly fit for purpose.<br>
-No entanto, eles podem estar incompletos ou precisar de mais testes.<br>
-Alguns dos add-ons incluídos no ZAP por padrão estão ainda no nível beta.  
+However they may be incomplete or need further testing.<br>
+Some of the add-ons included with ZAP by default are still at the beta level.</p>
 
 <h3>Report new Alpha status add-ons.</h3>
-If selected then ZAP will inform you if and when any new add-ons are added at 'alpha' status.<br>
-Estescomplememntos estarão revisados, mas geralmente estão  na fase inicial de desenvolvimento.<br>
-Podem estar incompletos, conter problemas relevantes ou causar problemas de estabilidade.
+<p>If selected then ZAP will inform you if and when any new add-ons are added at 'alpha' status.<br>
+These add-ons will have been reviewed but they are typically at an early stage of development.<br>
+They may be incomplete, contain significant issues or cause stability problems.</p>
 
 <h3>Diretórios de complementos</h3>
-ZAP vai carregar todos os complementos do <a href="../../../start/features/addons.html">diretório padrão <code>plugin</code></a>.<br>
-Você também pode adicionar tantos diretórios de complementos quanto precisar, adicionando-os aqui.<br>
-Isso pode ser muito útil quando várias instâncias do ZAP estiverem sendo executadas em uma máquina, por exemplo um ambiente de CI.<br>
-Você pode então apenas baixar complementos novos ou atualizados e imediatamente compartilhá-los entre as várias instâncias.<br>
-Complementos baixados em diretórios compartilhados serão adicionados apenas para novas instâncias do ZAP, e não para aqueles que já estão em execução, com exceção da instância que baixou aquele complemento. 
+<p>ZAP will load all of the add-ons from the <a href="../../../start/features/addons.html">default <code>plugin</code>
+directories</a>.<br>
+You can also add as many additional add-on directories as you need by adding them here.<br>
+This can be very useful when running multiple ZAP instances on one machine, for example in a CI environment.<br>
+You can then just download new or updated add-ons once and immediately share them between multiple instances.<br>
+Add-ons downloaded into shared directories will be only added to new ZAP instances, not to ones that are already running,
+with the exception of the instance that actually downloaded the add-on.</p>
 
 <h3>Diretório de Download</h3>
-Este é o diretório onde o Zap irá baixar os complementos novos ou atualizados.<br>
-Por padrão este será o diretório local, mas você também pode escolher um dos diretórios compartilhados, contanto que esta instância do ZAP possa escrever nele.<br>
-O ZAP só moverá Complementos para um diretório compartilhado depois que eles estiverem completamente baixados, para que outras instâncias ZAP não tentem carregar um complemento incompleto.
+<p>This is the directory ZAP will download new or updated add-ons to.<br>
+By default it will be the local directory, but you can also choose one of the shared directories as long as this ZAP
+instance can write to it.<br>
+ZAP will only move add-ons to a shared directory after they are completely downloaded, so that other ZAP instances
+do not try to load an incomplete add-on.</p>
 
 <h2>Leia também</h2>
 <table>

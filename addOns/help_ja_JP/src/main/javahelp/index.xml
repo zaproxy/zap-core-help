@@ -90,29 +90,30 @@
     <indexitem text="リリース 2.15.0" target="zap.releases.2.15.0" />
     <indexitem text="リリース 2.16.0" target="zap.releases.2.16.0" />
     <indexitem text="リリース 2.16.1" target="zap.releases.2.16.1" />
-    <indexitem text="リリース" target="zap.releases" />
-    <indexitem text="リクエストタブ" target="ui.tabs.request" />
-    <indexitem text="レスポンスタブ" target="ui.tabs.response" />
-    <indexitem text="スキャナールール" target="start.check" />
-    <indexitem text="スキャンポリシー" target="start.features.scanpolicy" />
-    <indexitem text="スキャンポリシーダイアログ" target="ui.dialogs.scanpolicy" />
-    <indexitem text="スキャンポリシー管理ダイアログ" target="ui.dialogs.scanpolicymgr" />
-    <indexitem text="スキャンの進捗ダイアログ" target="ui.dialogs.scanprogress" />
-    <indexitem text="スクリプト" target="start.features.scripts" />
-    <indexitem text="検索タブ" target="ui.tabs.search" />
-    <indexitem text="セッションコンテキスト画面" target="ui.dialogs.contexts" />
-    <indexitem text="セッションコンテキスト認証画面" target="ui.dialogs.context-auth" />
-    <indexitem text="セッションコンテキスト構造画面" target="ui.dialogs.context-struct" />
-    <indexitem text="セッションプロパティダイアログ" target="ui.dialogs.sessprop" />
-    <indexitem text="サイトタブ" target="ui.tabs.sites" />
-    <indexitem text="サイトツリー" target="start.features.sitestree" />
-    <indexitem text="統計" target="start.features.stats" />
-    <indexitem text="構造体修飾子" target="start.features.structmods" />
-    <indexitem text="構造体パラメーター" target="start.features.structparams" />
-    <indexitem text="タグ" target="start.features.tags" />
-    <indexitem text="トップレベルメニュー" target="ui.topmenu" />
-    <indexitem text="トップレベルツールバー" target="ui.toptoolbar" />
-    <indexitem text="UIの概要" target="ui.overview" />
-    <indexitem text="ビュー" target="ui.views" />
+    <indexitem text="release 2.17.0" target="zap.releases.2.17.0" />
+    <indexitem text="releases" target="zap.releases" />
+    <indexitem text="request tab" target="ui.tabs.request" />
+    <indexitem text="response tab" target="ui.tabs.response" />
+    <indexitem text="scanner rules" target="start.check" />
+    <indexitem text="scan policy" target="start.features.scanpolicy" />
+    <indexitem text="scan policy dialog" target="ui.dialogs.scanpolicy" />
+    <indexitem text="scan policy manager dialog" target="ui.dialogs.scanpolicymgr" />
+    <indexitem text="scan progress dialog" target="ui.dialogs.scanprogress" />
+    <indexitem text="scripts" target="start.features.scripts" />
+    <indexitem text="search tab" target="ui.tabs.search" />
+    <indexitem text="session context screens" target="ui.dialogs.contexts" />
+    <indexitem text="session context authentication screen" target="ui.dialogs.context-auth" />
+    <indexitem text="session context structure screen" target="ui.dialogs.context-struct" />
+    <indexitem text="session properties dialog" target="ui.dialogs.sessprop" />
+    <indexitem text="sites tab" target="ui.tabs.sites" />
+    <indexitem text="sites tree" target="start.features.sitestree" />
+    <indexitem text="statistics" target="start.features.stats" />
+    <indexitem text="structural modifiers" target="start.features.structmods" />
+    <indexitem text="structural parameters" target="start.features.structparams" />
+    <indexitem text="tags" target="start.features.tags" />
+    <indexitem text="top level menu" target="ui.topmenu" />
+    <indexitem text="top level toolbar" target="ui.toptoolbar" />
+    <indexitem text="ui overview" target="ui.overview" />
+    <indexitem text="views" target="ui.views" />
 
 </index>

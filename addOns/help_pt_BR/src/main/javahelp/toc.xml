@@ -117,6 +117,7 @@
    <tocitem text="Complementos" target="addons.introduction" tocid="addons" image="addons.icon" />
    
    <tocitem text="Releases" target="zap.releases">
+      <tocitem text="2.17.0" target="zap.releases.2.17.0"/>
       <tocitem text="2.16.1" target="zap.releases.2.16.1"/>
       <tocitem text="2.16.0" target="zap.releases.2.16.0"/>
       <tocitem text="2.15.0" target="zap.releases.2.15.0"/>

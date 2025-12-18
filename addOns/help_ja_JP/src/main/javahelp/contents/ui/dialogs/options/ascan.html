@@ -20,6 +20,12 @@
 <p>スキャナーがホストごとに使用するスレッド数です。<br>
 スレッド数を増やすとスキャンは高速化されますが、ZAPを実行しているコンピューターとターゲットホストの両方に余分な負荷がかかる可能性があります。</p>
 
+<h3>Persist Temporary HTTP Messages</h3>
+<p>If this option is selected the active scanner will persist all HTTP messages sent while active scanning, which allows to further inspect them (e.g. custom passive scanners, manually).
+They are temporary and removed once the session is closed, for cases where the HTTP messages are not necessary it is advised to disable this option for performance reasons (I/O, disk space).<br>
+The option is disabled by default when running ZAP <a href="../../../cmdline.html">inline</a>, where the sessions are usually discarded.
+</p>
+
 <h3>最大表示件数</h3>
 <p>アクティブスキャンタブに表示される結果数です。<br>
 大量の結果を表示すると、スキャンにかかる時間が大幅に増加する可能性があります。</p>
