@@ -13,48 +13,52 @@ Layar ini memungkinkan anda untuk mengkonfigurasiapaqkah ZAP melihat untuk memer
 </p>
 
 <h3>Periksa pembaruan saat distartup</h3>
-Jika dipilih maka ZAP secara otomatis akan memeriksa sebagai pembaruan terhadap keseluruhan aplikasi dan semua pengaya ketika itu dimulai.<br>
-Sangat disarankan supaya anda memeriksa kotak ini.<br>
-Jika karena alasan apapun anda memilih untuk tidak maka anda harus sering memeriksa pembaruan secara manual.<br>
-ZAP hanya akan membuat sebuah permintaan, dan satu-satunya informasi yang disertakan akan menjadi versi terbaru yang akan anda gunakan.
+<p>If selected then ZAP will automatically check for updates to the whole application and all of the add-ons when it starts.<br>
+It is strongly recommended that you check this box.<br>
+If for any reason you choose not to then you should manually check for updates frequently.<br>
+ZAP will only make one request, and the only information included will be the current version you are on.</p>
 
 <h3>Automatically download new ZAP releases.</h3>
-Jika dipilih maka ZAP akan secara otomatis mengunduh rilis ZAP baru ketika itu tersedia dan menyarakan anda untuk memasangnya. 
+<p>Jika dipilih maka ZAP akan secara otomatis mengunduh rilis ZAP baru ketika itu tersedia dan menyarakan anda untuk memasangnya.</p>
 
 <h3>Automatically install updates to the add-ons you have installed.</h3>
-Jika dipilih kemudian ZAP akan secara otomatis mengunduh dan memasang pembaruan untuk pegaya yang telah anda pasang.
+<p>Jika dipilih kemudian ZAP akan secara otomatis mengunduh dan memasang pembaruan untuk pegaya yang telah anda pasang.</p>
 
 <h3>Automatically install updates to the scan rules you have installed.</h3>
-If selected then ZAP will automatically download and install any updates to the scan rules you have installed.<br>
-Ini merupakan subset dari set lengkap untuk pengaya yang terpasang.
+<p>If selected then ZAP will automatically download and install any updates to the scan rules you have installed.<br>
+These are a subset of the full set of add-ons installed.</p>
 
 <h3>Report new Release status add-ons.</h3>
-If selected then ZAP will inform you if and when any add-ons are promoted to 'release' status.<br>
-These add-ons will have been thoroughly tested and reviewed, and you can be sure they are of the highest status.
+<p>If selected then ZAP will inform you if and when any add-ons are promoted to 'release' status.<br>
+These add-ons will have been thoroughly tested and reviewed, and you can be sure they are of the highest status.</p>
 
 <h3>Report new Beta status add-ons.</h3>
-If selected then ZAP will inform you if and when any add-ons are promoted to 'beta' status.<br>
+<p>If selected then ZAP will inform you if and when any add-ons are promoted to 'beta' status.<br>
 These add-ons will have been tested and reviewed, and are considered to be of a reasonable status 
 and mostly fit for purpose.<br>
-Namun mereka mungkin tidak lengkap atau membutuhlan lebih lanjut pengujian.<br>
-Beberapa pengaya yang disertakan dengan ZAP secara bawaan masih berada pada level beta.  
+However they may be incomplete or need further testing.<br>
+Some of the add-ons included with ZAP by default are still at the beta level.</p>
 
 <h3>Report new Alpha status add-ons.</h3>
-If selected then ZAP will inform you if and when any new add-ons are added at 'alpha' status.<br>
-Pengaya ini akan ditinjau namun biasanya pada tahapan awal dari pengembangan.<br>
-Mereka mungkin tidak lengkap, mengandung masalah signifikan atau menyebabkan masalah stabilitas.
+<p>If selected then ZAP will inform you if and when any new add-ons are added at 'alpha' status.<br>
+These add-ons will have been reviewed but they are typically at an early stage of development.<br>
+They may be incomplete, contain significant issues or cause stability problems.</p>
 
 <h3>Tambahkan direktori</h3>
-ZAP akan memuat semua pengaya dari <a href="../../../start/features/addons.html">direktori <code>plugin</code> bawaan</a>.<br>
-Anda juga dapat menambahkan direktori add-on tambahkan sebanyak yang anda butuhkan dengan menambahkan mereka di sini.<br>
-Ini bisa sangat berguna ketika menjalankan beberapa ZAP misalnya pada satu mesin, sebagai contoh pada lingkungan CI.<br>
-Kemudian anda bisa mengunduh pengaya baru atau yang pernah diperbarui dan segera membagikannya di antara beberapa contoh.<br>
-Pegaya yang diunduh kedalam direktori bersama hanya akan ditambahkan kekasus ZAP baru, tidak untuk orqang orang yang sudah berjalan, dengan pengecualian contoh yang benar benar diunduh. 
+<p>ZAP will load all of the add-ons from the <a href="../../../start/features/addons.html">default <code>plugin</code>
+directories</a>.<br>
+You can also add as many additional add-on directories as you need by adding them here.<br>
+This can be very useful when running multiple ZAP instances on one machine, for example in a CI environment.<br>
+You can then just download new or updated add-ons once and immediately share them between multiple instances.<br>
+Add-ons downloaded into shared directories will be only added to new ZAP instances, not to ones that are already running,
+with the exception of the instance that actually downloaded the add-on.</p>
 
 <h3>Unduh direktori</h3>
-Ini merupakan direktori ZAP yang akan mengunduh pengaya baru atau yang telah diperbarui.<br>
-Secara deafult, itu akan menjadi direktori lokal, tetapi anda juga dapat memilioh salah satu direktori bersama sebagai contoh ZAP ini dapat menulis untk itu.<br>
-ZAP ini hanya kaan bergerqak pegaya ke direktori bersama setelah mereka sepenuhnya diunduh, sehingga kasus ZAP lain tidak mencoba untuk memuat add-on tidak lengkap.
+<p>This is the directory ZAP will download new or updated add-ons to.<br>
+By default it will be the local directory, but you can also choose one of the shared directories as long as this ZAP
+instance can write to it.<br>
+ZAP will only move add-ons to a shared directory after they are completely downloaded, so that other ZAP instances
+do not try to load an incomplete add-on.</p>
 
 <h2>Melihat juga</h2>
 <table>

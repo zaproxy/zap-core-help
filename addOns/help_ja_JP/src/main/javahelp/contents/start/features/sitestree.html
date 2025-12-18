@@ -75,6 +75,155 @@ ZAPでは、'action' パラメーターを<a href="structparams.html">構造パ�
 <p>
 これらの場合、入力ベクトル<a href="scripts.html">スクリプト</a>を使用できます。これにより、サイトツリー内のリクエストを任意の方法で表現できます。
 
+<h2>Node Name Format</h2>
+
+<h3>Top Level Nodes</h3>
+The top level node names include the protocol, host name and the port (if specified), e.g. <code>https://www.example.com:8080</code>
+
+<h3>Intermediate Nodes</h3>
+Non leaf nodes will just have the name of the relevant part of the URL path, unless they are configured to be 
+<a href="ddc.html">Data Driven Content</a> in which case then will have the format <code>«ddc-name»</code>.
+
+<h3>Leaf Nodes</h3>
+Leaf node names are made up of:
+<ul>
+<li>The HTTP method (GET, POST, etc)
+<li>A colon
+<li>The last path element, or "/" if the last element is empty
+<li>A list of the URL parameter names in round brackets
+<li>An optional representation of the POST parameter names in round brackets
+</ul>
+
+A GET request to 
+<ul>
+<li><code>https://www.example.com/aaa/bbb?cc=dd&amp;ee=ff</code>
+</ul>
+will be represented as 3 nodes:
+<ul>
+<li>https://www.example.com
+  <ul>
+  <li>aaa
+    <ul>
+    <li>GET:bbb(cc,ee)
+    </ul>
+  </ul>
+</ul>
+
+A POST request to 
+<ul>
+<li><code>https://www.example.com/aaa/bbb/ccc/?cc=dd</code>
+</ul>
+ with "application/x-www-form-urlencoded" encoded data
+<ul>
+<li><code>cc=dd&amp;ee=ff&amp;gg=hh</code>
+</ul>
+
+will be represented as 5 nodes:
+<ul>
+<li>https://www.example.com
+  <ul>
+  <li>aaa
+    <ul>
+    <li>bbb
+      <ul>
+      <li>ccc
+        <ul>
+        <li>POST:/(cc)(cc,ee,gg)
+        </ul>
+      </ul>
+    </ul>
+  </ul>
+</ul>
+
+A POST request to 
+<ul>
+<li><code>https://www.example.com/aaa/bbb/ccc</code>
+</ul>
+with the JSON encoded data
+<ul>
+<li><code>{"aaa":{"bbb": "ccc", "ddd": "eee"}, fff: ["kkk", {"ggg":"hhh"}, {"iii":"jjj"}]}</code>
+</ul>
+will be represented as 4 nodes:
+<ul>
+<li>https://www.example.com
+  <ul>
+  <li>aaa
+    <ul>
+    <li>bbb
+      <ul>
+      <li>POST:ccc()({aaa:{bbb,ddd},fff:[{ggg},{iii}]})
+      </ul>
+    </ul>
+  </ul>
+</ul>
+
+A POST request to 
+<ul>
+<li><code>https://www.example.com/aaa/bbb/</code>
+</ul>
+with the XML encoded data
+<ul>
+<li><code>&lt;aaa&gt;&lt;bbb&gt;BBB&lt;/bbb&gt;&lt;ccc&gt;CCC&lt;/ccc&gt;&lt;ddd&gt;DDD&lt;/ddd&gt;&lt;/aaa&gt;</code>
+</ul>
+will be represented as 4 nodes:
+<ul>
+<li>https://www.example.com
+  <ul>
+  <li>aaa
+    <ul>
+    <li>bbb
+      <ul>
+      <li>POST:/()(&lt;aaa:&lt;bbb&gt;,&lt;ccc&gt;,&lt;ddd&gt;&gt;)
+      </ul>
+    </ul>
+  </ul>
+</ul>
+
+For JSON and XML data repeated child elements may be represented using "<code>..</code>".<br>
+For example <ul>
+<li><code>[{"a":{"b": "c", "d": "e"}},{"a":{"b": "f", "d": "g"}},{"a":{"b": "h", "d": "i"}}]</code>
+</ul>
+will be represented as 
+<ul>
+<li><code>[{a:{b,d}}..]</code>
+</ul>
+<p>
+A POST request to 
+<ul>
+<li><code>https://www.example.com/aaa/</code>
+</ul>
+with multipart POST data like:
+<pre>
+-----------------------------3973496743964376987349857345
+Content-Disposition: form-data; name="text"
+
+text default
+-----------------------------3973496743964376987349857345
+Content-Disposition: form-data; name="file1"; filename="a.txt"
+Content-Type: text/plain
+
+Content of a.txt.
+
+-----------------------------3973496743964376987349857345
+Content-Disposition: form-data; name="file2"; filename="a.html"
+Content-Type: text/html
+
+&lt;!DOCTYPE html&gt;&lt;title&gt;Content of a.html.&lt;/title&gt;
+
+-----------------------------3973496743964376987349857345--
+</pre>
+
+will be represented as 3 nodes:
+<ul>
+<li>https://www.example.com
+  <ul>
+  <li>aaa
+    <ul>
+    <li>POST:/()(multipart:text,file1,file2)
+    </ul>
+  </ul>
+</ul>
+
 <H2>関連情報</H2>
 <table>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>

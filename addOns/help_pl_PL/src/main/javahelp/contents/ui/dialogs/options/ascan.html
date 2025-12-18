@@ -20,6 +20,12 @@ Increasing this may put extra strain on the computer ZAP is running on.</p>
 <p>The number of threads the scanner will use per host.<br>
 Increasing the number of threads will speed up the scan but may put extra strain on the computer ZAP is running on and the target host.</p>
 
+<h3>Persist Temporary HTTP Messages</h3>
+<p>If this option is selected the active scanner will persist all HTTP messages sent while active scanning, which allows to further inspect them (e.g. custom passive scanners, manually).
+They are temporary and removed once the session is closed, for cases where the HTTP messages are not necessary it is advised to disable this option for performance reasons (I/O, disk space).<br>
+The option is disabled by default when running ZAP <a href="../../../cmdline.html">inline</a>, where the sessions are usually discarded.
+</p>
+
 <h3>Max Results to List</h3>
 <p>The number of results that will be shown in the Active Scan tab.<br>
 Displaying a large number of results can significantly increase the time a scan takes.</p>
