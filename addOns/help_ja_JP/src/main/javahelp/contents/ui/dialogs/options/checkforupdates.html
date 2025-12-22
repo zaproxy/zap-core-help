@@ -13,52 +13,47 @@
 </p>
 
 <h3>起動時に更新を確認する</h3>
-<p>If selected then ZAP will automatically check for updates to the whole application and all of the add-ons when it starts.<br>
-It is strongly recommended that you check this box.<br>
-If for any reason you choose not to then you should manually check for updates frequently.<br>
-ZAP will only make one request, and the only information included will be the current version you are on.</p>
+<p>選択すると、ZAPは起動時にアプリケーション全体とすべてのアドオンのアップデートを自動的に確認します。<br>
+このボックスにチェックを入れることを強く推奨します。<br>
+何らかの理由でチェックを入れない場合は、手動で頻繁にアップデートを確認する必要があります。<br>
+ZAPは1つのリクエストのみを行い、含まれる情報は現在実行しているバージョンのみです。</p>
 
-<h3>新しいZAPリリースを自動ダウンロードする</h3>
+<h3>新しいZAPリリースを自動的にダウンロードする</h3>
 <p>このオプションを選択すると、ZAPは新しいリリースが利用可能になった際に自動的にダウンロードし、インストールを促します。</p>
 
-<h3>インストール済みアドオンを自動アップデートする</h3>
+<h3>インストール済みアドオンのアップデートを自動的にインストールする</h3>
 <p>このオプションを有効にすると、ZAPはインストール済みのアドオンのアップデートを自動的にダウンロードし、インストールします。</p>
 
-<h3>インストール済みスキャンルールを自動アップデートする</h3>
-<p>If selected then ZAP will automatically download and install any updates to the scan rules you have installed.<br>
-These are a subset of the full set of add-ons installed.</p>
+<h3>インストール済みスキャンルールのアップデートを自動的にインストールする</h3>
+<p>選択すると、ZAPはインストール済みスキャンルールのアップデートを自動的にダウンロードしてインストールします。<br>
+これらはインストールされているアドオン全体のサブセットです。</p>
 
 <h3>新しいリリース版アドオンを通知する</h3>
-<p>If selected then ZAP will inform you if and when any add-ons are promoted to 'release' status.<br>
-These add-ons will have been thoroughly tested and reviewed, and you can be sure they are of the highest status.</p>
+<p>選択すると、ZAPはアドオンが「リリース」ステータスに昇格したときに通知します。<br>
+これらのアドオンは徹底的にテストおよびレビューされており、最高品質であることが保証されています。</p>
 
 <h3>新しいベータ版アドオンを通知する</h3>
-<p>If selected then ZAP will inform you if and when any add-ons are promoted to 'beta' status.<br>
-These add-ons will have been tested and reviewed, and are considered to be of a reasonable status 
-and mostly fit for purpose.<br>
-However they may be incomplete or need further testing.<br>
-Some of the add-ons included with ZAP by default are still at the beta level.</p>
+<p>選択すると、ZAPはアドオンが「ベータ」ステータスに昇格したときに通知します。<br>
+これらのアドオンはテストおよびレビューされており、合理的な品質で、 ほとんどの場合目的に適していると考えられます。<br>
+ただし、不完全であったり、さらなるテストが必要な場合があります。<br>
+ZAPにデフォルトで含まれているアドオンの一部は、まだベータレベルです。</p>
 
 <h3>新しいアルファ版アドオンを通知する</h3>
-<p>If selected then ZAP will inform you if and when any new add-ons are added at 'alpha' status.<br>
-These add-ons will have been reviewed but they are typically at an early stage of development.<br>
-They may be incomplete, contain significant issues or cause stability problems.</p>
+<p>選択すると、ZAPは新しいアドオンが「アルファ」ステータスで追加されたときに通知します。<br>
+これらのアドオンはレビュー済みですが、通常は開発の初期段階にあります。<br>
+不完全であったり、重大な問題を含んでいたり、安定性の問題を引き起こす可能性があります。</p>
 
 <h3>アドオンディレクトリ</h3>
-<p>ZAP will load all of the add-ons from the <a href="../../../start/features/addons.html">default <code>plugin</code>
-directories</a>.<br>
-You can also add as many additional add-on directories as you need by adding them here.<br>
-This can be very useful when running multiple ZAP instances on one machine, for example in a CI environment.<br>
-You can then just download new or updated add-ons once and immediately share them between multiple instances.<br>
-Add-ons downloaded into shared directories will be only added to new ZAP instances, not to ones that are already running,
-with the exception of the instance that actually downloaded the add-on.</p>
+<p>ZAPは<a href="../../../start/features/addons.html">デフォルトの<code>plugin</code>ディレクトリ</a>からすべてのアドオンを読み込みます。<br>
+必要に応じて、ここに必要な数だけアドオンディレクトリを追加できます。<br>
+これは、CI環境など、1台のマシンで複数のZAPインスタンスを実行する場合に非常に便利です。<br>
+新しいアドオンや更新されたアドオンを一度だけダウンロードし、複数のインスタンス間ですぐに共有できます。<br>
+共有ディレクトリにダウンロードされたアドオンは、新しいZAPインスタンスにのみ追加され、既に実行中のインスタンスには追加されません。 ただし、実際にアドオンをダウンロードしたインスタンスは例外です。</p>
 
 <h3>ダウンロード ディレクトリ</h3>
-<p>This is the directory ZAP will download new or updated add-ons to.<br>
-By default it will be the local directory, but you can also choose one of the shared directories as long as this ZAP
-instance can write to it.<br>
-ZAP will only move add-ons to a shared directory after they are completely downloaded, so that other ZAP instances
-do not try to load an incomplete add-on.</p>
+<p>これは、ZAPが新しいアドオンまたは更新されたアドオンをダウンロードするディレクトリです。<br>
+デフォルトではローカルディレクトリですが、このZAPインスタンスが書き込み可能であれば、共有ディレクトリの1つを選択することもできます。<br>
+ZAPは、アドオンが完全にダウンロードされた後にのみ共有ディレクトリに移動します。これにより、他のZAPインスタンスが不完全なアドオンを読み込もうとすることを防ぎます。</p>
 
 <h2>関連情報</h2>
 <table>

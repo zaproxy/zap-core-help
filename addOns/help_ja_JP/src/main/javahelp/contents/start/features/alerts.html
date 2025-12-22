@@ -31,124 +31,120 @@
 すべてのアラートは<a href="../../ui/tabs/alerts.html">アラートタブ</a>に一覧表示され、リスクごとのアラート数は<a href="../../ui/footer.html">フッター</a>に表示されます。.
 </p>
 <p>
-The full set of alerts that ZAP can raise is available online at 
-<a href="https://www.zaproxy.org/docs/alerts/">https://www.zaproxy.org/docs/alerts/</a>
+ZAPが生成する可能性のあるすべてのアラートは、<a href="https://www.zaproxy.org/docs/alerts/">https://www.zaproxy.org/docs/alerts/</a>で確認できます
 </p>
 
-<a name="alertfields"></a><h2>Alert Fields</h2> 
+<a name="alertfields"></a><h2>アラートフィールド</h2> 
 
-The following fields are supported.
+以下のフィールドがサポートされています。
 
-<a name="alert-name"></a><h3>Name</h3> 
+<a name="alert-name"></a><h3>名前</h3> 
 
-The name of the alert, for example "Cross Site Scripting (Reflected)"
+アラートの名前。例: クロスサイトスクリプティング (反射型)
 
 <a name="alert-url"></a><h3>URL</h3> 
 
-The URL related to the alert.
+アラートに関連するURL。
 
-<a name="alert-nodename"></a><h3>Node Name</h3> 
+<a name="alert-nodename"></a><h3>ノード名</h3> 
 
-A normalised version of the URL, which is also used in the <a href="sitestree.html">Sites Tree</a> 
+URLの正規化されたバージョンで、 <a href="sitestree.html">サイトツリー</a>でも使用されます<a href="#"></a> 
 
-<a name="alert-risk"></a><h3>Risk</h3> 
+<a name="alert-risk"></a><h3>リスク</h3> 
 
-The relative severity of the alert.
+アラートの相対的な深刻度。
 <p>
-One of:
+以下のいずれか:
 <ul>
-<li>Informational
-<li>Low
-<li>Medium
-<li>High
+<li>情報
+<li>低
+<li>中
+<li>高
 </ul>
 
-The risk is automatically set for Alerts raised by ZAP.
-If you want to change the risk you can either do that manually for each alert or you can create an
-Alert Filter to do it automatically.
+リスクはZAPによって生成されたアラートに対して自動的に設定されます。
+リスクを変更したい場合は、各アラートに対して手動で変更するか、 アラートフィルターを作成して自動的に変更することができます。
 
-<a name="alert-confidence"></a><h3>Confidence</h3> 
+<a name="alert-confidence"></a><h3>信頼度</h3> 
 
-The relative confidence in the alert.
+アラートに対する相対的な信頼度。
 <p>
-One of:
+以下のいずれか:
 <ul>
-<li>False Positive
-<li>Low
-<li>Medium
-<li>High
-<li>Confirmed
+<li>誤検知 (偽陽性)
+<li>低
+<li>中
+<li>高
+<li>確認済み
 </ul>
 
-ZAP will not raise an alert with a confidence of either "False Positive" or "Confirmed".
-However you can set these levels either manually or via an Alert Filter.
+ZAPは「誤検知 (偽陽性)」または「確認済み」の信頼度ではアラートを生成しません。
+ただし、これらのレベルは手動またはアラートフィルター経由で設定できます。
 
-<a name="alert-param"></a><h3>Parameter</h3> 
+<a name="alert-param"></a><h3>パラメーター</h3> 
 
-The name of the parameter that was attacked. 
-This will be empty if the alert is not associated with a specific parameter.
+攻撃されたパラメーターの名前。
+アラートが特定のパラメーターに関連付けられていない場合、これは空になります。
 
-<a name="alert-attack"></a><h3>Attack</h3>
+<a name="alert-attack"></a><h3>攻撃</h3>
 
-The payload used to find the alert.
-This will be empty for passive alerts.
+アラートを発見するために使用されたペイロード。
+パッシブアラートの場合、これは空になります。
 
-<a name="alert-evidence"></a><h3>Evidence</h3>
+<a name="alert-evidence"></a><h3>証拠</h3>
 
-A string that appears in the request or response which was used to help identify the alert.
-This will be empty if there is no relevant string, for example for missing security headers.
+アラートの特定に役立ったリクエストまたはレスポンスに現れる文字列。
+関連する文字列がない場合 (例: セキュリティヘッダーの欠落など)、これは空になります。
  
 <a name="alert-cweid"></a><h3>CWE ID</h3> 
 
-The <a href="https://cwe.mitre.org/">Common Weakness Enumeration</a> ID.
+ <a href="https://cwe.mitre.org/">共通脆弱性タイプ一覧 (Common Weakness Enumeration)</a> ID
 
 <a name="alert-wascid"></a><h3>WASC ID</h3> 
 
-The <a href="http://projects.webappsec.org/w/page/13246978/Threat%20Classification">Web Application Security Consortium</a> ID.
+ <a href="http://projects.webappsec.org/w/page/13246978/Threat%20Classification">Webアプリケーションセキュリティコンソーシアム (Web Application Security Consortium)</a> ID
 
-<a name="alert-source"></a><h3>Source</h3> 
+<a name="alert-source"></a><h3>ソース</h3> 
 
-The component which raised the alert, and the ID of the rule.
+アラートを生成したコンポーネントと、ルールのID。
 
-<a name="alert-alertref"></a><h3>Alert Reference</h3> 
+<a name="alert-alertref"></a><h3>アラート参照</h3> 
 
-The ID of the rule which raised the alert, optionally followed by a dash and the alert type.
+アラートを生成したルールのID。オプションでダッシュとアラートタイプが続きます。
 <p>
-All of the alerts raised by ZAP are listed on
-<a href="https://www.zaproxy.org/docs/alerts/">https://www.zaproxy.org/docs/alerts/</a>,
-and they all have a static page with a URL based on the Alert Reference.
+ZAPによって生成されるすべてのアラートは <a href="https://www.zaproxy.org/docs/alerts/">https://www.zaproxy.org/docs/alerts/</a> に一覧表示されており、 それらはすべてアラート参照に基づくURLを持つ静的ページがあります。
 
-<a name="alert-input"></a><h3>Input Vector</h3> 
+<a name="alert-input"></a><h3>入力ベクトル</h3>
 
-The <a href="../../ui/dialogs/options/ascaninput.html">Active Scan Input Vector</a> used to identify the element attacked.
-This will be empty for passive alerts or if the alert is not associated with a specific parameter.
+攻撃された要素を識別するために使用される<a href="../../ui/dialogs/options/ascaninput.html">アクティブスキャンの入力ベクトル</a>。
+パッシブアラートの場合、またはアラートが特定のパラメーターに関連付けられていない場合、これは空になります。
 
-<a name="alert-desc"></a><h3>Description</h3> 
+<a name="alert-desc"></a><h3>説明</h3>
 
-A detailed description of the alert. This will be the same text for all alert instances with the same reference.
+アラートの詳細な説明。 これは同じ参照を持つすべてのアラートインスタンスで同じテキストになります。
 
-<a name="alert-other"></a><h3>Other Info</h3> 
+<a name="alert-other"></a><h3>その他の情報</h3>
 
-Alert specific information, which is potentially different for each alert raised.
+アラート固有の情報。生成されたアラートごとに異なる可能性があります。
 
-<a name="alert-solution"></a><h3>Solution</h3> 
+<a name="alert-solution"></a><h3>解決策</h3>
 
-Potential solutions to the underlying problem. 
-Note that these solutions will be generic as ZAP does not access any source code. 
-This will be the same text for all alert instances with the same reference.
+根本的な問題に対する潜在的な解決策。 
+ZAPはソースコードにアクセスしないため、これらの解決策は一般的なものになることに注意してください。 
+これは同じ参照を持つすべてのアラートインスタンスで同じテキストになります。
 
-<a name="alert-ref"></a><h3>Reference</h3> 
+<a name="alert-ref"></a><h3>参照</h3>
 
-A set of links to more information about the alert online.
+オンラインでアラートに関する詳細情報へのリンク。
 
-<a name="alert-tags"></a><h3>Alert Tags</h3> 
+<a name="alert-tags"></a><h3>アラートタグ</h3>
 
-The tags associated with the alert.
-The full set of tags supported are listed on <a href="https://www.zaproxy.org/alerttags/">https://www.zaproxy.org/alerttags/</a>.
+アラートに関連付けられたタグ。
+サポートされているタグの完全な一覧は、<a href="https://www.zaproxy.org/alerttags/">https://www.zaproxy.org/alerttags/</a>に記載されています。
 
-<a name="alertoverrides"></a><h2>Alert Overrides</h2> 
+<a name="alertoverrides"></a><h2>アラートオーバーライド</h2>
 
-Alerts raised by ZAP include both generic and specific information about the alerts raised.
+ZAPによって生成されたアラートには、生成されたアラートに関する一般的な情報と固有の情報の両方が含まれています。
 固有の情報は、対象のURLやパラメーターなど、発見された潜在的な問題に直接関連するものです。
 一般的な情報には、説明や関連するオンラインリソースへのリンクなどが含まれます。
 <p>

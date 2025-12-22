@@ -75,30 +75,29 @@ ZAPでは、'action' パラメーターを<a href="structparams.html">構造パ�
 <p>
 これらの場合、入力ベクトル<a href="scripts.html">スクリプト</a>を使用できます。これにより、サイトツリー内のリクエストを任意の方法で表現できます。
 
-<h2>Node Name Format</h2>
+<h2>ノード名の形式</h2>
 
-<h3>Top Level Nodes</h3>
-The top level node names include the protocol, host name and the port (if specified), e.g. <code>https://www.example.com:8080</code>
+<h3>トップレベルノード</h3>
+トップレベルのノード名には、プロトコル、ホスト名、ポート (指定されている場合) が含まれます。例: <code>https://www.example.com:8080</code>
 
-<h3>Intermediate Nodes</h3>
-Non leaf nodes will just have the name of the relevant part of the URL path, unless they are configured to be 
-<a href="ddc.html">Data Driven Content</a> in which case then will have the format <code>«ddc-name»</code>.
+<h3>中間ノード</h3>
+リーフノードでないノードは、<a href="ddc.html">データ駆動型コンテンツ</a>として設定されていない限り、URLパスの該当部分の名前だけを持ちます。設定されている場合は、<code>«ddc-name»</code>の形式になります。
 
-<h3>Leaf Nodes</h3>
-Leaf node names are made up of:
+<h3>リーフノード</h3>
+リーフノードの名前は以下で構成されます:
 <ul>
-<li>The HTTP method (GET, POST, etc)
-<li>A colon
-<li>The last path element, or "/" if the last element is empty
-<li>A list of the URL parameter names in round brackets
-<li>An optional representation of the POST parameter names in round brackets
+<li>HTTPメソッド (GET、POSTなど)
+<li>コロン
+<li>最後のパス要素、または最後の要素が空の場合は"/"
+<li>丸括弧内のURLパラメーター名のリスト
+<li>オプションで丸括弧内のPOSTパラメーター名の表現
 </ul>
 
-A GET request to 
+以下へのGETリクエスト 
 <ul>
 <li><code>https://www.example.com/aaa/bbb?cc=dd&amp;ee=ff</code>
 </ul>
-will be represented as 3 nodes:
+は3つのノードとして表現されます:
 <ul>
 <li>https://www.example.com
   <ul>
@@ -109,16 +108,16 @@ will be represented as 3 nodes:
   </ul>
 </ul>
 
-A POST request to 
+以下へのPOSTリクエスト 
 <ul>
 <li><code>https://www.example.com/aaa/bbb/ccc/?cc=dd</code>
 </ul>
- with "application/x-www-form-urlencoded" encoded data
+ に "application/x-www-form-urlencoded" でエンコードされたデータ
 <ul>
 <li><code>cc=dd&amp;ee=ff&amp;gg=hh</code>
 </ul>
 
-will be represented as 5 nodes:
+は5つのノードとして表現されます:
 <ul>
 <li>https://www.example.com
   <ul>
@@ -135,15 +134,15 @@ will be represented as 5 nodes:
   </ul>
 </ul>
 
-A POST request to 
+以下へのPOSTリクエスト 
 <ul>
 <li><code>https://www.example.com/aaa/bbb/ccc</code>
 </ul>
-with the JSON encoded data
+にJSONエンコードされたデータ
 <ul>
 <li><code>{"aaa":{"bbb": "ccc", "ddd": "eee"}, fff: ["kkk", {"ggg":"hhh"}, {"iii":"jjj"}]}</code>
 </ul>
-will be represented as 4 nodes:
+は4つのノードとして表現されます:
 <ul>
 <li>https://www.example.com
   <ul>
@@ -157,15 +156,15 @@ will be represented as 4 nodes:
   </ul>
 </ul>
 
-A POST request to 
+以下へのPOSTリクエスト 
 <ul>
 <li><code>https://www.example.com/aaa/bbb/</code>
 </ul>
-with the XML encoded data
+にXMLエンコードされたデータ
 <ul>
 <li><code>&lt;aaa&gt;&lt;bbb&gt;BBB&lt;/bbb&gt;&lt;ccc&gt;CCC&lt;/ccc&gt;&lt;ddd&gt;DDD&lt;/ddd&gt;&lt;/aaa&gt;</code>
 </ul>
-will be represented as 4 nodes:
+は4つのノードとして表現されます:
 <ul>
 <li>https://www.example.com
   <ul>
@@ -179,20 +178,20 @@ will be represented as 4 nodes:
   </ul>
 </ul>
 
-For JSON and XML data repeated child elements may be represented using "<code>..</code>".<br>
-For example <ul>
+JSONとXMLデータの場合、繰り返される子要素は"<code>..</code>"を使用して表現される場合があります。<br>
+例えば、 <ul>
 <li><code>[{"a":{"b": "c", "d": "e"}},{"a":{"b": "f", "d": "g"}},{"a":{"b": "h", "d": "i"}}]</code>
 </ul>
-will be represented as 
+は以下のように表現されます 
 <ul>
 <li><code>[{a:{b,d}}..]</code>
 </ul>
 <p>
-A POST request to 
+以下へのPOSTリクエスト 
 <ul>
 <li><code>https://www.example.com/aaa/</code>
 </ul>
-with multipart POST data like:
+に次のようなマルチパートPOSTデータ:
 <pre>
 -----------------------------3973496743964376987349857345
 Content-Disposition: form-data; name="text"
@@ -213,7 +212,7 @@ Content-Type: text/html
 -----------------------------3973496743964376987349857345--
 </pre>
 
-will be represented as 3 nodes:
+は3つのノードとして表現されます:
 <ul>
 <li>https://www.example.com
   <ul>
