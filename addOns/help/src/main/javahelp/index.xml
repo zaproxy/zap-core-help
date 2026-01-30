@@ -49,7 +49,6 @@
     <indexitem text="notes" target="start.features.notes" />
     <indexitem text="options dialog" target="ui.dialogs.options" />
     <indexitem text="output tab" target="ui.tabs.output" />
-    <indexitem text="params tab" target="ui.tabs.params" />
     <indexitem text="paros proxy" target="zap.paros" />
     <indexitem text="passive scan" target="start.features.pscan" />
     <indexitem text="passive scanner options" target="ui.dialogs.options.pscan.main" />

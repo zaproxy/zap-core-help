@@ -64,7 +64,6 @@
          <tocitem text="Breakpoints" target="ui.tabs.breakpoints"/>
          <tocitem text="Alerts" target="ui.tabs.alerts"/>
          <tocitem text="Active Scan" target="ui.tabs.ascan"/>
-         <tocitem text="Params" target="ui.tabs.params"/>
          <tocitem text="HTTP Sessions" target="ui.tabs.httpsessions"/>
          <tocitem text="Output" target="ui.tabs.output"/>
       </tocitem>
