@@ -2,7 +2,7 @@
 <helpset version="2.0" xml:lang="fr-FR">
 
   <!-- title -->
-  <title>ZAP by Checkmarx - Desktop User Guide</title>
+  <title>Guide utilisateur de ZAP Desktop par Checkmarx</title>
 
   <!-- maps -->
   <maps>
@@ -13,14 +13,14 @@
   <!-- views -->
   <view mergetype="org.zaproxy.zap.extension.help.ZapTocMerger">
     <name>TOC</name>
-    <label>Contents</label>
+    <label>Contenus</label>
     <type>org.zaproxy.zap.extension.help.ZapTocView</type>
     <data>toc.xml</data>
   </view>
 
   <view mergetype="javax.help.SortMerge">
     <name>Index</name>
-    <label>Indice</label>
+    <label>Index</label>
     <type>javax.help.IndexView</type>
     <data>index.xml</data>
   </view>
@@ -36,7 +36,7 @@
 
   <view>
     <name>Favorites</name>
-    <label>Favorites</label>
+    <label>Favoris</label>
     <type>javax.help.FavoritesView</type>
   </view>
 
@@ -44,7 +44,7 @@
      <name>main window</name>
      <size height="600" width="1000"/>
      <location x="200" y="200"/>
-     <title>ZAP - Desktop User Guide</title>
+     <title>ZAP – Guide utilisateur (Desktop)</title>
      <image>toplevelicon</image>
      <toolbar>
 	<helpaction>javax.help.BackAction</helpaction>
@@ -61,6 +61,6 @@
      <name>main</name>
      <size height="400" width="400"/>
      <location x="200" y="200"/>
-     <title>ZAP - Desktop User Guide</title>
+     <title>ZAP – Guide utilisateur (Desktop)</title>
   </presentation>
 </helpset>
