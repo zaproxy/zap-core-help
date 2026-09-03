@@ -12,11 +12,7 @@ Manipulation anti-CSRF
 Les jetons anti-CSRF sont des paramètres (pseudo) aléatoires utilisés pour protéger contre les attaques de Cross Site Request Forgery (CSRF).<br>Cependant ils rendent aussi le travail des testeurs de pénétration plus difficile, surtout si les jetons sont régénérés chaque fois qu'un formulaire est demandé.<br>
 </p>
 <p>
-ZAP detects anti CSRF tokens purely by attribute names - the list of attribute names considered to be anti CSRF tokens
-is configured using the <a href="../../ui/dialogs/options/anticsrf.html">Options Anti CSRF screen</a>.<br/>
-When ZAP detects these tokens it records the token value and which URL generated the token.<br/>
-Other tools, like the <a href="ascan.html">active scanner</a>, have options which
-cause ZAP to automatically regenerate the tokens when required.
+ZAP détecte les jetons anti-CSRF uniquement à partir des noms d'attributs. La liste des noms d'attributs considérés comme des jetons anti-CSRF est configurée depuis <a href="../../ui/dialogs/options/anticsrf.html">l'écran des options anti-CSRF</a>.<br/> Lorsque ZAP détecte ces jetons, il enregistre leur valeur ainsi que l'URL qui les a générés.<br/> D'autres outils, comme <a href="ascan.html">l'analyseur actif</a>, disposent d'options permettant à ZAP de régénérer automatiquement les jetons lorsque cela est nécessaire.
 </p>
 
 <h2>Voir aussi</h2>
