@@ -56,7 +56,6 @@
         <mapID target="ui.tabs.breakpoints" url="contents/ui/tabs/breakpoints.html" />
         <mapID target="ui.tabs.alerts" url="contents/ui/tabs/alerts.html" />
         <mapID target="ui.tabs.ascan" url="contents/ui/tabs/ascan.html" />
-        <mapID target="ui.tabs.params" url="contents/ui/tabs/params.html" />
         <mapID target="ui.tabs.output" url="contents/ui/tabs/output.html" />
         <mapID target="ui.tabs.httpsessions" url="contents/ui/tabs/httpsessions.html" />
         <mapID target="ui.dialogs" url="contents/ui/dialogs/dialogs.html"/>
