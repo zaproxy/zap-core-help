@@ -32,7 +32,7 @@ ZAP (コア) は、以下のコマンドラインオプションをサポート�
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-daemon</td><td>デーモンモード (UIなし) でZAPを起動します。バックグラウンドで実行し、APIからのみ制御します</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-config &lt;kvpair&gt;</td><td>設定ファイル内の指定されたキーと値を上書きします。複数指定可能で、指定された順序で適用されます</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-configfile &lt;path&gt;</td><td>指定されたプロパティファイルでキーと値を上書きします</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-dir &lt;dir&gt;</td><td>ホームディレクトリ (設定、セッション、ログなどが保存される場所) を指定します。 アドオンが (誤って) コアファイルを使用/上書きすることを防ぐため、ホームディレクトリとインストールディレクトリが同じ場合、ZAPは起動しません (エラーを表示します)。</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-dir &lt;dir&gt;</td><td>ホームディレクトリ (設定、セッション、ログなどが保存される場所) を指定します。アドオンが (誤って) コアファイルを使用/上書きすることを防ぐため、ホームディレクトリとインストールディレクトリが同じ場合、ZAPは起動しません (エラーを表示します)。</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-installdir &lt;dir&gt;</td><td>ZAPのインストールディレクトリを明示的に指定します</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-h</td><td>利用可能なすべてのコマンドラインオプションを表示します (アドオンが追加したオプションを含む)</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-help</td><td>-hと同じです</td></tr>
@@ -43,9 +43,9 @@ ZAP (コア) は、以下のコマンドラインオプションをサポート�
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-nostdout</td><td>標準出力へのログ出力を無効にします</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-loglevel &lt;level&gt;</td><td>ログレベルを設定し、ホームディレクトリの log4j2.properties ファイルで指定された値を上書きします</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-silent</td><td>ZAPが自動的に外部へのリクエスト (更新確認など) を行わないようにします</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstall &lt;addOnId&gt;</td><td>指定されたIDのアドオンをZAP マーケットプレイスからインストールします。 マーケットプレイスで利用可能なアドオンのIDは、<a href="ui/dialogs/manageaddons.html">アドオンの管理ダイアログ</a>のマーケットプレイスタブで確認できます.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstall &lt;addOnId&gt;</td><td>指定されたIDのアドオンをZAP マーケットプレイスからインストールします。マーケットプレイスで利用可能なアドオンのIDは、<a href="ui/dialogs/manageaddons.html">アドオンの管理ダイアログ</a>のマーケットプレイスタブで確認できます.</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addoninstallall</td><td>マーケットプレイスから利用可能なすべてのアドオンをインストールします</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonuninstall &lt;addOnId&gt;</td><td>指定されたIDのアドオンをアンインストールします。 インストールされているアドオンのIDを知るには、<code>-addonlist</code>を使用するか、<a href="ui/dialogs/manageaddons.html">アドオンの管理ダイアログ</a>のインストール済みタブを確認してください。</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonuninstall &lt;addOnId&gt;</td><td>指定されたIDのアドオンをアンインストールします。インストールされているアドオンのIDを知るには、<code>-addonlist</code>を使用するか、<a href="ui/dialogs/manageaddons.html">アドオンの管理ダイアログ</a>のインストール済みタブを確認してください。</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonupdate</td><td>ZAP マーケットプレイスから変更されたすべてのアドオンを更新します</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-addonlist</td><td>インストール済みのすべてのアドオンを一覧表示します</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>-script &lt;script&gt;</td><td>指定されたスクリプト (ファイルパス) を、コマンドライン/デーモンモードでは実行し、GUIモードでは読み込みます</td></tr>
