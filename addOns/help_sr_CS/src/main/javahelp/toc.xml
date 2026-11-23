@@ -64,7 +64,6 @@
          <tocitem text="Breakpoints" target="ui.tabs.breakpoints"/>
          <tocitem text="Upozorenja" target="ui.tabs.alerts"/>
          <tocitem text="Active Scan" target="ui.tabs.ascan"/>
-         <tocitem text="Params" target="ui.tabs.params"/>
          <tocitem text="HTTP Sessions" target="ui.tabs.httpsessions"/>
          <tocitem text="Output" target="ui.tabs.output"/>
       </tocitem>
@@ -117,6 +116,7 @@
    <tocitem text="Add-ons" target="addons.introduction" tocid="addons" image="addons.icon" />
    
    <tocitem text="Releases" target="zap.releases">
+      <tocitem text="2.17.1" target="zap.releases.2.17.1"/>
       <tocitem text="2.17.0" target="zap.releases.2.17.0"/>
       <tocitem text="2.16.1" target="zap.releases.2.16.1"/>
       <tocitem text="2.16.0" target="zap.releases.2.16.0"/>
