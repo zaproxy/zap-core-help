@@ -90,6 +90,12 @@ HTTP GET, в противном случае используется HTTP POST.
 Целое число будет представлять либо количество запросов, которые будут сделаны до того, как ZAP выполнит повторный опрос, либо количество секунд до этого.
 он будет опрашивать снова, в зависимости от выбранного раскрывающегося списка. <br/>
 Опция актуальна только в том случае, если была выбрана стратегия проверки «Опрос указанного URL». 
+
+<h3><a name="pollmethod">Poll Request Method</a></h3>
+
+The HTTP method to use for the poll request (e.g. GET, POST). Custom methods can be typed directly into the field.<br/>
+If left empty, ZAP will use POST if Poll Request POST Data is set, otherwise GET.<br/>
+Опция актуальна только в том случае, если была выбрана стратегия проверки «Опрос указанного URL». 
   
 <h3><a name="pollurl">URL для опроса для проверки </a></h3>
 
@@ -98,8 +104,8 @@ HTTP GET, в противном случае используется HTTP POST.
  
 <h3><a name="polldata">Данные POST запроса опроса </a></h3>
 
-Если предоставлено, то оно будет отправлено как POST в запросе на опрос. Если он пуст, ZAP сделает запрос GET. <br/>
-Опция актуальна только в том случае, если была выбрана стратегия проверки «Опрос указанного URL». 
+If supplied then this will be sent as the body of the poll request.<br/>
+The option is only relevant if the "Poll the Specified URL" Verification Strategy has been selected. 
   
 <h3><a name="pollheaders">Дополнительные заголовки запроса на опрос </a></h3>
 
@@ -108,7 +114,7 @@ HTTP GET, в противном случае используется HTTP POST.
 Тип содержимого: приложение / json
 X-Requested-с: XMLHttpRequest
 </pre>
-The option is only relevant if the "Poll the Specified URL" Verification Strategy has been selected. 
+The option is only relevant if the "Poll the Specified URL" Verification Strategy has been selected.
   
 <h2>Доступ через </h2>
 <table>

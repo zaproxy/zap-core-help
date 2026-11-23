@@ -14,8 +14,9 @@
 
 	<p>
 		このツールは、セッショントークンの概念に基づいています。セッショントークンとは、HTTPサーバーがリクエストメッセージを過去のリクエストや保存されたデータと関連付けることを可能にするHTTPメッセージパラメーター (現時点はCookieのみ) です。 
-		ZAPの概念では、セッショントークンは「デフォルトセッショントークン」と「サイトセッショントークン」の2つのカテゴリに分類されています。デフォルトセッショントークンは、ユーザーが<a href="../../ui/dialogs/options/httpsessions.html">オプション画面</a>で設定できるトークンであり、デフォルトですべてのサイトのセッショントークンとして自動的にみなされるものです (例:  phpsessid, jsessionid など)。サイトセッショントークンは、特定のサイト用の一連のトークンであり、通常は<a
-			href="../../ui/tabs/params.html">パラメータータブ</a>で利用可能なポップアップメニューを使用して設定されます.
+		ZAPの概念では、セッショントークンは「デフォルトセッショントークン」と「サイトセッショントークン」の2つのカテゴリに分類されています。デフォルトセッショントークンは、ユーザーが<a href="../../ui/dialogs/options/httpsessions.html">オプション画面</a>で設定できるトークンであり、デフォルトですべてのサイトのセッショントークンとして自動的にみなされるものです (例:  phpsessid, jsessionid など)。 The site
+		session tokens are a set of tokens for a particular site and are
+		usually set up using the popup menus available in the Params Tab.
 	</p>
 
 	<p>
@@ -58,12 +59,6 @@
 			<td><a href="../../ui/dialogs/options/httpsessions.html">HTTPセッションオプション画面</a></td>
 			<td>ツールのオプションの概要について</td>
 		</tr>
-		<tr>
-			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			<td><a href="../../ui/tabs/params.html">パラメータータブ</a></td>
-			<td>パラメータタブの概要について</td>
-		</tr>
-
 	</table>
 
 </body>

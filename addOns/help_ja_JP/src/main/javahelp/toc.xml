@@ -65,9 +65,8 @@
          <tocitem text="ブレークポイント" target="ui.tabs.breakpoints"/>
          <tocitem text="アラート" target="ui.tabs.alerts"/>
          <tocitem text="アクティブスキャン" target="ui.tabs.ascan"/>
-         <tocitem text="パラメーター" target="ui.tabs.params"/>
-         <tocitem text="HTTP セッション" target="ui.tabs.httpsessions"/>
-         <tocitem text="出力" target="ui.tabs.output"/>
+         <tocitem text="HTTP Sessions" target="ui.tabs.httpsessions"/>
+         <tocitem text="Output" target="ui.tabs.output"/>
       </tocitem>
       <tocitem text="ダイアログ" target="ui.dialogs">
          <tocitem text="アクティブスキャン" target="ui.dialogs.advascan"/>
@@ -118,6 +117,7 @@
    <tocitem text="アドオン" target="addons.introduction" tocid="addons" image="addons.icon" />
    
    <tocitem text="リリース" target="zap.releases">
+      <tocitem text="2.17.1" target="zap.releases.2.17.1"/>
       <tocitem text="2.17.0" target="zap.releases.2.17.0"/>
       <tocitem text="2.16.1" target="zap.releases.2.16.1"/>
       <tocitem text="2.16.0" target="zap.releases.2.16.0"/>
